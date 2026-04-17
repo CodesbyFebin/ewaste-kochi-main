@@ -1,15 +1,13 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
-import cloudflare from '@astrojs/cloudflare';
+import vercel from '@astrojs/vercel';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://ewastekochi.com',
   output: 'static',
-  adapter: cloudflare({
-    imageService: 'cloudflare',
-  }),
+  adapter: vercel(),
   integrations: [
     sitemap({
       changefreq: 'weekly',
@@ -43,12 +41,6 @@ export default defineConfig({
     service: {
       entrypoint: 'astro/assets/services/sharp',
     },
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'ewastekochi.com',
-      },
-    ],
   },
   vite: {
     build: {
