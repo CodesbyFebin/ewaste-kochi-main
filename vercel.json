@@ -1,4 +1,8 @@
 {
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install --legacy-peer-deps",
+  "framework": "astro",
   "redirects": [
     {
       "source": "/sitemap-pages.xml",
@@ -173,16 +177,6 @@
     {
       "source": "/locations/ewaste-682024/",
       "destination": "/locations/edappally/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682207",
-      "destination": "/locations/maradu/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682207/",
-      "destination": "/locations/maradu/",
       "permanent": true
     },
     {
