@@ -28,6 +28,15 @@ export default defineConfig({
         'https://ewastekochi.com/marketplace/',
         'https://ewastekochi.com/services/hard-drive-destruction-kochi/',
         'https://ewastekochi.com/services/it-asset-inventory-audit/',
+        // New high-value service pages
+        'https://ewastekochi.com/services/hard-drive-degaussing-kochi',
+        'https://ewastekochi.com/services/computer-recycling-near-me',
+        'https://ewastekochi.com/services/electronics-recycling-near-me',
+        'https://ewastekochi.com/services/business-it-decommissioning',
+        // Comprehensive pillar guides
+        'https://ewastekochi.com/blog/complete-guide-ewaste-recycling-kochi/',
+        'https://ewastekochi.com/blog/complete-guide-battery-recycling-kochi/',
+        'https://ewastekochi.com/blog/complete-guide-hard-drive-destruction-kochi/',
       ],
     }),
     tailwind({

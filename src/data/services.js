@@ -426,6 +426,340 @@ For large enterprise clients at Infopark, Smart City and across Kochi, we deploy
     relatedServices: ['itad-kochi', 'data-destruction-kochi', 'certificate-of-destruction-kochi'],
     schemaType: 'ProfessionalService',
   },
+
+  // ── NEW HIGH-TRAFFIC SERVICE PAGES (Added April 2026 based on Search Console data) ──────────────────────
+  {
+    slug: 'battery-recycling-near-me',
+    name: 'Battery Recycling Near Me',
+    shortName: 'Battery Recycling',
+    category: 'recycling',
+    isPillar: true,
+    icon: '🔋',
+    tagline: 'Safe Battery Disposal & Recycling Near You in Kochi',
+    description: 'Find safe battery recycling near you in Kochi. We recycle lithium-ion, lead-acid, laptop, phone, UPS, and EV batteries. Free pickup for bulk. KSPCB authorized.',
+    longDescription: `Searching for "battery recycling near me" in Kochi? EWaste Kochi provides safe, certified battery recycling services across Ernakulam and all of Kerala. We handle all battery types including lithium-ion (laptops, phones, power banks), lead-acid (UPS, inverters, automotive), NiMH, and EV batteries.
+
+**Why battery recycling matters:** Batteries contain toxic heavy metals and chemicals that can cause fires, explosions, and severe environmental contamination. Under India's Battery Waste Management Rules 2022, improper disposal can result in penalties up to ₹1 lakh per ton.
+
+**Our battery recycling services:** Free pickup for bulk quantities (20+ batteries), safe handling of swollen/damaged batteries, certified recycling with full documentation, and compliance with Battery Waste Rules 2022. We serve residential, commercial, and industrial clients across Kochi including Infopark, Smart City, Kakkanad, Edapally, and all Ernakulam areas.`,
+    keywords: ['battery recycling near me', 'battery disposal near me', 'lithium battery recycling kochi', 'lead acid battery disposal', 'laptop battery recycling', 'phone battery recycling', 'UPS battery disposal', 'EV battery recycling kochi', 'swollen battery disposal'],
+    metaTitle: 'Battery Recycling Near Me Kochi | Li-Ion, Lead-Acid, UPS, EV | Free Pickup | EWaste Kochi',
+    metaDescription: 'Safe battery recycling near you in Kochi. Li-ion, lead-acid, laptop, UPS, EV batteries. KSPCB authorized. Free bulk pickup. Battery Waste Rules 2022 compliant. Call 24/7.',
+    price: 'Free for 20+ batteries',
+    priceSchema: '0',
+    priceCurrency: 'INR',
+    badges: ['KSPCB Authorized', 'All Battery Types', 'Free Bulk Pickup', 'Battery Rules 2022'],
+    relatedServices: ['e-waste-recycling-kochi', 'ups-inverter-recycling-kochi', 'mobile-recycling-kochi'],
+    schemaType: 'RecyclingService',
+  },
+  {
+    slug: 'electronics-recycling-near-me',
+    name: 'Electronics Recycling Near Me',
+    shortName: 'Electronics Recycling',
+    category: 'recycling',
+    isPillar: true,
+    icon: '♻️',
+    tagline: 'Electronics Recycling Near You in Kochi & Ernakulam',
+    description: 'Find electronics recycling near you in Kochi. We recycle computers, laptops, phones, TVs, printers, and all e-waste. Free pickup for bulk. KSPCB authorized recycler.',
+    longDescription: `Looking for "electronics recycling near me" in Kochi? EWaste Kochi is your local KSPCB-authorized electronics recycler serving all of Ernakulam district. We accept all types of electronic waste: computers, laptops, desktops, servers, mobile phones, tablets, TVs, monitors, printers, scanners, networking equipment, and small household electronics.
+
+**Why choose certified electronics recycling:** Uncertified recyclers often strip valuable components and dump hazardous materials in landfills. As a KSPCB-authorized facility, we ensure 100% compliant processing with zero landfill commitment.
+
+**Our electronics recycling process:** Collection → Secure data destruction (if needed) → Dismantling → Material segregation → Precious metal recovery → Hazardous material safe disposal. We provide Certificate of Recycling for all corporate pickups.`,
+    keywords: ['electronics recycling near me', 'electronic recycling near me', 'computer recycling near me', 'e waste recycling near me', 'recycle electronics kochi', 'electronic waste recycling', 'where to recycle electronics'],
+    metaTitle: 'Electronics Recycling Near Me Kochi | Computers, Phones, TVs | Free Pickup | EWaste Kochi',
+    metaDescription: 'Electronics recycling near you in Kochi. Computers, laptops, phones, TVs, printers. KSPCB authorized. Free bulk pickup. Certificate of Recycling provided. Call 24/7.',
+    price: 'Free for 10+ items',
+    priceSchema: '0',
+    priceCurrency: 'INR',
+    badges: ['KSPCB Authorized', 'All Electronics', 'Free Bulk Pickup', 'Zero Landfill'],
+    relatedServices: ['e-waste-recycling-kochi', 'computer-recycling', 'laptop-buyback-kochi'],
+    schemaType: 'RecyclingService',
+  },
+  {
+    slug: 'computer-recycling',
+    name: 'Computer Recycling',
+    shortName: 'Computer Recycling',
+    category: 'recycling',
+    isPillar: true,
+    icon: '🖥️',
+    tagline: 'Desktop & Laptop Computer Recycling in Kochi',
+    description: 'Recycle old computers in Kochi. Desktops, laptops, all-in-ones, workstations. Free pickup for businesses. Data destruction included. KSPCB authorized.',
+    longDescription: `Computer recycling in Kochi made simple. EWaste Kochi recycles all types of computers: desktop PCs, laptops, all-in-one computers, workstations, servers, and computer peripherals. Whether you have a single old computer or hundreds from an office refresh, we provide compliant, environmentally responsible recycling.
+
+**What we recycle:** Desktop computers (towers, SFF, USFF), laptops and notebooks, all-in-one PCs, workstations, computer monitors, keyboards, mice, cables, and computer accessories.
+
+**Data security guaranteed:** All computers with storage drives undergo NIST 800-88 certified data wiping or physical destruction. Certificate of Destruction provided for every device. This is essential for businesses handling sensitive data and required for DPDP Act 2023 compliance.
+
+**Business computer recycling:** Free pickup for 10+ computers anywhere in Kochi. Same-day service available for Infopark, Smart City, and Kakkanad. Full audit documentation provided.`,
+    keywords: ['computer recycling', 'recycle computers', 'computer recycling kochi', 'desktop recycling', 'old computer disposal', 'computer recycling near me', 'where to recycle old computers'],
+    metaTitle: 'Computer Recycling Kochi | Desktops, Laptops, Workstations | Free Pickup | EWaste Kochi',
+    metaDescription: 'Recycle computers in Kochi. Desktops, laptops, workstations. Free business pickup. NIST data destruction included. KSPCB authorized. Certificate provided. Call 24/7.',
+    price: 'Free for 10+ computers',
+    priceSchema: '0',
+    priceCurrency: 'INR',
+    badges: ['KSPCB Authorized', 'Data Destruction Included', 'Free Business Pickup', 'All Brands'],
+    relatedServices: ['e-waste-recycling-kochi', 'laptop-buyback-kochi', 'data-destruction-kochi'],
+    schemaType: 'RecyclingService',
+  },
+  {
+    slug: 'secure-computer-recycling',
+    name: 'Secure Computer Recycling',
+    shortName: 'Secure Computer Recycling',
+    category: 'data',
+    isPillar: true,
+    icon: '🔒',
+    tagline: 'NIST-Certified Secure Computer Recycling in Kochi',
+    description: 'Secure computer recycling with certified data destruction in Kochi. NIST 800-88 & DoD compliant. Certificate of Destruction for every device. DPDP Act ready.',
+    longDescription: `Secure computer recycling is not just about environmental responsibility — it's about protecting your data. EWaste Kochi provides NIST 800-88 and DoD 5220.22-M certified secure computer recycling for businesses, government agencies, hospitals, and educational institutions across Kochi.
+
+**What makes our computer recycling secure:** NIST 800-88 certified data wiping with verification, physical hard drive shredding available, chain-of-custody documentation, tamper-evident transport, GPS-tracked vehicles, secure facility with 24/7 monitoring, and Certificate of Destruction for every device.
+
+**Compliance ready:** Our secure recycling process meets DPDP Act 2023, RBI, SEBI, ISO 27001, and IT Act requirements. Perfect for banks, financial services, healthcare, IT companies, and government organizations.
+
+**On-site destruction available:** For maximum security, we can destroy hard drives at your premises with our mobile shredding unit. Witness the destruction and receive your Certificate of Destruction immediately.`,
+    keywords: ['secure computer recycling', 'secure computer disposal', 'certified computer recycling', 'secure IT recycling', 'data secure computer disposal', 'NIST computer recycling'],
+    metaTitle: 'Secure Computer Recycling Kochi | NIST Certified | Certificate of Destruction | EWaste Kochi',
+    metaDescription: 'Secure computer recycling in Kochi. NIST 800-88 certified data destruction. Certificate of Destruction every device. DPDP Act compliant. On-site shredding available.',
+    price: '₹299–₹599 per computer',
+    priceSchema: '299',
+    priceCurrency: 'INR',
+    badges: ['NIST 800-88', 'DoD 5220.22-M', 'Certificate of Destruction', 'DPDP Compliant'],
+    relatedServices: ['data-destruction-kochi', 'hard-drive-shredding-kochi', 'itad-kochi'],
+    schemaType: 'ProfessionalService',
+  },
+  {
+    slug: 'laptop-recycling-near-me',
+    name: 'Laptop Recycling Near Me',
+    shortName: 'Laptop Recycling',
+    category: 'recycling',
+    isPillar: true,
+    icon: '💻',
+    tagline: 'Laptop Recycling & Buyback Near You in Kochi',
+    description: 'Recycle or sell your old laptop near you in Kochi. All brands accepted. Best buyback prices. Free pickup. Data securely wiped. Same-day payment.',
+    longDescription: `Searching for "laptop recycling near me" in Kochi? EWaste Kochi offers both recycling and buyback options for old laptops. We accept all brands: Dell, HP, Lenovo, Apple MacBook, Asus, Acer, MSI, and more. Whether your laptop is working, damaged, or completely dead, we have a solution.
+
+**Laptop buyback (working laptops):** Get the best prices for working laptops in Kochi. MacBook Pro up to ₹65,000, MacBook Air up to ₹45,000, Dell/HP business laptops up to ₹18,000. Same-day payment via UPI or bank transfer.
+
+**Laptop recycling (non-working):** Non-working laptops are dismantled and recycled responsibly. We recover valuable materials (gold, silver, copper) and ensure hazardous components (batteries, mercury) are safely disposed.
+
+**Data security:** Every laptop undergoes NIST 800-88 certified data wiping. Certificate of Destruction provided. Free pickup for 5+ laptops anywhere in Kochi.`,
+    keywords: ['laptop recycling near me', 'recycle laptop near me', 'laptop disposal near me', 'sell laptop near me', 'old laptop recycling kochi', 'laptop buyback near me'],
+    metaTitle: 'Laptop Recycling Near Me Kochi | Buyback & Recycling | Free Pickup | EWaste Kochi',
+    metaDescription: 'Laptop recycling near you in Kochi. All brands accepted. Best buyback prices. Free pickup. Data securely wiped. Same-day payment. MacBook up to ₹65K. Call now.',
+    price: '₹2,000 – ₹80,000+ buyback',
+    priceSchema: '2000',
+    priceCurrency: 'INR',
+    badges: ['Best Prices Kerala', 'All Brands', 'Free Pickup', 'Same-Day Payment'],
+    relatedServices: ['laptop-buyback-kochi', 'computer-recycling', 'data-destruction-kochi'],
+    schemaType: 'RecyclingService',
+  },
+  {
+    slug: 'electronic-waste-disposal',
+    name: 'Electronic Waste Disposal',
+    shortName: 'E-Waste Disposal',
+    category: 'recycling',
+    isPillar: true,
+    icon: '🗑️',
+    tagline: 'Safe Electronic Waste Disposal in Kochi & Kerala',
+    description: 'Safe electronic waste disposal in Kochi. We dispose of all e-waste: computers, phones, TVs, batteries. KSPCB authorized. Free pickup. Certificate provided.',
+    longDescription: `Electronic waste disposal in Kochi requires a certified approach. EWaste Kochi is a KSPCB-authorized e-waste disposal facility serving all of Ernakulam district and Kerala. We dispose of all types of electronic waste in compliance with E-Waste (Management) Rules 2022.
+
+**What is electronic waste:** Computers, laptops, tablets, mobile phones, TVs, monitors, printers, scanners, keyboards, mice, cables, chargers, batteries, electronic toys, small appliances, and more.
+
+**Why proper disposal matters:** E-waste contains hazardous materials like lead, mercury, cadmium, and arsenic. Improper disposal in landfills leads to soil and water contamination. Under E-Waste Rules 2022, businesses must dispose of e-waste only through authorized recyclers.
+
+**Our disposal process:** Collection → Inventory → Data destruction (if needed) → Dismantling → Material recovery → Hazardous material safe disposal → Certificate of Disposal. Zero landfill commitment.`,
+    keywords: ['electronic waste disposal', 'e waste disposal', 'ewaste disposal', 'electronic waste disposal near me', 'e waste disposal kochi', 'where to dispose electronic waste'],
+    metaTitle: 'Electronic Waste Disposal Kochi | Safe E-Waste Disposal | Free Pickup | EWaste Kochi',
+    metaDescription: 'Safe electronic waste disposal in Kochi. All e-waste accepted. KSPCB authorized. Free pickup. Certificate of Disposal. E-Waste Rules 2022 compliant. Call 24/7.',
+    price: 'Free for 10+ items',
+    priceSchema: '0',
+    priceCurrency: 'INR',
+    badges: ['KSPCB Authorized', 'All E-Waste', 'Free Pickup', 'Certificate Provided'],
+    relatedServices: ['e-waste-recycling-kochi', 'battery-recycling-near-me', 'electronics-recycling-near-me'],
+    schemaType: 'RecyclingService',
+  },
+  {
+    slug: 'old-computer-disposal',
+    name: 'Old Computer Disposal',
+    shortName: 'Old Computer Disposal',
+    category: 'recycling',
+    isPillar: true,
+    icon: '💻',
+    tagline: 'Safe Old Computer Disposal in Kochi & Ernakulam',
+    description: 'Dispose of old computers safely in Kochi. Desktops, laptops, all brands. Free pickup for businesses. Data destruction included. KSPCB authorized.',
+    longDescription: `Old computer disposal in Kochi requires careful handling — both for data security and environmental compliance. EWaste Kochi provides safe, certified old computer disposal services across Ernakulam district.
+
+**We dispose of all old computers:** Desktop PCs (towers, SFF, all-in-one), laptops and notebooks, old CRT monitors, LCD/LED monitors, computer peripherals, cables and accessories, and computer components.
+
+**Data security first:** Old computers often contain sensitive personal or business data. Simply deleting files or formatting is not enough. We provide NIST 800-88 certified data wiping or physical hard drive destruction with Certificate of Destruction.
+
+**Environmental compliance:** As a KSPCB-authorized recycler, we ensure your old computers are disposed of in compliance with E-Waste Rules 2022. No landfill dumping — 100% responsible recycling.`,
+    keywords: ['old computer disposal', 'dispose old computers', 'old computer disposal near me', 'where to dispose old computers', 'old computer recycling', 'old laptop disposal'],
+    metaTitle: 'Old Computer Disposal Kochi | Safe Disposal | Free Pickup | Data Wiped | EWaste Kochi',
+    metaDescription: 'Dispose of old computers safely in Kochi. Desktops, laptops, all brands. Free business pickup. NIST data destruction. KSPCB authorized. Certificate provided. Call 24/7.',
+    price: 'Free for 10+ computers',
+    priceSchema: '0',
+    priceCurrency: 'INR',
+    badges: ['KSPCB Authorized', 'Data Destruction', 'Free Pickup', 'All Brands'],
+    relatedServices: ['computer-recycling', 'data-destruction-kochi', 'laptop-buyback-kochi'],
+    schemaType: 'RecyclingService',
+  },
+  {
+    slug: 'sell-old-electronics',
+    name: 'Sell Old Electronics',
+    shortName: 'Sell Old Electronics',
+    category: 'buyback',
+    isPillar: true,
+    icon: '💰',
+    tagline: 'Best Prices for Old Electronics in Kochi',
+    description: 'Sell your old electronics in Kochi for the best prices. Laptops, phones, tablets, desktops. Instant payment. Free pickup. All brands accepted.',
+    longDescription: `Want to sell old electronics in Kochi? EWaste Kochi offers the best buyback prices for used electronics in Kerala. We buy laptops, mobile phones, tablets, desktop computers, and other electronic devices — working or not.
+
+**Electronics we buy:** Laptops (Dell, HP, Lenovo, Apple, Asus, Acer), mobile phones (iPhone, Samsung, OnePlus, Xiaomi, all brands), tablets and iPads, desktop computers, gaming consoles, smartwatches, and other gadgets.
+
+**Why sell to us:** Better prices than Cashify, OLX, or local dealers (we sell directly to business buyers), instant payment via UPI/bank transfer, free pickup for 5+ items, NIST-certified data wiping included, and transparent pricing with no hidden deductions.
+
+**Current buyback prices (April 2026):** MacBook Pro M3: up to ₹65,000 | iPhone 15 Pro Max: up to ₹75,000 | Dell Latitude i7 (2020+): up to ₹18,000 | iPad Pro: up to ₹45,000`,
+    keywords: ['sell old electronics', 'sell old electronics near me', 'sell used electronics', 'sell electronics kochi', 'sell old laptop', 'sell old phone', 'electronics buyback'],
+    metaTitle: 'Sell Old Electronics Kochi | Best Prices | Laptops, Phones | Instant Payment | EWaste Kochi',
+    metaDescription: 'Sell old electronics in Kochi for best prices. Laptops, phones, tablets. Better than Cashify. Instant UPI payment. Free pickup. MacBook up to ₹65K. Call now.',
+    price: 'We pay you — up to ₹75,000',
+    priceSchema: '0',
+    priceCurrency: 'INR',
+    badges: ['Best Prices Kerala', 'Instant Payment', 'Free Pickup', 'All Brands'],
+    relatedServices: ['laptop-buyback-kochi', 'mobile-recycling-kochi', 'sell-electronics-kochi'],
+    schemaType: 'BuyAction',
+  },
+  {
+    slug: 'secure-laptop-disposal',
+    name: 'Secure Laptop Disposal',
+    shortName: 'Secure Laptop Disposal',
+    category: 'data',
+    isPillar: true,
+    icon: '🔐',
+    tagline: 'Certified Secure Laptop Disposal in Kochi',
+    description: 'Secure laptop disposal with certified data destruction in Kochi. NIST 800-88 compliant. Certificate of Destruction. DPDP Act ready. On-site available.',
+    longDescription: `Secure laptop disposal is critical for businesses handling sensitive data. EWaste Kochi provides NIST 800-88 certified secure laptop disposal services for corporate clients, government agencies, and organizations across Kochi.
+
+**Our secure disposal process:** Chain-of-custody documentation from pickup to destruction, tamper-evident sealed transport, NIST 800-88 certified data wiping with verification, physical hard drive shredding option, Certificate of Destruction for every laptop, and audit-ready documentation.
+
+**Compliance coverage:** DPDP Act 2023, RBI guidelines, SEBI regulations, ISO 27001, IT Act 2000. Perfect for banks, financial services, healthcare providers, IT companies, law firms, and government departments.
+
+**On-site disposal:** For maximum security, we offer on-site laptop hard drive destruction at your premises. Watch the destruction process and receive your Certificate of Destruction immediately.`,
+    keywords: ['secure laptop disposal', 'secure laptop recycling', 'certified laptop disposal', 'laptop data destruction', 'secure disposal of laptops', 'business laptop disposal'],
+    metaTitle: 'Secure Laptop Disposal Kochi | NIST Certified | Certificate of Destruction | EWaste Kochi',
+    metaDescription: 'Secure laptop disposal in Kochi. NIST 800-88 certified data destruction. Certificate of Destruction. DPDP Act compliant. On-site shredding available. Call 24/7.',
+    price: '₹299–₹599 per laptop',
+    priceSchema: '299',
+    priceCurrency: 'INR',
+    badges: ['NIST 800-88', 'Certificate of Destruction', 'DPDP Compliant', 'On-Site Available'],
+    relatedServices: ['data-destruction-kochi', 'hard-drive-shredding-kochi', 'itad-kochi'],
+    schemaType: 'ProfessionalService',
+  },
+   {
+    slug: 'business-it-decommissioning',
+    name: 'Business IT Decommissioning',
+    shortName: 'IT Decommissioning',
+    category: 'corporate',
+    isPillar: true,
+    icon: '🏢',
+    tagline: 'Complete IT Decommissioning Services for Businesses',
+    description: 'Full-service IT decommissioning for businesses in Kochi. Office closures, data centre shutdowns, IT refreshes. Asset recovery, data destruction, recycling.',
+    longDescription: `Business IT decommissioning requires careful planning and execution. EWaste Kochi provides end-to-end IT decommissioning services for office closures, data centre shutdowns, IT refreshes, and business relocations across Kochi and Kerala.
+
+Our decommissioning services: IT asset inventory and valuation, secure data destruction (NIST/DoD certified), asset remarketing and buyback, responsible recycling of non-recoverable equipment, chain-of-custody documentation, Certificate of Destruction for all storage devices, and EPR compliance documentation.
+
+Types of decommissioning: Office closure IT clearance, data centre decommissioning, server room shutdown, IT refresh projects, business relocation IT moves, and startup wind-down services.
+
+Industries served: IT companies, banks and financial services, hospitals and healthcare, educational institutions, government agencies, manufacturing, and retail chains.`,
+    keywords: ['business it decommissioning', 'IT decommissioning services', 'office IT clearance', 'data centre decommissioning', 'IT asset decommissioning', 'corporate IT disposal'],
+    metaTitle: 'Business IT Decommissioning Kochi | Office Clearance | Data Centre | EWaste Kochi',
+    metaDescription: 'Business IT decommissioning in Kochi. Office closures, data centre shutdowns, IT refreshes. Asset recovery, certified data destruction, recycling. Full documentation.',
+    price: 'Quote-based',
+    badges: ['Full-Service', 'Asset Recovery', 'Data Destruction', 'EPR Compliant'],
+    relatedServices: ['itad-kochi', 'server-recycling-kochi', 'data-destruction-kochi'],
+    schemaType: 'ProfessionalService',
+  },
+  {
+    slug: 'hard-drive-degaussing-kochi',
+    name: 'Hard Drive Degaussing Kochi',
+    shortName: 'Hard Drive Degaussing',
+    category: 'data',
+    isPillar: false,
+    icon: '🧲',
+    tagline: 'Magnetic Data Destruction for HDDs, Tapes & Legacy Media',
+    description: 'Professional hard drive degaussing in Kochi. Uses powerful magnetic fields to permanently erase data from HDDs, tapes, floppies. NIST 800-88 compliant. Certificate provided.',
+    longDescription: `Hard drive degaussing is a magnetic data destruction method that uses a powerful electromagnetic field to permanently erase data from magnetic storage media. EWaste Kochi provides professional degaussing services in Kochi for hard drives, backup tapes, floppy disks, and other magnetic media.
+
+**What degaussing destroys:** Traditional hard disk drives (HDDs), magnetic tapes (LTO, DLT, DAT), floppy disks, VHS tapes, and any media that stores data magnetically. **Does NOT work** on SSDs, flash drives, or optical media — those require physical shredding.
+
+**Why choose degaussing:** For legacy enterprise environments with thousands of backup tapes or older HDDs, degaussing is faster and more cost-effective than individual shredding. It's NIST 800-88 compliant and produces a verifiable destruction certificate. Ideal for banks, government offices, and data centers retiring tape libraries.
+
+**Our degaussing process:** Media intake → logging with serial numbers → degaussing chamber (field strength >30,000 Oersted) → verification → Certificate of Destruction with device list. All jobs completed within 48 hours.`,
+    keywords: ['hard drive degaussing kochi', 'degaussing service kochi', 'magnetic data destruction kochi', 'tape degaussing kochi', 'HDD degaussing kerala'],
+    metaTitle: 'Hard Drive Degaussing Kochi | Magnetic Data Destruction | HDD, Tape, Floppy | EWaste Kochi',
+    metaDescription: 'Professional hard drive degaussing in Kochi. NIST 800-88 compliant magnetic data destruction for HDDs, backup tapes, floppy disks. Certificate of Destruction provided.',
+    price: '₹80–₹200 per drive/tape',
+    priceSchema: '80',
+    priceCurrency: 'INR',
+    badges: ['NIST 800-88', 'Magnetic Erasure', 'Tape Specialist', 'Fast Turnaround'],
+    relatedServices: ['hard-drive-shredding-kochi', 'data-destruction-kochi', 'server-recycling-kochi'],
+    schemaType: 'ProfessionalService',
+  },
+  {
+    slug: 'computer-recycling-near-me',
+    name: 'Computer Recycling Near Me',
+    shortName: 'Computer Recycling Near Me',
+    category: 'recycling',
+    isPillar: true,
+    icon: '🖥️',
+    tagline: 'Find Computer Recycling Near You in Kochi & Ernakulam',
+    description: 'Computer recycling near you in Kochi. We recycle desktops, laptops, all-in-ones, and workstations. Free pickup for businesses. NIST data destruction included. KSPCB authorized.',
+    longDescription: `Looking for "computer recycling near me" in Kochi? EWaste Kochi is your local KSPCB-authorized computer recycling facility serving all of Ernakulam district. We recycle all types of computers: desktop PCs, laptops, all-in-ones, workstations, servers, and computer peripherals.
+
+Why computer recycling matters: E-waste contains hazardous materials like lead, mercury, cadmium, and flame retardants. Under India's E-Waste Rules 2022, businesses must use authorized recyclers. EWaste Kochi ensures 100% compliant processing with zero landfill commitment.
+
+What we recycle: Desktop computers (towers, SFF, USFF), laptops and notebooks, all-in-one PCs, computer monitors, keyboards, mice, cables, printers, scanners, and other computer accessories.
+
+Our computer recycling process: Collection → Secure data destruction (NIST 800-88) → Dismantling → Material segregation → Precious metal recovery → Hazardous material safe disposal → Certificate of Recycling.`,
+    keywords: ['computer recycling near me', 'recycle computers near me', 'computer disposal near me', 'old computer recycling', 'desktop recycling near me'],
+    metaTitle: 'Computer Recycling Near Me Kochi | Desktops, Laptops | Free Pickup | EWaste Kochi',
+    metaDescription: 'Computer recycling near you in Kochi. Desktops, laptops, workstations. Free business pickup. NIST data destruction included. KSPCB authorized.',
+    price: 'Free for 10+ computers',
+    priceSchema: '0',
+    priceCurrency: 'INR',
+    badges: ['KSPCB Authorized', 'Data Destruction Included', 'Free Business Pickup', 'All Brands'],
+    relatedServices: ['e-waste-recycling-kochi', 'laptop-buyback-kochi', 'data-destruction-kochi'],
+    schemaType: 'RecyclingService',
+  },
+  {
+    slug: 'electronics-recycling-near-me',
+    name: 'Electronics Recycling Near Me',
+    shortName: 'Electronics Recycling Near Me',
+    category: 'recycling',
+    isPillar: true,
+    icon: '♻️',
+    tagline: 'Electronics Recycling Near You in Kochi & Kerala',
+    description: 'Find electronics recycling near you in Kochi. All e-waste accepted: computers, phones, TVs, batteries, printers. Free bulk pickup. KSPCB authorized.',
+    longDescription: `Searching for "electronics recycling near me" in Kochi? EWaste Kochi is your local KSPCB-authorized electronics recycler serving all of Ernakulam district and Kerala. We accept all types of electronic waste from consumer electronics to large industrial equipment.
+
+Why certified electronics recycling: Uncertified recyclers often strip valuable components and dump hazardous materials illegally. As a KSPCB-authorized facility, we ensure 100% compliant processing with zero landfill commitment and full documentation for your records.
+
+What we recycle: Computers, laptops, servers, mobile phones, tablets, TVs, monitors, printers, networking equipment, air conditioners, refrigerators, washing machines, batteries, UPS systems, and all categories under E-Waste Rules 2022.
+
+Our electronics recycling process: Collection → Data destruction (if needed) → Dismantling into component streams → Material segregation → Precious metal recovery → Hazardous material safe disposal → Certificate of Recycling provided. Free pickup for 10+ items.`,
+    keywords: ['electronics recycling near me', 'electronic recycling near me', 'e waste recycling near me', 'recycle electronics near me', 'where to recycle electronics'],
+    metaTitle: 'Electronics Recycling Near Me Kochi | Computers, Phones, TVs | Free Pickup | EWaste Kochi',
+    metaDescription: 'Electronics recycling near you in Kochi. All e-waste accepted. KSPCB authorized. Free bulk pickup. Certificate provided. Serving all Ernakulam.',
+    price: 'Free for 10+ items',
+    priceSchema: '0',
+    priceCurrency: 'INR',
+    badges: ['KSPCB Authorized', 'All Electronics', 'Free Pickup', 'Zero Landfill'],
+    relatedServices: ['e-waste-recycling-kochi', 'computer-recycling-near-me', 'battery-recycling-near-me'],
+    schemaType: 'RecyclingService',
+  },
 ];
 
 // Derived collections for convenience

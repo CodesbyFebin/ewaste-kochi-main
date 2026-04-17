@@ -27,3 +27,4 @@ Thumbs.db
 # Misc
 *.zip
 *.deb
+.vercel
