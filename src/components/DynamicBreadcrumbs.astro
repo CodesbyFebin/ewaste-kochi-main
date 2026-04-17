@@ -1,0 +1,102 @@
+// src/components/DynamicBreadcrumbs.astro
+---
+interface Props {
+  breadcrumbs?: {
+    name: string;
+    url?: string;
+  }[];
+  pageTitle?: string;
+}
+
+const { breadcrumbs, pageTitle } = Astro.props;
+
+// Generate default breadcrumbs from URL if not provided
+const generatedBreadcrumbs = !breadcrumbs || breadcrumbs.length === 0
+  ? [{ name: 'Home', url: 'https://ewastekochi.com/' }]
+  : breadcrumbs;
+
+// Add current page to breadcrumbs
+const currentPage = pageTitle ? [{ name: pageTitle }] : [];
+const fullBreadcrumbs = [...generatedBreadcrumbs, ...currentPage];
+---
+
+<nav aria-label="breadcrumb" class="breadcrumb-navigation">
+  <ol class="breadcrumb-list">
+    {fullBreadcrumbs.map((crumb, index) => (
+      <li class="breadcrumb-item">
+        {index < fullBreadcrumbs.length - 1 ? (
+          <a href={crumb.url} class="breadcrumb-link">
+            {crumb.name}
+          </a>
+        ) : (
+          <span class="breadcrumb-current" aria-current="page">
+            {crumb.name}
+          </span>
+        )}
+        {index < fullBreadcrumbs.length - 1 && (
+          <span class="breadcrumb-separator" aria-hidden="true">›</span>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<style>
+  .breadcrumb-navigation {
+    margin-bottom: 1.5rem;
+  }
+  
+  .breadcrumb-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .breadcrumb-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .breadcrumb-link {
+    color: var(--blue);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .breadcrumb-link:hover {
+    color: var(--blue-dark);
+  }
+  
+  .breadcrumb-separator {
+    margin: 0 0.5rem;
+    color: var(--text-muted);
+    font-weight: bold;
+  }
+  
+  .breadcrumb-current {
+    color: var(--text);
+    font-weight: 500;
+  }
+  
+  @media (max-width: 768px) {
+    .breadcrumb-list {
+      font-size: 0.9rem;
+    }
+  }
+</style>
+
+<script>
+  // Enhance breadcrumbs with smooth scrolling for in-page links
+  document.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('.breadcrumb-link');
+    links.forEach(link => {
+      link.addEventListener('click', (e) => {
+        // Could add smooth scrolling logic here if needed
+        console.log('Breadcrumb navigation:', link.getAttribute('href'));
+      });
+    });
+  });
+</script>
