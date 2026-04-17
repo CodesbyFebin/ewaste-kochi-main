@@ -138,18 +138,13 @@ export const generateServiceFaqs = (svcName) => [
 // GSC-targeted: generate massive FAQ list for pillar pages
 export const generateMassiveFaqs = (topicName) => {
   const base = [
-    { q: `What is ${topicName} and why is it important for Kochi businesses?`, a: `${topicName} in Kochi requires KSPCB-authorized handling under India's E-Waste Rules 2022. EWaste Kochi is the certified authority for ${topicName}, providing full compliance documentation, NIST 800-88 data destruction, and Certificate of Destruction for every engagement.` },
-    { q: `How does EWaste Kochi handle ${topicName}?`, a: `Our certified process for ${topicName}: asset intake and tagging, NIST 800-88 data destruction, KSPCB-authorized recycling, and full audit trail documentation including Certificate of Destruction and DPDP Act compliance evidence.` },
-    { q: `Is ${topicName} free for corporate clients in Kochi?`, a: `Free collection for 10+ devices. Certificate of Destruction included at no extra cost. Buyback value for working devices offsets or eliminates service costs for most corporate clients.` },
-    { q: `What certification is required for ${topicName} in Kerala?`, a: `KSPCB authorization is mandatory under E-Waste Rules 2022. EWaste Kochi holds authorization No. KL/EW/628, one of only three authorized facilities in Ernakulam district.` },
-    { q: `How quickly can you complete ${topicName} in Kochi?`, a: `Standard turnaround: same-day to 48 hours. Emergency service (4-hour SLA) available for urgent corporate requirements. Certificate of Destruction delivered within 24 hours of completion.` },
+    { q: `What is ${topicName} and why is it important for Kochi businesses?`, a: `${topicName} in Kochi requires KSPCB-authorized handling under India's E-Waste Rules 2022. Certified providers ensure proper data destruction, material recovery, and full compliance documentation.` },
+    { q: `How do you handle ${topicName}?`, a: `Our certified process covers asset intake, NIST 800-88 data destruction, KSPCB-authorized recycling, and complete audit trail with Certificate of Destruction and DPDP compliance evidence.` },
+    { q: `Is ${topicName} free for corporate clients in Kochi?`, a: `Collection is free for 10+ devices. Certificate of Destruction included. Buyback value for working devices often offsets costs entirely.` },
+    { q: `What certification is required for ${topicName} in Kerala?`, a: `KSPCB authorization under E-Waste Rules 2022 is mandatory. We hold authorization No. KL/EW/628 — one of three authorized facilities in Ernakulam.` },
+    { q: `How quickly can you complete ${topicName} in Kochi?`, a: `Standard turnaround is same-day to 48 hours. Emergency 4-hour SLA available. Certificate of Destruction delivered within 24 hours.` },
     ...faqs.slice(0, 10).map(f => ({ q: f.q, a: f.a })),
   ];
-  // Supplement with location-based variants
-  const locs = ['Infopark', 'Kakkanad', 'Smart City', 'Edappally', 'MG Road', 'Fort Kochi', 'Aluva', 'Kalamassery'];
-  locs.forEach(loc => {
-    base.push({ q: `Do you provide ${topicName} in ${loc}, Kochi?`, a: `Yes. EWaste Kochi provides full ${topicName} services in ${loc} with free pickup for 10+ devices, same-day processing and Certificate of Destruction. Infopark and Smart City clients get priority same-day slots.` });
-  });
   return base;
 };
 
