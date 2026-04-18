@@ -7,7 +7,9 @@ import vercel from '@astrojs/vercel';
 export default defineConfig({
   site: 'https://ewastekochi.com',
   output: 'static',
-  adapter: vercel(),
+  adapter: vercel({
+    webAnalytics: { enabled: true }
+  }),
   integrations: [
     sitemap({
       changefreq: 'weekly',
