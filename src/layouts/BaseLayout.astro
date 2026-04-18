@@ -4,6 +4,7 @@
 import { contact } from "../data/contact.js";
 import ChatbotWidget from "../components/ChatbotWidget.astro";
 import GTM_INIT from "../components/GTM_INIT.astro";
+import SpeedInsights from "@vercel/speed-insights/astro";
 import type { Metadata } from "../types/metadata.js";
 
 interface Props extends Metadata {}
@@ -278,6 +279,7 @@ const baseSchema = {
   <body>
     <slot />
     <ChatbotWidget pageContext={chatbotContext} />
+    <SpeedInsights />
 
     <style is:global>
       /* ══════════════════════════════════════════════
