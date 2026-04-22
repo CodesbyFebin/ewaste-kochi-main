@@ -1,6 +1,6 @@
 # ?? AI SEO Autopilot Report
 
-**Generated:** 2026-04-22 23:50:59
+**Generated:** 2026-04-23 02:02:13
 **Analysis Period:** Last 28 days
 **Total Opportunities:** 3
 **High Priority:** 3

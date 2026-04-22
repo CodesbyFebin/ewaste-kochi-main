@@ -451,16 +451,16 @@ class BlogEnhancementEngine {
                 default: return false;
               }
             }
-          }
-        } else if (c.includes('||')) {
+          } else if (c.includes('||')) {
             return c.split('||').some(subCond => this.evaluateCondition(subCond, content, frontmatter));
           }
+          return false;
         });
       }
       
       return eval(condition);
     } catch (error) {
-      console.error('❌ Condition evaluation error:', error.message);
+      console.error('Condition evaluation error:', error.message);
       return false;
     }
   }
