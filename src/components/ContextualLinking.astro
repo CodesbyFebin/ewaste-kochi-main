@@ -1,0 +1,362 @@
+---
+// Contextual Linking Component for SEO Authority Loops
+// This component creates smart contextual links between related pages
+
+interface LinkItem {
+  url: string;
+  text: string;
+  context: string;
+  relevance: number;
+}
+
+interface LinkCluster {
+  title: string;
+  links: LinkItem[];
+  type: 'service' | 'location' | 'blog' | 'process';
+}
+
+const contextualLinks: LinkCluster[] = [
+  {
+    title: "Related E-Waste Services",
+    type: "service",
+    links: [
+      {
+        url: "/itad-services-kochi/",
+        text: "IT Asset Disposition",
+        context: "Complete IT equipment lifecycle management with NIST 800-88 data destruction",
+        relevance: 95
+      },
+      {
+        url: "/laptop-recycling-near-me/",
+        text: "Laptop Recycling",
+        context: "Secure laptop disposal and buyback program for businesses and individuals",
+        relevance: 90
+      },
+      {
+        url: "/battery-recycling-near-me/",
+        text: "Battery Recycling",
+        context: "Safe battery disposal preventing toxic environmental contamination",
+        relevance: 85
+      },
+      {
+        url: "/blog/service-data-destruction/",
+        text: "Data Destruction Methods",
+        context: "Compare NIST 800-88 vs DOD 5220.22-M data sanitization standards",
+        relevance: 88
+      }
+    ]
+  },
+  {
+    title: "Service Areas in Kochi",
+    type: "location",
+    links: [
+      {
+        url: "/locations/kakkanad/",
+        text: "Kakkanad",
+        context: "IT hub and government offices - free pickup for 10+ devices",
+        relevance: 92
+      },
+      {
+        url: "/locations/infopark/",
+        text: "Infopark",
+        context: "Major IT park with 200+ companies - same-day service available",
+        relevance: 94
+      },
+      {
+        url: "/locations/smart-city/",
+        text: "Smart City Kochi",
+        context: "Technology park and innovation center - priority corporate service",
+        relevance: 91
+      },
+      {
+        url: "/blog/location-kakkanad/",
+        text: "E-Waste Collection in Kakkanad",
+        context: "Complete guide to e-waste disposal options in Kakkanad area",
+        relevance: 87
+      }
+    ]
+  },
+  {
+    title: "Process & Compliance",
+    type: "process",
+    links: [
+      {
+        url: "/blog/service-itad/",
+        text: "ITAD Process Guide",
+        context: "Step-by-step guide to certified IT asset disposition",
+        relevance: 89
+      },
+      {
+        url: "/ultimate-seo-guide/",
+        text: "E-Waste Compliance Guide",
+        context: "Complete KSPCB and CPCB compliance requirements for businesses",
+        relevance: 86
+      },
+      {
+        url: "/blog/category-legal/",
+        text: "Legal Requirements",
+        context: "DPDP Act 2023 and E-Waste Rules 2022 compliance",
+        relevance: 91
+      }
+    ]
+  }
+];
+
+// Get current page path to determine relevant links
+const currentPath = Astro.url.pathname;
+
+// Filter links based on current page context
+function getRelevantLinks(path: string): LinkCluster[] {
+  if (path.includes('itad') || path.includes('data-destruction')) {
+    return contextualLinks.filter(cluster => 
+      cluster.type === 'service' || cluster.type === 'process'
+    );
+  }
+  if (path.includes('location') || path.includes('kakkanad') || path.includes('infopark')) {
+    return contextualLinks.filter(cluster => 
+      cluster.type === 'service' || cluster.type === 'location'
+    );
+  }
+  if (path.includes('laptop') || path.includes('battery')) {
+    return contextualLinks.filter(cluster => 
+      cluster.type === 'service' || cluster.type === 'process'
+    );
+  }
+  return contextualLinks;
+}
+
+const relevantLinks = getRelevantLinks(currentPath);
+---
+
+<!-- Contextual Linking Section -->
+<section class="contextual-links" aria-labelledby="contextual-heading">
+  <div class="container">
+    <h2 id="contextual-heading" class="section-title">Related Resources & Services</h2>
+    <p class="section-sub">Explore our comprehensive e-waste management solutions across Kochi</p>
+    
+    <div class="link-grid">
+      {relevantLinks.map(cluster => (
+        <div class="link-cluster" key={cluster.title}>
+          <h3 class="cluster-title">{cluster.title}</h3>
+          <div class="cluster-links">
+            {cluster.links.map(link => (
+              <a href={link.url} class="contextual-link" key={link.url}>
+                <div class="link-content">
+                  <h4 class="link-text">{link.text}</h4>
+                  <p class="link-context">{link.context}</p>
+                  <div class="link-meta">
+                    <span class="relevance-score">Relevance: {link.relevance}%</span>
+                    <span class="link-arrow">Learn more</span>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    <!-- Authority Loop Explanation -->
+    <div class="authority-loop">
+      <div class="loop-content">
+        <h3>Building SEO Authority Through Contextual Linking</h3>
+        <p>Our internal linking strategy creates topical authority loops that help search engines understand the relationship between our services, locations, and expertise. Each contextual link reinforces our position as Kerala's leading e-waste management authority.</p>
+        <div class="loop-benefits">
+          <div class="benefit">
+            <strong>Topical Authority:</strong> Related pages reinforce expertise
+          </div>
+          <div class="benefit">
+            <strong>User Journey:</strong> Logical navigation paths for visitors
+          </div>
+          <div class="benefit">
+            <strong>Crawl Efficiency:</strong> Search engines discover content easily
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.contextual-links {
+  background: linear-gradient(135deg, #0a0f0b 0%, #162018 100%);
+  padding: 4rem 0;
+  border-top: 1px solid rgba(0,255,136,0.1);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #00ff88;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section-sub {
+  font-size: 1.1rem;
+  color: #8aab90;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.link-cluster {
+  background: rgba(22,32,24,0.8);
+  border: 1px solid rgba(0,255,136,0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(12px);
+}
+
+.cluster-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #00ff88;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cluster-title::before {
+  content: '';
+  width: 4px;
+  height: 20px;
+  background: #00ff88;
+  border-radius: 2px;
+}
+
+.cluster-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contextual-link {
+  display: block;
+  background: rgba(0,255,136,0.05);
+  border: 1px solid rgba(0,255,136,0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.contextual-link:hover {
+  background: rgba(0,255,136,0.1);
+  border-color: rgba(0,255,136,0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,255,136,0.1);
+}
+
+.link-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.link-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e4f0e7;
+  margin: 0;
+}
+
+.link-context {
+  font-size: 0.9rem;
+  color: #8aab90;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.link-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.relevance-score {
+  font-size: 0.8rem;
+  color: rgba(0,255,136,0.7);
+  font-weight: 500;
+}
+
+.link-arrow {
+  font-size: 0.8rem;
+  color: #00ff88;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.authority-loop {
+  background: rgba(0,255,136,0.05);
+  border: 1px solid rgba(0,255,136,0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.loop-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #00ff88;
+  margin-bottom: 1rem;
+}
+
+.loop-content p {
+  color: #8aab90;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.loop-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.benefit {
+  background: rgba(22,32,24,0.8);
+  border: 1px solid rgba(0,255,136,0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #8aab90;
+}
+
+.benefit strong {
+  color: #00ff88;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .link-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .loop-benefits {
+    grid-template-columns: 1fr;
+  }
+  
+  .link-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+</style>

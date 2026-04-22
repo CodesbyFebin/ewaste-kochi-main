@@ -24,7 +24,8 @@
     "@astrojs/tailwind": "^5.1.5",
     "@astrojs/vercel": "^9.0.5",
     "@vercel/analytics": "^2.0.1",
-    "astro": "^5.18.1"
+    "astro": "^5.18.1",
+    "web-vitals": "^5.2.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

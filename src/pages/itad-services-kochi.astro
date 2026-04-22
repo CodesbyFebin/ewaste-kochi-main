@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import ClusterInterlinks from "../components/ClusterInterlinks.astro";
+import ContextualLinking from "../components/ContextualLinking.astro";
 import { contact } from "../data/contact";
 
 const pageTitle = "ITAD Services Kochi | 🏆 Kerala's #1 Certified IT Asset Disposition";
@@ -23,18 +24,33 @@ const faqs = [
 
 const schema = {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "IT Asset Disposition (ITAD) Kochi",
-  "provider": { "@id": "https://ewastekochi.com/#organization" },
-  "areaServed": "Kochi, Kerala",
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "ITAD Services",
-    "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Secure Data Destruction" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "IT Asset Valuation & Buyback" } }
-    ]
-  }
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "IT Asset Disposition (ITAD) Kochi",
+      "provider": { "@id": "https://ewastekochi.com/#organization" },
+      "areaServed": "Kochi, Kerala",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "ITAD Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Secure Data Destruction" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "IT Asset Valuation & Buyback" } }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.a
+        }
+      }))
+    }
+  ]
 };
 ---
 
@@ -182,5 +198,9 @@ const schema = {
     </section>
 
   </main>
+  
+  <!-- Contextual Linking for SEO Authority -->
+  <ContextualLinking />
+  
   <Footer />
 </BaseLayout>

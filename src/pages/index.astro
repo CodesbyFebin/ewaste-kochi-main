@@ -1168,4 +1168,85 @@ function setLang(code,name){
 }
 </script>
 
+<!-- Performance Monitoring -->
+  <script type="module">
+    // Core Web Vitals monitoring
+    const vitals = {};
+    
+    function logMetric(name, value, rating) {
+      vitals[name] = { value, rating, timestamp: Date.now() };
+      console.log(`[Performance] ${name}: ${value} (${rating})`);
+      
+      // Store in localStorage for analysis
+      const existing = JSON.parse(localStorage.getItem('ewaste-vitals') || '{}');
+      existing[name] = vitals[name];
+      localStorage.setItem('ewaste-vitals', JSON.stringify(existing));
+      
+      // Send to Google Analytics if available
+      if (typeof gtag !== 'undefined') {
+        gtag('event', name, {
+          event_category: 'Web Vitals',
+          event_label: rating,
+          value: Math.round(name === 'CLS' ? value * 1000 : value),
+          non_interaction: true
+        });
+      }
+    }
+    
+    // Largest Contentful Paint (LCP)
+    new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      logMetric('LCP', lastEntry.startTime, lastEntry.startTime <= 2500 ? 'good' : lastEntry.startTime <= 4000 ? 'needs-improvement' : 'poor');
+    }).observe({ entryTypes: ['largest-contentful-paint'] });
+    
+    // Cumulative Layout Shift (CLS)
+    let clsValue = 0;
+    new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        if (!entry.hadRecentInput) {
+          clsValue += entry.value;
+        }
+      });
+      logMetric('CLS', clsValue, clsValue <= 0.1 ? 'good' : clsValue <= 0.25 ? 'needs-improvement' : 'poor');
+    }).observe({ entryTypes: ['layout-shift'] });
+    
+    // Interaction to Next Paint (INP)
+    new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        logMetric('INP', entry.duration, entry.duration <= 200 ? 'good' : entry.duration <= 500 ? 'needs-improvement' : 'poor');
+      });
+    }).observe({ entryTypes: ['event'] });
+    
+    // First Contentful Paint (FCP)
+    new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+      if (fcpEntry) {
+        logMetric('FCP', fcpEntry.startTime, fcpEntry.startTime <= 1800 ? 'good' : fcpEntry.startTime <= 3000 ? 'needs-improvement' : 'poor');
+      }
+    }).observe({ entryTypes: ['paint'] });
+    
+    // Time to First Byte (TTFB)
+    const navEntry = performance.getEntriesByType('navigation')[0];
+    if (navEntry) {
+      const ttfb = navEntry.responseStart - navEntry.requestStart;
+      logMetric('TTFB', ttfb, ttfb <= 800 ? 'good' : ttfb <= 1800 ? 'needs-improvement' : 'poor');
+    }
+    
+    // Resource timing analysis
+    new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        if (entry.duration > 1000) {
+          console.warn(`[Performance] Slow resource: ${entry.name} - ${entry.duration.toFixed(0)}ms`);
+        }
+      });
+    }).observe({ entryTypes: ['resource'] });
+    
+    // Make vitals available globally for debugging
+    window.ewasteVitals = vitals;
+    console.log('Performance monitoring initialized');
+  </script>
+
 </BaseLayout>
