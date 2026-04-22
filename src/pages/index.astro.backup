@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "EWaste Kochi",
+  "description": "Certified e-waste recycling in Kochi. Free pickup, data destruction, ITAD services.",
+  "areaServed": "Kochi, Kerala",
+  "url": "https://www.ewastekochi.com",
+  "telephone": "+91-XXXX-XXXXXX"
+};
+---
+
+<BaseLayout 
+  title="E-Waste Recycling Kochi - Free Pickup & Data Destruction"
+  description="Certified e-waste disposal in Kochi. Free pickup, hard drive shredding, laptop buyback, ITAD. Trusted by businesses."
+  schema={schema}
+>
+  <h1>E-Waste Recycling Kochi</h1>
+  <p>Secure, responsible, and affordable e-waste disposal across Kochi.</p>
+  <div class="services-grid">
+    <a href="/services/free-ewaste-pickup-kochi/">Free Pickup</a>
+    <a href="/services/data-destruction-kochi/">Data Destruction</a>
+    <a href="/itad/">ITAD Services</a>
+    <a href="/buyback/dell-laptop-kochi/">Sell Dell Laptop</a>
+  </div>
+  <section>
+    <h2>Our Locations</h2>
+    <ul>
+      <li><a href="/locations/kakkanad/">Kakkanad</a></li>
+      <li><a href="/locations/edappally/">Edappally</a></li>
+      <li><a href="/locations/aluva/">Aluva</a></li>
+    </ul>
+  </section>
+</BaseLayout>
