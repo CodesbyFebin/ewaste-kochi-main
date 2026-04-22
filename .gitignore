@@ -29,3 +29,4 @@ Thumbs.db
 *.deb
 .vercel
 .kilocode/
+.env*.local
