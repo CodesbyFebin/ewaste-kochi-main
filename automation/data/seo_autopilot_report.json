@@ -1,0 +1,106 @@
+{
+  "generated_at": "2026-04-22T23:45:15.503889",
+  "site_url": "https://ewastekochi.com/",
+  "analysis_period": "28 days",
+  "total_opportunities": 3,
+  "high_priority_opportunities": 3,
+  "potential_total_impact": 64,
+  "opportunities": [
+    {
+      "type": "LOW_CTR",
+      "page": "/recycling/",
+      "clicks": 10,
+      "impressions": 2000,
+      "ctr": 0.005,
+      "position": 8.5,
+      "priority": "HIGH",
+      "potential_impact": 30,
+      "current_title": "Page Title",
+      "current_description": "Page description",
+      "ai_recommendations": {
+        "title_suggestions": [
+          "E-Waste Recycling in Kochi | EWaste Kochi",
+          "Professional e-waste recycling | Kochi E-Waste",
+          "Certified Electronic Waste Recycling | Kochi"
+        ],
+        "description_suggestions": [
+          "Professional e-waste recycling in Kochi. Free pickup, certified recycling, data destruction. Call +91-9876543210.",
+          "Electronic waste disposal and IT asset recycling services in Kochi. Environmentally responsible."
+        ],
+        "internal_link_suggestions": [
+          "Link from homepage hero section",
+          "Add to main navigation menu",
+          "Create dedicated blog post about this topic"
+        ]
+      },
+      "optimization_type": "TITLE_META_OPTIMIZATION",
+      "estimated_effort": "LOW"
+    },
+    {
+      "type": "LOW_CTR",
+      "page": "/services/data-destruction/",
+      "clicks": 12,
+      "impressions": 1500,
+      "ctr": 0.008,
+      "position": 11.2,
+      "priority": "HIGH",
+      "potential_impact": 18,
+      "current_title": "Data Destruction Services | EWaste Kochi",
+      "current_description": "Certified data destruction and secure IT asset disposal services",
+      "ai_recommendations": {
+        "title_suggestions": [
+          "Data Destruction/ in Kochi | EWaste Kochi",
+          "Professional data destruction/ | Kochi E-Waste",
+          "Certified Electronic Waste Recycling | Kochi"
+        ],
+        "description_suggestions": [
+          "Professional data destruction/ in Kochi. Free pickup, certified recycling, data destruction. Call +91-9876543210.",
+          "Electronic waste disposal and IT asset recycling services in Kochi. Environmentally responsible."
+        ],
+        "internal_link_suggestions": [
+          "Link from homepage hero section",
+          "Add to main navigation menu",
+          "Create dedicated blog post about this topic",
+          "Link from related service pages",
+          "Add to location pages as available service",
+          "Create FAQ cluster around this service"
+        ]
+      },
+      "optimization_type": "TITLE_META_OPTIMIZATION",
+      "estimated_effort": "LOW"
+    },
+    {
+      "type": "LOW_CTR",
+      "page": "/locations/kakkanad/",
+      "clicks": 8,
+      "impressions": 1200,
+      "ctr": 0.0067,
+      "position": 8.5,
+      "priority": "HIGH",
+      "potential_impact": 16,
+      "current_title": "E-Waste Recycling Kakkanad | EWaste Kochi",
+      "current_description": "E-waste recycling and pickup services in Kakkanad, Kochi",
+      "ai_recommendations": {
+        "title_suggestions": [
+          "E-Waste Recycling in Kakkanad/ | EWaste Kochi",
+          "Professional e-waste recycling | Kakkanad/ E-Waste",
+          "Certified Electronic Waste Recycling | Kakkanad/"
+        ],
+        "description_suggestions": [
+          "Professional e-waste recycling in Kakkanad/. Free pickup, certified recycling, data destruction. Call +91-9876543210.",
+          "Electronic waste disposal and IT asset recycling services in Kakkanad/. Environmentally responsible."
+        ],
+        "internal_link_suggestions": [
+          "Link from homepage hero section",
+          "Add to main navigation menu",
+          "Create dedicated blog post about this topic",
+          "Link from service pages as available location",
+          "Add to service area pages",
+          "Create location-specific blog content"
+        ]
+      },
+      "optimization_type": "TITLE_META_OPTIMIZATION",
+      "estimated_effort": "LOW"
+    }
+  ]
+}

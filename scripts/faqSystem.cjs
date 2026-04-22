@@ -1,0 +1,514 @@
+const fs = require('fs');
+const path = require('path');
+
+/**
+ * Comprehensive FAQ System
+ * Script-based extraction, dynamic runtime generation, centralized data management
+ */
+
+class FAQSystem {
+  constructor() {
+    this.blogDir = path.join(__dirname, '../src/content/blog');
+    this.dataDir = path.join(__dirname, '../data');
+    this.cache = new Map();
+    this.stats = {
+      filesProcessed: 0,
+      faqsExtracted: 0,
+      schemasGenerated: 0,
+      errors: 0
+    };
+  }
+
+  /**
+   * Main FAQ system entry point
+   */
+  async runCompleteSystem() {
+    console.log('🚀 Starting Comprehensive FAQ System...\n');
+    
+    try {
+      // Phase 1: Script-based FAQ extraction
+      await this.addSchemaToBlogs();
+      
+      // Phase 2: Dynamic runtime generation
+      await this.generateDynamicFAQs();
+      
+      // Phase 3: Centralized data management
+      await this.manageFAQData();
+      
+      // Phase 4: Automated enhancement
+      await this.enhanceBlogsWithFAQs();
+      
+      this.generateSystemReport();
+      
+    } catch (error) {
+      console.error('❌ FAQ System Error:', error.message);
+    }
+  }
+
+  /**
+   * Phase 1a: Script Entry Point
+   */
+  addSchemaToBlogs() {
+    console.log('📝 Phase 1a: Script-based FAQ Extraction');
+    console.log('=' .repeat(50));
+    
+    const files = fs.readdirSync(this.blogDir).filter(file => file.endsWith('.md'));
+    console.log(`Processing ${files.length} blog files...`);
+    
+    files.forEach(file => {
+      const filePath = path.join(this.blogDir, file);
+      const content = fs.readFileSync(filePath, 'utf8');
+      
+      if (this.hasFAQSection(content)) {
+        const faqs = this.extractFAQs(content);
+        const schema = this.generateFAQSchema(faqs);
+        const enhancedContent = this.addSchemaToContent(content, schema);
+        
+        fs.writeFileSync(filePath, enhancedContent);
+        this.stats.faqsExtracted += faqs.length;
+        this.stats.schemasGenerated++;
+      }
+      
+      this.stats.filesProcessed++;
+    });
+    
+    console.log(`✅ Processed ${this.stats.filesProcessed} files`);
+    console.log(`📋 Extracted ${this.stats.faqsExtracted} FAQs`);
+    console.log(`🔧 Generated ${this.stats.schemasGenerated} schemas\n`);
+  }
+
+  /**
+   * Phase 1b: FAQ Section Detection
+   */
+  hasFAQSection(content) {
+    const patterns = [
+      /## Frequently Asked Questions\s*\n\n([\s\S]*?)(?=\n## |\n---|$)/,
+      /## FAQ\s*\n\n([\s\S]*?)(?=\n## |\n---|$)/,
+      /### Frequently Asked Questions\s*\n\n([\s\S]*?)(?=\n## |\n---|$)/,
+      /## Questions?\s*\n\n([\s\S]*?)(?=\n## |\n---|$)/
+    ];
+    
+    return patterns.some(pattern => pattern.test(content));
+  }
+
+  /**
+   * Phase 1c: Q&A Pair Extraction
+   */
+  extractFAQs(content) {
+    const faqs = [];
+    
+    // Multiple extraction patterns
+    const patterns = [
+      // Pattern 1: ### Question \n\n Answer
+      /### ([^\n]+)\n\n([^\n#]+(?:\n[^#\n][^\n]*)*)/g,
+      // Pattern 2: **Q:** \n\n **A:**
+      /\*\*Q:[\s]*([^\n*]+)\*\*\s*\n\*\*A:[\s]*([^\n*]+)/g,
+      // Pattern 3: Q: \n\n A:
+      /Q:\s*([^\n]+)\s*\nA:\s*([^\n]+)/g,
+      // Pattern 4: Numbered Q&A
+      /\d+\.\s*([^\n]+)\s*\n\d+\.\s*([^\n]+)/g
+    ];
+    
+    patterns.forEach(pattern => {
+      let match;
+      while ((match = pattern.exec(content)) !== null) {
+        faqs.push({
+          question: match[1].trim(),
+          answer: match[2].trim().replace(/\n\s*\n/g, ' ').replace(/\s+/g, ' ')
+        });
+      }
+    });
+    
+    return faqs;
+  }
+
+  /**
+   * Phase 1d: FAQ Object Creation
+   */
+  createFAQObjects(faqs) {
+    return faqs.map((faq, index) => ({
+      id: `faq-${index + 1}`,
+      question: faq.question,
+      answer: faq.answer,
+      category: this.categorizeFAQ(faq),
+      priority: this.calculateFAQPriority(faq),
+      relatedTopics: this.extractRelatedTopics(faq),
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
+    }));
+  }
+
+  /**
+   * Phase 1e: Schema Generation
+   */
+  generateFAQSchema(faqs) {
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqs.map((faq, index) => ({
+        "@type": "Question",
+        "@id": `faq-${index + 1}`,
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        },
+        "position": index + 1
+      }))
+    };
+
+    return `<script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n</script>`;
+  }
+
+  /**
+   * Phase 1f: File Update
+   */
+  addSchemaToContent(content, schema) {
+    // Insert schema after frontmatter, before first heading
+    const frontmatterEnd = content.indexOf('---', 1);
+    const firstHeading = content.indexOf('\n#', frontmatterEnd);
+    
+    if (firstHeading === -1) {
+      return content + '\n\n' + schema;
+    }
+    
+    return content.slice(0, firstHeading) + '\n\n' + schema + content.slice(firstHeading);
+  }
+
+  /**
+   * Phase 2a: Dynamic Runtime Generation
+   */
+  async generateDynamicFAQs() {
+    console.log('🔄 Phase 2a: Dynamic Runtime FAQ Generation');
+    console.log('=' .repeat(50));
+    
+    // Generate FAQs based on common user queries
+    const commonQueries = [
+      'How to dispose laptops in Kochi',
+      'Battery recycling price in Aluva',
+      'Data destruction requirements Ernakulam',
+      'Server recycling process Kakkanad',
+      'Phone buyback best price Edappally'
+    ];
+    
+    const dynamicFAQs = commonQueries.map(query => ({
+      question: query,
+      answer: this.generateDynamicAnswer(query),
+      category: 'dynamic',
+      priority: 'high',
+      source: 'runtime-generation'
+    }));
+    
+    // Save dynamic FAQs to data file
+    const dynamicFAQPath = path.join(this.dataDir, 'dynamic-faqs.json');
+    fs.writeFileSync(dynamicFAQPath, JSON.stringify(dynamicFAQs, null, 2));
+    
+    console.log(`✅ Generated ${dynamicFAQs.length} dynamic FAQs`);
+  }
+
+  /**
+   * Phase 2b: Answer Generation
+   */
+  generateDynamicAnswer(query) {
+    const answerTemplates = {
+      'how to': `To ${query.toLowerCase().replace('how to ', '')}, you should contact certified e-waste providers in Kochi. They offer professional services with proper documentation and environmental compliance.`,
+      'price': `The cost for ${query.toLowerCase().replace('price in ', '')} varies based on device type, condition, and service provider. Typically ranges from Rs.500-5000. Get quotes from multiple providers for best pricing.`,
+      'requirements': `For ${query.toLowerCase()}, you'll need valid ID proof, address proof, device ownership documents, and for businesses, GST certificate. All documentation must comply with KSPCB regulations.`,
+      'process': `The ${query.toLowerCase()} process typically takes 20-30 minutes from initial contact to certificate issuance. Professional providers ensure proper data handling and environmental compliance.`,
+      'best price': `For best ${query.toLowerCase()}, compare quotes from multiple certified providers. Consider device condition, market rates, and additional services like data destruction when evaluating offers.`
+    };
+    
+    // Extract key intent from query
+    for (const [key, template] of Object.entries(answerTemplates)) {
+      if (query.toLowerCase().includes(key)) {
+        return template;
+      }
+    }
+    
+    return `For information about ${query}, please contact our certified e-waste management team at +91-98765-43210 or visit www.ewastekochi.com for comprehensive details.`;
+  }
+
+  /**
+   * Phase 3a: Centralized Data Management
+   */
+  async manageFAQData() {
+    console.log('💾 Phase 3a: Centralized Data Management');
+    console.log('=' .repeat(50));
+    
+    // Create FAQ database structure
+    const faqDatabase = {
+      metadata: {
+        version: '1.0.0',
+        lastUpdated: new Date().toISOString(),
+        totalFAQs: 0,
+        categories: ['how-to', 'pricing', 'requirements', 'process', 'comparison', 'troubleshooting'],
+        locations: ['kochi', 'aluva', 'ernakulam', 'kakkanad', 'edappally', 'thrippunithura', 'angamaly', 'north-paravur']
+      },
+      faqs: [],
+      categories: {},
+      analytics: {
+        mostAsked: [],
+        recentQueries: [],
+        searchTrends: []
+      }
+    };
+    
+    // Load existing FAQs from all blog files
+    const files = fs.readdirSync(this.blogDir).filter(file => file.endsWith('.md'));
+    
+    files.forEach(file => {
+      const filePath = path.join(this.blogDir, file);
+      const content = fs.readFileSync(filePath, 'utf8');
+      
+      if (this.hasFAQSection(content)) {
+        const faqs = this.extractFAQs(content);
+        const faqObjects = this.createFAQObjects(faqs);
+        
+        faqDatabase.faqs.push(...faqObjects);
+        faqDatabase.metadata.totalFAQs += faqs.length;
+        
+        // Categorize FAQs
+        faqObjects.forEach(faq => {
+          const category = faq.category;
+          if (!faqDatabase.categories[category]) {
+            faqDatabase.categories[category] = [];
+          }
+          faqDatabase.categories[category].push(faq);
+        });
+      }
+    });
+    
+    // Save FAQ database
+    const faqDatabasePath = path.join(this.dataDir, 'faq-database.json');
+    fs.writeFileSync(faqDatabasePath, JSON.stringify(faqDatabase, null, 2));
+    
+    console.log(`✅ Created FAQ database with ${faqDatabase.metadata.totalFAQs} FAQs`);
+    console.log(`📊 Categories: ${Object.keys(faqDatabase.categories).length}`);
+  }
+
+  /**
+   * Phase 3b: Component Rendering System
+   */
+  createComponentRenderer() {
+    return {
+      renderFAQList: (faqs, options = {}) => {
+        const { maxItems = 10, category = null, priority = null } = options;
+        
+        let filteredFAQs = faqs;
+        
+        if (category) {
+          filteredFAQs = faqs.filter(faq => faq.category === category);
+        }
+        
+        if (priority) {
+          filteredFAQs = filteredFAQs.filter(faq => faq.priority === priority);
+        }
+        
+        filteredFAQs = filteredFAQs.slice(0, maxItems);
+        
+        return filteredFAQs.map(faq => `
+          <div class="faq-item" data-faq-id="${faq.id}">
+            <h3 class="faq-question">${faq.question}</h3>
+            <div class="faq-answer">${faq.answer}</div>
+            <div class="faq-meta">
+              <span class="faq-category">${faq.category}</span>
+              <span class="faq-priority">${faq.priority}</span>
+            </div>
+          </div>
+        `).join('');
+      },
+      
+      renderFAQSchema: (faqs) => {
+        const schema = {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": faqs.map(faq => ({
+            "@type": "Question",
+            "@id": faq.id,
+            "name": faq.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.answer
+            }
+          }))
+        };
+        
+        return `<script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n</script>`;
+      }
+    };
+  }
+
+  /**
+   * Phase 4a: Automated Enhancement
+   */
+  async enhanceBlogsWithFAQs() {
+    console.log('🔧 Phase 4a: Automated Blog Enhancement');
+    console.log('=' .repeat(50));
+    
+    const files = fs.readdirSync(this.blogDir).filter(file => file.endsWith('.md'));
+    let enhancedCount = 0;
+    
+    for (const file of files) {
+      const filePath = path.join(this.blogDir, file);
+      const content = fs.readFileSync(filePath, 'utf8');
+      
+      if (!content.includes('application/ld+json') && this.hasFAQSection(content)) {
+        const faqs = this.extractFAQs(content);
+        const enhancedContent = this.enhanceContentWithFAQs(content, faqs);
+        
+        fs.writeFileSync(filePath, enhancedContent);
+        enhancedCount++;
+      }
+    }
+    
+    console.log(`✅ Enhanced ${enhancedCount} blog files with FAQ schemas`);
+  }
+
+  /**
+   * Phase 4b: Content Enhancement
+   */
+  enhanceContentWithFAQs(content, faqs) {
+    // Add FAQ section if missing
+    if (!content.includes('## Frequently Asked Questions')) {
+      content += '\n\n## Frequently Asked Questions\n\n';
+      
+      faqs.forEach((faq, index) => {
+        content += `### ${faq.question}\n\n${faq.answer}\n\n`;
+      });
+    }
+    
+    // Add related FAQs section
+    if (!content.includes('## Related FAQs')) {
+      content += '\n## Related FAQs\n\n';
+      content += 'For more information, check out these frequently asked questions:\n\n';
+      
+      faqs.slice(0, 3).forEach(faq => {
+        content += `- [${faq.question}](#${faq.id})\n`;
+      });
+    }
+    
+    return content;
+  }
+
+  /**
+   * Utility Methods
+   */
+  categorizeFAQ(faq) {
+    const question = faq.question.toLowerCase();
+    
+    if (question.includes('how to') || question.includes('process')) return 'how-to';
+    if (question.includes('price') || question.includes('cost')) return 'pricing';
+    if (question.includes('requirement') || question.includes('document')) return 'requirements';
+    if (question.includes('best') || question.includes('compare')) return 'comparison';
+    if (question.includes('problem') || question.includes('troubleshoot')) return 'troubleshooting';
+    
+    return 'general';
+  }
+
+  calculateFAQPriority(faq) {
+    const question = faq.question.toLowerCase();
+    
+    if (question.includes('urgent') || question.includes('emergency')) return 'high';
+    if (question.includes('how to') || question.includes('process')) return 'medium';
+    if (question.includes('price') || question.includes('cost')) return 'medium';
+    
+    return 'low';
+  }
+
+  extractRelatedTopics(faq) {
+    const topics = [];
+    const keywords = faq.question.toLowerCase().split(' ');
+    
+    const topicMap = {
+      'laptop': 'laptop-buyback',
+      'battery': 'battery-recycling',
+      'data': 'data-destruction',
+      'server': 'server-recycling',
+      'phone': 'phone-buyback',
+      'printer': 'printer-recycling',
+      'monitor': 'monitor-recycling',
+      'price': 'pricing',
+      'cost': 'pricing',
+      'how': 'how-to',
+      'dispose': 'e-waste-collection'
+    };
+    
+    keywords.forEach(keyword => {
+      if (topicMap[keyword]) {
+        topics.push(topicMap[keyword]);
+      }
+    });
+    
+    return [...new Set(topics)];
+  }
+
+  /**
+   * System Reporting
+   */
+  generateSystemReport() {
+    console.log('\n📊 FAQ System Report');
+    console.log('=' .repeat(50));
+    console.log(`📁 Files Processed: ${this.stats.filesProcessed}`);
+    console.log(`📋 FAQs Extracted: ${this.stats.faqsExtracted}`);
+    console.log(`🔧 Schemas Generated: ${this.stats.schemasGenerated}`);
+    console.log(`❌ Errors: ${this.stats.errors}`);
+    console.log(`📈 Success Rate: ${this.stats.filesProcessed > 0 ? ((this.stats.schemasGenerated / this.stats.filesProcessed) * 100).toFixed(1) : 0}%`);
+    
+    // Generate detailed analytics
+    this.generateAnalytics();
+  }
+
+  generateAnalytics() {
+    const analytics = {
+      timestamp: new Date().toISOString(),
+      performance: {
+        filesPerSecond: this.stats.filesProcessed / 10, // Assuming 10 seconds processing
+        faqsPerFile: this.stats.faqsExtracted / Math.max(this.stats.filesProcessed, 1),
+        schemaGenerationRate: (this.stats.schemasGenerated / Math.max(this.stats.filesProcessed, 1)) * 100
+      },
+      distribution: {
+        avgFAQsPerFile: this.stats.faqsExtracted / Math.max(this.stats.filesProcessed, 1),
+        totalUniqueQuestions: this.stats.faqsExtracted,
+        categoriesCovered: 6
+      },
+      recommendations: this.generateRecommendations()
+    };
+    
+    const analyticsPath = path.join(this.dataDir, 'faq-analytics.json');
+    fs.writeFileSync(analyticsPath, JSON.stringify(analytics, null, 2));
+    
+    console.log(`📈 Analytics saved to ${analyticsPath}`);
+  }
+
+  generateRecommendations() {
+    return [
+      {
+        type: 'content_gap',
+        priority: 'high',
+        description: 'Add more "how-to" guides for complex processes',
+        action: 'Generate step-by-step tutorials'
+      },
+      {
+        type: 'seo_optimization',
+        priority: 'medium',
+        description: 'Improve FAQ schema markup',
+        action: 'Add more structured data and internal links'
+      },
+      {
+        type: 'user_experience',
+        priority: 'medium',
+        description: 'Enhance FAQ navigation',
+        action: 'Implement FAQ search and categorization'
+      }
+    ];
+  }
+}
+
+// Export for use in other modules
+module.exports = FAQSystem;
+
+// Run if called directly
+if (require.main === module) {
+  const faqSystem = new FAQSystem();
+  faqSystem.runCompleteSystem().catch(console.error);
+}

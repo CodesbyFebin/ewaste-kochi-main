@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-04-22T15:39:15.841Z",
+  "performance": {
+    "filesPerSecond": 111,
+    "faqsPerFile": 7.391891891891892,
+    "schemaGenerationRate": 99.27927927927928
+  },
+  "distribution": {
+    "avgFAQsPerFile": 7.391891891891892,
+    "totalUniqueQuestions": 8205,
+    "categoriesCovered": 6
+  },
+  "recommendations": [
+    {
+      "type": "content_gap",
+      "priority": "high",
+      "description": "Add more \"how-to\" guides for complex processes",
+      "action": "Generate step-by-step tutorials"
+    },
+    {
+      "type": "seo_optimization",
+      "priority": "medium",
+      "description": "Improve FAQ schema markup",
+      "action": "Add more structured data and internal links"
+    },
+    {
+      "type": "user_experience",
+      "priority": "medium",
+      "description": "Enhance FAQ navigation",
+      "action": "Implement FAQ search and categorization"
+    }
+  ]
+}

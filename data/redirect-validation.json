@@ -1,0 +1,96 @@
+{
+  "coverage": {
+    "total": 227,
+    "categories": {
+      "www": 1,
+      "html": 1,
+      "pincode": 148,
+      "service": 12,
+      "location": 37,
+      "blog": 11,
+      "other": 17
+    },
+    "patterns": {
+      "exact": 219,
+      "wildcard": 2,
+      "parameterized": 6,
+      "regex": 0
+    }
+  },
+  "testResults": [
+    {
+      "name": "WWW Forcing",
+      "description": "Non-www domain should redirect to www",
+      "input": "https://ewastekochi.com/",
+      "expected": "https://www.ewastekochi.com/",
+      "actual": "https://ewastekochi.com/",
+      "success": false,
+      "redirect": null
+    },
+    {
+      "name": "WWW Forcing with Path",
+      "description": "Non-www domain with path should redirect to www",
+      "input": "https://ewastekochi.com/blog/",
+      "expected": "https://www.ewastekochi.com/blog/",
+      "actual": "https://www.ewastekochi.com/blog/",
+      "success": true,
+      "redirect": {
+        "source": "/(.*)",
+        "has": [
+          {
+            "type": "host",
+            "value": "ewastekochi.com"
+          }
+        ],
+        "destination": "https://www.ewastekochi.com/$1",
+        "permanent": true
+      }
+    },
+    {
+      "name": "HTML Extension Removal",
+      "description": "HTML extension should be removed",
+      "input": "https://www.ewastekochi.com/blog/data-destruction-kochi.html",
+      "expected": "https://www.ewastekochi.com/blog/data-destruction-kochi",
+      "actual": "https://www.ewastekochi.com/blog/data-destruction-kochi",
+      "success": true,
+      "redirect": {
+        "source": "/(.*)\\.html",
+        "destination": "/$1",
+        "permanent": true
+      }
+    },
+    {
+      "name": "Pincode Redirect",
+      "description": "Pincode 682002 should redirect to Ernakulam",
+      "input": "https://www.ewastekochi.com/locations/ewaste-682002",
+      "expected": "https://www.ewastekochi.com/locations/ernakulam/",
+      "actual": "https://www.ewastekochi.com/locations/ernakulam/",
+      "success": true,
+      "redirect": {
+        "source": "/locations/ewaste-682002",
+        "destination": "/locations/ernakulam/",
+        "permanent": true
+      }
+    },
+    {
+      "name": "Complex Multi-Step",
+      "description": "WWW + HTML removal + Pincode redirect",
+      "input": "https://ewastekochi.com/locations/ewaste-682002.html",
+      "expected": "https://www.ewastekochi.com/locations/ernakulam/",
+      "actual": "https://www.ewastekochi.com/locations/ewaste-682002.html",
+      "success": false,
+      "redirect": {
+        "source": "/(.*)",
+        "has": [
+          {
+            "type": "host",
+            "value": "ewastekochi.com"
+          }
+        ],
+        "destination": "https://www.ewastekochi.com/$1",
+        "permanent": true
+      }
+    }
+  ],
+  "status": "GOOD"
+}

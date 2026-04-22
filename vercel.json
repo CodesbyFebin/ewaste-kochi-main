@@ -5,6 +5,22 @@
   "framework": "astro",
   "redirects": [
     {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "ewastekochi.com"
+        }
+      ],
+      "destination": "https://www.ewastekochi.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)\\.html",
+      "destination": "/$1",
+      "permanent": true
+    },
+    {
       "source": "/ml/buyback/:path*",
       "destination": "/sell-electronics-kochi/",
       "permanent": true
@@ -35,877 +51,217 @@
       "permanent": true
     },
     {
-      "source": "/blog/corporate-e-waste-policy-template-india.html",
-      "destination": "/blog/ewaste-laws-kerala-2026/",
+      "source": "/marketplace",
+      "destination": "/marketplace/",
       "permanent": true
     },
     {
-      "source": "/blog/data-destruction-kochi.html",
-      "destination": "/services/data-destruction-kochi/",
+      "source": "/itad-kochi",
+      "destination": "/itad/",
       "permanent": true
     },
     {
-      "source": "/blog/dpdp-act-impact-startups.html",
-      "destination": "/blog/dpdp-act-2023-it-disposal-compliance/",
-      "permanent": true
-    },
-    {
-      "source": "/blog/e-waste-pickup-infopark.html",
-      "destination": "/locations/infopark-kochi/",
-      "permanent": true
-    },
-    {
-      "source": "/blog/hard-drive-shredding-cost-kochi.html",
-      "destination": "/services/hard-drive-shredding-kochi/",
-      "permanent": true
-    },
-    {
-      "source": "/blog/how-to-dispose-e-waste-in-infopark-kakkanad.html",
-      "destination": "/locations/infopark-kochi/",
-      "permanent": true
-    },
-    {
-      "source": "/blog/itad-kakkanad.html",
-      "destination": "/locations/kakkanad/",
-      "permanent": true
-    },
-    {
-      "source": "/blog/laptop-data-wiping-software-vs-nist.html",
-      "destination": "/blog/itad-roi-kochi-enterprise/",
-      "permanent": true
-    },
-    {
-      "source": "/blog/laptop-resale-value-2026.html",
-      "destination": "/sell-electronics-kochi/",
-      "permanent": true
-    },
-    {
-      "source": "/blog/secure-phone-disposal-guide.html",
-      "destination": "/blog/itad-roi-kochi-enterprise/",
-      "permanent": true
-    },
-    {
-      "source": "/blog/where-sell-old-phone-kochi.html",
-      "destination": "/sell-electronics-kochi/",
-      "permanent": true
-    },
-    {
-      "source": "/bulk-laptop-buyback.html",
-      "destination": "/sell-electronics-kochi/",
-      "permanent": true
-    },
-    {
-      "source": "/buyback/bulk-laptop-buyback-kochi.html",
-      "destination": "/sell-electronics-kochi/",
-      "permanent": true
-    },
-    {
-      "source": "/buyback/office-it-clearance-kochi.html",
-      "destination": "/services/itad-kochi/",
-      "permanent": true
-    },
-    {
-      "source": "/buyback/sell-broken-laptop-kochi.html",
-      "destination": "/sell-electronics-kochi/",
-      "permanent": true
-    },
-    {
-      "source": "/buyback/sell-old-laptop-kochi.html",
-      "destination": "/sell-electronics-kochi/",
-      "permanent": true
-    },
-    {
-      "source": "/buyback/sell-water-damaged-macbook-kochi.html",
-      "destination": "/sell-electronics-kochi/",
-      "permanent": true
-    },
-    {
-      "source": "/comparisons/olx-vs-ewastekochi.html",
-      "destination": "/sell-electronics-kochi/",
-      "permanent": true
-    },
-    {
-      "source": "/comparisons/quickr-vs-ewastekochi.html",
-      "destination": "/sell-electronics-kochi/",
-      "permanent": true
-    },
-    {
-      "source": "/compliance/dod-5220-22m-guide.html",
-      "destination": "/services/data-destruction-kochi/",
-      "permanent": true
-    },
-    {
-      "source": "/compliance/kerala-pcb-authorization.html",
-      "destination": "/blogs/compliance/",
-      "permanent": true
-    },
-    {
-      "source": "/compliance/nist-800-88-explained.html",
-      "destination": "/services/data-destruction-kochi/",
-      "permanent": true
-    },
-    {
-      "source": "/e-waste-vyttila.html",
-      "destination": "/locations/vyttila/",
-      "permanent": true
-    },
-    {
-      "source": "/get-instant-quote.html",
+      "source": "/get-instant-quote",
       "destination": "/contact/",
       "permanent": true
     },
     {
-      "source": "/industries/manufacturing-ewaste.html",
-      "destination": "/services/itad-kochi/",
+      "source": "/blog/corporate-e-waste-policy-template-india",
+      "destination": "/blog/ewaste-laws-kerala-2026/",
       "permanent": true
     },
     {
-      "source": "/itad-kochi.html",
-      "destination": "/itad/",
+      "source": "/blog/data-destruction-kochi",
+      "destination": "/services/data-destruction-kochi/",
       "permanent": true
     },
     {
-      "source": "/itad/corporate-itad-ernakulam.html",
-      "destination": "/locations/ernakulam/",
+      "source": "/blog/dpdp-act-impact-startups",
+      "destination": "/blog/dpdp-act-2023-it-disposal-compliance/",
       "permanent": true
     },
     {
-      "source": "/itad/data-destruction-infopark.html",
+      "source": "/blog/e-waste-pickup-infopark",
       "destination": "/locations/infopark-kochi/",
       "permanent": true
     },
     {
-      "source": "/itad/it-clearance-smartcity-kochi.html",
-      "destination": "/locations/smart-city-kochi/",
+      "source": "/blog/hard-drive-shredding-cost-kochi",
+      "destination": "/services/hard-drive-shredding-kochi/",
       "permanent": true
     },
     {
-      "source": "/itad/itad-kochi.html",
-      "destination": "/itad/",
+      "source": "/blog/how-to-dispose-e-waste-in-infopark-kakkanad",
+      "destination": "/locations/infopark-kochi/",
       "permanent": true
     },
     {
-      "source": "/itad/server-recycling-kochi.html",
-      "destination": "/services/itad-kochi/",
-      "permanent": true
-    },
-    {
-      "source": "/itad/services/sell-ups-batteries-kochi.html",
-      "destination": "/services/battery-recycling-kochi/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/edappally-ewaste-kochi.html",
-      "destination": "/locations/edappally/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682002",
-      "destination": "/locations/ernakulam/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682003.html",
-      "destination": "/locations/ernakulam/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682004.html",
-      "destination": "/locations/ernakulam-south/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682008.html",
-      "destination": "/locations/aluva/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682009.html",
-      "destination": "/locations/682009/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682010.html",
-      "destination": "/locations/fort-kochi/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682012.html",
-      "destination": "/locations/fort-kochi/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682014.html",
-      "destination": "/locations/ernakulam/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682015.html",
-      "destination": "/locations/ernakulam/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682016.html",
+      "source": "/blog/itad-kakkanad",
       "destination": "/locations/kakkanad/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-682026.html",
-      "destination": "/locations/aluva/",
+      "source": "/blog/laptop-data-wiping-software-vs-nist",
+      "destination": "/blog/itad-roi-kochi-enterprise/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-682028.html",
-      "destination": "/locations/north-paravur/",
+      "source": "/blog/laptop-resale-value-2026",
+      "destination": "/sell-electronics-kochi/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-682030.html",
-      "destination": "/locations/north-paravur/",
+      "source": "/blog/secure-phone-disposal-guide",
+      "destination": "/blog/itad-roi-kochi-enterprise/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-682035.html",
-      "destination": "/locations/angamaly/",
+      "source": "/blog/where-sell-old-phone-kochi",
+      "destination": "/sell-electronics-kochi/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-682037.html",
-      "destination": "/locations/aluva/",
+      "source": "/bulk-laptop-buyback",
+      "destination": "/sell-electronics-kochi/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-682038.html",
-      "destination": "/locations/muvattupuzha/",
+      "source": "/buyback/bulk-laptop-buyback-kochi",
+      "destination": "/sell-electronics-kochi/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-682040.html",
-      "destination": "/locations/muvattupuzha/",
+      "source": "/buyback/office-it-clearance-kochi",
+      "destination": "/services/itad-kochi/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-682044.html",
-      "destination": "/locations/muvattupuzha/",
+      "source": "/buyback/sell-broken-laptop-kochi",
+      "destination": "/sell-electronics-kochi/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-682046.html",
-      "destination": "/locations/perumbavoor/",
+      "source": "/buyback/sell-old-laptop-kochi",
+      "destination": "/sell-electronics-kochi/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-048.html",
-      "destination": "/locations/aluva/",
+      "source": "/buyback/sell-water-damaged-macbook-kochi",
+      "destination": "/sell-electronics-kochi/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-682049.html",
-      "destination": "/locations/aluva/",
+      "source": "/comparisons/olx-vs-ewastekochi",
+      "destination": "/sell-electronics-kochi/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-682054.html",
-      "destination": "/locations/682054/",
+      "source": "/comparisons/quickr-vs-ewastekochi",
+      "destination": "/sell-electronics-kochi/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-682055.html",
-      "destination": "/locations/682055/",
+      "source": "/compliance/dod-5220-22m-guide",
+      "destination": "/services/data-destruction-kochi/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-682058.html",
-      "destination": "/locations/682058/",
+      "source": "/compliance/kerala-pcb-authorization",
+      "destination": "/blogs/compliance/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-682064.html",
-      "destination": "/locations/682064/",
+      "source": "/compliance/nist-800-88-explained",
+      "destination": "/services/data-destruction-kochi/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-682065.html",
-      "destination": "/locations/682065/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682066.html",
-      "destination": "/locations/682066/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682068.html",
-      "destination": "/locations/682068/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682069.html",
-      "destination": "/locations/682069/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682070.html",
-      "destination": "/locations/682070/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682071.html",
-      "destination": "/locations/682071/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682074.html",
+      "source": "/e-waste-vyttila",
       "destination": "/locations/vyttila/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-682076.html",
-      "destination": "/locations/682076/",
+      "source": "/locations/edappally-ewaste-kochi",
+      "destination": "/locations/edappally/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-682078.html",
-      "destination": "/locations/682078/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682081.html",
-      "destination": "/locations/682081/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682082.html",
-      "destination": "/locations/682082/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682083.html",
-      "destination": "/locations/682083/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682085",
-      "destination": "/locations/682085/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682085.html",
-      "destination": "/locations/682085/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682087.html",
-      "destination": "/locations/682087/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682089.html",
-      "destination": "/locations/682089/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682090.html",
-      "destination": "/locations/682090/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682092.html",
-      "destination": "/locations/682092/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682095.html",
-      "destination": "/locations/682095/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682097.html",
-      "destination": "/locations/682097/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682099.html",
-      "destination": "/locations/682099/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682103.html",
-      "destination": "/locations/682103/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682104.html",
-      "destination": "/locations/682104/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682105.html",
-      "destination": "/locations/682105/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682106.html",
-      "destination": "/locations/682106/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682107.html",
-      "destination": "/locations/682107/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682108.html",
-      "destination": "/locations/infopark-kochi/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682109.html",
-      "destination": "/locations/682109/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682112.html",
-      "destination": "/locations/682112/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682116.html",
-      "destination": "/locations/thrippunithura/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682118.html",
-      "destination": "/locations/682118/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682121",
-      "destination": "/locations/682121/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682121.html",
-      "destination": "/locations/682121/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682124.html",
-      "destination": "/locations/682124/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682125.html",
-      "destination": "/locations/maradu/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682126.html",
-      "destination": "/locations/maradu/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682127",
-      "destination": "/locations/682127/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682127.html",
-      "destination": "/locations/682127/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682133.html",
-      "destination": "/locations/682133/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682135.html",
-      "destination": "/locations/682135/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682136.html",
-      "destination": "/locations/682136/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682139.html",
-      "destination": "/locations/682139/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682143.html",
-      "destination": "/locations/682143/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682148.html",
-      "destination": "/locations/682148/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682150.html",
-      "destination": "/locations/682150/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682151.html",
-      "destination": "/locations/682151/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682152.html",
-      "destination": "/locations/682152/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682154.html",
-      "destination": "/locations/682154/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682158",
-      "destination": "/locations/682158/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682161.html",
-      "destination": "/locations/682161/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682162.html",
-      "destination": "/locations/682162/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682164.html",
-      "destination": "/locations/682164/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682165.html",
-      "destination": "/locations/aluva/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682166.html",
-      "destination": "/locations/682166/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682168.html",
-      "destination": "/locations/682168/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682169.html",
-      "destination": "/locations/682169/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682170.html",
-      "destination": "/locations/682170/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682172.html",
-      "destination": "/locations/682172/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682173.html",
-      "destination": "/locations/682173/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682175.html",
-      "destination": "/locations/682175/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682177.html",
-      "destination": "/locations/682177/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682179.html",
-      "destination": "/locations/682179/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682180.html",
-      "destination": "/locations/682180/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682181.html",
-      "destination": "/locations/682181/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682182.html",
-      "destination": "/locations/682182/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682184.html",
-      "destination": "/locations/682184/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682185.html",
-      "destination": "/locations/kakkanad/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682186",
-      "destination": "/locations/682186/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682186.html",
-      "destination": "/locations/682186/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682189.html",
-      "destination": "/locations/682189/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682190.html",
-      "destination": "/locations/682190/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682191.html",
-      "destination": "/locations/ernakulam/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682192.html",
-      "destination": "/locations/682192/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682195.html",
-      "destination": "/locations/682195/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682196.html",
-      "destination": "/locations/682196/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682200.html",
-      "destination": "/locations/682200/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682202.html",
-      "destination": "/locations/682202/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682206.html",
-      "destination": "/locations/682206/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682207.html",
-      "destination": "/locations/682207/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682210.html",
-      "destination": "/locations/682210/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682213.html",
-      "destination": "/locations/682213/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682214.html",
-      "destination": "/locations/682214/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682217.html",
-      "destination": "/locations/682217/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682218.html",
-      "destination": "/locations/682218/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682220.html",
-      "destination": "/locations/682220/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682221.html",
-      "destination": "/locations/682221/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682227.html",
-      "destination": "/locations/682227/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682228.html",
-      "destination": "/locations/682228/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682229.html",
-      "destination": "/locations/aluva/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682231.html",
-      "destination": "/locations/north-paravur/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682232.html",
-      "destination": "/locations/682232/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682234.html",
-      "destination": "/locations/682234/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682235.html",
-      "destination": "/locations/682235/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682236.html",
-      "destination": "/locations/682236/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682237.html",
-      "destination": "/locations/682237/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682240.html",
-      "destination": "/locations/682240/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682241.html",
-      "destination": "/locations/682241/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682245.html",
-      "destination": "/locations/682245/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682246.html",
-      "destination": "/locations/perumbavoor/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-682247.html",
-      "destination": "/locations/682247/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-ambalamukku.html",
-      "destination": "/locations/ambalamukku/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/ewaste-angamaly.html",
+      "source": "/locations/ewaste-angamaly",
       "destination": "/locations/angamaly/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-aroor.html",
+      "source": "/locations/ewaste-aroor",
       "destination": "/locations/aroor/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-binanipuram.html",
+      "source": "/locations/ewaste-binanipuram",
       "destination": "/locations/binanipuram/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-chalakudy.html",
+      "source": "/locations/ewaste-chalakudy",
       "destination": "/locations/chalakudy/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-cheranalloor.html",
+      "source": "/locations/ewaste-cheranalloor",
       "destination": "/locations/cheranalloor/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-cheranallur.html",
+      "source": "/locations/ewaste-cheranallur",
       "destination": "/locations/cheranallur/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-chottanikkara.html",
+      "source": "/locations/ewaste-chottanikkara",
       "destination": "/locations/chottanikkara/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-elamakkara.html",
+      "source": "/locations/ewaste-elamakkara",
       "destination": "/locations/elamakkara/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-eramalloor.html",
+      "source": "/locations/ewaste-eramalloor",
       "destination": "/locations/eramalloor/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-ernakulam.html",
+      "source": "/locations/ewaste-ernakulam",
       "destination": "/locations/ernakulam/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-infopark.html",
+      "source": "/locations/ewaste-infopark",
       "destination": "/locations/infopark-kochi/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-kakkanad.html",
+      "source": "/locations/ewaste-kakkanad",
       "destination": "/locations/kakkanad/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-kaloor.html",
+      "source": "/locations/ewaste-kaloor",
       "destination": "/locations/kaloor/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-kolenchery.html",
+      "source": "/locations/ewaste-kolenchery",
       "destination": "/locations/kolenchery/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-kothamangalam.html",
+      "source": "/locations/ewaste-kothamangalam",
       "destination": "/locations/kothamangalam/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-kottuvally.html",
+      "source": "/locations/ewaste-kottuvally",
       "destination": "/locations/kottuvally/",
       "permanent": true
     },
@@ -915,72 +271,72 @@
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-mulanthuruthy.html",
+      "source": "/locations/ewaste-mulanthuruthy",
       "destination": "/locations/thrippunithura/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-muvattupuzha.html",
+      "source": "/locations/ewaste-muvattupuzha",
       "destination": "/locations/muvattupuzha/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-north-paravur.html",
+      "source": "/locations/ewaste-north-paravur",
       "destination": "/locations/north-paravur/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-okkal.html",
+      "source": "/locations/ewaste-okkal",
       "destination": "/locations/kothamangalam/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-paravur.html",
+      "source": "/locations/ewaste-paravur",
       "destination": "/locations/north-paravur/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-pathalam.html",
+      "source": "/locations/ewaste-pathalam",
       "destination": "/locations/kakkanad/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-ravipuram.html",
+      "source": "/locations/ewaste-ravipuram",
       "destination": "/locations/ernakulam-south/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-rayamangalam.html",
+      "source": "/locations/ewaste-rayamangalam",
       "destination": "/locations/kakkanad/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-thammanam.html",
+      "source": "/locations/ewaste-thammanam",
       "destination": "/locations/edappally/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-thripunithura.html",
+      "source": "/locations/ewaste-thripunithura",
       "destination": "/locations/thrippunithura/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-vadavucode.html",
+      "source": "/locations/ewaste-vadavucode",
       "destination": "/locations/muvattupuzha/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-vaduthala.html",
+      "source": "/locations/ewaste-vaduthala",
       "destination": "/locations/ernakulam/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-vallarpadam.html",
+      "source": "/locations/ewaste-vallarpadam",
       "destination": "/locations/willingdon-island/",
       "permanent": true
     },
     {
-      "source": "/locations/ewaste-vypeen.html",
+      "source": "/locations/ewaste-vypeen",
       "destination": "/locations/fort-kochi/",
       "permanent": true
     },
@@ -995,1087 +351,799 @@
       "permanent": true
     },
     {
-      "source": "/locations/v2/e-waste-aluva.html",
-      "destination": "/locations/aluva/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/v2/e-waste-kakkanad.html",
-      "destination": "/locations/kakkanad/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/v2/e-waste-vyttila.html",
-      "destination": "/locations/vyttila/",
-      "permanent": true
-    },
-    {
-      "source": "/marketplace",
-      "destination": "/marketplace/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682001.html",
+      "source": "/locations/ewaste-682002",
       "destination": "/locations/ernakulam/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682002.html",
+      "source": "/locations/ewaste-682003",
       "destination": "/locations/ernakulam/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682004.html",
+      "source": "/locations/ewaste-682004",
       "destination": "/locations/ernakulam-south/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682006.html",
-      "destination": "/locations/palarivattom/",
+      "source": "/locations/ewaste-682008",
+      "destination": "/locations/aluva/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682010.html",
+      "source": "/locations/ewaste-682009",
+      "destination": "/locations/682009/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ewaste-682010",
       "destination": "/locations/fort-kochi/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682013.html",
-      "destination": "/locations/willingdon-island/",
+      "source": "/locations/ewaste-682012",
+      "destination": "/locations/fort-kochi/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682014.html",
+      "source": "/locations/ewaste-682014",
       "destination": "/locations/ernakulam/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682015.html",
+      "source": "/locations/ewaste-682015",
       "destination": "/locations/ernakulam/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682016.html",
+      "source": "/locations/ewaste-682016",
       "destination": "/locations/kakkanad/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682017.html",
-      "destination": "/locations/kakkanad/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682018.html",
-      "destination": "/locations/682018/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682019.html",
-      "destination": "/locations/thrippunithura/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682020.html",
-      "destination": "/locations/thrippunithura/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682021.html",
-      "destination": "/locations/thrippunithura/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682022.html",
-      "destination": "/locations/maradu/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682024.html",
-      "destination": "/locations/kalamassery/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682025.html",
+      "source": "/locations/ewaste-682026",
       "destination": "/locations/aluva/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682029.html",
+      "source": "/locations/ewaste-682028",
       "destination": "/locations/north-paravur/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682031.html",
-      "destination": "/locations/perumbavoor/",
+      "source": "/locations/ewaste-682030",
+      "destination": "/locations/north-paravur/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682032.html",
-      "destination": "/locations/perumbavoor/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682033.html",
+      "source": "/locations/ewaste-682035",
       "destination": "/locations/angamaly/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682034.html",
-      "destination": "/locations/angamaly/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682035.html",
-      "destination": "/locations/angamaly/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682037.html",
+      "source": "/locations/ewaste-682037",
       "destination": "/locations/aluva/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682038.html",
+      "source": "/locations/ewaste-682038",
       "destination": "/locations/muvattupuzha/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-041.html",
-      "destination": "/locations/kothamangalam/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682042.html",
-      "destination": "/locations/kothamangalam/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682044.html",
+      "source": "/locations/ewaste-682040",
       "destination": "/locations/muvattupuzha/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682046.html",
+      "source": "/locations/ewaste-682044",
+      "destination": "/locations/muvattupuzha/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ewaste-682046",
       "destination": "/locations/perumbavoor/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682047.html",
-      "destination": "/locations/perumbavoor/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682049.html",
+      "source": "/locations/ewaste-682049",
       "destination": "/locations/aluva/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682051.html",
-      "destination": "/locations/682051/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682054.html",
+      "source": "/locations/ewaste-682054",
       "destination": "/locations/682054/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682057.html",
-      "destination": "/locations/682057/",
+      "source": "/locations/ewaste-682055",
+      "destination": "/locations/682055/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682058.html",
+      "source": "/locations/ewaste-682058",
       "destination": "/locations/682058/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682059.html",
-      "destination": "/locations/edappally/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682061.html",
-      "destination": "/locations/682061/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682063.html",
-      "destination": "/locations/kakkanad/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682064.html",
+      "source": "/locations/ewaste-682064",
       "destination": "/locations/682064/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682065.html",
+      "source": "/locations/ewaste-682065",
       "destination": "/locations/682065/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682070.html",
+      "source": "/locations/ewaste-682066",
+      "destination": "/locations/682066/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ewaste-682068",
+      "destination": "/locations/682068/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ewaste-682069",
+      "destination": "/locations/682069/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ewaste-682070",
       "destination": "/locations/682070/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682072.html",
-      "destination": "/locations/682072/",
+      "source": "/locations/ewaste-682071",
+      "destination": "/locations/682071/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682073.html",
-      "destination": "/locations/682073/",
+      "source": "/locations/ewaste-682074",
+      "destination": "/locations/vytilla/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682074.html",
-      "destination": "/locations/vyttila/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682076.html",
+      "source": "/locations/ewaste-682076",
       "destination": "/locations/682076/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682078.html",
+      "source": "/locations/ewaste-682078",
       "destination": "/locations/682078/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682083.html",
+      "source": "/locations/ewaste-682081",
+      "destination": "/locations/682081/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ewaste-682082",
+      "destination": "/locations/682082/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ewaste-682083",
       "destination": "/locations/682083/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682084.html",
-      "destination": "/locations/kalamassery/",
+      "source": "/locations/ewaste-682085",
+      "destination": "/locations/682085/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682086.html",
-      "destination": "/locations/682086/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682087.html",
+      "source": "/locations/ewaste-682087",
       "destination": "/locations/682087/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-688.html",
-      "destination": "/locations/682088/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682089.html",
+      "source": "/locations/ewaste-682089",
       "destination": "/locations/682089/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682090.html",
+      "source": "/locations/ewaste-682090",
       "destination": "/locations/682090/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682091.html",
-      "destination": "/locations/682091/",
+      "source": "/locations/ewaste-682092",
+      "destination": "/locations/682092/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682093.html",
-      "destination": "/locations/682093/",
+      "source": "/locations/ewaste-682095",
+      "destination": "/locations/682095/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682094.html",
-      "destination": "/locations/682094/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682097.html",
+      "source": "/locations/ewaste-682097",
       "destination": "/locations/682097/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682098.html",
-      "destination": "/locations/682098/",
+      "source": "/locations/ewaste-682099",
+      "destination": "/locations/682099/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682100.html",
-      "destination": "/locations/682100/",
+      "source": "/locations/ewaste-682103",
+      "destination": "/locations/682103/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682101.html",
-      "destination": "/locations/682101/",
+      "source": "/locations/ewaste-682104",
+      "destination": "/locations/682104/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682102.html",
-      "destination": "/locations/682102/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682105.html",
+      "source": "/locations/ewaste-682105",
       "destination": "/locations/682105/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682106.html",
+      "source": "/locations/ewaste-682106",
       "destination": "/locations/682106/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682108.html",
+      "source": "/locations/ewaste-682107",
+      "destination": "/locations/682107/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ewaste-682108",
       "destination": "/locations/infopark-kochi/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682109.html",
+      "source": "/locations/ewaste-682109",
       "destination": "/locations/682109/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682111.html",
-      "destination": "/locations/682111/",
+      "source": "/locations/ewaste-682112",
+      "destination": "/locations/682112/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682114.html",
-      "destination": "/locations/682114/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682116.html",
+      "source": "/locations/ewaste-682116",
       "destination": "/locations/thrippunithura/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682117.html",
-      "destination": "/locations/682117/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682118.html",
+      "source": "/locations/ewaste-682118",
       "destination": "/locations/682118/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682120.html",
-      "destination": "/locations/682120/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682121.html",
+      "source": "/locations/ewaste-682121",
       "destination": "/locations/682121/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682123.html",
-      "destination": "/locations/682123/",
+      "source": "/locations/ewaste-682124",
+      "destination": "/locations/682124/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682125.html",
+      "source": "/locations/ewaste-682125",
       "destination": "/locations/maradu/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682126.html",
+      "source": "/locations/ewaste-682126",
       "destination": "/locations/maradu/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682127.html",
+      "source": "/locations/ewaste-682127",
       "destination": "/locations/682127/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682131.html",
-      "destination": "/locations/thrippunithura/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682133.html",
+      "source": "/locations/ewaste-682133",
       "destination": "/locations/682133/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682134.html",
-      "destination": "/locations/682134/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682135.html",
+      "source": "/locations/ewaste-682135",
       "destination": "/locations/682135/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682136.html",
+      "source": "/locations/ewaste-682136",
       "destination": "/locations/682136/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682138.html",
-      "destination": "/locations/682138/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682139.html",
+      "source": "/locations/ewaste-682139",
       "destination": "/locations/682139/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682141.html",
-      "destination": "/locations/682141/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682143.html",
+      "source": "/locations/ewaste-682143",
       "destination": "/locations/682143/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682144.html",
-      "destination": "/locations/thrippunithura/",
+      "source": "/locations/ewaste-682148",
+      "destination": "/locations/682148/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682145.html",
-      "destination": "/locations/682145/",
+      "source": "/locations/ewaste-682150",
+      "destination": "/locations/682150/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682149.html",
-      "destination": "/locations/682149/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682151.html",
+      "source": "/locations/ewaste-682151",
       "destination": "/locations/682151/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682153.html",
-      "destination": "/locations/682153/",
+      "source": "/locations/ewaste-682152",
+      "destination": "/locations/682152/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682155.html",
-      "destination": "/locations/682155/",
+      "source": "/locations/ewaste-682154",
+      "destination": "/locations/682154/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682156.html",
-      "destination": "/locations/682156/",
+      "source": "/locations/ewaste-682158",
+      "destination": "/locations/682158/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682160.html",
-      "destination": "/locations/682160/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682161.html",
+      "source": "/locations/ewaste-682161",
       "destination": "/locations/682161/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682162.html",
+      "source": "/locations/ewaste-682162",
       "destination": "/locations/682162/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682163.html",
-      "destination": "/locations/682163/",
+      "source": "/locations/ewaste-682164",
+      "destination": "/locations/682164/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682165.html",
+      "source": "/locations/ewaste-682165",
       "destination": "/locations/aluva/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682166.html",
+      "source": "/locations/ewaste-682166",
       "destination": "/locations/682166/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682167.html",
-      "destination": "/locations/682167/",
+      "source": "/locations/ewaste-682168",
+      "destination": "/locations/682168/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682169.html",
+      "source": "/locations/ewaste-682169",
       "destination": "/locations/682169/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682170.html",
+      "source": "/locations/ewaste-682170",
       "destination": "/locations/682170/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682171.html",
-      "destination": "/locations/682171/",
+      "source": "/locations/ewaste-682172",
+      "destination": "/locations/682172/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682174.html",
-      "destination": "/locations/682174/",
+      "source": "/locations/ewaste-682173",
+      "destination": "/locations/682173/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682175.html",
+      "source": "/locations/ewaste-682175",
       "destination": "/locations/682175/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682176.html",
-      "destination": "/locations/kalamassery/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682177.html",
+      "source": "/locations/ewaste-682177",
       "destination": "/locations/682177/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682178.html",
-      "destination": "/locations/682178/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682179.html",
+      "source": "/locations/ewaste-682179",
       "destination": "/locations/682179/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682185.html",
+      "source": "/locations/ewaste-682180",
+      "destination": "/locations/682180/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ewaste-682181",
+      "destination": "/locations/682181/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ewaste-682182",
+      "destination": "/locations/682182/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ewaste-682184",
+      "destination": "/locations/682184/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ewaste-682185",
       "destination": "/locations/kakkanad/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682187.html",
-      "destination": "/locations/682187/",
+      "source": "/locations/ewaste-682186",
+      "destination": "/locations/682186/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-688.html",
-      "destination": "/locations/682188/",
+      "source": "/locations/ewaste-682189",
+      "destination": "/locations/682189/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682191.html",
+      "source": "/locations/ewaste-682190",
+      "destination": "/locations/682190/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ewaste-682191",
       "destination": "/locations/ernakulam/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682192.html",
+      "source": "/locations/ewaste-682192",
       "destination": "/locations/682192/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682193.html",
-      "destination": "/locations/682193/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682194.html",
-      "destination": "/locations/682194/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682195.html",
+      "source": "/locations/ewaste-682195",
       "destination": "/locations/682195/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682197.html",
-      "destination": "/locations/682197/",
+      "source": "/locations/ewaste-682196",
+      "destination": "/locations/682196/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682198.html",
-      "destination": "/locations/682198/",
+      "source": "/locations/ewaste-682200",
+      "destination": "/locations/682200/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682202.html",
+      "source": "/locations/ewaste-682202",
       "destination": "/locations/682202/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682203.html",
-      "destination": "/locations/682203/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682205.html",
-      "destination": "/locations/682205/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682206.html",
+      "source": "/locations/ewaste-682206",
       "destination": "/locations/682206/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682208.html",
-      "destination": "/locations/edappally/",
+      "source": "/locations/ewaste-682207",
+      "destination": "/locations/682207/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682209.html",
-      "destination": "/locations/682209/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682210.html",
+      "source": "/locations/ewaste-682210",
       "destination": "/locations/682210/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682211.html",
-      "destination": "/locations/682211/",
+      "source": "/locations/ewaste-682213",
+      "destination": "/locations/682213/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682212.html",
-      "destination": "/locations/682212/",
+      "source": "/locations/ewaste-682214",
+      "destination": "/locations/682214/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682215.html",
-      "destination": "/locations/682215/",
+      "source": "/locations/ewaste-682217",
+      "destination": "/locations/682217/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682219.html",
-      "destination": "/locations/vyttila/",
+      "source": "/locations/ewaste-682218",
+      "destination": "/locations/682218/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682221.html",
+      "source": "/locations/ewaste-682220",
+      "destination": "/locations/682220/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ewaste-682221",
       "destination": "/locations/682221/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682222.html",
-      "destination": "/locations/682222/",
+      "source": "/locations/ewaste-682227",
+      "destination": "/locations/682227/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682223.html",
-      "destination": "/locations/682223/",
+      "source": "/locations/ewaste-682228",
+      "destination": "/locations/682228/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682224.html",
-      "destination": "/locations/ernakulam/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682225.html",
-      "destination": "/locations/682225/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682226.html",
-      "destination": "/locations/682226/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682229.html",
+      "source": "/locations/ewaste-682229",
       "destination": "/locations/aluva/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682231.html",
+      "source": "/locations/ewaste-682231",
       "destination": "/locations/north-paravur/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682232.html",
+      "source": "/locations/ewaste-682232",
       "destination": "/locations/682232/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682235.html",
+      "source": "/locations/ewaste-682234",
+      "destination": "/locations/682234/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ewaste-682235",
       "destination": "/locations/682235/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682236.html",
+      "source": "/locations/ewaste-682236",
       "destination": "/locations/682236/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682238.html",
-      "destination": "/locations/perumbavoor/",
+      "source": "/locations/ewaste-682237",
+      "destination": "/locations/682237/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682241.html",
+      "source": "/locations/ewaste-682240",
+      "destination": "/locations/682240/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ewaste-682241",
       "destination": "/locations/682241/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682242.html",
-      "destination": "/locations/682242/",
+      "source": "/locations/ewaste-682245",
+      "destination": "/locations/682245/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682243.html",
-      "destination": "/locations/682243/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682244.html",
-      "destination": "/locations/682244/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-682246.html",
+      "source": "/locations/ewaste-682246",
       "destination": "/locations/perumbavoor/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682247.html",
+      "source": "/locations/ewaste-682247",
       "destination": "/locations/682247/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682248.html",
-      "destination": "/locations/682248/",
+      "source": "/itad/corporate-itad-ernakulam",
+      "destination": "/locations/ernakulam/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-682249.html",
-      "destination": "/locations/kothamangalam/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-angamaly.html",
-      "destination": "/locations/angamaly/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-cheranallur.html",
-      "destination": "/locations/cheranallur/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-eramalloor.html",
-      "destination": "/locations/eramalloor/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-infopark-phase-1.html",
-      "destination": "/locations/infopark-phase-1/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-infopark-phase-2.html",
-      "destination": "/locations/infopark-phase-2/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-infopark.html",
+      "source": "/itad/data-destruction-infopark",
       "destination": "/locations/infopark-kochi/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-kadavanthra.html",
-      "destination": "/locations/kadavanthra/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-kalamassery.html",
-      "destination": "/locations/kalamassery/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-kaloor.html",
-      "destination": "/locations/kaloor/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-kochi.html",
-      "destination": "/locations/kochi/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-marine-drive.html",
-      "destination": "/locations/marine-drive/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-muvattupuzha.html",
-      "destination": "/locations/muvattupuzha/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-nettoor.html",
-      "destination": "/locations/nettoor/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-palarivattom.html",
-      "destination": "/locations/palarivattom/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-perumbavoor.html",
-      "destination": "/locations/perumbavoor/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-smart-city.html",
+      "source": "/itad/it-clearance-smartcity-kochi",
       "destination": "/locations/smart-city-kochi/",
       "permanent": true
     },
     {
-      "source": "/ml/locations/ewaste-thammanam.html",
-      "destination": "/locations/edappally/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-thrippunithura.html",
-      "destination": "/locations/thrippunithura/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/locations/ewaste-tripunithura.html",
-      "destination": "/locations/tripunithura/",
-      "permanent": true
-    },
-    {
-      "source": "/security/hard-drive-shredding-kochi.html",
-      "destination": "/services/hard-drive-shredding-kochi/",
-      "permanent": true
-    },
-    {
-      "source": "/sell-old-desktop-kochi.html",
-      "destination": "/sell-electronics-kochi/",
-      "permanent": true
-    },
-    {
-      "source": "/server-disposal-kochi.html",
-      "destination": "/services/itad-kochi/",
-      "permanent": true
-    },
-    {
-      "source": "/services/data-center-decommissioning-kochi.html",
-      "destination": "/services/itad-kochi/",
-      "permanent": true
-    },
-    {
-      "source": "/services/e-waste-collection-aluva.html",
-      "destination": "/locations/aluva/",
-      "permanent": true
-    },
-    {
-      "source": "/services/it-asset-buyback-kochi.html",
-      "destination": "/sell-electronics-kochi/",
-      "permanent": true
-    },
-    {
-      "source": "/services/it-asset-inventory-audit",
-      "destination": "/services/itad-kochi/",
-      "permanent": true
-    },
-    {
-      "source": "/services/laptop-disposal-edappally.html",
-      "destination": "/locations/edappally/",
-      "permanent": true
-    },
-    {
-      "source": "/services/sell-used-servers-kochi.html",
-      "destination": "/sell-electronics-kochi/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/([^/]+)/([a-z-]+)-kochi/?$",
-      "destination": "/services/$2-kochi/",
-      "permanent": true
-    },
-    {
-      "source": "/ml/:path*",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/locations/v2/:path*",
-      "destination": "/locations/",
-      "permanent": true
-    },
-    {
-      "source": "/index.html",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/blog/:slug.html",
-      "destination": "/blog/:slug/",
-      "permanent": true
-    },
-    {
-      "source": "/itad-kochi",
+      "source": "/itad/itad-kochi",
       "destination": "/itad/",
       "permanent": true
     },
     {
-      "source": "/ewaste",
-      "destination": "/ewaste/",
+      "source": "/itad/server-recycling-kochi",
+      "destination": "/services/itad-kochi/",
       "permanent": true
     },
     {
-      "source": "/e-waste",
-      "destination": "/ewaste/",
+      "source": "/itad/services/sell-ups-batteries-kochi",
+      "destination": "/services/battery-recycling-kochi/",
       "permanent": true
     },
     {
-      "source": "/recycling-kochi",
-      "destination": "/recycling/",
+      "source": "/industries/manufacturing-ewaste",
+      "destination": "/services/itad-kochi/",
       "permanent": true
     },
     {
-      "source": "/e-waste-recycling",
-      "destination": "/recycling/",
+      "source": "/ml/locations/ewaste-682001",
+      "destination": "/locations/ernakulam/",
       "permanent": true
     },
     {
-      "source": "/data-destruction",
-      "destination": "/services/data-destruction-kochi/",
+      "source": "/ml/locations/ewaste-682002",
+      "destination": "/locations/ernakulam/",
       "permanent": true
     },
     {
-      "source": "/hard-drive-shredding",
-      "destination": "/services/hard-drive-shredding-kochi/",
+      "source": "/ml/locations/ewaste-682004",
+      "destination": "/locations/ernakulam-south/",
       "permanent": true
     },
     {
-      "source": "/laptop-buyback",
-      "destination": "/services/laptop-buyback-kochi/",
+      "source": "/ml/locations/ewaste-682006",
+      "destination": "/locations/palarivattom/",
       "permanent": true
     },
     {
-      "source": "/sell-electronics",
-      "destination": "/sell-electronics-kochi/",
+      "source": "/ml/locations/ewaste-682010",
+      "destination": "/locations/fort-kochi/",
       "permanent": true
     },
     {
-      "source": "/contact-us",
-      "destination": "/contact/",
+      "source": "/ml/locations/ewaste-682013",
+      "destination": "/locations/willingdon-island/",
       "permanent": true
     },
     {
-      "source": "/about-us",
-      "destination": "/contact/",
+      "source": "/ml/locations/ewaste-682014",
+      "destination": "/locations/ernakulam/",
       "permanent": true
     },
     {
-      "source": "/faq.html",
-      "destination": "/faq/",
+      "source": "/ml/locations/ewaste-682015",
+      "destination": "/locations/ernakulam/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/locations/ewaste-682016",
+      "destination": "/locations/kakkanad/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/locations/ewaste-682017",
+      "destination": "/locations/kakkanad/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/locations/ewaste-682018",
+      "destination": "/locations/682018/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/locations/ewaste-682019",
+      "destination": "/locations/thrippunithura/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/locations/ewaste-682020",
+      "destination": "/locations/thrippunithura/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/locations/ewaste-682021",
+      "destination": "/locations/thrippunithura/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/locations/ewaste-682022",
+      "destination": "/locations/maradu/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/locations/ewaste-682024",
+      "destination": "/locations/kalamassery/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/locations/ewaste-682025",
+      "destination": "/locations/aluva/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/locations/ewaste-682029",
+      "destination": "/locations/north-paravur/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/locations/ewaste-682031",
+      "destination": "/locations/perumbavoor/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/locations/ewaste-682032",
+      "destination": "/locations/perumbavoor/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/locations/ewaste-682033",
+      "destination": "/locations/angamaly/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/locations/ewaste-682035",
+      "destination": "/locations/angamaly/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/locations/ewaste-682037",
+      "destination": "/locations/aluva/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/locations/ewaste-682038",
+      "destination": "/locations/muvattupuzha/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/locations/ewaste-682040",
+      "destination": "/locations/muvattupuzha/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/locations/ewaste-682044",
+      "destination": "/locations/muvattupuzha/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/locations/ewaste-682046",
+      "destination": "/locations/perumbavoor/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/locations/ewaste-048",
+      "destination": "/locations/aluva/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/locations/ewaste-682049",
+      "destination": "/locations/aluva/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/v2/e-waste-aluva",
+      "destination": "/locations/aluva/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/v2/e-waste-kakkanad",
+      "destination": "/locations/kakkanad/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/v2/e-waste-vyttila",
+      "destination": "/locations/vyttila/",
       "permanent": true
     }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "SAMEORIGIN"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        },
-        {
-          "key": "Permissions-Policy",
-          "value": "camera=(), microphone=(), geolocation=(self)"
-        },
-        {
-          "key": "X-Robots-Tag",
-          "value": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
-        }
-      ]
-    },
-    {
-      "source": "/fonts/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/_astro/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/images/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=604800, stale-while-revalidate=86400"
-        }
-      ]
-    },
-    {
-      "source": "/(.*)\\.html",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/sitemap(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600"
-        },
-        {
-          "key": "Content-Type",
-          "value": "application/xml; charset=utf-8"
-        }
-      ]
-    },
-    {
-      "source": "/robots.txt",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=86400"
-        }
-      ]
-    }
-  ],
-  "regions": [
-    "sin1",
-    "bom1"
   ]
 }

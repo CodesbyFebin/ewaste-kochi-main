@@ -1,0 +1,495 @@
+{
+  "summary": {
+    "totalTests": 26,
+    "passed": 20,
+    "failed": 6,
+    "successRate": 76.9,
+    "status": "ACCEPTABLE"
+  },
+  "results": {
+    "presetTests": [
+      {
+        "name": "Homepage Preset",
+        "success": false,
+        "error": "faqItems is not defined"
+      },
+      {
+        "name": "Service Preset",
+        "success": false,
+        "error": "faqItems is not defined"
+      },
+      {
+        "name": "Location Preset",
+        "success": false,
+        "error": "faqItems is not defined"
+      },
+      {
+        "name": "Blog Preset",
+        "success": false,
+        "error": "faqItems is not defined"
+      },
+      {
+        "name": "Contact Preset",
+        "success": false,
+        "error": "faqItems is not defined"
+      },
+      {
+        "name": "FAQ Preset",
+        "success": false,
+        "error": "faqItems is not defined"
+      }
+    ],
+    "titleTests": [
+      {
+        "name": "Long Title",
+        "inputLength": 132,
+        "actualLength": 60,
+        "expectedLength": 60,
+        "success": true,
+        "wasTruncated": true,
+        "truncated": "This is a very long title that should be truncated exactl..."
+      },
+      {
+        "name": "Short Title",
+        "inputLength": 11,
+        "actualLength": 11,
+        "expectedLength": 15,
+        "success": true,
+        "wasTruncated": false,
+        "truncated": "Short title"
+      },
+      {
+        "name": "Exact Limit Title",
+        "inputLength": 71,
+        "actualLength": 60,
+        "expectedLength": 60,
+        "success": true,
+        "wasTruncated": true,
+        "truncated": "This title is exactly sixty characters long and should no..."
+      }
+    ],
+    "descriptionTests": [
+      {
+        "name": "Long Description",
+        "inputLength": 200,
+        "actualLength": 155,
+        "expectedLength": 155,
+        "success": true,
+        "wasTruncated": true,
+        "truncated": "This is a very long description that exceeds the maximum length of one hundred fifty five characters and should be properly truncated with an ellipsis t..."
+      },
+      {
+        "name": "Short Description",
+        "inputLength": 17,
+        "actualLength": 17,
+        "expectedLength": 17,
+        "success": true,
+        "wasTruncated": false,
+        "truncated": "Short description"
+      },
+      {
+        "name": "Exact Limit Description",
+        "inputLength": 139,
+        "actualLength": 139,
+        "expectedLength": 155,
+        "success": true,
+        "wasTruncated": false,
+        "truncated": "This description is exactly one hundred fifty five characters long and should not be truncated at all when processed by the metadata system"
+      }
+    ],
+    "canonicalTests": [
+      {
+        "name": "Root Path",
+        "input": "/",
+        "expected": "https://ewastekochi.com/",
+        "actual": "https://ewastekochi.com/",
+        "success": true
+      },
+      {
+        "name": "Service Path",
+        "input": "/services/laptop-recycling",
+        "expected": "https://ewastekochi.com/services/laptop-recycling/",
+        "actual": "https://ewastekochi.com/services/laptop-recycling/",
+        "success": true
+      },
+      {
+        "name": "Blog Path",
+        "input": "/blog/e-waste-guide",
+        "expected": "https://ewastekochi.com/blog/e-waste-guide/",
+        "actual": "https://ewastekochi.com/blog/e-waste-guide/",
+        "success": true
+      },
+      {
+        "name": "Location Path",
+        "input": "/locations/kakkanad",
+        "expected": "https://ewastekochi.com/locations/kakkanad/",
+        "actual": "https://ewastekochi.com/locations/kakkanad/",
+        "success": true
+      },
+      {
+        "name": "Absolute URL",
+        "input": "https://ewastekochi.com/about",
+        "expected": "https://ewastekochi.com/about/",
+        "actual": "https://ewastekochi.com/about/",
+        "success": true
+      },
+      {
+        "name": "Uppercase Path",
+        "input": "/BLOG/Test-Post",
+        "expected": "https://ewastekochi.com/blog/test-post/",
+        "actual": "https://ewastekochi.com/blog/test-post/",
+        "success": true
+      },
+      {
+        "name": "Multiple Slashes",
+        "input": "//services//laptop-recycling//",
+        "expected": "https://ewastekochi.com/services/laptop-recycling/",
+        "actual": "https://ewastekochi.com/services/laptop-recycling/",
+        "success": true
+      }
+    ],
+    "structuredDataTests": [
+      {
+        "name": "LocalBusiness Schema",
+        "success": true,
+        "result": {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "EWaste Kochi",
+          "url": "https://ewastekochi.com",
+          "description": "Leading e-waste recycling and IT asset disposition company in Kochi, Kerala",
+          "logo": "https://ewastekochi.com/brand/ewastekochi-logo.svg",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-9876543210",
+            "contactType": "customer service",
+            "availableLanguage": [
+              "English",
+              "Hindi",
+              "Malayalam"
+            ],
+            "areaServed": "Kochi, Kerala"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Infopark Phase 1, Kakkanad",
+            "addressLocality": "Kakkanad",
+            "addressRegion": "Kochi",
+            "postalCode": "682037",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 10.0185,
+            "longitude": 76.3451
+          },
+          "sameAs": [
+            "https://www.facebook.com/ewastekochi",
+            "https://www.linkedin.com/company/ewastekochi",
+            "https://twitter.com/ewastekochi"
+          ],
+          "openingHours": [
+            "Mo-Fr 09:00-18:00",
+            "Sa 09:00-14:00",
+            "Su Closed"
+          ],
+          "priceRange": "₹₹₹₹",
+          "currenciesAccepted": "INR",
+          "paymentAccepted": [
+            "Cash",
+            "Credit Card",
+            "Debit Card",
+            "UPI",
+            "Bank Transfer"
+          ],
+          "areaServed": "Kochi, Ernakulam, Aluva, Kakkanad, Thrippunithura",
+          "knowsLanguage": [
+            "English",
+            "Hindi",
+            "Malayalam",
+            "Tamil"
+          ]
+        },
+        "expectedType": "LocalBusiness",
+        "actualType": "LocalBusiness",
+        "hasContext": true,
+        "hasRequiredFields": false
+      },
+      {
+        "name": "Article Schema",
+        "success": true,
+        "result": {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "E-Waste Guide",
+          "description": "Complete e-waste guide",
+          "image": "https://ewastekochi.com/img/blog-hero.jpg",
+          "author": {
+            "@type": "Organization",
+            "name": "EWaste Kochi"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "EWaste Kochi",
+            "logo": "https://ewastekochi.com/brand/ewastekochi-logo.svg"
+          },
+          "datePublished": "2026-04-01",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ewastekochi.com/blog/e-waste-guide"
+          }
+        },
+        "expectedType": "Article",
+        "actualType": "Article",
+        "hasContext": true,
+        "hasRequiredFields": true
+      },
+      {
+        "name": "Service Schema",
+        "success": true,
+        "result": {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Laptop Recycling",
+          "description": "Professional laptop recycling",
+          "provider": {
+            "@type": "Organization",
+            "name": "EWaste Kochi",
+            "description": "Leading e-waste recycling and IT asset disposition company in Kochi, Kerala",
+            "url": "https://ewastekochi.com",
+            "logo": "https://ewastekochi.com/brand/ewastekochi-logo.svg",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+91-9876543210",
+              "contactType": "customer service",
+              "availableLanguage": [
+                "English",
+                "Hindi",
+                "Malayalam"
+              ],
+              "areaServed": "Kochi, Kerala"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Infopark Phase 1, Kakkanad",
+              "addressLocality": "Kakkanad",
+              "addressRegion": "Kochi",
+              "postalCode": "682037",
+              "addressCountry": "IN"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 10.0185,
+              "longitude": 76.3451
+            },
+            "sameAs": [
+              "https://www.facebook.com/ewastekochi",
+              "https://www.linkedin.com/company/ewastekochi",
+              "https://twitter.com/ewastekochi"
+            ],
+            "openingHours": [
+              "Mo-Fr 09:00-18:00",
+              "Sa 09:00-14:00",
+              "Su Closed"
+            ],
+            "priceRange": "₹₹₹₹",
+            "currenciesAccepted": "INR",
+            "paymentAccepted": [
+              "Cash",
+              "Credit Card",
+              "Debit Card",
+              "UPI",
+              "Bank Transfer"
+            ],
+            "areaServed": "Kochi, Ernakulam, Aluva, Kakkanad, Thrippunithura, Kerala"
+          },
+          "areaServed": "Kochi, Kerala",
+          "availableChannel": [
+            "Online",
+            "Phone",
+            "Email",
+            "On-site"
+          ]
+        },
+        "expectedType": "Service",
+        "actualType": "Service",
+        "hasContext": true,
+        "hasRequiredFields": true
+      },
+      {
+        "name": "FAQ Schema",
+        "success": true,
+        "result": {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "question": "What is e-waste?",
+              "answer": "Electronic waste that needs recycling"
+            }
+          ]
+        },
+        "expectedType": "FAQPage",
+        "actualType": "FAQPage",
+        "hasContext": true,
+        "hasRequiredFields": true
+      }
+    ],
+    "openGraph": {
+      "name": "Open Graph Generation",
+      "success": true,
+      "result": {
+        "og:title": "E-Waste Recycling Kochi",
+        "og:description": "Professional e-waste recycling services",
+        "og:image": "/img/blog-hero.jpg",
+        "og:url": "https://ewastekochi.com/services/laptop-recycling/",
+        "og:type": "website",
+        "og:locale": "en_IN",
+        "og:site_name": "EWaste Kochi",
+        "og:image:width": "1200",
+        "og:image:height": "630",
+        "og:image:alt": "E-Waste Recycling Kochi"
+      },
+      "expectedFields": [
+        "og:title",
+        "og:description",
+        "og:image",
+        "og:url",
+        "og:type",
+        "og:locale",
+        "og:site_name",
+        "og:image:width",
+        "og:image:height",
+        "og:image:alt"
+      ],
+      "actualFields": [
+        "og:title",
+        "og:description",
+        "og:image",
+        "og:url",
+        "og:type",
+        "og:locale",
+        "og:site_name",
+        "og:image:width",
+        "og:image:height",
+        "og:image:alt"
+      ],
+      "hasAllFields": true,
+      "missingFields": []
+    },
+    "twitterCard": {
+      "name": "Twitter Card Generation",
+      "success": true,
+      "result": {
+        "twitter:card": "summary_large_image",
+        "twitter:title": "E-Waste Recycling Kochi",
+        "twitter:description": "Professional e-waste recycling services",
+        "twitter:image": "/img/blog-hero.jpg",
+        "twitter:site": "@ewastekochi",
+        "twitter:creator": "@ewastekochi"
+      },
+      "expectedFields": [
+        "twitter:card",
+        "twitter:title",
+        "twitter:description",
+        "twitter:image",
+        "twitter:site",
+        "twitter:creator"
+      ],
+      "actualFields": [
+        "twitter:card",
+        "twitter:title",
+        "twitter:description",
+        "twitter:image",
+        "twitter:site",
+        "twitter:creator"
+      ],
+      "hasAllFields": true,
+      "missingFields": []
+    },
+    "organizationData": {
+      "name": "Organization Data",
+      "success": true,
+      "result": {
+        "name": "EWaste Kochi",
+        "description": "Leading e-waste recycling and IT asset disposition company in Kochi, Kerala",
+        "url": "https://ewastekochi.com",
+        "logo": "https://ewastekochi.com/brand/ewastekochi-logo.svg",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-9876543210",
+          "contactType": "customer service",
+          "availableLanguage": [
+            "English",
+            "Hindi",
+            "Malayalam"
+          ],
+          "areaServed": "Kochi, Kerala"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Infopark Phase 1, Kakkanad",
+          "addressLocality": "Kakkanad",
+          "addressRegion": "Kochi",
+          "postalCode": "682037",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 10.0185,
+          "longitude": 76.3451
+        },
+        "sameAs": [
+          "https://www.facebook.com/ewastekochi",
+          "https://www.linkedin.com/company/ewastekochi",
+          "https://twitter.com/ewastekochi"
+        ],
+        "openingHours": [
+          "Mo-Fr 09:00-18:00",
+          "Sa 09:00-14:00",
+          "Su Closed"
+        ],
+        "priceRange": "₹₹₹₹",
+        "currenciesAccepted": "INR",
+        "paymentAccepted": [
+          "Cash",
+          "Credit Card",
+          "Debit Card",
+          "UPI",
+          "Bank Transfer"
+        ],
+        "areaServed": "Kochi, Ernakulam, Aluva, Kakkanad, Thrippunithura, Kerala"
+      },
+      "expectedFields": [
+        "name",
+        "description",
+        "url",
+        "logo",
+        "contactPoint",
+        "address",
+        "geo",
+        "openingHours"
+      ],
+      "actualFields": [
+        "name",
+        "description",
+        "url",
+        "logo",
+        "contactPoint",
+        "address",
+        "geo",
+        "sameAs",
+        "openingHours",
+        "priceRange",
+        "currenciesAccepted",
+        "paymentAccepted",
+        "areaServed"
+      ],
+      "hasAllFields": true,
+      "hasValidContactPoint": "customer service",
+      "hasValidAddress": "682037",
+      "hasValidGeo": true,
+      "missingFields": []
+    }
+  }
+}
