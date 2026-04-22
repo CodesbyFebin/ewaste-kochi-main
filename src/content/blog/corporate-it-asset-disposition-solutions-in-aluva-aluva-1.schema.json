@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Corporate IT Asset Disposition Solutions in Aluva",
+  "description": "Proper e-waste management is crucial for Aluva's environmental sustainability. This guide explores it asset disposition options, legal requirements, and trusted...",
+  "image": "https://www.ewastekochi.com/images/blog/corporate-it-asset-disposition-solutions-in-aluva-aluva-1.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-10-21",
+  "dateModified": "2025-10-21",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/corporate-it-asset-disposition-solutions-in-aluva-aluva-1/"
+  },
+  "articleSection": "corporate",
+  "keywords": "IT Asset Disposition, Aluva, ITAD services, corporate e-waste, asset disposal",
+  "wordCount": 1898,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "IT Asset Disposition"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Aluva",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Aluva",
+      "addressRegion": "Kerala",
+      "postalCode": "683101",
+      "addressCountry": "IN"
+    }
+  }
+}

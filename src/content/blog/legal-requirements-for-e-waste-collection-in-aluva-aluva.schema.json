@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Legal Requirements for E-Waste Collection in Aluva",
+  "description": "Looking for reliable e-waste collection in Aluva? This comprehensive guide covers everything you need to know about MSI e-waste management in Aluva, including p...",
+  "image": "https://www.ewastekochi.com/images/blog/legal-requirements-for-e-waste-collection-in-aluva-aluva.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2026-02-15",
+  "dateModified": "2026-02-15",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/legal-requirements-for-e-waste-collection-in-aluva-aluva/"
+  },
+  "articleSection": "collection",
+  "keywords": "E-Waste Collection, Aluva, e-waste pickup, electronic waste, recycling collection",
+  "wordCount": 1918,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "E-Waste Collection"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Aluva",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Aluva",
+      "addressRegion": "Kerala",
+      "postalCode": "683101",
+      "addressCountry": "IN"
+    }
+  }
+}

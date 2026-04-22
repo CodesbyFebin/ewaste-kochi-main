@@ -1,0 +1,174 @@
+{
+  "categories": [
+    {
+      "name": "how-to",
+      "slug": "how-to",
+      "count": 136,
+      "url": "/blog/category-how-to/"
+    },
+    {
+      "name": "troubleshooting",
+      "slug": "troubleshooting",
+      "count": 113,
+      "url": "/blog/category-troubleshooting/"
+    },
+    {
+      "name": "seasonal",
+      "slug": "seasonal",
+      "count": 125,
+      "url": "/blog/category-seasonal/"
+    },
+    {
+      "name": "benefits",
+      "slug": "benefits",
+      "count": 120,
+      "url": "/blog/category-benefits/"
+    },
+    {
+      "name": "business",
+      "slug": "business",
+      "count": 146,
+      "url": "/blog/category-business/"
+    },
+    {
+      "name": "legal",
+      "slug": "legal",
+      "count": 139,
+      "url": "/blog/category-legal/"
+    },
+    {
+      "name": "pricing",
+      "slug": "pricing",
+      "count": 111,
+      "url": "/blog/category-pricing/"
+    },
+    {
+      "name": "comparison",
+      "slug": "comparison",
+      "count": 110,
+      "url": "/blog/category-comparison/"
+    }
+  ],
+  "tags": [
+    {
+      "name": "server-recycling",
+      "slug": "server-recycling",
+      "count": 116,
+      "url": "/blog/tag-server-recycling/"
+    },
+    {
+      "name": "ernakulam",
+      "slug": "ernakulam",
+      "count": 93,
+      "url": "/blog/tag-ernakulam/"
+    },
+    {
+      "name": "battery-recycling",
+      "slug": "battery-recycling",
+      "count": 105,
+      "url": "/blog/tag-battery-recycling/"
+    },
+    {
+      "name": "phone-buyback",
+      "slug": "phone-buyback",
+      "count": 82,
+      "url": "/blog/tag-phone-buyback/"
+    },
+    {
+      "name": "edappally",
+      "slug": "edappally",
+      "count": 111,
+      "url": "/blog/tag-edappally/"
+    },
+    {
+      "name": "laptop-buyback",
+      "slug": "laptop-buyback",
+      "count": 90,
+      "url": "/blog/tag-laptop-buyback/"
+    },
+    {
+      "name": "aluva",
+      "slug": "aluva",
+      "count": 105,
+      "url": "/blog/tag-aluva/"
+    },
+    {
+      "name": "cable-recycling",
+      "slug": "cable-recycling",
+      "count": 93,
+      "url": "/blog/tag-cable-recycling/"
+    },
+    {
+      "name": "kochi",
+      "slug": "kochi",
+      "count": 107,
+      "url": "/blog/tag-kochi/"
+    },
+    {
+      "name": "itad",
+      "slug": "itad",
+      "count": 111,
+      "url": "/blog/tag-itad/"
+    },
+    {
+      "name": "monitor-recycling",
+      "slug": "monitor-recycling",
+      "count": 85,
+      "url": "/blog/tag-monitor-recycling/"
+    },
+    {
+      "name": "thrippunithura",
+      "slug": "thrippunithura",
+      "count": 94,
+      "url": "/blog/tag-thrippunithura/"
+    },
+    {
+      "name": "kalamassery",
+      "slug": "kalamassery",
+      "count": 106,
+      "url": "/blog/tag-kalamassery/"
+    },
+    {
+      "name": "data-destruction",
+      "slug": "data-destruction",
+      "count": 106,
+      "url": "/blog/tag-data-destruction/"
+    },
+    {
+      "name": "north-paravur",
+      "slug": "north-paravur",
+      "count": 98,
+      "url": "/blog/tag-north-paravur/"
+    },
+    {
+      "name": "e-waste-collection",
+      "slug": "e-waste-collection",
+      "count": 99,
+      "url": "/blog/tag-e-waste-collection/"
+    },
+    {
+      "name": "angamaly",
+      "slug": "angamaly",
+      "count": 104,
+      "url": "/blog/tag-angamaly/"
+    },
+    {
+      "name": "vyttila",
+      "slug": "vyttila",
+      "count": 94,
+      "url": "/blog/tag-vyttila/"
+    },
+    {
+      "name": "printer-recycling",
+      "slug": "printer-recycling",
+      "count": 113,
+      "url": "/blog/tag-printer-recycling/"
+    },
+    {
+      "name": "kakkanad",
+      "slug": "kakkanad",
+      "count": 88,
+      "url": "/blog/tag-kakkanad/"
+    }
+  ]
+}

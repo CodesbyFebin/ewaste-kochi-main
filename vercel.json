@@ -1900,6 +1900,11 @@
       "permanent": true
     },
     {
+      "source": "/locations/([^/]+)/([a-z-]+)-kochi/?$",
+      "destination": "/services/$2-kochi/",
+      "permanent": true
+    },
+    {
       "source": "/ml/:path*",
       "destination": "/",
       "permanent": true

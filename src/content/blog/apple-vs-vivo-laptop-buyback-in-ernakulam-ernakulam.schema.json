@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Apple vs Vivo Laptop Buyback in Ernakulam",
+  "description": "Looking for reliable laptop buyback in Ernakulam? This comprehensive guide covers everything you need to know about Apple e-waste management in Ernakulam, inclu...",
+  "image": "https://www.ewastekochi.com/images/blog/apple-vs-vivo-laptop-buyback-in-ernakulam-ernakulam.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-10-07",
+  "dateModified": "2025-10-07",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/apple-vs-vivo-laptop-buyback-in-ernakulam-ernakulam/"
+  },
+  "articleSection": "buyback",
+  "keywords": "Laptop Buyback, Ernakulam, sell laptop, laptop recycling, used laptop price",
+  "wordCount": 1955,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Laptop Buyback"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Ernakulam",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ernakulam",
+      "addressRegion": "Kerala",
+      "postalCode": "682016",
+      "addressCountry": "IN"
+    }
+  }
+}

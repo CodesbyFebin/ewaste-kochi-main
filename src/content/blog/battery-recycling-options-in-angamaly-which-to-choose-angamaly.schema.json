@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Battery Recycling Options in Angamaly: Which to Choose?",
+  "description": "Looking for reliable battery recycling in Angamaly? This comprehensive guide covers everything you need to know about Razer e-waste management in Angamaly, incl...",
+  "image": "https://www.ewastekochi.com/images/blog/battery-recycling-options-in-angamaly-which-to-choose-angamaly.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-10-18",
+  "dateModified": "2025-10-18",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/battery-recycling-options-in-angamaly-which-to-choose-angamaly/"
+  },
+  "articleSection": "recycling",
+  "keywords": "Battery Recycling, Angamaly, battery disposal, lithium recycling, UPS batteries",
+  "wordCount": 1935,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Battery Recycling"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Angamaly",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Angamaly",
+      "addressRegion": "Kerala",
+      "postalCode": "683572",
+      "addressCountry": "IN"
+    }
+  }
+}

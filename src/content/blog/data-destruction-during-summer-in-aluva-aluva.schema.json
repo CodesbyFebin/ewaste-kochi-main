@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Data Destruction During Summer in Aluva",
+  "description": "In Aluva's growing tech landscape, responsible Honor disposal matters. Learn about data destruction services, pricing structures, and environmental impact for A...",
+  "image": "https://www.ewastekochi.com/images/blog/data-destruction-during-summer-in-aluva-aluva.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-05-12",
+  "dateModified": "2025-05-12",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/data-destruction-during-summer-in-aluva-aluva/"
+  },
+  "articleSection": "security",
+  "keywords": "Data Destruction, Aluva, hard drive shredding, data wiping, secure disposal",
+  "wordCount": 1428,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Data Destruction"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Aluva",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Aluva",
+      "addressRegion": "Kerala",
+      "postalCode": "683101",
+      "addressCountry": "IN"
+    }
+  }
+}

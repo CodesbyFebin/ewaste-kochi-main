@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Data Destruction During Winter in Kakkanad",
+  "description": "Looking for reliable data destruction in Kakkanad? This comprehensive guide covers everything you need to know about e-waste management in Kakkanad, including p...",
+  "image": "https://www.ewastekochi.com/images/blog/data-destruction-during-winter-in-kakkanad-kakkanad.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2026-03-24",
+  "dateModified": "2026-03-24",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/data-destruction-during-winter-in-kakkanad-kakkanad/"
+  },
+  "articleSection": "security",
+  "keywords": "Data Destruction, Kakkanad, hard drive shredding, data wiping, secure disposal",
+  "wordCount": 1414,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Data Destruction"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Kakkanad",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kakkanad",
+      "addressRegion": "Kerala",
+      "postalCode": "682030",
+      "addressCountry": "IN"
+    }
+  }
+}

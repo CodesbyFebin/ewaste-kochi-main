@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Benefits of IT Asset Disposition in Ernakulam",
+  "description": "Proper e-waste management is crucial for Ernakulam's environmental sustainability. This guide explores it asset disposition options, legal requirements, and tru...",
+  "image": "https://www.ewastekochi.com/images/blog/benefits-of-it-asset-disposition-in-ernakulam-ernakulam.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-06-27",
+  "dateModified": "2025-06-27",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/benefits-of-it-asset-disposition-in-ernakulam-ernakulam/"
+  },
+  "articleSection": "corporate",
+  "keywords": "IT Asset Disposition, Ernakulam, ITAD services, corporate e-waste, asset disposal",
+  "wordCount": 1747,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "IT Asset Disposition"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Ernakulam",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ernakulam",
+      "addressRegion": "Kerala",
+      "postalCode": "682016",
+      "addressCountry": "IN"
+    }
+  }
+}

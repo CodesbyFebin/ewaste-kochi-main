@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Economic Benefits of IT Asset Disposition in North Paravur",
+  "description": "North Paravur residents and businesses often wonder about proper disposal. Our detailed guide explains it asset disposition services available in North Paravur,...",
+  "image": "https://www.ewastekochi.com/images/blog/economic-benefits-of-it-asset-disposition-in-north-paravur-north-paravur.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2026-02-23",
+  "dateModified": "2026-02-23",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/economic-benefits-of-it-asset-disposition-in-north-paravur-north-paravur/"
+  },
+  "articleSection": "corporate",
+  "keywords": "IT Asset Disposition, North Paravur, ITAD services, corporate e-waste, asset disposal",
+  "wordCount": 1664,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "IT Asset Disposition"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "North Paravur",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "North Paravur",
+      "addressRegion": "Kerala",
+      "postalCode": "683513",
+      "addressCountry": "IN"
+    }
+  }
+}

@@ -1,0 +1,272 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Seasonal Articles - EWaste Kochi";
+const description = "Expert guides and articles on seasonal in e-waste management. Learn about seasonal processes, best practices, and solutions in Kerala.";
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Blog", url: "/blog/" },
+  { name: "Topics", url: "/blog/topics/" },
+  { name: "Seasonal", url: "/blog/topic-seasonal/" }
+];
+
+// Topic blogs
+const topicBlogs = [
+  {
+    title: "Data Destruction Trends in Angamaly 2026",
+    slug: "data-destruction-trends-in-angamaly-2026-angamaly",
+    publishDate: "2026-04-14",
+    description: "",
+    service: "data-destruction",
+    location: "angamaly"
+  },
+  {
+    title: "Seasonal IT Asset Disposition Guide for Thrippunithura",
+    slug: "seasonal-it-asset-disposition-guide-for-thrippunithura-thrippunithura",
+    publishDate: "2026-04-13",
+    description: "",
+    service: "itad",
+    location: "thrippunithura"
+  },
+  {
+    title: "Cable Recycling During Winter in Aluva",
+    slug: "cable-recycling-during-winter-in-aluva-aluva",
+    publishDate: "2026-04-13",
+    description: "",
+    service: "cable-recycling",
+    location: "aluva"
+  },
+  {
+    title: "Best Time for Cable Recycling in Aluva",
+    slug: "best-time-for-cable-recycling-in-aluva-aluva",
+    publishDate: "2026-04-12",
+    description: "",
+    service: "cable-recycling",
+    location: "aluva"
+  },
+  {
+    title: "Data Destruction During Winter in Kakkanad",
+    slug: "data-destruction-during-winter-in-kakkanad-kakkanad",
+    publishDate: "2026-03-24",
+    description: "",
+    service: "data-destruction",
+    location: "kakkanad"
+  },
+  {
+    title: "Seasonal Server Recycling Guide for Kalamassery",
+    slug: "seasonal-server-recycling-guide-for-kalamassery-kalamassery",
+    publishDate: "2026-03-23",
+    description: "",
+    service: "server-recycling",
+    location: "kalamassery"
+  },
+  {
+    title: "Seasonal Printer Recycling Guide for Vyttila",
+    slug: "seasonal-printer-recycling-guide-for-vyttila-vyttila",
+    publishDate: "2026-03-21",
+    description: "",
+    service: "printer-recycling",
+    location: "vyttila"
+  },
+  {
+    title: "Phone Buyback During Spring in Edappally",
+    slug: "phone-buyback-during-spring-in-edappally-edappally",
+    publishDate: "2026-03-08",
+    description: "",
+    service: "phone-buyback",
+    location: "edappally"
+  },
+  {
+    title: "Best Time for Server Recycling in Kakkanad",
+    slug: "best-time-for-server-recycling-in-kakkanad-kakkanad",
+    publishDate: "2026-03-06",
+    description: "",
+    service: "server-recycling",
+    location: "kakkanad"
+  },
+  {
+    title: "Battery Recycling Trends in Kochi 2026",
+    slug: "battery-recycling-trends-in-kochi-2026-kochi-1",
+    publishDate: "2026-03-05",
+    description: "",
+    service: "battery-recycling",
+    location: "kochi"
+  },
+  {
+    title: "Best Time for Printer Recycling in Edappally",
+    slug: "best-time-for-printer-recycling-in-edappally-edappally-1",
+    publishDate: "2026-03-02",
+    description: "",
+    service: "printer-recycling",
+    location: "edappally"
+  },
+  {
+    title: "IT Asset Disposition Trends in Vyttila 2026",
+    slug: "it-asset-disposition-trends-in-vyttila-2026-vyttila",
+    publishDate: "2026-02-28",
+    description: "",
+    service: "itad",
+    location: "vyttila"
+  },
+  {
+    title: "Seasonal Printer Recycling Guide for Kalamassery",
+    slug: "seasonal-printer-recycling-guide-for-kalamassery-kalamassery",
+    publishDate: "2026-02-26",
+    description: "",
+    service: "printer-recycling",
+    location: "kalamassery"
+  },
+  {
+    title: "Monitor Recycling Trends in North Paravur 2026",
+    slug: "monitor-recycling-trends-in-north-paravur-2026-north-paravur-1",
+    publishDate: "2026-02-25",
+    description: "",
+    service: "monitor-recycling",
+    location: "north-paravur"
+  },
+  {
+    title: "Printer Recycling During Summer in Kalamassery",
+    slug: "printer-recycling-during-summer-in-kalamassery-kalamassery",
+    publishDate: "2026-02-24",
+    description: "",
+    service: "printer-recycling",
+    location: "kalamassery"
+  },
+  {
+    title: "Battery Recycling During Summer in North Paravur",
+    slug: "battery-recycling-during-summer-in-north-paravur-north-paravur",
+    publishDate: "2026-02-24",
+    description: "",
+    service: "battery-recycling",
+    location: "north-paravur"
+  },
+  {
+    title: "Best Time for Battery Recycling in Aluva",
+    slug: "best-time-for-battery-recycling-in-aluva-aluva",
+    publishDate: "2026-02-22",
+    description: "",
+    service: "battery-recycling",
+    location: "aluva"
+  },
+  {
+    title: "Battery Recycling During Spring in Aluva",
+    slug: "battery-recycling-during-spring-in-aluva-aluva",
+    publishDate: "2026-02-16",
+    description: "",
+    service: "battery-recycling",
+    location: "aluva"
+  },
+  {
+    title: "Seasonal Server Recycling Guide for Kakkanad",
+    slug: "seasonal-server-recycling-guide-for-kakkanad-kakkanad",
+    publishDate: "2026-02-09",
+    description: "",
+    service: "server-recycling",
+    location: "kakkanad"
+  },
+  {
+    title: "Best Time for E-Waste Collection in Kalamassery",
+    slug: "best-time-for-e-waste-collection-in-kalamassery-kalamassery",
+    publishDate: "2026-02-04",
+    description: "",
+    service: "e-waste-collection",
+    location: "kalamassery"
+  }
+];
+
+// Topic statistics
+const totalArticles = 125;
+const services = [...new Set(topicBlogs.map(blog => blog.service))];
+const locations = [...new Set(topicBlogs.map(blog => blog.location))];
+---
+
+<BaseLayout title={title} description={description} pageType="website" breadcrumbs={breadcrumbs}>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Seasonal Articles</h1>
+      <p class="text-xl text-gray-700 leading-relaxed mb-4">
+        Expert guides and articles on seasonal in e-waste management. 
+        Learn about seasonal processes, best practices, and solutions in Kerala.
+      </p>
+      <div class="bg-purple-50 p-4 rounded-lg">
+        <div class="grid grid-cols-3 gap-4">
+          <div>
+            <span class="font-bold text-purple-800">{totalArticles}</span>
+            <span class="text-purple-700"> articles</span>
+          </div>
+          <div>
+            <span class="font-bold text-purple-800">{services.length}</span>
+            <span class="text-purple-700"> services</span>
+          </div>
+          <div>
+            <span class="font-bold text-purple-800">{locations.length}</span>
+            <span class="text-purple-700"> locations</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="blog-list">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Recent Seasonal Articles</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        {topicBlogs.map(blog => (
+          <article class="blog-card bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-sm text-gray-500">
+                {new Date(blog.publishDate).toLocaleDateString('en-IN', { 
+                  year: 'numeric', 
+                  month: 'short',
+                  day: 'numeric'
+                })}
+              </span>
+              <div class="flex gap-2">
+                <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
+                  {blog.service}
+                </span>
+                <span class="px-2 py-1 bg-green-100 text-green-800 rounded text-xs">
+                  {blog.location}
+                </span>
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700">
+                {blog.title}
+              </a>
+            </h3>
+            <p class="text-gray-700 mb-4">{blog.description}</p>
+            <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700 font-medium">
+              Read more
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="related-section mt-12">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Browse by Service</h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        {services.map(service => (
+          <a 
+            href={`/blog/service-${service}/`} 
+            class="block p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
+          >
+            <h3 class="font-semibold text-blue-800 mb-2">
+              {service.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
+            </h3>
+            <p class="text-blue-700 text-sm">benefits articles</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .blog-card {
+      transition: all 0.3s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</BaseLayout>

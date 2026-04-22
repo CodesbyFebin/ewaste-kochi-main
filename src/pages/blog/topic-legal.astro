@@ -1,0 +1,272 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Legal Articles - EWaste Kochi";
+const description = "Expert guides and articles on legal in e-waste management. Learn about legal processes, best practices, and solutions in Kerala.";
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Blog", url: "/blog/" },
+  { name: "Topics", url: "/blog/topics/" },
+  { name: "Legal", url: "/blog/topic-legal/" }
+];
+
+// Topic blogs
+const topicBlogs = [
+  {
+    title: "Compliance Guide for E-Waste Collection in Vyttila",
+    slug: "compliance-guide-for-e-waste-collection-in-vyttila-vyttila",
+    publishDate: "2026-04-21",
+    description: "",
+    service: "e-waste-collection",
+    location: "vyttila"
+  },
+  {
+    title: "E-Waste Laws in Kochi: Complete Guide",
+    slug: "e-waste-laws-in-kochi-complete-guide-kochi-4",
+    publishDate: "2026-04-20",
+    description: "",
+    service: "monitor-recycling",
+    location: "kochi"
+  },
+  {
+    title: "KSPCB Regulations for Data Destruction in Aluva",
+    slug: "kspcb-regulations-for-data-destruction-in-aluva-aluva",
+    publishDate: "2026-04-17",
+    description: "",
+    service: "data-destruction",
+    location: "aluva"
+  },
+  {
+    title: "Legal Requirements for Printer Recycling in North Paravur",
+    slug: "legal-requirements-for-printer-recycling-in-north-paravur-north-paravur-1",
+    publishDate: "2026-04-15",
+    description: "",
+    service: "printer-recycling",
+    location: "north-paravur"
+  },
+  {
+    title: "Legal Requirements for Phone Buyback in Kalamassery",
+    slug: "legal-requirements-for-phone-buyback-in-kalamassery-kalamassery",
+    publishDate: "2026-04-13",
+    description: "",
+    service: "phone-buyback",
+    location: "kalamassery"
+  },
+  {
+    title: "E-Waste Laws in Kalamassery: Complete Guide",
+    slug: "e-waste-laws-in-kalamassery-complete-guide-kalamassery-4",
+    publishDate: "2026-04-12",
+    description: "",
+    service: "laptop-buyback",
+    location: "kalamassery"
+  },
+  {
+    title: "Compliance Guide for Monitor Recycling in Edappally",
+    slug: "compliance-guide-for-monitor-recycling-in-edappally-edappally",
+    publishDate: "2026-04-09",
+    description: "",
+    service: "monitor-recycling",
+    location: "edappally"
+  },
+  {
+    title: "Legal Requirements for Battery Recycling in Kalamassery",
+    slug: "legal-requirements-for-battery-recycling-in-kalamassery-kalamassery-1",
+    publishDate: "2026-04-08",
+    description: "",
+    service: "battery-recycling",
+    location: "kalamassery"
+  },
+  {
+    title: "E-Waste Laws in North Paravur: Complete Guide",
+    slug: "e-waste-laws-in-north-paravur-complete-guide-north-paravur-6",
+    publishDate: "2026-04-08",
+    description: "",
+    service: "printer-recycling",
+    location: "north-paravur"
+  },
+  {
+    title: "KSPCB Regulations for Phone Buyback in Ernakulam",
+    slug: "kspcb-regulations-for-phone-buyback-in-ernakulam-ernakulam-1",
+    publishDate: "2026-04-07",
+    description: "",
+    service: "phone-buyback",
+    location: "ernakulam"
+  },
+  {
+    title: "Legal Requirements for Server Recycling in Ernakulam",
+    slug: "legal-requirements-for-server-recycling-in-ernakulam-ernakulam",
+    publishDate: "2026-04-03",
+    description: "",
+    service: "server-recycling",
+    location: "ernakulam"
+  },
+  {
+    title: "Legal Requirements for Printer Recycling in Vyttila",
+    slug: "legal-requirements-for-printer-recycling-in-vyttila-vyttila",
+    publishDate: "2026-03-28",
+    description: "",
+    service: "printer-recycling",
+    location: "vyttila"
+  },
+  {
+    title: "Compliance Guide for Battery Recycling in Thrippunithura",
+    slug: "compliance-guide-for-battery-recycling-in-thrippunithura-thrippunithura",
+    publishDate: "2026-03-25",
+    description: "",
+    service: "battery-recycling",
+    location: "thrippunithura"
+  },
+  {
+    title: "KSPCB Regulations for Monitor Recycling in Angamaly",
+    slug: "kspcb-regulations-for-monitor-recycling-in-angamaly-angamaly",
+    publishDate: "2026-03-24",
+    description: "",
+    service: "monitor-recycling",
+    location: "angamaly"
+  },
+  {
+    title: "KSPCB Regulations for E-Waste Collection in Kalamassery",
+    slug: "kspcb-regulations-for-e-waste-collection-in-kalamassery-kalamassery-1",
+    publishDate: "2026-03-20",
+    description: "",
+    service: "e-waste-collection",
+    location: "kalamassery"
+  },
+  {
+    title: "KSPCB Regulations for Battery Recycling in Kochi",
+    slug: "kspcb-regulations-for-battery-recycling-in-kochi-kochi",
+    publishDate: "2026-03-18",
+    description: "",
+    service: "battery-recycling",
+    location: "kochi"
+  },
+  {
+    title: "E-Waste Laws in Kakkanad: Complete Guide",
+    slug: "e-waste-laws-in-kakkanad-complete-guide-kakkanad-3",
+    publishDate: "2026-03-16",
+    description: "",
+    service: "laptop-buyback",
+    location: "kakkanad"
+  },
+  {
+    title: "KSPCB Regulations for IT Asset Disposition in Thrippunithura",
+    slug: "kspcb-regulations-for-it-asset-disposition-in-thrippunithura-thrippunithura-1",
+    publishDate: "2026-03-15",
+    description: "",
+    service: "itad",
+    location: "thrippunithura"
+  },
+  {
+    title: "E-Waste Laws in Angamaly: Complete Guide",
+    slug: "e-waste-laws-in-angamaly-complete-guide-angamaly-8",
+    publishDate: "2026-03-11",
+    description: "",
+    service: "battery-recycling",
+    location: "angamaly"
+  },
+  {
+    title: "KSPCB Regulations for Phone Buyback in Ernakulam",
+    slug: "kspcb-regulations-for-phone-buyback-in-ernakulam-ernakulam",
+    publishDate: "2026-03-10",
+    description: "",
+    service: "phone-buyback",
+    location: "ernakulam"
+  }
+];
+
+// Topic statistics
+const totalArticles = 139;
+const services = [...new Set(topicBlogs.map(blog => blog.service))];
+const locations = [...new Set(topicBlogs.map(blog => blog.location))];
+---
+
+<BaseLayout title={title} description={description} pageType="website" breadcrumbs={breadcrumbs}>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Legal Articles</h1>
+      <p class="text-xl text-gray-700 leading-relaxed mb-4">
+        Expert guides and articles on legal in e-waste management. 
+        Learn about legal processes, best practices, and solutions in Kerala.
+      </p>
+      <div class="bg-purple-50 p-4 rounded-lg">
+        <div class="grid grid-cols-3 gap-4">
+          <div>
+            <span class="font-bold text-purple-800">{totalArticles}</span>
+            <span class="text-purple-700"> articles</span>
+          </div>
+          <div>
+            <span class="font-bold text-purple-800">{services.length}</span>
+            <span class="text-purple-700"> services</span>
+          </div>
+          <div>
+            <span class="font-bold text-purple-800">{locations.length}</span>
+            <span class="text-purple-700"> locations</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="blog-list">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Recent Legal Articles</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        {topicBlogs.map(blog => (
+          <article class="blog-card bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-sm text-gray-500">
+                {new Date(blog.publishDate).toLocaleDateString('en-IN', { 
+                  year: 'numeric', 
+                  month: 'short',
+                  day: 'numeric'
+                })}
+              </span>
+              <div class="flex gap-2">
+                <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
+                  {blog.service}
+                </span>
+                <span class="px-2 py-1 bg-green-100 text-green-800 rounded text-xs">
+                  {blog.location}
+                </span>
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700">
+                {blog.title}
+              </a>
+            </h3>
+            <p class="text-gray-700 mb-4">{blog.description}</p>
+            <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700 font-medium">
+              Read more
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="related-section mt-12">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Browse by Service</h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        {services.map(service => (
+          <a 
+            href={`/blog/service-${service}/`} 
+            class="block p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
+          >
+            <h3 class="font-semibold text-blue-800 mb-2">
+              {service.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
+            </h3>
+            <p class="text-blue-700 text-sm">benefits articles</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .blog-card {
+      transition: all 0.3s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</BaseLayout>

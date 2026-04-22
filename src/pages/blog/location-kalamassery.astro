@@ -1,0 +1,272 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Kalamassery Articles - EWaste Kochi";
+const description = "E-waste management guides and articles for Kalamassery. Find local recycling services, pickup options, and environmental solutions in Kalamassery.";
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Blog", url: "/blog/" },
+  { name: "Locations", url: "/blog/locations/" },
+  { name: "Kalamassery", url: "/blog/location-kalamassery/" }
+];
+
+// Location blogs
+const locationBlogs = [
+  {
+    title: "Legal Requirements for Phone Buyback in Kalamassery",
+    slug: "legal-requirements-for-phone-buyback-in-kalamassery-kalamassery",
+    publishDate: "2026-04-13",
+    description: "",
+    service: "phone-buyback",
+    topic: "legal"
+  },
+  {
+    title: "Benefits of E-Waste Collection in Kalamassery",
+    slug: "benefits-of-e-waste-collection-in-kalamassery-kalamassery",
+    publishDate: "2026-04-12",
+    description: "",
+    service: "e-waste-collection",
+    topic: "benefits"
+  },
+  {
+    title: "E-Waste Laws in Kalamassery: Complete Guide",
+    slug: "e-waste-laws-in-kalamassery-complete-guide-kalamassery-4",
+    publishDate: "2026-04-12",
+    description: "",
+    service: "laptop-buyback",
+    topic: "legal"
+  },
+  {
+    title: "Legal Requirements for Battery Recycling in Kalamassery",
+    slug: "legal-requirements-for-battery-recycling-in-kalamassery-kalamassery-1",
+    publishDate: "2026-04-08",
+    description: "",
+    service: "battery-recycling",
+    topic: "legal"
+  },
+  {
+    title: "Complete Guide to IT Asset Disposition in Kalamassery",
+    slug: "complete-guide-to-it-asset-disposition-in-kalamassery-kalamassery-2",
+    publishDate: "2026-04-07",
+    description: "",
+    service: "itad",
+    topic: "how-to"
+  },
+  {
+    title: "E-Waste Collection for Businesses in Kalamassery",
+    slug: "e-waste-collection-for-businesses-in-kalamassery-kalamassery",
+    publishDate: "2026-04-06",
+    description: "",
+    service: "e-waste-collection",
+    topic: "business"
+  },
+  {
+    title: "Data Destruction Problems in Kalamassery: Solutions",
+    slug: "data-destruction-problems-in-kalamassery-solutions-kalamassery",
+    publishDate: "2026-04-04",
+    description: "",
+    service: "data-destruction",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Affordable Printer Recycling in Kalamassery: Complete Pricing",
+    slug: "affordable-printer-recycling-in-kalamassery-complete-pricing-kalamassery",
+    publishDate: "2026-04-04",
+    description: "",
+    service: "printer-recycling",
+    topic: "pricing"
+  },
+  {
+    title: "Realme vs Poco Data Destruction in Kalamassery",
+    slug: "realme-vs-poco-data-destruction-in-kalamassery-kalamassery",
+    publishDate: "2026-04-01",
+    description: "",
+    service: "data-destruction",
+    topic: "comparison"
+  },
+  {
+    title: "Battery Recycling Options in Kalamassery: Which to Choose?",
+    slug: "battery-recycling-options-in-kalamassery-which-to-choose-kalamassery",
+    publishDate: "2026-04-01",
+    description: "",
+    service: "battery-recycling",
+    topic: "comparison"
+  },
+  {
+    title: "vs Realme E-Waste Collection in Kalamassery",
+    slug: "vs-realme-e-waste-collection-in-kalamassery-kalamassery",
+    publishDate: "2026-03-31",
+    description: "",
+    service: "e-waste-collection",
+    topic: "comparison"
+  },
+  {
+    title: "Complete Guide to Server Recycling in Kalamassery",
+    slug: "complete-guide-to-server-recycling-in-kalamassery-kalamassery-1",
+    publishDate: "2026-03-31",
+    description: "",
+    service: "server-recycling",
+    topic: "how-to"
+  },
+  {
+    title: "Cable Recycling Prices in Kalamassery 2026",
+    slug: "cable-recycling-prices-in-kalamassery-2026-kalamassery",
+    publishDate: "2026-03-30",
+    description: "",
+    service: "cable-recycling",
+    topic: "pricing"
+  },
+  {
+    title: "Seasonal Server Recycling Guide for Kalamassery",
+    slug: "seasonal-server-recycling-guide-for-kalamassery-kalamassery",
+    publishDate: "2026-03-23",
+    description: "",
+    service: "server-recycling",
+    topic: "seasonal"
+  },
+  {
+    title: "Best Phone Buyback Providers in Kalamassery: Comparison",
+    slug: "best-phone-buyback-providers-in-kalamassery-comparison-kalamassery",
+    publishDate: "2026-03-20",
+    description: "",
+    service: "phone-buyback",
+    topic: "comparison"
+  },
+  {
+    title: "KSPCB Regulations for E-Waste Collection in Kalamassery",
+    slug: "kspcb-regulations-for-e-waste-collection-in-kalamassery-kalamassery-1",
+    publishDate: "2026-03-20",
+    description: "",
+    service: "e-waste-collection",
+    topic: "legal"
+  },
+  {
+    title: "Troubleshooting Battery Recycling in Kalamassery",
+    slug: "troubleshooting-battery-recycling-in-kalamassery-kalamassery",
+    publishDate: "2026-03-12",
+    description: "",
+    service: "battery-recycling",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Why Choose Laptop Buyback in Kalamassery?",
+    slug: "why-choose-laptop-buyback-in-kalamassery-kalamassery",
+    publishDate: "2026-03-11",
+    description: "",
+    service: "laptop-buyback",
+    topic: "benefits"
+  },
+  {
+    title: "Enterprise Laptop Buyback in Kalamassery",
+    slug: "enterprise-laptop-buyback-in-kalamassery-kalamassery-2",
+    publishDate: "2026-03-09",
+    description: "",
+    service: "laptop-buyback",
+    topic: "business"
+  },
+  {
+    title: "How to it asset disposition in Kalamassery",
+    slug: "how-to-it-asset-disposition-in-kalamassery-kalamassery-1",
+    publishDate: "2026-03-08",
+    description: "",
+    service: "itad",
+    topic: "how-to"
+  }
+];
+
+// Location statistics
+const totalArticles = 106;
+const services = [...new Set(locationBlogs.map(blog => blog.service))];
+const topics = [...new Set(locationBlogs.map(blog => blog.topic))];
+---
+
+<BaseLayout title={title} description={description} pageType="website" breadcrumbs={breadcrumbs}>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Kalamassery Articles</h1>
+      <p class="text-xl text-gray-700 leading-relaxed mb-4">
+        E-waste management guides and articles for Kalamassery. Find local recycling services, 
+        pickup options, and environmental solutions in Kalamassery.
+      </p>
+      <div class="bg-green-50 p-4 rounded-lg">
+        <div class="grid grid-cols-3 gap-4">
+          <div>
+            <span class="font-bold text-green-800">{totalArticles}</span>
+            <span class="text-green-700"> articles</span>
+          </div>
+          <div>
+            <span class="font-bold text-green-800">{services.length}</span>
+            <span class="text-green-700"> services</span>
+          </div>
+          <div>
+            <span class="font-bold text-green-800">{topics.length}</span>
+            <span class="text-green-700"> topics</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="blog-list">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Recent Kalamassery Articles</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        {locationBlogs.map(blog => (
+          <article class="blog-card bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-sm text-gray-500">
+                {new Date(blog.publishDate).toLocaleDateString('en-IN', { 
+                  year: 'numeric', 
+                  month: 'short',
+                  day: 'numeric'
+                })}
+              </span>
+              <div class="flex gap-2">
+                <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
+                  {blog.service}
+                </span>
+                <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs">
+                  {blog.topic}
+                </span>
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700">
+                {blog.title}
+              </a>
+            </h3>
+            <p class="text-gray-700 mb-4">{blog.description}</p>
+            <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700 font-medium">
+              Read more
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="related-section mt-12">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Browse by Service</h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        {services.map(service => (
+          <a 
+            href={`/blog/service-${service}/`} 
+            class="block p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
+          >
+            <h3 class="font-semibold text-blue-800 mb-2">
+              {service.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
+            </h3>
+            <p class="text-blue-700 text-sm">aluva articles</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .blog-card {
+      transition: all 0.3s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</BaseLayout>

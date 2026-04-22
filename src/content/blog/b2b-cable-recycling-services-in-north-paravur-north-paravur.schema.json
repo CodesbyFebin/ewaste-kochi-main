@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "B2B Cable Recycling Services in North Paravur",
+  "description": "North Paravur residents and businesses often wonder about proper Razer disposal. Our detailed guide explains cable recycling services available in North Paravur...",
+  "image": "https://www.ewastekochi.com/images/blog/b2b-cable-recycling-services-in-north-paravur-north-paravur.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2026-01-28",
+  "dateModified": "2026-01-28",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/b2b-cable-recycling-services-in-north-paravur-north-paravur/"
+  },
+  "articleSection": "recycling",
+  "keywords": "Cable Recycling, North Paravur, wire recycling, copper cables, electronic cables",
+  "wordCount": 1375,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Cable Recycling"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "North Paravur",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "North Paravur",
+      "addressRegion": "Kerala",
+      "postalCode": "683513",
+      "addressCountry": "IN"
+    }
+  }
+}

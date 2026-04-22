@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Legal Requirements for Phone Buyback in Kalamassery",
+  "description": "In Kalamassery's growing tech landscape, responsible disposal matters. Learn about phone buyback services, pricing structures, and environmental impact for Kala...",
+  "image": "https://www.ewastekochi.com/images/blog/legal-requirements-for-phone-buyback-in-kalamassery-kalamassery.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2026-04-13",
+  "dateModified": "2026-04-13",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/legal-requirements-for-phone-buyback-in-kalamassery-kalamassery/"
+  },
+  "articleSection": "buyback",
+  "keywords": "Phone Buyback, Kalamassery, sell phone, mobile recycling, used phone price",
+  "wordCount": 1222,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Phone Buyback"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Kalamassery",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kalamassery",
+      "addressRegion": "Kerala",
+      "postalCode": "683104",
+      "addressCountry": "IN"
+    }
+  }
+}

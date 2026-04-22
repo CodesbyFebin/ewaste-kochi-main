@@ -1,0 +1,239 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "aluva Articles - EWaste Kochi";
+const description = "E-waste services, recycling solutions, and electronic disposal options in Aluva, Kerala. Serving areas including Aluva Railway Station, Periyar River, Siva Temple.";
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Blog", url: "/blog/" },
+  { name: "aluva", url: "/blog/tag-aluva/" }
+];
+
+// Get tag blogs
+const tagBlogs = [
+  {
+    title: "KSPCB Regulations for Data Destruction in Aluva",
+    slug: "kspcb-regulations-for-data-destruction-in-aluva-aluva",
+    publishDate: "2026-04-17",
+    description: "undefined",
+    service: "data-destruction",
+    location: "aluva",
+    topic: "legal"
+  },
+  {
+    title: "Cable Recycling During Winter in Aluva",
+    slug: "cable-recycling-during-winter-in-aluva-aluva",
+    publishDate: "2026-04-13",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "aluva",
+    topic: "seasonal"
+  },
+  {
+    title: "Best Time for Cable Recycling in Aluva",
+    slug: "best-time-for-cable-recycling-in-aluva-aluva",
+    publishDate: "2026-04-12",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "aluva",
+    topic: "seasonal"
+  },
+  {
+    title: "Printer Recycling Challenges in Aluva: Expert Tips",
+    slug: "printer-recycling-challenges-in-aluva-expert-tips-aluva",
+    publishDate: "2026-04-10",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "aluva",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Best Way to battery recycle in Aluva 2026",
+    slug: "best-way-to-battery-recycle-in-aluva-2026-aluva",
+    publishDate: "2026-04-05",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "aluva",
+    topic: "how-to"
+  },
+  {
+    title: "Environmental Impact of Server Recycling in Aluva",
+    slug: "environmental-impact-of-server-recycling-in-aluva-aluva-2",
+    publishDate: "2026-04-05",
+    description: "undefined",
+    service: "server-recycling",
+    location: "aluva",
+    topic: "benefits"
+  },
+  {
+    title: "Cable Recycling vs Wire Recycling in Aluva",
+    slug: "cable-recycling-vs-wire-recycling-in-aluva-aluva",
+    publishDate: "2026-03-24",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "aluva",
+    topic: "comparison"
+  },
+  {
+    title: "Printer Recycling Price Guide for Aluva",
+    slug: "printer-recycling-price-guide-for-aluva-aluva",
+    publishDate: "2026-03-23",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "aluva",
+    topic: "pricing"
+  },
+  {
+    title: "Corporate IT Asset Disposition Solutions in Aluva",
+    slug: "corporate-it-asset-disposition-solutions-in-aluva-aluva-2",
+    publishDate: "2026-03-21",
+    description: "undefined",
+    service: "itad",
+    location: "aluva",
+    topic: "business"
+  },
+  {
+    title: "Server Recycling Challenges in Aluva: Expert Tips",
+    slug: "server-recycling-challenges-in-aluva-expert-tips-aluva",
+    publishDate: "2026-03-18",
+    description: "undefined",
+    service: "server-recycling",
+    location: "aluva",
+    topic: "troubleshooting"
+  }
+];
+
+// Get related tags
+const relatedTags = [
+  {
+    name: "server-recycling",
+    slug: "server-recycling",
+    count: 116,
+    url: "/blog/tag-server-recycling/"
+  },
+  {
+    name: "printer-recycling",
+    slug: "printer-recycling",
+    count: 113,
+    url: "/blog/tag-printer-recycling/"
+  },
+  {
+    name: "edappally",
+    slug: "edappally",
+    count: 111,
+    url: "/blog/tag-edappally/"
+  },
+  {
+    name: "itad",
+    slug: "itad",
+    count: 111,
+    url: "/blog/tag-itad/"
+  },
+  {
+    name: "kochi",
+    slug: "kochi",
+    count: 107,
+    url: "/blog/tag-kochi/"
+  },
+  {
+    name: "kalamassery",
+    slug: "kalamassery",
+    count: 106,
+    url: "/blog/tag-kalamassery/"
+  },
+  {
+    name: "data-destruction",
+    slug: "data-destruction",
+    count: 106,
+    url: "/blog/tag-data-destruction/"
+  },
+  {
+    name: "battery-recycling",
+    slug: "battery-recycling",
+    count: 105,
+    url: "/blog/tag-battery-recycling/"
+  }
+];
+---
+
+<BaseLayout title={title} description={description} pageType="website" breadcrumbs={breadcrumbs}>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">aluva</h1>
+      <p class="text-xl text-gray-700 leading-relaxed mb-4">
+        E-waste services, recycling solutions, and electronic disposal options in Aluva, Kerala. Serving areas including Aluva Railway Station, Periyar River, Siva Temple.
+      </p>
+      <div class="bg-amber-50 p-4 rounded-lg">
+        <p class="text-amber-800 font-medium">
+          <span class="font-bold">{tagBlogs.length}</span> articles tagged with "aluva"
+        </p>
+      </div>
+    </header>
+
+    <section class="blog-list mb-12">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Recent Articles</h2>
+      <div class="space-y-6">
+        {tagBlogs.map(blog => (
+          <article class="blog-card bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-sm text-gray-500">
+                {new Date(blog.publishDate).toLocaleDateString('en-IN', { 
+                  year: 'numeric', 
+                  month: 'long', 
+                  day: 'numeric' 
+                })}
+              </span>
+              <div class="flex gap-2">
+                <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs">
+                  {blog.topic}
+                </span>
+                <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
+                  {blog.service}
+                </span>
+                <span class="px-2 py-1 bg-green-100 text-green-800 rounded text-xs">
+                  {blog.location}
+                </span>
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700">
+                {blog.title}
+              </a>
+            </h3>
+            <p class="text-gray-700 mb-4">{blog.description}</p>
+            <a 
+              href={`/blog/${blog.slug}/`} 
+              class="text-amber-600 hover:text-amber-700 font-medium"
+            >
+              Read more
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="related-tags">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Tags</h2>
+      <div class="flex flex-wrap gap-3">
+        {relatedTags.map(tag => (
+          <a 
+            href={tag.url} 
+            class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full hover:bg-gray-200 transition-colors"
+          >
+            aluva (10)
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .blog-card {
+      transition: all 0.3s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</BaseLayout>

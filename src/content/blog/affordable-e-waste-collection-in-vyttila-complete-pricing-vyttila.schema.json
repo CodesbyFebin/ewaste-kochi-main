@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Affordable E-Waste Collection in Vyttila: Complete Pricing",
+  "description": "In Vyttila's growing tech landscape, responsible disposal matters. Learn about e-waste collection services, pricing structures, and environmental impact for Vyt...",
+  "image": "https://www.ewastekochi.com/images/blog/affordable-e-waste-collection-in-vyttila-complete-pricing-vyttila.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2026-03-23",
+  "dateModified": "2026-03-23",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/affordable-e-waste-collection-in-vyttila-complete-pricing-vyttila/"
+  },
+  "articleSection": "collection",
+  "keywords": "E-Waste Collection, Vyttila, e-waste pickup, electronic waste, recycling collection",
+  "wordCount": 1966,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "E-Waste Collection"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Vyttila",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Vyttila",
+      "addressRegion": "Kerala",
+      "postalCode": "682019",
+      "addressCountry": "IN"
+    }
+  }
+}

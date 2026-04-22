@@ -1,0 +1,4672 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Blog Archives: 2026 - EWaste Kochi";
+const description = "Browse our 2026 blog archives. Find e-waste management guides, recycling tips, and ITAD solutions published in 2026.";
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Blog", url: "/blog/" },
+  { name: "Archives", url: "/blog/archives/" },
+  { name: "2026", url: "/blog/archive-2026/" }
+];
+
+// Year data
+const yearBlogs = [
+  {
+    title: "Best Battery Recycling Providers in North Paravur: Comparison",
+    slug: "best-battery-recycling-providers-in-north-paravur-comparison-north-paravur",
+    publishDate: "2026-04-17",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "north-paravur",
+    topic: "comparison"
+  },
+  {
+    title: "Printer Recycling Challenges in Aluva: Expert Tips",
+    slug: "printer-recycling-challenges-in-aluva-expert-tips-aluva",
+    publishDate: "2026-04-10",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "aluva",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Economic Benefits of Cable Recycling in Thrippunithura",
+    slug: "economic-benefits-of-cable-recycling-in-thrippunithura-thrippunithura-1",
+    publishDate: "2026-04-20",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "thrippunithura",
+    topic: "benefits"
+  },
+  {
+    title: "Complete Guide to IT Asset Disposition in Kalamassery",
+    slug: "complete-guide-to-it-asset-disposition-in-kalamassery-kalamassery-2",
+    publishDate: "2026-04-07",
+    description: "undefined",
+    service: "itad",
+    location: "kalamassery",
+    topic: "how-to"
+  },
+  {
+    title: "Realme vs Poco Data Destruction in Kalamassery",
+    slug: "realme-vs-poco-data-destruction-in-kalamassery-kalamassery",
+    publishDate: "2026-04-01",
+    description: "undefined",
+    service: "data-destruction",
+    location: "kalamassery",
+    topic: "comparison"
+  },
+  {
+    title: "Best Time for Cable Recycling in Aluva",
+    slug: "best-time-for-cable-recycling-in-aluva-aluva",
+    publishDate: "2026-04-12",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "aluva",
+    topic: "seasonal"
+  },
+  {
+    title: "Printer Recycling Process in Vyttila: Step by Step",
+    slug: "printer-recycling-process-in-vyttila-step-by-step-vyttila-1",
+    publishDate: "2026-04-08",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "vyttila",
+    topic: "how-to"
+  },
+  {
+    title: "Data Destruction Options in Kochi: Which to Choose?",
+    slug: "data-destruction-options-in-kochi-which-to-choose-kochi",
+    publishDate: "2026-04-01",
+    description: "undefined",
+    service: "data-destruction",
+    location: "kochi",
+    topic: "comparison"
+  },
+  {
+    title: "Best Data Destruction Providers in Angamaly: Comparison",
+    slug: "best-data-destruction-providers-in-angamaly-comparison-angamaly-1",
+    publishDate: "2026-04-02",
+    description: "undefined",
+    service: "data-destruction",
+    location: "angamaly",
+    topic: "comparison"
+  },
+  {
+    title: "Data Destruction Problems in Kalamassery: Solutions",
+    slug: "data-destruction-problems-in-kalamassery-solutions-kalamassery",
+    publishDate: "2026-04-04",
+    description: "undefined",
+    service: "data-destruction",
+    location: "kalamassery",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Environmental Impact of E-Waste Collection in Thrippunithura",
+    slug: "environmental-impact-of-e-waste-collection-in-thrippunithura-thrippunithura",
+    publishDate: "2026-04-16",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "thrippunithura",
+    topic: "benefits"
+  },
+  {
+    title: "Affordable Laptop Buyback in North Paravur: Complete Pricing",
+    slug: "affordable-laptop-buyback-in-north-paravur-complete-pricing-north-paravur",
+    publishDate: "2026-04-17",
+    description: "undefined",
+    service: "laptop-buyback",
+    location: "north-paravur",
+    topic: "pricing"
+  },
+  {
+    title: "Common E-Waste Collection Issues in Thrippunithura",
+    slug: "common-e-waste-collection-issues-in-thrippunithura-thrippunithura",
+    publishDate: "2026-04-11",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "thrippunithura",
+    topic: "troubleshooting"
+  },
+  {
+    title: "KSPCB Regulations for Data Destruction in Aluva",
+    slug: "kspcb-regulations-for-data-destruction-in-aluva-aluva",
+    publishDate: "2026-04-17",
+    description: "undefined",
+    service: "data-destruction",
+    location: "aluva",
+    topic: "legal"
+  },
+  {
+    title: "E-Waste Laws in Kochi: Complete Guide",
+    slug: "e-waste-laws-in-kochi-complete-guide-kochi-4",
+    publishDate: "2026-04-20",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "kochi",
+    topic: "legal"
+  },
+  {
+    title: "How to battery recycle in Angamaly",
+    slug: "how-to-battery-recycle-in-angamaly-angamaly-1",
+    publishDate: "2026-04-16",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "angamaly",
+    topic: "how-to"
+  },
+  {
+    title: "How to printer recycle in Edappally",
+    slug: "how-to-printer-recycle-in-edappally-edappally",
+    publishDate: "2026-04-15",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "edappally",
+    topic: "how-to"
+  },
+  {
+    title: "E-Waste Collection for Businesses in Kalamassery",
+    slug: "e-waste-collection-for-businesses-in-kalamassery-kalamassery",
+    publishDate: "2026-04-06",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "kalamassery",
+    topic: "business"
+  },
+  {
+    title: "Complete Guide to Server Recycling in North Paravur",
+    slug: "complete-guide-to-server-recycling-in-north-paravur-north-paravur",
+    publishDate: "2026-04-06",
+    description: "undefined",
+    service: "server-recycling",
+    location: "north-paravur",
+    topic: "how-to"
+  },
+  {
+    title: "Best Way to monitor recycle in Kochi 2026",
+    slug: "best-way-to-monitor-recycle-in-kochi-2026-kochi-1",
+    publishDate: "2026-04-11",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "kochi",
+    topic: "how-to"
+  },
+  {
+    title: "Best Way to cable recycle in Vyttila 2026",
+    slug: "best-way-to-cable-recycle-in-vyttila-2026-vyttila",
+    publishDate: "2026-04-19",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "vyttila",
+    topic: "how-to"
+  },
+  {
+    title: "Legal Requirements for Server Recycling in Ernakulam",
+    slug: "legal-requirements-for-server-recycling-in-ernakulam-ernakulam",
+    publishDate: "2026-04-03",
+    description: "undefined",
+    service: "server-recycling",
+    location: "ernakulam",
+    topic: "legal"
+  },
+  {
+    title: "Affordable Phone Buyback in North Paravur: Complete Pricing",
+    slug: "affordable-phone-buyback-in-north-paravur-complete-pricing-north-paravur",
+    publishDate: "2026-04-11",
+    description: "undefined",
+    service: "phone-buyback",
+    location: "north-paravur",
+    topic: "pricing"
+  },
+  {
+    title: "Compliance Guide for Monitor Recycling in Edappally",
+    slug: "compliance-guide-for-monitor-recycling-in-edappally-edappally",
+    publishDate: "2026-04-09",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "edappally",
+    topic: "legal"
+  },
+  {
+    title: "Battery Recycling Options in Kalamassery: Which to Choose?",
+    slug: "battery-recycling-options-in-kalamassery-which-to-choose-kalamassery",
+    publishDate: "2026-04-01",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "kalamassery",
+    topic: "comparison"
+  },
+  {
+    title: "Enterprise Monitor Recycling in Ernakulam",
+    slug: "enterprise-monitor-recycling-in-ernakulam-ernakulam",
+    publishDate: "2026-04-03",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "ernakulam",
+    topic: "business"
+  },
+  {
+    title: "Best Way to battery recycle in Vyttila 2026",
+    slug: "best-way-to-battery-recycle-in-vyttila-2026-vyttila",
+    publishDate: "2026-04-21",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "vyttila",
+    topic: "how-to"
+  },
+  {
+    title: "Benefits of Battery Recycling in Thrippunithura",
+    slug: "benefits-of-battery-recycling-in-thrippunithura-thrippunithura",
+    publishDate: "2026-04-03",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "thrippunithura",
+    topic: "benefits"
+  },
+  {
+    title: "Environmental Impact of Data Destruction in Kakkanad",
+    slug: "environmental-impact-of-data-destruction-in-kakkanad-kakkanad",
+    publishDate: "2026-04-09",
+    description: "undefined",
+    service: "data-destruction",
+    location: "kakkanad",
+    topic: "benefits"
+  },
+  {
+    title: "How to e-waste collection in Edappally",
+    slug: "how-to-e-waste-collection-in-edappally-edappally",
+    publishDate: "2026-04-05",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "edappally",
+    topic: "how-to"
+  },
+  {
+    title: "Best Way to e-waste collection in Ernakulam 2026",
+    slug: "best-way-to-e-waste-collection-in-ernakulam-2026-ernakulam",
+    publishDate: "2026-04-19",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "ernakulam",
+    topic: "how-to"
+  },
+  {
+    title: "KSPCB Regulations for Phone Buyback in Ernakulam",
+    slug: "kspcb-regulations-for-phone-buyback-in-ernakulam-ernakulam-1",
+    publishDate: "2026-04-07",
+    description: "undefined",
+    service: "phone-buyback",
+    location: "ernakulam",
+    topic: "legal"
+  },
+  {
+    title: "Complete Guide to IT Asset Disposition in Vyttila",
+    slug: "complete-guide-to-it-asset-disposition-in-vyttila-vyttila",
+    publishDate: "2026-04-18",
+    description: "undefined",
+    service: "itad",
+    location: "vyttila",
+    topic: "how-to"
+  },
+  {
+    title: "Server Recycling Challenges in Ernakulam: Expert Tips",
+    slug: "server-recycling-challenges-in-ernakulam-expert-tips-ernakulam",
+    publishDate: "2026-04-16",
+    description: "undefined",
+    service: "server-recycling",
+    location: "ernakulam",
+    topic: "troubleshooting"
+  },
+  {
+    title: "E-Waste Laws in Kalamassery: Complete Guide",
+    slug: "e-waste-laws-in-kalamassery-complete-guide-kalamassery-4",
+    publishDate: "2026-04-12",
+    description: "undefined",
+    service: "laptop-buyback",
+    location: "kalamassery",
+    topic: "legal"
+  },
+  {
+    title: "Common Monitor Recycling Issues in Kakkanad",
+    slug: "common-monitor-recycling-issues-in-kakkanad-kakkanad",
+    publishDate: "2026-04-07",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "kakkanad",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Legal Requirements for Phone Buyback in Kalamassery",
+    slug: "legal-requirements-for-phone-buyback-in-kalamassery-kalamassery",
+    publishDate: "2026-04-13",
+    description: "undefined",
+    service: "phone-buyback",
+    location: "kalamassery",
+    topic: "legal"
+  },
+  {
+    title: "Common Monitor Recycling Issues in Thrippunithura",
+    slug: "common-monitor-recycling-issues-in-thrippunithura-thrippunithura-1",
+    publishDate: "2026-04-02",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "thrippunithura",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Legal Requirements for Printer Recycling in North Paravur",
+    slug: "legal-requirements-for-printer-recycling-in-north-paravur-north-paravur-1",
+    publishDate: "2026-04-15",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "north-paravur",
+    topic: "legal"
+  },
+  {
+    title: "Data Destruction Trends in Angamaly 2026",
+    slug: "data-destruction-trends-in-angamaly-2026-angamaly",
+    publishDate: "2026-04-14",
+    description: "undefined",
+    service: "data-destruction",
+    location: "angamaly",
+    topic: "seasonal"
+  },
+  {
+    title: "Best Way to battery recycle in Aluva 2026",
+    slug: "best-way-to-battery-recycle-in-aluva-2026-aluva",
+    publishDate: "2026-04-05",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "aluva",
+    topic: "how-to"
+  },
+  {
+    title: "Benefits of Cable Recycling in Ernakulam",
+    slug: "benefits-of-cable-recycling-in-ernakulam-ernakulam",
+    publishDate: "2026-04-10",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "ernakulam",
+    topic: "benefits"
+  },
+  {
+    title: "Affordable Printer Recycling in Kalamassery: Complete Pricing",
+    slug: "affordable-printer-recycling-in-kalamassery-complete-pricing-kalamassery",
+    publishDate: "2026-04-04",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "kalamassery",
+    topic: "pricing"
+  },
+  {
+    title: "Why Choose Battery Recycling in Edappally?",
+    slug: "why-choose-battery-recycling-in-edappally-edappally-1",
+    publishDate: "2026-04-14",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "edappally",
+    topic: "benefits"
+  },
+  {
+    title: "E-Waste Laws in North Paravur: Complete Guide",
+    slug: "e-waste-laws-in-north-paravur-complete-guide-north-paravur-6",
+    publishDate: "2026-04-08",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "north-paravur",
+    topic: "legal"
+  },
+  {
+    title: "Laptop Buyback Price Guide for Vyttila",
+    slug: "laptop-buyback-price-guide-for-vyttila-vyttila",
+    publishDate: "2026-04-09",
+    description: "undefined",
+    service: "laptop-buyback",
+    location: "vyttila",
+    topic: "pricing"
+  },
+  {
+    title: "Common E-Waste Collection Issues in Vyttila",
+    slug: "common-e-waste-collection-issues-in-vyttila-vyttila-1",
+    publishDate: "2026-04-18",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "vyttila",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Benefits of E-Waste Collection in Kalamassery",
+    slug: "benefits-of-e-waste-collection-in-kalamassery-kalamassery",
+    publishDate: "2026-04-12",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "kalamassery",
+    topic: "benefits"
+  },
+  {
+    title: "Data Destruction Problems in Edappally: Solutions",
+    slug: "data-destruction-problems-in-edappally-solutions-edappally-1",
+    publishDate: "2026-04-19",
+    description: "undefined",
+    service: "data-destruction",
+    location: "edappally",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Compliance Guide for E-Waste Collection in Vyttila",
+    slug: "compliance-guide-for-e-waste-collection-in-vyttila-vyttila",
+    publishDate: "2026-04-21",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "vyttila",
+    topic: "legal"
+  },
+  {
+    title: "Seasonal IT Asset Disposition Guide for Thrippunithura",
+    slug: "seasonal-it-asset-disposition-guide-for-thrippunithura-thrippunithura",
+    publishDate: "2026-04-13",
+    description: "undefined",
+    service: "itad",
+    location: "thrippunithura",
+    topic: "seasonal"
+  },
+  {
+    title: "Cable Recycling During Winter in Aluva",
+    slug: "cable-recycling-during-winter-in-aluva-aluva",
+    publishDate: "2026-04-13",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "aluva",
+    topic: "seasonal"
+  },
+  {
+    title: "Corporate E-Waste Collection Solutions in Vyttila",
+    slug: "corporate-e-waste-collection-solutions-in-vyttila-vyttila",
+    publishDate: "2026-04-15",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "vyttila",
+    topic: "business"
+  },
+  {
+    title: "Environmental Impact of Server Recycling in Aluva",
+    slug: "environmental-impact-of-server-recycling-in-aluva-aluva-2",
+    publishDate: "2026-04-05",
+    description: "undefined",
+    service: "server-recycling",
+    location: "aluva",
+    topic: "benefits"
+  },
+  {
+    title: "Best Data Destruction Providers in Angamaly: Comparison",
+    slug: "best-data-destruction-providers-in-angamaly-comparison-angamaly-2",
+    publishDate: "2026-04-20",
+    description: "undefined",
+    service: "data-destruction",
+    location: "angamaly",
+    topic: "comparison"
+  },
+  {
+    title: "Phone Buyback for Businesses in Vyttila",
+    slug: "phone-buyback-for-businesses-in-vyttila-vyttila",
+    publishDate: "2026-04-04",
+    description: "undefined",
+    service: "phone-buyback",
+    location: "vyttila",
+    topic: "business"
+  },
+  {
+    title: "Legal Requirements for Battery Recycling in Kalamassery",
+    slug: "legal-requirements-for-battery-recycling-in-kalamassery-kalamassery-1",
+    publishDate: "2026-04-08",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "kalamassery",
+    topic: "legal"
+  },
+  {
+    title: "Best Time for Printer Recycling in Edappally",
+    slug: "best-time-for-printer-recycling-in-edappally-edappally-1",
+    publishDate: "2026-03-02",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "edappally",
+    topic: "seasonal"
+  },
+  {
+    title: "Enterprise Battery Recycling in Kochi",
+    slug: "enterprise-battery-recycling-in-kochi-kochi-1",
+    publishDate: "2026-03-27",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "kochi",
+    topic: "business"
+  },
+  {
+    title: "Enterprise Laptop Buyback in Kakkanad",
+    slug: "enterprise-laptop-buyback-in-kakkanad-kakkanad",
+    publishDate: "2026-03-07",
+    description: "undefined",
+    service: "laptop-buyback",
+    location: "kakkanad",
+    topic: "business"
+  },
+  {
+    title: "Complete Guide to Server Recycling in Kalamassery",
+    slug: "complete-guide-to-server-recycling-in-kalamassery-kalamassery-1",
+    publishDate: "2026-03-31",
+    description: "undefined",
+    service: "server-recycling",
+    location: "kalamassery",
+    topic: "how-to"
+  },
+  {
+    title: "Compliance Guide for IT Asset Disposition in Vyttila",
+    slug: "compliance-guide-for-it-asset-disposition-in-vyttila-vyttila",
+    publishDate: "2026-03-05",
+    description: "undefined",
+    service: "itad",
+    location: "vyttila",
+    topic: "legal"
+  },
+  {
+    title: "Complete Guide to Printer Recycling in Edappally",
+    slug: "complete-guide-to-printer-recycling-in-edappally-edappally",
+    publishDate: "2026-03-17",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "edappally",
+    topic: "how-to"
+  },
+  {
+    title: "Best Printer Recycling Providers in Ernakulam: Comparison",
+    slug: "best-printer-recycling-providers-in-ernakulam-comparison-ernakulam",
+    publishDate: "2026-03-25",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "ernakulam",
+    topic: "comparison"
+  },
+  {
+    title: "Seasonal Printer Recycling Guide for Vyttila",
+    slug: "seasonal-printer-recycling-guide-for-vyttila-vyttila",
+    publishDate: "2026-03-21",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "vyttila",
+    topic: "seasonal"
+  },
+  {
+    title: "Cable Recycling Problems in Kochi: Solutions",
+    slug: "cable-recycling-problems-in-kochi-solutions-kochi",
+    publishDate: "2026-03-20",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "kochi",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Corporate IT Asset Disposition Solutions in Aluva",
+    slug: "corporate-it-asset-disposition-solutions-in-aluva-aluva-2",
+    publishDate: "2026-03-21",
+    description: "undefined",
+    service: "itad",
+    location: "aluva",
+    topic: "business"
+  },
+  {
+    title: "Corporate IT Asset Disposition Solutions in Kakkanad",
+    slug: "corporate-it-asset-disposition-solutions-in-kakkanad-kakkanad",
+    publishDate: "2026-03-13",
+    description: "undefined",
+    service: "itad",
+    location: "kakkanad",
+    topic: "business"
+  },
+  {
+    title: "IT Asset Disposition Options in Edappally: Which to Choose?",
+    slug: "it-asset-disposition-options-in-edappally-which-to-choose-edappally-1",
+    publishDate: "2026-03-19",
+    description: "undefined",
+    service: "itad",
+    location: "edappally",
+    topic: "comparison"
+  },
+  {
+    title: "Environmental Impact of Printer Recycling in Vyttila",
+    slug: "environmental-impact-of-printer-recycling-in-vyttila-vyttila",
+    publishDate: "2026-03-13",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "vyttila",
+    topic: "benefits"
+  },
+  {
+    title: "Corporate Printer Recycling Solutions in North Paravur",
+    slug: "corporate-printer-recycling-solutions-in-north-paravur-north-paravur",
+    publishDate: "2026-03-19",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "north-paravur",
+    topic: "business"
+  },
+  {
+    title: "Data Destruction During Winter in Kakkanad",
+    slug: "data-destruction-during-winter-in-kakkanad-kakkanad",
+    publishDate: "2026-03-24",
+    description: "undefined",
+    service: "data-destruction",
+    location: "kakkanad",
+    topic: "seasonal"
+  },
+  {
+    title: "Laptop Buyback Problems in Kakkanad: Solutions",
+    slug: "laptop-buyback-problems-in-kakkanad-solutions-kakkanad",
+    publishDate: "2026-03-13",
+    description: "undefined",
+    service: "laptop-buyback",
+    location: "kakkanad",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Troubleshooting Printer Recycling in North Paravur",
+    slug: "troubleshooting-printer-recycling-in-north-paravur-north-paravur-1",
+    publishDate: "2026-03-22",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "north-paravur",
+    topic: "troubleshooting"
+  },
+  {
+    title: "KSPCB Regulations for Battery Recycling in Kochi",
+    slug: "kspcb-regulations-for-battery-recycling-in-kochi-kochi",
+    publishDate: "2026-03-18",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "kochi",
+    topic: "legal"
+  },
+  {
+    title: "Printer Recycling Price Guide for Aluva",
+    slug: "printer-recycling-price-guide-for-aluva-aluva",
+    publishDate: "2026-03-23",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "aluva",
+    topic: "pricing"
+  },
+  {
+    title: "Economic Benefits of Cable Recycling in Thrippunithura",
+    slug: "economic-benefits-of-cable-recycling-in-thrippunithura-thrippunithura",
+    publishDate: "2026-03-03",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "thrippunithura",
+    topic: "benefits"
+  },
+  {
+    title: "Why Choose Battery Recycling in Edappally?",
+    slug: "why-choose-battery-recycling-in-edappally-edappally",
+    publishDate: "2026-03-29",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "edappally",
+    topic: "benefits"
+  },
+  {
+    title: "Corporate Data Destruction Solutions in North Paravur",
+    slug: "corporate-data-destruction-solutions-in-north-paravur-north-paravur",
+    publishDate: "2026-03-26",
+    description: "undefined",
+    service: "data-destruction",
+    location: "north-paravur",
+    topic: "business"
+  },
+  {
+    title: "Common Server Recycling Issues in Edappally",
+    slug: "common-server-recycling-issues-in-edappally-edappally-1",
+    publishDate: "2026-03-07",
+    description: "undefined",
+    service: "server-recycling",
+    location: "edappally",
+    topic: "troubleshooting"
+  },
+  {
+    title: "How to it asset disposition in Kalamassery",
+    slug: "how-to-it-asset-disposition-in-kalamassery-kalamassery-1",
+    publishDate: "2026-03-08",
+    description: "undefined",
+    service: "itad",
+    location: "kalamassery",
+    topic: "how-to"
+  },
+  {
+    title: "Best Way to data destruction in Thrippunithura 2026",
+    slug: "best-way-to-data-destruction-in-thrippunithura-2026-thrippunithura",
+    publishDate: "2026-03-16",
+    description: "undefined",
+    service: "data-destruction",
+    location: "thrippunithura",
+    topic: "how-to"
+  },
+  {
+    title: "Huawei vs Vivo Battery Recycling in Angamaly",
+    slug: "huawei-vs-vivo-battery-recycling-in-angamaly-angamaly",
+    publishDate: "2026-03-15",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "angamaly",
+    topic: "comparison"
+  },
+  {
+    title: "KSPCB Regulations for IT Asset Disposition in Thrippunithura",
+    slug: "kspcb-regulations-for-it-asset-disposition-in-thrippunithura-thrippunithura-1",
+    publishDate: "2026-03-15",
+    description: "undefined",
+    service: "itad",
+    location: "thrippunithura",
+    topic: "legal"
+  },
+  {
+    title: "Enterprise Laptop Buyback in Kalamassery",
+    slug: "enterprise-laptop-buyback-in-kalamassery-kalamassery-2",
+    publishDate: "2026-03-09",
+    description: "undefined",
+    service: "laptop-buyback",
+    location: "kalamassery",
+    topic: "business"
+  },
+  {
+    title: "Legal Requirements for Data Destruction in Kalamassery",
+    slug: "legal-requirements-for-data-destruction-in-kalamassery-kalamassery-1",
+    publishDate: "2026-03-04",
+    description: "undefined",
+    service: "data-destruction",
+    location: "kalamassery",
+    topic: "legal"
+  },
+  {
+    title: "Monitor Recycling Problems in Edappally: Solutions",
+    slug: "monitor-recycling-problems-in-edappally-solutions-edappally",
+    publishDate: "2026-03-14",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "edappally",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Phone Buyback Problems in Edappally: Solutions",
+    slug: "phone-buyback-problems-in-edappally-solutions-edappally-2",
+    publishDate: "2026-03-19",
+    description: "undefined",
+    service: "phone-buyback",
+    location: "edappally",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Why Choose Laptop Buyback in Kalamassery?",
+    slug: "why-choose-laptop-buyback-in-kalamassery-kalamassery",
+    publishDate: "2026-03-11",
+    description: "undefined",
+    service: "laptop-buyback",
+    location: "kalamassery",
+    topic: "benefits"
+  },
+  {
+    title: "Monitor Recycling vs Screen Recycling in North Paravur",
+    slug: "monitor-recycling-vs-screen-recycling-in-north-paravur-north-paravur",
+    publishDate: "2026-03-11",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "north-paravur",
+    topic: "comparison"
+  },
+  {
+    title: "Troubleshooting Data Destruction in Angamaly",
+    slug: "troubleshooting-data-destruction-in-angamaly-angamaly",
+    publishDate: "2026-03-17",
+    description: "undefined",
+    service: "data-destruction",
+    location: "angamaly",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Affordable Monitor Recycling in Ernakulam: Complete Pricing",
+    slug: "affordable-monitor-recycling-in-ernakulam-complete-pricing-ernakulam",
+    publishDate: "2026-03-12",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "ernakulam",
+    topic: "pricing"
+  },
+  {
+    title: "Common E-Waste Collection Issues in Vyttila",
+    slug: "common-e-waste-collection-issues-in-vyttila-vyttila",
+    publishDate: "2026-03-10",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "vyttila",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Server Recycling for Businesses in Edappally",
+    slug: "server-recycling-for-businesses-in-edappally-edappally-1",
+    publishDate: "2026-03-09",
+    description: "undefined",
+    service: "server-recycling",
+    location: "edappally",
+    topic: "business"
+  },
+  {
+    title: "Battery Recycling Price Guide for Kakkanad",
+    slug: "battery-recycling-price-guide-for-kakkanad-kakkanad",
+    publishDate: "2026-03-28",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "kakkanad",
+    topic: "pricing"
+  },
+  {
+    title: "Printer Recycling vs Office Equipment Recycling in Kakkanad",
+    slug: "printer-recycling-vs-office-equipment-recycling-in-kakkanad-kakkanad",
+    publishDate: "2026-03-14",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "kakkanad",
+    topic: "comparison"
+  },
+  {
+    title: "Cable Recycling Prices in Kalamassery 2026",
+    slug: "cable-recycling-prices-in-kalamassery-2026-kalamassery",
+    publishDate: "2026-03-30",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "kalamassery",
+    topic: "pricing"
+  },
+  {
+    title: "E-Waste Laws in Kakkanad: Complete Guide",
+    slug: "e-waste-laws-in-kakkanad-complete-guide-kakkanad-3",
+    publishDate: "2026-03-16",
+    description: "undefined",
+    service: "laptop-buyback",
+    location: "kakkanad",
+    topic: "legal"
+  },
+  {
+    title: "KSPCB Regulations for E-Waste Collection in Kalamassery",
+    slug: "kspcb-regulations-for-e-waste-collection-in-kalamassery-kalamassery",
+    publishDate: "2026-03-03",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "kalamassery",
+    topic: "legal"
+  },
+  {
+    title: "Complete Guide to Laptop Buyback in Kakkanad",
+    slug: "complete-guide-to-laptop-buyback-in-kakkanad-kakkanad",
+    publishDate: "2026-03-12",
+    description: "undefined",
+    service: "laptop-buyback",
+    location: "kakkanad",
+    topic: "how-to"
+  },
+  {
+    title: "E-Waste Collection Prices in Edappally 2026",
+    slug: "e-waste-collection-prices-in-edappally-2026-edappally",
+    publishDate: "2026-03-04",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "edappally",
+    topic: "pricing"
+  },
+  {
+    title: "Server Recycling Process in Edappally: Step by Step",
+    slug: "server-recycling-process-in-edappally-step-by-step-edappally-1",
+    publishDate: "2026-03-27",
+    description: "undefined",
+    service: "server-recycling",
+    location: "edappally",
+    topic: "how-to"
+  },
+  {
+    title: "IT Asset Disposition Prices in Thrippunithura 2026",
+    slug: "it-asset-disposition-prices-in-thrippunithura-2026-thrippunithura",
+    publishDate: "2026-03-01",
+    description: "undefined",
+    service: "itad",
+    location: "thrippunithura",
+    topic: "pricing"
+  },
+  {
+    title: "KSPCB Regulations for Phone Buyback in Ernakulam",
+    slug: "kspcb-regulations-for-phone-buyback-in-ernakulam-ernakulam",
+    publishDate: "2026-03-10",
+    description: "undefined",
+    service: "phone-buyback",
+    location: "ernakulam",
+    topic: "legal"
+  },
+  {
+    title: "Seasonal Server Recycling Guide for Kalamassery",
+    slug: "seasonal-server-recycling-guide-for-kalamassery-kalamassery",
+    publishDate: "2026-03-23",
+    description: "undefined",
+    service: "server-recycling",
+    location: "kalamassery",
+    topic: "seasonal"
+  },
+  {
+    title: "Compliance Guide for Battery Recycling in Thrippunithura",
+    slug: "compliance-guide-for-battery-recycling-in-thrippunithura-thrippunithura",
+    publishDate: "2026-03-25",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "thrippunithura",
+    topic: "legal"
+  },
+  {
+    title: "Enterprise Laptop Buyback in Thrippunithura",
+    slug: "enterprise-laptop-buyback-in-thrippunithura-thrippunithura-1",
+    publishDate: "2026-03-08",
+    description: "undefined",
+    service: "laptop-buyback",
+    location: "thrippunithura",
+    topic: "business"
+  },
+  {
+    title: "Enterprise Monitor Recycling in Vyttila",
+    slug: "enterprise-monitor-recycling-in-vyttila-vyttila",
+    publishDate: "2026-03-25",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "vyttila",
+    topic: "business"
+  },
+  {
+    title: "Cable Recycling vs Wire Recycling in Aluva",
+    slug: "cable-recycling-vs-wire-recycling-in-aluva-aluva",
+    publishDate: "2026-03-24",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "aluva",
+    topic: "comparison"
+  },
+  {
+    title: "Economic Benefits of Battery Recycling in Ernakulam",
+    slug: "economic-benefits-of-battery-recycling-in-ernakulam-ernakulam",
+    publishDate: "2026-03-27",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "ernakulam",
+    topic: "benefits"
+  },
+  {
+    title: "Why Choose Battery Recycling in Aluva?",
+    slug: "why-choose-battery-recycling-in-aluva-aluva",
+    publishDate: "2026-03-07",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "aluva",
+    topic: "benefits"
+  },
+  {
+    title: "Legal Requirements for Data Destruction in Kakkanad",
+    slug: "legal-requirements-for-data-destruction-in-kakkanad-kakkanad",
+    publishDate: "2026-03-06",
+    description: "undefined",
+    service: "data-destruction",
+    location: "kakkanad",
+    topic: "legal"
+  },
+  {
+    title: "Battery Recycling Price Guide for Ernakulam",
+    slug: "battery-recycling-price-guide-for-ernakulam-ernakulam",
+    publishDate: "2026-03-16",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "ernakulam",
+    topic: "pricing"
+  },
+  {
+    title: "Benefits of Data Destruction in Edappally",
+    slug: "benefits-of-data-destruction-in-edappally-edappally-1",
+    publishDate: "2026-03-01",
+    description: "undefined",
+    service: "data-destruction",
+    location: "edappally",
+    topic: "benefits"
+  },
+  {
+    title: "Troubleshooting Data Destruction in Angamaly",
+    slug: "troubleshooting-data-destruction-in-angamaly-angamaly-1",
+    publishDate: "2026-03-29",
+    description: "undefined",
+    service: "data-destruction",
+    location: "angamaly",
+    topic: "troubleshooting"
+  },
+  {
+    title: "vs Poco IT Asset Disposition in Kalamassery",
+    slug: "vs-poco-it-asset-disposition-in-kalamassery-kalamassery",
+    publishDate: "2026-03-02",
+    description: "undefined",
+    service: "itad",
+    location: "kalamassery",
+    topic: "comparison"
+  },
+  {
+    title: "E-Waste Laws in Ernakulam: Complete Guide",
+    slug: "e-waste-laws-in-ernakulam-complete-guide-ernakulam-4",
+    publishDate: "2026-03-01",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "ernakulam",
+    topic: "legal"
+  },
+  {
+    title: "Troubleshooting Battery Recycling in Kalamassery",
+    slug: "troubleshooting-battery-recycling-in-kalamassery-kalamassery",
+    publishDate: "2026-03-12",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "kalamassery",
+    topic: "troubleshooting"
+  },
+  {
+    title: "E-Waste Collection Prices in Edappally 2026",
+    slug: "e-waste-collection-prices-in-edappally-2026-edappally-1",
+    publishDate: "2026-03-21",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "edappally",
+    topic: "pricing"
+  },
+  {
+    title: "Affordable Cable Recycling in Kochi: Complete Pricing",
+    slug: "affordable-cable-recycling-in-kochi-complete-pricing-kochi",
+    publishDate: "2026-03-05",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "kochi",
+    topic: "pricing"
+  },
+  {
+    title: "Battery Recycling Trends in Kochi 2026",
+    slug: "battery-recycling-trends-in-kochi-2026-kochi-1",
+    publishDate: "2026-03-05",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "kochi",
+    topic: "seasonal"
+  },
+  {
+    title: "Best Data Destruction Providers in Kochi: Comparison",
+    slug: "best-data-destruction-providers-in-kochi-comparison-kochi",
+    publishDate: "2026-03-30",
+    description: "undefined",
+    service: "data-destruction",
+    location: "kochi",
+    topic: "comparison"
+  },
+  {
+    title: "Best Time for Server Recycling in Kakkanad",
+    slug: "best-time-for-server-recycling-in-kakkanad-kakkanad",
+    publishDate: "2026-03-06",
+    description: "undefined",
+    service: "server-recycling",
+    location: "kakkanad",
+    topic: "seasonal"
+  },
+  {
+    title: "B2B Laptop Buyback Services in Edappally",
+    slug: "b2b-laptop-buyback-services-in-edappally-edappally",
+    publishDate: "2026-03-22",
+    description: "undefined",
+    service: "laptop-buyback",
+    location: "edappally",
+    topic: "business"
+  },
+  {
+    title: "Laptop Buyback Price Guide for Kochi",
+    slug: "laptop-buyback-price-guide-for-kochi-kochi",
+    publishDate: "2026-03-30",
+    description: "undefined",
+    service: "laptop-buyback",
+    location: "kochi",
+    topic: "pricing"
+  },
+  {
+    title: "Server Recycling Challenges in Aluva: Expert Tips",
+    slug: "server-recycling-challenges-in-aluva-expert-tips-aluva",
+    publishDate: "2026-03-18",
+    description: "undefined",
+    service: "server-recycling",
+    location: "aluva",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Server Recycling Process in Edappally: Step by Step",
+    slug: "server-recycling-process-in-edappally-step-by-step-edappally",
+    publishDate: "2026-03-09",
+    description: "undefined",
+    service: "server-recycling",
+    location: "edappally",
+    topic: "how-to"
+  },
+  {
+    title: "Affordable E-Waste Collection in Vyttila: Complete Pricing",
+    slug: "affordable-e-waste-collection-in-vyttila-complete-pricing-vyttila",
+    publishDate: "2026-03-23",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "vyttila",
+    topic: "pricing"
+  },
+  {
+    title: "vs Realme E-Waste Collection in Kalamassery",
+    slug: "vs-realme-e-waste-collection-in-kalamassery-kalamassery",
+    publishDate: "2026-03-31",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "kalamassery",
+    topic: "comparison"
+  },
+  {
+    title: "E-Waste Collection Price Guide for Ernakulam",
+    slug: "e-waste-collection-price-guide-for-ernakulam-ernakulam-2",
+    publishDate: "2026-03-31",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "ernakulam",
+    topic: "pricing"
+  },
+  {
+    title: "Phone Buyback vs Mobile Phone Recycling in Kochi",
+    slug: "phone-buyback-vs-mobile-phone-recycling-in-kochi-kochi",
+    publishDate: "2026-03-28",
+    description: "undefined",
+    service: "phone-buyback",
+    location: "kochi",
+    topic: "comparison"
+  },
+  {
+    title: "Legal Requirements for Printer Recycling in Vyttila",
+    slug: "legal-requirements-for-printer-recycling-in-vyttila-vyttila",
+    publishDate: "2026-03-28",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "vyttila",
+    topic: "legal"
+  },
+  {
+    title: "Enterprise Data Destruction in Aluva",
+    slug: "enterprise-data-destruction-in-aluva-aluva-1",
+    publishDate: "2026-03-04",
+    description: "undefined",
+    service: "data-destruction",
+    location: "aluva",
+    topic: "business"
+  },
+  {
+    title: "Affordable Server Recycling in Kalamassery: Complete Pricing",
+    slug: "affordable-server-recycling-in-kalamassery-complete-pricing-kalamassery-1",
+    publishDate: "2026-03-02",
+    description: "undefined",
+    service: "server-recycling",
+    location: "kalamassery",
+    topic: "pricing"
+  },
+  {
+    title: "E-Waste Laws in Angamaly: Complete Guide",
+    slug: "e-waste-laws-in-angamaly-complete-guide-angamaly-8",
+    publishDate: "2026-03-11",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "angamaly",
+    topic: "legal"
+  },
+  {
+    title: "Best Phone Buyback Providers in Kalamassery: Comparison",
+    slug: "best-phone-buyback-providers-in-kalamassery-comparison-kalamassery",
+    publishDate: "2026-03-20",
+    description: "undefined",
+    service: "phone-buyback",
+    location: "kalamassery",
+    topic: "comparison"
+  },
+  {
+    title: "Phone Buyback During Spring in Edappally",
+    slug: "phone-buyback-during-spring-in-edappally-edappally",
+    publishDate: "2026-03-08",
+    description: "undefined",
+    service: "phone-buyback",
+    location: "edappally",
+    topic: "seasonal"
+  },
+  {
+    title: "Phone Buyback Problems in Thrippunithura: Solutions",
+    slug: "phone-buyback-problems-in-thrippunithura-solutions-thrippunithura",
+    publishDate: "2026-03-15",
+    description: "undefined",
+    service: "phone-buyback",
+    location: "thrippunithura",
+    topic: "troubleshooting"
+  },
+  {
+    title: "KSPCB Regulations for Monitor Recycling in Angamaly",
+    slug: "kspcb-regulations-for-monitor-recycling-in-angamaly-angamaly",
+    publishDate: "2026-03-24",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "angamaly",
+    topic: "legal"
+  },
+  {
+    title: "KSPCB Regulations for E-Waste Collection in Kalamassery",
+    slug: "kspcb-regulations-for-e-waste-collection-in-kalamassery-kalamassery-1",
+    publishDate: "2026-03-20",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "kalamassery",
+    topic: "legal"
+  },
+  {
+    title: "E-Waste Collection Prices in Angamaly 2026",
+    slug: "e-waste-collection-prices-in-angamaly-2026-angamaly-1",
+    publishDate: "2026-03-17",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "angamaly",
+    topic: "pricing"
+  },
+  {
+    title: "Cable Recycling Problems in Thrippunithura: Solutions",
+    slug: "cable-recycling-problems-in-thrippunithura-solutions-thrippunithura",
+    publishDate: "2026-03-26",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "thrippunithura",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Why Choose Data Destruction in Edappally?",
+    slug: "why-choose-data-destruction-in-edappally-edappally",
+    publishDate: "2026-02-17",
+    description: "undefined",
+    service: "data-destruction",
+    location: "edappally",
+    topic: "benefits"
+  },
+  {
+    title: "Cable Recycling During Winter in Ernakulam",
+    slug: "cable-recycling-during-winter-in-ernakulam-ernakulam",
+    publishDate: "2026-02-01",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "ernakulam",
+    topic: "seasonal"
+  },
+  {
+    title: "Best IT Asset Disposition Providers in Vyttila: Comparison",
+    slug: "best-it-asset-disposition-providers-in-vyttila-comparison-vyttila",
+    publishDate: "2026-02-18",
+    description: "undefined",
+    service: "itad",
+    location: "vyttila",
+    topic: "comparison"
+  },
+  {
+    title: "B2B Cable Recycling Services in Kalamassery",
+    slug: "b2b-cable-recycling-services-in-kalamassery-kalamassery",
+    publishDate: "2026-02-22",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "kalamassery",
+    topic: "business"
+  },
+  {
+    title: "Benefits of Printer Recycling in Aluva",
+    slug: "benefits-of-printer-recycling-in-aluva-aluva",
+    publishDate: "2026-02-07",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "aluva",
+    topic: "benefits"
+  },
+  {
+    title: "Best Way to printer recycle in Vyttila 2026",
+    slug: "best-way-to-printer-recycle-in-vyttila-2026-vyttila-2",
+    publishDate: "2026-02-28",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "vyttila",
+    topic: "how-to"
+  },
+  {
+    title: "Monitor Recycling Process in North Paravur: Step by Step",
+    slug: "monitor-recycling-process-in-north-paravur-step-by-step-north-paravur",
+    publishDate: "2026-02-16",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "north-paravur",
+    topic: "how-to"
+  },
+  {
+    title: "Best Time for Battery Recycling in Aluva",
+    slug: "best-time-for-battery-recycling-in-aluva-aluva",
+    publishDate: "2026-02-22",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "aluva",
+    topic: "seasonal"
+  },
+  {
+    title: "Laptop Buyback Price Guide for Aluva",
+    slug: "laptop-buyback-price-guide-for-aluva-aluva",
+    publishDate: "2026-02-10",
+    description: "undefined",
+    service: "laptop-buyback",
+    location: "aluva",
+    topic: "pricing"
+  },
+  {
+    title: "Printer Recycling During Summer in Kalamassery",
+    slug: "printer-recycling-during-summer-in-kalamassery-kalamassery",
+    publishDate: "2026-02-24",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "kalamassery",
+    topic: "seasonal"
+  },
+  {
+    title: "E-Waste Laws in Ernakulam: Complete Guide",
+    slug: "e-waste-laws-in-ernakulam-complete-guide-ernakulam-3",
+    publishDate: "2026-02-13",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "ernakulam",
+    topic: "legal"
+  },
+  {
+    title: "Troubleshooting Printer Recycling in North Paravur",
+    slug: "troubleshooting-printer-recycling-in-north-paravur-north-paravur",
+    publishDate: "2026-02-12",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "north-paravur",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Enterprise E-Waste Collection in North Paravur",
+    slug: "enterprise-e-waste-collection-in-north-paravur-north-paravur",
+    publishDate: "2026-02-10",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "north-paravur",
+    topic: "business"
+  },
+  {
+    title: "Server Recycling Process in North Paravur: Step by Step",
+    slug: "server-recycling-process-in-north-paravur-step-by-step-north-paravur",
+    publishDate: "2026-02-08",
+    description: "undefined",
+    service: "server-recycling",
+    location: "north-paravur",
+    topic: "how-to"
+  },
+  {
+    title: "How to printer recycle in Angamaly",
+    slug: "how-to-printer-recycle-in-angamaly-angamaly",
+    publishDate: "2026-02-14",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "angamaly",
+    topic: "how-to"
+  },
+  {
+    title: "IT Asset Disposition Process in Edappally: Step by Step",
+    slug: "it-asset-disposition-process-in-edappally-step-by-step-edappally-1",
+    publishDate: "2026-02-06",
+    description: "undefined",
+    service: "itad",
+    location: "edappally",
+    topic: "how-to"
+  },
+  {
+    title: "E-Waste Laws in Angamaly: Complete Guide",
+    slug: "e-waste-laws-in-angamaly-complete-guide-angamaly-6",
+    publishDate: "2026-02-20",
+    description: "undefined",
+    service: "phone-buyback",
+    location: "angamaly",
+    topic: "legal"
+  },
+  {
+    title: "Cable Recycling Options in Kakkanad: Which to Choose?",
+    slug: "cable-recycling-options-in-kakkanad-which-to-choose-kakkanad",
+    publishDate: "2026-02-10",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "kakkanad",
+    topic: "comparison"
+  },
+  {
+    title: "Best Time for E-Waste Collection in Kalamassery",
+    slug: "best-time-for-e-waste-collection-in-kalamassery-kalamassery",
+    publishDate: "2026-02-04",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "kalamassery",
+    topic: "seasonal"
+  },
+  {
+    title: "Best Monitor Recycling Providers in Kalamassery: Comparison",
+    slug: "best-monitor-recycling-providers-in-kalamassery-comparison-kalamassery",
+    publishDate: "2026-02-27",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "kalamassery",
+    topic: "comparison"
+  },
+  {
+    title: "How to monitor recycle in Ernakulam",
+    slug: "how-to-monitor-recycle-in-ernakulam-ernakulam",
+    publishDate: "2026-02-11",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "ernakulam",
+    topic: "how-to"
+  },
+  {
+    title: "IT Asset Disposition Trends in Vyttila 2026",
+    slug: "it-asset-disposition-trends-in-vyttila-2026-vyttila",
+    publishDate: "2026-02-28",
+    description: "undefined",
+    service: "itad",
+    location: "vyttila",
+    topic: "seasonal"
+  },
+  {
+    title: "Troubleshooting Monitor Recycling in Edappally",
+    slug: "troubleshooting-monitor-recycling-in-edappally-edappally",
+    publishDate: "2026-02-19",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "edappally",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Printer Recycling Prices in Edappally 2026",
+    slug: "printer-recycling-prices-in-edappally-2026-edappally",
+    publishDate: "2026-02-21",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "edappally",
+    topic: "pricing"
+  },
+  {
+    title: "IT Asset Disposition Process in North Paravur: Step by Step",
+    slug: "it-asset-disposition-process-in-north-paravur-step-by-step-north-paravur",
+    publishDate: "2026-02-26",
+    description: "undefined",
+    service: "itad",
+    location: "north-paravur",
+    topic: "how-to"
+  },
+  {
+    title: "Cable Recycling Options in Ernakulam: Which to Choose?",
+    slug: "cable-recycling-options-in-ernakulam-which-to-choose-ernakulam",
+    publishDate: "2026-02-09",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "ernakulam",
+    topic: "comparison"
+  },
+  {
+    title: "E-Waste Laws in Angamaly: Complete Guide",
+    slug: "e-waste-laws-in-angamaly-complete-guide-angamaly-7",
+    publishDate: "2026-02-28",
+    description: "undefined",
+    service: "server-recycling",
+    location: "angamaly",
+    topic: "legal"
+  },
+  {
+    title: "B2B Printer Recycling Services in Thrippunithura",
+    slug: "b2b-printer-recycling-services-in-thrippunithura-thrippunithura",
+    publishDate: "2026-02-09",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "thrippunithura",
+    topic: "business"
+  },
+  {
+    title: "Battery Recycling During Spring in Aluva",
+    slug: "battery-recycling-during-spring-in-aluva-aluva",
+    publishDate: "2026-02-16",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "aluva",
+    topic: "seasonal"
+  },
+  {
+    title: "Economic Benefits of Data Destruction in Kalamassery",
+    slug: "economic-benefits-of-data-destruction-in-kalamassery-kalamassery",
+    publishDate: "2026-02-06",
+    description: "undefined",
+    service: "data-destruction",
+    location: "kalamassery",
+    topic: "benefits"
+  },
+  {
+    title: "How to it asset disposition in Kalamassery",
+    slug: "how-to-it-asset-disposition-in-kalamassery-kalamassery",
+    publishDate: "2026-02-17",
+    description: "undefined",
+    service: "itad",
+    location: "kalamassery",
+    topic: "how-to"
+  },
+  {
+    title: "Economic Benefits of Server Recycling in Kochi",
+    slug: "economic-benefits-of-server-recycling-in-kochi-kochi",
+    publishDate: "2026-02-01",
+    description: "undefined",
+    service: "server-recycling",
+    location: "kochi",
+    topic: "benefits"
+  },
+  {
+    title: "Data Destruction vs Data Wiping in Thrippunithura",
+    slug: "data-destruction-vs-data-wiping-in-thrippunithura-thrippunithura",
+    publishDate: "2026-02-22",
+    description: "undefined",
+    service: "data-destruction",
+    location: "thrippunithura",
+    topic: "comparison"
+  },
+  {
+    title: "Data Destruction Price Guide for Ernakulam",
+    slug: "data-destruction-price-guide-for-ernakulam-ernakulam",
+    publishDate: "2026-02-12",
+    description: "undefined",
+    service: "data-destruction",
+    location: "ernakulam",
+    topic: "pricing"
+  },
+  {
+    title: "Seasonal Printer Recycling Guide for Kalamassery",
+    slug: "seasonal-printer-recycling-guide-for-kalamassery-kalamassery",
+    publishDate: "2026-02-26",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "kalamassery",
+    topic: "seasonal"
+  },
+  {
+    title: "Battery Recycling vs Battery Disposal in Kalamassery",
+    slug: "battery-recycling-vs-battery-disposal-in-kalamassery-kalamassery",
+    publishDate: "2026-02-20",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "kalamassery",
+    topic: "comparison"
+  },
+  {
+    title: "Legal Requirements for E-Waste Collection in Aluva",
+    slug: "legal-requirements-for-e-waste-collection-in-aluva-aluva",
+    publishDate: "2026-02-15",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "aluva",
+    topic: "legal"
+  },
+  {
+    title: "vs Lenovo Server Recycling in Thrippunithura",
+    slug: "vs-lenovo-server-recycling-in-thrippunithura-thrippunithura",
+    publishDate: "2026-02-15",
+    description: "undefined",
+    service: "server-recycling",
+    location: "thrippunithura",
+    topic: "comparison"
+  },
+  {
+    title: "Legal Requirements for E-Waste Collection in Kalamassery",
+    slug: "legal-requirements-for-e-waste-collection-in-kalamassery-kalamassery",
+    publishDate: "2026-02-03",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "kalamassery",
+    topic: "legal"
+  },
+  {
+    title: "B2B Server Recycling Services in Kochi",
+    slug: "b2b-server-recycling-services-in-kochi-kochi",
+    publishDate: "2026-02-27",
+    description: "undefined",
+    service: "server-recycling",
+    location: "kochi",
+    topic: "business"
+  },
+  {
+    title: "E-Waste Laws in Aluva: Complete Guide",
+    slug: "e-waste-laws-in-aluva-complete-guide-aluva-3",
+    publishDate: "2026-02-25",
+    description: "undefined",
+    service: "itad",
+    location: "aluva",
+    topic: "legal"
+  },
+  {
+    title: "Phone Buyback for Businesses in Kochi",
+    slug: "phone-buyback-for-businesses-in-kochi-kochi-1",
+    publishDate: "2026-02-14",
+    description: "undefined",
+    service: "phone-buyback",
+    location: "kochi",
+    topic: "business"
+  },
+  {
+    title: "Seasonal Server Recycling Guide for Kakkanad",
+    slug: "seasonal-server-recycling-guide-for-kakkanad-kakkanad",
+    publishDate: "2026-02-09",
+    description: "undefined",
+    service: "server-recycling",
+    location: "kakkanad",
+    topic: "seasonal"
+  },
+  {
+    title: "Why Choose E-Waste Collection in Aluva?",
+    slug: "why-choose-e-waste-collection-in-aluva-aluva-1",
+    publishDate: "2026-02-26",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "aluva",
+    topic: "benefits"
+  },
+  {
+    title: "B2B Phone Buyback Services in Edappally",
+    slug: "b2b-phone-buyback-services-in-edappally-edappally",
+    publishDate: "2026-02-07",
+    description: "undefined",
+    service: "phone-buyback",
+    location: "edappally",
+    topic: "business"
+  },
+  {
+    title: "Environmental Impact of Battery Recycling in Aluva",
+    slug: "environmental-impact-of-battery-recycling-in-aluva-aluva",
+    publishDate: "2026-02-05",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "aluva",
+    topic: "benefits"
+  },
+  {
+    title: "E-Waste Laws in Kakkanad: Complete Guide",
+    slug: "e-waste-laws-in-kakkanad-complete-guide-kakkanad-2",
+    publishDate: "2026-02-24",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "kakkanad",
+    topic: "legal"
+  },
+  {
+    title: "Why Choose Printer Recycling in Kalamassery?",
+    slug: "why-choose-printer-recycling-in-kalamassery-kalamassery-1",
+    publishDate: "2026-02-02",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "kalamassery",
+    topic: "benefits"
+  },
+  {
+    title: "Phone Buyback Process in Kochi: Step by Step",
+    slug: "phone-buyback-process-in-kochi-step-by-step-kochi",
+    publishDate: "2026-02-11",
+    description: "undefined",
+    service: "phone-buyback",
+    location: "kochi",
+    topic: "how-to"
+  },
+  {
+    title: "Common E-Waste Collection Issues in Kakkanad",
+    slug: "common-e-waste-collection-issues-in-kakkanad-kakkanad",
+    publishDate: "2026-02-25",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "kakkanad",
+    topic: "troubleshooting"
+  },
+  {
+    title: "IT Asset Disposition Options in Kalamassery: Which to Choose?",
+    slug: "it-asset-disposition-options-in-kalamassery-which-to-choose-kalamassery",
+    publishDate: "2026-02-05",
+    description: "undefined",
+    service: "itad",
+    location: "kalamassery",
+    topic: "comparison"
+  },
+  {
+    title: "Affordable Printer Recycling in Thrippunithura: Complete Pricing",
+    slug: "affordable-printer-recycling-in-thrippunithura-complete-pricing-thrippunithura-1",
+    publishDate: "2026-02-16",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "thrippunithura",
+    topic: "pricing"
+  },
+  {
+    title: "vs Infinix Battery Recycling in Kochi",
+    slug: "vs-infinix-battery-recycling-in-kochi-kochi",
+    publishDate: "2026-02-20",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "kochi",
+    topic: "comparison"
+  },
+  {
+    title: "Environmental Impact of E-Waste Collection in Vyttila",
+    slug: "environmental-impact-of-e-waste-collection-in-vyttila-vyttila",
+    publishDate: "2026-02-03",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "vyttila",
+    topic: "benefits"
+  },
+  {
+    title: "Monitor Recycling Trends in North Paravur 2026",
+    slug: "monitor-recycling-trends-in-north-paravur-2026-north-paravur-1",
+    publishDate: "2026-02-25",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "north-paravur",
+    topic: "seasonal"
+  },
+  {
+    title: "Corporate Battery Recycling Solutions in Thrippunithura",
+    slug: "corporate-battery-recycling-solutions-in-thrippunithura-thrippunithura-1",
+    publishDate: "2026-02-02",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "thrippunithura",
+    topic: "business"
+  },
+  {
+    title: "Environmental Impact of Server Recycling in Angamaly",
+    slug: "environmental-impact-of-server-recycling-in-angamaly-angamaly",
+    publishDate: "2026-02-17",
+    description: "undefined",
+    service: "server-recycling",
+    location: "angamaly",
+    topic: "benefits"
+  },
+  {
+    title: "vs Motorola Monitor Recycling in North Paravur",
+    slug: "vs-motorola-monitor-recycling-in-north-paravur-north-paravur",
+    publishDate: "2026-02-18",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "north-paravur",
+    topic: "comparison"
+  },
+  {
+    title: "Affordable Data Destruction in Angamaly: Complete Pricing",
+    slug: "affordable-data-destruction-in-angamaly-complete-pricing-angamaly",
+    publishDate: "2026-02-21",
+    description: "undefined",
+    service: "data-destruction",
+    location: "angamaly",
+    topic: "pricing"
+  },
+  {
+    title: "Best Way to it asset disposition in Aluva 2026",
+    slug: "best-way-to-it-asset-disposition-in-aluva-2026-aluva",
+    publishDate: "2026-02-12",
+    description: "undefined",
+    service: "itad",
+    location: "aluva",
+    topic: "how-to"
+  },
+  {
+    title: "Compliance Guide for Data Destruction in Kakkanad",
+    slug: "compliance-guide-for-data-destruction-in-kakkanad-kakkanad-1",
+    publishDate: "2026-02-13",
+    description: "undefined",
+    service: "data-destruction",
+    location: "kakkanad",
+    topic: "legal"
+  },
+  {
+    title: "Best Laptop Buyback Providers in Aluva: Comparison",
+    slug: "best-laptop-buyback-providers-in-aluva-comparison-aluva",
+    publishDate: "2026-02-08",
+    description: "undefined",
+    service: "laptop-buyback",
+    location: "aluva",
+    topic: "comparison"
+  },
+  {
+    title: "KSPCB Regulations for E-Waste Collection in Edappally",
+    slug: "kspcb-regulations-for-e-waste-collection-in-edappally-edappally",
+    publishDate: "2026-02-06",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "edappally",
+    topic: "legal"
+  },
+  {
+    title: "Battery Recycling During Summer in North Paravur",
+    slug: "battery-recycling-during-summer-in-north-paravur-north-paravur",
+    publishDate: "2026-02-24",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "north-paravur",
+    topic: "seasonal"
+  },
+  {
+    title: "Economic Benefits of Server Recycling in Vyttila",
+    slug: "economic-benefits-of-server-recycling-in-vyttila-vyttila",
+    publishDate: "2026-02-08",
+    description: "undefined",
+    service: "server-recycling",
+    location: "vyttila",
+    topic: "benefits"
+  },
+  {
+    title: "E-Waste Collection Problems in Ernakulam: Solutions",
+    slug: "e-waste-collection-problems-in-ernakulam-solutions-ernakulam",
+    publishDate: "2026-02-13",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "ernakulam",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Environmental Impact of Monitor Recycling in Kalamassery",
+    slug: "environmental-impact-of-monitor-recycling-in-kalamassery-kalamassery",
+    publishDate: "2026-02-14",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "kalamassery",
+    topic: "benefits"
+  },
+  {
+    title: "Data Destruction Trends in Kochi 2026",
+    slug: "data-destruction-trends-in-kochi-2026-kochi",
+    publishDate: "2026-02-01",
+    description: "undefined",
+    service: "data-destruction",
+    location: "kochi",
+    topic: "seasonal"
+  },
+  {
+    title: "Cable Recycling Prices in Thrippunithura 2026",
+    slug: "cable-recycling-prices-in-thrippunithura-2026-thrippunithura",
+    publishDate: "2026-02-21",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "thrippunithura",
+    topic: "pricing"
+  },
+  {
+    title: "Troubleshooting E-Waste Collection in Aluva",
+    slug: "troubleshooting-e-waste-collection-in-aluva-aluva",
+    publishDate: "2026-02-19",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "aluva",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Economic Benefits of IT Asset Disposition in North Paravur",
+    slug: "economic-benefits-of-it-asset-disposition-in-north-paravur-north-paravur",
+    publishDate: "2026-02-23",
+    description: "undefined",
+    service: "itad",
+    location: "north-paravur",
+    topic: "benefits"
+  },
+  {
+    title: "Best Time for Data Destruction in North Paravur",
+    slug: "best-time-for-data-destruction-in-north-paravur-north-paravur",
+    publishDate: "2026-02-04",
+    description: "undefined",
+    service: "data-destruction",
+    location: "north-paravur",
+    topic: "seasonal"
+  },
+  {
+    title: "Why Choose Phone Buyback in Ernakulam?",
+    slug: "why-choose-phone-buyback-in-ernakulam-ernakulam",
+    publishDate: "2026-02-03",
+    description: "undefined",
+    service: "phone-buyback",
+    location: "ernakulam",
+    topic: "benefits"
+  },
+  {
+    title: "KSPCB Regulations for E-Waste Collection in Vyttila",
+    slug: "kspcb-regulations-for-e-waste-collection-in-vyttila-vyttila",
+    publishDate: "2026-02-23",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "vyttila",
+    topic: "legal"
+  },
+  {
+    title: "How Much Does E-Waste Collection Cost in Vyttila?",
+    slug: "how-much-does-e-waste-collection-cost-in-vyttila-vyttila",
+    publishDate: "2026-02-02",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "vyttila",
+    topic: "pricing"
+  },
+  {
+    title: "Laptop Buyback Prices in Thrippunithura 2026",
+    slug: "laptop-buyback-prices-in-thrippunithura-2026-thrippunithura-1",
+    publishDate: "2026-02-05",
+    description: "undefined",
+    service: "laptop-buyback",
+    location: "thrippunithura",
+    topic: "pricing"
+  },
+  {
+    title: "Data Destruction Process in Thrippunithura: Step by Step",
+    slug: "data-destruction-process-in-thrippunithura-step-by-step-thrippunithura-1",
+    publishDate: "2026-02-18",
+    description: "undefined",
+    service: "data-destruction",
+    location: "thrippunithura",
+    topic: "how-to"
+  },
+  {
+    title: "How to printer recycle in Kakkanad",
+    slug: "how-to-printer-recycle-in-kakkanad-kakkanad",
+    publishDate: "2026-01-24",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "kakkanad",
+    topic: "how-to"
+  },
+  {
+    title: "Server Recycling for Businesses in Edappally",
+    slug: "server-recycling-for-businesses-in-edappally-edappally",
+    publishDate: "2026-01-01",
+    description: "undefined",
+    service: "server-recycling",
+    location: "edappally",
+    topic: "business"
+  },
+  {
+    title: "KSPCB Regulations for IT Asset Disposition in Angamaly",
+    slug: "kspcb-regulations-for-it-asset-disposition-in-angamaly-angamaly",
+    publishDate: "2026-01-29",
+    description: "undefined",
+    service: "itad",
+    location: "angamaly",
+    topic: "legal"
+  },
+  {
+    title: "Best Time for E-Waste Collection in Thrippunithura",
+    slug: "best-time-for-e-waste-collection-in-thrippunithura-thrippunithura-1",
+    publishDate: "2026-01-08",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "thrippunithura",
+    topic: "seasonal"
+  },
+  {
+    title: "How Much Does Battery Recycling Cost in Ernakulam?",
+    slug: "how-much-does-battery-recycling-cost-in-ernakulam-ernakulam",
+    publishDate: "2026-01-07",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "ernakulam",
+    topic: "pricing"
+  },
+  {
+    title: "Troubleshooting Laptop Buyback in Angamaly",
+    slug: "troubleshooting-laptop-buyback-in-angamaly-angamaly",
+    publishDate: "2026-01-26",
+    description: "undefined",
+    service: "laptop-buyback",
+    location: "angamaly",
+    topic: "troubleshooting"
+  },
+  {
+    title: "B2B Monitor Recycling Services in Kakkanad",
+    slug: "b2b-monitor-recycling-services-in-kakkanad-kakkanad-1",
+    publishDate: "2026-01-24",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "kakkanad",
+    topic: "business"
+  },
+  {
+    title: "B2B Server Recycling Services in Kakkanad",
+    slug: "b2b-server-recycling-services-in-kakkanad-kakkanad",
+    publishDate: "2026-01-13",
+    description: "undefined",
+    service: "server-recycling",
+    location: "kakkanad",
+    topic: "business"
+  },
+  {
+    title: "Seasonal Battery Recycling Guide for Aluva",
+    slug: "seasonal-battery-recycling-guide-for-aluva-aluva",
+    publishDate: "2026-01-19",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "aluva",
+    topic: "seasonal"
+  },
+  {
+    title: "E-Waste Laws in Kakkanad: Complete Guide",
+    slug: "e-waste-laws-in-kakkanad-complete-guide-kakkanad-1",
+    publishDate: "2026-01-17",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "kakkanad",
+    topic: "legal"
+  },
+  {
+    title: "Economic Benefits of Phone Buyback in Aluva",
+    slug: "economic-benefits-of-phone-buyback-in-aluva-aluva",
+    publishDate: "2026-01-29",
+    description: "undefined",
+    service: "phone-buyback",
+    location: "aluva",
+    topic: "benefits"
+  },
+  {
+    title: "Best Time for Cable Recycling in Edappally",
+    slug: "best-time-for-cable-recycling-in-edappally-edappally",
+    publishDate: "2026-01-03",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "edappally",
+    topic: "seasonal"
+  },
+  {
+    title: "Benefits of E-Waste Collection in North Paravur",
+    slug: "benefits-of-e-waste-collection-in-north-paravur-north-paravur",
+    publishDate: "2026-01-13",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "north-paravur",
+    topic: "benefits"
+  },
+  {
+    title: "Economic Benefits of Battery Recycling in Kochi",
+    slug: "economic-benefits-of-battery-recycling-in-kochi-kochi",
+    publishDate: "2026-01-15",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "kochi",
+    topic: "benefits"
+  },
+  {
+    title: "E-Waste Collection vs Electronic Waste Pickup in Kochi",
+    slug: "e-waste-collection-vs-electronic-waste-pickup-in-kochi-kochi-1",
+    publishDate: "2026-01-15",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "kochi",
+    topic: "comparison"
+  },
+  {
+    title: "Best Cable Recycling Providers in Vyttila: Comparison",
+    slug: "best-cable-recycling-providers-in-vyttila-comparison-vyttila-1",
+    publishDate: "2026-01-03",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "vyttila",
+    topic: "comparison"
+  },
+  {
+    title: "Best Way to e-waste collection in Vyttila 2026",
+    slug: "best-way-to-e-waste-collection-in-vyttila-2026-vyttila",
+    publishDate: "2026-01-02",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "vyttila",
+    topic: "how-to"
+  },
+  {
+    title: "E-Waste Laws in Angamaly: Complete Guide",
+    slug: "e-waste-laws-in-angamaly-complete-guide-angamaly-3",
+    publishDate: "2026-01-02",
+    description: "undefined",
+    service: "itad",
+    location: "angamaly",
+    topic: "legal"
+  },
+  {
+    title: "Enterprise Cable Recycling in Angamaly",
+    slug: "enterprise-cable-recycling-in-angamaly-angamaly-1",
+    publishDate: "2026-01-16",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "angamaly",
+    topic: "business"
+  },
+  {
+    title: "Server Recycling During Spring in Kakkanad",
+    slug: "server-recycling-during-spring-in-kakkanad-kakkanad",
+    publishDate: "2026-01-09",
+    description: "undefined",
+    service: "server-recycling",
+    location: "kakkanad",
+    topic: "seasonal"
+  },
+  {
+    title: "Server Recycling During Monsoon in Angamaly",
+    slug: "server-recycling-during-monsoon-in-angamaly-angamaly",
+    publishDate: "2026-01-19",
+    description: "undefined",
+    service: "server-recycling",
+    location: "angamaly",
+    topic: "seasonal"
+  },
+  {
+    title: "B2B Cable Recycling Services in North Paravur",
+    slug: "b2b-cable-recycling-services-in-north-paravur-north-paravur",
+    publishDate: "2026-01-28",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "north-paravur",
+    topic: "business"
+  },
+  {
+    title: "Benefits of Server Recycling in Angamaly",
+    slug: "benefits-of-server-recycling-in-angamaly-angamaly",
+    publishDate: "2026-01-12",
+    description: "undefined",
+    service: "server-recycling",
+    location: "angamaly",
+    topic: "benefits"
+  },
+  {
+    title: "Troubleshooting Laptop Buyback in Kakkanad",
+    slug: "troubleshooting-laptop-buyback-in-kakkanad-kakkanad",
+    publishDate: "2026-01-18",
+    description: "undefined",
+    service: "laptop-buyback",
+    location: "kakkanad",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Common Laptop Buyback Issues in Aluva",
+    slug: "common-laptop-buyback-issues-in-aluva-aluva",
+    publishDate: "2026-01-28",
+    description: "undefined",
+    service: "laptop-buyback",
+    location: "aluva",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Complete Guide to E-Waste Collection in Aluva",
+    slug: "complete-guide-to-e-waste-collection-in-aluva-aluva",
+    publishDate: "2026-01-21",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "aluva",
+    topic: "how-to"
+  },
+  {
+    title: "Common Laptop Buyback Issues in Edappally",
+    slug: "common-laptop-buyback-issues-in-edappally-edappally-1",
+    publishDate: "2026-01-10",
+    description: "undefined",
+    service: "laptop-buyback",
+    location: "edappally",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Laptop Buyback Price Guide for Kakkanad",
+    slug: "laptop-buyback-price-guide-for-kakkanad-kakkanad-1",
+    publishDate: "2026-01-08",
+    description: "undefined",
+    service: "laptop-buyback",
+    location: "kakkanad",
+    topic: "pricing"
+  },
+  {
+    title: "Server Recycling Trends in Kochi 2026",
+    slug: "server-recycling-trends-in-kochi-2026-kochi",
+    publishDate: "2026-01-17",
+    description: "undefined",
+    service: "server-recycling",
+    location: "kochi",
+    topic: "seasonal"
+  },
+  {
+    title: "Phone Buyback Price Guide for Kochi",
+    slug: "phone-buyback-price-guide-for-kochi-kochi-1",
+    publishDate: "2026-01-05",
+    description: "undefined",
+    service: "phone-buyback",
+    location: "kochi",
+    topic: "pricing"
+  },
+  {
+    title: "Cable Recycling vs Wire Recycling in Kakkanad",
+    slug: "cable-recycling-vs-wire-recycling-in-kakkanad-kakkanad",
+    publishDate: "2026-01-07",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "kakkanad",
+    topic: "comparison"
+  },
+  {
+    title: "Why Choose Phone Buyback in Aluva?",
+    slug: "why-choose-phone-buyback-in-aluva-aluva",
+    publishDate: "2026-01-22",
+    description: "undefined",
+    service: "phone-buyback",
+    location: "aluva",
+    topic: "benefits"
+  },
+  {
+    title: "Printer Recycling Price Guide for Edappally",
+    slug: "printer-recycling-price-guide-for-edappally-edappally",
+    publishDate: "2026-01-02",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "edappally",
+    topic: "pricing"
+  },
+  {
+    title: "Printer Recycling for Businesses in Vyttila",
+    slug: "printer-recycling-for-businesses-in-vyttila-vyttila",
+    publishDate: "2026-01-24",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "vyttila",
+    topic: "business"
+  },
+  {
+    title: "B2B Battery Recycling Services in Kakkanad",
+    slug: "b2b-battery-recycling-services-in-kakkanad-kakkanad",
+    publishDate: "2026-01-20",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "kakkanad",
+    topic: "business"
+  },
+  {
+    title: "Benefits of Battery Recycling in Aluva",
+    slug: "benefits-of-battery-recycling-in-aluva-aluva",
+    publishDate: "2026-01-13",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "aluva",
+    topic: "benefits"
+  },
+  {
+    title: "Compliance Guide for Printer Recycling in Edappally",
+    slug: "compliance-guide-for-printer-recycling-in-edappally-edappally-1",
+    publishDate: "2026-01-01",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "edappally",
+    topic: "legal"
+  },
+  {
+    title: "E-Waste Laws in Kochi: Complete Guide",
+    slug: "e-waste-laws-in-kochi-complete-guide-kochi-3",
+    publishDate: "2026-01-16",
+    description: "undefined",
+    service: "itad",
+    location: "kochi",
+    topic: "legal"
+  },
+  {
+    title: "Server Recycling Problems in Angamaly: Solutions",
+    slug: "server-recycling-problems-in-angamaly-solutions-angamaly",
+    publishDate: "2026-01-14",
+    description: "undefined",
+    service: "server-recycling",
+    location: "angamaly",
+    topic: "troubleshooting"
+  },
+  {
+    title: "vs Huawei Printer Recycling in Aluva",
+    slug: "vs-huawei-printer-recycling-in-aluva-aluva",
+    publishDate: "2026-01-11",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "aluva",
+    topic: "comparison"
+  },
+  {
+    title: "Why Choose Data Destruction in Kalamassery?",
+    slug: "why-choose-data-destruction-in-kalamassery-kalamassery",
+    publishDate: "2026-01-10",
+    description: "undefined",
+    service: "data-destruction",
+    location: "kalamassery",
+    topic: "benefits"
+  },
+  {
+    title: "Compliance Guide for Printer Recycling in Kochi",
+    slug: "compliance-guide-for-printer-recycling-in-kochi-kochi",
+    publishDate: "2026-01-21",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "kochi",
+    topic: "legal"
+  },
+  {
+    title: "Troubleshooting E-Waste Collection in North Paravur",
+    slug: "troubleshooting-e-waste-collection-in-north-paravur-north-paravur",
+    publishDate: "2026-01-31",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "north-paravur",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Legal Requirements for Laptop Buyback in Thrippunithura",
+    slug: "legal-requirements-for-laptop-buyback-in-thrippunithura-thrippunithura",
+    publishDate: "2026-01-06",
+    description: "undefined",
+    service: "laptop-buyback",
+    location: "thrippunithura",
+    topic: "legal"
+  },
+  {
+    title: "Environmental Impact of Cable Recycling in Angamaly",
+    slug: "environmental-impact-of-cable-recycling-in-angamaly-angamaly",
+    publishDate: "2026-01-07",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "angamaly",
+    topic: "benefits"
+  },
+  {
+    title: "E-Waste Laws in North Paravur: Complete Guide",
+    slug: "e-waste-laws-in-north-paravur-complete-guide-north-paravur-5",
+    publishDate: "2026-01-21",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "north-paravur",
+    topic: "legal"
+  },
+  {
+    title: "E-Waste Laws in Angamaly: Complete Guide",
+    slug: "e-waste-laws-in-angamaly-complete-guide-angamaly-4",
+    publishDate: "2026-01-20",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "angamaly",
+    topic: "legal"
+  },
+  {
+    title: "Benefits of Monitor Recycling in Thrippunithura",
+    slug: "benefits-of-monitor-recycling-in-thrippunithura-thrippunithura",
+    publishDate: "2026-01-30",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "thrippunithura",
+    topic: "benefits"
+  },
+  {
+    title: "Complete Guide to Monitor Recycling in North Paravur",
+    slug: "complete-guide-to-monitor-recycling-in-north-paravur-north-paravur",
+    publishDate: "2026-01-29",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "north-paravur",
+    topic: "how-to"
+  },
+  {
+    title: "E-Waste Collection During Spring in Kochi",
+    slug: "e-waste-collection-during-spring-in-kochi-kochi",
+    publishDate: "2026-01-23",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "kochi",
+    topic: "seasonal"
+  },
+  {
+    title: "Benefits of Server Recycling in North Paravur",
+    slug: "benefits-of-server-recycling-in-north-paravur-north-paravur",
+    publishDate: "2026-01-09",
+    description: "undefined",
+    service: "server-recycling",
+    location: "north-paravur",
+    topic: "benefits"
+  },
+  {
+    title: "Benefits of Cable Recycling in Kochi",
+    slug: "benefits-of-cable-recycling-in-kochi-kochi-1",
+    publishDate: "2026-01-03",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "kochi",
+    topic: "benefits"
+  },
+  {
+    title: "Cable Recycling Challenges in Kalamassery: Expert Tips",
+    slug: "cable-recycling-challenges-in-kalamassery-expert-tips-kalamassery-1",
+    publishDate: "2026-01-28",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "kalamassery",
+    topic: "troubleshooting"
+  },
+  {
+    title: "E-Waste Collection Price Guide for Aluva",
+    slug: "e-waste-collection-price-guide-for-aluva-aluva",
+    publishDate: "2026-01-27",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "aluva",
+    topic: "pricing"
+  },
+  {
+    title: "Common E-Waste Collection Issues in Ernakulam",
+    slug: "common-e-waste-collection-issues-in-ernakulam-ernakulam",
+    publishDate: "2026-01-14",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "ernakulam",
+    topic: "troubleshooting"
+  },
+  {
+    title: "How to battery recycle in Kochi",
+    slug: "how-to-battery-recycle-in-kochi-kochi",
+    publishDate: "2026-01-27",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "kochi",
+    topic: "how-to"
+  },
+  {
+    title: "Printer Recycling vs Office Equipment Recycling in Angamaly",
+    slug: "printer-recycling-vs-office-equipment-recycling-in-angamaly-angamaly",
+    publishDate: "2026-01-31",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "angamaly",
+    topic: "comparison"
+  },
+  {
+    title: "How Much Does Cable Recycling Cost in Kakkanad?",
+    slug: "how-much-does-cable-recycling-cost-in-kakkanad-kakkanad",
+    publishDate: "2026-01-18",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "kakkanad",
+    topic: "pricing"
+  },
+  {
+    title: "Corporate Cable Recycling Solutions in Angamaly",
+    slug: "corporate-cable-recycling-solutions-in-angamaly-angamaly-1",
+    publishDate: "2026-01-06",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "angamaly",
+    topic: "business"
+  },
+  {
+    title: "Economic Benefits of Server Recycling in Edappally",
+    slug: "economic-benefits-of-server-recycling-in-edappally-edappally",
+    publishDate: "2026-01-26",
+    description: "undefined",
+    service: "server-recycling",
+    location: "edappally",
+    topic: "benefits"
+  },
+  {
+    title: "How to monitor recycle in Thrippunithura",
+    slug: "how-to-monitor-recycle-in-thrippunithura-thrippunithura",
+    publishDate: "2026-01-30",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "thrippunithura",
+    topic: "how-to"
+  },
+  {
+    title: "Battery Recycling During Spring in Kakkanad",
+    slug: "battery-recycling-during-spring-in-kakkanad-kakkanad",
+    publishDate: "2026-01-14",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "kakkanad",
+    topic: "seasonal"
+  },
+  {
+    title: "How Much Does E-Waste Collection Cost in Ernakulam?",
+    slug: "how-much-does-e-waste-collection-cost-in-ernakulam-ernakulam",
+    publishDate: "2026-01-11",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "ernakulam",
+    topic: "pricing"
+  },
+  {
+    title: "Environmental Impact of Printer Recycling in Thrippunithura",
+    slug: "environmental-impact-of-printer-recycling-in-thrippunithura-thrippunithura",
+    publishDate: "2026-01-25",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "thrippunithura",
+    topic: "benefits"
+  },
+  {
+    title: "Best Time for Printer Recycling in Kalamassery",
+    slug: "best-time-for-printer-recycling-in-kalamassery-kalamassery-1",
+    publishDate: "2026-01-01",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "kalamassery",
+    topic: "seasonal"
+  },
+  {
+    title: "Cable Recycling Trends in Kochi 2026",
+    slug: "cable-recycling-trends-in-kochi-2026-kochi",
+    publishDate: "2026-01-04",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "kochi",
+    topic: "seasonal"
+  },
+  {
+    title: "Monitor Recycling Challenges in Thrippunithura: Expert Tips",
+    slug: "monitor-recycling-challenges-in-thrippunithura-expert-tips-thrippunithura",
+    publishDate: "2026-01-05",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "thrippunithura",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Common E-Waste Collection Issues in Ernakulam",
+    slug: "common-e-waste-collection-issues-in-ernakulam-ernakulam-1",
+    publishDate: "2026-01-20",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "ernakulam",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Best Time for Laptop Buyback in Edappally",
+    slug: "best-time-for-laptop-buyback-in-edappally-edappally",
+    publishDate: "2026-01-05",
+    description: "undefined",
+    service: "laptop-buyback",
+    location: "edappally",
+    topic: "seasonal"
+  },
+  {
+    title: "Phone Buyback Prices in Kalamassery 2026",
+    slug: "phone-buyback-prices-in-kalamassery-2026-kalamassery",
+    publishDate: "2026-01-30",
+    description: "undefined",
+    service: "phone-buyback",
+    location: "kalamassery",
+    topic: "pricing"
+  },
+  {
+    title: "Complete Guide to Monitor Recycling in Angamaly",
+    slug: "complete-guide-to-monitor-recycling-in-angamaly-angamaly",
+    publishDate: "2026-01-09",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "angamaly",
+    topic: "how-to"
+  },
+  {
+    title: "Compliance Guide for Printer Recycling in Angamaly",
+    slug: "compliance-guide-for-printer-recycling-in-angamaly-angamaly",
+    publishDate: "2026-01-22",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "angamaly",
+    topic: "legal"
+  },
+  {
+    title: "IT Asset Disposition Process in Vyttila: Step by Step",
+    slug: "it-asset-disposition-process-in-vyttila-step-by-step-vyttila",
+    publishDate: "2026-01-18",
+    description: "undefined",
+    service: "itad",
+    location: "vyttila",
+    topic: "how-to"
+  },
+  {
+    title: "Environmental Impact of E-Waste Collection in Kochi",
+    slug: "environmental-impact-of-e-waste-collection-in-kochi-kochi-1",
+    publishDate: "2026-01-10",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "kochi",
+    topic: "benefits"
+  },
+  {
+    title: "Economic Benefits of Laptop Buyback in Thrippunithura",
+    slug: "economic-benefits-of-laptop-buyback-in-thrippunithura-thrippunithura",
+    publishDate: "2026-01-26",
+    description: "undefined",
+    service: "laptop-buyback",
+    location: "thrippunithura",
+    topic: "benefits"
+  },
+  {
+    title: "Affordable Printer Recycling in Thrippunithura: Complete Pricing",
+    slug: "affordable-printer-recycling-in-thrippunithura-complete-pricing-thrippunithura",
+    publishDate: "2026-01-06",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "thrippunithura",
+    topic: "pricing"
+  },
+  {
+    title: "E-Waste Laws in Aluva: Complete Guide",
+    slug: "e-waste-laws-in-aluva-complete-guide-aluva-2",
+    publishDate: "2026-01-22",
+    description: "undefined",
+    service: "server-recycling",
+    location: "aluva",
+    topic: "legal"
+  },
+  {
+    title: "Enterprise Data Destruction in Edappally",
+    slug: "enterprise-data-destruction-in-edappally-edappally",
+    publishDate: "2026-01-25",
+    description: "undefined",
+    service: "data-destruction",
+    location: "edappally",
+    topic: "business"
+  },
+  {
+    title: "Troubleshooting IT Asset Disposition in Kakkanad",
+    slug: "troubleshooting-it-asset-disposition-in-kakkanad-kakkanad",
+    publishDate: "2026-01-23",
+    description: "undefined",
+    service: "itad",
+    location: "kakkanad",
+    topic: "troubleshooting"
+  },
+  {
+    title: "E-Waste Laws in Angamaly: Complete Guide",
+    slug: "e-waste-laws-in-angamaly-complete-guide-angamaly-5",
+    publishDate: "2026-01-25",
+    description: "undefined",
+    service: "cable-recycling",
+    location: "angamaly",
+    topic: "legal"
+  },
+  {
+    title: "How to data destruction in Kochi",
+    slug: "how-to-data-destruction-in-kochi-kochi",
+    publishDate: "2026-01-16",
+    description: "undefined",
+    service: "data-destruction",
+    location: "kochi",
+    topic: "how-to"
+  },
+  {
+    title: "Server Recycling Options in Kalamassery: Which to Choose?",
+    slug: "server-recycling-options-in-kalamassery-which-to-choose-kalamassery",
+    publishDate: "2026-01-12",
+    description: "undefined",
+    service: "server-recycling",
+    location: "kalamassery",
+    topic: "comparison"
+  },
+  {
+    title: "How Much Does Battery Recycling Cost in Vyttila?",
+    slug: "how-much-does-battery-recycling-cost-in-vyttila-vyttila",
+    publishDate: "2026-01-04",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "vyttila",
+    topic: "pricing"
+  },
+  {
+    title: "Monitor Recycling During Summer in North Paravur",
+    slug: "monitor-recycling-during-summer-in-north-paravur-north-paravur",
+    publishDate: "2026-01-17",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "north-paravur",
+    topic: "seasonal"
+  },
+  {
+    title: "Best Time for IT Asset Disposition in Kalamassery",
+    slug: "best-time-for-it-asset-disposition-in-kalamassery-kalamassery",
+    publishDate: "2026-01-11",
+    description: "undefined",
+    service: "itad",
+    location: "kalamassery",
+    topic: "seasonal"
+  }
+];
+
+// Monthly breakdown
+const months = [
+  {
+    month: 4,
+    name: "April",
+    count: 57,
+    blogs: [
+      {
+        title: "Best Battery Recycling Providers in North Paravur: Comparison",
+        slug: "best-battery-recycling-providers-in-north-paravur-comparison-north-paravur",
+        publishDate: "2026-04-17",
+        description: "undefined"
+      },
+      {
+        title: "Printer Recycling Challenges in Aluva: Expert Tips",
+        slug: "printer-recycling-challenges-in-aluva-expert-tips-aluva",
+        publishDate: "2026-04-10",
+        description: "undefined"
+      },
+      {
+        title: "Economic Benefits of Cable Recycling in Thrippunithura",
+        slug: "economic-benefits-of-cable-recycling-in-thrippunithura-thrippunithura-1",
+        publishDate: "2026-04-20",
+        description: "undefined"
+      },
+      {
+        title: "Complete Guide to IT Asset Disposition in Kalamassery",
+        slug: "complete-guide-to-it-asset-disposition-in-kalamassery-kalamassery-2",
+        publishDate: "2026-04-07",
+        description: "undefined"
+      },
+      {
+        title: "Realme vs Poco Data Destruction in Kalamassery",
+        slug: "realme-vs-poco-data-destruction-in-kalamassery-kalamassery",
+        publishDate: "2026-04-01",
+        description: "undefined"
+      },
+      {
+        title: "Best Time for Cable Recycling in Aluva",
+        slug: "best-time-for-cable-recycling-in-aluva-aluva",
+        publishDate: "2026-04-12",
+        description: "undefined"
+      },
+      {
+        title: "Printer Recycling Process in Vyttila: Step by Step",
+        slug: "printer-recycling-process-in-vyttila-step-by-step-vyttila-1",
+        publishDate: "2026-04-08",
+        description: "undefined"
+      },
+      {
+        title: "Data Destruction Options in Kochi: Which to Choose?",
+        slug: "data-destruction-options-in-kochi-which-to-choose-kochi",
+        publishDate: "2026-04-01",
+        description: "undefined"
+      },
+      {
+        title: "Best Data Destruction Providers in Angamaly: Comparison",
+        slug: "best-data-destruction-providers-in-angamaly-comparison-angamaly-1",
+        publishDate: "2026-04-02",
+        description: "undefined"
+      },
+      {
+        title: "Data Destruction Problems in Kalamassery: Solutions",
+        slug: "data-destruction-problems-in-kalamassery-solutions-kalamassery",
+        publishDate: "2026-04-04",
+        description: "undefined"
+      },
+      {
+        title: "Environmental Impact of E-Waste Collection in Thrippunithura",
+        slug: "environmental-impact-of-e-waste-collection-in-thrippunithura-thrippunithura",
+        publishDate: "2026-04-16",
+        description: "undefined"
+      },
+      {
+        title: "Affordable Laptop Buyback in North Paravur: Complete Pricing",
+        slug: "affordable-laptop-buyback-in-north-paravur-complete-pricing-north-paravur",
+        publishDate: "2026-04-17",
+        description: "undefined"
+      },
+      {
+        title: "Common E-Waste Collection Issues in Thrippunithura",
+        slug: "common-e-waste-collection-issues-in-thrippunithura-thrippunithura",
+        publishDate: "2026-04-11",
+        description: "undefined"
+      },
+      {
+        title: "KSPCB Regulations for Data Destruction in Aluva",
+        slug: "kspcb-regulations-for-data-destruction-in-aluva-aluva",
+        publishDate: "2026-04-17",
+        description: "undefined"
+      },
+      {
+        title: "E-Waste Laws in Kochi: Complete Guide",
+        slug: "e-waste-laws-in-kochi-complete-guide-kochi-4",
+        publishDate: "2026-04-20",
+        description: "undefined"
+      },
+      {
+        title: "How to battery recycle in Angamaly",
+        slug: "how-to-battery-recycle-in-angamaly-angamaly-1",
+        publishDate: "2026-04-16",
+        description: "undefined"
+      },
+      {
+        title: "How to printer recycle in Edappally",
+        slug: "how-to-printer-recycle-in-edappally-edappally",
+        publishDate: "2026-04-15",
+        description: "undefined"
+      },
+      {
+        title: "E-Waste Collection for Businesses in Kalamassery",
+        slug: "e-waste-collection-for-businesses-in-kalamassery-kalamassery",
+        publishDate: "2026-04-06",
+        description: "undefined"
+      },
+      {
+        title: "Complete Guide to Server Recycling in North Paravur",
+        slug: "complete-guide-to-server-recycling-in-north-paravur-north-paravur",
+        publishDate: "2026-04-06",
+        description: "undefined"
+      },
+      {
+        title: "Best Way to monitor recycle in Kochi 2026",
+        slug: "best-way-to-monitor-recycle-in-kochi-2026-kochi-1",
+        publishDate: "2026-04-11",
+        description: "undefined"
+      },
+      {
+        title: "Best Way to cable recycle in Vyttila 2026",
+        slug: "best-way-to-cable-recycle-in-vyttila-2026-vyttila",
+        publishDate: "2026-04-19",
+        description: "undefined"
+      },
+      {
+        title: "Legal Requirements for Server Recycling in Ernakulam",
+        slug: "legal-requirements-for-server-recycling-in-ernakulam-ernakulam",
+        publishDate: "2026-04-03",
+        description: "undefined"
+      },
+      {
+        title: "Affordable Phone Buyback in North Paravur: Complete Pricing",
+        slug: "affordable-phone-buyback-in-north-paravur-complete-pricing-north-paravur",
+        publishDate: "2026-04-11",
+        description: "undefined"
+      },
+      {
+        title: "Compliance Guide for Monitor Recycling in Edappally",
+        slug: "compliance-guide-for-monitor-recycling-in-edappally-edappally",
+        publishDate: "2026-04-09",
+        description: "undefined"
+      },
+      {
+        title: "Battery Recycling Options in Kalamassery: Which to Choose?",
+        slug: "battery-recycling-options-in-kalamassery-which-to-choose-kalamassery",
+        publishDate: "2026-04-01",
+        description: "undefined"
+      },
+      {
+        title: "Enterprise Monitor Recycling in Ernakulam",
+        slug: "enterprise-monitor-recycling-in-ernakulam-ernakulam",
+        publishDate: "2026-04-03",
+        description: "undefined"
+      },
+      {
+        title: "Best Way to battery recycle in Vyttila 2026",
+        slug: "best-way-to-battery-recycle-in-vyttila-2026-vyttila",
+        publishDate: "2026-04-21",
+        description: "undefined"
+      },
+      {
+        title: "Benefits of Battery Recycling in Thrippunithura",
+        slug: "benefits-of-battery-recycling-in-thrippunithura-thrippunithura",
+        publishDate: "2026-04-03",
+        description: "undefined"
+      },
+      {
+        title: "Environmental Impact of Data Destruction in Kakkanad",
+        slug: "environmental-impact-of-data-destruction-in-kakkanad-kakkanad",
+        publishDate: "2026-04-09",
+        description: "undefined"
+      },
+      {
+        title: "How to e-waste collection in Edappally",
+        slug: "how-to-e-waste-collection-in-edappally-edappally",
+        publishDate: "2026-04-05",
+        description: "undefined"
+      },
+      {
+        title: "Best Way to e-waste collection in Ernakulam 2026",
+        slug: "best-way-to-e-waste-collection-in-ernakulam-2026-ernakulam",
+        publishDate: "2026-04-19",
+        description: "undefined"
+      },
+      {
+        title: "KSPCB Regulations for Phone Buyback in Ernakulam",
+        slug: "kspcb-regulations-for-phone-buyback-in-ernakulam-ernakulam-1",
+        publishDate: "2026-04-07",
+        description: "undefined"
+      },
+      {
+        title: "Complete Guide to IT Asset Disposition in Vyttila",
+        slug: "complete-guide-to-it-asset-disposition-in-vyttila-vyttila",
+        publishDate: "2026-04-18",
+        description: "undefined"
+      },
+      {
+        title: "Server Recycling Challenges in Ernakulam: Expert Tips",
+        slug: "server-recycling-challenges-in-ernakulam-expert-tips-ernakulam",
+        publishDate: "2026-04-16",
+        description: "undefined"
+      },
+      {
+        title: "E-Waste Laws in Kalamassery: Complete Guide",
+        slug: "e-waste-laws-in-kalamassery-complete-guide-kalamassery-4",
+        publishDate: "2026-04-12",
+        description: "undefined"
+      },
+      {
+        title: "Common Monitor Recycling Issues in Kakkanad",
+        slug: "common-monitor-recycling-issues-in-kakkanad-kakkanad",
+        publishDate: "2026-04-07",
+        description: "undefined"
+      },
+      {
+        title: "Legal Requirements for Phone Buyback in Kalamassery",
+        slug: "legal-requirements-for-phone-buyback-in-kalamassery-kalamassery",
+        publishDate: "2026-04-13",
+        description: "undefined"
+      },
+      {
+        title: "Common Monitor Recycling Issues in Thrippunithura",
+        slug: "common-monitor-recycling-issues-in-thrippunithura-thrippunithura-1",
+        publishDate: "2026-04-02",
+        description: "undefined"
+      },
+      {
+        title: "Legal Requirements for Printer Recycling in North Paravur",
+        slug: "legal-requirements-for-printer-recycling-in-north-paravur-north-paravur-1",
+        publishDate: "2026-04-15",
+        description: "undefined"
+      },
+      {
+        title: "Data Destruction Trends in Angamaly 2026",
+        slug: "data-destruction-trends-in-angamaly-2026-angamaly",
+        publishDate: "2026-04-14",
+        description: "undefined"
+      },
+      {
+        title: "Best Way to battery recycle in Aluva 2026",
+        slug: "best-way-to-battery-recycle-in-aluva-2026-aluva",
+        publishDate: "2026-04-05",
+        description: "undefined"
+      },
+      {
+        title: "Benefits of Cable Recycling in Ernakulam",
+        slug: "benefits-of-cable-recycling-in-ernakulam-ernakulam",
+        publishDate: "2026-04-10",
+        description: "undefined"
+      },
+      {
+        title: "Affordable Printer Recycling in Kalamassery: Complete Pricing",
+        slug: "affordable-printer-recycling-in-kalamassery-complete-pricing-kalamassery",
+        publishDate: "2026-04-04",
+        description: "undefined"
+      },
+      {
+        title: "Why Choose Battery Recycling in Edappally?",
+        slug: "why-choose-battery-recycling-in-edappally-edappally-1",
+        publishDate: "2026-04-14",
+        description: "undefined"
+      },
+      {
+        title: "E-Waste Laws in North Paravur: Complete Guide",
+        slug: "e-waste-laws-in-north-paravur-complete-guide-north-paravur-6",
+        publishDate: "2026-04-08",
+        description: "undefined"
+      },
+      {
+        title: "Laptop Buyback Price Guide for Vyttila",
+        slug: "laptop-buyback-price-guide-for-vyttila-vyttila",
+        publishDate: "2026-04-09",
+        description: "undefined"
+      },
+      {
+        title: "Common E-Waste Collection Issues in Vyttila",
+        slug: "common-e-waste-collection-issues-in-vyttila-vyttila-1",
+        publishDate: "2026-04-18",
+        description: "undefined"
+      },
+      {
+        title: "Benefits of E-Waste Collection in Kalamassery",
+        slug: "benefits-of-e-waste-collection-in-kalamassery-kalamassery",
+        publishDate: "2026-04-12",
+        description: "undefined"
+      },
+      {
+        title: "Data Destruction Problems in Edappally: Solutions",
+        slug: "data-destruction-problems-in-edappally-solutions-edappally-1",
+        publishDate: "2026-04-19",
+        description: "undefined"
+      },
+      {
+        title: "Compliance Guide for E-Waste Collection in Vyttila",
+        slug: "compliance-guide-for-e-waste-collection-in-vyttila-vyttila",
+        publishDate: "2026-04-21",
+        description: "undefined"
+      },
+      {
+        title: "Seasonal IT Asset Disposition Guide for Thrippunithura",
+        slug: "seasonal-it-asset-disposition-guide-for-thrippunithura-thrippunithura",
+        publishDate: "2026-04-13",
+        description: "undefined"
+      },
+      {
+        title: "Cable Recycling During Winter in Aluva",
+        slug: "cable-recycling-during-winter-in-aluva-aluva",
+        publishDate: "2026-04-13",
+        description: "undefined"
+      },
+      {
+        title: "Corporate E-Waste Collection Solutions in Vyttila",
+        slug: "corporate-e-waste-collection-solutions-in-vyttila-vyttila",
+        publishDate: "2026-04-15",
+        description: "undefined"
+      },
+      {
+        title: "Environmental Impact of Server Recycling in Aluva",
+        slug: "environmental-impact-of-server-recycling-in-aluva-aluva-2",
+        publishDate: "2026-04-05",
+        description: "undefined"
+      },
+      {
+        title: "Best Data Destruction Providers in Angamaly: Comparison",
+        slug: "best-data-destruction-providers-in-angamaly-comparison-angamaly-2",
+        publishDate: "2026-04-20",
+        description: "undefined"
+      },
+      {
+        title: "Phone Buyback for Businesses in Vyttila",
+        slug: "phone-buyback-for-businesses-in-vyttila-vyttila",
+        publishDate: "2026-04-04",
+        description: "undefined"
+      },
+      {
+        title: "Legal Requirements for Battery Recycling in Kalamassery",
+        slug: "legal-requirements-for-battery-recycling-in-kalamassery-kalamassery-1",
+        publishDate: "2026-04-08",
+        description: "undefined"
+      }
+    ]
+  },
+  {
+    month: 3,
+    name: "March",
+    count: 85,
+    blogs: [
+      {
+        title: "Best Time for Printer Recycling in Edappally",
+        slug: "best-time-for-printer-recycling-in-edappally-edappally-1",
+        publishDate: "2026-03-02",
+        description: "undefined"
+      },
+      {
+        title: "Enterprise Battery Recycling in Kochi",
+        slug: "enterprise-battery-recycling-in-kochi-kochi-1",
+        publishDate: "2026-03-27",
+        description: "undefined"
+      },
+      {
+        title: "Enterprise Laptop Buyback in Kakkanad",
+        slug: "enterprise-laptop-buyback-in-kakkanad-kakkanad",
+        publishDate: "2026-03-07",
+        description: "undefined"
+      },
+      {
+        title: "Complete Guide to Server Recycling in Kalamassery",
+        slug: "complete-guide-to-server-recycling-in-kalamassery-kalamassery-1",
+        publishDate: "2026-03-31",
+        description: "undefined"
+      },
+      {
+        title: "Compliance Guide for IT Asset Disposition in Vyttila",
+        slug: "compliance-guide-for-it-asset-disposition-in-vyttila-vyttila",
+        publishDate: "2026-03-05",
+        description: "undefined"
+      },
+      {
+        title: "Complete Guide to Printer Recycling in Edappally",
+        slug: "complete-guide-to-printer-recycling-in-edappally-edappally",
+        publishDate: "2026-03-17",
+        description: "undefined"
+      },
+      {
+        title: "Best Printer Recycling Providers in Ernakulam: Comparison",
+        slug: "best-printer-recycling-providers-in-ernakulam-comparison-ernakulam",
+        publishDate: "2026-03-25",
+        description: "undefined"
+      },
+      {
+        title: "Seasonal Printer Recycling Guide for Vyttila",
+        slug: "seasonal-printer-recycling-guide-for-vyttila-vyttila",
+        publishDate: "2026-03-21",
+        description: "undefined"
+      },
+      {
+        title: "Cable Recycling Problems in Kochi: Solutions",
+        slug: "cable-recycling-problems-in-kochi-solutions-kochi",
+        publishDate: "2026-03-20",
+        description: "undefined"
+      },
+      {
+        title: "Corporate IT Asset Disposition Solutions in Aluva",
+        slug: "corporate-it-asset-disposition-solutions-in-aluva-aluva-2",
+        publishDate: "2026-03-21",
+        description: "undefined"
+      },
+      {
+        title: "Corporate IT Asset Disposition Solutions in Kakkanad",
+        slug: "corporate-it-asset-disposition-solutions-in-kakkanad-kakkanad",
+        publishDate: "2026-03-13",
+        description: "undefined"
+      },
+      {
+        title: "IT Asset Disposition Options in Edappally: Which to Choose?",
+        slug: "it-asset-disposition-options-in-edappally-which-to-choose-edappally-1",
+        publishDate: "2026-03-19",
+        description: "undefined"
+      },
+      {
+        title: "Environmental Impact of Printer Recycling in Vyttila",
+        slug: "environmental-impact-of-printer-recycling-in-vyttila-vyttila",
+        publishDate: "2026-03-13",
+        description: "undefined"
+      },
+      {
+        title: "Corporate Printer Recycling Solutions in North Paravur",
+        slug: "corporate-printer-recycling-solutions-in-north-paravur-north-paravur",
+        publishDate: "2026-03-19",
+        description: "undefined"
+      },
+      {
+        title: "Data Destruction During Winter in Kakkanad",
+        slug: "data-destruction-during-winter-in-kakkanad-kakkanad",
+        publishDate: "2026-03-24",
+        description: "undefined"
+      },
+      {
+        title: "Laptop Buyback Problems in Kakkanad: Solutions",
+        slug: "laptop-buyback-problems-in-kakkanad-solutions-kakkanad",
+        publishDate: "2026-03-13",
+        description: "undefined"
+      },
+      {
+        title: "Troubleshooting Printer Recycling in North Paravur",
+        slug: "troubleshooting-printer-recycling-in-north-paravur-north-paravur-1",
+        publishDate: "2026-03-22",
+        description: "undefined"
+      },
+      {
+        title: "KSPCB Regulations for Battery Recycling in Kochi",
+        slug: "kspcb-regulations-for-battery-recycling-in-kochi-kochi",
+        publishDate: "2026-03-18",
+        description: "undefined"
+      },
+      {
+        title: "Printer Recycling Price Guide for Aluva",
+        slug: "printer-recycling-price-guide-for-aluva-aluva",
+        publishDate: "2026-03-23",
+        description: "undefined"
+      },
+      {
+        title: "Economic Benefits of Cable Recycling in Thrippunithura",
+        slug: "economic-benefits-of-cable-recycling-in-thrippunithura-thrippunithura",
+        publishDate: "2026-03-03",
+        description: "undefined"
+      },
+      {
+        title: "Why Choose Battery Recycling in Edappally?",
+        slug: "why-choose-battery-recycling-in-edappally-edappally",
+        publishDate: "2026-03-29",
+        description: "undefined"
+      },
+      {
+        title: "Corporate Data Destruction Solutions in North Paravur",
+        slug: "corporate-data-destruction-solutions-in-north-paravur-north-paravur",
+        publishDate: "2026-03-26",
+        description: "undefined"
+      },
+      {
+        title: "Common Server Recycling Issues in Edappally",
+        slug: "common-server-recycling-issues-in-edappally-edappally-1",
+        publishDate: "2026-03-07",
+        description: "undefined"
+      },
+      {
+        title: "How to it asset disposition in Kalamassery",
+        slug: "how-to-it-asset-disposition-in-kalamassery-kalamassery-1",
+        publishDate: "2026-03-08",
+        description: "undefined"
+      },
+      {
+        title: "Best Way to data destruction in Thrippunithura 2026",
+        slug: "best-way-to-data-destruction-in-thrippunithura-2026-thrippunithura",
+        publishDate: "2026-03-16",
+        description: "undefined"
+      },
+      {
+        title: "Huawei vs Vivo Battery Recycling in Angamaly",
+        slug: "huawei-vs-vivo-battery-recycling-in-angamaly-angamaly",
+        publishDate: "2026-03-15",
+        description: "undefined"
+      },
+      {
+        title: "KSPCB Regulations for IT Asset Disposition in Thrippunithura",
+        slug: "kspcb-regulations-for-it-asset-disposition-in-thrippunithura-thrippunithura-1",
+        publishDate: "2026-03-15",
+        description: "undefined"
+      },
+      {
+        title: "Enterprise Laptop Buyback in Kalamassery",
+        slug: "enterprise-laptop-buyback-in-kalamassery-kalamassery-2",
+        publishDate: "2026-03-09",
+        description: "undefined"
+      },
+      {
+        title: "Legal Requirements for Data Destruction in Kalamassery",
+        slug: "legal-requirements-for-data-destruction-in-kalamassery-kalamassery-1",
+        publishDate: "2026-03-04",
+        description: "undefined"
+      },
+      {
+        title: "Monitor Recycling Problems in Edappally: Solutions",
+        slug: "monitor-recycling-problems-in-edappally-solutions-edappally",
+        publishDate: "2026-03-14",
+        description: "undefined"
+      },
+      {
+        title: "Phone Buyback Problems in Edappally: Solutions",
+        slug: "phone-buyback-problems-in-edappally-solutions-edappally-2",
+        publishDate: "2026-03-19",
+        description: "undefined"
+      },
+      {
+        title: "Why Choose Laptop Buyback in Kalamassery?",
+        slug: "why-choose-laptop-buyback-in-kalamassery-kalamassery",
+        publishDate: "2026-03-11",
+        description: "undefined"
+      },
+      {
+        title: "Monitor Recycling vs Screen Recycling in North Paravur",
+        slug: "monitor-recycling-vs-screen-recycling-in-north-paravur-north-paravur",
+        publishDate: "2026-03-11",
+        description: "undefined"
+      },
+      {
+        title: "Troubleshooting Data Destruction in Angamaly",
+        slug: "troubleshooting-data-destruction-in-angamaly-angamaly",
+        publishDate: "2026-03-17",
+        description: "undefined"
+      },
+      {
+        title: "Affordable Monitor Recycling in Ernakulam: Complete Pricing",
+        slug: "affordable-monitor-recycling-in-ernakulam-complete-pricing-ernakulam",
+        publishDate: "2026-03-12",
+        description: "undefined"
+      },
+      {
+        title: "Common E-Waste Collection Issues in Vyttila",
+        slug: "common-e-waste-collection-issues-in-vyttila-vyttila",
+        publishDate: "2026-03-10",
+        description: "undefined"
+      },
+      {
+        title: "Server Recycling for Businesses in Edappally",
+        slug: "server-recycling-for-businesses-in-edappally-edappally-1",
+        publishDate: "2026-03-09",
+        description: "undefined"
+      },
+      {
+        title: "Battery Recycling Price Guide for Kakkanad",
+        slug: "battery-recycling-price-guide-for-kakkanad-kakkanad",
+        publishDate: "2026-03-28",
+        description: "undefined"
+      },
+      {
+        title: "Printer Recycling vs Office Equipment Recycling in Kakkanad",
+        slug: "printer-recycling-vs-office-equipment-recycling-in-kakkanad-kakkanad",
+        publishDate: "2026-03-14",
+        description: "undefined"
+      },
+      {
+        title: "Cable Recycling Prices in Kalamassery 2026",
+        slug: "cable-recycling-prices-in-kalamassery-2026-kalamassery",
+        publishDate: "2026-03-30",
+        description: "undefined"
+      },
+      {
+        title: "E-Waste Laws in Kakkanad: Complete Guide",
+        slug: "e-waste-laws-in-kakkanad-complete-guide-kakkanad-3",
+        publishDate: "2026-03-16",
+        description: "undefined"
+      },
+      {
+        title: "KSPCB Regulations for E-Waste Collection in Kalamassery",
+        slug: "kspcb-regulations-for-e-waste-collection-in-kalamassery-kalamassery",
+        publishDate: "2026-03-03",
+        description: "undefined"
+      },
+      {
+        title: "Complete Guide to Laptop Buyback in Kakkanad",
+        slug: "complete-guide-to-laptop-buyback-in-kakkanad-kakkanad",
+        publishDate: "2026-03-12",
+        description: "undefined"
+      },
+      {
+        title: "E-Waste Collection Prices in Edappally 2026",
+        slug: "e-waste-collection-prices-in-edappally-2026-edappally",
+        publishDate: "2026-03-04",
+        description: "undefined"
+      },
+      {
+        title: "Server Recycling Process in Edappally: Step by Step",
+        slug: "server-recycling-process-in-edappally-step-by-step-edappally-1",
+        publishDate: "2026-03-27",
+        description: "undefined"
+      },
+      {
+        title: "IT Asset Disposition Prices in Thrippunithura 2026",
+        slug: "it-asset-disposition-prices-in-thrippunithura-2026-thrippunithura",
+        publishDate: "2026-03-01",
+        description: "undefined"
+      },
+      {
+        title: "KSPCB Regulations for Phone Buyback in Ernakulam",
+        slug: "kspcb-regulations-for-phone-buyback-in-ernakulam-ernakulam",
+        publishDate: "2026-03-10",
+        description: "undefined"
+      },
+      {
+        title: "Seasonal Server Recycling Guide for Kalamassery",
+        slug: "seasonal-server-recycling-guide-for-kalamassery-kalamassery",
+        publishDate: "2026-03-23",
+        description: "undefined"
+      },
+      {
+        title: "Compliance Guide for Battery Recycling in Thrippunithura",
+        slug: "compliance-guide-for-battery-recycling-in-thrippunithura-thrippunithura",
+        publishDate: "2026-03-25",
+        description: "undefined"
+      },
+      {
+        title: "Enterprise Laptop Buyback in Thrippunithura",
+        slug: "enterprise-laptop-buyback-in-thrippunithura-thrippunithura-1",
+        publishDate: "2026-03-08",
+        description: "undefined"
+      },
+      {
+        title: "Enterprise Monitor Recycling in Vyttila",
+        slug: "enterprise-monitor-recycling-in-vyttila-vyttila",
+        publishDate: "2026-03-25",
+        description: "undefined"
+      },
+      {
+        title: "Cable Recycling vs Wire Recycling in Aluva",
+        slug: "cable-recycling-vs-wire-recycling-in-aluva-aluva",
+        publishDate: "2026-03-24",
+        description: "undefined"
+      },
+      {
+        title: "Economic Benefits of Battery Recycling in Ernakulam",
+        slug: "economic-benefits-of-battery-recycling-in-ernakulam-ernakulam",
+        publishDate: "2026-03-27",
+        description: "undefined"
+      },
+      {
+        title: "Why Choose Battery Recycling in Aluva?",
+        slug: "why-choose-battery-recycling-in-aluva-aluva",
+        publishDate: "2026-03-07",
+        description: "undefined"
+      },
+      {
+        title: "Legal Requirements for Data Destruction in Kakkanad",
+        slug: "legal-requirements-for-data-destruction-in-kakkanad-kakkanad",
+        publishDate: "2026-03-06",
+        description: "undefined"
+      },
+      {
+        title: "Battery Recycling Price Guide for Ernakulam",
+        slug: "battery-recycling-price-guide-for-ernakulam-ernakulam",
+        publishDate: "2026-03-16",
+        description: "undefined"
+      },
+      {
+        title: "Benefits of Data Destruction in Edappally",
+        slug: "benefits-of-data-destruction-in-edappally-edappally-1",
+        publishDate: "2026-03-01",
+        description: "undefined"
+      },
+      {
+        title: "Troubleshooting Data Destruction in Angamaly",
+        slug: "troubleshooting-data-destruction-in-angamaly-angamaly-1",
+        publishDate: "2026-03-29",
+        description: "undefined"
+      },
+      {
+        title: "vs Poco IT Asset Disposition in Kalamassery",
+        slug: "vs-poco-it-asset-disposition-in-kalamassery-kalamassery",
+        publishDate: "2026-03-02",
+        description: "undefined"
+      },
+      {
+        title: "E-Waste Laws in Ernakulam: Complete Guide",
+        slug: "e-waste-laws-in-ernakulam-complete-guide-ernakulam-4",
+        publishDate: "2026-03-01",
+        description: "undefined"
+      },
+      {
+        title: "Troubleshooting Battery Recycling in Kalamassery",
+        slug: "troubleshooting-battery-recycling-in-kalamassery-kalamassery",
+        publishDate: "2026-03-12",
+        description: "undefined"
+      },
+      {
+        title: "E-Waste Collection Prices in Edappally 2026",
+        slug: "e-waste-collection-prices-in-edappally-2026-edappally-1",
+        publishDate: "2026-03-21",
+        description: "undefined"
+      },
+      {
+        title: "Affordable Cable Recycling in Kochi: Complete Pricing",
+        slug: "affordable-cable-recycling-in-kochi-complete-pricing-kochi",
+        publishDate: "2026-03-05",
+        description: "undefined"
+      },
+      {
+        title: "Battery Recycling Trends in Kochi 2026",
+        slug: "battery-recycling-trends-in-kochi-2026-kochi-1",
+        publishDate: "2026-03-05",
+        description: "undefined"
+      },
+      {
+        title: "Best Data Destruction Providers in Kochi: Comparison",
+        slug: "best-data-destruction-providers-in-kochi-comparison-kochi",
+        publishDate: "2026-03-30",
+        description: "undefined"
+      },
+      {
+        title: "Best Time for Server Recycling in Kakkanad",
+        slug: "best-time-for-server-recycling-in-kakkanad-kakkanad",
+        publishDate: "2026-03-06",
+        description: "undefined"
+      },
+      {
+        title: "B2B Laptop Buyback Services in Edappally",
+        slug: "b2b-laptop-buyback-services-in-edappally-edappally",
+        publishDate: "2026-03-22",
+        description: "undefined"
+      },
+      {
+        title: "Laptop Buyback Price Guide for Kochi",
+        slug: "laptop-buyback-price-guide-for-kochi-kochi",
+        publishDate: "2026-03-30",
+        description: "undefined"
+      },
+      {
+        title: "Server Recycling Challenges in Aluva: Expert Tips",
+        slug: "server-recycling-challenges-in-aluva-expert-tips-aluva",
+        publishDate: "2026-03-18",
+        description: "undefined"
+      },
+      {
+        title: "Server Recycling Process in Edappally: Step by Step",
+        slug: "server-recycling-process-in-edappally-step-by-step-edappally",
+        publishDate: "2026-03-09",
+        description: "undefined"
+      },
+      {
+        title: "Affordable E-Waste Collection in Vyttila: Complete Pricing",
+        slug: "affordable-e-waste-collection-in-vyttila-complete-pricing-vyttila",
+        publishDate: "2026-03-23",
+        description: "undefined"
+      },
+      {
+        title: "vs Realme E-Waste Collection in Kalamassery",
+        slug: "vs-realme-e-waste-collection-in-kalamassery-kalamassery",
+        publishDate: "2026-03-31",
+        description: "undefined"
+      },
+      {
+        title: "E-Waste Collection Price Guide for Ernakulam",
+        slug: "e-waste-collection-price-guide-for-ernakulam-ernakulam-2",
+        publishDate: "2026-03-31",
+        description: "undefined"
+      },
+      {
+        title: "Phone Buyback vs Mobile Phone Recycling in Kochi",
+        slug: "phone-buyback-vs-mobile-phone-recycling-in-kochi-kochi",
+        publishDate: "2026-03-28",
+        description: "undefined"
+      },
+      {
+        title: "Legal Requirements for Printer Recycling in Vyttila",
+        slug: "legal-requirements-for-printer-recycling-in-vyttila-vyttila",
+        publishDate: "2026-03-28",
+        description: "undefined"
+      },
+      {
+        title: "Enterprise Data Destruction in Aluva",
+        slug: "enterprise-data-destruction-in-aluva-aluva-1",
+        publishDate: "2026-03-04",
+        description: "undefined"
+      },
+      {
+        title: "Affordable Server Recycling in Kalamassery: Complete Pricing",
+        slug: "affordable-server-recycling-in-kalamassery-complete-pricing-kalamassery-1",
+        publishDate: "2026-03-02",
+        description: "undefined"
+      },
+      {
+        title: "E-Waste Laws in Angamaly: Complete Guide",
+        slug: "e-waste-laws-in-angamaly-complete-guide-angamaly-8",
+        publishDate: "2026-03-11",
+        description: "undefined"
+      },
+      {
+        title: "Best Phone Buyback Providers in Kalamassery: Comparison",
+        slug: "best-phone-buyback-providers-in-kalamassery-comparison-kalamassery",
+        publishDate: "2026-03-20",
+        description: "undefined"
+      },
+      {
+        title: "Phone Buyback During Spring in Edappally",
+        slug: "phone-buyback-during-spring-in-edappally-edappally",
+        publishDate: "2026-03-08",
+        description: "undefined"
+      },
+      {
+        title: "Phone Buyback Problems in Thrippunithura: Solutions",
+        slug: "phone-buyback-problems-in-thrippunithura-solutions-thrippunithura",
+        publishDate: "2026-03-15",
+        description: "undefined"
+      },
+      {
+        title: "KSPCB Regulations for Monitor Recycling in Angamaly",
+        slug: "kspcb-regulations-for-monitor-recycling-in-angamaly-angamaly",
+        publishDate: "2026-03-24",
+        description: "undefined"
+      },
+      {
+        title: "KSPCB Regulations for E-Waste Collection in Kalamassery",
+        slug: "kspcb-regulations-for-e-waste-collection-in-kalamassery-kalamassery-1",
+        publishDate: "2026-03-20",
+        description: "undefined"
+      },
+      {
+        title: "E-Waste Collection Prices in Angamaly 2026",
+        slug: "e-waste-collection-prices-in-angamaly-2026-angamaly-1",
+        publishDate: "2026-03-17",
+        description: "undefined"
+      },
+      {
+        title: "Cable Recycling Problems in Thrippunithura: Solutions",
+        slug: "cable-recycling-problems-in-thrippunithura-solutions-thrippunithura",
+        publishDate: "2026-03-26",
+        description: "undefined"
+      }
+    ]
+  },
+  {
+    month: 2,
+    name: "February",
+    count: 77,
+    blogs: [
+      {
+        title: "Why Choose Data Destruction in Edappally?",
+        slug: "why-choose-data-destruction-in-edappally-edappally",
+        publishDate: "2026-02-17",
+        description: "undefined"
+      },
+      {
+        title: "Cable Recycling During Winter in Ernakulam",
+        slug: "cable-recycling-during-winter-in-ernakulam-ernakulam",
+        publishDate: "2026-02-01",
+        description: "undefined"
+      },
+      {
+        title: "Best IT Asset Disposition Providers in Vyttila: Comparison",
+        slug: "best-it-asset-disposition-providers-in-vyttila-comparison-vyttila",
+        publishDate: "2026-02-18",
+        description: "undefined"
+      },
+      {
+        title: "B2B Cable Recycling Services in Kalamassery",
+        slug: "b2b-cable-recycling-services-in-kalamassery-kalamassery",
+        publishDate: "2026-02-22",
+        description: "undefined"
+      },
+      {
+        title: "Benefits of Printer Recycling in Aluva",
+        slug: "benefits-of-printer-recycling-in-aluva-aluva",
+        publishDate: "2026-02-07",
+        description: "undefined"
+      },
+      {
+        title: "Best Way to printer recycle in Vyttila 2026",
+        slug: "best-way-to-printer-recycle-in-vyttila-2026-vyttila-2",
+        publishDate: "2026-02-28",
+        description: "undefined"
+      },
+      {
+        title: "Monitor Recycling Process in North Paravur: Step by Step",
+        slug: "monitor-recycling-process-in-north-paravur-step-by-step-north-paravur",
+        publishDate: "2026-02-16",
+        description: "undefined"
+      },
+      {
+        title: "Best Time for Battery Recycling in Aluva",
+        slug: "best-time-for-battery-recycling-in-aluva-aluva",
+        publishDate: "2026-02-22",
+        description: "undefined"
+      },
+      {
+        title: "Laptop Buyback Price Guide for Aluva",
+        slug: "laptop-buyback-price-guide-for-aluva-aluva",
+        publishDate: "2026-02-10",
+        description: "undefined"
+      },
+      {
+        title: "Printer Recycling During Summer in Kalamassery",
+        slug: "printer-recycling-during-summer-in-kalamassery-kalamassery",
+        publishDate: "2026-02-24",
+        description: "undefined"
+      },
+      {
+        title: "E-Waste Laws in Ernakulam: Complete Guide",
+        slug: "e-waste-laws-in-ernakulam-complete-guide-ernakulam-3",
+        publishDate: "2026-02-13",
+        description: "undefined"
+      },
+      {
+        title: "Troubleshooting Printer Recycling in North Paravur",
+        slug: "troubleshooting-printer-recycling-in-north-paravur-north-paravur",
+        publishDate: "2026-02-12",
+        description: "undefined"
+      },
+      {
+        title: "Enterprise E-Waste Collection in North Paravur",
+        slug: "enterprise-e-waste-collection-in-north-paravur-north-paravur",
+        publishDate: "2026-02-10",
+        description: "undefined"
+      },
+      {
+        title: "Server Recycling Process in North Paravur: Step by Step",
+        slug: "server-recycling-process-in-north-paravur-step-by-step-north-paravur",
+        publishDate: "2026-02-08",
+        description: "undefined"
+      },
+      {
+        title: "How to printer recycle in Angamaly",
+        slug: "how-to-printer-recycle-in-angamaly-angamaly",
+        publishDate: "2026-02-14",
+        description: "undefined"
+      },
+      {
+        title: "IT Asset Disposition Process in Edappally: Step by Step",
+        slug: "it-asset-disposition-process-in-edappally-step-by-step-edappally-1",
+        publishDate: "2026-02-06",
+        description: "undefined"
+      },
+      {
+        title: "E-Waste Laws in Angamaly: Complete Guide",
+        slug: "e-waste-laws-in-angamaly-complete-guide-angamaly-6",
+        publishDate: "2026-02-20",
+        description: "undefined"
+      },
+      {
+        title: "Cable Recycling Options in Kakkanad: Which to Choose?",
+        slug: "cable-recycling-options-in-kakkanad-which-to-choose-kakkanad",
+        publishDate: "2026-02-10",
+        description: "undefined"
+      },
+      {
+        title: "Best Time for E-Waste Collection in Kalamassery",
+        slug: "best-time-for-e-waste-collection-in-kalamassery-kalamassery",
+        publishDate: "2026-02-04",
+        description: "undefined"
+      },
+      {
+        title: "Best Monitor Recycling Providers in Kalamassery: Comparison",
+        slug: "best-monitor-recycling-providers-in-kalamassery-comparison-kalamassery",
+        publishDate: "2026-02-27",
+        description: "undefined"
+      },
+      {
+        title: "How to monitor recycle in Ernakulam",
+        slug: "how-to-monitor-recycle-in-ernakulam-ernakulam",
+        publishDate: "2026-02-11",
+        description: "undefined"
+      },
+      {
+        title: "IT Asset Disposition Trends in Vyttila 2026",
+        slug: "it-asset-disposition-trends-in-vyttila-2026-vyttila",
+        publishDate: "2026-02-28",
+        description: "undefined"
+      },
+      {
+        title: "Troubleshooting Monitor Recycling in Edappally",
+        slug: "troubleshooting-monitor-recycling-in-edappally-edappally",
+        publishDate: "2026-02-19",
+        description: "undefined"
+      },
+      {
+        title: "Printer Recycling Prices in Edappally 2026",
+        slug: "printer-recycling-prices-in-edappally-2026-edappally",
+        publishDate: "2026-02-21",
+        description: "undefined"
+      },
+      {
+        title: "IT Asset Disposition Process in North Paravur: Step by Step",
+        slug: "it-asset-disposition-process-in-north-paravur-step-by-step-north-paravur",
+        publishDate: "2026-02-26",
+        description: "undefined"
+      },
+      {
+        title: "Cable Recycling Options in Ernakulam: Which to Choose?",
+        slug: "cable-recycling-options-in-ernakulam-which-to-choose-ernakulam",
+        publishDate: "2026-02-09",
+        description: "undefined"
+      },
+      {
+        title: "E-Waste Laws in Angamaly: Complete Guide",
+        slug: "e-waste-laws-in-angamaly-complete-guide-angamaly-7",
+        publishDate: "2026-02-28",
+        description: "undefined"
+      },
+      {
+        title: "B2B Printer Recycling Services in Thrippunithura",
+        slug: "b2b-printer-recycling-services-in-thrippunithura-thrippunithura",
+        publishDate: "2026-02-09",
+        description: "undefined"
+      },
+      {
+        title: "Battery Recycling During Spring in Aluva",
+        slug: "battery-recycling-during-spring-in-aluva-aluva",
+        publishDate: "2026-02-16",
+        description: "undefined"
+      },
+      {
+        title: "Economic Benefits of Data Destruction in Kalamassery",
+        slug: "economic-benefits-of-data-destruction-in-kalamassery-kalamassery",
+        publishDate: "2026-02-06",
+        description: "undefined"
+      },
+      {
+        title: "How to it asset disposition in Kalamassery",
+        slug: "how-to-it-asset-disposition-in-kalamassery-kalamassery",
+        publishDate: "2026-02-17",
+        description: "undefined"
+      },
+      {
+        title: "Economic Benefits of Server Recycling in Kochi",
+        slug: "economic-benefits-of-server-recycling-in-kochi-kochi",
+        publishDate: "2026-02-01",
+        description: "undefined"
+      },
+      {
+        title: "Data Destruction vs Data Wiping in Thrippunithura",
+        slug: "data-destruction-vs-data-wiping-in-thrippunithura-thrippunithura",
+        publishDate: "2026-02-22",
+        description: "undefined"
+      },
+      {
+        title: "Data Destruction Price Guide for Ernakulam",
+        slug: "data-destruction-price-guide-for-ernakulam-ernakulam",
+        publishDate: "2026-02-12",
+        description: "undefined"
+      },
+      {
+        title: "Seasonal Printer Recycling Guide for Kalamassery",
+        slug: "seasonal-printer-recycling-guide-for-kalamassery-kalamassery",
+        publishDate: "2026-02-26",
+        description: "undefined"
+      },
+      {
+        title: "Battery Recycling vs Battery Disposal in Kalamassery",
+        slug: "battery-recycling-vs-battery-disposal-in-kalamassery-kalamassery",
+        publishDate: "2026-02-20",
+        description: "undefined"
+      },
+      {
+        title: "Legal Requirements for E-Waste Collection in Aluva",
+        slug: "legal-requirements-for-e-waste-collection-in-aluva-aluva",
+        publishDate: "2026-02-15",
+        description: "undefined"
+      },
+      {
+        title: "vs Lenovo Server Recycling in Thrippunithura",
+        slug: "vs-lenovo-server-recycling-in-thrippunithura-thrippunithura",
+        publishDate: "2026-02-15",
+        description: "undefined"
+      },
+      {
+        title: "Legal Requirements for E-Waste Collection in Kalamassery",
+        slug: "legal-requirements-for-e-waste-collection-in-kalamassery-kalamassery",
+        publishDate: "2026-02-03",
+        description: "undefined"
+      },
+      {
+        title: "B2B Server Recycling Services in Kochi",
+        slug: "b2b-server-recycling-services-in-kochi-kochi",
+        publishDate: "2026-02-27",
+        description: "undefined"
+      },
+      {
+        title: "E-Waste Laws in Aluva: Complete Guide",
+        slug: "e-waste-laws-in-aluva-complete-guide-aluva-3",
+        publishDate: "2026-02-25",
+        description: "undefined"
+      },
+      {
+        title: "Phone Buyback for Businesses in Kochi",
+        slug: "phone-buyback-for-businesses-in-kochi-kochi-1",
+        publishDate: "2026-02-14",
+        description: "undefined"
+      },
+      {
+        title: "Seasonal Server Recycling Guide for Kakkanad",
+        slug: "seasonal-server-recycling-guide-for-kakkanad-kakkanad",
+        publishDate: "2026-02-09",
+        description: "undefined"
+      },
+      {
+        title: "Why Choose E-Waste Collection in Aluva?",
+        slug: "why-choose-e-waste-collection-in-aluva-aluva-1",
+        publishDate: "2026-02-26",
+        description: "undefined"
+      },
+      {
+        title: "B2B Phone Buyback Services in Edappally",
+        slug: "b2b-phone-buyback-services-in-edappally-edappally",
+        publishDate: "2026-02-07",
+        description: "undefined"
+      },
+      {
+        title: "Environmental Impact of Battery Recycling in Aluva",
+        slug: "environmental-impact-of-battery-recycling-in-aluva-aluva",
+        publishDate: "2026-02-05",
+        description: "undefined"
+      },
+      {
+        title: "E-Waste Laws in Kakkanad: Complete Guide",
+        slug: "e-waste-laws-in-kakkanad-complete-guide-kakkanad-2",
+        publishDate: "2026-02-24",
+        description: "undefined"
+      },
+      {
+        title: "Why Choose Printer Recycling in Kalamassery?",
+        slug: "why-choose-printer-recycling-in-kalamassery-kalamassery-1",
+        publishDate: "2026-02-02",
+        description: "undefined"
+      },
+      {
+        title: "Phone Buyback Process in Kochi: Step by Step",
+        slug: "phone-buyback-process-in-kochi-step-by-step-kochi",
+        publishDate: "2026-02-11",
+        description: "undefined"
+      },
+      {
+        title: "Common E-Waste Collection Issues in Kakkanad",
+        slug: "common-e-waste-collection-issues-in-kakkanad-kakkanad",
+        publishDate: "2026-02-25",
+        description: "undefined"
+      },
+      {
+        title: "IT Asset Disposition Options in Kalamassery: Which to Choose?",
+        slug: "it-asset-disposition-options-in-kalamassery-which-to-choose-kalamassery",
+        publishDate: "2026-02-05",
+        description: "undefined"
+      },
+      {
+        title: "Affordable Printer Recycling in Thrippunithura: Complete Pricing",
+        slug: "affordable-printer-recycling-in-thrippunithura-complete-pricing-thrippunithura-1",
+        publishDate: "2026-02-16",
+        description: "undefined"
+      },
+      {
+        title: "vs Infinix Battery Recycling in Kochi",
+        slug: "vs-infinix-battery-recycling-in-kochi-kochi",
+        publishDate: "2026-02-20",
+        description: "undefined"
+      },
+      {
+        title: "Environmental Impact of E-Waste Collection in Vyttila",
+        slug: "environmental-impact-of-e-waste-collection-in-vyttila-vyttila",
+        publishDate: "2026-02-03",
+        description: "undefined"
+      },
+      {
+        title: "Monitor Recycling Trends in North Paravur 2026",
+        slug: "monitor-recycling-trends-in-north-paravur-2026-north-paravur-1",
+        publishDate: "2026-02-25",
+        description: "undefined"
+      },
+      {
+        title: "Corporate Battery Recycling Solutions in Thrippunithura",
+        slug: "corporate-battery-recycling-solutions-in-thrippunithura-thrippunithura-1",
+        publishDate: "2026-02-02",
+        description: "undefined"
+      },
+      {
+        title: "Environmental Impact of Server Recycling in Angamaly",
+        slug: "environmental-impact-of-server-recycling-in-angamaly-angamaly",
+        publishDate: "2026-02-17",
+        description: "undefined"
+      },
+      {
+        title: "vs Motorola Monitor Recycling in North Paravur",
+        slug: "vs-motorola-monitor-recycling-in-north-paravur-north-paravur",
+        publishDate: "2026-02-18",
+        description: "undefined"
+      },
+      {
+        title: "Affordable Data Destruction in Angamaly: Complete Pricing",
+        slug: "affordable-data-destruction-in-angamaly-complete-pricing-angamaly",
+        publishDate: "2026-02-21",
+        description: "undefined"
+      },
+      {
+        title: "Best Way to it asset disposition in Aluva 2026",
+        slug: "best-way-to-it-asset-disposition-in-aluva-2026-aluva",
+        publishDate: "2026-02-12",
+        description: "undefined"
+      },
+      {
+        title: "Compliance Guide for Data Destruction in Kakkanad",
+        slug: "compliance-guide-for-data-destruction-in-kakkanad-kakkanad-1",
+        publishDate: "2026-02-13",
+        description: "undefined"
+      },
+      {
+        title: "Best Laptop Buyback Providers in Aluva: Comparison",
+        slug: "best-laptop-buyback-providers-in-aluva-comparison-aluva",
+        publishDate: "2026-02-08",
+        description: "undefined"
+      },
+      {
+        title: "KSPCB Regulations for E-Waste Collection in Edappally",
+        slug: "kspcb-regulations-for-e-waste-collection-in-edappally-edappally",
+        publishDate: "2026-02-06",
+        description: "undefined"
+      },
+      {
+        title: "Battery Recycling During Summer in North Paravur",
+        slug: "battery-recycling-during-summer-in-north-paravur-north-paravur",
+        publishDate: "2026-02-24",
+        description: "undefined"
+      },
+      {
+        title: "Economic Benefits of Server Recycling in Vyttila",
+        slug: "economic-benefits-of-server-recycling-in-vyttila-vyttila",
+        publishDate: "2026-02-08",
+        description: "undefined"
+      },
+      {
+        title: "E-Waste Collection Problems in Ernakulam: Solutions",
+        slug: "e-waste-collection-problems-in-ernakulam-solutions-ernakulam",
+        publishDate: "2026-02-13",
+        description: "undefined"
+      },
+      {
+        title: "Environmental Impact of Monitor Recycling in Kalamassery",
+        slug: "environmental-impact-of-monitor-recycling-in-kalamassery-kalamassery",
+        publishDate: "2026-02-14",
+        description: "undefined"
+      },
+      {
+        title: "Data Destruction Trends in Kochi 2026",
+        slug: "data-destruction-trends-in-kochi-2026-kochi",
+        publishDate: "2026-02-01",
+        description: "undefined"
+      },
+      {
+        title: "Cable Recycling Prices in Thrippunithura 2026",
+        slug: "cable-recycling-prices-in-thrippunithura-2026-thrippunithura",
+        publishDate: "2026-02-21",
+        description: "undefined"
+      },
+      {
+        title: "Troubleshooting E-Waste Collection in Aluva",
+        slug: "troubleshooting-e-waste-collection-in-aluva-aluva",
+        publishDate: "2026-02-19",
+        description: "undefined"
+      },
+      {
+        title: "Economic Benefits of IT Asset Disposition in North Paravur",
+        slug: "economic-benefits-of-it-asset-disposition-in-north-paravur-north-paravur",
+        publishDate: "2026-02-23",
+        description: "undefined"
+      },
+      {
+        title: "Best Time for Data Destruction in North Paravur",
+        slug: "best-time-for-data-destruction-in-north-paravur-north-paravur",
+        publishDate: "2026-02-04",
+        description: "undefined"
+      },
+      {
+        title: "Why Choose Phone Buyback in Ernakulam?",
+        slug: "why-choose-phone-buyback-in-ernakulam-ernakulam",
+        publishDate: "2026-02-03",
+        description: "undefined"
+      },
+      {
+        title: "KSPCB Regulations for E-Waste Collection in Vyttila",
+        slug: "kspcb-regulations-for-e-waste-collection-in-vyttila-vyttila",
+        publishDate: "2026-02-23",
+        description: "undefined"
+      },
+      {
+        title: "How Much Does E-Waste Collection Cost in Vyttila?",
+        slug: "how-much-does-e-waste-collection-cost-in-vyttila-vyttila",
+        publishDate: "2026-02-02",
+        description: "undefined"
+      },
+      {
+        title: "Laptop Buyback Prices in Thrippunithura 2026",
+        slug: "laptop-buyback-prices-in-thrippunithura-2026-thrippunithura-1",
+        publishDate: "2026-02-05",
+        description: "undefined"
+      },
+      {
+        title: "Data Destruction Process in Thrippunithura: Step by Step",
+        slug: "data-destruction-process-in-thrippunithura-step-by-step-thrippunithura-1",
+        publishDate: "2026-02-18",
+        description: "undefined"
+      }
+    ]
+  },
+  {
+    month: 1,
+    name: "January",
+    count: 85,
+    blogs: [
+      {
+        title: "How to printer recycle in Kakkanad",
+        slug: "how-to-printer-recycle-in-kakkanad-kakkanad",
+        publishDate: "2026-01-24",
+        description: "undefined"
+      },
+      {
+        title: "Server Recycling for Businesses in Edappally",
+        slug: "server-recycling-for-businesses-in-edappally-edappally",
+        publishDate: "2026-01-01",
+        description: "undefined"
+      },
+      {
+        title: "KSPCB Regulations for IT Asset Disposition in Angamaly",
+        slug: "kspcb-regulations-for-it-asset-disposition-in-angamaly-angamaly",
+        publishDate: "2026-01-29",
+        description: "undefined"
+      },
+      {
+        title: "Best Time for E-Waste Collection in Thrippunithura",
+        slug: "best-time-for-e-waste-collection-in-thrippunithura-thrippunithura-1",
+        publishDate: "2026-01-08",
+        description: "undefined"
+      },
+      {
+        title: "How Much Does Battery Recycling Cost in Ernakulam?",
+        slug: "how-much-does-battery-recycling-cost-in-ernakulam-ernakulam",
+        publishDate: "2026-01-07",
+        description: "undefined"
+      },
+      {
+        title: "Troubleshooting Laptop Buyback in Angamaly",
+        slug: "troubleshooting-laptop-buyback-in-angamaly-angamaly",
+        publishDate: "2026-01-26",
+        description: "undefined"
+      },
+      {
+        title: "B2B Monitor Recycling Services in Kakkanad",
+        slug: "b2b-monitor-recycling-services-in-kakkanad-kakkanad-1",
+        publishDate: "2026-01-24",
+        description: "undefined"
+      },
+      {
+        title: "B2B Server Recycling Services in Kakkanad",
+        slug: "b2b-server-recycling-services-in-kakkanad-kakkanad",
+        publishDate: "2026-01-13",
+        description: "undefined"
+      },
+      {
+        title: "Seasonal Battery Recycling Guide for Aluva",
+        slug: "seasonal-battery-recycling-guide-for-aluva-aluva",
+        publishDate: "2026-01-19",
+        description: "undefined"
+      },
+      {
+        title: "E-Waste Laws in Kakkanad: Complete Guide",
+        slug: "e-waste-laws-in-kakkanad-complete-guide-kakkanad-1",
+        publishDate: "2026-01-17",
+        description: "undefined"
+      },
+      {
+        title: "Economic Benefits of Phone Buyback in Aluva",
+        slug: "economic-benefits-of-phone-buyback-in-aluva-aluva",
+        publishDate: "2026-01-29",
+        description: "undefined"
+      },
+      {
+        title: "Best Time for Cable Recycling in Edappally",
+        slug: "best-time-for-cable-recycling-in-edappally-edappally",
+        publishDate: "2026-01-03",
+        description: "undefined"
+      },
+      {
+        title: "Benefits of E-Waste Collection in North Paravur",
+        slug: "benefits-of-e-waste-collection-in-north-paravur-north-paravur",
+        publishDate: "2026-01-13",
+        description: "undefined"
+      },
+      {
+        title: "Economic Benefits of Battery Recycling in Kochi",
+        slug: "economic-benefits-of-battery-recycling-in-kochi-kochi",
+        publishDate: "2026-01-15",
+        description: "undefined"
+      },
+      {
+        title: "E-Waste Collection vs Electronic Waste Pickup in Kochi",
+        slug: "e-waste-collection-vs-electronic-waste-pickup-in-kochi-kochi-1",
+        publishDate: "2026-01-15",
+        description: "undefined"
+      },
+      {
+        title: "Best Cable Recycling Providers in Vyttila: Comparison",
+        slug: "best-cable-recycling-providers-in-vyttila-comparison-vyttila-1",
+        publishDate: "2026-01-03",
+        description: "undefined"
+      },
+      {
+        title: "Best Way to e-waste collection in Vyttila 2026",
+        slug: "best-way-to-e-waste-collection-in-vyttila-2026-vyttila",
+        publishDate: "2026-01-02",
+        description: "undefined"
+      },
+      {
+        title: "E-Waste Laws in Angamaly: Complete Guide",
+        slug: "e-waste-laws-in-angamaly-complete-guide-angamaly-3",
+        publishDate: "2026-01-02",
+        description: "undefined"
+      },
+      {
+        title: "Enterprise Cable Recycling in Angamaly",
+        slug: "enterprise-cable-recycling-in-angamaly-angamaly-1",
+        publishDate: "2026-01-16",
+        description: "undefined"
+      },
+      {
+        title: "Server Recycling During Spring in Kakkanad",
+        slug: "server-recycling-during-spring-in-kakkanad-kakkanad",
+        publishDate: "2026-01-09",
+        description: "undefined"
+      },
+      {
+        title: "Server Recycling During Monsoon in Angamaly",
+        slug: "server-recycling-during-monsoon-in-angamaly-angamaly",
+        publishDate: "2026-01-19",
+        description: "undefined"
+      },
+      {
+        title: "B2B Cable Recycling Services in North Paravur",
+        slug: "b2b-cable-recycling-services-in-north-paravur-north-paravur",
+        publishDate: "2026-01-28",
+        description: "undefined"
+      },
+      {
+        title: "Benefits of Server Recycling in Angamaly",
+        slug: "benefits-of-server-recycling-in-angamaly-angamaly",
+        publishDate: "2026-01-12",
+        description: "undefined"
+      },
+      {
+        title: "Troubleshooting Laptop Buyback in Kakkanad",
+        slug: "troubleshooting-laptop-buyback-in-kakkanad-kakkanad",
+        publishDate: "2026-01-18",
+        description: "undefined"
+      },
+      {
+        title: "Common Laptop Buyback Issues in Aluva",
+        slug: "common-laptop-buyback-issues-in-aluva-aluva",
+        publishDate: "2026-01-28",
+        description: "undefined"
+      },
+      {
+        title: "Complete Guide to E-Waste Collection in Aluva",
+        slug: "complete-guide-to-e-waste-collection-in-aluva-aluva",
+        publishDate: "2026-01-21",
+        description: "undefined"
+      },
+      {
+        title: "Common Laptop Buyback Issues in Edappally",
+        slug: "common-laptop-buyback-issues-in-edappally-edappally-1",
+        publishDate: "2026-01-10",
+        description: "undefined"
+      },
+      {
+        title: "Laptop Buyback Price Guide for Kakkanad",
+        slug: "laptop-buyback-price-guide-for-kakkanad-kakkanad-1",
+        publishDate: "2026-01-08",
+        description: "undefined"
+      },
+      {
+        title: "Server Recycling Trends in Kochi 2026",
+        slug: "server-recycling-trends-in-kochi-2026-kochi",
+        publishDate: "2026-01-17",
+        description: "undefined"
+      },
+      {
+        title: "Phone Buyback Price Guide for Kochi",
+        slug: "phone-buyback-price-guide-for-kochi-kochi-1",
+        publishDate: "2026-01-05",
+        description: "undefined"
+      },
+      {
+        title: "Cable Recycling vs Wire Recycling in Kakkanad",
+        slug: "cable-recycling-vs-wire-recycling-in-kakkanad-kakkanad",
+        publishDate: "2026-01-07",
+        description: "undefined"
+      },
+      {
+        title: "Why Choose Phone Buyback in Aluva?",
+        slug: "why-choose-phone-buyback-in-aluva-aluva",
+        publishDate: "2026-01-22",
+        description: "undefined"
+      },
+      {
+        title: "Printer Recycling Price Guide for Edappally",
+        slug: "printer-recycling-price-guide-for-edappally-edappally",
+        publishDate: "2026-01-02",
+        description: "undefined"
+      },
+      {
+        title: "Printer Recycling for Businesses in Vyttila",
+        slug: "printer-recycling-for-businesses-in-vyttila-vyttila",
+        publishDate: "2026-01-24",
+        description: "undefined"
+      },
+      {
+        title: "B2B Battery Recycling Services in Kakkanad",
+        slug: "b2b-battery-recycling-services-in-kakkanad-kakkanad",
+        publishDate: "2026-01-20",
+        description: "undefined"
+      },
+      {
+        title: "Benefits of Battery Recycling in Aluva",
+        slug: "benefits-of-battery-recycling-in-aluva-aluva",
+        publishDate: "2026-01-13",
+        description: "undefined"
+      },
+      {
+        title: "Compliance Guide for Printer Recycling in Edappally",
+        slug: "compliance-guide-for-printer-recycling-in-edappally-edappally-1",
+        publishDate: "2026-01-01",
+        description: "undefined"
+      },
+      {
+        title: "E-Waste Laws in Kochi: Complete Guide",
+        slug: "e-waste-laws-in-kochi-complete-guide-kochi-3",
+        publishDate: "2026-01-16",
+        description: "undefined"
+      },
+      {
+        title: "Server Recycling Problems in Angamaly: Solutions",
+        slug: "server-recycling-problems-in-angamaly-solutions-angamaly",
+        publishDate: "2026-01-14",
+        description: "undefined"
+      },
+      {
+        title: "vs Huawei Printer Recycling in Aluva",
+        slug: "vs-huawei-printer-recycling-in-aluva-aluva",
+        publishDate: "2026-01-11",
+        description: "undefined"
+      },
+      {
+        title: "Why Choose Data Destruction in Kalamassery?",
+        slug: "why-choose-data-destruction-in-kalamassery-kalamassery",
+        publishDate: "2026-01-10",
+        description: "undefined"
+      },
+      {
+        title: "Compliance Guide for Printer Recycling in Kochi",
+        slug: "compliance-guide-for-printer-recycling-in-kochi-kochi",
+        publishDate: "2026-01-21",
+        description: "undefined"
+      },
+      {
+        title: "Troubleshooting E-Waste Collection in North Paravur",
+        slug: "troubleshooting-e-waste-collection-in-north-paravur-north-paravur",
+        publishDate: "2026-01-31",
+        description: "undefined"
+      },
+      {
+        title: "Legal Requirements for Laptop Buyback in Thrippunithura",
+        slug: "legal-requirements-for-laptop-buyback-in-thrippunithura-thrippunithura",
+        publishDate: "2026-01-06",
+        description: "undefined"
+      },
+      {
+        title: "Environmental Impact of Cable Recycling in Angamaly",
+        slug: "environmental-impact-of-cable-recycling-in-angamaly-angamaly",
+        publishDate: "2026-01-07",
+        description: "undefined"
+      },
+      {
+        title: "E-Waste Laws in North Paravur: Complete Guide",
+        slug: "e-waste-laws-in-north-paravur-complete-guide-north-paravur-5",
+        publishDate: "2026-01-21",
+        description: "undefined"
+      },
+      {
+        title: "E-Waste Laws in Angamaly: Complete Guide",
+        slug: "e-waste-laws-in-angamaly-complete-guide-angamaly-4",
+        publishDate: "2026-01-20",
+        description: "undefined"
+      },
+      {
+        title: "Benefits of Monitor Recycling in Thrippunithura",
+        slug: "benefits-of-monitor-recycling-in-thrippunithura-thrippunithura",
+        publishDate: "2026-01-30",
+        description: "undefined"
+      },
+      {
+        title: "Complete Guide to Monitor Recycling in North Paravur",
+        slug: "complete-guide-to-monitor-recycling-in-north-paravur-north-paravur",
+        publishDate: "2026-01-29",
+        description: "undefined"
+      },
+      {
+        title: "E-Waste Collection During Spring in Kochi",
+        slug: "e-waste-collection-during-spring-in-kochi-kochi",
+        publishDate: "2026-01-23",
+        description: "undefined"
+      },
+      {
+        title: "Benefits of Server Recycling in North Paravur",
+        slug: "benefits-of-server-recycling-in-north-paravur-north-paravur",
+        publishDate: "2026-01-09",
+        description: "undefined"
+      },
+      {
+        title: "Benefits of Cable Recycling in Kochi",
+        slug: "benefits-of-cable-recycling-in-kochi-kochi-1",
+        publishDate: "2026-01-03",
+        description: "undefined"
+      },
+      {
+        title: "Cable Recycling Challenges in Kalamassery: Expert Tips",
+        slug: "cable-recycling-challenges-in-kalamassery-expert-tips-kalamassery-1",
+        publishDate: "2026-01-28",
+        description: "undefined"
+      },
+      {
+        title: "E-Waste Collection Price Guide for Aluva",
+        slug: "e-waste-collection-price-guide-for-aluva-aluva",
+        publishDate: "2026-01-27",
+        description: "undefined"
+      },
+      {
+        title: "Common E-Waste Collection Issues in Ernakulam",
+        slug: "common-e-waste-collection-issues-in-ernakulam-ernakulam",
+        publishDate: "2026-01-14",
+        description: "undefined"
+      },
+      {
+        title: "How to battery recycle in Kochi",
+        slug: "how-to-battery-recycle-in-kochi-kochi",
+        publishDate: "2026-01-27",
+        description: "undefined"
+      },
+      {
+        title: "Printer Recycling vs Office Equipment Recycling in Angamaly",
+        slug: "printer-recycling-vs-office-equipment-recycling-in-angamaly-angamaly",
+        publishDate: "2026-01-31",
+        description: "undefined"
+      },
+      {
+        title: "How Much Does Cable Recycling Cost in Kakkanad?",
+        slug: "how-much-does-cable-recycling-cost-in-kakkanad-kakkanad",
+        publishDate: "2026-01-18",
+        description: "undefined"
+      },
+      {
+        title: "Corporate Cable Recycling Solutions in Angamaly",
+        slug: "corporate-cable-recycling-solutions-in-angamaly-angamaly-1",
+        publishDate: "2026-01-06",
+        description: "undefined"
+      },
+      {
+        title: "Economic Benefits of Server Recycling in Edappally",
+        slug: "economic-benefits-of-server-recycling-in-edappally-edappally",
+        publishDate: "2026-01-26",
+        description: "undefined"
+      },
+      {
+        title: "How to monitor recycle in Thrippunithura",
+        slug: "how-to-monitor-recycle-in-thrippunithura-thrippunithura",
+        publishDate: "2026-01-30",
+        description: "undefined"
+      },
+      {
+        title: "Battery Recycling During Spring in Kakkanad",
+        slug: "battery-recycling-during-spring-in-kakkanad-kakkanad",
+        publishDate: "2026-01-14",
+        description: "undefined"
+      },
+      {
+        title: "How Much Does E-Waste Collection Cost in Ernakulam?",
+        slug: "how-much-does-e-waste-collection-cost-in-ernakulam-ernakulam",
+        publishDate: "2026-01-11",
+        description: "undefined"
+      },
+      {
+        title: "Environmental Impact of Printer Recycling in Thrippunithura",
+        slug: "environmental-impact-of-printer-recycling-in-thrippunithura-thrippunithura",
+        publishDate: "2026-01-25",
+        description: "undefined"
+      },
+      {
+        title: "Best Time for Printer Recycling in Kalamassery",
+        slug: "best-time-for-printer-recycling-in-kalamassery-kalamassery-1",
+        publishDate: "2026-01-01",
+        description: "undefined"
+      },
+      {
+        title: "Cable Recycling Trends in Kochi 2026",
+        slug: "cable-recycling-trends-in-kochi-2026-kochi",
+        publishDate: "2026-01-04",
+        description: "undefined"
+      },
+      {
+        title: "Monitor Recycling Challenges in Thrippunithura: Expert Tips",
+        slug: "monitor-recycling-challenges-in-thrippunithura-expert-tips-thrippunithura",
+        publishDate: "2026-01-05",
+        description: "undefined"
+      },
+      {
+        title: "Common E-Waste Collection Issues in Ernakulam",
+        slug: "common-e-waste-collection-issues-in-ernakulam-ernakulam-1",
+        publishDate: "2026-01-20",
+        description: "undefined"
+      },
+      {
+        title: "Best Time for Laptop Buyback in Edappally",
+        slug: "best-time-for-laptop-buyback-in-edappally-edappally",
+        publishDate: "2026-01-05",
+        description: "undefined"
+      },
+      {
+        title: "Phone Buyback Prices in Kalamassery 2026",
+        slug: "phone-buyback-prices-in-kalamassery-2026-kalamassery",
+        publishDate: "2026-01-30",
+        description: "undefined"
+      },
+      {
+        title: "Complete Guide to Monitor Recycling in Angamaly",
+        slug: "complete-guide-to-monitor-recycling-in-angamaly-angamaly",
+        publishDate: "2026-01-09",
+        description: "undefined"
+      },
+      {
+        title: "Compliance Guide for Printer Recycling in Angamaly",
+        slug: "compliance-guide-for-printer-recycling-in-angamaly-angamaly",
+        publishDate: "2026-01-22",
+        description: "undefined"
+      },
+      {
+        title: "IT Asset Disposition Process in Vyttila: Step by Step",
+        slug: "it-asset-disposition-process-in-vyttila-step-by-step-vyttila",
+        publishDate: "2026-01-18",
+        description: "undefined"
+      },
+      {
+        title: "Environmental Impact of E-Waste Collection in Kochi",
+        slug: "environmental-impact-of-e-waste-collection-in-kochi-kochi-1",
+        publishDate: "2026-01-10",
+        description: "undefined"
+      },
+      {
+        title: "Economic Benefits of Laptop Buyback in Thrippunithura",
+        slug: "economic-benefits-of-laptop-buyback-in-thrippunithura-thrippunithura",
+        publishDate: "2026-01-26",
+        description: "undefined"
+      },
+      {
+        title: "Affordable Printer Recycling in Thrippunithura: Complete Pricing",
+        slug: "affordable-printer-recycling-in-thrippunithura-complete-pricing-thrippunithura",
+        publishDate: "2026-01-06",
+        description: "undefined"
+      },
+      {
+        title: "E-Waste Laws in Aluva: Complete Guide",
+        slug: "e-waste-laws-in-aluva-complete-guide-aluva-2",
+        publishDate: "2026-01-22",
+        description: "undefined"
+      },
+      {
+        title: "Enterprise Data Destruction in Edappally",
+        slug: "enterprise-data-destruction-in-edappally-edappally",
+        publishDate: "2026-01-25",
+        description: "undefined"
+      },
+      {
+        title: "Troubleshooting IT Asset Disposition in Kakkanad",
+        slug: "troubleshooting-it-asset-disposition-in-kakkanad-kakkanad",
+        publishDate: "2026-01-23",
+        description: "undefined"
+      },
+      {
+        title: "E-Waste Laws in Angamaly: Complete Guide",
+        slug: "e-waste-laws-in-angamaly-complete-guide-angamaly-5",
+        publishDate: "2026-01-25",
+        description: "undefined"
+      },
+      {
+        title: "How to data destruction in Kochi",
+        slug: "how-to-data-destruction-in-kochi-kochi",
+        publishDate: "2026-01-16",
+        description: "undefined"
+      },
+      {
+        title: "Server Recycling Options in Kalamassery: Which to Choose?",
+        slug: "server-recycling-options-in-kalamassery-which-to-choose-kalamassery",
+        publishDate: "2026-01-12",
+        description: "undefined"
+      },
+      {
+        title: "How Much Does Battery Recycling Cost in Vyttila?",
+        slug: "how-much-does-battery-recycling-cost-in-vyttila-vyttila",
+        publishDate: "2026-01-04",
+        description: "undefined"
+      },
+      {
+        title: "Monitor Recycling During Summer in North Paravur",
+        slug: "monitor-recycling-during-summer-in-north-paravur-north-paravur",
+        publishDate: "2026-01-17",
+        description: "undefined"
+      },
+      {
+        title: "Best Time for IT Asset Disposition in Kalamassery",
+        slug: "best-time-for-it-asset-disposition-in-kalamassery-kalamassery",
+        publishDate: "2026-01-11",
+        description: "undefined"
+      }
+    ]
+  }
+];
+---
+
+<BaseLayout title={title} description={description} pageType="website" breadcrumbs={breadcrumbs}>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Blog Archives: 2026</h1>
+      <p class="text-xl text-gray-700 leading-relaxed">
+        Browse our 2026 blog archives. Find e-waste management guides, recycling tips, 
+        and ITAD solutions published in 2026.
+      </p>
+    </header>
+
+    <section class="year-section">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Monthly Breakdown</h2>
+      <div class="space-y-8">
+        {months.map(month => (
+          <div class="month-section">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-semibold text-gray-900">
+                {month.name} 2026
+              </h3>
+              <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+                {month.count} articles
+              </span>
+            </div>
+            <div class="space-y-4">
+              {month.blogs.map(blog => (
+                <article class="blog-item bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="text-sm text-gray-500">
+                      {new Date(blog.publishDate).toLocaleDateString('en-IN', { 
+                        month: 'long',
+                        day: 'numeric'
+                      })}
+                    </span>
+                    <div class="flex gap-2">
+                      <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs">
+                        {blog.topic}
+                      </span>
+                    </div>
+                  </div>
+                  <h4 class="text-lg font-semibold text-gray-900 mb-2">
+                    <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700">
+                      {blog.title}
+                    </a>
+                  </h4>
+                  <p class="text-gray-700 mb-3">{blog.description}</p>
+                  <div class="flex gap-2">
+                    <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
+                      {blog.service}
+                    </span>
+                    <span class="px-2 py-1 bg-green-100 text-green-800 rounded text-xs">
+                      {blog.location}
+                    </span>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  </div>
+</BaseLayout>

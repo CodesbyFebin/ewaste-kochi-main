@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Battery Recycling Problems in Thrippunithura: Solutions",
+  "description": "Looking for reliable battery recycling in Thrippunithura? This comprehensive guide covers everything you need to know about e-waste management in Thrippunithura...",
+  "image": "https://www.ewastekochi.com/images/blog/battery-recycling-problems-in-thrippunithura-solutions-thrippunithura.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-12-20",
+  "dateModified": "2025-12-20",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/battery-recycling-problems-in-thrippunithura-solutions-thrippunithura/"
+  },
+  "articleSection": "recycling",
+  "keywords": "Battery Recycling, Thrippunithura, battery disposal, lithium recycling, UPS batteries",
+  "wordCount": 1359,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Battery Recycling"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Thrippunithura",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Thrippunithura",
+      "addressRegion": "Kerala",
+      "postalCode": "682301",
+      "addressCountry": "IN"
+    }
+  }
+}

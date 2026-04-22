@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Data Destruction Process in Ernakulam: Step by Step",
+  "description": "Proper e-waste management is crucial for Ernakulam's environmental sustainability. This guide explores data destruction options, legal requirements, and trusted...",
+  "image": "https://www.ewastekochi.com/images/blog/data-destruction-process-in-ernakulam-step-by-step-ernakulam.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-08-27",
+  "dateModified": "2025-08-27",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/data-destruction-process-in-ernakulam-step-by-step-ernakulam/"
+  },
+  "articleSection": "security",
+  "keywords": "Data Destruction, Ernakulam, hard drive shredding, data wiping, secure disposal",
+  "wordCount": 1386,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Data Destruction"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Ernakulam",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ernakulam",
+      "addressRegion": "Kerala",
+      "postalCode": "682016",
+      "addressCountry": "IN"
+    }
+  }
+}

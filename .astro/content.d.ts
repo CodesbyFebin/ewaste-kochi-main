@@ -174,55 +174,55 @@ declare module 'astro:content' {
 }>;
 "buyback": Record<string, {
   id: string;
-  render(): Render[".md"];
-  slug: string;
-  body: string;
+  body?: string;
   collection: "buyback";
-  data: InferEntrySchema<"buyback">;
+  data: any;
   rendered?: RenderedContent;
   filePath?: string;
 }>;
 "caseStudies": Record<string, {
   id: string;
-  body?: string;
+  render(): Render[".md"];
+  slug: string;
+  body: string;
   collection: "caseStudies";
-  data: any;
+  data: InferEntrySchema<"caseStudies">;
   rendered?: RenderedContent;
   filePath?: string;
 }>;
 "faq": Record<string, {
   id: string;
-  body?: string;
+  render(): Render[".md"];
+  slug: string;
+  body: string;
   collection: "faq";
-  data: any;
+  data: InferEntrySchema<"faq">;
   rendered?: RenderedContent;
   filePath?: string;
 }>;
 "locations": Record<string, {
   id: string;
-  render(): Render[".md"];
-  slug: string;
-  body: string;
+  body?: string;
   collection: "locations";
-  data: InferEntrySchema<"locations">;
+  data: any;
   rendered?: RenderedContent;
   filePath?: string;
 }>;
 "services": Record<string, {
   id: string;
-  render(): Render[".md"];
-  slug: string;
-  body: string;
+  body?: string;
   collection: "services";
-  data: InferEntrySchema<"services">;
+  data: any;
   rendered?: RenderedContent;
   filePath?: string;
 }>;
 "testimonials": Record<string, {
   id: string;
-  body?: string;
+  render(): Render[".md"];
+  slug: string;
+  body: string;
   collection: "testimonials";
-  data: any;
+  data: InferEntrySchema<"testimonials">;
   rendered?: RenderedContent;
   filePath?: string;
 }>;
@@ -258,6 +258,6 @@ declare module 'astro:content' {
 		LiveContentConfig['collections'][C]['loader']
 	>;
 
-	export type ContentConfig = typeof import("../src/content/config.js");
+	export type ContentConfig = typeof import("../src/content.config.js");
 	export type LiveContentConfig = never;
 }

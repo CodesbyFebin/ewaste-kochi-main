@@ -1,0 +1,272 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Monitor Recycling Articles - EWaste Kochi";
+const description = "Expert guides and articles on monitor recycling in Kerala. Learn about pricing, process, and best practices for monitor recycling.";
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Blog", url: "/blog/" },
+  { name: "Services", url: "/blog/services/" },
+  { name: "Monitor Recycling", url: "/blog/service-monitor-recycling/" }
+];
+
+// Service blogs
+const serviceBlogs = [
+  {
+    title: "E-Waste Laws in Kochi: Complete Guide",
+    slug: "e-waste-laws-in-kochi-complete-guide-kochi-4",
+    publishDate: "2026-04-20",
+    description: "",
+    location: "kochi",
+    topic: "legal"
+  },
+  {
+    title: "Best Way to monitor recycle in Kochi 2026",
+    slug: "best-way-to-monitor-recycle-in-kochi-2026-kochi-1",
+    publishDate: "2026-04-11",
+    description: "",
+    location: "kochi",
+    topic: "how-to"
+  },
+  {
+    title: "Compliance Guide for Monitor Recycling in Edappally",
+    slug: "compliance-guide-for-monitor-recycling-in-edappally-edappally",
+    publishDate: "2026-04-09",
+    description: "",
+    location: "edappally",
+    topic: "legal"
+  },
+  {
+    title: "Common Monitor Recycling Issues in Kakkanad",
+    slug: "common-monitor-recycling-issues-in-kakkanad-kakkanad",
+    publishDate: "2026-04-07",
+    description: "",
+    location: "kakkanad",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Enterprise Monitor Recycling in Ernakulam",
+    slug: "enterprise-monitor-recycling-in-ernakulam-ernakulam",
+    publishDate: "2026-04-03",
+    description: "",
+    location: "ernakulam",
+    topic: "business"
+  },
+  {
+    title: "Common Monitor Recycling Issues in Thrippunithura",
+    slug: "common-monitor-recycling-issues-in-thrippunithura-thrippunithura-1",
+    publishDate: "2026-04-02",
+    description: "",
+    location: "thrippunithura",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Enterprise Monitor Recycling in Vyttila",
+    slug: "enterprise-monitor-recycling-in-vyttila-vyttila",
+    publishDate: "2026-03-25",
+    description: "",
+    location: "vyttila",
+    topic: "business"
+  },
+  {
+    title: "KSPCB Regulations for Monitor Recycling in Angamaly",
+    slug: "kspcb-regulations-for-monitor-recycling-in-angamaly-angamaly",
+    publishDate: "2026-03-24",
+    description: "",
+    location: "angamaly",
+    topic: "legal"
+  },
+  {
+    title: "Monitor Recycling Problems in Edappally: Solutions",
+    slug: "monitor-recycling-problems-in-edappally-solutions-edappally",
+    publishDate: "2026-03-14",
+    description: "",
+    location: "edappally",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Affordable Monitor Recycling in Ernakulam: Complete Pricing",
+    slug: "affordable-monitor-recycling-in-ernakulam-complete-pricing-ernakulam",
+    publishDate: "2026-03-12",
+    description: "",
+    location: "ernakulam",
+    topic: "pricing"
+  },
+  {
+    title: "Monitor Recycling vs Screen Recycling in North Paravur",
+    slug: "monitor-recycling-vs-screen-recycling-in-north-paravur-north-paravur",
+    publishDate: "2026-03-11",
+    description: "",
+    location: "north-paravur",
+    topic: "comparison"
+  },
+  {
+    title: "Best Monitor Recycling Providers in Kalamassery: Comparison",
+    slug: "best-monitor-recycling-providers-in-kalamassery-comparison-kalamassery",
+    publishDate: "2026-02-27",
+    description: "",
+    location: "kalamassery",
+    topic: "comparison"
+  },
+  {
+    title: "Monitor Recycling Trends in North Paravur 2026",
+    slug: "monitor-recycling-trends-in-north-paravur-2026-north-paravur-1",
+    publishDate: "2026-02-25",
+    description: "",
+    location: "north-paravur",
+    topic: "seasonal"
+  },
+  {
+    title: "Troubleshooting Monitor Recycling in Edappally",
+    slug: "troubleshooting-monitor-recycling-in-edappally-edappally",
+    publishDate: "2026-02-19",
+    description: "",
+    location: "edappally",
+    topic: "troubleshooting"
+  },
+  {
+    title: "vs Motorola Monitor Recycling in North Paravur",
+    slug: "vs-motorola-monitor-recycling-in-north-paravur-north-paravur",
+    publishDate: "2026-02-18",
+    description: "",
+    location: "north-paravur",
+    topic: "comparison"
+  },
+  {
+    title: "Monitor Recycling Process in North Paravur: Step by Step",
+    slug: "monitor-recycling-process-in-north-paravur-step-by-step-north-paravur",
+    publishDate: "2026-02-16",
+    description: "",
+    location: "north-paravur",
+    topic: "how-to"
+  },
+  {
+    title: "Environmental Impact of Monitor Recycling in Kalamassery",
+    slug: "environmental-impact-of-monitor-recycling-in-kalamassery-kalamassery",
+    publishDate: "2026-02-14",
+    description: "",
+    location: "kalamassery",
+    topic: "benefits"
+  },
+  {
+    title: "E-Waste Laws in Ernakulam: Complete Guide",
+    slug: "e-waste-laws-in-ernakulam-complete-guide-ernakulam-3",
+    publishDate: "2026-02-13",
+    description: "",
+    location: "ernakulam",
+    topic: "legal"
+  },
+  {
+    title: "How to monitor recycle in Ernakulam",
+    slug: "how-to-monitor-recycle-in-ernakulam-ernakulam",
+    publishDate: "2026-02-11",
+    description: "",
+    location: "ernakulam",
+    topic: "how-to"
+  },
+  {
+    title: "How to monitor recycle in Thrippunithura",
+    slug: "how-to-monitor-recycle-in-thrippunithura-thrippunithura",
+    publishDate: "2026-01-30",
+    description: "",
+    location: "thrippunithura",
+    topic: "how-to"
+  }
+];
+
+// Service statistics
+const totalArticles = 85;
+const locations = [...new Set(serviceBlogs.map(blog => blog.location))];
+const topics = [...new Set(serviceBlogs.map(blog => blog.topic))];
+---
+
+<BaseLayout title={title} description={description} pageType="website" breadcrumbs={breadcrumbs}>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Monitor Recycling Articles</h1>
+      <p class="text-xl text-gray-700 leading-relaxed mb-4">
+        Expert guides and articles on monitor recycling in Kerala. 
+        Learn about pricing, process, and best practices for monitor recycling.
+      </p>
+      <div class="bg-blue-50 p-4 rounded-lg">
+        <div class="grid grid-cols-3 gap-4">
+          <div>
+            <span class="font-bold text-blue-800">{totalArticles}</span>
+            <span class="text-blue-700"> articles</span>
+          </div>
+          <div>
+            <span class="font-bold text-blue-800">{locations.length}</span>
+            <span class="text-blue-700"> locations</span>
+          </div>
+          <div>
+            <span class="font-bold text-blue-800">{topics.length}</span>
+            <span class="text-blue-700"> topics</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="blog-list">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Recent Monitor Recycling Articles</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        {serviceBlogs.map(blog => (
+          <article class="blog-card bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-sm text-gray-500">
+                {new Date(blog.publishDate).toLocaleDateString('en-IN', { 
+                  year: 'numeric', 
+                  month: 'short',
+                  day: 'numeric'
+                })}
+              </span>
+              <div class="flex gap-2">
+                <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs">
+                  {blog.topic}
+                </span>
+                <span class="px-2 py-1 bg-green-100 text-green-800 rounded text-xs">
+                  {blog.location}
+                </span>
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700">
+                {blog.title}
+              </a>
+            </h3>
+            <p class="text-gray-700 mb-4">{blog.description}</p>
+            <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700 font-medium">
+              Read more
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="related-section mt-12">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Browse by Location</h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        {locations.map(location => (
+          <a 
+            href={`/blog/location-${location}/`} 
+            class="block p-4 bg-green-50 rounded-lg hover:bg-green-100 transition-colors"
+          >
+            <h3 class="font-semibold text-green-800 mb-2">
+              {location.charAt(0).toUpperCase() + location.slice(1)}
+            </h3>
+            <p class="text-green-700 text-sm">battery-recycling articles</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .blog-card {
+      transition: all 0.3s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</BaseLayout>

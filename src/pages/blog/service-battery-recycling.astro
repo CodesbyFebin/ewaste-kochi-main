@@ -1,0 +1,272 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Battery Recycling Articles - EWaste Kochi";
+const description = "Expert guides and articles on battery recycling in Kerala. Learn about pricing, process, and best practices for battery recycling.";
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Blog", url: "/blog/" },
+  { name: "Services", url: "/blog/services/" },
+  { name: "Battery Recycling", url: "/blog/service-battery-recycling/" }
+];
+
+// Service blogs
+const serviceBlogs = [
+  {
+    title: "Best Way to battery recycle in Vyttila 2026",
+    slug: "best-way-to-battery-recycle-in-vyttila-2026-vyttila",
+    publishDate: "2026-04-21",
+    description: "",
+    location: "vyttila",
+    topic: "how-to"
+  },
+  {
+    title: "Best Battery Recycling Providers in North Paravur: Comparison",
+    slug: "best-battery-recycling-providers-in-north-paravur-comparison-north-paravur",
+    publishDate: "2026-04-17",
+    description: "",
+    location: "north-paravur",
+    topic: "comparison"
+  },
+  {
+    title: "How to battery recycle in Angamaly",
+    slug: "how-to-battery-recycle-in-angamaly-angamaly-1",
+    publishDate: "2026-04-16",
+    description: "",
+    location: "angamaly",
+    topic: "how-to"
+  },
+  {
+    title: "Why Choose Battery Recycling in Edappally?",
+    slug: "why-choose-battery-recycling-in-edappally-edappally-1",
+    publishDate: "2026-04-14",
+    description: "",
+    location: "edappally",
+    topic: "benefits"
+  },
+  {
+    title: "Legal Requirements for Battery Recycling in Kalamassery",
+    slug: "legal-requirements-for-battery-recycling-in-kalamassery-kalamassery-1",
+    publishDate: "2026-04-08",
+    description: "",
+    location: "kalamassery",
+    topic: "legal"
+  },
+  {
+    title: "Best Way to battery recycle in Aluva 2026",
+    slug: "best-way-to-battery-recycle-in-aluva-2026-aluva",
+    publishDate: "2026-04-05",
+    description: "",
+    location: "aluva",
+    topic: "how-to"
+  },
+  {
+    title: "Benefits of Battery Recycling in Thrippunithura",
+    slug: "benefits-of-battery-recycling-in-thrippunithura-thrippunithura",
+    publishDate: "2026-04-03",
+    description: "",
+    location: "thrippunithura",
+    topic: "benefits"
+  },
+  {
+    title: "Battery Recycling Options in Kalamassery: Which to Choose?",
+    slug: "battery-recycling-options-in-kalamassery-which-to-choose-kalamassery",
+    publishDate: "2026-04-01",
+    description: "",
+    location: "kalamassery",
+    topic: "comparison"
+  },
+  {
+    title: "Why Choose Battery Recycling in Edappally?",
+    slug: "why-choose-battery-recycling-in-edappally-edappally",
+    publishDate: "2026-03-29",
+    description: "",
+    location: "edappally",
+    topic: "benefits"
+  },
+  {
+    title: "Battery Recycling Price Guide for Kakkanad",
+    slug: "battery-recycling-price-guide-for-kakkanad-kakkanad",
+    publishDate: "2026-03-28",
+    description: "",
+    location: "kakkanad",
+    topic: "pricing"
+  },
+  {
+    title: "Economic Benefits of Battery Recycling in Ernakulam",
+    slug: "economic-benefits-of-battery-recycling-in-ernakulam-ernakulam",
+    publishDate: "2026-03-27",
+    description: "",
+    location: "ernakulam",
+    topic: "benefits"
+  },
+  {
+    title: "Enterprise Battery Recycling in Kochi",
+    slug: "enterprise-battery-recycling-in-kochi-kochi-1",
+    publishDate: "2026-03-27",
+    description: "",
+    location: "kochi",
+    topic: "business"
+  },
+  {
+    title: "Compliance Guide for Battery Recycling in Thrippunithura",
+    slug: "compliance-guide-for-battery-recycling-in-thrippunithura-thrippunithura",
+    publishDate: "2026-03-25",
+    description: "",
+    location: "thrippunithura",
+    topic: "legal"
+  },
+  {
+    title: "KSPCB Regulations for Battery Recycling in Kochi",
+    slug: "kspcb-regulations-for-battery-recycling-in-kochi-kochi",
+    publishDate: "2026-03-18",
+    description: "",
+    location: "kochi",
+    topic: "legal"
+  },
+  {
+    title: "Battery Recycling Price Guide for Ernakulam",
+    slug: "battery-recycling-price-guide-for-ernakulam-ernakulam",
+    publishDate: "2026-03-16",
+    description: "",
+    location: "ernakulam",
+    topic: "pricing"
+  },
+  {
+    title: "Huawei vs Vivo Battery Recycling in Angamaly",
+    slug: "huawei-vs-vivo-battery-recycling-in-angamaly-angamaly",
+    publishDate: "2026-03-15",
+    description: "",
+    location: "angamaly",
+    topic: "comparison"
+  },
+  {
+    title: "Troubleshooting Battery Recycling in Kalamassery",
+    slug: "troubleshooting-battery-recycling-in-kalamassery-kalamassery",
+    publishDate: "2026-03-12",
+    description: "",
+    location: "kalamassery",
+    topic: "troubleshooting"
+  },
+  {
+    title: "E-Waste Laws in Angamaly: Complete Guide",
+    slug: "e-waste-laws-in-angamaly-complete-guide-angamaly-8",
+    publishDate: "2026-03-11",
+    description: "",
+    location: "angamaly",
+    topic: "legal"
+  },
+  {
+    title: "Why Choose Battery Recycling in Aluva?",
+    slug: "why-choose-battery-recycling-in-aluva-aluva",
+    publishDate: "2026-03-07",
+    description: "",
+    location: "aluva",
+    topic: "benefits"
+  },
+  {
+    title: "Battery Recycling Trends in Kochi 2026",
+    slug: "battery-recycling-trends-in-kochi-2026-kochi-1",
+    publishDate: "2026-03-05",
+    description: "",
+    location: "kochi",
+    topic: "seasonal"
+  }
+];
+
+// Service statistics
+const totalArticles = 105;
+const locations = [...new Set(serviceBlogs.map(blog => blog.location))];
+const topics = [...new Set(serviceBlogs.map(blog => blog.topic))];
+---
+
+<BaseLayout title={title} description={description} pageType="website" breadcrumbs={breadcrumbs}>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Battery Recycling Articles</h1>
+      <p class="text-xl text-gray-700 leading-relaxed mb-4">
+        Expert guides and articles on battery recycling in Kerala. 
+        Learn about pricing, process, and best practices for battery recycling.
+      </p>
+      <div class="bg-blue-50 p-4 rounded-lg">
+        <div class="grid grid-cols-3 gap-4">
+          <div>
+            <span class="font-bold text-blue-800">{totalArticles}</span>
+            <span class="text-blue-700"> articles</span>
+          </div>
+          <div>
+            <span class="font-bold text-blue-800">{locations.length}</span>
+            <span class="text-blue-700"> locations</span>
+          </div>
+          <div>
+            <span class="font-bold text-blue-800">{topics.length}</span>
+            <span class="text-blue-700"> topics</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="blog-list">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Recent Battery Recycling Articles</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        {serviceBlogs.map(blog => (
+          <article class="blog-card bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-sm text-gray-500">
+                {new Date(blog.publishDate).toLocaleDateString('en-IN', { 
+                  year: 'numeric', 
+                  month: 'short',
+                  day: 'numeric'
+                })}
+              </span>
+              <div class="flex gap-2">
+                <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs">
+                  {blog.topic}
+                </span>
+                <span class="px-2 py-1 bg-green-100 text-green-800 rounded text-xs">
+                  {blog.location}
+                </span>
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700">
+                {blog.title}
+              </a>
+            </h3>
+            <p class="text-gray-700 mb-4">{blog.description}</p>
+            <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700 font-medium">
+              Read more
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="related-section mt-12">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Browse by Location</h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        {locations.map(location => (
+          <a 
+            href={`/blog/location-${location}/`} 
+            class="block p-4 bg-green-50 rounded-lg hover:bg-green-100 transition-colors"
+          >
+            <h3 class="font-semibold text-green-800 mb-2">
+              {location.charAt(0).toUpperCase() + location.slice(1)}
+            </h3>
+            <p class="text-green-700 text-sm">battery-recycling articles</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .blog-card {
+      transition: all 0.3s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</BaseLayout>

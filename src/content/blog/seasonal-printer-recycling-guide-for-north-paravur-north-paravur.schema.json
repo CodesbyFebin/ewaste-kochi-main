@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Seasonal Printer Recycling Guide for North Paravur",
+  "description": "Proper Lava e-waste management is crucial for North Paravur's environmental sustainability. This guide explores printer recycling options, legal requirements, a...",
+  "image": "https://www.ewastekochi.com/images/blog/seasonal-printer-recycling-guide-for-north-paravur-north-paravur.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-12-04",
+  "dateModified": "2025-12-04",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/seasonal-printer-recycling-guide-for-north-paravur-north-paravur/"
+  },
+  "articleSection": "recycling",
+  "keywords": "Printer Recycling, North Paravur, printer disposal, cartridge recycling, office equipment",
+  "wordCount": 1317,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Printer Recycling"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "North Paravur",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "North Paravur",
+      "addressRegion": "Kerala",
+      "postalCode": "683513",
+      "addressCountry": "IN"
+    }
+  }
+}

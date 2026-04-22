@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Cable Recycling Problems in Thrippunithura: Solutions",
+  "description": "Thrippunithura residents and businesses often wonder about proper disposal. Our detailed guide explains cable recycling services available in Thrippunithura, wi...",
+  "image": "https://www.ewastekochi.com/images/blog/cable-recycling-problems-in-thrippunithura-solutions-thrippunithura.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2026-03-26",
+  "dateModified": "2026-03-26",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/cable-recycling-problems-in-thrippunithura-solutions-thrippunithura/"
+  },
+  "articleSection": "recycling",
+  "keywords": "Cable Recycling, Thrippunithura, wire recycling, copper cables, electronic cables",
+  "wordCount": 1407,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Cable Recycling"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Thrippunithura",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Thrippunithura",
+      "addressRegion": "Kerala",
+      "postalCode": "682301",
+      "addressCountry": "IN"
+    }
+  }
+}

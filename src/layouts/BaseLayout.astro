@@ -80,7 +80,7 @@ const {
 const SITE_URL = 'https://www.ewastekochi.com';
 const currentPath = Astro.url.pathname;
 const canonicalURL = canonical || `${SITE_URL}${currentPath}`;
-const fullOgImage = ogImage.startsWith('http') ? ogImage : `${SITE_URL}${ogImage}`;
+const fullOgImage = ogImage && ogImage.startsWith('http') ? ogImage : `${SITE_URL}${ogImage || '/images/og-default.jpg'}`;
 
 // Organisation schema (always present)
 const orgSchema = {
@@ -371,7 +371,7 @@ const breadcrumbSchema = breadcrumbs && breadcrumbs.length > 0 ? {
       "@type": "ListItem",
       "position": i + 2,
       "name": crumb.name,
-      "item": crumb.url.startsWith('http') ? crumb.url : `${SITE_URL}${crumb.url}` 
+      "item": crumb.url && crumb.url.startsWith('http') ? crumb.url : `${SITE_URL}${crumb.url || '/'}` 
     }))
   ]
 } : null;

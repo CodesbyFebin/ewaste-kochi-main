@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "B2B Server Recycling Services in Thrippunithura",
+  "description": "Thrippunithura residents and businesses often wonder about proper disposal. Our detailed guide explains server recycling services available in Thrippunithura, w...",
+  "image": "https://www.ewastekochi.com/images/blog/b2b-server-recycling-services-in-thrippunithura-thrippunithura.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-06-24",
+  "dateModified": "2025-06-24",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/b2b-server-recycling-services-in-thrippunithura-thrippunithura/"
+  },
+  "articleSection": "corporate",
+  "keywords": "Server Recycling, Thrippunithura, server disposal, data center recycling, rack disposal",
+  "wordCount": 1264,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Server Recycling"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Thrippunithura",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Thrippunithura",
+      "addressRegion": "Kerala",
+      "postalCode": "682301",
+      "addressCountry": "IN"
+    }
+  }
+}

@@ -1,0 +1,579 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Blog Services - EWaste Kochi";
+const description = "Explore our blog articles by service type. Find detailed guides on e-waste collection, laptop buyback, data destruction, and more.";
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Blog", url: "/blog/" },
+  { name: "Services", url: "/blog/services/" }
+];
+
+// Services data
+const services = [
+  {
+    name: "Server Recycling",
+    slug: "server-recycling",
+    count: 116,
+    blogs: [
+      {
+        title: "Complete Guide to Server Recycling in Ernakulam",
+        slug: "complete-guide-to-server-recycling-in-ernakulam-ernakulam",
+        publishDate: "2025-04-22",
+        location: "ernakulam",
+        topic: "how-to"
+      },
+      {
+        title: "Benefits of Server Recycling in Aluva",
+        slug: "benefits-of-server-recycling-in-aluva-aluva",
+        publishDate: "2025-04-23",
+        location: "aluva",
+        topic: "benefits"
+      },
+      {
+        title: "Troubleshooting Server Recycling in Kalamassery",
+        slug: "troubleshooting-server-recycling-in-kalamassery-kalamassery",
+        publishDate: "2025-04-24",
+        location: "kalamassery",
+        topic: "troubleshooting"
+      },
+      {
+        title: "E-Waste Laws in Edappally: Complete Guide",
+        slug: "e-waste-laws-in-edappally-complete-guide-edappally",
+        publishDate: "2025-04-28",
+        location: "edappally",
+        topic: "legal"
+      },
+      {
+        title: "Server Recycling Prices in Vyttila 2026",
+        slug: "server-recycling-prices-in-vyttila-2026-vyttila",
+        publishDate: "2025-04-30",
+        location: "vyttila",
+        topic: "pricing"
+      },
+      {
+        title: "Server Recycling vs Server Disposal in Kalamassery",
+        slug: "server-recycling-vs-server-disposal-in-kalamassery-kalamassery",
+        publishDate: "2025-05-01",
+        location: "kalamassery",
+        topic: "comparison"
+      }
+    ]
+  },
+  {
+    name: "Battery Recycling",
+    slug: "battery-recycling",
+    count: 105,
+    blogs: [
+      {
+        title: "Best Way to battery recycle in Ernakulam 2026",
+        slug: "best-way-to-battery-recycle-in-ernakulam-2026-ernakulam",
+        publishDate: "2025-04-22",
+        location: "ernakulam",
+        topic: "how-to"
+      },
+      {
+        title: "How Much Does Battery Recycling Cost in Angamaly?",
+        slug: "how-much-does-battery-recycling-cost-in-angamaly-angamaly",
+        publishDate: "2025-04-26",
+        location: "angamaly",
+        topic: "pricing"
+      },
+      {
+        title: "Battery Recycling for Businesses in North Paravur",
+        slug: "battery-recycling-for-businesses-in-north-paravur-north-paravur",
+        publishDate: "2025-05-02",
+        location: "north-paravur",
+        topic: "business"
+      },
+      {
+        title: "Battery Recycling Options in Kochi: Which to Choose?",
+        slug: "battery-recycling-options-in-kochi-which-to-choose-kochi",
+        publishDate: "2025-05-02",
+        location: "kochi",
+        topic: "comparison"
+      },
+      {
+        title: "Complete Guide to Battery Recycling in Kochi",
+        slug: "complete-guide-to-battery-recycling-in-kochi-kochi",
+        publishDate: "2025-05-10",
+        location: "kochi",
+        topic: "how-to"
+      },
+      {
+        title: "Affordable Battery Recycling in Kalamassery: Complete Pricing",
+        slug: "affordable-battery-recycling-in-kalamassery-complete-pricing-kalamassery",
+        publishDate: "2025-05-17",
+        location: "kalamassery",
+        topic: "pricing"
+      }
+    ]
+  },
+  {
+    name: "Phone Buyback",
+    slug: "phone-buyback",
+    count: 82,
+    blogs: [
+      {
+        title: "Phone Buyback Problems in Edappally: Solutions",
+        slug: "phone-buyback-problems-in-edappally-solutions-edappally",
+        publishDate: "2025-04-22",
+        location: "edappally",
+        topic: "troubleshooting"
+      },
+      {
+        title: "Environmental Impact of Phone Buyback in Thrippunithura",
+        slug: "environmental-impact-of-phone-buyback-in-thrippunithura-thrippunithura",
+        publishDate: "2025-05-01",
+        location: "thrippunithura",
+        topic: "benefits"
+      },
+      {
+        title: "Seasonal Phone Buyback Guide for Aluva",
+        slug: "seasonal-phone-buyback-guide-for-aluva-aluva",
+        publishDate: "2025-05-04",
+        location: "aluva",
+        topic: "seasonal"
+      },
+      {
+        title: "Compliance Guide for Phone Buyback in Edappally",
+        slug: "compliance-guide-for-phone-buyback-in-edappally-edappally",
+        publishDate: "2025-05-09",
+        location: "edappally",
+        topic: "legal"
+      },
+      {
+        title: "Phone Buyback Problems in Aluva: Solutions",
+        slug: "phone-buyback-problems-in-aluva-solutions-aluva",
+        publishDate: "2025-05-28",
+        location: "aluva",
+        topic: "troubleshooting"
+      },
+      {
+        title: "Corporate Phone Buyback Solutions in Kalamassery",
+        slug: "corporate-phone-buyback-solutions-in-kalamassery-kalamassery",
+        publishDate: "2025-05-30",
+        location: "kalamassery",
+        topic: "business"
+      }
+    ]
+  },
+  {
+    name: "Laptop Buyback",
+    slug: "laptop-buyback",
+    count: 90,
+    blogs: [
+      {
+        title: "Laptop Buyback During Spring in Aluva",
+        slug: "laptop-buyback-during-spring-in-aluva-aluva",
+        publishDate: "2025-04-23",
+        location: "aluva",
+        topic: "seasonal"
+      },
+      {
+        title: "Laptop Buyback During Summer in Ernakulam",
+        slug: "laptop-buyback-during-summer-in-ernakulam-ernakulam",
+        publishDate: "2025-04-27",
+        location: "ernakulam",
+        topic: "seasonal"
+      },
+      {
+        title: "Complete Guide to Laptop Buyback in Kochi",
+        slug: "complete-guide-to-laptop-buyback-in-kochi-kochi",
+        publishDate: "2025-04-29",
+        location: "kochi",
+        topic: "how-to"
+      },
+      {
+        title: "Best Time for Laptop Buyback in Aluva",
+        slug: "best-time-for-laptop-buyback-in-aluva-aluva",
+        publishDate: "2025-05-13",
+        location: "aluva",
+        topic: "seasonal"
+      },
+      {
+        title: "Troubleshooting Laptop Buyback in Aluva",
+        slug: "troubleshooting-laptop-buyback-in-aluva-aluva",
+        publishDate: "2025-05-16",
+        location: "aluva",
+        topic: "troubleshooting"
+      },
+      {
+        title: "Corporate Laptop Buyback Solutions in Vyttila",
+        slug: "corporate-laptop-buyback-solutions-in-vyttila-vyttila",
+        publishDate: "2025-05-17",
+        location: "vyttila",
+        topic: "business"
+      }
+    ]
+  },
+  {
+    name: "Cable Recycling",
+    slug: "cable-recycling",
+    count: 93,
+    blogs: [
+      {
+        title: "Troubleshooting Cable Recycling in Kochi",
+        slug: "troubleshooting-cable-recycling-in-kochi-kochi",
+        publishDate: "2025-04-23",
+        location: "kochi",
+        topic: "troubleshooting"
+      },
+      {
+        title: "Cable Recycling During Monsoon in North Paravur",
+        slug: "cable-recycling-during-monsoon-in-north-paravur-north-paravur",
+        publishDate: "2025-04-28",
+        location: "north-paravur",
+        topic: "seasonal"
+      },
+      {
+        title: "Complete Guide to Cable Recycling in Kalamassery",
+        slug: "complete-guide-to-cable-recycling-in-kalamassery-kalamassery",
+        publishDate: "2025-05-03",
+        location: "kalamassery",
+        topic: "how-to"
+      },
+      {
+        title: "How Much Does Cable Recycling Cost in Angamaly?",
+        slug: "how-much-does-cable-recycling-cost-in-angamaly-angamaly",
+        publishDate: "2025-05-08",
+        location: "angamaly",
+        topic: "pricing"
+      },
+      {
+        title: "Benefits of Cable Recycling in Kochi",
+        slug: "benefits-of-cable-recycling-in-kochi-kochi",
+        publishDate: "2025-05-15",
+        location: "kochi",
+        topic: "benefits"
+      },
+      {
+        title: "Cable Recycling Trends in Aluva 2026",
+        slug: "cable-recycling-trends-in-aluva-2026-aluva",
+        publishDate: "2025-05-16",
+        location: "aluva",
+        topic: "seasonal"
+      }
+    ]
+  },
+  {
+    name: "Itad",
+    slug: "itad",
+    count: 111,
+    blogs: [
+      {
+        title: "B2B IT Asset Disposition Services in Edappally",
+        slug: "b2b-it-asset-disposition-services-in-edappally-edappally",
+        publishDate: "2025-04-24",
+        location: "edappally",
+        topic: "business"
+      },
+      {
+        title: "IT Asset Disposition for Businesses in Kochi",
+        slug: "it-asset-disposition-for-businesses-in-kochi-kochi",
+        publishDate: "2025-04-28",
+        location: "kochi",
+        topic: "business"
+      },
+      {
+        title: "IT Asset Disposition Process in Edappally: Step by Step",
+        slug: "it-asset-disposition-process-in-edappally-step-by-step-edappally",
+        publishDate: "2025-04-30",
+        location: "edappally",
+        topic: "how-to"
+      },
+      {
+        title: "Legal Requirements for IT Asset Disposition in Angamaly",
+        slug: "legal-requirements-for-it-asset-disposition-in-angamaly-angamaly",
+        publishDate: "2025-05-06",
+        location: "angamaly",
+        topic: "legal"
+      },
+      {
+        title: "IT Asset Disposition Challenges in Ernakulam: Expert Tips",
+        slug: "it-asset-disposition-challenges-in-ernakulam-expert-tips-ernakulam",
+        publishDate: "2025-05-07",
+        location: "ernakulam",
+        topic: "troubleshooting"
+      },
+      {
+        title: "IT Asset Disposition vs IT Asset Management in North Paravur",
+        slug: "it-asset-disposition-vs-it-asset-management-in-north-paravur-north-paravur",
+        publishDate: "2025-05-08",
+        location: "north-paravur",
+        topic: "comparison"
+      }
+    ]
+  },
+  {
+    name: "Monitor Recycling",
+    slug: "monitor-recycling",
+    count: 85,
+    blogs: [
+      {
+        title: "Why Choose Monitor Recycling in Thrippunithura?",
+        slug: "why-choose-monitor-recycling-in-thrippunithura-thrippunithura",
+        publishDate: "2025-04-24",
+        location: "thrippunithura",
+        topic: "benefits"
+      },
+      {
+        title: "Best Time for Monitor Recycling in Thrippunithura",
+        slug: "best-time-for-monitor-recycling-in-thrippunithura-thrippunithura",
+        publishDate: "2025-04-26",
+        location: "thrippunithura",
+        topic: "seasonal"
+      },
+      {
+        title: "KSPCB Regulations for Monitor Recycling in Aluva",
+        slug: "kspcb-regulations-for-monitor-recycling-in-aluva-aluva",
+        publishDate: "2025-04-27",
+        location: "aluva",
+        topic: "legal"
+      },
+      {
+        title: "Troubleshooting Monitor Recycling in Ernakulam",
+        slug: "troubleshooting-monitor-recycling-in-ernakulam-ernakulam",
+        publishDate: "2025-04-29",
+        location: "ernakulam",
+        topic: "troubleshooting"
+      },
+      {
+        title: "Benefits of Monitor Recycling in North Paravur",
+        slug: "benefits-of-monitor-recycling-in-north-paravur-north-paravur",
+        publishDate: "2025-05-01",
+        location: "north-paravur",
+        topic: "benefits"
+      },
+      {
+        title: "E-Waste Laws in Edappally: Complete Guide",
+        slug: "e-waste-laws-in-edappally-complete-guide-edappally-1",
+        publishDate: "2025-05-03",
+        location: "edappally",
+        topic: "legal"
+      }
+    ]
+  },
+  {
+    name: "Data Destruction",
+    slug: "data-destruction",
+    count: 106,
+    blogs: [
+      {
+        title: "Economic Benefits of Data Destruction in North Paravur",
+        slug: "economic-benefits-of-data-destruction-in-north-paravur-north-paravur",
+        publishDate: "2025-04-25",
+        location: "north-paravur",
+        topic: "benefits"
+      },
+      {
+        title: "Corporate Data Destruction Solutions in Ernakulam",
+        slug: "corporate-data-destruction-solutions-in-ernakulam-ernakulam",
+        publishDate: "2025-04-26",
+        location: "ernakulam",
+        topic: "business"
+      },
+      {
+        title: "Affordable Data Destruction in Ernakulam: Complete Pricing",
+        slug: "affordable-data-destruction-in-ernakulam-complete-pricing-ernakulam",
+        publishDate: "2025-04-27",
+        location: "ernakulam",
+        topic: "pricing"
+      },
+      {
+        title: "Common Data Destruction Issues in Kochi",
+        slug: "common-data-destruction-issues-in-kochi-kochi",
+        publishDate: "2025-05-04",
+        location: "kochi",
+        topic: "troubleshooting"
+      },
+      {
+        title: "Complete Guide to Data Destruction in North Paravur",
+        slug: "complete-guide-to-data-destruction-in-north-paravur-north-paravur",
+        publishDate: "2025-05-06",
+        location: "north-paravur",
+        topic: "how-to"
+      },
+      {
+        title: "Affordable Data Destruction in Thrippunithura: Complete Pricing",
+        slug: "affordable-data-destruction-in-thrippunithura-complete-pricing-thrippunithura",
+        publishDate: "2025-05-08",
+        location: "thrippunithura",
+        topic: "pricing"
+      }
+    ]
+  },
+  {
+    name: "E Waste Collection",
+    slug: "e-waste-collection",
+    count: 99,
+    blogs: [
+      {
+        title: "E-Waste Laws in Ernakulam: Complete Guide",
+        slug: "e-waste-laws-in-ernakulam-complete-guide-ernakulam",
+        publishDate: "2025-04-25",
+        location: "ernakulam",
+        topic: "legal"
+      },
+      {
+        title: "vs Oppo E-Waste Collection in Kalamassery",
+        slug: "vs-oppo-e-waste-collection-in-kalamassery-kalamassery",
+        publishDate: "2025-05-02",
+        location: "kalamassery",
+        topic: "comparison"
+      },
+      {
+        title: "Best Time for E-Waste Collection in Thrippunithura",
+        slug: "best-time-for-e-waste-collection-in-thrippunithura-thrippunithura",
+        publishDate: "2025-05-10",
+        location: "thrippunithura",
+        topic: "seasonal"
+      },
+      {
+        title: "Economic Benefits of E-Waste Collection in Aluva",
+        slug: "economic-benefits-of-e-waste-collection-in-aluva-aluva",
+        publishDate: "2025-05-10",
+        location: "aluva",
+        topic: "benefits"
+      },
+      {
+        title: "E-Waste Collection for Businesses in Kakkanad",
+        slug: "e-waste-collection-for-businesses-in-kakkanad-kakkanad",
+        publishDate: "2025-05-15",
+        location: "kakkanad",
+        topic: "business"
+      },
+      {
+        title: "vs Sony E-Waste Collection in Thrippunithura",
+        slug: "vs-sony-e-waste-collection-in-thrippunithura-thrippunithura",
+        publishDate: "2025-05-18",
+        location: "thrippunithura",
+        topic: "comparison"
+      }
+    ]
+  },
+  {
+    name: "Printer Recycling",
+    slug: "printer-recycling",
+    count: 113,
+    blogs: [
+      {
+        title: "Printer Recycling During Winter in Aluva",
+        slug: "printer-recycling-during-winter-in-aluva-aluva",
+        publishDate: "2025-04-30",
+        location: "aluva",
+        topic: "seasonal"
+      },
+      {
+        title: "Troubleshooting Printer Recycling in Vyttila",
+        slug: "troubleshooting-printer-recycling-in-vyttila-vyttila",
+        publishDate: "2025-05-05",
+        location: "vyttila",
+        topic: "troubleshooting"
+      },
+      {
+        title: "Complete Guide to Printer Recycling in Vyttila",
+        slug: "complete-guide-to-printer-recycling-in-vyttila-vyttila",
+        publishDate: "2025-05-07",
+        location: "vyttila",
+        topic: "how-to"
+      },
+      {
+        title: "Compliance Guide for Printer Recycling in Edappally",
+        slug: "compliance-guide-for-printer-recycling-in-edappally-edappally",
+        publishDate: "2025-05-19",
+        location: "edappally",
+        topic: "legal"
+      },
+      {
+        title: "B2B Printer Recycling Services in Aluva",
+        slug: "b2b-printer-recycling-services-in-aluva-aluva",
+        publishDate: "2025-05-27",
+        location: "aluva",
+        topic: "business"
+      },
+      {
+        title: "Printer Recycling Process in Vyttila: Step by Step",
+        slug: "printer-recycling-process-in-vyttila-step-by-step-vyttila",
+        publishDate: "2025-06-03",
+        location: "vyttila",
+        topic: "how-to"
+      }
+    ]
+  }
+];
+---
+
+<BaseLayout title={title} description={description} pageType="website" breadcrumbs={breadcrumbs}>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Blog Services</h1>
+      <p class="text-xl text-gray-700 leading-relaxed">
+        Explore our blog articles by service type. Find detailed guides on e-waste collection, 
+        laptop buyback, data destruction, and more.
+      </p>
+    </header>
+
+    <section class="services-section">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Browse by Service</h2>
+      <div class="space-y-12">
+        {services.map(service => (
+          <div class="service-section">
+            <div class="flex items-center justify-between mb-6">
+              <h3 class="text-2xl font-semibold text-gray-900">
+                <a href={`/blog/service-${service.slug}/`} class="text-amber-600 hover:text-amber-700">
+                  {service.name}
+                </a>
+              </h3>
+              <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+                {service.count} articles
+              </span>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-4 mb-6">
+              {service.blogs.map(blog => (
+                <article class="blog-item bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="text-sm text-gray-500">
+                      {new Date(blog.publishDate).toLocaleDateString('en-IN', { 
+                        month: 'short',
+                        day: 'numeric'
+                      })}
+                    </span>
+                  </div>
+                  <h4 class="text-lg font-semibold text-gray-900 mb-2">
+                    <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700">
+                      {blog.title}
+                    </a>
+                  </h4>
+                  <div class="flex gap-2">
+                    <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs">
+                      {blog.topic}
+                    </span>
+                    <span class="px-2 py-1 bg-green-100 text-green-800 rounded text-xs">
+                      {blog.location}
+                    </span>
+                  </div>
+                </article>
+              ))}
+            </div>
+            
+            <a href={`/blog/service-${service.slug}/`} class="text-amber-600 hover:text-amber-700 font-medium">
+              View all {service.name.toLowerCase()} articles
+            </a>
+          </div>
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .blog-item {
+      transition: all 0.3s ease;
+    }
+    .blog-item:hover {
+      transform: translateY(-1px);
+    }
+  </style>
+</BaseLayout>

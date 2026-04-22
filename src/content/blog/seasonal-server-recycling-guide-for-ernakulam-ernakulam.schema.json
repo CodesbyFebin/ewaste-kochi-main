@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Seasonal Server Recycling Guide for Ernakulam",
+  "description": "Proper e-waste management is crucial for Ernakulam's environmental sustainability. This guide explores server recycling options, legal requirements, and trusted...",
+  "image": "https://www.ewastekochi.com/images/blog/seasonal-server-recycling-guide-for-ernakulam-ernakulam.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-06-28",
+  "dateModified": "2025-06-28",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/seasonal-server-recycling-guide-for-ernakulam-ernakulam/"
+  },
+  "articleSection": "corporate",
+  "keywords": "Server Recycling, Ernakulam, server disposal, data center recycling, rack disposal",
+  "wordCount": 1558,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Server Recycling"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Ernakulam",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ernakulam",
+      "addressRegion": "Kerala",
+      "postalCode": "682016",
+      "addressCountry": "IN"
+    }
+  }
+}

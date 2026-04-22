@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "IT Asset Disposition for Businesses in Kochi",
+  "description": "Proper e-waste management is crucial for Kochi's environmental sustainability. This guide explores it asset disposition options, legal requirements, and trusted...",
+  "image": "https://www.ewastekochi.com/images/blog/it-asset-disposition-for-businesses-in-kochi-kochi.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-04-28",
+  "dateModified": "2025-04-28",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/it-asset-disposition-for-businesses-in-kochi-kochi/"
+  },
+  "articleSection": "corporate",
+  "keywords": "IT Asset Disposition, Kochi, ITAD services, corporate e-waste, asset disposal",
+  "wordCount": 1958,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "IT Asset Disposition"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Kochi",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kochi",
+      "addressRegion": "Kerala",
+      "postalCode": "682001",
+      "addressCountry": "IN"
+    }
+  }
+}

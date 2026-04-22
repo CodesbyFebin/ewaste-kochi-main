@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Printer Recycling Prices in Edappally 2026",
+  "description": "Edappally residents and businesses often wonder about proper disposal. Our detailed guide explains printer recycling services available in Edappally, with exper...",
+  "image": "https://www.ewastekochi.com/images/blog/printer-recycling-prices-in-edappally-2026-edappally.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2026-02-21",
+  "dateModified": "2026-02-21",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/printer-recycling-prices-in-edappally-2026-edappally/"
+  },
+  "articleSection": "recycling",
+  "keywords": "Printer Recycling, Edappally, printer disposal, cartridge recycling, office equipment",
+  "wordCount": 1952,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Printer Recycling"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Edappally",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Edappally",
+      "addressRegion": "Kerala",
+      "postalCode": "682024",
+      "addressCountry": "IN"
+    }
+  }
+}

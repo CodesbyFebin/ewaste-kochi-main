@@ -1,0 +1,88 @@
+---
+interface Props {
+  currentService: string;
+  currentLocation: string;
+  currentTopic: string;
+  currentSlug: string;
+  limit?: number;
+}
+
+const { currentService, currentLocation, currentTopic, currentSlug, limit = 6 } = Astro.props;
+
+// In a real implementation, you would fetch these from your data source
+// For now, we'll use a static approach
+const relatedPosts = [
+  {
+    title: "Complete Guide to E-Waste Management",
+    slug: "complete-guide-to-e-waste-management",
+    publishDate: "2025-04-20",
+    service: "e-waste-collection",
+    location: "kochi",
+    topic: "how-to"
+  },
+  {
+    title: "Best Laptop Buyback Services in Kerala",
+    slug: "best-laptop-buyback-services-kerala",
+    publishDate: "2025-04-18",
+    service: "laptop-buyback",
+    location: "ernakulam",
+    topic: "comparison"
+  },
+  {
+    title: "Data Destruction Process Explained",
+    slug: "data-destruction-process-explained",
+    publishDate: "2025-04-15",
+    service: "data-destruction",
+    location: "kalamassery",
+    topic: "how-to"
+  }
+].filter(post => post.slug !== currentSlug).slice(0, limit);
+---
+
+{relatedPosts.length > 0 && (
+  <section class="related-posts">
+    <h2 class="text-xl font-semibold text-gray-900 mb-4">Related Articles</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {relatedPosts.map(post => (
+        <article class="related-post bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-sm text-gray-500">
+              {new Date(post.publishDate).toLocaleDateString('en-IN', { 
+                month: 'short',
+                year: 'numeric'
+              })}
+            </span>
+            <div class="flex gap-2">
+              <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
+                {post.service}
+              </span>
+              <span class="px-2 py-1 bg-green-100 text-green-800 rounded text-xs">
+                {post.location}
+              </span>
+            </div>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">
+            <a href={`/blog/${post.slug}/`} class="text-amber-600 hover:text-amber-700">
+              {post.title}
+            </a>
+          </h3>
+          <div class="flex gap-2">
+            <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs">
+              {post.topic}
+            </span>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+)}
+
+<style>
+  .related-post {
+    transition: all 0.3s ease;
+  }
+  
+  .related-post:hover {
+    transform: translateY(-2px);
+  }
+</style>

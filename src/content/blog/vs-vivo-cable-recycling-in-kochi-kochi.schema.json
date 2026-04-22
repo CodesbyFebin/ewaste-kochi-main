@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "vs Vivo Cable Recycling in Kochi",
+  "description": "In Kochi's growing tech landscape, responsible disposal matters. Learn about cable recycling services, pricing structures, and environmental impact for Kochi re...",
+  "image": "https://www.ewastekochi.com/images/blog/vs-vivo-cable-recycling-in-kochi-kochi.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-12-07",
+  "dateModified": "2025-12-07",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/vs-vivo-cable-recycling-in-kochi-kochi/"
+  },
+  "articleSection": "recycling",
+  "keywords": "Cable Recycling, Kochi, wire recycling, copper cables, electronic cables",
+  "wordCount": 1610,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Cable Recycling"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Kochi",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kochi",
+      "addressRegion": "Kerala",
+      "postalCode": "682001",
+      "addressCountry": "IN"
+    }
+  }
+}

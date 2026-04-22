@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Battery Recycling for Businesses in North Paravur",
+  "description": "Proper e-waste management is crucial for North Paravur's environmental sustainability. This guide explores battery recycling options, legal requirements, and tr...",
+  "image": "https://www.ewastekochi.com/images/blog/battery-recycling-for-businesses-in-north-paravur-north-paravur.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-05-02",
+  "dateModified": "2025-05-02",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/battery-recycling-for-businesses-in-north-paravur-north-paravur/"
+  },
+  "articleSection": "recycling",
+  "keywords": "Battery Recycling, North Paravur, battery disposal, lithium recycling, UPS batteries",
+  "wordCount": 1669,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Battery Recycling"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "North Paravur",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "North Paravur",
+      "addressRegion": "Kerala",
+      "postalCode": "683513",
+      "addressCountry": "IN"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Compliance Guide for Data Destruction in Angamaly",
+  "description": "Angamaly residents and businesses often wonder about proper disposal. Our detailed guide explains data destruction services available in Angamaly, with expert i...",
+  "image": "https://www.ewastekochi.com/images/blog/compliance-guide-for-data-destruction-in-angamaly-angamaly.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-06-04",
+  "dateModified": "2025-06-04",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/compliance-guide-for-data-destruction-in-angamaly-angamaly/"
+  },
+  "articleSection": "security",
+  "keywords": "Data Destruction, Angamaly, hard drive shredding, data wiping, secure disposal",
+  "wordCount": 1889,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Data Destruction"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Angamaly",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Angamaly",
+      "addressRegion": "Kerala",
+      "postalCode": "683572",
+      "addressCountry": "IN"
+    }
+  }
+}

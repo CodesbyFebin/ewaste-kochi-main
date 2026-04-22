@@ -10,57 +10,63 @@
         "description": {
           "type": "string"
         },
-        "author": {
-          "type": "string",
-          "default": "EWaste Kochi Team"
+        "publishDate": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "tags": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          ]
+        },
+        "service": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "priority": {
+          "type": "number"
         },
         "published": {
           "anyOf": [
             {
-              "type": "string",
-              "format": "date-time"
+              "type": "string"
             },
-            {
-              "type": "string",
-              "format": "date"
-            },
-            {
-              "type": "integer",
-              "format": "unix-time"
-            }
-          ]
-        },
-        "canonical": {
-          "anyOf": [
             {
               "anyOf": [
                 {
-                  "not": {}
+                  "type": "string",
+                  "format": "date-time"
                 },
                 {
                   "type": "string",
-                  "format": "uri"
+                  "format": "date"
+                },
+                {
+                  "type": "integer",
+                  "format": "unix-time"
                 }
               ]
-            },
-            {
-              "type": "string",
-              "const": ""
             }
           ]
-        },
-        "priority": {
-          "type": "number",
-          "default": 0.6
         },
         "$schema": {
           "type": "string"
         }
       },
       "required": [
-        "title",
-        "description",
-        "published"
+        "title"
       ],
       "additionalProperties": false
     }

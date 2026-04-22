@@ -1,0 +1,481 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Blog Topics - EWaste Kochi";
+const description = "Explore our blog articles by topic. Find comprehensive guides on e-waste management, recycling processes, legal requirements, and more.";
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Blog", url: "/blog/" },
+  { name: "Topics", url: "/blog/topics/" }
+];
+
+// Topics data
+const topics = [
+  {
+    name: "How-to",
+    slug: "how-to",
+    count: 136,
+    blogs: [
+      {
+        title: "Complete Guide to Server Recycling in Ernakulam",
+        slug: "complete-guide-to-server-recycling-in-ernakulam-ernakulam",
+        publishDate: "2025-04-22",
+        service: "server-recycling",
+        location: "ernakulam"
+      },
+      {
+        title: "Best Way to battery recycle in Ernakulam 2026",
+        slug: "best-way-to-battery-recycle-in-ernakulam-2026-ernakulam",
+        publishDate: "2025-04-22",
+        service: "battery-recycling",
+        location: "ernakulam"
+      },
+      {
+        title: "Complete Guide to Laptop Buyback in Kochi",
+        slug: "complete-guide-to-laptop-buyback-in-kochi-kochi",
+        publishDate: "2025-04-29",
+        service: "laptop-buyback",
+        location: "kochi"
+      },
+      {
+        title: "IT Asset Disposition Process in Edappally: Step by Step",
+        slug: "it-asset-disposition-process-in-edappally-step-by-step-edappally",
+        publishDate: "2025-04-30",
+        service: "itad",
+        location: "edappally"
+      },
+      {
+        title: "Complete Guide to Cable Recycling in Kalamassery",
+        slug: "complete-guide-to-cable-recycling-in-kalamassery-kalamassery",
+        publishDate: "2025-05-03",
+        service: "cable-recycling",
+        location: "kalamassery"
+      },
+      {
+        title: "Complete Guide to Data Destruction in North Paravur",
+        slug: "complete-guide-to-data-destruction-in-north-paravur-north-paravur",
+        publishDate: "2025-05-06",
+        service: "data-destruction",
+        location: "north-paravur"
+      }
+    ]
+  },
+  {
+    name: "Troubleshooting",
+    slug: "troubleshooting",
+    count: 113,
+    blogs: [
+      {
+        title: "Phone Buyback Problems in Edappally: Solutions",
+        slug: "phone-buyback-problems-in-edappally-solutions-edappally",
+        publishDate: "2025-04-22",
+        service: "phone-buyback",
+        location: "edappally"
+      },
+      {
+        title: "Troubleshooting Cable Recycling in Kochi",
+        slug: "troubleshooting-cable-recycling-in-kochi-kochi",
+        publishDate: "2025-04-23",
+        service: "cable-recycling",
+        location: "kochi"
+      },
+      {
+        title: "Troubleshooting Server Recycling in Kalamassery",
+        slug: "troubleshooting-server-recycling-in-kalamassery-kalamassery",
+        publishDate: "2025-04-24",
+        service: "server-recycling",
+        location: "kalamassery"
+      },
+      {
+        title: "Troubleshooting Monitor Recycling in Ernakulam",
+        slug: "troubleshooting-monitor-recycling-in-ernakulam-ernakulam",
+        publishDate: "2025-04-29",
+        service: "monitor-recycling",
+        location: "ernakulam"
+      },
+      {
+        title: "Common Data Destruction Issues in Kochi",
+        slug: "common-data-destruction-issues-in-kochi-kochi",
+        publishDate: "2025-05-04",
+        service: "data-destruction",
+        location: "kochi"
+      },
+      {
+        title: "Server Recycling Challenges in Kochi: Expert Tips",
+        slug: "server-recycling-challenges-in-kochi-expert-tips-kochi",
+        publishDate: "2025-05-05",
+        service: "server-recycling",
+        location: "kochi"
+      }
+    ]
+  },
+  {
+    name: "Seasonal",
+    slug: "seasonal",
+    count: 125,
+    blogs: [
+      {
+        title: "Laptop Buyback During Spring in Aluva",
+        slug: "laptop-buyback-during-spring-in-aluva-aluva",
+        publishDate: "2025-04-23",
+        service: "laptop-buyback",
+        location: "aluva"
+      },
+      {
+        title: "Best Time for Monitor Recycling in Thrippunithura",
+        slug: "best-time-for-monitor-recycling-in-thrippunithura-thrippunithura",
+        publishDate: "2025-04-26",
+        service: "monitor-recycling",
+        location: "thrippunithura"
+      },
+      {
+        title: "Laptop Buyback During Summer in Ernakulam",
+        slug: "laptop-buyback-during-summer-in-ernakulam-ernakulam",
+        publishDate: "2025-04-27",
+        service: "laptop-buyback",
+        location: "ernakulam"
+      },
+      {
+        title: "Cable Recycling During Monsoon in North Paravur",
+        slug: "cable-recycling-during-monsoon-in-north-paravur-north-paravur",
+        publishDate: "2025-04-28",
+        service: "cable-recycling",
+        location: "north-paravur"
+      },
+      {
+        title: "Printer Recycling During Winter in Aluva",
+        slug: "printer-recycling-during-winter-in-aluva-aluva",
+        publishDate: "2025-04-30",
+        service: "printer-recycling",
+        location: "aluva"
+      },
+      {
+        title: "Seasonal Phone Buyback Guide for Aluva",
+        slug: "seasonal-phone-buyback-guide-for-aluva-aluva",
+        publishDate: "2025-05-04",
+        service: "phone-buyback",
+        location: "aluva"
+      }
+    ]
+  },
+  {
+    name: "Benefits",
+    slug: "benefits",
+    count: 120,
+    blogs: [
+      {
+        title: "Benefits of Server Recycling in Aluva",
+        slug: "benefits-of-server-recycling-in-aluva-aluva",
+        publishDate: "2025-04-23",
+        service: "server-recycling",
+        location: "aluva"
+      },
+      {
+        title: "Why Choose Monitor Recycling in Thrippunithura?",
+        slug: "why-choose-monitor-recycling-in-thrippunithura-thrippunithura",
+        publishDate: "2025-04-24",
+        service: "monitor-recycling",
+        location: "thrippunithura"
+      },
+      {
+        title: "Economic Benefits of Data Destruction in North Paravur",
+        slug: "economic-benefits-of-data-destruction-in-north-paravur-north-paravur",
+        publishDate: "2025-04-25",
+        service: "data-destruction",
+        location: "north-paravur"
+      },
+      {
+        title: "Benefits of Monitor Recycling in North Paravur",
+        slug: "benefits-of-monitor-recycling-in-north-paravur-north-paravur",
+        publishDate: "2025-05-01",
+        service: "monitor-recycling",
+        location: "north-paravur"
+      },
+      {
+        title: "Environmental Impact of Phone Buyback in Thrippunithura",
+        slug: "environmental-impact-of-phone-buyback-in-thrippunithura-thrippunithura",
+        publishDate: "2025-05-01",
+        service: "phone-buyback",
+        location: "thrippunithura"
+      },
+      {
+        title: "Benefits of Server Recycling in Edappally",
+        slug: "benefits-of-server-recycling-in-edappally-edappally",
+        publishDate: "2025-05-09",
+        service: "server-recycling",
+        location: "edappally"
+      }
+    ]
+  },
+  {
+    name: "Business",
+    slug: "business",
+    count: 146,
+    blogs: [
+      {
+        title: "B2B IT Asset Disposition Services in Edappally",
+        slug: "b2b-it-asset-disposition-services-in-edappally-edappally",
+        publishDate: "2025-04-24",
+        service: "itad",
+        location: "edappally"
+      },
+      {
+        title: "Corporate Data Destruction Solutions in Ernakulam",
+        slug: "corporate-data-destruction-solutions-in-ernakulam-ernakulam",
+        publishDate: "2025-04-26",
+        service: "data-destruction",
+        location: "ernakulam"
+      },
+      {
+        title: "IT Asset Disposition for Businesses in Kochi",
+        slug: "it-asset-disposition-for-businesses-in-kochi-kochi",
+        publishDate: "2025-04-28",
+        service: "itad",
+        location: "kochi"
+      },
+      {
+        title: "Battery Recycling for Businesses in North Paravur",
+        slug: "battery-recycling-for-businesses-in-north-paravur-north-paravur",
+        publishDate: "2025-05-02",
+        service: "battery-recycling",
+        location: "north-paravur"
+      },
+      {
+        title: "Enterprise IT Asset Disposition in Aluva",
+        slug: "enterprise-it-asset-disposition-in-aluva-aluva",
+        publishDate: "2025-05-14",
+        service: "itad",
+        location: "aluva"
+      },
+      {
+        title: "E-Waste Collection for Businesses in Kakkanad",
+        slug: "e-waste-collection-for-businesses-in-kakkanad-kakkanad",
+        publishDate: "2025-05-15",
+        service: "e-waste-collection",
+        location: "kakkanad"
+      }
+    ]
+  },
+  {
+    name: "Legal",
+    slug: "legal",
+    count: 139,
+    blogs: [
+      {
+        title: "E-Waste Laws in Ernakulam: Complete Guide",
+        slug: "e-waste-laws-in-ernakulam-complete-guide-ernakulam",
+        publishDate: "2025-04-25",
+        service: "e-waste-collection",
+        location: "ernakulam"
+      },
+      {
+        title: "KSPCB Regulations for Monitor Recycling in Aluva",
+        slug: "kspcb-regulations-for-monitor-recycling-in-aluva-aluva",
+        publishDate: "2025-04-27",
+        service: "monitor-recycling",
+        location: "aluva"
+      },
+      {
+        title: "E-Waste Laws in Edappally: Complete Guide",
+        slug: "e-waste-laws-in-edappally-complete-guide-edappally",
+        publishDate: "2025-04-28",
+        service: "server-recycling",
+        location: "edappally"
+      },
+      {
+        title: "E-Waste Laws in Edappally: Complete Guide",
+        slug: "e-waste-laws-in-edappally-complete-guide-edappally-1",
+        publishDate: "2025-05-03",
+        service: "monitor-recycling",
+        location: "edappally"
+      },
+      {
+        title: "Compliance Guide for Monitor Recycling in Ernakulam",
+        slug: "compliance-guide-for-monitor-recycling-in-ernakulam-ernakulam",
+        publishDate: "2025-05-04",
+        service: "monitor-recycling",
+        location: "ernakulam"
+      },
+      {
+        title: "Legal Requirements for IT Asset Disposition in Angamaly",
+        slug: "legal-requirements-for-it-asset-disposition-in-angamaly-angamaly",
+        publishDate: "2025-05-06",
+        service: "itad",
+        location: "angamaly"
+      }
+    ]
+  },
+  {
+    name: "Pricing",
+    slug: "pricing",
+    count: 111,
+    blogs: [
+      {
+        title: "How Much Does Battery Recycling Cost in Angamaly?",
+        slug: "how-much-does-battery-recycling-cost-in-angamaly-angamaly",
+        publishDate: "2025-04-26",
+        service: "battery-recycling",
+        location: "angamaly"
+      },
+      {
+        title: "Affordable Data Destruction in Ernakulam: Complete Pricing",
+        slug: "affordable-data-destruction-in-ernakulam-complete-pricing-ernakulam",
+        publishDate: "2025-04-27",
+        service: "data-destruction",
+        location: "ernakulam"
+      },
+      {
+        title: "Server Recycling Prices in Vyttila 2026",
+        slug: "server-recycling-prices-in-vyttila-2026-vyttila",
+        publishDate: "2025-04-30",
+        service: "server-recycling",
+        location: "vyttila"
+      },
+      {
+        title: "Affordable Server Recycling in Kakkanad: Complete Pricing",
+        slug: "affordable-server-recycling-in-kakkanad-complete-pricing-kakkanad",
+        publishDate: "2025-05-06",
+        service: "server-recycling",
+        location: "kakkanad"
+      },
+      {
+        title: "Affordable Data Destruction in Thrippunithura: Complete Pricing",
+        slug: "affordable-data-destruction-in-thrippunithura-complete-pricing-thrippunithura",
+        publishDate: "2025-05-08",
+        service: "data-destruction",
+        location: "thrippunithura"
+      },
+      {
+        title: "How Much Does Cable Recycling Cost in Angamaly?",
+        slug: "how-much-does-cable-recycling-cost-in-angamaly-angamaly",
+        publishDate: "2025-05-08",
+        service: "cable-recycling",
+        location: "angamaly"
+      }
+    ]
+  },
+  {
+    name: "Comparison",
+    slug: "comparison",
+    count: 110,
+    blogs: [
+      {
+        title: "Server Recycling vs Server Disposal in Kalamassery",
+        slug: "server-recycling-vs-server-disposal-in-kalamassery-kalamassery",
+        publishDate: "2025-05-01",
+        service: "server-recycling",
+        location: "kalamassery"
+      },
+      {
+        title: "vs Oppo E-Waste Collection in Kalamassery",
+        slug: "vs-oppo-e-waste-collection-in-kalamassery-kalamassery",
+        publishDate: "2025-05-02",
+        service: "e-waste-collection",
+        location: "kalamassery"
+      },
+      {
+        title: "Battery Recycling Options in Kochi: Which to Choose?",
+        slug: "battery-recycling-options-in-kochi-which-to-choose-kochi",
+        publishDate: "2025-05-02",
+        service: "battery-recycling",
+        location: "kochi"
+      },
+      {
+        title: "IT Asset Disposition vs IT Asset Management in North Paravur",
+        slug: "it-asset-disposition-vs-it-asset-management-in-north-paravur-north-paravur",
+        publishDate: "2025-05-08",
+        service: "itad",
+        location: "north-paravur"
+      },
+      {
+        title: "Data Destruction vs Data Wiping in North Paravur",
+        slug: "data-destruction-vs-data-wiping-in-north-paravur-north-paravur",
+        publishDate: "2025-05-11",
+        service: "data-destruction",
+        location: "north-paravur"
+      },
+      {
+        title: "Best Server Recycling Providers in Angamaly: Comparison",
+        slug: "best-server-recycling-providers-in-angamaly-comparison-angamaly",
+        publishDate: "2025-05-14",
+        service: "server-recycling",
+        location: "angamaly"
+      }
+    ]
+  }
+];
+---
+
+<BaseLayout title={title} description={description} pageType="website" breadcrumbs={breadcrumbs}>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Blog Topics</h1>
+      <p class="text-xl text-gray-700 leading-relaxed">
+        Explore our blog articles by topic. Find comprehensive guides on e-waste management, 
+        recycling processes, legal requirements, and more.
+      </p>
+    </header>
+
+    <section class="topics-section">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Browse by Topic</h2>
+      <div class="space-y-12">
+        {topics.map(topic => (
+          <div class="topic-section">
+            <div class="flex items-center justify-between mb-6">
+              <h3 class="text-2xl font-semibold text-gray-900">
+                <a href={`/blog/topic-${topic.slug}/`} class="text-amber-600 hover:text-amber-700">
+                  {topic.name}
+                </a>
+              </h3>
+              <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+                {topic.count} articles
+              </span>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-4 mb-6">
+              {topic.blogs.map(blog => (
+                <article class="blog-item bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="text-sm text-gray-500">
+                      {new Date(blog.publishDate).toLocaleDateString('en-IN', { 
+                        month: 'short',
+                        day: 'numeric'
+                      })}
+                    </span>
+                  </div>
+                  <h4 class="text-lg font-semibold text-gray-900 mb-2">
+                    <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700">
+                      {blog.title}
+                    </a>
+                  </h4>
+                  <div class="flex gap-2">
+                    <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
+                      {blog.service}
+                    </span>
+                    <span class="px-2 py-1 bg-green-100 text-green-800 rounded text-xs">
+                      {blog.location}
+                    </span>
+                  </div>
+                </article>
+              ))}
+            </div>
+            
+            <a href={`/blog/topic-${topic.slug}/`} class="text-amber-600 hover:text-amber-700 font-medium">
+              View all {topic.name.toLowerCase()} articles
+            </a>
+          </div>
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .blog-item {
+      transition: all 0.3s ease;
+    }
+    .blog-item:hover {
+      transform: translateY(-1px);
+    }
+  </style>
+</BaseLayout>

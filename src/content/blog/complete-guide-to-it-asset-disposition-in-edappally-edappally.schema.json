@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Complete Guide to IT Asset Disposition in Edappally",
+  "description": "Proper Oppo e-waste management is crucial for Edappally's environmental sustainability. This guide explores it asset disposition options, legal requirements, an...",
+  "image": "https://www.ewastekochi.com/images/blog/complete-guide-to-it-asset-disposition-in-edappally-edappally.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-06-17",
+  "dateModified": "2025-06-17",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/complete-guide-to-it-asset-disposition-in-edappally-edappally/"
+  },
+  "articleSection": "corporate",
+  "keywords": "IT Asset Disposition, Edappally, ITAD services, corporate e-waste, asset disposal",
+  "wordCount": 1618,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "IT Asset Disposition"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Edappally",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Edappally",
+      "addressRegion": "Kerala",
+      "postalCode": "682024",
+      "addressCountry": "IN"
+    }
+  }
+}

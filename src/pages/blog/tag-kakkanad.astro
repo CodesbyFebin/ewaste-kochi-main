@@ -1,0 +1,239 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "kakkanad Articles - EWaste Kochi";
+const description = "E-waste services, recycling solutions, and electronic disposal options in Kakkanad, Kerala. Serving areas including Infopark, SmartCity, Civil Station.";
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Blog", url: "/blog/" },
+  { name: "kakkanad", url: "/blog/tag-kakkanad/" }
+];
+
+// Get tag blogs
+const tagBlogs = [
+  {
+    title: "Environmental Impact of Data Destruction in Kakkanad",
+    slug: "environmental-impact-of-data-destruction-in-kakkanad-kakkanad",
+    publishDate: "2026-04-09",
+    description: "undefined",
+    service: "data-destruction",
+    location: "kakkanad",
+    topic: "benefits"
+  },
+  {
+    title: "Common Monitor Recycling Issues in Kakkanad",
+    slug: "common-monitor-recycling-issues-in-kakkanad-kakkanad",
+    publishDate: "2026-04-07",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "kakkanad",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Battery Recycling Price Guide for Kakkanad",
+    slug: "battery-recycling-price-guide-for-kakkanad-kakkanad",
+    publishDate: "2026-03-28",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "kakkanad",
+    topic: "pricing"
+  },
+  {
+    title: "Data Destruction During Winter in Kakkanad",
+    slug: "data-destruction-during-winter-in-kakkanad-kakkanad",
+    publishDate: "2026-03-24",
+    description: "undefined",
+    service: "data-destruction",
+    location: "kakkanad",
+    topic: "seasonal"
+  },
+  {
+    title: "E-Waste Laws in Kakkanad: Complete Guide",
+    slug: "e-waste-laws-in-kakkanad-complete-guide-kakkanad-3",
+    publishDate: "2026-03-16",
+    description: "undefined",
+    service: "laptop-buyback",
+    location: "kakkanad",
+    topic: "legal"
+  },
+  {
+    title: "Printer Recycling vs Office Equipment Recycling in Kakkanad",
+    slug: "printer-recycling-vs-office-equipment-recycling-in-kakkanad-kakkanad",
+    publishDate: "2026-03-14",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "kakkanad",
+    topic: "comparison"
+  },
+  {
+    title: "Laptop Buyback Problems in Kakkanad: Solutions",
+    slug: "laptop-buyback-problems-in-kakkanad-solutions-kakkanad",
+    publishDate: "2026-03-13",
+    description: "undefined",
+    service: "laptop-buyback",
+    location: "kakkanad",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Corporate IT Asset Disposition Solutions in Kakkanad",
+    slug: "corporate-it-asset-disposition-solutions-in-kakkanad-kakkanad",
+    publishDate: "2026-03-13",
+    description: "undefined",
+    service: "itad",
+    location: "kakkanad",
+    topic: "business"
+  },
+  {
+    title: "Complete Guide to Laptop Buyback in Kakkanad",
+    slug: "complete-guide-to-laptop-buyback-in-kakkanad-kakkanad",
+    publishDate: "2026-03-12",
+    description: "undefined",
+    service: "laptop-buyback",
+    location: "kakkanad",
+    topic: "how-to"
+  },
+  {
+    title: "Enterprise Laptop Buyback in Kakkanad",
+    slug: "enterprise-laptop-buyback-in-kakkanad-kakkanad",
+    publishDate: "2026-03-07",
+    description: "undefined",
+    service: "laptop-buyback",
+    location: "kakkanad",
+    topic: "business"
+  }
+];
+
+// Get related tags
+const relatedTags = [
+  {
+    name: "server-recycling",
+    slug: "server-recycling",
+    count: 116,
+    url: "/blog/tag-server-recycling/"
+  },
+  {
+    name: "printer-recycling",
+    slug: "printer-recycling",
+    count: 113,
+    url: "/blog/tag-printer-recycling/"
+  },
+  {
+    name: "edappally",
+    slug: "edappally",
+    count: 111,
+    url: "/blog/tag-edappally/"
+  },
+  {
+    name: "itad",
+    slug: "itad",
+    count: 111,
+    url: "/blog/tag-itad/"
+  },
+  {
+    name: "kochi",
+    slug: "kochi",
+    count: 107,
+    url: "/blog/tag-kochi/"
+  },
+  {
+    name: "kalamassery",
+    slug: "kalamassery",
+    count: 106,
+    url: "/blog/tag-kalamassery/"
+  },
+  {
+    name: "data-destruction",
+    slug: "data-destruction",
+    count: 106,
+    url: "/blog/tag-data-destruction/"
+  },
+  {
+    name: "battery-recycling",
+    slug: "battery-recycling",
+    count: 105,
+    url: "/blog/tag-battery-recycling/"
+  }
+];
+---
+
+<BaseLayout title={title} description={description} pageType="website" breadcrumbs={breadcrumbs}>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">kakkanad</h1>
+      <p class="text-xl text-gray-700 leading-relaxed mb-4">
+        E-waste services, recycling solutions, and electronic disposal options in Kakkanad, Kerala. Serving areas including Infopark, SmartCity, Civil Station.
+      </p>
+      <div class="bg-amber-50 p-4 rounded-lg">
+        <p class="text-amber-800 font-medium">
+          <span class="font-bold">{tagBlogs.length}</span> articles tagged with "kakkanad"
+        </p>
+      </div>
+    </header>
+
+    <section class="blog-list mb-12">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Recent Articles</h2>
+      <div class="space-y-6">
+        {tagBlogs.map(blog => (
+          <article class="blog-card bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-sm text-gray-500">
+                {new Date(blog.publishDate).toLocaleDateString('en-IN', { 
+                  year: 'numeric', 
+                  month: 'long', 
+                  day: 'numeric' 
+                })}
+              </span>
+              <div class="flex gap-2">
+                <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs">
+                  {blog.topic}
+                </span>
+                <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
+                  {blog.service}
+                </span>
+                <span class="px-2 py-1 bg-green-100 text-green-800 rounded text-xs">
+                  {blog.location}
+                </span>
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700">
+                {blog.title}
+              </a>
+            </h3>
+            <p class="text-gray-700 mb-4">{blog.description}</p>
+            <a 
+              href={`/blog/${blog.slug}/`} 
+              class="text-amber-600 hover:text-amber-700 font-medium"
+            >
+              Read more
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="related-tags">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Tags</h2>
+      <div class="flex flex-wrap gap-3">
+        {relatedTags.map(tag => (
+          <a 
+            href={tag.url} 
+            class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full hover:bg-gray-200 transition-colors"
+          >
+            aluva (10)
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .blog-card {
+      transition: all 0.3s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</BaseLayout>

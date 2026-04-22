@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "E-Waste Laws in Kalamassery: Complete Guide",
+  "description": "Proper e-waste management is crucial for Kalamassery's environmental sustainability. This guide explores battery recycling options, legal requirements, and trus...",
+  "image": "https://www.ewastekochi.com/images/blog/e-waste-laws-in-kalamassery-complete-guide-kalamassery.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-05-24",
+  "dateModified": "2025-05-24",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/e-waste-laws-in-kalamassery-complete-guide-kalamassery/"
+  },
+  "articleSection": "recycling",
+  "keywords": "Battery Recycling, Kalamassery, battery disposal, lithium recycling, UPS batteries",
+  "wordCount": 1251,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Battery Recycling"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Kalamassery",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kalamassery",
+      "addressRegion": "Kerala",
+      "postalCode": "683104",
+      "addressCountry": "IN"
+    }
+  }
+}

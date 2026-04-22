@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "B2B Server Recycling Services in Kochi",
+  "description": "In Kochi's growing tech landscape, responsible disposal matters. Learn about server recycling services, pricing structures, and environmental impact for Kochi r...",
+  "image": "https://www.ewastekochi.com/images/blog/b2b-server-recycling-services-in-kochi-kochi.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2026-02-27",
+  "dateModified": "2026-02-27",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/b2b-server-recycling-services-in-kochi-kochi/"
+  },
+  "articleSection": "corporate",
+  "keywords": "Server Recycling, Kochi, server disposal, data center recycling, rack disposal",
+  "wordCount": 1735,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Server Recycling"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Kochi",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kochi",
+      "addressRegion": "Kerala",
+      "postalCode": "682001",
+      "addressCountry": "IN"
+    }
+  }
+}

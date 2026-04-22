@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Printer Recycling Trends in Thrippunithura 2026",
+  "description": "In Thrippunithura's growing tech landscape, responsible disposal matters. Learn about printer recycling services, pricing structures, and environmental impact f...",
+  "image": "https://www.ewastekochi.com/images/blog/printer-recycling-trends-in-thrippunithura-2026-thrippunithura-1.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-07-20",
+  "dateModified": "2025-07-20",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/printer-recycling-trends-in-thrippunithura-2026-thrippunithura-1/"
+  },
+  "articleSection": "recycling",
+  "keywords": "Printer Recycling, Thrippunithura, printer disposal, cartridge recycling, office equipment",
+  "wordCount": 1770,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Printer Recycling"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Thrippunithura",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Thrippunithura",
+      "addressRegion": "Kerala",
+      "postalCode": "682301",
+      "addressCountry": "IN"
+    }
+  }
+}

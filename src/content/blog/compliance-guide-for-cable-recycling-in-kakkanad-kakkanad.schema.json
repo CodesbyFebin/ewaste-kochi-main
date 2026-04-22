@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Compliance Guide for Cable Recycling in Kakkanad",
+  "description": "In Kakkanad's growing tech landscape, responsible disposal matters. Learn about cable recycling services, pricing structures, and environmental impact for Kakka...",
+  "image": "https://www.ewastekochi.com/images/blog/compliance-guide-for-cable-recycling-in-kakkanad-kakkanad.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-06-20",
+  "dateModified": "2025-06-20",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/compliance-guide-for-cable-recycling-in-kakkanad-kakkanad/"
+  },
+  "articleSection": "recycling",
+  "keywords": "Cable Recycling, Kakkanad, wire recycling, copper cables, electronic cables",
+  "wordCount": 1375,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Cable Recycling"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Kakkanad",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kakkanad",
+      "addressRegion": "Kerala",
+      "postalCode": "682030",
+      "addressCountry": "IN"
+    }
+  }
+}

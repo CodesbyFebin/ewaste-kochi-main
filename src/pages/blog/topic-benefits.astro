@@ -1,0 +1,272 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Benefits Articles - EWaste Kochi";
+const description = "Expert guides and articles on benefits in e-waste management. Learn about benefits processes, best practices, and solutions in Kerala.";
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Blog", url: "/blog/" },
+  { name: "Topics", url: "/blog/topics/" },
+  { name: "Benefits", url: "/blog/topic-benefits/" }
+];
+
+// Topic blogs
+const topicBlogs = [
+  {
+    title: "Economic Benefits of Cable Recycling in Thrippunithura",
+    slug: "economic-benefits-of-cable-recycling-in-thrippunithura-thrippunithura-1",
+    publishDate: "2026-04-20",
+    description: "",
+    service: "cable-recycling",
+    location: "thrippunithura"
+  },
+  {
+    title: "Environmental Impact of E-Waste Collection in Thrippunithura",
+    slug: "environmental-impact-of-e-waste-collection-in-thrippunithura-thrippunithura",
+    publishDate: "2026-04-16",
+    description: "",
+    service: "e-waste-collection",
+    location: "thrippunithura"
+  },
+  {
+    title: "Why Choose Battery Recycling in Edappally?",
+    slug: "why-choose-battery-recycling-in-edappally-edappally-1",
+    publishDate: "2026-04-14",
+    description: "",
+    service: "battery-recycling",
+    location: "edappally"
+  },
+  {
+    title: "Benefits of E-Waste Collection in Kalamassery",
+    slug: "benefits-of-e-waste-collection-in-kalamassery-kalamassery",
+    publishDate: "2026-04-12",
+    description: "",
+    service: "e-waste-collection",
+    location: "kalamassery"
+  },
+  {
+    title: "Benefits of Cable Recycling in Ernakulam",
+    slug: "benefits-of-cable-recycling-in-ernakulam-ernakulam",
+    publishDate: "2026-04-10",
+    description: "",
+    service: "cable-recycling",
+    location: "ernakulam"
+  },
+  {
+    title: "Environmental Impact of Data Destruction in Kakkanad",
+    slug: "environmental-impact-of-data-destruction-in-kakkanad-kakkanad",
+    publishDate: "2026-04-09",
+    description: "",
+    service: "data-destruction",
+    location: "kakkanad"
+  },
+  {
+    title: "Environmental Impact of Server Recycling in Aluva",
+    slug: "environmental-impact-of-server-recycling-in-aluva-aluva-2",
+    publishDate: "2026-04-05",
+    description: "",
+    service: "server-recycling",
+    location: "aluva"
+  },
+  {
+    title: "Benefits of Battery Recycling in Thrippunithura",
+    slug: "benefits-of-battery-recycling-in-thrippunithura-thrippunithura",
+    publishDate: "2026-04-03",
+    description: "",
+    service: "battery-recycling",
+    location: "thrippunithura"
+  },
+  {
+    title: "Why Choose Battery Recycling in Edappally?",
+    slug: "why-choose-battery-recycling-in-edappally-edappally",
+    publishDate: "2026-03-29",
+    description: "",
+    service: "battery-recycling",
+    location: "edappally"
+  },
+  {
+    title: "Economic Benefits of Battery Recycling in Ernakulam",
+    slug: "economic-benefits-of-battery-recycling-in-ernakulam-ernakulam",
+    publishDate: "2026-03-27",
+    description: "",
+    service: "battery-recycling",
+    location: "ernakulam"
+  },
+  {
+    title: "Environmental Impact of Printer Recycling in Vyttila",
+    slug: "environmental-impact-of-printer-recycling-in-vyttila-vyttila",
+    publishDate: "2026-03-13",
+    description: "",
+    service: "printer-recycling",
+    location: "vyttila"
+  },
+  {
+    title: "Why Choose Laptop Buyback in Kalamassery?",
+    slug: "why-choose-laptop-buyback-in-kalamassery-kalamassery",
+    publishDate: "2026-03-11",
+    description: "",
+    service: "laptop-buyback",
+    location: "kalamassery"
+  },
+  {
+    title: "Why Choose Battery Recycling in Aluva?",
+    slug: "why-choose-battery-recycling-in-aluva-aluva",
+    publishDate: "2026-03-07",
+    description: "",
+    service: "battery-recycling",
+    location: "aluva"
+  },
+  {
+    title: "Economic Benefits of Cable Recycling in Thrippunithura",
+    slug: "economic-benefits-of-cable-recycling-in-thrippunithura-thrippunithura",
+    publishDate: "2026-03-03",
+    description: "",
+    service: "cable-recycling",
+    location: "thrippunithura"
+  },
+  {
+    title: "Benefits of Data Destruction in Edappally",
+    slug: "benefits-of-data-destruction-in-edappally-edappally-1",
+    publishDate: "2026-03-01",
+    description: "",
+    service: "data-destruction",
+    location: "edappally"
+  },
+  {
+    title: "Why Choose E-Waste Collection in Aluva?",
+    slug: "why-choose-e-waste-collection-in-aluva-aluva-1",
+    publishDate: "2026-02-26",
+    description: "",
+    service: "e-waste-collection",
+    location: "aluva"
+  },
+  {
+    title: "Economic Benefits of IT Asset Disposition in North Paravur",
+    slug: "economic-benefits-of-it-asset-disposition-in-north-paravur-north-paravur",
+    publishDate: "2026-02-23",
+    description: "",
+    service: "itad",
+    location: "north-paravur"
+  },
+  {
+    title: "Why Choose Data Destruction in Edappally?",
+    slug: "why-choose-data-destruction-in-edappally-edappally",
+    publishDate: "2026-02-17",
+    description: "",
+    service: "data-destruction",
+    location: "edappally"
+  },
+  {
+    title: "Environmental Impact of Server Recycling in Angamaly",
+    slug: "environmental-impact-of-server-recycling-in-angamaly-angamaly",
+    publishDate: "2026-02-17",
+    description: "",
+    service: "server-recycling",
+    location: "angamaly"
+  },
+  {
+    title: "Environmental Impact of Monitor Recycling in Kalamassery",
+    slug: "environmental-impact-of-monitor-recycling-in-kalamassery-kalamassery",
+    publishDate: "2026-02-14",
+    description: "",
+    service: "monitor-recycling",
+    location: "kalamassery"
+  }
+];
+
+// Topic statistics
+const totalArticles = 120;
+const services = [...new Set(topicBlogs.map(blog => blog.service))];
+const locations = [...new Set(topicBlogs.map(blog => blog.location))];
+---
+
+<BaseLayout title={title} description={description} pageType="website" breadcrumbs={breadcrumbs}>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Benefits Articles</h1>
+      <p class="text-xl text-gray-700 leading-relaxed mb-4">
+        Expert guides and articles on benefits in e-waste management. 
+        Learn about benefits processes, best practices, and solutions in Kerala.
+      </p>
+      <div class="bg-purple-50 p-4 rounded-lg">
+        <div class="grid grid-cols-3 gap-4">
+          <div>
+            <span class="font-bold text-purple-800">{totalArticles}</span>
+            <span class="text-purple-700"> articles</span>
+          </div>
+          <div>
+            <span class="font-bold text-purple-800">{services.length}</span>
+            <span class="text-purple-700"> services</span>
+          </div>
+          <div>
+            <span class="font-bold text-purple-800">{locations.length}</span>
+            <span class="text-purple-700"> locations</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="blog-list">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Recent Benefits Articles</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        {topicBlogs.map(blog => (
+          <article class="blog-card bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-sm text-gray-500">
+                {new Date(blog.publishDate).toLocaleDateString('en-IN', { 
+                  year: 'numeric', 
+                  month: 'short',
+                  day: 'numeric'
+                })}
+              </span>
+              <div class="flex gap-2">
+                <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
+                  {blog.service}
+                </span>
+                <span class="px-2 py-1 bg-green-100 text-green-800 rounded text-xs">
+                  {blog.location}
+                </span>
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700">
+                {blog.title}
+              </a>
+            </h3>
+            <p class="text-gray-700 mb-4">{blog.description}</p>
+            <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700 font-medium">
+              Read more
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="related-section mt-12">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Browse by Service</h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        {services.map(service => (
+          <a 
+            href={`/blog/service-${service}/`} 
+            class="block p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
+          >
+            <h3 class="font-semibold text-blue-800 mb-2">
+              {service.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
+            </h3>
+            <p class="text-blue-700 text-sm">benefits articles</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .blog-card {
+      transition: all 0.3s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</BaseLayout>

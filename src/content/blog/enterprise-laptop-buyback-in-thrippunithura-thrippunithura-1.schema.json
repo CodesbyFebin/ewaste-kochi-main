@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Enterprise Laptop Buyback in Thrippunithura",
+  "description": "Proper e-waste management is crucial for Thrippunithura's environmental sustainability. This guide explores laptop buyback options, legal requirements, and trus...",
+  "image": "https://www.ewastekochi.com/images/blog/enterprise-laptop-buyback-in-thrippunithura-thrippunithura-1.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2026-03-08",
+  "dateModified": "2026-03-08",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/enterprise-laptop-buyback-in-thrippunithura-thrippunithura-1/"
+  },
+  "articleSection": "buyback",
+  "keywords": "Laptop Buyback, Thrippunithura, sell laptop, laptop recycling, used laptop price",
+  "wordCount": 1635,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Laptop Buyback"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Thrippunithura",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Thrippunithura",
+      "addressRegion": "Kerala",
+      "postalCode": "682301",
+      "addressCountry": "IN"
+    }
+  }
+}

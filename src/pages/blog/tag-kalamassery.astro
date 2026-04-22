@@ -1,0 +1,239 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "kalamassery Articles - EWaste Kochi";
+const description = "E-waste services, recycling solutions, and electronic disposal options in Kalamassery, Kerala. Serving areas including Cochin University, Kalamassery Railway Station.";
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Blog", url: "/blog/" },
+  { name: "kalamassery", url: "/blog/tag-kalamassery/" }
+];
+
+// Get tag blogs
+const tagBlogs = [
+  {
+    title: "Legal Requirements for Phone Buyback in Kalamassery",
+    slug: "legal-requirements-for-phone-buyback-in-kalamassery-kalamassery",
+    publishDate: "2026-04-13",
+    description: "undefined",
+    service: "phone-buyback",
+    location: "kalamassery",
+    topic: "legal"
+  },
+  {
+    title: "Benefits of E-Waste Collection in Kalamassery",
+    slug: "benefits-of-e-waste-collection-in-kalamassery-kalamassery",
+    publishDate: "2026-04-12",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "kalamassery",
+    topic: "benefits"
+  },
+  {
+    title: "E-Waste Laws in Kalamassery: Complete Guide",
+    slug: "e-waste-laws-in-kalamassery-complete-guide-kalamassery-4",
+    publishDate: "2026-04-12",
+    description: "undefined",
+    service: "laptop-buyback",
+    location: "kalamassery",
+    topic: "legal"
+  },
+  {
+    title: "Legal Requirements for Battery Recycling in Kalamassery",
+    slug: "legal-requirements-for-battery-recycling-in-kalamassery-kalamassery-1",
+    publishDate: "2026-04-08",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "kalamassery",
+    topic: "legal"
+  },
+  {
+    title: "Complete Guide to IT Asset Disposition in Kalamassery",
+    slug: "complete-guide-to-it-asset-disposition-in-kalamassery-kalamassery-2",
+    publishDate: "2026-04-07",
+    description: "undefined",
+    service: "itad",
+    location: "kalamassery",
+    topic: "how-to"
+  },
+  {
+    title: "E-Waste Collection for Businesses in Kalamassery",
+    slug: "e-waste-collection-for-businesses-in-kalamassery-kalamassery",
+    publishDate: "2026-04-06",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "kalamassery",
+    topic: "business"
+  },
+  {
+    title: "Data Destruction Problems in Kalamassery: Solutions",
+    slug: "data-destruction-problems-in-kalamassery-solutions-kalamassery",
+    publishDate: "2026-04-04",
+    description: "undefined",
+    service: "data-destruction",
+    location: "kalamassery",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Affordable Printer Recycling in Kalamassery: Complete Pricing",
+    slug: "affordable-printer-recycling-in-kalamassery-complete-pricing-kalamassery",
+    publishDate: "2026-04-04",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "kalamassery",
+    topic: "pricing"
+  },
+  {
+    title: "Realme vs Poco Data Destruction in Kalamassery",
+    slug: "realme-vs-poco-data-destruction-in-kalamassery-kalamassery",
+    publishDate: "2026-04-01",
+    description: "undefined",
+    service: "data-destruction",
+    location: "kalamassery",
+    topic: "comparison"
+  },
+  {
+    title: "Battery Recycling Options in Kalamassery: Which to Choose?",
+    slug: "battery-recycling-options-in-kalamassery-which-to-choose-kalamassery",
+    publishDate: "2026-04-01",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "kalamassery",
+    topic: "comparison"
+  }
+];
+
+// Get related tags
+const relatedTags = [
+  {
+    name: "server-recycling",
+    slug: "server-recycling",
+    count: 116,
+    url: "/blog/tag-server-recycling/"
+  },
+  {
+    name: "printer-recycling",
+    slug: "printer-recycling",
+    count: 113,
+    url: "/blog/tag-printer-recycling/"
+  },
+  {
+    name: "edappally",
+    slug: "edappally",
+    count: 111,
+    url: "/blog/tag-edappally/"
+  },
+  {
+    name: "itad",
+    slug: "itad",
+    count: 111,
+    url: "/blog/tag-itad/"
+  },
+  {
+    name: "kochi",
+    slug: "kochi",
+    count: 107,
+    url: "/blog/tag-kochi/"
+  },
+  {
+    name: "data-destruction",
+    slug: "data-destruction",
+    count: 106,
+    url: "/blog/tag-data-destruction/"
+  },
+  {
+    name: "battery-recycling",
+    slug: "battery-recycling",
+    count: 105,
+    url: "/blog/tag-battery-recycling/"
+  },
+  {
+    name: "aluva",
+    slug: "aluva",
+    count: 105,
+    url: "/blog/tag-aluva/"
+  }
+];
+---
+
+<BaseLayout title={title} description={description} pageType="website" breadcrumbs={breadcrumbs}>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">kalamassery</h1>
+      <p class="text-xl text-gray-700 leading-relaxed mb-4">
+        E-waste services, recycling solutions, and electronic disposal options in Kalamassery, Kerala. Serving areas including Cochin University, Kalamassery Railway Station.
+      </p>
+      <div class="bg-amber-50 p-4 rounded-lg">
+        <p class="text-amber-800 font-medium">
+          <span class="font-bold">{tagBlogs.length}</span> articles tagged with "kalamassery"
+        </p>
+      </div>
+    </header>
+
+    <section class="blog-list mb-12">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Recent Articles</h2>
+      <div class="space-y-6">
+        {tagBlogs.map(blog => (
+          <article class="blog-card bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-sm text-gray-500">
+                {new Date(blog.publishDate).toLocaleDateString('en-IN', { 
+                  year: 'numeric', 
+                  month: 'long', 
+                  day: 'numeric' 
+                })}
+              </span>
+              <div class="flex gap-2">
+                <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs">
+                  {blog.topic}
+                </span>
+                <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
+                  {blog.service}
+                </span>
+                <span class="px-2 py-1 bg-green-100 text-green-800 rounded text-xs">
+                  {blog.location}
+                </span>
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700">
+                {blog.title}
+              </a>
+            </h3>
+            <p class="text-gray-700 mb-4">{blog.description}</p>
+            <a 
+              href={`/blog/${blog.slug}/`} 
+              class="text-amber-600 hover:text-amber-700 font-medium"
+            >
+              Read more
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="related-tags">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Tags</h2>
+      <div class="flex flex-wrap gap-3">
+        {relatedTags.map(tag => (
+          <a 
+            href={tag.url} 
+            class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full hover:bg-gray-200 transition-colors"
+          >
+            aluva (10)
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .blog-card {
+      transition: all 0.3s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</BaseLayout>

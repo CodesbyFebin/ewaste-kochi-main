@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Cable Recycling Trends in Kochi 2026",
+  "description": "Kochi residents and businesses often wonder about proper disposal. Our detailed guide explains cable recycling services available in Kochi, with expert insights...",
+  "image": "https://www.ewastekochi.com/images/blog/cable-recycling-trends-in-kochi-2026-kochi.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2026-01-04",
+  "dateModified": "2026-01-04",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/cable-recycling-trends-in-kochi-2026-kochi/"
+  },
+  "articleSection": "recycling",
+  "keywords": "Cable Recycling, Kochi, wire recycling, copper cables, electronic cables",
+  "wordCount": 1505,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Cable Recycling"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Kochi",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kochi",
+      "addressRegion": "Kerala",
+      "postalCode": "682001",
+      "addressCountry": "IN"
+    }
+  }
+}

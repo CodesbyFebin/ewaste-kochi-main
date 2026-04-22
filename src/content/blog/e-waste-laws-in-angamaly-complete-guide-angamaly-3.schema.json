@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "E-Waste Laws in Angamaly: Complete Guide",
+  "description": "Proper Vivo e-waste management is crucial for Angamaly's environmental sustainability. This guide explores it asset disposition options, legal requirements, and...",
+  "image": "https://www.ewastekochi.com/images/blog/e-waste-laws-in-angamaly-complete-guide-angamaly-3.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2026-01-02",
+  "dateModified": "2026-01-02",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/e-waste-laws-in-angamaly-complete-guide-angamaly-3/"
+  },
+  "articleSection": "corporate",
+  "keywords": "IT Asset Disposition, Angamaly, ITAD services, corporate e-waste, asset disposal",
+  "wordCount": 1364,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "IT Asset Disposition"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Angamaly",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Angamaly",
+      "addressRegion": "Kerala",
+      "postalCode": "683572",
+      "addressCountry": "IN"
+    }
+  }
+}

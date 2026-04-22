@@ -1,0 +1,200 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "EWaste Kochi Blog - E-Waste Management & Recycling Guide";
+const description = "Expert guides on e-waste management, recycling services, and ITAD solutions in Kerala. Learn about proper electronic waste disposal, data destruction, and environmental compliance.";
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Blog", url: "/blog/" }
+];
+
+// Load blog data from API or static data
+const recentBlogs = [
+  {
+    title: "Complete Guide to Server Recycling in Ernakulam",
+    slug: "complete-guide-to-server-recycling-in-ernakulam-ernakulam",
+    publishDate: "2025-04-22",
+    service: "server-recycling",
+    location: "ernakulam",
+    topic: "how-to"
+  },
+  {
+    title: "Best Way to Battery Recycle in Ernakulam 2026",
+    slug: "best-way-to-battery-recycle-in-ernakulam-2026-ernakulam",
+    publishDate: "2025-04-22",
+    service: "battery-recycling",
+    location: "ernakulam",
+    topic: "how-to"
+  },
+  // Add more recent blogs as needed
+];
+
+const featuredBlogs = [
+  {
+    title: "Complete Guide to Server Recycling in Ernakulam",
+    slug: "complete-guide-to-server-recycling-in-ernakulam-ernakulam",
+    publishDate: "2025-04-22",
+    service: "server-recycling",
+    location: "ernakulam"
+  },
+  // Add more featured blogs
+];
+
+// Blog statistics
+const totalBlogs = 1000;
+const services = 10;
+const locations = 10;
+const topics = 8;
+---
+
+<BaseLayout title={title} description={description} pageType="website" breadcrumbs={breadcrumbs}>
+  <div class="max-w-6xl mx-auto px-4 py-8">
+    <!-- Blog Hero Section -->
+    <header class="mb-12 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        EWaste Kochi Blog
+      </h1>
+      <p class="text-xl text-gray-700 leading-relaxed mb-8 max-w-3xl mx-auto">
+        Expert guides on e-waste management, recycling services, and ITAD solutions in Kerala. 
+        Learn about proper electronic waste disposal, data destruction, and environmental compliance.
+      </p>
+      
+      <!-- Blog Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+        <div class="bg-amber-50 p-4 rounded-lg">
+          <div class="text-2xl font-bold text-amber-800">{totalBlogs}+</div>
+          <div class="text-sm text-amber-700">Articles</div>
+        </div>
+        <div class="bg-blue-50 p-4 rounded-lg">
+          <div class="text-2xl font-bold text-blue-800">{services}</div>
+          <div class="text-sm text-blue-700">Services</div>
+        </div>
+        <div class="bg-green-50 p-4 rounded-lg">
+          <div class="text-2xl font-bold text-green-800">{locations}</div>
+          <div class="text-sm text-green-700">Locations</div>
+        </div>
+        <div class="bg-purple-50 p-4 rounded-lg">
+          <div class="text-2xl font-bold text-purple-800">{topics}</div>
+          <div class="text-sm text-purple-700">Topics</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Featured Articles -->
+    <section class="featured-section mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8">Featured Articles</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {featuredBlogs.map(blog => (
+          <article class="featured-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">
+                Featured
+              </span>
+              <span class="text-sm text-gray-500">
+                {new Date(blog.publishDate).toLocaleDateString('en-IN', { 
+                  year: 'numeric', 
+                  month: 'short' 
+                })}
+              </span>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              <a href={\`/blog/\${blog.slug}/\`} class="text-amber-600 hover:text-amber-700">
+                {blog.title}
+              </a>
+            </h3>
+            <div class="flex items-center justify-between">
+              <div class="flex gap-2">
+                <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
+                  {blog.service}
+                </span>
+                <span class="px-2 py-1 bg-green-100 text-green-800 rounded text-xs">
+                  {blog.location}
+                </span>
+              </div>
+              <a href={\`/blog/\${blog.slug}/\`} class="text-amber-600 hover:text-amber-700 font-medium text-sm">
+                Read more
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!-- Recent Articles -->
+    <section class="recent-section mb-12">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="text-3xl font-bold text-gray-900">Recent Articles</h2>
+        <a href="/blog/archives/" class="text-amber-600 hover:text-amber-700 font-medium">
+          View all archives
+        </a>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {recentBlogs.map(blog => (
+          <article class="blog-card bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-sm text-gray-500">
+                {new Date(blog.publishDate).toLocaleDateString('en-IN', { 
+                  year: 'numeric', 
+                  month: 'short',
+                  day: 'numeric'
+                })}
+              </span>
+              <div class="flex gap-2">
+                <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs">
+                  {blog.topic}
+                </span>
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              <a href={\`/blog/\${blog.slug}/\`} class="text-amber-600 hover:text-amber-700">
+                {blog.title}
+              </a>
+            </h3>
+            <div class="flex items-center justify-between">
+              <div class="flex gap-2">
+                <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
+                  {blog.service}
+                </span>
+                <span class="px-2 py-1 bg-green-100 text-green-800 rounded text-xs">
+                  {blog.location}
+                </span>
+              </div>
+              <a href={\`/blog/\${blog.slug}/\`} class="text-amber-600 hover:text-amber-700 font-medium text-sm">
+                Read more
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="quick-links-section">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Explore by Category</h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        <a href="/blog/topics/" class="block p-4 bg-amber-50 rounded-lg hover:bg-amber-100 transition-colors">
+          <h3 class="font-semibold text-amber-800 mb-2">Browse Topics</h3>
+          <p class="text-amber-700 text-sm">Explore articles by topic and category</p>
+        </a>
+        <a href="/blog/services/" class="block p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+          <h3 class="font-semibold text-blue-800 mb-2">Services</h3>
+          <p class="text-blue-700 text-sm">Find articles by service type</p>
+        </a>
+        <a href="/blog/locations/" class="block p-4 bg-green-50 rounded-lg hover:bg-green-100 transition-colors">
+          <h3 class="font-semibold text-green-800 mb-2">Locations</h3>
+          <p class="text-green-700 text-sm">Browse by location in Kerala</p>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .blog-card, .featured-card {
+      transition: all 0.3s ease;
+    }
+    .blog-card:hover, .featured-card:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</BaseLayout>

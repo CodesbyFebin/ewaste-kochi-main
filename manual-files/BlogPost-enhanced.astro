@@ -1,0 +1,155 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  publishDate: string;
+  category: string;
+  tags: string[];
+  service: string;
+  location: string;
+}
+
+const { title, description, publishDate, category, tags, service, location } = Astro.props;
+
+// Generate breadcrumbs
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Blog", url: "/blog/" },
+  { name: category.charAt(0).toUpperCase() + category.slice(1), url: `/blog/topic-${category}/` },
+  { name: title, url: `/blog/${Astro.url.pathname.split('/').pop()}/` }
+];
+
+// Navigation links
+const serviceLink = `/blog/service-${service}/`;
+const locationLink = `/blog/location-${location}/`;
+const topicLink = `/blog/topic-${category}/`;
+---
+
+<BaseLayout title={title} description={description} pageType="blog" breadcrumbs={breadcrumbs}>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <article class="blog-post">
+      <header class="mb-8">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex gap-2">
+            <a href={serviceLink} class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium hover:bg-blue-200 transition-colors">
+              {service.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
+            </a>
+            <a href={locationLink} class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium hover:bg-green-200 transition-colors">
+              {location.charAt(0).toUpperCase() + location.slice(1)}
+            </a>
+            <a href={topicLink} class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium hover:bg-purple-200 transition-colors">
+              {category.charAt(0).toUpperCase() + category.slice(1)}
+            </a>
+          </div>
+          <time datetime={publishDate} class="text-gray-500">
+            {new Date(publishDate).toLocaleDateString('en-IN', { 
+              year: 'numeric', 
+              month: 'long', 
+              day: 'numeric' 
+            })}
+          </time>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          {title}
+        </h1>
+        <p class="text-xl text-gray-700 leading-relaxed">
+          {description}
+        </p>
+      </header>
+
+      <!-- Blog Content -->
+      <div class="prose prose-lg max-w-none mb-12">
+        <slot />
+      </div>
+
+      <!-- Navigation -->
+      <footer class="border-t pt-8">
+        <nav class="mb-8">
+          <h2 class="text-xl font-semibold text-gray-900 mb-4">Browse More</h2>
+          <div class="grid md:grid-cols-3 gap-4">
+            <a href={serviceLink} class="block p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+              <h3 class="font-semibold text-blue-800 mb-2">
+                More {service.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
+              </h3>
+              <p class="text-blue-700 text-sm">Explore similar services</p>
+            </a>
+            <a href={locationLink} class="block p-4 bg-green-50 rounded-lg hover:bg-green-100 transition-colors">
+              <h3 class="font-semibold text-green-800 mb-2">
+                {location.charAt(0).toUpperCase() + location.slice(1)} Articles
+              </h3>
+              <p class="text-green-700 text-sm">Local guides and tips</p>
+            </a>
+            <a href={topicLink} class="block p-4 bg-purple-50 rounded-lg hover:bg-purple-100 transition-colors">
+              <h3 class="font-semibold text-purple-800 mb-2">
+                {category.charAt(0).toUpperCase() + category.slice(1)} Guides
+              </h3>
+              <p class="text-purple-700 text-sm">Learn more about {category.toLowerCase()}</p>
+            </a>
+          </div>
+        </nav>
+
+        <!-- Back to Blog -->
+        <div class="mt-8 text-center">
+          <a href="/blog/" class="inline-flex items-center px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            Back to Blog
+          </a>
+        </div>
+      </footer>
+    </article>
+  </div>
+
+  <style>
+    .blog-post {
+      line-height: 1.7;
+    }
+    
+    .prose h2 {
+      @apply text-2xl font-bold text-gray-900 mt-8 mb-4;
+    }
+    
+    .prose h3 {
+      @apply text-xl font-semibold text-gray-900 mt-6 mb-3;
+    }
+    
+    .prose p {
+      @apply mb-4 text-gray-700;
+    }
+    
+    .prose ul, .prose ol {
+      @apply mb-4 pl-6;
+    }
+    
+    .prose li {
+      @apply mb-2 text-gray-700;
+    }
+    
+    .prose blockquote {
+      @apply border-l-4 border-amber-500 pl-4 italic text-gray-600 my-4;
+    }
+    
+    .prose code {
+      @apply bg-gray-100 px-2 py-1 rounded text-sm;
+    }
+    
+    .prose pre {
+      @apply bg-gray-100 p-4 rounded-lg overflow-x-auto;
+    }
+    
+    .prose table {
+      @apply w-full border-collapse border border-gray-300 my-4;
+    }
+    
+    .prose th, .prose td {
+      @apply border border-gray-300 px-4 py-2 text-left;
+    }
+    
+    .prose th {
+      @apply bg-gray-100 font-semibold;
+    }
+  </style>
+</BaseLayout>

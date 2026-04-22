@@ -55,13 +55,13 @@ const schema = {
       "url": "https://www.ewastekochi.com/logo.png"
     }
   },
-  "datePublished": post.data.published.toISOString(),
+  "datePublished": post.data.published ? post.data.published.toISOString() : new Date().toISOString(),
   "dateModified": lastmod.toISOString(),
   "mainEntityOfPage": `https://www.ewastekochi.com/blog/${post.slug}/`,
   "image": `https://www.ewastekochi.com/images/blog/${post.slug}.webp`,
   "articleSection": "E-Waste Management",
   "wordCount": 2000,
-  "keywords": post.data.tags?.join(", ") || "e-waste, recycling, kochi",
+  "keywords": Array.isArray(post.data.tags) ? post.data.tags.join(", ") : (post.data.tags || "e-waste, recycling, kochi"),
   "about": [
     {
       "@type": "Thing",
@@ -213,8 +213,12 @@ const generateFAQ = (content: string) => {
     <!-- Blog Header -->
     <header class="blog-header">
       <div class="blog-meta">
-        <time datetime={post.data.published.toISOString()}>
-          {post.data.published.toLocaleDateString('en-US', { 
+        <time datetime={post.data.published ? post.data.published.toISOString() : new Date().toISOString()}>
+          {post.data.published ? post.data.published.toLocaleDateString('en-US', { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+          }) : new Date().toLocaleDateString('en-US', { 
             year: 'numeric', 
             month: 'long', 
             day: 'numeric' 
@@ -321,8 +325,8 @@ const generateFAQ = (content: string) => {
               <a href={`/blog/${relatedPost.slug}/`}>
                 <h3>{relatedPost.data.title}</h3>
                 <p>{relatedPost.data.description}</p>
-                <time datetime={relatedPost.data.published.toISOString()}>
-                  {relatedPost.data.published.toLocaleDateString()}
+                <time datetime={relatedPost.data.published ? relatedPost.data.published.toISOString() : new Date().toISOString()}>
+                  {relatedPost.data.published ? relatedPost.data.published.toLocaleDateString() : new Date().toLocaleDateString()}
                 </time>
               </a>
             </article>

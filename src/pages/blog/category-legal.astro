@@ -1,0 +1,210 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "legal Articles - EWaste Kochi";
+const description = "Legal requirements, compliance guidelines, and regulatory information for e-waste management.";
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Blog", url: "/blog/" },
+  { name: "Categories", url: "/blog/categories/" },
+  { name: "legal", url: "/blog/category-legal/" }
+];
+
+// Get category blogs
+const categoryBlogs = [
+  {
+    title: "Compliance Guide for E-Waste Collection in Vyttila",
+    slug: "compliance-guide-for-e-waste-collection-in-vyttila-vyttila",
+    publishDate: "2026-04-21",
+    description: "undefined",
+    service: "e-waste-collection",
+    location: "vyttila"
+  },
+  {
+    title: "E-Waste Laws in Kochi: Complete Guide",
+    slug: "e-waste-laws-in-kochi-complete-guide-kochi-4",
+    publishDate: "2026-04-20",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "kochi"
+  },
+  {
+    title: "KSPCB Regulations for Data Destruction in Aluva",
+    slug: "kspcb-regulations-for-data-destruction-in-aluva-aluva",
+    publishDate: "2026-04-17",
+    description: "undefined",
+    service: "data-destruction",
+    location: "aluva"
+  },
+  {
+    title: "Legal Requirements for Printer Recycling in North Paravur",
+    slug: "legal-requirements-for-printer-recycling-in-north-paravur-north-paravur-1",
+    publishDate: "2026-04-15",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "north-paravur"
+  },
+  {
+    title: "Legal Requirements for Phone Buyback in Kalamassery",
+    slug: "legal-requirements-for-phone-buyback-in-kalamassery-kalamassery",
+    publishDate: "2026-04-13",
+    description: "undefined",
+    service: "phone-buyback",
+    location: "kalamassery"
+  },
+  {
+    title: "E-Waste Laws in Kalamassery: Complete Guide",
+    slug: "e-waste-laws-in-kalamassery-complete-guide-kalamassery-4",
+    publishDate: "2026-04-12",
+    description: "undefined",
+    service: "laptop-buyback",
+    location: "kalamassery"
+  },
+  {
+    title: "Compliance Guide for Monitor Recycling in Edappally",
+    slug: "compliance-guide-for-monitor-recycling-in-edappally-edappally",
+    publishDate: "2026-04-09",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "edappally"
+  },
+  {
+    title: "Legal Requirements for Battery Recycling in Kalamassery",
+    slug: "legal-requirements-for-battery-recycling-in-kalamassery-kalamassery-1",
+    publishDate: "2026-04-08",
+    description: "undefined",
+    service: "battery-recycling",
+    location: "kalamassery"
+  },
+  {
+    title: "E-Waste Laws in North Paravur: Complete Guide",
+    slug: "e-waste-laws-in-north-paravur-complete-guide-north-paravur-6",
+    publishDate: "2026-04-08",
+    description: "undefined",
+    service: "printer-recycling",
+    location: "north-paravur"
+  },
+  {
+    title: "KSPCB Regulations for Phone Buyback in Ernakulam",
+    slug: "kspcb-regulations-for-phone-buyback-in-ernakulam-ernakulam-1",
+    publishDate: "2026-04-07",
+    description: "undefined",
+    service: "phone-buyback",
+    location: "ernakulam"
+  }
+];
+
+// Get related categories
+const relatedCategories = [
+  {
+    name: "how-to",
+    slug: "how-to",
+    count: 136,
+    url: "/blog/category-how-to/"
+  },
+  {
+    name: "troubleshooting",
+    slug: "troubleshooting",
+    count: 113,
+    url: "/blog/category-troubleshooting/"
+  },
+  {
+    name: "seasonal",
+    slug: "seasonal",
+    count: 125,
+    url: "/blog/category-seasonal/"
+  },
+  {
+    name: "benefits",
+    slug: "benefits",
+    count: 120,
+    url: "/blog/category-benefits/"
+  },
+  {
+    name: "business",
+    slug: "business",
+    count: 146,
+    url: "/blog/category-business/"
+  }
+];
+---
+
+<BaseLayout title={title} description={description} pageType="website" breadcrumbs={breadcrumbs}>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">legal</h1>
+      <p class="text-xl text-gray-700 leading-relaxed mb-4">
+        Legal requirements, compliance guidelines, and regulatory information for e-waste management.
+      </p>
+      <div class="bg-amber-50 p-4 rounded-lg">
+        <p class="text-amber-800 font-medium">
+          <span class="font-bold">{categoryBlogs.length}</span> articles in this category
+        </p>
+      </div>
+    </header>
+
+    <section class="blog-list mb-12">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Recent Articles</h2>
+      <div class="space-y-6">
+        {categoryBlogs.map(blog => (
+          <article class="blog-card bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-sm text-gray-500">
+                {new Date(blog.publishDate).toLocaleDateString('en-IN', { 
+                  year: 'numeric', 
+                  month: 'long', 
+                  day: 'numeric' 
+                })}
+              </span>
+              <div class="flex gap-2">
+                <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
+                  {blog.service}
+                </span>
+                <span class="px-2 py-1 bg-green-100 text-green-800 rounded text-xs">
+                  {blog.location}
+                </span>
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700">
+                {blog.title}
+              </a>
+            </h3>
+            <p class="text-gray-700 mb-4">{blog.description}</p>
+            <a 
+              href={`/blog/${blog.slug}/`} 
+              class="text-amber-600 hover:text-amber-700 font-medium"
+            >
+              Read more
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="related-categories">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Categories</h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        {relatedCategories.map(category => (
+          <a 
+            href={category.url} 
+            class="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            <h3 class="font-semibold text-gray-900 mb-2">{category.name}</h3>
+            <p class="text-sm text-gray-600">{category.count} articles</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .blog-card {
+      transition: all 0.3s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</BaseLayout>

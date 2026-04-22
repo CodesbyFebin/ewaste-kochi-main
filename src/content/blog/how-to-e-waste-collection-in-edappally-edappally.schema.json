@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to e-waste collection in Edappally",
+  "description": "Looking for reliable e-waste collection in Edappally? This comprehensive guide covers everything you need to know about e-waste management in Edappally, includi...",
+  "image": "https://www.ewastekochi.com/images/blog/how-to-e-waste-collection-in-edappally-edappally.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2026-04-05",
+  "dateModified": "2026-04-05",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/how-to-e-waste-collection-in-edappally-edappally/"
+  },
+  "articleSection": "collection",
+  "keywords": "E-Waste Collection, Edappally, e-waste pickup, electronic waste, recycling collection",
+  "wordCount": 1611,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "E-Waste Collection"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Edappally",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Edappally",
+      "addressRegion": "Kerala",
+      "postalCode": "682024",
+      "addressCountry": "IN"
+    }
+  }
+}

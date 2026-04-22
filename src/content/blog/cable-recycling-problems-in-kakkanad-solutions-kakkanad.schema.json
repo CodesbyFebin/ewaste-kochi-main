@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Cable Recycling Problems in Kakkanad: Solutions",
+  "description": "Kakkanad residents and businesses often wonder about proper Nokia disposal. Our detailed guide explains cable recycling services available in Kakkanad, with exp...",
+  "image": "https://www.ewastekochi.com/images/blog/cable-recycling-problems-in-kakkanad-solutions-kakkanad.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-05-26",
+  "dateModified": "2025-05-26",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/cable-recycling-problems-in-kakkanad-solutions-kakkanad/"
+  },
+  "articleSection": "recycling",
+  "keywords": "Cable Recycling, Kakkanad, wire recycling, copper cables, electronic cables",
+  "wordCount": 1537,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Cable Recycling"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Kakkanad",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kakkanad",
+      "addressRegion": "Kerala",
+      "postalCode": "682030",
+      "addressCountry": "IN"
+    }
+  }
+}

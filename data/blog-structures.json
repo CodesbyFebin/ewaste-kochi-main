@@ -1,0 +1,259 @@
+{
+  "locations": [
+    {
+      "name": "Kochi",
+      "slug": "kochi",
+      "pincode": "682001",
+      "coordinates": { "lat": 9.9312, "lng": 76.2673 },
+      "landmarks": ["Marine Drive", "MG Road", "Fort Kochi", "Vyttila"],
+      "businessParks": ["Infopark", "SmartCity", "Kakkanad IT Park"],
+      "population": "2.1M"
+    },
+    {
+      "name": "Ernakulam",
+      "slug": "ernakulam", 
+      "pincode": "682016",
+      "coordinates": { "lat": 9.9846, "lng": 76.2846 },
+      "landmarks": ["North Railway Station", "South Railway Station", "Marine Drive"],
+      "businessParks": ["Kakkanad", "Edappally"],
+      "population": "1.8M"
+    },
+    {
+      "name": "Kakkanad",
+      "slug": "kakkanad",
+      "pincode": "682030",
+      "coordinates": { "lat": 10.0168, "lng": 76.3418 },
+      "landmarks": ["Infopark", "SmartCity", "Civil Station"],
+      "businessParks": ["Infopark Phase 1", "Infopark Phase 2", "SmartCity"],
+      "population": "850K"
+    },
+    {
+      "name": "Aluva",
+      "slug": "aluva",
+      "pincode": "683101",
+      "coordinates": { "lat": 10.1085, "lng": 76.3585 },
+      "landmarks": ["Aluva Railway Station", "Periyar River", "Siva Temple"],
+      "businessParks": ["Aluva Industrial Estate"],
+      "population": "650K"
+    },
+    {
+      "name": "Vyttila",
+      "slug": "vyttila",
+      "pincode": "682019",
+      "coordinates": { "lat": 9.9784, "lng": 76.3076 },
+      "landmarks": ["Mobility Hub", "Kochi Bypass", "Vyttila Junction"],
+      "businessParks": ["Vyttila Commercial Complex"],
+      "population": "420K"
+    },
+    {
+      "name": "Edappally",
+      "slug": "edappally",
+      "pincode": "682024",
+      "coordinates": { "lat": 10.0252, "lng": 76.3127 },
+      "landmarks": ["Lulu Mall", "Edappally Church", "Metro Station"],
+      "businessParks": ["Edappally Business Park"],
+      "population": "380K"
+    },
+    {
+      "name": "North Paravur",
+      "slug": "north-paravur",
+      "pincode": "683513",
+      "coordinates": { "lat": 10.1448, "lng": 76.2291 },
+      "landmarks": ["Paravur Railway Station", "Moothakunnam"],
+      "businessParks": ["Paravur Industrial Area"],
+      "population": "310K"
+    },
+    {
+      "name": "Angamaly",
+      "slug": "angamaly",
+      "pincode": "683572",
+      "coordinates": { "lat": 10.2139, "lng": 76.3837 },
+      "landmarks": ["Airport Road", "Angamaly Railway Station"],
+      "businessParks": ["Airport Industrial Estate"],
+      "population": "290K"
+    },
+    {
+      "name": "Thrippunithura",
+      "slug": "thrippunithura",
+      "pincode": "682301",
+      "coordinates": { "lat": 9.9392, "lng": 76.4567 },
+      "landmarks": ["Hill Palace", "Sree Poornathrayeesa Temple"],
+      "businessParks": ["Thrippunithura Commercial Area"],
+      "population": "270K"
+    },
+    {
+      "name": "Kalamassery",
+      "slug": "kalamassery",
+      "pincode": "683104",
+      "coordinates": { "lat": 10.0542, "lng": 76.3284 },
+      "landmarks": ["Cochin University", "Kalamassery Railway Station"],
+      "businessParks": ["Kalamassery IT Park"],
+      "population": "250K"
+    }
+  ],
+  "services": [
+    {
+      "name": "E-Waste Collection",
+      "slug": "e-waste-collection",
+      "category": "collection",
+      "keywords": ["e-waste pickup", "electronic waste", "recycling collection"],
+      "priceRange": "Free to Rs.500",
+      "timeRequired": "30-60 minutes"
+    },
+    {
+      "name": "Laptop Buyback",
+      "slug": "laptop-buyback",
+      "category": "buyback",
+      "keywords": ["sell laptop", "laptop recycling", "used laptop price"],
+      "priceRange": "Rs.5,000 - Rs.50,000",
+      "timeRequired": "15 minutes"
+    },
+    {
+      "name": "Phone Buyback",
+      "slug": "phone-buyback",
+      "category": "buyback", 
+      "keywords": ["sell phone", "mobile recycling", "used phone price"],
+      "priceRange": "Rs.1,000 - Rs.25,000",
+      "timeRequired": "10 minutes"
+    },
+    {
+      "name": "Data Destruction",
+      "slug": "data-destruction",
+      "category": "security",
+      "keywords": ["hard drive shredding", "data wiping", "secure disposal"],
+      "priceRange": "Rs.500 - Rs.5,000",
+      "timeRequired": "1-2 hours"
+    },
+    {
+      "name": "IT Asset Disposition",
+      "slug": "itad",
+      "category": "corporate",
+      "keywords": ["ITAD services", "corporate e-waste", "asset disposal"],
+      "priceRange": "Custom pricing",
+      "timeRequired": "2-4 hours"
+    },
+    {
+      "name": "Battery Recycling",
+      "slug": "battery-recycling",
+      "category": "recycling",
+      "keywords": ["battery disposal", "lithium recycling", "UPS batteries"],
+      "priceRange": "Rs.50 - Rs.500",
+      "timeRequired": "20 minutes"
+    },
+    {
+      "name": "Server Recycling",
+      "slug": "server-recycling",
+      "category": "corporate",
+      "keywords": ["server disposal", "data center recycling", "rack disposal"],
+      "priceRange": "Rs.2,000 - Rs.20,000",
+      "timeRequired": "2-3 hours"
+    },
+    {
+      "name": "Monitor Recycling",
+      "slug": "monitor-recycling",
+      "category": "recycling",
+      "keywords": ["LCD recycling", "screen disposal", "monitor pickup"],
+      "priceRange": "Rs.100 - Rs.1,000",
+      "timeRequired": "30 minutes"
+    },
+    {
+      "name": "Printer Recycling",
+      "slug": "printer-recycling",
+      "category": "recycling",
+      "keywords": ["printer disposal", "cartridge recycling", "office equipment"],
+      "priceRange": "Rs.200 - Rs.2,000",
+      "timeRequired": "30 minutes"
+    },
+    {
+      "name": "Cable Recycling",
+      "slug": "cable-recycling",
+      "category": "recycling",
+      "keywords": ["wire recycling", "copper cables", "electronic cables"],
+      "priceRange": "Rs.10 - Rs.500",
+      "timeRequired": "15 minutes"
+    }
+  ],
+  "topics": [
+    {
+      "category": "how-to",
+      "templates": [
+        "How to {action} in {location}",
+        "Complete Guide to {service} in {location}",
+        "{service} Process in {location}: Step by Step",
+        "Best Way to {action} in {location} 2026"
+      ]
+    },
+    {
+      "category": "pricing",
+      "templates": [
+        "{service} Prices in {location} 2026",
+        "How Much Does {service} Cost in {location}?",
+        "{service} Price Guide for {location}",
+        "Affordable {service} in {location}: Complete Pricing"
+      ]
+    },
+    {
+      "category": "comparison",
+      "templates": [
+        "{service} vs {alternative} in {location}",
+        "Best {service} Providers in {location}: Comparison",
+        "{service} Options in {location}: Which to Choose?",
+        "{brand} vs {brand2} {service} in {location}"
+      ]
+    },
+    {
+      "category": "legal",
+      "templates": [
+        "E-Waste Laws in {location}: Complete Guide",
+        "KSPCB Regulations for {service} in {location}",
+        "Legal Requirements for {service} in {location}",
+        "Compliance Guide for {service} in {location}"
+      ]
+    },
+    {
+      "category": "benefits",
+      "templates": [
+        "Benefits of {service} in {location}",
+        "Why Choose {service} in {location}?",
+        "Environmental Impact of {service} in {location}",
+        "Economic Benefits of {service} in {location}"
+      ]
+    },
+    {
+      "category": "troubleshooting",
+      "templates": [
+        "Common {service} Issues in {location}",
+        "{service} Problems in {location}: Solutions",
+        "Troubleshooting {service} in {location}",
+        "{service} Challenges in {location}: Expert Tips"
+      ]
+    },
+    {
+      "category": "seasonal",
+      "templates": [
+        "Best Time for {service} in {location}",
+        "{service} During {season} in {location}",
+        "Seasonal {service} Guide for {location}",
+        "{service} Trends in {location} {year}"
+      ]
+    },
+    {
+      "category": "business",
+      "templates": [
+        "{service} for Businesses in {location}",
+        "Corporate {service} Solutions in {location}",
+        "B2B {service} Services in {location}",
+        "Enterprise {service} in {location}"
+      ]
+    }
+  ],
+  "brands": [
+    "Dell", "HP", "Lenovo", "Apple", "Samsung", "OnePlus", "Xiaomi", "Vivo", "Oppo", "Realme",
+    "Asus", "Acer", "MSI", "Razer", "LG", "Sony", "Microsoft", "Google", "Nokia", "Motorola",
+    "Huawei", "Honor", "Tecno", "Infinix", "Micromax", "Lava", "Xiaomi", "Redmi", "Poco"
+  ],
+  "contentTypes": [
+    "guide", "tutorial", "comparison", "review", "checklist", "faq", "case-study", "tips",
+    "mistakes", "benefits", "process", "requirements", "solutions", "trends", "analysis"
+  ]
+}

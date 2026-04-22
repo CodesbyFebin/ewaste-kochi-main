@@ -1,0 +1,272 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Kochi Articles - EWaste Kochi";
+const description = "E-waste management guides and articles for Kochi. Find local recycling services, pickup options, and environmental solutions in Kochi.";
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Blog", url: "/blog/" },
+  { name: "Locations", url: "/blog/locations/" },
+  { name: "Kochi", url: "/blog/location-kochi/" }
+];
+
+// Location blogs
+const locationBlogs = [
+  {
+    title: "E-Waste Laws in Kochi: Complete Guide",
+    slug: "e-waste-laws-in-kochi-complete-guide-kochi-4",
+    publishDate: "2026-04-20",
+    description: "",
+    service: "monitor-recycling",
+    topic: "legal"
+  },
+  {
+    title: "Best Way to monitor recycle in Kochi 2026",
+    slug: "best-way-to-monitor-recycle-in-kochi-2026-kochi-1",
+    publishDate: "2026-04-11",
+    description: "",
+    service: "monitor-recycling",
+    topic: "how-to"
+  },
+  {
+    title: "Data Destruction Options in Kochi: Which to Choose?",
+    slug: "data-destruction-options-in-kochi-which-to-choose-kochi",
+    publishDate: "2026-04-01",
+    description: "",
+    service: "data-destruction",
+    topic: "comparison"
+  },
+  {
+    title: "Best Data Destruction Providers in Kochi: Comparison",
+    slug: "best-data-destruction-providers-in-kochi-comparison-kochi",
+    publishDate: "2026-03-30",
+    description: "",
+    service: "data-destruction",
+    topic: "comparison"
+  },
+  {
+    title: "Laptop Buyback Price Guide for Kochi",
+    slug: "laptop-buyback-price-guide-for-kochi-kochi",
+    publishDate: "2026-03-30",
+    description: "",
+    service: "laptop-buyback",
+    topic: "pricing"
+  },
+  {
+    title: "Phone Buyback vs Mobile Phone Recycling in Kochi",
+    slug: "phone-buyback-vs-mobile-phone-recycling-in-kochi-kochi",
+    publishDate: "2026-03-28",
+    description: "",
+    service: "phone-buyback",
+    topic: "comparison"
+  },
+  {
+    title: "Enterprise Battery Recycling in Kochi",
+    slug: "enterprise-battery-recycling-in-kochi-kochi-1",
+    publishDate: "2026-03-27",
+    description: "",
+    service: "battery-recycling",
+    topic: "business"
+  },
+  {
+    title: "Cable Recycling Problems in Kochi: Solutions",
+    slug: "cable-recycling-problems-in-kochi-solutions-kochi",
+    publishDate: "2026-03-20",
+    description: "",
+    service: "cable-recycling",
+    topic: "troubleshooting"
+  },
+  {
+    title: "KSPCB Regulations for Battery Recycling in Kochi",
+    slug: "kspcb-regulations-for-battery-recycling-in-kochi-kochi",
+    publishDate: "2026-03-18",
+    description: "",
+    service: "battery-recycling",
+    topic: "legal"
+  },
+  {
+    title: "Affordable Cable Recycling in Kochi: Complete Pricing",
+    slug: "affordable-cable-recycling-in-kochi-complete-pricing-kochi",
+    publishDate: "2026-03-05",
+    description: "",
+    service: "cable-recycling",
+    topic: "pricing"
+  },
+  {
+    title: "Battery Recycling Trends in Kochi 2026",
+    slug: "battery-recycling-trends-in-kochi-2026-kochi-1",
+    publishDate: "2026-03-05",
+    description: "",
+    service: "battery-recycling",
+    topic: "seasonal"
+  },
+  {
+    title: "B2B Server Recycling Services in Kochi",
+    slug: "b2b-server-recycling-services-in-kochi-kochi",
+    publishDate: "2026-02-27",
+    description: "",
+    service: "server-recycling",
+    topic: "business"
+  },
+  {
+    title: "vs Infinix Battery Recycling in Kochi",
+    slug: "vs-infinix-battery-recycling-in-kochi-kochi",
+    publishDate: "2026-02-20",
+    description: "",
+    service: "battery-recycling",
+    topic: "comparison"
+  },
+  {
+    title: "Phone Buyback for Businesses in Kochi",
+    slug: "phone-buyback-for-businesses-in-kochi-kochi-1",
+    publishDate: "2026-02-14",
+    description: "",
+    service: "phone-buyback",
+    topic: "business"
+  },
+  {
+    title: "Phone Buyback Process in Kochi: Step by Step",
+    slug: "phone-buyback-process-in-kochi-step-by-step-kochi",
+    publishDate: "2026-02-11",
+    description: "",
+    service: "phone-buyback",
+    topic: "how-to"
+  },
+  {
+    title: "Economic Benefits of Server Recycling in Kochi",
+    slug: "economic-benefits-of-server-recycling-in-kochi-kochi",
+    publishDate: "2026-02-01",
+    description: "",
+    service: "server-recycling",
+    topic: "benefits"
+  },
+  {
+    title: "Data Destruction Trends in Kochi 2026",
+    slug: "data-destruction-trends-in-kochi-2026-kochi",
+    publishDate: "2026-02-01",
+    description: "",
+    service: "data-destruction",
+    topic: "seasonal"
+  },
+  {
+    title: "How to battery recycle in Kochi",
+    slug: "how-to-battery-recycle-in-kochi-kochi",
+    publishDate: "2026-01-27",
+    description: "",
+    service: "battery-recycling",
+    topic: "how-to"
+  },
+  {
+    title: "E-Waste Collection During Spring in Kochi",
+    slug: "e-waste-collection-during-spring-in-kochi-kochi",
+    publishDate: "2026-01-23",
+    description: "",
+    service: "e-waste-collection",
+    topic: "seasonal"
+  },
+  {
+    title: "Compliance Guide for Printer Recycling in Kochi",
+    slug: "compliance-guide-for-printer-recycling-in-kochi-kochi",
+    publishDate: "2026-01-21",
+    description: "",
+    service: "printer-recycling",
+    topic: "legal"
+  }
+];
+
+// Location statistics
+const totalArticles = 107;
+const services = [...new Set(locationBlogs.map(blog => blog.service))];
+const topics = [...new Set(locationBlogs.map(blog => blog.topic))];
+---
+
+<BaseLayout title={title} description={description} pageType="website" breadcrumbs={breadcrumbs}>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Kochi Articles</h1>
+      <p class="text-xl text-gray-700 leading-relaxed mb-4">
+        E-waste management guides and articles for Kochi. Find local recycling services, 
+        pickup options, and environmental solutions in Kochi.
+      </p>
+      <div class="bg-green-50 p-4 rounded-lg">
+        <div class="grid grid-cols-3 gap-4">
+          <div>
+            <span class="font-bold text-green-800">{totalArticles}</span>
+            <span class="text-green-700"> articles</span>
+          </div>
+          <div>
+            <span class="font-bold text-green-800">{services.length}</span>
+            <span class="text-green-700"> services</span>
+          </div>
+          <div>
+            <span class="font-bold text-green-800">{topics.length}</span>
+            <span class="text-green-700"> topics</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="blog-list">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Recent Kochi Articles</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        {locationBlogs.map(blog => (
+          <article class="blog-card bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-sm text-gray-500">
+                {new Date(blog.publishDate).toLocaleDateString('en-IN', { 
+                  year: 'numeric', 
+                  month: 'short',
+                  day: 'numeric'
+                })}
+              </span>
+              <div class="flex gap-2">
+                <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
+                  {blog.service}
+                </span>
+                <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs">
+                  {blog.topic}
+                </span>
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700">
+                {blog.title}
+              </a>
+            </h3>
+            <p class="text-gray-700 mb-4">{blog.description}</p>
+            <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700 font-medium">
+              Read more
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="related-section mt-12">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Browse by Service</h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        {services.map(service => (
+          <a 
+            href={`/blog/service-${service}/`} 
+            class="block p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
+          >
+            <h3 class="font-semibold text-blue-800 mb-2">
+              {service.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
+            </h3>
+            <p class="text-blue-700 text-sm">aluva articles</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .blog-card {
+      transition: all 0.3s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</BaseLayout>

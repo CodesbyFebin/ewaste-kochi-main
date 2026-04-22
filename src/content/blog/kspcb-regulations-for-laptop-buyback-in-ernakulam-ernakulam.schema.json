@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "KSPCB Regulations for Laptop Buyback in Ernakulam",
+  "description": "In Ernakulam's growing tech landscape, responsible disposal matters. Learn about laptop buyback services, pricing structures, and environmental impact for Ernak...",
+  "image": "https://www.ewastekochi.com/images/blog/kspcb-regulations-for-laptop-buyback-in-ernakulam-ernakulam.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-09-03",
+  "dateModified": "2025-09-03",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/kspcb-regulations-for-laptop-buyback-in-ernakulam-ernakulam/"
+  },
+  "articleSection": "buyback",
+  "keywords": "Laptop Buyback, Ernakulam, sell laptop, laptop recycling, used laptop price",
+  "wordCount": 1384,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Laptop Buyback"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Ernakulam",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ernakulam",
+      "addressRegion": "Kerala",
+      "postalCode": "682016",
+      "addressCountry": "IN"
+    }
+  }
+}

@@ -10,63 +10,22 @@
         "company": {
           "type": "string"
         },
-        "position": {
+        "role": {
           "type": "string"
         },
         "content": {
           "type": "string"
         },
         "rating": {
-          "type": "number",
-          "minimum": 1,
-          "maximum": 5,
-          "default": 5
-        },
-        "avatar": {
-          "type": "string"
-        },
-        "location": {
-          "type": "string"
-        },
-        "service_type": {
-          "type": "string"
-        },
-        "verified": {
-          "type": "boolean",
-          "default": true
-        },
-        "featured": {
-          "type": "boolean",
-          "default": false
+          "type": "number"
         },
         "date": {
-          "anyOf": [
-            {
-              "type": "string",
-              "format": "date-time"
-            },
-            {
-              "type": "string",
-              "format": "date"
-            },
-            {
-              "type": "integer",
-              "format": "unix-time"
-            }
-          ]
-        },
-        "order": {
-          "type": "number",
-          "default": 0
+          "type": "string"
         },
         "$schema": {
           "type": "string"
         }
       },
-      "required": [
-        "name",
-        "content"
-      ],
       "additionalProperties": false
     }
   },

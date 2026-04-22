@@ -1,0 +1,272 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "E Waste Collection Articles - EWaste Kochi";
+const description = "Expert guides and articles on e waste collection in Kerala. Learn about pricing, process, and best practices for e waste collection.";
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Blog", url: "/blog/" },
+  { name: "Services", url: "/blog/services/" },
+  { name: "E Waste Collection", url: "/blog/service-e-waste-collection/" }
+];
+
+// Service blogs
+const serviceBlogs = [
+  {
+    title: "Compliance Guide for E-Waste Collection in Vyttila",
+    slug: "compliance-guide-for-e-waste-collection-in-vyttila-vyttila",
+    publishDate: "2026-04-21",
+    description: "",
+    location: "vyttila",
+    topic: "legal"
+  },
+  {
+    title: "Best Way to e-waste collection in Ernakulam 2026",
+    slug: "best-way-to-e-waste-collection-in-ernakulam-2026-ernakulam",
+    publishDate: "2026-04-19",
+    description: "",
+    location: "ernakulam",
+    topic: "how-to"
+  },
+  {
+    title: "Common E-Waste Collection Issues in Vyttila",
+    slug: "common-e-waste-collection-issues-in-vyttila-vyttila-1",
+    publishDate: "2026-04-18",
+    description: "",
+    location: "vyttila",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Environmental Impact of E-Waste Collection in Thrippunithura",
+    slug: "environmental-impact-of-e-waste-collection-in-thrippunithura-thrippunithura",
+    publishDate: "2026-04-16",
+    description: "",
+    location: "thrippunithura",
+    topic: "benefits"
+  },
+  {
+    title: "Corporate E-Waste Collection Solutions in Vyttila",
+    slug: "corporate-e-waste-collection-solutions-in-vyttila-vyttila",
+    publishDate: "2026-04-15",
+    description: "",
+    location: "vyttila",
+    topic: "business"
+  },
+  {
+    title: "Benefits of E-Waste Collection in Kalamassery",
+    slug: "benefits-of-e-waste-collection-in-kalamassery-kalamassery",
+    publishDate: "2026-04-12",
+    description: "",
+    location: "kalamassery",
+    topic: "benefits"
+  },
+  {
+    title: "Common E-Waste Collection Issues in Thrippunithura",
+    slug: "common-e-waste-collection-issues-in-thrippunithura-thrippunithura",
+    publishDate: "2026-04-11",
+    description: "",
+    location: "thrippunithura",
+    topic: "troubleshooting"
+  },
+  {
+    title: "E-Waste Collection for Businesses in Kalamassery",
+    slug: "e-waste-collection-for-businesses-in-kalamassery-kalamassery",
+    publishDate: "2026-04-06",
+    description: "",
+    location: "kalamassery",
+    topic: "business"
+  },
+  {
+    title: "How to e-waste collection in Edappally",
+    slug: "how-to-e-waste-collection-in-edappally-edappally",
+    publishDate: "2026-04-05",
+    description: "",
+    location: "edappally",
+    topic: "how-to"
+  },
+  {
+    title: "E-Waste Collection Price Guide for Ernakulam",
+    slug: "e-waste-collection-price-guide-for-ernakulam-ernakulam-2",
+    publishDate: "2026-03-31",
+    description: "",
+    location: "ernakulam",
+    topic: "pricing"
+  },
+  {
+    title: "vs Realme E-Waste Collection in Kalamassery",
+    slug: "vs-realme-e-waste-collection-in-kalamassery-kalamassery",
+    publishDate: "2026-03-31",
+    description: "",
+    location: "kalamassery",
+    topic: "comparison"
+  },
+  {
+    title: "Affordable E-Waste Collection in Vyttila: Complete Pricing",
+    slug: "affordable-e-waste-collection-in-vyttila-complete-pricing-vyttila",
+    publishDate: "2026-03-23",
+    description: "",
+    location: "vyttila",
+    topic: "pricing"
+  },
+  {
+    title: "E-Waste Collection Prices in Edappally 2026",
+    slug: "e-waste-collection-prices-in-edappally-2026-edappally-1",
+    publishDate: "2026-03-21",
+    description: "",
+    location: "edappally",
+    topic: "pricing"
+  },
+  {
+    title: "KSPCB Regulations for E-Waste Collection in Kalamassery",
+    slug: "kspcb-regulations-for-e-waste-collection-in-kalamassery-kalamassery-1",
+    publishDate: "2026-03-20",
+    description: "",
+    location: "kalamassery",
+    topic: "legal"
+  },
+  {
+    title: "E-Waste Collection Prices in Angamaly 2026",
+    slug: "e-waste-collection-prices-in-angamaly-2026-angamaly-1",
+    publishDate: "2026-03-17",
+    description: "",
+    location: "angamaly",
+    topic: "pricing"
+  },
+  {
+    title: "Common E-Waste Collection Issues in Vyttila",
+    slug: "common-e-waste-collection-issues-in-vyttila-vyttila",
+    publishDate: "2026-03-10",
+    description: "",
+    location: "vyttila",
+    topic: "troubleshooting"
+  },
+  {
+    title: "E-Waste Collection Prices in Edappally 2026",
+    slug: "e-waste-collection-prices-in-edappally-2026-edappally",
+    publishDate: "2026-03-04",
+    description: "",
+    location: "edappally",
+    topic: "pricing"
+  },
+  {
+    title: "KSPCB Regulations for E-Waste Collection in Kalamassery",
+    slug: "kspcb-regulations-for-e-waste-collection-in-kalamassery-kalamassery",
+    publishDate: "2026-03-03",
+    description: "",
+    location: "kalamassery",
+    topic: "legal"
+  },
+  {
+    title: "Why Choose E-Waste Collection in Aluva?",
+    slug: "why-choose-e-waste-collection-in-aluva-aluva-1",
+    publishDate: "2026-02-26",
+    description: "",
+    location: "aluva",
+    topic: "benefits"
+  },
+  {
+    title: "Common E-Waste Collection Issues in Kakkanad",
+    slug: "common-e-waste-collection-issues-in-kakkanad-kakkanad",
+    publishDate: "2026-02-25",
+    description: "",
+    location: "kakkanad",
+    topic: "troubleshooting"
+  }
+];
+
+// Service statistics
+const totalArticles = 99;
+const locations = [...new Set(serviceBlogs.map(blog => blog.location))];
+const topics = [...new Set(serviceBlogs.map(blog => blog.topic))];
+---
+
+<BaseLayout title={title} description={description} pageType="website" breadcrumbs={breadcrumbs}>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">E Waste Collection Articles</h1>
+      <p class="text-xl text-gray-700 leading-relaxed mb-4">
+        Expert guides and articles on e waste collection in Kerala. 
+        Learn about pricing, process, and best practices for e waste collection.
+      </p>
+      <div class="bg-blue-50 p-4 rounded-lg">
+        <div class="grid grid-cols-3 gap-4">
+          <div>
+            <span class="font-bold text-blue-800">{totalArticles}</span>
+            <span class="text-blue-700"> articles</span>
+          </div>
+          <div>
+            <span class="font-bold text-blue-800">{locations.length}</span>
+            <span class="text-blue-700"> locations</span>
+          </div>
+          <div>
+            <span class="font-bold text-blue-800">{topics.length}</span>
+            <span class="text-blue-700"> topics</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="blog-list">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Recent E Waste Collection Articles</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        {serviceBlogs.map(blog => (
+          <article class="blog-card bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-sm text-gray-500">
+                {new Date(blog.publishDate).toLocaleDateString('en-IN', { 
+                  year: 'numeric', 
+                  month: 'short',
+                  day: 'numeric'
+                })}
+              </span>
+              <div class="flex gap-2">
+                <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs">
+                  {blog.topic}
+                </span>
+                <span class="px-2 py-1 bg-green-100 text-green-800 rounded text-xs">
+                  {blog.location}
+                </span>
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700">
+                {blog.title}
+              </a>
+            </h3>
+            <p class="text-gray-700 mb-4">{blog.description}</p>
+            <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700 font-medium">
+              Read more
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="related-section mt-12">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Browse by Location</h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        {locations.map(location => (
+          <a 
+            href={`/blog/location-${location}/`} 
+            class="block p-4 bg-green-50 rounded-lg hover:bg-green-100 transition-colors"
+          >
+            <h3 class="font-semibold text-green-800 mb-2">
+              {location.charAt(0).toUpperCase() + location.slice(1)}
+            </h3>
+            <p class="text-green-700 text-sm">battery-recycling articles</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .blog-card {
+      transition: all 0.3s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</BaseLayout>

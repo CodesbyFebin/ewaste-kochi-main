@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Cable Recycling Options in Aluva: Which to Choose?",
+  "description": "Proper e-waste management is crucial for Aluva's environmental sustainability. This guide explores cable recycling options, legal requirements, and trusted serv...",
+  "image": "https://www.ewastekochi.com/images/blog/cable-recycling-options-in-aluva-which-to-choose-aluva.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-11-12",
+  "dateModified": "2025-11-12",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/cable-recycling-options-in-aluva-which-to-choose-aluva/"
+  },
+  "articleSection": "recycling",
+  "keywords": "Cable Recycling, Aluva, wire recycling, copper cables, electronic cables",
+  "wordCount": 1335,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Cable Recycling"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Aluva",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Aluva",
+      "addressRegion": "Kerala",
+      "postalCode": "683101",
+      "addressCountry": "IN"
+    }
+  }
+}

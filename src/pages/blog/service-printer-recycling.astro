@@ -1,0 +1,272 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Printer Recycling Articles - EWaste Kochi";
+const description = "Expert guides and articles on printer recycling in Kerala. Learn about pricing, process, and best practices for printer recycling.";
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Blog", url: "/blog/" },
+  { name: "Services", url: "/blog/services/" },
+  { name: "Printer Recycling", url: "/blog/service-printer-recycling/" }
+];
+
+// Service blogs
+const serviceBlogs = [
+  {
+    title: "How to printer recycle in Edappally",
+    slug: "how-to-printer-recycle-in-edappally-edappally",
+    publishDate: "2026-04-15",
+    description: "",
+    location: "edappally",
+    topic: "how-to"
+  },
+  {
+    title: "Legal Requirements for Printer Recycling in North Paravur",
+    slug: "legal-requirements-for-printer-recycling-in-north-paravur-north-paravur-1",
+    publishDate: "2026-04-15",
+    description: "",
+    location: "north-paravur",
+    topic: "legal"
+  },
+  {
+    title: "Printer Recycling Challenges in Aluva: Expert Tips",
+    slug: "printer-recycling-challenges-in-aluva-expert-tips-aluva",
+    publishDate: "2026-04-10",
+    description: "",
+    location: "aluva",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Printer Recycling Process in Vyttila: Step by Step",
+    slug: "printer-recycling-process-in-vyttila-step-by-step-vyttila-1",
+    publishDate: "2026-04-08",
+    description: "",
+    location: "vyttila",
+    topic: "how-to"
+  },
+  {
+    title: "E-Waste Laws in North Paravur: Complete Guide",
+    slug: "e-waste-laws-in-north-paravur-complete-guide-north-paravur-6",
+    publishDate: "2026-04-08",
+    description: "",
+    location: "north-paravur",
+    topic: "legal"
+  },
+  {
+    title: "Affordable Printer Recycling in Kalamassery: Complete Pricing",
+    slug: "affordable-printer-recycling-in-kalamassery-complete-pricing-kalamassery",
+    publishDate: "2026-04-04",
+    description: "",
+    location: "kalamassery",
+    topic: "pricing"
+  },
+  {
+    title: "Legal Requirements for Printer Recycling in Vyttila",
+    slug: "legal-requirements-for-printer-recycling-in-vyttila-vyttila",
+    publishDate: "2026-03-28",
+    description: "",
+    location: "vyttila",
+    topic: "legal"
+  },
+  {
+    title: "Best Printer Recycling Providers in Ernakulam: Comparison",
+    slug: "best-printer-recycling-providers-in-ernakulam-comparison-ernakulam",
+    publishDate: "2026-03-25",
+    description: "",
+    location: "ernakulam",
+    topic: "comparison"
+  },
+  {
+    title: "Printer Recycling Price Guide for Aluva",
+    slug: "printer-recycling-price-guide-for-aluva-aluva",
+    publishDate: "2026-03-23",
+    description: "",
+    location: "aluva",
+    topic: "pricing"
+  },
+  {
+    title: "Troubleshooting Printer Recycling in North Paravur",
+    slug: "troubleshooting-printer-recycling-in-north-paravur-north-paravur-1",
+    publishDate: "2026-03-22",
+    description: "",
+    location: "north-paravur",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Seasonal Printer Recycling Guide for Vyttila",
+    slug: "seasonal-printer-recycling-guide-for-vyttila-vyttila",
+    publishDate: "2026-03-21",
+    description: "",
+    location: "vyttila",
+    topic: "seasonal"
+  },
+  {
+    title: "Corporate Printer Recycling Solutions in North Paravur",
+    slug: "corporate-printer-recycling-solutions-in-north-paravur-north-paravur",
+    publishDate: "2026-03-19",
+    description: "",
+    location: "north-paravur",
+    topic: "business"
+  },
+  {
+    title: "Complete Guide to Printer Recycling in Edappally",
+    slug: "complete-guide-to-printer-recycling-in-edappally-edappally",
+    publishDate: "2026-03-17",
+    description: "",
+    location: "edappally",
+    topic: "how-to"
+  },
+  {
+    title: "Printer Recycling vs Office Equipment Recycling in Kakkanad",
+    slug: "printer-recycling-vs-office-equipment-recycling-in-kakkanad-kakkanad",
+    publishDate: "2026-03-14",
+    description: "",
+    location: "kakkanad",
+    topic: "comparison"
+  },
+  {
+    title: "Environmental Impact of Printer Recycling in Vyttila",
+    slug: "environmental-impact-of-printer-recycling-in-vyttila-vyttila",
+    publishDate: "2026-03-13",
+    description: "",
+    location: "vyttila",
+    topic: "benefits"
+  },
+  {
+    title: "Best Time for Printer Recycling in Edappally",
+    slug: "best-time-for-printer-recycling-in-edappally-edappally-1",
+    publishDate: "2026-03-02",
+    description: "",
+    location: "edappally",
+    topic: "seasonal"
+  },
+  {
+    title: "Best Way to printer recycle in Vyttila 2026",
+    slug: "best-way-to-printer-recycle-in-vyttila-2026-vyttila-2",
+    publishDate: "2026-02-28",
+    description: "",
+    location: "vyttila",
+    topic: "how-to"
+  },
+  {
+    title: "Seasonal Printer Recycling Guide for Kalamassery",
+    slug: "seasonal-printer-recycling-guide-for-kalamassery-kalamassery",
+    publishDate: "2026-02-26",
+    description: "",
+    location: "kalamassery",
+    topic: "seasonal"
+  },
+  {
+    title: "Printer Recycling During Summer in Kalamassery",
+    slug: "printer-recycling-during-summer-in-kalamassery-kalamassery",
+    publishDate: "2026-02-24",
+    description: "",
+    location: "kalamassery",
+    topic: "seasonal"
+  },
+  {
+    title: "E-Waste Laws in Kakkanad: Complete Guide",
+    slug: "e-waste-laws-in-kakkanad-complete-guide-kakkanad-2",
+    publishDate: "2026-02-24",
+    description: "",
+    location: "kakkanad",
+    topic: "legal"
+  }
+];
+
+// Service statistics
+const totalArticles = 113;
+const locations = [...new Set(serviceBlogs.map(blog => blog.location))];
+const topics = [...new Set(serviceBlogs.map(blog => blog.topic))];
+---
+
+<BaseLayout title={title} description={description} pageType="website" breadcrumbs={breadcrumbs}>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Printer Recycling Articles</h1>
+      <p class="text-xl text-gray-700 leading-relaxed mb-4">
+        Expert guides and articles on printer recycling in Kerala. 
+        Learn about pricing, process, and best practices for printer recycling.
+      </p>
+      <div class="bg-blue-50 p-4 rounded-lg">
+        <div class="grid grid-cols-3 gap-4">
+          <div>
+            <span class="font-bold text-blue-800">{totalArticles}</span>
+            <span class="text-blue-700"> articles</span>
+          </div>
+          <div>
+            <span class="font-bold text-blue-800">{locations.length}</span>
+            <span class="text-blue-700"> locations</span>
+          </div>
+          <div>
+            <span class="font-bold text-blue-800">{topics.length}</span>
+            <span class="text-blue-700"> topics</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="blog-list">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Recent Printer Recycling Articles</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        {serviceBlogs.map(blog => (
+          <article class="blog-card bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-sm text-gray-500">
+                {new Date(blog.publishDate).toLocaleDateString('en-IN', { 
+                  year: 'numeric', 
+                  month: 'short',
+                  day: 'numeric'
+                })}
+              </span>
+              <div class="flex gap-2">
+                <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs">
+                  {blog.topic}
+                </span>
+                <span class="px-2 py-1 bg-green-100 text-green-800 rounded text-xs">
+                  {blog.location}
+                </span>
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700">
+                {blog.title}
+              </a>
+            </h3>
+            <p class="text-gray-700 mb-4">{blog.description}</p>
+            <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700 font-medium">
+              Read more
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="related-section mt-12">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Browse by Location</h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        {locations.map(location => (
+          <a 
+            href={`/blog/location-${location}/`} 
+            class="block p-4 bg-green-50 rounded-lg hover:bg-green-100 transition-colors"
+          >
+            <h3 class="font-semibold text-green-800 mb-2">
+              {location.charAt(0).toUpperCase() + location.slice(1)}
+            </h3>
+            <p class="text-green-700 text-sm">battery-recycling articles</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .blog-card {
+      transition: all 0.3s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</BaseLayout>

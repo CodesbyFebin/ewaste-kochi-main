@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Battery Recycling Options in Kochi: Which to Choose?",
+  "description": "Kochi residents and businesses often wonder about proper disposal. Our detailed guide explains battery recycling services available in Kochi, with expert insigh...",
+  "image": "https://www.ewastekochi.com/images/blog/battery-recycling-options-in-kochi-which-to-choose-kochi.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-05-02",
+  "dateModified": "2025-05-02",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/battery-recycling-options-in-kochi-which-to-choose-kochi/"
+  },
+  "articleSection": "recycling",
+  "keywords": "Battery Recycling, Kochi, battery disposal, lithium recycling, UPS batteries",
+  "wordCount": 1920,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Battery Recycling"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Kochi",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kochi",
+      "addressRegion": "Kerala",
+      "postalCode": "682001",
+      "addressCountry": "IN"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Motorola vs Microsoft IT Asset Disposition in Aluva",
+  "description": "Aluva residents and businesses often wonder about proper Motorola disposal. Our detailed guide explains it asset disposition services available in Aluva, with e...",
+  "image": "https://www.ewastekochi.com/images/blog/motorola-vs-microsoft-it-asset-disposition-in-aluva-aluva.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-09-09",
+  "dateModified": "2025-09-09",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/motorola-vs-microsoft-it-asset-disposition-in-aluva-aluva/"
+  },
+  "articleSection": "corporate",
+  "keywords": "IT Asset Disposition, Aluva, ITAD services, corporate e-waste, asset disposal",
+  "wordCount": 1464,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "IT Asset Disposition"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Aluva",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Aluva",
+      "addressRegion": "Kerala",
+      "postalCode": "683101",
+      "addressCountry": "IN"
+    }
+  }
+}

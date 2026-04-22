@@ -1,0 +1,239 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "monitor-recycling Articles - EWaste Kochi";
+const description = "Display recycling, screen disposal, and monitor e-waste management.";
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Blog", url: "/blog/" },
+  { name: "monitor-recycling", url: "/blog/tag-monitor-recycling/" }
+];
+
+// Get tag blogs
+const tagBlogs = [
+  {
+    title: "E-Waste Laws in Kochi: Complete Guide",
+    slug: "e-waste-laws-in-kochi-complete-guide-kochi-4",
+    publishDate: "2026-04-20",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "kochi",
+    topic: "legal"
+  },
+  {
+    title: "Best Way to monitor recycle in Kochi 2026",
+    slug: "best-way-to-monitor-recycle-in-kochi-2026-kochi-1",
+    publishDate: "2026-04-11",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "kochi",
+    topic: "how-to"
+  },
+  {
+    title: "Compliance Guide for Monitor Recycling in Edappally",
+    slug: "compliance-guide-for-monitor-recycling-in-edappally-edappally",
+    publishDate: "2026-04-09",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "edappally",
+    topic: "legal"
+  },
+  {
+    title: "Common Monitor Recycling Issues in Kakkanad",
+    slug: "common-monitor-recycling-issues-in-kakkanad-kakkanad",
+    publishDate: "2026-04-07",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "kakkanad",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Enterprise Monitor Recycling in Ernakulam",
+    slug: "enterprise-monitor-recycling-in-ernakulam-ernakulam",
+    publishDate: "2026-04-03",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "ernakulam",
+    topic: "business"
+  },
+  {
+    title: "Common Monitor Recycling Issues in Thrippunithura",
+    slug: "common-monitor-recycling-issues-in-thrippunithura-thrippunithura-1",
+    publishDate: "2026-04-02",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "thrippunithura",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Enterprise Monitor Recycling in Vyttila",
+    slug: "enterprise-monitor-recycling-in-vyttila-vyttila",
+    publishDate: "2026-03-25",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "vyttila",
+    topic: "business"
+  },
+  {
+    title: "KSPCB Regulations for Monitor Recycling in Angamaly",
+    slug: "kspcb-regulations-for-monitor-recycling-in-angamaly-angamaly",
+    publishDate: "2026-03-24",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "angamaly",
+    topic: "legal"
+  },
+  {
+    title: "Monitor Recycling Problems in Edappally: Solutions",
+    slug: "monitor-recycling-problems-in-edappally-solutions-edappally",
+    publishDate: "2026-03-14",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "edappally",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Affordable Monitor Recycling in Ernakulam: Complete Pricing",
+    slug: "affordable-monitor-recycling-in-ernakulam-complete-pricing-ernakulam",
+    publishDate: "2026-03-12",
+    description: "undefined",
+    service: "monitor-recycling",
+    location: "ernakulam",
+    topic: "pricing"
+  }
+];
+
+// Get related tags
+const relatedTags = [
+  {
+    name: "server-recycling",
+    slug: "server-recycling",
+    count: 116,
+    url: "/blog/tag-server-recycling/"
+  },
+  {
+    name: "printer-recycling",
+    slug: "printer-recycling",
+    count: 113,
+    url: "/blog/tag-printer-recycling/"
+  },
+  {
+    name: "edappally",
+    slug: "edappally",
+    count: 111,
+    url: "/blog/tag-edappally/"
+  },
+  {
+    name: "itad",
+    slug: "itad",
+    count: 111,
+    url: "/blog/tag-itad/"
+  },
+  {
+    name: "kochi",
+    slug: "kochi",
+    count: 107,
+    url: "/blog/tag-kochi/"
+  },
+  {
+    name: "kalamassery",
+    slug: "kalamassery",
+    count: 106,
+    url: "/blog/tag-kalamassery/"
+  },
+  {
+    name: "data-destruction",
+    slug: "data-destruction",
+    count: 106,
+    url: "/blog/tag-data-destruction/"
+  },
+  {
+    name: "battery-recycling",
+    slug: "battery-recycling",
+    count: 105,
+    url: "/blog/tag-battery-recycling/"
+  }
+];
+---
+
+<BaseLayout title={title} description={description} pageType="website" breadcrumbs={breadcrumbs}>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">monitor-recycling</h1>
+      <p class="text-xl text-gray-700 leading-relaxed mb-4">
+        Display recycling, screen disposal, and monitor e-waste management.
+      </p>
+      <div class="bg-amber-50 p-4 rounded-lg">
+        <p class="text-amber-800 font-medium">
+          <span class="font-bold">{tagBlogs.length}</span> articles tagged with "monitor-recycling"
+        </p>
+      </div>
+    </header>
+
+    <section class="blog-list mb-12">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Recent Articles</h2>
+      <div class="space-y-6">
+        {tagBlogs.map(blog => (
+          <article class="blog-card bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-sm text-gray-500">
+                {new Date(blog.publishDate).toLocaleDateString('en-IN', { 
+                  year: 'numeric', 
+                  month: 'long', 
+                  day: 'numeric' 
+                })}
+              </span>
+              <div class="flex gap-2">
+                <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs">
+                  {blog.topic}
+                </span>
+                <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
+                  {blog.service}
+                </span>
+                <span class="px-2 py-1 bg-green-100 text-green-800 rounded text-xs">
+                  {blog.location}
+                </span>
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700">
+                {blog.title}
+              </a>
+            </h3>
+            <p class="text-gray-700 mb-4">{blog.description}</p>
+            <a 
+              href={`/blog/${blog.slug}/`} 
+              class="text-amber-600 hover:text-amber-700 font-medium"
+            >
+              Read more
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="related-tags">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Tags</h2>
+      <div class="flex flex-wrap gap-3">
+        {relatedTags.map(tag => (
+          <a 
+            href={tag.url} 
+            class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full hover:bg-gray-200 transition-colors"
+          >
+            aluva (10)
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .blog-card {
+      transition: all 0.3s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</BaseLayout>

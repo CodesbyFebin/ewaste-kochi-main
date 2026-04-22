@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Cable Recycling Options in Ernakulam: Which to Choose?",
+  "description": "Looking for reliable cable recycling in Ernakulam? This comprehensive guide covers everything you need to know about Dell e-waste management in Ernakulam, inclu...",
+  "image": "https://www.ewastekochi.com/images/blog/cable-recycling-options-in-ernakulam-which-to-choose-ernakulam.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2026-02-09",
+  "dateModified": "2026-02-09",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/cable-recycling-options-in-ernakulam-which-to-choose-ernakulam/"
+  },
+  "articleSection": "recycling",
+  "keywords": "Cable Recycling, Ernakulam, wire recycling, copper cables, electronic cables",
+  "wordCount": 1955,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Cable Recycling"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Ernakulam",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ernakulam",
+      "addressRegion": "Kerala",
+      "postalCode": "682016",
+      "addressCountry": "IN"
+    }
+  }
+}

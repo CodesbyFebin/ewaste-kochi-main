@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Complete Guide to Laptop Buyback in Kochi",
+  "description": "Looking for reliable laptop buyback in Kochi? This comprehensive guide covers everything you need to know about e-waste management in Kochi, including process, ...",
+  "image": "https://www.ewastekochi.com/images/blog/complete-guide-to-laptop-buyback-in-kochi-kochi.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-04-29",
+  "dateModified": "2025-04-29",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/complete-guide-to-laptop-buyback-in-kochi-kochi/"
+  },
+  "articleSection": "buyback",
+  "keywords": "Laptop Buyback, Kochi, sell laptop, laptop recycling, used laptop price",
+  "wordCount": 1348,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Laptop Buyback"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Kochi",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kochi",
+      "addressRegion": "Kerala",
+      "postalCode": "682001",
+      "addressCountry": "IN"
+    }
+  }
+}

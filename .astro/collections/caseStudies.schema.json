@@ -10,10 +10,13 @@
         "description": {
           "type": "string"
         },
-        "client": {
+        "publishDate": {
           "type": "string"
         },
         "industry": {
+          "type": "string"
+        },
+        "client": {
           "type": "string"
         },
         "challenge": {
@@ -25,64 +28,13 @@
         "results": {
           "type": "string"
         },
-        "services_used": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "waste_volume": {
-          "type": "string"
-        },
-        "data_destroyed": {
-          "type": "string"
-        },
-        "recovery_rate": {
-          "type": "string"
-        },
-        "featured_image": {
-          "type": "string"
-        },
-        "gallery": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "testimonial": {
-          "type": "string"
-        },
-        "seo_title": {
-          "type": "string"
-        },
-        "seo_description": {
-          "type": "string"
-        },
-        "featured": {
-          "type": "boolean",
-          "default": false
-        },
-        "draft": {
-          "type": "boolean",
-          "default": false
-        },
-        "order": {
-          "type": "number",
-          "default": 0
-        },
         "$schema": {
           "type": "string"
         }
       },
       "required": [
         "title",
-        "description",
-        "client",
-        "industry",
-        "challenge",
-        "solution",
-        "results",
-        "services_used"
+        "description"
       ],
       "additionalProperties": false
     }

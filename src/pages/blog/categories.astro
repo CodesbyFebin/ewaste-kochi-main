@@ -1,0 +1,193 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const title = "Blog Categories - EWaste Kochi";
+const description = "Explore our comprehensive blog categories covering e-waste management, recycling services, and environmental solutions in Kerala.";
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Blog", url: "/blog/" },
+  { name: "Categories", url: "/blog/categories/" }
+];
+
+// Get all categories with counts
+const categories = [
+  {
+    name: "how-to",
+    slug: "how-to",
+    description: "Step-by-step guides and tutorials for e-waste management, recycling processes, and proper disposal methods.",
+    count: 136,
+    url: "/blog/category-how-to/"
+  },
+  {
+    name: "troubleshooting",
+    slug: "troubleshooting",
+    description: "Common issues, problems, and solutions related to e-waste management and recycling.",
+    count: 113,
+    url: "/blog/category-troubleshooting/"
+  },
+  {
+    name: "seasonal",
+    slug: "seasonal",
+    description: "Seasonal trends, timing considerations, and period-specific e-waste management tips.",
+    count: 125,
+    url: "/blog/category-seasonal/"
+  },
+  {
+    name: "benefits",
+    slug: "benefits",
+    description: "Environmental and economic benefits of proper e-waste recycling and responsible disposal.",
+    count: 120,
+    url: "/blog/category-benefits/"
+  },
+  {
+    name: "business",
+    slug: "business",
+    description: "Corporate and business-focused e-waste solutions, ITAD services, and enterprise recycling.",
+    count: 146,
+    url: "/blog/category-business/"
+  },
+  {
+    name: "legal",
+    slug: "legal",
+    description: "Legal requirements, compliance guidelines, and regulatory information for e-waste management.",
+    count: 139,
+    url: "/blog/category-legal/"
+  },
+  {
+    name: "pricing",
+    slug: "pricing",
+    description: "Comprehensive pricing guides, cost breakdowns, and affordable options for e-waste services.",
+    count: 111,
+    url: "/blog/category-pricing/"
+  },
+  {
+    name: "comparison",
+    slug: "comparison",
+    description: "Detailed comparisons between different e-waste services, providers, and disposal methods.",
+    count: 110,
+    url: "/blog/category-comparison/"
+  }
+];
+
+// Get popular tags
+const popularTags = [
+  {
+    name: "server-recycling",
+    slug: "server-recycling",
+    count: 116,
+    url: "/blog/tag-server-recycling/"
+  },
+  {
+    name: "printer-recycling",
+    slug: "printer-recycling",
+    count: 113,
+    url: "/blog/tag-printer-recycling/"
+  },
+  {
+    name: "edappally",
+    slug: "edappally",
+    count: 111,
+    url: "/blog/tag-edappally/"
+  },
+  {
+    name: "itad",
+    slug: "itad",
+    count: 111,
+    url: "/blog/tag-itad/"
+  },
+  {
+    name: "kochi",
+    slug: "kochi",
+    count: 107,
+    url: "/blog/tag-kochi/"
+  },
+  {
+    name: "kalamassery",
+    slug: "kalamassery",
+    count: 106,
+    url: "/blog/tag-kalamassery/"
+  },
+  {
+    name: "data-destruction",
+    slug: "data-destruction",
+    count: 106,
+    url: "/blog/tag-data-destruction/"
+  },
+  {
+    name: "battery-recycling",
+    slug: "battery-recycling",
+    count: 105,
+    url: "/blog/tag-battery-recycling/"
+  },
+  {
+    name: "aluva",
+    slug: "aluva",
+    count: 105,
+    url: "/blog/tag-aluva/"
+  },
+  {
+    name: "angamaly",
+    slug: "angamaly",
+    count: 104,
+    url: "/blog/tag-angamaly/"
+  }
+];
+---
+
+<BaseLayout title={title} description={description} pageType="website" breadcrumbs={breadcrumbs}>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Blog Categories</h1>
+      <p class="text-xl text-gray-700 leading-relaxed">
+        Explore our comprehensive blog categories covering e-waste management, recycling services, and environmental solutions in Kerala.
+      </p>
+    </header>
+
+    <section class="categories-section mb-12">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Browse by Category</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        {categories.map(category => (
+          <article class="category-card bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              <a href={category.url} class="text-amber-600 hover:text-amber-700">
+                {category.name}
+              </a>
+            </h3>
+            <p class="text-gray-700 mb-4">{category.description}</p>
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-gray-500">{category.count} articles</span>
+              <a href={category.url} class="text-amber-600 hover:text-amber-700 font-medium">
+                View all articles
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="popular-tags-section">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Popular Tags</h2>
+      <div class="flex flex-wrap gap-3">
+        {popularTags.map(tag => (
+          <a 
+            href={tag.url} 
+            class="px-4 py-2 bg-amber-100 text-amber-800 rounded-full hover:bg-amber-200 transition-colors"
+          >
+            {tag.name} ({tag.count})
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .category-card {
+      transition: all 0.3s ease;
+    }
+    .category-card:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</BaseLayout>

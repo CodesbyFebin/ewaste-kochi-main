@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "KSPCB Regulations for E-Waste Collection in Aluva",
+  "description": "Proper e-waste management is crucial for Aluva's environmental sustainability. This guide explores e-waste collection options, legal requirements, and trusted s...",
+  "image": "https://www.ewastekochi.com/images/blog/kspcb-regulations-for-e-waste-collection-in-aluva-aluva.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-06-14",
+  "dateModified": "2025-06-14",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/kspcb-regulations-for-e-waste-collection-in-aluva-aluva/"
+  },
+  "articleSection": "collection",
+  "keywords": "E-Waste Collection, Aluva, e-waste pickup, electronic waste, recycling collection",
+  "wordCount": 1967,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "E-Waste Collection"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Aluva",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Aluva",
+      "addressRegion": "Kerala",
+      "postalCode": "683101",
+      "addressCountry": "IN"
+    }
+  }
+}

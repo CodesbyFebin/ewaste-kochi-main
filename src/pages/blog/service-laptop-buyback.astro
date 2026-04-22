@@ -1,0 +1,272 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Laptop Buyback Articles - EWaste Kochi";
+const description = "Expert guides and articles on laptop buyback in Kerala. Learn about pricing, process, and best practices for laptop buyback.";
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Blog", url: "/blog/" },
+  { name: "Services", url: "/blog/services/" },
+  { name: "Laptop Buyback", url: "/blog/service-laptop-buyback/" }
+];
+
+// Service blogs
+const serviceBlogs = [
+  {
+    title: "Affordable Laptop Buyback in North Paravur: Complete Pricing",
+    slug: "affordable-laptop-buyback-in-north-paravur-complete-pricing-north-paravur",
+    publishDate: "2026-04-17",
+    description: "",
+    location: "north-paravur",
+    topic: "pricing"
+  },
+  {
+    title: "E-Waste Laws in Kalamassery: Complete Guide",
+    slug: "e-waste-laws-in-kalamassery-complete-guide-kalamassery-4",
+    publishDate: "2026-04-12",
+    description: "",
+    location: "kalamassery",
+    topic: "legal"
+  },
+  {
+    title: "Laptop Buyback Price Guide for Vyttila",
+    slug: "laptop-buyback-price-guide-for-vyttila-vyttila",
+    publishDate: "2026-04-09",
+    description: "",
+    location: "vyttila",
+    topic: "pricing"
+  },
+  {
+    title: "Laptop Buyback Price Guide for Kochi",
+    slug: "laptop-buyback-price-guide-for-kochi-kochi",
+    publishDate: "2026-03-30",
+    description: "",
+    location: "kochi",
+    topic: "pricing"
+  },
+  {
+    title: "B2B Laptop Buyback Services in Edappally",
+    slug: "b2b-laptop-buyback-services-in-edappally-edappally",
+    publishDate: "2026-03-22",
+    description: "",
+    location: "edappally",
+    topic: "business"
+  },
+  {
+    title: "E-Waste Laws in Kakkanad: Complete Guide",
+    slug: "e-waste-laws-in-kakkanad-complete-guide-kakkanad-3",
+    publishDate: "2026-03-16",
+    description: "",
+    location: "kakkanad",
+    topic: "legal"
+  },
+  {
+    title: "Laptop Buyback Problems in Kakkanad: Solutions",
+    slug: "laptop-buyback-problems-in-kakkanad-solutions-kakkanad",
+    publishDate: "2026-03-13",
+    description: "",
+    location: "kakkanad",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Complete Guide to Laptop Buyback in Kakkanad",
+    slug: "complete-guide-to-laptop-buyback-in-kakkanad-kakkanad",
+    publishDate: "2026-03-12",
+    description: "",
+    location: "kakkanad",
+    topic: "how-to"
+  },
+  {
+    title: "Why Choose Laptop Buyback in Kalamassery?",
+    slug: "why-choose-laptop-buyback-in-kalamassery-kalamassery",
+    publishDate: "2026-03-11",
+    description: "",
+    location: "kalamassery",
+    topic: "benefits"
+  },
+  {
+    title: "Enterprise Laptop Buyback in Kalamassery",
+    slug: "enterprise-laptop-buyback-in-kalamassery-kalamassery-2",
+    publishDate: "2026-03-09",
+    description: "",
+    location: "kalamassery",
+    topic: "business"
+  },
+  {
+    title: "Enterprise Laptop Buyback in Thrippunithura",
+    slug: "enterprise-laptop-buyback-in-thrippunithura-thrippunithura-1",
+    publishDate: "2026-03-08",
+    description: "",
+    location: "thrippunithura",
+    topic: "business"
+  },
+  {
+    title: "Enterprise Laptop Buyback in Kakkanad",
+    slug: "enterprise-laptop-buyback-in-kakkanad-kakkanad",
+    publishDate: "2026-03-07",
+    description: "",
+    location: "kakkanad",
+    topic: "business"
+  },
+  {
+    title: "Laptop Buyback Price Guide for Aluva",
+    slug: "laptop-buyback-price-guide-for-aluva-aluva",
+    publishDate: "2026-02-10",
+    description: "",
+    location: "aluva",
+    topic: "pricing"
+  },
+  {
+    title: "Best Laptop Buyback Providers in Aluva: Comparison",
+    slug: "best-laptop-buyback-providers-in-aluva-comparison-aluva",
+    publishDate: "2026-02-08",
+    description: "",
+    location: "aluva",
+    topic: "comparison"
+  },
+  {
+    title: "Laptop Buyback Prices in Thrippunithura 2026",
+    slug: "laptop-buyback-prices-in-thrippunithura-2026-thrippunithura-1",
+    publishDate: "2026-02-05",
+    description: "",
+    location: "thrippunithura",
+    topic: "pricing"
+  },
+  {
+    title: "Common Laptop Buyback Issues in Aluva",
+    slug: "common-laptop-buyback-issues-in-aluva-aluva",
+    publishDate: "2026-01-28",
+    description: "",
+    location: "aluva",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Economic Benefits of Laptop Buyback in Thrippunithura",
+    slug: "economic-benefits-of-laptop-buyback-in-thrippunithura-thrippunithura",
+    publishDate: "2026-01-26",
+    description: "",
+    location: "thrippunithura",
+    topic: "benefits"
+  },
+  {
+    title: "Troubleshooting Laptop Buyback in Angamaly",
+    slug: "troubleshooting-laptop-buyback-in-angamaly-angamaly",
+    publishDate: "2026-01-26",
+    description: "",
+    location: "angamaly",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Troubleshooting Laptop Buyback in Kakkanad",
+    slug: "troubleshooting-laptop-buyback-in-kakkanad-kakkanad",
+    publishDate: "2026-01-18",
+    description: "",
+    location: "kakkanad",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Common Laptop Buyback Issues in Edappally",
+    slug: "common-laptop-buyback-issues-in-edappally-edappally-1",
+    publishDate: "2026-01-10",
+    description: "",
+    location: "edappally",
+    topic: "troubleshooting"
+  }
+];
+
+// Service statistics
+const totalArticles = 90;
+const locations = [...new Set(serviceBlogs.map(blog => blog.location))];
+const topics = [...new Set(serviceBlogs.map(blog => blog.topic))];
+---
+
+<BaseLayout title={title} description={description} pageType="website" breadcrumbs={breadcrumbs}>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Laptop Buyback Articles</h1>
+      <p class="text-xl text-gray-700 leading-relaxed mb-4">
+        Expert guides and articles on laptop buyback in Kerala. 
+        Learn about pricing, process, and best practices for laptop buyback.
+      </p>
+      <div class="bg-blue-50 p-4 rounded-lg">
+        <div class="grid grid-cols-3 gap-4">
+          <div>
+            <span class="font-bold text-blue-800">{totalArticles}</span>
+            <span class="text-blue-700"> articles</span>
+          </div>
+          <div>
+            <span class="font-bold text-blue-800">{locations.length}</span>
+            <span class="text-blue-700"> locations</span>
+          </div>
+          <div>
+            <span class="font-bold text-blue-800">{topics.length}</span>
+            <span class="text-blue-700"> topics</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="blog-list">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Recent Laptop Buyback Articles</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        {serviceBlogs.map(blog => (
+          <article class="blog-card bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-sm text-gray-500">
+                {new Date(blog.publishDate).toLocaleDateString('en-IN', { 
+                  year: 'numeric', 
+                  month: 'short',
+                  day: 'numeric'
+                })}
+              </span>
+              <div class="flex gap-2">
+                <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs">
+                  {blog.topic}
+                </span>
+                <span class="px-2 py-1 bg-green-100 text-green-800 rounded text-xs">
+                  {blog.location}
+                </span>
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700">
+                {blog.title}
+              </a>
+            </h3>
+            <p class="text-gray-700 mb-4">{blog.description}</p>
+            <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700 font-medium">
+              Read more
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="related-section mt-12">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Browse by Location</h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        {locations.map(location => (
+          <a 
+            href={`/blog/location-${location}/`} 
+            class="block p-4 bg-green-50 rounded-lg hover:bg-green-100 transition-colors"
+          >
+            <h3 class="font-semibold text-green-800 mb-2">
+              {location.charAt(0).toUpperCase() + location.slice(1)}
+            </h3>
+            <p class="text-green-700 text-sm">battery-recycling articles</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .blog-card {
+      transition: all 0.3s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</BaseLayout>

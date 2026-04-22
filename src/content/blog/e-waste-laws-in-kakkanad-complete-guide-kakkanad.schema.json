@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "E-Waste Laws in Kakkanad: Complete Guide",
+  "description": "Kakkanad residents and businesses often wonder about proper disposal. Our detailed guide explains printer recycling services available in Kakkanad, with expert ...",
+  "image": "https://www.ewastekochi.com/images/blog/e-waste-laws-in-kakkanad-complete-guide-kakkanad.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-10-21",
+  "dateModified": "2025-10-21",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/e-waste-laws-in-kakkanad-complete-guide-kakkanad/"
+  },
+  "articleSection": "recycling",
+  "keywords": "Printer Recycling, Kakkanad, printer disposal, cartridge recycling, office equipment",
+  "wordCount": 1447,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Printer Recycling"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Kakkanad",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kakkanad",
+      "addressRegion": "Kerala",
+      "postalCode": "682030",
+      "addressCountry": "IN"
+    }
+  }
+}

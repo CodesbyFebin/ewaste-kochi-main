@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Server Recycling vs Server Disposal in Edappally",
+  "description": "Looking for reliable server recycling in Edappally? This comprehensive guide covers everything you need to know about e-waste management in Edappally, including...",
+  "image": "https://www.ewastekochi.com/images/blog/server-recycling-vs-server-disposal-in-edappally-edappally.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-07-04",
+  "dateModified": "2025-07-04",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/server-recycling-vs-server-disposal-in-edappally-edappally/"
+  },
+  "articleSection": "corporate",
+  "keywords": "Server Recycling, Edappally, server disposal, data center recycling, rack disposal",
+  "wordCount": 1629,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Server Recycling"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Edappally",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Edappally",
+      "addressRegion": "Kerala",
+      "postalCode": "682024",
+      "addressCountry": "IN"
+    }
+  }
+}

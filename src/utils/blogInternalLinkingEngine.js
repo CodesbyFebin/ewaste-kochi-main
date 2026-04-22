@@ -119,7 +119,8 @@ export class BlogInternalLinkingEngine {
 
   // Identify topical cluster for a blog post
   identifyTopicalCluster(title, content, tags = []) {
-    const text = `${title} ${content} ${tags.join(' ')}`.toLowerCase();
+    const tagsText = Array.isArray(tags) ? tags.join(' ') : tags || '';
+    const text = `${title} ${content} ${tagsText}`.toLowerCase();
     
     for (const [clusterName, cluster] of Object.entries(this.topicalClusters)) {
       const keywordMatches = cluster.keywords.filter(keyword => 

@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Environmental Impact of Cable Recycling in Vyttila",
+  "description": "Vyttila residents and businesses often wonder about proper disposal. Our detailed guide explains cable recycling services available in Vyttila, with expert insi...",
+  "image": "https://www.ewastekochi.com/images/blog/environmental-impact-of-cable-recycling-in-vyttila-vyttila.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-10-12",
+  "dateModified": "2025-10-12",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/environmental-impact-of-cable-recycling-in-vyttila-vyttila/"
+  },
+  "articleSection": "recycling",
+  "keywords": "Cable Recycling, Vyttila, wire recycling, copper cables, electronic cables",
+  "wordCount": 1210,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Cable Recycling"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Vyttila",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Vyttila",
+      "addressRegion": "Kerala",
+      "postalCode": "682019",
+      "addressCountry": "IN"
+    }
+  }
+}

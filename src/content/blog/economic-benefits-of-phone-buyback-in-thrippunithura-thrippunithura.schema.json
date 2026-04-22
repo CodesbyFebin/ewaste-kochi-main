@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Economic Benefits of Phone Buyback in Thrippunithura",
+  "description": "In Thrippunithura's growing tech landscape, responsible Sony disposal matters. Learn about phone buyback services, pricing structures, and environmental impact ...",
+  "image": "https://www.ewastekochi.com/images/blog/economic-benefits-of-phone-buyback-in-thrippunithura-thrippunithura.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-10-22",
+  "dateModified": "2025-10-22",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/economic-benefits-of-phone-buyback-in-thrippunithura-thrippunithura/"
+  },
+  "articleSection": "buyback",
+  "keywords": "Phone Buyback, Thrippunithura, sell phone, mobile recycling, used phone price",
+  "wordCount": 1201,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Phone Buyback"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Thrippunithura",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Thrippunithura",
+      "addressRegion": "Kerala",
+      "postalCode": "682301",
+      "addressCountry": "IN"
+    }
+  }
+}

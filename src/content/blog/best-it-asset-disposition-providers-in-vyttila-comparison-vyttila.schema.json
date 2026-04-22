@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Best IT Asset Disposition Providers in Vyttila: Comparison",
+  "description": "Looking for reliable it asset disposition in Vyttila? This comprehensive guide covers everything you need to know about Dell e-waste management in Vyttila, incl...",
+  "image": "https://www.ewastekochi.com/images/blog/best-it-asset-disposition-providers-in-vyttila-comparison-vyttila.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2026-02-18",
+  "dateModified": "2026-02-18",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/best-it-asset-disposition-providers-in-vyttila-comparison-vyttila/"
+  },
+  "articleSection": "corporate",
+  "keywords": "IT Asset Disposition, Vyttila, ITAD services, corporate e-waste, asset disposal",
+  "wordCount": 1838,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "IT Asset Disposition"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Vyttila",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Vyttila",
+      "addressRegion": "Kerala",
+      "postalCode": "682019",
+      "addressCountry": "IN"
+    }
+  }
+}

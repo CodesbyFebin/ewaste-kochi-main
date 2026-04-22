@@ -1,0 +1,314 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "EWaste Kochi Blog - E-Waste Management & Recycling Guide";
+const description = "Expert guides on e-waste management, recycling services, and ITAD solutions in Kerala. Learn about proper electronic waste disposal, data destruction, and environmental compliance.";
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Blog", url: "/blog/" }
+];
+
+// Recent blog posts
+const recentBlogs = [
+  {
+    title: "Best Way to battery recycle in Vyttila 2026",
+    slug: "best-way-to-battery-recycle-in-vyttila-2026-vyttila",
+    publishDate: "2026-04-21",
+    service: "battery-recycling",
+    location: "vyttila",
+    topic: "how-to"
+  },
+  {
+    title: "Compliance Guide for E-Waste Collection in Vyttila",
+    slug: "compliance-guide-for-e-waste-collection-in-vyttila-vyttila",
+    publishDate: "2026-04-21",
+    service: "e-waste-collection",
+    location: "vyttila",
+    topic: "legal"
+  },
+  {
+    title: "Best Data Destruction Providers in Angamaly: Comparison",
+    slug: "best-data-destruction-providers-in-angamaly-comparison-angamaly-2",
+    publishDate: "2026-04-20",
+    service: "data-destruction",
+    location: "angamaly",
+    topic: "comparison"
+  },
+  {
+    title: "Economic Benefits of Cable Recycling in Thrippunithura",
+    slug: "economic-benefits-of-cable-recycling-in-thrippunithura-thrippunithura-1",
+    publishDate: "2026-04-20",
+    service: "cable-recycling",
+    location: "thrippunithura",
+    topic: "benefits"
+  },
+  {
+    title: "E-Waste Laws in Kochi: Complete Guide",
+    slug: "e-waste-laws-in-kochi-complete-guide-kochi-4",
+    publishDate: "2026-04-20",
+    service: "monitor-recycling",
+    location: "kochi",
+    topic: "legal"
+  },
+  {
+    title: "Best Way to cable recycle in Vyttila 2026",
+    slug: "best-way-to-cable-recycle-in-vyttila-2026-vyttila",
+    publishDate: "2026-04-19",
+    service: "cable-recycling",
+    location: "vyttila",
+    topic: "how-to"
+  },
+  {
+    title: "Data Destruction Problems in Edappally: Solutions",
+    slug: "data-destruction-problems-in-edappally-solutions-edappally-1",
+    publishDate: "2026-04-19",
+    service: "data-destruction",
+    location: "edappally",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Best Way to e-waste collection in Ernakulam 2026",
+    slug: "best-way-to-e-waste-collection-in-ernakulam-2026-ernakulam",
+    publishDate: "2026-04-19",
+    service: "e-waste-collection",
+    location: "ernakulam",
+    topic: "how-to"
+  },
+  {
+    title: "Complete Guide to IT Asset Disposition in Vyttila",
+    slug: "complete-guide-to-it-asset-disposition-in-vyttila-vyttila",
+    publishDate: "2026-04-18",
+    service: "itad",
+    location: "vyttila",
+    topic: "how-to"
+  },
+  {
+    title: "Common E-Waste Collection Issues in Vyttila",
+    slug: "common-e-waste-collection-issues-in-vyttila-vyttila-1",
+    publishDate: "2026-04-18",
+    service: "e-waste-collection",
+    location: "vyttila",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Best Battery Recycling Providers in North Paravur: Comparison",
+    slug: "best-battery-recycling-providers-in-north-paravur-comparison-north-paravur",
+    publishDate: "2026-04-17",
+    service: "battery-recycling",
+    location: "north-paravur",
+    topic: "comparison"
+  },
+  {
+    title: "Affordable Laptop Buyback in North Paravur: Complete Pricing",
+    slug: "affordable-laptop-buyback-in-north-paravur-complete-pricing-north-paravur",
+    publishDate: "2026-04-17",
+    service: "laptop-buyback",
+    location: "north-paravur",
+    topic: "pricing"
+  }
+];
+
+// Featured articles
+const featuredBlogs = [
+  {
+    title: "Best Way to battery recycle in Vyttila 2026",
+    slug: "best-way-to-battery-recycle-in-vyttila-2026-vyttila",
+    publishDate: "2026-04-21",
+    service: "battery-recycling",
+    location: "vyttila"
+  },
+  {
+    title: "Economic Benefits of Cable Recycling in Thrippunithura",
+    slug: "economic-benefits-of-cable-recycling-in-thrippunithura-thrippunithura-1",
+    publishDate: "2026-04-20",
+    service: "cable-recycling",
+    location: "thrippunithura"
+  },
+  {
+    title: "Best Way to cable recycle in Vyttila 2026",
+    slug: "best-way-to-cable-recycle-in-vyttila-2026-vyttila",
+    publishDate: "2026-04-19",
+    service: "cable-recycling",
+    location: "vyttila"
+  },
+  {
+    title: "Best Way to e-waste collection in Ernakulam 2026",
+    slug: "best-way-to-e-waste-collection-in-ernakulam-2026-ernakulam",
+    publishDate: "2026-04-19",
+    service: "e-waste-collection",
+    location: "ernakulam"
+  },
+  {
+    title: "Complete Guide to IT Asset Disposition in Vyttila",
+    slug: "complete-guide-to-it-asset-disposition-in-vyttila-vyttila",
+    publishDate: "2026-04-18",
+    service: "itad",
+    location: "vyttila"
+  },
+  {
+    title: "Environmental Impact of E-Waste Collection in Thrippunithura",
+    slug: "environmental-impact-of-e-waste-collection-in-thrippunithura-thrippunithura",
+    publishDate: "2026-04-16",
+    service: "e-waste-collection",
+    location: "thrippunithura"
+  }
+];
+
+// Blog statistics
+const totalBlogs = 1000;
+const services = [...new Set(recentBlogs.map(blog => blog.service))];
+const locations = [...new Set(recentBlogs.map(blog => blog.location))];
+const topics = [...new Set(recentBlogs.map(blog => blog.topic))];
+---
+
+<BaseLayout title={title} description={description} pageType="website" breadcrumbs={breadcrumbs}>
+  <div class="max-w-6xl mx-auto px-4 py-8">
+    <!-- Blog Hero Section -->
+    <header class="mb-12 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        EWaste Kochi Blog
+      </h1>
+      <p class="text-xl text-gray-700 leading-relaxed mb-8 max-w-3xl mx-auto">
+        Expert guides on e-waste management, recycling services, and ITAD solutions in Kerala. 
+        Learn about proper electronic waste disposal, data destruction, and environmental compliance.
+      </p>
+      
+      <!-- Blog Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+        <div class="bg-amber-50 p-4 rounded-lg">
+          <div class="text-2xl font-bold text-amber-800">{totalBlogs}+</div>
+          <div class="text-sm text-amber-700">Articles</div>
+        </div>
+        <div class="bg-blue-50 p-4 rounded-lg">
+          <div class="text-2xl font-bold text-blue-800">{services.length}</div>
+          <div class="text-sm text-blue-700">Services</div>
+        </div>
+        <div class="bg-green-50 p-4 rounded-lg">
+          <div class="text-2xl font-bold text-green-800">{locations.length}</div>
+          <div class="text-sm text-green-700">Locations</div>
+        </div>
+        <div class="bg-purple-50 p-4 rounded-lg">
+          <div class="text-2xl font-bold text-purple-800">{topics.length}</div>
+          <div class="text-sm text-purple-700">Topics</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Featured Articles -->
+    <section class="featured-section mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8">Featured Articles</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {featuredBlogs.map(blog => (
+          <article class="featured-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">
+                Featured
+              </span>
+              <span class="text-sm text-gray-500">
+                {new Date(blog.publishDate).toLocaleDateString('en-IN', { 
+                  year: 'numeric', 
+                  month: 'short' 
+                })}
+              </span>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700">
+                {blog.title}
+              </a>
+            </h3>
+            <div class="flex items-center justify-between">
+              <div class="flex gap-2">
+                <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
+                  {blog.service}
+                </span>
+                <span class="px-2 py-1 bg-green-100 text-green-800 rounded text-xs">
+                  {blog.location}
+                </span>
+              </div>
+              <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700 font-medium text-sm">
+                Read more
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!-- Recent Articles -->
+    <section class="recent-section mb-12">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="text-3xl font-bold text-gray-900">Recent Articles</h2>
+        <a href="/blog/archives/" class="text-amber-600 hover:text-amber-700 font-medium">
+          View all archives
+        </a>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {recentBlogs.map(blog => (
+          <article class="blog-card bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-sm text-gray-500">
+                {new Date(blog.publishDate).toLocaleDateString('en-IN', { 
+                  year: 'numeric', 
+                  month: 'short',
+                  day: 'numeric'
+                })}
+              </span>
+              <div class="flex gap-2">
+                <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs">
+                  {blog.topic}
+                </span>
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700">
+                {blog.title}
+              </a>
+            </h3>
+            <div class="flex items-center justify-between">
+              <div class="flex gap-2">
+                <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
+                  {blog.service}
+                </span>
+                <span class="px-2 py-1 bg-green-100 text-green-800 rounded text-xs">
+                  {blog.location}
+                </span>
+              </div>
+              <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700 font-medium text-sm">
+                Read more
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="quick-links-section">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Explore by Category</h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        <a href="/blog/topics/" class="block p-4 bg-amber-50 rounded-lg hover:bg-amber-100 transition-colors">
+          <h3 class="font-semibold text-amber-800 mb-2">Browse Topics</h3>
+          <p class="text-amber-700 text-sm">Explore articles by topic and category</p>
+        </a>
+        <a href="/blog/services/" class="block p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+          <h3 class="font-semibold text-blue-800 mb-2">Services</h3>
+          <p class="text-blue-700 text-sm">Find articles by service type</p>
+        </a>
+        <a href="/blog/locations/" class="block p-4 bg-green-50 rounded-lg hover:bg-green-100 transition-colors">
+          <h3 class="font-semibold text-green-800 mb-2">Locations</h3>
+          <p class="text-green-700 text-sm">Browse by location in Kerala</p>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .blog-card, .featured-card {
+      transition: all 0.3s ease;
+    }
+    .blog-card:hover, .featured-card:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</BaseLayout>

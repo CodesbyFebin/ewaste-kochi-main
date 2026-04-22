@@ -1,0 +1,272 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "North-paravur Articles - EWaste Kochi";
+const description = "E-waste management guides and articles for North-paravur. Find local recycling services, pickup options, and environmental solutions in North-paravur.";
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Blog", url: "/blog/" },
+  { name: "Locations", url: "/blog/locations/" },
+  { name: "North-paravur", url: "/blog/location-north-paravur/" }
+];
+
+// Location blogs
+const locationBlogs = [
+  {
+    title: "Best Battery Recycling Providers in North Paravur: Comparison",
+    slug: "best-battery-recycling-providers-in-north-paravur-comparison-north-paravur",
+    publishDate: "2026-04-17",
+    description: "",
+    service: "battery-recycling",
+    topic: "comparison"
+  },
+  {
+    title: "Affordable Laptop Buyback in North Paravur: Complete Pricing",
+    slug: "affordable-laptop-buyback-in-north-paravur-complete-pricing-north-paravur",
+    publishDate: "2026-04-17",
+    description: "",
+    service: "laptop-buyback",
+    topic: "pricing"
+  },
+  {
+    title: "Legal Requirements for Printer Recycling in North Paravur",
+    slug: "legal-requirements-for-printer-recycling-in-north-paravur-north-paravur-1",
+    publishDate: "2026-04-15",
+    description: "",
+    service: "printer-recycling",
+    topic: "legal"
+  },
+  {
+    title: "Affordable Phone Buyback in North Paravur: Complete Pricing",
+    slug: "affordable-phone-buyback-in-north-paravur-complete-pricing-north-paravur",
+    publishDate: "2026-04-11",
+    description: "",
+    service: "phone-buyback",
+    topic: "pricing"
+  },
+  {
+    title: "E-Waste Laws in North Paravur: Complete Guide",
+    slug: "e-waste-laws-in-north-paravur-complete-guide-north-paravur-6",
+    publishDate: "2026-04-08",
+    description: "",
+    service: "printer-recycling",
+    topic: "legal"
+  },
+  {
+    title: "Complete Guide to Server Recycling in North Paravur",
+    slug: "complete-guide-to-server-recycling-in-north-paravur-north-paravur",
+    publishDate: "2026-04-06",
+    description: "",
+    service: "server-recycling",
+    topic: "how-to"
+  },
+  {
+    title: "Corporate Data Destruction Solutions in North Paravur",
+    slug: "corporate-data-destruction-solutions-in-north-paravur-north-paravur",
+    publishDate: "2026-03-26",
+    description: "",
+    service: "data-destruction",
+    topic: "business"
+  },
+  {
+    title: "Troubleshooting Printer Recycling in North Paravur",
+    slug: "troubleshooting-printer-recycling-in-north-paravur-north-paravur-1",
+    publishDate: "2026-03-22",
+    description: "",
+    service: "printer-recycling",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Corporate Printer Recycling Solutions in North Paravur",
+    slug: "corporate-printer-recycling-solutions-in-north-paravur-north-paravur",
+    publishDate: "2026-03-19",
+    description: "",
+    service: "printer-recycling",
+    topic: "business"
+  },
+  {
+    title: "Monitor Recycling vs Screen Recycling in North Paravur",
+    slug: "monitor-recycling-vs-screen-recycling-in-north-paravur-north-paravur",
+    publishDate: "2026-03-11",
+    description: "",
+    service: "monitor-recycling",
+    topic: "comparison"
+  },
+  {
+    title: "IT Asset Disposition Process in North Paravur: Step by Step",
+    slug: "it-asset-disposition-process-in-north-paravur-step-by-step-north-paravur",
+    publishDate: "2026-02-26",
+    description: "",
+    service: "itad",
+    topic: "how-to"
+  },
+  {
+    title: "Monitor Recycling Trends in North Paravur 2026",
+    slug: "monitor-recycling-trends-in-north-paravur-2026-north-paravur-1",
+    publishDate: "2026-02-25",
+    description: "",
+    service: "monitor-recycling",
+    topic: "seasonal"
+  },
+  {
+    title: "Battery Recycling During Summer in North Paravur",
+    slug: "battery-recycling-during-summer-in-north-paravur-north-paravur",
+    publishDate: "2026-02-24",
+    description: "",
+    service: "battery-recycling",
+    topic: "seasonal"
+  },
+  {
+    title: "Economic Benefits of IT Asset Disposition in North Paravur",
+    slug: "economic-benefits-of-it-asset-disposition-in-north-paravur-north-paravur",
+    publishDate: "2026-02-23",
+    description: "",
+    service: "itad",
+    topic: "benefits"
+  },
+  {
+    title: "vs Motorola Monitor Recycling in North Paravur",
+    slug: "vs-motorola-monitor-recycling-in-north-paravur-north-paravur",
+    publishDate: "2026-02-18",
+    description: "",
+    service: "monitor-recycling",
+    topic: "comparison"
+  },
+  {
+    title: "Monitor Recycling Process in North Paravur: Step by Step",
+    slug: "monitor-recycling-process-in-north-paravur-step-by-step-north-paravur",
+    publishDate: "2026-02-16",
+    description: "",
+    service: "monitor-recycling",
+    topic: "how-to"
+  },
+  {
+    title: "Troubleshooting Printer Recycling in North Paravur",
+    slug: "troubleshooting-printer-recycling-in-north-paravur-north-paravur",
+    publishDate: "2026-02-12",
+    description: "",
+    service: "printer-recycling",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Enterprise E-Waste Collection in North Paravur",
+    slug: "enterprise-e-waste-collection-in-north-paravur-north-paravur",
+    publishDate: "2026-02-10",
+    description: "",
+    service: "e-waste-collection",
+    topic: "business"
+  },
+  {
+    title: "Server Recycling Process in North Paravur: Step by Step",
+    slug: "server-recycling-process-in-north-paravur-step-by-step-north-paravur",
+    publishDate: "2026-02-08",
+    description: "",
+    service: "server-recycling",
+    topic: "how-to"
+  },
+  {
+    title: "Best Time for Data Destruction in North Paravur",
+    slug: "best-time-for-data-destruction-in-north-paravur-north-paravur",
+    publishDate: "2026-02-04",
+    description: "",
+    service: "data-destruction",
+    topic: "seasonal"
+  }
+];
+
+// Location statistics
+const totalArticles = 98;
+const services = [...new Set(locationBlogs.map(blog => blog.service))];
+const topics = [...new Set(locationBlogs.map(blog => blog.topic))];
+---
+
+<BaseLayout title={title} description={description} pageType="website" breadcrumbs={breadcrumbs}>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">North-paravur Articles</h1>
+      <p class="text-xl text-gray-700 leading-relaxed mb-4">
+        E-waste management guides and articles for North-paravur. Find local recycling services, 
+        pickup options, and environmental solutions in North-paravur.
+      </p>
+      <div class="bg-green-50 p-4 rounded-lg">
+        <div class="grid grid-cols-3 gap-4">
+          <div>
+            <span class="font-bold text-green-800">{totalArticles}</span>
+            <span class="text-green-700"> articles</span>
+          </div>
+          <div>
+            <span class="font-bold text-green-800">{services.length}</span>
+            <span class="text-green-700"> services</span>
+          </div>
+          <div>
+            <span class="font-bold text-green-800">{topics.length}</span>
+            <span class="text-green-700"> topics</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="blog-list">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Recent North-paravur Articles</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        {locationBlogs.map(blog => (
+          <article class="blog-card bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-sm text-gray-500">
+                {new Date(blog.publishDate).toLocaleDateString('en-IN', { 
+                  year: 'numeric', 
+                  month: 'short',
+                  day: 'numeric'
+                })}
+              </span>
+              <div class="flex gap-2">
+                <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
+                  {blog.service}
+                </span>
+                <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs">
+                  {blog.topic}
+                </span>
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700">
+                {blog.title}
+              </a>
+            </h3>
+            <p class="text-gray-700 mb-4">{blog.description}</p>
+            <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700 font-medium">
+              Read more
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="related-section mt-12">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Browse by Service</h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        {services.map(service => (
+          <a 
+            href={`/blog/service-${service}/`} 
+            class="block p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
+          >
+            <h3 class="font-semibold text-blue-800 mb-2">
+              {service.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
+            </h3>
+            <p class="text-blue-700 text-sm">aluva articles</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .blog-card {
+      transition: all 0.3s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</BaseLayout>

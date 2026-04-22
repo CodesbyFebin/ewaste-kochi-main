@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "E-Waste Collection Trends in Edappally 2026",
+  "description": "Edappally residents and businesses often wonder about proper Infinix disposal. Our detailed guide explains e-waste collection services available in Edappally, w...",
+  "image": "https://www.ewastekochi.com/images/blog/e-waste-collection-trends-in-edappally-2026-edappally.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-05-19",
+  "dateModified": "2025-05-19",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/e-waste-collection-trends-in-edappally-2026-edappally/"
+  },
+  "articleSection": "collection",
+  "keywords": "E-Waste Collection, Edappally, e-waste pickup, electronic waste, recycling collection",
+  "wordCount": 1270,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "E-Waste Collection"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Edappally",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Edappally",
+      "addressRegion": "Kerala",
+      "postalCode": "682024",
+      "addressCountry": "IN"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Compliance Guide for Phone Buyback in North Paravur",
+  "description": "Proper Redmi e-waste management is crucial for North Paravur's environmental sustainability. This guide explores phone buyback options, legal requirements, and ...",
+  "image": "https://www.ewastekochi.com/images/blog/compliance-guide-for-phone-buyback-in-north-paravur-north-paravur.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-09-12",
+  "dateModified": "2025-09-12",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/compliance-guide-for-phone-buyback-in-north-paravur-north-paravur/"
+  },
+  "articleSection": "buyback",
+  "keywords": "Phone Buyback, North Paravur, sell phone, mobile recycling, used phone price",
+  "wordCount": 1544,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Phone Buyback"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "North Paravur",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "North Paravur",
+      "addressRegion": "Kerala",
+      "postalCode": "683513",
+      "addressCountry": "IN"
+    }
+  }
+}

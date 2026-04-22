@@ -1,0 +1,272 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Data Destruction Articles - EWaste Kochi";
+const description = "Expert guides and articles on data destruction in Kerala. Learn about pricing, process, and best practices for data destruction.";
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Blog", url: "/blog/" },
+  { name: "Services", url: "/blog/services/" },
+  { name: "Data Destruction", url: "/blog/service-data-destruction/" }
+];
+
+// Service blogs
+const serviceBlogs = [
+  {
+    title: "Best Data Destruction Providers in Angamaly: Comparison",
+    slug: "best-data-destruction-providers-in-angamaly-comparison-angamaly-2",
+    publishDate: "2026-04-20",
+    description: "",
+    location: "angamaly",
+    topic: "comparison"
+  },
+  {
+    title: "Data Destruction Problems in Edappally: Solutions",
+    slug: "data-destruction-problems-in-edappally-solutions-edappally-1",
+    publishDate: "2026-04-19",
+    description: "",
+    location: "edappally",
+    topic: "troubleshooting"
+  },
+  {
+    title: "KSPCB Regulations for Data Destruction in Aluva",
+    slug: "kspcb-regulations-for-data-destruction-in-aluva-aluva",
+    publishDate: "2026-04-17",
+    description: "",
+    location: "aluva",
+    topic: "legal"
+  },
+  {
+    title: "Data Destruction Trends in Angamaly 2026",
+    slug: "data-destruction-trends-in-angamaly-2026-angamaly",
+    publishDate: "2026-04-14",
+    description: "",
+    location: "angamaly",
+    topic: "seasonal"
+  },
+  {
+    title: "Environmental Impact of Data Destruction in Kakkanad",
+    slug: "environmental-impact-of-data-destruction-in-kakkanad-kakkanad",
+    publishDate: "2026-04-09",
+    description: "",
+    location: "kakkanad",
+    topic: "benefits"
+  },
+  {
+    title: "Data Destruction Problems in Kalamassery: Solutions",
+    slug: "data-destruction-problems-in-kalamassery-solutions-kalamassery",
+    publishDate: "2026-04-04",
+    description: "",
+    location: "kalamassery",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Best Data Destruction Providers in Angamaly: Comparison",
+    slug: "best-data-destruction-providers-in-angamaly-comparison-angamaly-1",
+    publishDate: "2026-04-02",
+    description: "",
+    location: "angamaly",
+    topic: "comparison"
+  },
+  {
+    title: "Data Destruction Options in Kochi: Which to Choose?",
+    slug: "data-destruction-options-in-kochi-which-to-choose-kochi",
+    publishDate: "2026-04-01",
+    description: "",
+    location: "kochi",
+    topic: "comparison"
+  },
+  {
+    title: "Realme vs Poco Data Destruction in Kalamassery",
+    slug: "realme-vs-poco-data-destruction-in-kalamassery-kalamassery",
+    publishDate: "2026-04-01",
+    description: "",
+    location: "kalamassery",
+    topic: "comparison"
+  },
+  {
+    title: "Best Data Destruction Providers in Kochi: Comparison",
+    slug: "best-data-destruction-providers-in-kochi-comparison-kochi",
+    publishDate: "2026-03-30",
+    description: "",
+    location: "kochi",
+    topic: "comparison"
+  },
+  {
+    title: "Troubleshooting Data Destruction in Angamaly",
+    slug: "troubleshooting-data-destruction-in-angamaly-angamaly-1",
+    publishDate: "2026-03-29",
+    description: "",
+    location: "angamaly",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Corporate Data Destruction Solutions in North Paravur",
+    slug: "corporate-data-destruction-solutions-in-north-paravur-north-paravur",
+    publishDate: "2026-03-26",
+    description: "",
+    location: "north-paravur",
+    topic: "business"
+  },
+  {
+    title: "Data Destruction During Winter in Kakkanad",
+    slug: "data-destruction-during-winter-in-kakkanad-kakkanad",
+    publishDate: "2026-03-24",
+    description: "",
+    location: "kakkanad",
+    topic: "seasonal"
+  },
+  {
+    title: "Troubleshooting Data Destruction in Angamaly",
+    slug: "troubleshooting-data-destruction-in-angamaly-angamaly",
+    publishDate: "2026-03-17",
+    description: "",
+    location: "angamaly",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Best Way to data destruction in Thrippunithura 2026",
+    slug: "best-way-to-data-destruction-in-thrippunithura-2026-thrippunithura",
+    publishDate: "2026-03-16",
+    description: "",
+    location: "thrippunithura",
+    topic: "how-to"
+  },
+  {
+    title: "Legal Requirements for Data Destruction in Kakkanad",
+    slug: "legal-requirements-for-data-destruction-in-kakkanad-kakkanad",
+    publishDate: "2026-03-06",
+    description: "",
+    location: "kakkanad",
+    topic: "legal"
+  },
+  {
+    title: "Legal Requirements for Data Destruction in Kalamassery",
+    slug: "legal-requirements-for-data-destruction-in-kalamassery-kalamassery-1",
+    publishDate: "2026-03-04",
+    description: "",
+    location: "kalamassery",
+    topic: "legal"
+  },
+  {
+    title: "Enterprise Data Destruction in Aluva",
+    slug: "enterprise-data-destruction-in-aluva-aluva-1",
+    publishDate: "2026-03-04",
+    description: "",
+    location: "aluva",
+    topic: "business"
+  },
+  {
+    title: "Benefits of Data Destruction in Edappally",
+    slug: "benefits-of-data-destruction-in-edappally-edappally-1",
+    publishDate: "2026-03-01",
+    description: "",
+    location: "edappally",
+    topic: "benefits"
+  },
+  {
+    title: "Data Destruction vs Data Wiping in Thrippunithura",
+    slug: "data-destruction-vs-data-wiping-in-thrippunithura-thrippunithura",
+    publishDate: "2026-02-22",
+    description: "",
+    location: "thrippunithura",
+    topic: "comparison"
+  }
+];
+
+// Service statistics
+const totalArticles = 106;
+const locations = [...new Set(serviceBlogs.map(blog => blog.location))];
+const topics = [...new Set(serviceBlogs.map(blog => blog.topic))];
+---
+
+<BaseLayout title={title} description={description} pageType="website" breadcrumbs={breadcrumbs}>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Data Destruction Articles</h1>
+      <p class="text-xl text-gray-700 leading-relaxed mb-4">
+        Expert guides and articles on data destruction in Kerala. 
+        Learn about pricing, process, and best practices for data destruction.
+      </p>
+      <div class="bg-blue-50 p-4 rounded-lg">
+        <div class="grid grid-cols-3 gap-4">
+          <div>
+            <span class="font-bold text-blue-800">{totalArticles}</span>
+            <span class="text-blue-700"> articles</span>
+          </div>
+          <div>
+            <span class="font-bold text-blue-800">{locations.length}</span>
+            <span class="text-blue-700"> locations</span>
+          </div>
+          <div>
+            <span class="font-bold text-blue-800">{topics.length}</span>
+            <span class="text-blue-700"> topics</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="blog-list">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Recent Data Destruction Articles</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        {serviceBlogs.map(blog => (
+          <article class="blog-card bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-sm text-gray-500">
+                {new Date(blog.publishDate).toLocaleDateString('en-IN', { 
+                  year: 'numeric', 
+                  month: 'short',
+                  day: 'numeric'
+                })}
+              </span>
+              <div class="flex gap-2">
+                <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs">
+                  {blog.topic}
+                </span>
+                <span class="px-2 py-1 bg-green-100 text-green-800 rounded text-xs">
+                  {blog.location}
+                </span>
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700">
+                {blog.title}
+              </a>
+            </h3>
+            <p class="text-gray-700 mb-4">{blog.description}</p>
+            <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700 font-medium">
+              Read more
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="related-section mt-12">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Browse by Location</h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        {locations.map(location => (
+          <a 
+            href={`/blog/location-${location}/`} 
+            class="block p-4 bg-green-50 rounded-lg hover:bg-green-100 transition-colors"
+          >
+            <h3 class="font-semibold text-green-800 mb-2">
+              {location.charAt(0).toUpperCase() + location.slice(1)}
+            </h3>
+            <p class="text-green-700 text-sm">battery-recycling articles</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .blog-card {
+      transition: all 0.3s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</BaseLayout>

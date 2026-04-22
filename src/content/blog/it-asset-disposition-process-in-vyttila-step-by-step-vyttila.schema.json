@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "IT Asset Disposition Process in Vyttila: Step by Step",
+  "description": "Proper e-waste management is crucial for Vyttila's environmental sustainability. This guide explores it asset disposition options, legal requirements, and trust...",
+  "image": "https://www.ewastekochi.com/images/blog/it-asset-disposition-process-in-vyttila-step-by-step-vyttila.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2026-01-18",
+  "dateModified": "2026-01-18",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/it-asset-disposition-process-in-vyttila-step-by-step-vyttila/"
+  },
+  "articleSection": "corporate",
+  "keywords": "IT Asset Disposition, Vyttila, ITAD services, corporate e-waste, asset disposal",
+  "wordCount": 1271,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "IT Asset Disposition"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Vyttila",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Vyttila",
+      "addressRegion": "Kerala",
+      "postalCode": "682019",
+      "addressCountry": "IN"
+    }
+  }
+}

@@ -1,0 +1,272 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Kakkanad Articles - EWaste Kochi";
+const description = "E-waste management guides and articles for Kakkanad. Find local recycling services, pickup options, and environmental solutions in Kakkanad.";
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Blog", url: "/blog/" },
+  { name: "Locations", url: "/blog/locations/" },
+  { name: "Kakkanad", url: "/blog/location-kakkanad/" }
+];
+
+// Location blogs
+const locationBlogs = [
+  {
+    title: "Environmental Impact of Data Destruction in Kakkanad",
+    slug: "environmental-impact-of-data-destruction-in-kakkanad-kakkanad",
+    publishDate: "2026-04-09",
+    description: "",
+    service: "data-destruction",
+    topic: "benefits"
+  },
+  {
+    title: "Common Monitor Recycling Issues in Kakkanad",
+    slug: "common-monitor-recycling-issues-in-kakkanad-kakkanad",
+    publishDate: "2026-04-07",
+    description: "",
+    service: "monitor-recycling",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Battery Recycling Price Guide for Kakkanad",
+    slug: "battery-recycling-price-guide-for-kakkanad-kakkanad",
+    publishDate: "2026-03-28",
+    description: "",
+    service: "battery-recycling",
+    topic: "pricing"
+  },
+  {
+    title: "Data Destruction During Winter in Kakkanad",
+    slug: "data-destruction-during-winter-in-kakkanad-kakkanad",
+    publishDate: "2026-03-24",
+    description: "",
+    service: "data-destruction",
+    topic: "seasonal"
+  },
+  {
+    title: "E-Waste Laws in Kakkanad: Complete Guide",
+    slug: "e-waste-laws-in-kakkanad-complete-guide-kakkanad-3",
+    publishDate: "2026-03-16",
+    description: "",
+    service: "laptop-buyback",
+    topic: "legal"
+  },
+  {
+    title: "Printer Recycling vs Office Equipment Recycling in Kakkanad",
+    slug: "printer-recycling-vs-office-equipment-recycling-in-kakkanad-kakkanad",
+    publishDate: "2026-03-14",
+    description: "",
+    service: "printer-recycling",
+    topic: "comparison"
+  },
+  {
+    title: "Laptop Buyback Problems in Kakkanad: Solutions",
+    slug: "laptop-buyback-problems-in-kakkanad-solutions-kakkanad",
+    publishDate: "2026-03-13",
+    description: "",
+    service: "laptop-buyback",
+    topic: "troubleshooting"
+  },
+  {
+    title: "Corporate IT Asset Disposition Solutions in Kakkanad",
+    slug: "corporate-it-asset-disposition-solutions-in-kakkanad-kakkanad",
+    publishDate: "2026-03-13",
+    description: "",
+    service: "itad",
+    topic: "business"
+  },
+  {
+    title: "Complete Guide to Laptop Buyback in Kakkanad",
+    slug: "complete-guide-to-laptop-buyback-in-kakkanad-kakkanad",
+    publishDate: "2026-03-12",
+    description: "",
+    service: "laptop-buyback",
+    topic: "how-to"
+  },
+  {
+    title: "Enterprise Laptop Buyback in Kakkanad",
+    slug: "enterprise-laptop-buyback-in-kakkanad-kakkanad",
+    publishDate: "2026-03-07",
+    description: "",
+    service: "laptop-buyback",
+    topic: "business"
+  },
+  {
+    title: "Legal Requirements for Data Destruction in Kakkanad",
+    slug: "legal-requirements-for-data-destruction-in-kakkanad-kakkanad",
+    publishDate: "2026-03-06",
+    description: "",
+    service: "data-destruction",
+    topic: "legal"
+  },
+  {
+    title: "Best Time for Server Recycling in Kakkanad",
+    slug: "best-time-for-server-recycling-in-kakkanad-kakkanad",
+    publishDate: "2026-03-06",
+    description: "",
+    service: "server-recycling",
+    topic: "seasonal"
+  },
+  {
+    title: "Common E-Waste Collection Issues in Kakkanad",
+    slug: "common-e-waste-collection-issues-in-kakkanad-kakkanad",
+    publishDate: "2026-02-25",
+    description: "",
+    service: "e-waste-collection",
+    topic: "troubleshooting"
+  },
+  {
+    title: "E-Waste Laws in Kakkanad: Complete Guide",
+    slug: "e-waste-laws-in-kakkanad-complete-guide-kakkanad-2",
+    publishDate: "2026-02-24",
+    description: "",
+    service: "printer-recycling",
+    topic: "legal"
+  },
+  {
+    title: "Compliance Guide for Data Destruction in Kakkanad",
+    slug: "compliance-guide-for-data-destruction-in-kakkanad-kakkanad-1",
+    publishDate: "2026-02-13",
+    description: "",
+    service: "data-destruction",
+    topic: "legal"
+  },
+  {
+    title: "Cable Recycling Options in Kakkanad: Which to Choose?",
+    slug: "cable-recycling-options-in-kakkanad-which-to-choose-kakkanad",
+    publishDate: "2026-02-10",
+    description: "",
+    service: "cable-recycling",
+    topic: "comparison"
+  },
+  {
+    title: "Seasonal Server Recycling Guide for Kakkanad",
+    slug: "seasonal-server-recycling-guide-for-kakkanad-kakkanad",
+    publishDate: "2026-02-09",
+    description: "",
+    service: "server-recycling",
+    topic: "seasonal"
+  },
+  {
+    title: "B2B Monitor Recycling Services in Kakkanad",
+    slug: "b2b-monitor-recycling-services-in-kakkanad-kakkanad-1",
+    publishDate: "2026-01-24",
+    description: "",
+    service: "monitor-recycling",
+    topic: "business"
+  },
+  {
+    title: "How to printer recycle in Kakkanad",
+    slug: "how-to-printer-recycle-in-kakkanad-kakkanad",
+    publishDate: "2026-01-24",
+    description: "",
+    service: "printer-recycling",
+    topic: "how-to"
+  },
+  {
+    title: "Troubleshooting IT Asset Disposition in Kakkanad",
+    slug: "troubleshooting-it-asset-disposition-in-kakkanad-kakkanad",
+    publishDate: "2026-01-23",
+    description: "",
+    service: "itad",
+    topic: "troubleshooting"
+  }
+];
+
+// Location statistics
+const totalArticles = 88;
+const services = [...new Set(locationBlogs.map(blog => blog.service))];
+const topics = [...new Set(locationBlogs.map(blog => blog.topic))];
+---
+
+<BaseLayout title={title} description={description} pageType="website" breadcrumbs={breadcrumbs}>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Kakkanad Articles</h1>
+      <p class="text-xl text-gray-700 leading-relaxed mb-4">
+        E-waste management guides and articles for Kakkanad. Find local recycling services, 
+        pickup options, and environmental solutions in Kakkanad.
+      </p>
+      <div class="bg-green-50 p-4 rounded-lg">
+        <div class="grid grid-cols-3 gap-4">
+          <div>
+            <span class="font-bold text-green-800">{totalArticles}</span>
+            <span class="text-green-700"> articles</span>
+          </div>
+          <div>
+            <span class="font-bold text-green-800">{services.length}</span>
+            <span class="text-green-700"> services</span>
+          </div>
+          <div>
+            <span class="font-bold text-green-800">{topics.length}</span>
+            <span class="text-green-700"> topics</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="blog-list">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Recent Kakkanad Articles</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        {locationBlogs.map(blog => (
+          <article class="blog-card bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-sm text-gray-500">
+                {new Date(blog.publishDate).toLocaleDateString('en-IN', { 
+                  year: 'numeric', 
+                  month: 'short',
+                  day: 'numeric'
+                })}
+              </span>
+              <div class="flex gap-2">
+                <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
+                  {blog.service}
+                </span>
+                <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs">
+                  {blog.topic}
+                </span>
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700">
+                {blog.title}
+              </a>
+            </h3>
+            <p class="text-gray-700 mb-4">{blog.description}</p>
+            <a href={`/blog/${blog.slug}/`} class="text-amber-600 hover:text-amber-700 font-medium">
+              Read more
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="related-section mt-12">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Browse by Service</h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        {services.map(service => (
+          <a 
+            href={`/blog/service-${service}/`} 
+            class="block p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
+          >
+            <h3 class="font-semibold text-blue-800 mb-2">
+              {service.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
+            </h3>
+            <p class="text-blue-700 text-sm">aluva articles</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .blog-card {
+      transition: all 0.3s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</BaseLayout>

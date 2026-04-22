@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Common Laptop Buyback Issues in Kakkanad",
+  "description": "Looking for reliable laptop buyback in Kakkanad? This comprehensive guide covers everything you need to know about e-waste management in Kakkanad, including pro...",
+  "image": "https://www.ewastekochi.com/images/blog/common-laptop-buyback-issues-in-kakkanad-kakkanad.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-11-28",
+  "dateModified": "2025-11-28",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/common-laptop-buyback-issues-in-kakkanad-kakkanad/"
+  },
+  "articleSection": "buyback",
+  "keywords": "Laptop Buyback, Kakkanad, sell laptop, laptop recycling, used laptop price",
+  "wordCount": 1232,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Laptop Buyback"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Kakkanad",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kakkanad",
+      "addressRegion": "Kerala",
+      "postalCode": "682030",
+      "addressCountry": "IN"
+    }
+  }
+}

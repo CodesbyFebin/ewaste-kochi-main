@@ -13,32 +13,10 @@
         "category": {
           "type": "string"
         },
-        "service": {
-          "type": "string"
-        },
-        "location": {
-          "type": "string"
-        },
-        "priority": {
-          "type": "number",
-          "default": 0
-        },
-        "featured": {
-          "type": "boolean",
-          "default": false
-        },
-        "order": {
-          "type": "number",
-          "default": 0
-        },
         "$schema": {
           "type": "string"
         }
       },
-      "required": [
-        "question",
-        "answer"
-      ],
       "additionalProperties": false
     }
   },

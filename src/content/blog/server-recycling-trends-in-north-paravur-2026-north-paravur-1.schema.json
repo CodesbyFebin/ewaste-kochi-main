@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Server Recycling Trends in North Paravur 2026",
+  "description": "Proper Dell e-waste management is crucial for North Paravur's environmental sustainability. This guide explores server recycling options, legal requirements, an...",
+  "image": "https://www.ewastekochi.com/images/blog/server-recycling-trends-in-north-paravur-2026-north-paravur-1.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "url": "https://www.ewastekochi.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EWaste Kochi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ewastekochi.com/logo.png"
+    }
+  },
+  "datePublished": "2025-12-04",
+  "dateModified": "2025-12-04",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/server-recycling-trends-in-north-paravur-2026-north-paravur-1/"
+  },
+  "articleSection": "corporate",
+  "keywords": "Server Recycling, North Paravur, server disposal, data center recycling, rack disposal",
+  "wordCount": 1207,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      ".blog-intro"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Server Recycling"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "North Paravur",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "North Paravur",
+      "addressRegion": "Kerala",
+      "postalCode": "683513",
+      "addressCountry": "IN"
+    }
+  }
+}
