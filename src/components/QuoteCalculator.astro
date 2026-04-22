@@ -1,0 +1,619 @@
+---
+// Quote Calculator Component for Conversion Engine
+interface Device {
+  id: string;
+  name: string;
+  category: string;
+  basePrice: number;
+  conditionMultiplier: {
+    excellent: number;
+    good: number;
+    fair: number;
+    poor: number;
+  };
+}
+
+const devices: Device[] = [
+  {
+    id: 'macbook-pro-m2',
+    name: 'MacBook Pro M2/M3',
+    category: 'laptop',
+    basePrice: 65000,
+    conditionMultiplier: {
+      excellent: 1.0,
+      good: 0.85,
+      fair: 0.65,
+      poor: 0.45
+    }
+  },
+  {
+    id: 'iphone-15-pro',
+    name: 'iPhone 15 Pro Max',
+    category: 'phone',
+    basePrice: 75000,
+    conditionMultiplier: {
+      excellent: 1.0,
+      good: 0.80,
+      fair: 0.60,
+      poor: 0.35
+    }
+  },
+  {
+    id: 'dell-i7-laptop',
+    name: 'Dell/HP i7 Laptop',
+    category: 'laptop',
+    basePrice: 18000,
+    conditionMultiplier: {
+      excellent: 1.0,
+      good: 0.75,
+      fair: 0.55,
+      poor: 0.35
+    }
+  },
+  {
+    id: 'samsung-s24',
+    name: 'Samsung S24 Ultra',
+    category: 'phone',
+    basePrice: 50000,
+    conditionMultiplier: {
+      excellent: 1.0,
+      good: 0.75,
+      fair: 0.50,
+      poor: 0.30
+    }
+  },
+  {
+    id: 'dell-server',
+    name: 'Dell/HP Server',
+    category: 'server',
+    basePrice: 45000,
+    conditionMultiplier: {
+      excellent: 1.0,
+      good: 0.70,
+      fair: 0.45,
+      poor: 0.25
+    }
+  },
+  {
+    id: 'macbook-air-m2',
+    name: 'MacBook Air M2',
+    category: 'laptop',
+    basePrice: 45000,
+    conditionMultiplier: {
+      excellent: 1.0,
+      good: 0.80,
+      fair: 0.60,
+      poor: 0.40
+    }
+  }
+];
+
+const locations = [
+  { id: 'kakkanad', name: 'Kakkanad', pickupFee: 0 },
+  { id: 'infopark', name: 'Infopark', pickupFee: 0 },
+  { id: 'smart-city', name: 'Smart City', pickupFee: 0 },
+  { id: 'edappally', name: 'Edappally', pickupFee: 0 },
+  { id: 'aluva', name: 'Aluva', pickupFee: 0 },
+  { id: 'vyttila', name: 'Vytilla', pickupFee: 0 },
+  { id: 'mg-road', name: 'MG Road', pickupFee: 0 },
+  { id: 'fort-kochi', name: 'Fort Kochi', pickupFee: 0 },
+  { id: 'kalamassery', name: 'Kalamassery', pickupFee: 0 },
+  { id: 'thrippunithura', name: 'Thrippunithura', pickupFee: 0 }
+];
+---
+
+<div id="quote-calculator" class="quote-calculator">
+  <div class="calculator-header">
+    <h3>Instant Quote Calculator</h3>
+    <p>Get an instant estimate for your electronics. Free pickup for 10+ devices!</p>
+  </div>
+
+  <form id="quote-form" class="quote-form">
+    <!-- Step 1: Device Selection -->
+    <div class="form-step active" id="step-1">
+      <div class="step-header">
+        <span class="step-number">1</span>
+        <h4>Select Your Device</h4>
+      </div>
+      <div class="device-grid">
+        {devices.map(device => (
+          <label class="device-option" for={device.id}>
+            <input type="radio" name="device" value={device.id} id={device.id} required>
+            <div class="device-card">
+              <div class="device-name">{device.name}</div>
+              <div class="device-price">Up to {device.basePrice.toLocaleString('en-IN')}</div>
+            </div>
+          </label>
+        ))}
+      </div>
+      <button type="button" class="btn-next" onclick="nextStep(1)">Next Step</button>
+    </div>
+
+    <!-- Step 2: Condition -->
+    <div class="form-step" id="step-2">
+      <div class="step-header">
+        <span class="step-number">2</span>
+        <h4>Device Condition</h4>
+      </div>
+      <div class="condition-options">
+        <label class="condition-option">
+          <input type="radio" name="condition" value="excellent" required>
+          <div class="condition-card">
+            <div class="condition-title">Excellent</div>
+            <div class="condition-desc">Like new, no scratches, fully functional</div>
+          </div>
+        </label>
+        <label class="condition-option">
+          <input type="radio" name="condition" value="good" required>
+          <div class="condition-card">
+            <div class="condition-title">Good</div>
+            <div class="condition-desc">Minor wear, fully functional</div>
+          </div>
+        </label>
+        <label class="condition-option">
+          <input type="radio" name="condition" value="fair" required>
+          <div class="condition-card">
+            <div class="condition-title">Fair</div>
+            <div class="condition-desc">Visible wear, functional issues</div>
+          </div>
+        </label>
+        <label class="condition-option">
+          <input type="radio" name="condition" value="poor" required>
+          <div class="condition-card">
+            <div class="condition-title">Poor</div>
+            <div class="condition-desc">Heavy wear, major issues</div>
+          </div>
+        </label>
+      </div>
+      <div class="step-buttons">
+        <button type="button" class="btn-prev" onclick="prevStep(2)">Previous</button>
+        <button type="button" class="btn-next" onclick="nextStep(2)">Next Step</button>
+      </div>
+    </div>
+
+    <!-- Step 3: Location -->
+    <div class="form-step" id="step-3">
+      <div class="step-header">
+        <span class="step-number">3</span>
+        <h4>Your Location</h4>
+      </div>
+      <div class="location-grid">
+        {locations.map(location => (
+          <label class="location-option" for={location.id}>
+            <input type="radio" name="location" value={location.id} id={location.id} required>
+            <div class="location-card">
+              <div class="location-name">{location.name}</div>
+              <div class="location-fee">Free Pickup</div>
+            </div>
+          </label>
+        ))}
+      </div>
+      <div class="step-buttons">
+        <button type="button" class="btn-prev" onclick="prevStep(3)">Previous</button>
+        <button type="button" class="btn-next" onclick="nextStep(3)">Get Quote</button>
+      </div>
+    </div>
+
+    <!-- Step 4: Results -->
+    <div class="form-step" id="step-4">
+      <div class="step-header">
+        <span class="step-number">4</span>
+        <h4>Your Instant Quote</h4>
+      </div>
+      <div class="quote-results">
+        <div class="quote-summary">
+          <div class="quote-device" id="quote-device">-</div>
+          <div class="quote-condition" id="quote-condition">-</div>
+          <div class="quote-location" id="quote-location">-</div>
+        </div>
+        <div class="quote-price">
+          <div class="price-label">Estimated Value</div>
+          <div class="price-amount" id="quote-amount">0</div>
+        </div>
+        <div class="quote-details">
+          <div class="detail-item">
+            <span>Base Price:</span>
+            <span id="detail-base">0</span>
+          </div>
+          <div class="detail-item">
+            <span>Condition Adjustment:</span>
+            <span id="detail-condition">0</span>
+          </div>
+          <div class="detail-item">
+            <span>Pickup Fee:</span>
+            <span id="detail-pickup">Free</span>
+          </div>
+        </div>
+        <div class="quote-actions">
+          <button type="button" class="btn-prev" onclick="prevStep(4)">Previous</button>
+          <a href="tel:+917500555454" class="btn-primary">Call to Confirm</a>
+          <a href="https://wa.me/917500555454?text=I%20got%20a%20quote%20for%20my%20device" class="btn-secondary">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<style>
+.quote-calculator {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  backdrop-filter: blur(12px);
+}
+
+.calculator-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.calculator-header h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text1);
+  margin-bottom: 0.5rem;
+}
+
+.calculator-header p {
+  color: var(--text2);
+  font-size: 0.9rem;
+}
+
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.step-number {
+  width: 2rem;
+  height: 2rem;
+  background: var(--green);
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.step-header h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text1);
+}
+
+.device-grid,
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.device-option,
+.location-option {
+  cursor: pointer;
+}
+
+.device-option input,
+.location-option input {
+  display: none;
+}
+
+.device-card,
+.location-card {
+  background: var(--bg2);
+  border: 2px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.device-option input:checked + .device-card,
+.location-option input:checked + .location-card {
+  border-color: var(--green);
+  background: var(--green-glow);
+}
+
+.device-card:hover,
+.location-card:hover {
+  border-color: var(--border2);
+  transform: translateY(-2px);
+}
+
+.device-name,
+.location-name {
+  font-weight: 600;
+  color: var(--text1);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.device-price,
+.location-fee {
+  color: var(--green);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.condition-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.condition-option {
+  cursor: pointer;
+}
+
+.condition-option input {
+  display: none;
+}
+
+.condition-card {
+  background: var(--bg2);
+  border: 2px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.condition-option input:checked + .condition-card {
+  border-color: var(--green);
+  background: var(--green-glow);
+}
+
+.condition-card:hover {
+  border-color: var(--border2);
+  transform: translateY(-2px);
+}
+
+.condition-title {
+  font-weight: 600;
+  color: var(--text1);
+  margin-bottom: 0.5rem;
+}
+
+.condition-desc {
+  color: var(--text2);
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.step-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.btn-next,
+.btn-prev {
+  background: var(--green);
+  color: #000;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--r-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-next:hover,
+.btn-prev:hover {
+  background: var(--green-dim);
+  transform: translateY(-2px);
+}
+
+.btn-prev {
+  background: transparent;
+  color: var(--text2);
+  border: 1px solid var(--border2);
+}
+
+.btn-prev:hover {
+  background: var(--bg2);
+  color: var(--text1);
+}
+
+.quote-results {
+  text-align: center;
+}
+
+.quote-summary {
+  background: var(--bg2);
+  border-radius: var(--r-sm);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.quote-device,
+.quote-condition,
+.quote-location {
+  color: var(--text2);
+  margin-bottom: 0.5rem;
+}
+
+.quote-device {
+  font-weight: 600;
+  color: var(--text1);
+  font-size: 1.1rem;
+}
+
+.quote-price {
+  background: linear-gradient(135deg, var(--green-glow), rgba(0,212,255,0.05));
+  border: 2px solid var(--green);
+  border-radius: var(--r);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.price-label {
+  color: var(--text2);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.price-amount {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--green);
+  font-family: var(--font-head);
+}
+
+.quote-details {
+  background: var(--bg2);
+  border-radius: var(--r-sm);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  color: var(--text2);
+}
+
+.detail-item:last-child {
+  margin-bottom: 0;
+}
+
+.quote-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.quote-actions .btn-primary,
+.quote-actions .btn-secondary {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+  border-radius: var(--r-sm);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.quote-actions .btn-primary {
+  background: var(--green);
+  color: #000;
+}
+
+.quote-actions .btn-secondary {
+  background: transparent;
+  color: var(--green);
+  border: 2px solid var(--green);
+}
+
+.quote-actions .btn-primary:hover,
+.quote-actions .btn-secondary:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .device-grid,
+  .location-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .condition-options {
+    grid-template-columns: 1fr;
+  }
+  
+  .quote-actions {
+    flex-direction: column;
+  }
+  
+  .price-amount {
+    font-size: 2rem;
+  }
+}
+</style>
+
+<script>
+  const devicesData = {devices.map(d => ({id: d.id, name: d.name, basePrice: d.basePrice, conditionMultiplier: d.conditionMultiplier}))};
+  const locationsData = {locations.map(l => ({id: l.id, name: l.name, pickupFee: l.pickupFee}))};
+
+  function nextStep(currentStep) {
+    const currentStepElement = document.getElementById(`step-${currentStep}`);
+    
+    // Validate current step
+    if (currentStep === 1) {
+      const deviceSelected = document.querySelector('input[name="device"]:checked');
+      if (!deviceSelected) {
+        alert('Please select a device');
+        return;
+      }
+    } else if (currentStep === 2) {
+      const conditionSelected = document.querySelector('input[name="condition"]:checked');
+      if (!conditionSelected) {
+        alert('Please select device condition');
+        return;
+      }
+    } else if (currentStep === 3) {
+      const locationSelected = document.querySelector('input[name="location"]:checked');
+      if (!locationSelected) {
+        alert('Please select your location');
+        return;
+      }
+      // Calculate and show quote
+      calculateQuote();
+    }
+    
+    currentStepElement.classList.remove('active');
+    const nextStepElement = document.getElementById(`step-${currentStep + 1}`);
+    if (nextStepElement) {
+      nextStepElement.classList.add('active');
+    }
+  }
+
+  function prevStep(currentStep) {
+    const currentStepElement = document.getElementById(`step-${currentStep}`);
+    currentStepElement.classList.remove('active');
+    const prevStepElement = document.getElementById(`step-${currentStep - 1}`);
+    prevStepElement.classList.add('active');
+  }
+
+  function calculateQuote() {
+    const selectedDevice = document.querySelector('input[name="device"]:checked').value;
+    const selectedCondition = document.querySelector('input[name="condition"]:checked').value;
+    const selectedLocation = document.querySelector('input[name="location"]:checked').value;
+    
+    const device = devicesData.find(d => d.id === selectedDevice);
+    const location = locationsData.find(l => l.id === selectedLocation);
+    
+    const basePrice = device.basePrice;
+    const conditionMultiplier = device.conditionMultiplier[selectedCondition];
+    const pickupFee = location.pickupFee;
+    
+    const finalPrice = Math.round(basePrice * conditionMultiplier - pickupFee);
+    
+    // Update quote display
+    document.getElementById('quote-device').textContent = device.name;
+    document.getElementById('quote-condition').textContent = selectedCondition.charAt(0).toUpperCase() + selectedCondition.slice(1) + ' Condition';
+    document.getElementById('quote-location').textContent = location.name;
+    document.getElementById('quote-amount').textContent = 'Rs. ' + finalPrice.toLocaleString('en-IN');
+    document.getElementById('detail-base').textContent = 'Rs. ' + basePrice.toLocaleString('en-IN');
+    document.getElementById('detail-condition').textContent = (conditionMultiplier * 100).toFixed(0) + '%';
+    document.getElementById('detail-pickup').textContent = pickupFee === 0 ? 'Free' : 'Rs. ' + pickupFee.toLocaleString('en-IN');
+  }
+</script>
