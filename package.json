@@ -16,7 +16,8 @@
     "generate": "node scripts/generate_all.js",
     "sitemap": "node scripts/sitemap_generator.js",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "test": "echo \"No tests specified\" && exit 0"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.2",
