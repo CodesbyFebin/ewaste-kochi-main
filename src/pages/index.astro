@@ -1,10 +1,92 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-// JSON-LD Schema Suite
+// Enhanced JSON-LD Schema Suite with E-E-A-T signals
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.ewastekochi.com/#organization",
+      "name": "EWaste Kochi",
+      "description": "Kerala's leading certified e-waste recycling and ITAD services provider since 2018",
+      "url": "https://www.ewastekochi.com",
+      "telephone": "+91-75005-55454",
+      "email": "info@ewastekochi.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "710A, Hill Palace Road, Thrippunithura",
+        "addressLocality": "Kochi",
+        "addressRegion": "Kerala",
+        "postalCode": "682301",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 9.9312,
+        "longitude": 76.3090
+      },
+      "areaServed": "Kochi, Ernakulam, Kerala",
+      "openingHours": [
+        "Mo-Sa 08:00-20:00",
+        "Su 10:00-16:00"
+      ],
+      "foundingDate": "2018",
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": 25
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Environmental Authorization",
+          "name": "KSPCB Authorization KL/EW/628"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Data Security Certification",
+          "name": "NIST 800-88 Certified"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Data Privacy Compliance",
+          "name": "DPDP Act 2023 Compliant"
+        }
+      ],
+      "memberOf": {
+        "@type": "Organization",
+        "name": "CPCB EPR Registry"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "312",
+        "bestRating": "5"
+      },
+      "hasOfferCatalog": [
+        {
+          "@type": "Service",
+          "name": "E-Waste Recycling Kochi",
+          "description": "Certified e-waste recycling and disposal services in Kochi, Kerala with zero landfill policy",
+          "url": "https://www.ewastekochi.com/services/e-waste-recycling-kochi/",
+          "areaServed": "Kochi, Ernakulam, Kerala"
+        },
+        {
+          "@type": "Service", 
+          "name": "ITAD Services Kochi",
+          "description": "IT Asset Disposition services with NIST certified data destruction and complete audit trails",
+          "url": "https://www.ewastekochi.com/itad/",
+          "areaServed": "Kochi, Ernakulam, Kerala"
+        },
+        {
+          "@type": "Service",
+          "name": "Data Destruction Kochi", 
+          "description": "NIST 800-88 and DoD certified data destruction services with serial-numbered certificates",
+          "url": "https://www.ewastekochi.com/services/data-destruction-kochi/",
+          "areaServed": "Kochi, Ernakulam, Kerala"
+        }
+      ]
+    },
     {
       "@type": "LocalBusiness",
       "@id": "https://www.ewastekochi.com#localbusiness",
@@ -37,25 +119,26 @@ const schema = {
         "DPDP Act 2023 Compliant",
         "EPR Registered"
       ],
-      "hasOfferCatalog": [
-        {
-          "@type": "Service",
-          "name": "E-Waste Recycling Kochi",
-          "description": "Certified e-waste recycling and disposal services in Kochi",
-          "url": "https://www.ewastekochi.com"
-        },
-        {
-          "@type": "Service", 
-          "name": "ITAD Services Kochi",
-          "description": "IT Asset Disposition services with NIST certified data destruction",
-          "url": "https://www.ewastekochi.com/itad/"
-        },
-        {
-          "@type": "Service",
-          "name": "Data Destruction Kochi", 
-          "description": "NIST 800-88 and DoD certified data destruction services",
-          "url": "https://www.ewastekochi.com/services/data-destruction-kochi/"
-        }
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".speakable-hero", ".speakable-services", ".speakable-faq"]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.ewastekochi.com/#founder",
+      "name": "Febin Francis",
+      "jobTitle": "Founder & Director",
+      "worksFor": {
+        "@id": "https://www.ewastekochi.com/#organization"
+      },
+      "knowsAbout": [
+        "E-Waste Recycling",
+        "ITAD",
+        "Data Destruction",
+        "Kerala Environmental Compliance",
+        "NIST 800-88",
+        "KSPCB Regulations"
       ]
     },
     {
@@ -91,7 +174,7 @@ const schema = {
           "name": "What certifications should I look for in an e-waste recycler?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Always verify KSPCB authorization. We hold KL/EW/628 — one of the few authorized facilities in Ernakulam district. We also provide NIST 800-88 data destruction and DPDP Act compliance documentation."
+            "text": "Always verify KSPCB authorization. We hold KL/EW/628, one of the few authorized facilities in Ernakulam district. We also provide NIST 800-88 data destruction and DPDP Act compliance documentation."
           }
         },
         {
@@ -107,7 +190,7 @@ const schema = {
           "name": "What is e-waste recycling and why is it important in Kochi?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "E-waste recycling is the certified process of recovering valuable materials from discarded electronics while safely neutralizing hazardous components like lead, mercury and cadmium. In Kochi, which generates over 18,000 metric tonnes of e-waste annually, proper recycling prevents toxic contamination of the Periyar river basin and ensures compliance with India's E-Waste Rules 2022."
+            "text": "E-waste recycling is the certified process of recovering valuable materials from discarded electronics while safely neutralizing hazardous components. In Kochi, generating over 18,000 metric tonnes annually, proper recycling prevents Periyar river contamination and ensures compliance with E-Waste Rules 2022."
           }
         },
         {
@@ -115,7 +198,7 @@ const schema = {
           "name": "Is EWaste Kochi certified and KSPCB authorized?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. EWaste Kochi holds KSPCB (Kerala State Pollution Control Board) authorization No. KL/EW/628, making us one of only three authorized e-waste processing facilities in Ernakulam district. We are also EPR-registered with the Central Pollution Control Board (CPCB), Government of India."
+            "text": "Yes. EWaste Kochi holds KSPCB authorization No. KL/EW/628, one of only three authorized e-waste processing facilities in Ernakulam district. We are also EPR-registered with the Central Pollution Control Board, Government of India."
           }
         },
         {
@@ -123,7 +206,23 @@ const schema = {
           "name": "Where is the best e-waste collection point in Kochi?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Our main facility is at 710A, Hill Palace Road, Thrippunithura, Kochi — open Monday to Saturday 8AM–8PM, Sunday 10AM–4PM. For corporate clients in Infopark, Smart City and Kakkanad, we offer free same-day pickup. For residential areas across Ernakulam, we pick up within 24 hours of booking via WhatsApp."
+            "text": "Our main facility is at 710A, Hill Palace Road, Thrippunithura, Kochi, open Mon-Sat 8AM-8PM, Sun 10AM-4PM. For corporate clients in Infopark, Smart City and Kakkanad, we offer free same-day pickup. For residential areas across Ernakulam, we pick up within 24 hours via WhatsApp."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does ITAD stand for and what does it include?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ITAD stands for IT Asset Disposition, a certified, auditable process of retiring IT equipment. Complete ITAD includes: asset inventory, NIST 800-88/DoD data destruction, Certificate of Destruction, KSPCB-compliant recycling, value recovery, and DPDP Act 2023 compliance documentation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is the best certified ITAD company in Kochi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "EWaste Kochi is the preferred ITAD partner for 500+ businesses in Kochi and Kerala, including IT companies at Infopark, banks on MG Road, hospitals in Ernakulam and manufacturing firms in Kalamassery. We are KSPCB authorized, NIST 800-88 certified, and DPDP Act 2023 compliant."
           }
         }
       ]
@@ -144,29 +243,43 @@ const schema = {
       "@id": "https://www.ewastekochi.com#website",
       "url": "https://www.ewastekochi.com",
       "name": "EWaste Kochi",
-      "description": "Kerala's #1 Certified E-Waste Recycling & ITAD Services",
+      "description": "Kerala's #1 Certified E-Waste Recycling & ITAD Services in Kochi",
       "potentialAction": {
         "@type": "SearchAction",
         "target": "https://www.ewastekochi.com/search?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
-    },
-    {
-      "@type": "SpeakableSpecification",
-      "@id": "https://www.ewastekochi.com#speakable",
-      "cssSelector": [
-        ".hero h1",
-        ".hero .subheading",
-        ".service-title"
-      ]
     }
   ]
 };
 ---
 
+<!-- No Flash of Wrong Theme (FWOT) Script -->
+<script>
+(function(){var t=localStorage.getItem('ew-theme');if(t){document.documentElement.setAttribute('data-theme',t)}else if(window.matchMedia('(prefers-color-scheme: dark)').matches){document.documentElement.setAttribute('data-theme','dark')}})();
+</script>
+
+<!-- AI Crawler Directives -->
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="googlebot" content="index, follow">
+<meta name="GPTBot" content="index, follow">
+<meta name="ClaudeBot" content="index, follow">
+<meta name="PerplexityBot" content="index, follow">
+<meta name="anthropic-ai" content="index, follow">
+
+<!-- Hreflang for Multilingual SEO -->
+<link rel="alternate" hreflang="en-IN" href="https://ewastekochi.com/" />
+<link rel="alternate" hreflang="ml-IN" href="https://ewastekochi.com/ml/" />
+<link rel="alternate" hreflang="hi-IN" href="https://ewastekochi.com/hi/" />
+<link rel="alternate" hreflang="ta-IN" href="https://ewastekochi.com/ta/" />
+<link rel="alternate" hreflang="x-default" href="https://ewastekochi.com/" />
+
+<!-- Font Preload for Performance -->
+<link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap">
+
 <BaseLayout 
-  title="E-Waste Recycling Kochi - Free Pickup & Data Destruction | Kerala's #1 Certified ITAD"
-  description="Certified e-waste disposal in Kochi. Free pickup, hard drive shredding, laptop buyback, ITAD. KSPCB KL/EW/628 authorized, NIST 800-88 certified."
+  title="E-Waste Recycling & ITAD Services in Kochi, Kerala | KSPCB Authorized"
+  description="Certified e-waste recycling and ITAD services in Kochi, Kerala. KSPCB KL/EW/628 authorized, NIST 800-88 certified. Free pickup, data destruction, certificate of destruction."
   schema={schema}
 >
   <header role="banner">
@@ -174,42 +287,89 @@ const schema = {
     <nav aria-label="main navigation" role="navigation">
       <div class="nav-container">
         <a href="/" class="logo" aria-label="EWaste Kochi Home">
-          ♻️ EWaste Kochi
+          <span class="logo-icon">Recycle</span>
+          EWaste Kochi
         </a>
+        
         <ul class="nav-menu">
           <li><a href="/services/">Services</a></li>
           <li><a href="/locations/">Locations</a></li>
           <li><a href="/sell-electronics-kochi/">Sell Electronics</a></li>
           <li><a href="/blog/">Blog</a></li>
           <li><a href="/faq/">FAQ</a></li>
-          <li><a href="/contact/" class="cta-button">📞 Contact</a></li>
         </ul>
+        
+        <div class="nav-actions">
+          <!-- Theme Toggle -->
+          <button 
+            class="theme-toggle" 
+            aria-label="Switch to dark mode"
+            onclick="toggleTheme()"
+            aria-live="polite"
+          >
+            <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/>
+              <line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/>
+              <line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+          
+          <!-- Language Switcher -->
+          <div class="language-switcher">
+            <button class="lang-btn" onclick="toggleLanguageSwitcher()" aria-label="Language">
+              EN · <span class="lang-preview">ML</span> · HI · TA
+            </button>
+            <div class="lang-dropdown" id="langDropdown">
+              <a href="/ml/" class="lang-option" data-lang="ml">Malayalam</a>
+              <a href="/hi/" class="lang-option" data-lang="hi">Hindi</a>
+              <a href="/ta/" class="lang-option" data-lang="ta">Tamil</a>
+            </div>
+          </div>
+          
+          <a href="/contact/" class="cta-button">Get Free Quote</a>
+        </div>
       </div>
     </nav>
   </header>
 
   <main id="main-content">
-    <!-- Hero Section -->
+    <!-- Hero Section with Voice Search Optimization -->
     <section aria-labelledby="hero-heading" class="hero">
       <div class="container">
         <hgroup>
-          <h1 id="hero-heading" class="hero-title speakable">Kerala's #1 Certified E-Waste & ITAD Recycler — Kochi</h1>
-          <p class="hero-subheading speakable">KSPCB Authorized KL/EW/628 • NIST 800-88 Certified Data Destruction • DPDP Act 2023 Compliant • Zero Landfill Policy</p>
+          <h1 id="hero-heading" class="hero-title speakable-hero">
+            E-Waste Recycling & ITAD Services in Kochi, Kerala
+          </h1>
+          <p class="hero-subheading speakable-hero">
+            Looking for certified e-waste recycling near you in Kochi? Kerala's #1 KSPCB authorized provider with NIST 800-88 data destruction and same-day pickup across Ernakulam district.
+          </p>
         </hgroup>
         
         <nav aria-label="hero actions" class="hero-actions">
-          <a href="tel:+917500555454" class="btn btn-primary">📞 Call 24/7</a>
-          <a href="https://wa.me/917500555454?text=Hi%2C+I+need+ewaste+collection+in+Kochi" class="btn btn-secondary" target="_blank" rel="noopener">💬 WhatsApp</a>
-          <a href="/contact/" class="btn btn-outline">Get Free Quote →</a>
+          <a href="tel:+917500555454" class="btn btn-primary">Call +91 75005 55454</a>
+          <a href="https://wa.me/917500555454?text=Hi%2C+I+need+ewaste+collection+in+Kochi" class="btn btn-secondary" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="/contact/" class="btn btn-outline">Schedule Free Pickup</a>
         </nav>
 
+        <!-- Trust Badges with Compliance Authority -->
         <div class="trust-badges">
-          <span class="badge">✅ KSPCB Authorized</span>
-          <span class="badge">🔒 NIST 800-88</span>
-          <span class="badge">📋 DPDP Act 2023</span>
-          <span class="badge">♻️ Zero Landfill</span>
+          <span class="badge">KSPCB Authorized KL/EW/628</span>
+          <span class="badge">NIST 800-88 Certified</span>
+          <span class="badge">DPDP Act 2023 Compliant</span>
+          <span class="badge">Zero Landfill Policy</span>
+          <span class="badge">Certificate of Destruction</span>
         </div>
 
+        <!-- Real Data Metrics for E-E-A-T -->
         <div class="stats-bar">
           <div class="stat">
             <span class="stat-number">2,400+</span>
@@ -224,73 +384,110 @@ const schema = {
             <span class="stat-label">Pickup Zones</span>
           </div>
           <div class="stat">
-            <span class="stat-number">100%</span>
-            <span class="stat-label">Certified</span>
+            <span class="stat-number">4.9</span>
+            <span class="stat-label">Rating (312 reviews)</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Companies Trust Us</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Process Transparency Block -->
+    <section aria-labelledby="process-heading" class="process">
+      <div class="container">
+        <h2 id="process-heading" class="section-title">4-Step Certified Process</h2>
+        <div class="process-grid">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <h3>Book</h3>
+            <p>Call or WhatsApp to schedule pickup. Free for 10+ devices in Ernakulam district.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <h3>Pickup</h3>
+            <p>GPS-tracked secure collection with KSPCB manifest. Same-day for Infopark & Smart City.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <h3>Destroy</h3>
+            <p>NIST 800-88 certified data destruction with serial-numbered tracking.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <h3>Certificate</h3>
+            <p>Certificate of Destruction issued within 24 hours for complete compliance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section with Topic Authority -->
     <section aria-labelledby="services-heading" class="services">
       <div class="container">
         <h2 id="services-heading" class="section-title">Our Certified Services</h2>
         <div class="services-grid">
           <article class="service-card">
             <header>
-              <h3 class="service-title speakable">♻️ E-Waste Recycling Kochi</h3>
+              <h3 class="service-title speakable-services">E-Waste Recycling Kochi</h3>
             </header>
-            <p>Certified e-waste recycling and disposal services for Kerala businesses and residents.</p>
-            <a href="/services/e-waste-recycling-kochi/" class="service-link">Learn More →</a>
+            <p>Certified e-waste recycling and disposal services for Kerala businesses and residents. Zero landfill policy with KSPCB compliance.</p>
+            <a href="/services/e-waste-recycling-kochi/" class="service-link">Learn More</a>
           </article>
 
           <article class="service-card">
             <header>
-              <h3 class="service-title speakable">🏢 ITAD Services Kochi</h3>
+              <h3 class="service-title speakable-services">ITAD Services Kochi</h3>
             </header>
-            <p>NIST/DoD Certified IT Asset Disposition with complete audit trails.</p>
-            <a href="/itad/" class="service-link">Learn More →</a>
+            <p>NIST/DoD Certified IT Asset Disposition with complete audit trails for corporate compliance in Kochi.</p>
+            <a href="/itad/" class="service-link">Learn More</a>
           </article>
 
           <article class="service-card">
             <header>
-              <h3 class="service-title speakable">🔐 Data Destruction Kochi</h3>
+              <h3 class="service-title speakable-services">Data Destruction Kochi</h3>
             </header>
-            <p>NIST 800-88 & DoD Certified Data Sanitization and physical destruction.</p>
-            <a href="/services/data-destruction-kochi/" class="service-link">Learn More →</a>
+            <p>NIST 800-88 & DoD Certified Data Sanitization and physical destruction with serial-numbered certificates.</p>
+            <a href="/services/data-destruction-kochi/" class="service-link">Learn More</a>
           </article>
 
           <article class="service-card">
             <header>
-              <h3 class="service-title speakable">⚙️ Hard Drive Shredding Kochi</h3>
+              <h3 class="service-title speakable-services">Secure Laptop Recycling Kochi</h3>
             </header>
-            <p>Physical destruction of hard drives & SSDs with serial-numbered certificates.</p>
-            <a href="/services/hard-drive-shredding-kochi/" class="service-link">Learn More →</a>
+            <p>Certified secure laptop recycling with data destruction for businesses and individuals in Kochi.</p>
+            <a href="/services/secure-laptop-recycling/" class="service-link">Learn More</a>
           </article>
 
           <article class="service-card">
             <header>
-              <h3 class="service-title speakable">💻 Laptop Buyback Kochi</h3>
+              <h3 class="service-title speakable-services">Free E-Waste Pickup Kochi</h3>
             </header>
-            <p>Best laptop buyback prices in Kochi with instant payment.</p>
-            <a href="/sell-electronics-kochi/" class="service-link">Learn More →</a>
+            <p>Same-day & next-day e-waste collection across Ernakulam district. Free for 10+ devices.</p>
+            <a href="/services/free-ewaste-pickup-kochi/" class="service-link">Learn More</a>
           </article>
 
           <article class="service-card">
             <header>
-              <h3 class="service-title speakable">🚚 Free E-Waste Pickup Kochi</h3>
+              <h3 class="service-title speakable-services">Electronics Buyback Kochi</h3>
             </header>
-            <p>Same-day & next-day e-waste collection across Ernakulam district.</p>
-            <a href="/services/free-ewaste-pickup-kochi/" class="service-link">Learn More →</a>
+            <p>Best prices for old electronics with instant payment and free pickup service in Kochi.</p>
+            <a href="/sell-electronics-kochi/" class="service-link">Learn More</a>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- FAQ Section with Schema and Voice Search -->
     <section aria-labelledby="faq-heading" class="faq">
       <div class="container">
-        <h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-header">
+          <h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
+          <p class="faq-updated">Last Updated: April 2026</p>
+        </div>
+        
         <div class="faq-categories">
           
           <fieldset class="faq-category">
@@ -298,29 +495,29 @@ const schema = {
             
             <details itemscope itemtype="https://schema.org/Question">
               <summary itemprop="name">What are the legal requirements for e-waste disposal for a company in Kochi?</summary>
-              <div itemscope itemtype="https://schema.org/Answer" class="faq-answer">
+              <div itemscope itemtype="https://schema.org/Answer" class="faq-answer speakable-faq">
                 <p itemprop="text">Companies in Kochi must comply with India's E-Waste Rules 2022, which require using a KSPCB-authorized recycler. We are authorized (Reg. No: KL/EW/628) and provide the necessary compliance documentation and Certificate of Destruction for every job.</p>
               </div>
             </details>
 
             <details itemscope itemtype="https://schema.org/Question">
               <summary itemprop="name">What certifications should I look for in an e-waste recycler?</summary>
-              <div itemscope itemtype="https://schema.org/Answer" class="faq-answer">
-                <p itemprop="text">Always verify KSPCB authorization. We hold KL/EW/628 — one of the few authorized facilities in Ernakulam district. We also provide NIST 800-88 data destruction and DPDP Act compliance documentation.</p>
+              <div itemscope itemtype="https://schema.org/Answer" class="faq-answer speakable-faq">
+                <p itemprop="text">Always verify KSPCB authorization. We hold KL/EW/628, one of the few authorized facilities in Ernakulam district. We also provide NIST 800-88 data destruction and DPDP Act compliance documentation.</p>
               </div>
             </details>
 
             <details itemscope itemtype="https://schema.org/Question">
               <summary itemprop="name">Is EWaste Kochi certified and KSPCB authorized?</summary>
-              <div itemscope itemtype="https://schema.org/Answer" class="faq-answer">
-                <p itemprop="text">Yes. EWaste Kochi holds KSPCB (Kerala State Pollution Control Board) authorization No. KL/EW/628, making us one of only three authorized e-waste processing facilities in Ernakulam district. We are also EPR-registered with the Central Pollution Control Board (CPCB), Government of India.</p>
+              <div itemscope itemtype="https://schema.org/Answer" class="faq-answer speakable-faq">
+                <p itemprop="text">Yes. EWaste Kochi holds KSPCB authorization No. KL/EW/628, one of only three authorized e-waste processing facilities in Ernakulam district. We are also EPR-registered with the Central Pollution Control Board, Government of India.</p>
               </div>
             </details>
 
             <details itemscope itemtype="https://schema.org/Question">
               <summary itemprop="name">What is e-waste recycling and why is it important in Kochi?</summary>
-              <div itemscope itemtype="https://schema.org/Answer" class="faq-answer">
-                <p itemprop="text">E-waste recycling is the certified process of recovering valuable materials from discarded electronics while safely neutralizing hazardous components like lead, mercury and cadmium. In Kochi, which generates over 18,000 metric tonnes of e-waste annually, proper recycling prevents toxic contamination of the Periyar river basin and ensures compliance with India's E-Waste Rules 2022.</p>
+              <div itemscope itemtype="https://schema.org/Answer" class="faq-answer speakable-faq">
+                <p itemprop="text">E-waste recycling is the certified process of recovering valuable materials from discarded electronics while safely neutralizing hazardous components. In Kochi, generating over 18,000 metric tonnes annually, proper recycling prevents Periyar river contamination and ensures compliance with E-Waste Rules 2022.</p>
               </div>
             </details>
           </fieldset>
@@ -330,29 +527,29 @@ const schema = {
             
             <details itemscope itemtype="https://schema.org/Question">
               <summary itemprop="name">How does your e-waste collection service work?</summary>
-              <div itemscope itemtype="https://schema.org/Answer" class="faq-answer">
+              <div itemscope itemtype="https://schema.org/Answer" class="faq-answer speakable-faq">
                 <p itemprop="text">Simply contact us to schedule a pickup. We arrive with proper documentation, collect your e-waste, and provide a Certificate of Destruction within 24 hours. For 10+ devices, pickup is free.</p>
               </div>
             </details>
 
             <details itemscope itemtype="https://schema.org/Question">
-              <summary itemprop="name">Is e-waste disposal free for businesses?</summary>
-              <div itemscope itemtype="https://schema.org/Answer" class="faq-answer">
-                <p itemprop="text">We offer free pickup for 10 or more devices. Every job includes a Certificate of Destruction at no extra cost.</p>
+              <summary itemprop="name">Is e-waste disposal free for businesses in Kochi?</summary>
+              <div itemscope itemtype="https://schema.org/Answer" class="faq-answer speakable-faq">
+                <p itemprop="text">We offer free pickup for 10 or more devices anywhere in Ernakulam district. Every job includes a Certificate of Destruction at no extra cost.</p>
               </div>
             </details>
 
             <details itemscope itemtype="https://schema.org/Question">
-              <summary itemprop="name">How quickly can you collect e-waste from my office?</summary>
-              <div itemscope itemtype="https://schema.org/Answer" class="faq-answer">
-                <p itemprop="text">Same-day to 48-hour turnaround is standard. We also offer 4-hour emergency service for urgent corporate needs.</p>
+              <summary itemprop="name">How quickly can you collect e-waste from my office in Kochi?</summary>
+              <div itemscope itemtype="https://schema.org/Answer" class="faq-answer speakable-faq">
+                <p itemprop="text">Same-day to 48-hour turnaround is standard across Kochi. We also offer 4-hour emergency service for urgent corporate needs in Infopark, Smart City and Kakkanad.</p>
               </div>
             </details>
 
             <details itemscope itemtype="https://schema.org/Question">
               <summary itemprop="name">Where is the best e-waste collection point in Kochi?</summary>
-              <div itemscope itemtype="https://schema.org/Answer" class="faq-answer">
-                <p itemprop="text">Our main facility is at 710A, Hill Palace Road, Thrippunithura, Kochi — open Monday to Saturday 8AM–8PM, Sunday 10AM–4PM. For corporate clients in Infopark, Smart City and Kakkanad, we offer free same-day pickup. For residential areas across Ernakulam, we pick up within 24 hours of booking via WhatsApp.</p>
+              <div itemscope itemtype="https://schema.org/Answer" class="faq-answer speakable-faq">
+                <p itemprop="text">Our main facility is at 710A, Hill Palace Road, Thrippunithura, Kochi, open Mon-Sat 8AM-8PM, Sun 10AM-4PM. For corporate clients in Infopark, Smart City and Kakkanad, we offer free same-day pickup.</p>
               </div>
             </details>
           </fieldset>
@@ -362,87 +559,80 @@ const schema = {
             
             <details itemscope itemtype="https://schema.org/Question">
               <summary itemprop="name">What does ITAD stand for and what does it include?</summary>
-              <div itemscope itemtype="https://schema.org/Answer" class="faq-answer">
-                <p itemprop="text">ITAD stands for IT Asset Disposition — a certified, auditable process of retiring IT equipment. A complete ITAD service includes: asset inventory and tagging, NIST 800-88/DoD certified data destruction, Certificate of Destruction, KSPCB-compliant recycling, value recovery through buyback, and DPDP Act 2023 compliance documentation.</p>
-              </div>
-            </details>
-
-            <details itemscope itemtype="https://schema.org/Question">
-              <summary itemprop="name">What is certified IT asset destruction for companies in Kochi?</summary>
-              <div itemscope itemtype="https://schema.org/Answer" class="faq-answer">
-                <p itemprop="text">Certified IT asset destruction involves NIST 800-88 or DoD 5220.22-M data destruction of all storage media, followed by eco-responsible recycling, with a serial-numbered Certificate of Destruction issued for every device. EWaste Kochi provides this for all sizes — from a single laptop to a 500-device enterprise IT refresh at Infopark.</p>
+              <div itemscope itemtype="https://schema.org/Answer" class="faq-answer speakable-faq">
+                <p itemprop="text">ITAD stands for IT Asset Disposition, a certified, auditable process of retiring IT equipment. Complete ITAD includes: asset inventory, NIST 800-88/DoD data destruction, Certificate of Destruction, KSPCB-compliant recycling, value recovery, and DPDP Act 2023 compliance documentation.</p>
               </div>
             </details>
 
             <details itemscope itemtype="https://schema.org/Question">
               <summary itemprop="name">Who is the best certified ITAD company in Kochi?</summary>
-              <div itemscope itemtype="https://schema.org/Answer" class="faq-answer">
-                <p itemprop="text">EWaste Kochi is the preferred ITAD partner for 500+ businesses in Kochi and Kerala, including IT companies at Infopark, banks on MG Road, hospitals in Ernakulam and manufacturing firms in Kalamassery. We are KSPCB authorized, NIST 800-88 certified, and DPDP Act 2023 compliant — providing a complete audit trail needed for any corporate compliance review.</p>
+              <div itemscope itemtype="https://schema.org/Answer" class="faq-answer speakable-faq">
+                <p itemprop="text">EWaste Kochi is the preferred ITAD partner for 500+ businesses in Kochi and Kerala, including IT companies at Infopark, banks on MG Road, hospitals in Ernakulam and manufacturing firms in Kalamassery. We are KSPCB authorized, NIST 800-88 certified, and DPDP Act 2023 compliant.</p>
               </div>
             </details>
           </fieldset>
         </div>
         
         <div class="faq-summary">
-          <p><strong>12 questions answered</strong> — covering compliance, pickup, and data destruction services.</p>
+          <p><strong>10 questions answered</strong> covering compliance, pickup, and data destruction services in Kochi, Kerala.</p>
         </div>
       </div>
     </section>
 
-    <!-- Locations Section -->
+    <!-- Locations Section with Programmatic Links -->
     <section aria-labelledby="locations-heading" class="locations">
       <div class="container">
-        <h2 id="locations-heading" class="section-title">569 Local Authority Zones</h2>
+        <h2 id="locations-heading" class="section-title">569 Local Authority Zones in Kochi, Kerala</h2>
         <p class="section-subtitle">Free corporate collection and localized compliance across every district in Kerala.</p>
         
         <div class="locations-grid">
           <a href="/locations/kakkanad/" class="location-card" itemprop="areaServed">
-            <span class="location-name">Kakkanad →</span>
+            <span class="location-name">Kakkanad</span>
             <span class="pickup-badge">Free Pickup</span>
           </a>
           
           <a href="/locations/infopark-kochi/" class="location-card" itemprop="areaServed">
-            <span class="location-name">Infopark Kochi →</span>
+            <span class="location-name">Infopark Kochi</span>
             <span class="pickup-badge">Free Pickup</span>
           </a>
           
           <a href="/locations/smart-city-kochi/" class="location-card" itemprop="areaServed">
-            <span class="location-name">Smart City Kochi →</span>
+            <span class="location-name">Smart City Kochi</span>
             <span class="pickup-badge">Free Pickup</span>
           </a>
           
           <a href="/locations/edappally/" class="location-card" itemprop="areaServed">
-            <span class="location-name">Edappally →</span>
+            <span class="location-name">Edappally</span>
             <span class="pickup-badge">Free Pickup</span>
           </a>
           
           <a href="/locations/thrippunithura/" class="location-card" itemprop="areaServed">
-            <span class="location-name">Thrippunithura →</span>
+            <span class="location-name">Thrippunithura</span>
             <span class="pickup-badge">Free Pickup</span>
           </a>
           
           <a href="/locations/aluva/" class="location-card" itemprop="areaServed">
-            <span class="location-name">Aluva →</span>
+            <span class="location-name">Aluva</span>
             <span class="pickup-badge">Free Pickup</span>
           </a>
           
           <a href="/locations/vytilla/" class="location-card" itemprop="areaServed">
-            <span class="location-name">Vytilla →</span>
+            <span class="location-name">Vytilla</span>
             <span class="pickup-badge">Free Pickup</span>
           </a>
           
           <a href="/locations/mg-road/" class="location-card" itemprop="areaServed">
-            <span class="location-name">MG Road →</span>
+            <span class="location-name">MG Road</span>
             <span class="pickup-badge">Free Pickup</span>
           </a>
           
           <a href="/locations/fort-kochi/" class="location-card" itemprop="areaServed">
-            <span class="location-name">Fort Kochi →</span>
+            <span class="location-name">Fort Kochi</span>
             <span class="pickup-badge">Free Pickup</span>
           </a>
           
           <a href="/locations/kalamassery/" class="location-card" itemprop="areaServed">
-            <span class="location-name">Kalamassery →</span>
+            <span class="location-name">Kalamassery</span>
             <span class="pickup-badge">Free Pickup</span>
           </a>
         </div>
@@ -457,98 +647,106 @@ const schema = {
     <section aria-labelledby="buyback-heading" class="buyback">
       <div class="container">
         <div class="text-center">
-          <div class="section-eyebrow">Best Prices in Kerala</div>
-          <h2 id="buyback-heading" class="section-title">Sell Your Old <em>Electronics</em> in Kochi</h2>
+          <div class="section-eyebrow">Best Buyback Prices in Kerala</div>
+          <h2 id="buyback-heading" class="section-title">Sell Your Old Electronics in Kochi</h2>
           <p class="section-subtitle">Better than Cashify. Instant payment. Free pickup for 10+ items. Data destruction included.</p>
         </div>
         
         <div class="buyback-grid">
           <article class="buyback-card">
             <div class="device-name">MacBook Pro M2/M3</div>
-            <div class="device-price">₹65,000</div>
-            <div class="device-sub">2021–2024 · Any condition</div>
+            <div class="device-price">Rs 65,000</div>
+            <div class="device-sub">2021-2024 · Any condition</div>
           </article>
           
           <article class="buyback-card">
             <div class="device-name">iPhone 15 Pro Max</div>
-            <div class="device-price">₹75,000</div>
+            <div class="device-price">Rs 75,000</div>
             <div class="device-sub">256GB+ · Working</div>
           </article>
           
           <article class="buyback-card">
             <div class="device-name">Dell/HP i7 Laptop</div>
-            <div class="device-price">₹18,000</div>
+            <div class="device-price">Rs 18,000</div>
             <div class="device-sub">2020+ · 16GB RAM</div>
           </article>
           
           <article class="buyback-card">
             <div class="device-name">Samsung S24 Ultra</div>
-            <div class="device-price">₹50,000</div>
+            <div class="device-price">Rs 50,000</div>
             <div class="device-sub">Excellent condition</div>
           </article>
           
           <article class="buyback-card">
             <div class="device-name">Server (Dell/HP)</div>
-            <div class="device-price">₹45,000</div>
+            <div class="device-price">Rs 45,000</div>
             <div class="device-sub">Rack unit · Xeon</div>
           </article>
           
           <article class="buyback-card">
             <div class="device-name">MacBook Air M2</div>
-            <div class="device-price">₹45,000</div>
-            <div class="device-sub">2022–2024</div>
+            <div class="device-price">Rs 45,000</div>
+            <div class="device-sub">2022-2024</div>
           </article>
         </div>
         
         <div class="buyback-cta">
-          <a href="/sell-electronics-kochi/" class="btn btn-primary btn-lg">💰 Get Instant Quote →</a>
-          <a href="/cashify-vs-ewastekochi/" class="btn btn-outline btn-lg">vs Cashify — Who Pays More?</a>
+          <a href="/sell-electronics-kochi/" class="btn btn-primary btn-lg">Get Instant Quote</a>
+          <a href="/cashify-vs-ewastekochi/" class="btn btn-outline btn-lg">vs Cashify</a>
         </div>
       </div>
     </section>
 
-    <!-- Collection Section -->
-    <section aria-labelledby="collection-heading" class="collection">
+    <!-- Fresh Content Feed - Blog Section -->
+    <section aria-labelledby="blog-heading" class="blog">
       <div class="container">
-        <div class="collection-grid">
-          <div class="collection-content">
-            <div class="section-eyebrow">Free E-Waste Collection</div>
-            <h2 id="collection-heading" class="section-title">E-Waste <em>Collection</em> in Kochi — Scheduled & Free</h2>
-            <p>Need e-waste collection in Kochi? EWaste Kochi picks up from your office, home or factory anywhere in Ernakulam district. Free for 10+ devices. Same-day slots available for Infopark, Kakkanad and Smart City.</p>
-            
-            <ul class="collection-features">
-              <li>✓ Free for 10+ devices — Ernakulam district</li>
-              <li>✓ Same-day priority for Infopark & Smart City</li>
-              <li>✓ GPS-tracked secure transport</li>
-              <li>✓ KSPCB manifest provided at pickup</li>
-              <li>✓ Certificate of Destruction within 24 hours</li>
-            </ul>
-            
-            <a href="/contact/" class="btn btn-primary">📦 Book Collection Now →</a>
-          </div>
+        <h2 id="blog-heading" class="section-title">Latest Compliance Updates & Guides</h2>
+        <div class="blog-grid">
+          <article class="blog-card">
+            <h3><a href="/blog/dpdp-act-2023-compliance/">DPDP Act 2023: Complete Guide for Kerala Businesses</a></h3>
+            <p>Understanding data protection requirements for e-waste disposal and ITAD services under India's new privacy law.</p>
+            <time datetime="2026-04-15">April 15, 2026</time>
+          </article>
           
-          <div class="collection-pricing">
-            <div class="pricing-header">Pickup Pricing — Ernakulam</div>
-            <table class="pricing-table">
-              <tr>
-                <td>50+ units — corporate</td>
-                <td class="price-free">FREE</td>
-              </tr>
-              <tr>
-                <td>10–49 units</td>
-                <td class="price-free">FREE</td>
-              </tr>
-              <tr>
-                <td>1–9 units (residential)</td>
-                <td>₹99</td>
-              </tr>
-              <tr>
-                <td>Walk-in drop-off</td>
-                <td class="price-free">FREE</td>
-              </tr>
-            </table>
-            
-            <a href="https://wa.me/917500555454?text=Hi%2C+I+need+ewaste+collection+in+Kochi" target="_blank" rel="noopener" class="btn btn-wa">💬 WhatsApp to Schedule</a>
+          <article class="blog-card">
+            <h3><a href="/blog/kspcb-e-waste-rules-2022/">KSPCB E-Waste Rules 2022: What Kochi Companies Must Know</a></h3>
+            <p>Complete breakdown of Kerala's e-waste regulations and compliance requirements for businesses in Ernakulam district.</p>
+            <time datetime="2026-04-10">April 10, 2026</time>
+          </article>
+          
+          <article class="blog-card">
+            <h3><a href="/blog/nist-800-88-data-destruction/">NIST 800-88 Data Destruction: ITAD Best Practices</a></h3>
+            <p>Technical guide to implementing NIST 800-88 standards for secure data destruction in corporate environments.</p>
+            <time datetime="2026-04-05">April 5, 2026</time>
+          </article>
+        </div>
+        
+        <div class="blog-cta">
+          <a href="/blog/" class="btn btn-outline">View All Articles</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section aria-labelledby="clients-heading" class="clients">
+      <div class="container">
+        <h2 id="clients-heading" class="section-title">Trusted by 500+ Companies in Kerala</h2>
+        <div class="client-categories">
+          <div class="client-category">
+            <h3>IT Companies</h3>
+            <p>Infopark, Smart City, Kakkanad Technology Parks</p>
+          </div>
+          <div class="client-category">
+            <h3>Banks & Finance</h3>
+            <p>Leading banks on MG Road and Ernakulam</p>
+          </div>
+          <div class="client-category">
+            <h3>Healthcare</h3>
+            <p>Hospitals and medical facilities across Kochi</p>
+          </div>
+          <div class="client-category">
+            <h3>Manufacturing</h3>
+            <p>Industrial firms in Kalamassery and Aluva</p>
           </div>
         </div>
       </div>
@@ -585,7 +783,7 @@ const schema = {
             <li><a href="/locations/infopark-kochi/">Infopark Kochi</a></li>
             <li><a href="/locations/smart-city-kochi/">Smart City Kochi</a></li>
             <li><a href="/locations/edappally/">Edappally</a></li>
-            <li><a href="/locations/">All Locations →</a></li>
+            <li><a href="/locations/">All Locations</a></li>
           </ul>
         </div>
         
@@ -593,70 +791,187 @@ const schema = {
           <h3>Contact</h3>
           <address class="contact-info">
             <div class="contact-item">
-              <strong>📞 Phone:</strong> 
+              <strong>Phone:</strong> 
               <a href="tel:+917500555454">+91 75005 55454</a>
             </div>
             <div class="contact-item">
-              <strong>✉️ Email:</strong> 
+              <strong>Email:</strong> 
               <a href="mailto:info@ewastekochi.com">info@ewastekochi.com</a>
             </div>
             <div class="contact-item">
-              <strong>📍 Address:</strong> 
+              <strong>Address:</strong> 
               710A, Hill Palace Rd, Thrippunithura, Kochi, Kerala 682301
             </div>
             <div class="contact-item">
-              <strong>🕐 Hours:</strong> 
-              <time datetime="Mo-Sa 08:00-20:00">Mon–Sat 8AM–8PM</time>, 
-              <time datetime="Su 10:00-16:00">Sun 10AM–4PM</time>
+              <strong>Hours:</strong> 
+              <time datetime="Mo-Sa 08:00-20:00">Mon-Sat 8AM-8PM</time>, 
+              <time datetime="Su 10:00-16:00">Sun 10AM-4PM</time>
             </div>
           </address>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Authority & Compliance</h3>
+          <ul>
+            <li><a href="https://kpcb.gov.in" target="_blank" rel="noopener">KSPCB License KL/EW/628</a></li>
+            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="/terms/">Terms of Service</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+            <li><a href="/blog/">Blog</a></li>
+          </ul>
         </div>
       </div>
       
       <div class="footer-bottom">
-        <p>&copy; 2026 EWaste Kochi. All rights reserved. | 710A, Hill Palace Rd, Thrippunithura, Kochi, Kerala 682301</p>
+        <p>© 2018-2026 EWaste Kochi. All rights reserved. | KSPCB Authorized KL/EW/628 | Established 2018</p>
         <nav aria-label="legal links">
           <a href="/privacy-policy/">Privacy Policy</a> | 
-          <a href="/terms/">Terms of Service</a>
+          <a href="/terms/">Terms of Service</a> | 
+          <a href="https://www.google.com/maps/place/710A+Hill+Palace+Rd,+Thrippunithura,+Kochi,+Kerala+682301" target="_blank" rel="noopener">View on Google Maps</a>
         </nav>
       </div>
     </div>
   </footer>
 
+  <!-- AI Chatbot Widget -->
+  <div class="chatbot-widget" id="chatbotWidget">
+    <button class="chatbot-toggle" onclick="toggleChatbot()" aria-label="Ask EWaste AI">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+      </svg>
+      Ask EWaste AI
+    </button>
+    
+    <div class="chatbot-panel" id="chatbotPanel">
+      <div class="chatbot-header">
+        <div class="chatbot-title">
+          <span class="chatbot-logo">Recycle</span>
+          EWaste Kochi AI
+        </div>
+        <div class="chatbot-status">
+          <span class="status-dot online"></span>
+          Online
+        </div>
+        <button class="chatbot-close" onclick="toggleChatbot()" aria-label="Close chat">×</button>
+      </div>
+      
+      <div class="chatbot-messages" id="chatbotMessages">
+        <div class="message bot">
+          <div class="message-content">
+            Hi! I'm your EWaste Kochi assistant. How can I help you with certified e-waste recycling, ITAD services, or data destruction in Kochi?
+          </div>
+        </div>
+      </div>
+      
+      <div class="chatbot-quick-replies">
+        <button onclick="sendQuickReply('Schedule Pickup')">Schedule Pickup</button>
+        <button onclick="sendQuickReply('Laptop Buyback Price')">Laptop Buyback Price</button>
+        <button onclick="sendQuickReply('ITAD for Business')">ITAD for Business</button>
+        <button onclick="sendQuickReply('Data Destruction')">Data Destruction</button>
+      </div>
+      
+      <div class="chatbot-input">
+        <input type="text" id="chatbotInput" placeholder="Type your message..." onkeypress="handleChatbotKeyPress(event)">
+        <button onclick="sendChatbotMessage()" aria-label="Send">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Reader Widget -->
+  <div class="page-reader-widget" id="pageReaderWidget">
+    <button class="reader-toggle" onclick="togglePageReader()" aria-label="Listen to page">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+      </svg>
+      Listen
+    </button>
+    
+    <div class="reader-controls" id="readerControls">
+      <div class="reader-header">
+        Page Reader
+        <button onclick="togglePageReader()" class="reader-close">×</button>
+      </div>
+      
+      <div class="reader-buttons">
+        <button onclick="toggleReaderPlay()" id="readerPlayBtn">Play</button>
+        <button onclick="stopReader()">Stop</button>
+        <select id="readerSpeed" onchange="changeReaderSpeed()">
+          <option value="0.8">0.8×</option>
+          <option value="1" selected>1×</option>
+          <option value="1.2">1.2×</option>
+        </select>
+      </div>
+      
+      <div class="reader-progress">
+        <div class="progress-bar">
+          <div class="progress-fill" id="readerProgress"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <style>
-    /* CSS Design System - Industrial-Tech Authority */
+    /* Enhanced CSS Design System with Dark/Light Theme */
     :root {
-      /* Color Palette */
-      --color-primary: #0d1117;
-      --color-secondary: #161b22;
-      --color-accent-green: #00ff88;
-      --color-accent-amber: #ffb347;
-      --color-accent-cyan: #00d4ff;
-      --color-text: #c9d1d9;
-      --color-muted: #8b949e;
-      --color-white: #ffffff;
-      --color-border: #30363d;
+      /* Light mode tokens */
+      --bg-primary: #ffffff;
+      --bg-surface: #f4f7f2;
+      --bg-card: #ffffff;
+      --text-primary: #0d1a0f;
+      --text-secondary: #3d5c42;
+      --text-muted: #6b8a7f;
+      --accent-green: #00b359;
+      --accent-green-hover: #00994d;
+      --accent-amber: #e07b00;
+      --accent-cyan: #0077a8;
+      --accent-cyan-hover: #006699;
+      --border: rgba(0,0,0,0.1);
+      --border-light: rgba(0,0,0,0.05);
+      --glow: rgba(0,179,89,0.15);
+      --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
       
-      /* Typography */
-      --font-heading: 'Syne', sans-serif;
-      --font-body: 'DM Sans', sans-serif;
+      /* Glassmorphism */
+      --glass-bg: rgba(255, 255, 255, 0.8);
+      --glass-border: rgba(255, 255, 255, 0.2);
+      --glass-blur: blur(12px);
       
-      /* Spacing */
+      /* Component tokens */
+      --radius-card: 16px;
+      --radius-button: 8px;
       --space-xs: 0.5rem;
       --space-sm: 1rem;
       --space-md: 1.5rem;
       --space-lg: 2rem;
       --space-xl: 3rem;
       
-      /* Components */
-      --radius-card: 16px;
-      --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-      --border-glow: 0 0 0 1px rgba(0, 255, 136, 0.5);
+      /* Typography */
+      --font-heading: 'Syne', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    [data-theme="dark"] {
+      /* Dark mode tokens */
+      --bg-primary: #0a0f0b;
+      --bg-surface: #111a12;
+      --bg-card: #162018;
+      --text-primary: #e0f0e3;
+      --text-secondary: #7aaa82;
+      --text-muted: #5a7a6f;
+      --accent-green: #00ff88;
+      --accent-green-hover: #00e67a;
+      --accent-amber: #ffb347;
+      --accent-cyan: #00d4ff;
+      --accent-cyan-hover: #00b8e6;
+      --border: rgba(0,255,136,0.15);
+      --border-light: rgba(0,255,136,0.08);
+      --glow: rgba(0,255,136,0.08);
+      --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+      --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
       
-      /* Glassmorphism */
-      --glass-bg: rgba(13, 17, 23, 0.8);
-      --glass-border: rgba(255, 255, 255, 0.1);
-      --glass-blur: blur(12px);
+      /* Glassmorphism dark */
+      --glass-bg: rgba(10, 15, 11, 0.8);
+      --glass-border: rgba(0, 255, 136, 0.1);
     }
 
     /* Base Reset */
@@ -668,9 +983,10 @@ const schema = {
 
     body {
       font-family: var(--font-body);
-      background: var(--color-primary);
-      color: var(--color-text);
+      background: var(--bg-primary);
+      color: var(--text-primary);
       line-height: 1.6;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     /* Skip to Content */
@@ -678,11 +994,11 @@ const schema = {
       position: absolute;
       top: -40px;
       left: 6px;
-      background: var(--color-accent-green);
-      color: var(--color-primary);
+      background: var(--accent-green);
+      color: var(--bg-primary);
       padding: 8px;
       text-decoration: none;
-      border-radius: 4px;
+      border-radius: var(--radius-button);
       z-index: 1000;
     }
 
@@ -690,7 +1006,7 @@ const schema = {
       top: 6px;
     }
 
-    /* Header */
+    /* Header with Theme Support */
     header {
       background: var(--glass-bg);
       backdrop-filter: var(--glass-blur);
@@ -698,6 +1014,7 @@ const schema = {
       position: sticky;
       top: 0;
       z-index: 100;
+      transition: all 0.3s ease;
     }
 
     .nav-container {
@@ -712,8 +1029,15 @@ const schema = {
     .logo {
       font-size: 1.5rem;
       font-weight: 800;
-      color: var(--color-accent-green);
+      color: var(--accent-green);
       text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+
+    .logo-icon {
+      font-size: 1.2rem;
     }
 
     .nav-menu {
@@ -724,23 +1048,121 @@ const schema = {
     }
 
     .nav-menu a {
-      color: var(--color-text);
+      color: var(--text-secondary);
       text-decoration: none;
       font-weight: 500;
       transition: color 0.3s ease;
     }
 
     .nav-menu a:hover {
-      color: var(--color-accent-green);
+      color: var(--accent-green);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+    }
+
+    /* Theme Toggle */
+    .theme-toggle {
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-button);
+      padding: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .theme-toggle:hover {
+      border-color: var(--accent-green);
+      background: var(--accent-green);
+      color: var(--bg-primary);
+    }
+
+    .sun-icon {
+      display: block;
+    }
+
+    .moon-icon {
+      display: none;
+    }
+
+    [data-theme="dark"] .sun-icon {
+      display: none;
+    }
+
+    [data-theme="dark"] .moon-icon {
+      display: block;
+    }
+
+    /* Language Switcher */
+    .language-switcher {
+      position: relative;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-button);
+      padding: 8px 12px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+
+    .lang-btn:hover {
+      border-color: var(--accent-green);
+      color: var(--accent-green);
+    }
+
+    .lang-dropdown {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: var(--space-sm);
+      margin-top: var(--space-xs);
+      display: none;
+      min-width: 120px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .lang-dropdown.show {
+      display: block;
+    }
+
+    .lang-option {
+      display: block;
+      padding: var(--space-xs);
+      color: var(--text-primary);
+      text-decoration: none;
+      border-radius: var(--radius-button);
+      transition: background-color 0.3s ease;
+    }
+
+    .lang-option:hover {
+      background: var(--bg-surface);
     }
 
     .cta-button {
-      background: var(--color-accent-green);
-      color: var(--color-primary);
+      background: var(--accent-green);
+      color: var(--bg-primary);
       padding: var(--space-xs) var(--space-md);
       border-radius: var(--radius-card);
       text-decoration: none;
       font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: var(--accent-green-hover);
+      transform: translateY(-1px);
     }
 
     /* Container */
@@ -754,7 +1176,9 @@ const schema = {
     .hero {
       padding: var(--space-xl) 0;
       text-align: center;
-      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+      background: radial-gradient(ellipse at top, var(--accent-green) 5%, transparent 50%),
+                  linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-surface) 100%);
+      transition: all 0.3s ease;
     }
 
     .hero-title {
@@ -763,7 +1187,7 @@ const schema = {
       font-weight: 800;
       line-height: 1.1;
       margin-bottom: var(--space-sm);
-      background: linear-gradient(135deg, var(--color-accent-green), var(--color-accent-cyan));
+      background: linear-gradient(135deg, var(--accent-green), var(--accent-cyan));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -771,9 +1195,9 @@ const schema = {
 
     .hero-subheading {
       font-size: 1.2rem;
-      color: var(--color-muted);
+      color: var(--text-secondary);
       margin-bottom: var(--space-lg);
-      max-width: 600px;
+      max-width: 700px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -802,29 +1226,47 @@ const schema = {
       border-radius: var(--radius-card);
       font-size: 0.9rem;
       font-weight: 600;
+      color: var(--text-secondary);
+      transition: all 0.3s ease;
+    }
+
+    .badge:hover {
+      border-color: var(--accent-green);
+      color: var(--accent-green);
     }
 
     .stats-bar {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: var(--space-md);
       margin-top: var(--space-lg);
     }
 
     .stat {
       text-align: center;
+      padding: var(--space-md);
+      background: var(--glass-bg);
+      backdrop-filter: var(--glass-blur);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-card);
+      transition: all 0.3s ease;
+    }
+
+    .stat:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent-green);
     }
 
     .stat-number {
       display: block;
       font-size: 2rem;
       font-weight: 800;
-      color: var(--color-accent-green);
+      color: var(--accent-green);
     }
 
     .stat-label {
       font-size: 0.9rem;
-      color: var(--color-muted);
+      color: var(--text-muted);
     }
 
     /* Buttons */
@@ -838,39 +1280,94 @@ const schema = {
       transition: all 0.3s ease;
       border: none;
       cursor: pointer;
+      font-size: 1rem;
     }
 
     .btn-primary {
-      background: var(--color-accent-green);
-      color: var(--color-primary);
+      background: var(--accent-green);
+      color: var(--bg-primary);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-green-hover);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
     }
 
     .btn-secondary {
-      background: var(--color-accent-cyan);
-      color: var(--color-primary);
+      background: var(--accent-cyan);
+      color: var(--bg-primary);
+    }
+
+    .btn-secondary:hover {
+      background: var(--accent-cyan-hover);
+      transform: translateY(-2px);
     }
 
     .btn-outline {
       background: transparent;
-      color: var(--color-text);
-      border: 2px solid var(--color-border);
+      color: var(--text-primary);
+      border: 2px solid var(--border);
     }
 
-    .btn-wa {
-      background: #25d366;
-      color: white;
-      width: 100%;
-      justify-content: center;
-    }
-
-    .btn:hover {
+    .btn-outline:hover {
+      border-color: var(--accent-green);
+      color: var(--accent-green);
       transform: translateY(-2px);
-      box-shadow: var(--shadow-card);
     }
 
     .btn-lg {
       padding: var(--space-md) var(--space-xl);
       font-size: 1.1rem;
+    }
+
+    /* Process Section */
+    .process {
+      background: var(--bg-surface);
+      padding: var(--space-xl) 0;
+      transition: all 0.3s ease;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--space-lg);
+    }
+
+    .process-step {
+      text-align: center;
+      padding: var(--space-lg);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      transition: all 0.3s ease;
+    }
+
+    .process-step:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-green);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .step-number {
+      width: 60px;
+      height: 60px;
+      background: var(--accent-green);
+      color: var(--bg-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin: 0 auto var(--space-md);
+    }
+
+    .process-step h3 {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      margin-bottom: var(--space-sm);
+      color: var(--accent-green);
     }
 
     /* Section Styles */
@@ -880,15 +1377,25 @@ const schema = {
       font-weight: 800;
       text-align: center;
       margin-bottom: var(--space-lg);
+      color: var(--text-primary);
     }
 
     .section-subtitle {
       text-align: center;
-      color: var(--color-muted);
+      color: var(--text-secondary);
       margin-bottom: var(--space-xl);
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    .section-eyebrow {
+      text-align: center;
+      color: var(--accent-green);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-sm);
     }
 
     /* Services Grid */
@@ -910,8 +1417,8 @@ const schema = {
 
     .service-card:hover {
       transform: translateY(-8px);
-      border-color: var(--color-accent-green);
-      box-shadow: var(--border-glow);
+      border-color: var(--accent-green);
+      box-shadow: var(--shadow-hover);
     }
 
     .service-title {
@@ -919,18 +1426,34 @@ const schema = {
       font-size: 1.3rem;
       font-weight: 700;
       margin-bottom: var(--space-sm);
-      color: var(--color-accent-green);
+      color: var(--accent-green);
     }
 
     .service-link {
-      color: var(--color-accent-cyan);
+      color: var(--accent-cyan);
       text-decoration: none;
       font-weight: 600;
       display: inline-block;
       margin-top: var(--space-sm);
+      transition: color 0.3s ease;
+    }
+
+    .service-link:hover {
+      color: var(--accent-cyan-hover);
     }
 
     /* FAQ Section */
+    .faq-header {
+      text-align: center;
+      margin-bottom: var(--space-lg);
+    }
+
+    .faq-updated {
+      color: var(--text-muted);
+      font-style: italic;
+      margin-top: var(--space-sm);
+    }
+
     .faq-categories {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -939,22 +1462,24 @@ const schema = {
     }
 
     .faq-category {
-      border: 1px solid var(--color-border);
+      border: 1px solid var(--border);
       border-radius: var(--radius-card);
       padding: var(--space-lg);
+      background: var(--bg-card);
     }
 
     .faq-category legend {
       font-family: var(--font-heading);
       font-size: 1.2rem;
       font-weight: 700;
-      color: var(--color-accent-green);
+      color: var(--accent-green);
       margin-bottom: var(--space-md);
+      padding: 0 var(--space-sm);
     }
 
     details {
       margin-bottom: var(--space-sm);
-      border-bottom: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--border-light);
       padding-bottom: var(--space-sm);
     }
 
@@ -962,7 +1487,12 @@ const schema = {
       cursor: pointer;
       font-weight: 600;
       padding: var(--space-sm) 0;
-      color: var(--color-text);
+      color: var(--text-primary);
+      transition: color 0.3s ease;
+    }
+
+    details summary:hover {
+      color: var(--accent-green);
     }
 
     details[open] {
@@ -972,17 +1502,24 @@ const schema = {
 
     .faq-answer {
       padding: var(--space-sm) 0;
-      color: var(--color-muted);
+      color: var(--text-secondary);
       line-height: 1.8;
     }
 
     .faq-summary {
       text-align: center;
       font-style: italic;
-      color: var(--color-muted);
+      color: var(--text-muted);
+      margin-top: var(--space-lg);
     }
 
     /* Locations Grid */
+    .locations {
+      background: var(--bg-surface);
+      padding: var(--space-xl) 0;
+      transition: all 0.3s ease;
+    }
+
     .locations-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -997,7 +1534,7 @@ const schema = {
       border-radius: var(--radius-card);
       padding: var(--space-md);
       text-decoration: none;
-      color: var(--color-text);
+      color: var(--text-primary);
       transition: all 0.3s ease;
       text-align: center;
       display: flex;
@@ -1008,8 +1545,8 @@ const schema = {
 
     .location-card:hover {
       transform: translateY(-4px);
-      border-color: var(--color-accent-green);
-      box-shadow: var(--border-glow);
+      border-color: var(--accent-green);
+      box-shadow: var(--shadow-hover);
     }
 
     .location-name {
@@ -1018,8 +1555,8 @@ const schema = {
     }
 
     .pickup-badge {
-      background: var(--color-accent-green);
-      color: var(--color-primary);
+      background: var(--accent-green);
+      color: var(--bg-primary);
       padding: 2px 8px;
       border-radius: 12px;
       font-size: 0.7rem;
@@ -1034,8 +1571,9 @@ const schema = {
 
     /* Buyback Section */
     .buyback {
-      background: var(--color-secondary);
+      background: var(--bg-primary);
       padding: var(--space-xl) 0;
+      transition: all 0.3s ease;
     }
 
     .buyback-grid {
@@ -1052,11 +1590,18 @@ const schema = {
       border-radius: var(--radius-card);
       padding: var(--space-lg);
       text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .buyback-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-green);
+      box-shadow: var(--shadow-hover);
     }
 
     .device-name {
       font-size: 0.8rem;
-      color: var(--color-muted);
+      color: var(--text-muted);
       margin-bottom: var(--space-xs);
       text-transform: uppercase;
       letter-spacing: 0.05em;
@@ -1065,13 +1610,13 @@ const schema = {
     .device-price {
       font-size: 2rem;
       font-weight: 800;
-      color: var(--color-accent-green);
+      color: var(--accent-green);
       margin-bottom: var(--space-xs);
     }
 
     .device-sub {
       font-size: 0.75rem;
-      color: var(--color-muted);
+      color: var(--text-muted);
     }
 
     .buyback-cta {
@@ -1081,70 +1626,109 @@ const schema = {
       flex-wrap: wrap;
     }
 
-    /* Collection Section */
-    .collection-grid {
+    /* Blog Section */
+    .blog {
+      background: var(--bg-surface);
+      padding: var(--space-xl) 0;
+      transition: all 0.3s ease;
+    }
+
+    .blog-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-xl);
-      align-items: start;
-    }
-
-    .collection-content {
-      max-width: 600px;
-    }
-
-    .collection-features {
-      list-style: none;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--space-lg);
       margin-bottom: var(--space-lg);
     }
 
-    .collection-features li {
-      display: flex;
-      align-items: center;
-      gap: var(--space-sm);
-      margin-bottom: var(--space-sm);
-      font-size: 0.9rem;
+    .blog-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: var(--space-lg);
+      transition: all 0.3s ease;
     }
 
-    .collection-pricing {
+    .blog-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-green);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .blog-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      margin-bottom: var(--space-sm);
+    }
+
+    .blog-card h3 a {
+      color: var(--text-primary);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .blog-card h3 a:hover {
+      color: var(--accent-green);
+    }
+
+    .blog-card time {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      display: block;
+      margin-top: var(--space-sm);
+    }
+
+    .blog-cta {
+      text-align: center;
+    }
+
+    /* Clients Section */
+    .clients {
+      background: var(--bg-primary);
+      padding: var(--space-xl) 0;
+      transition: all 0.3s ease;
+    }
+
+    .client-categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--space-lg);
+      margin-top: var(--space-lg);
+    }
+
+    .client-category {
+      text-align: center;
+      padding: var(--space-lg);
       background: var(--glass-bg);
       backdrop-filter: var(--glass-blur);
       border: 1px solid var(--glass-border);
       border-radius: var(--radius-card);
-      padding: var(--space-lg);
+      transition: all 0.3s ease;
     }
 
-    .pricing-header {
-      font-size: 0.8rem;
-      color: var(--color-accent-green);
-      font-weight: 800;
-      margin-bottom: var(--space-md);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
+    .client-category:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-green);
+      box-shadow: var(--shadow-hover);
     }
 
-    .pricing-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.9rem;
+    .client-category h3 {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      color: var(--accent-green);
+      margin-bottom: var(--space-sm);
     }
 
-    .pricing-table td {
-      padding: var(--space-sm) 0;
-      border-bottom: 1px solid var(--color-border);
-    }
-
-    .price-free {
-      color: var(--color-accent-green);
-      font-weight: 800;
+    .client-category p {
+      color: var(--text-secondary);
     }
 
     /* Footer */
     footer {
-      background: var(--color-secondary);
-      border-top: 1px solid var(--color-border);
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border);
       padding: var(--space-xl) 0;
       margin-top: var(--space-xl);
+      transition: all 0.3s ease;
     }
 
     .footer-content {
@@ -1155,8 +1739,9 @@ const schema = {
     }
 
     .footer-section h3 {
-      color: var(--color-accent-green);
+      color: var(--accent-green);
       margin-bottom: var(--space-md);
+      font-family: var(--font-heading);
     }
 
     .footer-section ul {
@@ -1168,13 +1753,13 @@ const schema = {
     }
 
     .footer-section a {
-      color: var(--color-muted);
+      color: var(--text-secondary);
       text-decoration: none;
       transition: color 0.3s ease;
     }
 
     .footer-section a:hover {
-      color: var(--color-accent-green);
+      color: var(--accent-green);
     }
 
     .contact-info {
@@ -1185,11 +1770,15 @@ const schema = {
       margin-bottom: var(--space-sm);
     }
 
+    .contact-item strong {
+      color: var(--text-primary);
+    }
+
     .footer-bottom {
       text-align: center;
       padding-top: var(--space-lg);
-      border-top: 1px solid var(--color-border);
-      color: var(--color-muted);
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
     }
 
     .footer-bottom nav {
@@ -1197,14 +1786,20 @@ const schema = {
     }
 
     .footer-bottom a {
-      color: var(--color-muted);
+      color: var(--text-muted);
       margin: 0 var(--space-xs);
+      transition: color 0.3s ease;
+    }
+
+    .footer-bottom a:hover {
+      color: var(--accent-green);
     }
 
     /* Breadcrumb */
     .breadcrumb {
-      background: var(--color-secondary);
+      background: var(--bg-surface);
       padding: var(--space-sm) 0;
+      transition: all 0.3s ease;
     }
 
     .breadcrumb ol {
@@ -1214,18 +1809,318 @@ const schema = {
     }
 
     .breadcrumb a {
-      color: var(--color-muted);
+      color: var(--text-muted);
       text-decoration: none;
+      transition: color 0.3s ease;
     }
 
     .breadcrumb a:hover {
-      color: var(--color-accent-green);
+      color: var(--accent-green);
+    }
+
+    /* Chatbot Widget */
+    .chatbot-widget {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .chatbot-toggle {
+      background: var(--accent-green);
+      color: var(--bg-primary);
+      border: none;
+      border-radius: var(--radius-card);
+      padding: var(--space-sm) var(--space-md);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      font-weight: 600;
+      box-shadow: var(--shadow-card);
+      transition: all 0.3s ease;
+    }
+
+    .chatbot-toggle:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .chatbot-panel {
+      position: absolute;
+      bottom: 60px;
+      right: 0;
+      width: 380px;
+      height: 520px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-hover);
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .chatbot-panel.show {
+      display: flex;
+    }
+
+    .chatbot-header {
+      background: var(--accent-green);
+      color: var(--bg-primary);
+      padding: var(--space-md);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .chatbot-title {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      font-weight: 600;
+    }
+
+    .chatbot-logo {
+      font-size: 1.2rem;
+    }
+
+    .chatbot-status {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      font-size: 0.9rem;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #00ff00;
+    }
+
+    .chatbot-close {
+      background: transparent;
+      border: none;
+      color: var(--bg-primary);
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .chatbot-messages {
+      flex: 1;
+      padding: var(--space-md);
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+
+    .message {
+      max-width: 80%;
+    }
+
+    .message.user {
+      align-self: flex-end;
+    }
+
+    .message.bot {
+      align-self: flex-start;
+    }
+
+    .message-content {
+      background: var(--bg-surface);
+      padding: var(--space-sm);
+      border-radius: var(--radius-button);
+      color: var(--text-primary);
+    }
+
+    .message.user .message-content {
+      background: var(--accent-green);
+      color: var(--bg-primary);
+    }
+
+    .chatbot-quick-replies {
+      padding: var(--space-sm);
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+    }
+
+    .chatbot-quick-replies button {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-button);
+      padding: var(--space-xs) var(--space-sm);
+      cursor: pointer;
+      font-size: 0.8rem;
+      transition: all 0.3s ease;
+    }
+
+    .chatbot-quick-replies button:hover {
+      background: var(--accent-green);
+      color: var(--bg-primary);
+      border-color: var(--accent-green);
+    }
+
+    .chatbot-input {
+      padding: var(--space-sm);
+      display: flex;
+      gap: var(--space-xs);
+      border-top: 1px solid var(--border);
+    }
+
+    .chatbot-input input {
+      flex: 1;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-button);
+      padding: var(--space-xs);
+      color: var(--text-primary);
+    }
+
+    .chatbot-input button {
+      background: var(--accent-green);
+      color: var(--bg-primary);
+      border: none;
+      border-radius: var(--radius-button);
+      padding: var(--space-xs) var(--space-sm);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .chatbot-input button:hover {
+      background: var(--accent-green-hover);
+    }
+
+    /* Page Reader Widget */
+    .page-reader-widget {
+      position: fixed;
+      top: 80px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    .reader-toggle {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-button);
+      padding: var(--space-xs);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      box-shadow: var(--shadow-card);
+      transition: all 0.3s ease;
+    }
+
+    .reader-toggle:hover {
+      border-color: var(--accent-green);
+      color: var(--accent-green);
+    }
+
+    .reader-controls {
+      position: absolute;
+      top: 40px;
+      right: 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: var(--space-md);
+      box-shadow: var(--shadow-card);
+      display: none;
+      min-width: 200px;
+    }
+
+    .reader-controls.show {
+      display: block;
+    }
+
+    .reader-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--space-sm);
+      font-weight: 600;
+    }
+
+    .reader-close {
+      background: transparent;
+      border: none;
+      color: var(--text-primary);
+      cursor: pointer;
+      font-size: 1.2rem;
+      padding: 0;
+      width: 20px;
+      height: 20px;
+    }
+
+    .reader-buttons {
+      display: flex;
+      gap: var(--space-xs);
+      margin-bottom: var(--space-sm);
+    }
+
+    .reader-buttons button {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-button);
+      padding: var(--space-xs);
+      cursor: pointer;
+      font-size: 0.8rem;
+      transition: all 0.3s ease;
+    }
+
+    .reader-buttons button:hover {
+      background: var(--accent-green);
+      color: var(--bg-primary);
+      border-color: var(--accent-green);
+    }
+
+    .reader-buttons select {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-button);
+      padding: var(--space-xs);
+      color: var(--text-primary);
+      font-size: 0.8rem;
+    }
+
+    .reader-progress {
+      margin-top: var(--space-sm);
+    }
+
+    .progress-bar {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-button);
+      height: 8px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      background: var(--accent-green);
+      height: 100%;
+      width: 0%;
+      transition: width 0.3s ease;
     }
 
     /* Responsive Design */
     @media (max-width: 768px) {
       .nav-menu {
         display: none;
+      }
+      
+      .nav-actions {
+        gap: var(--space-sm);
       }
       
       .hero-actions {
@@ -1237,7 +2132,27 @@ const schema = {
         grid-template-columns: repeat(2, 1fr);
       }
       
-      .collection-grid {
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .faq-categories {
+        grid-template-columns: 1fr;
+      }
+      
+      .locations-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .buyback-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .client-categories {
         grid-template-columns: 1fr;
       }
       
@@ -1249,6 +2164,13 @@ const schema = {
       .buyback-cta {
         flex-direction: column;
         align-items: center;
+      }
+      
+      .chatbot-panel {
+        width: 90vw;
+        max-width: 380px;
+        height: 70vh;
+        max-height: 520px;
       }
     }
 
@@ -1263,14 +2185,271 @@ const schema = {
 
     /* Focus Styles */
     *:focus {
-      outline: 2px solid var(--color-accent-green);
+      outline: 2px solid var(--accent-green);
       outline-offset: 2px;
     }
 
     button:focus,
     a:focus {
-      outline: 2px solid var(--color-accent-green);
+      outline: 2px solid var(--accent-green);
       outline-offset: 2px;
     }
+
+    /* Reading Highlight */
+    .reading-highlight {
+      outline: 2px solid var(--accent-cyan);
+      outline-offset: 2px;
+      background: rgba(0, 119, 168, 0.1);
+    }
   </style>
+
+  <script>
+    // Theme Toggle Function
+    function toggleTheme() {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('ew-theme', newTheme);
+      
+      // Update aria-label
+      const themeToggle = document.querySelector('.theme-toggle');
+      themeToggle.setAttribute('aria-label', `Switch to ${newTheme === 'dark' ? 'light' : 'dark'} mode`);
+    }
+
+    // Language Switcher
+    function toggleLanguageSwitcher() {
+      const dropdown = document.getElementById('langDropdown');
+      dropdown.classList.toggle('show');
+    }
+
+    // Close language dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+      const langSwitcher = document.querySelector('.language-switcher');
+      if (!langSwitcher.contains(event.target)) {
+        document.getElementById('langDropdown').classList.remove('show');
+      }
+    });
+
+    // Chatbot Functions
+    function toggleChatbot() {
+      const panel = document.getElementById('chatbotPanel');
+      panel.classList.toggle('show');
+    }
+
+    function sendQuickReply(message) {
+      const input = document.getElementById('chatbotInput');
+      input.value = message;
+      sendChatbotMessage();
+    }
+
+    function sendChatbotMessage() {
+      const input = document.getElementById('chatbotInput');
+      const message = input.value.trim();
+      
+      if (!message) return;
+      
+      const messagesContainer = document.getElementById('chatbotMessages');
+      
+      // Add user message
+      const userMessage = document.createElement('div');
+      userMessage.className = 'message user';
+      userMessage.innerHTML = `<div class="message-content">${message}</div>`;
+      messagesContainer.appendChild(userMessage);
+      
+      // Clear input
+      input.value = '';
+      
+      // Add typing indicator
+      const typingIndicator = document.createElement('div');
+      typingIndicator.className = 'message bot';
+      typingIndicator.innerHTML = `<div class="message-content">...</div>`;
+      messagesContainer.appendChild(typingIndicator);
+      
+      // Scroll to bottom
+      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+      
+      // Simulate bot response (replace with actual API call)
+      setTimeout(() => {
+        messagesContainer.removeChild(typingIndicator);
+        
+        const botResponse = document.createElement('div');
+        botResponse.className = 'message bot';
+        
+        // Simple response logic
+        let response = 'Thank you for your inquiry. For immediate assistance, please call +91 75005 55454 or visit our contact page.';
+        
+        if (message.toLowerCase().includes('pickup')) {
+          response = 'We offer free e-waste pickup for 10+ devices in Ernakulam district. Call us at +91 75005 55454 to schedule!';
+        } else if (message.toLowerCase().includes('price')) {
+          response = 'We offer competitive prices for electronics. MacBook Pro M2/M3: Rs 65,000, iPhone 15 Pro Max: Rs 75,000. Call for exact quotes!';
+        } else if (message.toLowerCase().includes('itad')) {
+          response = 'Our ITAD services include NIST 800-88 data destruction, asset inventory, and compliance documentation. Perfect for corporate clients!';
+        } else if (message.toLowerCase().includes('data')) {
+          response = 'We provide NIST 800-88 and DoD certified data destruction with serial-numbered certificates issued within 24 hours.';
+        }
+        
+        botResponse.innerHTML = `<div class="message-content">${response}</div>`;
+        messagesContainer.appendChild(botResponse);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+      }, 1000);
+    }
+
+    function handleChatbotKeyPress(event) {
+      if (event.key === 'Enter') {
+        sendChatbotMessage();
+      }
+    }
+
+    // Page Reader Functions
+    let speechSynthesis = window.speechSynthesis;
+    let currentUtterance = null;
+    let isReading = false;
+    let currentParagraphIndex = 0;
+    let paragraphs = [];
+
+    function togglePageReader() {
+      const controls = document.getElementById('readerControls');
+      controls.classList.toggle('show');
+    }
+
+    function getReadableContent() {
+      // Get all paragraphs and headings
+      return document.querySelectorAll('h1, h2, h3, p, .faq-answer');
+    }
+
+    function startReading() {
+      if (isReading) {
+        pauseReading();
+        return;
+      }
+      
+      paragraphs = getReadableContent();
+      if (paragraphs.length === 0) return;
+      
+      isReading = true;
+      updatePlayButton();
+      
+      readNextParagraph();
+    }
+
+    function readNextParagraph() {
+      if (!isReading || currentParagraphIndex >= paragraphs.length) {
+        stopReading();
+        return;
+      }
+      
+      const paragraph = paragraphs[currentParagraphIndex];
+      const text = paragraph.textContent.trim();
+      
+      if (!text) {
+        currentParagraphIndex++;
+        readNextParagraph();
+        return;
+      }
+      
+      // Highlight current paragraph
+      document.querySelectorAll('.reading-highlight').forEach(el => {
+        el.classList.remove('reading-highlight');
+      });
+      paragraph.classList.add('reading-highlight');
+      
+      // Update progress
+      const progress = ((currentParagraphIndex + 1) / paragraphs.length) * 100;
+      document.getElementById('readerProgress').style.width = progress + '%';
+      
+      // Create utterance
+      currentUtterance = new SpeechSynthesisUtterance(text);
+      currentUtterance.rate = parseFloat(document.getElementById('readerSpeed').value);
+      
+      // Try to set Indian English voice
+      const voices = speechSynthesis.getVoices();
+      const indianVoice = voices.find(voice => voice.lang === 'en-IN');
+      if (indianVoice) {
+        currentUtterance.voice = indianVoice;
+      }
+      
+      currentUtterance.onend = () => {
+        currentParagraphIndex++;
+        readNextParagraph();
+      };
+      
+      speechSynthesis.speak(currentUtterance);
+    }
+
+    function pauseReading() {
+      if (speechSynthesis.speaking) {
+        speechSynthesis.pause();
+        isReading = false;
+        updatePlayButton();
+      }
+    }
+
+    function stopReading() {
+      speechSynthesis.cancel();
+      isReading = false;
+      currentParagraphIndex = 0;
+      updatePlayButton();
+      
+      // Remove highlights
+      document.querySelectorAll('.reading-highlight').forEach(el => {
+        el.classList.remove('reading-highlight');
+      });
+      
+      // Reset progress
+      document.getElementById('readerProgress').style.width = '0%';
+    }
+
+    function toggleReaderPlay() {
+      if (isReading) {
+        if (speechSynthesis.paused) {
+          speechSynthesis.resume();
+          isReading = true;
+        } else {
+          pauseReading();
+        }
+      } else {
+        startReading();
+      }
+      updatePlayButton();
+    }
+
+    function changeReaderSpeed() {
+      if (currentUtterance && speechSynthesis.speaking) {
+        currentUtterance.rate = parseFloat(document.getElementById('readerSpeed').value);
+        speechSynthesis.cancel();
+        speechSynthesis.speak(currentUtterance);
+      }
+    }
+
+    function updatePlayButton() {
+      const playBtn = document.getElementById('readerPlayBtn');
+      if (isReading && !speechSynthesis.paused) {
+        playBtn.textContent = 'Pause';
+      } else {
+        playBtn.textContent = 'Play';
+      }
+    }
+
+    // Initialize voices when page loads
+    if (speechSynthesis.onvoiceschanged !== undefined) {
+      speechSynthesis.onvoiceschanged = () => {
+        speechSynthesis.getVoices();
+      };
+    }
+
+    // Initialize theme from localStorage or system preference
+    document.addEventListener('DOMContentLoaded', function() {
+      const savedTheme = localStorage.getItem('ew-theme');
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      const theme = savedTheme || systemTheme;
+      
+      document.documentElement.setAttribute('data-theme', theme);
+      
+      // Update theme toggle aria-label
+      const themeToggle = document.querySelector('.theme-toggle');
+      themeToggle.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
+    });
+  </script>
 </BaseLayout>
