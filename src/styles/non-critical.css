@@ -1,0 +1,531 @@
+/* Non-Critical CSS - Below the fold content */
+.section {
+  padding: 5rem 0;
+}
+
+.sl {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gr);
+  margin-bottom: 0.9rem;
+}
+
+.sl::before {
+  content: '';
+  width: 22px;
+  height: 2px;
+  background: var(--gr);
+}
+
+h2.st {
+  font-family: var(--fd);
+  font-size: clamp(1.75rem, 3.8vw, 2.7rem);
+  font-weight: 700;
+  line-height: 1.13;
+  letter-spacing: -1px;
+  margin-bottom: 0.7rem;
+}
+
+.ss {
+  color: var(--t2);
+  font-size: 1rem;
+  max-width: 620px;
+  margin-bottom: 2.8rem;
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+
+.bg {
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--gr);
+  border: 1px solid rgba(34, 197, 94, 0.22);
+}
+
+.ba {
+  background: rgba(245, 158, 11, 0.11);
+  color: var(--am);
+  border: 1px solid rgba(245, 158, 11, 0.22);
+}
+
+.bb {
+  background: rgba(96, 165, 250, 0.11);
+  color: var(--bl);
+  border: 1px solid rgba(96, 165, 250, 0.22);
+}
+
+/* Service Grid */
+.svcg {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 14px;
+}
+
+.svc {
+  padding: 1.4rem;
+  transition: all var(--t);
+}
+
+.svc:hover {
+  transform: translateY(-2px);
+}
+
+.svci {
+  font-size: 1.9rem;
+  margin-bottom: 11px;
+}
+
+.svct {
+  font-family: var(--fd);
+  font-size: 0.98rem;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+.svcd {
+  font-size: 12.5px;
+  color: var(--t2);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.svcp {
+  font-size: 11.5px;
+  color: var(--gr);
+  font-weight: 700;
+}
+
+/* FAQ System */
+.fqs {
+  margin-bottom: 3.5rem;
+}
+
+.fqsh {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1.4rem;
+}
+
+.fqsi {
+  font-size: 1.7rem;
+}
+
+.fqst {
+  font-family: var(--fd);
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.fqg {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(460px, 1fr));
+  gap: 10px;
+}
+
+.fqi {
+  background: var(--sf);
+  border: 1px solid var(--gb);
+  border-radius: var(--rs);
+  overflow: hidden;
+  transition: all var(--t);
+}
+
+.fqi:hover {
+  border-color: var(--gbh);
+}
+
+.fqq {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px 16px;
+  cursor: pointer;
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.fqtg {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--gd);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: var(--gr);
+  transition: all var(--t);
+  font-weight: 700;
+}
+
+.fqi.open .fqtg {
+  background: var(--gr);
+  color: #fff;
+  transform: rotate(45deg);
+}
+
+.fqa {
+  display: none;
+  padding: 0 16px 14px;
+  font-size: 12.5px;
+  color: var(--t2);
+  line-height: 1.72;
+  border-top: 1px solid var(--gb);
+  padding-top: 12px;
+}
+
+.fqi.open .fqa {
+  display: block;
+}
+
+/* Stats Grid */
+.sb {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 2px;
+  background: var(--gb);
+  border-radius: var(--r);
+  overflow: hidden;
+  margin: 2.5rem 0;
+}
+
+.sbl {
+  background: var(--bg2);
+  padding: 1.8rem 1.3rem;
+  text-align: center;
+}
+
+.sbn {
+  font-family: var(--fd);
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: var(--gr);
+  line-height: 1;
+}
+
+.sbd {
+  font-size: 12.5px;
+  color: var(--t2);
+  margin-top: 5px;
+}
+
+/* Process Steps */
+.prst {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(195px, 1fr));
+  gap: 14px;
+}
+
+.prs {
+  padding: 1.4rem;
+  text-align: center;
+}
+
+.prn {
+  font-family: var(--fd);
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--gr);
+  opacity: 0.13;
+  line-height: 1;
+  margin-bottom: 7px;
+}
+
+.pri {
+  font-size: 1.8rem;
+  margin-bottom: 9px;
+}
+
+.prtl {
+  font-family: var(--fd);
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.prd {
+  font-size: 11.5px;
+  color: var(--t2);
+  line-height: 1.6;
+}
+
+/* Testimonials */
+.testg {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 18px;
+}
+
+.test {
+  padding: 1.7rem;
+}
+
+.tsts {
+  color: var(--am);
+  font-size: 13px;
+  margin-bottom: 11px;
+  letter-spacing: 2px;
+}
+
+.tstt {
+  font-size: 13.5px;
+  color: var(--t2);
+  line-height: 1.75;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.tsta {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.tstav {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--gd);
+  border: 2px solid var(--gr);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--gr);
+}
+
+.tstn {
+  font-weight: 700;
+  font-size: 12.5px;
+}
+
+.tstr {
+  font-size: 10.5px;
+  color: var(--t3);
+}
+
+/* CTA Section */
+.cta-sec {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.07) 0%, transparent 55%);
+  border: 1px solid var(--gb);
+  border-radius: var(--r);
+  padding: 3.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctat {
+  font-family: var(--fd);
+  font-size: clamp(1.75rem, 3.8vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-bottom: 0.9rem;
+}
+
+.ctas {
+  color: var(--t2);
+  margin-bottom: 1.8rem;
+  font-size: 1rem;
+}
+
+.ctaa {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Footer */
+footer {
+  background: var(--bg2);
+  border-top: 1px solid var(--gb);
+  padding: 3.5rem 0 1.8rem;
+}
+
+.fg2 {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.flogo {
+  font-family: var(--fd);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--gr);
+  margin-bottom: 0.9rem;
+}
+
+.fdesc {
+  font-size: 12.5px;
+  color: var(--t2);
+  line-height: 1.7;
+  max-width: 270px;
+  margin-bottom: 1.1rem;
+}
+
+.fct {
+  font-family: var(--fd);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--t3);
+  margin-bottom: 0.9rem;
+}
+
+.fc a {
+  display: block;
+  font-size: 12.5px;
+  color: var(--t2);
+  margin-bottom: 7px;
+  transition: color var(--t);
+}
+
+.fc a:hover {
+  color: var(--gr);
+}
+
+.fbot {
+  border-top: 1px solid var(--gb);
+  padding-top: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.fleg {
+  font-size: 11.5px;
+  color: var(--t3);
+}
+
+/* Additional Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes gridDrift {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(36px);
+  }
+}
+
+/* Additional Variables */
+[data-theme="dark"] {
+  --bg3: #131a1c;
+  --gbh: rgba(34, 197, 94, 0.32);
+  --gr2: #16a34a;
+  --gd: rgba(34, 197, 94, 0.1);
+  --gg: 0 0 40px rgba(34, 197, 94, 0.18);
+  --am: #f59e0b;
+  --re: #f87171;
+  --bl: #60a5fa;
+  --t3: #3d6145;
+  --sf: rgba(255, 255, 255, 0.04);
+  --sf2: rgba(255, 255, 255, 0.07);
+  --hp: radial-gradient(ellipse 90% 70% at 65% 15%, rgba(34, 197, 94, 0.07) 0%, transparent 65%);
+}
+
+[data-theme="light"] {
+  --bg3: #fff;
+  --gbh: rgba(22, 163, 74, 0.45);
+  --gr2: #166534;
+  --gd: rgba(22, 163, 74, 0.09);
+  --gg: 0 0 30px rgba(22, 163, 74, 0.12);
+  --am: #b45309;
+  --re: #dc2626;
+  --bl: #2563eb;
+  --t3: #6fa37a;
+  --sf: rgba(0, 0, 0, 0.04);
+  --sf2: rgba(0, 0, 0, 0.07);
+  --hp: radial-gradient(ellipse 90% 70% at 65% 15%, rgba(22, 163, 74, 0.05) 0%, transparent 65%);
+}
+
+/* Responsive Improvements */
+@media (max-width: 900px) {
+  .cg {
+    grid-template-columns: 1fr;
+  }
+  
+  .fg2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .nls {
+    display: none;
+  }
+  
+  .fqg {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 3.2rem 0;
+  }
+  
+  .fg2 {
+    grid-template-columns: 1fr;
+  }
+  
+  .sb {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .prst {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .cta-sec {
+    padding: 2.2rem 1.3rem;
+  }
+}

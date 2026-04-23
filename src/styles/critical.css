@@ -1,0 +1,239 @@
+/* Critical CSS - Above the fold content */
+:root {
+  --fd: 'Syne', sans-serif;
+  --fb: 'Plus Jakarta Sans', sans-serif;
+  --r: 14px;
+  --rs: 9px;
+  --t: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] {
+  --bg: #07090a;
+  --bg2: #0e1214;
+  --gl: rgba(14, 20, 22, 0.72);
+  --gb: rgba(34, 197, 94, 0.13);
+  --gr: #22c55e;
+  --tx: #dff0e4;
+  --t2: #7da686;
+  --sh: 0 6px 28px rgba(0, 0, 0, 0.55);
+}
+
+[data-theme="light"] {
+  --bg: #f2f7f3;
+  --bg2: #e9f2eb;
+  --gl: rgba(255, 255, 255, 0.78);
+  --gb: rgba(22, 163, 74, 0.18);
+  --gr: #15803d;
+  --tx: #0d1f12;
+  --t2: #2d5c38;
+  --sh: 0 6px 28px rgba(0, 0, 0, 0.09);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--tx);
+  font-family: var(--fb);
+  line-height: 1.65;
+  overflow-x: hidden;
+  transition: background var(--t), color var(--t);
+}
+
+/* Critical Navigation */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all var(--t);
+}
+
+#navbar.scrolled {
+  background: var(--gl);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--gb);
+}
+
+.ni {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 62px;
+  display: flex;
+  align-items: center;
+}
+
+.nl {
+  font-family: var(--fd);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--gr);
+  margin-right: auto;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+/* Critical Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 7rem 0 4rem;
+}
+
+.hbg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 90% 70% at 65% 15%, rgba(34, 197, 94, 0.07) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.hi {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+h1 {
+  font-family: var(--fd);
+  font-size: clamp(2.3rem, 4.8vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.07;
+  letter-spacing: -2px;
+  margin-bottom: 1.3rem;
+  animation: fadeUp 0.75s ease both;
+}
+
+h1 em {
+  font-style: normal;
+  color: var(--gr);
+}
+
+.hd {
+  font-size: 1.05rem;
+  color: var(--t2);
+  line-height: 1.78;
+  margin-bottom: 1.9rem;
+  max-width: 510px;
+  animation: fadeUp 0.75s 0.1s ease both;
+}
+
+/* Critical Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 12px 24px;
+  border-radius: var(--rs);
+  font-size: 13.5px;
+  font-weight: 700;
+  border: none;
+  transition: all var(--t);
+  text-decoration: none;
+  font-family: var(--fb);
+}
+
+.bp {
+  background: var(--gr);
+  color: #fff;
+  box-shadow: 0 3px 18px rgba(34, 197, 94, 0.28);
+}
+
+.bp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 26px rgba(34, 197, 94, 0.38);
+}
+
+/* Critical Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Critical Glass Effect */
+.glass {
+  background: var(--gl);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--gb);
+  border-radius: var(--r);
+  box-shadow: var(--sh);
+}
+
+/* Critical WhatsApp Button */
+.fwa {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  width: 50px;
+  height: 50px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.38);
+  z-index: 998;
+  transition: all var(--t);
+}
+
+.fwa:hover {
+  transform: scale(1.1);
+  box-shadow: 0 7px 28px rgba(37, 211, 102, 0.48);
+}
+
+/* Critical Container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Critical Responsive */
+@media (max-width: 900px) {
+  .hi {
+    grid-template-columns: 1fr;
+  }
+  
+  .hv {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1.2rem;
+  }
+  
+  .hero {
+    padding: 3.2rem 0;
+  }
+}
