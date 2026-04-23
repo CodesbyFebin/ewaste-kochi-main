@@ -21,8 +21,8 @@ const {
 ---
 
 <section class="hero-glass" aria-label="EWaste Kochi hero">
-  <div class="hero-background" aria-hidden="true"></div>
-  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-background" aria-hidden="true" loading="lazy"></div>
+  <div class="hero-grid" aria-hidden="true" loading="lazy"></div>
   
   <div class="hero-container">
     <div class="hero-content">
@@ -127,6 +127,10 @@ const {
     position: relative;
     overflow: hidden;
     padding: 7rem 0 4rem;
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   .hero-background {
