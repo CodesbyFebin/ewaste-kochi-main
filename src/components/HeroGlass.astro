@@ -1,0 +1,388 @@
+---
+interface Props {
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  primaryCTA?: string;
+  secondaryCTA?: string;
+  primaryLink?: string;
+  secondaryLink?: string;
+}
+
+const {
+  title = "Kerala's #1 Authorized E-Waste & ITAD Platform",
+  subtitle = "Certified E-Waste Recycling & IT Asset Disposal in Kochi",
+  description = "Free corporate pickup · NIST-certified data destruction · EPR compliance certificates · Laptop buyback up to ₹65,000. Serving Infopark, Smart City, MG Road & all of Kerala.",
+  primaryCTA = "🚛 Schedule Free Pickup",
+  secondaryCTA = "Explore Services →",
+  primaryLink = "#contact",
+  secondaryLink = "#services"
+} = Astro.props;
+---
+
+<section class="hero-glass" aria-label="EWaste Kochi hero">
+  <div class="hero-background" aria-hidden="true"></div>
+  <div class="hero-grid" aria-hidden="true"></div>
+  
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="hero-badges">
+        <span class="badge success">✓ KSPCB Auth No. KL/EW/628</span>
+        <span class="badge success">✓ NIST 800-88 Certified</span>
+        <span class="badge warning">DPDP 2023 Compliant</span>
+      </div>
+      
+      <h1 class="hero-title">
+        Kerala's <span class="highlight">#1 Authorized</span><br>
+        E-Waste & ITAD Platform
+      </h1>
+      
+      <p class="hero-description">
+        {description}
+      </p>
+      
+      <div class="hero-ctas">
+        <a href={primaryLink} class="btn btn-primary">
+          {primaryCTA}
+        </a>
+        <a href={secondaryLink} class="btn btn-secondary">
+          {secondaryCTA}
+        </a>
+      </div>
+      
+      <div class="hero-trust">
+        <span class="trust-item">✅ 500+ Corporate Clients</span>
+        <span class="trust-item">✅ 10L+ KG Recycled</span>
+        <span class="trust-item">✅ Zero Data Breaches</span>
+      </div>
+    </div>
+    
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-card glass-card">
+        <div class="card-header">
+          <span class="card-label">TODAY'S PICKUPS — LIVE</span>
+        </div>
+        <div class="pickup-list">
+          <div class="pickup-item">
+            <span>Infopark Cluster A</span>
+            <span class="badge success">Completed</span>
+          </div>
+          <div class="pickup-item">
+            <span>Smart City Campus</span>
+            <span class="badge warning">In Transit</span>
+          </div>
+          <div class="pickup-item">
+            <span>MG Road Corporate</span>
+            <span class="badge info">3PM Slot</span>
+          </div>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-value">4h</div>
+            <div class="stat-label">Avg pickup</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">24h</div>
+            <div class="stat-label">Cert delivery</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">100%</div>
+            <div class="stat-label">Data destroyed</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">Free</div>
+            <div class="stat-label">10+ units</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  :root {
+    --bg-primary: #0b0f14;
+    --bg-secondary: #0f1720;
+    --glass-bg: rgba(255, 255, 255, 0.08);
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --primary: #00d084;
+    --primary-glow: rgba(0, 208, 132, 0.3);
+    --secondary: #0077ff;
+    --secondary-glow: rgba(0, 119, 255, 0.3);
+    --text-primary: #dff0e4;
+    --text-secondary: #7da686;
+    --text-muted: #3d6145;
+    --warning: #f59e0b;
+    --warning-glow: rgba(245, 158, 11, 0.2);
+    --success: #22c55e;
+    --success-glow: rgba(34, 197, 94, 0.2);
+    --info: #60a5fa;
+    --info-glow: rgba(96, 165, 250, 0.2);
+  }
+
+  .hero-glass {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 7rem 0 4rem;
+  }
+
+  .hero-background {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 90% 70% at 65% 15%, rgba(34, 197, 94, 0.07) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      linear-gradient(rgba(34, 197, 94, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34, 197, 94, 0.05) 1px, transparent 1px);
+    background-size: 55px 55px;
+    opacity: 0.35;
+    animation: gridDrift 9s linear infinite alternate;
+    pointer-events: none;
+  }
+
+  @keyframes gridDrift {
+    from { transform: translateY(0); }
+    to { transform: translateY(36px); }
+  }
+
+  .hero-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem;
+    align-items: center;
+  }
+
+  .hero-badges {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.4rem;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 11px;
+    border-radius: 100px;
+    letter-spacing: 0.05em;
+  }
+
+  .badge.success {
+    background: rgba(34, 197, 94, 0.1);
+    color: var(--success);
+    border: 1px solid rgba(34, 197, 94, 0.28);
+  }
+
+  .badge.warning {
+    background: rgba(245, 158, 11, 0.11);
+    color: var(--warning);
+    border: 1px solid rgba(245, 158, 11, 0.22);
+  }
+
+  .badge.info {
+    background: rgba(96, 165, 250, 0.11);
+    color: var(--info);
+    border: 1px solid rgba(96, 165, 250, 0.22);
+  }
+
+  .hero-title {
+    font-family: 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: clamp(2.3rem, 4.8vw, 3.8rem);
+    font-weight: 800;
+    line-height: 1.07;
+    letter-spacing: -2px;
+    margin-bottom: 1.3rem;
+    color: var(--text-primary);
+    animation: fadeUp 0.75s ease both;
+  }
+
+  .hero-title .highlight {
+    color: var(--primary);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-description {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.78;
+    margin-bottom: 1.9rem;
+    max-width: 510px;
+    animation: fadeUp 0.75s 0.1s ease both;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 0.625rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.3rem;
+    animation: fadeUp 0.75s 0.2s ease both;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4375rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9px;
+    font-size: 13.5px;
+    font-weight: 700;
+    border: none;
+    transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .btn-primary {
+    background: var(--primary);
+    color: #fff;
+    box-shadow: 0 3px 18px rgba(34, 197, 94, 0.28);
+  }
+
+  .btn-primary:hover {
+    background: #16a34a;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 26px rgba(34, 197, 94, 0.38);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1.5px solid rgba(34, 197, 94, 0.13);
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    background: rgba(34, 197, 94, 0.1);
+  }
+
+  .hero-trust {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    flex-wrap: wrap;
+    animation: fadeUp 0.75s 0.3s ease both;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.3125rem;
+    font-size: 11.5px;
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+
+  .hero-visual {
+    animation: fadeIn 1s 0.35s ease both;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    padding: 1.6rem;
+    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.55);
+  }
+
+  .card-header {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+    margin-bottom: 0.9rem;
+  }
+
+  .card-label {
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .pickup-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5625rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .pickup-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12.5px;
+    color: var(--text-primary);
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.625rem;
+  }
+
+  .stat-item {
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 9px;
+    padding: 0.875rem;
+    text-align: center;
+    border: 1px solid rgba(34, 197, 94, 0.05);
+  }
+
+  .stat-value {
+    font-family: 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 10.5px;
+    color: var(--text-secondary);
+    margin-top: 3px;
+  }
+
+  @media (max-width: 900px) {
+    .hero-container {
+      grid-template-columns: 1fr;
+    }
+    .hero-visual {
+      display: none;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .hero-container {
+      padding: 0 1.2rem;
+    }
+    .hero-glass {
+      padding: 3.2rem 0;
+    }
+  }
+</style>

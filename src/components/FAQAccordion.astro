@@ -1,0 +1,214 @@
+---
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
+const faqs: FAQ[] = [
+  {
+    question: "What is e-waste and why is it dangerous?",
+    answer: "E-waste (electronic waste) refers to discarded electrical or electronic devices. It contains toxic substances including lead, mercury, cadmium, chromium, brominated flame retardants, and PCBs. When informally processed or landfilled, these toxins leach into groundwater and soil, causing serious health risks."
+  },
+  {
+    question: "Is a software wipe legally sufficient for data destruction in India?",
+    answer: "Under DPDP Act 2023, a simple format or quick wipe is NOT sufficient. At minimum, a NIST 800-88 multi-pass overwrite must be used for HDDs. For SSDs, physical destruction (shredding) is the only forensically accepted method."
+  },
+  {
+    question: "What is the cost of certified data destruction in Kochi?",
+    answer: "Software data destruction (NIST 800-88 overwrite): ₹299/device. Physical shredding: ₹499/device. On-site destruction: ₹999/device plus travel. Bulk rates for 100+ devices: from ₹99/device."
+  },
+  {
+    question: "Do you provide EPR certificates for compliance?",
+    answer: "Yes. After each collection, we enter the weight and category data into the CPCB EPR portal and generate certificates under our KSPCB authorization number KL/EW/628. These certificates are emailed to you in PDF format within 24 hours."
+  },
+  {
+    question: "What is the buyback price for a MacBook Pro M2?",
+    answer: "A working MacBook Pro M2 (2022–2024) commands ₹45,000–₹65,000 depending on RAM (8GB vs 16GB+), storage size, and cosmetic condition. MacBook Pro 14-inch M2 Pro/Max models fetch the highest values."
+  },
+  {
+    question: "How quickly can you pick up my e-waste in Kochi?",
+    answer: "We offer same-day pickup service across Kochi. Schedule your pickup and we'll collect within 4 hours. For corporate clients with 10+ units, pickup is free."
+  }
+];
+---
+
+<section class="faq-section" id="faq" aria-labelledby="faq-title">
+  <div class="container">
+    <span class="section-label">FAQs</span>
+    <h2 class="section-title" id="faq-title">Frequently Asked Questions</h2>
+    <p class="section-subtitle">
+      Everything you need to know about certified e-waste disposal, data destruction, and compliance.
+    </p>
+    
+    <div class="faq-list">
+      {faqs.map((faq, index) => (
+        <div class={`faq-item ${index === 0 ? 'open' : ''}`} id={`faq-${index}`}>
+          <button class="faq-question" onclick={`toggleFAQ(${index})`} aria-expanded={index === 0}>
+            <span>{faq.question}</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>{faq.answer}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  function toggleFAQ(index: number) {
+    const allItems = document.querySelectorAll('.faq-item');
+    const targetItem = document.getElementById(`faq-${index}`);
+    
+    allItems.forEach(item => {
+      if (item !== targetItem) {
+        item.classList.remove('open');
+        const button = item.querySelector('.faq-question');
+        if (button) button.setAttribute('aria-expanded', 'false');
+      }
+    });
+    
+    if (targetItem) {
+      targetItem.classList.toggle('open');
+      const button = targetItem.querySelector('.faq-question');
+      if (button) button.setAttribute('aria-expanded', targetItem.classList.contains('open'));
+    }
+  }
+</script>
+
+<style>
+  .faq-section {
+    padding: 5rem 0;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #22c55e;
+    margin-bottom: 0.9rem;
+  }
+
+  .section-label::before {
+    content: '';
+    width: 22px;
+    height: 2px;
+    background: #22c55e;
+  }
+
+  .section-title {
+    font-family: 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: clamp(1.75rem, 3.8vw, 2.7rem);
+    font-weight: 700;
+    line-height: 1.13;
+    letter-spacing: -1px;
+    margin-bottom: 0.7rem;
+    color: #dff0e4;
+  }
+
+  .section-subtitle {
+    color: #7da686;
+    font-size: 1rem;
+    max-width: 620px;
+    margin-bottom: 2.8rem;
+  }
+
+  .faq-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(460px, 1fr));
+    gap: 0.625rem;
+  }
+
+  .faq-item {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(34, 197, 94, 0.05);
+    border-radius: 9px;
+    overflow: hidden;
+    transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .faq-item:hover {
+    border-color: rgba(34, 197, 94, 0.2);
+  }
+
+  .faq-item.open {
+    border-color: rgba(34, 197, 94, 0.32);
+    background: rgba(34, 197, 94, 0.05);
+  }
+
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.625rem;
+    padding: 0.875rem 1rem;
+    cursor: pointer;
+    font-size: 13.5px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #dff0e4;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .faq-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(34, 197, 94, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: #22c55e;
+    transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 700;
+  }
+
+  .faq-item.open .faq-icon {
+    background: #22c55e;
+    color: #fff;
+    transform: rotate(45deg);
+  }
+
+  .faq-answer {
+    display: none;
+    padding: 0 1rem 0.875rem;
+    font-size: 12.5px;
+    color: #7da686;
+    line-height: 1.72;
+    border-top: 1px solid rgba(34, 197, 94, 0.05);
+    padding-top: 0.75rem;
+  }
+
+  .faq-item.open .faq-answer {
+    display: block;
+  }
+
+  @media (max-width: 640px) {
+    .container {
+      padding: 0 1.2rem;
+    }
+    .faq-section {
+      padding: 3.2rem 0;
+    }
+    .faq-list {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

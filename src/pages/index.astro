@@ -1,5 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroGlass from '../components/HeroGlass.astro';
+import TrustStrip from '../components/TrustStrip.astro';
+import ServiceGrid from '../components/ServiceGrid.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
+import CTASticky from '../components/CTASticky.astro';
+import TestimonialGlass from '../components/TestimonialGlass.astro';
+import FAQAccordion from '../components/FAQAccordion.astro';
 
 // JSON-LD Schema Suite
 const schema = [
@@ -67,7 +74,7 @@ const schema = [
     },
     "speakable": {
       "@type":"SpeakableSpecification",
-      "cssSelector":[".speakable-hero",".speakable-services",".speakable-compliance",".speakable-faq"]
+      "cssSelector":[".hero-title",".section-title"]
     }
   },
   {
@@ -124,25 +131,25 @@ const schema = [
   <script type="application/ld+json" set:html={JSON.stringify(schema)}></script>
 
   <!-- Skip Link -->
-  <a href="#main" style="position:absolute;top:-100px;left:0;background:var(--green);color:#000;padding:.5rem 1rem;font-weight:700;z-index:1000;transition:top .2s;border-radius:0 0 8px 0" onfocus="this.style.top='0'" onblur="this.style.top='-100px'">Skip to main content</a>
+  <a href="#main" style="position:absolute;top:-100px;left:0;background:#00d084;color:#000;padding:.5rem 1rem;font-weight:700;z-index:1000;transition:top .2s;border-radius:0 0 8px 0" onfocus="this.style.top='0'" onblur="this.style.top='-100px'">Skip to main content</a>
 
   <!-- Navigation -->
   <header id="nav" role="banner">
     <nav class="nav-inner" aria-label="Main navigation">
       <a href="/" class="nav-logo" aria-label="EWaste Kochi">
   <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-    <rect width="32" height="32" rx="8" fill="#00ff88"/>
+    <rect width="32" height="32" rx="8" fill="#00d084"/>
     <path d="M8 20l4-8 4 4 4-8" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
     <circle cx="24" cy="10" r="2" fill="#000"/>
   </svg>
   <span>EWaste <strong>Kochi</strong></span>
 </a>
       <ul class="nav-links" role="list">
-        <li><a href="/services/">Services</a></li>
-        <li><a href="/locations/">Locations</a></li>
-        <li><a href="/itad/">ITAD</a></li>
-        <li><a href="/blog/">Blog</a></li>
-        <li><a href="/sell-electronics/">Sell Electronics</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#faq">FAQs</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="nav-right">
         <button class="lang-btn" id="lang-toggle" aria-label="Change language" aria-haspopup="dialog">EN</button>
@@ -188,618 +195,237 @@ const schema = [
   </div>
 
   <main id="main">
-
-    <!-- HERO SECTION -->
-    <section id="hero" aria-labelledby="hero-h1">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="hero-grid-lines" aria-hidden="true"></div>
-      <div class="hero-inner">
-        <div>
-          <!-- Breadcrumb -->
-          <nav aria-label="breadcrumb" style="margin-bottom:1.25rem">
-            <ol style="display:flex;gap:.5rem;font-size:.78rem;color:var(--text3);list-style:none" itemscope itemtype="https://schema.org/BreadcrumbList">
-              <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a href="/" itemprop="item" style="color:var(--text3)"><span itemprop="name">Home</span></a>
-                <meta itemprop="position" content="1">
-              </li>
-            </ol>
-          </nav>
-          <div class="hero-eyebrow">
-            <span class="badge badge-green"> KSPCB KL/EW/628</span>
-            <span class="badge badge-cyan">NIST 800-88</span>
-            <span class="badge badge-amber">DPDP 2023</span>
-          </div>
-          <hgroup>
-            <h1 id="hero-h1" class="hero-h1 speakable-hero">
-              E-Waste Recycling &amp; ITAD Services<br>
-              <span class="accent">in Kochi, Kerala</span>
-            </h1>
-            <p class="hero-sub speakable-hero">
-              Kerala's most trusted certified e-waste recycler. KSPCB authorized (KL/EW/628), NIST 800-88 data destruction, zero landfill - serving Kochi, Ernakulam, and all of Kerala since 2018. <strong>Free pickup for 10+ devices. Certificate of Destruction for every job.</strong>
-            </p>
-          </hgroup>
-          <nav class="hero-ctas" aria-label="Hero actions">
-            <a href="tel:+917500555454" class="btn btn-primary"> Call 24/7</a>
-            <a href="https://wa.me/917500555454" class="btn btn-secondary"> WhatsApp</a>
-            <a href="/get-quote/" class="btn btn-ghost">Get Free Quote </a>
-          </nav>
-          <div class="hero-trust">
-            <span class="badge badge-green"> Zero Landfill</span>
-            <span class="badge badge-green"> Certificate of Destruction</span>
-            <span class="badge badge-green"> EPR Compliant</span>
-            <span class="badge badge-amber"> Same-Day Infopark</span>
-          </div>
-        </div>
-        <div class="hero-stats" aria-label="Key metrics">
-          <div class="stat-card fade-up">
-            <div class="stat-num" data-count="2400">0</div>
-            <div class="stat-label">Tonnes Recycled</div>
-          </div>
-          <div class="stat-card fade-up" style="transition-delay:.1s">
-            <div class="stat-num" data-count="50000">0</div>
-            <div class="stat-label">Devices Wiped</div>
-          </div>
-          <div class="stat-card fade-up" style="transition-delay:.2s">
-            <div class="stat-num" data-count="569">0</div>
-            <div class="stat-label">Pickup Zones</div>
-          </div>
-          <div class="stat-card fade-up" style="transition-delay:.3s">
-            <div class="stat-num">500+</div>
-            <div class="stat-label">Business Clients</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- COMPLIANCE TICKER -->
-    <div id="compliance-bar" aria-label="Certifications and compliance">
-      <div class="compliance-scroll" aria-hidden="true">
-        <span class="c-item"> KSPCB Authorized · KL/EW/628</span>
-        <span class="c-item"> NIST SP 800-88 Data Destruction</span>
-        <span class="c-item"> DPDP Act 2023 Compliant</span>
-        <span class="c-item"> EPR Registered · CPCB India</span>
-        <span class="c-item"> DoD 5220.22-M Certified</span>
-        <span class="c-item"> Zero Landfill Rate 100%</span>
-        <span class="c-item"> Free Bulk Pickup - Ernakulam</span>
-        <!-- duplicate for seamless loop -->
-        <span class="c-item"> KSPCB Authorized · KL/EW/628</span>
-        <span class="c-item"> NIST SP 800-88 Data Destruction</span>
-        <span class="c-item"> DPDP Act 2023 Compliant</span>
-        <span class="c-item"> EPR Registered · CPCB India</span>
-        <span class="c-item"> DoD 5220.22-M Certified</span>
-        <span class="c-item"> Zero Landfill Rate 100%</span>
-        <span class="c-item"> Free Bulk Pickup - Ernakulam</span>
-      </div>
-    </div>
-
-    <!-- SERVICES SECTION -->
-    <section id="services" aria-labelledby="services-h2">
-      <div class="container">
-        <div class="section-label">Our Specializations</div>
-        <h2 id="services-h2" class="section-title speakable-services">Certified Industrial E-Waste &amp; ITAD Solutions</h2>
-        <p class="section-sub">Looking for certified e-waste recycling and IT asset disposal in Kochi? We serve every sector - from IT parks and banks to hospitals and manufacturing firms across Kerala.</p>
-        <div class="grid-3" role="list">
-          <article class="service-card fade-up" role="listitem" itemscope itemtype="https://schema.org/Service">
-            <div class="service-icon" aria-hidden="true">
-              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M7 19H4.5A2.5 2.5 0 012 16.5v-1M17 19h2.5a2.5 2.5 0 002.5-2.5v-1M12 3v4m0 0l-2-2m2 2l2-2M6.5 9.5L5 11l1.5 1.5M17.5 9.5L19 11l-1.5 1.5M5 16h14"/></svg>
-            </div>
-            <h3 itemprop="name"><a href="/services/e-waste-recycling-kochi/" style="color:var(--text1)">E-Waste Recycling Kochi</a></h3>
-            <p itemprop="description">Kerala's most trusted <a href="/services/e-waste-recycling-kochi/">certified e-waste recycler in Kochi</a>. All 21 categories under India's E-Waste Rules 2022. Zero landfill, KSPCB manifest for every collection.</p>
-            <a href="/services/e-waste-recycling-kochi/" class="service-link" itemprop="url">Learn More </a>
-          </article>
-          <article class="service-card fade-up" role="listitem" itemscope itemtype="https://schema.org/Service" style="transition-delay:.1s">
-            <div class="service-icon" aria-hidden="true">
-              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="13" rx="1"/><path d="M9 22V12h6v10M3 9l9-6 9 6"/></svg>
-            </div>
-            <h3 itemprop="name"><a href="/services/itad-services-kochi/" style="color:var(--text1)">ITAD Services Kochi</a></h3>
-            <p itemprop="description">Complete <a href="/services/itad-services-kochi/">IT asset disposition in Kochi</a> - inventory, NIST data destruction, Certificate of Destruction, value recovery. Preferred ITAD partner for 500+ Kerala businesses.</p>
-            <a href="/services/itad-services-kochi/" class="service-link" itemprop="url">Learn More </a>
-          </article>
-          <article class="service-card fade-up" role="listitem" itemscope itemtype="https://schema.org/Service" style="transition-delay:.2s">
-            <div class="service-icon" aria-hidden="true">
-              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 2l7 4v6c0 4.5-3 8.5-7 10C8 20.5 5 16.5 5 12V6l7-4z"/><path d="M9 12l2 2 4-4"/></svg>
-            </div>
-            <h3 itemprop="name"><a href="/services/data-destruction-kochi/" style="color:var(--text1)">Data Destruction Kochi</a></h3>
-            <p itemprop="description">NIST 800-88 and DoD 5220.22-M certified <a href="/services/data-destruction-kochi/">data destruction in Kochi</a>. Cryptographic erase, degaussing, physical shredding. Serial-numbered certificate for every device.</p>
-            <a href="/services/data-destruction-kochi/" class="service-link" itemprop="url">Learn More </a>
-          </article>
-          <article class="service-card fade-up" role="listitem" itemscope itemtype="https://schema.org/Service">
-            <div class="service-icon" aria-hidden="true">
-              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 18h.01M10 18h.01M2 14L6.5 4h11L22 14"/></svg>
-            </div>
-            <h3 itemprop="name"><a href="/services/hard-drive-shredding-kochi/" style="color:var(--text1)">Hard Drive Shredding Kochi</a></h3>
-            <p itemprop="description">Industrial <a href="/services/hard-drive-shredding-kochi/">hard drive and SSD destruction in Kochi</a>. Physical shredding beyond data recovery. Witnessed destruction available for high-security clients.</p>
-            <a href="/services/hard-drive-shredding-kochi/" class="service-link" itemprop="url">Learn More </a>
-          </article>
-          <article class="service-card fade-up" role="listitem" itemscope itemtype="https://schema.org/Service" style="transition-delay:.1s">
-            <div class="service-icon" aria-hidden="true">
-              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="7" width="16" height="10" rx="1"/><path d="M22 11v2M7 11v2M11 11v2"/></svg>
-            </div>
-            <h3 itemprop="name"><a href="/services/battery-recycling-kochi/" style="color:var(--text1)">Battery Recycling Kochi</a></h3>
-            <p itemprop="description">Safe <a href="/services/battery-recycling-kochi/">Li-Ion, lead-acid and laptop battery disposal in Kochi</a>. Prevents toxic leakage into Kerala's waterways. Free collection for bulk battery lots.</p>
-            <a href="/services/battery-recycling-kochi/" class="service-link" itemprop="url">Learn More </a>
-          </article>
-          <article class="service-card fade-up" role="listitem" itemscope itemtype="https://schema.org/Service" style="transition-delay:.2s">
-            <div class="service-icon" aria-hidden="true">
-              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="1"/><path d="M1 21h22M12 17v4"/></svg>
-            </div>
-            <h3 itemprop="name"><a href="/services/laptop-buyback-kochi/" style="color:var(--text1)">Laptop Buyback Kochi</a></h3>
-            <p itemprop="description">Best <a href="/services/laptop-buyback-kochi/">laptop buyback prices in Kochi</a> - better than Cashify. Instant payment, free pickup for 10+ units, data wiped before resale. MacBook, Dell, HP, Lenovo.</p>
-            <a href="/services/laptop-buyback-kochi/" class="service-link" itemprop="url">Get Quote </a>
-          </article>
-        </div>
-        <div style="text-align:center;margin-top:2rem">
-          <a href="/services/" class="btn btn-ghost">Explore All 17 Services </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- COMPLIANCE AUTHORITY -->
-    <section id="compliance" aria-labelledby="compliance-h2" style="background:var(--bg1);padding:4rem 0">
-      <div class="container">
-        <div class="section-label">Regulatory Authority</div>
-        <h2 id="compliance-h2" class="section-title speakable-compliance">The Only Choice for Compliant E-Waste Disposal in Kerala</h2>
-        <p class="section-sub">Companies in Kochi must comply with India's E-Waste Rules 2022. Using an unauthorized recycler exposes your business to legal liability. Verify our KSPCB authorization before choosing any recycler.</p>
-        <div class="grid-2" style="margin-bottom:2rem">
-          <div class="card">
-            <div style="display:flex;gap:1rem;align-items:flex-start">
-              <div style="font-size:2rem;flex-shrink:0"></div>
-              <div>
-                <h3 style="margin-bottom:.5rem">KSPCB Authorization KL/EW/628</h3>
-                <p style="font-size:.9rem;margin-bottom:.75rem">One of only three authorized e-waste processing facilities in Ernakulam district. Our KSPCB authorization is publicly verifiable - a legal requirement for any business in Kerala disposing of electronic waste.</p>
-                <a href="https://www.kspcb.kerala.gov.in" target="_blank" rel="noopener noreferrer nofollow" class="badge badge-green" style="font-size:.72rem">Verify on KSPCB Portal </a>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div style="display:flex;gap:1rem;align-items:flex-start">
-              <div style="font-size:2rem;flex-shrink:0"></div>
-              <div>
-                <h3 style="margin-bottom:.5rem">NIST SP 800-88 + DoD 5220.22-M</h3>
-                <p style="font-size:.9rem;margin-bottom:.75rem">US government-standard data destruction protocols applied to every storage device. Critical for DPDP Act 2023 compliance - India's data protection law requires certified destruction of personal data before hardware retirement.</p>
-                <a href="https://csrc.nist.gov/publications/detail/sp/800-88/rev-1/final" target="_blank" rel="noopener noreferrer nofollow" class="badge badge-cyan" style="font-size:.72rem">NIST Official Standard </a>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div style="display:flex;gap:1rem;align-items:flex-start">
-              <div style="font-size:2rem;flex-shrink:0"></div>
-              <div>
-                <h3 style="margin-bottom:.5rem">DPDP Act 2023 Compliance</h3>
-                <p style="font-size:.9rem;margin-bottom:.75rem">India's Digital Personal Data Protection Act 2023 mandates certified data destruction for all hardware handling personal data. Our DPDP compliance documentation provides the legal protection your IT team needs.</p>
-                <a href="/services/dpdp-compliance-kochi/" class="badge badge-amber">DPDP Guide </a>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div style="display:flex;gap:1rem;align-items:flex-start">
-              <div style="font-size:2rem;flex-shrink:0"></div>
-              <div>
-                <h3 style="margin-bottom:.5rem">EPR Registered - CPCB India</h3>
-                <p style="font-size:.9rem;margin-bottom:.75rem">Extended Producer Responsibility registration with the Central Pollution Control Board. Our EPR compliance means your discarded electronics are counted toward India's national recycling targets - closing the loop legally.</p>
-                <a href="https://www.cpcb.nic.in" target="_blank" rel="noopener noreferrer nofollow" class="badge badge-green" style="font-size:.72rem">CPCB Registry </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CERTIFICATE PROOF -->
-    <section id="certificate" aria-labelledby="cert-h2" style="padding:4rem 0">
-      <div class="container">
-        <div class="cert-block">
-          <div class="cert-icon" aria-hidden="true"></div>
-          <div style="flex:1">
-            <div class="section-label" style="margin-bottom:.5rem">Every Job, No Exceptions</div>
-            <h2 id="cert-h2" class="cert-title">Certificate of Destruction - Issued Within 24 Hours</h2>
-            <p style="margin-bottom:1rem">Every collection - from a single laptop to a 500-device enterprise IT refresh - receives a serial-numbered Certificate of Destruction. This document is your legal proof of NIST-certified data wiping and KSPCB-compliant recycling. Accepted by auditors, regulators, and ISO 27001 compliance teams.</p>
-            <div class="cert-features">
-              <span class="badge badge-green"> Serial-numbered per device</span>
-              <span class="badge badge-green"> Issued in 24 hours</span>
-              <span class="badge badge-green"> NIST method documented</span>
-              <span class="badge badge-cyan"> Audit-ready format</span>
-              <span class="badge badge-amber"> Zero extra cost</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROCESS SECTION -->
-    <section id="process" aria-labelledby="process-h2" style="background:var(--bg1);padding:4rem 0">
-      <div class="container">
-        <div class="section-label">How It Works</div>
-        <h2 id="process-h2" class="section-title">Certified E-Waste Collection - 4 Simple Steps</h2>
-        <div class="process-steps" role="list">
-          <div class="process-step fade-up" role="listitem">
-            <div class="step-num" aria-hidden="true">01</div>
-            <div class="step-icon">
-              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-            </div>
-            <h3>Book Pickup</h3>
-            <p>Call, WhatsApp or book online. Same-day slots for <a href="/locations/infopark/">Infopark</a>, <a href="/locations/smart-city/">Smart City</a> and <a href="/locations/kakkanad/">Kakkanad</a>. 48-hour coverage across all Ernakulam.</p>
-          </div>
-          <div class="process-step fade-up" role="listitem" style="transition-delay:.1s">
-            <div class="step-num" aria-hidden="true">02</div>
-            <div class="step-icon">
-              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8zM5.5 19a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM18.5 19a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/></svg>
-            </div>
-            <h3>Secure Collection</h3>
-            <p>Our certified team arrives with KSPCB manifest documentation. GPS-tracked vehicles. Chain-of-custody from your door to our facility - no third-party handlers.</p>
-          </div>
-          <div class="process-step fade-up" role="listitem" style="transition-delay:.2s">
-            <div class="step-num" aria-hidden="true">03</div>
-            <div class="step-icon">
-              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M12 2l7 4v6c0 4.5-3 8.5-7 10C8 20.5 5 16.5 5 12V6l7-4z"/><path d="M9 12l2 2 4-4"/></svg>
-            </div>
-            <h3>NIST Data Destruction</h3>
-            <p>Every storage device: cryptographic erase for SSDs, degaussing for HDDs, physical shredding for ultimate security. Documented per NIST SP 800-88 at our Thrippunithura facility.</p>
-          </div>
-          <div class="process-step fade-up" role="listitem" style="transition-delay:.3s">
-            <div class="step-num" aria-hidden="true">04</div>
-            <div class="step-icon">
-              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M9 22l3-3 3 3V15a6 6 0 10-6 0v7z"/></svg>
-            </div>
-            <h3>Certificate Issued</h3>
-            <p>Serial-numbered Certificate of Destruction delivered within 24 hours. Zero-landfill recycling completed. Full compliance documentation ready for your audit.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- LOCATIONS SECTION -->
-    <section id="locations" aria-labelledby="loc-h2" style="padding:4rem 0">
-      <div class="container">
-        <div class="section-label">Service Coverage</div>
-        <h2 id="loc-h2" class="section-title">E-Waste Collection Across Kochi &amp; Kerala</h2>
-        <p class="section-sub">Looking for <a href="/services/e-waste-recycling-kochi/">e-waste collection near you in Kochi</a>? We cover all 569 zones across Ernakulam. Free pickup for 10+ devices, same-day priority for business parks.</p>
-        <div class="grid-5" style="margin-bottom:1.5rem" role="list">
-          <a href="/locations/kakkanad/" class="location-card" itemprop="areaServed" role="listitem">
-            <div><div class="loc-name">Kakkanad</div><div class="loc-badge">Free Pickup</div></div>
-            <span style="color:var(--text3);font-size:.8rem"></span>
-          </a>
-          <a href="/locations/infopark/" class="location-card" itemprop="areaServed" role="listitem">
-            <div><div class="loc-name">Infopark Kochi</div><div class="loc-badge">Same-Day</div></div>
-            <span style="color:var(--text3);font-size:.8rem"></span>
-          </a>
-          <a href="/locations/smart-city/" class="location-card" itemprop="areaServed" role="listitem">
-            <div><div class="loc-name">Smart City</div><div class="loc-badge">Same-Day</div></div>
-            <span style="color:var(--text3);font-size:.8rem"></span>
-          </a>
-          <a href="/locations/edappally/" class="location-card" itemprop="areaServed" role="listitem">
-            <div><div class="loc-name">Edappally</div><div class="loc-badge">Free Pickup</div></div>
-            <span style="color:var(--text3);font-size:.8rem"></span>
-          </a>
-          <a href="/locations/thrippunithura/" class="location-card" itemprop="areaServed" role="listitem">
-            <div><div class="loc-name">Thrippunithura</div><div class="loc-badge">Walk-In HQ</div></div>
-            <span style="color:var(--text3);font-size:.8rem"></span>
-          </a>
-          <a href="/locations/vytilla/" class="location-card" itemprop="areaServed" role="listitem">
-            <div><div class="loc-name">Vytilla</div><div class="loc-badge">Free Pickup</div></div>
-            <span style="color:var(--text3);font-size:.8rem"></span>
-          </a>
-          <a href="/locations/aluva/" class="location-card" itemprop="areaServed" role="listitem">
-            <div><div class="loc-name">Aluva</div><div class="loc-badge">Free Pickup</div></div>
-            <span style="color:var(--text3);font-size:.8rem"></span>
-          </a>
-          <a href="/locations/mg-road/" class="location-card" itemprop="areaServed" role="listitem">
-            <div><div class="loc-name">MG Road</div><div class="loc-badge">Free Pickup</div></div>
-            <span style="color:var(--text3);font-size:.8rem"></span>
-          </a>
-          <a href="/locations/fort-kochi/" class="location-card" itemprop="areaServed" role="listitem">
-            <div><div class="loc-name">Fort Kochi</div><div class="loc-badge">Free Pickup</div></div>
-            <span style="color:var(--text3);font-size:.8rem"></span>
-          </a>
-          <a href="/locations/kalamassery/" class="location-card" itemprop="areaServed" role="listitem">
-            <div><div class="loc-name">Kalamassery</div><div class="loc-badge">Free Pickup</div></div>
-            <span style="color:var(--text3);font-size:.8rem"></span>
-          </a>
-        </div>
-        <div style="text-align:center">
-          <a href="/locations/" class="btn btn-ghost">View All 569 Zones </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- BUYBACK SECTION -->
-    <section id="buyback" aria-labelledby="buyback-h2" style="background:var(--bg1);padding:4rem 0">
-      <div class="container">
-        <div class="section-label">Best Prices in Kerala</div>
-        <h2 id="buyback-h2" class="section-title">Sell Old Electronics in Kochi - Better Than Cashify</h2>
-        <p class="section-sub">Get the best <a href="/sell-electronics/">laptop and phone buyback prices in Kochi</a>. Instant payment, free pickup for 10+ items, data destruction included.</p>
-        <div class="grid-3" style="margin-bottom:2rem">
-          <div class="buyback-card fade-up">
-            <div class="buyback-device"> MacBook Pro M2/M3</div>
-            <div class="buyback-price">65,000</div>
-            <div class="buyback-note">2021-2024 · Any condition</div>
-          </div>
-          <div class="buyback-card fade-up" style="transition-delay:.1s">
-            <div class="buyback-device"> iPhone 15 Pro Max</div>
-            <div class="buyback-price">75,000</div>
-            <div class="buyback-note">256GB+ · Working</div>
-          </div>
-          <div class="buyback-card fade-up" style="transition-delay:.2s">
-            <div class="buyback-device"> Dell/HP i7 Laptop</div>
-            <div class="buyback-price">18,000</div>
-            <div class="buyback-note">2020+ · 16GB RAM</div>
-          </div>
-          <div class="buyback-card fade-up">
-            <div class="buyback-device"> Samsung S24 Ultra</div>
-            <div class="buyback-price">50,000</div>
-            <div class="buyback-note">Excellent condition</div>
-          </div>
-          <div class="buyback-card fade-up" style="transition-delay:.1s">
-            <div class="buyback-device"> Dell/HP Server</div>
-            <div class="buyback-price">45,000</div>
-            <div class="buyback-note">Rack unit · Xeon</div>
-          </div>
-          <div class="buyback-card fade-up" style="transition-delay:.2s">
-            <div class="buyback-device"> MacBook Air M2</div>
-            <div class="buyback-price">45,000</div>
-            <div class="buyback-note">2022-2024</div>
-          </div>
-        </div>
-        <div style="text-align:center">
-          <a href="/sell-electronics/" class="btn btn-primary"> Get Instant Quote</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- SOCIAL PROOF -->
-    <section id="social-proof" aria-labelledby="sp-h2" style="padding:4rem 0">
-      <div class="container">
-        <div class="section-label">Trusted By Kerala's Best</div>
-        <h2 id="sp-h2" class="section-title" style="margin-bottom:1.5rem">500+ Businesses Trust EWaste Kochi</h2>
-        <div class="client-strip" style="margin-bottom:3rem">
-          <div class="client-badge"> Leading Bank - MG Road</div>
-          <div class="client-badge"> Multi-specialty Hospital - Ernakulam</div>
-          <div class="client-badge"> IT Company - Infopark</div>
-          <div class="client-badge"> Manufacturing - Kalamassery</div>
-          <div class="client-badge"> Government Office - Kakkanad</div>
-          <div class="client-badge"> Engineering College - Ernakulam</div>
-        </div>
-        <div class="grid-3">
-          <div class="review-card fade-up">
-            <div class="review-stars"></div>
-            <p class="review-text">"The fastest and most professional e-waste service in Kerala. Certificate of Destruction was in our inbox within 12 hours. Our IT audit team was very impressed with the documentation."</p>
-            <div class="review-author">Rajesh Kumar, IT Manager</div>
-            <div class="review-company">Infopark Kochi - IT Services Company</div>
-          </div>
-          <div class="review-card fade-up" style="transition-delay:.1s">
-            <div class="review-stars"></div>
-            <p class="review-text">"Handled our 300-device server decommissioning at Smart City flawlessly. KSPCB documentation was exactly what our compliance officer needed. Would recommend without hesitation."</p>
-            <div class="review-author">Priya Menon, Head of Operations</div>
-            <div class="review-company">Smart City Kochi - Financial Services</div>
-          </div>
-          <div class="review-card fade-up" style="transition-delay:.2s">
-            <div class="review-stars"></div>
-            <p class="review-text">"As a hospital we handle highly sensitive patient data. EWaste Kochi's NIST data destruction protocol and DPDP compliance certificates gave us complete confidence in the process."</p>
-            <div class="review-author">Dr. Anoop Varghese, Admin Director</div>
-            <div class="review-company">Multi-specialty Hospital - Ernakulam</div>
-          </div>
-        </div>
-        <div style="text-align:center;margin-top:1.5rem">
-          <div style="font-family:var(--font-head);font-size:1.1rem;margin-bottom:.5rem">
-            <span style="color:var(--amber)"></span>
-            <span style="color:var(--text1);font-weight:700;margin-left:.5rem">4.9 / 5</span>
-            <span style="color:var(--text2);font-size:.9rem;margin-left:.5rem">from 312 reviews</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section id="faq" aria-labelledby="faq-h2" style="background:var(--bg1);padding:4rem 0">
-      <div class="container">
-        <div class="section-label">Common Questions</div>
-        <h2 id="faq-h2" class="section-title speakable-faq">Everything You Need to Know About E-Waste Recycling in Kochi</h2>
-        <p class="section-sub">Updated <time datetime="2026-04-01">April 2026</time>. Can't find your answer? <a href="https://wa.me/917500555454">Ask on WhatsApp</a>.</p>
-
-        <div class="faq-group">
-          <div class="faq-group-label">Compliance &amp; Certification</div>
-          <details itemscope itemtype="https://schema.org/Question">
-            <summary itemprop="name">What are the legal requirements for e-waste disposal for a company in Kochi?</summary>
-            <div class="faq-body" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
-              <span itemprop="text">Companies in Kochi must comply with India's E-Waste Rules 2022, which require using a KSPCB-authorized recycler. Under DPDP Act 2023, any hardware storing personal data must be certified-destroyed. EWaste Kochi is authorized (Reg. No: <strong>KL/EW/628</strong>) and provides all compliance documentation - KSPCB manifest, NIST certificate, and Certificate of Destruction - for every job. <a href="/services/itad-services-kochi/">Learn about our ITAD compliance services </a></span>
-            </div>
-          </details>
-          <details itemscope itemtype="https://schema.org/Question">
-            <summary itemprop="name">Is EWaste Kochi KSPCB authorized?</summary>
-            <div class="faq-body" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
-              <span itemprop="text">Yes. EWaste Kochi holds KSPCB (Kerala State Pollution Control Board) authorization No. <strong>KL/EW/628</strong> - one of only three authorized e-waste processing facilities in Ernakulam district. We are also EPR-registered with the Central Pollution Control Board (CPCB). You can <a href="https://www.kspcb.kerala.gov.in" target="_blank" rel="noopener">verify this on the KSPCB portal</a>.</span>
-            </div>
-          </details>
-          <details itemscope itemtype="https://schema.org/Question">
-            <summary itemprop="name">Do you provide a Certificate of Destruction?</summary>
-            <div class="faq-body" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
-              <span itemprop="text">Yes. A serial-numbered Certificate of Destruction is issued within 24 hours for every job, at no extra cost. This certificate documents the NIST 800-88 data sanitization method used and KSPCB-compliant recycling of all devices. It is accepted by auditors, ISO 27001 teams, and regulatory bodies.</span>
-            </div>
-          </details>
-        </div>
-
-        <div class="faq-group">
-          <div class="faq-group-label">Pickup &amp; Pricing</div>
-          <details itemscope itemtype="https://schema.org/Question">
-            <summary itemprop="name">Is e-waste disposal free in Kochi?</summary>
-            <div class="faq-body" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
-              <span itemprop="text">Free pickup is available for 10 or more devices anywhere in Ernakulam district. For 1-9 devices, residential collection is 99. Walk-in drop-off at our <a href="/locations/thrippunithura/">Thrippunithura facility</a> is always free. Corporate clients at <a href="/locations/infopark/">Infopark</a>, <a href="/locations/smart-city/">Smart City</a>, and <a href="/locations/kakkanad/">Kakkanad</a> get same-day priority service.</span>
-            </div>
-          </details>
-          <details itemscope itemtype="https://schema.org/Question">
-            <summary itemprop="name">How quickly can you collect e-waste from my office in Kochi?</summary>
-            <div class="faq-body" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
-              <span itemprop="text">Same-day to 48-hour turnaround is standard. We offer 4-hour emergency service for urgent corporate needs at Infopark, Smart City, and Kakkanad. Call <strong>+91 75005 55454</strong> or WhatsApp to check same-day slot availability in your area.</span>
-            </div>
-          </details>
-          <details itemscope itemtype="https://schema.org/Question">
-            <summary itemprop="name">Where can I find e-waste recycling near me in Kochi?</summary>
-            <div class="faq-body" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
-              <span itemprop="text">Our main facility is at 710A Hill Palace Road, Thrippunithura, Kochi - open Monday to Saturday 8AM-8PM, Sunday 10AM-4PM. We also offer free pickup across Ernakulam: <a href="/locations/infopark/">Infopark</a>, <a href="/locations/kakkanad/">Kakkanad</a>, <a href="/locations/smart-city/">Smart City</a>, <a href="/locations/edappally/">Edappally</a>, MG Road, <a href="/locations/fort-kochi/">Fort Kochi</a>, <a href="/locations/thrippunithura/">Thrippunithura</a>, <a href="/locations/aluva/">Aluva</a>, <a href="/locations/vytilla/">Vytilla</a> and all surrounding areas.</span>
-            </div>
-          </details>
-        </div>
-
-        <div class="faq-group">
-          <div class="faq-group-label">Data Destruction &amp; ITAD</div>
-          <details itemscope itemtype="https://schema.org/Question">
-            <summary itemprop="name">What is ITAD and does my business need it?</summary>
-            <div class="faq-body" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
-              <span itemprop="text">ITAD (IT Asset Disposition) is the certified, auditable process of retiring IT equipment - including data destruction, inventory documentation, KSPCB-compliant recycling, and value recovery. Under India's DPDP Act 2023 and E-Waste Rules 2022, any business handling personal or financial data must use certified ITAD. <a href="/services/itad-services-kochi/">Learn about our ITAD services in Kochi </a></span>
-            </div>
-          </details>
-          <details itemscope itemtype="https://schema.org/Question">
-            <summary itemprop="name">How do you destroy data from hard drives and SSDs?</summary>
-            <div class="faq-body" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
-              <span itemprop="text">We use NIST SP 800-88 and DoD 5220.22-M certified methods: cryptographic erase for SSDs, degaussing for HDDs, and physical shredding for ultimate security. Every device receives a unique Certificate of Destruction with serial number, destruction method, and technician documentation. <a href="/services/data-destruction-kochi/">View our data destruction services </a></span>
-            </div>
-          </details>
-          <details itemscope itemtype="https://schema.org/Question">
-            <summary itemprop="name">What electronics does EWaste Kochi accept for recycling?</summary>
-            <div class="faq-body" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
-              <span itemprop="text">We accept all 21 categories under India's E-Waste Rules 2022: laptops, desktops, servers, smartphones, tablets, TVs, monitors, printers, networking equipment, air conditioners, refrigerators, washing machines, batteries, UPS systems, LED/CFL bulbs, medical diagnostic equipment and more. <a href="/accepted-items/">View complete accepted items list </a></span>
-            </div>
-          </details>
-        </div>
-        <div style="text-align:center;margin-top:1.5rem">
-          <a href="/faq/" class="btn btn-ghost">View All 300+ Questions </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- BLOG / FRESH CONTENT -->
-    <section id="blog" aria-labelledby="blog-h2" style="padding:4rem 0">
-      <div class="container">
-        <div class="section-label">Latest from Our Knowledge Base</div>
-        <h2 id="blog-h2" class="section-title">E-Waste &amp; ITAD Insights for Kerala Businesses</h2>
-        <div class="grid-3">
-          <article class="blog-card fade-up">
-            <div class="blog-img-placeholder" role="img" aria-label="DPDP Act article"></div>
-            <div class="blog-body">
-              <div class="blog-meta">
-                <time datetime="2026-03-15">Mar 15, 2026</time>
-                <span>Compliance</span>
-              </div>
-              <h3><a href="/blog/dpdp-act-2023-it-hardware-disposal-kerala/" style="color:var(--text1)">DPDP Act 2023: What Every Kerala Business Must Do Before Disposing Old IT Hardware</a></h3>
-              <p>India's new data protection law changes how companies must retire laptops, servers and storage devices. Here's what you need to know.</p>
-            </div>
-          </article>
-          <article class="blog-card fade-up" style="transition-delay:.1s">
-            <div class="blog-img-placeholder" role="img" aria-label="E-waste rules article"></div>
-            <div class="blog-body">
-              <div class="blog-meta">
-                <time datetime="2026-02-28">Feb 28, 2026</time>
-                <span>Regulation</span>
-              </div>
-              <h3><a href="/blog/e-waste-rules-2022-compliance-guide-kochi/" style="color:var(--text1)">E-Waste Rules 2022: Complete Compliance Guide for Kochi Businesses</a></h3>
-              <p>The updated E-Waste Rules require all businesses to use KSPCB-authorized recyclers. Here is the complete compliance checklist.</p>
-            </div>
-          </article>
-          <article class="blog-card fade-up" style="transition-delay:.2s">
-            <div class="blog-img-placeholder" role="img" aria-label="NIST data destruction article"></div>
-            <div class="blog-body">
-              <div class="blog-meta">
-                <time datetime="2026-02-10">Feb 10, 2026</time>
-                <span>Data Security</span>
-              </div>
-              <h3><a href="/blog/nist-800-88-vs-dod-5220-data-destruction-comparison/" style="color:var(--text1)">NIST 800-88 vs DoD 5220.22-M: Which Data Destruction Standard Do You Need?</a></h3>
-              <p>A practical breakdown of the two dominant certified data destruction standards - and when your business needs each one.</p>
-            </div>
-          </article>
-        </div>
-        <div style="text-align:center;margin-top:2rem">
-          <a href="/blog/" class="btn btn-ghost">Read All Articles </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- FINAL CTA -->
-    <section id="cta-final" aria-labelledby="cta-h2">
-      <div class="container">
-        <div class="badge badge-green" style="margin-bottom:1rem">Free Pickup - No Obligation</div>
-        <h2 id="cta-h2" class="cta-title">Ready to Recycle Your E-Waste in Kochi?</h2>
-        <p class="cta-sub">Kerala's most trusted KSPCB-certified recycler. Free pickup for 10+ devices, Certificate of Destruction for every job. Serving Infopark, Smart City, Kakkanad and all of Ernakulam - 24/7.</p>
-        <div class="phone-display" aria-label="Phone number">+91 75005 55454</div>
-        <div class="cta-buttons">
-          <a href="tel:+917500555454" class="btn btn-primary" style="font-size:1.1rem;padding:.9rem 2rem"> Call 24/7</a>
-          <a href="https://wa.me/917500555454" class="btn btn-secondary" style="font-size:1.1rem;padding:.9rem 2rem"> WhatsApp</a>
-          <a href="/get-quote/" class="btn btn-ghost" style="font-size:1.1rem;padding:.9rem 2rem">Get Free Quote </a>
-        </div>
-        <p style="font-size:.82rem;color:var(--text3);margin-top:1.5rem">Open Mon-Sat 8AM-8PM · Sun 10AM-4PM · Emergency service 24/7</p>
-      </div>
-    </section>
-
+    <!-- Hero Section -->
+    <HeroGlass />
+    
+    <!-- Trust Strip -->
+    <TrustStrip />
+    
+    <!-- Services Grid -->
+    <ServiceGrid />
+    
+    <!-- Process Steps -->
+    <ProcessSteps />
+    
+    <!-- Testimonials -->
+    <TestimonialGlass />
+    
+    <!-- FAQ -->
+    <FAQAccordion />
+    
+    <!-- Final CTA -->
+    <CTASticky />
   </main>
 
-  <!-- FOOTER -->
-  <footer role="contentinfo">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-brand"> <span>EWaste</span> Kochi</div>
-          <p class="footer-tagline">Kerala's #1 certified e-waste recycler and ITAD company. KSPCB authorized, EPR compliant, NIST/DoD certified data destruction. Serving Kochi, Ernakulam, and all of Kerala since 2018.</p>
-          <address>
-            <strong>EWaste Kochi</strong><br>
-            710A, Hill Palace Road, Thrippunithura<br>
-            Kochi, Kerala 682301<br>
-            <a href="tel:+917500555454" style="color:var(--green)">+91 75005 55454</a><br>
-            <a href="mailto:info@ewastekochi.com" style="color:var(--text2)">info@ewastekochi.com</a>
-          </address>
-          <div class="footer-certs">
-            <span class="badge badge-green" style="font-size:.65rem">KSPCB KL/EW/628</span>
-            <span class="badge badge-cyan" style="font-size:.65rem">NIST 800-88</span>
-            <span class="badge badge-amber" style="font-size:.65rem">DPDP 2023</span>
-            <span class="badge badge-green" style="font-size:.65rem">EPR Registered</span>
-          </div>
-          <p style="font-size:.78rem;color:var(--text3);margin-top:.75rem">Established 2018 · <a href="https://www.kspcb.kerala.gov.in" target="_blank" rel="noopener" style="color:var(--text3)">Verify KSPCB License </a></p>
-        </div>
-        <div class="footer-col">
-          <h4>Services</h4>
-          <ul role="list">
-            <li><a href="/services/e-waste-recycling-kochi/">E-Waste Recycling</a></li>
-            <li><a href="/services/itad-services-kochi/">ITAD Services</a></li>
-            <li><a href="/services/data-destruction-kochi/">Data Destruction</a></li>
-            <li><a href="/services/hard-drive-shredding-kochi/">Hard Drive Shredding</a></li>
-            <li><a href="/services/battery-recycling-kochi/">Battery Recycling</a></li>
-            <li><a href="/services/laptop-buyback-kochi/">Laptop Buyback</a></li>
-            <li><a href="/services/">All 17 Services </a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Service Areas</h4>
-          <ul role="list">
-            <li><a href="/locations/kakkanad/">Kakkanad</a></li>
-            <li><a href="/locations/infopark/">Infopark Kochi</a></li>
-            <li><a href="/locations/smart-city/">Smart City Kochi</a></li>
-            <li><a href="/locations/edappally/">Edappally</a></li>
-            <li><a href="/locations/thrippunithura/">Thrippunithura</a></li>
-            <li><a href="/locations/vytilla/">Vytilla</a></li>
-            <li><a href="/locations/aluva/">Aluva</a></li>
-            <li><a href="/locations/mg-road/">MG Road</a></li>
-            <li><a href="/locations/fort-kochi/">Fort Kochi</a></li>
-            <li><a href="/locations/">All 569 Zones </a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <ul role="list">
-            <li><a href="/about/">About Us</a></li>
-            <li><a href="/blog/">Blog &amp; News</a></li>
-            <li><a href="/faq/">FAQ</a></li>
-            <li><a href="/compliance/">Compliance</a></li>
-            <li><a href="/marketplace/">Marketplace</a></li>
-            <li><a href="/contact/">Contact</a></li>
-            <li><a href="/privacy-policy/">Privacy Policy</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 EWaste Kochi. All rights reserved.</span>
-        <span style="display:flex;gap:1rem">
-          <a href="/privacy-policy/" style="color:var(--text3)">Privacy</a>
-          <a href="/terms/" style="color:var(--text3)">Terms</a>
-          <a href="/sitemap.xml" style="color:var(--text3)">Sitemap</a>
-        </span>
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/917500555454" class="floating-whatsapp" aria-label="WhatsApp" target="_blank" rel="noopener">
+    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.121 1.533 5.85L.057 23.386a.75.75 0 00.921.921l5.536-1.476A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.952 9.952 0 01-5.073-1.39l-.363-.215-3.785 1.01 1.01-3.785-.215-.363A9.952 9.952 0 012 12C2 6.486 6.486 2 12 2s10 5.486 10 10-4.486 10-10 10z"/>
+    </svg>
+  </a>
+
+  <style>
+    /* Floating WhatsApp Button */
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      width: 50px;
+      height: 50px;
+      background: #25d366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      box-shadow: 0 4px 18px rgba(37, 211, 102, 0.38);
+      z-index: 998;
+      transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+      color: #fff;
+    }
+
+    .floating-whatsapp:hover {
+      transform: scale(1.1);
+      box-shadow: 0 7px 28px rgba(37, 211, 102, 0.48);
+    }
+
+    /* Navigation styles */
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      height: 62px;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-family: 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #00d084;
+      margin-right: auto;
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 0.4375rem;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 0.125rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      font-size: 12.5px;
+      font-weight: 500;
+      color: #7da686;
+      padding: 0.3125rem 0.75rem;
+      border-radius: 6px;
+      transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: #00d084;
+      background: rgba(34, 197, 94, 0.1);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0.4375rem;
+      margin-left: 0.875rem;
+    }
+
+    .lang-btn, .theme-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(34, 197, 94, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 0.3125rem 0.5625rem;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      cursor: pointer;
+      transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+      color: #7da686;
+    }
+
+    .lang-btn:hover, .theme-btn:hover {
+      background: rgba(34, 197, 94, 0.1);
+      color: #00d084;
+      border-color: rgba(34, 197, 94, 0.2);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.04);
+      color: #7da686;
+      border: 1.5px solid rgba(34, 197, 94, 0.13);
+      padding: 0.5rem 1rem;
+      font-size: 0.8125rem;
+      border-radius: 9px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .btn-secondary:hover {
+      color: #00d084;
+      border-color: rgba(34, 197, 94, 0.32);
+      background: rgba(34, 197, 94, 0.1);
+    }
+
+    .btn-primary {
+      background: #00d084;
+      color: #fff;
+      padding: 0.5rem 1.1rem;
+      font-size: 0.8125rem;
+      border-radius: 9px;
+      text-decoration: none;
+      border: none;
+      transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .btn-primary:hover {
+      background: #16a34a;
+      transform: translateY(-1px);
+    }
+
+    /* Speech bar styles */
+    #speech-bar {
+      position: fixed;
+      bottom: 85px;
+      right: 22px;
+      z-index: 999;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(34, 197, 94, 0.05);
+      border-radius: 9px;
+      padding: 0.875rem 1.1rem;
+      min-width: 250px;
+      backdrop-filter: blur(18px);
+      display: none;
+    }
+
+    #speech-bar.show {
+      display: flex;
+      animation: fadeUp 0.3s ease;
+    }
+
+    .speech-btn {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(34, 197, 94, 0.05);
+      color: #7da686;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 11px;
+      cursor: pointer;
+      transition: all 0.28s;
+    }
+
+    .speech-btn.active {
+      background: #00d084;
+      color: #fff;
+    }
+
+    .speech-progress {
+      flex: 1;
+      height: 3px;
+      background: rgba(34, 197, 94, 0.1);
+      border-radius: 2px;
+      margin: 0 0.5rem;
+      overflow: hidden;
+    }
+
+    .speech-fill {
+      height: 100%;
+      background: #00d084;
+      width: 0%;
+      transition: width 0.1s;
+    }
+
+    @media (max-width: 640px) {
+      .nav-inner {
+        padding: 0 1.2rem;
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+
+</BaseLayout>
       </div>
     </div>
   </footer>
@@ -965,179 +591,5 @@ const schema = [
       applyTheme(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark');
     });
     applyTheme(document.documentElement.getAttribute('data-theme')||'dark');
-
-    // Scroll Animations
-    const io=new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}});
-    },{threshold:0.15});
-    document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
-
-    // Stat Counter
-    document.querySelectorAll('[data-count]').forEach(el => {
-      const io = new IntersectionObserver(entries => {
-        entries.forEach(e => {
-          if (!e.isIntersecting) return;
-          // Strip commas — "50,000" → 50000
-          const raw = el.dataset.count.replace(/,/g, '');
-          const target = parseInt(raw, 10);
-          if (isNaN(target)) return;
-          let start = 0;
-          const step = () => {
-            start += Math.ceil(target / 60);
-            el.textContent = (start >= target ? target : start)
-              .toLocaleString('en-IN') + (target >= 1000 ? '+' : '');
-            if (start < target) requestAnimationFrame(step);
-          };
-          requestAnimationFrame(step);
-          io.unobserve(el);
-        });
-      }, { threshold: 0.5 });
-      io.observe(el);
-    });
-
-    // Speech Reader
-    let synth=window.speechSynthesis,utter=null,speechRate=1,reading=false,paragraphs=[],pIdx=0;
-    function getSpeakableText(){
-      const els=document.querySelectorAll('.speakable-hero,.speakable-services,.speakable-compliance,.speakable-faq,[itemprop="text"]');
-      return Array.from(els).map(el=>el.textContent.trim()).filter(Boolean).join('. ');
-    }
-    function toggleSpeech(){
-      if(reading){synth.pause();reading=false;document.getElementById('speech-play').textContent=' Resume';return}
-      if(synth.paused&&utter){synth.resume();reading=true;document.getElementById('speech-play').textContent=' Pause';return}
-      const text=getSpeakableText();
-      utter=new SpeechSynthesisUtterance(text);
-      utter.rate=speechRate;utter.lang='en-IN';
-      const voices=synth.getVoices();
-      const preferred=voices.find(v=>v.lang.startsWith('en-IN'))||voices.find(v=>v.lang.startsWith('en'));
-      if(preferred)utter.voice=preferred;
-      utter.onend=()=>{reading=false;document.getElementById('speech-play').textContent=' Listen';document.getElementById('speech-fill').style.width='100%'};
-      let total=text.length,done=0;
-      utter.onboundary=e=>{if(e.charIndex){done=e.charIndex;document.getElementById('speech-fill').style.width=Math.round(done/total*100)+'%'}};
-      synth.speak(utter);reading=true;
-      document.getElementById('speech-play').textContent=' Pause';
-      document.getElementById('speech-bar').classList.add('visible');
-    }
-    function stopSpeech(){synth.cancel();reading=false;document.getElementById('speech-play').textContent=' Listen';document.getElementById('speech-fill').style.width='0%'}
-    function setSpeechRate(r){speechRate=r;if(utter&&reading){const p=synth.paused;synth.cancel();utter.rate=r;synth.speak(utter);if(p)synth.pause()}}
-    // Show speech bar on scroll
-    window.addEventListener('scroll',()=>{
-      if(window.scrollY>300)document.getElementById('speech-bar').classList.add('visible');
-    },{ passive: true });
-
-    // Chatbot
-    const chatBtn=document.getElementById('chat-btn');
-    const chatPanel=document.getElementById('chat-panel');
-    const chatClose=document.getElementById('chat-close');
-    const chatInput=document.getElementById('chat-input');
-    const chatSend=document.getElementById('chat-send');
-    const chatMessages=document.getElementById('chat-messages');
-    let chatHistory=[];
-
-    const SYSTEM=`You are the EWaste Kochi assistant - Kerala's #1 certified e-waste recycler. Be helpful, concise (max 3 sentences), and direct.
-    Key facts:
-    - KSPCB authorized: KL/EW/628
-    - Phone: +91 75005 55454  
-    - Address: 710A Hill Palace Road, Thrippunithura, Kochi, Kerala 682301
-    - Free pickup: 10+ devices, Ernakulam district. 1-9 devices: 99.
-    - Same-day slots: Infopark, Smart City, Kakkanad
-    - NIST 800-88 + DoD certified data destruction
-    - Certificate of Destruction: free, within 24 hours
-    - Hours: Mon-Sat 8AM-8PM, Sun 10AM-4PM
-    Pickup booking intent: capture how many devices, what type, which area of Kochi, then direct to +91 75005 55454.
-    Language: respond in the same language the user writes in.`;
-
-    chatBtn.addEventListener('click',()=>{chatPanel.classList.toggle('open');chatBtn.setAttribute('aria-expanded',chatPanel.classList.contains('open'))});
-    chatClose.addEventListener('click',()=>{chatPanel.classList.remove('open');chatBtn.setAttribute('aria-expanded','false')});
-    chatInput.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendMessage()}});
-    chatSend.addEventListener('click',sendMessage);
-
-    function sendChip(text){
-      document.getElementById('chat-chips').style.display='none';
-      sendMessage(text);
-    }
-
-    function appendMsg(text,role){
-      const d=document.createElement('div');
-      d.className='chat-msg '+role;
-      d.textContent=text;
-      chatMessages.appendChild(d);
-      chatMessages.scrollTop=chatMessages.scrollHeight;
-      return d;
-    }
-
-    function showTyping(){
-      const d=document.createElement('div');
-      d.className='chat-msg bot';d.id='typing';
-      d.innerHTML='<div class="typing"><span></span><span></span><span></span></div>';
-      chatMessages.appendChild(d);
-      chatMessages.scrollTop=chatMessages.scrollHeight;
-    }
-
-    async function sendMessage(overrideText){
-      const text=(overrideText||chatInput.value).trim();
-      if(!text)return;
-      chatInput.value='';
-      appendMsg(text,'user');
-      chatHistory.push({role:'user',content:text});
-      showTyping();
-
-      try{
-        const res=await fetch('https://api.anthropic.com/v1/messages',{
-          method:'POST',
-          headers:{'Content-Type':'application/json'},
-          body:JSON.stringify({
-            model:'claude-sonnet-4-20250514',
-            max_tokens:400,
-            system:SYSTEM,
-            messages:chatHistory
-          })
-        });
-        const data=await res.json();
-        const reply=data.content?.[0]?.text||"I'm sorry, I had trouble connecting. Please call us at +91 75005 55454.";
-        document.getElementById('typing')?.remove();
-        appendMsg(reply,'bot');
-        chatHistory.push({role:'assistant',content:reply});
-      }catch{
-        document.getElementById('typing')?.remove();
-        appendMsg("Sorry, I'm having trouble connecting. Please call +91 75005 55454 or WhatsApp us for immediate help.",'bot');
-      }
-    }
-
-    // Language Switcher
-    document.getElementById('lang-toggle').addEventListener('click',()=>{
-      document.getElementById('lang-modal').classList.add('open');
-    });
-    document.getElementById('lang-modal').addEventListener('click',e=>{
-      if(e.target===document.getElementById('lang-modal'))e.target.classList.remove('open');
-    });
-    function setLang(code,name){
-      document.getElementById('lang-toggle').textContent=code.toUpperCase();
-      document.documentElement.lang=code+'-IN';
-      localStorage.setItem('ew-lang',code);
-      document.querySelectorAll('.lang-option').forEach(o=>o.classList.remove('active'));
-      event.currentTarget.classList.add('active');
-      if(code!=='en')window.location.href='/'+code+'/';
-      else document.getElementById('lang-modal').classList.remove('open');
-    }
   </script>
-
-  <style>
-    /* Force 3-column layout for services grid */
-    #services .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* force 3 cols — 6 cards = 2 clean rows */
-      gap: 1.25rem;
-    }
-    @media (max-width: 900px) {
-      #services .grid-3 { 
-        grid-template-columns: repeat(2, 1fr); 
-      }
-    }
-    @media (max-width: 600px) {
-      #services .grid-3 { 
-        grid-template-columns: 1fr; 
-      }
-    }
-  </style>
-
 </BaseLayout>

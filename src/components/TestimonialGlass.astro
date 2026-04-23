@@ -1,0 +1,193 @@
+---
+interface Testimonial {
+  stars: string;
+  text: string;
+  author: string;
+  role: string;
+  avatar: string;
+}
+
+const testimonials: Testimonial[] = [
+  {
+    stars: "⭐⭐⭐⭐⭐",
+    text: "EWaste Kochi handled our entire Infopark office decommissioning. Zero data breaches, complete documentation, and we recovered ₹12 lakhs from buyback.",
+    author: "RK",
+    role: "IT Manager, TCS Infopark",
+    avatar: "RK"
+  },
+  {
+    stars: "⭐⭐⭐⭐⭐",
+    text: "DPDP Act compliance was our biggest concern. Their Certificate of Destruction satisfied our legal team and ISO auditors completely.",
+    author: "PM",
+    role: "CISO, Smart City Kochi",
+    avatar: "PM"
+  },
+  {
+    stars: "⭐⭐⭐⭐⭐",
+    text: "We've been using their service for 3 years. 500+ devices processed, 0 issues. The Form-6 EPR documentation is seamless.",
+    author: "AS",
+    role: "Procurement Head, HDFC Bank",
+    avatar: "AS"
+  }
+];
+---
+
+<section class="testimonials-section" id="testimonials" aria-labelledby="testimonials-title">
+  <div class="container">
+    <span class="section-label">Client Reviews</span>
+    <h2 class="section-title" id="testimonials-title">Trusted by Kerala's Leading Enterprises</h2>
+    <p class="section-subtitle">
+      500+ corporate clients trust us for certified e-waste disposal with zero data risk.
+    </p>
+    
+    <div class="testimonials-grid">
+      {testimonials.map((testimonial) => (
+        <div class="testimonial-card glass-card">
+          <div class="testimonial-stars">{testimonial.stars}</div>
+          <p class="testimonial-text">{testimonial.text}</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">{testimonial.avatar}</div>
+            <div class="author-info">
+              <div class="author-name">{testimonial.author}</div>
+              <div class="author-role">{testimonial.role}</div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials-section {
+    padding: 5rem 0;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #22c55e;
+    margin-bottom: 0.9rem;
+  }
+
+  .section-label::before {
+    content: '';
+    width: 22px;
+    height: 2px;
+    background: #22c55e;
+  }
+
+  .section-title {
+    font-family: 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: clamp(1.75rem, 3.8vw, 2.7rem);
+    font-weight: 700;
+    line-height: 1.13;
+    letter-spacing: -1px;
+    margin-bottom: 0.7rem;
+    color: #dff0e4;
+  }
+
+  .section-subtitle {
+    color: #7da686;
+    font-size: 1rem;
+    max-width: 620px;
+    margin-bottom: 2.8rem;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 1.125rem;
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    padding: 1.7rem;
+    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.55);
+    transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(34, 197, 94, 0.32);
+    box-shadow: 0 8px 24px rgba(34, 197, 94, 0.15);
+  }
+
+  .testimonial-stars {
+    color: #f59e0b;
+    font-size: 13px;
+    margin-bottom: 0.6875rem;
+    letter-spacing: 2px;
+  }
+
+  .testimonial-text {
+    font-size: 13.5px;
+    color: #7da686;
+    line-height: 1.75;
+    margin-bottom: 0.9375rem;
+    font-style: italic;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 0.5625rem;
+  }
+
+  .author-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(34, 197, 94, 0.1);
+    border: 2px solid #22c55e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 13px;
+    color: #22c55e;
+  }
+
+  .author-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .author-name {
+    font-weight: 700;
+    font-size: 12.5px;
+    color: #dff0e4;
+  }
+
+  .author-role {
+    font-size: 10.5px;
+    color: #3d6145;
+  }
+
+  @media (max-width: 640px) {
+    .container {
+      padding: 0 1.2rem;
+    }
+    .testimonials-section {
+      padding: 3.2rem 0;
+    }
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

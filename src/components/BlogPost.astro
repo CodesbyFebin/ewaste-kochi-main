@@ -124,7 +124,46 @@ const schema = {
     "name": post.data.service || "E-Waste Recycling",
     "areaServed": post.data.location || "Kochi"
   },
-  "mainEntityOfPage": `https://www.ewastekochi.com/blog/${post.slug}/`
+  "mainEntityOfPage": `https://www.ewastekochi.com/blog/${post.slug}/`,
+  "breadcrumbList": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.ewastekochi.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://www.ewastekochi.com/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": post.data.title,
+        "item": `https://www.ewastekochi.com/blog/${post.slug}/`
+      }
+    ]
+  },
+  "hasPart": [
+    {
+      "@type": "FAQPage",
+      "mainEntity": {
+        "@type": "FAQ",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We provide detailed certificates of data destruction and recycling for your records and compliance."
+        },
+        "suggestedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we are KSPCB authorized and follow NIST 800-88 standards for data destruction and environmental compliance."
+        }
+      }
+    }
+  ]
 };
 
 // Generate breadcrumbs
@@ -339,6 +378,9 @@ const generateFAQ = (content: string) => {
       <!-- Article Body -->
       <div class="article-body">
         <Content />
+        
+        <!-- Service CTA Boxes (after every 3rd H2) -->
+        <div class="service-cta-inserts" id="service-cta-inserts"></div>
       </div>
 
       <!-- Bottom of Article -->
@@ -1156,6 +1198,93 @@ const generateFAQ = (content: string) => {
       text-decoration: underline;
     }
 
+    /* Service CTA Boxes */
+    .service-cta-box {
+      background: linear-gradient(135deg, #1a2332, #2d4a2f);
+      border: 2px solid var(--green);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      box-shadow: 0 8px 24px rgba(0, 255, 136, 0.15);
+    }
+
+    .cta-box-content h4 {
+      color: var(--green);
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 0 0 1rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .cta-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-feature {
+      background: rgba(0, 255, 136, 0.1);
+      color: var(--text1);
+      padding: 0.75rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-align: center;
+      border: 1px solid rgba(0, 255, 136, 0.2);
+    }
+
+    .cta-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .cta-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .cta-action.primary {
+      background: var(--green);
+      color: var(--bg0);
+    }
+
+    .cta-action.secondary {
+      background: var(--bg3);
+      color: var(--green);
+      border: 1px solid var(--green);
+    }
+
+    .cta-action:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 255, 136, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .service-cta-box {
+        padding: 1rem;
+        margin: 1.5rem 0;
+      }
+
+      .cta-features {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+
+      .cta-actions {
+        flex-direction: column;
+      }
+    }
+
     .blog-content {
       font-size: 1.1rem;
       line-height: 1.8;
@@ -1616,9 +1745,39 @@ const generateFAQ = (content: string) => {
       headings.forEach(heading => observer.observe(heading));
     }
 
+    // Insert service CTA boxes after every 3rd H2
+    function insertServiceCTAs() {
+      const articleBody = document.querySelector('.article-body');
+      const headings = articleBody.querySelectorAll('h2');
+      
+      headings.forEach((heading, index) => {
+        if ((index + 1) % 3 === 0) {
+          const serviceCTA = document.createElement('div');
+          serviceCTA.className = 'service-cta-box';
+          serviceCTA.innerHTML = `
+            <div class="cta-box-content">
+              <h4>🏢 Need ${getServiceName(post.data.service)} in ${getLocationName(post.data.location)}?</h4>
+              <div class="cta-features">
+                <div class="cta-feature">✓ Free pickup</div>
+                <div class="cta-feature">✓ Certificate of Destruction</div>
+                <div class="cta-feature">✓ Same-day available</div>
+              </div>
+              <div class="cta-actions">
+                <a href="tel:+917500555454" class="cta-action primary">📞 Call Now</a>
+                <a href="https://wa.me/917500555454" class="cta-action secondary">💬 WhatsApp</a>
+              </div>
+            </div>
+          `;
+          
+          heading.parentNode.insertBefore(serviceCTA, heading.nextSibling);
+        }
+      });
+    }
+
     // Initialize on page load
     document.addEventListener('DOMContentLoaded', function() {
       initTOC();
+      insertServiceCTAs();
     });
   </script>
 </BaseLayout>

@@ -1,0 +1,301 @@
+---
+export interface Props {
+  title: string;
+  slug: string;
+  category: string;
+  type: 'how-to' | 'legal' | 'comparison' | 'pricing' | 'benefits' | 'troubleshooting';
+  location: string;
+  date: string; // ISO 8601
+  readTime: number; // minutes
+  excerpt: string;
+}
+
+const { title, slug, category, type, location, date, readTime, excerpt } = Astro.props;
+
+// Category gradient mapping
+function categoryGradient(cat: string): string {
+  switch (cat.toLowerCase()) {
+    case 'compliance':
+    case 'legal':
+      return 'linear-gradient(135deg,#0a1f2e,#0d3b55)';
+    case 'how-to':
+      return 'linear-gradient(135deg,#0a1f0d,#0d3b1a)';
+    case 'comparison':
+      return 'linear-gradient(135deg,#1f1a0a,#3b2e0d)';
+    case 'pricing':
+      return 'linear-gradient(135deg,#1f0a0a,#3b1a0d)';
+    case 'itad':
+      return 'linear-gradient(135deg,#1a0a1f,#2e0d3b)';
+    default:
+      return 'linear-gradient(135deg,#0a1f1a,#0d3b30)';
+  }
+}
+
+// Category emoji mapping
+function categoryEmoji(cat: string): string {
+  switch (cat.toLowerCase()) {
+    case 'compliance':
+    case 'legal':
+      return '⚖️';
+    case 'how-to':
+      return '🔧';
+    case 'comparison':
+      return '⚖️';
+    case 'pricing':
+      return '💰';
+    case 'itad':
+      return '🏢';
+    case 'battery-recycling':
+      return '🔋';
+    case 'data-destruction':
+      return '🔐';
+    case 'locations':
+      return '📍';
+    default:
+      return '♻️';
+  }
+}
+
+// Format date function
+function formatDate(dateString: string): string {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-IN', { 
+    day: 'numeric', 
+    month: 'short', 
+    year: 'numeric' 
+  });
+}
+---
+
+<article class="blog-card" 
+         data-category={category} 
+         data-type={type}
+         itemscope 
+         itemtype="https://schema.org/BlogPosting">
+
+  <!-- Image zone: category-colored gradient, no real image needed -->
+  <div class="card-img" style={`background: ${categoryGradient(category)}`}>
+    <span class="card-emoji">{categoryEmoji(category)}</span>
+    <span class="card-type-pill">{type}</span>
+  </div>
+
+  <!-- Body -->
+  <div class="card-body">
+    <div class="card-meta-top">
+      <span class="cat-tag">{category}</span>
+      <span class="loc-tag">📍 {location}</span>
+    </div>
+    <h3 itemprop="headline">{title}</h3>
+    <p class="card-excerpt" itemprop="description">{excerpt}</p>
+    <div class="card-meta-bottom">
+      <time datetime={date} itemprop="datePublished">{formatDate(date)}</time>
+      <span>·</span>
+      <span>{readTime} min read</span>
+    </div>
+    <a href={`/blog/${slug}/`} class="card-cta" itemprop="url">
+      Read Guide →
+    </a>
+  </div>
+</article>
+
+<style>
+  /* Main card container */
+  .blog-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 255, 136, 0.15);
+    border-color: var(--green);
+  }
+
+  /* Image zone */
+  .card-img {
+    height: 180px;
+    display: flex;
+    align-items: flex-end;
+    padding: 0.75rem;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .card-emoji {
+    font-size: 2.5rem;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+  }
+
+  .card-type-pill {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--green);
+    border: 1px solid var(--green);
+    border-radius: 4px;
+    padding: 2px 8px;
+    backdrop-filter: blur(4px);
+  }
+
+  /* Card body */
+  .card-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    flex: 1;
+  }
+
+  /* Meta top section */
+  .card-meta-top {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .cat-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    background: var(--green);
+    color: var(--bg0);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+
+  .loc-tag {
+    font-size: 0.75rem;
+    color: var(--text3);
+    background: var(--bg3);
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+
+  /* Title */
+  h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: var(--text1);
+  }
+
+  /* Excerpt */
+  .card-excerpt {
+    font-size: 0.85rem;
+    color: var(--text2);
+    line-height: 1.6;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex: 1;
+  }
+
+  /* Meta bottom section */
+  .card-meta-bottom {
+    font-size: 0.78rem;
+    color: var(--text3);
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-top: auto;
+  }
+
+  time {
+    font-weight: 500;
+  }
+
+  /* CTA button */
+  .card-cta {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--green);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: auto;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.2s ease;
+  }
+
+  .card-cta:hover {
+    color: var(--amber);
+    transform: translateX(2px);
+  }
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .card-img {
+      height: 160px;
+      padding: 0.5rem;
+    }
+
+    .card-emoji {
+      font-size: 2rem;
+    }
+
+    .card-body {
+      padding: 1rem;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+    }
+
+    .card-excerpt {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .card-img {
+      height: 140px;
+    }
+
+    .card-emoji {
+      font-size: 1.8rem;
+    }
+
+    .card-type-pill {
+      font-size: 0.6rem;
+      top: 0.5rem;
+      right: 0.5rem;
+    }
+
+    .card-body {
+      padding: 0.75rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+    }
+
+    .card-cta {
+      font-size: 0.85rem;
+    }
+  }
+</style>
