@@ -331,7 +331,9 @@ Payment methods vary by provider and item condition. Most offer cash, bank trans
 
   generateDescription(title, location) {
     const locationName = typeof location === 'string' ? location : location.name;
-    return `Complete guide to ${title.toLowerCase()} in ${locationName}. Expert insights, pricing, and best practices for e-waste management and recycling services.`;
+    // Clean title by removing any trailing location slugs to prevent duplication
+    const cleanTitle = title.replace(/\s+(in|at|near|for)\s+[\w-]+$/gi, '');
+    return `Complete guide to ${cleanTitle.toLowerCase()} in ${locationName}. Expert insights, pricing, and best practices for e-waste management and recycling services.`;
   }
 
   getCategory(title) {

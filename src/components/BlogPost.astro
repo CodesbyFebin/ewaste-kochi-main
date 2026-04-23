@@ -36,42 +36,95 @@ const paaSchema = paaEngine.generatePAASchema(paaQuestions);
 const lastmod = post.data.lastmod ? new Date(post.data.lastmod) : new Date();
 const isRecentlyUpdated = (Date.now() - lastmod.getTime()) < (30 * 24 * 60 * 60 * 1000); // Within 30 days
 
+// Clean title to remove trailing location slugs (fixes "Vyttila 2026 Vyttila" bug)
+const cleanTitle = post.data.title.replace(/\s+(in|at|near|for)\s+[\w-]+$/gi, '');
+
+// Helper functions for enhanced article layout
+function getCategoryGradient(category) {
+  const gradients = {
+    'compliance': 'linear-gradient(135deg,#0a1f2e,#0d3b55)',
+    'legal': 'linear-gradient(135deg,#0a1f2e,#0d3b55)',
+    'how-to': 'linear-gradient(135deg,#0a1f0d,#0d3b1a)',
+    'comparison': 'linear-gradient(135deg,#1f1a0a,#3b2e0d)',
+    'pricing': 'linear-gradient(135deg,#1f0a0a,#3b1a0d)',
+    'itad': 'linear-gradient(135deg,#1a0a1f,#2e0d3b)',
+    'data-destruction': 'linear-gradient(135deg,#1a0a0a,#3b0d0d)',
+    'battery-recycling': 'linear-gradient(135deg,#1f1f0a,#3b2e0d)',
+    'locations': 'linear-gradient(135deg,#0a1f1a,#0d3b30)',
+    'default': 'linear-gradient(135deg,#0a1f1a,#0d3b30)'
+  };
+  return gradients[category] || gradients['default'];
+}
+
+function getCategoryEmoji(category) {
+  const emojis = {
+    'compliance': '⚖️',
+    'legal': '⚖️',
+    'how-to': '📋',
+    'comparison': '⚖️',
+    'pricing': '💰',
+    'itad': '🏢',
+    'data-destruction': '🔐',
+    'battery-recycling': '🔋',
+    'locations': '📍',
+    'default': '♻️'
+  };
+  return emojis[category] || emojis['default'];
+}
+
+function getServiceName(service) {
+  const serviceNames = {
+    'e-waste-recycling': 'e-waste recycling',
+    'itad': 'ITAD',
+    'data-destruction': 'data destruction',
+    'laptop-buyback': 'laptop buyback',
+    'battery-recycling': 'battery recycling',
+    'default': 'e-waste services'
+  };
+  return serviceNames[service] || serviceNames['default'];
+}
+
+function getLocationName(location) {
+  const locationNames = {
+    'kakkanad': 'Kakkanad',
+    'infopark': 'Infopark',
+    'smart-city': 'Smart City',
+    'edappally': 'Edappally',
+    'thrippunithura': 'Thrippunithura',
+    'vytilla': 'Vyttila',
+    'aluva': 'Aluva',
+    'mg-road': 'MG Road',
+    'fort-kochi': 'Fort Kochi',
+    'kalamassery': 'Kalamassery',
+    'default': 'Kochi'
+  };
+  return locationNames[location] || locationNames['default'];
+}
+
 // Generate enhanced schema for blog posts
 const schema = {
   "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": post.data.title,
+  "@type": "TechArticle",
+  "headline": cleanTitle,
   "description": post.data.description,
   "author": {
     "@type": "Organization",
-    "name": post.data.author,
-    "url": "https://www.ewastekochi.com"
+    "name": "EWaste Kochi Editorial Team",
+    "@id": "https://ewastekochi.com/#organization"
   },
   "publisher": {
-    "@type": "Organization",
-    "name": "EWaste Kochi",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.ewastekochi.com/logo.png"
-    }
+    "@id": "https://ewastekochi.com/#organization"
   },
   "datePublished": post.data.published ? post.data.published.toISOString() : new Date().toISOString(),
   "dateModified": lastmod.toISOString(),
-  "mainEntityOfPage": `https://www.ewastekochi.com/blog/${post.slug}/`,
-  "image": `https://www.ewastekochi.com/images/blog/${post.slug}.webp`,
-  "articleSection": "E-Waste Management",
-  "wordCount": 2000,
-  "keywords": Array.isArray(post.data.tags) ? post.data.tags.join(", ") : (post.data.tags || "e-waste, recycling, kochi"),
-  "about": [
-    {
-      "@type": "Thing",
-      "name": "E-Waste Recycling"
-    },
-    {
-      "@type": "Place", 
-      "name": "Kochi"
-    }
-  ]
+  "articleSection": post.data.category || "E-Waste Management",
+  "inLanguage": "en-IN",
+  "about": {
+    "@type": "Service",
+    "name": post.data.service || "E-Waste Recycling",
+    "areaServed": post.data.location || "Kochi"
+  },
+  "mainEntityOfPage": `https://www.ewastekochi.com/blog/${post.slug}/`
 };
 
 // Generate breadcrumbs
@@ -197,55 +250,82 @@ const generateFAQ = (content: string) => {
   canonical={post.data.canonical}
   schema={schema}
 >
-  <article class="blog-post">
-    <!-- Schema Breadcrumbs -->
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": breadcrumbs.map((crumb, index) => ({
-        "@type": "ListItem",
-        "position": index + 1,
-        "name": crumb.name,
-        "item": crumb.url
-      }))
-    })} />
+  <div class="article-layout">
+    <!-- LEFT COLUMN - Main Content -->
+    <main class="article-main">
+      <!-- Breadcrumb Navigation -->
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <a href="/">Home</a> &gt; <a href="/blog/">Blog</a> &gt; <span>{post.data.category || 'Article'}</span> &gt; <span>{cleanTitle}</span>
+      </nav>
 
-    <!-- Blog Header -->
-    <header class="blog-header">
-      <div class="blog-meta">
-        <time datetime={post.data.published ? post.data.published.toISOString() : new Date().toISOString()}>
-          {post.data.published ? post.data.published.toLocaleDateString('en-US', { 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric' 
-          }) : new Date().toLocaleDateString('en-US', { 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric' 
-          })}
-        </time>
-        {isRecentlyUpdated && (
-          <span class="freshness-badge" title="Recently updated">
-            Updated {lastmod.toLocaleDateString('en-US', { 
-              month: 'short', 
-              day: 'numeric' 
-            })}
-          </span>
-        )}
-        <span class="author">By {post.data.author}</span>
-        <span class="read-time">15 min read</span>
-      </div>
-      
-      <h1 class="blog-title">{post.data.title}</h1>
-      
-      <div class="blog-excerpt">
-        <p>{post.data.description}</p>
+      <!-- Article Header -->
+      <header class="article-header">
+        <!-- Category & Type Badges -->
+        <div class="article-badges">
+          <span class="category-badge">{post.data.category || 'Guide'}</span>
+          <span class="type-badge">{post.data.topic || 'How-To'}</span>
+        </div>
+        
+        <!-- Conversational H1 -->
+        <h1 class="article-title">{cleanTitle}</h1>
+        
+        <!-- Author Block -->
+        <div class="author-block">
+          <div class="author-avatar">EK</div>
+          <div class="author-info">
+            <div class="author-name">EWaste Kochi Editorial Team</div>
+            <div class="author-cred">KSPCB Authorized · Est. 2018</div>
+          </div>
+          <div class="author-meta">
+            <time datetime={post.data.published ? post.data.published.toISOString() : new Date().toISOString()}>
+              {post.data.published ? post.data.published.toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+              }) : new Date().toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+              })}
+            </time>
+            <span class="read-time">{post.data.wordCount ? Math.ceil(post.data.wordCount / 180) : 15} min read</span>
+          </div>
+        </div>
+
+        <!-- Social Share -->
+        <div class="social-share">
+          <button class="share-btn" onclick="copyLink()" title="Copy link">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M10 13a5 5 0 0 0-5 5v1a1 1 0 0 1-1h10a1 1 0 0 1 1v-1a1 1 0 0 1-1h-10a1 1 0 0-1 1z"/>
+              <path d="M8 8v-2a2 2 0 0 1-2h6a2 2 0 0 1 2v2a2 2 0 0 1-2h-6a2 2 0 0-1 2z"/>
+            </svg>
+          </button>
+          <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://ewastekochi.com/blog/${post.slug}/`)}&title=${encodeURIComponent(cleanTitle)}`} 
+             class="share-btn" target="_blank" title="Share on LinkedIn">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-16.894L6.756 8.938v-2.828a.5.5.5 0 0 1 1h4.444a.5.5.5 0 0 1-1v4.444a.5.5.5 0 0 1-1h-4.444a.5.5.5 0 0 1 1zm-3.5 6.5a1.5 1.5 0 0 3 0h4a1.5 1.5 0 0 1.5v4a1.5 1.5 0 0 1.5h-4a1.5 1.5 0 0-1.5z"/>
+              <path d="M19.5 7.5a1.5 1.5 0 0 1.5v6a1.5 1.5 0 0-1.5h-9a1.5 1.5 0 0-1.5v-6a1.5 1.5 0 0 1.5z"/>
+            </svg>
+          </a>
+          <a href={`https://wa.me/917500555454?text=${encodeURIComponent(`Check out this article: ${cleanTitle}`)}`} 
+             class="share-btn" target="_blank" title="Share on WhatsApp">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.093-.459-.232-.67-.141l.831-2.515c-.215-.68-.534-1.236-.534-1.236 0-.697.382-1.236h-2.492c-.665 0-1.208.487-1.236h-2.492c-.376.743-.209 1.236h1.587l.673-1.534c.096-.297.262-.23.465-.23-.67.141-.831-2.515c-.215-.68-.534-1.236-.534-1.236 0-.697.382-1.236z"/>
+              <path d="M12 0C5.373 0 0 5.373 0s5.373 4.958 0 8.473c0 1.657.358 3.158 1.089.535 1.089 0 1.657.358 3.158 1.089.535 1.089 0 1.657.358 3.158zm0 22c-6.627 0-12 5.373-12 5.373 0 6.627 0 12 5.373 0 12 6.627zm0 22a9 9 0 1 9 0 4 0 4 0 9 0 4 0zm0 22a9 9 0 1 9 0 4 0 4 0 9 0 4z"/>
+            </svg>
+          </a>
+        </div>
+      </header>
+
+      <!-- Article Hero Image Zone -->
+      <div class="article-hero" style={`background: ${getCategoryGradient(post.data.category || 'default')}`}>
+        <span class="hero-emoji">{getCategoryEmoji(post.data.category || 'default')}</span>
       </div>
 
       <!-- Table of Contents -->
       {tableOfContents.length > 0 && (
-        <nav class="table-of-contents" aria-label="Table of Contents">
-          <h2>Table of Contents</h2>
+        <nav class="table-of-contents sticky-toc" aria-label="Table of Contents">
+          <h2>In this guide:</h2>
           <ol>
             {tableOfContents.map(item => (
               <li style={`margin-left: ${(item.level - 1) * 20}px`}>
@@ -255,12 +335,133 @@ const generateFAQ = (content: string) => {
           </ol>
         </nav>
       )}
-    </header>
 
-    <!-- Blog Content -->
-    <div class="blog-content">
-      <Content />
-    </div>
+      <!-- Article Body -->
+      <div class="article-body">
+        <Content />
+      </div>
+
+      <!-- Bottom of Article -->
+      <section class="article-footer">
+        <!-- Final CTA Block -->
+        <div class="final-cta">
+          <h3>Ready to recycle {getServiceName(post.data.service)} in {getLocationName(post.data.location)}?</h3>
+          <p>Free pickup · Certificate of Destruction · Same-day available</p>
+          <div class="cta-buttons">
+            <a href="tel:+917500555454" class="cta-btn primary">
+              📞 Book Free Pickup
+            </a>
+            <a href="https://wa.me/917500555454" class="cta-btn secondary">
+              💬 WhatsApp +91 75005 55454
+            </a>
+          </div>
+        </div>
+
+        <!-- Share Buttons -->
+        <div class="share-section">
+          <h4>Share this guide</h4>
+          <div class="share-buttons">
+            <button class="share-btn" onclick="copyLink()">🔗 Copy Link</button>
+            <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://ewastekochi.com/blog/${post.slug}/`)}&title=${encodeURIComponent(cleanTitle)}`} 
+               class="share-btn" target="_blank">LinkedIn</a>
+            <a href={`https://wa.me/917500555454?text=${encodeURIComponent(`Check out this article: ${cleanTitle}`)}`} 
+               class="share-btn" target="_blank">WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- Feedback -->
+        <div class="helpful-feedback">
+          <h4>Was this helpful?</h4>
+          <div class="feedback-buttons">
+            <button class="feedback-btn" onclick="markHelpful(true)">👍 Yes</button>
+            <button class="feedback-btn" onclick="markHelpful(false)">👎 No</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- RIGHT COLUMN - Sticky Sidebar -->
+    <aside class="article-sidebar">
+      <!-- Quick Contact Card -->
+      <div class="sidebar-card contact-card">
+        <h3>Need help in {getLocationName(post.data.location)}?</h3>
+        <div class="contact-info">
+          <a href="tel:+917500555454" class="contact-item">
+            📞 +91 75005 55454
+          </a>
+          <a href="https://wa.me/917500555454" class="contact-item">
+            💬 WhatsApp
+          </a>
+        </div>
+        <a href="/contact/" class="sidebar-cta">
+          Book Free Pickup →
+        </a>
+      </div>
+
+      <!-- Table of Contents (Sticky) -->
+      {tableOfContents.length > 0 && (
+        <div class="sidebar-card toc-card">
+          <h3>Table of Contents</h3>
+          <ol class="sidebar-toc">
+            {tableOfContents.map(item => (
+              <li style={`margin-left: ${(item.level - 1) * 15}px`}>
+                <a href={`#${item.id}`}>{item.title}</a>
+              </li>
+            ))}
+          </ol>
+        </div>
+      )}
+
+      <!-- Related Articles -->
+      {relatedPosts.length > 0 && (
+        <div class="sidebar-card related-card">
+          <h3>Related Articles</h3>
+          <div class="related-articles">
+            {relatedPosts.slice(0, 3).map(relatedPost => (
+              <article class="related-article">
+                <div class="related-thumbnail" style={`background: ${getCategoryGradient(relatedPost.data.category || 'default')}`}>
+                  <span class="related-emoji">{getCategoryEmoji(relatedPost.data.category || 'default')}</span>
+                </div>
+                <div class="related-content">
+                  <h4><a href={`/blog/${relatedPost.slug}/`}>{relatedPost.data.title}</a></h4>
+                  <time>{relatedPost.data.published ? relatedPost.data.published.toLocaleDateString() : new Date().toLocaleDateString()}</time>
+                  <span class="related-read-time">{Math.ceil((relatedPost.data.wordCount || 1500) / 180)} min read</span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <!-- Certification Badges -->
+      <div class="sidebar-card certification-card">
+        <h3>Certifications</h3>
+        <div class="cert-badges">
+          <div class="cert-badge">
+            <div class="cert-icon">🏢</div>
+            <div class="cert-info">
+              <strong>KSPCB</strong><br>
+              KL/EW/628
+            </div>
+          </div>
+          <div class="cert-badge">
+            <div class="cert-icon">🔐</div>
+            <div class="cert-info">
+              <strong>NIST 800-88</strong><br>
+              Data Destruction
+            </div>
+          </div>
+          <div class="cert-badge">
+            <div class="cert-icon">🛡️</div>
+            <div class="cert-info">
+              <strong>DPDP 2023</strong><br>
+              Data Protection
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
 
     <!-- People Also Ask Section -->
     <section class="people-also-ask" id="people-also-ask">
@@ -361,6 +562,524 @@ const generateFAQ = (content: string) => {
       max-width: 800px;
       margin: 0 auto;
       padding: 2rem;
+    }
+
+    /* Breadcrumb Navigation */
+    .breadcrumb-nav {
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .breadcrumb-nav a {
+      color: #3182ce;
+      text-decoration: none;
+    }
+    .breadcrumb-nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Author Block */
+    .author-block {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .author-avatar {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, #00ff88, #00d084);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #000;
+      font-size: 1.2rem;
+    }
+
+    .author-info {
+      flex: 1;
+    }
+
+    .author-name {
+      font-weight: 600;
+      color: #1a202c;
+      font-size: 1.1rem;
+    }
+
+    .author-cred {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 0.25rem;
+    }
+
+    .author-meta {
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: #666;
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    /* Article Badges */
+    .article-badges {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .category-badge {
+      background: linear-gradient(135deg, #00ff88, #00d084);
+      color: #000;
+      padding: 0.25rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .type-badge {
+      background: rgba(0,0,0,0.1);
+      color: #666;
+      padding: 0.25rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    /* Two-Column Layout */
+    .article-layout {
+      display: grid;
+      grid-template-columns: 68% 32%;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .article-main {
+      min-height: 100vh;
+    }
+
+    .article-sidebar {
+      position: sticky;
+      top: 2rem;
+      height: fit-content;
+    }
+
+    /* Article Header Styles */
+    .article-header {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+    }
+
+    .article-title {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      color: var(--text1);
+    }
+
+    /* Article Hero */
+    .article-hero {
+      height: 300px;
+      border-radius: 12px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-emoji {
+      font-size: 4rem;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+    }
+
+    /* Article Body */
+    .article-body {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      max-width: 680px;
+      color: var(--text1);
+    }
+
+    .article-body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 2.5rem 0 1rem;
+      padding-left: 0.75rem;
+      border-left: 4px solid var(--green);
+      color: var(--text1);
+    }
+
+    .article-body h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 2rem 0 1rem;
+      color: var(--amber);
+    }
+
+    .article-body blockquote {
+      margin: 1.5rem 0;
+      padding: 1rem 1.5rem;
+      border-left: 4px solid var(--green);
+      background: var(--bg2);
+      font-style: italic;
+      border-radius: 8px;
+    }
+
+    .article-body ul, .article-body ol {
+      margin: 1.5rem 0;
+      padding-left: 2rem;
+    }
+
+    .article-body li {
+      margin-bottom: 0.5rem;
+      padding-left: 0.5rem;
+      position: relative;
+    }
+
+    .article-body li::before {
+      content: '▶';
+      color: var(--green);
+      position: absolute;
+      left: -1.5rem;
+      font-size: 0.8rem;
+    }
+
+    /* Article Footer */
+    .article-footer {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .final-cta {
+      background: linear-gradient(135deg, var(--green), var(--bg0));
+      border: 2px solid var(--green);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      color: var(--text1);
+    }
+
+    .final-cta h3 {
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+
+    .cta-btn {
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .cta-btn.primary {
+      background: var(--green);
+      color: var(--bg0);
+    }
+
+    .cta-btn.secondary {
+      background: transparent;
+      color: var(--green);
+      border: 1px solid var(--green);
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,255,136,0.3);
+    }
+
+    /* Social Share */
+    .social-share {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .share-btn {
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg2);
+      color: var(--text1);
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .share-btn:hover {
+      background: var(--bg3);
+      border-color: var(--green);
+    }
+
+    /* Share Section */
+    .share-section h4 {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      color: var(--text1);
+    }
+
+    .share-buttons {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    /* Feedback */
+    .helpful-feedback {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background: var(--bg2);
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .helpful-feedback h4 {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      color: var(--text1);
+    }
+
+    .feedback-buttons {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+
+    .feedback-btn {
+      padding: 0.75rem 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg2);
+      color: var(--text1);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .feedback-btn:hover {
+      background: var(--bg3);
+    }
+
+    /* Sticky TOC */
+    .sticky-toc {
+      position: sticky;
+      top: 2rem;
+    }
+
+    .sidebar-toc {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar-toc li {
+      margin-bottom: 0.75rem;
+      font-size: 0.9rem;
+    }
+
+    .sidebar-toc a {
+      color: var(--text2);
+      text-decoration: none;
+      display: block;
+      padding: 0.25rem 0;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar-toc a:hover {
+      background: var(--bg3);
+      color: var(--text1);
+    }
+
+    /* Sidebar Cards */
+    .sidebar-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-card h3,
+    .toc-card h3,
+    .related-card h3,
+    .certification-card h3 {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      color: var(--text1);
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .contact-item {
+      color: var(--text1);
+      text-decoration: none;
+      padding: 0.5rem;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .contact-item:hover {
+      background: var(--bg3);
+      color: var(--green);
+    }
+
+    .sidebar-cta {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background: var(--green);
+      color: var(--bg0);
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,255,136,0.3);
+    }
+
+    /* Related Articles */
+    .related-articles {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .related-article {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem;
+      border-radius: 8px;
+      background: var(--bg2);
+      transition: all 0.3s ease;
+    }
+
+    .related-article:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,255,136,0.2);
+    }
+
+    .related-thumbnail {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .related-emoji {
+      font-size: 1.5rem;
+    }
+
+    .related-content {
+      flex: 1;
+    }
+
+    .related-content h4 {
+      margin: 0 0 0.5rem;
+      font-size: 0.95rem;
+      line-height: 1.3;
+    }
+
+    .related-content a {
+      color: var(--text1);
+      text-decoration: none;
+    }
+
+    .related-content a:hover {
+      color: var(--green);
+    }
+
+    .related-content time {
+      font-size: 0.8rem;
+      color: var(--text3);
+    }
+
+    .related-read-time {
+      font-size: 0.8rem;
+      color: var(--text3);
+    }
+
+    /* Certification Badges */
+    .cert-badges {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .cert-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem;
+      background: var(--bg2);
+      border-radius: 8px;
+    }
+
+    .cert-icon {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    .cert-info {
+      font-size: 0.85rem;
+      line-height: 1.3;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 968px) {
+      .article-layout {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .article-sidebar {
+        position: static;
+        order: 2;
+        margin-top: 2rem;
+      }
+
+      .social-share {
+        flex-direction: column;
+      }
+
+      .share-buttons {
+        justify-content: center;
+      }
     }
 
     .blog-header {
@@ -818,68 +1537,88 @@ const generateFAQ = (content: string) => {
     }
   </style>
 
-  <!-- PAA Interaction Tracking Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Track PAA interactions
-      const paaItems = document.querySelectorAll('.paa-question');
-      const postId = '{post.slug}';
+  <!-- Interactive Script -->
+  <script is:inline>
+    // Copy link functionality
+    function copyLink() {
+      const url = window.location.href;
+      navigator.clipboard.writeText(url).then(() => {
+        // Show success feedback
+        const btn = event.target;
+        const originalText = btn.textContent;
+        btn.textContent = '✓ Copied!';
+        setTimeout(() => {
+          btn.textContent = originalText;
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy link:', err);
+      });
+    }
+
+    // Feedback functionality
+    function markHelpful(helpful) {
+      const data = {
+        postId: '{post.slug}',
+        helpful: helpful,
+        timestamp: new Date().toISOString()
+      };
       
-      paaItems.forEach((item, index) => {
-        const question = item.querySelector('.paa-question-text').textContent;
-        
-        // Track expand/collapse
-        item.addEventListener('toggle', function() {
-          const action = item.open ? 'expand' : 'collapse';
-          trackPAAInteraction(question, action, postId);
-        });
-        
-        // Track helpful votes
-        const helpfulBtn = item.querySelector('.paa-helpful');
-        if (helpfulBtn) {
-          helpfulBtn.addEventListener('click', function() {
-            if (!this.classList.contains('voted')) {
-              this.classList.add('voted');
-              this.textContent = 'Thanks!';
-              trackPAAInteraction(question, 'helpful', postId);
-            }
-          });
-        }
-        
-        // Track CTA clicks
-        const ctaBtn = item.querySelector('.paa-cta');
-        if (ctaBtn) {
-          ctaBtn.addEventListener('click', function() {
-            trackPAAInteraction(question, 'cta_click', postId);
-          });
+      // Store in localStorage
+      const existing = JSON.parse(localStorage.getItem('article_feedback') || '[]');
+      existing.push(data);
+      localStorage.setItem('article_feedback', JSON.stringify(existing));
+      
+      // Update button states
+      document.querySelectorAll('.feedback-btn').forEach(btn => {
+        btn.disabled = true;
+        if (helpful && btn.textContent.includes('Yes')) {
+          btn.textContent = '✓ Thanks!';
+          btn.style.background = 'var(--green)';
+          btn.style.color = 'var(--bg0)';
+        } else if (!helpful && btn.textContent.includes('No')) {
+          btn.textContent = '👎 Thanks!';
+          btn.style.background = 'var(--amber)';
+          btn.style.color = 'var(--bg0)';
         }
       });
       
-      function trackPAAInteraction(question, action, postId) {
-        const data = {
-          postId,
-          question,
-          action,
-          timestamp: new Date().toISOString(),
-          userAgent: navigator.userAgent
-        };
-        
-        // Store in localStorage
-        const existing = JSON.parse(localStorage.getItem('paa_interactions') || '[]');
-        existing.push(data);
-        localStorage.setItem('paa_interactions', JSON.stringify(existing));
-        
-        // Send to analytics (customize as needed)
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'paa_interaction', {
-            'post_id': postId,
-            'action': action,
-            'question': question
-          });
-        }
-        
-        console.log('PAA Interaction:', data);
+      // Send to analytics
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'article_feedback', {
+          'post_id': '{post.slug}',
+          'helpful': helpful
+        });
       }
+    }
+
+    // Table of Contents - Active section highlighting
+    function initTOC() {
+      const tocLinks = document.querySelectorAll('.sidebar-toc a');
+      const headings = Array.from(document.querySelectorAll('.article-body h2[id]'));
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            const activeLink = document.querySelector(`.sidebar-toc a[href="#${id}"]`);
+            
+            // Remove active class from all links
+            tocLinks.forEach(link => link.classList.remove('active'));
+            
+            // Add active class to current section
+            if (activeLink) {
+              activeLink.classList.add('active');
+            }
+          }
+        });
+      }, { threshold: 0.3 });
+      
+      headings.forEach(heading => observer.observe(heading));
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      initTOC();
     });
   </script>
 </BaseLayout>
