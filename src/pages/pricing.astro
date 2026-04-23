@@ -1,0 +1,1127 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// JSON-LD Schema Suite
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness","RecyclingCenter"],
+      "@id": "https://ewastekochi.com/#organization",
+      "name": "EWaste Kochi",
+      "description": "Transparent e-waste recycling pricing in Kochi, Kerala. Free pickup for bulk quantities, competitive rates for all electronics recycling services.",
+      "url": "https://ewastekochi.com/pricing/",
+      "telephone": "+917500555454",
+      "email": "info@ewastekochi.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "710A, Hill Palace Road, Thrippunithura",
+        "addressLocality": "Kochi",
+        "addressRegion": "Kerala",
+        "postalCode": "682301",
+        "addressCountry": "IN"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "E-Waste Pricing",
+      "description": "Transparent pricing for e-waste recycling services in Kochi with free bulk pickup and competitive rates",
+      "provider": {"@id":"https://ewastekochi.com/#organization"},
+      "areaServed": "Kochi, Kerala",
+      "serviceType": "Pricing Information"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"Is e-waste recycling really free in Kochi?","acceptedAnswer":{"@type":"Answer","text":"Yes! We offer completely free pickup for 10 or more devices anywhere in Ernakulam district. For 1-9 devices, residential collection is just 99. Walk-in drop-off at our Thrippunithura facility is always free."}},
+        {"@type":"Question","name":"What factors affect e-waste recycling pricing?","acceptedAnswer":{"@type":"Answer","text":"Pricing depends on quantity, device type, location, and additional services like data destruction. Bulk quantities (10+ devices) get free pickup, while smaller quantities have minimal collection fees."}},
+        {"@type":"Question","name":"Do you pay for working electronics?","acceptedAnswer":{"@type":"Answer","text":"Yes! We pay competitive prices for working electronics through our buyback program. Rates vary by device condition, age, and market demand. Call us for a free quote."}},
+        {"@type":"Question","name":"Are there any hidden charges in your pricing?","acceptedAnswer":{"@type":"Answer","text":"No. Our pricing is completely transparent. The quoted price includes pickup, transportation, data destruction, and certificate. No hidden fees or surprise charges."}},
+        {"@type":"Question","name":"Do you offer enterprise pricing for large volumes?","acceptedAnswer":{"@type":"Answer","text":"Yes. We provide customized enterprise pricing for large volumes, regular pickups, and corporate ITAD services. Contact our business team for volume discounts and service agreements."}}
+      ]
+    }
+  ]
+};
+
+// Pricing categories
+const pricingCategories = [
+  {
+    category: "Collection Services",
+    description: "Transparent pricing for pickup and collection services across Kochi",
+    services: [
+      {
+        name: "Bulk Pickup (10+ devices)",
+        price: "FREE",
+        description: "Free pickup anywhere in Ernakulam district for 10 or more devices",
+        includes: ["Free transportation", "Data destruction", "Certificate", "Zero landfill"],
+        popular: true
+      },
+      {
+        name: "Small Collection (1-9 devices)",
+        price: "99",
+        description: "Residential collection service for small quantities",
+        includes: ["Doorstep pickup", "Data destruction", "Certificate", "Same-day service"],
+        popular: false
+      },
+      {
+        name: "Self Drop-off",
+        price: "FREE",
+        description: "Bring your e-waste to our Thrippunithura facility",
+        includes: ["Free processing", "Data destruction", "Certificate", "Immediate receipt"],
+        popular: false
+      }
+    ]
+  },
+  {
+    category: "Data Destruction Services",
+    description: "Certified data destruction with complete documentation",
+    services: [
+      {
+        name: "Standard Data Destruction",
+        price: "299/device",
+        description: "NIST 800-88 certified data destruction for standard devices",
+        includes: ["NIST 800-88 compliance", "Certificate of Destruction", "Serial tracking", "24-hour processing"],
+        popular: true
+      },
+      {
+        name: "On-Site Destruction",
+        price: "599/device",
+        description: "Mobile destruction unit comes to your location",
+        includes: ["On-site verification", "Witness destruction", "Immediate certificate", "GPS tracking"],
+        popular: false
+      },
+      {
+        name: "Emergency Destruction",
+        price: "999/device",
+        description: "4-hour emergency response for urgent data destruction",
+        includes: ["4-hour response", "Priority processing", "Same-day certificate", "24/7 availability"],
+        popular: false
+      }
+    ]
+  },
+  {
+    category: "Enterprise Services",
+    description: "Customized pricing for business and institutional clients",
+    services: [
+      {
+        name: "Corporate ITAD",
+        price: "Custom Quote",
+        description: "Complete IT Asset Disposition for enterprises",
+        includes: ["Asset valuation", "Bulk pickup", "Data destruction", "Compliance reporting", "Value recovery"],
+        popular: true
+      },
+      {
+        name: "Regular Pickup Service",
+        price: "Monthly Rate",
+        description: "Scheduled regular pickups for ongoing e-waste management",
+        includes: ["Scheduled collection", "Priority service", "Dedicated account", "Volume discounts"],
+        popular: false
+      },
+      {
+        name: "Event Cleanup",
+        price: "Custom Quote",
+        description: "E-waste collection for corporate events, exhibitions, and cleanups",
+        includes: ["On-site collection", "Staff deployment", "Processing equipment", "Environmental reporting"],
+        popular: false
+      }
+    ]
+  }
+];
+
+// Buyback prices
+const buybackPrices = [
+  {
+    category: "Laptops",
+    items: [
+      { name: "Working Laptop (i5/i7, 8GB+ RAM)", price: "8,000 - 25,000", condition: "Working" },
+      { name: "Working Laptop (i3, 4GB RAM)", price: "3,000 - 8,000", condition: "Working" },
+      { name: "Non-working Laptop", price: "500 - 2,000", condition: "For Parts" }
+    ]
+  },
+  {
+    category: "Desktops",
+    items: [
+      { name: "Working Desktop (i5/i7)", price: "5,000 - 15,000", condition: "Working" },
+      { name: "Working Desktop (i3/Dual Core)", price: "2,000 - 6,000", condition: "Working" },
+      { name: "Non-working Desktop", price: "300 - 1,500", condition: "For Parts" }
+    ]
+  },
+  {
+    category: "Mobile Devices",
+    items: [
+      { name: "Smartphone (Working, 4GB+ RAM)", price: "2,000 - 12,000", condition: "Working" },
+      { name: "Smartphone (Working, 2-3GB RAM)", price: "500 - 3,000", condition: "Working" },
+      { name: "Non-working Smartphone", price: "100 - 800", condition: "For Parts" }
+    ]
+  },
+  {
+    category: "Monitors & TVs",
+    items: [
+      { name: "LED Monitor (19-24 inch)", price: "800 - 3,000", condition: "Working" },
+      { name: "LED Monitor (25+ inch)", price: "2,000 - 6,000", condition: "Working" },
+      { name: "CRT Monitor/TV", price: "100 - 500", condition: "All Conditions" }
+    ]
+  }
+];
+---
+
+<BaseLayout 
+  title="E-Waste Recycling Pricing Kochi | Free Bulk Pickup | EWaste Kochi"
+  description="Transparent e-waste recycling pricing in Kochi. Free pickup for 10+ devices, competitive buyback rates, certified data destruction. No hidden charges."
+  canonical="https://ewastekochi.com/pricing/"
+  schema={schema}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)}></script>
+
+  <!-- Sticky CTA Bar -->
+  <div class="sticky-cta-bar">
+    <div class="cta-container">
+      <a href="tel:+917500555454" class="cta-button primary">Call Now</a>
+      <a href="https://wa.me/917500555454" class="cta-button whatsapp">WhatsApp</a>
+      <button onclick="openQuoteModal()" class="cta-button secondary">Get Quote</button>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">Transparent E-Waste Recycling Pricing</h1>
+      <p class="hero-description">No hidden charges, just honest pricing. Free pickup for 10+ devices, competitive buyback rates, and certified data destruction services across Kochi.</p>
+      
+      <div class="hero-features">
+        <div class="feature-badge">
+          <span class="icon">check_circle</span>
+          <span>No Hidden Fees</span>
+        </div>
+        <div class="feature-badge">
+          <span class="icon">local_shipping</span>
+          <span>Free Bulk Pickup</span>
+        </div>
+        <div class="feature-badge">
+          <span class="icon">paid</span>
+          <span>Competitive Buyback</span>
+        </div>
+      </div>
+
+      <div class="hero-cta">
+        <a href="tel:+917500555454" class="cta-button primary large">Call +91 75005 55454</a>
+        <button onclick="openQuoteModal()" class="cta-button secondary large">Get Instant Quote</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Price Calculator -->
+  <section class="calculator-section">
+    <div class="content-container">
+      <h2>Instant Price Calculator</h2>
+      <p class="section-intro">Get an instant estimate for your e-waste recycling needs.</p>
+      
+      <div class="calculator-form">
+        <div class="form-group">
+          <label for="device-type">Device Type</label>
+          <select id="device-type" onchange="updatePrice()">
+            <option value="">Select device type</option>
+            <option value="laptop">Laptop</option>
+            <option value="desktop">Desktop</option>
+            <option value="mobile">Mobile Phone</option>
+            <option value="monitor">Monitor/TV</option>
+            <option value="printer">Printer</option>
+            <option value="server">Server</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="device-quantity">Quantity</label>
+          <input type="number" id="device-quantity" min="1" value="1" onchange="updatePrice()">
+        </div>
+        
+        <div class="form-group">
+          <label for="device-condition">Condition</label>
+          <select id="device-condition" onchange="updatePrice()">
+            <option value="working">Working</option>
+            <option value="non-working">Non-working</option>
+            <option value="for-parts">For parts only</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="data-destruction">
+            <input type="checkbox" id="data-destruction" onchange="updatePrice()">
+            Include Data Destruction (+299/device)
+          </label>
+        </div>
+        
+        <div class="price-result" id="price-result">
+          <div class="result-label">Estimated Price:</div>
+          <div class="result-amount" id="result-amount">Select options to calculate</div>
+          <div class="result-note" id="result-note"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Categories -->
+  <section class="pricing-section bg-light">
+    <div class="content-container">
+      <h2>Service Pricing</h2>
+      <p class="section-intro">Clear, transparent pricing for all our e-waste recycling services.</p>
+      
+      {pricingCategories.map(category => (
+        <div class="pricing-category">
+          <h3>{category.category}</h3>
+          <p>{category.description}</p>
+          <div class="pricing-grid">
+            {category.services.map(service => (
+              <div class={`pricing-card ${service.popular ? 'popular' : ''}`}>
+                {service.popular && <div class="popular-badge">Most Popular</div>}
+                <div class="pricing-header">
+                  <h4>{service.name}</h4>
+                  <div class="price">{service.price}</div>
+                </div>
+                <p class="pricing-description">{service.description}</p>
+                <ul class="pricing-features">
+                  {service.includes.map(feature => <li>{feature}</li>)}
+                </ul>
+                <button onclick="selectService('{service.name}')" class="pricing-button">Select Service</button>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Buyback Prices -->
+  <section class="buyback-section">
+    <div class="content-container">
+      <h2>Electronics Buyback Prices</h2>
+      <p class="section-intro">We pay competitive prices for working electronics. Prices vary by condition, age, and market demand.</p>
+      
+      <div class="buyback-grid">
+        {buybackPrices.map(category => (
+          <div class="buyback-category">
+            <h3>{category.category}</h3>
+            <div class="price-list">
+              {category.items.map(item => (
+                <div class="price-item">
+                  <div class="item-info">
+                    <h4>{item.name}</h4>
+                    <span class="condition-badge">{item.condition}</span>
+                  </div>
+                  <div class="item-price">{item.price}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+      
+      <div class="buyback-note">
+        <p><strong>Note:</strong> Prices are indicative and may vary based on exact condition, age, brand, and current market demand. Call us for a precise quote.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Volume Discounts -->
+  <section class="discount-section bg-light">
+    <div class="content-container">
+      <h2>Volume Discounts & Enterprise Pricing</h2>
+      <p class="section-intro">Special pricing for bulk quantities and regular service agreements.</p>
+      
+      <div class="discount-tiers">
+        <div class="discount-tier">
+          <div class="tier-header">
+            <h3>Small Business</h3>
+            <div class="tier-quantity">10-50 devices</div>
+          </div>
+          <div class="tier-benefit">Free Pickup + 5% Discount</div>
+          <p>Perfect for small offices and retail businesses with periodic e-waste needs.</p>
+        </div>
+        
+        <div class="discount-tier featured">
+          <div class="tier-header">
+            <h3>Medium Enterprise</h3>
+            <div class="tier-quantity">51-200 devices</div>
+          </div>
+          <div class="tier-benefit">Free Pickup + 10% Discount</div>
+          <p>Ideal for medium-sized companies and educational institutions.</p>
+        </div>
+        
+        <div class="discount-tier">
+          <div class="tier-header">
+            <h3>Large Enterprise</h3>
+            <div class="tier-quantity">200+ devices</div>
+          </div>
+          <div class="tier-benefit">Free Pickup + 15% Discount</div>
+          <p>Custom pricing for large corporations, data centers, and government agencies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="content-container">
+      <h2>Frequently Asked Questions</h2>
+      
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Is e-waste recycling really free in Kochi?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! We offer completely free pickup for 10 or more devices anywhere in Ernakulam district. For 1-9 devices, residential collection is just 99. Walk-in drop-off at our Thrippunithura facility is always free.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>What factors affect e-waste recycling pricing?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Pricing depends on quantity, device type, location, and additional services like data destruction. Bulk quantities (10+ devices) get free pickup, while smaller quantities have minimal collection fees.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Do you pay for working electronics?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! We pay competitive prices for working electronics through our buyback program. Rates vary by device condition, age, and market demand. Call us for a free quote.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Are there any hidden charges in your pricing?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>No. Our pricing is completely transparent. The quoted price includes pickup, transportation, data destruction, and certificate. No hidden fees or surprise charges.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Do you offer enterprise pricing for large volumes?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes. We provide customized enterprise pricing for large volumes, regular pickups, and corporate ITAD services. Contact our business team for volume discounts and service agreements.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <div class="content-container">
+      <div class="cta-content">
+        <h2>Get Your Free Quote Today</h2>
+        <p>Transparent pricing, no hidden fees, and certified service. Call us now or request an instant quote for your e-waste recycling needs.</p>
+        <div class="cta-buttons">
+          <a href="tel:+917500555454" class="cta-button primary large">Call +91 75005 55454</a>
+          <button onclick="openQuoteModal()" class="cta-button secondary large">Get Instant Quote</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* Glass UI Design System */
+    :root {
+      --glass-bg: rgba(255, 255, 255, 0.95);
+      --glass-border: rgba(255, 255, 255, 0.18);
+      --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      --primary: #059669;
+      --primary-dark: #047857;
+      --secondary: #3b82f6;
+      --accent: #f59e0b;
+      --text-primary: #1f2937;
+      --text-secondary: #6b7280;
+      --border-radius: 16px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Base Styles */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: var(--text-primary);
+    }
+
+    /* Sticky CTA Bar */
+    .sticky-cta-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(20px);
+      border-top: 1px solid var(--glass-border);
+      padding: 1rem;
+      z-index: 1000;
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .cta-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-button {
+      padding: 0.75rem 1.5rem;
+      border-radius: 12px;
+      border: none;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      transition: var(--transition);
+      font-size: 1rem;
+    }
+
+    .cta-button.primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .cta-button.primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .cta-button.whatsapp {
+      background: #25d366;
+      color: white;
+    }
+
+    .cta-button.secondary {
+      background: var(--secondary);
+      color: white;
+    }
+
+    .cta-button.large {
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      padding: 6rem 1rem 4rem;
+      background: linear-gradient(135deg, #059669 0%, #047857 100%);
+      color: white;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+    }
+
+    .hero-description {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+      line-height: 1.5;
+    }
+
+    .hero-features {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .feature-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-weight: 600;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Content Sections */
+    .content-section {
+      padding: 5rem 1rem;
+    }
+
+    .content-section.bg-light {
+      background: #f9fafb;
+    }
+
+    .content-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .content-section h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+
+    .section-intro {
+      font-size: 1.2rem;
+      text-align: center;
+      color: var(--text-secondary);
+      margin-bottom: 3rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Calculator Section */
+    .calculator-form {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      box-shadow: var(--glass-shadow);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+
+    .form-group select,
+    .form-group input {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .form-group input[type="checkbox"] {
+      width: auto;
+      margin-right: 0.5rem;
+    }
+
+    .price-result {
+      background: var(--primary);
+      color: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .result-label {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .result-amount {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .result-note {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    /* Pricing Section */
+    .pricing-category {
+      margin-bottom: 4rem;
+    }
+
+    .pricing-category h3 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+
+    .pricing-category > p {
+      text-align: center;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .pricing-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      box-shadow: var(--glass-shadow);
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .pricing-card.popular {
+      border: 2px solid var(--primary);
+      transform: scale(1.05);
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .pricing-card.popular:hover {
+      transform: scale(1.05) translateY(-4px);
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--primary);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+
+    .pricing-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .pricing-header h4 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .price {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .pricing-description {
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .pricing-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 2rem 0;
+    }
+
+    .pricing-features li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #e5e7eb;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .pricing-features li:before {
+      content: "check";
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+    }
+
+    .pricing-button {
+      width: 100%;
+      padding: 1rem;
+      border-radius: 12px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      background: var(--primary);
+      color: white;
+    }
+
+    .pricing-button:hover {
+      background: var(--primary-dark);
+    }
+
+    /* Buyback Section */
+    .buyback-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .buyback-category {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--border-radius);
+      padding: 1.5rem;
+      box-shadow: var(--glass-shadow);
+    }
+
+    .buyback-category h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-primary);
+    }
+
+    .price-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .price-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background: #f9fafb;
+      border-radius: 8px;
+    }
+
+    .item-info h4 {
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .condition-badge {
+      background: var(--accent);
+      color: white;
+      padding: 0.25rem 0.5rem;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .item-price {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .buyback-note {
+      background: #fef3c7;
+      border: 1px solid #f59e0b;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    /* Discount Tiers */
+    .discount-tiers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .discount-tier {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      box-shadow: var(--glass-shadow);
+      transition: var(--transition);
+      text-align: center;
+    }
+
+    .discount-tier.featured {
+      border: 2px solid var(--primary);
+      transform: scale(1.05);
+    }
+
+    .discount-tier:hover {
+      transform: translateY(-4px);
+    }
+
+    .discount-tier.featured:hover {
+      transform: scale(1.05) translateY(-4px);
+    }
+
+    .tier-header {
+      margin-bottom: 1rem;
+    }
+
+    .tier-header h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .tier-quantity {
+      background: var(--primary);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .tier-benefit {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 1rem 0;
+    }
+
+    /* FAQ Section */
+    .faq-list {
+      margin-top: 2rem;
+    }
+
+    .faq-item {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--border-radius);
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+    }
+
+    .faq-question h3 {
+      margin: 0;
+    }
+
+    .faq-toggle {
+      font-size: 1.5rem;
+      color: var(--primary);
+      transition: var(--transition);
+    }
+
+    .faq-item.active .faq-toggle {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 0 1.5rem 1.5rem;
+      color: var(--text-secondary);
+      display: none;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    /* Final CTA */
+    .final-cta {
+      padding: 5rem 1rem;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      text-align: center;
+    }
+
+    .cta-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .cta-content p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .hero-description {
+        font-size: 1.1rem;
+      }
+
+      .content-section h2 {
+        font-size: 2rem;
+      }
+
+      .sticky-cta-bar {
+        padding: 0.75rem 1rem;
+      }
+
+      .cta-container {
+        flex-direction: column;
+      }
+
+      .cta-button {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .pricing-card.popular {
+        transform: none;
+      }
+
+      .discount-tier.featured {
+        transform: none;
+      }
+    }
+  </style>
+
+  <script>
+    // Price Calculator
+    function updatePrice() {
+      const deviceType = document.getElementById('device-type').value;
+      const quantity = parseInt(document.getElementById('device-quantity').value) || 1;
+      const condition = document.getElementById('device-condition').value;
+      const dataDestruction = document.getElementById('data-destruction').checked;
+      
+      const resultAmount = document.getElementById('result-amount');
+      const resultNote = document.getElementById('result-note');
+      
+      if (!deviceType) {
+        resultAmount.textContent = 'Select options to calculate';
+        resultNote.textContent = '';
+        return;
+      }
+      
+      let basePrice = 0;
+      let hasBuyback = false;
+      
+      // Buyback prices (simplified)
+      const buybackPrices = {
+        laptop: { working: 12000, 'non-working': 1000, 'for-parts': 800 },
+        desktop: { working: 8000, 'non-working': 800, 'for-parts': 500 },
+        mobile: { working: 4000, 'non-working': 300, 'for-parts': 200 },
+        monitor: { working: 1500, 'non-working': 200, 'for-parts': 100 },
+        printer: { working: 800, 'non-working': 150, 'for-parts': 100 },
+        server: { working: 15000, 'non-working': 2000, 'for-parts': 1000 }
+      };
+      
+      if (buybackPrices[deviceType] && buybackPrices[deviceType][condition]) {
+        basePrice = buybackPrices[deviceType][condition] * quantity;
+        hasBuyback = true;
+      }
+      
+      // Add data destruction cost
+      if (dataDestruction) {
+        basePrice += 299 * quantity;
+      }
+      
+      // Collection fee
+      if (quantity < 10 && !hasBuyback) {
+        basePrice += 99;
+      }
+      
+      // Display result
+      if (hasBuyback && basePrice > 0) {
+        resultAmount.textContent = `₹${basePrice.toLocaleString()} (You Receive)`;
+        resultNote.textContent = 'We pay you for these devices!';
+      } else if (basePrice > 0) {
+        resultAmount.textContent = `₹${basePrice.toLocaleString()}`;
+        resultNote.textContent = quantity >= 10 ? 'Free pickup included' : 'Collection fee applies';
+      } else {
+        resultAmount.textContent = 'FREE';
+        resultNote.textContent = 'Free pickup and processing';
+      }
+    }
+    
+    // Service Selection
+    function selectService(serviceName) {
+      // In production, this would open a booking modal with pre-selected service
+      window.location.href = 'tel:+917500555454';
+    }
+    
+    // Quote Modal
+    function openQuoteModal() {
+      // In production, this would open a detailed quote modal
+      window.location.href = 'tel:+917500555454';
+    }
+    
+    // FAQ Toggle
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const faqItem = question.parentElement;
+        const isActive = faqItem.classList.contains('active');
+        
+        // Close all FAQ items
+        document.querySelectorAll('.faq-item').forEach(item => {
+          item.classList.remove('active');
+        });
+        
+        // Open clicked item if it wasn't active
+        if (!isActive) {
+          faqItem.classList.add('active');
+        }
+      });
+    });
+    
+    // Add scroll effect to sticky CTA
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      const ctaBar = document.querySelector('.sticky-cta-bar');
+      
+      if (ctaBar) {
+        if (currentScroll > lastScroll && currentScroll > 500) {
+          // Scrolling down
+          ctaBar.style.transform = 'translateY(100%)';
+        } else {
+          // Scrolling up
+          ctaBar.style.transform = 'translateY(0)';
+        }
+      }
+      
+      lastScroll = currentScroll;
+    });
+  </script>
+</BaseLayout>

@@ -1,0 +1,1083 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// JSON-LD Schema Suite
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness","RecyclingCenter"],
+      "@id": "https://ewastekochi.com/#organization",
+      "name": "EWaste Kochi",
+      "description": "Kerala's #1 certified data destruction service provider offering NIST 800-88 compliant data sanitization and hard drive shredding in Kochi.",
+      "url": "https://ewastekochi.com/data-destruction/",
+      "telephone": "+917500555454",
+      "email": "info@ewastekochi.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "710A, Hill Palace Road, Thrippunithura",
+        "addressLocality": "Kochi",
+        "addressRegion": "Kerala",
+        "postalCode": "682301",
+        "addressCountry": "IN"
+      },
+      "hasCredential": [
+        {"@type":"EducationalOccupationalCredential","name":"NIST SP 800-88 Certified"},
+        {"@type":"EducationalOccupationalCredential","name":"DPDP Act 2023 Compliant"},
+        {"@type":"EducationalOccupationalCredential","name":"KSPCB Authorized"}
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Data Destruction Service",
+      "description": "NIST 800-88 certified data destruction services including hard drive shredding, degaussing, and cryptographic erase in Kochi, Kerala",
+      "provider": {"@id":"https://ewastekochi.com/#organization"},
+      "areaServed": "Kochi, Kerala",
+      "serviceType": "Data Destruction"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"What is NIST 800-88 data destruction?","acceptedAnswer":{"@type":"Answer","text":"NIST SP 800-88 is the U.S. government standard for data sanitization. It provides guidelines for secure data destruction methods including Clear, Purge, and Destroy. EWaste Kochi follows these standards for complete data security compliance."}},
+        {"@type":"Question","name":"Do you provide Certificate of Data Destruction?","acceptedAnswer":{"@type":"Answer","text":"Yes. We provide serial-numbered Certificates of Data Destruction within 24 hours for every job, documenting NIST 800-88 compliance, serial numbers, and destruction method used."}},
+        {"@type":"Question","name":"What data destruction methods do you use?","acceptedAnswer":{"@type":"Answer","text":"We use three NIST 800-88 certified methods: Cryptographic Erase for SSDs, Degaussing for magnetic media, and Physical Shredding for ultimate security. Each method is selected based on media type and security requirements."}},
+        {"@type":"Question","name":"Is data destruction mandatory under DPDP Act 2023?","acceptedAnswer":{"@type":"Answer","text":"Yes. Under India's Digital Personal Data Protection Act 2023, organizations must ensure complete data destruction when disposing of storage media. Non-compliance can result in penalties up to 250 crore."}},
+        {"@type":"Question","name":"Can you destroy data on-site at our office?","acceptedAnswer":{"@type":"Answer","text":"Yes. We offer on-site data destruction services for high-security requirements. Our certified team brings mobile shredding equipment to your location in Kochi for immediate data destruction."}}
+      ]
+    }
+  ]
+};
+
+// Destruction methods
+const destructionMethods = [
+  {
+    name: "Cryptographic Erase",
+    description: "Secure cryptographic erasure for SSDs and modern storage devices",
+    bestFor: ["SSDs", "Modern HDDs", "Enterprise Storage"],
+    compliance: ["NIST 800-88 Purge", "DPDP Act 2023"],
+    icon: "lock"
+  },
+  {
+    name: "Degaussing",
+    description: "Magnetic field destruction for traditional hard drives and tapes",
+    bestFor: ["HDDs", "Backup Tapes", "Floppy Disks"],
+    compliance: ["NIST 800-88 Purge", "DoD 5220.22-M"],
+    icon: "magnet"
+  },
+  {
+    name: "Physical Shredding",
+    description: "Complete physical destruction to 2mm particles for ultimate security",
+    bestFor: ["All Storage Media", "High-Security Data", "Legal Requirements"],
+    compliance: ["NIST 800-88 Destroy", "ISO 27001"],
+    icon: "delete"
+  }
+];
+
+// Compliance standards
+const complianceStandards = [
+  {
+    name: "NIST SP 800-88",
+    description: "U.S. Government standard for data sanitization",
+    requirement: "Mandatory for government contractors",
+    icon: "security"
+  },
+  {
+    name: "DPDP Act 2023",
+    description: "India's Digital Personal Data Protection Act",
+    requirement: "Mandatory for all Indian organizations",
+    icon: "gavel"
+  },
+  {
+    name: "DoD 5220.22-M",
+    description: "U.S. Department of Defense data wiping standard",
+    requirement: "Military and defense contractors",
+    icon: "military_tech"
+  },
+  {
+    name: "ISO 27001",
+    description: "International information security standard",
+    requirement: "Global information security compliance",
+    icon: "verified"
+  }
+];
+---
+
+<BaseLayout 
+  title="Data Destruction Services Kochi | NIST 800-88 Certified | EWaste Kochi"
+  description="Kerala's #1 NIST 800-88 certified data destruction service in Kochi. Hard drive shredding, degaussing, cryptographic erase. DPDP Act 2023 compliant with Certificate of Destruction."
+  canonical="https://ewastekochi.com/data-destruction/"
+  schema={schema}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)}></script>
+
+  <!-- Sticky CTA Bar -->
+  <div class="sticky-cta-bar">
+    <div class="cta-container">
+      <a href="tel:+917500555454" class="cta-button primary">Call Now</a>
+      <a href="https://wa.me/917500555454" class="cta-button whatsapp">WhatsApp</a>
+      <button onclick="openBookingModal()" class="cta-button secondary">Book Service</button>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">Certified Data Destruction Services in Kochi</h1>
+      <p class="hero-description">NIST 800-88 certified data destruction with Certificate of Destruction for every job. Hard drive shredding, degaussing, and cryptographic erase. DPDP Act 2023 compliant.</p>
+      
+      <div class="hero-features">
+        <div class="feature-badge">
+          <span class="icon">verified</span>
+          <span>NIST 800-88 Certified</span>
+        </div>
+        <div class="feature-badge">
+          <span class="icon">gavel</span>
+          <span>DPDP Act 2023 Compliant</span>
+        </div>
+        <div class="feature-badge">
+          <span class="icon">certificate</span>
+          <span>Certificate of Destruction</span>
+        </div>
+      </div>
+
+      <div class="hero-cta">
+        <a href="tel:+917500555454" class="cta-button primary large">Call +91 75005 55454</a>
+        <button onclick="openBookingModal()" class="cta-button secondary large">Schedule Destruction</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compliance Alert -->
+  <section class="compliance-alert">
+    <div class="content-container">
+      <div class="alert-content">
+        <div class="alert-icon">warning</div>
+        <div class="alert-text">
+          <h2>DPDP Act 2023 Compliance Required</h2>
+          <p>Under India's Digital Personal Data Protection Act 2023, organizations must ensure complete data destruction when disposing of storage media. Non-compliance can result in penalties up to 250 crore. EWaste Kochi provides certified data destruction services with full legal compliance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What is Data Destruction -->
+  <section class="content-section">
+    <div class="content-container">
+      <h2>What is Professional Data Destruction?</h2>
+      <p class="section-intro">Data destruction is the process of permanently destroying data stored on electronic media, making it completely unrecoverable. Unlike simple deletion, professional data destruction ensures that information cannot be recovered by any means.</p>
+      
+      <div class="info-cards">
+        <div class="info-card">
+          <div class="card-icon">security</div>
+          <h3>Complete Data Elimination</h3>
+          <p>Permanently destroys all data, making it impossible to recover through any forensic means.</p>
+        </div>
+        <div class="info-card">
+          <div class="card-icon">verified_user</div>
+          <h3>Legal Compliance</h3>
+          <p>Meets NIST 800-88, DPDP Act 2023, and other regulatory requirements for data security.</p>
+        </div>
+        <div class="info-card">
+          <div class="card-icon">certificate</div>
+          <h3>Documented Proof</h3>
+          <p>Provides Certificate of Destruction with serial numbers and method verification.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Data Destruction Methods -->
+  <section class="methods-section bg-light">
+    <div class="content-container">
+      <h2>NIST 800-88 Certified Data Destruction Methods</h2>
+      <p class="section-intro">We use three NIST 800-88 certified methods, each selected based on media type and security requirements.</p>
+      
+      <div class="methods-grid">
+        {destructionMethods.map(method => (
+          <div class="method-card">
+            <div class="method-header">
+              <div class="method-icon">{method.icon}</div>
+              <h3>{method.name}</h3>
+            </div>
+            <p class="method-description">{method.description}</p>
+            <div class="method-details">
+              <h4>Best For:</h4>
+              <ul class="method-list">
+                {method.bestFor.map(item => <li>{item}</li>)}
+              </ul>
+              <h4>Compliance:</h4>
+              <div class="compliance-badges">
+                {method.compliance.map(comp => <span class="compliance-badge">{comp}</span>)}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Compliance Standards -->
+  <section class="compliance-section">
+    <div class="content-container">
+      <h2>Regulatory Compliance Standards</h2>
+      <p class="section-intro">Our data destruction services comply with major international and Indian data protection regulations.</p>
+      
+      <div class="compliance-grid">
+        {complianceStandards.map(standard => (
+          <div class="compliance-card">
+            <div class="compliance-header">
+              <div class="compliance-icon">{standard.icon}</div>
+              <h3>{standard.name}</h3>
+            </div>
+            <p class="compliance-description">{standard.description}</p>
+            <div class="compliance-requirement">
+              <strong>Requirement:</strong> {standard.requirement}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Steps -->
+  <section class="process-section bg-light">
+    <div class="content-container">
+      <h2>Our Data Destruction Process</h2>
+      
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Media Assessment</h3>
+            <p>Identify storage media types and select appropriate destruction method based on security requirements.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Chain of Custody</h3>
+            <p>Document serial numbers, media details, and maintain secure chain of custody throughout the process.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Data Destruction</h3>
+            <p>Execute certified data destruction using NIST 800-88 compliant methods at our secure facility.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Verification</h3>
+            <p>Verify complete data destruction and document the process with detailed logs and evidence.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">5</div>
+          <div class="step-content">
+            <h3>Certificate Issued</h3>
+            <p>Issue serial-numbered Certificate of Destruction within 24 hours with full compliance documentation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Options -->
+  <section class="services-section">
+    <div class="content-container">
+      <h2>Data Destruction Service Options</h2>
+      
+      <div class="service-options">
+        <div class="service-option">
+          <div class="option-header">
+            <h3>On-Site Destruction</h3>
+            <div class="option-price">Premium</div>
+          </div>
+          <p class="option-description">Our certified team brings mobile destruction equipment to your location for immediate data destruction.</p>
+          <ul class="option-features">
+            <li>Mobile shredding equipment</li>
+            <li>Immediate destruction</li>
+            <li>Witness verification available</li>
+            <li>Same-day certificate</li>
+          </ul>
+          <button onclick="openBookingModal()" class="option-button">Book On-Site Service</button>
+        </div>
+        
+        <div class="service-option featured">
+          <div class="option-header">
+            <h3>Facility Destruction</h3>
+            <div class="option-price">Standard</div>
+          </div>
+          <p class="option-description">Secure transport to our KSPCB-authorized facility for certified data destruction.</p>
+          <ul class="option-features">
+            <li>Secure GPS-tracked transport</li>
+            <li>24-hour processing</li>
+            <li>Video documentation</li>
+            <li>Certificate within 24 hours</li>
+          </ul>
+          <button onclick="openBookingModal()" class="option-button primary">Book Facility Service</button>
+        </div>
+        
+        <div class="service-option">
+          <div class="option-header">
+            <h3>Emergency Destruction</h3>
+            <div class="option-price">Urgent</div>
+          </div>
+          <p class="option-description">4-hour emergency response for urgent data destruction needs.</p>
+          <ul class="option-features">
+            <li>4-hour response time</li>
+            <li>Priority processing</li>
+            <li>Immediate certificate</li>
+            <li>24/7 availability</li>
+          </ul>
+          <a href="tel:+917500555454" class="option-button emergency">Call Emergency Line</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section bg-light">
+    <div class="content-container">
+      <h2>Frequently Asked Questions</h2>
+      
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>What is NIST 800-88 data destruction?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>NIST SP 800-88 is the U.S. government standard for data sanitization. It provides guidelines for secure data destruction methods including Clear, Purge, and Destroy. EWaste Kochi follows these standards for complete data security compliance.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Do you provide Certificate of Data Destruction?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes. We provide serial-numbered Certificates of Data Destruction within 24 hours for every job, documenting NIST 800-88 compliance, serial numbers, and destruction method used.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>What data destruction methods do you use?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>We use three NIST 800-88 certified methods: Cryptographic Erase for SSDs, Degaussing for magnetic media, and Physical Shredding for ultimate security. Each method is selected based on media type and security requirements.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Is data destruction mandatory under DPDP Act 2023?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes. Under India's Digital Personal Data Protection Act 2023, organizations must ensure complete data destruction when disposing of storage media. Non-compliance can result in penalties up to 250 crore.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Can you destroy data on-site at our office?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes. We offer on-site data destruction services for high-security requirements. Our certified team brings mobile shredding equipment to your location in Kochi for immediate data destruction.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <div class="content-container">
+      <div class="cta-content">
+        <h2>Protect Your Data with Certified Destruction</h2>
+        <p>Ensure DPDP Act 2023 compliance and complete data security with NIST 800-88 certified data destruction services.</p>
+        <div class="cta-buttons">
+          <a href="tel:+917500555454" class="cta-button primary large">Call +91 75005 55454</a>
+          <button onclick="openBookingModal()" class="cta-button secondary large">Schedule Destruction</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* Glass UI Design System */
+    :root {
+      --glass-bg: rgba(255, 255, 255, 0.95);
+      --glass-border: rgba(255, 255, 255, 0.18);
+      --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      --primary: #dc2626;
+      --primary-dark: #991b1b;
+      --secondary: #3b82f6;
+      --accent: #f59e0b;
+      --text-primary: #1f2937;
+      --text-secondary: #6b7280;
+      --border-radius: 16px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Base Styles */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: var(--text-primary);
+    }
+
+    /* Sticky CTA Bar */
+    .sticky-cta-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(20px);
+      border-top: 1px solid var(--glass-border);
+      padding: 1rem;
+      z-index: 1000;
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .cta-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-button {
+      padding: 0.75rem 1.5rem;
+      border-radius: 12px;
+      border: none;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      transition: var(--transition);
+      font-size: 1rem;
+    }
+
+    .cta-button.primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .cta-button.primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .cta-button.whatsapp {
+      background: #25d366;
+      color: white;
+    }
+
+    .cta-button.secondary {
+      background: var(--secondary);
+      color: white;
+    }
+
+    .cta-button.large {
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      padding: 6rem 1rem 4rem;
+      background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+      color: white;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+    }
+
+    .hero-description {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+      line-height: 1.5;
+    }
+
+    .hero-features {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .feature-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-weight: 600;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Compliance Alert */
+    .compliance-alert {
+      padding: 2rem 1rem;
+      background: #fef3c7;
+      border-bottom: 3px solid #f59e0b;
+    }
+
+    .alert-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .alert-icon {
+      font-size: 2.5rem;
+      color: #f59e0b;
+      flex-shrink: 0;
+    }
+
+    .alert-text h2 {
+      color: #92400e;
+      margin-bottom: 0.5rem;
+    }
+
+    .alert-text p {
+      color: #78350f;
+      margin: 0;
+    }
+
+    /* Content Sections */
+    .content-section {
+      padding: 5rem 1rem;
+    }
+
+    .content-section.bg-light {
+      background: #f9fafb;
+    }
+
+    .content-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .content-section h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+
+    .section-intro {
+      font-size: 1.2rem;
+      text-align: center;
+      color: var(--text-secondary);
+      margin-bottom: 3rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Info Cards */
+    .info-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .info-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      box-shadow: var(--glass-shadow);
+      transition: var(--transition);
+    }
+
+    .info-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .info-card .card-icon {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .info-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Methods Grid */
+    .methods-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .method-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      box-shadow: var(--glass-shadow);
+      transition: var(--transition);
+    }
+
+    .method-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .method-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .method-icon {
+      font-size: 2.5rem;
+      color: var(--primary);
+    }
+
+    .method-header h3 {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+
+    .method-description {
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+    }
+
+    .method-details h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+
+    .method-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1rem 0;
+    }
+
+    .method-list li {
+      padding: 0.25rem 0;
+      color: var(--text-secondary);
+    }
+
+    .compliance-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .compliance-badge {
+      background: var(--primary);
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+
+    /* Compliance Grid */
+    .compliance-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .compliance-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      box-shadow: var(--glass-shadow);
+      transition: var(--transition);
+    }
+
+    .compliance-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .compliance-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .compliance-icon {
+      font-size: 2rem;
+      color: var(--primary);
+    }
+
+    .compliance-header h3 {
+      font-size: 1.3rem;
+      margin: 0;
+    }
+
+    .compliance-description {
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+    }
+
+    .compliance-requirement {
+      background: #fef3c7;
+      padding: 0.75rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+
+    /* Process Steps */
+    .process-steps {
+      margin-top: 3rem;
+    }
+
+    .process-step {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      align-items: flex-start;
+    }
+
+    .step-number {
+      width: 60px;
+      height: 60px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .step-content h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Service Options */
+    .service-options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .service-option {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      box-shadow: var(--glass-shadow);
+      transition: var(--transition);
+    }
+
+    .service-option.featured {
+      border: 2px solid var(--primary);
+      transform: scale(1.05);
+    }
+
+    .service-option:hover {
+      transform: translateY(-4px);
+    }
+
+    .service-option.featured:hover {
+      transform: scale(1.05) translateY(-4px);
+    }
+
+    .option-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .option-header h3 {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+
+    .option-price {
+      background: var(--primary);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+
+    .option-description {
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+    }
+
+    .option-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 2rem 0;
+    }
+
+    .option-features li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #e5e7eb;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .option-features li:before {
+      content: "check";
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+    }
+
+    .option-button {
+      width: 100%;
+      padding: 1rem;
+      border-radius: 12px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .option-button.primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .option-button.emergency {
+      background: #dc2626;
+      color: white;
+    }
+
+    /* FAQ Section */
+    .faq-list {
+      margin-top: 2rem;
+    }
+
+    .faq-item {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--border-radius);
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+    }
+
+    .faq-question h3 {
+      margin: 0;
+    }
+
+    .faq-toggle {
+      font-size: 1.5rem;
+      color: var(--primary);
+      transition: var(--transition);
+    }
+
+    .faq-item.active .faq-toggle {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 0 1.5rem 1.5rem;
+      color: var(--text-secondary);
+      display: none;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    /* Final CTA */
+    .final-cta {
+      padding: 5rem 1rem;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      text-align: center;
+    }
+
+    .cta-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .cta-content p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .hero-description {
+        font-size: 1.1rem;
+      }
+
+      .content-section h2 {
+        font-size: 2rem;
+      }
+
+      .process-step {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .step-number {
+        margin: 0 auto 1rem;
+      }
+
+      .sticky-cta-bar {
+        padding: 0.75rem 1rem;
+      }
+
+      .cta-container {
+        flex-direction: column;
+      }
+
+      .cta-button {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .service-option.featured {
+        transform: none;
+      }
+
+      .alert-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+
+  <script>
+    // FAQ Toggle
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const faqItem = question.parentElement;
+        const isActive = faqItem.classList.contains('active');
+        
+        // Close all FAQ items
+        document.querySelectorAll('.faq-item').forEach(item => {
+          item.classList.remove('active');
+        });
+        
+        // Open clicked item if it wasn't active
+        if (!isActive) {
+          faqItem.classList.add('active');
+        }
+      });
+    });
+
+    // Booking Modal (placeholder)
+    function openBookingModal() {
+      // In production, this would open a booking modal
+      window.location.href = 'tel:+917500555454';
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add scroll effect to sticky CTA
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      const ctaBar = document.querySelector('.sticky-cta-bar');
+      
+      if (ctaBar) {
+        if (currentScroll > lastScroll && currentScroll > 500) {
+          // Scrolling down
+          ctaBar.style.transform = 'translateY(100%)';
+        } else {
+          // Scrolling up
+          ctaBar.style.transform = 'translateY(0)';
+        }
+      }
+      
+      lastScroll = currentScroll;
+    });
+  </script>
+</BaseLayout>
