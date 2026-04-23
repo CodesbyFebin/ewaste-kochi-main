@@ -129,7 +129,14 @@ const schema = [
   <!-- Navigation -->
   <header id="nav" role="banner">
     <nav class="nav-inner" aria-label="Main navigation">
-      <a href="/" class="nav-logo" aria-label="EWaste Kochi - Home"> <span>EWaste</span> Kochi</a>
+      <a href="/" class="nav-logo" aria-label="EWaste Kochi">
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+    <rect width="32" height="32" rx="8" fill="#00ff88"/>
+    <path d="M8 20l4-8 4 4 4-8" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="24" cy="10" r="2" fill="#000"/>
+  </svg>
+  <span>EWaste <strong>Kochi</strong></span>
+</a>
       <ul class="nav-links" role="list">
         <li><a href="/services/">Services</a></li>
         <li><a href="/locations/">Locations</a></li>
@@ -139,7 +146,31 @@ const schema = [
       </ul>
       <div class="nav-right">
         <button class="lang-btn" id="lang-toggle" aria-label="Change language" aria-haspopup="dialog">EN</button>
-        <button class="theme-btn" id="theme-toggle" aria-label="Toggle dark/light theme"></button>
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+          <!-- Sun icon (shown in dark mode) -->
+          <svg id="icon-sun" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+          <!-- Moon icon (shown in light mode, hidden by default) -->
+          <svg id="icon-moon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="display:none">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+          </svg>
+        </button>
+        <a href="https://wa.me/917500555454" class="btn btn-secondary" 
+           style="padding:.5rem 1rem;font-size:.82rem;display:flex;align-items:center;gap:.4rem">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.121 1.533 5.85L.057 23.386a.75.75 0 00.921.921l5.536-1.476A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.952 9.952 0 01-5.073-1.39l-.363-.215-3.785 1.01 1.01-3.785-.215-.363A9.952 9.952 0 012 12C2 6.486 6.486 2 12 2s10 5.486 10 10-4.486 10-10 10z"/>
+          </svg>
+          WhatsApp
+        </a>
+        <button onclick="toggleSpeech()" class="theme-btn" aria-label="Listen to page" title="Read page aloud">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+            <path d="M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07"/>
+          </svg>
+        </button>
         <a href="tel:+917500555454" class="btn btn-primary" style="padding:.5rem 1.1rem;font-size:.82rem"> Call Now</a>
       </div>
       <button class="nav-hamburger" aria-label="Menu"></button>
@@ -249,37 +280,49 @@ const schema = [
         <p class="section-sub">Looking for certified e-waste recycling and IT asset disposal in Kochi? We serve every sector - from IT parks and banks to hospitals and manufacturing firms across Kerala.</p>
         <div class="grid-3" role="list">
           <article class="service-card fade-up" role="listitem" itemscope itemtype="https://schema.org/Service">
-            <div class="service-icon" aria-hidden="true"></div>
+            <div class="service-icon" aria-hidden="true">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M7 19H4.5A2.5 2.5 0 012 16.5v-1M17 19h2.5a2.5 2.5 0 002.5-2.5v-1M12 3v4m0 0l-2-2m2 2l2-2M6.5 9.5L5 11l1.5 1.5M17.5 9.5L19 11l-1.5 1.5M5 16h14"/></svg>
+            </div>
             <h3 itemprop="name"><a href="/services/e-waste-recycling-kochi/" style="color:var(--text1)">E-Waste Recycling Kochi</a></h3>
             <p itemprop="description">Kerala's most trusted <a href="/services/e-waste-recycling-kochi/">certified e-waste recycler in Kochi</a>. All 21 categories under India's E-Waste Rules 2022. Zero landfill, KSPCB manifest for every collection.</p>
             <a href="/services/e-waste-recycling-kochi/" class="service-link" itemprop="url">Learn More </a>
           </article>
           <article class="service-card fade-up" role="listitem" itemscope itemtype="https://schema.org/Service" style="transition-delay:.1s">
-            <div class="service-icon" aria-hidden="true"></div>
+            <div class="service-icon" aria-hidden="true">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="13" rx="1"/><path d="M9 22V12h6v10M3 9l9-6 9 6"/></svg>
+            </div>
             <h3 itemprop="name"><a href="/services/itad-services-kochi/" style="color:var(--text1)">ITAD Services Kochi</a></h3>
             <p itemprop="description">Complete <a href="/services/itad-services-kochi/">IT asset disposition in Kochi</a> - inventory, NIST data destruction, Certificate of Destruction, value recovery. Preferred ITAD partner for 500+ Kerala businesses.</p>
             <a href="/services/itad-services-kochi/" class="service-link" itemprop="url">Learn More </a>
           </article>
           <article class="service-card fade-up" role="listitem" itemscope itemtype="https://schema.org/Service" style="transition-delay:.2s">
-            <div class="service-icon" aria-hidden="true"></div>
+            <div class="service-icon" aria-hidden="true">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 2l7 4v6c0 4.5-3 8.5-7 10C8 20.5 5 16.5 5 12V6l7-4z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
             <h3 itemprop="name"><a href="/services/data-destruction-kochi/" style="color:var(--text1)">Data Destruction Kochi</a></h3>
             <p itemprop="description">NIST 800-88 and DoD 5220.22-M certified <a href="/services/data-destruction-kochi/">data destruction in Kochi</a>. Cryptographic erase, degaussing, physical shredding. Serial-numbered certificate for every device.</p>
             <a href="/services/data-destruction-kochi/" class="service-link" itemprop="url">Learn More </a>
           </article>
           <article class="service-card fade-up" role="listitem" itemscope itemtype="https://schema.org/Service">
-            <div class="service-icon" aria-hidden="true"></div>
+            <div class="service-icon" aria-hidden="true">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 18h.01M10 18h.01M2 14L6.5 4h11L22 14"/></svg>
+            </div>
             <h3 itemprop="name"><a href="/services/hard-drive-shredding-kochi/" style="color:var(--text1)">Hard Drive Shredding Kochi</a></h3>
             <p itemprop="description">Industrial <a href="/services/hard-drive-shredding-kochi/">hard drive and SSD destruction in Kochi</a>. Physical shredding beyond data recovery. Witnessed destruction available for high-security clients.</p>
             <a href="/services/hard-drive-shredding-kochi/" class="service-link" itemprop="url">Learn More </a>
           </article>
           <article class="service-card fade-up" role="listitem" itemscope itemtype="https://schema.org/Service" style="transition-delay:.1s">
-            <div class="service-icon" aria-hidden="true"></div>
+            <div class="service-icon" aria-hidden="true">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="7" width="16" height="10" rx="1"/><path d="M22 11v2M7 11v2M11 11v2"/></svg>
+            </div>
             <h3 itemprop="name"><a href="/services/battery-recycling-kochi/" style="color:var(--text1)">Battery Recycling Kochi</a></h3>
             <p itemprop="description">Safe <a href="/services/battery-recycling-kochi/">Li-Ion, lead-acid and laptop battery disposal in Kochi</a>. Prevents toxic leakage into Kerala's waterways. Free collection for bulk battery lots.</p>
             <a href="/services/battery-recycling-kochi/" class="service-link" itemprop="url">Learn More </a>
           </article>
           <article class="service-card fade-up" role="listitem" itemscope itemtype="https://schema.org/Service" style="transition-delay:.2s">
-            <div class="service-icon" aria-hidden="true"></div>
+            <div class="service-icon" aria-hidden="true">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="1"/><path d="M1 21h22M12 17v4"/></svg>
+            </div>
             <h3 itemprop="name"><a href="/services/laptop-buyback-kochi/" style="color:var(--text1)">Laptop Buyback Kochi</a></h3>
             <p itemprop="description">Best <a href="/services/laptop-buyback-kochi/">laptop buyback prices in Kochi</a> - better than Cashify. Instant payment, free pickup for 10+ units, data wiped before resale. MacBook, Dell, HP, Lenovo.</p>
             <a href="/services/laptop-buyback-kochi/" class="service-link" itemprop="url">Get Quote </a>
@@ -371,25 +414,33 @@ const schema = [
         <div class="process-steps" role="list">
           <div class="process-step fade-up" role="listitem">
             <div class="step-num" aria-hidden="true">01</div>
-            <div class="step-icon"></div>
+            <div class="step-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            </div>
             <h3>Book Pickup</h3>
             <p>Call, WhatsApp or book online. Same-day slots for <a href="/locations/infopark/">Infopark</a>, <a href="/locations/smart-city/">Smart City</a> and <a href="/locations/kakkanad/">Kakkanad</a>. 48-hour coverage across all Ernakulam.</p>
           </div>
           <div class="process-step fade-up" role="listitem" style="transition-delay:.1s">
             <div class="step-num" aria-hidden="true">02</div>
-            <div class="step-icon"></div>
+            <div class="step-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8zM5.5 19a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM18.5 19a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/></svg>
+            </div>
             <h3>Secure Collection</h3>
             <p>Our certified team arrives with KSPCB manifest documentation. GPS-tracked vehicles. Chain-of-custody from your door to our facility - no third-party handlers.</p>
           </div>
           <div class="process-step fade-up" role="listitem" style="transition-delay:.2s">
             <div class="step-num" aria-hidden="true">03</div>
-            <div class="step-icon"></div>
+            <div class="step-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M12 2l7 4v6c0 4.5-3 8.5-7 10C8 20.5 5 16.5 5 12V6l7-4z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
             <h3>NIST Data Destruction</h3>
             <p>Every storage device: cryptographic erase for SSDs, degaussing for HDDs, physical shredding for ultimate security. Documented per NIST SP 800-88 at our Thrippunithura facility.</p>
           </div>
           <div class="process-step fade-up" role="listitem" style="transition-delay:.3s">
             <div class="step-num" aria-hidden="true">04</div>
-            <div class="step-icon"></div>
+            <div class="step-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M9 22l3-3 3 3V15a6 6 0 10-6 0v7z"/></svg>
+            </div>
             <h3>Certificate Issued</h3>
             <p>Serial-numbered Certificate of Destruction delivered within 24 hours. Zero-landfill recycling completed. Full compliance documentation ready for your audit.</p>
           </div>
@@ -906,7 +957,8 @@ const schema = [
     function applyTheme(t){
       document.documentElement.setAttribute('data-theme',t);
       localStorage.setItem('ew-theme',t);
-      themeBtn.textContent=t==='dark'?'':'';
+      document.getElementById('icon-sun').style.display = t === 'dark' ? '' : 'none';
+      document.getElementById('icon-moon').style.display = t === 'light' ? '' : 'none';
       themeBtn.setAttribute('aria-label','Switch to '+(t==='dark'?'light':'dark')+' mode');
     }
     themeBtn.addEventListener('click',()=>{
@@ -921,23 +973,27 @@ const schema = [
     document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
 
     // Stat Counter
-    const io2=new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){
-          const el=e.target,target=+el.dataset.count;
-          if(!target)return;
-          let start=0,dur=1600;
-          const step=()=>{
-            start+=Math.ceil(target/60);
-            el.textContent=(start>=target?target:start).toLocaleString('en-IN')+(target===50000?'+':target===2400?'+':'');
-            if(start<target)requestAnimationFrame(step);
+    document.querySelectorAll('[data-count]').forEach(el => {
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (!e.isIntersecting) return;
+          // Strip commas — "50,000" → 50000
+          const raw = el.dataset.count.replace(/,/g, '');
+          const target = parseInt(raw, 10);
+          if (isNaN(target)) return;
+          let start = 0;
+          const step = () => {
+            start += Math.ceil(target / 60);
+            el.textContent = (start >= target ? target : start)
+              .toLocaleString('en-IN') + (target >= 1000 ? '+' : '');
+            if (start < target) requestAnimationFrame(step);
           };
           requestAnimationFrame(step);
-          io2.unobserve(e);
-        }
-      });
-    },{threshold:0.5});
-    document.querySelectorAll('[data-count]').forEach(el=>io2.observe(el));
+          io.unobserve(el);
+        });
+      }, { threshold: 0.5 });
+      io.observe(el);
+    });
 
     // Speech Reader
     let synth=window.speechSynthesis,utter=null,speechRate=1,reading=false,paragraphs=[],pIdx=0;
@@ -1064,5 +1120,24 @@ const schema = [
       else document.getElementById('lang-modal').classList.remove('open');
     }
   </script>
+
+  <style>
+    /* Force 3-column layout for services grid */
+    #services .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* force 3 cols — 6 cards = 2 clean rows */
+      gap: 1.25rem;
+    }
+    @media (max-width: 900px) {
+      #services .grid-3 { 
+        grid-template-columns: repeat(2, 1fr); 
+      }
+    }
+    @media (max-width: 600px) {
+      #services .grid-3 { 
+        grid-template-columns: 1fr; 
+      }
+    }
+  </style>
 
 </BaseLayout>
