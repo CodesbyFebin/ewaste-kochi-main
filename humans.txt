@@ -1,0 +1,14 @@
+/* TEAM */
+  Company: Ewaste Kochi
+  Location: Kochi, Kerala, India
+  Contact: info@ewastekochi.com
+
+/* SITE */
+  Language: English
+  Doctype: HTML5
+  IDE: VS Code
+
+/* THANKS */
+  Google Search Console
+  Bing Webmaster Tools
+  Schema.org

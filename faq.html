@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<style>
+.faq-hero{background:linear-gradient(135deg,#0d3d20 0%,#1a5c30 60%,#0d3d20 100%);padding:3rem 0;position:relative;overflow:hidden}
+.faq-hero::before{content:'';position:absolute;inset:0;background:url('img/ewaste-guide-hero.png') center/cover no-repeat;opacity:.18}
+.faq-hero .container{position:relative;z-index:1}
+.faq-hero-inner{display:grid;grid-template-columns:1fr 400px;gap:2.5rem;align-items:center}
+.faq-hero-img{border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.faq-hero-img img{width:100%;height:280px;object-fit:cover;display:block}
+.faq-page-layout{display:grid;grid-template-columns:280px 1fr;gap:2.5rem;align-items:start}
+.faq-sidebar-box{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:1.2rem;margin-bottom:1rem}
+.faq-sidebar-label{font-size:11.5px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.8rem}
+.faq-search-wrap{display:flex;gap:6px}
+.faq-search-input{flex:1;border:1.5px solid var(--gray-300);border-radius:var(--radius-sm);padding:8px 12px;font-size:13px;outline:none;font-family:inherit;transition:border-color .2s}
+.faq-search-input:focus{border-color:var(--green)}
+.faq-search-btn{background:var(--green);color:#fff;border:none;border-radius:var(--radius-sm);padding:8px 12px;cursor:pointer;font-size:14px}
+.faq-cat-list{display:flex;flex-direction:column;gap:3px}
+.faq-cat-item{display:flex;align-items:center;justify-content:space-between;padding:8px 12px;border-radius:var(--radius-sm);cursor:pointer;font-size:13px;color:var(--text2);font-weight:500;transition:all .2s;border:1px solid transparent}
+.faq-cat-item:hover{background:var(--green-lt);color:var(--green);border-color:var(--green-mid)}
+.faq-cat-item.active{background:var(--green);color:#fff;border-color:var(--green)}
+.faq-cat-item .cat-icon{margin-right:6px;font-size:14px}
+.faq-cat-item .cat-count{background:rgba(0,0,0,.08);border-radius:10px;padding:1px 7px;font-size:11px;font-weight:700}
+.faq-cat-item.active .cat-count{background:rgba(255,255,255,.25)}
+.faq-still-box{background:var(--green-lt);border:1px solid var(--green-mid);border-radius:var(--radius);padding:1rem;margin-top:1rem;text-align:center}
+.trust-row{display:flex;justify-content:center;gap:.4rem;font-size:11.5px;color:var(--text3);margin-top:.4rem}
+.trust-row a{color:var(--text3);font-weight:600}
+.faq-group-card{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:1.2rem}
+.faq-group-hdr{padding:1rem 1.4rem;background:var(--gray-50);border-bottom:1px solid var(--gray-200);display:flex;align-items:center;gap:10px}
+.faq-group-icon{font-size:1.1rem}
+.faq-group-name{font-family:var(--font-h);font-size:.95rem;font-weight:700;color:var(--gray-900);flex:1}
+.faq-group-count{font-size:11.5px;background:var(--green-lt);color:var(--green);font-weight:700;padding:2px 10px;border-radius:12px}
+.faq-group-body{padding:.6rem}
+@media(max-width:900px){
+  .faq-hero-inner,.faq-page-layout{grid-template-columns:1fr}
+  .faq-hero-img{order:-1}
+}
+</style>
+
+<title>Frequently Asked Questions – E-Waste Recycling in Kochi</title>
+<meta name="description" content="Got questions about e-waste disposal, scrap prices, or data security? Read our FAQs or call Ewaste Kochi at 75 0055 5454.">
+<link rel="canonical" href="https://ewastekochi.com/faq/">
+<meta property="og:title" content="Frequently Asked Questions – E-Waste Recycling in Kochi">
+<meta property="og:description" content="Got questions about e-waste disposal, scrap prices, or data security? Read our FAQs or call Ewaste Kochi at 75 0055 5454.">
+<meta property="og:url" content="https://ewastekochi.com/faq/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://ewastekochi.com/hero-banner.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Frequently Asked Questions – E-Waste Recycling in Kochi">
+<meta name="twitter:description" content="Got questions about e-waste disposal, scrap prices, or data security? Read our FAQs or call Ewaste Kochi at 75 0055 5454.">
+<meta name="twitter:image" content="https://ewastekochi.com/hero-banner.png">
+<meta name="geo.region" content="IN-KL">
+<meta name="geo.placename" content="Kochi, Kerala, India">
+<meta name="geo.position" content="9.9816;76.3016">
+<meta name="ICBM" content="9.9816, 76.3016">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is pickup free in Kochi?","acceptedAnswer":{"@type":"Answer","text":"Yes, we offer completely free e-waste pickup across all areas of Kochi."}}]}</script>
+</head>
+<body>
+<div id="hdr"></div>
+<!-- HERO -->
+<section class="faq-hero">
+  <div class="container">
+    <div class="faq-hero-inner">
+      <div>
+        <nav class="breadcrumb" style="margin-bottom:.7rem"><a href="index.html" style="color:rgba(255,255,255,.7)">Home</a> <span style="color:rgba(255,255,255,.5)">›</span> <span style="color:#fff">FAQ</span></nav>
+        <div style="font-size:12px;font-weight:700;color:#7ce88a;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.6rem">Help Center</div>
+        <h1 style="font-family:var(--font-h);font-size:2.3rem;font-weight:800;color:#fff;line-height:1.2;margin-bottom:.8rem">Frequently Asked<br><span style="color:#7ce88a">Questions</span></h1>
+        <p style="font-size:14.5px;color:rgba(255,255,255,.85);line-height:1.7;margin-bottom:1.2rem;max-width:480px">Find answers to common questions about our e-waste recycling, IT asset disposal, data destruction and free pickup services in Kochi.</p>
+        <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1.2rem">
+          <span style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;font-size:11.5px;font-weight:600;padding:5px 14px;border-radius:20px">Free Pickup</span>
+          <span style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;font-size:11.5px;font-weight:600;padding:5px 14px;border-radius:20px">100% Data Security</span>
+          <span style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;font-size:11.5px;font-weight:600;padding:5px 14px;border-radius:20px">Eco-Friendly</span>
+          <span style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;font-size:11.5px;font-weight:600;padding:5px 14px;border-radius:20px">Best Price</span>
+        </div>
+      </div>
+      <div class="faq-hero-img">
+        <img loading="lazy" src="img/ewaste-guide-hero.png" alt="E-waste FAQ Kochi recycling guide">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FAQ BODY -->
+<section style="padding:3rem 0">
+  <div class="container">
+    <div class="faq-page-layout">
+      <!-- SIDEBAR -->
+      <aside>
+        <div class="faq-sidebar-box">
+          <div class="faq-sidebar-label">Search FAQs</div>
+          <div class="faq-search-wrap">
+            <input type="text" id="faqsearch" class="faq-search-input" placeholder="Search your question…" oninput="searchFAQ(this.value)">
+            <button class="faq-search-btn" onclick="searchFAQ(document.getElementById('faqsearch').value)">🔍</button>
+          </div>
+        </div>
+        <div class="faq-sidebar-box">
+          <div class="faq-sidebar-label">FAQ Categories</div>
+          <div class="faq-cat-list" id="catlinks"></div>
+        </div>
+        <div class="faq-still-box">
+          <div style="font-size:1.4rem;margin-bottom:.5rem">💬</div>
+          <div style="font-size:13px;font-weight:700;color:var(--gray-900);margin-bottom:.3rem">Still have questions?</div>
+          <div style="font-size:12px;color:var(--text2);margin-bottom:.8rem">Our team is ready to help you.</div>
+          <a href="contact.html" class="btn btn-primary btn-sm" style="width:100%;justify-content:center;margin-bottom:.5rem">Contact Us</a>
+          <a href="https://wa.me/917500555454" class="btn btn-wa btn-sm" style="width:100%;justify-content:center" target="_blank">WhatsApp Us</a>
+        </div>
+        <div style="background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:1.2rem;margin-top:1rem;text-align:center">
+          <div style="font-size:11.5px;color:var(--text3);margin-bottom:.3rem">Trusted by 5,000+ Customers</div>
+          <div style="font-size:16px;color:#f5a623;letter-spacing:2px;margin-bottom:.3rem">★★★★★</div>
+          <div style="font-size:12px;font-weight:600;color:var(--gray-900);margin-bottom:.2rem">4.9 / 5 · 124+ Reviews</div>
+          <div class="trust-row"><a href="#">Google</a><span>·</span><a href="#">JustDial</a><span>·</span><a href="#">Sulekha</a></div>
+        </div>
+      </aside>
+      <!-- MAIN FAQ -->
+      <div id="faqmain"></div>
+    </div>
+  </div>
+</section>
+<!-- BOTTOM CTA BANNER -->
+<section style="padding:0 0 3.5rem">
+  <div class="container">
+    <div class="cta-banner">
+      <div style="font-size:2.8rem">♻️</div>
+      <div class="cta-banner-text">
+        <div class="cta-title">Ready to Recycle Your E-Waste?</div>
+        <div class="cta-sub">Book a free pickup today and help us build a cleaner, greener Kochi.</div>
+      </div>
+      <div class="cta-banner-actions">
+        <a href="contact.html" class="btn btn-white">Book Free Pickup</a>
+        <a href="https://wa.me/917500555454" class="btn btn-wa" target="_blank">WhatsApp Us · 75 0055 5454</a>
+      </div>
+    </div>
+  </div>
+</section>
+<div id="ftr"></div>
+<script src="shared.js"></script>
+<script>
+document.getElementById('hdr').innerHTML=renderHeader('FAQ');
+document.getElementById('ftr').innerHTML=renderFooter();
+const faqData={
+  'General':{icon:'🌐',items:[
+    {q:'What is e-waste?',a:'E-waste refers to discarded electrical or electronic devices such as computers, laptops, phones, printers, batteries, cables and other electronics no longer in use. We ensure these are recycled in an environmentally responsible way.'},
+    {q:'Why should I recycle my e-waste?',a:'Recycling e-waste prevents toxic materials from harming the environment, recovers valuable resources, and ensures data security. It also helps reduce pollution and contributes to a greener future for Kochi and Kerala.'},
+    {q:'Is e-waste recycling safe for the environment?',a:'Yes! Our zero-landfill process ensures all e-waste is recycled responsibly. We follow CPCB guidelines and use certified methods to safely process all electronic waste.'},
+    {q:'Is Ewaste Kochi a government authorised company?',a:'Yes, Ewaste Kochi is authorised by the Pollution Control Board and follows all CPCB guidelines. We are ISO 14001:2015 certified for environmental management.'},
+  ]},
+  'E-Waste Pickup':{icon:'🚛',items:[
+    {q:'Do you provide free e-waste pickup in Kochi?',a:'Yes, we provide 100% free pickup of e-waste from homes, offices, businesses and organisations anywhere in Kochi. Simply call or WhatsApp us at 75 0055 5454 to schedule a pickup.'},
+    {q:'How do I schedule a pickup?',a:'You can schedule a pickup by calling us at 75 0055 5454, sending a WhatsApp message to the same number, or filling our online booking form. We respond quickly and schedule pickup at your convenient time.'},
+    {q:'What areas do you cover for pickup?',a:'We cover all areas in and around Kochi including Kakkanad, Edappally, Fort Kochi, Kalamassery, Aluva, Palarivattom, Vyttila, Tripunithura, Willingdon Island and all other areas in Kochi.'},
+  ]},
+  'Data Destruction':{icon:'🔒',items:[
+    {q:'How do you ensure data security?',a:'We use certified data destruction methods including DoD 5220.22-M data wiping and physical hard drive shredding. All processes are documented and a Certificate of Destruction is issued for every device.'},
+    {q:'Will I receive a data destruction certificate?',a:'Yes, we provide a verifiable Certificate of Destruction for every device. This certificate documents the method used, device serial numbers, and confirms complete data elimination.'},
+    {q:'What happens to the data after destruction?',a:'After data destruction, the storage media is either physically shredded (permanently unrecoverable) or certified-wiped using DoD 5220.22-M standards. The destroyed material is then recycled responsibly.'},
+  ]},
+  'Pricing & Payment':{icon:'💰',items:[
+    {q:'How is the price of e-waste determined?',a:'Prices are based on current market rates, the condition and age of items, quantity, and type of material. We provide transparent quotes upfront with no hidden charges.'},
+    {q:'Do you offer the best price in the market?',a:'Yes! We guarantee the best market price for your electronic scrap. Our prices are updated regularly to reflect current market rates, ensuring you always get maximum value.'},
+    {q:'How do you make payments?',a:'We make payments via cash, UPI, NEFT/IMPS bank transfer or cheque depending on the amount. For larger transactions, bank transfer is preferred for security and transparency.'},
+  ]},
+  'Items We Accept':{icon:'📦',items:[
+    {q:'What types of e-waste do you accept?',a:'We accept all types of electronic waste including laptops, desktops, servers, mobiles, tablets, monitors, printers, scanners, UPS, batteries, networking equipment, ACs, refrigerators, TVs and all home/office appliances.'},
+    {q:'Do you accept damaged or non-working items?',a:'Yes! We accept all e-waste regardless of condition – working, damaged, broken or completely non-functional. Even items that seem worthless often have recyclable components with value.'},
+    {q:'Do you accept batteries and UPS?',a:'Yes, we accept all types of batteries including laptop batteries, mobile batteries, UPS batteries, inverter batteries, and industrial batteries. Proper hazardous waste handling is followed for all battery types.'},
+  ]},
+  'Corporate ITAD':{icon:'🏢',items:[
+    {q:'What is ITAD and who needs it?',a:'ITAD (IT Asset Disposition) is the process of responsibly disposing of IT hardware for businesses. Any company replacing computers, servers, networking gear or other IT equipment needs ITAD to ensure data security and environmental compliance.'},
+    {q:'Do you provide bulk e-waste pickup for offices?',a:'Absolutely! We specialise in bulk corporate e-waste pickups. Whether you have 10 or 10,000 devices, we handle everything from logistics to certified data destruction and compliance documentation.'},
+    {q:'What compliance documents do you provide?',a:'We provide Certificate of Data Destruction, EPR (Extended Producer Responsibility) certificates, GST invoices, and complete audit trails. All documentation meets regulatory requirements for corporate compliance.'},
+  ]},
+  'Recycling Process':{icon:'♻️',items:[
+    {q:'What is your recycling process?',a:'Our zero-landfill recycling process involves: secure collection → data destruction → manual disassembly → material segregation → certified recycling of metals, plastics and components → safe disposal of hazardous materials.'},
+    {q:'How long does the recycling process take?',a:'After pickup, e-waste is processed within 2–5 business days. Data destruction certificates are issued within 24–48 hours of processing. EPR certificates are provided as required.'},
+  ]},
+  'Others':{icon:'❓',items:[
+    {q:'Can businesses avail ITAD services?',a:'Absolutely! We specialise in corporate ITAD for businesses of all sizes. We offer dedicated pickup, certified data destruction, asset evaluation, value recovery and complete compliance documentation.'},
+    {q:'How can I contact Ewaste Kochi?',a:'Call us at 75 0055 5454 (Mon-Sat 9AM–6PM), WhatsApp at the same number, email info@ewastekochi.com, or visit our office at Door No. 34/1406, Palarivattom, Kochi.'},
+  ]},
+};
+const cats=Object.keys(faqData);
+let activecat=cats[0];
+document.getElementById('catlinks').innerHTML=cats.map(c=>`<div class="faq-cat-item ${c===activecat?'active':''}" onclick="showCat('${c}',this)"><span class="cat-icon">${faqData[c].icon}</span>${c}<span class="cat-count">${faqData[c].items.length}</span></div>`).join('');
+function renderGroups(){
+  document.getElementById('faqmain').innerHTML=cats.map(cat=>`<div class="faq-group-card" id="group-${cat.replace(/[\s&\/]/g,'-')}"><div class="faq-group-hdr"><span class="faq-group-icon">${faqData[cat].icon}</span><span class="faq-group-name">${cat}</span><span class="faq-group-count">${faqData[cat].items.length} FAQs</span></div><div class="faq-group-body"><div class="faq-list">${renderFAQ(faqData[cat].items)}</div></div></div>`).join('');
+}
+renderGroups();
+function showCat(cat,el){
+  document.querySelectorAll('.faq-cat-item').forEach(l=>l.classList.remove('active'));
+  el.classList.add('active');
+  const id='group-'+cat.replace(/[\s&\/]/g,'-');
+  const target=document.getElementById(id);
+  if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+}
+function searchFAQ(q){
+  if(!q.trim()){renderGroups();return;}
+  const results=[];
+  Object.values(faqData).forEach(({items})=>items.forEach(f=>{if(f.q.toLowerCase().includes(q.toLowerCase())||f.a.toLowerCase().includes(q.toLowerCase()))results.push(f)}));
+  document.getElementById('faqmain').innerHTML=`<div class="faq-group-card"><div class="faq-group-hdr"><span class="faq-group-icon">🔍</span><span class="faq-group-name">Search Results</span><span class="faq-group-count">${results.length} found</span></div><div class="faq-group-body"><div class="faq-list">${results.length?renderFAQ(results):'<p style="padding:1rem;color:var(--text2)">No FAQs found for your search.</p>'}</div></div></div>`;
+}
+</script>
+</body></html>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://ewastekochi.com/</loc>
+    <image:image>
+      <image:loc>https://ewastekochi.com/img/recycling_hero_premium.png</image:loc>
+      <image:title>E-Waste Recycling Kochi – Ewaste Kochi</image:title>
+      <image:caption>Ewaste Kochi – CPCB authorized e-waste recycling and IT asset disposal services in Kochi, Kerala</image:caption>
+      <image:geo_location>Kochi, Kerala, India</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://ewastekochi.com/img/services_hero_premium.png</image:loc>
+      <image:title>E-Waste Services Kochi – IT Asset Disposal, Data Destruction</image:title>
+      <image:caption>Complete e-waste management services in Kochi – ITAD, data destruction, hard drive shredding, free pickup</image:caption>
+      <image:geo_location>Kochi, Kerala, India</image:geo_location>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ewastekochi.com/e-waste-recycling/</loc>
+    <image:image>
+      <image:loc>https://ewastekochi.com/img/recycling_hero_premium.png</image:loc>
+      <image:title>E-Waste Recycling Services Kochi – Zero Landfill</image:title>
+      <image:caption>Eco-friendly e-waste recycling in Kochi. CPCB authorized. All 21 e-waste categories accepted. Free doorstep pickup.</image:caption>
+      <image:geo_location>Kochi, Kerala, India</image:geo_location>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ewastekochi.com/itad/</loc>
+    <image:image>
+      <image:loc>https://ewastekochi.com/img/itad_hero_premium.png</image:loc>
+      <image:title>IT Asset Disposition (ITAD) Services Kochi</image:title>
+      <image:caption>Secure IT asset disposal for businesses in Kochi. DoD certified data destruction, value recovery, full compliance documentation.</image:caption>
+      <image:geo_location>Kochi, Kerala, India</image:geo_location>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ewastekochi.com/hard-drive-shredding/</loc>
+    <image:image>
+      <image:loc>https://ewastekochi.com/img/services_hero_premium.png</image:loc>
+      <image:title>Hard Drive Shredding Kochi – Certified Secure Data Destruction</image:title>
+      <image:caption>Industrial hard drive and SSD shredding in Kochi. Certificate of Destruction issued per device. On-site option available.</image:caption>
+      <image:geo_location>Kochi, Kerala, India</image:geo_location>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ewastekochi.com/data-destruction/</loc>
+    <image:image>
+      <image:loc>https://ewastekochi.com/img/services_hero_premium.png</image:loc>
+      <image:title>Certified Data Destruction Services Kochi</image:title>
+      <image:caption>DoD 5220.22-M and NIST 800-88 compliant data wiping in Kochi. Certificate of Destruction for every device.</image:caption>
+      <image:geo_location>Kochi, Kerala, India</image:geo_location>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ewastekochi.com/pickup/</loc>
+    <image:image>
+      <image:loc>https://ewastekochi.com/img/recycling_hero_premium.png</image:loc>
+      <image:title>Free E-Waste Pickup Kochi – Doorstep Collection</image:title>
+      <image:caption>Free e-waste pickup service across all areas of Kochi. Schedule a pickup online or call 75 0055 5454.</image:caption>
+      <image:geo_location>Kochi, Kerala, India</image:geo_location>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ewastekochi.com/scrap-price/</loc>
+    <image:image>
+      <image:loc>https://ewastekochi.com/img/recycling_hero_premium.png</image:loc>
+      <image:title>Electronic Scrap Price List Kochi 2025</image:title>
+      <image:caption>Best electronic scrap prices in Kochi 2025 – laptops, servers, HDDs, SSDs, RAM, mobiles, UPS, batteries. Instant payment.</image:caption>
+      <image:geo_location>Kochi, Kerala, India</image:geo_location>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ewastekochi.com/about/</loc>
+    <image:image>
+      <image:loc>https://ewastekochi.com/img/services_hero_premium.png</image:loc>
+      <image:title>About Ewaste Kochi – CPCB Authorized E-Waste Recycler</image:title>
+      <image:caption>Ewaste Kochi – Founded 2015, ISO 14001 certified, government authorized e-waste recycler based in Palarivattom, Kochi.</image:caption>
+      <image:geo_location>Palarivattom, Kochi, Kerala, India</image:geo_location>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ewastekochi.com/locations/</loc>
+    <image:image>
+      <image:loc>https://ewastekochi.com/img/services_hero_premium.png</image:loc>
+      <image:title>E-Waste Pickup Locations Kochi – All Areas Covered</image:title>
+      <image:caption>Ewaste Kochi serves all areas of Kochi and Ernakulam district – Kakkanad, Edappally, Kalamassery, Aluva, Fort Kochi and more.</image:caption>
+      <image:geo_location>Kochi, Kerala, India</image:geo_location>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ewastekochi.com/faq/</loc>
+    <image:image>
+      <image:loc>https://ewastekochi.com/img/ewaste-guide-hero.png</image:loc>
+      <image:title>E-Waste FAQ – Ewaste Kochi Questions &amp; Answers</image:title>
+      <image:caption>Frequently asked questions about e-waste recycling, data destruction, IT asset disposal, pricing and pickup in Kochi.</image:caption>
+      <image:geo_location>Kochi, Kerala, India</image:geo_location>
+    </image:image>
+  </url>
+</urlset>
