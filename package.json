@@ -1,0 +1,19 @@
+{
+  "name": "ewaste-kochi-main",
+  "version": "1.0.0",
+  "description": "E-Waste Recycling, ITAD & Data Destruction in Kochi",
+  "private": true,
+  "scripts": {
+    "dev": "npx http-server -p 3000",
+    "build": "echo 'Static HTML site - no build needed'",
+    "lint": "echo 'No linting configured for static HTML'"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.4.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CodesbyFebin/ewaste-kochi-main"
+  }
+}

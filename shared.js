@@ -322,3 +322,25 @@ document.querySelectorAll('.stats-bar, .stats-grid').forEach(el => io.observe(el
     loadSEO();
   }
 })();
+
+/* ── Vercel Web Analytics ── */
+(function () {
+  function loadAnalytics() {
+    // Initialize the queue for analytics
+    window.va = window.va || function () {
+      (window.vaq = window.vaq || []).push(arguments);
+    };
+    
+    // Load the Vercel Analytics script
+    var s = document.createElement('script');
+    s.defer = true;
+    s.src = '/_vercel/insights/script.js';
+    document.head.appendChild(s);
+  }
+  
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadAnalytics);
+  } else {
+    loadAnalytics();
+  }
+})();
