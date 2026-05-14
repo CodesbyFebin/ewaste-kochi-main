@@ -1,1 +1,21 @@
+# Build output
 .vercel
+dist/
+.astro/
+
+# Dependencies — never commit these
+node_modules/
+astro-site/node_modules/
+
+# Environment & secrets
+.env
+.env.local
+.env*.local
+ewk-site/.env.local
+
+# Claude Code local config (permissions, not code)
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
