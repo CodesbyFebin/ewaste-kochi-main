@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -n '${' /media/codes/46b13cd3-c72e-49b5-9d03-80494ae78da0/ewaste-kochi-main-main/ewk-site/index.html)"
+    ]
+  }
+}

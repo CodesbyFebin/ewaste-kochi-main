@@ -1,0 +1,118 @@
+---
+import { getBlogsByPillar } from "../../../lib/data";
+import ChatBot from "../../../components/ChatBot.astro";
+
+export const prerender = false;
+export const runtime = 'node';
+
+Astro.response.headers.set("Cache-Control", "public, s-maxage=86400, stale-while-revalidate=3600");
+
+const { pillar } = Astro.params;
+
+const PILLAR_META: Record<string, { label: string; description: string }> = {
+  'itad':             { label: 'IT Asset Disposal (ITAD)', description: 'Certified IT asset disposal and decommissioning for businesses in Kerala.' },
+  'recycling':        { label: 'E-Waste Recycling',       description: 'CPCB-authorized zero-landfill e-waste recycling services across Kerala.' },
+  'data-destruction': { label: 'Data Destruction',        description: 'DoD/NIST certified data destruction with Certificate of Destruction.' },
+  'collection':       { label: 'E-Waste Collection',      description: 'Free doorstep e-waste collection for homes and businesses in Kerala.' },
+};
+
+const meta = PILLAR_META[pillar as string];
+if (!meta) return new Response(null, { status: 404 });
+
+const posts = getBlogsByPillar(pillar as string, 60);
+if (!posts.length) return new Response(null, { status: 404 });
+
+const canonicalURL = `https://www.ewastekochi.com/blog/${pillar}/`;
+const pillarLabel = meta.label;
+
+// Group by category for hub navigation
+const byCategory: Record<string, typeof posts> = {};
+for (const p of posts) {
+  if (!byCategory[p.category]) byCategory[p.category] = [];
+  byCategory[p.category].push(p);
+}
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{pillarLabel} Services in Kerala – Complete Guide | Ewaste Kochi</title>
+  <meta name="description" content={meta.description}>
+  <link rel="canonical" href={canonicalURL}>
+  <link rel="sitemap" href="/sitemap_index.xml">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": `${pillarLabel} – Ewaste Kochi`,
+    "description": meta.description,
+    "url": canonicalURL,
+    "publisher": { "@id": "https://www.ewastekochi.com/#business" }
+  })} />
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 1000px; margin: 0 auto; padding: 1rem 1.5rem; color: #1f2937; background: #f9fafb; }
+    header { background: #0d7a38; color: #fff; padding: 1rem 1.5rem; margin: -1rem -1.5rem 2rem; }
+    header a { color: #fff; text-decoration: none; font-weight: 700; }
+    h1 { font-size: 2rem; font-weight: 800; color: #111827; }
+    .intro { font-size: 1.1rem; color: #374151; margin-bottom: 2rem; }
+    h2 { font-size: 1.2rem; font-weight: 700; color: #0d7a38; margin-top: 2.5rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: .8rem; margin-top: 1rem; }
+    .card { background: #fff; border: 1px solid #e5e7eb; border-radius: 6px; padding: .9rem; font-size: .9rem; }
+    .card a { color: #0d7a38; text-decoration: none; font-weight: 600; display: block; margin-bottom: .3rem; }
+    .card p { font-size: .8rem; color: #6b7280; margin: 0; }
+    .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
+    .gallery img { width: 100%; height: 220px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0; }
+    .cert-card { background: #fff; border: 1px solid #e5e7eb; padding: 1.2rem; border-radius: 8px; text-align: center; }
+    .cert-card a { font-size: 0.9rem; color: #0d7a38; text-decoration: none; font-weight: 700; display: block; margin-top: 0.5rem; }
+    .cta-hub { background: #0d7a38; color: #fff; padding: 2rem; border-radius: 10px; text-align: center; margin: 3rem 0; }
+    .cta-hub a { display: inline-block; background: #fff; color: #0d7a38; padding: 0.8rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 700; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <header><a href="https://www.ewastekochi.com">← Ewaste Kochi</a></header>
+
+  <h1>{pillarLabel} Services in Kerala</h1>
+  <p class="intro">{meta.description} Browse our location-specific guides below.</p>
+
+  {Object.entries(byCategory).map(([cat, items]) => (
+    <section>
+      <h2>
+        <a href={`/blog/${pillar}/${cat}/`}>
+          {cat.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())} →
+        </a>
+      </h2>
+      <div class="grid">
+        {items.slice(0, 12).map((post) => (
+          <div class="card">
+            <a href={`/blog/${post.pillar}/${post.category}/${post.slug}/`}>{post.title}</a>
+            <p>{post.excerpt.slice(0, 80)}…</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  ))}
+  <div class="cta-hub">
+    <h3>Professional ITAD & E-Waste Services</h3>
+    <p>We serve 500+ enterprises across Kerala with certified data destruction and green recycling.</p>
+    <a href="https://wa.me/917500555454?text=Hi%20I%20want%20to%20schedule%20a%20free%20e-waste%20pickup">Book Free Pickup Now</a>
+  </div>
+
+  <section style="margin: 4rem 0;">
+    <h2>Authorized Disposal Facility</h2>
+    <div class="gallery">
+      <img src="/img/facility_interior.png" alt="E-Waste Kochi Facility" loading="lazy">
+      <img src="/img/data_destruction.png" alt="Secure Destruction" loading="lazy">
+    </div>
+
+    <h2>Download Verification Documents</h2>
+    <div class="cert-grid">
+      <div class="cert-card"><strong>KSPCB Auth</strong><a href="/docs/kspcb-authorization.pdf">Download PDF ↓</a></div>
+      <div class="cert-card"><strong>ISO 14001:2015</strong><a href="/docs/iso-14001.pdf">Download PDF ↓</a></div>
+      <div class="cert-card"><strong>Sample CoD</strong><a href="/docs/sample-cod.pdf">Download PDF ↓</a></div>
+    </div>
+  </section>
+  <ChatBot />
+</body>
+</html>

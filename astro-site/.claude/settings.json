@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node generate-pillars.js)",
+      "Bash(vercel --version)",
+      "Bash(npm run *)",
+      "Bash(python3 -c \"import sqlite3; c=sqlite3.connect\\('src/data/content.db'\\); r=c.execute\\(\\\\\"SELECT slug,pillar,category FROM blogs WHERE pillar='data-destruction' AND category='hospitals' LIMIT 3\\\\\"\\).fetchall\\(\\); print\\(r\\)\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code} %{url_effective}\\\\n\" -L \"https://astro-site-dusky.vercel.app/blog/data-destruction/hospitals/affordable-data-destruction-hospitals-aluva-208/\")",
+      "Read(//tmp/**)",
+      "Bash(python3 -c ' *)",
+      "Bash(vercel domains *)"
+    ]
+  }
+}
