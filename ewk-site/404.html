@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+
+<!-- Favicon & PWA -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1a7a3a">
+
+<meta http-equiv="refresh" content="0; url=/">
+<title>404 – Page Not Found | Ewaste Kochi</title>
+
+<link rel="stylesheet" href="/style.css">
+
+<style>
+  .err-wrap {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 1.25rem 4rem;
+  }
+  .err-code {
+    font-size: clamp(5rem, 20vw, 9rem);
+    font-weight: 900;
+    line-height: 1;
+    color: #1a6b3a;
+    letter-spacing: -0.04em;
+    margin: 0 0 0.25rem;
+  }
+  .err-title {
+    font-size: clamp(1.35rem, 4vw, 2rem);
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 1rem;
+  }
+  .err-msg {
+    font-size: 1rem;
+    color: #555;
+    max-width: 480px;
+    line-height: 1.7;
+    margin: 0 auto 1.5rem;
+  }
+  .err-countdown {
+    display: inline-block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1a6b3a;
+    background: #e8f5ee;
+    border: 1.5px solid #b2d9c0;
+    border-radius: 2rem;
+    padding: 0.45rem 1.1rem;
+    margin-bottom: 1.8rem;
+  }
+  .err-btn-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: #1a6b3a;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.75rem 1.75rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.18s, transform 0.15s;
+    margin-bottom: 2.5rem;
+  }
+  .err-btn-home:hover {
+    background: #145530;
+    transform: translateY(-1px);
+  }
+  .err-nav-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #888;
+    margin-bottom: 0.85rem;
+  }
+  .err-nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .err-nav-links a {
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #1a6b3a;
+    background: #fff;
+    border: 1.5px solid #1a6b3a;
+    border-radius: 0.375rem;
+    padding: 0.4rem 0.9rem;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+  }
+  .err-nav-links a:hover {
+    background: #1a6b3a;
+    color: #fff;
+  }
+</style>
+</head>
+<body>
+<div id="hdr"></div>
+
+<section class="err-wrap">
+  <p class="err-code">404</p>
+  <h1 class="err-title">Page Not Found</h1>
+  <p class="err-msg">The page you're looking for may have moved or no longer exists. You're being redirected to our homepage.</p>
+
+  <div class="err-countdown" id="countdown-msg">Redirecting now...</div>
+
+  <a href="/" class="err-btn-home">Go to Homepage &rarr;</a>
+
+  <p class="err-nav-label">Or explore these pages</p>
+  <ul class="err-nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/services/">Services</a></li>
+    <li><a href="/locations/">Locations</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/scrap-price/">Scrap Price</a></li>
+    <li><a href="/contact/">Contact</a></li>
+  </ul>
+</section>
+
+<div id="ftr"></div>
+<script src="/shared.js"></script>
+<script>
+document.getElementById('hdr').innerHTML = renderHeader('');
+document.getElementById('ftr').innerHTML = renderFooter();
+
+// Instant redirect
+window.location.href = '/';
+</script>
+
+</body>
+</html>

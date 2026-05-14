@@ -1,0 +1,44 @@
+{
+  "name": "Ewaste Kochi – E-Waste Recycling & ITAD Kochi",
+  "short_name": "Ewaste Kochi",
+  "description": "Kerala's trusted CPCB-authorized e-waste recycling, ITAD & data destruction company. Free pickup across Kochi. Best scrap prices.",
+  "start_url": "/?utm_source=pwa&utm_medium=homescreen",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#0d7a38",
+  "lang": "en-IN",
+  "dir": "ltr",
+  "categories": ["business", "environment", "shopping"],
+  "prefer_related_applications": false,
+  "icons": [
+    { "src": "/favicon-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/favicon-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/favicon-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/favicon-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    {
+      "name": "Book Free Pickup",
+      "short_name": "Book Pickup",
+      "description": "Schedule a free e-waste pickup in Kochi",
+      "url": "/contact/?utm_source=pwa_shortcut",
+      "icons": [{ "src": "/favicon-96x96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Scrap Prices",
+      "short_name": "Prices",
+      "description": "Check current e-waste scrap prices in Kochi",
+      "url": "/scrap-price/?utm_source=pwa_shortcut",
+      "icons": [{ "src": "/favicon-96x96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "WhatsApp Us",
+      "short_name": "WhatsApp",
+      "description": "Chat with Ewaste Kochi on WhatsApp",
+      "url": "https://wa.me/917500555454?text=Hi%20I%20want%20to%20schedule%20a%20free%20e-waste%20pickup",
+      "icons": [{ "src": "/favicon-96x96.png", "sizes": "96x96" }]
+    }
+  ]
+}
