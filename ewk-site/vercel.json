@@ -1098,103 +1098,103 @@
   "rewrites": [
     {
       "source": "/blog/itad/",
-      "destination": "https://astro-site-dusky.vercel.app/blog/itad/"
+      "destination": "https://blogs.ewastekochi.com/blog/itad/"
     },
     {
       "source": "/blog/recycling/",
-      "destination": "https://astro-site-dusky.vercel.app/blog/recycling/"
+      "destination": "https://blogs.ewastekochi.com/blog/recycling/"
     },
     {
       "source": "/blog/data-destruction/",
-      "destination": "https://astro-site-dusky.vercel.app/blog/data-destruction/"
+      "destination": "https://blogs.ewastekochi.com/blog/data-destruction/"
     },
     {
       "source": "/blog/collection/",
-      "destination": "https://astro-site-dusky.vercel.app/blog/collection/"
+      "destination": "https://blogs.ewastekochi.com/blog/collection/"
     },
     {
       "source": "/blog/itad/:cat/",
-      "destination": "https://astro-site-dusky.vercel.app/blog/itad/:cat/"
+      "destination": "https://blogs.ewastekochi.com/blog/itad/:cat/"
     },
     {
       "source": "/blog/recycling/:cat/",
-      "destination": "https://astro-site-dusky.vercel.app/blog/recycling/:cat/"
+      "destination": "https://blogs.ewastekochi.com/blog/recycling/:cat/"
     },
     {
       "source": "/blog/data-destruction/:cat/",
-      "destination": "https://astro-site-dusky.vercel.app/blog/data-destruction/:cat/"
+      "destination": "https://blogs.ewastekochi.com/blog/data-destruction/:cat/"
     },
     {
       "source": "/blog/collection/:cat/",
-      "destination": "https://astro-site-dusky.vercel.app/blog/collection/:cat/"
+      "destination": "https://blogs.ewastekochi.com/blog/collection/:cat/"
     },
     {
       "source": "/blog/itad/:cat/:slug/",
-      "destination": "https://astro-site-dusky.vercel.app/blog/itad/:cat/:slug/"
+      "destination": "https://blogs.ewastekochi.com/blog/itad/:cat/:slug/"
     },
     {
       "source": "/blog/recycling/:cat/:slug/",
-      "destination": "https://astro-site-dusky.vercel.app/blog/recycling/:cat/:slug/"
+      "destination": "https://blogs.ewastekochi.com/blog/recycling/:cat/:slug/"
     },
     {
       "source": "/blog/data-destruction/:cat/:slug/",
-      "destination": "https://astro-site-dusky.vercel.app/blog/data-destruction/:cat/:slug/"
+      "destination": "https://blogs.ewastekochi.com/blog/data-destruction/:cat/:slug/"
     },
     {
       "source": "/blog/collection/:cat/:slug/",
-      "destination": "https://astro-site-dusky.vercel.app/blog/collection/:cat/:slug/"
+      "destination": "https://blogs.ewastekochi.com/blog/collection/:cat/:slug/"
     },
     {
       "source": "/sitemap-index.xml",
-      "destination": "https://astro-site-dusky.vercel.app/sitemap-index.xml"
+      "destination": "https://blogs.ewastekochi.com/sitemap-index.xml"
     },
     {
       "source": "/sitemap_index.xml",
-      "destination": "https://astro-site-dusky.vercel.app/sitemap_index.xml"
+      "destination": "https://blogs.ewastekochi.com/sitemap_index.xml"
     },
     {
       "source": "/sitemap-1.xml",
-      "destination": "https://astro-site-dusky.vercel.app/sitemap-1.xml"
+      "destination": "https://blogs.ewastekochi.com/sitemap-1.xml"
     },
     {
       "source": "/sitemap-2.xml",
-      "destination": "https://astro-site-dusky.vercel.app/sitemap-2.xml"
+      "destination": "https://blogs.ewastekochi.com/sitemap-2.xml"
     },
     {
       "source": "/sitemap-3.xml",
-      "destination": "https://astro-site-dusky.vercel.app/sitemap-3.xml"
+      "destination": "https://blogs.ewastekochi.com/sitemap-3.xml"
     },
     {
       "source": "/sitemap-4.xml",
-      "destination": "https://astro-site-dusky.vercel.app/sitemap-4.xml"
+      "destination": "https://blogs.ewastekochi.com/sitemap-4.xml"
     },
     {
       "source": "/sitemap-5.xml",
-      "destination": "https://astro-site-dusky.vercel.app/sitemap-5.xml"
+      "destination": "https://blogs.ewastekochi.com/sitemap-5.xml"
     },
     {
       "source": "/sitemap-6.xml",
-      "destination": "https://astro-site-dusky.vercel.app/sitemap-6.xml"
+      "destination": "https://blogs.ewastekochi.com/sitemap-6.xml"
     },
     {
       "source": "/sitemap-7.xml",
-      "destination": "https://astro-site-dusky.vercel.app/sitemap-7.xml"
+      "destination": "https://blogs.ewastekochi.com/sitemap-7.xml"
     },
     {
       "source": "/sitemap-8.xml",
-      "destination": "https://astro-site-dusky.vercel.app/sitemap-8.xml"
+      "destination": "https://blogs.ewastekochi.com/sitemap-8.xml"
     },
     {
       "source": "/sitemap-9.xml",
-      "destination": "https://astro-site-dusky.vercel.app/sitemap-9.xml"
+      "destination": "https://blogs.ewastekochi.com/sitemap-9.xml"
     },
     {
       "source": "/sitemap-10.xml",
-      "destination": "https://astro-site-dusky.vercel.app/sitemap-10.xml"
+      "destination": "https://blogs.ewastekochi.com/sitemap-10.xml"
     },
     {
       "source": "/sitemap-11.xml",
-      "destination": "https://astro-site-dusky.vercel.app/sitemap-11.xml"
+      "destination": "https://blogs.ewastekochi.com/sitemap-11.xml"
     }
   ]
 }
