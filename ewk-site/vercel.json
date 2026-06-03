@@ -1095,5 +1095,38 @@
       ]
     }
   ],
-  "rewrites": []
+  "rewrites": [
+    {
+      "source": "/blog/",
+      "destination": "https://blogs.ewastekochi.com/blog/"
+    },
+    {
+      "source": "/blog/:pillar/",
+      "destination": "https://blogs.ewastekochi.com/blog/:pillar/"
+    },
+    {
+      "source": "/blog/:pillar/:category/",
+      "destination": "https://blogs.ewastekochi.com/blog/:pillar/:category/"
+    },
+    {
+      "source": "/blog/:pillar/:category/:slug/",
+      "destination": "https://blogs.ewastekochi.com/blog/:pillar/:category/:slug/"
+    },
+    {
+      "source": "/blog/:pillar/:category/:slug.html",
+      "destination": "https://blogs.ewastekochi.com/blog/:pillar/:category/:slug.html"
+    },
+    {
+      "source": "/sitemap-index.xml",
+      "destination": "https://blogs.ewastekochi.com/sitemap-index.xml"
+    },
+    {
+      "source": "/sitemap_index.xml",
+      "destination": "https://blogs.ewastekochi.com/sitemap_index.xml"
+    },
+    {
+      "source": "/sitemap-:number.xml",
+      "destination": "https://blogs.ewastekochi.com/sitemap-:number.xml"
+    }
+  ]
 }
