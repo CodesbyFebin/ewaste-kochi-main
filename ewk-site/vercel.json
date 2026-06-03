@@ -277,5 +277,38 @@
       ]
     }
   ],
-  "rewrites": []
+  "rewrites": [
+    {
+      "source": "/blog/collection/:category/:slug/",
+      "destination": "https://vercel-blog-collection.vercel.app/:category/:slug/"
+    },
+    {
+      "source": "/blog/data-destruction/:category/:slug/",
+      "destination": "https://vercel-blog-data-destruction.vercel.app/:category/:slug/"
+    },
+    {
+      "source": "/blog/itad/:category/:slug/",
+      "destination": "https://vercel-blog-itad.vercel.app/:category/:slug/"
+    },
+    {
+      "source": "/blog/recycling/:category/:slug/",
+      "destination": "https://vercel-blog-recycling.vercel.app/:category/:slug/"
+    },
+    {
+      "source": "/blog/collection/",
+      "destination": "https://vercel-blog-collection.vercel.app/"
+    },
+    {
+      "source": "/blog/data-destruction/",
+      "destination": "https://vercel-blog-data-destruction.vercel.app/"
+    },
+    {
+      "source": "/blog/itad/",
+      "destination": "https://vercel-blog-itad.vercel.app/"
+    },
+    {
+      "source": "/blog/recycling/",
+      "destination": "https://vercel-blog-recycling.vercel.app/"
+    }
+  ]
 }
