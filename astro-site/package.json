@@ -8,7 +8,6 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "prebuild": "node -e \"const fs=require('fs'),f='node_modules/@astrojs/vercel/dist/serverless/adapter.js';fs.writeFileSync(f,fs.readFileSync(f,'utf8').replace(/'nodejs18\\.x'/g,\\\"'nodejs20.x'\\\"))\"",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
