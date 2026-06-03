@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- Favicon & PWA Icons (SEO Boost) -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1a7a3a">
+<meta name="msapplication-TileColor" content="#1a7a3a">
+<meta name="msapplication-TileImage" content="/favicon-192x192.png">
+<meta name="application-name" content="Ewaste Kochi">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Ewaste Kochi">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<style>
+/* HERO */
+.itad-hero{background:#fff;padding:3rem 0;border-bottom:1px solid var(--gray-200)}
+.itad-hero-inner{display:grid;grid-template-columns:1fr 520px;gap:3rem;align-items:center}
+.itad-hero-img-wrap{position:relative}
+.itad-hero-img-wrap img{width:100%;height:340px;object-fit:cover;border-radius:var(--radius-lg);box-shadow:var(--shadow-md);display:block}
+.itad-stats-card{position:absolute;top:1.2rem;right:1.2rem;background:#fff;border-radius:var(--radius-lg);box-shadow:0 8px 32px rgba(0,0,0,.18);padding:1.2rem;min-width:160px}
+.itad-stat-row{display:flex;align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid var(--gray-100)}
+.itad-stat-row:last-child{border-bottom:none}
+.itad-stat-icon{width:32px;height:32px;background:var(--green-lt);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem}
+.itad-stat-num{font-family:var(--font-h);font-size:1rem;font-weight:800;color:var(--green);line-height:1}
+.itad-stat-lbl{font-size:10.5px;color:var(--text3)}
+/* SERVICE CARDS */
+.itad-svc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
+.itad-svc-card{background:#fff;border:1.5px solid var(--gray-200);border-radius:var(--radius-lg);overflow:hidden;transition:all .2s;text-align:center}
+.itad-svc-card:hover{border-color:var(--green);box-shadow:0 6px 20px rgba(16,100,42,.12);transform:translateY(-3px)}
+.itad-svc-img{width:100%;height:120px;object-fit:cover;display:block}
+.itad-svc-body{padding:.9rem}
+.itad-svc-icon{font-size:1.4rem;margin-bottom:.5rem}
+.itad-svc-title{font-family:var(--font-h);font-size:.85rem;font-weight:700;color:var(--gray-900);margin-bottom:.4rem}
+.itad-svc-desc{font-size:11.5px;color:var(--text3);line-height:1.5}
+/* PROCESS */
+.itad-process-row{display:flex;align-items:flex-start;justify-content:center;gap:0;position:relative}
+.itad-step{display:flex;flex-direction:column;align-items:center;text-align:center;flex:1;position:relative;padding:0 .5rem}
+.itad-step:not(:last-child)::after{content:'';position:absolute;top:22px;left:calc(50% + 22px);right:calc(-50% + 22px);border-top:2px dashed var(--green-mid)}
+.itad-step-circle{width:44px;height:44px;border-radius:50%;background:var(--green-lt);border:2px solid var(--green-mid);display:flex;align-items:center;justify-content:center;font-size:1rem;margin-bottom:.7rem;position:relative;z-index:1;flex-shrink:0}
+.itad-step-num{position:absolute;top:-6px;left:-6px;width:18px;height:18px;background:var(--green);color:#fff;border-radius:50%;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.itad-step-title{font-size:11.5px;font-weight:700;color:var(--gray-900);margin-bottom:3px}
+.itad-step-desc{font-size:10.5px;color:var(--text3);line-height:1.5}
+/* BENEFITS 3-col */
+.itad-benefits-grid{display:grid;grid-template-columns:300px 1fr 240px;gap:2rem;align-items:start}
+.itad-benefits-img{position:relative;border-radius:var(--radius-lg);overflow:hidden}
+.itad-benefits-img img{width:100%;height:340px;object-fit:cover;display:block}
+.itad-benefits-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.75));padding:1.5rem 1rem 1rem;color:#fff}
+.itad-asset-list li{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text2);padding:6px 0;border-bottom:1px solid var(--gray-100)}
+.itad-asset-list li:last-child{border-bottom:none}
+/* CERTS + CTA side-by-side */
+.cert-cta-grid{display:grid;grid-template-columns:1fr 380px;gap:2rem;align-items:center}
+.cert-items-row{display:flex;flex-direction:column;gap:1.2rem}
+.cert-item-row{display:flex;align-items:center;gap:14px}
+.cert-item-badge{width:52px;height:52px;border-radius:50%;background:#fff;border:2px solid var(--gray-200);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;box-shadow:var(--shadow-sm)}
+.itad-cta-box{background:var(--green);border-radius:var(--radius-lg);padding:2rem;color:#fff;text-align:center;position:relative;overflow:hidden}
+.itad-cta-van{width:100%;height:120px;object-fit:cover;border-radius:var(--radius);margin-top:1rem;opacity:.9}
+/* FAQ + FORM */
+.faq-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+@media(max-width:1000px){
+  .itad-hero-inner,.itad-benefits-grid,.cert-cta-grid,.faq-form-grid{grid-template-columns:1fr}
+  .itad-svc-grid{grid-template-columns:repeat(3,1fr)}
+  .itad-stats-card{position:static;margin-top:1rem}
+}
+@media(max-width:600px){
+  .itad-svc-grid{grid-template-columns:repeat(2,1fr)}
+  .itad-process-row{flex-wrap:wrap;gap:1rem}
+  .itad-step::after{display:none}
+}
+</style>
+
+<title>IT Asset Disposal (ITAD) Services in Kochi | Ewaste Kochi</title>
+<meta name="description" content="Secure, compliant IT Asset Disposal (ITAD) in Kochi. Value recovery, certified data destruction, and EPR compliance for businesses.">
+<link rel="canonical" href="https://www.ewastekochi.com/itad/">
+<meta property="og:title" content="IT Asset Disposal (ITAD) Services in Kochi | Ewaste Kochi">
+<meta property="og:description" content="Secure, compliant IT Asset Disposal (ITAD) in Kochi. Value recovery, certified data destruction, and EPR compliance for businesses.">
+<meta property="og:url" content="https://www.ewastekochi.com/itad/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.ewastekochi.com/img/itad_hero_premium.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="IT Asset Disposal (ITAD) Services in Kochi | Ewaste Kochi">
+<meta name="twitter:description" content="Secure, compliant IT Asset Disposal (ITAD) in Kochi. Value recovery, certified data destruction, and EPR compliance for businesses.">
+<meta name="twitter:image" content="https://www.ewastekochi.com/img/itad_hero_premium.png">
+<meta name="geo.region" content="IN-KL">
+<meta name="geo.placename" content="Kochi, Kerala, India">
+<meta name="geo.position" content="9.9816;76.3016">
+<meta name="ICBM" content="9.9816, 76.3016">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","@id":"https://www.ewastekochi.com/itad/#service","serviceType":"Enterprise IT Asset Disposal","name":"IT Asset Disposal (ITAD) Kochi","description":"Secure, compliant, and sustainable IT Asset Disposition (ITAD) following NIST 800-88, IEEE 2883, and DPDP Act 2023 standards. Includes corporate IT asset inventory audits, certified data destruction, and value recovery.","provider":{"@id":"https://www.ewastekochi.com/#business"},"areaServed":{"@type":"City","name":"Kochi"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"ITAD Service Tiers","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Basic ITAD (SME/Retail)"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Enterprise ITAD (NIST/DPDP Compliant)"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"On-Site Data Destruction"}}]},"review":{"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"4.9","bestRating":"5"},"author":{"@type":"Organization","name":"Kochi Corporate Clients"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"https://www.ewastekochi.com/itad/#webpage","url":"https://www.ewastekochi.com/itad/","name":"IT Asset Disposal (ITAD) Kochi – Secure Enterprise ITAD","isPartOf":{"@id":"https://www.ewastekochi.com/#website"},"about":{"@id":"https://www.ewastekochi.com/itad/#service"},"speakable":{"@type":"SpeakableSpecification","cssSelector":[".page-title",".page-sub"]},"dateModified":"2026-05-09"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is IT Asset Disposal (ITAD)?","acceptedAnswer":{"@type":"Answer","text":"IT Asset Disposal (ITAD) is the secure, compliant, and environmentally responsible process of decommissioning, data-wiping, valuing, and disposing of retired IT equipment. ITAD ensures data security, maximizes value recovery, and provides full compliance documentation for corporate governance."}},{"@type":"Question","name":"Why do businesses need a professional ITAD service in Kochi?","acceptedAnswer":{"@type":"Answer","text":"Businesses need professional ITAD to protect sensitive data on retired devices, comply with data protection laws (DPDP Act 2023, IT Act 2000), recover maximum value from old assets, and meet CSR sustainability goals. DIY disposal risks data breaches, legal penalties, and environmental violations."}},{"@type":"Question","name":"What does the Ewaste Kochi ITAD service include?","acceptedAnswer":{"@type":"Answer","text":"Our ITAD service includes on-site IT asset audit, certified data destruction (NIST 800-88 / IEEE 2883 standards), value recovery and payment for working equipment, logistics management, EPR compliance documentation, Certificate of Data Destruction, and zero-landfill disposal."}},{"@type":"Question","name":"How long does the complete ITAD process take?","acceptedAnswer":{"@type":"Answer","text":"For a standard corporate ITAD project of 50 to 200 devices, the complete process takes 3-7 business days: 1 day for on-site audit and collection, 2-3 days for data destruction and processing, 1-2 days for documentation and certificates. Larger volumes are scheduled accordingly."}}]}</script>
+</head>
+<body>
+<div id="hdr"></div>
+<!-- HERO -->
+<section class="itad-hero">
+  <div class="container">
+    <div class="itad-hero-inner">
+      <div>
+        <nav class="breadcrumb" style="margin-bottom:.7rem"><a href="/">Home</a> › <span>ITAD Solutions</span></nav>
+        <h1 style="font-family:var(--font-h);font-size:2.5rem;font-weight:800;color:var(--gray-900);line-height:1.15;margin-bottom:.7rem">ITAD Services in Kochi<br><span style="color:var(--green)">Secure. Compliant.<br>Value-Driven.</span></h1>
+        <p style="font-size:14.5px;color:var(--text2);line-height:1.7;margin-bottom:1.2rem;max-width:440px">Professional IT Asset Disposition (ITAD) solutions for businesses, organizations and institutions.</p>
+        <ul style="list-style:none;padding:0;margin-bottom:1.4rem">
+          <li style="display:flex;align-items:center;gap:8px;padding:5px 0;font-size:14px;color:var(--text2)"><span style="color:var(--green);font-size:1rem">✓</span>Secure IT asset disposal</li>
+          <li style="display:flex;align-items:center;gap:8px;padding:5px 0;font-size:14px;color:var(--text2)"><span style="color:var(--green);font-size:1rem">✓</span>Data security with certificates</li>
+          <li style="display:flex;align-items:center;gap:8px;padding:5px 0;font-size:14px;color:var(--text2)"><span style="color:var(--green);font-size:1rem">✓</span>Environmental responsibility</li>
+          <li style="display:flex;align-items:center;gap:8px;padding:5px 0;font-size:14px;color:var(--text2)"><span style="color:var(--green);font-size:1rem">✓</span>Maximum value recovery</li>
+        </ul>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:1rem">
+          <a href="/contact/" class="btn btn-primary"><span>📅</span> Book Free ITAD Pickup</a>
+          <a href="tel:+917500555454" class="btn btn-outline"><span>📞</span> Call Now: 75 0055 5454</a>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text2)"><span style="color:#f5a623;font-size:15px">★★★★★</span><span>4.9/5 from 500+ Business Clients in Kochi</span></div>
+      </div>
+      <div class="itad-hero-img-wrap">
+        <img loading="lazy" src="/img/itad_hero_premium.png" alt="ITAD services Kochi – IT asset disposition">
+        <div class="itad-stats-card">
+          <div style="font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.6rem">Our Track Record</div>
+          <div class="itad-stat-row"><div class="itad-stat-icon">🛡️</div><div><div class="itad-stat-num">10+</div><div class="itad-stat-lbl">Years of ITAD Experience</div></div></div>
+          <div class="itad-stat-row"><div class="itad-stat-icon">💻</div><div><div class="itad-stat-num">5000+</div><div class="itad-stat-lbl">IT Assets Disposed</div></div></div>
+          <div class="itad-stat-row"><div class="itad-stat-icon">🔒</div><div><div class="itad-stat-num">100%</div><div class="itad-stat-lbl">Data Security</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- WHAT IS ITAD -->
+<section style="background:var(--gray-50);padding:3rem 0">
+  <div class="container">
+    <div class="sec-header center">
+      <h2 class="sec-title">What is <em>IT Asset Disposition (ITAD)?</em></h2>
+      <p class="sec-sub" style="max-width:720px">IT Asset Disposition (ITAD) is the secure, environmentally responsible process of retiring and disposing of IT equipment such as laptops, desktops, servers, storage devices, and networking gear. We help you protect your data, ensure compliance, and recover maximum value from your end-of-life IT assets.</p>
+    </div>
+  </div>
+</section>
+<!-- OUR ITAD SERVICES -->
+<section style="padding:3.5rem 0;background:#fff">
+  <div class="container">
+    <div class="sec-header center" style="margin-bottom:2rem">
+      <h2 class="sec-title">Our <em>ITAD Services</em></h2>
+    </div>
+    <div class="itad-svc-grid" id="itad-svc-grid"></div>
+  </div>
+</section>
+<!-- PROCESS -->
+<section style="background:var(--gray-50);padding:3.5rem 0">
+  <div class="container">
+    <div class="sec-header center" style="margin-bottom:2.5rem">
+      <h2 class="sec-title">Our Secure <em>ITAD Process</em></h2>
+    </div>
+    <div class="itad-process-row" id="itad-process"></div>
+  </div>
+</section>
+<!-- BENEFITS -->
+<section style="padding:3.5rem 0;background:#fff">
+  <div class="container">
+    <div class="itad-benefits-grid">
+      <div class="itad-benefits-img">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80" alt="Ewaste Kochi ITAD benefits">
+        <div class="itad-benefits-overlay">
+          <div style="font-size:1.8rem;font-weight:800;line-height:1">✓ SECURE</div>
+          <div style="font-size:.9rem;font-weight:700;opacity:.85">COMPLIANT · SUSTAINABLE</div>
+          <div style="font-size:11px;opacity:.7;margin-top:.3rem">Ewaste Kochi</div>
+        </div>
+      </div>
+      <div>
+        <h2 class="sec-title">Benefits of Choosing <em>Ewaste Kochi for ITAD</em></h2>
+        <div style="margin-top:1rem;margin-bottom:1.2rem" id="itad-benefits-list"></div>
+      </div>
+      <div>
+        <div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:1.4rem">
+          <h3 style="font-family:var(--font-h);font-size:.9rem;font-weight:700;color:var(--gray-900);margin-bottom:1rem;border-bottom:2px solid var(--green);padding-bottom:.6rem">We Handle All Types of IT Assets</h3>
+          <ul class="itad-asset-list" id="itad-asset-list"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- SERVICE TIERS -->
+<section style="background:var(--gray-50);padding:3.5rem 0;border-top:1px solid var(--gray-200)">
+  <div class="container">
+    <div class="sec-header center" style="margin-bottom:2.5rem">
+      <h2 class="sec-title">Tailored ITAD <em>Service Tiers</em></h2>
+      <p class="sec-sub">Choose the right level of IT asset disposition for your organisation — from single-device SME disposal to full on-site enterprise destruction.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:2rem">
+      <div style="background:#fff;padding:2rem;border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);border:1px solid var(--gray-200)">
+        <div style="font-size:2rem;margin-bottom:.8rem">🔵</div>
+        <h3 style="font-family:var(--font-h);font-size:1.15rem;color:var(--gray-900);margin-bottom:1rem">Basic ITAD <span style="font-size:.75rem;color:var(--text3);font-weight:400">(SME / Retail)</span></h3>
+        <ul style="list-style:none;padding:0;font-size:13.5px;color:var(--text2);line-height:2">
+          <li><span style="color:var(--green)">✓</span> Free Doorstep Pickup</li>
+          <li><span style="color:var(--green)">✓</span> Basic Software Data Wiping</li>
+          <li><span style="color:var(--green)">✓</span> Market Value Assessment &amp; Payment</li>
+          <li><span style="color:var(--green)">✓</span> CPCB Authorised Recycling</li>
+          <li><span style="color:var(--green)">✓</span> Disposal Receipt</li>
+        </ul>
+        <a href="/contact/" class="btn btn-outline" style="width:100%;justify-content:center;margin-top:1.2rem">Get Started</a>
+      </div>
+      <div style="background:#fff;padding:2rem;border-radius:var(--radius-lg);box-shadow:var(--shadow-md);border:2px solid var(--green);position:relative">
+        <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--green);color:#fff;font-size:10.5px;font-weight:800;padding:4px 14px;border-radius:20px;text-transform:uppercase;white-space:nowrap">Most Popular</div>
+        <div style="font-size:2rem;margin-bottom:.8rem">🟢</div>
+        <h3 style="font-family:var(--font-h);font-size:1.15rem;color:var(--green);margin-bottom:1rem">Enterprise ITAD <span style="font-size:.75rem;color:var(--text3);font-weight:400">(Corporate)</span></h3>
+        <ul style="list-style:none;padding:0;font-size:13.5px;color:var(--text2);line-height:2">
+          <li><span style="color:var(--green)">✓</span> Full IT Asset Lifecycle Audit</li>
+          <li><span style="color:var(--green)">✓</span> NIST 800-88 / IEEE 2883 Destruction</li>
+          <li><span style="color:var(--green)">✓</span> DPDP Act 2023 Compliance Ready</li>
+          <li><span style="color:var(--green)">✓</span> Serialized Certificates of Destruction</li>
+          <li><span style="color:var(--green)">✓</span> EPR / CPCB Compliance Reports</li>
+        </ul>
+        <a href="/contact/" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:1.2rem">Book Enterprise ITAD</a>
+      </div>
+      <div style="background:#fff;padding:2rem;border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);border:1px solid var(--gray-200)">
+        <div style="font-size:2rem;margin-bottom:.8rem">🔴</div>
+        <h3 style="font-family:var(--font-h);font-size:1.15rem;color:var(--gray-900);margin-bottom:1rem">On-Site Destruction <span style="font-size:.75rem;color:var(--text3);font-weight:400">(High Security)</span></h3>
+        <ul style="list-style:none;padding:0;font-size:13.5px;color:var(--text2);line-height:2">
+          <li><span style="color:var(--green)">✓</span> Mobile Degaussing &amp; Shredding Unit</li>
+          <li><span style="color:var(--green)">✓</span> Dual Verification &amp; Witness Logging</li>
+          <li><span style="color:var(--green)">✓</span> Destruction at Your Premises</li>
+          <li><span style="color:var(--green)">✓</span> Suitable for Classified / Defence Data</li>
+          <li><span style="color:var(--green)">✓</span> Forensic-Level Audit Trail</li>
+        </ul>
+        <a href="/contact/" class="btn btn-outline" style="width:100%;justify-content:center;margin-top:1.2rem">Enquire Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- CERTS + CTA -->
+<section style="background:var(--gray-50);padding:3.5rem 0">
+  <div class="container">
+    <div class="cert-cta-grid">
+      <div>
+        <h2 class="sec-title" style="margin-bottom:1.5rem">Certified. Compliant. <em>Trusted.</em></h2>
+        <div class="cert-items-row" id="cert-items"></div>
+      </div>
+      <div class="itad-cta-box">
+        <div style="font-size:14px;font-weight:600;opacity:.85;margin-bottom:.4rem">Ready to Dispose Your IT Assets?</div>
+        <div style="font-family:var(--font-h);font-size:1.35rem;font-weight:800;line-height:1.2;margin-bottom:.5rem">Book Your Free ITAD<br>Pickup Today!</div>
+        <div style="font-size:12px;opacity:.8;margin-bottom:1.2rem">Secure. Compliant. Value-Driven.</div>
+        <a href="/contact/" class="btn btn-white" style="width:100%;justify-content:center;margin-bottom:.6rem"><span>📅</span> Book Free Pickup Now</a>
+        <div style="font-size:11.5px;opacity:.75;margin-bottom:.5rem">or WhatsApp Us</div>
+        <a href="https://wa.me/917500555454" class="btn btn-wa" style="width:100%;justify-content:center" target="_blank">💬 75 0055 5454</a>
+        <a href="/docs/sample-cod.pdf" class="btn btn-outline" style="width:100%;justify-content:center;margin-top:.8rem;background:rgba(255,255,255,0.1);color:#fff;border-color:rgba(255,255,255,0.3);" download>📄 Download Sample CoD</a>
+        <img loading="lazy" src="/img/services_hero_premium.png" class="itad-cta-van" alt="Ewaste Kochi pickup van">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FAQ + FORM -->
+<section style="padding:3.5rem 0;background:#fff">
+  <div class="container">
+    <div class="faq-form-grid">
+      <div>
+        <h2 class="sec-title" style="margin-bottom:1.4rem">Frequently Asked <em>Questions</em></h2>
+        <div class="faq-list" id="itadfaqs"></div>
+      </div>
+      <div>
+        <div style="background:var(--green-lt);border:1.5px solid var(--green-mid);border-radius:var(--radius-lg);padding:2rem">
+          <h3 style="font-family:var(--font-h);font-size:1.05rem;font-weight:700;color:var(--gray-900);margin-bottom:1.2rem">Request Free ITAD Pickup</h3>
+          <p style="font-size:13px;color:var(--text2);margin-bottom:1.2rem">Fill the form and our team will contact you.</p>
+          <div class="form-row">
+            <div class="form-group"><label>Full Name *</label><input type="text" placeholder="Your Name"></div>
+            <div class="form-group"><label>Phone Number *</label><input type="tel" placeholder="10-digit mobile number"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Company Name</label><input type="text" placeholder="Your Company"></div>
+            <div class="form-group"><label>Email Address</label><input type="email" placeholder="Your Email"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Type of IT Assets</label><select><option>Select Type</option><option>Laptops/Desktops</option><option>Servers</option><option>Networking Equipment</option><option>Data Center Equipment</option><option>Mixed IT Assets</option></select></div>
+            <div class="form-group"><label>Estimated Quantity</label><select><option>Select Quantity</option><option>1-10 units</option><option>11-50 units</option><option>51-200 units</option><option>200+ units</option></select></div>
+          </div>
+          <div class="form-group"><label>Additional Message (Optional)</label><textarea placeholder="Tell us more about your requirement..." style="min-height:80px"></textarea></div>
+          <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="alert('Request submitted! We will contact you shortly.')">🚀 Submit Request</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div id="ftr"></div>
+<script src="/shared.js"></script>
+<script>
+document.getElementById('hdr').innerHTML=renderHeader('ITAD Solutions');
+document.getElementById('ftr').innerHTML=renderFooter();
+document.getElementById('itad-svc-grid').innerHTML=[
+  {img:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=75',icon:'🚛',title:'IT Asset Collection',desc:'Free pickup of your old IT assets from your location anywhere in Kochi.'},
+  {img:'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&q=75',icon:'📋',title:'Asset Audit & Evaluation',desc:'Detailed audit and reporting to determine asset condition and market value.'},
+  {img:'https://images.unsplash.com/photo-1597852074816-d933c7d2b988?w=400&q=75',icon:'🔒',title:'Data Destruction',desc:'Secure data wiping, hard disk shredding & destruction with certificate.'},
+  {img:'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=75',icon:'💰',title:'Value Recovery',desc:'We help you recover the maximum resale value from your IT assets.'},
+  {img:'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=400&q=75',icon:'🌱',title:'Eco-Friendly Disposal',desc:'Environmentally responsible recycling of all end-of-life IT equipment.'},
+].map(s=>`<div class="itad-svc-card"><img class="itad-svc-img" src="${s.img}" alt="${s.title}" loading="lazy"><div class="itad-svc-body"><div class="itad-svc-icon">${s.icon}</div><div class="itad-svc-title">${s.title}</div><div class="itad-svc-desc">${s.desc}</div></div></div>`).join('');
+document.getElementById('itad-process').innerHTML=[
+  {n:1,icon:'📅',title:'Request Pickup',desc:'Share your requirement or schedule a pickup.'},
+  {n:2,icon:'🚛',title:'We Collect',desc:'Our team collects IT assets from your site.'},
+  {n:3,icon:'🔍',title:'Audit & Evaluation',desc:'Assets are audited and evaluated for value.'},
+  {n:4,icon:'🔒',title:'Data Destruction',desc:'Data is securely wiped or physically destroyed.'},
+  {n:5,icon:'💰',title:'Value Recovery',desc:'Reusable assets are resold for best returns.'},
+  {n:6,icon:'📄',title:'Certificate Issued',desc:'Certificate for data destruction and asset disposal.'},
+].map(s=>`<div class="itad-step"><div class="itad-step-circle"><span class="itad-step-num">${s.n}</span>${s.icon}</div><div class="itad-step-title">${s.title}</div><div class="itad-step-desc">${s.desc}</div></div>`).join('');
+document.getElementById('itad-benefits-list').innerHTML=[
+  '100% data security with verifiable certificates',
+  'Compliant with CPCB & environmental regulations',
+  'Transparent process with detailed reporting',
+  'Maximum value recovery for your IT assets',
+  'Zero landfill – we recycle responsibly',
+  'Serving businesses across Kochi and Kerala',
+].map(i=>`<div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--gray-100);font-size:13.5px;color:var(--text2)"><span style="width:20px;height:20px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;flex-shrink:0">✓</span>${i}</div>`).join('');
+document.getElementById('itad-asset-list').innerHTML=[
+  ['💻','Laptops & Desktops'],['🖥️','Servers & Storage Devices'],['🌐','Networking Equipment'],['🏭','Data Center Equipment'],['🔋','UPS & Batteries'],['🖨️','Printers & Peripherals'],['📱','Mobile Devices'],
+].map(([i,t])=>`<li><span>${i}</span>${t}</li>`).join('');
+document.getElementById('cert-items').innerHTML=[
+  ['🏆','ISO 14001 & 27001','Environmental & InfoSec Management'],
+  ['🛡️','DPDP Act Compliant','India Data Protection Ready'],
+  ['🔐','NIST 800-88 Standards','Global Data Destruction Benchmarks'],
+  ['📄','Verified Chain of Custody','End-to-End Asset Tracking'],
+].map(([i,t,s])=>`<div class="cert-item-row"><div class="cert-item-badge">${i}</div><div><div style="font-weight:700;font-size:13.5px;color:var(--gray-900)">${t}</div><div style="font-size:12px;color:var(--text3)">${s}</div></div></div>`).join('');
+document.getElementById('itadfaqs').innerHTML=renderFAQ([
+  {q:'What is IT Asset Disposition?',a:'ITAD is the secure, environmentally responsible process of retiring IT equipment. It covers data destruction, asset evaluation, value recovery, and certified recycling with complete documentation.'},
+  {q:'Is data really 100% secure?',a:'Yes. We use DoD 5220.22-M and NIST 800-88 certified data wiping methods. Physical shredding is available for hard drives. Every device gets a verifiable Certificate of Destruction.'},
+  {q:'Do you provide data destruction certificates?',a:'Yes, we provide detailed Certificate of Destruction for every device processed. This certificate documents the method used, serial numbers, and confirms complete data elimination.'},
+  {q:'Can you handle large volumes of IT assets?',a:'Absolutely. We specialise in bulk ITAD for businesses, data centres, and institutions. We have handled 500+ asset disposals in single projects across Kochi and Kerala.'},
+  {q:'Do you offer pickup across Kochi?',a:'Yes, free pickup across all areas in Kochi including Kakkanad, Edappally, Fort Kochi, Kalamassery, Aluva, Palarivattom, Vyttila, Tripunithura and all surrounding areas.'},
+]);
+</script>
+<script src="/ewaste-chatbot.js"></script><script src="/wa-funnel.js"></script>
+</body></html>
