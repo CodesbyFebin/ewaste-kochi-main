@@ -12,5 +12,6 @@ export const supabase = createClient(supabaseUrl, supabaseKey, {
     params: {
       eventsPerSecond: 10,
     },
+    transport: ws,
   },
 });
