@@ -239,22 +239,22 @@
     },
     {
       "source": "/blog/ewaste-laws-kerala.html",
-      "destination": "/blog/e-waste-rules-india-2024/",
+      "destination": "https://www.ewastekochi.com/blog/",
       "permanent": true
     },
     {
       "source": "/blog/dpdp-act-impact-startups.html",
-      "destination": "/blog/why-data-destruction-important-businesses/",
+      "destination": "https://www.ewastekochi.com/blog/",
       "permanent": true
     },
     {
       "source": "/blog/is-formatting-enough-delete-data.html",
-      "destination": "/blog/how-destroy-hard-disk-data/",
+      "destination": "https://www.ewastekochi.com/blog/",
       "permanent": true
     },
     {
       "source": "/blog/laptop-resale-value-2026.html",
-      "destination": "/blog/sell-old-laptop-kochi-best-price/",
+      "destination": "https://www.ewastekochi.com/blog/",
       "permanent": true
     },
     {
@@ -263,13 +263,8 @@
       "permanent": true
     },
     {
-      "source": "/blog/:slug.html",
-      "destination": "/blog/:slug/",
-      "permanent": true
-    },
-    {
       "source": "/blogs/:path*",
-      "destination": "/blog/",
+      "destination": "https://www.ewastekochi.com/blog/",
       "permanent": true
     },
     {
@@ -804,22 +799,22 @@
     },
     {
       "source": "/blog/archive-2025",
-      "destination": "/blog/",
+      "destination": "https://www.ewastekochi.com/blog/",
       "permanent": true
     },
     {
       "source": "/blog/archive-2025/",
-      "destination": "/blog/",
+      "destination": "https://www.ewastekochi.com/blog/",
       "permanent": true
     },
     {
       "source": "/blog/topic-:slug",
-      "destination": "/blog/",
+      "destination": "https://www.ewastekochi.com/blog/",
       "permanent": true
     },
     {
       "source": "/blog/topic-:slug/",
-      "destination": "/blog/",
+      "destination": "https://www.ewastekochi.com/blog/",
       "permanent": true
     }
   ],
