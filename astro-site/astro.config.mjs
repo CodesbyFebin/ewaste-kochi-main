@@ -8,7 +8,6 @@ export default defineConfig({
   site: 'https://www.ewastekochi.com',
   output: 'hybrid',
   adapter: vercel({
-    includeFiles: ['./src/data/content.db'],
     maxDuration: 10,
   }),
   trailingSlash: 'always',
