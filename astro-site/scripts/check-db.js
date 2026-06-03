@@ -1,0 +1,14 @@
+const Database = require("better-sqlite3");
+const db = new Database("src/data/content.db", { readonly: true });
+const pillars = db.prepare("SELECT DISTINCT pillar FROM blogs").all().map(r => r.pillar);
+const cats = db.prepare("SELECT DISTINCT pillar, category FROM blogs").all();
+const emptySlugs = db.prepare("SELECT COUNT(*) as c FROM blogs WHERE slug IS NULL OR trim(slug) = ''").get().c;
+const emptyTitles = db.prepare("SELECT COUNT(*) as c FROM blogs WHERE title IS NULL OR trim(title) = ''").get().c;
+const emptyExcerpts = db.prepare("SELECT COUNT(*) as c FROM blogs WHERE excerpt IS NULL OR trim(excerpt) = ''").get().c;
+const badContent = db.prepare("SELECT COUNT(*) as c FROM blogs WHERE content IS NULL OR trim(content) = ''").get().c;
+console.log("Pillars:", pillars.join(", "));
+console.log("Categories:", cats.length);
+console.log("Empty slugs:", emptySlugs);
+console.log("Empty titles:", emptyTitles);
+console.log("Empty excerpts:", emptyExcerpts);
+console.log("Empty/bad content:", badContent);
