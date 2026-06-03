@@ -1,15 +1,23 @@
 ---
 import { supabase } from '../db/supabase';
 
-const { data, error } = await supabase.from("todos").select('*');
+let data: any[] | null = null;
+try {
+  const res = await supabase.from("todos").select('*').limit(1);
+  data = res.data;
+} catch (e) {
+  data = null;
+}
 ---
 
 {
-  (
+  data && data.length > 0 ? (
     <ul>
-      {data?.map((entry) => (
+      {data.map((entry: any) => (
         <li>{entry.name}</li>
       ))}
     </ul>
+  ) : (
+    <p>No data available. Connect your Supabase to see content.</p>
   )
 }
