@@ -1097,36 +1097,40 @@
   ],
   "rewrites": [
     {
+      "source": "/blog/collection/:category/:slug/",
+      "destination": "https://vercel-blog-collection.vercel.app/blog/collection/:category/:slug/"
+    },
+    {
+      "source": "/blog/data-destruction/:category/:slug/",
+      "destination": "https://vercel-blog-data-destruction.vercel.app/blog/data-destruction/:category/:slug/"
+    },
+    {
+      "source": "/blog/itad/:category/:slug/",
+      "destination": "https://vercel-blog-itad.vercel.app/blog/itad/:category/:slug/"
+    },
+    {
+      "source": "/blog/recycling/:category/:slug/",
+      "destination": "https://vercel-blog-recycling.vercel.app/blog/recycling/:category/:slug/"
+    },
+    {
+      "source": "/blog/collection/",
+      "destination": "https://vercel-blog-collection.vercel.app/blog/collection/"
+    },
+    {
+      "source": "/blog/data-destruction/",
+      "destination": "https://vercel-blog-data-destruction.vercel.app/blog/data-destruction/"
+    },
+    {
+      "source": "/blog/itad/",
+      "destination": "https://vercel-blog-itad.vercel.app/blog/itad/"
+    },
+    {
+      "source": "/blog/recycling/",
+      "destination": "https://vercel-blog-recycling.vercel.app/blog/recycling/"
+    },
+    {
       "source": "/blog/",
-      "destination": "https://blogs.ewastekochi.com/blog/"
-    },
-    {
-      "source": "/blog/:pillar/",
-      "destination": "https://blogs.ewastekochi.com/blog/:pillar/"
-    },
-    {
-      "source": "/blog/:pillar/:category/",
-      "destination": "https://blogs.ewastekochi.com/blog/:pillar/:category/"
-    },
-    {
-      "source": "/blog/:pillar/:category/:slug/",
-      "destination": "https://blogs.ewastekochi.com/blog/:pillar/:category/:slug/"
-    },
-    {
-      "source": "/blog/:pillar/:category/:slug.html",
-      "destination": "https://blogs.ewastekochi.com/blog/:pillar/:category/:slug.html"
-    },
-    {
-      "source": "/sitemap-index.xml",
-      "destination": "https://blogs.ewastekochi.com/sitemap-index.xml"
-    },
-    {
-      "source": "/sitemap_index.xml",
-      "destination": "https://blogs.ewastekochi.com/sitemap_index.xml"
-    },
-    {
-      "source": "/sitemap-:number.xml",
-      "destination": "https://blogs.ewastekochi.com/sitemap-:number.xml"
+      "destination": "https://vercel-blog-collection.vercel.app/blog/"
     }
   ]
 }
