@@ -3,7 +3,6 @@ import { getBlogsByPillar } from "../../../lib/data";
 import ChatBot from "../../../components/ChatBot.astro";
 
 export const prerender = false;
-export const runtime = 'node';
 
 Astro.response.headers.set("Cache-Control", "public, s-maxage=86400, stale-while-revalidate=3600");
 
@@ -19,7 +18,7 @@ const PILLAR_META: Record<string, { label: string; description: string }> = {
 const meta = PILLAR_META[pillar as string];
 if (!meta) return new Response(null, { status: 404 });
 
-const posts = getBlogsByPillar(pillar as string, 60);
+const posts = await getBlogsByPillar(pillar as string, 60);
 if (!posts.length) return new Response(null, { status: 404 });
 
 const canonicalURL = `https://www.ewastekochi.com/blog/${pillar}/`;

@@ -3,7 +3,6 @@ import { getBlogsByCategory } from "../../../../lib/data";
 import ChatBot from "../../../../components/ChatBot.astro";
 
 export const prerender = false;
-export const runtime = 'node';
 
 Astro.response.headers.set("Cache-Control", "public, s-maxage=86400, stale-while-revalidate=3600");
 
@@ -12,7 +11,7 @@ const { pillar, category } = Astro.params;
 const pillarLabel = (pillar as string).replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 const categoryLabel = (category as string).replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 
-const posts = getBlogsByCategory(category as string, 200);
+const posts = await getBlogsByCategory(category as string, 200);
 if (!posts.length) return new Response(null, { status: 404 });
 
 // Filter to only posts in this pillar

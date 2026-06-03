@@ -5,9 +5,6 @@ import ChatBot from "../../../../components/ChatBot.astro";
 // SSR on demand — do NOT prerender 11k pages at build time
 export const prerender = false;
 
-// Force Node.js runtime (required for better-sqlite3 native bindings)
-export const runtime = 'node';
-
 // CDN: cache for 1 year, background revalidate daily
 Astro.response.headers.set(
   "Cache-Control",
@@ -19,7 +16,7 @@ const { pillar, category, slug } = Astro.params;
 if (!pillar || !category || !slug) {
   return new Response(null, { status: 404 });
 }
-const blog = getBlogBySlug(slug);
+const blog = await getBlogBySlug(slug);
 
 if (!blog) {
   return new Response(null, { status: 404 });
@@ -30,7 +27,7 @@ if (blog.pillar !== pillar || blog.category !== category) {
   return Astro.redirect(`/blog/${blog.pillar}/${blog.category}/${blog.slug}/`, 301);
 }
 
-const relatedBlogs = getRelatedBlogs(category, slug, 8);
+const relatedBlogs = await getRelatedBlogs(category, slug, 8);
 const canonicalURL = new URL(Astro.url.pathname, 'https://www.ewastekochi.com').toString();
 const pillarLabel = pillar.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 const categoryLabel = category.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
