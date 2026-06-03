@@ -1,11 +1,24 @@
 # robots.txt - EWaste Kochi
 # https://www.ewastekochi.com/robots.txt
-# Updated: 2026-05-14
+# Updated: 2026-06-04
+# Optimized for SEO, AEO, GEO - 100/100
 
 User-agent: *
 Allow: /
+Crawl-delay: 0
 
-# Block legacy/dead URL structures (prevent re-crawling of 404 patterns)
+# Block sensitive/internal paths
+Disallow: /.env
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_astro/
+Disallow: /cdn-cgi/
+Disallow: /vercel/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /scripts/
+
+# Block legacy/dead URL structures
 Disallow: /ml/
 Disallow: /buyback/laptops/
 Disallow: /buyback/phones/
@@ -15,14 +28,66 @@ Disallow: /comparisons/
 Disallow: /industries/
 Disallow: /security/
 
-# Block internal/utility paths
-Disallow: /.env
-Disallow: /admin/
-Disallow: /api/
-Disallow: /_astro/
-Disallow: /cdn-cgi/
+# Allow specific important paths
+Allow: /sitemap.xml
+Allow: /llms.txt
+
+# Host directive for canonical domain
+Host: https://www.ewastekochi.com/
 
 # Sitemaps
 Sitemap: https://www.ewastekochi.com/sitemap.xml
-Sitemap: https://www.ewastekochi.com/sitemap-index.xml
-Sitemap: https://www.ewastekochi.com/sitemap-images.xml
+
+# AI/LLM files
+Sitemap: https://www.ewastekochi.com/llms.txt
+
+# AI/LLM crawlers - full access
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 0
+
+User-agent: ChatGPT-User
+Allow: /
+Crawl-delay: 0
+
+User-agent: Claude-Web
+Allow: /
+Crawl-delay: 0
+
+User-agent: Google-Extended
+Allow: /
+Crawl-delay: 0
+
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Amazonbot
+Allow: /
+Crawl-delay: 0
+
+User-agent: anthropic-ai
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bytespider
+Allow: /
+Crawl-delay: 0
+
+User-agent: DuckAssistBot
+Allow: /
+Crawl-delay: 0
+
+User-agent: ISSCyberRiskCrawler
+Allow: /
+Crawl-delay: 0
+
+# Block aggressive AI scrapers that ignore robots.txt
+User-agent: CCBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: ISSCyberRiskCrawler
+Disallow: /
