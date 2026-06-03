@@ -1,0 +1,13 @@
+{
+  "framework": "astro",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "ewastekochi.com" }],
+      "destination": "https://www.ewastekochi.com/:path*",
+      "permanent": true
+    }
+  ]
+}

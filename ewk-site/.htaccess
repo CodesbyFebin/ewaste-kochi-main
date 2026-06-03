@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Canonical host: non-www.
+RewriteCond %{HTTP_HOST} ^www\.ewastekochi\.com$ [NC]
+RewriteRule ^(.*)$ https://ewastekochi.com/$1 [R=301,L]
+
+# High-value legacy aliases.
+Redirect 301 /services/battery-recycling-kochi/ /battery-recycling/
+Redirect 301 /sell-electronics-kochi/ /sell-electronics/
+Redirect 301 /e-waste-recycling/ /recycling/

@@ -1,0 +1,18 @@
+---
+interface Props {
+  pillar?: string;
+  category?: string;
+}
+const { pillar, category } = Astro.props;
+---
+<!-- Google tag (gtag.js) -->
+<script is:inline src="https://www.googletagmanager.com/gtag/js?id=G-YOUR-ID"></script>
+<script is:inline define:vars={{ pillar, category }}>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YOUR-ID', {
+    'content_group': pillar,
+    'content_type': category
+  });
+</script>

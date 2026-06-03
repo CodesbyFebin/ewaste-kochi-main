@@ -1,0 +1,868 @@
+{
+  "framework": "astro",
+  "buildCommand": "npm run build",
+  "outputDirectory": ".vercel/output",
+  "redirects": [
+    {
+      "source": "/contact-us",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us/",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "ewastekochi.com"
+        }
+      ],
+      "destination": "https://www.ewastekochi.com/:path*",
+      "statusCode": 301
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "ewaste-kochi-main.vercel.app"
+        }
+      ],
+      "destination": "https://www.ewastekochi.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/services/hard-drive-degaussing-kochi",
+      "destination": "/data-destruction/",
+      "permanent": true
+    },
+    {
+      "source": "/services/hard-drive-degaussing-kochi/",
+      "destination": "/data-destruction/",
+      "permanent": true
+    },
+    {
+      "source": "/services/battery-recycling-kochi",
+      "destination": "/battery-recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/battery-recycling-kochi/",
+      "destination": "/battery-recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/e-waste-recycling-kochi",
+      "destination": "/e-waste-recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/e-waste-recycling-kochi/",
+      "destination": "/e-waste-recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/data-destruction-kochi",
+      "destination": "/data-destruction/",
+      "permanent": true
+    },
+    {
+      "source": "/services/data-destruction-kochi/",
+      "destination": "/data-destruction/",
+      "permanent": true
+    },
+    {
+      "source": "/services/hard-drive-shredding-kochi",
+      "destination": "/hard-drive-shredding/",
+      "permanent": true
+    },
+    {
+      "source": "/services/hard-drive-shredding-kochi/",
+      "destination": "/hard-drive-shredding/",
+      "permanent": true
+    },
+    {
+      "source": "/services/itad-kochi",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
+      "source": "/services/itad-kochi/",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
+      "source": "/services/laptop-buyback-kochi",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/services/laptop-buyback-kochi/",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/services/corporate-ewaste-kochi",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
+      "source": "/services/corporate-ewaste-kochi/",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
+      "source": "/services/mobile-recycling-kochi",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/mobile-recycling-kochi/",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/free-ewaste-pickup-kochi",
+      "destination": "/pickup/",
+      "permanent": true
+    },
+    {
+      "source": "/services/free-ewaste-pickup-kochi/",
+      "destination": "/pickup/",
+      "permanent": true
+    },
+    {
+      "source": "/services/tv-monitor-recycling-kochi",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/tv-monitor-recycling-kochi/",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/air-conditioner-recycling-kochi",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/air-conditioner-recycling-kochi/",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/certificate-of-destruction-kochi",
+      "destination": "/data-destruction/",
+      "permanent": true
+    },
+    {
+      "source": "/services/certificate-of-destruction-kochi/",
+      "destination": "/data-destruction/",
+      "permanent": true
+    },
+    {
+      "source": "/services/computer-recycling-near-me",
+      "destination": "/services/electronics-recycling-near-me/",
+      "permanent": true
+    },
+    {
+      "source": "/services/computer-recycling-near-me/",
+      "destination": "/services/electronics-recycling-near-me/",
+      "permanent": true
+    },
+    {
+      "source": "/services/dpdp-act-compliance-kochi",
+      "destination": "/data-destruction/",
+      "permanent": true
+    },
+    {
+      "source": "/services/dpdp-act-compliance-kochi/",
+      "destination": "/data-destruction/",
+      "permanent": true
+    },
+    {
+      "source": "/services/network-equipment-disposal-kochi",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/services/network-equipment-disposal-kochi/",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/services/server-recycling-kochi",
+      "destination": "/server-recycling-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/services/server-recycling-kochi/",
+      "destination": "/server-recycling-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/about.html",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/faq.html",
+      "destination": "/faq/",
+      "permanent": true
+    },
+    {
+      "source": "/itad-kochi.html",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy.html",
+      "destination": "/privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/sell-old-phone-kochi.html",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ewaste-laws-kerala.html",
+      "destination": "/blog/e-waste-rules-india-2024/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/dpdp-act-impact-startups.html",
+      "destination": "/blog/why-data-destruction-important-businesses/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/is-formatting-enough-delete-data.html",
+      "destination": "/blog/how-destroy-hard-disk-data/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/laptop-resale-value-2026.html",
+      "destination": "/blog/sell-old-laptop-kochi-best-price/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/where-sell-old-phone-kochi.html",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/:slug.html",
+      "destination": "/blog/:slug/",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/:path*",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/hi/:path*",
+      "destination": "/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/ml/:path*",
+      "destination": "/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/sell-electronics-kochi",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/sell-electronics-kochi/:rest*",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/laptop-recycling-near-me",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/laptop-recycling-near-me/:rest*",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/itad-kochi",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
+      "source": "/itad-kochi/:rest*",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
+      "source": "/ewaste",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ewaste/:rest*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/media-kit",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/buyback/:path*",
+      "destination": "/marketplace/",
+      "permanent": true
+    },
+    {
+      "source": "/industries/:path*",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/comparisons/:path*",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/compliance/:path*",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/index-old",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/index-old/:rest*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ewaste-682001",
+      "destination": "/locations/ernakulam/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ewaste-682002",
+      "destination": "/locations/fort-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ewaste-682024",
+      "destination": "/locations/edappally/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ewaste-682075",
+      "destination": "/locations/aluva/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ewaste-682079",
+      "destination": "/locations/angamaly/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ewaste-682085",
+      "destination": "/locations/kalamassery/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ewaste-682146",
+      "destination": "/locations/thrissur/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ewaste-682186",
+      "destination": "/locations/kakkanad/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ewaste-682207",
+      "destination": "/locations/thrippunithura/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ewaste-682239",
+      "destination": "/locations/vyttila/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ewaste-:pincode.html",
+      "destination": "/locations/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/v2/:rest*",
+      "destination": "/locations/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/:city/:service+",
+      "destination": "/locations/:city/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/:city/:service+/",
+      "destination": "/locations/:city/",
+      "permanent": true
+    },
+    {
+      "source": "/services/battery-recycling",
+      "destination": "/battery-recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/battery-recycling/",
+      "destination": "/battery-recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/data-destruction",
+      "destination": "/data-destruction/",
+      "permanent": true
+    },
+    {
+      "source": "/services/data-destruction/",
+      "destination": "/data-destruction/",
+      "permanent": true
+    },
+    {
+      "source": "/services/cable-recycling",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/cable-recycling/",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/tv-monitor-recycling",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/tv-monitor-recycling/",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/printer-recycling",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/printer-recycling/",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/mobile-recycling",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/mobile-recycling/",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/air-conditioner-recycling",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/air-conditioner-recycling/",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/monitor-recycling",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/monitor-recycling/",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/e-waste-collection",
+      "destination": "/pickup/",
+      "permanent": true
+    },
+    {
+      "source": "/services/e-waste-collection/",
+      "destination": "/pickup/",
+      "permanent": true
+    },
+    {
+      "source": "/services/ups-inverter-recycling",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/ups-inverter-recycling/",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/certificate-of-destruction",
+      "destination": "/data-destruction/",
+      "permanent": true
+    },
+    {
+      "source": "/services/certificate-of-destruction/",
+      "destination": "/data-destruction/",
+      "permanent": true
+    },
+    {
+      "source": "/services/server-recycling",
+      "destination": "/server-recycling-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/services/server-recycling/",
+      "destination": "/server-recycling-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/services/corporate-ewaste",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
+      "source": "/services/corporate-ewaste/",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
+      "source": "/services/phone-buyback",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/services/phone-buyback/",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/services/laptop-buyback",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/services/laptop-buyback/",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/services/sell-electronics",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/services/sell-electronics/",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/services/free-ewaste-pickup",
+      "destination": "/pickup/",
+      "permanent": true
+    },
+    {
+      "source": "/services/free-ewaste-pickup/",
+      "destination": "/pickup/",
+      "permanent": true
+    },
+    {
+      "source": "/services/dpdp-act-compliance",
+      "destination": "/data-destruction/",
+      "permanent": true
+    },
+    {
+      "source": "/services/dpdp-act-compliance/",
+      "destination": "/data-destruction/",
+      "permanent": true
+    },
+    {
+      "source": "/services/battery-recycling-:city",
+      "destination": "/battery-recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/battery-recycling-:city/",
+      "destination": "/battery-recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/monitor-recycling-:city",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/monitor-recycling-:city/",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/printer-recycling-:city",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/printer-recycling-:city/",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/phone-buyback-:city",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/services/phone-buyback-:city/",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/services/laptop-buyback-:city",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/services/laptop-buyback-:city/",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/services/server-recycling-:city",
+      "destination": "/server-recycling-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/services/server-recycling-:city/",
+      "destination": "/server-recycling-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/services/cable-recycling-:city",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/cable-recycling-:city/",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/e-waste-collection-:city",
+      "destination": "/pickup/",
+      "permanent": true
+    },
+    {
+      "source": "/services/e-waste-collection-:city/",
+      "destination": "/pickup/",
+      "permanent": true
+    },
+    {
+      "source": "/services/data-destruction-:city",
+      "destination": "/data-destruction/",
+      "permanent": true
+    },
+    {
+      "source": "/services/data-destruction-:city/",
+      "destination": "/data-destruction/",
+      "permanent": true
+    },
+    {
+      "source": "/services/itad-:city",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
+      "source": "/services/itad-:city/",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
+      "source": "/itad/:rest+",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
+      "source": "/sell-old-electronics",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/sell-old-electronics/",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/sell-old-phone-kochi",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/sell-old-phone-kochi/",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/laptop-recycling-kochi",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/laptop-recycling-kochi/",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/battery-recycling-near-me",
+      "destination": "/battery-recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/battery-recycling-near-me/",
+      "destination": "/battery-recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/server-disposal-kochi",
+      "destination": "/server-recycling-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/server-disposal-kochi/",
+      "destination": "/server-recycling-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/itad-faq-kochi",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
+      "source": "/itad-faq-kochi/",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
+      "source": "/nist-800-88",
+      "destination": "/data-destruction/",
+      "permanent": true
+    },
+    {
+      "source": "/nist-800-88/",
+      "destination": "/data-destruction/",
+      "permanent": true
+    },
+    {
+      "source": "/careers",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/careers/",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/compliance",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/compliance/",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/archive-2025",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/archive-2025/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/topic-:slug",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/topic-:slug/",
+      "destination": "/blog/",
+      "permanent": true
+    }
+  ],
+  "cleanUrls": true,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), interest-cohort=(), payment=()"
+        },
+        {
+          "key": "X-Permitted-Cross-Domain-Policies",
+          "value": "none"
+        },
+        {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin-allow-popups"
+        },
+        {
+          "key": "Cross-Origin-Resource-Policy",
+          "value": "same-site"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.ewastekochi.com; connect-src 'self' https://www.ewastekochi.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"
+        }
+      ]
+    }
+  ]
+}

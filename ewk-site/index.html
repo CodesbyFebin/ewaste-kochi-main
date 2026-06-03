@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<!-- A/B Test: 50/50 split. Variant B → /b/. Tracking via [B] tag in WA messages. Exclude search bots from redirection. -->
+<script>!function(){try{var u=navigator.userAgent;if(/bot|google|baidu|bing|msn|duckduckbot|teoma|slurp|yandex|lighthouse|chrome-lighthouse/i.test(u))return;var v=localStorage.getItem('ewk_ab');if(!v){v=Math.random()<.5?'a':'b';localStorage.setItem('ewk_ab',v);}if(v==='b')window.location.replace('/b/');}catch(e){}}();</script>
+
+<!-- ── Favicon & PWA ── -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0d7a38">
+<meta name="msapplication-TileColor" content="#0d7a38">
+<meta name="msapplication-TileImage" content="/favicon-192x192.png">
+<meta name="application-name" content="Ewaste Kochi">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Ewaste Kochi">
+
+<!-- ── Performance: preconnect + preload LCP ── -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preload" as="image" href="/hero-banner.webp" fetchpriority="high">
+
+<!-- ── Primary SEO ── -->
+<title>Ewaste Recycling Kochi ♻️ Free Pickup + Instant Payment</title>
+<meta name="description" content="Ewaste recycling in Kochi: free doorstep pickup, instant payment &amp; certified data destruction. Best scrap prices. CPCB authorized. Call 75 0055 5454.">
+<meta name="keywords" content="ewaste recycling kochi, e-waste recycling kochi, ITAD kochi, data destruction kochi, ewaste pickup kochi, laptop scrap kochi, computer recycling kerala, sell old laptop kochi, battery recycling kochi">
+<link rel="canonical" href="https://www.ewastekochi.com/">
+
+<!-- ── Open Graph (complete) ── -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ewaste Kochi">
+<meta property="og:locale" content="en_IN">
+<meta property="og:url" content="https://www.ewastekochi.com/">
+<meta property="og:title" content="Ewaste Recycling Kochi ♻️ Free Pickup + Instant Payment">
+<meta property="og:description" content="CPCB-authorized ewaste recycling in Kochi. Free doorstep pickup, best scrap prices, certified data destruction. Call 75 0055 5454.">
+<meta property="og:image" content="https://www.ewastekochi.com/hero-banner.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ewaste Kochi – E-Waste Recycling and Free Pickup Kochi">
+
+<!-- ── Twitter Card (complete) ── -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ewastekochi">
+<meta name="twitter:title" content="Ewaste Recycling Kochi ♻️ Free Pickup + Instant Payment">
+<meta name="twitter:description" content="CPCB-authorized ewaste recycling in Kochi. Free pickup, best prices, certified data destruction. Call 75 0055 5454.">
+<meta name="twitter:image" content="https://www.ewastekochi.com/hero-banner.png">
+
+<!-- ── Geo ── -->
+<meta name="geo.region" content="IN-KL">
+<meta name="geo.placename" content="Kochi, Kerala, India">
+<meta name="geo.position" content="9.9816;76.3016">
+<meta name="ICBM" content="9.9816, 76.3016">
+
+<!-- ── Schema: LocalBusiness (comprehensive, merged) ── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+   "@id": "https://www.ewastekochi.com/#business",
+   "name": "Ewaste Kochi",
+   "alternateName": "E-Waste Kochi",
+   "url": "https://www.ewastekochi.com",
+  "telephone": "+917500555454",
+  "email": "info@ewastekochi.com",
+  "priceRange": "₹₹",
+  "currenciesAccepted": "INR",
+  "paymentAccepted": "Cash, UPI, Bank Transfer",
+   "image": "https://www.ewastekochi.com/hero-banner.png",
+   "logo": {"@type":"ImageObject","url":"https://www.ewastekochi.com/logo.png","width":180,"height":50},
+  "description": "CPCB-authorized e-waste recycling and IT asset disposal (ITAD) company in Kochi, Kerala. Free doorstep pickup, certified data destruction, best scrap prices for laptops, computers and all electronics.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Palarivattom",
+    "addressLocality": "Kochi",
+    "addressRegion": "Kerala",
+    "postalCode": "682025",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "9.9816",
+    "longitude": "76.3016"
+  },
+  "hasMap": "https://maps.google.com/?q=Ewaste+Kochi+Palarivattom+Kerala",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "09:00",
+    "closes": "18:00"
+  },
+  "areaServed": [
+    "Kochi","Ernakulam","Kakkanad","Edappally","Aluva","Vyttila",
+    "Kalamassery","Thrippunithura","Palarivattom","Fort Kochi","Kaloor",
+    "Kadavanthra","Angamaly","North Paravur","Perumbavoor",
+    "Kozhikode","Thrissur","Thiruvananthapuram","Malappuram",
+    "Kollam","Kottayam","Kannur","Palakkad","Kerala"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "500",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "sameAs": [
+    "https://www.facebook.com/ewastekochi",
+    "https://www.instagram.com/ewastekochi",
+    "https://twitter.com/ewastekochi"
+  ],
+  "knowsAbout": ["E-Waste Recycling","IT Asset Disposal","Data Destruction","ITAD","Computer Recycling","Battery Recycling","DPDP Act Compliance","EPR Compliance","E-Waste Rules 2022"],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+917500555454",
+    "contactType": "customer service",
+    "areaServed": "IN-KL",
+    "availableLanguage": ["English","Malayalam"],
+    "hoursAvailable": {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:00","closes":"18:00"}
+  },
+  "hasCredential": [
+    {"@type":"EducationalOccupationalCredential","name":"CPCB E-Waste Recycler Authorization","credentialCategory":"Government Authorization","recognizedBy":{"@type":"Organization","name":"Central Pollution Control Board"}},
+    {"@type":"EducationalOccupationalCredential","name":"ISO 14001:2015 Environmental Management System","credentialCategory":"ISO Certification"},
+    {"@type":"EducationalOccupationalCredential","name":"ISO 9001:2015 Quality Management System","credentialCategory":"ISO Certification"},
+    {"@type":"EducationalOccupationalCredential","name":"Kerala State Pollution Control Board Registration","credentialCategory":"Government Registration"}
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "E-Waste Management Services – Ewaste Kochi",
+    "itemListElement": [
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Free E-Waste Pickup Kochi","url":"https://www.ewastekochi.com/pickup/","description":"Free doorstep e-waste collection from homes and businesses anywhere in Kochi"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"IT Asset Disposal (ITAD) Kochi","url":"https://www.ewastekochi.com/itad/","description":"End-to-end IT asset disposition with certified data destruction and compliance documentation"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Certified Data Destruction Kochi","url":"https://www.ewastekochi.com/data-destruction/","description":"DoD 5220.22-M and NIST 800-88 certified data wiping and physical hard drive shredding"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"E-Waste Recycling Kochi","url":"https://www.ewastekochi.com/recycling/","description":"Zero-landfill CPCB-authorized e-waste recycling for all electronics"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Battery Recycling Kochi","url":"https://www.ewastekochi.com/battery-recycling/","description":"Safe disposal and recycling of all battery types including lithium, lead-acid and nickel"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Sell Old Electronics Kochi","url":"https://www.ewastekochi.com/sell-electronics/","description":"Best market prices for used laptops, phones, computers and all electronics"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Hard Drive Shredding Kochi","url":"https://www.ewastekochi.com/hard-drive-shredding/","description":"Physical hard drive destruction with Certificate of Destruction"}}
+    ]
+  }
+}
+</script>
+
+<!-- ── Schema: WebSite ── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.ewastekochi.com/#website",
+  "url": "https://www.ewastekochi.com",
+  "name": "Ewaste Kochi",
+  "description": "E-waste recycling and ITAD services in Kochi, Kerala",
+  "publisher": {"@id": "https://www.ewastekochi.com/#business"},
+  "inLanguage": "en-IN",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {"@type":"EntryPoint","urlTemplate":"https://www.ewastekochi.com/blog/?s={search_term_string}"},
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<!-- ── Schema: WebPage + Speakable ── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.ewastekochi.com/#webpage",
+  "url": "https://www.ewastekochi.com/",
+  "name": "E-Waste Recycling Kochi – Free Pickup &amp; Instant Payment",
+  "isPartOf": {"@id": "https://www.ewastekochi.com/#website"},
+  "about": {"@id": "https://www.ewastekochi.com/#business"},
+  "description": "CPCB-authorized e-waste recycling in Kochi with free doorstep pickup, instant payment and certified data destruction for homes and businesses.",
+  "inLanguage": "en-IN",
+  "datePublished": "2024-01-01",
+  "dateModified": "2026-05-09",
+  "publisher": {"@id": "https://www.ewastekochi.com/#business"},
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".hero-banner-h1", ".faq-a", ".service-desc", ".step-desc", ".sec-title", ".stat-label"]
+  }
+}
+</script>
+
+<!-- ── Schema: Services ItemList ── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "E-Waste Services – Ewaste Kochi",
+  "description": "Complete e-waste management services in Kochi",
+   "itemListElement": [
+     {"@type":"ListItem","position":1,"name":"Free E-Waste Pickup Kochi","url":"https://www.ewastekochi.com/pickup/"},
+     {"@type":"ListItem","position":2,"name":"IT Asset Disposal (ITAD) Kochi","url":"https://www.ewastekochi.com/itad/"},
+     {"@type":"ListItem","position":3,"name":"Certified Data Destruction Kochi","url":"https://www.ewastekochi.com/data-destruction/"},
+     {"@type":"ListItem","position":4,"name":"E-Waste Recycling Kochi","url":"https://www.ewastekochi.com/recycling/"},
+     {"@type":"ListItem","position":5,"name":"Electronic Scrap Buyers Kochi","url":"https://www.ewastekochi.com/scrap-price/"},
+     {"@type":"ListItem","position":6,"name":"Battery Recycling Kochi","url":"https://www.ewastekochi.com/battery-recycling/"},
+     {"@type":"ListItem","position":7,"name":"Sell Old Electronics Kochi","url":"https://www.ewastekochi.com/sell-electronics/"},
+     {"@type":"ListItem","position":8,"name":"Hard Drive Shredding Kochi","url":"https://www.ewastekochi.com/hard-drive-shredding/"}
+   ]
+}
+</script>
+
+<!-- ── Schema: FAQPage (answers match visible content) ── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I dispose of old computers in Kochi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Simply call or WhatsApp us at 75 0055 5454. We provide free pickup for e-waste from your home, office or business anywhere in Kochi. Our team collects items safely and handles everything from certified data destruction to eco-friendly recycling."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide data destruction certificates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We provide certified data destruction with a verifiable Certificate of Destruction for every job. Our process follows DoD 5220.22-M and NIST 800-88 standards, ensuring 100% data security for businesses and individuals in Kochi."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is e-waste pickup free in Kochi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, completely free pickup for homes and businesses across all Kochi areas — Kakkanad, Edappally, Ernakulam, Aluva, Vyttila, Kalamassery, Palarivattom, Fort Kochi and all nearby locations. No transport charge."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is pickup service available for businesses?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We specialize in corporate e-waste pickup and ITAD for businesses of all sizes in Kochi. We offer dedicated pickup schedules, bulk pricing, EPR certificates and complete compliance documentation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of e-waste do you accept?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We accept all types of electronic waste — laptops, desktops, servers, mobiles, tablets, monitors, printers, scanners, UPS, batteries, networking equipment, ACs, refrigerators and all home appliances."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- ── Styles ── -->
+<link rel="stylesheet" href="/style.css">
+<style>
+.trust-badges{margin-top:20px;display:flex;flex-wrap:wrap;gap:15px;color:white;font-size:.9rem;font-weight:500}
+</style>
+
+</head>
+<body>
+<div id="header-slot"></div>
+<main>
+<!-- HERO -->
+<section class="hero" style="padding:0;background:#0a4d27;overflow:hidden">
+  <div style="position:relative;width:100%">
+    <img src="/hero-banner.webp" alt="E-Waste Recycling Kochi - Free Pickup & Instant Payment" class="hero-banner-img" style="width:100%;display:block;max-height:620px;object-fit:cover;object-position:center top;aspect-ratio:1600/600" width="1600" height="600" loading="eager" fetchpriority="high" decoding="sync">
+    <div class="hero-banner-h1-wrap" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:90%;max-width:800px;text-align:center;z-index:20;"><h1 class="hero-banner-h1" style="color:white;font-size:2rem;font-weight:800;margin-bottom:10px;text-shadow:0 2px 8px rgba(0,0,0,.5)">Get Cash for Your Old Electronics — Free Same-Day Pickup in Kochi</h1></div>
+    <!-- Trust Badges Overlay (Top Left) — hidden on mobile -->
+    <div class="hero-trust-badges" style="position:absolute;top:20px;left:20px;display:flex;flex-direction:column;gap:8px;z-index:10">
+      <div style="background:rgba(255,255,255,0.9);padding:6px 12px;border-radius:4px;font-size:12px;font-weight:700;color:#0d7a38;box-shadow:0 2px 10px rgba(0,0,0,0.1)">⭐ 4.9 / 5 — 500+ Reviews</div>
+      <div style="background:rgba(255,255,255,0.9);padding:6px 12px;border-radius:4px;font-size:12px;font-weight:700;color:#0d7a38;box-shadow:0 2px 10px rgba(0,0,0,0.1)">✓ CPCB Authorized</div>
+      <div style="background:rgba(255,255,255,0.9);padding:6px 12px;border-radius:4px;font-size:12px;font-weight:700;color:#0d7a38;box-shadow:0 2px 10px rgba(0,0,0,0.1)">✓ ISO Certified</div>
+    </div>
+
+<!-- CTA overlay at bottom of banner -->
+     <div class="hero-cta-overlay" style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(13,122,56,.85));padding:2.5rem 2rem 1.8rem">
+       <div class="container">
+         <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+           <a href="https://wa.me/917500555454?text=Hi%2C%20I%20want%20to%20get%20a%20price%20quote%20for%20my%20old%20electronics" class="btn btn-wa btn-xl" target="_blank" rel="noopener">
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="17" height="17"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.115 1.528 5.84L0 24l6.335-1.506A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.798 9.798 0 01-5.003-1.37l-.359-.214-3.718.976.991-3.636-.234-.373A9.787 9.787 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+             Get Price Quote on WhatsApp
+           </a>
+           <a href="tel:+917500555454" class="btn btn-xl" style="background:rgba(255,255,255,.15);backdrop-filter:blur(8px);color:#fff;border:1.5px solid rgba(255,255,255,.4)">
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="17" height="17"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.59.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.59 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+             Call Now: +91 75 0055 5454
+           </a>
+           <a href="/contact/" class="btn btn-xl" style="background:rgba(255,255,255,.15);backdrop-filter:blur(8px);color:#fff;border:1.5px solid rgba(255,255,255,.4)">
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="17" height="17"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 2v3M16 2v3M3 9h18" stroke="white" stroke-width="1.5" fill="none"/></svg>
+             Book Free Pickup
+           </a>
+         </div>
+        
+        <div class="trust-badges">
+          💰 Best Market Price — Instant UPI  
+          🚛 Free Same-Day Pickup  
+          🔒 100% Data Security  
+          ✅ CPCB Authorized  
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Scrap Price Ticker -->
+<div style="background:#0a4d27;overflow:hidden;padding:8px 0;border-top:1px solid rgba(255,255,255,.15)">
+  <div style="display:flex;animation:ewk-ticker 30s linear infinite;white-space:nowrap;gap:0">
+    <div style="display:flex;gap:48px;padding-right:48px;font-size:13px;color:#fff;font-weight:600">
+      <span>💻 Laptop — ₹800–₹18,000</span>
+      <span>🖥️ Desktop PC — ₹500–₹6,000</span>
+      <span>📱 Mobile Phone — ₹200–₹8,000</span>
+      <span>🖨️ Printer — ₹100–₹800</span>
+      <span>🖥 Monitor — ₹200–₹1,500</span>
+      <span>🌐 Router / Switch — ₹100–₹500</span>
+      <span>🔋 UPS / Battery — ₹50–₹1,200</span>
+      <span>📺 LED TV — ₹300–₹3,500</span>
+      <span>❄️ AC (split/window) — ₹800–₹4,000</span>
+    </div>
+    <div style="display:flex;gap:48px;padding-right:48px;font-size:13px;color:#fff;font-weight:600" aria-hidden="true">
+      <span>💻 Laptop — ₹800–₹18,000</span>
+      <span>🖥️ Desktop PC — ₹500–₹6,000</span>
+      <span>📱 Mobile Phone — ₹200–₹8,000</span>
+      <span>🖨️ Printer — ₹100–₹800</span>
+      <span>🖥 Monitor — ₹200–₹1,500</span>
+      <span>🌐 Router / Switch — ₹100–₹500</span>
+      <span>🔋 UPS / Battery — ₹50–₹1,200</span>
+      <span>📺 LED TV — ₹300–₹3,500</span>
+      <span>❄️ AC (split/window) — ₹800–₹4,000</span>
+    </div>
+  </div>
+</div>
+<style>@keyframes ewk-ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}</style>
+<!-- Section heading -->
+<section style="padding:4rem 0 2rem;text-align:center">
+  <div class="container">
+    <h2 class="sec-title" style="font-size:1.6rem">Certified ITAD, Data Destruction &amp; <em>Ewaste Recycling</em> in Kochi</h2>
+    <p class="sec-sub" style="margin:0 auto">End-to-end solutions for safe collection, data security &amp; responsible recycling.</p>
+  </div>
+</section>
+<p style="text-align:center;margin:2rem 0;"><a href="/scrap-price/" style="font-weight:700;color:var(--primary);text-decoration:underline;">Check latest e-waste scrap prices in Kochi</a></p>
+<!-- Core services cards -->
+<section style="padding:0 0 3.5rem">
+  <div class="container">
+    <div class="service-grid" style="grid-template-columns:repeat(5,minmax(0,1fr))" id="svc-grid">
+      <div class="service-mini">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=300&q=75" class="service-mini-img" width="300" height="200" alt="Free e-waste pickup Kochi">
+        <div class="service-mini-title">Free E-Waste Pickup</div>
+        <div class="service-mini-desc">We offer free pickup of e-waste from homes, offices &amp; organizations anywhere in Kochi.</div>
+        <a href="/pickup/" class="learn-more">Learn More →</a>
+      </div>
+      <div class="service-mini">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=300&q=75" class="service-mini-img" width="300" height="200" alt="IT Asset Disposal ITAD Kochi">
+        <div class="service-mini-title">IT Asset Disposal (ITAD)</div>
+        <div class="service-mini-desc">Secure IT asset disposition for computers, laptops, servers, networking equipment &amp; more with value recovery.</div>
+        <a href="/itad/" class="learn-more">Learn More →</a>
+      </div>
+      <div class="service-mini">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=300&q=75" class="service-mini-img" width="300" height="200" alt="Data Destruction Services Kochi">
+        <div class="service-mini-title">Data Destruction Services</div>
+        <div class="service-mini-desc">Certified data wiping, hard disk shredding &amp; media destruction with certificate for full compliance &amp; data security.</div>
+        <a href="/data-destruction/" class="learn-more">Learn More →</a>
+      </div>
+      <div class="service-mini">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=300&q=75" class="service-mini-img" width="300" height="200" alt="E-Waste Recycling Kerala">
+        <div class="service-mini-title">Ewaste Recycling</div>
+        <div class="service-mini-desc">Environmentally responsible ewaste recycling with zero landfill policy &amp; maximum material recovery.</div>
+        <a href="/recycling/" class="learn-more">Learn More →</a>
+      </div>
+      <div class="service-mini">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=300&q=75" class="service-mini-img" width="300" height="200" alt="Electronic Scrap Buyers Kochi">
+        <div class="service-mini-title">Electronic Scrap Buyers</div>
+        <div class="service-mini-desc">Get the best market price for your old laptops, computers, servers, mobiles &amp; all types of electronic scrap.</div>
+        <a href="/scrap-price/" class="learn-more">Learn More →</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Testimonials -->
+<section style="background:linear-gradient(135deg, var(--gray-50), var(--green-lt));padding:4rem 0">
+  <div class="container">
+    <div class="sec-header center"><h2 class="sec-title">What Our <em>Customers Say</em></h2></div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card"><div class="test-stars">★★★★★</div><p class="test-text">"Got ₹12,000 for my old office laptops — paid instantly via UPI. The team arrived within 2 hours of my call. Excellent service!"</p><div class="test-author"><div class="test-avatar">AM</div><div><div class="test-name">Arun Menon</div><div class="test-role">Edappally, Kochi</div></div></div></div>
+      <div class="testimonial-card"><div class="test-stars">★★★★★</div><p class="test-text">"Cleared 40 old desktops from our office. Got a great price, full data destruction certificate, and EPR documents — all in one visit. Highly professional!"</p><div class="test-author"><div class="test-avatar">NG</div><div><div class="test-name">Neha George</div><div class="test-role">Kakkanad, Kochi</div></div></div></div>
+      <div class="testimonial-card"><div class="test-stars">★★★★★</div><p class="test-text">"Called at 10am, team arrived by noon, paid cash on the spot for my old PC and AC. Zero hassle. Will use again!"</p><div class="test-author"><div class="test-avatar">SK</div><div><div class="test-name">Sajith Kumar</div><div class="test-role">Palarivattom, Kochi</div></div></div></div>
+    </div>
+  </div>
+</section>
+<!-- About Section -->
+<section style="background:linear-gradient(135deg, #0a4d27, #0d7a38);padding:4rem 0">
+  <div class="container">
+    <div class="about-grid">
+      <div style="position:relative;border-radius:var(--radius-lg);overflow:hidden">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80" alt="EWaste Kochi team recycling circuit boards" width="800" height="360" style="width:100%;height:360px;object-fit:cover;border-radius:var(--radius-lg)">
+        <div style="position:absolute;top:16px;left:16px;background:rgba(255,255,255,.18);backdrop-filter:blur(8px);border-radius:var(--radius);padding:14px 18px;color:#fff">
+          <div style="font-size:11px;font-weight:600;opacity:.85;margin-bottom:4px">✓ ISO 14001:2015 Certified</div>
+          <div style="font-size:11px;font-weight:600;opacity:.85;margin-bottom:4px">✓ CPCB &amp; Pollution Control Board Authorized</div>
+          <div style="font-size:11px;font-weight:600;opacity:.85;margin-bottom:4px">✓ Secure &amp; Compliant Process</div>
+          <div style="font-size:11px;font-weight:600;opacity:.85">✓ Transparent &amp; Ethical</div>
+        </div>
+        <div style="position:absolute;bottom:16px;left:16px;background:rgba(0,0,0,.5);border-radius:var(--radius-sm);padding:8px 14px;color:#fff;font-weight:700;font-size:13px">10+ Years of Experience</div>
+      </div>
+      <div style="color:#fff">
+        <div class="sec-label" style="color:rgba(255,255,255,.7)">About Ewaste Kochi</div>
+        <h2 class="sec-title" style="color:#fff">Kochi's Most Trusted<br>Ewaste Recycling Company</h2>
+        <div class="divider" style="background:rgba(255,255,255,.4)"></div>
+        <p style="font-size:14.5px;color:rgba(255,255,255,.85);line-height:1.8;margin-bottom:1.4rem">We are a government-authorized e-waste management company in Kochi committed to secure data destruction, customer satisfaction &amp; a cleaner future.</p>
+        <div class="checklist-col">
+          <div class="check-item" style="color:rgba(255,255,255,.9)"><div class="check-icon" style="background:rgba(255,255,255,.2)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/></svg></div>Secure Data Destruction with Certificate</div>
+          <div class="check-item" style="color:rgba(255,255,255,.9)"><div class="check-icon" style="background:rgba(255,255,255,.2)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/></svg></div>Free Pickup Across Kochi – Same Day</div>
+          <div class="check-item" style="color:rgba(255,255,255,.9)"><div class="check-icon" style="background:rgba(255,255,255,.2)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/></svg></div>Transparent Process &amp; Best Market Price</div>
+          <div class="check-item" style="color:rgba(255,255,255,.9)"><div class="check-icon" style="background:rgba(255,255,255,.2)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/></svg></div>Eco-Friendly Recycling &amp; Resource Recovery</div>
+        </div>
+        <div style="display:flex;gap:1rem;margin-top:1.8rem">
+          <a href="/about/" class="btn btn-white">Know More About Us</a>
+          <a href="/contact/" class="btn" style="background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.3)">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Stats -->
+<section class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item"><div class="num" data-count="5000" data-suffix="+">5000+</div><div class="stat-label">Happy Customers</div></div>
+      <div class="stat-item"><div class="num" data-count="1200" data-suffix="+">1200+</div><div class="stat-label">Tons E-Waste Recycled</div></div>
+      <div class="stat-item"><div class="num" data-count="100" data-suffix="%">100%</div><div class="stat-label">Data Security</div></div>
+      <div class="stat-item"><div class="num">0%</div><div class="stat-label">Landfill Waste</div></div>
+    </div>
+  </div>
+</section>
+<!-- Process -->
+<section class="section">
+  <div class="container">
+    <div class="sec-header center">
+      <h2 class="sec-title">How <em>E-Waste Pickup</em> Works in Kochi</h2>
+    </div>
+    <div class="process-steps">
+      <div class="step"><div class="step-num">1</div><div class="step-title">Book Pickup</div><div class="step-desc">Share your details or schedule pickup on WhatsApp / Call.</div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-title">We Collect</div><div class="step-desc">Our team arrives at your location &amp; collects e-waste safely.</div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-title">Data Destruction</div><div class="step-desc">Your data is securely wiped or devices destroyed physically.</div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-title">Recycling Process</div><div class="step-desc">E-waste is sorted &amp; recycled in authorized facilities.</div></div>
+      <div class="step"><div class="step-num">5</div><div class="step-title">Certificate Issued</div><div class="step-desc">You receive a certificate for data destruction (if required).</div></div>
+    </div>
+  </div>
+</section>
+<!-- Items we collect -->
+<section style="background:var(--gray-50);padding:3.5rem 0">
+  <div class="container">
+    <div class="sec-header center"><h2 class="sec-title">We Collect <em>All Types</em> of E-Waste</h2></div>
+    <div id="ewaste-items" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:1rem">
+    </div>
+  </div>
+</section>
+<!-- Why Choose + Booking Form -->
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start">
+      <div>
+        <div class="sec-header"><h2 class="sec-title">Why Choose <em>Ewaste Kochi?</em></h2></div>
+        <div class="feature-grid" style="grid-template-columns:1fr 1fr">
+          <div class="feature-card"><div class="feature-icon"><span>🚛</span></div><div class="feature-title">Free Same-Day Pickup</div><div class="feature-desc">Hassle-free same-day pickup anywhere in Kochi.</div></div>
+          <div class="feature-card"><div class="feature-icon"><span>🔒</span></div><div class="feature-title">Data Security</div><div class="feature-desc">100% secure data wiping &amp; hard disk shredding.</div></div>
+          <div class="feature-card"><div class="feature-icon"><span>✅</span></div><div class="feature-title">Certified &amp; Compliant</div><div class="feature-desc">Follow all CPCB &amp; Govt. guidelines.</div></div>
+          <div class="feature-card"><div class="feature-icon"><span>💰</span></div><div class="feature-title">Best Price</div><div class="feature-desc">We offer the best market value.</div></div>
+          <div class="feature-card"><div class="feature-icon"><span>🌱</span></div><div class="feature-title">Eco Friendly</div><div class="feature-desc">We ensure zero landfill &amp; safe recycling.</div></div>
+          <div class="feature-card"><div class="feature-icon"><span>💸</span></div><div class="feature-title">Instant Payment</div><div class="feature-desc">Cash or UPI paid at the time of collection.</div></div>
+        </div>
+      </div>
+      <div>
+        <div style="background:#fff;border:1.5px solid var(--green-mid);border-radius:var(--radius-lg);padding:2rem;box-shadow:var(--shadow-md)">
+          <h3 style="font-family:var(--font-h);font-size:1.1rem;font-weight:700;color:var(--gray-900);margin-bottom:.5rem;text-align:center">Get Instant Price Quote</h3>
+          <p style="text-align:center;font-size:13px;color:var(--text3);margin-bottom:1rem">Pick your item — we'll WhatsApp you the price in minutes</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.3rem;justify-content:center" id="price-chips">
+            <button onclick="ewkSelectChip(this,'Laptop')" style="border:1.5px solid #e5e7eb;border-radius:20px;padding:6px 14px;font-size:12.5px;font-weight:600;background:#fff;cursor:pointer;transition:all .15s" type="button">💻 Laptop</button>
+            <button onclick="ewkSelectChip(this,'Desktop PC')" style="border:1.5px solid #e5e7eb;border-radius:20px;padding:6px 14px;font-size:12.5px;font-weight:600;background:#fff;cursor:pointer;transition:all .15s" type="button">🖥️ Desktop</button>
+            <button onclick="ewkSelectChip(this,'Mobile Phone')" style="border:1.5px solid #e5e7eb;border-radius:20px;padding:6px 14px;font-size:12.5px;font-weight:600;background:#fff;cursor:pointer;transition:all .15s" type="button">📱 Mobile</button>
+            <button onclick="ewkSelectChip(this,'Server')" style="border:1.5px solid #e5e7eb;border-radius:20px;padding:6px 14px;font-size:12.5px;font-weight:600;background:#fff;cursor:pointer;transition:all .15s" type="button">🖥 Server</button>
+            <button onclick="ewkSelectChip(this,'Monitor')" style="border:1.5px solid #e5e7eb;border-radius:20px;padding:6px 14px;font-size:12.5px;font-weight:600;background:#fff;cursor:pointer;transition:all .15s" type="button">🖥 Monitor</button>
+            <button onclick="ewkSelectChip(this,'AC / Fridge')" style="border:1.5px solid #e5e7eb;border-radius:20px;padding:6px 14px;font-size:12.5px;font-weight:600;background:#fff;cursor:pointer;transition:all .15s" type="button">❄️ AC / Fridge</button>
+            <button onclick="ewkSelectChip(this,'Mixed E-Waste')" style="border:1.5px solid #e5e7eb;border-radius:20px;padding:6px 14px;font-size:12.5px;font-weight:600;background:#fff;cursor:pointer;transition:all .15s" type="button">♻️ Mixed</button>
+          </div>
+          <form id="pickup-form" onsubmit="submitQuoteForm(event)">
+            <div class="form-row">
+              <div class="form-group"><label for="pickup-name">Your Name *</label><input id="pickup-name" name="name" type="text" placeholder="Full name" required autocomplete="name"></div>
+              <div class="form-group"><label for="pickup-phone">WhatsApp Number *</label><input id="pickup-phone" name="phone" type="tel" placeholder="10-digit number" required autocomplete="tel"></div>
+            </div>
+            <button type="submit" class="btn btn-wa" style="width:100%;justify-content:center;padding:13px;font-size:14.5px;margin-top:.4rem">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="17" height="17"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.115 1.528 5.84L0 24l6.335-1.506A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.798 9.798 0 01-5.003-1.37l-.359-.214-3.718.976.991-3.636-.234-.373A9.787 9.787 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+              Get My Price on WhatsApp
+            </button>
+          </form>
+          <div style="text-align:center;margin-top:.8rem;font-size:12px;color:var(--text3)">Free pickup • Instant UPI payment • No hidden charges</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Areas + FAQ + Rating -->
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr 300px;gap:2rem;align-items:start">
+      <!-- Areas -->
+      <div>
+        <h3 style="font-family:var(--font-h);font-size:1rem;font-weight:700;margin-bottom:1rem">Areas We Serve in Kochi</h3>
+        <ul class="areas-list">
+          <li><a href="/locations/kakkanad/" style="color:inherit;text-decoration:none;display:flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/></svg>Kakkanad</a></li>
+          <li><a href="/locations/thrippunithura/" style="color:inherit;text-decoration:none;display:flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/></svg>Thrippunithura</a></li>
+          <li><a href="/locations/edappally/" style="color:inherit;text-decoration:none;display:flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/></svg>Edappally</a></li>
+          <li><a href="/locations/vyttila/" style="color:inherit;text-decoration:none;display:flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/></svg>Vyttila</a></li>
+          <li><a href="/locations/fort-kochi/" style="color:inherit;text-decoration:none;display:flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/></svg>Fort Kochi</a></li>
+          <li><a href="/locations/palarivattom/" style="color:inherit;text-decoration:none;display:flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/></svg>Palarivattom</a></li>
+          <li><a href="/locations/kalamassery/" style="color:inherit;text-decoration:none;display:flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/></svg>Kalamassery</a></li>
+        </ul>
+        <a href="/locations/" style="font-size:12px;font-weight:700;color:var(--green);margin-top:.5rem;display:inline-block">View all 32 service locations →</a>
+      </div>
+      <!-- FAQ -->
+      <div>
+        <h3 style="font-family:var(--font-h);font-size:1rem;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h3>
+        <div class="faq-list">
+          <div class="faq-item" id="hfaq-0"><div class="faq-q" onclick="toggleFAQ('hfaq-0')"><span>How do I dispose of old computers in Kochi?</span><span class="faq-toggle">+</span></div><div class="faq-a">Simply call or WhatsApp us at 75 0055 5454. We provide free pickup for e-waste from your home, office or business anywhere in Kochi. Our team will come to your location, collect the items safely and handle everything from data destruction to eco-friendly recycling.</div></div>
+          <div class="faq-item" id="hfaq-1"><div class="faq-q" onclick="toggleFAQ('hfaq-1')"><span>Do you provide data destruction certificates?</span><span class="faq-toggle">+</span></div><div class="faq-a">Yes, we provide certified data destruction services with a verifiable certificate for every job. Our process follows DoD 5220.22-M and NIST 800-88 standards, ensuring 100% data security.</div></div>
+          <div class="faq-item" id="hfaq-2"><div class="faq-q" onclick="toggleFAQ('hfaq-2')"><span>Is pickup service available for businesses?</span><span class="faq-toggle">+</span></div><div class="faq-a">Yes! We specialize in corporate e-waste pickup and ITAD services for businesses of all sizes in Kochi. We offer dedicated pickup schedules, bulk pricing, and complete documentation including EPR certificates.</div></div>
+          <div class="faq-item" id="hfaq-3"><div class="faq-q" onclick="toggleFAQ('hfaq-3')"><span>What types of e-waste do you accept?</span><span class="faq-toggle">+</span></div><div class="faq-a">We accept all types of electronic waste including laptops, desktops, servers, mobiles, tablets, monitors, printers, scanners, UPS, batteries, networking equipment, ACs, refrigerators and all types of home appliances.</div></div>
+        </div>
+        <a href="/faq/" style="font-size:13px;font-weight:600;color:var(--green);display:inline-flex;align-items:center;gap:4px;margin-top:.8rem">View All FAQs →</a>
+      </div>
+      <!-- Google Rating -->
+      <div>
+        <div class="google-rating-box">
+          <div class="google-logo"><span style="color:#4285F4;font-weight:800">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC04">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span> <span style="font-size:.85rem;font-weight:700;color:var(--gray-700)">Rating</span></div>
+          <div class="google-rating-num">4.9</div>
+          <div class="stars" style="margin:.4rem 0">★★★★★</div>
+          <div style="font-size:12.5px;color:var(--text3);margin-bottom:1rem">Based on 500+ reviews</div>
+          <a href="#reviews" class="btn btn-outline btn-sm" style="width:100%;justify-content:center">See All Reviews</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Blog preview -->
+<section style="background:var(--gray-50);padding:4rem 0">
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem;flex-wrap:wrap;gap:1rem">
+      <h2 class="sec-title" style="margin:0">Latest from Our <em>Blog</em></h2>
+      <a href="/blog/" style="font-size:13.5px;font-weight:600;color:var(--green)">View All Articles →</a>
+    </div>
+    <div id="blog-preview" class="blog-grid">
+    </div>
+  </div>
+</section>
+<!-- Internal Links to pSEO Blog Pillars -->
+<section style="background:#f0fdf4;padding:2.5rem 0;border-top:1px solid #d1fae5;border-bottom:1px solid #d1fae5">
+  <div class="container">
+    <h2 style="font-family:var(--font-h);font-size:1rem;font-weight:700;color:var(--gray-700);text-transform:uppercase;letter-spacing:.05em;margin-bottom:1rem;text-align:center">Browse Our E-Waste Guides</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center">
+      <a href="/blog/itad/" style="background:#fff;border:1px solid #d1fae5;border-radius:20px;padding:7px 16px;font-size:13px;font-weight:600;color:#0d7a38;text-decoration:none">IT Asset Disposal Guide</a>
+      <a href="/blog/recycling/" style="background:#fff;border:1px solid #d1fae5;border-radius:20px;padding:7px 16px;font-size:13px;font-weight:600;color:#0d7a38;text-decoration:none">E-Waste Recycling Guide</a>
+      <a href="/blog/data-destruction/" style="background:#fff;border:1px solid #d1fae5;border-radius:20px;padding:7px 16px;font-size:13px;font-weight:600;color:#0d7a38;text-decoration:none">Data Destruction Guide</a>
+      <a href="/blog/collection/" style="background:#fff;border:1px solid #d1fae5;border-radius:20px;padding:7px 16px;font-size:13px;font-weight:600;color:#0d7a38;text-decoration:none">E-Waste Collection Guide</a>
+      <a href="/blog/itad/enterprise/" style="background:#fff;border:1px solid #d1fae5;border-radius:20px;padding:7px 16px;font-size:13px;font-weight:600;color:#0d7a38;text-decoration:none">ITAD for Enterprise</a>
+      <a href="/blog/recycling/residential/" style="background:#fff;border:1px solid #d1fae5;border-radius:20px;padding:7px 16px;font-size:13px;font-weight:600;color:#0d7a38;text-decoration:none">Home Electronics Recycling</a>
+      <a href="/blog/data-destruction/enterprise/" style="background:#fff;border:1px solid #d1fae5;border-radius:20px;padding:7px 16px;font-size:13px;font-weight:600;color:#0d7a38;text-decoration:none">Enterprise Data Destruction</a>
+      <a href="/blog/collection/hospitals/" style="background:#fff;border:1px solid #d1fae5;border-radius:20px;padding:7px 16px;font-size:13px;font-weight:600;color:#0d7a38;text-decoration:none">Hospital E-Waste Collection</a>
+    </div>
+  </div>
+</section>
+<!-- CTA Banner -->
+<section style="padding:3.5rem 0">
+  <div class="container">
+    <div class="cta-banner" style="background:linear-gradient(135deg, var(--primary), var(--blue-800))">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=200&q=75" class="cta-banner-img" width="200" height="200" alt="EWaste Kochi pickup truck">
+      <div class="cta-banner-text">
+        <div class="cta-title">Get the Best Price for Your Old Electronics<br>Free Same-Day Pickup — Instant UPI Payment!</div>
+        <div class="cta-sub">CPCB Authorized · ISO Certified · Zero Landfill</div>
+      </div>
+      <div class="cta-banner-actions">
+        <a href="/contact/" class="btn btn-white"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 2v3M16 2v3M3 9h18" stroke="currentColor" stroke-width="1.5" fill="none"/></svg> Book Free Pickup Now</a>
+        <a href="https://wa.me/917500555454?text=Hi%2C%20I%20want%20to%20get%20the%20best%20price%20for%20my%20old%20electronics.%20Please%20send%20me%20a%20quote." class="btn btn-wa" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.115 1.528 5.84L0 24l6.335-1.506A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.798 9.798 0 01-5.003-1.37l-.359-.214-3.718.976.991-3.636-.234-.373A9.787 9.787 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg> Call / WhatsApp: 75 0055 5454</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<div id="footer-slot"></div>
+<div class="mobile-sticky-bar">
+  <a href="tel:+917500555454" class="btn btn-primary" style="flex:1">📞 Call</a>
+  <a href="https://wa.me/917500555454?text=Hi%2C%20I%20want%20a%20price%20quote%20for%20my%20old%20electronics" class="btn btn-wa" style="flex:1">💬 Get Price</a>
+</div>
+<script src="/shared.js"></script>
+<script src="/ewaste-chatbot.js"></script><script src="/wa-funnel.js"></script>
+<script>
+document.getElementById('header-slot').innerHTML = renderHeader('Home');
+document.getElementById('footer-slot').innerHTML = renderFooter();
+function ewkSelectedItem(){return (document.querySelector('#price-chips button[data-sel]')||{}).dataset&&document.querySelector('#price-chips button[data-sel]').dataset.sel||'';}
+function ewkSelectChip(el,item){document.querySelectorAll('#price-chips button').forEach(b=>{b.style.background='#fff';b.style.borderColor='#e5e7eb';b.style.color='';delete b.dataset.sel;});el.style.background='#0d7a38';el.style.borderColor='#0d7a38';el.style.color='#fff';el.dataset.sel='1';el._item=item;}
+function submitQuoteForm(e){
+  e.preventDefault();
+  var name=document.getElementById('pickup-name').value.trim();
+  var phone=document.getElementById('pickup-phone').value.trim();
+  var item=document.querySelector('#price-chips button[data-sel]');
+  var itemName=item?item._item:'electronics';
+  var msg=encodeURIComponent('Hi, I am '+name+' ('+phone+'). I want to know the price for my old '+itemName+'. Please send a quote. [WEB-QUOTE]');
+  window.open('https://wa.me/917500555454?text='+msg,'_blank');
+}
+function submitPickup(e){
+  e.preventDefault();
+  e.target.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--green)"><div style="font-size:2rem">✅</div><h3 style="font-family:var(--font-h);margin:.5rem 0">Request Received!</h3><p style="color:var(--text2);font-size:13.5px">Our team will contact you within 30 minutes.</p></div>';
+}
+document.getElementById('ewaste-items').innerHTML=[['💻','Laptops &\nComputers'],['🖥️','Servers &\nStorage'],['📱','Mobiles &\nTablets'],['🖨️','Printers &\nScanners'],['🖥','Monitors &\nTVs'],['🌐','Networking\nDevices'],['🔋','UPS & Batteries /\nPower Backup'],['🏠','Office & Home\nAppliances']].map(([icon,label])=>`<div style="background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius);padding:1.2rem;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,.06)"><div style="font-size:2.2rem;margin-bottom:8px">${icon}</div><div style="font-size:12px;font-weight:600;color:var(--gray-700);line-height:1.4">${label.replace('\n','<br>')}</div></div>`).join('');
+document.getElementById('blog-preview').innerHTML=[
+  ['/blog/e-waste-recycling-process-india/','May 1, 2025','E-Waste Recycling','How E-Waste Recycling Works in India – The Complete Process','A step-by-step guide to how authorized recyclers handle collection, data destruction and material recovery.','https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=400&q=75'],
+  ['/blog/why-data-destruction-important-businesses/','Apr 28, 2025','Data Security','Why Data Destruction is Critical for Businesses','Real risks of improper IT disposal, legal obligations and the right methods for Indian businesses.','https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&q=75'],
+  ['/blog/sell-old-laptop-kochi-best-price/','Apr 25, 2025','Scrap Prices','How to Sell Your Old Laptop in Kochi for the Best Price','Current laptop scrap prices, which brands pay more, and how to safely wipe data before selling.','https://images.unsplash.com/photo-1609220136736-443140cffec6?w=400&q=75'],
+  ['/blog/e-waste-rules-india-2024/','Apr 20, 2025','E-Waste Rules','E-Waste Management Rules India – Complete 2025 Guide','EPR targets, CPCB authorization, penalties and your obligations as a business in Kerala.','https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&q=75'],
+].map(([href,date,cat,title,excerpt,img])=>`<div class="blog-card"><a href="${href}"><img loading="lazy" src="${img}" class="blog-card-img" alt="${title}"></a><div class="blog-card-body"><div style="display:flex;gap:8px;align-items:center;margin-bottom:.4rem"><span class="blog-cat">${cat}</span><span style="font-size:11px;color:var(--text3)">${date}</span></div><div class="blog-card-title">${title}</div><div class="blog-card-excerpt">${excerpt}</div><a href="${href}" class="blog-read-more">Read More →</a></div></div>`).join('');
+</script>
+</body>
+</html>

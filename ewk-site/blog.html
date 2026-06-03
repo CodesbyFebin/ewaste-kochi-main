@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- Favicon & PWA Icons (SEO Boost) -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1a7a3a">
+<meta name="msapplication-TileColor" content="#1a7a3a">
+<meta name="msapplication-TileImage" content="/favicon-192x192.png">
+<meta name="application-name" content="Ewaste Kochi">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Ewaste Kochi">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<style>
+/* ── BLOG HERO ── */
+.blog-hero {
+  background: linear-gradient(135deg, #f0f9f4 0%, #e8f5ee 100%);
+  padding: 3rem 0 2.5rem;
+  border-bottom: 1px solid var(--green-mid);
+}
+.blog-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+.blog-hero-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--green);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: .5rem;
+}
+.blog-hero-title {
+  font-family: var(--font-h);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: var(--gray-900);
+  line-height: 1.15;
+  margin-bottom: .5rem;
+}
+.blog-hero-subtitle {
+  font-family: var(--font-h);
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-weight: 700;
+  color: var(--green);
+  line-height: 1.3;
+  margin-bottom: .9rem;
+}
+.blog-hero-desc {
+  font-size: 15px;
+  color: var(--text2);
+  line-height: 1.75;
+  max-width: 460px;
+}
+.blog-hero-img-wrap {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+.blog-hero-img-wrap img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+/* ── BLOG 3-COL GRID ── */
+.blog-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+}
+.blog-card {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition);
+}
+.blog-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--green-mid);
+  transform: translateY(-3px);
+}
+.blog-card-img {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+  display: block;
+}
+.blog-card-body { padding: 1rem 1.1rem 1.2rem; }
+.blog-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: .45rem;
+}
+.blog-cat {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--green);
+  background: var(--green-lt);
+  padding: 2px 8px;
+  border-radius: 100px;
+  display: inline-block;
+  white-space: nowrap;
+}
+.blog-meta-date {
+  font-size: 11px;
+  color: var(--text3);
+}
+.blog-card-title {
+  font-family: var(--font-h);
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  line-height: 1.4;
+  margin-bottom: .45rem;
+}
+.blog-card-title a { color: inherit; }
+.blog-card-title a:hover { color: var(--green); }
+.blog-card-excerpt {
+  font-size: 12px;
+  color: var(--text2);
+  line-height: 1.65;
+  margin-bottom: .7rem;
+}
+.blog-read-more {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--green);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.blog-read-more:hover { gap: 8px; }
+/* ── PAGINATION ── */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+.page-btn {
+  min-width: 38px;
+  height: 38px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  font-size: 13.5px;
+  font-weight: 600;
+  border: 1px solid var(--gray-300);
+  background: #fff;
+  color: var(--text2);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--transition);
+}
+.page-btn:hover { border-color: var(--green); color: var(--green); }
+.page-btn.active { background: var(--green); color: #fff; border-color: var(--green); }
+.page-btn.next { padding: 0 14px; }
+/* ── SIDEBAR ── */
+.sidebar-box {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 1.3rem;
+}
+.sidebar-title {
+  font-family: var(--font-h);
+  font-size: .98rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: .9rem;
+  padding-bottom: .5rem;
+  border-bottom: 2.5px solid var(--green);
+}
+.sidebar-search {
+  display: flex;
+  gap: 8px;
+}
+.sidebar-search input {
+  flex: 1;
+  border: 1.5px solid var(--gray-300);
+  border-radius: var(--radius-sm);
+  padding: 9px 12px;
+  font-size: 13px;
+  outline: none;
+  font-family: var(--font);
+}
+.sidebar-search input:focus { border-color: var(--green); }
+.sidebar-search button {
+  background: var(--green);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 9px 13px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.sidebar-cat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--text2);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.sidebar-cat-item:hover {
+  background: var(--green-lt);
+  color: var(--green);
+  font-weight: 600;
+}
+.sidebar-cat-item:hover .cat-count { background: var(--green); color: #fff; }
+.cat-count {
+  background: var(--green-lt);
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 100px;
+  transition: all var(--transition);
+}
+.popular-post {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--gray-100);
+}
+.popular-post:last-of-type { border-bottom: none; }
+.popular-post-img {
+  width: 64px;
+  height: 52px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+.popular-post-title {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--gray-900);
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+.popular-post-title a { color: inherit; }
+.popular-post-title a:hover { color: var(--green); }
+.popular-post-date { font-size: 11px; color: var(--text3); }
+/* ── SIDEBAR CTA ── */
+.sidebar-cta {
+  background: var(--green);
+  border-radius: var(--radius-lg);
+  padding: 1.4rem;
+  position: relative;
+  overflow: hidden;
+}
+.sidebar-cta::after {
+  content: '';
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 110px;
+  height: 110px;
+  background: rgba(255,255,255,.08);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.sidebar-cta-icon { font-size: 2.2rem; margin-bottom: .6rem; line-height: 1; }
+.sidebar-cta-title {
+  font-family: var(--font-h);
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: .8rem;
+  line-height: 1.3;
+}
+.sidebar-cta ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 1.1rem;
+}
+.sidebar-cta ul li {
+  font-size: 12.5px;
+  color: rgba(255,255,255,.9);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.sidebar-cta ul li::before { content: '✓'; font-weight: 700; color: #86efac; }
+/* ── RESPONSIVE ── */
+@media(max-width:1024px) {
+  .blog-3col { grid-template-columns: 1fr 1fr; }
+}
+@media(max-width:768px) {
+  .blog-hero-inner { grid-template-columns: 1fr; }
+  .blog-hero-img-wrap { display: none; }
+  .blog-3col { grid-template-columns: 1fr; }
+  .blog-layout { grid-template-columns: 1fr !important; }
+  .sidebar { display: none; }
+}
+</style>
+
+<title>E-Waste Recycling Blog Kochi – ITAD & Scrap Price Guides</title>
+<meta name="description" content="Read the latest news, guides, and insights on e-waste recycling, data security, and IT asset disposal in Kochi and Kerala.">
+<link rel="canonical" href="https://www.ewastekochi.com/blog/">
+<meta property="og:title" content="E-Waste Recycling & ITAD Blog | Ewaste Kochi">
+<meta property="og:description" content="Read the latest news, guides, and insights on e-waste recycling, data security, and IT asset disposal in Kochi and Kerala.">
+<meta property="og:url" content="https://www.ewastekochi.com/blog/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.ewastekochi.com/img/ewaste-guide-hero.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="E-Waste Recycling & ITAD Blog | Ewaste Kochi">
+<meta name="twitter:description" content="Read the latest news, guides, and insights on e-waste recycling, data security, and IT asset disposal in Kochi and Kerala.">
+<meta name="twitter:image" content="https://www.ewastekochi.com/img/ewaste-guide-hero.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"Ewaste Kochi Blog"}</script>
+<meta name="geo.region" content="IN-KL">
+<meta name="geo.placename" content="Kochi, Kerala, India">
+<meta name="geo.position" content="9.9816;76.3016">
+<meta name="ICBM" content="9.9816, 76.3016">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How can I learn more about e-waste recycling in Kochi?","acceptedAnswer":{"@type":"Answer","text":"The Ewaste Kochi blog covers all aspects of e-waste management including recycling processes, scrap prices, data destruction, ITAD best practices, and e-waste laws in India. Browse our 36+ in-depth articles for expert guidance on responsible electronics disposal."}},{"@type":"Question","name":"What is the current laptop scrap price in Kochi?","acceptedAnswer":{"@type":"Answer","text":"Laptop scrap prices in Kochi range from Rs 500 to Rs 8,000+ depending on brand and condition. Working Dell, HP, and Lenovo laptops command premium prices. Check our blog post on laptop scrap prices for a complete brand-wise price guide updated for 2025."}},{"@type":"Question","name":"What are the e-waste rules in India in 2024?","acceptedAnswer":{"@type":"Answer","text":"The E-Waste Management Rules 2022 (amended in 2024) require producers, consumers, and dismantlers to comply with Extended Producer Responsibility (EPR) guidelines. Individuals must not dispose of e-waste in regular trash. Read our detailed blog post on India e-waste rules for full compliance guidance."}},{"@type":"Question","name":"How do I safely destroy data on old hard drives?","acceptedAnswer":{"@type":"Answer","text":"Old hard drives can be data-wiped using DoD or NIST-compliant software, degaussed using a certified degausser, or physically shredded. Software wiping is suitable for most drives; shredding is recommended for SSDs and highest-security requirements. Read our blog for step-by-step guides."}},{"@type":"Question","name":"Are there free e-waste recycling options in Kochi?","acceptedAnswer":{"@type":"Answer","text":"Yes, Ewaste Kochi offers completely free e-waste pickup and recycling across Kochi. No minimum quantity, no service fee. For valuable items like laptops and servers, you also receive instant cash payment. Book your free pickup via WhatsApp 75 0055 5454."}}]}</script>
+</head>
+<body>
+<div id="hdr"></div>
+<!-- ── BLOG HERO ── -->
+<section class="blog-hero">
+  <div class="container">
+    <div class="blog-hero-inner">
+      <div>
+        <div class="blog-hero-label">Our Blog</div>
+        <h1 class="blog-hero-title">Our Blog</h1>
+        <div class="blog-hero-subtitle">Insights, Tips &amp; Updates on<br>E-Waste Management</div>
+        <p class="blog-hero-desc">Stay informed about e-waste recycling, data security, sustainability and the latest industry updates.</p>
+      </div>
+      <div class="blog-hero-img-wrap">
+        <img src="/img/recycling_hero_premium.png" alt="E-Waste Blog Kochi – insights on recycling, ITAD and data destruction" loading="eager">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ── BLOG CONTENT + SIDEBAR ── -->
+<section class="section" style="padding-top:3rem">
+  <div class="container">
+    <div class="blog-layout" style="display:grid;grid-template-columns:1fr 300px;gap:2.5rem;align-items:start">
+      <!-- POSTS -->
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.6rem;flex-wrap:wrap;gap:1rem">
+          <h2 class="sec-title" style="margin:0">Latest <em>Articles</em></h2>
+          <a href="/blog/" style="font-size:13px;font-weight:600;color:var(--green);display:flex;align-items:center;gap:4px">View All Articles →</a>
+        </div>
+        <div class="blog-3col" id="blogposts"></div>
+        <div class="pagination" id="pagination"></div>
+      </div>
+      <!-- SIDEBAR -->
+      <div style="display:flex;flex-direction:column;gap:1.4rem;position:sticky;top:80px">
+        <!-- Search -->
+        <div class="sidebar-box">
+          <div class="sidebar-title">Search Blog</div>
+          <div class="sidebar-search">
+            <input type="text" placeholder="Search articles..." id="blog-search">
+            <button>🔍</button>
+          </div>
+        </div>
+        <!-- Categories & Hubs -->
+        <div class="sidebar-box">
+          <div class="sidebar-title">Explore Local Service Hubs</div>
+          <div id="catlist"></div>
+          <a href="/blog/" style="font-size:12.5px;color:var(--green);display:flex;align-items:center;gap:4px;margin-top:.8rem;font-weight:600;border-top:1px solid var(--gray-100);padding-top:.8rem">View All Articles →</a>
+        </div>
+        <!-- Popular Posts -->
+        <div class="sidebar-box">
+          <div class="sidebar-title">Popular Posts</div>
+          <div id="popular"></div>
+          <a href="/blog/" style="font-size:12.5px;color:var(--green);display:flex;align-items:center;gap:4px;margin-top:.8rem;font-weight:600;border-top:1px solid var(--gray-100);padding-top:.8rem">View All Popular Posts →</a>
+        </div>
+        <!-- CTA -->
+        <div class="sidebar-cta">
+          <div class="sidebar-cta-icon">🚛</div>
+          <div class="sidebar-cta-title">Need E-Waste Pickup?<br>We've Got You Covered!</div>
+          <ul>
+            <li>Free pickup across Kochi</li>
+            <li>Safe &amp; secure handling</li>
+            <li>Best market value</li>
+            <li>No hidden charges</li>
+          </ul>
+          <a href="/contact/" class="btn btn-white btn-sm" style="width:100%;justify-content:center;margin-bottom:10px;font-size:12.5px">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 2v3M16 2v3M3 9h18" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+            Book Free Pickup Now
+          </a>
+          <div style="text-align:center;font-size:11px;color:rgba(255,255,255,.65);margin-bottom:7px">or WhatsApp us</div>
+          <a href="https://wa.me/917500555454" class="btn btn-sm" style="width:100%;justify-content:center;background:rgba(255,255,255,.15);color:#fff;border:1.5px solid rgba(255,255,255,.35);font-size:12.5px" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.115 1.528 5.84L0 24l6.335-1.506A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.798 9.798 0 01-5.003-1.37l-.359-.214-3.718.976.991-3.636-.234-.373A9.787 9.787 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+            75 0055 5454
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ── NEWSLETTER ── -->
+<section style="padding:0 0 3.5rem">
+  <div class="container">
+    <div class="newsletter-bar">
+      <div class="newsletter-icon">✉️</div>
+      <div class="newsletter-text">
+        <div class="nl-title">Stay Updated with <em style="font-style:normal;color:var(--green)">E-Waste News &amp; Tips</em></div>
+        <div class="nl-sub">Subscribe to our newsletter for the latest updates on e-waste management, data security and sustainability.</div>
+      </div>
+      <div>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Enter your email address">
+          <button class="btn btn-primary" onclick="this.textContent='Subscribed ✓';this.style.background='#145c30'">Subscribe</button>
+        </div>
+        <div class="newsletter-privacy">We respect your privacy. Unsubscribe anytime.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div id="ftr"></div>
+<script src="/shared.js"></script>
+<script>
+document.getElementById('hdr').innerHTML = renderHeader('Blog');
+document.getElementById('ftr').innerHTML = renderFooter();
+const posts = [
+  { cat:'E-Waste Recycling', date:'May 1, 2025', read:'8 min', title:'How E-Waste Recycling Works in India – The Complete Process', excerpt:'A step-by-step guide to how authorized e-waste recyclers in India handle collection, data destruction, dismantling and material recovery.', href:'/blog/e-waste-recycling-process-india/', img:'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=400&q=80' },
+  { cat:'Data Security', date:'Apr 28, 2025', read:'6 min', title:'Why Data Destruction is Critical for Businesses', excerpt:'Real risks of improper IT disposal, legal obligations under IT Act 2000 and DPDP Act, and the right data destruction methods for Indian businesses.', href:'/blog/why-data-destruction-important-businesses/', img:'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&q=80' },
+  { cat:'Electronic Scrap', date:'Apr 25, 2025', read:'5 min', title:'How to Sell Your Old Laptop in Kochi for the Best Price', excerpt:'Current laptop scrap prices in Kochi, which brands pay more, where to sell, and how to safely wipe data before selling.', href:'/blog/sell-old-laptop-kochi-best-price/', img:'https://images.unsplash.com/photo-1609220136736-443140cffec6?w=400&q=80' },
+  { cat:'E-Waste Rules', date:'Apr 20, 2025', read:'7 min', title:'E-Waste Management Rules India – Complete Guide for 2025', excerpt:'E-Waste Management Rules 2022 explained — EPR targets, CPCB authorization, penalties and obligations for businesses in Kerala.', href:'/blog/e-waste-rules-india-2024/', img:'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&q=80' },
+  { cat:'Electronic Scrap', date:'Apr 18, 2026', read:'5 min', title:'Laptop Scrap Price in Kochi 2026 – Brand-wise Buyback Rates', excerpt:'Current laptop scrap prices in Kochi for Dell, HP, Lenovo and Apple MacBook. Free pickup, certified data destruction, instant payment.', href:'/blog/laptop-scrap-price-kochi/', img:'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&q=80' },
+  { cat:'Mobile Recycling', date:'Apr 15, 2026', read:'4 min', title:'Mobile Phone Scrap Price in Kochi 2026 – iPhone & Android Rates', excerpt:'Current mobile phone scrap prices in Kochi 2026. iPhone, Samsung, OnePlus buyback rates and how to get the best value.', href:'/blog/mobile-scrap-price-kochi/', img:'https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=400&q=80' },
+  { cat:'Data Security', date:'Apr 12, 2026', read:'6 min', title:'Secure Data Destruction Services in Kochi 2026', excerpt:'Certified secure data destruction in Kochi following NIST 800-88 and DoD 5220.22-M standards. Certificate of destruction guaranteed.', href:'/blog/secure-data-destruction-kochi/', img:'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&q=80' },
+  { cat:'E-Waste Recycling', date:'Apr 10, 2026', read:'5 min', title:'Free E-Waste Pickup in Kochi 2026 – Home & Office Collection', excerpt:'Free e-waste pickup in Kochi for homes and businesses. Same-day collection across Kakkanad, Edappally, Aluva and all Kochi areas.', href:'/blog/free-e-waste-pickup-kochi/', img:'https://images.unsplash.com/photo-1558618047-f4e60c4e0e2d?w=400&q=80' },
+  { cat:'ITAD Solutions', date:'May 13, 2026', read:'8 min', title:'How to Choose an ITAD Provider in India – 2026 Checklist', excerpt:'7 critical criteria for evaluating ITAD providers in India: CPCB certifications, NIST data destruction standards, DPDP Act compliance, chain of custody, and red flags to avoid.', href:'/blog/how-to-choose-itad-provider/', img:'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80' },
+  { cat:'ITAD Solutions', date:'Apr 8, 2026', read:'6 min', title:'IT Asset Disposal (ITAD) Services in Kochi 2026', excerpt:'Professional IT Asset Disposal in Kochi. Certified data destruction, value recovery and complete compliance documentation for businesses.', href:'/blog/it-asset-disposal-kochi/', img:'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80' },
+  { cat:'Electronic Scrap', date:'Apr 5, 2026', read:'5 min', title:'Server Scrap Price in Kochi 2026 – Enterprise IT Buyback Rates', excerpt:'Current server scrap and buyback prices in Kochi 2026. Dell PowerEdge, HP ProLiant rates and enterprise IT decommissioning services.', href:'/blog/server-scrap-price-kochi/', img:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80' },
+  { cat:'Electronic Scrap', date:'Apr 3, 2026', read:'4 min', title:'AC Scrap Price in Kerala 2026 – Complete Guide', excerpt:'Everything you need to know about AC scrap prices in Kerala, how to sell your old AC unit, and best recycling options.', href:'/blog/ac-scrap-price-kerala/', img:'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&q=80' },
+  { cat:'Battery Recycling', date:'Apr 1, 2026', read:'5 min', title:'Battery Disposal in India 2026 – Complete Guide', excerpt:'How to safely dispose of batteries in India. Regulations, drop-off points, and certified battery recycling services in Kochi.', href:'/blog/battery-disposal-india/', img:'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=400&q=80' },
+  { cat:'Sustainability', date:'Mar 28, 2026', read:'6 min', title:'Benefits of E-Waste Recycling 2026 – Why It Matters', excerpt:'Environmental, economic and social benefits of recycling electronic waste. Why responsible e-waste disposal is critical for Kerala.', href:'/blog/benefits-ewaste-recycling/', img:'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=400&q=80' },
+  { cat:'E-Waste Recycling', date:'Mar 25, 2026', read:'5 min', title:'Best E-Waste Recycling in Kochi 2026 – Authorized Centres', excerpt:'Find the best e-waste recycling centres in Kochi. CPCB-authorized, free pickup, best prices for all electronics.', href:'/blog/best-e-waste-recycling-kochi/', img:'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=400&q=80' },
+  { cat:'Electronic Scrap', date:'Mar 22, 2026', read:'5 min', title:'Best Scrap Dealers in Kochi for Electronics 2026', excerpt:'Top-rated electronic scrap dealers in Kochi. Compare prices, services and find the best buyers for your old laptops, computers and gadgets.', href:'/blog/best-scrap-dealers-kochi-electronics/', img:'https://images.unsplash.com/photo-1609220136736-443140cffec6?w=400&q=80' },
+  { cat:'E-Waste Recycling', date:'Mar 20, 2026', read:'5 min', title:'Bulk E-Waste Disposal in Kochi 2026 – Corporate Solutions', excerpt:'Bulk e-waste disposal solutions for offices, IT companies and corporates in Kochi. EPR certificates, bulk pricing, complete compliance.', href:'/blog/bulk-e-waste-disposal-kochi/', img:'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80' },
+  { cat:'Electronic Scrap', date:'Mar 18, 2026', read:'4 min', title:'Computer Scrap Dealers in Kochi 2026 – Best Prices', excerpt:'Find reliable computer scrap dealers in Kochi offering best prices for old desktops, laptops, servers and all computer hardware.', href:'/blog/computer-scrap-dealers-kochi/', img:'https://images.unsplash.com/photo-1587614382346-4ec70e388b28?w=400&q=80' },
+  { cat:'Data Security', date:'Mar 15, 2026', read:'6 min', title:'Corporate Data Destruction Services 2026 – Complete Guide', excerpt:'Certified corporate data destruction services for businesses. NIST standards, certificate of destruction, complete audit trail.', href:'/blog/corporate-data-destruction-services/', img:'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&q=80' },
+  { cat:'E-Waste Recycling', date:'Mar 12, 2026', read:'4 min', title:'Electronic Waste Collection Near Me Kochi 2026', excerpt:'Find e-waste collection points near you in Kochi. Free pickup, drop-off locations and scheduled collection services.', href:'/blog/electronic-waste-collection-near-me-kochi/', img:'https://images.unsplash.com/photo-1558618047-f4e60c4e0e2d?w=400&q=80' },
+  { cat:'E-Waste Recycling', date:'Mar 10, 2026', read:'5 min', title:'Electronic Waste Disposal in Kerala 2026 – Complete Guide', excerpt:'How to dispose of electronic waste safely in Kerala. CPCB-authorized recyclers, regulations and best practices for responsible disposal.', href:'/blog/electronic-waste-disposal-kerala/', img:'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=400&q=80' },
+  { cat:'Sustainability', date:'Mar 8, 2026', read:'6 min', title:'Environmental Impact of E-Waste 2026 – Why It Matters', excerpt:'The environmental dangers of e-waste and how responsible recycling protects soil, water and public health in Kerala.', href:'/blog/environmental-impact-ewaste/', img:'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=400&q=80' },
+  { cat:'E-Waste Recycling', date:'Mar 5, 2026', read:'4 min', title:'E-Waste Collection Near Me Kochi 2026', excerpt:'Easy e-waste collection near you in Kochi. WhatsApp or call for free doorstep pickup anywhere in Kochi and Ernakulam.', href:'/blog/e-waste-collection-near-me-kochi/', img:'https://images.unsplash.com/photo-1558618047-f4e60c4e0e2d?w=400&q=80' },
+  { cat:'ITAD Solutions', date:'Mar 3, 2026', read:'6 min', title:'E-Waste Management for IT Companies 2026', excerpt:'Comprehensive e-waste management solutions for IT companies in Kochi. ITAD, data destruction, EPR compliance and certification.', href:'/blog/e-waste-management-it-companies/', img:'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80' },
+  { cat:'Electronic Scrap', date:'Mar 1, 2026', read:'4 min', title:'Free Laptop Recycling in Kochi 2026', excerpt:'Get your old laptops recycled for free in Kochi. Free pickup, data destruction and best buyback prices for all laptop brands.', href:'/blog/free-laptop-recycling-kochi/', img:'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&q=80' },
+  { cat:'Data Security', date:'Feb 28, 2026', read:'5 min', title:'HDD vs SSD Destruction 2026 – Which Method is Right?', excerpt:'Compare HDD and SSD data destruction methods. Why SSDs require physical destruction and how to ensure complete data erasure.', href:'/blog/hdd-vs-ssd-destruction/', img:'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&q=80' },
+  { cat:'Data Security', date:'Feb 25, 2026', read:'5 min', title:'How to Destroy Hard Disk Data Permanently in Kochi 2026', excerpt:'Learn how to permanently destroy hard disk data in Kochi using NIST 800-88 and DoD 5220.22-M certified methods.', href:'/blog/how-destroy-hard-disk-data/', img:'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&q=80' },
+  { cat:'Data Security', date:'Feb 22, 2026', read:'5 min', title:'NIST 800-88 Data Wiping 2026 – Complete Compliance Guide', excerpt:'Complete guide to NIST 800-88 data wiping standards. How Indian businesses can achieve certified media sanitization compliance.', href:'/blog/nist-800-88-data-wiping/', img:'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&q=80' },
+  { cat:'E-Waste Recycling', date:'Feb 20, 2026', read:'5 min', title:'Office Computer Recycling in Kerala 2026', excerpt:'Office computer recycling solutions for businesses in Kerala. Bulk pickup, data destruction, EPR certificates and zero-landfill recycling.', href:'/blog/office-computer-recycling-kerala/', img:'https://images.unsplash.com/photo-1587614382346-4ec70e388b28?w=400&q=80' },
+  { cat:'Electronic Scrap', date:'Feb 18, 2026', read:'4 min', title:'Old TV Disposal in Kochi 2026 – LED, LCD & CRT Recycling', excerpt:'How to dispose of your old TV in Kochi safely. LED, LCD and CRT TV recycling with free pickup and best scrap prices.', href:'/blog/old-tv-disposal-kochi/', img:'https://images.unsplash.com/photo-1593359677879-a4bb92f829e1?w=400&q=80' },
+  { cat:'Electronic Scrap', date:'Feb 15, 2026', read:'4 min', title:'Printer Recycling in Kochi 2026 – All Brands Accepted', excerpt:'Printer recycling in Kochi for all brands — HP, Canon, Epson, Brother. Free pickup, eco-friendly disposal, best prices.', href:'/blog/printer-recycling-kochi/', img:'https://images.unsplash.com/photo-1558618047-f4e60c4e0e2d?w=400&q=80' },
+  { cat:'Sustainability', date:'Feb 12, 2026', read:'6 min', title:'How Recycling Electronics Helps Kerala 2026', excerpt:'How responsible e-waste recycling contributes to a greener Kerala. Environmental benefits, resource recovery and community impact.', href:'/blog/recycling-electronics-helps-kerala/', img:'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=400&q=80' },
+  { cat:'Electronic Scrap', date:'Feb 10, 2026', read:'5 min', title:'Sell Old Laptop in Kochi 2026 – Best Buyback Prices', excerpt:'Where and how to sell your old laptop in Kochi for maximum value. Compare buyback vs scrap prices, free pickup available.', href:'/blog/sell-old-laptop-kochi/', img:'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&q=80' },
+  { cat:'Electronic Scrap', date:'Feb 8, 2026', read:'5 min', title:'Server Scrap Value in India 2026 – Enterprise IT Recycling', excerpt:'How to calculate server scrap value in India. Enterprise IT recycling rates, buyback factors and how to maximize returns.', href:'/blog/server-scrap-value-india/', img:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80' },
+  { cat:'E-Waste Recycling', date:'Feb 5, 2026', read:'5 min', title:'What is E-Waste 2026 – Types, Examples & Impact', excerpt:'What is e-waste? Types of electronic waste, examples, environmental impact and why responsible disposal matters for India.', href:'/blog/what-is-ewaste/', img:'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=400&q=80' },
+  { cat:'Electronic Scrap', date:'Feb 3, 2026', read:'4 min', title:'Where to Sell E-Waste Near Me 2026 – Kochi Guide', excerpt:'Find the best places to sell e-waste near you in Kochi and Kerala. Authorized buyers, best prices, free pickup options.', href:'/blog/where-sell-ewaste-near-me/', img:'https://images.unsplash.com/photo-1609220136736-443140cffec6?w=400&q=80' },
+  { cat:'Data Security', date:'Feb 1, 2026', read:'5 min', title:'Why Companies Destroy Data 2026 – Legal & Security Reasons', excerpt:'Why businesses must destroy data before disposing old devices. Legal requirements under Indian law and real-world breach examples.', href:'/blog/why-companies-destroy-data/', img:'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&q=80' },
+];
+const cats = [
+  { name: 'IT Asset Disposal (ITAD)', count: '100+', href: '/blog/itad/' },
+  { name: 'Data Destruction',         count: '100+', href: '/blog/data-destruction/' },
+  { name: 'E-Waste Recycling',        count: '100+', href: '/blog/recycling/' },
+  { name: 'E-Waste Collection',       count: '100+', href: '/blog/collection/' },
+  { name: 'Electronic Scrap',         count: 14,     href: '#' },
+  { name: 'Sustainability',           count: 3,      href: '#' },
+];
+/* Blog cards */
+document.getElementById('blogposts').innerHTML = posts.map(p => `
+<div class="blog-card">
+  <img src="${p.img}" class="blog-card-img" alt="${p.title}" loading="lazy">
+  <div class="blog-card-body">
+    <div class="blog-card-meta">
+      <span class="blog-cat">${p.cat}</span>
+      <span class="blog-meta-date">${p.date} · ${p.read} read</span>
+    </div>
+    <div class="blog-card-title"><a href="${p.href}">${p.title}</a></div>
+    <div class="blog-card-excerpt">${p.excerpt}</div>
+    <a href="${p.href}" class="blog-read-more">Read More →</a>
+  </div>
+</div>`).join('');
+/* Categories */
+document.getElementById('catlist').innerHTML = cats.map(c => `
+<a href="${c.href || '#'}" class="sidebar-cat-item" style="text-decoration:none;">
+  <span>› ${c.name}</span>
+  <span class="cat-count">${c.count}</span>
+</a>`).join('');
+/* Popular posts (top 5) */
+document.getElementById('popular').innerHTML = posts.slice(0, 5).map(p => `
+<div class="popular-post">
+  <img src="${p.img}" class="popular-post-img" alt="${p.title}" loading="lazy">
+  <div>
+    <div class="popular-post-title"><a href="${p.href}">${p.title}</a></div>
+    <div class="popular-post-date">${p.date}</div>
+  </div>
+</div>`).join('');
+/* Pagination */
+document.getElementById('pagination').innerHTML =
+  [1, 2, 3, '...', 10].map((p, i) =>
+    `<a href="#" class="page-btn${i === 0 ? ' active' : ''}">${p}</a>`
+  ).join('') +
+  `<a href="#" class="page-btn next">Next →</a>`;
+</script>
+<script src="/ewaste-chatbot.js"></script><script src="/wa-funnel.js"></script>
+</body>
+</html>

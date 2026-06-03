@@ -1,0 +1,71 @@
+---
+export const prerender = true;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found | Ewaste Kochi Blog</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Browse our e-waste recycling guides or return to Ewaste Kochi.">
+  <link rel="canonical" href="https://www.ewastekochi.com/blog/">
+  <meta name="robots" content="noindex">
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 800px; margin: 0 auto; padding: 1rem 1.5rem; color: #1f2937; background: #f9fafb; }
+    header { background: #0d7a38; color: #fff; padding: 1rem 1.5rem; margin: -1rem -1.5rem 2rem; }
+    header a { color: #fff; text-decoration: none; font-weight: 700; }
+    .hero { text-align: center; padding: 3rem 1rem; }
+    .code { font-size: 5rem; font-weight: 900; color: #0d7a38; line-height: 1; margin: 0; }
+    h1 { font-size: 1.6rem; font-weight: 700; color: #111827; margin: 1rem 0 .5rem; }
+    p { color: #6b7280; margin: 0 0 2rem; }
+    .links { display: flex; flex-wrap: wrap; gap: .75rem; justify-content: center; }
+    .btn-primary { background: #0d7a38; color: #fff; padding: .65rem 1.4rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: .95rem; }
+    .btn-primary:hover { background: #0a6230; }
+    .btn-secondary { border: 1.5px solid #0d7a38; color: #0d7a38; padding: .65rem 1.4rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: .95rem; }
+    .btn-secondary:hover { background: #f0fdf4; }
+    .pillars { margin: 3rem 0 1rem; }
+    .pillars h2 { font-size: 1rem; font-weight: 600; color: #6b7280; text-transform: uppercase; letter-spacing: .05em; text-align: center; margin-bottom: 1rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: .6rem; }
+    .pill { background: #fff; border: 1px solid #e5e7eb; border-radius: 6px; padding: .7rem 1rem; text-decoration: none; color: #374151; font-size: .88rem; transition: border-color .15s; }
+    .pill:hover { border-color: #0d7a38; color: #0d7a38; }
+    footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e5e7eb; font-size: .85rem; color: #9ca3af; }
+    footer a { color: #6b7280; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="https://www.ewastekochi.com/">← Ewaste Kochi</a>
+  </header>
+
+  <div class="hero">
+    <p class="code">404</p>
+    <h1>Page not found</h1>
+    <p>This URL doesn't exist. It may have been moved, renamed, or never published.</p>
+    <div class="links">
+      <a href="https://www.ewastekochi.com/" class="btn-primary">Go to main site</a>
+      <a href="/blog/itad/" class="btn-secondary">Browse ITAD guides</a>
+      <a href="/blog/recycling/" class="btn-secondary">Browse recycling guides</a>
+    </div>
+  </div>
+
+  <div class="pillars">
+    <h2>Browse by topic</h2>
+    <div class="grid">
+      <a href="/blog/itad/enterprise/" class="pill">ITAD for Enterprise</a>
+      <a href="/blog/itad/sme/" class="pill">ITAD for SMEs</a>
+      <a href="/blog/itad/residential/" class="pill">ITAD Residential</a>
+      <a href="/blog/recycling/enterprise/" class="pill">Recycling – Enterprise</a>
+      <a href="/blog/recycling/residential/" class="pill">Recycling – Residential</a>
+      <a href="/blog/recycling/hospitals/" class="pill">Recycling – Hospitals</a>
+      <a href="/blog/data-destruction/enterprise/" class="pill">Data Destruction</a>
+      <a href="/blog/collection/residential/" class="pill">E-Waste Collection</a>
+      <a href="https://www.ewastekochi.com/blog/" class="pill">All blog guides →</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>Need help? Call or WhatsApp <a href="tel:+917500555454">75 0055 5454</a> · <a href="https://www.ewastekochi.com/">www.ewastekochi.com</a></p>
+  </footer>
+</body>
+</html>

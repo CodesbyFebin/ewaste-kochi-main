@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- Favicon & PWA Icons (SEO Boost) -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1a7a3a">
+<meta name="msapplication-TileColor" content="#1a7a3a">
+<meta name="msapplication-TileImage" content="/favicon-192x192.png">
+<meta name="application-name" content="Ewaste Kochi">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Ewaste Kochi">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<style>
+/* HERO */
+.itad-hero{background:#fff;padding:3rem 0;border-bottom:1px solid var(--gray-200)}
+.itad-hero-inner{display:grid;grid-template-columns:1fr 520px;gap:3rem;align-items:center}
+.itad-hero-img-wrap{position:relative}
+.itad-hero-img-wrap img{width:100%;height:340px;object-fit:cover;border-radius:var(--radius-lg);box-shadow:var(--shadow-md);display:block}
+.itad-stats-card{position:absolute;top:1.2rem;right:1.2rem;background:#fff;border-radius:var(--radius-lg);box-shadow:0 8px 32px rgba(0,0,0,.18);padding:1.2rem;min-width:160px}
+.itad-stat-row{display:flex;align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid var(--gray-100)}
+.itad-stat-row:last-child{border-bottom:none}
+.itad-stat-icon{width:32px;height:32px;background:var(--green-lt);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem}
+.itad-stat-num{font-family:var(--font-h);font-size:1rem;font-weight:800;color:var(--green);line-height:1}
+.itad-stat-lbl{font-size:10.5px;color:var(--text3)}
+/* PRICE TABLE */
+.price-table {width: 100%; border-collapse: collapse; margin: 1.5rem 0;}
+.price-table th, .price-table td {border: 1px solid var(--gray-200); padding: 12px 16px; text-align: left;}
+.price-table th {background: var(--green); color: #fff; font-family: var(--font-h); font-weight: 700;}
+.price-table tr:nth-child(even) {background: var(--gray-50);}
+.price-table tr:hover {background: var(--green-lt);}
+/* PROCESS */
+.itad-process-row{display:flex;align-items:flex-start;justify-content:center;gap:0;position:relative}
+.itad-step{display:flex;flex-direction:column;align-items:center;text-align:center;flex:1;position:relative;padding:0 .5rem}
+.itad-step:not(:last-child)::after{content:'';position:absolute;top:22px;left:calc(50% + 22px);right:calc(-50% + 22px);border-top:2px dashed var(--green-mid)}
+.itad-step-circle{width:44px;height:44px;border-radius:50%;background:var(--green-lt);border:2px solid var(--green-mid);display:flex;align-items:center;justify-content:center;font-size:1rem;margin-bottom:.7rem;position:relative;z-index:1;flex-shrink:0}
+.itad-step-num{position:absolute;top:-6px;left:-6px;width:18px;height:18px;background:var(--green);color:#fff;border-radius:50%;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.itad-step-title{font-size:11.5px;font-weight:700;color:var(--gray-900);margin-bottom:3px}
+.itad-step-desc{font-size:10.5px;color:var(--text3);line-height:1.5}
+/* CONTENT WRAPPER */
+.content-wrapper { font-size: 15px; line-height: 1.8; color: var(--text2); }
+.content-wrapper h2 { font-family: var(--font-h); font-size: 1.8rem; color: var(--gray-900); margin: 2rem 0 1rem; }
+.content-wrapper h3 { font-family: var(--font-h); font-size: 1.4rem; color: var(--gray-900); margin: 1.5rem 0 0.8rem; }
+.content-wrapper p { margin-bottom: 1.2rem; }
+.content-wrapper ul { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+.content-wrapper li { margin-bottom: 0.5rem; }
+/* FAQ + FORM */
+.faq-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+@media(max-width:1000px){
+  .itad-hero-inner,.faq-form-grid{grid-template-columns:1fr}
+  .itad-stats-card{position:static;margin-top:1rem}
+}
+@media(max-width:600px){
+  .itad-process-row{flex-wrap:wrap;gap:1rem}
+  .itad-step::after{display:none}
+}
+</style>
+
+<title>Server Recycling Kochi | Enterprise IT Disposal & Scrap Prices</title>
+<meta name="description" content="Certified enterprise server recycling in Kochi. Get the best server scrap prices, NIST 800-88 data destruction, and complete DPDP Act compliance. Free pickup.">
+<link rel="canonical" href="https://www.ewastekochi.com/server-recycling-kochi/">
+<meta property="og:title" content="Server Recycling Kochi | Enterprise IT Disposal & Scrap Prices">
+<meta property="og:description" content="Certified enterprise server recycling in Kochi. Get the best server scrap prices, NIST 800-88 data destruction, and complete DPDP Act compliance. Free pickup.">
+<meta property="og:url" content="https://www.ewastekochi.com/server-recycling-kochi/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Server Recycling Kochi | Enterprise IT Disposal & Scrap Prices">
+<meta name="twitter:description" content="Certified enterprise server recycling in Kochi. Get the best server scrap prices, NIST 800-88 data destruction, and complete DPDP Act compliance. Free pickup.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80">
+<meta name="geo.region" content="IN-KL">
+<meta name="geo.placename" content="Kochi, Kerala, India">
+<meta name="geo.position" content="9.9816;76.3016">
+<meta name="ICBM" content="9.9816, 76.3016">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","@id":"https://www.ewastekochi.com/server-recycling-kochi/#service","serviceType":"Server Recycling and Enterprise IT Disposal","name":"Server Recycling Kochi","description":"Secure enterprise server recycling, data center decommissioning, and high-value server scrap recovery in Kochi. Complete DPDP Act compliance and DoD data wiping.","provider":{"@id":"https://www.ewastekochi.com/#business"},"areaServed":{"@type":"City","name":"Kochi"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Server Scrap Offers","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Product","name":"Rack Servers","description":"1U/2U/4U Rack Servers from Dell, HP, IBM"}},{"@type":"Offer","itemOffered":{"@type":"Product","name":"Blade Servers","description":"Enterprise blade enclosures and nodes"}},{"@type":"Offer","itemOffered":{"@type":"Product","name":"Storage Arrays","description":"SAN/NAS storage arrays and disk enclosures"}}]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"https://www.ewastekochi.com/server-recycling-kochi/#webpage","url":"https://www.ewastekochi.com/server-recycling-kochi/","name":"Server Recycling Kochi | Enterprise IT Disposal & Scrap Prices","isPartOf":{"@id":"https://www.ewastekochi.com/#website"},"about":{"@id":"https://www.ewastekochi.com/server-recycling-kochi/#service"},"speakable":{"@type":"SpeakableSpecification","cssSelector":[".page-title",".page-sub"]},"dateModified":"2026-05-09"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the scrap price for old servers in Kochi?","acceptedAnswer":{"@type":"Answer","text":"Server scrap prices in Kochi range from ₹2,500 to ₹15,000+ per unit depending on the brand (Dell, HP, IBM), generation, processor type, and included components (RAM, HDDs). We offer the highest market rates for bulk enterprise IT disposal."}},{"@type":"Question","name":"How do you ensure data security during server recycling?","acceptedAnswer":{"@type":"Answer","text":"We follow strict NIST 800-88 and DoD 5220.22-M standards for data destruction. We physically shred server hard drives or perform certified multipass software wiping, providing you with a serialized Certificate of Destruction."}},{"@type":"Question","name":"Do you provide data center decommissioning services in Infopark/Smart City?","acceptedAnswer":{"@type":"Answer","text":"Yes, we provide end-to-end data center decommissioning services across all major IT hubs in Kochi including Infopark (Kakkanad), Smart City, and KINFRA. We handle un-racking, secure logistics, and complete IT asset disposition."}},{"@type":"Question","name":"Do we get compliance documents for disposing of corporate servers?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. As a CPCB-authorised e-waste recycler, we provide comprehensive documentation including a Green Certificate, Certificate of Destruction, and Chain of Custody reports to ensure full DPDP Act 2023 and corporate ESG compliance."}}]}</script>
+</head>
+<body>
+<div id="hdr"></div>
+<!-- HERO -->
+<section class="itad-hero">
+  <div class="container">
+    <div class="itad-hero-inner">
+      <div>
+        <nav class="breadcrumb" style="margin-bottom:.7rem"><a href="/">Home</a> › <a href="/itad/">ITAD</a> › <span>Server Recycling</span></nav>
+        <h1 class="page-title" style="font-family:var(--font-h);font-size:2.5rem;font-weight:800;color:var(--gray-900);line-height:1.15;margin-bottom:.7rem">Server Recycling Kochi<br><span style="color:var(--green)">Enterprise IT Disposal</span></h1>
+        <p class="page-sub" style="font-size:14.5px;color:var(--text2);line-height:1.7;margin-bottom:1.2rem;max-width:440px">Securely decommission your data center with Kochi's leading enterprise ITAD provider. Get maximum scrap value for your servers with certified data destruction.</p>
+        <ul style="list-style:none;padding:0;margin-bottom:1.4rem">
+          <li style="display:flex;align-items:center;gap:8px;padding:5px 0;font-size:14px;color:var(--text2)"><span style="color:var(--green);font-size:1rem">✓</span>Highest server scrap prices in Kerala</li>
+          <li style="display:flex;align-items:center;gap:8px;padding:5px 0;font-size:14px;color:var(--text2)"><span style="color:var(--green);font-size:1rem">✓</span>NIST 800-88 compliant data destruction</li>
+          <li style="display:flex;align-items:center;gap:8px;padding:5px 0;font-size:14px;color:var(--text2)"><span style="color:var(--green);font-size:1rem">✓</span>DPDP Act 2023 compliance documentation</li>
+          <li style="display:flex;align-items:center;gap:8px;padding:5px 0;font-size:14px;color:var(--text2)"><span style="color:var(--green);font-size:1rem">✓</span>Free pickup from Infopark, Smart City & more</li>
+        </ul>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:1rem">
+          <a href="/contact/" class="btn btn-primary"><span>📋</span> Request Corporate Quote</a>
+          <a href="https://wa.me/917500555454" class="btn btn-wa" target="_blank"><span>💬</span> WhatsApp Us</a>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text2)"><span style="color:#f5a623;font-size:15px">★★★★★</span><span>Trusted by 200+ IT Companies in Kochi</span></div>
+      </div>
+      <div class="itad-hero-img-wrap">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80" alt="Server recycling in Kochi data center decommissioning">
+        <div class="itad-stats-card">
+          <div style="font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.6rem">Data Center Experts</div>
+          <div class="itad-stat-row"><div class="itad-stat-icon">🏢</div><div><div class="itad-stat-num">50+</div><div class="itad-stat-lbl">Data Centers Cleared</div></div></div>
+          <div class="itad-stat-row"><div class="itad-stat-icon">🗄️</div><div><div class="itad-stat-num">10,000+</div><div class="itad-stat-lbl">Servers Processed</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<section style="padding: 3rem 0;">
+  <div class="container">
+    <div class="content-wrapper">
+      <h2>Comprehensive Enterprise Server Recycling in Kochi</h2>
+      <p>As businesses in Kochi continue to digitally transform and upgrade their IT infrastructure, the need for secure, compliant, and environmentally responsible <strong>server recycling</strong> has never been higher. Whether your company is migrating to the cloud, consolidating data centers, or simply refreshing old hardware, E-Waste Kochi provides end-to-end <strong>Enterprise IT Asset Disposition (ITAD)</strong> and data center decommissioning services.</p>
+
+      <p>Servers hold the most sensitive corporate data—from customer databases and financial records to proprietary intellectual property. Improper disposal can lead to devastating data breaches and severe legal penalties under India's <strong>DPDP Act 2023</strong> (Digital Personal Data Protection Act). As a CPCB-authorised e-waste recycler, we ensure that your server disposal is 100% secure, compliant, and documented.</p>
+
+      <h2>Server Scrap Prices in Kochi (2026 Estimated Rates)</h2>
+      <p>We pride ourselves on offering the most competitive <strong>server scrap prices in Kochi</strong>. Unlike standard scrap dealers, our ITAD valuation team assesses the remarketing value of high-end components (like processors, RAM, and enterprise storage), allowing us to offer significantly higher returns on your retired assets.</p>
+      
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>Server Type / Component</th>
+            <th>Condition</th>
+            <th>Estimated Scrap Value (INR)*</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1U / 2U Rack Servers (Complete)</td>
+            <td>Non-Working / End-of-Life</td>
+            <td>₹2,500 - ₹5,500 per unit</td>
+          </tr>
+          <tr>
+            <td>High-End Enterprise Servers (e.g., Dell PowerEdge, HP ProLiant)</td>
+            <td>Working / Remarketable</td>
+            <td>₹6,000 - ₹25,000+ per unit</td>
+          </tr>
+          <tr>
+            <td>Blade Server Chassis & Enclosures</td>
+            <td>Mixed</td>
+            <td>₹3,000 - ₹10,000 per unit</td>
+          </tr>
+          <tr>
+            <td>Server RAM (ECC DDR3/DDR4)</td>
+            <td>Mixed</td>
+            <td>₹1,500 - ₹3,500 per kg</td>
+          </tr>
+          <tr>
+            <td>Enterprise Hard Drives (SAS/SATA/SSD)</td>
+            <td>For Shredding</td>
+            <td>₹150 - ₹400 per unit</td>
+          </tr>
+          <tr>
+            <td>Networking Switches & Routers</td>
+            <td>Mixed</td>
+            <td>₹100 - ₹350 per kg</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size: 13px; color: var(--text3);">*Note: Prices are estimated and vary based on the generation, brand, configuration, and current global precious metal market rates. Contact us for an exact valuation.</p>
+
+      <h2>Serving Kochi's IT Hubs</h2>
+      <p>We provide rapid, secure logistics and free doorstep pickup for bulk corporate e-waste across all major commercial and IT hubs in Ernakulam district. Our specialised fleet is equipped to handle heavy server racks and delicate storage arrays.</p>
+      <ul>
+        <li><strong>Infopark (Kakkanad):</strong> Dedicated weekly runs for Phase 1 and Phase 2 IT companies.</li>
+        <li><strong>Smart City Kochi:</strong> Preferred ITAD partner for multinational corporations.</li>
+        <li><strong>KINFRA Hi-Tech Park (Kalamassery):</strong> Serving manufacturing and tech enterprises.</li>
+        <li><strong>MG Road & Panampilly Nagar:</strong> Rapid pickup for corporate headquarters and financial institutions.</li>
+      </ul>
+
+      <h2>Guaranteed Data Security & DPDP Compliance</h2>
+      <p>When decommissioning servers, data security is our absolute highest priority. We eliminate the risk of data leaks by strictly adhering to international standards:</p>
+      <ul>
+        <li><strong>NIST 800-88 Guidelines:</strong> We utilise certified multi-pass software wiping (like Blancco) for drives that retain value, completely overwriting all sectors so data is forensically unrecoverable.</li>
+        <li><strong>DoD 5220.22-M Standards:</strong> Military-grade data sanitisation.</li>
+        <li><strong>Physical Hard Drive Shredding:</strong> For end-of-life drives or highly classified data, our industrial shredders physically destroy the drives down to small metallic fragments. (On-site shredding available upon request).</li>
+        <li><strong>Certificate of Destruction:</strong> For every server and hard drive processed, we provide a serialized, auditable Certificate of Data Destruction, protecting you against DPDP Act liability.</li>
+      </ul>
+
+      <h2>The Server Decommissioning Process</h2>
+      <p>Our turnkey ITAD process minimizes disruption to your IT team:</p>
+      <ol>
+        <li><strong>Site Audit & Valuation:</strong> Our engineers visit your data center to inventory the assets and provide a transparent financial quote.</li>
+        <li><strong>Secure De-installation:</strong> We safely un-rack servers, switches, and UPS systems, ensuring no damage to surrounding live infrastructure.</li>
+        <li><strong>Chain of Custody Transport:</strong> Assets are securely loaded into GPS-tracked vehicles and transported directly to our certified facility.</li>
+        <li><strong>Data Destruction & Processing:</strong> Data is permanently wiped or drives are shredded. Usable components are harvested for remarketing, while the rest is sustainably recycled for raw material recovery.</li>
+        <li><strong>Compliance Reporting:</strong> You receive a comprehensive ITAD report, Green Certificate, and payment for the asset value.</li>
+      </ol>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ + FORM -->
+<section style="padding:3.5rem 0;background:var(--gray-50); border-top: 1px solid var(--gray-200);">
+  <div class="container">
+    <div class="faq-form-grid">
+      <div>
+        <h2 class="sec-title" style="margin-bottom:1.4rem">Frequently Asked <em>Questions</em></h2>
+        <div class="faq-list" id="serverfaqs"></div>
+      </div>
+      <div>
+        <div style="background:var(--green-lt);border:1.5px solid var(--green-mid);border-radius:var(--radius-lg);padding:2rem; box-shadow: var(--shadow-md);">
+          <h3 style="font-family:var(--font-h);font-size:1.15rem;font-weight:700;color:var(--gray-900);margin-bottom:1.2rem">Request a Server ITAD Quote</h3>
+          <p style="font-size:13px;color:var(--text2);margin-bottom:1.2rem">Fill out this form and our enterprise team will provide a valuation within 24 hours.</p>
+          <div class="form-row">
+            <div class="form-group"><label>Full Name *</label><input type="text" placeholder="Your Name"></div>
+            <div class="form-group"><label>Phone Number *</label><input type="tel" placeholder="10-digit mobile number"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Company Name *</label><input type="text" placeholder="Your Company"></div>
+            <div class="form-group"><label>Email Address *</label><input type="email" placeholder="Your Corporate Email"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Number of Servers</label><select><option>Select Quantity</option><option>1-5 units</option><option>6-20 units</option><option>21-50 units</option><option>50+ units (Full Rack)</option></select></div>
+            <div class="form-group"><label>Location in Kochi</label><input type="text" placeholder="e.g. Kakkanad, Infopark"></div>
+          </div>
+          <div class="form-group"><label>Requirement Details</label><textarea placeholder="Please mention server brands (Dell, HP) and if data destruction is required..." style="min-height:80px"></textarea></div>
+          <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="alert('Quote request submitted! Our ITAD team will contact you shortly.')">🚀 Get Enterprise Quote</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div id="ftr"></div>
+<script src="/shared.js"></script>
+<script>
+document.getElementById('hdr').innerHTML=renderHeader('Services');
+document.getElementById('ftr').innerHTML=renderFooter();
+document.getElementById('serverfaqs').innerHTML=renderFAQ([
+  {q:'What is the scrap price for old servers in Kochi?',a:'Server scrap prices in Kochi range from ₹2,500 to ₹15,000+ per unit depending on the brand (Dell, HP, IBM), generation, processor type, and included components (RAM, HDDs). We offer the highest market rates for bulk enterprise IT disposal.'},
+  {q:'How do you ensure data security during server recycling?',a:'We follow strict NIST 800-88 and DoD 5220.22-M standards for data destruction. We physically shred server hard drives or perform certified multipass software wiping, providing you with a serialized Certificate of Destruction.'},
+  {q:'Do you provide data center decommissioning services in Infopark/Smart City?',a:'Yes, we provide end-to-end data center decommissioning services across all major IT hubs in Kochi including Infopark (Kakkanad), Smart City, and KINFRA. We handle un-racking, secure logistics, and complete IT asset disposition.'},
+  {q:'Do we get compliance documents for disposing of corporate servers?',a:'Absolutely. As a CPCB-authorised e-waste recycler, we provide comprehensive documentation including a Green Certificate, Certificate of Destruction, and Chain of Custody reports to ensure full DPDP Act 2023 and corporate ESG compliance.'}
+]);
+</script>
+<script src="/ewaste-chatbot.js"></script><script src="/wa-funnel.js"></script>
+</body></html>
