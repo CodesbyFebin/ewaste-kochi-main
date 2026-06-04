@@ -1,0 +1,37 @@
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Dependencies
+node_modules/
+astro-site/node_modules/
+ewk-site/node_modules/
+
+# Build Outputs
+astro-site/dist/
+astro-site/.astro/
+ewk-site/build/
+.vercel/
+
+# Temporary Files
+*.tmp
+*.log
+*.pid
+
+# OS Files
+.DS_Store
+Thumbs.db
+.AppleDouble
+.LSOverride
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Database
+*.db-journal
+*.sqlite-journal
