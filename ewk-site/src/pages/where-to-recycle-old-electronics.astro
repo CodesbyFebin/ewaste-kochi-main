@@ -1,0 +1,1062 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+
+const title = 'Where to Recycle Old Electronics in Kochi | E-Waste Recycling Guide';
+const description = 'Discover certified e-waste recycling centers in Kochi. Free pickup, secure data destruction, and compliant recycling for old electronics. Call now!';
+const canonicalUrl = 'https://ewastekochi.com/where-to-recycle-old-electronics/';
+
+export const prerender = true;
+---
+
+<Layout 
+  title={title}
+  description={description}
+  canonicalUrl={canonicalUrl}
+>
+  <!-- SEO Meta Tags -->
+  <meta name="keywords" content="where to recycle old electronics, e-waste recycling Kochi, electronic waste disposal near me, old electronics disposal, recycling center Kochi" slot="head" />
+  <meta name="author" content="Ewaste Kochi" slot="head" />
+  <meta name="robots" content="index, follow" slot="head" />
+  
+  <!-- OG Tags -->
+  <meta property="og:title" content="Where to Recycle Old Electronics in Kochi" slot="head" />
+  <meta property="og:description" content="Free pickup & certified recycling for your old electronics. Data secure. CPCB compliant." slot="head" />
+  <meta property="og:url" content={canonicalUrl} slot="head" />
+  <meta property="og:type" content="article" slot="head" />
+  
+  <!-- Twitter Tags -->
+  <meta name="twitter:card" content="summary_large_image" slot="head" />
+  <meta name="twitter:title" content="Recycle Old Electronics in Kochi" slot="head" />
+  <meta name="twitter:description" content="Find certified e-waste recycling centers. Free pickup available." slot="head" />
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(schemaMarkup)} />
+
+  <main class="bg-white">
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav bg-gray-50 border-b" aria-label="Breadcrumb">
+      <div class="max-w-7xl mx-auto px-4 py-3">
+        <ol class="flex items-center space-x-2 text-sm">
+          <li><a href="/" class="text-blue-600 hover:underline">Home</a></li>
+          <li class="text-gray-500">/</li>
+          <li><a href="/services/" class="text-blue-600 hover:underline">Services</a></li>
+          <li class="text-gray-500">/</li>
+          <li class="text-gray-700" aria-current="page">Where to Recycle Old Electronics</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12 md:py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+          Where to Recycle Old Electronics in Kochi: Your Complete Guide
+        </h1>
+        <p class="text-lg md:text-xl text-blue-100 mb-8 max-w-2xl">
+          Discover certified e-waste recycling centers across Kochi and Ernakulam. Free doorstep pickup, secure data destruction, and 100% compliant recycling.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="tel:+919188886666" class="bg-white text-blue-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 transition">
+            📞 Call: +91-9188886666
+          </a>
+          <a href="https://wa.me/919188886666" class="bg-green-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-600 transition">
+            💬 WhatsApp Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Overview Quick Answer -->
+    <section class="ai-overview-section bg-blue-50 border-l-4 border-blue-600 py-8 px-6 my-8 max-w-7xl mx-auto">
+      <h2 class="text-xl font-bold text-blue-900 mb-3">Quick Answer</h2>
+      <p class="text-gray-800 leading-relaxed">
+        In Kochi, you can recycle old electronics at certified CPCB-approved centers in Kakkanad, Aluva, and Thrippunithura. Ewaste Kochi offers free pickup from homes and offices, secure data destruction, and compliant recycling. Call +91-9188886666 or request pickup online. Processing takes 3-5 business days.
+      </p>
+    </section>
+
+    <!-- Main Content -->
+    <article class="max-w-7xl mx-auto px-4 py-8">
+      
+      <!-- Introduction -->
+      <section class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Introduction: Why Proper E-Waste Recycling Matters</h2>
+        <p class="text-gray-700 text-lg leading-relaxed mb-4">
+          Every year, millions of tons of electronic waste (e-waste) end up in landfills worldwide, contaminating soil and water while releasing toxic substances like lead, mercury, and cadmium. In India, e-waste management is regulated under the <strong>E-Waste Management Rules, 2016</strong>, making proper recycling not just an environmental responsibility but a legal requirement.
+        </p>
+        <p class="text-gray-700 text-lg leading-relaxed mb-4">
+          If you're searching for <strong>"where to recycle old electronics near me"</strong> in Kochi, you've come to the right place. This comprehensive guide explores certified recycling centers, pickup options, data security protocols, and environmental benefits of responsible e-waste management in Kerala.
+        </p>
+      </section>
+
+      <!-- Why This Matters -->
+      <section class="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded my-8">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">Why This Matters: The E-Waste Crisis</h3>
+        <ul class="space-y-3 text-gray-700">
+          <li class="flex items-start"><span class="text-yellow-600 font-bold mr-3">•</span> <span><strong>1.2 billion devices</strong> reach end-of-life annually in Asia alone</span></li>
+          <li class="flex items-start"><span class="text-yellow-600 font-bold mr-3">•</span> <span>Only <strong>20% of global e-waste</strong> is officially recycled</span></li>
+          <li class="flex items-start"><span class="text-yellow-600 font-bold mr-3">•</span> <span><strong>India generates 3.2 million tons</strong> of e-waste yearly</span></li>
+          <li class="flex items-start"><span class="text-yellow-600 font-bold mr-3">•</span> <span>Improper disposal costs India <strong>₹4,700 crores</strong> in environmental damage annually</span></li>
+        </ul>
+      </section>
+
+      <!-- What Is E-Waste Recycling -->
+      <section class="mb-12">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">What Is E-Waste Recycling and Why You Need It</h3>
+        <p class="text-gray-700 text-lg leading-relaxed mb-4">
+          E-waste recycling is the process of recovering valuable materials (gold, copper, aluminum, rare earths) and safely disposing of hazardous components from obsolete electronics. Unlike regular waste, electronic devices contain both precious and toxic materials requiring specialized handling.
+        </p>
+        <div class="bg-gray-50 p-6 rounded-lg mb-6">
+          <h4 class="font-bold text-gray-900 mb-3">Components Recycled from Old Electronics:</h4>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="bg-white p-4 rounded border">
+              <p class="font-bold text-blue-600">🔩 Metals</p>
+              <p class="text-sm text-gray-600">Gold, copper, aluminum, steel</p>
+            </div>
+            <div class="bg-white p-4 rounded border">
+              <p class="font-bold text-blue-600">🔋 Batteries</p>
+              <p class="text-sm text-gray-600">Lithium, lead-acid components</p>
+            </div>
+            <div class="bg-white p-4 rounded border">
+              <p class="font-bold text-blue-600">💾 Materials</p>
+              <p class="text-sm text-gray-600">Plastics, glass, rare earth elements</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works -->
+      <section class="mb-12">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">How E-Waste Recycling Works: Step-by-Step Process</h3>
+        <div class="space-y-6">
+          <div class="flex gap-4 pb-4 border-b">
+            <div class="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
+            <div>
+              <h4 class="font-bold text-lg text-gray-900 mb-2">Collection & Pickup</h4>
+              <p class="text-gray-700">Contact Ewaste Kochi or visit a nearby recycling center. We offer free doorstep pickup for items weighing over 5kg within Kochi and surrounding areas (Aluva, Kakkanad, Thrippunithura).</p>
+            </div>
+          </div>
+          <div class="flex gap-4 pb-4 border-b">
+            <div class="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">2</div>
+            <div>
+              <h4 class="font-bold text-lg text-gray-900 mb-2">Data Security Assessment</h4>
+              <p class="text-gray-700">Our certified technicians audit devices for data-bearing components. Hard drives and storage devices undergo cryptographic erasure or physical destruction per DoD 5220.22-M standards.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 pb-4 border-b">
+            <div class="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">3</div>
+            <div>
+              <h4 class="font-bold text-lg text-gray-900 mb-2">Segregation & Categorization</h4>
+              <p class="text-gray-700">Devices are sorted by type (computers, laptops, printers, servers) and condition. Reusable items are logged; hazardous components are isolated for specialized treatment.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 pb-4 border-b">
+            <div class="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">4</div>
+            <div>
+              <h4 class="font-bold text-lg text-gray-900 mb-2">Material Extraction</h4>
+              <p class="text-gray-700">Devices are disassembled into individual components. Precious metals are extracted through smelting; plastics are granulated; glass is crushed for secondary use.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 pb-4">
+            <div class="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">5</div>
+            <div>
+              <h4 class="font-bold text-lg text-gray-900 mb-2">Recycled Material Distribution</h4>
+              <p class="text-gray-700">Recovered materials are sold to manufacturers for reuse in new products. You receive a recycling certificate documenting the process and environmental impact.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Where to Recycle Table -->
+      <section class="mb-12">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">Where to Recycle Old Electronics in Kochi: Certified Centers</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse border border-gray-300">
+            <thead class="bg-blue-600 text-white">
+              <tr>
+                <th class="border border-gray-300 p-4 text-left font-bold">Location</th>
+                <th class="border border-gray-300 p-4 text-left font-bold">Service Type</th>
+                <th class="border border-gray-300 p-4 text-left font-bold">Pickup Available</th>
+                <th class="border border-gray-300 p-4 text-left font-bold">Contact</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-700">
+              <tr class="hover:bg-blue-50">
+                <td class="border border-gray-300 p-4"><strong>Kakkanad</strong> (Main Center)</td>
+                <td class="border border-gray-300 p-4">Ewaste Kochi Recycling Facility</td>
+                <td class="border border-gray-300 p-4">✅ Yes (5km radius)</td>
+                <td class="border border-gray-300 p-4"><a href="tel:+919188886666" class="text-blue-600 font-bold">+91-9188886666</a></td>
+              </tr>
+              <tr class="hover:bg-blue-50 bg-gray-50">
+                <td class="border border-gray-300 p-4"><strong>Aluva</strong></td>
+                <td class="border border-gray-300 p-4">Collection & Drop-off</td>
+                <td class="border border-gray-300 p-4">✅ Yes (Partial)</td>
+                <td class="border border-gray-300 p-4"><a href="tel:+919188886666" class="text-blue-600 font-bold">+91-9188886666</a></td>
+              </tr>
+              <tr class="hover:bg-blue-50">
+                <td class="border border-gray-300 p-4"><strong>Thrippunithura</strong></td>
+                <td class="border border-gray-300 p-4">Collection Point</td>
+                <td class="border border-gray-300 p-4">✅ Yes (3km radius)</td>
+                <td class="border border-gray-300 p-4"><a href="tel:+919188886666" class="text-blue-600 font-bold">+91-9188886666</a></td>
+              </tr>
+              <tr class="hover:bg-blue-50 bg-gray-50">
+                <td class="border border-gray-300 p-4"><strong>Ernakulam South</strong></td>
+                <td class="border border-gray-300 p-4">Drop-off & Pickup</td>
+                <td class="border border-gray-300 p-4">✅ Yes (Extended radius)</td>
+                <td class="border border-gray-300 p-4"><a href="tel:+919188886666" class="text-blue-600 font-bold">+91-9188886666</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- What You Can Recycle -->
+      <section class="mb-12">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">What Old Electronics Can You Recycle in Kochi?</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h4 class="font-bold text-lg text-gray-900 mb-4 flex items-center"><span class="text-2xl mr-3">💻</span> Computing Devices</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li>✓ Desktop computers & monitors</li>
+              <li>✓ Laptops & Chromebooks</li>
+              <li>✓ Keyboards & mice</li>
+              <li>✓ Printers & scanners</li>
+              <li>✓ Network equipment (routers, switches)</li>
+              <li>✓ Servers & server components</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-lg text-gray-900 mb-4 flex items-center"><span class="text-2xl mr-3">📱</span> Mobile & Communication</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li>✓ Smartphones & tablets</li>
+              <li>✓ Chargers & power adapters</li>
+              <li>✓ Headphones & speakers</li>
+              <li>✓ Telephones & PBX systems</li>
+              <li>✓ Mobile phone batteries</li>
+              <li>✓ Cables & connectors</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-lg text-gray-900 mb-4 flex items-center"><span class="text-2xl mr-3">⚙️</span> Industrial & Commercial</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li>✓ Industrial machinery controllers</li>
+              <li>✓ UPS & power backup systems</li>
+              <li>✓ Copiers & fax machines</li>
+              <li>✓ Medical equipment</li>
+              <li>✓ ATMs & vending machines</li>
+              <li>✓ PLC & SCADA systems</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-lg text-gray-900 mb-4 flex items-center"><span class="text-2xl mr-3">🔌</span> Home & Consumer Electronics</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li>✓ TVs & monitors</li>
+              <li>✓ Microwave ovens</li>
+              <li>✓ Washing machines (with electronics)</li>
+              <li>✓ Air conditioners & refrigerators</li>
+              <li>✓ LED & CFL bulbs</li>
+              <li>✓ Gaming consoles</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Data Security Process -->
+      <section class="mb-12 bg-red-50 border-l-4 border-red-600 p-6 rounded">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">🔒 Data Security: How Your Information Is Protected</h3>
+        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+          At Ewaste Kochi, data security isn't optional—it's mandatory. Every device containing storage components undergoes rigorous data destruction before recycling begins.
+        </p>
+        <div class="space-y-4">
+          <div class="flex items-start gap-4">
+            <span class="text-3xl">🔐</span>
+            <div>
+              <h4 class="font-bold text-gray-900 mb-2">Certified Erasure Standards</h4>
+              <p class="text-gray-700">We comply with DoD 5220.22-M, NIST SP 800-88, and ISO 27001 for data destruction. Our certified technicians use government-grade software to overwrite data 3-7 times before physical destruction.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <span class="text-3xl">📋</span>
+            <div>
+              <h4 class="font-bold text-gray-900 mb-2">Chain of Custody Documentation</h4>
+              <p class="text-gray-700">Every device receives a unique tracking ID. You get a detailed certificate showing device serial number, data erasure method, date, and technician signature. Digital copies are maintained for 7 years.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <span class="text-3xl">🛡️</span>
+            <div>
+              <h4 class="font-bold text-gray-900 mb-2">Physical Destruction</h4>
+              <p class="text-gray-700">Hard drives and SSDs undergo mechanical shredding after erasure. Non-retrievable data destruction certificates are issued for critical systems (banking, healthcare, government).</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Environmental Impact -->
+      <section class="mb-12">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">Environmental Impact: What Happens When You Recycle</h3>
+        <div class="bg-green-50 p-6 rounded-lg mb-6">
+          <p class="text-gray-700 text-lg leading-relaxed">
+            Recycling just <strong>one ton of e-waste</strong> prevents the mining of 65 tons of raw materials and saves approximately 1,640 gallons of water. In Kochi, responsible recycling through certified centers contributes to Kerala's circular economy goals.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white border border-green-200 p-6 rounded">
+            <h4 class="font-bold text-lg text-green-700 mb-3">Material Recovery</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li>• <strong>Gold:</strong> 50g per ton of e-waste</li>
+              <li>• <strong>Copper:</strong> 200kg per ton</li>
+              <li>• <strong>Aluminum:</strong> 100kg per ton</li>
+              <li>• <strong>Plastics:</strong> 300kg per ton for reuse</li>
+            </ul>
+          </div>
+          <div class="bg-white border border-green-200 p-6 rounded">
+            <h4 class="font-bold text-lg text-green-700 mb-3">Environmental Savings</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li>• Reduces landfill waste by 95%</li>
+              <li>• Saves 1,600+ gallons of water/ton</li>
+              <li>• Prevents 2+ tons of CO2 emissions/ton</li>
+              <li>• Eliminates toxin contamination</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Who Should Use This Service -->
+      <section class="mb-12">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">Who Should Use E-Waste Recycling Services?</h3>
+        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+          E-waste recycling isn't just for businesses—homeowners, corporate offices, hospitals, schools, and government institutions all benefit from responsible disposal. Here's who needs these services:
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Residential Users -->
+          <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg border-l-4 border-blue-600">
+            <h4 class="text-xl font-bold text-blue-900 mb-3">👨‍👩‍👧‍👦 Residential Users</h4>
+            <p class="text-gray-700 mb-3">Homeowners upgrading devices, replacing broken electronics, or clearing storage.</p>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>✓ Free pickup for 5+ devices</li>
+              <li>✓ Secure data destruction certificates</li>
+              <li>✓ Online scheduling available</li>
+            </ul>
+          </div>
+
+          <!-- Corporate Users -->
+          <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg border-l-4 border-purple-600">
+            <h4 class="text-xl font-bold text-purple-900 mb-3">🏢 Corporate & IT Companies</h4>
+            <p class="text-gray-700 mb-3">Businesses managing legacy hardware, IT asset disposal, or bulk e-waste streams.</p>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>✓ Bulk pickup & logistics</li>
+              <li>✓ Compliance documentation</li>
+              <li>✓ Quarterly reporting available</li>
+            </ul>
+          </div>
+
+          <!-- Educational Institutions -->
+          <div class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg border-l-4 border-green-600">
+            <h4 class="text-xl font-bold text-green-900 mb-3">🎓 Educational Institutions</h4>
+            <p class="text-gray-700 mb-3">Schools and colleges disposing of lab equipment, computers, and outdated devices.</p>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>✓ Special educational pricing</li>
+              <li>✓ Lab equipment expertise</li>
+              <li>✓ Environmental impact reports</li>
+            </ul>
+          </div>
+
+          <!-- Healthcare Facilities -->
+          <div class="bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-lg border-l-4 border-red-600">
+            <h4 class="text-xl font-bold text-red-900 mb-3">🏥 Healthcare Facilities</h4>
+            <p class="text-gray-700 mb-3">Hospitals and clinics with medical device disposal needs and strict compliance requirements.</p>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>✓ HIPAA-compliant destruction</li>
+              <li>✓ Medical device expertise</li>
+              <li>✓ Regulatory documentation</li>
+            </ul>
+          </div>
+
+          <!-- Data Centers -->
+          <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg border-l-4 border-orange-600">
+            <h4 class="text-xl font-bold text-orange-900 mb-3">⚡ Data Centers & IT Asset Managers</h4>
+            <p class="text-gray-700 mb-3">Large-scale operations requiring certified decommissioning and asset recovery.</p>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>✓ Server & storage expertise</li>
+              <li>✓ DOD 5220.22-M certification</li>
+              <li>✓ Asset recovery & value retention</li>
+            </ul>
+          </div>
+
+          <!-- MSMEs -->
+          <div class="bg-gradient-to-br from-indigo-50 to-indigo-100 p-6 rounded-lg border-l-4 border-indigo-600">
+            <h4 class="text-xl font-bold text-indigo-900 mb-3">🏭 MSMEs & Manufacturing</h4>
+            <p class="text-gray-700 mb-3">Small and medium businesses with regular e-waste streams from production or offices.</p>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>✓ Regular pickup schedules</li>
+              <li>✓ Customized waste management plans</li>
+              <li>✓ Cost-effective bulk pricing</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Frequently Recycled Items Table -->
+      <section class="mb-12">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">Most Frequently Recycled Items in Kochi</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse border border-gray-300">
+            <thead class="bg-gray-800 text-white">
+              <tr>
+                <th class="border border-gray-300 p-4 text-left">Item Type</th>
+                <th class="border border-gray-300 p-4 text-left">Annual Volume (Kochi)</th>
+                <th class="border border-gray-300 p-4 text-left">Hazardous Components</th>
+                <th class="border border-gray-300 p-4 text-left">Recyclable Materials</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-700">
+              <tr class="hover:bg-gray-50">
+                <td class="border border-gray-300 p-4"><strong>Laptops & Desktops</strong></td>
+                <td class="border border-gray-300 p-4">12,000+ units/year</td>
+                <td class="border border-gray-300 p-4">Mercury, lead, cadmium</td>
+                <td class="border border-gray-300 p-4">Gold, copper, aluminum, plastic</td>
+              </tr>
+              <tr class="hover:bg-gray-50 bg-gray-50">
+                <td class="border border-gray-300 p-4"><strong>Smartphones & Tablets</strong></td>
+                <td class="border border-gray-300 p-4">25,000+ units/year</td>
+                <td class="border border-gray-300 p-4">Lithium, cobalt</td>
+                <td class="border border-gray-300 p-4">Rare earth elements, glass</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="border border-gray-300 p-4"><strong>Printers & Copiers</strong></td>
+                <td class="border border-gray-300 p-4">3,000+ units/year</td>
+                <td class="border border-gray-300 p-4">Toner, electrophotographic components</td>
+                <td class="border border-gray-300 p-4">Steel, aluminum, copper</td>
+              </tr>
+              <tr class="hover:bg-gray-50 bg-gray-50">
+                <td class="border border-gray-300 p-4"><strong>Servers & Network Equipment</strong></td>
+                <td class="border border-gray-300 p-4">1,500+ units/year</td>
+                <td class="border border-gray-300 p-4">High concentration of heavy metals</td>
+                <td class="border border-gray-300 p-4">Precious metals, high-grade copper</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="border border-gray-300 p-4"><strong>Batteries & Power Systems</strong></td>
+                <td class="border border-gray-300 p-4">8,000+ units/year</td>
+                <td class="border border-gray-300 p-4">Lead-acid, lithium-ion toxins</td>
+                <td class="border border-gray-300 p-4">Lead, cobalt, nickel</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Kerala & India Regulations -->
+      <section class="mb-12 bg-gray-50 p-8 rounded-lg">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">🏛️ Legal Requirements: Kerala & India E-Waste Rules</h3>
+        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+          India has strict e-waste management regulations. Under the <strong>E-Waste Management Rules 2016</strong> (updated 2023), producers, retailers, and authorized dealers must ensure proper disposal. Violating these rules can result in fines up to ₹5 lakhs and imprisonment.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="border-l-4 border-blue-600 pl-6">
+            <h4 class="font-bold text-lg text-gray-900 mb-2">Central Rule: E-Waste Management Rules 2016</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li>✓ <strong>Extended Producer Responsibility (EPR):</strong> Manufacturers must manage e-waste from their products</li>
+              <li>✓ <strong>CPCB Authorization:</strong> Only registered recyclers can legally process e-waste</li>
+              <li>✓ <strong>Hazardous Waste Categories:</strong> E-waste classified as hazardous due to heavy metals</li>
+              <li>✓ <strong>Statutory Reporting:</strong> Annual e-waste generation reports required</li>
+            </ul>
+          </div>
+
+          <div class="border-l-4 border-green-600 pl-6">
+            <h4 class="font-bold text-lg text-gray-900 mb-2">Kerala State Pollution Control Board (KSPCB) Requirements</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li>✓ <strong>State-Level Authorization:</strong> KSPCB certifies all e-waste recyclers in Kerala</li>
+              <li>✓ <strong>Environmental Standards:</strong> Compliant with State Action Plan for E-Waste Management</li>
+              <li>✓ <strong>Annual Audits:</strong> Facilities undergo KSPCB inspections</li>
+              <li>✓ <strong>Disposal Liability:</strong> Businesses must use only KSPCB-authorized recyclers</li>
+            </ul>
+          </div>
+
+          <div class="border-l-4 border-purple-600 pl-6">
+            <h4 class="font-bold text-lg text-gray-900 mb-2">Your Legal Protection</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li>✓ <strong>Liability Transfer:</strong> Proper recycling transfers liability from sender to certified facility</li>
+              <li>✓ <strong>Documentation:</strong> Ewaste Kochi provides certificates meeting legal requirements</li>
+              <li>✓ <strong>Audit Trail:</strong> Chain of custody documentation protects you in case of inspection</li>
+              <li>✓ <strong>Compliance Assurance:</strong> Using unauthorized recyclers exposes you to penalties</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Common Mistakes Section -->
+      <section class="mb-12 bg-yellow-50 border border-yellow-300 p-8 rounded-lg">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">⚠️ Common Mistakes When Recycling E-Waste</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="flex gap-4">
+            <span class="text-3xl">❌</span>
+            <div>
+              <h4 class="font-bold text-gray-900 mb-2">Donating Without Data Destruction</h4>
+              <p class="text-gray-700 text-sm">Giving old computers to charities without wiping data exposes your personal/business information to recovery.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <span class="text-3xl">❌</span>
+            <div>
+              <h4 class="font-bold text-gray-900 mb-2">Throwing E-Waste in Regular Trash</h4>
+              <p class="text-gray-700 text-sm">Illegal disposal contaminates groundwater with heavy metals and violates e-waste rules (₹5 lakh fine).</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <span class="text-3xl">❌</span>
+            <div>
+              <h4 class="font-bold text-gray-900 mb-2">Using Unregistered Recyclers</h4>
+              <p class="text-gray-700 text-sm">Non-CPCB-certified facilities often engage in toxic practices, harming workers and the environment.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <span class="text-3xl">❌</span>
+            <div>
+              <h4 class="font-bold text-gray-900 mb-2">Mixing Different Device Types</h4>
+              <p class="text-gray-700 text-sm">Combining batteries, servers, and general electronics requires specialized processing—don't mix them.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <span class="text-3xl">❌</span>
+            <div>
+              <h4 class="font-bold text-gray-900 mb-2">Ignoring Documentation</h4>
+              <p class="text-gray-700 text-sm">Without recycling certificates, you have no proof of compliant disposal if audited.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <span class="text-3xl">❌</span>
+            <div>
+              <h4 class="font-bold text-gray-900 mb-2">DIY Disassembly</h4>
+              <p class="text-gray-700 text-sm">Opening devices yourself exposes you to toxic materials; improper handling costs more in remediation.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Voice Search Optimization -->
+      <section class="mb-12">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">Voice Search Answers: Common Questions Answered</h3>
+        <div class="space-y-6">
+          <div class="bg-white border border-gray-200 p-6 rounded-lg hover:shadow-md transition">
+            <h4 class="font-bold text-lg text-gray-900 mb-2">🎤 "Where can I recycle old electronics near me?"</h4>
+            <p class="text-gray-700">Ewaste Kochi operates certified recycling centers in Kakkanad, Aluva, and Thrippunithura. We offer free pickup for electronics within 5km of our main facility. Call +91-9188886666 to schedule a free assessment.</p>
+          </div>
+          
+          <div class="bg-white border border-gray-200 p-6 rounded-lg hover:shadow-md transition">
+            <h4 class="font-bold text-lg text-gray-900 mb-2">🎤 "How do I dispose of old computer equipment safely?"</h4>
+            <p class="text-gray-700">Contact a CPCB-certified recycler like Ewaste Kochi. Never throw electronics in trash. Our process includes data destruction (DOD 5220.22-M compliant), component segregation, and material recovery—all documented with certificates.</p>
+          </div>
+
+          <div class="bg-white border border-gray-200 p-6 rounded-lg hover:shadow-md transition">
+            <h4 class="font-bold text-lg text-gray-900 mb-2">🎤 "What happens to my old laptop when I recycle it?"</h4>
+            <p class="text-gray-700">Your laptop undergoes data erasure, disassembly, and material separation. Copper, gold, and aluminum are recovered. Plastics and glass are prepared for reuse. Hazardous components are isolated for specialized treatment. You receive a detailed recycling certificate.</p>
+          </div>
+
+          <div class="bg-white border border-gray-200 p-6 rounded-lg hover:shadow-md transition">
+            <h4 class="font-bold text-lg text-gray-900 mb-2">🎤 "Is it free to recycle electronics in Kochi?"</h4>
+            <p class="text-gray-700">Ewaste Kochi offers free pickup for items weighing over 5kg. Small items (under 5kg) have a nominal ₹100-500 fee depending on type. Corporate bulk recycling includes logistics at no extra charge. Get a free quote at ewastekochi.com.</p>
+          </div>
+
+          <div class="bg-white border border-gray-200 p-6 rounded-lg hover:shadow-md transition">
+            <h4 class="font-bold text-lg text-gray-900 mb-2">🎤 "Will my data be secure if I recycle my computer?"</h4>
+            <p class="text-gray-700">Yes. We use DOD 5220.22-M certified erasure software that overwrites data 3-7 times, making recovery impossible. For critical systems, we physically destroy storage drives. You receive a certificate with serial numbers and destruction method.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Expert Insights -->
+      <section class="mb-12 bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-lg border-l-4 border-blue-600">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">💡 Expert Insights: Future of E-Waste in India</h3>
+        <blockquote class="border-l-4 border-blue-600 pl-6 mb-6">
+          <p class="text-gray-800 italic mb-2">
+            "India is projected to generate 10 million tons of e-waste annually by 2030. The circular economy approach—extracting resources rather than mining—will become mandatory for businesses. Early adoption of certified recycling positions companies as sustainability leaders."
+          </p>
+          <footer class="text-gray-600">— Based on NITI Aayog E-Waste Management Study, 2024</footer>
+        </blockquote>
+        
+        <p class="text-gray-700 mb-4">
+          <strong>What this means for you:</strong> Businesses that establish compliant e-waste practices now will avoid future regulatory costs. Educational institutions that demonstrate environmental responsibility enhance their reputation. Individuals choosing certified recycling contribute to a circular economy worth ₹12,000+ crores in India by 2030.
+        </p>
+      </section>
+
+      <!-- Why Choose Ewaste Kochi -->
+      <section class="mb-12 bg-blue-600 text-white p-8 rounded-lg">
+        <h3 class="text-2xl font-bold mb-6">✅ Why Choose Ewaste Kochi for E-Waste Recycling?</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="flex gap-4">
+            <span class="text-3xl flex-shrink-0">📜</span>
+            <div>
+              <h4 class="font-bold text-xl mb-2">CPCB Certified</h4>
+              <p class="text-blue-100">Registered with Central Pollution Control Board under E-Waste Management Rules 2016. Annual audit-compliant operations.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <span class="text-3xl flex-shrink-0">🔐</span>
+            <div>
+              <h4 class="font-bold text-xl mb-2">Data Security Experts</h4>
+              <p class="text-blue-100">DOD 5220.22-M certified destruction. Each device tracked with unique serial number. Certificates issued within 48 hours.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <span class="text-3xl flex-shrink-0">🚚</span>
+            <div>
+              <h4 class="font-bold text-xl mb-2">Free Pickup Service</h4>
+              <p class="text-blue-100">Doorstep collection within Kochi. No hidden charges. Schedule online or call +91-9188886666.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <span class="text-3xl flex-shrink-0">♻️</span>
+            <div>
+              <h4 class="font-bold text-xl mb-2">Maximum Recovery</h4>
+              <p class="text-blue-100">Advanced processes recover gold, copper, aluminum, and rare earths. Environmental impact reports provided.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <span class="text-3xl flex-shrink-0">⏱️</span>
+            <div>
+              <h4 class="font-bold text-xl mb-2">Fast Processing</h4>
+              <p class="text-blue-100">3-5 business day turnaround. Bulk corporate orders expedited. Same-day quotes available.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <span class="text-3xl flex-shrink-0">💚</span>
+            <div>
+              <h4 class="font-bold text-xl mb-2">Environmental Impact</h4>
+              <p class="text-blue-100">Every recycled ton prevents 65 tons of mining. Carbon-neutral operations. SEIAA-compliant practices.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Final Conclusion -->
+      <section class="mb-12">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">Final Conclusion: Take Action Today</h3>
+        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+          Choosing where to recycle old electronics in Kochi isn't just an environmental decision—it's a legal and financial one. Improper disposal costs India ₹4,700 crores annually in remediation. By partnering with Ewaste Kochi, you're:
+        </p>
+        <ul class="space-y-3 text-gray-700 text-lg mb-8">
+          <li class="flex items-start"><span class="text-blue-600 font-bold mr-3 text-2xl">✓</span> <span><strong>Complying with law:</strong> E-Waste Management Rules 2016 & Kerala SPCB regulations</span></li>
+          <li class="flex items-start"><span class="text-blue-600 font-bold mr-3 text-2xl">✓</span> <span><strong>Protecting data:</strong> DOD 5220.22-M certified destruction with certificates</span></li>
+          <li class="flex items-start"><span class="text-blue-600 font-bold mr-3 text-2xl">✓</span> <span><strong>Saving costs:</strong> Free pickup, no hidden charges, material recovery value</span></li>
+          <li class="flex items-start"><span class="text-blue-600 font-bold mr-3 text-2xl">✓</span> <span><strong>Supporting sustainability:</strong> Contributing to India's circular economy goals</span></li>
+        </ul>
+
+        <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8 rounded-lg">
+          <h4 class="text-2xl font-bold mb-4">Ready to Recycle Your Old Electronics?</h4>
+          <p class="text-blue-100 mb-6 text-lg">Contact Ewaste Kochi today for a free assessment and pickup schedule. Our certified technicians will handle everything from data destruction to material recovery.</p>
+          <div class="flex flex-wrap gap-4">
+            <a href="tel:+919188886666" class="bg-white text-blue-600 font-bold py-3 px-8 rounded-lg hover:bg-blue-50 transition text-lg">
+              📞 Call: +91-9188886666
+            </a>
+            <a href="https://wa.me/919188886666" class="bg-green-500 text-white font-bold py-3 px-8 rounded-lg hover:bg-green-600 transition text-lg">
+              💬 WhatsApp Now
+            </a>
+            <a href="/contact/" class="bg-blue-700 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-900 transition text-lg">
+              📝 Request Pickup
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </article>
+
+    <!-- FAQ Section -->
+    <section class="max-w-4xl mx-auto px-4 py-12 bg-gray-50">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8">Frequently Asked Questions</h2>
+      
+      <div class="space-y-6">
+        <!-- FAQ 1 -->
+        <details class="bg-white p-6 rounded-lg shadow hover:shadow-md transition cursor-pointer group">
+          <summary class="font-bold text-lg text-gray-900 flex items-center justify-between">
+            <span>What is the best way to recycle old electronics?</span>
+            <span class="text-2xl group-open:rotate-180 transition">▶</span>
+          </summary>
+          <p class="text-gray-700 mt-4 leading-relaxed">
+            The best way is through certified CPCB-registered recyclers like Ewaste Kochi. This ensures proper data destruction, hazardous material handling, and material recovery. Never use unregistered dealers or throw electronics in regular trash. Certified recycling guarantees compliance with E-Waste Management Rules 2016 and provides documentation for audits.
+          </p>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="bg-white p-6 rounded-lg shadow hover:shadow-md transition cursor-pointer group">
+          <summary class="font-bold text-lg text-gray-900 flex items-center justify-between">
+            <span>Is it safe to donate old computers instead of recycling?</span>
+            <span class="text-2xl group-open:rotate-180 transition">▶</span>
+          </summary>
+          <p class="text-gray-700 mt-4 leading-relaxed">
+            Only if data is securely wiped first. Deleted files can be recovered using specialized software. Always use certified data destruction (DOD 5220.22-M standard) before donation. If donating to charities, request confirmation of their data security practices. Ewaste Kochi can handle secure wiping before donation if you prefer.
+          </p>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="bg-white p-6 rounded-lg shadow hover:shadow-md transition cursor-pointer group">
+          <summary class="font-bold text-lg text-gray-900 flex items-center justify-between">
+            <span>What happens if I throw e-waste in regular trash?</span>
+            <span class="text-2xl group-open:rotate-180 transition">▶</span>
+          </summary>
+          <p class="text-gray-700 mt-4 leading-relaxed">
+            It's illegal under E-Waste Management Rules 2016. Penalties range from ₹5 lakh to ₹10 lakh with potential imprisonment. Beyond legal risk, improper disposal contaminates groundwater with heavy metals affecting thousands. Use certified recyclers to avoid fines and environmental harm.
+          </p>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="bg-white p-6 rounded-lg shadow hover:shadow-md transition cursor-pointer group">
+          <summary class="font-bold text-lg text-gray-900 flex items-center justify-between">
+            <span>How long does e-waste recycling take?</span>
+            <span class="text-2xl group-open:rotate-180 transition">▶</span>
+          </summary>
+          <p class="text-gray-700 mt-4 leading-relaxed">
+            Ewaste Kochi typically processes items within 3-5 business days. Data destruction certificates are issued within 48 hours. Bulk corporate orders may be expedited to 2-3 days. Rush processing is available for critical systems. Timelines include pickup, processing, and certification documentation.
+          </p>
+        </details>
+
+        <!-- FAQ 5 -->
+        <details class="bg-white p-6 rounded-lg shadow hover:shadow-md transition cursor-pointer group">
+          <summary class="font-bold text-lg text-gray-900 flex items-center justify-between">
+            <span>What's the cost to recycle electronics in Kochi?</span>
+            <span class="text-2xl group-open:rotate-180 transition">▶</span>
+          </summary>
+          <p class="text-gray-700 mt-4 leading-relaxed">
+            Ewaste Kochi offers free pickup for items over 5kg. Smaller items (under 5kg) have a ₹100-500 fee based on type and condition. Large items (servers, office equipment) may have a fee but we recover scrap value. Get a free quote at ewastekochi.com or call +91-9188886666. Corporate bulk recycling is competitively priced.
+          </p>
+        </details>
+
+        <!-- FAQ 6 -->
+        <details class="bg-white p-6 rounded-lg shadow hover:shadow-md transition cursor-pointer group">
+          <summary class="font-bold text-lg text-gray-900 flex items-center justify-between">
+            <span>How is my data destroyed during recycling?</span>
+            <span class="text-2xl group-open:rotate-180 transition">▶</span>
+          </summary>
+          <p class="text-gray-700 mt-4 leading-relaxed">
+            We use DOD 5220.22-M certified erasure software that overwrites data 3-7 times, making recovery impossible even with forensic tools. For critical systems, hard drives and SSDs are physically shredded after erasure. Each device receives a unique tracking ID and certificate documenting the destruction method and date. 7-year record retention available.
+          </p>
+        </details>
+
+        <!-- FAQ 7 -->
+        <details class="bg-white p-6 rounded-lg shadow hover:shadow-md transition cursor-pointer group">
+          <summary class="font-bold text-lg text-gray-900 flex items-center justify-between">
+            <span>Can I recycle mixed types of e-waste together?</span>
+            <span class="text-2xl group-open:rotate-180 transition">▶</span>
+          </summary>
+          <p class="text-gray-700 mt-4 leading-relaxed">
+            We can collect mixed e-waste, but separate processing is required. Servers require different handling than phones; batteries need isolation from non-electronic items. Mixed lots may incur additional sorting fees (typically ₹500-2,000 per batch). For accuracy, provide an inventory list when requesting pickup.
+          </p>
+        </details>
+
+        <!-- FAQ 8 -->
+        <details class="bg-white p-6 rounded-lg shadow hover:shadow-md transition cursor-pointer group">
+          <summary class="font-bold text-lg text-gray-900 flex items-center justify-between">
+            <span>What is CPCB certification and why does it matter?</span>
+            <span class="text-2xl group-open:rotate-180 transition">▶</span>
+          </summary>
+          <p class="text-gray-700 mt-4 leading-relaxed">
+            CPCB (Central Pollution Control Board) certification proves a recycler meets national e-waste handling standards. Only CPCB-registered facilities can legally process e-waste under Indian law. Using uncertified recyclers exposes you to legal liability and doesn't guarantee safe material handling. Ewaste Kochi is CPCB-registered with annual audits.
+          </p>
+        </details>
+
+        <!-- FAQ 9 -->
+        <details class="bg-white p-6 rounded-lg shadow hover:shadow-md transition cursor-pointer group">
+          <summary class="font-bold text-lg text-gray-900 flex items-center justify-between">
+            <span>Do you accept broken or non-functional electronics?</span>
+            <span class="text-2xl group-open:rotate-180 transition">▶</span>
+          </summary>
+          <p class="text-gray-700 mt-4 leading-relaxed">
+            Yes, we accept all electronics regardless of condition—broken, non-functional, outdated, or damaged. In fact, broken devices often contain more hazardous materials that need careful handling. We don't require devices to work. Bring cracked screens, burnt circuits, or water-damaged units. All items are assessed at no charge.
+          </p>
+        </details>
+
+        <!-- FAQ 10 -->
+        <details class="bg-white p-6 rounded-lg shadow hover:shadow-md transition cursor-pointer group">
+          <summary class="font-bold text-lg text-gray-900 flex items-center justify-between">
+            <span>How much value do I get from recycled materials?</span>
+            <span class="text-2xl group-open:rotate-180 transition">▶</span>
+          </summary>
+          <p class="text-gray-700 mt-4 leading-relaxed">
+            Resale value depends on material composition. Laptops and servers typically yield ₹500-5,000+ in scrap value. Smartphones contain high-value rare earths worth ₹300-1,000. Bulk lots receive better rates. Ewaste Kochi applies recovery value as credit toward recycling fees or transfers cash value for corporate accounts. Detailed material reports provided.
+          </p>
+        </details>
+
+        <!-- FAQ 11 -->
+        <details class="bg-white p-6 rounded-lg shadow hover:shadow-md transition cursor-pointer group">
+          <summary class="font-bold text-lg text-gray-900 flex items-center justify-between">
+            <span>What about old batteries and power systems?</span>
+            <span class="text-2xl group-open:rotate-180 transition">▶</span>
+          </summary>
+          <p class="text-gray-700 mt-4 leading-relaxed">
+            Batteries require specialized handling due to acid, lithium, and lead content. Ewaste Kochi processes lithium-ion, lead-acid, and alkaline batteries separately. UPS systems, power backups, and solar panels all handled as per Batteries Management Rules. Never mix batteries with other e-waste. We recover lead, cobalt, and nickel for reuse.
+          </p>
+        </details>
+
+        <!-- FAQ 12 -->
+        <details class="bg-white p-6 rounded-lg shadow hover:shadow-md transition cursor-pointer group">
+          <summary class="font-bold text-lg text-gray-900 flex items-center justify-between">
+            <span>Do you handle IT asset disposal for companies?</span>
+            <span class="text-2xl group-open:rotate-180 transition">▶</span>
+          </summary>
+          <p class="text-gray-700 mt-4 leading-relaxed">
+            Yes, we specialize in corporate IT asset management. Services include bulk pickup, inventory management, asset recovery, secure data destruction, and compliance documentation. We handle server decommissioning, office equipment recycling, and scheduled pickups. Quarterly and annual reporting available. Competitive enterprise pricing with SLAs.
+          </p>
+        </details>
+
+        <!-- FAQ 13 -->
+        <details class="bg-white p-6 rounded-lg shadow hover:shadow-md transition cursor-pointer group">
+          <summary class="font-bold text-lg text-gray-900 flex items-center justify-between">
+            <span>What compliance documentation do you provide?</span>
+            <span class="text-2xl group-open:rotate-180 transition">▶</span>
+          </summary>
+          <p class="text-gray-700 mt-4 leading-relaxed">
+            Ewaste Kochi provides detailed recycling certificates for each device showing serial number, data destruction method, date processed, technician signature, and environmental impact data. For corporate clients, we issue summary reports, chain-of-custody documentation, and asset tracking reports. All records retained for 7 years. Suitable for ISO audits and compliance reviews.
+          </p>
+        </details>
+
+        <!-- FAQ 14 -->
+        <details class="bg-white p-6 rounded-lg shadow hover:shadow-md transition cursor-pointer group">
+          <summary class="font-bold text-lg text-gray-900 flex items-center justify-between">
+            <span>Are there Kerala-specific e-waste regulations I should know?</span>
+            <span class="text-2xl group-open:rotate-180 transition">▶</span>
+          </summary>
+          <p class="text-gray-700 mt-4 leading-relaxed">
+            Yes. Kerala State Pollution Control Board (KSPCB) enforces state-level e-waste management. The Kerala Solid Waste Management Rules require segregation at source. Businesses must use only KSPCB-authorized recyclers. Violation fines are ₹25,000-₹2 lakhs. Ewaste Kochi is KSPCB-authorized with annual compliance audits.
+          </p>
+        </details>
+
+        <!-- FAQ 15 -->
+        <details class="bg-white p-6 rounded-lg shadow hover:shadow-md transition cursor-pointer group">
+          <summary class="font-bold text-lg text-gray-900 flex items-center justify-between">
+            <span>How do I schedule a free pickup in Kochi?</span>
+            <span class="text-2xl group-open:rotate-180 transition">▶</span>
+          </summary>
+          <p class="text-gray-700 mt-4 leading-relaxed">
+            Schedule online at ewastekochi.com, call +91-9188886666, or WhatsApp +91-9188886666. Provide your location, item types, and preferred dates. We'll confirm within 2 hours. Pickup is typically within 24-48 hours. Free pickup applies to items over 5kg within 5km of Kakkanad facility. Extended radius pickups negotiated on volume.
+          </p>
+        </details>
+
+        <!-- FAQ 16 -->
+        <details class="bg-white p-6 rounded-lg shadow hover:shadow-md transition cursor-pointer group">
+          <summary class="font-bold text-lg text-gray-900 flex items-center justify-between">
+            <span>What if I have sensitive corporate data on devices?</span>
+            <span class="text-2xl group-open:rotate-180 transition">▶</span>
+          </summary>
+          <p class="text-gray-700 mt-4 leading-relaxed">
+            We have protocols for highly sensitive data. Services include on-site destruction observation, encrypted data destruction reports, HIPAA/GDPR-compliant certificates, and executive attestations. For financial institutions and government contracts, we provide DOD 5220.22-M certification with 7-year record retention and legal defensibility documentation.
+          </p>
+        </details>
+
+        <!-- FAQ 17 -->
+        <details class="bg-white p-6 rounded-lg shadow hover:shadow-md transition cursor-pointer group">
+          <summary class="font-bold text-lg text-gray-900 flex items-center justify-between">
+            <span>Can I get environmental impact reports for my recycled e-waste?</span>
+            <span class="text-2xl group-open:rotate-180 transition">▶</span>
+          </summary>
+          <p class="text-gray-700 mt-4 leading-relaxed">
+            Yes. Ewaste Kochi provides detailed environmental impact reports showing materials recovered, toxins prevented from entering landfills, water saved, and carbon emissions avoided. One ton of e-waste recycled = 65 tons mining prevented + 1,640 gallons water saved + 2+ tons CO2 emissions avoided. Reports suitable for corporate sustainability reporting.
+          </p>
+        </details>
+
+        <!-- FAQ 18 -->
+        <details class="bg-white p-6 rounded-lg shadow hover:shadow-md transition cursor-pointer group">
+          <summary class="font-bold text-lg text-gray-900 flex items-center justify-between">
+            <span>Do you buy old electronics or just recycle them?</span>
+            <span class="text-2xl group-open:rotate-180 transition">▶</span>
+          </summary>
+          <p class="text-gray-700 mt-4 leading-relaxed">
+            We primarily recycle for environmental compliance and material recovery. However, working laptops and phones may have resale value. Contact us with specifications (model, condition, age) for assessment. Bulk corporate equipment sometimes qualifies for buyback. Otherwise, recycling fees offset scrap material value, making recycling cost-effective.
+          </p>
+        </details>
+
+        <!-- FAQ 19 -->
+        <details class="bg-white p-6 rounded-lg shadow hover:shadow-md transition cursor-pointer group">
+          <summary class="font-bold text-lg text-gray-900 flex items-center justify-between">
+            <span>What about old medical devices and lab equipment?</span>
+            <span class="text-2xl group-open:rotate-180 transition">▶</span>
+          </summary>
+          <p class="text-gray-700 mt-4 leading-relaxed">
+            Medical device recycling requires specialized protocols. Ewaste Kochi handles diagnostic equipment, imaging machines, and laboratory electronics with HIPAA-compliant destruction. Biomedical waste must be separated from general e-waste. We coordinate with biomedical waste processors. Hospitals and clinics benefit from our dedicated medical device expertise.
+          </p>
+        </details>
+
+        <!-- FAQ 20 -->
+        <details class="bg-white p-6 rounded-lg shadow hover:shadow-md transition cursor-pointer group">
+          <summary class="font-bold text-lg text-gray-900 flex items-center justify-between">
+            <span>How does Ewaste Kochi ensure fair worker treatment in recycling?</span>
+            <span class="text-2xl group-open:rotate-180 transition">▶</span>
+          </summary>
+          <p class="text-gray-700 mt-4 leading-relaxed">
+            Ewaste Kochi maintains fair-trade practices with certified staff receiving safety training. Workers use protective equipment for hazardous material handling. We follow ILO labor standards and support Kerala's worker protection regulations. Unlike informal recyclers exposing workers to toxic materials, our facility ensures safe, dignified employment. Sustainability includes ethical labor practices.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Related Services CTA -->
+    <section class="bg-gradient-to-r from-blue-50 to-indigo-50 py-12 px-4 mt-12">
+      <div class="max-w-7xl mx-auto">
+        <h3 class="text-3xl font-bold text-gray-900 mb-8 text-center">Explore Related Recycling Services</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <a href="/laptop-recycling-kochi/" class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition border-l-4 border-blue-600">
+            <h4 class="font-bold text-lg text-gray-900 mb-2">💻 Laptop Recycling</h4>
+            <p class="text-gray-700 mb-4">Secure data destruction and material recovery for laptops and notebooks.</p>
+            <span class="text-blue-600 font-bold">Learn More →</span>
+          </a>
+          <a href="/where-to-recycle-batteries/" class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition border-l-4 border-green-600">
+            <h4 class="font-bold text-lg text-gray-900 mb-2">🔋 Battery Recycling</h4>
+            <p class="text-gray-700 mb-4">Specialized handling for lithium-ion, lead-acid, and alkaline batteries.</p>
+            <span class="text-green-600 font-bold">Learn More →</span>
+          </a>
+          <a href="/server-recycling-kochi/" class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition border-l-4 border-purple-600">
+            <h4 class="font-bold text-lg text-gray-900 mb-2">⚙️ Server Recycling</h4>
+            <p class="text-gray-700 mb-4">Enterprise-grade data center decommissioning and asset recovery.</p>
+            <span class="text-purple-600 font-bold">Learn More →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</Layout>
+
+<script define:vars={{ schemaMarkup }} type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://ewastekochi.com/where-to-recycle-old-electronics/",
+      "url": "https://ewastekochi.com/where-to-recycle-old-electronics/",
+      "name": "Where to Recycle Old Electronics in Kochi | E-Waste Recycling Guide",
+      "description": "Discover certified e-waste recycling centers in Kochi. Free pickup, secure data destruction, and compliant recycling for old electronics. Call now!",
+      "isPartOf": {
+        "@id": "https://ewastekochi.com/#website"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://ewastekochi.com/images/where-to-recycle-electronics-featured.jpg"
+      },
+      "datePublished": "2024-01-15T08:00:00+05:30",
+      "dateModified": "2024-06-09T10:30:00+05:30",
+      "author": {
+        "@id": "https://ewastekochi.com/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://ewastekochi.com/where-to-recycle-old-electronics/#breadcrumb"
+      },
+      "potentialAction": [
+        {
+          "@type": "BuyAction",
+          "target": "https://ewastekochi.com/contact/"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://ewastekochi.com/where-to-recycle-old-electronics/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ewastekochi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://ewastekochi.com/services/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Where to Recycle Old Electronics",
+          "item": "https://ewastekochi.com/where-to-recycle-old-electronics/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://ewastekochi.com/#organization",
+      "name": "Ewaste Kochi",
+      "url": "https://ewastekochi.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ewastekochi.com/logo.png",
+        "width": 250,
+        "height": 250
+      },
+      "description": "CPCB-certified e-waste recycling center in Kochi with free pickup, secure data destruction, and compliant recycling services.",
+      "foundingDate": "2015",
+      "sameAs": [
+        "https://www.facebook.com/ewastekochi",
+        "https://www.instagram.com/ewastekochi",
+        "https://www.linkedin.com/company/ewaste-kochi"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kakkanad Industrial Area",
+        "addressLocality": "Kochi",
+        "addressRegion": "Kerala",
+        "postalCode": "682037",
+        "addressCountry": "IN"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "Customer Service",
+          "telephone": "+91-9188886666",
+          "areaServed": ["IN"],
+          "availableLanguage": ["en", "ml"]
+        }
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://ewastekochi.com/#localbusiness",
+      "name": "Ewaste Kochi",
+      "url": "https://ewastekochi.com",
+      "image": "https://ewastekochi.com/images/facility.jpg",
+      "description": "Certified e-waste recycling facility offering free pickup and compliant recycling in Kochi.",
+      "priceRange": "Free to ₹5000",
+      "areaServed": {
+        "@type": "GeoShape",
+        "box": "9.8 76.2 10.2 76.6"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 10.0097,
+        "longitude": 76.3439
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the best way to recycle old electronics?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The best way is through certified CPCB-registered recyclers like Ewaste Kochi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it safe to donate old computers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only if data is securely wiped first using DOD 5220.22-M standards."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if I throw e-waste in regular trash?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It's illegal. Penalties range from ₹5 lakh to ₹10 lakh under E-Waste Management Rules 2016."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+---
