@@ -1,0 +1,9 @@
+{
+  "name": "ewk-site",
+  "version": "1.0.0",
+  "description": "E-Waste Kochi static site",
+  "scripts": {
+    "build": "echo 'Static site — no build required'"
+  },
+  "private": true
+}
