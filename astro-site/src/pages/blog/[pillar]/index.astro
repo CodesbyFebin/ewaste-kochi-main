@@ -1,6 +1,7 @@
 ---
 import { getBlogsByPillar } from "../../../lib/data";
 import ChatBot from "../../../components/ChatBot.astro";
+import SpeedInsights from "../../../components/SpeedInsights.astro";
 
 export const prerender = false;
 export const runtime = 'node';
@@ -114,5 +115,6 @@ for (const p of posts) {
     </div>
   </section>
   <ChatBot />
+  <SpeedInsights />
 </body>
 </html>

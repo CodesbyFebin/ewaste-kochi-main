@@ -1,6 +1,7 @@
 ---
 import { getBlogsByCategory } from "../../../../lib/data";
 import ChatBot from "../../../../components/ChatBot.astro";
+import SpeedInsights from "../../../../components/SpeedInsights.astro";
 
 export const prerender = false;
 export const runtime = 'node';
@@ -111,5 +112,6 @@ const description = `Complete ${pillarLabel.toLowerCase()} guide for ${categoryL
     </div>
   </section>
   <ChatBot />
+  <SpeedInsights />
 </body>
 </html>

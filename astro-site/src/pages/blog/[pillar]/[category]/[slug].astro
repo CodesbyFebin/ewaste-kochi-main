@@ -1,6 +1,7 @@
 ---
 import { getBlogBySlug, getRelatedBlogs } from "../../../../lib/data";
 import ChatBot from "../../../../components/ChatBot.astro";
+import SpeedInsights from "../../../../components/SpeedInsights.astro";
 
 // SSR on demand — do NOT prerender 11k pages at build time
 export const prerender = false;
@@ -249,5 +250,6 @@ const serviceSchema = {
     <div>&copy; {new Date().getFullYear()} Ewaste Kochi · <a href="https://www.ewastekochi.com" style="color: #0d7a38; font-weight: 700;">www.ewastekochi.com</a></div>
   </footer>
   <ChatBot />
+  <SpeedInsights />
 </body>
 </html>
