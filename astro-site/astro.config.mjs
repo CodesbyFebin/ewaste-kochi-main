@@ -11,6 +11,9 @@ export default defineConfig({
   adapter: vercel({
     includeFiles: ['./src/data/content.db'],
     maxDuration: 10,
+    webAnalytics: {
+      enabled: true,
+    },
   }),
   trailingSlash: 'always',
   integrations: [mdx(), tailwind()],
