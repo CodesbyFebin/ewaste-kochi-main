@@ -1,0 +1,132 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import Faq from "../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../data/site";
+
+const title = "Computer Scrap Buyers in Kochi | Desktops, Laptops & Office IT";
+const description =
+  "Sell computer and IT scrap in Kochi — desktops, laptops, motherboards, RAM, CPUs, servers, and mixed office lots. Instant quote, doorstep pickup, bulk buying for businesses.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Computer Scrap Buyers", path: "/computer-scrap-buyers-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Computer scrap buyback",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: "Kochi, Ernakulam, Kerala",
+    url: `${SITE_URL}/computer-scrap-buyers-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/computer-scrap-buyers-kochi/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Do you buy individual components, not just full computers?",
+    a: "Yes — motherboards, RAM, CPUs, and other components have scrap value on their own, not just complete working systems.",
+  },
+  {
+    q: "Can offices sell a full IT clearance in one go?",
+    a: "Yes, that's one of our most common jobs — a single consolidated pickup and quote for a whole office's worth of desktops, monitors, and peripherals.",
+  },
+  {
+    q: "Do you buy server hardware too?",
+    a: "Yes, though larger server and rack decommissioning is usually handled under our dedicated server recycling service, which also covers data destruction and asset inventory.",
+  },
+  {
+    q: "Is data wiped from computers before resale or scrapping?",
+    a: "On request, yes — any device with storage can be wiped or destroyed before processing. See our data destruction page for methods.",
+  },
+  {
+    q: "How is the price determined?",
+    a: "Item type, condition, quantity, and current market rate — see our e-waste scrap prices page for the full breakdown of pricing factors.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/computer-scrap-buyers-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Computer Scrap Buyers in Kochi</h1>
+  <p class="lede">
+    Whether it's a single old desktop or a full office IT clearance, we buy
+    computer and IT scrap directly from your location — desktops, laptops,
+    motherboards, RAM, CPUs, servers, and mixed lots.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I have computer/IT scrap to sell — please give me a quote." />
+
+  <section>
+    <h2>What we buy</h2>
+    <p>
+      Desktops and laptops (working, partially working, or scrap), monitors
+      and peripherals, motherboards, RAM modules, CPUs, and other individual
+      components, networking gear, and mixed office IT lots. Larger server
+      and rack decommissioning is handled under our
+      <a href="/server-recycling-kochi/">server recycling</a> service, which
+      also covers data destruction and asset inventory for bigger jobs.
+    </p>
+  </section>
+
+  <section>
+    <h2>How pricing works</h2>
+    <p>
+      Value depends on item type, condition, quantity, and current market
+      rate — not a fixed price list. See
+      <a href="/e-waste-scrap-prices-kochi/">e-waste scrap prices</a> for the
+      full breakdown of what moves your quote. Message us with details for a
+      preliminary estimate, confirmed after inspection at pickup.
+    </p>
+  </section>
+
+  <section>
+    <h2>Process</h2>
+    <ol class="process-list">
+      <li><strong>Message us</strong> what you have — item types, rough quantity, condition.</li>
+      <li><strong>Get a preliminary quote</strong> over WhatsApp.</li>
+      <li><strong>Schedule pickup</strong> — same-day or next-day in most areas.</li>
+      <li><strong>Inspection and final quote</strong> confirmed on the spot.</li>
+      <li><strong>Instant payment</strong> once you accept.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Who this is for</h2>
+    <p>
+      Individuals clearing out old computer parts, small businesses doing an
+      IT upgrade, and offices decommissioning multiple workstations at once.
+      For a broader sell/buy flow beyond scrap value, see our
+      <a href="/marketplace/">marketplace</a> or
+      <a href="/sell-electronics/">sell electronics</a> pages. To schedule
+      collection, see <a href="/pickup/">pickup</a>.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .process-list { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

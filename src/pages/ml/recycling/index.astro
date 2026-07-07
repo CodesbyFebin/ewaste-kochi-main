@@ -1,0 +1,128 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import LangSwitch from "../../../components/LangSwitch.astro";
+import { SITE_URL } from "../../../data/site";
+import { getHreflang } from "../../../data/routes";
+
+const title = "കൊച്ചിയിൽ ഇ-മാലിന്യ റീസൈക്ലിംഗ് | സുരക്ഷിത ഇലക്ട്രോണിക്സ് നിർമാർജനം";
+const description =
+  "കൊച്ചിയിൽ ലാപ്ടോപ്പ്, ഡെസ്ക്ടോപ്പ്, മോണിറ്റർ, പ്രിന്റർ എന്നിവ സൗജന്യ പിക്കപ്പോടെ റീസൈക്കിൾ ചെയ്യുക. ഡാറ്റ ആദ്യം സുരക്ഷിതമായി നീക്കം ചെയ്യുന്നു.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "ഹോം", path: "/" },
+  { name: "മലയാളം", path: "/ml/" },
+  { name: "റീസൈക്ലിംഗ്", path: "/ml/recycling/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "E-waste recycling",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: "Kochi, Ernakulam, Kerala",
+    url: `${SITE_URL}/ml/recycling/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/ml/recycling/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    inLanguage: "ml-IN",
+  },
+];
+
+const faqItems = [
+  {
+    q: "കൊച്ചിയിൽ എവിടെയാണ് ഇലക്ട്രോണിക്സ് റീസൈക്കിൾ ചെയ്യാൻ കഴിയുക?",
+    a: "ഞങ്ങൾ വീട്ടിലോ ഓഫീസിലോ നിന്ന് നേരിട്ട് ശേഖരിക്കുന്നു — എവിടെയെങ്കിലും കൊണ്ടുപോകേണ്ട ആവശ്യമില്ല.",
+  },
+  {
+    q: "വീട്ടിൽ നിന്ന് പിക്കപ്പ് ലഭ്യമാണോ?",
+    a: "അതെ, വീടുകൾക്കും ഓഫീസുകൾക്കും ഡോർസ്റ്റെപ്പ് പിക്കപ്പ് ആണ് സ്ഥിരം രീതി.",
+  },
+  {
+    q: "ഏതെല്ലാം ഇലക്ട്രോണിക്സ് റീസൈക്കിൾ ചെയ്യാം?",
+    a: "ലാപ്ടോപ്പ്, ഡെസ്ക്ടോപ്പ്, മോണിറ്റർ, പ്രിന്റർ, റൂട്ടർ, ടിവി, പൊതുവായ ഐടി ഉപകരണങ്ങൾ.",
+  },
+  {
+    q: "റീസൈക്ലിംഗിന് മുൻപ് ഡാറ്റ നീക്കം ചെയ്യുമോ?",
+    a: "സ്റ്റോറേജുള്ള ഏതു ഉപകരണവും റീസൈക്കിൾ ചെയ്യുന്നതിന് മുൻപ് ഡാറ്റ വൈപ്പ് ചെയ്യുകയോ നശിപ്പിക്കുകയോ ചെയ്യുന്നു.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/ml/recycling/" jsonLd={jsonLd} lang="ml-IN" hreflang={getHreflang("/ml/recycling/")}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <LangSwitch current="ml" otherPath="/recycling/" />
+  <h1>കൊച്ചിയിൽ ഇ-മാലിന്യ റീസൈക്ലിംഗ്</h1>
+  <p class="lede">
+    ഉപയോഗിക്കാത്ത ലാപ്ടോപ്പ്, ഡെസ്ക്ടോപ്പ്, മോണിറ്റർ, പ്രിന്റർ എന്നിവ ഞങ്ങൾ
+    നിങ്ങളുടെ വീട്ടിൽ നിന്നോ ഓഫീസിൽ നിന്നോ ശേഖരിച്ച് സുരക്ഷിതമായി റീസൈക്കിൾ
+    ചെയ്യുന്നു — ഡാറ്റ ആദ്യം നീക്കം ചെയ്ത ശേഷം. യോഗ്യമായ അളവിന് പിക്കപ്പ്
+    സൗജന്യമാണ്.
+  </p>
+
+  <CtaBar
+    whatsappMessage="നമസ്കാരം, കൊച്ചിയിൽ ഇ-വേസ്റ്റ് റീസൈക്ലിംഗ് പിക്കപ്പ് ബുക്ക് ചെയ്യണം."
+    pickupHref="/ml/pickup/"
+    labels={{ call: "വിളിക്കുക", whatsapp: "വാട്സ്ആപ്പ് ചെയ്യുക", pickup: "പിക്കപ്പ് ബുക്ക് ചെയ്യുക" }}
+  />
+
+  <section>
+    <h2>സ്വീകരിക്കുന്ന സാധനങ്ങൾ</h2>
+    <p>
+      ലാപ്ടോപ്പും ഡെസ്ക്ടോപ്പും, മോണിറ്ററും കീബോർഡും, പ്രിന്ററും സ്കാനറും,
+      റൂട്ടറും, ടെലിവിഷനും, ഓഫീസുകളിൽ നിന്നുള്ള പൊതുവായ ഐടി ഉപകരണങ്ങളും.
+      ബാറ്ററികൾ ഒരേ പിക്കപ്പിൽ നൽകാമെങ്കിലും അവ പ്രത്യേകം
+      <a href="/ml/battery-recycling/">ബാറ്ററി റീസൈക്ലിംഗ്</a> വഴിയാണ്
+      പ്രോസസ്സ് ചെയ്യുന്നത്.
+    </p>
+  </section>
+
+  <section>
+    <h2>പിക്കപ്പ് എങ്ങനെ പ്രവർത്തിക്കുന്നു</h2>
+    <ol class="process-list">
+      <li><strong>വാട്സ്ആപ്പിലോ ഫോണിലോ ബന്ധപ്പെടുക</strong> — സാധനങ്ങളും സ്ഥലവും അറിയിക്കുക.</li>
+      <li><strong>സ്ലോട്ട് സ്ഥിരീകരിക്കുന്നു</strong> — മിക്കപ്പോഴും അതേ ദിവസമോ അടുത്ത ദിവസമോ.</li>
+      <li><strong>ഡോർസ്റ്റെപ്പ് ശേഖരണം</strong> — വീട്ടിൽ നിന്നോ ഓഫീസിൽ നിന്നോ നേരിട്ട്.</li>
+      <li><strong>ഡാറ്റ കൈകാര്യം ചെയ്യൽ</strong> — സ്റ്റോറേജുള്ള ഉപകരണങ്ങൾ ആദ്യം വൈപ്പ് ചെയ്യുന്നു.</li>
+      <li><strong>റീസൈക്ലിംഗ് അല്ലെങ്കിൽ വിൽപ്പന</strong> — പ്രവർത്തിക്കുന്നവ <a href="/ml/sell-electronics/">വിൽപ്പനയ്ക്ക്</a> അയക്കാം.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>അനുസരണം (Compliance)</h2>
+    <p>
+      ഞങ്ങളുടെ റീസൈക്ലിംഗ് പ്രക്രിയ ISO 14001:2015 പരിസ്ഥിതി മാനേജ്മെന്റ്
+      രീതികളോട് യോജിച്ചതാണ്, കൂടാതെ Pollution Control Board അംഗീകാരത്തിന്
+      കീഴിലാണ് പ്രവർത്തിക്കുന്നത്. വിശദമായ രേഖകൾ ആവശ്യാനുസരണം ലഭ്യമാണ് —
+      <a href="/ml/contact/">ബന്ധപ്പെടുക</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>പ്രാദേശിക കവറേജ്</h2>
+    <p>
+      കക്കനാട്, എടപ്പള്ളി, ആലുവ, വൈറ്റില, തൃപ്പൂണിത്തുറ, കളമശ്ശേരി എന്നിവയും
+      കൊച്ചിയിലെയും എറണാകുളം ജില്ലയിലെയും മറ്റ് 20+ പ്രദേശങ്ങളും ഞങ്ങൾ
+      സേവിക്കുന്നു.
+    </p>
+  </section>
+
+  <Faq items={faqItems} heading="പതിവ് ചോദ്യങ്ങൾ" />
+
+  <p class="updated">അവസാനം പുതുക്കിയത്: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .process-list { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 1.25rem; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

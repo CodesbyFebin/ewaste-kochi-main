@@ -1,0 +1,96 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import Faq from "../../components/Faq.astro";
+import { SITE_URL } from "../../data/site";
+
+const title = "Certifications | Ewaste Kochi";
+const description =
+  "Environmental and regulatory compliance status for Ewaste Kochi's recycling and data destruction operations.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Trust", path: "/trust/" },
+  { name: "Certifications", path: "/certifications/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/certifications/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Is Ewaste Kochi ISO certified?",
+    a: "Our recycling processes are aligned with ISO 14001:2015 environmental management practices. Detailed certificate documentation is available on request.",
+  },
+  {
+    q: "Do you have Pollution Control Board authorization?",
+    a: "Yes, our e-waste handling operates under Pollution Control Board authorization. Specific authorization documents can be provided on request for your records.",
+  },
+  {
+    q: "Can I see the actual certificate documents?",
+    a: "Yes — contact us and we'll share the relevant certification and authorization documents for your review.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/certifications/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Certifications</h1>
+  <p class="lede">
+    A plain-language summary of the compliance standards our operations
+    follow. For the underlying documents themselves, contact us directly —
+    we'd rather point you to the real paperwork than restate numbers here
+    that you can't verify.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to request your certification documents." />
+
+  <section>
+    <h2>Environmental management</h2>
+    <p>
+      Our recycling processes are aligned with ISO 14001:2015 environmental
+      management practices. Certificate documentation, including validity
+      and scope, is available on request.
+    </p>
+  </section>
+
+  <section>
+    <h2>Pollution control authorization</h2>
+    <p>
+      Our e-waste handling operations run under Pollution Control Board
+      authorization applicable to e-waste recyclers in Kerala. Authorization
+      details are available on request for businesses that need them for
+      their own compliance records.
+    </p>
+  </section>
+
+  <section>
+    <h2>How to request documentation</h2>
+    <p>
+      Message us via <a href="/contact/">our contact page</a> with what you
+      need — general compliance documentation, or a certificate tied to a
+      specific pickup or data destruction job (see the
+      <a href="/data-destruction-certificate-sample/">certificate sample
+      page</a> for what that includes).
+    </p>
+  </section>
+
+  <Faq items={faqItems} />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

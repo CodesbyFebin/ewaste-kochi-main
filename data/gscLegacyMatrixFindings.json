@@ -1,0 +1,3745 @@
+{
+  "source": "GSC Performance-on-Search export, ~3-month window ending 2026-06-29 (reporting date 2026-07-06)",
+  "method": "Rows classified as location-matrix (/locations/{city}/{service}/) or blogs-taxonomy (/blogs/**), deduped across www/non-www host variants by summing clicks/impressions per path. action=keep-review if clicks>0 (still very low absolute volume, needs individual judgment when that page is built), action=redirect-to-hub if 0 clicks in the window (no measurable search equity to protect).",
+  "totalUniquePaths": 467,
+  "keepReviewCount": 56,
+  "redirectCount": 411,
+  "pages": [
+    {
+      "path": "/locations/thrippunithura/e-waste-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 4,
+      "impressions": 16,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/thrippunithura/"
+    },
+    {
+      "path": "/locations/kalamassery/electronic-waste-disposal/",
+      "category": "location-matrix",
+      "clicks": 3,
+      "impressions": 22,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/kalamassery/"
+    },
+    {
+      "path": "/locations/kalamassery/free-ewaste-pickup-kochi/",
+      "category": "location-matrix",
+      "clicks": 3,
+      "impressions": 21,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/kalamassery/"
+    },
+    {
+      "path": "/locations/palakkad/sell-old-electronics/",
+      "category": "location-matrix",
+      "clicks": 3,
+      "impressions": 9,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/palakkad/"
+    },
+    {
+      "path": "/locations/kozhikode/tv-monitor-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 3,
+      "impressions": 5,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/kozhikode/"
+    },
+    {
+      "path": "/locations/kadavanthra/sell-electronics-kochi/",
+      "category": "location-matrix",
+      "clicks": 2,
+      "impressions": 46,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/kadavanthra/"
+    },
+    {
+      "path": "/blogs/disposal/",
+      "category": "blogs-taxonomy",
+      "clicks": 2,
+      "impressions": 49,
+      "action": "keep-review",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/kakkanad/corporate-ewaste-kochi/",
+      "category": "location-matrix",
+      "clicks": 2,
+      "impressions": 16,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/kakkanad/"
+    },
+    {
+      "path": "/locations/kozhikode/electronic-waste-disposal/",
+      "category": "location-matrix",
+      "clicks": 2,
+      "impressions": 37,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/kozhikode/"
+    },
+    {
+      "path": "/locations/kakkanad/e-waste-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 2,
+      "impressions": 13,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/kakkanad/"
+    },
+    {
+      "path": "/locations/maradu/electronic-waste-disposal/",
+      "category": "location-matrix",
+      "clicks": 2,
+      "impressions": 9,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/maradu/"
+    },
+    {
+      "path": "/locations/smart-city-kochi/itad-kochi/",
+      "category": "location-matrix",
+      "clicks": 2,
+      "impressions": 7,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/smart-city-kochi/"
+    },
+    {
+      "path": "/locations/kannur/battery-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 2,
+      "impressions": 27,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/kannur/"
+    },
+    {
+      "path": "/blogs/scrap-electronics/pcb-and-motherboard-scrap-buyers-in-kakkanad-kochi/",
+      "category": "blogs-taxonomy",
+      "clicks": 1,
+      "impressions": 48,
+      "action": "keep-review",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/infopark-kochi/electronic-waste-disposal/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 43,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/infopark-kochi/"
+    },
+    {
+      "path": "/locations/palakkad/computer-recycling/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 31,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/palakkad/"
+    },
+    {
+      "path": "/blogs/",
+      "category": "blogs-taxonomy",
+      "clicks": 1,
+      "impressions": 26,
+      "action": "keep-review",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/kollam/battery-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 47,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/kollam/"
+    },
+    {
+      "path": "/locations/kozhikode/sell-old-electronics/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 27,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/kozhikode/"
+    },
+    {
+      "path": "/locations/ernakulam-south/data-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 16,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/ernakulam-south/"
+    },
+    {
+      "path": "/locations/aluva/free-ewaste-pickup-kochi/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 15,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/aluva/"
+    },
+    {
+      "path": "/locations/palakkad/electronic-waste-disposal/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 32,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/palakkad/"
+    },
+    {
+      "path": "/locations/vyttila/e-waste-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 13,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/vyttila/"
+    },
+    {
+      "path": "/locations/kalamassery/corporate-ewaste-kochi/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 12,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/kalamassery/"
+    },
+    {
+      "path": "/locations/ernakulam-south/battery-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 11,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/ernakulam-south/"
+    },
+    {
+      "path": "/blogs/disposal/where-to-dispose-old-laptops-in-infopark-kochi-free-pickup-guide/",
+      "category": "blogs-taxonomy",
+      "clicks": 1,
+      "impressions": 11,
+      "action": "keep-review",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/kozhikode/e-waste-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 26,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/kozhikode/"
+    },
+    {
+      "path": "/blogs/battery-recycling/office-battery-pickup-in-thiruvananthapuram-how-to-stage-mixed-loads/",
+      "category": "blogs-taxonomy",
+      "clicks": 1,
+      "impressions": 13,
+      "action": "keep-review",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/battery-recycling/phone-battery-recycling-in-thrippunithura-kochi-what-to-do-with-loose-cells/",
+      "category": "blogs-taxonomy",
+      "clicks": 1,
+      "impressions": 11,
+      "action": "keep-review",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/perumbavoor/e-waste-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 10,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/perumbavoor/"
+    },
+    {
+      "path": "/locations/edappally/e-waste-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 18,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/edappally/"
+    },
+    {
+      "path": "/locations/angamaly/free-ewaste-pickup-kochi/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 10,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/angamaly/"
+    },
+    {
+      "path": "/blogs/environmental-impact/precious-metal-recovery-from-e-waste-in-kakkanad-kochi/",
+      "category": "blogs-taxonomy",
+      "clicks": 1,
+      "impressions": 10,
+      "action": "keep-review",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/corporate-itad/bank-and-hospital-itad-in-kottayam-documentation-that-actually-matters/",
+      "category": "blogs-taxonomy",
+      "clicks": 1,
+      "impressions": 10,
+      "action": "keep-review",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/vyttila/server-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 9,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/vyttila/"
+    },
+    {
+      "path": "/locations/thrippunithura/corporate-ewaste-kochi/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 9,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/thrippunithura/"
+    },
+    {
+      "path": "/blogs/disposal/how-to-dispose-mixed-household-e-waste-in-kollam/",
+      "category": "blogs-taxonomy",
+      "clicks": 1,
+      "impressions": 17,
+      "action": "keep-review",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/kadavanthra/corporate-ewaste-kochi/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 11,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/kadavanthra/"
+    },
+    {
+      "path": "/locations/kannur/old-computer-disposal/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 8,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/kannur/"
+    },
+    {
+      "path": "/locations/kottayam/free-ewaste-pickup-kochi/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 8,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/kottayam/"
+    },
+    {
+      "path": "/blogs/recycling/laptop-recycling-in-kollam-reuse-buyback-or-scrap/",
+      "category": "blogs-taxonomy",
+      "clicks": 1,
+      "impressions": 11,
+      "action": "keep-review",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/infopark-kochi/data-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 6,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/infopark-kochi/"
+    },
+    {
+      "path": "/blogs/laptop-disposal/laptop-resale-value-in-kottayam-what-changes-the-price-fast/",
+      "category": "blogs-taxonomy",
+      "clicks": 1,
+      "impressions": 5,
+      "action": "keep-review",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/aluva/laptop-buyback-kochi/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 5,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/aluva/"
+    },
+    {
+      "path": "/locations/kakkanad/data-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 5,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/kakkanad/"
+    },
+    {
+      "path": "/locations/palakkad/mobile-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 4,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/palakkad/"
+    },
+    {
+      "path": "/locations/infopark-kochi/corporate-ewaste-kochi/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 4,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/infopark-kochi/"
+    },
+    {
+      "path": "/locations/vyttila/printer-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 2,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/vyttila/"
+    },
+    {
+      "path": "/locations/palakkad/ups-inverter-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 2,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/palakkad/"
+    },
+    {
+      "path": "/locations/thrissur/tv-monitor-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 2,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/thrissur/"
+    },
+    {
+      "path": "/locations/willingdon-island/tv-monitor-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 2,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/willingdon-island/"
+    },
+    {
+      "path": "/locations/kollam/tv-monitor-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 2,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/kollam/"
+    },
+    {
+      "path": "/locations/infopark-kochi/hard-drive-shredding-kochi/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 2,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/infopark-kochi/"
+    },
+    {
+      "path": "/locations/kollam/printer-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 2,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/kollam/"
+    },
+    {
+      "path": "/locations/palakkad/itad-kochi/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 1,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/palakkad/"
+    },
+    {
+      "path": "/locations/angamaly/air-conditioner-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 1,
+      "impressions": 1,
+      "action": "keep-review",
+      "suggestedRedirectTarget": "/locations/angamaly/"
+    },
+    {
+      "path": "/locations/kozhikode/battery-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 124,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kozhikode/"
+    },
+    {
+      "path": "/locations/thiruvananthapuram/battery-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 97,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thiruvananthapuram/"
+    },
+    {
+      "path": "/locations/thrissur/battery-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 65,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrissur/"
+    },
+    {
+      "path": "/blogs/recycling/how-electronics-recycling-works-in-thiruvananthapuram/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 65,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/itad-process/nist-800-88-vs-dod-5220-22-m-which-standard-to-choose-in-vyttila-kochi/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 40,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/battery-recycling/how-to-store-batteries-before-pickup-in-vyttila-kochi/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 34,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/itad-process/the-ultimate-server-decommissioning-checklist-for-data-centres-in-vyttila-kochi/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 33,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/thrikkakara/free-ewaste-pickup-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 31,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrikkakara/"
+    },
+    {
+      "path": "/locations/malappuram/battery-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 25,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/malappuram/"
+    },
+    {
+      "path": "/blogs/ewaste-laws/kspcb-authorized-recyclers-list-how-thiruvananthapuram-businesses-verify-vendors/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 23,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/recycling/battery-recycling-in-vyttila-kochi-what-needs-separate-handling/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 21,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/recycling/zero-landfill-electronics-recycling-in-thiruvananthapuram-what-it-really-means/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 26,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/disposal/where-to-dispose-old-laptops-in-kollam-free-pickup-guide/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 20,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/aluva/e-waste-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 20,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/aluva/"
+    },
+    {
+      "path": "/blogs/recycling/computer-recycling-in-thrippunithura-kochi-for-homes-and-offices/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 19,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/thiruvananthapuram/e-waste-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 18,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thiruvananthapuram/"
+    },
+    {
+      "path": "/blogs/disposal/where-to-dispose-old-phones-in-edappally-kochi-without-data-risk/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 18,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/ernakulam-south/itad-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 18,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/ernakulam-south/"
+    },
+    {
+      "path": "/locations/kakkanad/electronics-recycling-near-me/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 17,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kakkanad/"
+    },
+    {
+      "path": "/blogs/scrap-electronics/network-equipment-scrap-in-edappally-kochi-switches-routers-firewalls/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 17,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/disposal/how-to-dispose-office-computers-in-thiruvananthapuram-safely/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 17,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/kottayam/e-waste-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 15,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kottayam/"
+    },
+    {
+      "path": "/blogs/mobile-recycling/damaged-phone-recycling-in-kozhikode-what-still-counts-as-value/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 15,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/palarivattom/free-ewaste-pickup-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 14,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/palarivattom/"
+    },
+    {
+      "path": "/locations/kollam/e-waste-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 14,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kollam/"
+    },
+    {
+      "path": "/locations/malappuram/sell-old-electronics/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 13,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/malappuram/"
+    },
+    {
+      "path": "/blogs/environmental-impact/toxic-components-in-electronics-collected-in-kakkanad-kochi/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 18,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/malappuram/electronics-recycling-near-me/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 12,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/malappuram/"
+    },
+    {
+      "path": "/locations/thiruvananthapuram/free-ewaste-pickup-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 12,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thiruvananthapuram/"
+    },
+    {
+      "path": "/blogs/scrap-electronics/server-scrap-buyers-in-thrippunithura-kochi-recovering-more-from-old-racks/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 12,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/ernakulam-south/hard-drive-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 15,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/ernakulam-south/"
+    },
+    {
+      "path": "/locations/maradu/free-ewaste-pickup-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 13,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/maradu/"
+    },
+    {
+      "path": "/blogs/disposal/how-to-dispose-office-computers-in-kakkanad-kochi-safely/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 18,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/recycling/computer-recycling-in-vyttila-kochi-for-homes-and-offices/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 18,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/recycling/how-electronics-recycling-works-in-kozhikode/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 14,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/ernakulam-south/e-waste-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 11,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/ernakulam-south/"
+    },
+    {
+      "path": "/locations/infopark-kochi/e-waste-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 10,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/infopark-kochi/"
+    },
+    {
+      "path": "/locations/kozhikode/old-computer-disposal/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 10,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kozhikode/"
+    },
+    {
+      "path": "/blogs/battery-recycling/lead-acid-battery-recycling-in-kottayam-what-businesses-need-to-track/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 10,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/kakkanad/free-ewaste-pickup-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 10,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kakkanad/"
+    },
+    {
+      "path": "/blogs/disposal/monitor-and-tv-disposal-in-vyttila-kochi-what-to-do-first/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 10,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/infopark-kochi/itad-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 13,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/infopark-kochi/"
+    },
+    {
+      "path": "/blogs/laptop-disposal/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 18,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/kothamangalam/e-waste-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 10,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kothamangalam/"
+    },
+    {
+      "path": "/locations/kakkanad/hard-drive-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 10,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kakkanad/"
+    },
+    {
+      "path": "/blogs/disposal/corporate-e-waste-clearance-checklist-for-vyttila-kochi/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 9,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/kadavanthra/data-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 9,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kadavanthra/"
+    },
+    {
+      "path": "/locations/thrissur/e-waste-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 9,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrissur/"
+    },
+    {
+      "path": "/blogs/battery-recycling/solar-battery-disposal-in-thiruvananthapuram-practical-steps-for-safe-collection/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 9,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/kannur/e-waste-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 9,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kannur/"
+    },
+    {
+      "path": "/blogs/laptop-disposal/laptop-resale-value-in-thiruvananthapuram-what-changes-the-price-fast/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 11,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/kozhikode/secure-computer-recycling/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 9,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kozhikode/"
+    },
+    {
+      "path": "/locations/ernakulam-south/free-ewaste-pickup-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 8,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/ernakulam-south/"
+    },
+    {
+      "path": "/blogs/disposal/where-to-dispose-old-laptops-in-vyttila-kochi-free-pickup-guide/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 8,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/laptop-disposal/employee-laptop-returns-and-disposal-workflow-in-thiruvananthapuram/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 11,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/edappally/corporate-ewaste-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 8,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/edappally/"
+    },
+    {
+      "path": "/locations/maradu/e-waste-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 8,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/maradu/"
+    },
+    {
+      "path": "/blogs/laptop-disposal/school-and-college-laptop-disposal-in-kakkanad-kochi/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 8,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/government-rules/e-waste-rules-2022-for-businesses-in-kozhikode/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 10,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/fort-kochi/data-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 8,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/fort-kochi/"
+    },
+    {
+      "path": "/locations/palakkad/secure-computer-recycling/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 8,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/palakkad/"
+    },
+    {
+      "path": "/blogs/itad-process/the-ultimate-server-decommissioning-checklist-for-data-centres-in-kalamassery-kochi/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 8,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/ernakulam-south/tv-monitor-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 7,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/ernakulam-south/"
+    },
+    {
+      "path": "/locations/kozhikode/free-ewaste-pickup-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 7,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kozhikode/"
+    },
+    {
+      "path": "/locations/kadavanthra/electronic-waste-disposal/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 7,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kadavanthra/"
+    },
+    {
+      "path": "/locations/kannur/free-ewaste-pickup-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 7,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kannur/"
+    },
+    {
+      "path": "/locations/north-paravur/mobile-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 7,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/north-paravur/"
+    },
+    {
+      "path": "/locations/kozhikode/mobile-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 7,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kozhikode/"
+    },
+    {
+      "path": "/locations/thrippunithura/free-ewaste-pickup-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 7,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrippunithura/"
+    },
+    {
+      "path": "/blogs/environmental-impact/what-happens-when-electronics-reach-landfills-in-kollam/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 7,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/battery-recycling/ups-and-inverter-battery-disposal-in-thiruvananthapuram/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 8,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/ernakulam-south/laptop-buyback-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 7,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/ernakulam-south/"
+    },
+    {
+      "path": "/locations/fort-kochi/free-ewaste-pickup-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 7,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/fort-kochi/"
+    },
+    {
+      "path": "/blogs/recycling/laptop-recycling-in-infopark-kochi-reuse-buyback-or-scrap/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 12,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/recycling/laptop-recycling-in-kalamassery-kochi-reuse-buyback-or-scrap/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 10,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/kalamassery/data-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 7,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kalamassery/"
+    },
+    {
+      "path": "/locations/kakkanad/hard-drive-shredding-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 7,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kakkanad/"
+    },
+    {
+      "path": "/locations/kakkanad/mobile-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 7,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kakkanad/"
+    },
+    {
+      "path": "/locations/kannur/hard-drive-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 7,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kannur/"
+    },
+    {
+      "path": "/locations/palakkad/old-computer-disposal/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 6,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/palakkad/"
+    },
+    {
+      "path": "/locations/thrikkakara/data-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 6,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrikkakara/"
+    },
+    {
+      "path": "/locations/aluva/ups-inverter-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 6,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/aluva/"
+    },
+    {
+      "path": "/blogs/laptop-disposal/laptop-resale-value-in-kalamassery-kochi-what-changes-the-price-fast/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 6,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/thrissur/free-ewaste-pickup-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 6,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrissur/"
+    },
+    {
+      "path": "/blogs/government-rules/forms-and-manifests-for-e-waste-pickup-in-kalamassery-kochi/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 6,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/battery-recycling/ups-and-inverter-battery-disposal-in-kakkanad-kochi/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 6,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/palarivattom/corporate-ewaste-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 6,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/palarivattom/"
+    },
+    {
+      "path": "/locations/kothamangalam/free-ewaste-pickup-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 6,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kothamangalam/"
+    },
+    {
+      "path": "/blogs/environmental-impact/precious-metal-recovery-from-e-waste-in-kottayam/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 6,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/fort-kochi/e-waste-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 6,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/fort-kochi/"
+    },
+    {
+      "path": "/blogs/government-rules/how-to-verify-a-kspcb-authorized-recycler-in-infopark-kochi/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 10,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/laptop-disposal/business-laptop-buyback-in-infopark-kochi-what-it-teams-should-expect/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 6,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/kalamassery/hard-drive-shredding-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 6,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kalamassery/"
+    },
+    {
+      "path": "/locations/palakkad/hard-drive-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 6,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/palakkad/"
+    },
+    {
+      "path": "/locations/north-paravur/free-ewaste-pickup-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 5,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/north-paravur/"
+    },
+    {
+      "path": "/blogs/scrap-electronics/electronics-price-factors-in-kottayam-why-two-loads-get-different-rates/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 5,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/kadavanthra/free-ewaste-pickup-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 5,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kadavanthra/"
+    },
+    {
+      "path": "/locations/kalamassery/e-waste-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 5,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kalamassery/"
+    },
+    {
+      "path": "/blogs/recycling/pickup-vs-drop-off-recycling-in-kozhikode-which-option-fits-better/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 8,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/environmental-impact/apartment-and-community-e-waste-drives-in-kakkanad-kochi/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 5,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/muvattupuzha/e-waste-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 5,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/muvattupuzha/"
+    },
+    {
+      "path": "/locations/angamaly/e-waste-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 5,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/angamaly/"
+    },
+    {
+      "path": "/locations/kalady/ups-inverter-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 5,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kalady/"
+    },
+    {
+      "path": "/blogs/government-rules/how-disposal-mistakes-create-data-breach-risk-in-kakkanad-kochi/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 5,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/government-rules/forms-and-manifests-for-e-waste-pickup-in-kollam/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 5,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/disposal/corporate-e-waste-clearance-checklist-for-kottayam/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 8,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/environmental-impact/why-recycle-electronics-in-kottayam-the-local-impact/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 5,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/north-paravur/ups-inverter-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 5,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/north-paravur/"
+    },
+    {
+      "path": "/locations/angamaly/ups-inverter-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 5,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/angamaly/"
+    },
+    {
+      "path": "/locations/aluva/sell-electronics-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 5,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/aluva/"
+    },
+    {
+      "path": "/locations/north-paravur/e-waste-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 5,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/north-paravur/"
+    },
+    {
+      "path": "/blogs/mobile-recycling/phone-buyback-in-thrippunithura-kochi-best-route-for-fast-local-quotes/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 5,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/ernakulam-south/mobile-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 5,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/ernakulam-south/"
+    },
+    {
+      "path": "/locations/ernakulam-south/hard-drive-shredding-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 5,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/ernakulam-south/"
+    },
+    {
+      "path": "/locations/thrikkakara/e-waste-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 5,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrikkakara/"
+    },
+    {
+      "path": "/locations/kannur/itad-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 5,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kannur/"
+    },
+    {
+      "path": "/locations/north-paravur/network-equipment-disposal-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 5,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/north-paravur/"
+    },
+    {
+      "path": "/locations/ernakulam-south/network-equipment-disposal-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 5,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/ernakulam-south/"
+    },
+    {
+      "path": "/locations/maradu/data-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 5,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/maradu/"
+    },
+    {
+      "path": "/locations/maradu/hard-drive-shredding-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/maradu/"
+    },
+    {
+      "path": "/locations/ernakulam-south/ups-inverter-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/ernakulam-south/"
+    },
+    {
+      "path": "/locations/kakkanad/tv-monitor-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kakkanad/"
+    },
+    {
+      "path": "/locations/edappally/old-computer-disposal/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/edappally/"
+    },
+    {
+      "path": "/locations/kalamassery/server-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kalamassery/"
+    },
+    {
+      "path": "/locations/ernakulam-south/air-conditioner-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/ernakulam-south/"
+    },
+    {
+      "path": "/blogs/disposal/corporate-e-waste-clearance-checklist-for-edappally-kochi/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/government-rules/certificate-of-destruction-for-audits-in-thiruvananthapuram/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/kottayam/corporate-ewaste-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kottayam/"
+    },
+    {
+      "path": "/blogs/laptop-disposal/damaged-laptop-recycling-in-thrippunithura-kochi-what-still-has-value/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/edappally/mobile-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/edappally/"
+    },
+    {
+      "path": "/locations/kottayam/tv-monitor-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kottayam/"
+    },
+    {
+      "path": "/locations/thiruvananthapuram/corporate-ewaste-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thiruvananthapuram/"
+    },
+    {
+      "path": "/locations/palarivattom/e-waste-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/palarivattom/"
+    },
+    {
+      "path": "/locations/vyttila/free-ewaste-pickup-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/vyttila/"
+    },
+    {
+      "path": "/blogs/data-destruction/certificate-of-destruction-in-kozhikode-what-auditors-expect-to-see/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/itad-process/nist-800-88-vs-dod-5220-22-m-which-standard-to-choose-in-kalamassery-kochi/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/recycling/battery-recycling-in-kalamassery-kochi-what-needs-separate-handling/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/kalady/free-ewaste-pickup-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kalady/"
+    },
+    {
+      "path": "/locations/thiruvananthapuram/laptop-buyback-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thiruvananthapuram/"
+    },
+    {
+      "path": "/locations/vyttila/corporate-ewaste-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/vyttila/"
+    },
+    {
+      "path": "/locations/kakkanad/ups-inverter-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kakkanad/"
+    },
+    {
+      "path": "/locations/palarivattom/ups-inverter-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/palarivattom/"
+    },
+    {
+      "path": "/locations/kothamangalam/laptop-recycling-near-me/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kothamangalam/"
+    },
+    {
+      "path": "/blogs/data-destruction/server-drive-sanitization-in-edappally-kochi-for-itad-projects/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 7,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/maradu/corporate-ewaste-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/maradu/"
+    },
+    {
+      "path": "/locations/north-paravur/sell-electronics-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/north-paravur/"
+    },
+    {
+      "path": "/locations/thiruvananthapuram/data-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thiruvananthapuram/"
+    },
+    {
+      "path": "/locations/maradu/itad-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/maradu/"
+    },
+    {
+      "path": "/locations/willingdon-island/e-waste-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/willingdon-island/"
+    },
+    {
+      "path": "/locations/malappuram/e-waste-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/malappuram/"
+    },
+    {
+      "path": "/locations/palakkad/e-waste-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/palakkad/"
+    },
+    {
+      "path": "/locations/thiruvananthapuram/hard-drive-shredding-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thiruvananthapuram/"
+    },
+    {
+      "path": "/locations/kakkanad/network-equipment-disposal-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kakkanad/"
+    },
+    {
+      "path": "/locations/fort-kochi/itad-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/fort-kochi/"
+    },
+    {
+      "path": "/locations/kannur/certificate-of-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kannur/"
+    },
+    {
+      "path": "/locations/malappuram/data-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/malappuram/"
+    },
+    {
+      "path": "/locations/kollam/network-equipment-disposal-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kollam/"
+    },
+    {
+      "path": "/locations/malappuram/certificate-of-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/malappuram/"
+    },
+    {
+      "path": "/locations/angamaly/printer-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/angamaly/"
+    },
+    {
+      "path": "/locations/maradu/server-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/maradu/"
+    },
+    {
+      "path": "/locations/kothamangalam/ups-inverter-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kothamangalam/"
+    },
+    {
+      "path": "/blogs/environmental-impact/school-e-waste-drives-in-vyttila-kochi-planning-a-safer-collection-day/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/edappally/laptop-buyback-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/edappally/"
+    },
+    {
+      "path": "/locations/kozhikode/laptop-recycling-near-me/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kozhikode/"
+    },
+    {
+      "path": "/locations/palakkad/free-ewaste-pickup-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/palakkad/"
+    },
+    {
+      "path": "/locations/smart-city-kochi/tv-monitor-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/smart-city-kochi/"
+    },
+    {
+      "path": "/locations/kalady/corporate-ewaste-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kalady/"
+    },
+    {
+      "path": "/locations/kollam/mobile-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kollam/"
+    },
+    {
+      "path": "/locations/kottayam/battery-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kottayam/"
+    },
+    {
+      "path": "/blogs/government-rules/bulk-consumer-e-waste-obligations-in-thrippunithura-kochi/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/thrissur/corporate-ewaste-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrissur/"
+    },
+    {
+      "path": "/blogs/government-rules/dpdp-act-and-retired-devices-in-vyttila-kochi-what-changes-for-disposal/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/fort-kochi/tv-monitor-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/fort-kochi/"
+    },
+    {
+      "path": "/locations/kadavanthra/itad-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kadavanthra/"
+    },
+    {
+      "path": "/locations/kalady/e-waste-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kalady/"
+    },
+    {
+      "path": "/locations/muvattupuzha/server-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/muvattupuzha/"
+    },
+    {
+      "path": "/locations/thrissur/laptop-buyback-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrissur/"
+    },
+    {
+      "path": "/blogs/data-destruction/nist-800-88-wiping-in-thiruvananthapuram-what-it-covers-and-what-it-does-not/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/kalady/mobile-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kalady/"
+    },
+    {
+      "path": "/locations/palarivattom/battery-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/palarivattom/"
+    },
+    {
+      "path": "/locations/thiruvananthapuram/certificate-of-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thiruvananthapuram/"
+    },
+    {
+      "path": "/locations/thrippunithura/itad-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrippunithura/"
+    },
+    {
+      "path": "/blogs/battery-recycling/how-to-store-batteries-before-pickup-in-thrippunithura-kochi/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/smart-city-kochi/free-ewaste-pickup-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/smart-city-kochi/"
+    },
+    {
+      "path": "/locations/fort-kochi/hard-drive-shredding-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/fort-kochi/"
+    },
+    {
+      "path": "/locations/thrikkakara/battery-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrikkakara/"
+    },
+    {
+      "path": "/blogs/laptop-disposal/employee-laptop-returns-and-disposal-workflow-in-kakkanad-kochi/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/malappuram/mobile-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/malappuram/"
+    },
+    {
+      "path": "/blogs/mobile-recycling/same-day-mobile-pickup-in-vyttila-kochi-for-shops-and-offices/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/vyttila/tv-monitor-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/vyttila/"
+    },
+    {
+      "path": "/locations/thrippunithura/mobile-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrippunithura/"
+    },
+    {
+      "path": "/locations/aluva/data-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/aluva/"
+    },
+    {
+      "path": "/locations/kakkanad/air-conditioner-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kakkanad/"
+    },
+    {
+      "path": "/blogs/environmental-impact/what-happens-when-electronics-reach-landfills-in-kozhikode/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/government-rules/school-and-hospital-e-waste-compliance-in-kozhikode/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 5,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/kakkanad/itad-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kakkanad/"
+    },
+    {
+      "path": "/locations/kothamangalam/itad-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kothamangalam/"
+    },
+    {
+      "path": "/blogs/laptop-disposal/laptop-resale-value-in-infopark-kochi-what-changes-the-price-fast/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/kadavanthra/e-waste-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kadavanthra/"
+    },
+    {
+      "path": "/locations/kottayam/dpdp-act-compliance-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kottayam/"
+    },
+    {
+      "path": "/locations/smart-city-kochi/certificate-of-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/smart-city-kochi/"
+    },
+    {
+      "path": "/locations/kozhikode/itad-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kozhikode/"
+    },
+    {
+      "path": "/locations/smart-city-kochi/hard-drive-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/smart-city-kochi/"
+    },
+    {
+      "path": "/locations/kannur/network-equipment-disposal-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kannur/"
+    },
+    {
+      "path": "/locations/kalamassery-hitech-park/itad-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kalamassery-hitech-park/"
+    },
+    {
+      "path": "/locations/perumbavoor/itad-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/perumbavoor/"
+    },
+    {
+      "path": "/locations/angamaly/battery-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/angamaly/"
+    },
+    {
+      "path": "/locations/kollam/hard-drive-shredding-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kollam/"
+    },
+    {
+      "path": "/locations/smart-city-kochi/mobile-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/smart-city-kochi/"
+    },
+    {
+      "path": "/locations/thrikkakara/air-conditioner-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrikkakara/"
+    },
+    {
+      "path": "/locations/kozhikode/laptop-buyback-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kozhikode/"
+    },
+    {
+      "path": "/blogs/recycling/how-to-run-an-office-electronics-recycling-drive-in-thrippunithura-kochi/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/kadavanthra/mobile-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kadavanthra/"
+    },
+    {
+      "path": "/locations/thiruvananthapuram/server-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thiruvananthapuram/"
+    },
+    {
+      "path": "/locations/willingdon-island/free-ewaste-pickup-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/willingdon-island/"
+    },
+    {
+      "path": "/locations/fort-kochi/mobile-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/fort-kochi/"
+    },
+    {
+      "path": "/locations/thiruvananthapuram/tv-monitor-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thiruvananthapuram/"
+    },
+    {
+      "path": "/blogs/environmental-impact/how-e-waste-recycling-reduces-carbon-footprint-in-edappally-kochi/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/mobile-recycling/secure-mobile-data-wipe-in-vyttila-kochi-before-buyback-or-recycling/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/muvattupuzha/secure-laptop-disposal/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/muvattupuzha/"
+    },
+    {
+      "path": "/locations/muvattupuzha/ups-inverter-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/muvattupuzha/"
+    },
+    {
+      "path": "/locations/thrippunithura/computer-recycling/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrippunithura/"
+    },
+    {
+      "path": "/locations/ernakulam-south/printer-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/ernakulam-south/"
+    },
+    {
+      "path": "/locations/infopark-kochi/printer-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/infopark-kochi/"
+    },
+    {
+      "path": "/locations/kalamassery/tv-monitor-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kalamassery/"
+    },
+    {
+      "path": "/locations/muvattupuzha/battery-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/muvattupuzha/"
+    },
+    {
+      "path": "/blogs/corporate-itad/asset-recovery-and-remarketing-in-kakkanad-kochi-how-itad-recovers-budget/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/mobile-recycling/residential-phone-drop-off-in-infopark-kochi-what-to-bring-and-what-to-avoid/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/aluva/battery-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/aluva/"
+    },
+    {
+      "path": "/locations/fort-kochi/printer-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/fort-kochi/"
+    },
+    {
+      "path": "/locations/kollam/certificate-of-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kollam/"
+    },
+    {
+      "path": "/locations/kottayam/laptop-buyback-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kottayam/"
+    },
+    {
+      "path": "/locations/malappuram/server-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/malappuram/"
+    },
+    {
+      "path": "/locations/thrippunithura/battery-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrippunithura/"
+    },
+    {
+      "path": "/locations/thrippunithura/server-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrippunithura/"
+    },
+    {
+      "path": "/locations/aluva/mobile-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/aluva/"
+    },
+    {
+      "path": "/locations/infopark-kochi/network-equipment-disposal-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/infopark-kochi/"
+    },
+    {
+      "path": "/locations/muvattupuzha/laptop-buyback-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/muvattupuzha/"
+    },
+    {
+      "path": "/locations/thiruvananthapuram/mobile-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thiruvananthapuram/"
+    },
+    {
+      "path": "/blogs/environmental-impact/why-recycle-electronics-in-infopark-kochi-the-local-impact/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 4,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/scrap-electronics/office-clearance-scrap-quotes-in-kollam-how-to-prepare-the-inventory/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/edappally/printer-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/edappally/"
+    },
+    {
+      "path": "/locations/muvattupuzha/corporate-ewaste-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/muvattupuzha/"
+    },
+    {
+      "path": "/locations/palakkad/laptop-buyback-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/palakkad/"
+    },
+    {
+      "path": "/locations/kalady/server-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kalady/"
+    },
+    {
+      "path": "/locations/palakkad/business-it-decommissioning/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/palakkad/"
+    },
+    {
+      "path": "/locations/angamaly/corporate-ewaste-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/angamaly/"
+    },
+    {
+      "path": "/locations/muvattupuzha/dpdp-act-compliance-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/muvattupuzha/"
+    },
+    {
+      "path": "/locations/thrippunithura/tv-monitor-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrippunithura/"
+    },
+    {
+      "path": "/locations/edappally/free-ewaste-pickup-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/edappally/"
+    },
+    {
+      "path": "/locations/kannur/printer-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kannur/"
+    },
+    {
+      "path": "/locations/muvattupuzha/free-ewaste-pickup-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/muvattupuzha/"
+    },
+    {
+      "path": "/locations/north-paravur/tv-monitor-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/north-paravur/"
+    },
+    {
+      "path": "/blogs/data-destruction/server-drive-sanitization-in-kottayam-for-itad-projects/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/environmental-impact/school-e-waste-drives-in-edappally-kochi-planning-a-safer-collection-day/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/government-rules/how-to-choose-an-authorized-e-waste-vendor-in-kalamassery-kochi/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/angamaly/mobile-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/angamaly/"
+    },
+    {
+      "path": "/locations/edappally/battery-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/edappally/"
+    },
+    {
+      "path": "/locations/fort-kochi/air-conditioner-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/fort-kochi/"
+    },
+    {
+      "path": "/locations/vyttila/laptop-buyback-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/vyttila/"
+    },
+    {
+      "path": "/locations/kottayam/printer-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kottayam/"
+    },
+    {
+      "path": "/locations/perumbavoor/free-ewaste-pickup-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/perumbavoor/"
+    },
+    {
+      "path": "/locations/perumbavoor/ups-inverter-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/perumbavoor/"
+    },
+    {
+      "path": "/blogs/data-destruction/server-drive-sanitization-in-kollam-for-itad-projects/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 3,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/corporate-itad/data-centre-refresh-and-retirement-planning-in-kottayam/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/scrap-electronics/working-vs-broken-device-value-in-kollam-what-gets-a-better-quote/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/kalamassery-hitech-park/corporate-ewaste-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kalamassery-hitech-park/"
+    },
+    {
+      "path": "/locations/kalamassery-hitech-park/server-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kalamassery-hitech-park/"
+    },
+    {
+      "path": "/locations/kothamangalam/corporate-ewaste-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kothamangalam/"
+    },
+    {
+      "path": "/locations/maradu/network-equipment-disposal-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/maradu/"
+    },
+    {
+      "path": "/locations/kakkanad/server-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kakkanad/"
+    },
+    {
+      "path": "/locations/smart-city-kochi/corporate-ewaste-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/smart-city-kochi/"
+    },
+    {
+      "path": "/blogs/environmental-impact/precious-metal-recovery-from-e-waste-in-edappally-kochi/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/infopark-kochi/laptop-buyback-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/infopark-kochi/"
+    },
+    {
+      "path": "/locations/edappally/network-equipment-disposal-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/edappally/"
+    },
+    {
+      "path": "/blogs/laptop-disposal/macbook-buyback-in-kottayam-when-to-resell-vs-recycle/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/fort-kochi/corporate-ewaste-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/fort-kochi/"
+    },
+    {
+      "path": "/locations/vyttila/data-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/vyttila/"
+    },
+    {
+      "path": "/locations/willingdon-island/ups-inverter-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/willingdon-island/"
+    },
+    {
+      "path": "/locations/ernakulam-south/corporate-ewaste-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/ernakulam-south/"
+    },
+    {
+      "path": "/locations/ernakulam-south/dpdp-act-compliance-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/ernakulam-south/"
+    },
+    {
+      "path": "/locations/smart-city-kochi/hard-drive-shredding-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/smart-city-kochi/"
+    },
+    {
+      "path": "/locations/kozhikode/business-it-decommissioning/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kozhikode/"
+    },
+    {
+      "path": "/locations/kothamangalam/certificate-of-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kothamangalam/"
+    },
+    {
+      "path": "/locations/kakkanad/certificate-of-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kakkanad/"
+    },
+    {
+      "path": "/locations/kozhikode/hard-drive-shredding-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kozhikode/"
+    },
+    {
+      "path": "/locations/kozhikode/data-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kozhikode/"
+    },
+    {
+      "path": "/locations/smart-city-kochi/e-waste-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/smart-city-kochi/"
+    },
+    {
+      "path": "/locations/smart-city-kochi/data-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/smart-city-kochi/"
+    },
+    {
+      "path": "/locations/malappuram/itad-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/malappuram/"
+    },
+    {
+      "path": "/locations/kothamangalam/network-equipment-disposal-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kothamangalam/"
+    },
+    {
+      "path": "/locations/ernakulam-south/certificate-of-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 2,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/ernakulam-south/"
+    },
+    {
+      "path": "/locations/infopark-kochi/certificate-of-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/infopark-kochi/"
+    },
+    {
+      "path": "/locations/palarivattom/data-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/palarivattom/"
+    },
+    {
+      "path": "/locations/perumbavoor/laptop-buyback-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/perumbavoor/"
+    },
+    {
+      "path": "/locations/perumbavoor/tv-monitor-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/perumbavoor/"
+    },
+    {
+      "path": "/locations/thrippunithura/data-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrippunithura/"
+    },
+    {
+      "path": "/locations/kadavanthra/ups-inverter-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kadavanthra/"
+    },
+    {
+      "path": "/locations/kalamassery/mobile-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kalamassery/"
+    },
+    {
+      "path": "/locations/kannur/tv-monitor-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kannur/"
+    },
+    {
+      "path": "/locations/thiruvananthapuram/ups-inverter-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thiruvananthapuram/"
+    },
+    {
+      "path": "/locations/aluva/air-conditioner-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/aluva/"
+    },
+    {
+      "path": "/locations/fort-kochi/dpdp-act-compliance-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/fort-kochi/"
+    },
+    {
+      "path": "/locations/palakkad/laptop-recycling-near-me/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/palakkad/"
+    },
+    {
+      "path": "/locations/palakkad/tv-monitor-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/palakkad/"
+    },
+    {
+      "path": "/locations/infopark-kochi/mobile-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/infopark-kochi/"
+    },
+    {
+      "path": "/locations/infopark-kochi/server-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/infopark-kochi/"
+    },
+    {
+      "path": "/locations/infopark-kochi/ups-inverter-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/infopark-kochi/"
+    },
+    {
+      "path": "/locations/kadavanthra/battery-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kadavanthra/"
+    },
+    {
+      "path": "/locations/kalady/battery-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kalady/"
+    },
+    {
+      "path": "/locations/kalady/itad-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kalady/"
+    },
+    {
+      "path": "/locations/kalady/tv-monitor-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kalady/"
+    },
+    {
+      "path": "/locations/kannur/hard-drive-shredding-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kannur/"
+    },
+    {
+      "path": "/locations/perumbavoor/mobile-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/perumbavoor/"
+    },
+    {
+      "path": "/locations/thrissur/it-asset-inventory-audit/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrissur/"
+    },
+    {
+      "path": "/locations/thrissur/itad-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrissur/"
+    },
+    {
+      "path": "/locations/thrissur/mobile-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrissur/"
+    },
+    {
+      "path": "/locations/angamaly/server-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/angamaly/"
+    },
+    {
+      "path": "/locations/infopark-kochi/battery-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/infopark-kochi/"
+    },
+    {
+      "path": "/locations/kozhikode/hard-drive-degaussing-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kozhikode/"
+    },
+    {
+      "path": "/locations/maradu/mobile-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/maradu/"
+    },
+    {
+      "path": "/locations/thrissur/air-conditioner-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrissur/"
+    },
+    {
+      "path": "/locations/thrissur/hard-drive-shredding-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrissur/"
+    },
+    {
+      "path": "/locations/vyttila/ups-inverter-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/vyttila/"
+    },
+    {
+      "path": "/blogs/environmental-impact/school-e-waste-drives-in-kalamassery-kochi-planning-a-safer-collection-day/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/kalamassery-hitech-park/e-waste-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kalamassery-hitech-park/"
+    },
+    {
+      "path": "/locations/kannur/corporate-ewaste-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kannur/"
+    },
+    {
+      "path": "/locations/north-paravur/air-conditioner-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/north-paravur/"
+    },
+    {
+      "path": "/locations/palarivattom/itad-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/palarivattom/"
+    },
+    {
+      "path": "/locations/perumbavoor/battery-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/perumbavoor/"
+    },
+    {
+      "path": "/locations/thrikkakara/server-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrikkakara/"
+    },
+    {
+      "path": "/locations/thrissur/server-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrissur/"
+    },
+    {
+      "path": "/locations/willingdon-island/server-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/willingdon-island/"
+    },
+    {
+      "path": "/locations/edappally/dpdp-act-compliance-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/edappally/"
+    },
+    {
+      "path": "/locations/edappally/server-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/edappally/"
+    },
+    {
+      "path": "/locations/kadavanthra/laptop-buyback-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kadavanthra/"
+    },
+    {
+      "path": "/locations/kalamassery-hitech-park/printer-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kalamassery-hitech-park/"
+    },
+    {
+      "path": "/locations/kottayam/itad-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kottayam/"
+    },
+    {
+      "path": "/locations/muvattupuzha/certificate-of-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/muvattupuzha/"
+    },
+    {
+      "path": "/locations/perumbavoor/server-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/perumbavoor/"
+    },
+    {
+      "path": "/locations/smart-city-kochi/network-equipment-disposal-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/smart-city-kochi/"
+    },
+    {
+      "path": "/locations/kakkanad/dpdp-act-compliance-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kakkanad/"
+    },
+    {
+      "path": "/locations/kakkanad/printer-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kakkanad/"
+    },
+    {
+      "path": "/locations/kothamangalam/server-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kothamangalam/"
+    },
+    {
+      "path": "/locations/maradu/printer-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/maradu/"
+    },
+    {
+      "path": "/locations/palakkad/air-conditioner-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/palakkad/"
+    },
+    {
+      "path": "/locations/palakkad/corporate-ewaste-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/palakkad/"
+    },
+    {
+      "path": "/locations/thrikkakara/hard-drive-shredding-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrikkakara/"
+    },
+    {
+      "path": "/locations/thrippunithura/sell-electronics-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrippunithura/"
+    },
+    {
+      "path": "/locations/thrippunithura/ups-inverter-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrippunithura/"
+    },
+    {
+      "path": "/locations/vyttila/battery-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/vyttila/"
+    },
+    {
+      "path": "/locations/willingdon-island/printer-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/willingdon-island/"
+    },
+    {
+      "path": "/locations/kalady/old-computer-disposal/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kalady/"
+    },
+    {
+      "path": "/locations/kalamassery-hitech-park/tv-monitor-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kalamassery-hitech-park/"
+    },
+    {
+      "path": "/locations/kalamassery/battery-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kalamassery/"
+    },
+    {
+      "path": "/locations/kannur/mobile-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kannur/"
+    },
+    {
+      "path": "/locations/kothamangalam/battery-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kothamangalam/"
+    },
+    {
+      "path": "/locations/north-paravur/battery-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/north-paravur/"
+    },
+    {
+      "path": "/locations/palarivattom/hard-drive-degaussing-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/palarivattom/"
+    },
+    {
+      "path": "/locations/palarivattom/server-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/palarivattom/"
+    },
+    {
+      "path": "/locations/thrikkakara/mobile-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrikkakara/"
+    },
+    {
+      "path": "/locations/vyttila/air-conditioner-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/vyttila/"
+    },
+    {
+      "path": "/locations/vyttila/mobile-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/vyttila/"
+    },
+    {
+      "path": "/blogs/laptop-disposal/macbook-buyback-in-kollam-when-to-resell-vs-recycle/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/edappally/certificate-of-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/edappally/"
+    },
+    {
+      "path": "/locations/kadavanthra/tv-monitor-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kadavanthra/"
+    },
+    {
+      "path": "/locations/kottayam/hard-drive-shredding-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kottayam/"
+    },
+    {
+      "path": "/locations/kozhikode/server-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kozhikode/"
+    },
+    {
+      "path": "/locations/malappuram/air-conditioner-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/malappuram/"
+    },
+    {
+      "path": "/locations/maradu/ups-inverter-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/maradu/"
+    },
+    {
+      "path": "/locations/palakkad/battery-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/palakkad/"
+    },
+    {
+      "path": "/locations/perumbavoor/network-equipment-disposal-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/perumbavoor/"
+    },
+    {
+      "path": "/locations/palakkad/hard-drive-degaussing-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/palakkad/"
+    },
+    {
+      "path": "/locations/aluva/server-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/aluva/"
+    },
+    {
+      "path": "/locations/edappally/tv-monitor-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/edappally/"
+    },
+    {
+      "path": "/locations/infopark-kochi/dpdp-act-compliance-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/infopark-kochi/"
+    },
+    {
+      "path": "/locations/kalamassery-hitech-park/air-conditioner-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kalamassery-hitech-park/"
+    },
+    {
+      "path": "/locations/kalamassery/laptop-buyback-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kalamassery/"
+    },
+    {
+      "path": "/locations/kannur/laptop-buyback-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kannur/"
+    },
+    {
+      "path": "/locations/kollam/free-ewaste-pickup-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kollam/"
+    },
+    {
+      "path": "/locations/kozhikode/corporate-ewaste-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kozhikode/"
+    },
+    {
+      "path": "/locations/maradu/tv-monitor-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/maradu/"
+    },
+    {
+      "path": "/locations/muvattupuzha/data-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/muvattupuzha/"
+    },
+    {
+      "path": "/locations/north-paravur/laptop-buyback-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/north-paravur/"
+    },
+    {
+      "path": "/locations/palarivattom/mobile-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/palarivattom/"
+    },
+    {
+      "path": "/locations/vyttila/certificate-of-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/vyttila/"
+    },
+    {
+      "path": "/locations/vyttila/electronics-recycling-near-me/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/vyttila/"
+    },
+    {
+      "path": "/blogs/environmental-impact/school-e-waste-drives-in-kottayam-planning-a-safer-collection-day/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/blogs/laptop-disposal/secure-laptop-disposal-in-kottayam-for-teams-handling-client-data/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/kalamassery/ups-inverter-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kalamassery/"
+    },
+    {
+      "path": "/locations/north-paravur/hard-drive-shredding-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/north-paravur/"
+    },
+    {
+      "path": "/locations/palakkad/network-equipment-disposal-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/palakkad/"
+    },
+    {
+      "path": "/locations/kothamangalam/tv-monitor-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kothamangalam/"
+    },
+    {
+      "path": "/blogs/government-rules/how-to-verify-a-kspcb-authorized-recycler-in-thrippunithura-kochi/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/kalamassery/certificate-of-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kalamassery/"
+    },
+    {
+      "path": "/locations/thrissur/data-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrissur/"
+    },
+    {
+      "path": "/locations/aluva/printer-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/aluva/"
+    },
+    {
+      "path": "/blogs/environmental-impact/circular-economy-and-e-waste-in-vyttila-kochi-what-recovery-actually-looks-like/",
+      "category": "blogs-taxonomy",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": null
+    },
+    {
+      "path": "/locations/kollam/server-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kollam/"
+    },
+    {
+      "path": "/locations/kalady/data-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kalady/"
+    },
+    {
+      "path": "/locations/edappally/itad-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/edappally/"
+    },
+    {
+      "path": "/locations/thrissur/certificate-of-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thrissur/"
+    },
+    {
+      "path": "/locations/kozhikode/secure-laptop-disposal/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kozhikode/"
+    },
+    {
+      "path": "/locations/angamaly/itad-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/angamaly/"
+    },
+    {
+      "path": "/locations/thiruvananthapuram/dpdp-act-compliance-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thiruvananthapuram/"
+    },
+    {
+      "path": "/locations/palakkad/secure-laptop-disposal/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/palakkad/"
+    },
+    {
+      "path": "/locations/thiruvananthapuram/itad-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/thiruvananthapuram/"
+    },
+    {
+      "path": "/locations/aluva/itad-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/aluva/"
+    },
+    {
+      "path": "/locations/ernakulam-south/server-recycling-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/ernakulam-south/"
+    },
+    {
+      "path": "/locations/kalamassery-hitech-park/data-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kalamassery-hitech-park/"
+    },
+    {
+      "path": "/locations/kannur/data-destruction-kochi/",
+      "category": "location-matrix",
+      "clicks": 0,
+      "impressions": 1,
+      "action": "redirect-to-hub",
+      "suggestedRedirectTarget": "/locations/kannur/"
+    }
+  ]
+}

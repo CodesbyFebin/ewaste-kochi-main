@@ -1,0 +1,130 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Electronics Recycling Near Me in Kochi | Find Local Pickup";
+const description =
+  "Looking for electronics recycling near you in Kochi? We collect from your exact location — no need to find or travel to a drop-off point.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Services", path: "/services/" },
+  { name: "Electronics Recycling Near Me", path: "/services/electronics-recycling-near-me/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Local electronics recycling pickup",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: "Kochi, Ernakulam, Kerala",
+    url: `${SITE_URL}/services/electronics-recycling-near-me/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/services/electronics-recycling-near-me/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Do I need to find a drop-off location near me?",
+    a: "No — we collect directly from your address, so there's no need to search for or travel to a physical recycling point.",
+  },
+  {
+    q: "How do I check if you cover my specific area?",
+    a: "Message us your address on WhatsApp and we'll confirm — see our locations directory for areas with a dedicated page, though we cover many more than that list shows.",
+  },
+  {
+    q: "Is this only for households, or businesses too?",
+    a: "Both. Households get standard doorstep pickup; businesses can use this as an entry point and get routed to our ITAD service for larger asset disposal needs.",
+  },
+  {
+    q: "What's the difference between this page and the main recycling page?",
+    a: "This page is about finding and confirming local pickup availability wherever you are in Kochi. Our main recycling page covers what's accepted and how the full process works.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/services/electronics-recycling-near-me/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Electronics Recycling Near Me in Kochi</h1>
+  <p class="lede">
+    Instead of searching for a drop-off point, message us your location and
+    we'll confirm doorstep pickup — we cover most of Kochi and Ernakulam
+    district directly.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to check if you cover electronics recycling pickup near me." />
+
+  <section>
+    <h2>How to find local pickup</h2>
+    <ol class="process-list">
+      <li><strong>Message us your address</strong> over WhatsApp or phone.</li>
+      <li><strong>We confirm coverage</strong> and the earliest available slot — usually same-day or next-day.</li>
+      <li><strong>Doorstep collection</strong>, no travel needed on your end.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Areas we cover</h2>
+    <p>
+      Kakkanad, Edappally, Aluva, Vyttila, Palarivattom, Thrippunithura,
+      Kalamassery, Infopark, and 25+ other neighborhoods across Kochi and
+      Ernakulam district, with wider service across Kerala. See the full
+      <a href="/locations/">locations directory</a>, or just message us —
+      we very likely cover areas not yet listed there too.
+    </p>
+  </section>
+
+  <section>
+    <h2>What gets recycled</h2>
+    <p>
+      Laptops, desktops, monitors, printers, TVs, batteries, and general IT
+      hardware — see our main <a href="/recycling/">recycling page</a> for
+      the full accepted-items list and process. For businesses with larger
+      asset disposal needs, see <a href="/itad/">ITAD</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Schedule now</h2>
+    <p>
+      Ready to book? Head to our <a href="/pickup/">pickup page</a> for
+      scheduling details, or message us directly to get started.
+    </p>
+  </section>
+
+  <section>
+    <h2>Not sure which recycler to trust?</h2>
+    <p>
+      See our guide: <a href="/blog/e-waste-collection-near-me/">E-Waste
+      Collection Near Me — How to Choose a Safe Recycler</a>, covering what
+      to ask before handing over your devices.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .process-list { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

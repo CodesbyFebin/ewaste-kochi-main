@@ -1,0 +1,71 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import LangSwitch from "../../../components/LangSwitch.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+import { getHreflang } from "../../../data/routes";
+
+const title = "ബന്ധപ്പെടുക | ഇ-വേസ്റ്റ് കൊച്ചി";
+const description =
+  "ഫോൺ, വാട്സ്ആപ്പ്, ഇമെയിൽ വഴി ഇ-വേസ്റ്റ് കൊച്ചിയുമായി ബന്ധപ്പെടുക. വിലാസം, പ്രവർത്തന സമയം, പിക്കപ്പ് ബുക്ക് ചെയ്യാനുള്ള വഴികൾ.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "ഹോം", path: "/" },
+  { name: "മലയാളം", path: "/ml/" },
+  { name: "ബന്ധപ്പെടുക", path: "/ml/contact/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/ml/contact/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    inLanguage: "ml-IN",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/ml/contact/" jsonLd={jsonLd} lang="ml-IN" hreflang={getHreflang("/ml/contact/")}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <LangSwitch current="ml" otherPath="/contact/" />
+  <h1>ബന്ധപ്പെടുക</h1>
+  <p class="lede">
+    പിക്കപ്പിനും ക്വോട്ടിനും പൊതുവായ ചോദ്യങ്ങൾക്കും വാട്സ്ആപ്പ് ആണ്
+    ഏറ്റവും വേഗതയുള്ള മാർഗ്ഗം.
+  </p>
+
+  <CtaBar
+    whatsappMessage="നമസ്കാരം, എനിക്ക് ബന്ധപ്പെടണം."
+    pickupHref="/ml/pickup/"
+    labels={{ call: "വിളിക്കുക", whatsapp: "വാട്സ്ആപ്പ് ചെയ്യുക", pickup: "പിക്കപ്പ് ബുക്ക് ചെയ്യുക" }}
+  />
+
+  <section>
+    <h2>വിവരങ്ങൾ</h2>
+    <p><strong>ഫോൺ / വാട്സ്ആപ്പ്:</strong> <a href={telLink()}>{BUSINESS.phoneDisplay}</a></p>
+    <p><strong>ഇമെയിൽ:</strong> <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a></p>
+    <p><strong>വിലാസം:</strong> {BUSINESS.address.streetAddress}, {BUSINESS.address.addressLocality}, {BUSINESS.address.addressRegion} {BUSINESS.address.postalCode}</p>
+    <p><strong>പ്രവർത്തന സമയം:</strong> {BUSINESS.hoursDisplay}</p>
+  </section>
+
+  <section>
+    <h2>സന്ദേശം അയക്കുമ്പോൾ ഉൾപ്പെടുത്തേണ്ടത്</h2>
+    <ul>
+      <li>നിങ്ങളുടെ പക്കൽ ഉള്ളത് (ഉപകരണം, അളവ്)</li>
+      <li>കൊച്ചി/കേരളത്തിലെ നിങ്ങളുടെ പ്രദേശം</li>
+      <li>റീസൈക്കിൾ ചെയ്യണോ, വിൽക്കണോ, ഡാറ്റ നശിപ്പിക്കണോ എന്ന്</li>
+    </ul>
+  </section>
+
+  <p class="updated">അവസാനം പുതുക്കിയത്: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

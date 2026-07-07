@@ -1,0 +1,127 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import Faq from "../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../data/site";
+
+const title = "TV Recycling in Kochi | LED, LCD & Old CRT Disposal";
+const description =
+  "Recycle old TVs and monitors in Kochi — LED, LCD, and CRT displays. Free doorstep pickup for households, apartments, and offices across Ernakulam district.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "TV Recycling", path: "/tv-recycling-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "TV and display recycling",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: "Kochi, Ernakulam, Kerala",
+    url: `${SITE_URL}/tv-recycling-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/tv-recycling-kochi/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Do you take old CRT (tube) TVs, not just flat screens?",
+    a: "Yes, we accept older CRT televisions alongside modern LED and LCD displays — CRTs need particular care due to the materials inside, and we handle that as part of standard processing.",
+  },
+  {
+    q: "Is there a charge for TV pickup?",
+    a: "Pickup is free for qualifying quantities, same as our general e-waste pickup. Message us to confirm for your specific situation.",
+  },
+  {
+    q: "Can apartment complexes schedule a group pickup?",
+    a: "Yes — if multiple households in the same building want to recycle TVs or other electronics together, message us and we can coordinate a single visit.",
+  },
+  {
+    q: "Do you take office monitors as well as home TVs?",
+    a: "Yes, office monitors and displays are collected the same way — combine them with a general office e-waste pickup if you have other items too.",
+  },
+  {
+    q: "What happens to the TV after pickup?",
+    a: "Displays are processed through compliant recycling channels appropriate to their type (LED/LCD panels vs. older CRT glass and components), not landfilled.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/tv-recycling-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>TV Recycling in Kochi</h1>
+  <p class="lede">
+    Old televisions — whether a modern LED/LCD screen or an older CRT tube
+    set — shouldn't go in general household trash. We collect them directly
+    from your home, apartment, or office and recycle them properly.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to schedule a TV pickup for recycling." />
+
+  <section>
+    <h2>What we accept</h2>
+    <p>
+      LED and LCD televisions and monitors of any size, and older CRT
+      (tube-style) televisions. CRTs contain materials that need particular
+      handling, which is built into our standard recycling process — no
+      special arrangement needed on your end.
+    </p>
+  </section>
+
+  <section>
+    <h2>How pickup works</h2>
+    <ol class="process-list">
+      <li><strong>Message us</strong> the TV type, size, and your location over WhatsApp.</li>
+      <li><strong>We confirm a pickup slot</strong> — usually same-day or next-day.</li>
+      <li><strong>Doorstep collection</strong> — no need to move or transport it yourself.</li>
+      <li><strong>Compliant recycling</strong>, sorted by display type.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Households, apartments, and offices</h2>
+    <p>
+      Single-household pickups, coordinated apartment complex collections,
+      and office monitor clearances are all handled the same way — combine
+      TVs with other electronics in one visit if you have them. See our
+      general <a href="/recycling/">recycling</a> and
+      <a href="/pickup/">pickup</a> pages for the full accepted-items list
+      and process.
+    </p>
+  </section>
+
+  <section>
+    <h2>Coverage</h2>
+    <p>
+      Available across Kochi and Ernakulam district. See the
+      <a href="/locations/">locations directory</a> or just message us your
+      address to confirm.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .process-list { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

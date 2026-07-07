@@ -1,0 +1,153 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import Faq from "../../components/Faq.astro";
+import LangSwitch from "../../components/LangSwitch.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../data/site";
+import { getHreflang } from "../../data/routes";
+
+const title = "E-Waste Pickup in Kochi | Doorstep Collection for Electronics";
+const description =
+  "Schedule free doorstep e-waste pickup in Kochi for laptops, batteries, and IT hardware. Same-day and next-day slots available across Ernakulam district.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Pickup", path: "/pickup/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "E-waste doorstep pickup",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: "Kochi, Ernakulam, Kerala",
+    url: `${SITE_URL}/pickup/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/pickup/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "How fast can I get a pickup scheduled?",
+    a: "Same-day or next-day pickup is usually available across most of Kochi, depending on your area and current route schedule.",
+  },
+  {
+    q: "Is there a minimum quantity for pickup?",
+    a: "No strict minimum for most household pickups. For a single small item, let us know and we'll confirm whether a dedicated pickup makes sense or if it's better combined with a nearby scheduled route.",
+  },
+  {
+    q: "Do I need to be present at pickup?",
+    a: "Ideally yes, or someone authorized on your behalf, so items can be confirmed and any payment (for sellable devices) or documentation (for business pickups) can be handled on the spot.",
+  },
+  {
+    q: "Can I schedule a recurring pickup for an office?",
+    a: "Yes — offices with regular IT turnover can set up recurring pickup schedules rather than booking each time individually.",
+  },
+  {
+    q: "What should I have ready before the team arrives?",
+    a: "Have items gathered in one place if possible, and let us know in advance about anything heavy (servers, CRT monitors) so the team comes prepared.",
+  },
+  {
+    q: "Which areas get free pickup?",
+    a: "Free doorstep pickup covers Kochi and most of Ernakulam district for qualifying quantities. Message us your address to confirm for your specific location.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/pickup/" jsonLd={jsonLd} hreflang={getHreflang("/pickup/")}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <LangSwitch current="en" otherPath="/ml/pickup/" />
+  <h1>Free E-Waste Pickup in Kochi</h1>
+  <p class="lede">
+    Doorstep pickup is how most of our customers get started — no need to
+    drop anything off. Tell us what you have, we confirm a slot, and our
+    team collects directly from your home or office.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to schedule an e-waste pickup." />
+
+  <section>
+    <h2>What we pick up</h2>
+    <p>
+      Laptops, desktops, monitors, printers, general IT hardware for
+      <a href="/recycling/">recycling</a>, and
+      <a href="/battery-recycling/">batteries</a> (processed separately);
+      working devices for <a href="/sell-electronics/">sale</a>; drives and
+      devices needing <a href="/data-destruction/">data destruction</a>; old
+      <a href="/tv-recycling-kochi/">TVs and displays</a>; and bulk office
+      equipment under our <a href="/itad/">ITAD service</a>. Not sure if we
+      cover your area? Check
+      <a href="/services/electronics-recycling-near-me/">electronics
+      recycling near me</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>How scheduling works</h2>
+    <ol class="process-list">
+      <li><strong>Message us</strong> your location and a rough list of items over WhatsApp or phone.</li>
+      <li><strong>We confirm a time slot</strong> — usually same-day or next-day.</li>
+      <li><strong>Our team arrives</strong> and collects directly from your door.</li>
+      <li><strong>Follow-up</strong> — recycling confirmation, sale payment, or destruction documentation depending on what you booked.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Household pickup</h2>
+    <p>
+      No strict minimum quantity for most residential pickups — old laptops,
+      TVs, kitchen electronics, and batteries are all fine to combine in one
+      visit.
+    </p>
+  </section>
+
+  <section>
+    <h2>Business & bulk pickup</h2>
+    <p>
+      Offices and IT teams can schedule one-time or recurring bulk pickups.
+      For larger asset disposal projects with inventory tracking and
+      compliance reporting, see our <a href="/itad/">ITAD page</a> for the
+      fuller process.
+    </p>
+  </section>
+
+  <section>
+    <h2>Coverage area</h2>
+    <p>
+      Pickup runs across Kakkanad, Edappally, Aluva, Vyttila, Palarivattom,
+      Thrippunithura, Kalamassery, Infopark, and 25+ other neighborhoods —
+      plus wider coverage across Ernakulam district and Kerala. Full list on
+      the <a href="/locations/">locations page</a>.
+    </p>
+    <p>
+      New to how pickup works? See our guide:
+      <a href="/blog/free-e-waste-pickup-kochi/">Free E-Waste Pickup in
+      Kochi — areas, accepted items, and what to prepare</a>.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .process-list { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

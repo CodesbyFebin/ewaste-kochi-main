@@ -1,0 +1,3566 @@
+{
+  "source": "data/gscLegacyMatrixFindings.json, classified 2026-07-07 per docs/roadmap/legacy-matrix-redirect-strategy.md",
+  "method": "City-first matching against already-built location pages (kakkanad, kalamassery, ernakulam-south, and kalamassery-hitech-park mapped to its resolved winner kalamassery), then service-type matching against already-built service pages for remaining entries. High confidence = clear 1:1 semantic match to an existing page. Medium confidence = plausible but genuinely ambiguous between 2+ reasonable targets \u2014 NOT implemented in vercel.json this phase, kept as a documented candidate for future review.",
+  "candidates": [
+    {
+      "source": "/locations/thrippunithura/e-waste-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Direct match to recycling service hub",
+      "confidence": "high",
+      "sourceGroup": "service:e-waste-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 4,
+      "gscImpressions": 16
+    },
+    {
+      "source": "/locations/kalamassery/electronic-waste-disposal/",
+      "target": "/locations/kalamassery/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:kalamassery",
+      "targetType": "location-page",
+      "gscClicks": 3,
+      "gscImpressions": 22
+    },
+    {
+      "source": "/locations/kalamassery/free-ewaste-pickup-kochi/",
+      "target": "/locations/kalamassery/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:kalamassery",
+      "targetType": "location-page",
+      "gscClicks": 3,
+      "gscImpressions": 21
+    },
+    {
+      "source": "/locations/palakkad/sell-old-electronics/",
+      "target": "/sell-electronics/",
+      "reason": "Direct match to sell electronics hub",
+      "confidence": "high",
+      "sourceGroup": "service:sell-old-electronics",
+      "targetType": "service-page",
+      "gscClicks": 3,
+      "gscImpressions": 9
+    },
+    {
+      "source": "/locations/kozhikode/tv-monitor-recycling-kochi/",
+      "target": "/tv-recycling-kochi/",
+      "reason": "Exact match to built TV recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:tv-monitor-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 3,
+      "gscImpressions": 5
+    },
+    {
+      "source": "/locations/kadavanthra/sell-electronics-kochi/",
+      "target": "/sell-electronics/",
+      "reason": "Direct match to sell electronics hub",
+      "confidence": "high",
+      "sourceGroup": "service:sell-electronics-kochi",
+      "targetType": "service-page",
+      "gscClicks": 2,
+      "gscImpressions": 46
+    },
+    {
+      "source": "/locations/kakkanad/corporate-ewaste-kochi/",
+      "target": "/locations/kakkanad/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:kakkanad",
+      "targetType": "location-page",
+      "gscClicks": 2,
+      "gscImpressions": 16
+    },
+    {
+      "source": "/locations/kozhikode/electronic-waste-disposal/",
+      "target": "/recycling/",
+      "reason": "Generic e-waste disposal intent matches recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:electronic-waste-disposal",
+      "targetType": "service-page",
+      "gscClicks": 2,
+      "gscImpressions": 37
+    },
+    {
+      "source": "/locations/kakkanad/e-waste-recycling-kochi/",
+      "target": "/locations/kakkanad/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:kakkanad",
+      "targetType": "location-page",
+      "gscClicks": 2,
+      "gscImpressions": 13
+    },
+    {
+      "source": "/locations/maradu/electronic-waste-disposal/",
+      "target": "/recycling/",
+      "reason": "Generic e-waste disposal intent matches recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:electronic-waste-disposal",
+      "targetType": "service-page",
+      "gscClicks": 2,
+      "gscImpressions": 9
+    },
+    {
+      "source": "/locations/smart-city-kochi/itad-kochi/",
+      "target": "/itad/",
+      "reason": "Direct match to ITAD hub",
+      "confidence": "high",
+      "sourceGroup": "service:itad-kochi",
+      "targetType": "service-page",
+      "gscClicks": 2,
+      "gscImpressions": 7
+    },
+    {
+      "source": "/locations/kannur/battery-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "Direct match to battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:battery-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 2,
+      "gscImpressions": 27
+    },
+    {
+      "source": "/locations/infopark-kochi/electronic-waste-disposal/",
+      "target": "/recycling/",
+      "reason": "Generic e-waste disposal intent matches recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:electronic-waste-disposal",
+      "targetType": "service-page",
+      "gscClicks": 1,
+      "gscImpressions": 43
+    },
+    {
+      "source": "/locations/palakkad/computer-recycling/",
+      "target": "/recycling/",
+      "reason": "Computer recycling is explicitly covered on the recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:computer-recycling",
+      "targetType": "service-page",
+      "gscClicks": 1,
+      "gscImpressions": 31
+    },
+    {
+      "source": "/locations/kollam/battery-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "Direct match to battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:battery-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 1,
+      "gscImpressions": 47
+    },
+    {
+      "source": "/locations/kozhikode/sell-old-electronics/",
+      "target": "/sell-electronics/",
+      "reason": "Direct match to sell electronics hub",
+      "confidence": "high",
+      "sourceGroup": "service:sell-old-electronics",
+      "targetType": "service-page",
+      "gscClicks": 1,
+      "gscImpressions": 27
+    },
+    {
+      "source": "/locations/ernakulam-south/data-destruction-kochi/",
+      "target": "/locations/ernakulam-south/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:ernakulam-south",
+      "targetType": "location-page",
+      "gscClicks": 1,
+      "gscImpressions": 16
+    },
+    {
+      "source": "/locations/aluva/free-ewaste-pickup-kochi/",
+      "target": "/pickup/",
+      "reason": "Transactional pickup intent matches pickup hub",
+      "confidence": "high",
+      "sourceGroup": "service:free-ewaste-pickup-kochi",
+      "targetType": "service-page",
+      "gscClicks": 1,
+      "gscImpressions": 15
+    },
+    {
+      "source": "/locations/palakkad/electronic-waste-disposal/",
+      "target": "/recycling/",
+      "reason": "Generic e-waste disposal intent matches recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:electronic-waste-disposal",
+      "targetType": "service-page",
+      "gscClicks": 1,
+      "gscImpressions": 32
+    },
+    {
+      "source": "/locations/vyttila/e-waste-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Direct match to recycling service hub",
+      "confidence": "high",
+      "sourceGroup": "service:e-waste-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 1,
+      "gscImpressions": 13
+    },
+    {
+      "source": "/locations/kalamassery/corporate-ewaste-kochi/",
+      "target": "/locations/kalamassery/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:kalamassery",
+      "targetType": "location-page",
+      "gscClicks": 1,
+      "gscImpressions": 12
+    },
+    {
+      "source": "/locations/ernakulam-south/battery-recycling-kochi/",
+      "target": "/locations/ernakulam-south/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:ernakulam-south",
+      "targetType": "location-page",
+      "gscClicks": 1,
+      "gscImpressions": 11
+    },
+    {
+      "source": "/locations/kozhikode/e-waste-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Direct match to recycling service hub",
+      "confidence": "high",
+      "sourceGroup": "service:e-waste-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 1,
+      "gscImpressions": 26
+    },
+    {
+      "source": "/locations/perumbavoor/e-waste-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Direct match to recycling service hub",
+      "confidence": "high",
+      "sourceGroup": "service:e-waste-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 1,
+      "gscImpressions": 10
+    },
+    {
+      "source": "/locations/edappally/e-waste-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Direct match to recycling service hub",
+      "confidence": "high",
+      "sourceGroup": "service:e-waste-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 1,
+      "gscImpressions": 18
+    },
+    {
+      "source": "/locations/angamaly/free-ewaste-pickup-kochi/",
+      "target": "/pickup/",
+      "reason": "Transactional pickup intent matches pickup hub",
+      "confidence": "high",
+      "sourceGroup": "service:free-ewaste-pickup-kochi",
+      "targetType": "service-page",
+      "gscClicks": 1,
+      "gscImpressions": 10
+    },
+    {
+      "source": "/locations/vyttila/server-recycling-kochi/",
+      "target": "/server-recycling-kochi/",
+      "reason": "Exact match to built server recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:server-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 1,
+      "gscImpressions": 9
+    },
+    {
+      "source": "/locations/thrippunithura/corporate-ewaste-kochi/",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "confidence": "medium",
+      "sourceGroup": "service:corporate-ewaste-kochi",
+      "targetType": "service-page",
+      "gscClicks": 1,
+      "gscImpressions": 9
+    },
+    {
+      "source": "/locations/kadavanthra/corporate-ewaste-kochi/",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "confidence": "medium",
+      "sourceGroup": "service:corporate-ewaste-kochi",
+      "targetType": "service-page",
+      "gscClicks": 1,
+      "gscImpressions": 11
+    },
+    {
+      "source": "/locations/kannur/old-computer-disposal/",
+      "target": "/recycling/",
+      "reason": "Generic disposal intent, reasonably close to recycling hub",
+      "confidence": "medium",
+      "sourceGroup": "service:old-computer-disposal",
+      "targetType": "service-page",
+      "gscClicks": 1,
+      "gscImpressions": 8
+    },
+    {
+      "source": "/locations/kottayam/free-ewaste-pickup-kochi/",
+      "target": "/pickup/",
+      "reason": "Transactional pickup intent matches pickup hub",
+      "confidence": "high",
+      "sourceGroup": "service:free-ewaste-pickup-kochi",
+      "targetType": "service-page",
+      "gscClicks": 1,
+      "gscImpressions": 8
+    },
+    {
+      "source": "/locations/infopark-kochi/data-destruction-kochi/",
+      "target": "/data-destruction/",
+      "reason": "Direct match to data destruction hub",
+      "confidence": "high",
+      "sourceGroup": "service:data-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 1,
+      "gscImpressions": 6
+    },
+    {
+      "source": "/locations/aluva/laptop-buyback-kochi/",
+      "target": "/sell-electronics/",
+      "reason": "Buyback intent matches sell electronics hub",
+      "confidence": "high",
+      "sourceGroup": "service:laptop-buyback-kochi",
+      "targetType": "service-page",
+      "gscClicks": 1,
+      "gscImpressions": 5
+    },
+    {
+      "source": "/locations/kakkanad/data-destruction-kochi/",
+      "target": "/locations/kakkanad/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:kakkanad",
+      "targetType": "location-page",
+      "gscClicks": 1,
+      "gscImpressions": 5
+    },
+    {
+      "source": "/locations/palakkad/mobile-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "confidence": "medium",
+      "sourceGroup": "service:mobile-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 1,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/infopark-kochi/corporate-ewaste-kochi/",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "confidence": "medium",
+      "sourceGroup": "service:corporate-ewaste-kochi",
+      "targetType": "service-page",
+      "gscClicks": 1,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/vyttila/printer-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "No dedicated printer hub exists; recycling is the closest fit",
+      "confidence": "medium",
+      "sourceGroup": "service:printer-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 1,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/palakkad/ups-inverter-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "UPS/inverter batteries explicitly covered on battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:ups-inverter-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 1,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/thrissur/tv-monitor-recycling-kochi/",
+      "target": "/tv-recycling-kochi/",
+      "reason": "Exact match to built TV recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:tv-monitor-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 1,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/willingdon-island/tv-monitor-recycling-kochi/",
+      "target": "/tv-recycling-kochi/",
+      "reason": "Exact match to built TV recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:tv-monitor-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 1,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/kollam/tv-monitor-recycling-kochi/",
+      "target": "/tv-recycling-kochi/",
+      "reason": "Exact match to built TV recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:tv-monitor-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 1,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/infopark-kochi/hard-drive-shredding-kochi/",
+      "target": "/hard-drive-shredding/",
+      "reason": "Direct match to hard drive shredding page",
+      "confidence": "high",
+      "sourceGroup": "service:hard-drive-shredding-kochi",
+      "targetType": "service-page",
+      "gscClicks": 1,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/kollam/printer-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "No dedicated printer hub exists; recycling is the closest fit",
+      "confidence": "medium",
+      "sourceGroup": "service:printer-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 1,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/palakkad/itad-kochi/",
+      "target": "/itad/",
+      "reason": "Direct match to ITAD hub",
+      "confidence": "high",
+      "sourceGroup": "service:itad-kochi",
+      "targetType": "service-page",
+      "gscClicks": 1,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kozhikode/battery-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "Direct match to battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:battery-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 124
+    },
+    {
+      "source": "/locations/thiruvananthapuram/battery-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "Direct match to battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:battery-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 97
+    },
+    {
+      "source": "/locations/thrissur/battery-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "Direct match to battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:battery-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 65
+    },
+    {
+      "source": "/locations/thrikkakara/free-ewaste-pickup-kochi/",
+      "target": "/pickup/",
+      "reason": "Transactional pickup intent matches pickup hub",
+      "confidence": "high",
+      "sourceGroup": "service:free-ewaste-pickup-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 31
+    },
+    {
+      "source": "/locations/malappuram/battery-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "Direct match to battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:battery-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 25
+    },
+    {
+      "source": "/locations/aluva/e-waste-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Direct match to recycling service hub",
+      "confidence": "high",
+      "sourceGroup": "service:e-waste-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 20
+    },
+    {
+      "source": "/locations/thiruvananthapuram/e-waste-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Direct match to recycling service hub",
+      "confidence": "high",
+      "sourceGroup": "service:e-waste-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 18
+    },
+    {
+      "source": "/locations/ernakulam-south/itad-kochi/",
+      "target": "/locations/ernakulam-south/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:ernakulam-south",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 18
+    },
+    {
+      "source": "/locations/kakkanad/electronics-recycling-near-me/",
+      "target": "/locations/kakkanad/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:kakkanad",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 17
+    },
+    {
+      "source": "/locations/kottayam/e-waste-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Direct match to recycling service hub",
+      "confidence": "high",
+      "sourceGroup": "service:e-waste-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 15
+    },
+    {
+      "source": "/locations/palarivattom/free-ewaste-pickup-kochi/",
+      "target": "/pickup/",
+      "reason": "Transactional pickup intent matches pickup hub",
+      "confidence": "high",
+      "sourceGroup": "service:free-ewaste-pickup-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 14
+    },
+    {
+      "source": "/locations/kollam/e-waste-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Direct match to recycling service hub",
+      "confidence": "high",
+      "sourceGroup": "service:e-waste-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 14
+    },
+    {
+      "source": "/locations/malappuram/sell-old-electronics/",
+      "target": "/sell-electronics/",
+      "reason": "Direct match to sell electronics hub",
+      "confidence": "high",
+      "sourceGroup": "service:sell-old-electronics",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 13
+    },
+    {
+      "source": "/locations/malappuram/electronics-recycling-near-me/",
+      "target": "/services/electronics-recycling-near-me/",
+      "reason": "Exact match to built near-me page",
+      "confidence": "high",
+      "sourceGroup": "service:electronics-recycling-near-me",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 12
+    },
+    {
+      "source": "/locations/thiruvananthapuram/free-ewaste-pickup-kochi/",
+      "target": "/pickup/",
+      "reason": "Transactional pickup intent matches pickup hub",
+      "confidence": "high",
+      "sourceGroup": "service:free-ewaste-pickup-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 12
+    },
+    {
+      "source": "/locations/ernakulam-south/hard-drive-destruction-kochi/",
+      "target": "/locations/ernakulam-south/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:ernakulam-south",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 15
+    },
+    {
+      "source": "/locations/maradu/free-ewaste-pickup-kochi/",
+      "target": "/pickup/",
+      "reason": "Transactional pickup intent matches pickup hub",
+      "confidence": "high",
+      "sourceGroup": "service:free-ewaste-pickup-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 13
+    },
+    {
+      "source": "/locations/ernakulam-south/e-waste-recycling-kochi/",
+      "target": "/locations/ernakulam-south/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:ernakulam-south",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 11
+    },
+    {
+      "source": "/locations/infopark-kochi/e-waste-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Direct match to recycling service hub",
+      "confidence": "high",
+      "sourceGroup": "service:e-waste-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 10
+    },
+    {
+      "source": "/locations/kozhikode/old-computer-disposal/",
+      "target": "/recycling/",
+      "reason": "Generic disposal intent, reasonably close to recycling hub",
+      "confidence": "medium",
+      "sourceGroup": "service:old-computer-disposal",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 10
+    },
+    {
+      "source": "/locations/kakkanad/free-ewaste-pickup-kochi/",
+      "target": "/locations/kakkanad/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:kakkanad",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 10
+    },
+    {
+      "source": "/locations/infopark-kochi/itad-kochi/",
+      "target": "/itad/",
+      "reason": "Direct match to ITAD hub",
+      "confidence": "high",
+      "sourceGroup": "service:itad-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 13
+    },
+    {
+      "source": "/locations/kothamangalam/e-waste-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Direct match to recycling service hub",
+      "confidence": "high",
+      "sourceGroup": "service:e-waste-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 10
+    },
+    {
+      "source": "/locations/kakkanad/hard-drive-destruction-kochi/",
+      "target": "/locations/kakkanad/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:kakkanad",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 10
+    },
+    {
+      "source": "/locations/kadavanthra/data-destruction-kochi/",
+      "target": "/data-destruction/",
+      "reason": "Direct match to data destruction hub",
+      "confidence": "high",
+      "sourceGroup": "service:data-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 9
+    },
+    {
+      "source": "/locations/thrissur/e-waste-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Direct match to recycling service hub",
+      "confidence": "high",
+      "sourceGroup": "service:e-waste-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 9
+    },
+    {
+      "source": "/locations/kannur/e-waste-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Direct match to recycling service hub",
+      "confidence": "high",
+      "sourceGroup": "service:e-waste-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 9
+    },
+    {
+      "source": "/locations/kozhikode/secure-computer-recycling/",
+      "target": "/data-destruction/",
+      "reason": "Ambiguous between data-destruction (for \"secure\") and recycling",
+      "confidence": "medium",
+      "sourceGroup": "service:secure-computer-recycling",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 9
+    },
+    {
+      "source": "/locations/ernakulam-south/free-ewaste-pickup-kochi/",
+      "target": "/locations/ernakulam-south/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:ernakulam-south",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 8
+    },
+    {
+      "source": "/locations/edappally/corporate-ewaste-kochi/",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "confidence": "medium",
+      "sourceGroup": "service:corporate-ewaste-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 8
+    },
+    {
+      "source": "/locations/maradu/e-waste-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Direct match to recycling service hub",
+      "confidence": "high",
+      "sourceGroup": "service:e-waste-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 8
+    },
+    {
+      "source": "/locations/fort-kochi/data-destruction-kochi/",
+      "target": "/data-destruction/",
+      "reason": "Direct match to data destruction hub",
+      "confidence": "high",
+      "sourceGroup": "service:data-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 8
+    },
+    {
+      "source": "/locations/palakkad/secure-computer-recycling/",
+      "target": "/data-destruction/",
+      "reason": "Ambiguous between data-destruction (for \"secure\") and recycling",
+      "confidence": "medium",
+      "sourceGroup": "service:secure-computer-recycling",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 8
+    },
+    {
+      "source": "/locations/ernakulam-south/tv-monitor-recycling-kochi/",
+      "target": "/locations/ernakulam-south/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:ernakulam-south",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 7
+    },
+    {
+      "source": "/locations/kozhikode/free-ewaste-pickup-kochi/",
+      "target": "/pickup/",
+      "reason": "Transactional pickup intent matches pickup hub",
+      "confidence": "high",
+      "sourceGroup": "service:free-ewaste-pickup-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 7
+    },
+    {
+      "source": "/locations/kadavanthra/electronic-waste-disposal/",
+      "target": "/recycling/",
+      "reason": "Generic e-waste disposal intent matches recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:electronic-waste-disposal",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 7
+    },
+    {
+      "source": "/locations/kannur/free-ewaste-pickup-kochi/",
+      "target": "/pickup/",
+      "reason": "Transactional pickup intent matches pickup hub",
+      "confidence": "high",
+      "sourceGroup": "service:free-ewaste-pickup-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 7
+    },
+    {
+      "source": "/locations/north-paravur/mobile-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "confidence": "medium",
+      "sourceGroup": "service:mobile-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 7
+    },
+    {
+      "source": "/locations/kozhikode/mobile-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "confidence": "medium",
+      "sourceGroup": "service:mobile-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 7
+    },
+    {
+      "source": "/locations/thrippunithura/free-ewaste-pickup-kochi/",
+      "target": "/pickup/",
+      "reason": "Transactional pickup intent matches pickup hub",
+      "confidence": "high",
+      "sourceGroup": "service:free-ewaste-pickup-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 7
+    },
+    {
+      "source": "/locations/ernakulam-south/laptop-buyback-kochi/",
+      "target": "/locations/ernakulam-south/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:ernakulam-south",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 7
+    },
+    {
+      "source": "/locations/fort-kochi/free-ewaste-pickup-kochi/",
+      "target": "/pickup/",
+      "reason": "Transactional pickup intent matches pickup hub",
+      "confidence": "high",
+      "sourceGroup": "service:free-ewaste-pickup-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 7
+    },
+    {
+      "source": "/locations/kalamassery/data-destruction-kochi/",
+      "target": "/locations/kalamassery/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:kalamassery",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 7
+    },
+    {
+      "source": "/locations/kakkanad/hard-drive-shredding-kochi/",
+      "target": "/locations/kakkanad/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:kakkanad",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 7
+    },
+    {
+      "source": "/locations/kakkanad/mobile-recycling-kochi/",
+      "target": "/locations/kakkanad/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:kakkanad",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 7
+    },
+    {
+      "source": "/locations/kannur/hard-drive-destruction-kochi/",
+      "target": "/data-destruction/",
+      "reason": "Drive destruction falls under the data destruction hub",
+      "confidence": "high",
+      "sourceGroup": "service:hard-drive-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 7
+    },
+    {
+      "source": "/locations/palakkad/old-computer-disposal/",
+      "target": "/recycling/",
+      "reason": "Generic disposal intent, reasonably close to recycling hub",
+      "confidence": "medium",
+      "sourceGroup": "service:old-computer-disposal",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 6
+    },
+    {
+      "source": "/locations/thrikkakara/data-destruction-kochi/",
+      "target": "/data-destruction/",
+      "reason": "Direct match to data destruction hub",
+      "confidence": "high",
+      "sourceGroup": "service:data-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 6
+    },
+    {
+      "source": "/locations/aluva/ups-inverter-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "UPS/inverter batteries explicitly covered on battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:ups-inverter-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 6
+    },
+    {
+      "source": "/locations/thrissur/free-ewaste-pickup-kochi/",
+      "target": "/pickup/",
+      "reason": "Transactional pickup intent matches pickup hub",
+      "confidence": "high",
+      "sourceGroup": "service:free-ewaste-pickup-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 6
+    },
+    {
+      "source": "/locations/palarivattom/corporate-ewaste-kochi/",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "confidence": "medium",
+      "sourceGroup": "service:corporate-ewaste-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 6
+    },
+    {
+      "source": "/locations/kothamangalam/free-ewaste-pickup-kochi/",
+      "target": "/pickup/",
+      "reason": "Transactional pickup intent matches pickup hub",
+      "confidence": "high",
+      "sourceGroup": "service:free-ewaste-pickup-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 6
+    },
+    {
+      "source": "/locations/fort-kochi/e-waste-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Direct match to recycling service hub",
+      "confidence": "high",
+      "sourceGroup": "service:e-waste-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 6
+    },
+    {
+      "source": "/locations/kalamassery/hard-drive-shredding-kochi/",
+      "target": "/locations/kalamassery/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:kalamassery",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 6
+    },
+    {
+      "source": "/locations/palakkad/hard-drive-destruction-kochi/",
+      "target": "/data-destruction/",
+      "reason": "Drive destruction falls under the data destruction hub",
+      "confidence": "high",
+      "sourceGroup": "service:hard-drive-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 6
+    },
+    {
+      "source": "/locations/north-paravur/free-ewaste-pickup-kochi/",
+      "target": "/pickup/",
+      "reason": "Transactional pickup intent matches pickup hub",
+      "confidence": "high",
+      "sourceGroup": "service:free-ewaste-pickup-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 5
+    },
+    {
+      "source": "/locations/kadavanthra/free-ewaste-pickup-kochi/",
+      "target": "/pickup/",
+      "reason": "Transactional pickup intent matches pickup hub",
+      "confidence": "high",
+      "sourceGroup": "service:free-ewaste-pickup-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 5
+    },
+    {
+      "source": "/locations/kalamassery/e-waste-recycling-kochi/",
+      "target": "/locations/kalamassery/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:kalamassery",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 5
+    },
+    {
+      "source": "/locations/muvattupuzha/e-waste-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Direct match to recycling service hub",
+      "confidence": "high",
+      "sourceGroup": "service:e-waste-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 5
+    },
+    {
+      "source": "/locations/angamaly/e-waste-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Direct match to recycling service hub",
+      "confidence": "high",
+      "sourceGroup": "service:e-waste-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 5
+    },
+    {
+      "source": "/locations/kalady/ups-inverter-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "UPS/inverter batteries explicitly covered on battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:ups-inverter-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 5
+    },
+    {
+      "source": "/locations/north-paravur/ups-inverter-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "UPS/inverter batteries explicitly covered on battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:ups-inverter-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 5
+    },
+    {
+      "source": "/locations/angamaly/ups-inverter-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "UPS/inverter batteries explicitly covered on battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:ups-inverter-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 5
+    },
+    {
+      "source": "/locations/aluva/sell-electronics-kochi/",
+      "target": "/sell-electronics/",
+      "reason": "Direct match to sell electronics hub",
+      "confidence": "high",
+      "sourceGroup": "service:sell-electronics-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 5
+    },
+    {
+      "source": "/locations/north-paravur/e-waste-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Direct match to recycling service hub",
+      "confidence": "high",
+      "sourceGroup": "service:e-waste-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 5
+    },
+    {
+      "source": "/locations/ernakulam-south/mobile-recycling-kochi/",
+      "target": "/locations/ernakulam-south/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:ernakulam-south",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 5
+    },
+    {
+      "source": "/locations/ernakulam-south/hard-drive-shredding-kochi/",
+      "target": "/locations/ernakulam-south/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:ernakulam-south",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 5
+    },
+    {
+      "source": "/locations/thrikkakara/e-waste-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Direct match to recycling service hub",
+      "confidence": "high",
+      "sourceGroup": "service:e-waste-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 5
+    },
+    {
+      "source": "/locations/kannur/itad-kochi/",
+      "target": "/itad/",
+      "reason": "Direct match to ITAD hub",
+      "confidence": "high",
+      "sourceGroup": "service:itad-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 5
+    },
+    {
+      "source": "/locations/north-paravur/network-equipment-disposal-kochi/",
+      "target": "/server-recycling-kochi/",
+      "reason": "Could also fit ITAD; server-recycling chosen as more specific",
+      "confidence": "medium",
+      "sourceGroup": "service:network-equipment-disposal-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 5
+    },
+    {
+      "source": "/locations/ernakulam-south/network-equipment-disposal-kochi/",
+      "target": "/locations/ernakulam-south/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:ernakulam-south",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 5
+    },
+    {
+      "source": "/locations/maradu/data-destruction-kochi/",
+      "target": "/data-destruction/",
+      "reason": "Direct match to data destruction hub",
+      "confidence": "high",
+      "sourceGroup": "service:data-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 5
+    },
+    {
+      "source": "/locations/maradu/hard-drive-shredding-kochi/",
+      "target": "/hard-drive-shredding/",
+      "reason": "Direct match to hard drive shredding page",
+      "confidence": "high",
+      "sourceGroup": "service:hard-drive-shredding-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/ernakulam-south/ups-inverter-recycling-kochi/",
+      "target": "/locations/ernakulam-south/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:ernakulam-south",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/kakkanad/tv-monitor-recycling-kochi/",
+      "target": "/locations/kakkanad/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:kakkanad",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/edappally/old-computer-disposal/",
+      "target": "/recycling/",
+      "reason": "Generic disposal intent, reasonably close to recycling hub",
+      "confidence": "medium",
+      "sourceGroup": "service:old-computer-disposal",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/kalamassery/server-recycling-kochi/",
+      "target": "/locations/kalamassery/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:kalamassery",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/ernakulam-south/air-conditioner-recycling-kochi/",
+      "target": "/locations/ernakulam-south/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:ernakulam-south",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/kottayam/corporate-ewaste-kochi/",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "confidence": "medium",
+      "sourceGroup": "service:corporate-ewaste-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/edappally/mobile-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "confidence": "medium",
+      "sourceGroup": "service:mobile-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/kottayam/tv-monitor-recycling-kochi/",
+      "target": "/tv-recycling-kochi/",
+      "reason": "Exact match to built TV recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:tv-monitor-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/thiruvananthapuram/corporate-ewaste-kochi/",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "confidence": "medium",
+      "sourceGroup": "service:corporate-ewaste-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/palarivattom/e-waste-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Direct match to recycling service hub",
+      "confidence": "high",
+      "sourceGroup": "service:e-waste-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/vyttila/free-ewaste-pickup-kochi/",
+      "target": "/pickup/",
+      "reason": "Transactional pickup intent matches pickup hub",
+      "confidence": "high",
+      "sourceGroup": "service:free-ewaste-pickup-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/kalady/free-ewaste-pickup-kochi/",
+      "target": "/pickup/",
+      "reason": "Transactional pickup intent matches pickup hub",
+      "confidence": "high",
+      "sourceGroup": "service:free-ewaste-pickup-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/thiruvananthapuram/laptop-buyback-kochi/",
+      "target": "/sell-electronics/",
+      "reason": "Buyback intent matches sell electronics hub",
+      "confidence": "high",
+      "sourceGroup": "service:laptop-buyback-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/vyttila/corporate-ewaste-kochi/",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "confidence": "medium",
+      "sourceGroup": "service:corporate-ewaste-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/kakkanad/ups-inverter-recycling-kochi/",
+      "target": "/locations/kakkanad/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:kakkanad",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/palarivattom/ups-inverter-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "UPS/inverter batteries explicitly covered on battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:ups-inverter-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/kothamangalam/laptop-recycling-near-me/",
+      "target": "/services/electronics-recycling-near-me/",
+      "reason": "\"Near me\" intent matches the near-me finder page",
+      "confidence": "high",
+      "sourceGroup": "service:laptop-recycling-near-me",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/maradu/corporate-ewaste-kochi/",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "confidence": "medium",
+      "sourceGroup": "service:corporate-ewaste-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/north-paravur/sell-electronics-kochi/",
+      "target": "/sell-electronics/",
+      "reason": "Direct match to sell electronics hub",
+      "confidence": "high",
+      "sourceGroup": "service:sell-electronics-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/thiruvananthapuram/data-destruction-kochi/",
+      "target": "/data-destruction/",
+      "reason": "Direct match to data destruction hub",
+      "confidence": "high",
+      "sourceGroup": "service:data-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/maradu/itad-kochi/",
+      "target": "/itad/",
+      "reason": "Direct match to ITAD hub",
+      "confidence": "high",
+      "sourceGroup": "service:itad-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/willingdon-island/e-waste-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Direct match to recycling service hub",
+      "confidence": "high",
+      "sourceGroup": "service:e-waste-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/malappuram/e-waste-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Direct match to recycling service hub",
+      "confidence": "high",
+      "sourceGroup": "service:e-waste-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/palakkad/e-waste-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Direct match to recycling service hub",
+      "confidence": "high",
+      "sourceGroup": "service:e-waste-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/thiruvananthapuram/hard-drive-shredding-kochi/",
+      "target": "/hard-drive-shredding/",
+      "reason": "Direct match to hard drive shredding page",
+      "confidence": "high",
+      "sourceGroup": "service:hard-drive-shredding-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/kakkanad/network-equipment-disposal-kochi/",
+      "target": "/locations/kakkanad/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:kakkanad",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/fort-kochi/itad-kochi/",
+      "target": "/itad/",
+      "reason": "Direct match to ITAD hub",
+      "confidence": "high",
+      "sourceGroup": "service:itad-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/kannur/certificate-of-destruction-kochi/",
+      "target": "/data-destruction-certificate-sample/",
+      "reason": "Exact conceptual match to certificate sample page",
+      "confidence": "high",
+      "sourceGroup": "service:certificate-of-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/malappuram/data-destruction-kochi/",
+      "target": "/data-destruction/",
+      "reason": "Direct match to data destruction hub",
+      "confidence": "high",
+      "sourceGroup": "service:data-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/kollam/network-equipment-disposal-kochi/",
+      "target": "/server-recycling-kochi/",
+      "reason": "Could also fit ITAD; server-recycling chosen as more specific",
+      "confidence": "medium",
+      "sourceGroup": "service:network-equipment-disposal-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/malappuram/certificate-of-destruction-kochi/",
+      "target": "/data-destruction-certificate-sample/",
+      "reason": "Exact conceptual match to certificate sample page",
+      "confidence": "high",
+      "sourceGroup": "service:certificate-of-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/angamaly/printer-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "No dedicated printer hub exists; recycling is the closest fit",
+      "confidence": "medium",
+      "sourceGroup": "service:printer-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/maradu/server-recycling-kochi/",
+      "target": "/server-recycling-kochi/",
+      "reason": "Exact match to built server recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:server-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/kothamangalam/ups-inverter-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "UPS/inverter batteries explicitly covered on battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:ups-inverter-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/edappally/laptop-buyback-kochi/",
+      "target": "/sell-electronics/",
+      "reason": "Buyback intent matches sell electronics hub",
+      "confidence": "high",
+      "sourceGroup": "service:laptop-buyback-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/kozhikode/laptop-recycling-near-me/",
+      "target": "/services/electronics-recycling-near-me/",
+      "reason": "\"Near me\" intent matches the near-me finder page",
+      "confidence": "high",
+      "sourceGroup": "service:laptop-recycling-near-me",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/palakkad/free-ewaste-pickup-kochi/",
+      "target": "/pickup/",
+      "reason": "Transactional pickup intent matches pickup hub",
+      "confidence": "high",
+      "sourceGroup": "service:free-ewaste-pickup-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/smart-city-kochi/tv-monitor-recycling-kochi/",
+      "target": "/tv-recycling-kochi/",
+      "reason": "Exact match to built TV recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:tv-monitor-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/kalady/corporate-ewaste-kochi/",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "confidence": "medium",
+      "sourceGroup": "service:corporate-ewaste-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/kollam/mobile-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "confidence": "medium",
+      "sourceGroup": "service:mobile-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/kottayam/battery-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "Direct match to battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:battery-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/thrissur/corporate-ewaste-kochi/",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "confidence": "medium",
+      "sourceGroup": "service:corporate-ewaste-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 4
+    },
+    {
+      "source": "/locations/fort-kochi/tv-monitor-recycling-kochi/",
+      "target": "/tv-recycling-kochi/",
+      "reason": "Exact match to built TV recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:tv-monitor-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/kadavanthra/itad-kochi/",
+      "target": "/itad/",
+      "reason": "Direct match to ITAD hub",
+      "confidence": "high",
+      "sourceGroup": "service:itad-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/kalady/e-waste-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Direct match to recycling service hub",
+      "confidence": "high",
+      "sourceGroup": "service:e-waste-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/muvattupuzha/server-recycling-kochi/",
+      "target": "/server-recycling-kochi/",
+      "reason": "Exact match to built server recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:server-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/thrissur/laptop-buyback-kochi/",
+      "target": "/sell-electronics/",
+      "reason": "Buyback intent matches sell electronics hub",
+      "confidence": "high",
+      "sourceGroup": "service:laptop-buyback-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/kalady/mobile-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "confidence": "medium",
+      "sourceGroup": "service:mobile-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/palarivattom/battery-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "Direct match to battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:battery-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/thiruvananthapuram/certificate-of-destruction-kochi/",
+      "target": "/data-destruction-certificate-sample/",
+      "reason": "Exact conceptual match to certificate sample page",
+      "confidence": "high",
+      "sourceGroup": "service:certificate-of-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/thrippunithura/itad-kochi/",
+      "target": "/itad/",
+      "reason": "Direct match to ITAD hub",
+      "confidence": "high",
+      "sourceGroup": "service:itad-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/smart-city-kochi/free-ewaste-pickup-kochi/",
+      "target": "/pickup/",
+      "reason": "Transactional pickup intent matches pickup hub",
+      "confidence": "high",
+      "sourceGroup": "service:free-ewaste-pickup-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/fort-kochi/hard-drive-shredding-kochi/",
+      "target": "/hard-drive-shredding/",
+      "reason": "Direct match to hard drive shredding page",
+      "confidence": "high",
+      "sourceGroup": "service:hard-drive-shredding-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/thrikkakara/battery-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "Direct match to battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:battery-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/malappuram/mobile-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "confidence": "medium",
+      "sourceGroup": "service:mobile-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/vyttila/tv-monitor-recycling-kochi/",
+      "target": "/tv-recycling-kochi/",
+      "reason": "Exact match to built TV recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:tv-monitor-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/thrippunithura/mobile-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "confidence": "medium",
+      "sourceGroup": "service:mobile-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/aluva/data-destruction-kochi/",
+      "target": "/data-destruction/",
+      "reason": "Direct match to data destruction hub",
+      "confidence": "high",
+      "sourceGroup": "service:data-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/kakkanad/air-conditioner-recycling-kochi/",
+      "target": "/locations/kakkanad/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:kakkanad",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/kakkanad/itad-kochi/",
+      "target": "/locations/kakkanad/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:kakkanad",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/kothamangalam/itad-kochi/",
+      "target": "/itad/",
+      "reason": "Direct match to ITAD hub",
+      "confidence": "high",
+      "sourceGroup": "service:itad-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/kadavanthra/e-waste-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Direct match to recycling service hub",
+      "confidence": "high",
+      "sourceGroup": "service:e-waste-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/smart-city-kochi/certificate-of-destruction-kochi/",
+      "target": "/data-destruction-certificate-sample/",
+      "reason": "Exact conceptual match to certificate sample page",
+      "confidence": "high",
+      "sourceGroup": "service:certificate-of-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/kozhikode/itad-kochi/",
+      "target": "/itad/",
+      "reason": "Direct match to ITAD hub",
+      "confidence": "high",
+      "sourceGroup": "service:itad-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/smart-city-kochi/hard-drive-destruction-kochi/",
+      "target": "/data-destruction/",
+      "reason": "Drive destruction falls under the data destruction hub",
+      "confidence": "high",
+      "sourceGroup": "service:hard-drive-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/kannur/network-equipment-disposal-kochi/",
+      "target": "/server-recycling-kochi/",
+      "reason": "Could also fit ITAD; server-recycling chosen as more specific",
+      "confidence": "medium",
+      "sourceGroup": "service:network-equipment-disposal-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/kalamassery-hitech-park/itad-kochi/",
+      "target": "/locations/kalamassery/",
+      "reason": "Consistent with already-resolved GSC decision: kalamassery-hitech-park loses to kalamassery (Phase 1.5/2B)",
+      "confidence": "high",
+      "sourceGroup": "location:kalamassery-hitech-park",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/perumbavoor/itad-kochi/",
+      "target": "/itad/",
+      "reason": "Direct match to ITAD hub",
+      "confidence": "high",
+      "sourceGroup": "service:itad-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 3
+    },
+    {
+      "source": "/locations/angamaly/battery-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "Direct match to battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:battery-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/kollam/hard-drive-shredding-kochi/",
+      "target": "/hard-drive-shredding/",
+      "reason": "Direct match to hard drive shredding page",
+      "confidence": "high",
+      "sourceGroup": "service:hard-drive-shredding-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/smart-city-kochi/mobile-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "confidence": "medium",
+      "sourceGroup": "service:mobile-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/kozhikode/laptop-buyback-kochi/",
+      "target": "/sell-electronics/",
+      "reason": "Buyback intent matches sell electronics hub",
+      "confidence": "high",
+      "sourceGroup": "service:laptop-buyback-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/kadavanthra/mobile-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "confidence": "medium",
+      "sourceGroup": "service:mobile-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/thiruvananthapuram/server-recycling-kochi/",
+      "target": "/server-recycling-kochi/",
+      "reason": "Exact match to built server recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:server-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/willingdon-island/free-ewaste-pickup-kochi/",
+      "target": "/pickup/",
+      "reason": "Transactional pickup intent matches pickup hub",
+      "confidence": "high",
+      "sourceGroup": "service:free-ewaste-pickup-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/fort-kochi/mobile-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "confidence": "medium",
+      "sourceGroup": "service:mobile-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/thiruvananthapuram/tv-monitor-recycling-kochi/",
+      "target": "/tv-recycling-kochi/",
+      "reason": "Exact match to built TV recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:tv-monitor-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/muvattupuzha/secure-laptop-disposal/",
+      "target": "/data-destruction/",
+      "reason": "Same ambiguity as secure-computer-recycling",
+      "confidence": "medium",
+      "sourceGroup": "service:secure-laptop-disposal",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/muvattupuzha/ups-inverter-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "UPS/inverter batteries explicitly covered on battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:ups-inverter-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/thrippunithura/computer-recycling/",
+      "target": "/recycling/",
+      "reason": "Computer recycling is explicitly covered on the recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:computer-recycling",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/ernakulam-south/printer-recycling-kochi/",
+      "target": "/locations/ernakulam-south/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:ernakulam-south",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/infopark-kochi/printer-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "No dedicated printer hub exists; recycling is the closest fit",
+      "confidence": "medium",
+      "sourceGroup": "service:printer-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/kalamassery/tv-monitor-recycling-kochi/",
+      "target": "/locations/kalamassery/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:kalamassery",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/muvattupuzha/battery-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "Direct match to battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:battery-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/aluva/battery-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "Direct match to battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:battery-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/fort-kochi/printer-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "No dedicated printer hub exists; recycling is the closest fit",
+      "confidence": "medium",
+      "sourceGroup": "service:printer-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/kollam/certificate-of-destruction-kochi/",
+      "target": "/data-destruction-certificate-sample/",
+      "reason": "Exact conceptual match to certificate sample page",
+      "confidence": "high",
+      "sourceGroup": "service:certificate-of-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/kottayam/laptop-buyback-kochi/",
+      "target": "/sell-electronics/",
+      "reason": "Buyback intent matches sell electronics hub",
+      "confidence": "high",
+      "sourceGroup": "service:laptop-buyback-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/malappuram/server-recycling-kochi/",
+      "target": "/server-recycling-kochi/",
+      "reason": "Exact match to built server recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:server-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/thrippunithura/battery-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "Direct match to battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:battery-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/thrippunithura/server-recycling-kochi/",
+      "target": "/server-recycling-kochi/",
+      "reason": "Exact match to built server recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:server-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/aluva/mobile-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "confidence": "medium",
+      "sourceGroup": "service:mobile-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/infopark-kochi/network-equipment-disposal-kochi/",
+      "target": "/server-recycling-kochi/",
+      "reason": "Could also fit ITAD; server-recycling chosen as more specific",
+      "confidence": "medium",
+      "sourceGroup": "service:network-equipment-disposal-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/muvattupuzha/laptop-buyback-kochi/",
+      "target": "/sell-electronics/",
+      "reason": "Buyback intent matches sell electronics hub",
+      "confidence": "high",
+      "sourceGroup": "service:laptop-buyback-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/thiruvananthapuram/mobile-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "confidence": "medium",
+      "sourceGroup": "service:mobile-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/edappally/printer-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "No dedicated printer hub exists; recycling is the closest fit",
+      "confidence": "medium",
+      "sourceGroup": "service:printer-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/muvattupuzha/corporate-ewaste-kochi/",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "confidence": "medium",
+      "sourceGroup": "service:corporate-ewaste-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/palakkad/laptop-buyback-kochi/",
+      "target": "/sell-electronics/",
+      "reason": "Buyback intent matches sell electronics hub",
+      "confidence": "high",
+      "sourceGroup": "service:laptop-buyback-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/kalady/server-recycling-kochi/",
+      "target": "/server-recycling-kochi/",
+      "reason": "Exact match to built server recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:server-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/palakkad/business-it-decommissioning/",
+      "target": "/itad/",
+      "reason": "IT decommissioning is the core definition of ITAD",
+      "confidence": "high",
+      "sourceGroup": "service:business-it-decommissioning",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/angamaly/corporate-ewaste-kochi/",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "confidence": "medium",
+      "sourceGroup": "service:corporate-ewaste-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/thrippunithura/tv-monitor-recycling-kochi/",
+      "target": "/tv-recycling-kochi/",
+      "reason": "Exact match to built TV recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:tv-monitor-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/edappally/free-ewaste-pickup-kochi/",
+      "target": "/pickup/",
+      "reason": "Transactional pickup intent matches pickup hub",
+      "confidence": "high",
+      "sourceGroup": "service:free-ewaste-pickup-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/kannur/printer-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "No dedicated printer hub exists; recycling is the closest fit",
+      "confidence": "medium",
+      "sourceGroup": "service:printer-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/muvattupuzha/free-ewaste-pickup-kochi/",
+      "target": "/pickup/",
+      "reason": "Transactional pickup intent matches pickup hub",
+      "confidence": "high",
+      "sourceGroup": "service:free-ewaste-pickup-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/north-paravur/tv-monitor-recycling-kochi/",
+      "target": "/tv-recycling-kochi/",
+      "reason": "Exact match to built TV recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:tv-monitor-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/angamaly/mobile-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "confidence": "medium",
+      "sourceGroup": "service:mobile-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/edappally/battery-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "Direct match to battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:battery-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/vyttila/laptop-buyback-kochi/",
+      "target": "/sell-electronics/",
+      "reason": "Buyback intent matches sell electronics hub",
+      "confidence": "high",
+      "sourceGroup": "service:laptop-buyback-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/kottayam/printer-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "No dedicated printer hub exists; recycling is the closest fit",
+      "confidence": "medium",
+      "sourceGroup": "service:printer-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/perumbavoor/free-ewaste-pickup-kochi/",
+      "target": "/pickup/",
+      "reason": "Transactional pickup intent matches pickup hub",
+      "confidence": "high",
+      "sourceGroup": "service:free-ewaste-pickup-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/perumbavoor/ups-inverter-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "UPS/inverter batteries explicitly covered on battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:ups-inverter-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/kalamassery-hitech-park/corporate-ewaste-kochi/",
+      "target": "/locations/kalamassery/",
+      "reason": "Consistent with already-resolved GSC decision: kalamassery-hitech-park loses to kalamassery (Phase 1.5/2B)",
+      "confidence": "high",
+      "sourceGroup": "location:kalamassery-hitech-park",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/kalamassery-hitech-park/server-recycling-kochi/",
+      "target": "/locations/kalamassery/",
+      "reason": "Consistent with already-resolved GSC decision: kalamassery-hitech-park loses to kalamassery (Phase 1.5/2B)",
+      "confidence": "high",
+      "sourceGroup": "location:kalamassery-hitech-park",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/kothamangalam/corporate-ewaste-kochi/",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "confidence": "medium",
+      "sourceGroup": "service:corporate-ewaste-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/maradu/network-equipment-disposal-kochi/",
+      "target": "/server-recycling-kochi/",
+      "reason": "Could also fit ITAD; server-recycling chosen as more specific",
+      "confidence": "medium",
+      "sourceGroup": "service:network-equipment-disposal-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/kakkanad/server-recycling-kochi/",
+      "target": "/locations/kakkanad/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:kakkanad",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/smart-city-kochi/corporate-ewaste-kochi/",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "confidence": "medium",
+      "sourceGroup": "service:corporate-ewaste-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/infopark-kochi/laptop-buyback-kochi/",
+      "target": "/sell-electronics/",
+      "reason": "Buyback intent matches sell electronics hub",
+      "confidence": "high",
+      "sourceGroup": "service:laptop-buyback-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/edappally/network-equipment-disposal-kochi/",
+      "target": "/server-recycling-kochi/",
+      "reason": "Could also fit ITAD; server-recycling chosen as more specific",
+      "confidence": "medium",
+      "sourceGroup": "service:network-equipment-disposal-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/fort-kochi/corporate-ewaste-kochi/",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "confidence": "medium",
+      "sourceGroup": "service:corporate-ewaste-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/vyttila/data-destruction-kochi/",
+      "target": "/data-destruction/",
+      "reason": "Direct match to data destruction hub",
+      "confidence": "high",
+      "sourceGroup": "service:data-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/willingdon-island/ups-inverter-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "UPS/inverter batteries explicitly covered on battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:ups-inverter-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/ernakulam-south/corporate-ewaste-kochi/",
+      "target": "/locations/ernakulam-south/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:ernakulam-south",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/ernakulam-south/dpdp-act-compliance-kochi/",
+      "target": "/locations/ernakulam-south/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:ernakulam-south",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/smart-city-kochi/hard-drive-shredding-kochi/",
+      "target": "/hard-drive-shredding/",
+      "reason": "Direct match to hard drive shredding page",
+      "confidence": "high",
+      "sourceGroup": "service:hard-drive-shredding-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/kozhikode/business-it-decommissioning/",
+      "target": "/itad/",
+      "reason": "IT decommissioning is the core definition of ITAD",
+      "confidence": "high",
+      "sourceGroup": "service:business-it-decommissioning",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/kothamangalam/certificate-of-destruction-kochi/",
+      "target": "/data-destruction-certificate-sample/",
+      "reason": "Exact conceptual match to certificate sample page",
+      "confidence": "high",
+      "sourceGroup": "service:certificate-of-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/kakkanad/certificate-of-destruction-kochi/",
+      "target": "/locations/kakkanad/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:kakkanad",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/kozhikode/hard-drive-shredding-kochi/",
+      "target": "/hard-drive-shredding/",
+      "reason": "Direct match to hard drive shredding page",
+      "confidence": "high",
+      "sourceGroup": "service:hard-drive-shredding-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/kozhikode/data-destruction-kochi/",
+      "target": "/data-destruction/",
+      "reason": "Direct match to data destruction hub",
+      "confidence": "high",
+      "sourceGroup": "service:data-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/smart-city-kochi/e-waste-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Direct match to recycling service hub",
+      "confidence": "high",
+      "sourceGroup": "service:e-waste-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/smart-city-kochi/data-destruction-kochi/",
+      "target": "/data-destruction/",
+      "reason": "Direct match to data destruction hub",
+      "confidence": "high",
+      "sourceGroup": "service:data-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/malappuram/itad-kochi/",
+      "target": "/itad/",
+      "reason": "Direct match to ITAD hub",
+      "confidence": "high",
+      "sourceGroup": "service:itad-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/kothamangalam/network-equipment-disposal-kochi/",
+      "target": "/server-recycling-kochi/",
+      "reason": "Could also fit ITAD; server-recycling chosen as more specific",
+      "confidence": "medium",
+      "sourceGroup": "service:network-equipment-disposal-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/ernakulam-south/certificate-of-destruction-kochi/",
+      "target": "/locations/ernakulam-south/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:ernakulam-south",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 2
+    },
+    {
+      "source": "/locations/infopark-kochi/certificate-of-destruction-kochi/",
+      "target": "/data-destruction-certificate-sample/",
+      "reason": "Exact conceptual match to certificate sample page",
+      "confidence": "high",
+      "sourceGroup": "service:certificate-of-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/palarivattom/data-destruction-kochi/",
+      "target": "/data-destruction/",
+      "reason": "Direct match to data destruction hub",
+      "confidence": "high",
+      "sourceGroup": "service:data-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/perumbavoor/laptop-buyback-kochi/",
+      "target": "/sell-electronics/",
+      "reason": "Buyback intent matches sell electronics hub",
+      "confidence": "high",
+      "sourceGroup": "service:laptop-buyback-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/perumbavoor/tv-monitor-recycling-kochi/",
+      "target": "/tv-recycling-kochi/",
+      "reason": "Exact match to built TV recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:tv-monitor-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/thrippunithura/data-destruction-kochi/",
+      "target": "/data-destruction/",
+      "reason": "Direct match to data destruction hub",
+      "confidence": "high",
+      "sourceGroup": "service:data-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kadavanthra/ups-inverter-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "UPS/inverter batteries explicitly covered on battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:ups-inverter-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kalamassery/mobile-recycling-kochi/",
+      "target": "/locations/kalamassery/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:kalamassery",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kannur/tv-monitor-recycling-kochi/",
+      "target": "/tv-recycling-kochi/",
+      "reason": "Exact match to built TV recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:tv-monitor-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/thiruvananthapuram/ups-inverter-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "UPS/inverter batteries explicitly covered on battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:ups-inverter-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/palakkad/laptop-recycling-near-me/",
+      "target": "/services/electronics-recycling-near-me/",
+      "reason": "\"Near me\" intent matches the near-me finder page",
+      "confidence": "high",
+      "sourceGroup": "service:laptop-recycling-near-me",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/palakkad/tv-monitor-recycling-kochi/",
+      "target": "/tv-recycling-kochi/",
+      "reason": "Exact match to built TV recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:tv-monitor-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/infopark-kochi/mobile-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "confidence": "medium",
+      "sourceGroup": "service:mobile-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/infopark-kochi/server-recycling-kochi/",
+      "target": "/server-recycling-kochi/",
+      "reason": "Exact match to built server recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:server-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/infopark-kochi/ups-inverter-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "UPS/inverter batteries explicitly covered on battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:ups-inverter-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kadavanthra/battery-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "Direct match to battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:battery-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kalady/battery-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "Direct match to battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:battery-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kalady/itad-kochi/",
+      "target": "/itad/",
+      "reason": "Direct match to ITAD hub",
+      "confidence": "high",
+      "sourceGroup": "service:itad-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kalady/tv-monitor-recycling-kochi/",
+      "target": "/tv-recycling-kochi/",
+      "reason": "Exact match to built TV recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:tv-monitor-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kannur/hard-drive-shredding-kochi/",
+      "target": "/hard-drive-shredding/",
+      "reason": "Direct match to hard drive shredding page",
+      "confidence": "high",
+      "sourceGroup": "service:hard-drive-shredding-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/perumbavoor/mobile-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "confidence": "medium",
+      "sourceGroup": "service:mobile-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/thrissur/it-asset-inventory-audit/",
+      "target": "/services/it-asset-inventory-audit/",
+      "reason": "Exact match to built asset inventory audit page",
+      "confidence": "high",
+      "sourceGroup": "service:it-asset-inventory-audit",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/thrissur/itad-kochi/",
+      "target": "/itad/",
+      "reason": "Direct match to ITAD hub",
+      "confidence": "high",
+      "sourceGroup": "service:itad-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/thrissur/mobile-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "confidence": "medium",
+      "sourceGroup": "service:mobile-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/angamaly/server-recycling-kochi/",
+      "target": "/server-recycling-kochi/",
+      "reason": "Exact match to built server recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:server-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/infopark-kochi/battery-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "Direct match to battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:battery-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kozhikode/hard-drive-degaussing-kochi/",
+      "target": "/services/hard-drive-degaussing-kochi/",
+      "reason": "Exact match to built degaussing page",
+      "confidence": "high",
+      "sourceGroup": "service:hard-drive-degaussing-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/maradu/mobile-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "confidence": "medium",
+      "sourceGroup": "service:mobile-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/thrissur/hard-drive-shredding-kochi/",
+      "target": "/hard-drive-shredding/",
+      "reason": "Direct match to hard drive shredding page",
+      "confidence": "high",
+      "sourceGroup": "service:hard-drive-shredding-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/vyttila/ups-inverter-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "UPS/inverter batteries explicitly covered on battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:ups-inverter-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kalamassery-hitech-park/e-waste-recycling-kochi/",
+      "target": "/locations/kalamassery/",
+      "reason": "Consistent with already-resolved GSC decision: kalamassery-hitech-park loses to kalamassery (Phase 1.5/2B)",
+      "confidence": "high",
+      "sourceGroup": "location:kalamassery-hitech-park",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kannur/corporate-ewaste-kochi/",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "confidence": "medium",
+      "sourceGroup": "service:corporate-ewaste-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/palarivattom/itad-kochi/",
+      "target": "/itad/",
+      "reason": "Direct match to ITAD hub",
+      "confidence": "high",
+      "sourceGroup": "service:itad-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/perumbavoor/battery-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "Direct match to battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:battery-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/thrikkakara/server-recycling-kochi/",
+      "target": "/server-recycling-kochi/",
+      "reason": "Exact match to built server recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:server-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/thrissur/server-recycling-kochi/",
+      "target": "/server-recycling-kochi/",
+      "reason": "Exact match to built server recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:server-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/willingdon-island/server-recycling-kochi/",
+      "target": "/server-recycling-kochi/",
+      "reason": "Exact match to built server recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:server-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/edappally/server-recycling-kochi/",
+      "target": "/server-recycling-kochi/",
+      "reason": "Exact match to built server recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:server-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kadavanthra/laptop-buyback-kochi/",
+      "target": "/sell-electronics/",
+      "reason": "Buyback intent matches sell electronics hub",
+      "confidence": "high",
+      "sourceGroup": "service:laptop-buyback-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kalamassery-hitech-park/printer-recycling-kochi/",
+      "target": "/locations/kalamassery/",
+      "reason": "Consistent with already-resolved GSC decision: kalamassery-hitech-park loses to kalamassery (Phase 1.5/2B)",
+      "confidence": "high",
+      "sourceGroup": "location:kalamassery-hitech-park",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kottayam/itad-kochi/",
+      "target": "/itad/",
+      "reason": "Direct match to ITAD hub",
+      "confidence": "high",
+      "sourceGroup": "service:itad-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/muvattupuzha/certificate-of-destruction-kochi/",
+      "target": "/data-destruction-certificate-sample/",
+      "reason": "Exact conceptual match to certificate sample page",
+      "confidence": "high",
+      "sourceGroup": "service:certificate-of-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/perumbavoor/server-recycling-kochi/",
+      "target": "/server-recycling-kochi/",
+      "reason": "Exact match to built server recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:server-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/smart-city-kochi/network-equipment-disposal-kochi/",
+      "target": "/server-recycling-kochi/",
+      "reason": "Could also fit ITAD; server-recycling chosen as more specific",
+      "confidence": "medium",
+      "sourceGroup": "service:network-equipment-disposal-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kakkanad/dpdp-act-compliance-kochi/",
+      "target": "/locations/kakkanad/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:kakkanad",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kakkanad/printer-recycling-kochi/",
+      "target": "/locations/kakkanad/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:kakkanad",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kothamangalam/server-recycling-kochi/",
+      "target": "/server-recycling-kochi/",
+      "reason": "Exact match to built server recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:server-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/maradu/printer-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "No dedicated printer hub exists; recycling is the closest fit",
+      "confidence": "medium",
+      "sourceGroup": "service:printer-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/palakkad/corporate-ewaste-kochi/",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "confidence": "medium",
+      "sourceGroup": "service:corporate-ewaste-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/thrikkakara/hard-drive-shredding-kochi/",
+      "target": "/hard-drive-shredding/",
+      "reason": "Direct match to hard drive shredding page",
+      "confidence": "high",
+      "sourceGroup": "service:hard-drive-shredding-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/thrippunithura/sell-electronics-kochi/",
+      "target": "/sell-electronics/",
+      "reason": "Direct match to sell electronics hub",
+      "confidence": "high",
+      "sourceGroup": "service:sell-electronics-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/thrippunithura/ups-inverter-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "UPS/inverter batteries explicitly covered on battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:ups-inverter-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/vyttila/battery-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "Direct match to battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:battery-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/willingdon-island/printer-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "No dedicated printer hub exists; recycling is the closest fit",
+      "confidence": "medium",
+      "sourceGroup": "service:printer-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kalady/old-computer-disposal/",
+      "target": "/recycling/",
+      "reason": "Generic disposal intent, reasonably close to recycling hub",
+      "confidence": "medium",
+      "sourceGroup": "service:old-computer-disposal",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kalamassery-hitech-park/tv-monitor-recycling-kochi/",
+      "target": "/locations/kalamassery/",
+      "reason": "Consistent with already-resolved GSC decision: kalamassery-hitech-park loses to kalamassery (Phase 1.5/2B)",
+      "confidence": "high",
+      "sourceGroup": "location:kalamassery-hitech-park",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kalamassery/battery-recycling-kochi/",
+      "target": "/locations/kalamassery/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:kalamassery",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kannur/mobile-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "confidence": "medium",
+      "sourceGroup": "service:mobile-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kothamangalam/battery-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "Direct match to battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:battery-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/north-paravur/battery-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "Direct match to battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:battery-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/palarivattom/hard-drive-degaussing-kochi/",
+      "target": "/services/hard-drive-degaussing-kochi/",
+      "reason": "Exact match to built degaussing page",
+      "confidence": "high",
+      "sourceGroup": "service:hard-drive-degaussing-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/palarivattom/server-recycling-kochi/",
+      "target": "/server-recycling-kochi/",
+      "reason": "Exact match to built server recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:server-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/thrikkakara/mobile-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "confidence": "medium",
+      "sourceGroup": "service:mobile-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/vyttila/mobile-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "confidence": "medium",
+      "sourceGroup": "service:mobile-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/edappally/certificate-of-destruction-kochi/",
+      "target": "/data-destruction-certificate-sample/",
+      "reason": "Exact conceptual match to certificate sample page",
+      "confidence": "high",
+      "sourceGroup": "service:certificate-of-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kadavanthra/tv-monitor-recycling-kochi/",
+      "target": "/tv-recycling-kochi/",
+      "reason": "Exact match to built TV recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:tv-monitor-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kottayam/hard-drive-shredding-kochi/",
+      "target": "/hard-drive-shredding/",
+      "reason": "Direct match to hard drive shredding page",
+      "confidence": "high",
+      "sourceGroup": "service:hard-drive-shredding-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kozhikode/server-recycling-kochi/",
+      "target": "/server-recycling-kochi/",
+      "reason": "Exact match to built server recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:server-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/maradu/ups-inverter-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "UPS/inverter batteries explicitly covered on battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:ups-inverter-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/palakkad/battery-recycling-kochi/",
+      "target": "/battery-recycling/",
+      "reason": "Direct match to battery recycling hub",
+      "confidence": "high",
+      "sourceGroup": "service:battery-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/perumbavoor/network-equipment-disposal-kochi/",
+      "target": "/server-recycling-kochi/",
+      "reason": "Could also fit ITAD; server-recycling chosen as more specific",
+      "confidence": "medium",
+      "sourceGroup": "service:network-equipment-disposal-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/palakkad/hard-drive-degaussing-kochi/",
+      "target": "/services/hard-drive-degaussing-kochi/",
+      "reason": "Exact match to built degaussing page",
+      "confidence": "high",
+      "sourceGroup": "service:hard-drive-degaussing-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/aluva/server-recycling-kochi/",
+      "target": "/server-recycling-kochi/",
+      "reason": "Exact match to built server recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:server-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/edappally/tv-monitor-recycling-kochi/",
+      "target": "/tv-recycling-kochi/",
+      "reason": "Exact match to built TV recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:tv-monitor-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kalamassery-hitech-park/air-conditioner-recycling-kochi/",
+      "target": "/locations/kalamassery/",
+      "reason": "Consistent with already-resolved GSC decision: kalamassery-hitech-park loses to kalamassery (Phase 1.5/2B)",
+      "confidence": "high",
+      "sourceGroup": "location:kalamassery-hitech-park",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kalamassery/laptop-buyback-kochi/",
+      "target": "/locations/kalamassery/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:kalamassery",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kannur/laptop-buyback-kochi/",
+      "target": "/sell-electronics/",
+      "reason": "Buyback intent matches sell electronics hub",
+      "confidence": "high",
+      "sourceGroup": "service:laptop-buyback-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kollam/free-ewaste-pickup-kochi/",
+      "target": "/pickup/",
+      "reason": "Transactional pickup intent matches pickup hub",
+      "confidence": "high",
+      "sourceGroup": "service:free-ewaste-pickup-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kozhikode/corporate-ewaste-kochi/",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "confidence": "medium",
+      "sourceGroup": "service:corporate-ewaste-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/maradu/tv-monitor-recycling-kochi/",
+      "target": "/tv-recycling-kochi/",
+      "reason": "Exact match to built TV recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:tv-monitor-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/muvattupuzha/data-destruction-kochi/",
+      "target": "/data-destruction/",
+      "reason": "Direct match to data destruction hub",
+      "confidence": "high",
+      "sourceGroup": "service:data-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/north-paravur/laptop-buyback-kochi/",
+      "target": "/sell-electronics/",
+      "reason": "Buyback intent matches sell electronics hub",
+      "confidence": "high",
+      "sourceGroup": "service:laptop-buyback-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/palarivattom/mobile-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "confidence": "medium",
+      "sourceGroup": "service:mobile-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/vyttila/certificate-of-destruction-kochi/",
+      "target": "/data-destruction-certificate-sample/",
+      "reason": "Exact conceptual match to certificate sample page",
+      "confidence": "high",
+      "sourceGroup": "service:certificate-of-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/vyttila/electronics-recycling-near-me/",
+      "target": "/services/electronics-recycling-near-me/",
+      "reason": "Exact match to built near-me page",
+      "confidence": "high",
+      "sourceGroup": "service:electronics-recycling-near-me",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kalamassery/ups-inverter-recycling-kochi/",
+      "target": "/locations/kalamassery/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:kalamassery",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/north-paravur/hard-drive-shredding-kochi/",
+      "target": "/hard-drive-shredding/",
+      "reason": "Direct match to hard drive shredding page",
+      "confidence": "high",
+      "sourceGroup": "service:hard-drive-shredding-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/palakkad/network-equipment-disposal-kochi/",
+      "target": "/server-recycling-kochi/",
+      "reason": "Could also fit ITAD; server-recycling chosen as more specific",
+      "confidence": "medium",
+      "sourceGroup": "service:network-equipment-disposal-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kothamangalam/tv-monitor-recycling-kochi/",
+      "target": "/tv-recycling-kochi/",
+      "reason": "Exact match to built TV recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:tv-monitor-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kalamassery/certificate-of-destruction-kochi/",
+      "target": "/locations/kalamassery/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:kalamassery",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/thrissur/data-destruction-kochi/",
+      "target": "/data-destruction/",
+      "reason": "Direct match to data destruction hub",
+      "confidence": "high",
+      "sourceGroup": "service:data-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/aluva/printer-recycling-kochi/",
+      "target": "/recycling/",
+      "reason": "No dedicated printer hub exists; recycling is the closest fit",
+      "confidence": "medium",
+      "sourceGroup": "service:printer-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kollam/server-recycling-kochi/",
+      "target": "/server-recycling-kochi/",
+      "reason": "Exact match to built server recycling page",
+      "confidence": "high",
+      "sourceGroup": "service:server-recycling-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kalady/data-destruction-kochi/",
+      "target": "/data-destruction/",
+      "reason": "Direct match to data destruction hub",
+      "confidence": "high",
+      "sourceGroup": "service:data-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/edappally/itad-kochi/",
+      "target": "/itad/",
+      "reason": "Direct match to ITAD hub",
+      "confidence": "high",
+      "sourceGroup": "service:itad-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/thrissur/certificate-of-destruction-kochi/",
+      "target": "/data-destruction-certificate-sample/",
+      "reason": "Exact conceptual match to certificate sample page",
+      "confidence": "high",
+      "sourceGroup": "service:certificate-of-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kozhikode/secure-laptop-disposal/",
+      "target": "/data-destruction/",
+      "reason": "Same ambiguity as secure-computer-recycling",
+      "confidence": "medium",
+      "sourceGroup": "service:secure-laptop-disposal",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/angamaly/itad-kochi/",
+      "target": "/itad/",
+      "reason": "Direct match to ITAD hub",
+      "confidence": "high",
+      "sourceGroup": "service:itad-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/palakkad/secure-laptop-disposal/",
+      "target": "/data-destruction/",
+      "reason": "Same ambiguity as secure-computer-recycling",
+      "confidence": "medium",
+      "sourceGroup": "service:secure-laptop-disposal",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/thiruvananthapuram/itad-kochi/",
+      "target": "/itad/",
+      "reason": "Direct match to ITAD hub",
+      "confidence": "high",
+      "sourceGroup": "service:itad-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/aluva/itad-kochi/",
+      "target": "/itad/",
+      "reason": "Direct match to ITAD hub",
+      "confidence": "high",
+      "sourceGroup": "service:itad-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/ernakulam-south/server-recycling-kochi/",
+      "target": "/locations/ernakulam-south/",
+      "reason": "City page already built",
+      "confidence": "high",
+      "sourceGroup": "location:ernakulam-south",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kalamassery-hitech-park/data-destruction-kochi/",
+      "target": "/locations/kalamassery/",
+      "reason": "Consistent with already-resolved GSC decision: kalamassery-hitech-park loses to kalamassery (Phase 1.5/2B)",
+      "confidence": "high",
+      "sourceGroup": "location:kalamassery-hitech-park",
+      "targetType": "location-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    },
+    {
+      "source": "/locations/kannur/data-destruction-kochi/",
+      "target": "/data-destruction/",
+      "reason": "Direct match to data destruction hub",
+      "confidence": "high",
+      "sourceGroup": "service:data-destruction-kochi",
+      "targetType": "service-page",
+      "gscClicks": 0,
+      "gscImpressions": 1
+    }
+  ]
+}

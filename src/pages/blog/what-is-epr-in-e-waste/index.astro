@@ -1,0 +1,162 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "What Is EPR in E-Waste Management? A Plain-Language Explainer";
+const description =
+  "Extended Producer Responsibility (EPR) explained simply — what it means, who it applies to, and how it connects producers, recyclers, and e-waste collection.";
+const datePublished = "2026-07-07";
+const dateModified = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "What Is EPR?", path: "/blog/what-is-epr-in-e-waste/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/what-is-epr-in-e-waste/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/what-is-epr-in-e-waste/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Does EPR affect individual consumers?",
+    a: "Not directly — EPR obligations sit with producers (manufacturers, brand owners, and importers of electronics), not with the people buying and eventually discarding those products.",
+  },
+  {
+    q: "Is Ewaste Kochi an EPR-registered recycler?",
+    a: "For current authorization and registration details, contact us directly or see our trust and certifications pages — we'd rather point you to the real documentation than restate specific registration numbers here.",
+  },
+  {
+    q: "Where can I find the official rules on EPR?",
+    a: "The Central Pollution Control Board (CPCB) publishes official guidance and the EPR portal for producers and recyclers. For anything you need to rely on formally, check CPCB's own resources or a qualified advisor.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/what-is-epr-in-e-waste/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>What Is EPR in E-Waste Management?</h1>
+  <p class="lede">
+    Extended Producer Responsibility, or EPR, is the idea that companies
+    that make or sell electronics share responsibility for what happens to
+    those products once they're discarded — not just the consumers who
+    eventually throw them away.
+  </p>
+
+  <p class="disclaimer">
+    This page is general educational information, not legal advice.
+    Businesses should verify current requirements with official sources
+    (such as the Central Pollution Control Board) or a qualified advisor.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about e-waste compliance." />
+
+  <section>
+    <h2>What EPR means, in plain terms</h2>
+    <p>
+      Under an EPR framework, producers — manufacturers, brand owners, and
+      importers of electronic and electrical equipment — are made
+      responsible for ensuring the products they put into the market are
+      collected and recycled responsibly at end of life, rather than that
+      burden falling only on waste management systems or individual
+      consumers.
+    </p>
+  </section>
+
+  <section>
+    <h2>Why it exists</h2>
+    <p>
+      Without a framework like this, there's little incentive for
+      producers to think about what happens to a device once it's
+      discarded. EPR shifts some of that responsibility upstream, aiming
+      to increase formal collection and recycling rates and reduce how
+      much e-waste ends up in informal or unsafe disposal channels.
+    </p>
+  </section>
+
+  <section>
+    <h2>Who it applies to</h2>
+    <p>
+      EPR obligations in India's e-waste framework apply primarily to
+      producers — manufacturers, brand owners, and importers of
+      electronic equipment — rather than to individual consumers directly.
+      Recyclers, refurbishers, and dismantlers also have roles and
+      registration requirements within the same system, since they're the
+      ones actually processing the collected e-waste.
+    </p>
+  </section>
+
+  <section>
+    <h2>How it connects producers, recyclers, and collection</h2>
+    <p>
+      In practice, producers work toward collection and recycling targets
+      for the products they sell, often by partnering with registered
+      collection agents and recyclers who handle the actual pickup and
+      processing. This creates a chain of accountability from the point a
+      product is sold to the point it's responsibly recycled — at least in
+      principle, when the system functions as intended.
+    </p>
+  </section>
+
+  <section>
+    <h2>What ordinary users and businesses should know</h2>
+    <p>
+      As an individual or a business disposing of old electronics, you're
+      not the one carrying EPR obligations — but choosing a recycler that
+      operates within this formal system (rather than an unregistered
+      informal dealer) helps ensure your e-waste actually enters a
+      compliant recycling chain instead of an unregulated one. See our
+      <a href="/trust/">trust and compliance page</a> for how we approach
+      this, and our <a href="/certifications/">certifications page</a> for
+      what to ask about.
+    </p>
+  </section>
+
+  <section>
+    <h2>For businesses managing IT asset disposal</h2>
+    <p>
+      If your organization is disposing of IT assets at scale, our
+      <a href="/itad/">ITAD service</a> and
+      <a href="/recycling/">recycling service</a> are both built around
+      routing equipment through compliant channels. For specific EPR
+      compliance questions relevant to your business, <a href="/contact/">
+      contact us</a> or consult CPCB's official resources directly.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .disclaimer { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; border-left: 3px solid var(--color-primary); }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

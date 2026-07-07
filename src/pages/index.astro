@@ -1,0 +1,250 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CtaBar from "../components/CtaBar.astro";
+import Faq from "../components/Faq.astro";
+import LangSwitch from "../components/LangSwitch.astro";
+import { BUSINESS, SITE_URL } from "../data/site";
+import { getHreflang } from "../data/routes";
+
+const title = "E-Waste Recycling Kochi | Free Pickup + Instant Quote";
+const description =
+  "Ewaste Kochi collects, recycles and securely destroys data on old electronics across Kochi and Kerala. Free doorstep pickup, instant quotes, ISO-aligned data destruction.";
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
+    name: BUSINESS.legalName,
+    url: SITE_URL,
+    telephone: BUSINESS.phone,
+    email: BUSINESS.email,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: BUSINESS.address.streetAddress,
+      addressLocality: BUSINESS.address.addressLocality,
+      addressRegion: BUSINESS.address.addressRegion,
+      postalCode: BUSINESS.address.postalCode,
+      addressCountry: BUSINESS.address.addressCountry,
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": `${SITE_URL}/#localbusiness`,
+    name: BUSINESS.legalName,
+    image: `${SITE_URL}/og-image.jpg`,
+    telephone: BUSINESS.phone,
+    priceRange: "₹₹",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: BUSINESS.address.streetAddress,
+      addressLocality: BUSINESS.address.addressLocality,
+      addressRegion: BUSINESS.address.addressRegion,
+      postalCode: BUSINESS.address.postalCode,
+      addressCountry: BUSINESS.address.addressCountry,
+    },
+    openingHours: BUSINESS.hours,
+    areaServed: "Kochi, Ernakulam, Kerala",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
+    url: SITE_URL,
+    name: "Ewaste Kochi",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${SITE_URL}/search/?q={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
+  },
+];
+
+const faqItems = [
+  {
+    q: "Does Ewaste Kochi offer free e-waste pickup?",
+    a: "Yes. We collect old electronics, batteries, and IT equipment directly from homes and offices across Kochi at no charge for qualifying quantities. Book a pickup slot via WhatsApp or the pickup form.",
+  },
+  {
+    q: "What electronics do you accept?",
+    a: "Laptops, desktops, servers, monitors, TVs, printers, mobile phones, batteries (UPS, inverter, laptop, phone), and general IT hardware. For items outside this list, contact us to confirm.",
+  },
+  {
+    q: "Is my data wiped before recycling?",
+    a: "Yes, for any device with storage we offer certified data destruction — wiping, degaussing, or physical hard drive shredding — before the unit is recycled or resold.",
+  },
+  {
+    q: "Do you serve businesses and bulk IT asset disposal?",
+    a: "Yes. Our ITAD service handles corporate pickups, asset inventory, secure data destruction, and disposal documentation for offices, IT parks, and enterprises across Kochi.",
+  },
+  {
+    q: "Which areas in Kochi do you cover?",
+    a: "We currently serve 30+ neighborhoods across Kochi and Ernakulam district, including Kakkanad, Edappally, Aluva, Vyttila, Infopark, and Kalamassery, plus wider coverage across Kerala.",
+  },
+  {
+    q: "Can I sell my old electronics for cash instead of just recycling?",
+    a: "Yes — our Marketplace and Sell Electronics services let you get an instant quote and doorstep payment for working or partially working laptops, phones, and other devices.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/" jsonLd={jsonLd} hreflang={getHreflang("/")}>
+  <LangSwitch current="en" otherPath="/ml/" />
+  <h1>E-Waste Recycling in Kochi — Free Pickup, Instant Quote, Secure Data Destruction</h1>
+  <p class="lede">
+    Ewaste Kochi picks up old electronics, batteries, and IT equipment from homes and
+    offices across Kochi and Kerala — free of charge for qualifying pickups — and
+    handles recycling, resale, or certified data destruction depending on what you need.
+    Wondering <a href="/recycling/">where to recycle old electronics</a> nearby? Start there.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to book a free e-waste pickup in Kochi." />
+
+  <section class="hero-features" aria-label="Why choose Ewaste Kochi">
+    <div class="hero-feature">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M12 2 4 5v6c0 5 3.4 9 8 11 4.6-2 8-6 8-11V5l-8-3Z" stroke-linejoin="round" />
+      </svg>
+      <strong>Data Security</strong>
+      <span>Certified data destruction available</span>
+    </div>
+    <div class="hero-feature">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M12 3 8 7h3v4M12 21l4-4h-3v-4M4 12a8 8 0 0 1 4.5-7.2M20 12a8 8 0 0 1-4.5 7.2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <strong>Eco-Friendly</strong>
+      <span>Environment-first recycling process</span>
+    </div>
+    <div class="hero-feature">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <circle cx="12" cy="12" r="9" />
+        <path d="m8.5 12.5 2.3 2.3 4.7-5" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <strong>Compliant Process</strong>
+      <span>ISO 14001:2015-aligned, Pollution Control Board authorized</span>
+    </div>
+    <div class="hero-feature">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M3 16V7a1 1 0 0 1 1-1h9v10M3 16h10M13 10h5l3 3v3h-2M3 16a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm10 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <strong>Free Pickup</strong>
+      <span>Doorstep collection across Kochi</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Our Core Services</h2>
+    <p><a href="/services/">View all services →</a></p>
+    <div class="service-grid">
+      <a class="service-card" href="/recycling/">
+        <h3>E-Waste Recycling</h3>
+        <p>Safe, compliant disposal for laptops, desktops, monitors, printers and more.</p>
+      </a>
+      <a class="service-card" href="/battery-recycling/">
+        <h3>Battery Recycling</h3>
+        <p>UPS, inverter, laptop and phone battery collection and safe recycling.</p>
+      </a>
+      <a class="service-card" href="/marketplace/">
+        <h3>Marketplace</h3>
+        <p>Sell working or partially working electronics for an instant quote.</p>
+      </a>
+      <a class="service-card" href="/data-destruction/">
+        <h3>Data Destruction</h3>
+        <p>Certified wiping, degaussing, and hard drive shredding for businesses.</p>
+      </a>
+      <a class="service-card" href="/itad/">
+        <h3>ITAD for Business</h3>
+        <p>Corporate IT asset disposal, inventory audits, and compliant reporting.</p>
+      </a>
+      <a class="service-card" href="/pickup/">
+        <h3>Free Pickup</h3>
+        <p>Doorstep collection across Kochi — schedule a slot in minutes.</p>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Serving Kochi and Beyond</h2>
+    <p>
+      We operate across 30+ neighborhoods in Kochi and Ernakulam district — including
+      <a href="/locations/kakkanad/">Kakkanad</a>, Edappally, Aluva, and Infopark —
+      plus wider service across Kerala. See the full <a href="/locations/">locations directory</a>.
+    </p>
+  </section>
+
+  <Faq items={faqItems} />
+</Layout>
+
+<style>
+  .lede {
+    font-size: 1.1rem;
+    color: var(--color-muted);
+    max-width: 46rem;
+  }
+  .hero-features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1.75rem 0 2.5rem;
+  }
+  .hero-feature {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 1.1rem;
+    background: var(--color-surface);
+    border-radius: 0.75rem;
+  }
+  .hero-feature svg {
+    width: 28px;
+    height: 28px;
+    color: var(--color-primary);
+    flex-shrink: 0;
+  }
+  .hero-feature strong {
+    color: var(--color-text);
+    font-size: 0.95rem;
+  }
+  .hero-feature span {
+    color: var(--color-muted);
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+  @media (min-width: 700px) {
+    .hero-features {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  .service-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .service-card {
+    display: block;
+    padding: 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    text-decoration: none;
+    color: var(--color-text);
+  }
+  .service-card:hover {
+    border-color: var(--color-primary);
+  }
+  .service-card h3 {
+    margin: 0 0 0.4rem;
+    color: var(--color-primary-dark);
+  }
+  .service-card p {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 0.92rem;
+  }
+  @media (min-width: 700px) {
+    .service-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

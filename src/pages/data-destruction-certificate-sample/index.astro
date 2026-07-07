@@ -1,0 +1,125 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import Faq from "../../components/Faq.astro";
+import { SITE_URL } from "../../data/site";
+
+const title = "Data Destruction Certificate Sample | Ewaste Kochi";
+const description =
+  "What's included in an Ewaste Kochi certificate of data destruction, and how to request one for your devices.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Trust", path: "/trust/" },
+  { name: "Data Destruction Certificate Sample", path: "/data-destruction-certificate-sample/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/data-destruction-certificate-sample/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const certificateFields = [
+  { field: "Client name", detail: "The individual or business the certificate is issued to." },
+  { field: "Device inventory", detail: "Type, make/model, and serial number for each device processed." },
+  { field: "Destruction method", detail: "Wiping, degaussing, or physical shredding — whichever was used for that device." },
+  { field: "Standard followed", detail: "The sanitization guidance applied (e.g. NIST 800-88-aligned wiping)." },
+  { field: "Date and time", detail: "When the destruction was carried out." },
+  { field: "Chain of custody", detail: "A record of custody from pickup through processing, for jobs that require it." },
+  { field: "Authorized signatory", detail: "Sign-off from the team member responsible for the job." },
+];
+
+const faqItems = [
+  {
+    q: "Is a certificate provided automatically?",
+    a: "Certificates are issued on request rather than automatically for every job — let us know when you schedule a pickup that you'll need one.",
+  },
+  {
+    q: "Can I get a certificate for a job that already happened?",
+    a: "If we processed the device, yes — contact us with the details (approximate date, device type) and we'll arrange it.",
+  },
+  {
+    q: "Does the certificate cover physical shredding as well as wiping?",
+    a: "Yes, the certificate documents whichever method was actually used, including physical shredding for drives handled under our hard drive shredding service.",
+  },
+  {
+    q: "Can businesses get chain-of-custody documentation for bulk jobs?",
+    a: "Yes — for ITAD and bulk data destruction engagements, ask about chain-of-custody records when scoping the project.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/data-destruction-certificate-sample/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Data Destruction Certificate — What's Included</h1>
+  <p class="lede">
+    Rather than showing a filled-in sample with placeholder names and
+    invented numbers, here's exactly what fields a real Ewaste Kochi data
+    destruction certificate contains. Request an actual certificate for your
+    own job via our contact page.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to request a data destruction certificate." />
+
+  <section>
+    <h2>Certificate fields</h2>
+    <dl class="field-list">
+      {certificateFields.map((f) => (
+        <>
+          <dt>{f.field}</dt>
+          <dd>{f.detail}</dd>
+        </>
+      ))}
+    </dl>
+  </section>
+
+  <section>
+    <h2>How to request one</h2>
+    <p>
+      Mention when you schedule a pickup (see <a href="/pickup/">pickup</a>
+      or <a href="/data-destruction/">data destruction</a>) that you need a
+      certificate, and we'll issue it once the job is complete. For jobs
+      already done, contact us with approximate date and device details.
+    </p>
+  </section>
+
+  <Faq items={faqItems} />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .field-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.25rem 1rem;
+    margin: 1rem 0;
+  }
+  .field-list dt {
+    font-weight: 700;
+    margin-top: 0.75rem;
+  }
+  .field-list dd {
+    margin: 0.2rem 0 0;
+    color: var(--color-muted);
+  }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  @media (min-width: 700px) {
+    .field-list {
+      grid-template-columns: 12rem 1fr;
+      align-items: baseline;
+    }
+    .field-list dt {
+      margin-top: 0;
+    }
+  }
+</style>

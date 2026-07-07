@@ -1,0 +1,135 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Hard Drive Degaussing in Kochi | Magnetic Data Erasure";
+const description =
+  "Hard drive degaussing in Kochi — magnetic erasure for hard disk drives, distinct from wiping or physical shredding. Certificate available on request.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Services", path: "/services/" },
+  { name: "Hard Drive Degaussing", path: "/services/hard-drive-degaussing-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Hard drive degaussing",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: "Kochi, Ernakulam, Kerala",
+    url: `${SITE_URL}/services/hard-drive-degaussing-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/services/hard-drive-degaussing-kochi/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "What's the difference between degaussing, wiping, and shredding?",
+    a: "Wiping overwrites data on a drive that still works, so it can be reused. Degaussing uses a strong magnetic field to scramble the data on magnetic media, rendering the drive unusable afterward but not physically destroyed. Shredding physically destroys the drive. Each suits a different situation — see below.",
+  },
+  {
+    q: "Does degaussing work on SSDs?",
+    a: "No — degaussing only works on magnetic storage media (traditional hard disk drives). SSDs need wiping or physical destruction instead, since they don't store data magnetically.",
+  },
+  {
+    q: "Can a degaussed drive be reused afterward?",
+    a: "No, degaussing renders the drive's magnetic formatting unusable, so it can't be reused for storage — it's a one-way process suited to drives you're retiring, not reselling.",
+  },
+  {
+    q: "When should I choose degaussing over shredding?",
+    a: "Degaussing is faster for bulk magnetic drive volumes and still renders data unrecoverable. Shredding is preferred when physical destruction is specifically required by policy, or the drive is damaged. Ask us if you're unsure which fits your situation.",
+  },
+  {
+    q: "Is a certificate provided?",
+    a: "Yes, on request — see our data destruction certificate sample page for what's included.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/services/hard-drive-degaussing-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Hard Drive Degaussing in Kochi</h1>
+  <p class="lede">
+    Degaussing uses a strong magnetic field to erase data on magnetic hard
+    drives — a distinct method from overwrite-wiping or physical shredding,
+    suited to bulk drive retirement where reuse isn't the goal.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I need hard drive degaussing for some old drives." />
+
+  <section>
+    <h2>Degaussing vs. wiping vs. shredding</h2>
+    <p>
+      <strong>Wiping</strong> (see our main <a href="/data-destruction/">data
+      destruction</a> page) overwrites data on a drive that still works, so
+      it can be reused or resold afterward.<br />
+      <strong>Degaussing</strong> scrambles data magnetically — fast for
+      bulk volumes of traditional hard disk drives, but the drive can't be
+      reused afterward since its magnetic formatting is destroyed too.<br />
+      <strong>Physical shredding</strong> (see
+      <a href="/hard-drive-shredding/">hard drive shredding</a>) mechanically
+      destroys the drive — used for damaged drives or where policy requires
+      physical destruction regardless of condition.
+    </p>
+  </section>
+
+  <section>
+    <h2>Important limitation</h2>
+    <p>
+      Degaussing only works on magnetic media — traditional hard disk
+      drives. It does not work on SSDs, which don't store data magnetically
+      and need wiping or physical destruction instead. Tell us your drive
+      types when you schedule so the right method is used.
+    </p>
+  </section>
+
+  <section>
+    <h2>Process</h2>
+    <ol class="process-list">
+      <li><strong>Pickup or drop-off</strong> of the drive(s).</li>
+      <li><strong>Confirmation of drive type</strong> — degaussing applies only to magnetic HDDs.</li>
+      <li><strong>Degaussing performed</strong> using a magnetic field strong enough to erase the drive.</li>
+      <li><strong>Certificate issued</strong> on request — see our
+        <a href="/data-destruction-certificate-sample/">certificate sample page</a> for what's included.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Who this is for</h2>
+    <p>
+      Businesses retiring bulk quantities of traditional hard drives where
+      reuse isn't needed, and anyone who wants a fast, thorough erasure
+      method for magnetic media specifically. For SSDs or mixed
+      drive types, ask us about combining degaussing with wiping or
+      shredding as appropriate.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .process-list { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

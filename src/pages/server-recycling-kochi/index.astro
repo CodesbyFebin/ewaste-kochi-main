@@ -1,0 +1,120 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import Faq from "../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../data/site";
+
+const title = "Server Recycling in Kochi | Racks, Drives & Network Equipment";
+const description =
+  "B2B server and data center hardware recycling in Kochi — racks, drives, networking equipment, secure data destruction, and asset inventory for decommissioning projects.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Server Recycling", path: "/server-recycling-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Server and data center hardware recycling",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: "Kochi, Ernakulam, Kerala",
+    url: `${SITE_URL}/server-recycling-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/server-recycling-kochi/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Do you handle full rack decommissioning?",
+    a: "Yes — racks, blade servers, storage arrays, and associated networking equipment can be decommissioned as a single project, with an itemized asset inventory.",
+  },
+  {
+    q: "Is data destruction included for server drives?",
+    a: "Yes, every drive is wiped, degaussed, or physically shredded depending on condition and your requirements, before the hardware is resold or recycled.",
+  },
+  {
+    q: "Can you provide an asset inventory for our records?",
+    a: "Yes — for server and data center jobs we log serial numbers and asset details as part of the process, useful for internal IT asset registers and audits.",
+  },
+  {
+    q: "Do you serve IT parks and data centers directly?",
+    a: "Yes, Infopark, SmartCity, and similar business hubs are among our most frequent server decommissioning engagements.",
+  },
+  {
+    q: "Is this different from your general ITAD service?",
+    a: "Server recycling is the hardware-focused piece; ITAD is the broader engagement covering inventory, data destruction, resale, and compliance reporting across an entire office or data center project. Larger projects typically run through ITAD with server recycling as one component.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/server-recycling-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Server Recycling in Kochi</h1>
+  <p class="lede">
+    Decommissioning server hardware needs more care than general office
+    e-waste — data security, asset tracking, and proper handling of racks
+    and drives all matter. We handle the full process for IT teams and data
+    centers across Kochi.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, we need server/rack decommissioning and recycling for our office." />
+
+  <section>
+    <h2>What's covered</h2>
+    <p>
+      Servers, blade systems, storage arrays, racks, and associated
+      networking equipment (switches, routers, cabling). Every drive goes
+      through <a href="/data-destruction/">data destruction</a> — wiping,
+      degaussing, or <a href="/hard-drive-shredding/">physical shredding</a>
+      — before hardware is resold or recycled.
+    </p>
+  </section>
+
+  <section>
+    <h2>Process</h2>
+    <ol class="process-list">
+      <li><strong>Scoping</strong> — tell us what's being decommissioned and the timeline.</li>
+      <li><strong>Asset inventory</strong> — serial numbers and details logged; see our <a href="/services/it-asset-inventory-audit/">asset inventory audit</a> service for the fuller process on larger jobs.</li>
+      <li><strong>Pickup</strong> — scheduled around your operational needs.</li>
+      <li><strong>Data destruction</strong> — every drive handled per your security requirements.</li>
+      <li><strong>Resale or recycling</strong> — functional hardware remarketed, end-of-life hardware recycled.</li>
+      <li><strong>Reporting</strong> — documentation provided for your records.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Who this is for</h2>
+    <p>
+      IT teams decommissioning servers as part of a refresh cycle, data
+      centers retiring hardware, and offices closing or relocating. For a
+      full-scope corporate IT asset project beyond just servers, see our
+      <a href="/itad/">ITAD service</a>.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .process-list { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

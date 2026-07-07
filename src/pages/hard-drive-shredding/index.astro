@@ -1,0 +1,131 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import Faq from "../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../data/site";
+
+const title = "Hard Drive Shredding in Kochi | Physical Data Destruction";
+const description =
+  "Physical hard drive shredding in Kochi for failed, damaged, or end-of-life drives. Certificate of destruction available. Pickup across Ernakulam district.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Hard Drive Shredding", path: "/hard-drive-shredding/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Hard drive shredding",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: "Kochi, Ernakulam, Kerala",
+    url: `${SITE_URL}/hard-drive-shredding/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/hard-drive-shredding/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "When do I need shredding instead of wiping?",
+    a: "When a drive is physically damaged or failed and can't be reliably wiped, or when your organization's policy requires physical destruction regardless of drive condition. Working drives that don't need to be destroyed physically can go through our standard data destruction wiping process instead.",
+  },
+  {
+    q: "Is shredding required for compliance?",
+    a: "Some regulatory or client contract requirements specify physical destruction rather than wiping. If you're unsure what your situation requires, describe it to us and we can advise on the appropriate method.",
+  },
+  {
+    q: "Can you shred SSDs as well as traditional hard drives?",
+    a: "Yes, though SSDs and HDDs are destroyed differently given their different internal structure — mention the drive type when you schedule so the right process is used.",
+  },
+  {
+    q: "Do you provide proof the drive was destroyed?",
+    a: "Yes, a certificate of destruction is available on request, documenting the drive and destruction method.",
+  },
+  {
+    q: "Can I watch the shredding happen?",
+    a: "For sensitive corporate jobs, ask about witnessed destruction when you schedule — we can accommodate this depending on volume and location.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/hard-drive-shredding/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Hard Drive Shredding in Kochi</h1>
+  <p class="lede">
+    When a drive is damaged, failed, or your policy requires physical
+    destruction rather than wiping, we physically shred it — so the data is
+    unrecoverable regardless of drive condition.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I need a hard drive physically shredded/destroyed." />
+
+  <section>
+    <h2>When shredding makes sense over wiping</h2>
+    <p>
+      Wiping (covered on our main <a href="/data-destruction/">data
+      destruction</a> page) works for functional drives you want to reuse or
+      resell. Shredding is the right call when a drive is physically damaged
+      or failed and can't be wiped reliably, or when your organization's
+      compliance policy specifies physical destruction regardless of
+      condition. For bulk magnetic hard drives where reuse isn't the goal,
+      <a href="/services/hard-drive-degaussing-kochi/">degaussing</a> is a
+      faster middle option worth considering too.
+    </p>
+  </section>
+
+  <section>
+    <h2>Process</h2>
+    <ol class="process-list">
+      <li><strong>Pickup or drop-off</strong> — schedule collection of the drive(s).</li>
+      <li><strong>Identification</strong> — drives are logged before destruction, especially for corporate jobs needing chain-of-custody records.</li>
+      <li><strong>Physical shredding</strong> — the drive is mechanically destroyed.</li>
+      <li><strong>Certificate issued</strong> on request, confirming destruction.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Who this is for</h2>
+    <p>
+      Businesses decommissioning servers or workstations under a compliance
+      policy, anyone with a failed or physically damaged drive that held
+      sensitive data, and IT teams needing documented proof of destruction
+      for audits. For a full office IT decommission including inventory and
+      reporting, see <a href="/itad/">ITAD</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Compliance</h2>
+    <p>
+      Destruction is carried out in line with standard media sanitization
+      practice, and resulting material is recycled through Pollution Control
+      Board-authorized channels. Documentation is available on request via
+      our <a href="/contact/">contact page</a>.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .process-list { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

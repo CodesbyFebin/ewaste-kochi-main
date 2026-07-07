@@ -1,0 +1,72 @@
+---
+import { BUSINESS, telLink } from "../data/site";
+---
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="/" class="brand">Ewaste Kochi</a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="/recycling/">Recycling</a>
+      <a href="/battery-recycling/">Battery</a>
+      <a href="/marketplace/">Marketplace</a>
+      <a href="/data-destruction/">Data Destruction</a>
+      <a href="/itad/">ITAD</a>
+      <a href="/locations/">Locations</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+    <a class="header-call" href={telLink()}>{BUSINESS.phoneDisplay}</a>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    background: var(--color-bg);
+    z-index: 10;
+  }
+  .wrap {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 0.9rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .brand {
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--color-text);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .main-nav {
+    display: none;
+    gap: 1.1rem;
+    flex: 1;
+    font-size: 0.9rem;
+  }
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+  .main-nav a:hover {
+    color: var(--color-primary);
+  }
+  .header-call {
+    margin-left: auto;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  @media (min-width: 860px) {
+    .main-nav {
+      display: flex;
+    }
+    .header-call {
+      margin-left: 0;
+    }
+  }
+</style>

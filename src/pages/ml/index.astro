@@ -1,0 +1,142 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import Faq from "../../components/Faq.astro";
+import LangSwitch from "../../components/LangSwitch.astro";
+import { SITE_URL } from "../../data/site";
+import { getHreflang } from "../../data/routes";
+
+const breadcrumbItems = [
+  { name: "ഹോം", path: "/" },
+  { name: "മലയാളം", path: "/ml/" },
+];
+
+const title = "ഇ-വേസ്റ്റ് കൊച്ചി | സൗജന്യ പിക്കപ്പ് + തൽക്ഷണ ക്വോട്ട്";
+const description =
+  "കൊച്ചിയിലും കേരളത്തിലും പഴയ ഇലക്ട്രോണിക്സ് ശേഖരിച്ച് റീസൈക്കിൾ ചെയ്യുകയും ഡാറ്റ സുരക്ഷിതമായി നശിപ്പിക്കുകയും ചെയ്യുന്നു. സൗജന്യ പിക്കപ്പ്, തൽക്ഷണ ക്വോട്ട്.";
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/ml/`,
+    name: title,
+    description,
+    inLanguage: "ml-IN",
+  },
+];
+
+const faqItems = [
+  {
+    q: "പിക്കപ്പ് സൗജന്യമാണോ?",
+    a: "അതെ, യോഗ്യമായ അളവിന് വീട്ടിലെത്തി പിക്കപ്പ് സൗജന്യമാണ്. നിങ്ങളുടെ സാധനങ്ങളും സ്ഥലവും വാട്സ്ആപ്പിൽ അയക്കൂ.",
+  },
+  {
+    q: "ഏതെല്ലാം സാധനങ്ങൾ സ്വീകരിക്കും?",
+    a: "ലാപ്ടോപ്പ്, ഡെസ്ക്ടോപ്പ്, മോണിറ്റർ, പ്രിന്റർ, ബാറ്ററികൾ, ടിവി എന്നിവയും പൊതുവായ ഐടി ഉപകരണങ്ങളും.",
+  },
+  {
+    q: "എന്റെ ഡാറ്റ സുരക്ഷിതമാണോ?",
+    a: "സ്റ്റോറേജുള്ള ഏതു ഉപകരണവും റീസൈക്കിൾ ചെയ്യുന്നതിന് മുൻപ് ഡാറ്റ സുരക്ഷിതമായി നീക്കം ചെയ്യുന്നു.",
+  },
+  {
+    q: "ഏതെല്ലാം സ്ഥലങ്ങളിൽ സേവനം ലഭ്യമാണ്?",
+    a: "കൊച്ചിയിലും എറണാകുളം ജില്ലയിലും 30+ പ്രദേശങ്ങളിൽ ഞങ്ങൾ സേവനം നൽകുന്നു, കൂടാതെ കേരളത്തിലുടനീളം വിശാലമായ കവറേജും ഉണ്ട്.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/ml/" jsonLd={jsonLd} lang="ml-IN" hreflang={getHreflang("/ml/")}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <LangSwitch current="ml" otherPath="/" />
+  <h1>കൊച്ചിയിൽ ഇ-മാലിന്യ റീസൈക്ലിംഗ്</h1>
+  <p class="lede">
+    പഴയ ലാപ്ടോപ്പ്, ബാറ്ററി, ഐടി ഉപകരണങ്ങൾ എന്നിവ ഞങ്ങൾ വീട്ടിൽ നിന്നോ ഓഫീസിൽ
+    നിന്നോ ശേഖരിക്കുന്നു — യോഗ്യമായ അളവിന് സൗജന്യമായി — തുടർന്ന് റീസൈക്ലിംഗ്,
+    വിൽപ്പന, അല്ലെങ്കിൽ സാക്ഷ്യപ്പെടുത്തിയ ഡാറ്റ നശിപ്പിക്കൽ എന്നിവയിലേക്ക്
+    നയിക്കുന്നു.
+  </p>
+
+  <CtaBar
+    whatsappMessage="നമസ്കാരം, കൊച്ചിയിൽ ഒരു സൗജന്യ ഇ-വേസ്റ്റ് പിക്കപ്പ് ബുക്ക് ചെയ്യണം."
+    pickupHref="/ml/pickup/"
+    labels={{ call: "വിളിക്കുക", whatsapp: "വാട്സ്ആപ്പ് ചെയ്യുക", pickup: "സൗജന്യ പിക്കപ്പ് ബുക്ക് ചെയ്യുക" }}
+  />
+
+  <section>
+    <h2>ഞങ്ങളുടെ പ്രധാന സേവനങ്ങൾ</h2>
+    <div class="service-grid">
+      <a class="service-card" href="/ml/recycling/">
+        <h3>ഇ-വേസ്റ്റ് റീസൈക്ലിംഗ്</h3>
+        <p>ലാപ്ടോപ്പ്, ഡെസ്ക്ടോപ്പ്, മോണിറ്റർ, പ്രിന്റർ എന്നിവയുടെ സുരക്ഷിത നിർമാർജനം.</p>
+      </a>
+      <a class="service-card" href="/ml/battery-recycling/">
+        <h3>ബാറ്ററി റീസൈക്ലിംഗ്</h3>
+        <p>യുപിഎസ്, ഇൻവെർട്ടർ, ലാപ്ടോപ്പ്, ഫോൺ ബാറ്ററികളുടെ ശേഖരണവും റീസൈക്ലിംഗും.</p>
+      </a>
+      <a class="service-card" href="/ml/sell-electronics/">
+        <h3>പഴയ ഇലക്ട്രോണിക്സ് വിൽക്കുക</h3>
+        <p>പ്രവർത്തിക്കുന്ന ഉപകരണങ്ങൾക്ക് തൽക്ഷണ ക്വോട്ട് നേടുക.</p>
+      </a>
+      <a class="service-card" href="/ml/data-destruction/">
+        <h3>ഡാറ്റ നശിപ്പിക്കൽ</h3>
+        <p>സ്റ്റോറേജുള്ള ഏതു ഉപകരണത്തിനും സാക്ഷ്യപ്പെടുത്തിയ വൈപ്പിംഗ്, ഡീഗോസിംഗ്, ശ്രെഡിംഗ്.</p>
+      </a>
+      <a class="service-card" href="/ml/pickup/">
+        <h3>സൗജന്യ പിക്കപ്പ്</h3>
+        <p>കൊച്ചിയിലുടനീളം വീട്ടിലെത്തി ശേഖരണം.</p>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2>സേവന പ്രദേശം</h2>
+    <p>
+      കൊച്ചി, എറണാകുളം ജില്ല എന്നിവിടങ്ങളിലെ 30+ പ്രദേശങ്ങളിൽ ഞങ്ങൾ
+      പ്രവർത്തിക്കുന്നു, കൂടാതെ കേരളത്തിലുടനീളം വിശാലമായ സേവനവും ഉണ്ട്. കൂടുതൽ
+      വിവരങ്ങൾക്ക് <a href="/locations/">locations directory</a> കാണുക.
+    </p>
+  </section>
+
+  <Faq items={faqItems} heading="പതിവ് ചോദ്യങ്ങൾ" />
+</Layout>
+
+<style>
+  .lede {
+    font-size: 1.1rem;
+    color: var(--color-muted);
+    max-width: 46rem;
+  }
+  .service-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .service-card {
+    display: block;
+    padding: 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    text-decoration: none;
+    color: var(--color-text);
+  }
+  .service-card:hover {
+    border-color: var(--color-primary);
+  }
+  .service-card h3 {
+    margin: 0 0 0.4rem;
+    color: var(--color-primary-dark);
+  }
+  .service-card p {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 0.92rem;
+  }
+  @media (min-width: 700px) {
+    .service-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

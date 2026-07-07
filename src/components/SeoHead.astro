@@ -1,0 +1,42 @@
+---
+import { SITE_URL } from "../data/site";
+
+interface HreflangEntry {
+  lang: string;
+  href: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  jsonLd?: Record<string, unknown>[];
+  hreflang?: HreflangEntry[];
+  noindex?: boolean;
+}
+
+const { title, description, path, jsonLd = [], hreflang = [], noindex = false } = Astro.props;
+const canonicalUrl = new URL(path, SITE_URL).toString();
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalUrl} />
+{noindex && <meta name="robots" content="noindex,follow" />}
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:site_name" content="Ewaste Kochi" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+
+{hreflang.map((h) => (
+  <link rel="alternate" hreflang={h.lang} href={h.href} />
+))}
+
+{jsonLd.map((block) => (
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(block)} />
+))}

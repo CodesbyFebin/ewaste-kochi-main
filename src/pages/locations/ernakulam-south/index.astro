@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "E-Waste Pickup in Ernakulam South | Free Doorstep Collection";
+const description =
+  "Doorstep e-waste pickup in Ernakulam South, Kochi — homes and offices. Free collection, battery recycling, and data destruction available.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Locations", path: "/locations/" },
+  { name: "Ernakulam South", path: "/locations/ernakulam-south/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "E-waste collection",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: {
+      "@type": "Place",
+      name: "Ernakulam South, Kochi, Kerala",
+    },
+    url: `${SITE_URL}/locations/ernakulam-south/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/locations/ernakulam-south/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Do you offer same-day pickup in Ernakulam South?",
+    a: "Same-day or next-day pickup is usually available given how frequently we service this area, which sits close to the Kochi city core.",
+  },
+  {
+    q: "Can offices and shops in this area schedule pickup?",
+    a: "Yes — Ernakulam South has a mix of residential buildings, small businesses, and offices, and we handle all of them the same way: message us, confirm a slot, and we collect from your door.",
+  },
+  {
+    q: "Is data wiped from office computers before pickup?",
+    a: "Yes, on request — any device with storage can be wiped or destroyed before recycling or resale. See our data destruction page for details.",
+  },
+  {
+    q: "Do you collect batteries here too?",
+    a: "Yes, batteries can be handed over in the same visit as general e-waste — see our battery recycling page for what's accepted.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/locations/ernakulam-south/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Pickup in Ernakulam South</h1>
+  <p class="lede">
+    Ernakulam South sits close to the heart of Kochi city, with a mix of
+    residential buildings, small businesses, and offices — we run frequent
+    doorstep pickups across the area.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to schedule an e-waste pickup in Ernakulam South." />
+
+  <section>
+    <h2>Services available</h2>
+    <p>
+      <a href="/recycling/">General e-waste recycling</a> for laptops,
+      desktops, monitors, and printers; <a href="/battery-recycling/">battery
+      recycling</a> for UPS, inverter, and device batteries; and
+      <a href="/data-destruction/">data destruction</a> for any device with
+      storage. Prefer to sell a working device instead? See
+      <a href="/sell-electronics/">sell electronics</a> for an instant quote.
+    </p>
+  </section>
+
+  <section>
+    <h2>Home pickup</h2>
+    <p>
+      Message us your address and a rough list of items, and we'll confirm
+      a slot — usually same-day or next-day given how central this area is
+      to our regular routes.
+    </p>
+  </section>
+
+  <section>
+    <h2>Office pickup</h2>
+    <p>
+      Small businesses and offices in Ernakulam South can schedule pickup
+      the same way as households. For larger IT asset disposal projects
+      with inventory and reporting, see our <a href="/itad/">ITAD
+      service</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>What we accept</h2>
+    <p>
+      Laptops, desktops, monitors, printers, TVs, batteries, and general IT
+      hardware — the same accepted-items list as our main
+      <a href="/recycling/">recycling</a> page.
+    </p>
+  </section>
+
+  <section>
+    <h2>Nearby areas</h2>
+    <p>
+      Also serving Kadavanthra, Vyttila, Kaloor, and other central Kochi
+      neighborhoods — see the full <a href="/locations/">locations
+      directory</a>.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} heading="Ernakulam South Pickup FAQs" />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

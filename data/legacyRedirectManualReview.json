@@ -1,0 +1,782 @@
+{
+  "source": "data/gscLegacyMatrixFindings.json, classified 2026-07-07",
+  "items": [
+    {
+      "source": "/blogs/disposal/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 2,
+      "gscImpressions": 49,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/scrap-electronics/pcb-and-motherboard-scrap-buyers-in-kakkanad-kochi/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 1,
+      "gscImpressions": 48,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 1,
+      "gscImpressions": 26,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/disposal/where-to-dispose-old-laptops-in-infopark-kochi-free-pickup-guide/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 1,
+      "gscImpressions": 11,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/battery-recycling/office-battery-pickup-in-thiruvananthapuram-how-to-stage-mixed-loads/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 1,
+      "gscImpressions": 13,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/battery-recycling/phone-battery-recycling-in-thrippunithura-kochi-what-to-do-with-loose-cells/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 1,
+      "gscImpressions": 11,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/environmental-impact/precious-metal-recovery-from-e-waste-in-kakkanad-kochi/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 1,
+      "gscImpressions": 10,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/corporate-itad/bank-and-hospital-itad-in-kottayam-documentation-that-actually-matters/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 1,
+      "gscImpressions": 10,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/disposal/how-to-dispose-mixed-household-e-waste-in-kollam/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 1,
+      "gscImpressions": 17,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/recycling/laptop-recycling-in-kollam-reuse-buyback-or-scrap/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 1,
+      "gscImpressions": 11,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/laptop-disposal/laptop-resale-value-in-kottayam-what-changes-the-price-fast/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 1,
+      "gscImpressions": 5,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/locations/angamaly/air-conditioner-recycling-kochi/",
+      "reason": "No dedicated AC-recycling hub page exists yet",
+      "gscClicks": 1,
+      "gscImpressions": 1,
+      "suggestedNextStep": "Revisit once/if a dedicated page for this service type is built."
+    },
+    {
+      "source": "/blogs/recycling/how-electronics-recycling-works-in-thiruvananthapuram/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 65,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/itad-process/nist-800-88-vs-dod-5220-22-m-which-standard-to-choose-in-vyttila-kochi/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 40,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/battery-recycling/how-to-store-batteries-before-pickup-in-vyttila-kochi/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 34,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/itad-process/the-ultimate-server-decommissioning-checklist-for-data-centres-in-vyttila-kochi/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 33,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/ewaste-laws/kspcb-authorized-recyclers-list-how-thiruvananthapuram-businesses-verify-vendors/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 23,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/recycling/battery-recycling-in-vyttila-kochi-what-needs-separate-handling/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 21,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/recycling/zero-landfill-electronics-recycling-in-thiruvananthapuram-what-it-really-means/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 26,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/disposal/where-to-dispose-old-laptops-in-kollam-free-pickup-guide/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 20,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/recycling/computer-recycling-in-thrippunithura-kochi-for-homes-and-offices/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 19,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/disposal/where-to-dispose-old-phones-in-edappally-kochi-without-data-risk/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 18,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/scrap-electronics/network-equipment-scrap-in-edappally-kochi-switches-routers-firewalls/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 17,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/disposal/how-to-dispose-office-computers-in-thiruvananthapuram-safely/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 17,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/mobile-recycling/damaged-phone-recycling-in-kozhikode-what-still-counts-as-value/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 15,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/environmental-impact/toxic-components-in-electronics-collected-in-kakkanad-kochi/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 18,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/scrap-electronics/server-scrap-buyers-in-thrippunithura-kochi-recovering-more-from-old-racks/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 12,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/disposal/how-to-dispose-office-computers-in-kakkanad-kochi-safely/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 18,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/recycling/computer-recycling-in-vyttila-kochi-for-homes-and-offices/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 18,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/recycling/how-electronics-recycling-works-in-kozhikode/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 14,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/battery-recycling/lead-acid-battery-recycling-in-kottayam-what-businesses-need-to-track/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 10,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/disposal/monitor-and-tv-disposal-in-vyttila-kochi-what-to-do-first/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 10,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/laptop-disposal/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 18,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/disposal/corporate-e-waste-clearance-checklist-for-vyttila-kochi/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 9,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/battery-recycling/solar-battery-disposal-in-thiruvananthapuram-practical-steps-for-safe-collection/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 9,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/laptop-disposal/laptop-resale-value-in-thiruvananthapuram-what-changes-the-price-fast/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 11,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/disposal/where-to-dispose-old-laptops-in-vyttila-kochi-free-pickup-guide/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 8,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/laptop-disposal/employee-laptop-returns-and-disposal-workflow-in-thiruvananthapuram/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 11,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/laptop-disposal/school-and-college-laptop-disposal-in-kakkanad-kochi/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 8,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/government-rules/e-waste-rules-2022-for-businesses-in-kozhikode/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 10,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/itad-process/the-ultimate-server-decommissioning-checklist-for-data-centres-in-kalamassery-kochi/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 8,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/environmental-impact/what-happens-when-electronics-reach-landfills-in-kollam/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 7,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/battery-recycling/ups-and-inverter-battery-disposal-in-thiruvananthapuram/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 8,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/recycling/laptop-recycling-in-infopark-kochi-reuse-buyback-or-scrap/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 12,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/recycling/laptop-recycling-in-kalamassery-kochi-reuse-buyback-or-scrap/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 10,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/laptop-disposal/laptop-resale-value-in-kalamassery-kochi-what-changes-the-price-fast/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 6,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/government-rules/forms-and-manifests-for-e-waste-pickup-in-kalamassery-kochi/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 6,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/battery-recycling/ups-and-inverter-battery-disposal-in-kakkanad-kochi/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 6,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/environmental-impact/precious-metal-recovery-from-e-waste-in-kottayam/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 6,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/government-rules/how-to-verify-a-kspcb-authorized-recycler-in-infopark-kochi/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 10,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/laptop-disposal/business-laptop-buyback-in-infopark-kochi-what-it-teams-should-expect/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 6,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/scrap-electronics/electronics-price-factors-in-kottayam-why-two-loads-get-different-rates/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 5,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/recycling/pickup-vs-drop-off-recycling-in-kozhikode-which-option-fits-better/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 8,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/environmental-impact/apartment-and-community-e-waste-drives-in-kakkanad-kochi/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 5,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/government-rules/how-disposal-mistakes-create-data-breach-risk-in-kakkanad-kochi/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 5,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/government-rules/forms-and-manifests-for-e-waste-pickup-in-kollam/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 5,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/disposal/corporate-e-waste-clearance-checklist-for-kottayam/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 8,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/environmental-impact/why-recycle-electronics-in-kottayam-the-local-impact/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 5,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/mobile-recycling/phone-buyback-in-thrippunithura-kochi-best-route-for-fast-local-quotes/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 5,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/disposal/corporate-e-waste-clearance-checklist-for-edappally-kochi/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 4,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/government-rules/certificate-of-destruction-for-audits-in-thiruvananthapuram/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 4,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/laptop-disposal/damaged-laptop-recycling-in-thrippunithura-kochi-what-still-has-value/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 4,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/data-destruction/certificate-of-destruction-in-kozhikode-what-auditors-expect-to-see/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 4,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/itad-process/nist-800-88-vs-dod-5220-22-m-which-standard-to-choose-in-kalamassery-kochi/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 4,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/recycling/battery-recycling-in-kalamassery-kochi-what-needs-separate-handling/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 4,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/data-destruction/server-drive-sanitization-in-edappally-kochi-for-itad-projects/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 7,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/environmental-impact/school-e-waste-drives-in-vyttila-kochi-planning-a-safer-collection-day/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 3,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/government-rules/bulk-consumer-e-waste-obligations-in-thrippunithura-kochi/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 3,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/government-rules/dpdp-act-and-retired-devices-in-vyttila-kochi-what-changes-for-disposal/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 4,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/data-destruction/nist-800-88-wiping-in-thiruvananthapuram-what-it-covers-and-what-it-does-not/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 3,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/battery-recycling/how-to-store-batteries-before-pickup-in-thrippunithura-kochi/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 3,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/laptop-disposal/employee-laptop-returns-and-disposal-workflow-in-kakkanad-kochi/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 3,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/mobile-recycling/same-day-mobile-pickup-in-vyttila-kochi-for-shops-and-offices/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 3,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/environmental-impact/what-happens-when-electronics-reach-landfills-in-kozhikode/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 3,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/government-rules/school-and-hospital-e-waste-compliance-in-kozhikode/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 5,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/laptop-disposal/laptop-resale-value-in-infopark-kochi-what-changes-the-price-fast/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 3,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/locations/kottayam/dpdp-act-compliance-kochi/",
+      "reason": "No dedicated DPDP Act compliance content exists yet",
+      "gscClicks": 0,
+      "gscImpressions": 3,
+      "suggestedNextStep": "Revisit once/if a dedicated page for this service type is built."
+    },
+    {
+      "source": "/locations/thrikkakara/air-conditioner-recycling-kochi/",
+      "reason": "No dedicated AC-recycling hub page exists yet",
+      "gscClicks": 0,
+      "gscImpressions": 2,
+      "suggestedNextStep": "Revisit once/if a dedicated page for this service type is built."
+    },
+    {
+      "source": "/blogs/recycling/how-to-run-an-office-electronics-recycling-drive-in-thrippunithura-kochi/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 4,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/environmental-impact/how-e-waste-recycling-reduces-carbon-footprint-in-edappally-kochi/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 2,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/mobile-recycling/secure-mobile-data-wipe-in-vyttila-kochi-before-buyback-or-recycling/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 2,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/corporate-itad/asset-recovery-and-remarketing-in-kakkanad-kochi-how-itad-recovers-budget/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 2,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/mobile-recycling/residential-phone-drop-off-in-infopark-kochi-what-to-bring-and-what-to-avoid/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 2,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/environmental-impact/why-recycle-electronics-in-infopark-kochi-the-local-impact/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 4,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/scrap-electronics/office-clearance-scrap-quotes-in-kollam-how-to-prepare-the-inventory/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 2,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/locations/muvattupuzha/dpdp-act-compliance-kochi/",
+      "reason": "No dedicated DPDP Act compliance content exists yet",
+      "gscClicks": 0,
+      "gscImpressions": 2,
+      "suggestedNextStep": "Revisit once/if a dedicated page for this service type is built."
+    },
+    {
+      "source": "/blogs/data-destruction/server-drive-sanitization-in-kottayam-for-itad-projects/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 2,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/environmental-impact/school-e-waste-drives-in-edappally-kochi-planning-a-safer-collection-day/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 2,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/government-rules/how-to-choose-an-authorized-e-waste-vendor-in-kalamassery-kochi/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 3,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/locations/fort-kochi/air-conditioner-recycling-kochi/",
+      "reason": "No dedicated AC-recycling hub page exists yet",
+      "gscClicks": 0,
+      "gscImpressions": 2,
+      "suggestedNextStep": "Revisit once/if a dedicated page for this service type is built."
+    },
+    {
+      "source": "/blogs/data-destruction/server-drive-sanitization-in-kollam-for-itad-projects/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 3,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/corporate-itad/data-centre-refresh-and-retirement-planning-in-kottayam/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 2,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/scrap-electronics/working-vs-broken-device-value-in-kollam-what-gets-a-better-quote/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 2,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/environmental-impact/precious-metal-recovery-from-e-waste-in-edappally-kochi/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 2,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/laptop-disposal/macbook-buyback-in-kottayam-when-to-resell-vs-recycle/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 2,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/locations/aluva/air-conditioner-recycling-kochi/",
+      "reason": "No dedicated AC-recycling hub page exists yet",
+      "gscClicks": 0,
+      "gscImpressions": 1,
+      "suggestedNextStep": "Revisit once/if a dedicated page for this service type is built."
+    },
+    {
+      "source": "/locations/fort-kochi/dpdp-act-compliance-kochi/",
+      "reason": "No dedicated DPDP Act compliance content exists yet",
+      "gscClicks": 0,
+      "gscImpressions": 1,
+      "suggestedNextStep": "Revisit once/if a dedicated page for this service type is built."
+    },
+    {
+      "source": "/locations/thrissur/air-conditioner-recycling-kochi/",
+      "reason": "No dedicated AC-recycling hub page exists yet",
+      "gscClicks": 0,
+      "gscImpressions": 1,
+      "suggestedNextStep": "Revisit once/if a dedicated page for this service type is built."
+    },
+    {
+      "source": "/blogs/environmental-impact/school-e-waste-drives-in-kalamassery-kochi-planning-a-safer-collection-day/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 1,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/locations/north-paravur/air-conditioner-recycling-kochi/",
+      "reason": "No dedicated AC-recycling hub page exists yet",
+      "gscClicks": 0,
+      "gscImpressions": 1,
+      "suggestedNextStep": "Revisit once/if a dedicated page for this service type is built."
+    },
+    {
+      "source": "/locations/edappally/dpdp-act-compliance-kochi/",
+      "reason": "No dedicated DPDP Act compliance content exists yet",
+      "gscClicks": 0,
+      "gscImpressions": 1,
+      "suggestedNextStep": "Revisit once/if a dedicated page for this service type is built."
+    },
+    {
+      "source": "/locations/palakkad/air-conditioner-recycling-kochi/",
+      "reason": "No dedicated AC-recycling hub page exists yet",
+      "gscClicks": 0,
+      "gscImpressions": 1,
+      "suggestedNextStep": "Revisit once/if a dedicated page for this service type is built."
+    },
+    {
+      "source": "/locations/vyttila/air-conditioner-recycling-kochi/",
+      "reason": "No dedicated AC-recycling hub page exists yet",
+      "gscClicks": 0,
+      "gscImpressions": 1,
+      "suggestedNextStep": "Revisit once/if a dedicated page for this service type is built."
+    },
+    {
+      "source": "/blogs/laptop-disposal/macbook-buyback-in-kollam-when-to-resell-vs-recycle/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 1,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/locations/malappuram/air-conditioner-recycling-kochi/",
+      "reason": "No dedicated AC-recycling hub page exists yet",
+      "gscClicks": 0,
+      "gscImpressions": 1,
+      "suggestedNextStep": "Revisit once/if a dedicated page for this service type is built."
+    },
+    {
+      "source": "/locations/infopark-kochi/dpdp-act-compliance-kochi/",
+      "reason": "No dedicated DPDP Act compliance content exists yet",
+      "gscClicks": 0,
+      "gscImpressions": 1,
+      "suggestedNextStep": "Revisit once/if a dedicated page for this service type is built."
+    },
+    {
+      "source": "/blogs/environmental-impact/school-e-waste-drives-in-kottayam-planning-a-safer-collection-day/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 1,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/laptop-disposal/secure-laptop-disposal-in-kottayam-for-teams-handling-client-data/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 1,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/government-rules/how-to-verify-a-kspcb-authorized-recycler-in-thrippunithura-kochi/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 1,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/blogs/environmental-impact/circular-economy-and-e-waste-in-vyttila-kochi-what-recovery-actually-looks-like/",
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "gscClicks": 0,
+      "gscImpressions": 1,
+      "suggestedNextStep": "Re-check against each new /blog/{slug}/ post at the time it is built for a possible content overlap and redirect."
+    },
+    {
+      "source": "/locations/thiruvananthapuram/dpdp-act-compliance-kochi/",
+      "reason": "No dedicated DPDP Act compliance content exists yet",
+      "gscClicks": 0,
+      "gscImpressions": 1,
+      "suggestedNextStep": "Revisit once/if a dedicated page for this service type is built."
+    }
+  ]
+}

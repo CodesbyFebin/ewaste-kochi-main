@@ -1,0 +1,118 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import LangSwitch from "../../../components/LangSwitch.astro";
+import { SITE_URL } from "../../../data/site";
+import { getHreflang } from "../../../data/routes";
+
+const title = "കൊച്ചിയിൽ ഡാറ്റ നശിപ്പിക്കൽ സേവനം | സുരക്ഷിത വൈപ്പിംഗ് & സർട്ടിഫിക്കറ്റ്";
+const description =
+  "കൊച്ചിയിൽ ലാപ്ടോപ്പ്, സെർവർ, ഡ്രൈവുകൾക്കുള്ള സാക്ഷ്യപ്പെടുത്തിയ ഡാറ്റ നശിപ്പിക്കൽ. ആവശ്യാനുസരണം സർട്ടിഫിക്കറ്റ് ലഭ്യം.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "ഹോം", path: "/" },
+  { name: "മലയാളം", path: "/ml/" },
+  { name: "ഡാറ്റ നശിപ്പിക്കൽ", path: "/ml/data-destruction/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Data destruction",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: "Kochi, Ernakulam, Kerala",
+    url: `${SITE_URL}/ml/data-destruction/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/ml/data-destruction/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    inLanguage: "ml-IN",
+  },
+];
+
+const faqItems = [
+  {
+    q: "ഡാറ്റ നശിപ്പിച്ചതിന് സർട്ടിഫിക്കറ്റ് ലഭിക്കുമോ?",
+    a: "അതെ, ആവശ്യാനുസരണം — ബിസിനസുകൾക്ക് അവരുടെ രേഖകൾക്കായി ഇത് ഉപകാരപ്രദമാണ്.",
+  },
+  {
+    q: "വൈപ്പിംഗും ശ്രെഡിംഗും തമ്മിലുള്ള വ്യത്യാസം എന്താണ്?",
+    a: "വൈപ്പിംഗ് പ്രവർത്തിക്കുന്ന ഡ്രൈവിലെ ഡാറ്റ ഓവർറൈറ്റ് ചെയ്യുന്നു, ഡ്രൈവ് വീണ്ടും ഉപയോഗിക്കാം. ശ്രെഡിംഗ് ഡ്രൈവ് ശാരീരികമായി നശിപ്പിക്കുന്നു, കേടായ ഡ്രൈവുകൾക്കോ നിർബന്ധിത നയങ്ങൾക്കോ ഉപയോഗിക്കുന്നു.",
+  },
+  {
+    q: "ഫോർമാറ്റ് ചെയ്താൽ മതിയോ?",
+    a: "പോരാ. സാധാരണ ഫോർമാറ്റിംഗ് ഡാറ്റ വിശ്വസനീയമായി നീക്കം ചെയ്യില്ല — സാധാരണ ടൂളുകൾ ഉപയോഗിച്ച് വീണ്ടെടുക്കാൻ കഴിയും.",
+  },
+  {
+    q: "സെർവറുകളിൽ നിന്നും ഡാറ്റ നശിപ്പിക്കാമോ?",
+    a: "അതെ, സെർവർ ഡ്രൈവുകൾ, ഡെസ്ക്ടോപ്പ് ഡ്രൈവുകൾ, ലാപ്ടോപ്പ് ഡ്രൈവുകൾ, മൊബൈൽ സ്റ്റോറേജ് എന്നിവയെല്ലാം ഉൾപ്പെടുന്നു.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/ml/data-destruction/" jsonLd={jsonLd} lang="ml-IN" hreflang={getHreflang("/ml/data-destruction/")}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <LangSwitch current="ml" otherPath="/data-destruction/" />
+  <h1>കൊച്ചിയിൽ ഡാറ്റ നശിപ്പിക്കൽ സേവനം</h1>
+  <p class="lede">
+    സ്റ്റോറേജുള്ള ഏതു ഉപകരണവും റീസൈക്കിൾ ചെയ്യുന്നതിനോ വിൽക്കുന്നതിനോ മുൻപ്,
+    അതിലെ ഡാറ്റ വീണ്ടെടുക്കാൻ കഴിയാത്ത വിധം നശിപ്പിക്കുന്നു എന്ന് ഞങ്ങൾ
+    ഉറപ്പാക്കുന്നു. ബിസിനസുകൾക്ക് സർട്ടിഫിക്കറ്റ് ലഭ്യമാണ്.
+  </p>
+
+  <CtaBar
+    whatsappMessage="നമസ്കാരം, ഒരു ലാപ്ടോപ്പ്/സെർവറിന്റെ ഡാറ്റ നശിപ്പിക്കണം."
+    pickupHref="/ml/pickup/"
+    labels={{ call: "വിളിക്കുക", whatsapp: "വാട്സ്ആപ്പ് ചെയ്യുക", pickup: "പിക്കപ്പ് ബുക്ക് ചെയ്യുക" }}
+  />
+
+  <section>
+    <h2>ഉപയോഗിക്കുന്ന രീതികൾ</h2>
+    <p>
+      <strong>വൈപ്പിംഗ്</strong> — പ്രവർത്തിക്കുന്ന ഡ്രൈവുകളിലെ ഡാറ്റ
+      ഓവർറൈറ്റ് ചെയ്യുന്നു.<br />
+      <strong>ഡീഗോസിംഗ്</strong> — മാഗ്നറ്റിക് സ്റ്റോറേജ് ഡീമാഗ്നറ്റൈസ്
+      ചെയ്യുന്നു.<br />
+      <strong>ശാരീരിക ശ്രെഡിംഗ്</strong> — കേടായതോ പരാജയപ്പെട്ടതോ ആയ
+      ഡ്രൈവുകൾക്ക്; <a href="/hard-drive-shredding/">hard drive
+      shredding</a> സേവനം കാണുക.
+    </p>
+  </section>
+
+  <section>
+    <h2>പ്രോസസ്സ്</h2>
+    <ol class="process-list">
+      <li><strong>പിക്കപ്പ് അല്ലെങ്കിൽ ഡ്രോപ്പ്-ഓഫ്</strong> ഷെഡ്യൂൾ ചെയ്യുക.</li>
+      <li><strong>രീതി തിരഞ്ഞെടുക്കൽ</strong> — ഡ്രൈവിന്റെ അവസ്ഥ അനുസരിച്ച്.</li>
+      <li><strong>നശിപ്പിക്കൽ/വൈപ്പിംഗ്</strong> നടത്തുന്നു.</li>
+      <li><strong>സർട്ടിഫിക്കറ്റ്</strong> ആവശ്യാനുസരണം നൽകുന്നു.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>അനുസരണം (Compliance)</h2>
+    <p>
+      ഞങ്ങളുടെ ഡാറ്റ നശിപ്പിക്കൽ രീതികൾ NIST 800-88 മാർഗ്ഗനിർദ്ദേശങ്ങളോട്
+      യോജിച്ചതാണ്. വിശദമായ രേഖകൾ ആവശ്യാനുസരണം ലഭ്യമാണ് —
+      <a href="/ml/contact/">ബന്ധപ്പെടുക</a>.
+    </p>
+  </section>
+
+  <Faq items={faqItems} heading="പതിവ് ചോദ്യങ്ങൾ" />
+
+  <p class="updated">അവസാനം പുതുക്കിയത്: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .process-list { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 1.25rem; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

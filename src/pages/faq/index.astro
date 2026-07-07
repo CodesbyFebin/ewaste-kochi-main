@@ -1,0 +1,86 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import Faq from "../../components/Faq.astro";
+import { SITE_URL } from "../../data/site";
+
+const title = "FAQ | Ewaste Kochi";
+const description =
+  "Answers to common questions about e-waste pickup, pricing, data destruction, business services, and coverage areas for Ewaste Kochi.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "FAQ", path: "/faq/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/faq/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Is pickup really free?",
+    a: "Yes, for qualifying quantities across our service area. Message us your items and location and we'll confirm before you schedule anything.",
+  },
+  {
+    q: "How do I get a price for selling my device?",
+    a: "Message us the device type, age, and condition over WhatsApp for a preliminary quote, then we confirm the final price after a quick inspection at pickup. See our Sell Electronics page for condition guidance.",
+  },
+  {
+    q: "Is my data safe when you recycle or resell a device?",
+    a: "Any device with storage goes through data wiping, degaussing, or physical shredding before recycling or resale, depending on the device and your requirements. See our Data Destruction page.",
+  },
+  {
+    q: "Do you provide certificates for businesses?",
+    a: "Yes — recycling certificates and data destruction certificates are available on request, useful for internal compliance records.",
+  },
+  {
+    q: "What areas do you cover?",
+    a: "Kochi and most of Ernakulam district, with wider coverage across Kerala. See the Locations page for the full list, or just message us your address.",
+  },
+  {
+    q: "Can businesses schedule bulk or recurring pickups?",
+    a: "Yes, through our ITAD service for larger IT asset disposal projects, or as a simple recurring pickup arrangement for regular office turnover.",
+  },
+  {
+    q: "What electronics do you NOT accept?",
+    a: "If you're unsure whether an item qualifies, send us a photo over WhatsApp before scheduling and we'll confirm.",
+  },
+  {
+    q: "How do I contact you?",
+    a: "WhatsApp and phone are the fastest ways to reach us — see our Contact page for details and hours.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/faq/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Frequently Asked Questions</h1>
+  <p class="lede">
+    General questions about how we work. For questions specific to a
+    particular service, check that service's own page — each has its own
+    detailed FAQ section too, including
+    <a href="/recycling/">where to recycle old electronics</a> and
+    <a href="/battery-recycling/">where to recycle batteries</a>.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I have a question that's not covered in your FAQ." />
+
+  <Faq items={faqItems} heading="General Questions" />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

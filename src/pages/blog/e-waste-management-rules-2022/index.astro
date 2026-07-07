@@ -1,0 +1,174 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "E-Waste Management Rules 2022: A Simple Guide for Businesses";
+const description =
+  "A plain-language overview of India's E-Waste (Management) Rules, 2022 — why they matter, who they apply to, and what businesses should know about disposal.";
+const datePublished = "2026-07-07";
+const dateModified = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Management Rules 2022", path: "/blog/e-waste-management-rules-2022/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/e-waste-management-rules-2022/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/e-waste-management-rules-2022/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Do these rules apply to households, or just businesses?",
+    a: "The formal compliance obligations (registration, EPR targets, reporting) sit mainly with producers, recyclers, and dismantlers. Households and offices disposing of electronics aren't directly regulated the same way, but choosing a compliant recycler still matters.",
+  },
+  {
+    q: "What's the difference between formal and informal disposal?",
+    a: "Formal disposal goes through registered, authorized recyclers who follow required handling and reporting processes. Informal disposal — unregistered scrap dealers — typically doesn't have the same environmental safeguards or documentation.",
+  },
+  {
+    q: "Do I need documentation for business e-waste disposal?",
+    a: "Many businesses find it useful to keep records of how IT assets and e-waste were disposed of, for internal audits or client assurance. See our data destruction and recycling certificate options if you need this.",
+  },
+  {
+    q: "Where can I read the actual rules?",
+    a: "The Ministry of Environment, Forest and Climate Change and the Central Pollution Control Board publish official rule text and guidance — check their resources directly for anything you need to rely on formally.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/e-waste-management-rules-2022/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Management Rules 2022: A Simple Guide</h1>
+  <p class="lede">
+    India's e-waste regulations were updated in 2022, replacing the earlier
+    2016 rules with a stronger framework centered on Extended Producer
+    Responsibility. Here's what that means in plain language, without the
+    legal jargon.
+  </p>
+
+  <p class="disclaimer">
+    This page is general educational information, not legal advice.
+    Businesses should verify current requirements with official sources
+    (Ministry of Environment, Forest and Climate Change; Central Pollution
+    Control Board) or a qualified advisor.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about e-waste compliance for my business." />
+
+  <section>
+    <h2>Why the rules were updated</h2>
+    <p>
+      The updated framework builds on the earlier e-waste rules with a
+      stronger emphasis on <a href="/blog/what-is-epr-in-e-waste/">Extended
+      Producer Responsibility (EPR)</a> — the idea that manufacturers,
+      brand owners, and importers of electronics share responsibility for
+      what happens when their products are eventually discarded, rather
+      than leaving that entirely to waste management systems.
+    </p>
+  </section>
+
+  <section>
+    <h2>What the rules cover, broadly</h2>
+    <p>
+      The framework sets out registration requirements for producers,
+      recyclers, refurbishers, and dismantlers; collection and recycling
+      obligations tied to what producers put into the market; and
+      compliance monitoring through the Central Pollution Control Board and
+      state-level boards like the Kerala State Pollution Control Board.
+    </p>
+  </section>
+
+  <section>
+    <h2>Responsibilities, in plain language</h2>
+    <p>
+      Producers are expected to ensure their products are collected and
+      recycled responsibly at end of life. Recyclers and dismantlers need
+      to be registered and follow required processing standards. The
+      overall goal is to move more e-waste through documented, compliant
+      channels instead of informal ones.
+    </p>
+  </section>
+
+  <section>
+    <h2>Formal vs. informal disposal</h2>
+    <p>
+      Formal disposal means working with registered, authorized recyclers
+      who follow required handling and reporting standards. Informal
+      disposal — unregistered local scrap dealers — usually skips these
+      safeguards entirely, which is part of why the regulatory framework
+      exists in the first place.
+    </p>
+  </section>
+
+  <section>
+    <h2>Business documentation basics</h2>
+    <p>
+      For businesses, keeping a record of how IT assets and e-waste were
+      disposed of — what was collected, how data was handled, and where
+      items ultimately went — is good practice for internal audits and
+      client assurance, even where it's not always a strict legal
+      requirement. See our <a href="/data-destruction-certificate-sample/">
+      data destruction certificate</a> page for what that kind of
+      documentation typically includes.
+    </p>
+  </section>
+
+  <section>
+    <h2>Safe disposal and data handling</h2>
+    <p>
+      Separately from regulatory compliance, any device with storage
+      should have its data properly wiped or destroyed before disposal —
+      see <a href="/data-destruction/">data destruction</a> for methods.
+      This matters for personal privacy and business data security
+      regardless of which specific rules apply to your situation.
+    </p>
+  </section>
+
+  <section>
+    <h2>For businesses managing disposal at scale</h2>
+    <p>
+      Our <a href="/itad/">ITAD service</a> is built around this kind of
+      documented, compliant disposal process for offices and IT teams. See
+      our <a href="/trust/">trust page</a> for how we approach compliance,
+      or <a href="/certifications/">certifications</a> for what to ask
+      about.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .disclaimer { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; border-left: 3px solid var(--color-primary); }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

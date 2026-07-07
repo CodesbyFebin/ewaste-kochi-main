@@ -1,0 +1,152 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import Faq from "../../components/Faq.astro";
+import LangSwitch from "../../components/LangSwitch.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../data/site";
+import { getHreflang } from "../../data/routes";
+
+const title = "Data Destruction Services in Kochi | Secure Wiping & Certificate";
+const description =
+  "Certified data destruction in Kochi — wiping, degaussing, and hard drive shredding for laptops, servers, and drives. Certificates available on request.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Data Destruction", path: "/data-destruction/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Data destruction",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: "Kochi, Ernakulam, Kerala",
+    url: `${SITE_URL}/data-destruction/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/data-destruction/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Do you provide a certificate of data destruction?",
+    a: "Yes, on request — useful for businesses that need to document compliant disposal for internal records or client assurance.",
+  },
+  {
+    q: "What's the difference between wiping and shredding?",
+    a: "Wiping overwrites data on a drive that still works, so the drive can be reused or resold. Shredding physically destroys the drive, used when a drive is failed, damaged, or when policy requires physical destruction regardless of condition. See our hard drive shredding page for that method specifically.",
+  },
+  {
+    q: "Do you follow NIST 800-88 style wiping standards?",
+    a: "Our wiping process is aligned with NIST 800-88 media sanitization guidance for the methods we use. Ask us for specifics relevant to your compliance needs.",
+  },
+  {
+    q: "Can you destroy data from servers, not just laptops?",
+    a: "Yes — server drives, desktop drives, laptop drives, and mobile device storage are all covered. Large server or rack decommissioning is typically handled alongside our ITAD service.",
+  },
+  {
+    q: "Is formatting a laptop enough before disposal?",
+    a: "No. A standard format doesn't reliably remove data — it can often be recovered with common tools. Proper wiping or physical destruction is needed for anything containing sensitive personal or business data.",
+  },
+  {
+    q: "Can companies request chain-of-custody documentation?",
+    a: "Yes, for bulk or corporate jobs we can provide handover and destruction records tracking custody of devices from pickup through processing.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/data-destruction/" jsonLd={jsonLd} hreflang={getHreflang("/data-destruction/")}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <LangSwitch current="en" otherPath="/ml/data-destruction/" />
+  <h1>Data Destruction Services in Kochi</h1>
+  <p class="lede">
+    Before any device with storage is recycled or resold, we make sure the
+    data on it is gone — not just deleted, but destroyed in a way that can't
+    be recovered. Certificates are available for businesses that need to
+    document this.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I need data destruction for a laptop/server before disposal." />
+
+  <section>
+    <h2>Methods we use</h2>
+    <p>
+      <strong>Wiping</strong> — overwriting data on drives that are still
+      functional, so the drive can be safely reused or resold.<br />
+      <strong>Degaussing</strong> — demagnetizing magnetic storage media,
+      rendering data unreadable; see our
+      <a href="/services/hard-drive-degaussing-kochi/">hard drive
+      degaussing</a> page for how this differs from wiping and
+      shredding.<br />
+      <strong>Physical shredding</strong> — for drives that are damaged,
+      failed, or where policy requires physical destruction; see our
+      <a href="/hard-drive-shredding/">hard drive shredding</a> page for
+      that process specifically.
+    </p>
+  </section>
+
+  <section>
+    <h2>Who needs this</h2>
+    <p>
+      Anyone disposing of or selling a device that held personal accounts,
+      photos, or documents; offices decommissioning laptops, desktops, or
+      servers; and any business with a regulatory or client obligation to
+      prove secure disposal. If you're managing a larger office
+      decommission alongside data destruction, our <a href="/itad/">ITAD
+      service</a> bundles both.
+    </p>
+  </section>
+
+  <section>
+    <h2>Process</h2>
+    <ol class="process-list">
+      <li><strong>Pickup or drop-off</strong> — schedule collection of the device or drive.</li>
+      <li><strong>Method selection</strong> — wiping, degaussing, or shredding, based on drive condition and your requirements.</li>
+      <li><strong>Destruction/wiping performed</strong> by our team.</li>
+      <li><strong>Certificate issued</strong> on request, documenting the method and device details.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Compliance</h2>
+    <p>
+      Our data destruction methods are aligned with NIST 800-88 media
+      sanitization guidance, and recycling of the resulting materials follows
+      Pollution Control Board-authorized processes. Detailed documentation is
+      available on request via our <a href="/contact/">contact page</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Local coverage</h2>
+    <p>
+      Available across Kochi and Ernakulam district, including pickup from
+      Kakkanad, Infopark, Edappally, and other business hubs. See the full
+      <a href="/locations/">locations directory</a>.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .process-list { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

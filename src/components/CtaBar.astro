@@ -1,0 +1,70 @@
+---
+import { telLink, whatsappLink } from "../data/site";
+
+interface Labels {
+  call: string;
+  whatsapp: string;
+  pickup: string;
+}
+
+interface Props {
+  whatsappMessage?: string;
+  compact?: boolean;
+  pickupHref?: string;
+  labels?: Labels;
+}
+
+const {
+  whatsappMessage = "Hi, I'd like a free e-waste pickup quote in Kochi.",
+  compact = false,
+  pickupHref = "/pickup/",
+  labels = { call: "Call Now", whatsapp: "WhatsApp Us", pickup: "Book Free Pickup" },
+} = Astro.props;
+---
+
+<div class:list={["cta-bar", { compact }]}>
+  <a class="cta-btn cta-call" href={telLink()}>{labels.call}</a>
+  <a class="cta-btn cta-whatsapp" href={whatsappLink(whatsappMessage)} target="_blank" rel="noopener">
+    {labels.whatsapp}
+  </a>
+  <a class="cta-btn cta-pickup" href={pickupHref}>{labels.pickup}</a>
+</div>
+
+<style>
+  .cta-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-block: 1.5rem;
+  }
+  .cta-bar.compact {
+    margin-block: 0.75rem;
+  }
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+    min-height: 44px;
+  }
+  .cta-call {
+    background: var(--color-primary);
+    color: #fff;
+  }
+  .cta-whatsapp {
+    background: #25d366;
+    color: #063d1e;
+  }
+  .cta-pickup {
+    background: transparent;
+    color: var(--color-primary);
+    border: 1.5px solid var(--color-primary);
+  }
+  .cta-call:hover, .cta-whatsapp:hover, .cta-pickup:hover {
+    filter: brightness(0.95);
+  }
+</style>

@@ -1,0 +1,23 @@
+---
+interface Props {
+  current: "en" | "ml";
+  otherPath: string;
+}
+
+const { current, otherPath } = Astro.props;
+const label = current === "en" ? "മലയാളത്തിൽ വായിക്കുക" : "Read in English";
+---
+
+<p class="lang-switch">
+  <a href={otherPath}>{label}</a>
+</p>
+
+<style>
+  .lang-switch {
+    font-size: 0.85rem;
+    margin: 0 0 1rem;
+  }
+  .lang-switch a {
+    text-decoration: underline;
+  }
+</style>

@@ -1,0 +1,29 @@
+node_modules/
+dist/
+.astro/
+.vercel
+.DS_Store
+
+# Local tool state (not project source, not shared config)
+.claude/
+.kilocode/
+
+# Reference/downloaded material that is not part of the actual site source.
+# Excluded deliberately, not accidentally - see reports/phase-2k-git-safety-fresh-staging-report.md.
+# - SWARM/: debris from an unverified, never-tested "Business OS" pitch (buggy code,
+#   pasted into a chat session by a different tool); explicitly out of scope per this
+#   project's rules, and not something to preserve in this repo's history.
+# - ewastekochi-v3-chatbot.zip: contains a mass pSEO pillar-page generator (10
+#   template-swapped city/service pages + a script to make more) - the exact
+#   doorway-page pattern this project has repeatedly rejected.
+# - ewastekochi-amp.html: contains unverified claims ("most trusted," "Government
+#   authorized" stated as fact) that don't meet this project's anti-fabrication rules.
+# - Homepage Hero image.png: the source file for a hero graphic already reviewed and
+#   rejected for the same reason (fabricated rating, named client logos).
+# - GSC export zips: one-time data inputs already fully extracted into data/*.json;
+#   the useful content is in version control via those files, not the raw zips.
+SWARM/
+ewastekochi-v3-chatbot.zip
+ewastekochi-amp.html
+Homepage Hero image.png
+ewastekochi.com-*.zip

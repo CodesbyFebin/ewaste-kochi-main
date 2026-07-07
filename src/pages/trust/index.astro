@@ -1,0 +1,105 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import Faq from "../../components/Faq.astro";
+import { SITE_URL } from "../../data/site";
+
+const title = "Trust & Compliance | Ewaste Kochi";
+const description =
+  "How Ewaste Kochi handles compliance, certifications, and data destruction proof — and how to request documentation for your records.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Trust", path: "/trust/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/trust/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "What compliance standards does Ewaste Kochi follow?",
+    a: "Our recycling processes are aligned with ISO 14001:2015 environmental management practices, and we operate under Pollution Control Board authorization for e-waste handling. See our Certifications page for more detail.",
+  },
+  {
+    q: "Can I get proof of compliance for my own records?",
+    a: "Yes — recycling certificates and data destruction certificates are available on request. Contact us with the details of your pickup and we'll arrange the relevant documentation.",
+  },
+  {
+    q: "How is data destroyed and can you prove it?",
+    a: "See our Data Destruction Certificate Sample page for exactly what a destruction certificate includes, and our Data Destruction service page for the methods used.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/trust/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Trust & Compliance</h1>
+  <p class="lede">
+    This page explains how we approach compliance and documentation, and where
+    to go for specifics — rather than making broad claims without backing
+    them up.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to request compliance documentation." />
+
+  <section>
+    <h2>Our compliance approach</h2>
+    <p>
+      Our recycling processes are aligned with ISO 14001:2015 environmental
+      management practices, and we operate under Pollution Control Board
+      authorization for e-waste handling in Kerala. Full details of our
+      current certifications are on the <a href="/certifications/">
+      Certifications page</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Data destruction proof</h2>
+    <p>
+      Any device we process for data destruction can come with a certificate
+      documenting what was done. See <a href="/data-destruction-certificate-sample/">
+      what's included in that certificate</a>, and our
+      <a href="/data-destruction/">data destruction service page</a> for the
+      methods themselves.
+    </p>
+  </section>
+
+  <section>
+    <h2>Requesting documentation</h2>
+    <p>
+      If you need certification documents, authorization details, or a
+      destruction certificate for a specific job, contact us directly —
+      see our <a href="/contact/">contact page</a> — and we'll arrange the
+      relevant paperwork for your records.
+    </p>
+  </section>
+
+  <section>
+    <h2>Understanding the regulatory background</h2>
+    <p>
+      For a plain-language overview of the rules our industry operates
+      under, see <a href="/blog/e-waste-management-rules-2022/">E-Waste
+      Management Rules 2022: A Simple Guide</a>.
+    </p>
+  </section>
+
+  <Faq items={faqItems} />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

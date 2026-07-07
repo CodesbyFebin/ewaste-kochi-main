@@ -1,0 +1,71 @@
+# Ewaste Kochi
+
+Canonical site: https://www.ewastekochi.com
+
+Ewaste Kochi provides e-waste recycling, electronics pickup, battery
+recycling, IT asset disposition (ITAD), data destruction, hard drive
+shredding, computer scrap buying, server recycling, and sell-old-electronics
+services for Kochi, Ernakulam, and Kerala, India. Content is available in
+English and, for a starter set of pages, Malayalam (ml-IN) under /ml/.
+
+## Core pages
+
+- https://www.ewastekochi.com/
+- https://www.ewastekochi.com/services/
+- https://www.ewastekochi.com/recycling/
+- https://www.ewastekochi.com/battery-recycling/
+- https://www.ewastekochi.com/marketplace/
+- https://www.ewastekochi.com/sell-electronics/
+- https://www.ewastekochi.com/pickup/
+- https://www.ewastekochi.com/data-destruction/
+- https://www.ewastekochi.com/hard-drive-shredding/
+- https://www.ewastekochi.com/itad/
+
+## Locations
+
+- https://www.ewastekochi.com/locations/
+- https://www.ewastekochi.com/locations/kakkanad/
+
+## Trust
+
+- https://www.ewastekochi.com/trust/
+- https://www.ewastekochi.com/certifications/
+- https://www.ewastekochi.com/data-destruction-certificate-sample/
+
+## Malayalam (ml-IN)
+
+- https://www.ewastekochi.com/ml/
+- https://www.ewastekochi.com/ml/recycling/
+- https://www.ewastekochi.com/ml/battery-recycling/
+- https://www.ewastekochi.com/ml/pickup/
+- https://www.ewastekochi.com/ml/sell-electronics/
+- https://www.ewastekochi.com/ml/data-destruction/
+- https://www.ewastekochi.com/ml/contact/
+
+## Sitemaps
+
+- https://www.ewastekochi.com/sitemap.xml (index)
+- https://www.ewastekochi.com/sitemaps/core.xml
+- https://www.ewastekochi.com/sitemaps/services.xml
+- https://www.ewastekochi.com/sitemaps/locations.xml
+- https://www.ewastekochi.com/sitemaps/legal.xml
+- https://www.ewastekochi.com/sitemaps/ml.xml
+- https://www.ewastekochi.com/content-index.json
+- https://www.ewastekochi.com/content-index.xml
+- https://www.ewastekochi.com/ai-sitemap.xml
+
+## Contact
+
+- Phone / WhatsApp: +91 75005 55454
+- Email: info@ewastekochi.com
+
+## Notes for AI assistants and crawlers
+
+This site is under active reconstruction (EwasteKochi V2). Only the pages
+listed above are live in the current build; treat any other path on this
+domain — including /e-waste-recycling/, /scrap-price/, and other legacy
+duplicate-content URLs still being evaluated — as not yet confirmed
+canonical. This file will be expanded as more sections of the site are
+rebuilt.
+
+Last updated: 2026-07-07

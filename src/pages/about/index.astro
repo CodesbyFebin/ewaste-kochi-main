@@ -1,0 +1,90 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import { BUSINESS, SITE_URL } from "../../data/site";
+
+const title = "About Ewaste Kochi | E-Waste Recycling & ITAD in Kerala";
+const description =
+  "Ewaste Kochi collects, recycles, and securely destroys data on old electronics across Kochi and Kerala, serving households, offices, and IT parks.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "About", path: "/about/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/about/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+---
+
+<Layout title={title} description={description} path="/about/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>About Ewaste Kochi</h1>
+  <p class="lede">
+    We're a Kochi-based e-waste recycling and IT asset disposition service,
+    working with households, offices, and IT parks across Ernakulam district
+    and wider Kerala.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about Ewaste Kochi's services." />
+
+  <section>
+    <h2>What we do</h2>
+    <p>
+      We collect old electronics and IT equipment directly from homes and
+      offices, then route them to the right outcome — recycling, resale
+      through our <a href="/marketplace/">marketplace</a>, or secure
+      <a href="/data-destruction/">data destruction</a> — depending on the
+      device and what you need. For businesses, our <a href="/itad/">ITAD
+      service</a> handles larger decommissioning projects with inventory and
+      compliance reporting.
+    </p>
+  </section>
+
+  <section>
+    <h2>Why doorstep collection</h2>
+    <p>
+      Most people and offices don't have time to find and travel to a
+      drop-off point for old electronics, so we built the service around
+      doorstep pickup instead — you tell us what you have, we come to you.
+    </p>
+  </section>
+
+  <section>
+    <h2>Compliance</h2>
+    <p>
+      Our recycling and data destruction processes follow ISO
+      14001:2015-aligned environmental management practices, and we operate
+      under Pollution Control Board authorization for e-waste handling.
+      Certification documents are available on request — see our
+      <a href="/contact/">contact page</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Where we operate</h2>
+    <p>
+      Our base is in {BUSINESS.address.addressLocality}, and we run pickups
+      across Kakkanad, Edappally, Aluva, Vyttila, Infopark, and 25+ other
+      neighborhoods in Kochi and Ernakulam district, with wider service
+      across Kerala. See the full <a href="/locations/">locations
+      directory</a>.
+    </p>
+  </section>
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

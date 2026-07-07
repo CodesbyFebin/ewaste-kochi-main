@@ -1,0 +1,160 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "E-Waste Examples: Common Electronic Items You Should Recycle";
+const description =
+  "A practical list of common e-waste items — computers, phones, batteries, office electronics, cables, and more — and which ones need extra care before recycling.";
+const datePublished = "2026-07-07";
+const dateModified = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Examples", path: "/blog/e-waste-examples/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/e-waste-examples/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/e-waste-examples/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Do small items like chargers and cables really count?",
+    a: "Yes — they're often overlooked, but cables, chargers, and small accessories are e-waste and shouldn't go in general trash.",
+  },
+  {
+    q: "What if I'm not sure whether something qualifies?",
+    a: "Send us a photo over WhatsApp and we'll confirm before you schedule a pickup.",
+  },
+  {
+    q: "Do all of these need data wiping?",
+    a: "Only devices with storage — computers, laptops, phones, tablets, and some office equipment like printers with internal memory. Cables, basic peripherals, and most appliances don't hold data.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/e-waste-examples/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Examples: What Actually Counts</h1>
+  <p class="lede">
+    E-waste covers more than just old computers. Here's a practical
+    category-by-category list of common items, plus which ones need extra
+    care — data wiping, battery safety — before they're recycled.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to check what items you can collect." />
+
+  <section>
+    <h2>Computers and laptops</h2>
+    <p>
+      Desktops, laptops, monitors, keyboards, mice, and docking stations.
+      These almost always have storage, so <a href="/data-destruction/">data
+      wiping</a> matters before they're recycled or resold. If you're
+      selling rather than recycling, see
+      <a href="/computer-scrap-buyers-kochi/">computer scrap buyers</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Mobile phones and tablets</h2>
+    <p>
+      Smartphones, basic phones, and tablets — all carry personal data and
+      a battery, so both data wiping and battery-safe handling apply.
+    </p>
+  </section>
+
+  <section>
+    <h2>Batteries and UPS units</h2>
+    <p>
+      UPS batteries, inverter batteries, laptop and phone batteries, and
+      power banks need separate handling from general e-waste — see
+      <a href="/battery-recycling/">battery recycling</a> for why, and what
+      we accept.
+    </p>
+  </section>
+
+  <section>
+    <h2>Office electronics</h2>
+    <p>
+      Printers, scanners, routers, networking switches, and servers.
+      Larger volumes or server-specific hardware are usually better
+      handled through <a href="/itad/">ITAD</a> or dedicated
+      <a href="/server-recycling-kochi/">server recycling</a> rather than
+      a one-off pickup.
+    </p>
+  </section>
+
+  <section>
+    <h2>Cables, chargers, and accessories</h2>
+    <p>
+      Easy to forget, but genuinely e-waste — old chargers, cables,
+      adapters, and similar accessories. No data or battery concerns
+      usually apply here, so these are some of the simplest items to hand
+      over.
+    </p>
+  </section>
+
+  <section>
+    <h2>TVs and monitors</h2>
+    <p>
+      Both modern LED/LCD screens and older CRT (tube) televisions — see
+      <a href="/tv-recycling-kochi/">TV recycling</a> for details specific
+      to displays.
+    </p>
+  </section>
+
+  <section>
+    <h2>Items that need data wiping first</h2>
+    <p>
+      Anything with storage — computers, laptops, phones, tablets, and
+      some printers or networking gear with internal memory. See
+      <a href="/data-destruction/">data destruction</a> for how this
+      works.
+    </p>
+  </section>
+
+  <section>
+    <h2>Items that need battery-safety handling</h2>
+    <p>
+      Anything with a built-in or removable battery, especially if it's
+      swollen, damaged, or leaking — see
+      <a href="/battery-recycling/">battery recycling</a> for safe interim
+      storage guidance.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

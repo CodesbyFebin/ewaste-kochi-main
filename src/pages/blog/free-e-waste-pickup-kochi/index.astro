@@ -1,0 +1,167 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Free E-Waste Pickup in Kochi | Areas, Items & What to Prepare";
+const description =
+  "How free e-waste pickup works in Kochi — covered areas, accepted items, home vs office pickup, bulk pickup, and what to have ready before the team arrives.";
+const datePublished = "2026-07-07";
+const dateModified = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Free E-Waste Pickup in Kochi", path: "/blog/free-e-waste-pickup-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/free-e-waste-pickup-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/free-e-waste-pickup-kochi/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Is pickup really free, or are there hidden charges?",
+    a: "Pickup is free for qualifying quantities across our service area — no hidden charges for standard household or office e-waste collection. Bulk or unusual jobs are discussed upfront, not billed as a surprise.",
+  },
+  {
+    q: "Which areas get free pickup?",
+    a: "Most of Kochi and Ernakulam district, with wider coverage across Kerala. See our locations directory, or message us your address to confirm — we cover many areas not yet listed there individually.",
+  },
+  {
+    q: "Do I need a minimum number of items?",
+    a: "No strict minimum for most household pickups. For a single small item, mention it when you message us and we'll confirm the best way to handle it.",
+  },
+  {
+    q: "How is office pickup different from home pickup?",
+    a: "The core process is the same, but office pickups more often involve larger quantities, multiple workstations, and sometimes an itemized list — our team can work from an inventory if you have one ready.",
+  },
+  {
+    q: "What should I do before the team arrives?",
+    a: "Gather items in one accessible place if possible, remove any personal accessories you want to keep, and let us know in advance about anything heavy or bulky like old CRT monitors or server equipment.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/free-e-waste-pickup-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Free E-Waste Pickup in Kochi</h1>
+  <p class="lede">
+    Doorstep pickup is free for most households and offices across our
+    service area — here's exactly how it works, what's covered, and what to
+    have ready before our team arrives.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to book a free e-waste pickup." />
+
+  <section>
+    <h2>What "free" actually covers</h2>
+    <p>
+      Standard doorstep collection is free for qualifying quantities of
+      household or office e-waste — laptops, desktops, monitors, printers,
+      batteries, and general IT hardware. There's no charge for the pickup
+      visit itself. Unusually large bulk jobs or special handling (heavy
+      server racks, for example) are discussed upfront so there are no
+      surprises.
+    </p>
+  </section>
+
+  <section>
+    <h2>Areas covered</h2>
+    <p>
+      Free pickup runs across most of Kochi and Ernakulam district —
+      Kakkanad, Edappally, Aluva, Vyttila, Palarivattom, Thrippunithura,
+      Kalamassery, Infopark, and 25+ other neighborhoods — plus wider
+      coverage across Kerala. See our <a href="/locations/">locations
+      directory</a> for areas with a dedicated page, or just message us your
+      address to confirm.
+    </p>
+  </section>
+
+  <section>
+    <h2>What's accepted</h2>
+    <p>
+      Laptops, desktops, monitors, printers, routers, and general IT
+      hardware go through our <a href="/recycling/">recycling</a> service.
+      Batteries — UPS, inverter, laptop, or phone — are collected in the
+      same visit but processed separately through
+      <a href="/battery-recycling/">battery recycling</a>. Not sure if
+      something qualifies? Send a photo over WhatsApp before you schedule.
+    </p>
+  </section>
+
+  <section>
+    <h2>Home pickup vs. office pickup</h2>
+    <p>
+      The process is the same at its core — message us, confirm a slot, and
+      our team collects directly from your door. Office pickups more often
+      involve larger quantities or multiple workstations; if you already
+      have an inventory list, share it and we'll work from that.
+    </p>
+  </section>
+
+  <section>
+    <h2>Bulk pickup</h2>
+    <p>
+      For a full office clearance, an apartment complex drive, or any
+      unusually large quantity, message us with rough numbers in advance —
+      we can schedule a dedicated visit and, for corporate jobs, route it
+      through our <a href="/itad/">ITAD service</a> if data destruction or
+      asset inventory is also needed.
+    </p>
+  </section>
+
+  <section>
+    <h2>What to prepare before pickup</h2>
+    <ul class="check-list">
+      <li>Gather items in one accessible spot if possible</li>
+      <li>Remove any personal accessories or accessories you want to keep</li>
+      <li>Flag heavy or bulky items (old CRT TVs, server racks) in advance</li>
+      <li>Mention if you need data wiped from any device — see <a href="/data-destruction/">data destruction</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Want cash instead of free disposal?</h2>
+    <p>
+      Free pickup is for items you just want gone. If your laptop, phone, or
+      other device still works, you might get paid for it instead — see
+      <a href="/sell-electronics/">sell electronics</a> for an instant quote
+      and doorstep payment rather than free recycling.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

@@ -1,0 +1,133 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import Faq from "../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../data/site";
+
+const title = "E-Waste Scrap Prices in Kochi | Quote Guidance & Price Factors";
+const description =
+  "What affects your e-waste scrap quote in Kochi — item type, condition, quantity, and market rate. Get an instant preliminary quote over WhatsApp, confirmed at pickup.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Scrap Prices", path: "/e-waste-scrap-prices-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "E-waste scrap pricing guidance",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: "Kochi, Ernakulam, Kerala",
+    url: `${SITE_URL}/e-waste-scrap-prices-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/e-waste-scrap-prices-kochi/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Are these fixed prices?",
+    a: "No — these are the factors that determine your quote, not a fixed price list. Every quote is confirmed only after a quick inspection at pickup, since condition and current market rate both move prices.",
+  },
+  {
+    q: "What's the fastest way to get a price estimate?",
+    a: "Message us on WhatsApp with the item type, approximate age, and condition. We'll give a preliminary range immediately and confirm the final number at pickup.",
+  },
+  {
+    q: "Do non-working items still have scrap value?",
+    a: "Yes, at a lower scrap-value rate rather than a working-device rate — components and materials are still recoverable even if the item doesn't power on.",
+  },
+  {
+    q: "Does quantity affect the price?",
+    a: "Yes. Bulk quantities (multiple laptops, a full office clearance, server racks) typically get better per-unit rates than single items — mention volume when you message us.",
+  },
+  {
+    q: "Why did my final quote differ from the WhatsApp estimate?",
+    a: "The preliminary estimate is based on your description; the final quote reflects the actual condition confirmed at pickup, plus any change in current market rate for that material or model.",
+  },
+  {
+    q: "Do you buy computer and server scrap in bulk for businesses?",
+    a: "Yes — see our computer scrap buyers page for the business-focused buyback process, including desktops, servers, and mixed office IT scrap.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/e-waste-scrap-prices-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Scrap Prices in Kochi</h1>
+  <p class="lede">
+    There's no single fixed price list for e-waste scrap — value depends on
+    the item, its condition, and current market rates. This page explains
+    what actually moves your quote, so you know what to expect before you
+    contact us.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like a price estimate for my e-waste scrap." />
+
+  <section>
+    <h2>What determines your quote</h2>
+    <ul class="check-list">
+      <li><strong>Item type</strong> — laptops, desktops, servers, monitors, and batteries all have different scrap value profiles.</li>
+      <li><strong>Condition</strong> — working, partially working, or non-working/scrap changes the price tier significantly.</li>
+      <li><strong>Quantity</strong> — bulk lots (multiple devices, office clearances, server racks) typically get better per-unit rates.</li>
+      <li><strong>Market rate</strong> — scrap metal and component values shift over time; the rate we quote reflects current market conditions, not a fixed historical price.</li>
+      <li><strong>Pickup distance and access</strong> — most areas in Kochi and Ernakulam district have no impact on price, but unusually remote or difficult-access locations may be discussed case by case.</li>
+      <li><strong>Working vs. non-working status</strong> — a device that powers on and functions is worth more than one being sold purely for material recovery.</li>
+    </ul>
+    <p class="disclaimer">
+      <strong>These factors guide your estimate, not a fixed price.</strong>
+      The number we give over WhatsApp is preliminary; the final quote is
+      confirmed only after a quick physical inspection at pickup.
+    </p>
+  </section>
+
+  <section>
+    <h2>How to get a quote</h2>
+    <ol class="process-list">
+      <li><strong>Message us</strong> the item type, age, and condition over WhatsApp.</li>
+      <li><strong>Get a preliminary estimate</strong> based on your description.</li>
+      <li><strong>Schedule pickup</strong> at a convenient time.</li>
+      <li><strong>Final quote confirmed</strong> after inspection, before any payment.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Related pages</h2>
+    <p>
+      For a full device sale process and condition guide, see
+      <a href="/sell-electronics/">Sell Electronics</a>. To browse or list on
+      our two-sided platform, see <a href="/marketplace/">Marketplace</a>.
+      For business bulk computer and server scrap, see
+      <a href="/computer-scrap-buyers-kochi/">Computer Scrap Buyers</a>. To
+      schedule collection once you have an estimate, see
+      <a href="/pickup/">Pickup</a>.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .process-list { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 1.25rem; }
+  .disclaimer { font-size: 0.92rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

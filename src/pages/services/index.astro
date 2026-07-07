@@ -1,0 +1,137 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import Faq from "../../components/Faq.astro";
+import { SITE_URL } from "../../data/site";
+
+const title = "E-Waste & IT Asset Services in Kochi | Ewaste Kochi";
+const description =
+  "Recycling, battery recycling, sell-your-device marketplace, pickup, data destruction, hard drive shredding, and ITAD services across Kochi and Kerala.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Services", path: "/services/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/services/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const services = [
+  { href: "/recycling/", name: "E-Waste Recycling", blurb: "Laptops, desktops, monitors, printers, and general IT hardware, collected and recycled compliantly." },
+  { href: "/battery-recycling/", name: "Battery Recycling", blurb: "UPS, inverter, laptop, and phone batteries, handled separately from general e-waste." },
+  { href: "/marketplace/", name: "Marketplace", blurb: "Buy refurbished devices or list your own working electronics for resale." },
+  { href: "/sell-electronics/", name: "Sell Electronics", blurb: "Get an instant quote and doorstep payment for working or partially working devices." },
+  { href: "/pickup/", name: "Free Pickup", blurb: "Doorstep collection across Kochi for both households and offices." },
+  { href: "/data-destruction/", name: "Data Destruction", blurb: "Certified wiping, degaussing, and shredding for any device with storage." },
+  { href: "/hard-drive-shredding/", name: "Hard Drive Shredding", blurb: "Physical destruction for drives that can't or shouldn't be wiped." },
+  { href: "/itad/", name: "ITAD for Business", blurb: "Corporate IT asset disposition — inventory, secure destruction, and reporting." },
+  { href: "/e-waste-scrap-prices-kochi/", name: "E-Waste Scrap Prices", blurb: "What determines your quote — item type, condition, quantity, and market rate." },
+  { href: "/computer-scrap-buyers-kochi/", name: "Computer Scrap Buyers", blurb: "Sell desktops, laptops, and office IT scrap — bulk buying for businesses." },
+  { href: "/server-recycling-kochi/", name: "Server Recycling", blurb: "B2B decommissioning for racks, drives, and network equipment." },
+  { href: "/tv-recycling-kochi/", name: "TV Recycling", blurb: "LED, LCD, and CRT display recycling for homes and offices." },
+  { href: "/services/electronics-recycling-near-me/", name: "Electronics Recycling Near Me", blurb: "Check local pickup coverage across Kochi and Ernakulam district." },
+  { href: "/services/hard-drive-degaussing-kochi/", name: "Hard Drive Degaussing", blurb: "Magnetic erasure for bulk hard disk drive retirement." },
+  { href: "/services/it-asset-inventory-audit/", name: "IT Asset Inventory Audit", blurb: "Serial number capture and asset tracking ahead of disposal." },
+];
+
+const faqItems = [
+  {
+    q: "Which service do I need if I just want to clear out old electronics?",
+    a: "Start with our Recycling or Pickup service — we'll collect items from your home or office and sort out data destruction or battery handling as needed.",
+  },
+  {
+    q: "Which service is right for a business decommissioning IT equipment?",
+    a: "ITAD is built for that — it covers inventory, secure data destruction, and disposal documentation for offices and IT parks.",
+  },
+  {
+    q: "Can I sell devices instead of recycling them?",
+    a: "Yes, use Sell Electronics or Marketplace for an instant quote on working or partially working devices.",
+  },
+  {
+    q: "Do all services include free pickup?",
+    a: "Doorstep pickup is included for qualifying quantities across recycling, battery recycling, sell electronics, and ITAD. Ask us to confirm for your specific case.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/services/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Our Services</h1>
+  <p class="lede">
+    From a single old laptop to a full office IT decommission, these are the
+    services we run across Kochi and Kerala. Each has its own dedicated page
+    with accepted items, process, and local coverage detail.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to know which service fits my e-waste pickup needs." />
+
+  <section>
+    <div class="service-grid">
+      {services.map((s) => (
+        <a class="service-card" href={s.href}>
+          <h2>{s.name}</h2>
+          <p>{s.blurb}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <Faq items={faqItems} />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede {
+    font-size: 1.1rem;
+    color: var(--color-muted);
+    max-width: 46rem;
+  }
+  .service-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .service-card {
+    display: block;
+    padding: 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    text-decoration: none;
+    color: var(--color-text);
+  }
+  .service-card:hover {
+    border-color: var(--color-primary);
+  }
+  .service-card h2 {
+    margin: 0 0 0.4rem;
+    font-size: 1.05rem;
+    color: var(--color-primary-dark);
+  }
+  .service-card p {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 0.92rem;
+  }
+  .updated {
+    font-size: 0.8rem;
+    color: var(--color-muted);
+    margin-top: 2rem;
+  }
+  @media (min-width: 700px) {
+    .service-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

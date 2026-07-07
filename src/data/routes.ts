@@ -1,0 +1,526 @@
+// Registry of routes that actually exist as built pages in this Astro project.
+// sitemap.xml (and its sub-sitemaps), content-index.json/.xml, and ai-sitemap.xml
+// are all generated from this list only, so none of them can ever claim a URL
+// that isn't really live in the current build. Extend this array in the same
+// commit as each new page template.
+
+import { SITE_URL } from "./site";
+
+export interface RouteEntry {
+  path: string;
+  changefreq: "daily" | "weekly" | "monthly" | "yearly";
+  priority: number;
+  title: string;
+  description: string;
+  type: "core" | "service" | "location" | "blog" | "trust" | "legal";
+  sitemapGroup: "core" | "services" | "locations" | "legal" | "ml" | "blog";
+  lang: "en-IN" | "ml-IN";
+  // Path of this page's translation counterpart, if one exists and is built.
+  hreflangPair?: string;
+}
+
+export const ROUTES: RouteEntry[] = [
+  {
+    path: "/",
+    changefreq: "weekly",
+    priority: 1.0,
+    title: "E-Waste Recycling Kochi | Free Pickup + Instant Quote",
+    description:
+      "Ewaste Kochi collects, recycles and securely destroys data on old electronics across Kochi and Kerala. Free doorstep pickup, instant quotes.",
+    type: "core",
+    sitemapGroup: "core",
+    lang: "en-IN",
+    hreflangPair: "/ml/",
+  },
+  {
+    path: "/recycling/",
+    changefreq: "monthly",
+    priority: 0.9,
+    title: "Where to Recycle Old Electronics in Kochi | Free Pickup",
+    description:
+      "Recycle old electronics in Kochi with free doorstep pickup — laptops, desktops, monitors, printers and more. Data wiped first, no drop-off needed.",
+    type: "service",
+    sitemapGroup: "services",
+    lang: "en-IN",
+    hreflangPair: "/ml/recycling/",
+  },
+  {
+    path: "/locations/kakkanad/",
+    changefreq: "monthly",
+    priority: 0.8,
+    title: "E-Waste Collection in Kakkanad | Free Pickup for IT & Homes",
+    description:
+      "Doorstep e-waste pickup in Kakkanad, Kochi — laptops, servers, batteries, and IT hardware. Free pickup for offices and homes near Infopark and SmartCity.",
+    type: "location",
+    sitemapGroup: "locations",
+    lang: "en-IN",
+  },
+  {
+    path: "/locations/ernakulam-south/",
+    changefreq: "monthly",
+    priority: 0.8,
+    title: "E-Waste Pickup in Ernakulam South | Free Doorstep Collection",
+    description:
+      "Doorstep e-waste pickup in Ernakulam South, Kochi — homes and offices. Free collection, battery recycling, and data destruction available.",
+    type: "location",
+    sitemapGroup: "locations",
+    lang: "en-IN",
+  },
+  {
+    path: "/locations/kalamassery/",
+    changefreq: "monthly",
+    priority: 0.8,
+    title: "E-Waste Collection in Kalamassery | Industrial & Home Pickup",
+    description:
+      "Doorstep e-waste pickup in Kalamassery, Kochi — industrial units, educational institutions, and homes. Free collection, battery recycling, and data destruction.",
+    type: "location",
+    sitemapGroup: "locations",
+    lang: "en-IN",
+  },
+  {
+    path: "/blog/free-e-waste-pickup-kochi/",
+    changefreq: "monthly",
+    priority: 0.6,
+    title: "Free E-Waste Pickup in Kochi | Areas, Items & What to Prepare",
+    description:
+      "How free e-waste pickup works in Kochi — covered areas, accepted items, home vs office pickup, bulk pickup, and what to have ready before the team arrives.",
+    type: "blog",
+    sitemapGroup: "blog",
+    lang: "en-IN",
+  },
+  {
+    path: "/blog/sell-old-laptop-kochi/",
+    changefreq: "monthly",
+    priority: 0.6,
+    title: "Sell Old Laptop in Kochi | Condition Checklist & Quote Guide",
+    description:
+      "A practical guide to selling your old laptop in Kochi — condition checklist, data wiping, what drives your quote, and options for damaged or bulk office laptops.",
+    type: "blog",
+    sitemapGroup: "blog",
+    lang: "en-IN",
+  },
+  {
+    path: "/blog/what-is-ewaste/",
+    changefreq: "monthly",
+    priority: 0.6,
+    title: "What Is E-Waste? A Beginner's Guide for Kochi Households & Offices",
+    description:
+      "What e-waste actually means, common examples, why it matters, and what to do with old electronics in Kochi instead of throwing them in the regular bin.",
+    type: "blog",
+    sitemapGroup: "blog",
+    lang: "en-IN",
+  },
+  {
+    path: "/blog/e-waste-examples/",
+    changefreq: "monthly",
+    priority: 0.6,
+    title: "E-Waste Examples: Common Electronic Items You Should Recycle",
+    description:
+      "A practical list of common e-waste items — computers, phones, batteries, office electronics, cables, and more — and which ones need extra care before recycling.",
+    type: "blog",
+    sitemapGroup: "blog",
+    lang: "en-IN",
+  },
+  {
+    path: "/blog/e-waste-collection-near-me/",
+    changefreq: "monthly",
+    priority: 0.6,
+    title: "E-Waste Collection Near Me: How to Choose a Safe Recycler",
+    description:
+      "How to find safe, legitimate e-waste collection near you — what to ask before handing over devices, pickup vs. drop-off, and why informal disposal carries real risk.",
+    type: "blog",
+    sitemapGroup: "blog",
+    lang: "en-IN",
+  },
+  {
+    path: "/blog/what-is-epr-in-e-waste/",
+    changefreq: "monthly",
+    priority: 0.6,
+    title: "What Is EPR in E-Waste Management? A Plain-Language Explainer",
+    description:
+      "Extended Producer Responsibility (EPR) explained simply — what it means, who it applies to, and how it connects producers, recyclers, and e-waste collection.",
+    type: "blog",
+    sitemapGroup: "blog",
+    lang: "en-IN",
+  },
+  {
+    path: "/blog/e-waste-management-rules-2022/",
+    changefreq: "monthly",
+    priority: 0.6,
+    title: "E-Waste Management Rules 2022: A Simple Guide for Businesses",
+    description:
+      "A plain-language overview of India's E-Waste (Management) Rules, 2022 — why they matter, who they apply to, and what businesses should know about disposal.",
+    type: "blog",
+    sitemapGroup: "blog",
+    lang: "en-IN",
+  },
+  {
+    path: "/services/",
+    changefreq: "monthly",
+    priority: 0.8,
+    title: "E-Waste & IT Asset Services in Kochi | Ewaste Kochi",
+    description:
+      "Recycling, battery recycling, sell-your-device marketplace, pickup, data destruction, hard drive shredding, and ITAD services across Kochi and Kerala.",
+    type: "core",
+    sitemapGroup: "services",
+    lang: "en-IN",
+  },
+  {
+    path: "/locations/",
+    changefreq: "monthly",
+    priority: 0.8,
+    title: "E-Waste Pickup Locations in Kochi & Kerala | Ewaste Kochi",
+    description:
+      "Doorstep e-waste pickup areas across Kochi, Ernakulam district, and wider Kerala. Find your neighborhood and book a free pickup.",
+    type: "core",
+    sitemapGroup: "locations",
+    lang: "en-IN",
+  },
+  {
+    path: "/battery-recycling/",
+    changefreq: "monthly",
+    priority: 0.9,
+    title: "Where to Recycle Batteries in Kochi | Free Doorstep Pickup",
+    description:
+      "Recycle UPS, inverter, laptop, and phone batteries in Kochi with free doorstep pickup. Safe, compliant disposal — batteries should never go in household trash.",
+    type: "service",
+    sitemapGroup: "services",
+    lang: "en-IN",
+    hreflangPair: "/ml/battery-recycling/",
+  },
+  {
+    path: "/marketplace/",
+    changefreq: "weekly",
+    priority: 0.9,
+    title: "Sell Old Electronics in Kochi | Best Quote + Free Pickup",
+    description:
+      "List your used laptop, phone, or IT equipment for an instant quote, or browse inspected refurbished devices. Doorstep pickup and payment across Kochi.",
+    type: "service",
+    sitemapGroup: "services",
+    lang: "en-IN",
+  },
+  {
+    path: "/sell-electronics/",
+    changefreq: "weekly",
+    priority: 0.9,
+    title: "Sell Old Electronics in Kochi | Instant Quote, Doorstep Payment",
+    description:
+      "Sell your old laptop, phone, or computer in Kochi for an instant quote. Free doorstep pickup, on-the-spot payment, condition-based pricing guidance.",
+    type: "service",
+    sitemapGroup: "services",
+    lang: "en-IN",
+    hreflangPair: "/ml/sell-electronics/",
+  },
+  {
+    path: "/pickup/",
+    changefreq: "monthly",
+    priority: 0.9,
+    title: "E-Waste Pickup in Kochi | Doorstep Collection for Electronics",
+    description:
+      "Schedule free doorstep e-waste pickup in Kochi for laptops, batteries, and IT hardware. Same-day and next-day slots available across Ernakulam district.",
+    type: "service",
+    sitemapGroup: "services",
+    lang: "en-IN",
+    hreflangPair: "/ml/pickup/",
+  },
+  {
+    path: "/data-destruction/",
+    changefreq: "monthly",
+    priority: 0.9,
+    title: "Data Destruction Services in Kochi | Secure Wiping & Certificate",
+    description:
+      "Certified data destruction in Kochi — wiping, degaussing, and hard drive shredding for laptops, servers, and drives. Certificates available on request.",
+    type: "service",
+    sitemapGroup: "services",
+    lang: "en-IN",
+    hreflangPair: "/ml/data-destruction/",
+  },
+  {
+    path: "/hard-drive-shredding/",
+    changefreq: "monthly",
+    priority: 0.8,
+    title: "Hard Drive Shredding in Kochi | Physical Data Destruction",
+    description:
+      "Physical hard drive shredding in Kochi for failed, damaged, or end-of-life drives. Certificate of destruction available. Pickup across Ernakulam district.",
+    type: "service",
+    sitemapGroup: "services",
+    lang: "en-IN",
+  },
+  {
+    path: "/itad/",
+    changefreq: "monthly",
+    priority: 0.9,
+    title: "ITAD Services in Kochi | Corporate IT Asset Disposal",
+    description:
+      "IT Asset Disposition (ITAD) for offices in Kochi — inventory, secure data destruction, resale, and compliance reporting for corporate IT decommissioning.",
+    type: "service",
+    sitemapGroup: "services",
+    lang: "en-IN",
+  },
+  {
+    path: "/about/",
+    changefreq: "yearly",
+    priority: 0.5,
+    title: "About Ewaste Kochi | E-Waste Recycling & ITAD in Kerala",
+    description:
+      "Ewaste Kochi collects, recycles, and securely destroys data on old electronics across Kochi and Kerala, serving households, offices, and IT parks.",
+    type: "core",
+    sitemapGroup: "core",
+    lang: "en-IN",
+  },
+  {
+    path: "/faq/",
+    changefreq: "monthly",
+    priority: 0.6,
+    title: "FAQ | Ewaste Kochi",
+    description:
+      "Answers to common questions about e-waste pickup, pricing, data destruction, business services, and coverage areas for Ewaste Kochi.",
+    type: "core",
+    sitemapGroup: "core",
+    lang: "en-IN",
+  },
+  {
+    path: "/contact/",
+    changefreq: "yearly",
+    priority: 0.7,
+    title: "Contact Ewaste Kochi | Book a Pickup or Ask a Question",
+    description:
+      "Reach Ewaste Kochi by phone, WhatsApp, or email. Address, business hours, and quick links to book a pickup or request a quote.",
+    type: "core",
+    sitemapGroup: "core",
+    lang: "en-IN",
+    hreflangPair: "/ml/contact/",
+  },
+  {
+    path: "/privacy/",
+    changefreq: "yearly",
+    priority: 0.3,
+    title: "Privacy Policy | Ewaste Kochi",
+    description:
+      "How Ewaste Kochi collects, uses, and protects information shared for pickups, quotes, and enquiries.",
+    type: "legal",
+    sitemapGroup: "legal",
+    lang: "en-IN",
+  },
+  {
+    path: "/terms/",
+    changefreq: "yearly",
+    priority: 0.3,
+    title: "Terms of Service | Ewaste Kochi",
+    description:
+      "Terms governing pickup, recycling, resale, and data destruction services provided by Ewaste Kochi.",
+    type: "legal",
+    sitemapGroup: "legal",
+    lang: "en-IN",
+  },
+  {
+    path: "/e-waste-scrap-prices-kochi/",
+    changefreq: "monthly",
+    priority: 0.8,
+    title: "E-Waste Scrap Prices in Kochi | Quote Guidance & Price Factors",
+    description:
+      "What affects your e-waste scrap quote in Kochi — item type, condition, quantity, and market rate. Get an instant preliminary quote over WhatsApp, confirmed at pickup.",
+    type: "service",
+    sitemapGroup: "services",
+    lang: "en-IN",
+  },
+  {
+    path: "/computer-scrap-buyers-kochi/",
+    changefreq: "monthly",
+    priority: 0.8,
+    title: "Computer Scrap Buyers in Kochi | Desktops, Laptops & Office IT",
+    description:
+      "Sell computer and IT scrap in Kochi — desktops, laptops, motherboards, RAM, CPUs, servers, and mixed office lots. Instant quote, doorstep pickup, bulk buying for businesses.",
+    type: "service",
+    sitemapGroup: "services",
+    lang: "en-IN",
+  },
+  {
+    path: "/server-recycling-kochi/",
+    changefreq: "monthly",
+    priority: 0.8,
+    title: "Server Recycling in Kochi | Racks, Drives & Network Equipment",
+    description:
+      "B2B server and data center hardware recycling in Kochi — racks, drives, networking equipment, secure data destruction, and asset inventory for decommissioning projects.",
+    type: "service",
+    sitemapGroup: "services",
+    lang: "en-IN",
+  },
+  {
+    path: "/tv-recycling-kochi/",
+    changefreq: "monthly",
+    priority: 0.7,
+    title: "TV Recycling in Kochi | LED, LCD & Old CRT Disposal",
+    description:
+      "Recycle old TVs and monitors in Kochi — LED, LCD, and CRT displays. Free doorstep pickup for households, apartments, and offices across Ernakulam district.",
+    type: "service",
+    sitemapGroup: "services",
+    lang: "en-IN",
+  },
+  {
+    path: "/services/electronics-recycling-near-me/",
+    changefreq: "monthly",
+    priority: 0.7,
+    title: "Electronics Recycling Near Me in Kochi | Find Local Pickup",
+    description:
+      "Looking for electronics recycling near you in Kochi? We collect from your exact location — no need to find or travel to a drop-off point.",
+    type: "service",
+    sitemapGroup: "services",
+    lang: "en-IN",
+  },
+  {
+    path: "/services/hard-drive-degaussing-kochi/",
+    changefreq: "monthly",
+    priority: 0.7,
+    title: "Hard Drive Degaussing in Kochi | Magnetic Data Erasure",
+    description:
+      "Hard drive degaussing in Kochi — magnetic erasure for hard disk drives, distinct from wiping or physical shredding. Certificate available on request.",
+    type: "service",
+    sitemapGroup: "services",
+    lang: "en-IN",
+  },
+  {
+    path: "/services/it-asset-inventory-audit/",
+    changefreq: "monthly",
+    priority: 0.7,
+    title: "IT Asset Inventory Audit in Kochi | Pre-Disposal Asset Tracking",
+    description:
+      "IT asset inventory audits in Kochi ahead of disposal — serial number capture, asset tagging, chain-of-custody records, and reporting for ITAD projects.",
+    type: "service",
+    sitemapGroup: "services",
+    lang: "en-IN",
+  },
+  {
+    path: "/trust/",
+    changefreq: "monthly",
+    priority: 0.6,
+    title: "Trust & Compliance | Ewaste Kochi",
+    description:
+      "How Ewaste Kochi handles compliance, certifications, and data destruction proof — and how to request documentation for your records.",
+    type: "trust",
+    sitemapGroup: "core",
+    lang: "en-IN",
+  },
+  {
+    path: "/certifications/",
+    changefreq: "monthly",
+    priority: 0.5,
+    title: "Certifications | Ewaste Kochi",
+    description:
+      "Environmental and regulatory compliance status for Ewaste Kochi's recycling and data destruction operations.",
+    type: "trust",
+    sitemapGroup: "core",
+    lang: "en-IN",
+  },
+  {
+    path: "/data-destruction-certificate-sample/",
+    changefreq: "monthly",
+    priority: 0.5,
+    title: "Data Destruction Certificate Sample | Ewaste Kochi",
+    description:
+      "What's included in an Ewaste Kochi certificate of data destruction, and how to request one for your devices.",
+    type: "trust",
+    sitemapGroup: "core",
+    lang: "en-IN",
+  },
+  {
+    path: "/ml/",
+    changefreq: "weekly",
+    priority: 0.9,
+    title: "ഇ-വേസ്റ്റ് കൊച്ചി | സൗജന്യ പിക്കപ്പ് + തൽക്ഷണ ക്വോട്ട്",
+    description:
+      "കൊച്ചിയിലും കേരളത്തിലും പഴയ ഇലക്ട്രോണിക്സ് ശേഖരിച്ച് റീസൈക്കിൾ ചെയ്യുകയും ഡാറ്റ സുരക്ഷിതമായി നശിപ്പിക്കുകയും ചെയ്യുന്നു. സൗജന്യ പിക്കപ്പ്, തൽക്ഷണ ക്വോട്ട്.",
+    type: "core",
+    sitemapGroup: "ml",
+    lang: "ml-IN",
+    hreflangPair: "/",
+  },
+  {
+    path: "/ml/recycling/",
+    changefreq: "monthly",
+    priority: 0.8,
+    title: "കൊച്ചിയിൽ ഇ-മാലിന്യ റീസൈക്ലിംഗ് | സുരക്ഷിത ഇലക്ട്രോണിക്സ് നിർമാർജനം",
+    description:
+      "കൊച്ചിയിൽ ലാപ്ടോപ്പ്, ഡെസ്ക്ടോപ്പ്, മോണിറ്റർ, പ്രിന്റർ എന്നിവ സൗജന്യ പിക്കപ്പോടെ റീസൈക്കിൾ ചെയ്യുക. ഡാറ്റ ആദ്യം സുരക്ഷിതമായി നീക്കം ചെയ്യുന്നു.",
+    type: "service",
+    sitemapGroup: "ml",
+    lang: "ml-IN",
+    hreflangPair: "/recycling/",
+  },
+  {
+    path: "/ml/battery-recycling/",
+    changefreq: "monthly",
+    priority: 0.8,
+    title: "കൊച്ചിയിൽ ബാറ്ററി റീസൈക്ലിംഗ് | യുപിഎസ്, ഇൻവെർട്ടർ, ലാപ്ടോപ്പ്, ഫോൺ",
+    description:
+      "കൊച്ചിയിൽ യുപിഎസ്, ഇൻവെർട്ടർ, ലാപ്ടോപ്പ്, ഫോൺ ബാറ്ററികൾക്കുള്ള സുരക്ഷിത റീസൈക്ലിംഗ്. സൗജന്യ ശേഖരണം, നിയമാനുസൃത നിർമാർജനം.",
+    type: "service",
+    sitemapGroup: "ml",
+    lang: "ml-IN",
+    hreflangPair: "/battery-recycling/",
+  },
+  {
+    path: "/ml/pickup/",
+    changefreq: "monthly",
+    priority: 0.8,
+    title: "കൊച്ചിയിൽ ഇ-വേസ്റ്റ് പിക്കപ്പ് | വീട്ടിലെത്തി ശേഖരണം",
+    description:
+      "കൊച്ചിയിൽ ലാപ്ടോപ്പ്, ബാറ്ററി, ഐടി ഉപകരണങ്ങൾ എന്നിവയ്ക്കുള്ള സൗജന്യ പിക്കപ്പ് ബുക്ക് ചെയ്യുക. അതേ ദിവസം അല്ലെങ്കിൽ അടുത്ത ദിവസം സ്ലോട്ട് ലഭ്യം.",
+    type: "service",
+    sitemapGroup: "ml",
+    lang: "ml-IN",
+    hreflangPair: "/pickup/",
+  },
+  {
+    path: "/ml/sell-electronics/",
+    changefreq: "weekly",
+    priority: 0.8,
+    title: "കൊച്ചിയിൽ പഴയ ഇലക്ട്രോണിക്സ് വിൽക്കുക | തൽക്ഷണ ക്വോട്ട്",
+    description:
+      "കൊച്ചിയിൽ പഴയ ലാപ്ടോപ്പ്, ഫോൺ, കമ്പ്യൂട്ടർ എന്നിവ വിറ്റ് തൽക്ഷണ ക്വോട്ടും വീട്ടിലെത്തി പണവും നേടുക.",
+    type: "service",
+    sitemapGroup: "ml",
+    lang: "ml-IN",
+    hreflangPair: "/sell-electronics/",
+  },
+  {
+    path: "/ml/data-destruction/",
+    changefreq: "monthly",
+    priority: 0.8,
+    title: "കൊച്ചിയിൽ ഡാറ്റ നശിപ്പിക്കൽ സേവനം | സുരക്ഷിത വൈപ്പിംഗ് & സർട്ടിഫിക്കറ്റ്",
+    description:
+      "കൊച്ചിയിൽ ലാപ്ടോപ്പ്, സെർവർ, ഡ്രൈവുകൾക്കുള്ള സാക്ഷ്യപ്പെടുത്തിയ ഡാറ്റ നശിപ്പിക്കൽ. ആവശ്യാനുസരണം സർട്ടിഫിക്കറ്റ് ലഭ്യം.",
+    type: "service",
+    sitemapGroup: "ml",
+    lang: "ml-IN",
+    hreflangPair: "/data-destruction/",
+  },
+  {
+    path: "/ml/contact/",
+    changefreq: "yearly",
+    priority: 0.6,
+    title: "ബന്ധപ്പെടുക | ഇ-വേസ്റ്റ് കൊച്ചി",
+    description:
+      "ഫോൺ, വാട്സ്ആപ്പ്, ഇമെയിൽ വഴി ഇ-വേസ്റ്റ് കൊച്ചിയുമായി ബന്ധപ്പെടുക. വിലാസം, പ്രവർത്തന സമയം, പിക്കപ്പ് ബുക്ക് ചെയ്യാനുള്ള വഴികൾ.",
+    type: "core",
+    sitemapGroup: "ml",
+    lang: "ml-IN",
+    hreflangPair: "/contact/",
+  },
+];
+
+export function getHreflang(path: string): { lang: string; href: string }[] | undefined {
+  const route = ROUTES.find((r) => r.path === path);
+  if (!route?.hreflangPair) return undefined;
+  const pair = ROUTES.find((r) => r.path === route.hreflangPair);
+  if (!pair) return undefined;
+
+  const enRoute = route.lang === "en-IN" ? route : pair;
+  const mlRoute = route.lang === "ml-IN" ? route : pair;
+
+  return [
+    { lang: "en-IN", href: new URL(enRoute.path, SITE_URL).toString() },
+    { lang: "ml-IN", href: new URL(mlRoute.path, SITE_URL).toString() },
+    { lang: "x-default", href: new URL(enRoute.path, SITE_URL).toString() },
+  ];
+}

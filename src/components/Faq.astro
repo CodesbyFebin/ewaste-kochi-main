@@ -1,0 +1,80 @@
+---
+interface Item {
+  q: string;
+  a: string;
+}
+
+interface Props {
+  items: Item[];
+  heading?: string;
+}
+
+const { items, heading = "Frequently Asked Questions" } = Astro.props;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: items.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.a,
+    },
+  })),
+};
+---
+
+<section class="faq" aria-labelledby="faq-heading">
+  <h2 id="faq-heading">{heading}</h2>
+  <div class="faq-list">
+    {items.map((item) => (
+      <details class="faq-item">
+        <summary>{item.q}</summary>
+        <p>{item.a}</p>
+      </details>
+    ))}
+  </div>
+</section>
+<script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)} />
+
+<style>
+  .faq {
+    margin-block: 3rem;
+  }
+  .faq h2 {
+    margin-bottom: 1rem;
+  }
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .faq-item {
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    padding: 0.9rem 1.1rem;
+  }
+  .faq-item summary {
+    cursor: pointer;
+    font-weight: 600;
+    list-style: none;
+  }
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+  .faq-item summary::before {
+    content: "+";
+    display: inline-block;
+    width: 1.2rem;
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+  .faq-item[open] summary::before {
+    content: "\2212";
+  }
+  .faq-item p {
+    margin: 0.75rem 0 0.1rem;
+    color: var(--color-muted);
+  }
+</style>

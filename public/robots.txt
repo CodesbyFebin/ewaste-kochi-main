@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+Disallow: /api/
+Disallow: /admin/
+Disallow: /search/
+Disallow: /preview/
+Disallow: /thank-you/
+Disallow: /internal/
+
+Sitemap: https://www.ewastekochi.com/sitemap.xml
+Sitemap: https://www.ewastekochi.com/ai-sitemap.xml

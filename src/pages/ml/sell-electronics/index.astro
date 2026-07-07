@@ -1,0 +1,110 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import LangSwitch from "../../../components/LangSwitch.astro";
+import { SITE_URL } from "../../../data/site";
+import { getHreflang } from "../../../data/routes";
+
+const title = "കൊച്ചിയിൽ പഴയ ഇലക്ട്രോണിക്സ് വിൽക്കുക | തൽക്ഷണ ക്വോട്ട്";
+const description =
+  "കൊച്ചിയിൽ പഴയ ലാപ്ടോപ്പ്, ഫോൺ, കമ്പ്യൂട്ടർ എന്നിവ വിറ്റ് തൽക്ഷണ ക്വോട്ടും വീട്ടിലെത്തി പണവും നേടുക.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "ഹോം", path: "/" },
+  { name: "മലയാളം", path: "/ml/" },
+  { name: "വിൽക്കുക", path: "/ml/sell-electronics/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Electronics buyback",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: "Kochi, Ernakulam, Kerala",
+    url: `${SITE_URL}/ml/sell-electronics/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/ml/sell-electronics/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    inLanguage: "ml-IN",
+  },
+];
+
+const faqItems = [
+  {
+    q: "വിലയെ എന്താണ് സ്വാധീനിക്കുന്നത്?",
+    a: "ഉപകരണത്തിന്റെ തരം, മോഡൽ, പ്രായം, പ്രവർത്തന നില, നിലവിലെ ഡിമാൻഡ് എന്നിവ.",
+  },
+  {
+    q: "പ്രവർത്തിക്കാത്ത ഉപകരണങ്ങൾ വാങ്ങുമോ?",
+    a: "അതെ, സ്ക്രാപ്പ് വിലയ്ക്ക് — പ്രവർത്തിക്കാത്ത ലാപ്ടോപ്പോ ഫോണോ ആണെങ്കിലും ശരിയായ രീതിയിൽ ഒഴിവാക്കാൻ ഇത് സഹായിക്കും.",
+  },
+  {
+    q: "വിൽക്കുമ്പോൾ എന്റെ ഡാറ്റ സുരക്ഷിതമാണോ?",
+    a: "ആവശ്യാനുസരണം വിൽപ്പനയ്ക്ക് മുൻപ് സ്റ്റോറേജ് വൈപ്പ് ചെയ്യാം — പിക്കപ്പ് ബുക്ക് ചെയ്യുമ്പോൾ ഇത് പ്രത്യേകം ആവശ്യപ്പെടുക.",
+  },
+  {
+    q: "പണം എപ്പോൾ ലഭിക്കും?",
+    a: "പിക്കപ്പ് സമയത്ത് ഉപകരണം പരിശോധിച്ച ശേഷം അപ്പോൾ തന്നെ പണം നൽകുന്നു.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/ml/sell-electronics/" jsonLd={jsonLd} lang="ml-IN" hreflang={getHreflang("/ml/sell-electronics/")}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <LangSwitch current="ml" otherPath="/sell-electronics/" />
+  <h1>പഴയ ഇലക്ട്രോണിക്സ് കൊച്ചിയിൽ വിൽക്കുക</h1>
+  <p class="lede">
+    ഉപയോഗിക്കാത്ത ലാപ്ടോപ്പോ ഫോണോ കമ്പ്യൂട്ടറോ വിൽക്കാൻ താൽപ്പര്യമുണ്ടെങ്കിൽ,
+    ഞങ്ങൾ തൽക്ഷണ ക്വോട്ട് നൽകുകയും ഡോർസ്റ്റെപ്പ് പിക്കപ്പിൽ തന്നെ പണം
+    നൽകുകയും ചെയ്യുന്നു — പ്രവർത്തിക്കുന്നതോ ഭാഗികമായി പ്രവർത്തിക്കുന്നതോ
+    ആയാലും.
+  </p>
+
+  <CtaBar
+    whatsappMessage="നമസ്കാരം, എന്റെ പഴയ ഉപകരണം വിൽക്കാൻ ക്വോട്ട് വേണം."
+    pickupHref="/ml/pickup/"
+    labels={{ call: "വിളിക്കുക", whatsapp: "വാട്സ്ആപ്പ് ചെയ്യുക", pickup: "പിക്കപ്പ് ബുക്ക് ചെയ്യുക" }}
+  />
+
+  <section>
+    <h2>വിലയെ സ്വാധീനിക്കുന്ന ഘടകങ്ങൾ</h2>
+    <ul class="check-list">
+      <li>ഉപകരണത്തിന്റെ തരവും മോഡലും</li>
+      <li>പ്രവർത്തന നില — ഓണാകുന്നുണ്ടോ, ചാർജ് നിലനിർത്തുന്നുണ്ടോ</li>
+      <li>ശാരീരിക അവസ്ഥ — സ്ക്രീൻ, ബോഡി, ആക്സസറികൾ</li>
+      <li>ബാറ്ററി ആരോഗ്യം</li>
+      <li>ആ മോഡലിനുള്ള നിലവിലെ ഡിമാൻഡ്</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>എങ്ങനെ പ്രവർത്തിക്കുന്നു</h2>
+    <ol class="process-list">
+      <li><strong>ഉപകരണത്തിന്റെ വിവരങ്ങൾ</strong> വാട്സ്ആപ്പിൽ അയക്കുക.</li>
+      <li><strong>പ്രാഥമിക ക്വോട്ട്</strong> ലഭിക്കും.</li>
+      <li><strong>പിക്കപ്പ് ഷെഡ്യൂൾ ചെയ്യുക.</strong></li>
+      <li><strong>പരിശോധനയും അന്തിമ ക്വോട്ടും</strong> സ്ഥലത്ത് തന്നെ.</li>
+      <li><strong>തൽക്ഷണ പണം</strong> നിങ്ങൾ അംഗീകരിച്ചാൽ.</li>
+    </ol>
+  </section>
+
+  <Faq items={faqItems} heading="പതിവ് ചോദ്യങ്ങൾ" />
+
+  <p class="updated">അവസാനം പുതുക്കിയത്: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .process-list { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 1.25rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.4rem; padding-left: 1.25rem; color: var(--color-muted); }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

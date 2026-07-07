@@ -1,0 +1,142 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import Faq from "../../components/Faq.astro";
+import { SITE_URL } from "../../data/site";
+
+const title = "E-Waste Pickup Locations in Kochi & Kerala | Ewaste Kochi";
+const description =
+  "Doorstep e-waste pickup areas across Kochi, Ernakulam district, and wider Kerala. Find your neighborhood and book a free pickup.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Locations", path: "/locations/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/locations/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const builtLocations = [
+  { name: "Kakkanad", href: "/locations/kakkanad/" },
+  { name: "Ernakulam South", href: "/locations/ernakulam-south/" },
+  { name: "Kalamassery", href: "/locations/kalamassery/" },
+];
+
+const otherServedAreas = [
+  "Edappally", "Aluva", "Vyttila", "Palarivattom", "Thrippunithura", "Kaloor",
+  "Kadavanthra", "Infopark Kochi", "Angamaly", "North Paravur",
+  "Perumbavoor", "Smart City Kochi", "Thrikkakara", "Maradu", "Kothamangalam",
+  "Muvattupuzha", "Willingdon Island", "Kozhikode", "Thiruvananthapuram",
+  "Thrissur", "Kottayam", "Kollam", "Kannur", "Palakkad",
+];
+
+const faqItems = [
+  {
+    q: "Do you cover areas outside Kochi city?",
+    a: "Yes — we serve most of Ernakulam district and have wider coverage across Kerala including Kottayam, Thrissur, Kozhikode, and Thiruvananthapuram. Message us your address to confirm.",
+  },
+  {
+    q: "What if my neighborhood isn't listed with its own page yet?",
+    a: "We're still building out dedicated pages for every area we serve. If you don't see your neighborhood here, message us directly — we very likely still cover it.",
+  },
+  {
+    q: "Is pickup free everywhere you serve?",
+    a: "Doorstep pickup is free for qualifying quantities across all our service areas, whether or not that area has its own page yet.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/locations/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Locations We Serve</h1>
+  <p class="lede">
+    We run doorstep e-waste pickup across Kochi and Ernakulam district, with
+    wider coverage across Kerala. Below are the areas with a dedicated local
+    page, plus the full list of neighborhoods we currently serve. Not sure if
+    we cover your street? See
+    <a href="/services/electronics-recycling-near-me/">electronics recycling
+    near me</a> for how to check quickly.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to check if you cover my area for e-waste pickup." />
+
+  <section>
+    <h2>Areas with a dedicated page</h2>
+    <div class="location-grid">
+      {builtLocations.map((loc) => (
+        <a class="location-card" href={loc.href}>{loc.name}</a>
+      ))}
+    </div>
+  </section>
+
+  <section>
+    <h2>Also serving</h2>
+    <p class="area-chips">
+      {otherServedAreas.join(" · ")}
+    </p>
+    <p class="note">
+      Dedicated pages for these areas are being added as part of the ongoing
+      site rebuild. In the meantime, message us your address on WhatsApp and
+      we'll confirm pickup availability directly.
+    </p>
+  </section>
+
+  <Faq items={faqItems} />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede {
+    font-size: 1.1rem;
+    color: var(--color-muted);
+    max-width: 46rem;
+  }
+  .location-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+  .location-card {
+    display: block;
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.6rem;
+    text-decoration: none;
+    color: var(--color-primary-dark);
+    font-weight: 600;
+    text-align: center;
+  }
+  .location-card:hover {
+    border-color: var(--color-primary);
+  }
+  .area-chips {
+    color: var(--color-muted);
+    line-height: 2;
+  }
+  .note {
+    font-size: 0.9rem;
+    color: var(--color-muted);
+  }
+  .updated {
+    font-size: 0.8rem;
+    color: var(--color-muted);
+    margin-top: 2rem;
+  }
+  @media (min-width: 700px) {
+    .location-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+</style>

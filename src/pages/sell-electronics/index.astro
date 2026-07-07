@@ -1,0 +1,165 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import Faq from "../../components/Faq.astro";
+import LangSwitch from "../../components/LangSwitch.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../data/site";
+import { getHreflang } from "../../data/routes";
+
+const title = "Sell Old Electronics in Kochi | Instant Quote, Doorstep Payment";
+const description =
+  "Sell your old laptop, phone, or computer in Kochi for an instant quote. Free doorstep pickup, on-the-spot payment, condition-based pricing guidance.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Sell Electronics", path: "/sell-electronics/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Electronics buyback",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: "Kochi, Ernakulam, Kerala",
+    url: `${SITE_URL}/sell-electronics/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/sell-electronics/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "What determines how much I get for my device?",
+    a: "Device type and model, age, working condition (screen, battery health, physical damage), and current demand for that model. We give a preliminary range over WhatsApp and confirm after inspection.",
+  },
+  {
+    q: "Do you buy non-working devices too?",
+    a: "Yes, at a scrap-value price rather than a working-device price — useful if a laptop or phone no longer powers on but you still want it out of the house responsibly.",
+  },
+  {
+    q: "Is my data safe when I sell a device?",
+    a: "We can wipe storage before resale on request, following the same process used in our data destruction service — ask for this explicitly when you schedule pickup.",
+  },
+  {
+    q: "How fast is the process?",
+    a: "Most pickups are same-day or next-day once you confirm a slot, with payment made on the spot after a quick condition check.",
+  },
+  {
+    q: "Can businesses sell multiple devices at once?",
+    a: "Yes — for bulk device sales as part of an office upgrade, message us with quantities and we'll arrange a single consolidated pickup and quote.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/sell-electronics/" jsonLd={jsonLd} hreflang={getHreflang("/sell-electronics/")}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <LangSwitch current="en" otherPath="/ml/sell-electronics/" />
+  <h1>Sell Your Old Electronics in Kochi</h1>
+  <p class="lede">
+    If you have a laptop, phone, or computer you'd rather sell than let sit
+    unused, we give an instant quote and pay on the spot at doorstep pickup —
+    whether the device is fully working, partially working, or scrap. Not
+    sure whether to <a href="/recycling/">donate, sell or recycle old
+    electronics</a>? This page covers selling specifically — the linked
+    guide covers the other options.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to sell an old device — please give me a quote." />
+
+  <section>
+    <h2>What affects your quote</h2>
+    <ul class="check-list">
+      <li>Device type and model (newer, higher-spec models generally fetch more)</li>
+      <li>Working condition — does it power on, hold charge, and function normally?</li>
+      <li>Physical condition — screen, body, ports, and accessories included</li>
+      <li>Battery health, especially for laptops and phones</li>
+      <li>Current market demand for that specific model</li>
+    </ul>
+    <p>
+      Be upfront about condition when you message us — it gets you a more
+      accurate preliminary quote and avoids surprises at pickup.
+    </p>
+  </section>
+
+  <section>
+    <h2>Condition guide</h2>
+    <p>
+      <strong>Fully working:</strong> powers on, functions normally, no major
+      physical damage — highest quote tier.<br />
+      <strong>Partially working:</strong> functions with some issue (cracked
+      screen, weak battery, missing charger) — still valued, at a reduced
+      quote.<br />
+      <strong>Non-working / scrap:</strong> doesn't power on or has major
+      damage — valued for parts and material recovery rather than resale.
+    </p>
+  </section>
+
+  <section>
+    <h2>How it works</h2>
+    <ol class="process-list">
+      <li><strong>Message us</strong> with device details and condition over WhatsApp or phone.</li>
+      <li><strong>Get a preliminary quote</strong> based on your description.</li>
+      <li><strong>Schedule doorstep pickup</strong> at a convenient time.</li>
+      <li><strong>Quick condition check</strong> and final quote confirmed on the spot.</li>
+      <li><strong>Instant payment</strong> once you accept.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Who this is for</h2>
+    <p>
+      Individuals upgrading a personal device, and small offices clearing out
+      a handful of old laptops or phones. For larger bulk sales as part of an
+      IT asset refresh, or if you need data destruction certificates and
+      inventory documentation, see our <a href="/itad/">ITAD service</a>
+      instead. For a look at what drives pricing, see
+      <a href="/e-waste-scrap-prices-kochi/">e-waste scrap prices</a>, and
+      for bulk computer or office IT lots specifically, see
+      <a href="/computer-scrap-buyers-kochi/">computer scrap buyers</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Data safety</h2>
+    <p>
+      On request, we wipe storage on any device before resale using the same
+      process described on our <a href="/data-destruction/">data
+      destruction</a> page — worth asking for explicitly if the device held
+      personal accounts, photos, or documents.
+    </p>
+  </section>
+
+  <section>
+    <h2>Selling a laptop specifically?</h2>
+    <p>
+      See our guide: <a href="/blog/sell-old-laptop-kochi/">Sell Old Laptop
+      in Kochi — condition checklist and quote guide</a>, covering what to
+      check before you sell and what actually drives the price.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .process-list { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 1.25rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.4rem; padding-left: 1.25rem; color: var(--color-muted); }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

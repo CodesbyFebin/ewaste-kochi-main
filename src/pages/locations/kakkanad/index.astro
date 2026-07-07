@@ -1,0 +1,161 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "E-Waste Collection in Kakkanad | Free Pickup for IT & Homes";
+const description =
+  "Doorstep e-waste pickup in Kakkanad, Kochi — laptops, servers, batteries, and IT hardware. Free pickup for offices and homes near Infopark and SmartCity.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Locations", path: "/locations/" },
+  { name: "Kakkanad", path: "/locations/kakkanad/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "E-waste collection",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: {
+      "@type": "Place",
+      name: "Kakkanad, Kochi, Kerala",
+    },
+    url: `${SITE_URL}/locations/kakkanad/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/locations/kakkanad/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Do you offer same-day e-waste pickup in Kakkanad?",
+    a: "Same-day or next-day pickup is usually available in Kakkanad given how frequently we service the area, especially around Infopark and SmartCity. Confirm a slot over WhatsApp.",
+  },
+  {
+    q: "Can IT offices in Infopark schedule bulk pickups?",
+    a: "Yes — Infopark and SmartCity offices are among our most frequent bulk pickups. We can schedule recurring collection and provide asset lists or disposal documentation on request.",
+  },
+  {
+    q: "Do you collect UPS and inverter batteries in Kakkanad?",
+    a: "Yes, battery collection is available in the same visit as general e-waste pickup — see our battery recycling service for details on what we accept.",
+  },
+  {
+    q: "Is data wiped from office laptops and servers before disposal?",
+    a: "Yes. Any device with storage goes through data wiping, degaussing, or physical shredding before recycling or resale, depending on your security requirements.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/locations/kakkanad/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Collection in Kakkanad</h1>
+  <p class="lede">
+    Kakkanad — including Infopark and SmartCity — is one of our most active
+    service areas, thanks to the concentration of IT offices alongside
+    residential neighborhoods. We offer free doorstep pickup for both
+    households and businesses.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to schedule an e-waste pickup in Kakkanad." />
+
+  <section>
+    <h2>Services available in Kakkanad</h2>
+    <p>
+      <a href="/recycling/">General e-waste recycling</a> for laptops,
+      desktops, monitors, and printers; <a href="/battery-recycling/">battery
+      recycling</a> for UPS, inverter, and device batteries;
+      <a href="/itad/">ITAD</a> for IT offices needing bulk asset disposal and
+      documentation; and <a href="/data-destruction/">data destruction</a> for
+      any device with storage. If you'd rather sell working equipment, our
+      <a href="/marketplace/">marketplace</a> gives an instant quote.
+    </p>
+  </section>
+
+  <section>
+    <h2>Pickup process</h2>
+    <p>
+      Message us your Kakkanad address and a rough list of items over
+      WhatsApp or phone, and we'll confirm a pickup slot — usually same-day or
+      next-day given how often we're already in the area. Our team collects
+      directly from your home or office door; no drop-off needed.
+    </p>
+  </section>
+
+  <section>
+    <h2>Business collection for Infopark & SmartCity offices</h2>
+    <p>
+      IT offices in Infopark and SmartCity Kakkanad can schedule recurring or
+      one-time bulk pickups. We provide an itemized asset list and, on
+      request, documentation confirming compliant disposal — useful for
+      internal IT asset registers.
+    </p>
+  </section>
+
+  <section>
+    <h2>Household collection</h2>
+    <p>
+      Residential pickups in Kakkanad cover old laptops, TVs, kitchen
+      electronics, and batteries. No minimum quantity is required for most
+      household pickups — message us to confirm for your specific items.
+    </p>
+  </section>
+
+  <section>
+    <h2>Compliance</h2>
+    <p>
+      Collection and recycling in Kakkanad follows the same ISO
+      14001:2015-aligned and Pollution Control Board-authorized process used
+      across all our service areas. Documentation is available on request via
+      our <a href="/contact/">contact page</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Nearby areas</h2>
+    <p>
+      Also serving Edappally, Vyttila, Thrippunithura, and Infopark Kochi —
+      see the full <a href="/locations/">locations directory</a> for all
+      areas we cover.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} heading="Kakkanad Pickup FAQs" />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede {
+    font-size: 1.1rem;
+    color: var(--color-muted);
+    max-width: 46rem;
+  }
+  .mal-support {
+    font-size: 0.9rem;
+    color: var(--color-muted);
+    padding: 0.9rem 1.1rem;
+    background: var(--color-surface);
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+  }
+  .updated {
+    font-size: 0.8rem;
+    color: var(--color-muted);
+  }
+</style>

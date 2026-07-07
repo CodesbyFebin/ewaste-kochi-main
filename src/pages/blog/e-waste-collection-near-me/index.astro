@@ -1,0 +1,147 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "E-Waste Collection Near Me: How to Choose a Safe Recycler";
+const description =
+  "How to find safe, legitimate e-waste collection near you — what to ask before handing over devices, pickup vs. drop-off, and why informal disposal carries real risk.";
+const datePublished = "2026-07-07";
+const dateModified = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Collection Near Me", path: "/blog/e-waste-collection-near-me/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/e-waste-collection-near-me/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/e-waste-collection-near-me/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "What's the risk of using an informal scrap dealer instead of a proper recycler?",
+    a: "Informal dealers often lack proper environmental handling for hazardous materials, and typically can't guarantee your data was actually destroyed rather than just deleted or ignored.",
+  },
+  {
+    q: "Is pickup better than drop-off?",
+    a: "Pickup is usually more convenient and avoids the hassle of transporting bulky items yourself. Some people prefer drop-off for small quantities if a nearby, verified location exists — both can work, it depends on your situation.",
+  },
+  {
+    q: "How do I check if a recycler near me is legitimate?",
+    a: "Ask directly about their authorization status, whether they provide documentation for the pickup, and how they handle data destruction. A legitimate operator should answer these clearly without hesitation.",
+  },
+  {
+    q: "Do you cover my area in Kochi?",
+    a: "Very likely — see our locations directory or message us your address directly to confirm.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/e-waste-collection-near-me/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Collection Near Me: How to Choose a Safe Recycler</h1>
+  <p class="lede">
+    Searching for "e-waste collection near me" usually turns up a mix of
+    formal recyclers and informal scrap dealers. The difference matters —
+    here's what to check before you hand over your old electronics.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to check if you collect e-waste near me." />
+
+  <section>
+    <h2>Questions to ask before handing over devices</h2>
+    <ul class="check-list">
+      <li>Do you operate under Pollution Control Board authorization?</li>
+      <li>Can you provide a pickup or recycling record if I need one?</li>
+      <li>How is data on my devices handled before recycling?</li>
+      <li>What happens to items you can't recycle yourself — do you pass them to a compliant partner, or somewhere unclear?</li>
+    </ul>
+    <p>
+      A legitimate recycler should answer these directly, without vague or
+      evasive responses.
+    </p>
+  </section>
+
+  <section>
+    <h2>Pickup vs. drop-off</h2>
+    <p>
+      Doorstep pickup means you don't have to transport anything yourself
+      — useful for bulky items like monitors, printers, or multiple
+      devices at once. Drop-off can work for a single small item if a
+      verified location is genuinely nearby, but for most people, pickup
+      is simply more convenient. See our <a href="/pickup/">pickup
+      page</a> for how doorstep collection works.
+    </p>
+  </section>
+
+  <section>
+    <h2>Why informal disposal carries real risk</h2>
+    <p>
+      Informal scrap collection often lacks proper handling for hazardous
+      materials inside electronics, and there's usually no way to confirm
+      your personal data was actually destroyed rather than left on a
+      drive that gets resold or discarded. A recycler that operates under
+      environmental authorization and offers documented data destruction
+      closes both of those gaps.
+    </p>
+  </section>
+
+  <section>
+    <h2>How to check data safety specifically</h2>
+    <p>
+      Ask whether the recycler wipes, degausses, or physically destroys
+      storage before recycling or reselling a device, and whether they can
+      provide a certificate confirming it. See our
+      <a href="/data-destruction/">data destruction</a> page for how this
+      works with us specifically.
+    </p>
+  </section>
+
+  <section>
+    <h2>How Kochi residents can schedule collection</h2>
+    <p>
+      Message us your location and a rough list of items — we cover
+      Kochi and most of Ernakulam district, with wider coverage across
+      Kerala. See <a href="/services/electronics-recycling-near-me/">
+      electronics recycling near me</a> to check coverage quickly, or the
+      full <a href="/locations/">locations directory</a>. For anything
+      else, <a href="/contact/">contact us</a> directly.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

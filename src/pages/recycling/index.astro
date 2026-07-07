@@ -1,0 +1,213 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import Faq from "../../components/Faq.astro";
+import LangSwitch from "../../components/LangSwitch.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../data/site";
+import { getHreflang } from "../../data/routes";
+
+const title = "Where to Recycle Old Electronics in Kochi | Free Pickup";
+const description =
+  "Recycle old electronics in Kochi with free doorstep pickup — laptops, desktops, monitors, printers and more. Data wiped first, no drop-off needed.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Recycling", path: "/recycling/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "E-waste recycling",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: "Kochi, Ernakulam, Kerala",
+    url: `${SITE_URL}/recycling/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/recycling/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Where can I recycle old electronics in Kochi?",
+    a: "Ewaste Kochi collects electronics for recycling directly from your home or office anywhere in Kochi and most of Ernakulam district — no need to drop items off yourself.",
+  },
+  {
+    q: "Does Ewaste Kochi collect electronics from home?",
+    a: "Yes, doorstep pickup is our default collection method for both households and offices. Schedule a slot via WhatsApp, phone, or the pickup form.",
+  },
+  {
+    q: "What electronics can be recycled?",
+    a: "Laptops, desktops, monitors, keyboards, printers, scanners, routers, TVs, and most small and large IT/electronic hardware. See our accepted items list below; if you're unsure, send a photo over WhatsApp.",
+  },
+  {
+    q: "Can businesses schedule bulk e-waste pickup?",
+    a: "Yes. For offices, IT parks, and enterprises we offer scheduled bulk pickups, asset lists, and disposal documentation as part of our ITAD service.",
+  },
+  {
+    q: "Is data removed before recycling?",
+    a: "Any device with storage (laptops, desktops, servers, drives) goes through data wiping or destruction before recycling. See our Data Destruction service for details on methods and certificates.",
+  },
+  {
+    q: "Do you provide recycling certificates?",
+    a: "Yes, on request — useful for offices that need to document compliant disposal for internal or regulatory records.",
+  },
+  {
+    q: "Can batteries be mixed with electronics for pickup?",
+    a: "Yes, you can hand over batteries in the same pickup, but they're processed separately through our battery recycling stream since batteries need different handling than general e-waste.",
+  },
+  {
+    q: "Which areas in Kochi do you cover for recycling pickup?",
+    a: "Kakkanad, Edappally, Aluva, Vyttila, Palarivattom, Thrippunithura, Kalamassery, Infopark, and 20+ other neighborhoods — see our full locations directory for the complete list.",
+  },
+  {
+    q: "Can I donate old electronics instead of recycling them?",
+    a: "Some working electronics may be reusable or resellable after inspection. If you want to donate electronics, confirm whether the recipient can actually use them safely and remove personal data first. We can help with recycling or responsible disposal when donation isn't a good fit.",
+  },
+  {
+    q: "What should I do before giving old electronics for recycling?",
+    a: "Back up anything you want to keep, remove personal accessories, and let us know about any items needing data wiped — see our data destruction page. Gathering items in one spot before pickup also helps things go faster.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/recycling/" jsonLd={jsonLd} hreflang={getHreflang("/recycling/")}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <LangSwitch current="en" otherPath="/ml/recycling/" />
+  <h1>Where to Recycle Old Electronics in Kochi</h1>
+  <p class="lede">
+    You can recycle old electronics in Kochi through Ewaste Kochi's free
+    doorstep pickup — no need to find a drop-off point. We collect laptops,
+    desktops, monitors, printers, and general IT hardware directly from your
+    home or office, wipe any stored data first, and recycle everything
+    through compliant channels.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to schedule an e-waste recycling pickup in Kochi." />
+
+  <section>
+    <h2>What we accept</h2>
+    <p>
+      Laptops and desktops, monitors and displays, keyboards and peripherals,
+      printers and scanners, routers and networking gear,
+      <a href="/tv-recycling-kochi/">televisions and other displays</a>,
+      small household electronics, and general IT hardware from offices.
+      Large quantities, servers, and racks are handled under our
+      <a href="/itad/">ITAD</a> service. Batteries are collected alongside
+      e-waste, but if you're specifically wondering
+      <a href="/battery-recycling/">where to recycle batteries</a> in Kochi,
+      they're processed through a separate stream since they need different
+      handling. Not sure if something qualifies? Send a photo over WhatsApp
+      and we'll confirm before you schedule a pickup.
+    </p>
+  </section>
+
+  <section>
+    <h2>How pickup and recycling works</h2>
+    <ol class="process-list">
+      <li><strong>Request a pickup.</strong> Message us on WhatsApp, call, or use the pickup form with a rough list of items and your location.</li>
+      <li><strong>We confirm a slot.</strong> Same-day or next-day pickup is available across most of Kochi.</li>
+      <li><strong>Doorstep collection.</strong> Our team collects the items directly from your home or office — no drop-off required.</li>
+      <li><strong>Data handling.</strong> Any device with storage is wiped or destroyed before further processing.</li>
+      <li><strong>Recycling or resale.</strong> Items are recycled through compliant channels, or — if still functional — routed to our <a href="/marketplace/">marketplace</a> for resale with your consent.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Who this is for</h2>
+    <p>
+      Households clearing out old electronics, IT teams decommissioning office
+      hardware, and businesses that need periodic e-waste pickup as part of
+      routine IT asset turnover. For large-scale corporate disposal with
+      inventory audits and compliance documentation, see our
+      <a href="/itad/">ITAD service</a> instead — it's built specifically for
+      that use case.
+    </p>
+  </section>
+
+  <section>
+    <h2>Donating vs. recycling</h2>
+    <p>
+      Some working electronics may be reusable or resellable after
+      inspection. If you want to donate electronics, confirm whether the
+      recipient can actually use them safely and remove personal data first.
+      We can help with <a href="/marketplace/">resale</a>, recycling, or
+      responsible disposal when donation isn't a good fit for a particular
+      device.
+    </p>
+  </section>
+
+  <section>
+    <h2>Compliance</h2>
+    <p>
+      Our recycling processes follow ISO 14001:2015-aligned environmental
+      management practices, and we operate under Pollution Control Board
+      authorization for e-waste handling. Detailed certification documents are
+      available on request — see our <a href="/contact/">contact page</a> to
+      request them for your records.
+    </p>
+  </section>
+
+  <section>
+    <h2>Local coverage</h2>
+    <p>
+      We run recycling pickups across Kakkanad, Edappally, Aluva, Vyttila,
+      Palarivattom, Thrippunithura, Kalamassery, Kaloor, Kadavanthra, Infopark
+      Kochi, and 20+ other neighborhoods in and around Kochi — plus wider
+      coverage across Ernakulam district and parts of Kerala. Check your
+      neighborhood on the <a href="/locations/">locations page</a>, or just
+      message us your address and we'll confirm.
+    </p>
+  </section>
+
+  <section>
+    <h2>New to e-waste recycling?</h2>
+    <p>
+      If you're not sure what counts as e-waste or why it matters, see our
+      guide: <a href="/blog/what-is-ewaste/">What Is E-Waste?</a>
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede {
+    font-size: 1.1rem;
+    color: var(--color-muted);
+    max-width: 46rem;
+  }
+  .process-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding-left: 1.25rem;
+  }
+  .mal-support {
+    font-size: 0.9rem;
+    color: var(--color-muted);
+    padding: 0.9rem 1.1rem;
+    background: var(--color-surface);
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+  }
+  .updated {
+    font-size: 0.8rem;
+    color: var(--color-muted);
+  }
+</style>

@@ -1,0 +1,159 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import Faq from "../../components/Faq.astro";
+import LangSwitch from "../../components/LangSwitch.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../data/site";
+import { getHreflang } from "../../data/routes";
+
+const title = "Where to Recycle Batteries in Kochi | Free Doorstep Pickup";
+const description =
+  "Recycle UPS, inverter, laptop, and phone batteries in Kochi with free doorstep pickup. Safe, compliant disposal — batteries should never go in household trash.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Battery Recycling", path: "/battery-recycling/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Battery recycling",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: "Kochi, Ernakulam, Kerala",
+    url: `${SITE_URL}/battery-recycling/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/battery-recycling/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Where can I recycle batteries in Kochi?",
+    a: "Ewaste Kochi collects batteries directly from your home or office — no need to find a drop-off point. Schedule a pickup over WhatsApp or phone.",
+  },
+  {
+    q: "Which battery types do you accept?",
+    a: "UPS and inverter batteries, laptop and phone batteries, and most sealed lead-acid or lithium-ion batteries from household or office electronics.",
+  },
+  {
+    q: "Is it safe to store a swollen or damaged battery until pickup?",
+    a: "Keep it away from heat, don't puncture or charge it, and store it in a well-ventilated spot. Let us know it's damaged when you message us so we can advise on safe interim storage.",
+  },
+  {
+    q: "Can I combine battery pickup with general e-waste pickup?",
+    a: "Yes, batteries can be handed over in the same visit as general electronics — they're simply processed through a separate recycling stream afterward.",
+  },
+  {
+    q: "Do offices with UPS systems get bulk battery collection?",
+    a: "Yes. Offices replacing UPS battery banks can schedule bulk collection, and we can coordinate around your maintenance/replacement schedule.",
+  },
+  {
+    q: "What happens to batteries after collection?",
+    a: "Batteries are sorted by chemistry and routed to compliant recycling processes rather than general landfill disposal, in line with Pollution Control Board requirements for battery waste.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/battery-recycling/" jsonLd={jsonLd} hreflang={getHreflang("/battery-recycling/")}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <LangSwitch current="en" otherPath="/ml/battery-recycling/" />
+  <h1>Where to Recycle Batteries in Kochi</h1>
+  <p class="lede">
+    You can recycle batteries in Kochi through Ewaste Kochi's free doorstep
+    pickup — UPS, inverter, laptop, and phone batteries all qualify. Battery
+    handling depends on chemistry, condition, and quantity, so we collect
+    directly from your home or office and route everything through compliant
+    recycling, never household trash.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to schedule a battery recycling pickup in Kochi." />
+
+  <section>
+    <h2>What we accept</h2>
+    <p>
+      UPS batteries, inverter batteries, laptop and phone batteries, and most
+      sealed lead-acid or lithium-ion batteries from household or office
+      devices. If you're replacing an office UPS bank or clearing out old
+      power backup equipment, message us with quantities and we'll confirm
+      collection logistics.
+    </p>
+  </section>
+
+  <section>
+    <h2>Why batteries can't just go in the trash</h2>
+    <p>
+      Damaged, swollen, or leaking batteries should not be stored with
+      regular household waste. Batteries contain metals and chemicals that
+      can leak into soil and water if dumped in general waste, and
+      lithium-ion cells carry a real fire risk when crushed in regular
+      garbage handling. Routing them
+      through a dedicated recycling stream keeps both people and the
+      environment safer.
+    </p>
+  </section>
+
+  <section>
+    <h2>How pickup works</h2>
+    <ol class="process-list">
+      <li><strong>Message us</strong> with battery type and rough quantity over WhatsApp or phone.</li>
+      <li><strong>We confirm a slot</strong> — same-day or next-day pickup is available across most of Kochi.</li>
+      <li><strong>Doorstep collection</strong> from your home or office.</li>
+      <li><strong>Compliant recycling</strong> — batteries are sorted by chemistry and processed accordingly, not landfilled.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Who this is for</h2>
+    <p>
+      Households clearing out old device batteries, offices replacing UPS or
+      inverter battery banks, and IT teams decommissioning hardware that
+      still has batteries installed (laptops, UPS units, networking gear with
+      backup cells). For general electronics alongside batteries, our
+      <a href="/recycling/">recycling service</a> covers both in one pickup.
+    </p>
+  </section>
+
+  <section>
+    <h2>Compliance</h2>
+    <p>
+      Battery collection and recycling follows Pollution Control
+      Board-authorized handling procedures. Documentation is available on
+      request via our <a href="/contact/">contact page</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Local coverage</h2>
+    <p>
+      Battery pickup runs across Kakkanad, Edappally, Aluva, Vyttila,
+      Thrippunithura, Kalamassery, and 25+ other neighborhoods in Kochi and
+      Ernakulam district. See the full <a href="/locations/">locations
+      directory</a>, or just message us your address.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .process-list { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

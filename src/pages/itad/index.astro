@@ -1,0 +1,151 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import Faq from "../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../data/site";
+
+const title = "ITAD Services in Kochi | Corporate IT Asset Disposal";
+const description =
+  "IT Asset Disposition (ITAD) for offices in Kochi — inventory, secure data destruction, resale, and compliance reporting for corporate IT decommissioning.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "ITAD", path: "/itad/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "IT asset disposition",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: "Kochi, Ernakulam, Kerala",
+    url: `${SITE_URL}/itad/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/itad/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "What does an ITAD engagement typically include?",
+    a: "Asset pickup, an itemized inventory of what's collected, secure data destruction for anything with storage, resale or recycling of the hardware, and a disposal report for your records.",
+  },
+  {
+    q: "How do I choose an ITAD provider?",
+    a: "Look for clear data destruction documentation, chain-of-custody tracking for assets, transparent reporting, and a provider who can scale from a handful of laptops to a full office decommission.",
+  },
+  {
+    q: "Can you provide an asset inventory before pickup?",
+    a: "Yes — for larger engagements we can do an on-site or remote inventory audit first so both sides have an agreed asset list before anything is collected.",
+  },
+  {
+    q: "What happens to devices after collection?",
+    a: "Devices with resale value go through data destruction and are then resold or refurbished; end-of-life devices are recycled through compliant channels. You receive a report either way.",
+  },
+  {
+    q: "Do you handle recurring decommissioning for IT parks and data centers?",
+    a: "Yes — Infopark, SmartCity, and similar business hubs are among our most frequent ITAD engagements, including recurring schedules tied to hardware refresh cycles.",
+  },
+  {
+    q: "Is data destruction included or a separate cost?",
+    a: "It's included as a standard part of ITAD engagements for any device with storage — ask us for specifics when you scope your project.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/itad/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>ITAD Services in Kochi</h1>
+  <p class="lede">
+    IT Asset Disposition (ITAD) is built for offices, IT parks, and
+    enterprises decommissioning hardware at scale — with inventory tracking,
+    secure data destruction, and compliance reporting built into the process,
+    not bolted on afterward.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to discuss an ITAD engagement for our office." />
+
+  <section>
+    <h2>What's included</h2>
+    <p>
+      Asset pickup and an itemized inventory of everything collected — see
+      our dedicated <a href="/services/it-asset-inventory-audit/">asset
+      inventory audit</a> page for that process in detail;
+      <a href="/data-destruction/">secure data destruction</a> for laptops,
+      desktops, and servers; resale or recycling of the hardware depending on
+      condition; and a disposal report documenting what happened to each
+      asset. For server and rack-specific decommissioning, see
+      <a href="/server-recycling-kochi/">server recycling</a>. For a
+      smaller, ad hoc pickup rather than a full engagement, our
+      <a href="/pickup/">pickup service</a> may be a simpler fit.
+    </p>
+  </section>
+
+  <section>
+    <h2>Process</h2>
+    <ol class="process-list">
+      <li><strong>Scoping</strong> — tell us roughly what's being decommissioned and where.</li>
+      <li><strong>Asset inventory</strong> — an itemized list is built, on-site or remotely for larger jobs.</li>
+      <li><strong>Pickup</strong> — collection scheduled around your timeline.</li>
+      <li><strong>Data destruction</strong> — every device with storage is wiped, degaussed, or shredded as appropriate.</li>
+      <li><strong>Resale or recycling</strong> — functional hardware is remarketed; end-of-life hardware is recycled.</li>
+      <li><strong>Reporting</strong> — a disposal report is issued for your records.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Who this is for</h2>
+    <p>
+      IT teams and office administrators managing hardware refresh cycles,
+      companies closing or relocating offices, and any business that needs
+      documented, compliant proof of how retired IT assets were handled —
+      particularly common for offices in Infopark, SmartCity, and other
+      Kochi business hubs.
+    </p>
+  </section>
+
+  <section>
+    <h2>Choosing an ITAD provider — what to check</h2>
+    <p>
+      Ask any provider for clear data destruction documentation, chain-of-
+      custody tracking from pickup through processing, transparent reporting
+      you can keep on file, and the ability to scale from a handful of
+      laptops to a full office decommission without changing process
+      mid-project.
+    </p>
+  </section>
+
+  <section>
+    <h2>Compliance</h2>
+    <p>
+      Our ITAD process follows Pollution Control Board-authorized recycling
+      channels and NIST 800-88-aligned data destruction. Detailed
+      documentation is available on request via our <a href="/contact/">
+      contact page</a>.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .process-list { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

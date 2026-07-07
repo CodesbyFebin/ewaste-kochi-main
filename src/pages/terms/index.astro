@@ -1,0 +1,114 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import { BUSINESS, SITE_URL } from "../../data/site";
+
+const title = "Terms of Service | Ewaste Kochi";
+const description = "Terms governing pickup, recycling, resale, and data destruction services provided by Ewaste Kochi.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Terms", path: "/terms/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/terms/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+---
+
+<Layout title={title} description={description} path="/terms/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Terms of Service</h1>
+  <p class="updated">Last updated: {lastUpdated}</p>
+
+  <section>
+    <h2>Our services</h2>
+    <p>
+      Ewaste Kochi provides e-waste pickup, recycling, battery recycling,
+      device resale ("Marketplace"/"Sell Electronics"), data destruction,
+      hard drive shredding, and IT asset disposition (ITAD) as described on
+      the relevant service pages of this site.
+    </p>
+  </section>
+
+  <section>
+    <h2>Pickup scheduling</h2>
+    <p>
+      Pickup slots are confirmed based on availability in your area.
+      Same-day or next-day pickup is offered where possible but is not
+      guaranteed. Please have items ready and, where relevant, be present or
+      have an authorized person present at the scheduled time.
+    </p>
+  </section>
+
+  <section>
+    <h2>Pricing and quotes</h2>
+    <p>
+      Preliminary quotes for device sales are based on the information you
+      provide and are subject to confirmation after physical inspection at
+      pickup. The final price is agreed with you before any payment is
+      made; you are not obligated to proceed if the final quote differs
+      from the preliminary estimate.
+    </p>
+  </section>
+
+  <section>
+    <h2>Data destruction and certificates</h2>
+    <p>
+      Data destruction is performed using the methods described on our
+      <a href="/data-destruction/">data destruction</a> and
+      <a href="/hard-drive-shredding/">hard drive shredding</a> pages.
+      Certificates of destruction or recycling are issued on request for
+      devices we have processed directly. We are not responsible for data
+      on devices or media not disclosed to us at the time of pickup.
+    </p>
+  </section>
+
+  <section>
+    <h2>Refurbished and resold devices</h2>
+    <p>
+      Devices sold through our Marketplace are described to the best of our
+      knowledge based on inspection at the time of listing. Buyers should
+      confirm condition and any warranty terms directly with us before
+      purchase.
+    </p>
+  </section>
+
+  <section>
+    <h2>Limitation of liability</h2>
+    <p>
+      While we take reasonable care in handling devices and data, we are
+      not liable for pre-existing damage, data loss from devices not
+      properly disclosed, or delays caused by circumstances outside our
+      control.
+    </p>
+  </section>
+
+  <section>
+    <h2>Changes to these terms</h2>
+    <p>
+      We may update these terms from time to time; the current version will
+      always be available at this page with its last-updated date.
+    </p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>
+      Questions about these terms can be sent to {BUSINESS.email} or via our
+      <a href="/contact/">contact page</a>.
+    </p>
+  </section>
+</Layout>
+
+<style>
+  .updated { font-size: 0.8rem; color: var(--color-muted); margin-bottom: 2rem; }
+</style>

@@ -1,0 +1,136 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "E-Waste Collection in Kalamassery | Industrial & Home Pickup";
+const description =
+  "Doorstep e-waste pickup in Kalamassery, Kochi — industrial units, educational institutions, and homes. Free collection, battery recycling, and data destruction.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Locations", path: "/locations/" },
+  { name: "Kalamassery", path: "/locations/kalamassery/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "E-waste collection",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: {
+      "@type": "Place",
+      name: "Kalamassery, Kochi, Kerala",
+    },
+    url: `${SITE_URL}/locations/kalamassery/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/locations/kalamassery/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Do you serve industrial units near the HMT area?",
+    a: "Yes — Kalamassery's industrial belt around HMT is a regular part of our coverage, including bulk equipment and IT hardware pickup for factories and industrial offices.",
+  },
+  {
+    q: "Can educational institutions in the area schedule pickup?",
+    a: "Yes, colleges and educational campuses in and around Kalamassery can schedule pickup for old lab computers, projectors, and office IT equipment the same way as any business.",
+  },
+  {
+    q: "Is this different from the Kalamassery Hitech Park page?",
+    a: "This page covers Kalamassery generally, including its residential areas, industrial zone, and institutions. It's the main page for the area — message us regardless of exactly where in Kalamassery you're located.",
+  },
+  {
+    q: "Do you handle server and IT hardware pickup for nearby business parks?",
+    a: "Yes — see our server recycling and ITAD pages for the fuller process on larger business or data center decommissioning jobs.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/locations/kalamassery/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Collection in Kalamassery</h1>
+  <p class="lede">
+    Kalamassery combines an established industrial area around HMT,
+    educational institutions, and residential neighborhoods — we run
+    doorstep pickup across all of it.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to schedule an e-waste pickup in Kalamassery." />
+
+  <section>
+    <h2>Services available</h2>
+    <p>
+      <a href="/recycling/">General e-waste recycling</a> for laptops,
+      desktops, monitors, and printers; <a href="/battery-recycling/">battery
+      recycling</a> for UPS, inverter, and device batteries;
+      <a href="/itad/">ITAD</a> for industrial and institutional bulk asset
+      disposal; and <a href="/data-destruction/">data destruction</a> for
+      any device with storage.
+    </p>
+  </section>
+
+  <section>
+    <h2>Industrial and institutional pickup</h2>
+    <p>
+      Kalamassery's industrial units near HMT and the area's colleges and
+      educational institutions can schedule bulk pickup for old machinery
+      controllers, lab computers, projectors, and general office IT
+      equipment. For larger decommissioning projects with asset inventory
+      and data destruction, see <a href="/itad/">ITAD</a> or
+      <a href="/server-recycling-kochi/">server recycling</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Household pickup</h2>
+    <p>
+      Residential pickups cover old laptops, TVs, kitchen electronics, and
+      batteries — no minimum quantity required for most household jobs.
+    </p>
+  </section>
+
+  <section>
+    <h2>Compliance</h2>
+    <p>
+      Collection and recycling in Kalamassery follows the same ISO
+      14001:2015-aligned and Pollution Control Board-authorized process used
+      across all our service areas. Documentation is available on request
+      via our <a href="/contact/">contact page</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Nearby areas</h2>
+    <p>
+      Also serving Edappally, Aluva, Kakkanad, and other nearby
+      neighborhoods — see the full <a href="/locations/">locations
+      directory</a>.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} heading="Kalamassery Pickup FAQs" />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

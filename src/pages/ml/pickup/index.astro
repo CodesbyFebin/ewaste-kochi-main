@@ -1,0 +1,115 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import LangSwitch from "../../../components/LangSwitch.astro";
+import { SITE_URL } from "../../../data/site";
+import { getHreflang } from "../../../data/routes";
+
+const title = "കൊച്ചിയിൽ ഇ-വേസ്റ്റ് പിക്കപ്പ് | വീട്ടിലെത്തി ശേഖരണം";
+const description =
+  "കൊച്ചിയിൽ ലാപ്ടോപ്പ്, ബാറ്ററി, ഐടി ഉപകരണങ്ങൾ എന്നിവയ്ക്കുള്ള സൗജന്യ പിക്കപ്പ് ബുക്ക് ചെയ്യുക. അതേ ദിവസം അല്ലെങ്കിൽ അടുത്ത ദിവസം സ്ലോട്ട് ലഭ്യം.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "ഹോം", path: "/" },
+  { name: "മലയാളം", path: "/ml/" },
+  { name: "പിക്കപ്പ്", path: "/ml/pickup/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "E-waste doorstep pickup",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: "Kochi, Ernakulam, Kerala",
+    url: `${SITE_URL}/ml/pickup/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/ml/pickup/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    inLanguage: "ml-IN",
+  },
+];
+
+const faqItems = [
+  {
+    q: "എത്ര വേഗത്തിൽ പിക്കപ്പ് ലഭിക്കും?",
+    a: "മിക്ക പ്രദേശങ്ങളിലും അതേ ദിവസമോ അടുത്ത ദിവസമോ പിക്കപ്പ് ലഭ്യമാണ്.",
+  },
+  {
+    q: "പിക്കപ്പിന് കുറഞ്ഞ അളവ് വേണോ?",
+    a: "മിക്ക വീട്ടു പിക്കപ്പുകൾക്കും കുറഞ്ഞ അളവ് നിബന്ധനയില്ല.",
+  },
+  {
+    q: "പിക്കപ്പ് സമയത്ത് ഞാൻ വീട്ടിൽ ഉണ്ടാകണോ?",
+    a: "അതെ, അല്ലെങ്കിൽ നിങ്ങൾക്ക് വേണ്ടി അധികാരപ്പെടുത്തിയ ഒരാൾ ഉണ്ടാകണം.",
+  },
+  {
+    q: "ഓഫീസുകൾക്ക് ആവർത്തിച്ചുള്ള പിക്കപ്പ് ക്രമീകരിക്കാമോ?",
+    a: "അതെ, സ്ഥിരമായി ഐടി ഉപകരണങ്ങൾ മാറ്റുന്ന ഓഫീസുകൾക്ക് ആവർത്തന പിക്കപ്പ് ഷെഡ്യൂൾ ചെയ്യാം.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/ml/pickup/" jsonLd={jsonLd} lang="ml-IN" hreflang={getHreflang("/ml/pickup/")}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <LangSwitch current="ml" otherPath="/pickup/" />
+  <h1>കൊച്ചിയിൽ സൗജന്യ ഇ-വേസ്റ്റ് പിക്കപ്പ്</h1>
+  <p class="lede">
+    മിക്ക ഉപഭോക്താക്കളും തുടങ്ങുന്നത് ഡോർസ്റ്റെപ്പ് പിക്കപ്പിലൂടെയാണ് —
+    എവിടെയും കൊണ്ടുപോകേണ്ട ആവശ്യമില്ല. നിങ്ങളുടെ പക്കൽ എന്തുണ്ടെന്ന്
+    പറയൂ, ഞങ്ങൾ സ്ലോട്ട് സ്ഥിരീകരിച്ച് വീട്ടിലെത്തി ശേഖരിക്കും.
+  </p>
+
+  <CtaBar
+    whatsappMessage="നമസ്കാരം, ഒരു ഇ-വേസ്റ്റ് പിക്കപ്പ് ബുക്ക് ചെയ്യണം."
+    pickupHref="/ml/pickup/"
+    labels={{ call: "വിളിക്കുക", whatsapp: "വാട്സ്ആപ്പ് ചെയ്യുക", pickup: "പിക്കപ്പ് ബുക്ക് ചെയ്യുക" }}
+  />
+
+  <section>
+    <h2>ഞങ്ങൾ ശേഖരിക്കുന്നത്</h2>
+    <p>
+      <a href="/ml/recycling/">റീസൈക്ലിംഗിനുള്ള</a> ലാപ്ടോപ്പ്, ഡെസ്ക്ടോപ്പ്,
+      മോണിറ്റർ, പ്രിന്റർ, ബാറ്ററികൾ, പൊതുവായ ഐടി ഉപകരണങ്ങൾ;
+      <a href="/ml/sell-electronics/">വിൽപ്പനയ്ക്കുള്ള</a> പ്രവർത്തിക്കുന്ന
+      ഉപകരണങ്ങൾ; <a href="/ml/data-destruction/">ഡാറ്റ നശിപ്പിക്കൽ</a>
+      ആവശ്യമുള്ള ഡ്രൈവുകൾ.
+    </p>
+  </section>
+
+  <section>
+    <h2>ഷെഡ്യൂൾ ചെയ്യുന്ന വിധം</h2>
+    <ol class="process-list">
+      <li><strong>നിങ്ങളുടെ സ്ഥലവും സാധനങ്ങളും</strong> വാട്സ്ആപ്പിലോ ഫോണിലോ അറിയിക്കുക.</li>
+      <li><strong>സ്ലോട്ട് സ്ഥിരീകരിക്കുന്നു</strong> — സാധാരണയായി അതേ ദിവസമോ അടുത്ത ദിവസമോ.</li>
+      <li><strong>ഞങ്ങളുടെ ടീം എത്തുന്നു</strong> നിങ്ങളുടെ വാതിൽക്കൽ നിന്ന് നേരിട്ട് ശേഖരിക്കുന്നു.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>കവറേജ് പ്രദേശം</h2>
+    <p>
+      കക്കനാട്, എടപ്പള്ളി, ആലുവ, വൈറ്റില, തൃപ്പൂണിത്തുറ, കളമശ്ശേരി,
+      ഇൻഫോപാർക്ക് എന്നിവയും 25+ മറ്റ് പ്രദേശങ്ങളും — കൂടാതെ എറണാകുളം
+      ജില്ലയിലും കേരളത്തിലും വിശാലമായ കവറേജും.
+    </p>
+  </section>
+
+  <Faq items={faqItems} heading="പതിവ് ചോദ്യങ്ങൾ" />
+
+  <p class="updated">അവസാനം പുതുക്കിയത്: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .process-list { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 1.25rem; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

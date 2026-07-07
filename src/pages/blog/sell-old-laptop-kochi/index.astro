@@ -1,0 +1,160 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Sell Old Laptop in Kochi | Condition Checklist & Quote Guide";
+const description =
+  "A practical guide to selling your old laptop in Kochi — condition checklist, data wiping, what drives your quote, and options for damaged or bulk office laptops.";
+const datePublished = "2026-07-07";
+const dateModified = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Sell Old Laptop in Kochi", path: "/blog/sell-old-laptop-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/sell-old-laptop-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/sell-old-laptop-kochi/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Should I wipe my laptop myself before selling it?",
+    a: "You can, but it's not required — we offer data wiping as part of the sale process if you'd rather not handle it yourself. See our data destruction page for details.",
+  },
+  {
+    q: "What if my laptop has a cracked screen or won't turn on?",
+    a: "It still has value — non-working or damaged laptops are bought at a scrap-value rate rather than a working-device rate. Describe the condition honestly for an accurate preliminary estimate.",
+  },
+  {
+    q: "Do I need the original charger or box?",
+    a: "Not required, but including the charger can help the quote slightly since it saves the buyer sourcing a replacement.",
+  },
+  {
+    q: "Can an office sell multiple old laptops at once?",
+    a: "Yes — bulk office laptop sales are common. Message us with quantities for a consolidated pickup and quote rather than handling devices one at a time.",
+  },
+  {
+    q: "How fast do I get paid?",
+    a: "Payment is made at pickup, on the spot, once you accept the final quote after a quick condition check.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/sell-old-laptop-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Sell Old Laptop in Kochi</h1>
+  <p class="lede">
+    Before you sell an old laptop, a few minutes of preparation can get you
+    a better, more accurate quote. Here's a practical checklist, plus what
+    actually determines the price.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to sell my old laptop — please give me a quote." />
+
+  <section>
+    <h2>Condition checklist</h2>
+    <ul class="check-list">
+      <li>Does it power on and boot normally?</li>
+      <li>How's the battery — does it hold charge, or does it need to stay plugged in?</li>
+      <li>Screen condition — any cracks, dead pixels, or discoloration?</li>
+      <li>Body condition — hinges, keyboard, ports all functional?</li>
+      <li>Do you have the charger, and any other original accessories?</li>
+    </ul>
+    <p>
+      Describe these honestly when you message us — it gets you a more
+      accurate preliminary quote and avoids surprises at pickup. A couple of
+      clear photos (screen on, body, any visible damage) sent over WhatsApp
+      alongside the checklist above will get you the most accurate estimate
+      before we even arrive.
+    </p>
+  </section>
+
+  <section>
+    <h2>Data and documents first</h2>
+    <p>
+      Back up anything you want to keep, then either wipe the drive yourself
+      or let us handle it — we offer wiping as part of the sale process. See
+      <a href="/data-destruction/">data destruction</a> for how this works if
+      you'd rather we take care of it.
+    </p>
+  </section>
+
+  <section>
+    <h2>What determines your quote</h2>
+    <p>
+      Model and specs, working condition, battery health, physical
+      condition, and current market demand for that model. See our
+      <a href="/e-waste-scrap-prices-kochi/">e-waste scrap prices</a> page
+      for the fuller breakdown of pricing factors that apply across devices,
+      not just laptops.
+    </p>
+  </section>
+
+  <section>
+    <h2>Working vs. damaged laptops</h2>
+    <p>
+      A fully working laptop gets the highest quote tier. Partially working
+      (cracked screen, weak battery, missing charger) is still valued, just
+      at a reduced rate. Non-working laptops are bought at scrap value —
+      still worth selling rather than leaving unused.
+    </p>
+  </section>
+
+  <section>
+    <h2>Selling in bulk for an office</h2>
+    <p>
+      If you're clearing out multiple laptops as part of an office upgrade,
+      message us with quantities for a single consolidated pickup and quote.
+      For larger IT asset refreshes needing data destruction certificates
+      and inventory documentation, see our <a href="/itad/">ITAD service</a>
+      instead.
+    </p>
+  </section>
+
+  <section>
+    <h2>Ready to sell?</h2>
+    <p>
+      See our full <a href="/sell-electronics/">Sell Electronics</a> page
+      for the complete process, or <a href="/marketplace/">Marketplace</a>
+      for our broader buy/sell platform. To schedule collection, head to
+      <a href="/pickup/">Pickup</a>.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

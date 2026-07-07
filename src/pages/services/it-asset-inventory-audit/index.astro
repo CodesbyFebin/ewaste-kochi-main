@@ -1,0 +1,129 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "IT Asset Inventory Audit in Kochi | Pre-Disposal Asset Tracking";
+const description =
+  "IT asset inventory audits in Kochi ahead of disposal — serial number capture, asset tagging, chain-of-custody records, and reporting for ITAD projects.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Services", path: "/services/" },
+  { name: "IT Asset Inventory Audit", path: "/services/it-asset-inventory-audit/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "IT asset inventory audit",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: "Kochi, Ernakulam, Kerala",
+    url: `${SITE_URL}/services/it-asset-inventory-audit/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/services/it-asset-inventory-audit/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "What does an asset inventory audit include?",
+    a: "Capturing asset tags and serial numbers for each device, noting condition and type, and building a record that ties each item to what eventually happens to it — resale, recycling, or destruction.",
+  },
+  {
+    q: "Is this a standalone service or part of ITAD?",
+    a: "It's typically the first step in a larger ITAD or server recycling engagement, but can also be requested on its own if you need an inventory before deciding what to do with the equipment.",
+  },
+  {
+    q: "Can the audit happen before we decide on disposal?",
+    a: "Yes — an inventory audit can be done independently to help you plan a decommissioning project, with disposal decisions made afterward.",
+  },
+  {
+    q: "Do you provide chain-of-custody documentation?",
+    a: "Yes, for assets that move into our disposal process, we can track custody from pickup through final processing as part of the inventory record.",
+  },
+  {
+    q: "What format is the report delivered in?",
+    a: "A structured asset list covering device details, condition, and disposition — ask us about your preferred format when scoping the audit.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/services/it-asset-inventory-audit/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>IT Asset Inventory Audit</h1>
+  <p class="lede">
+    Before deciding what happens to a batch of IT equipment, it helps to
+    know exactly what you have. We build an itemized asset inventory —
+    serial numbers, condition, and disposition — as a standalone service or
+    as the first step of a larger ITAD engagement.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, we need an IT asset inventory audit before disposing of equipment." />
+
+  <section>
+    <h2>What's captured</h2>
+    <ul class="check-list">
+      <li>Asset tag and serial number per device</li>
+      <li>Device type, make/model, and condition</li>
+      <li>Location or department the asset came from, where relevant</li>
+      <li>Disposition — resale, recycling, or destruction, once decided</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>How it fits into a larger project</h2>
+    <p>
+      This audit is typically the first step in a full
+      <a href="/itad/">ITAD engagement</a> or
+      <a href="/server-recycling-kochi/">server recycling</a> project — it
+      gives you a clear record before anything is collected. It can also be
+      requested standalone if you just need to know what you have before
+      deciding on next steps.
+    </p>
+  </section>
+
+  <section>
+    <h2>Chain of custody</h2>
+    <p>
+      For assets that proceed into our disposal process, we track custody
+      from pickup through <a href="/data-destruction/">data destruction</a>
+      or recycling, tying back to the original inventory record — useful
+      for internal audits or compliance reviews.
+    </p>
+  </section>
+
+  <section>
+    <h2>Who this is for</h2>
+    <p>
+      IT teams planning a hardware refresh or office move, businesses that
+      need documentation before an audit, and any organization decommissioning
+      enough equipment that an informal count isn't good enough.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.4rem; padding-left: 1.25rem; color: var(--color-muted); }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

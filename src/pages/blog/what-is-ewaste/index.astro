@@ -1,0 +1,152 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "What Is E-Waste? A Beginner's Guide for Kochi Households & Offices";
+const description =
+  "What e-waste actually means, common examples, why it matters, and what to do with old electronics in Kochi instead of throwing them in the regular bin.";
+const datePublished = "2026-07-07";
+const dateModified = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "What Is E-Waste?", path: "/blog/what-is-ewaste/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/what-is-ewaste/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/what-is-ewaste/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Is a phone charger e-waste?",
+    a: "Yes — cables, chargers, and small accessories count as e-waste, even though they're easy to overlook. See our e-waste examples guide for a fuller list.",
+  },
+  {
+    q: "Can e-waste just go in the recycling bin with paper and plastic?",
+    a: "No. E-waste needs separate handling because of the metals, chemicals, and batteries it can contain — mixing it with general recycling can contaminate that stream and create safety hazards.",
+  },
+  {
+    q: "Is it illegal to throw electronics in household trash in Kerala?",
+    a: "E-waste is regulated separately from general household waste under national rules — see our overview of the E-Waste Management Rules 2022 for the general framework. For specifics, check with the Kerala State Pollution Control Board.",
+  },
+  {
+    q: "What should I do with e-waste right now?",
+    a: "Message us for a free doorstep pickup, or check our recycling page for what's accepted and how it works.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/what-is-ewaste/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>What Is E-Waste?</h1>
+  <p class="lede">
+    E-waste is any electrical or electronic device that's been discarded —
+    from an old phone charger to a dead laptop to a broken office printer.
+    It's one of the fastest-growing waste categories in India, and it needs
+    different handling than regular household trash because of what's
+    inside it.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I have some e-waste I'd like to recycle." />
+
+  <section>
+    <h2>What counts as e-waste</h2>
+    <p>
+      Anything with a plug, battery, or circuit board that's no longer
+      wanted or working: computers, laptops, mobile phones, televisions,
+      printers, routers, kitchen appliances, batteries, and even cables and
+      chargers. If it runs on electricity or stores a charge, it's likely
+      e-waste once you're done with it. See our
+      <a href="/blog/e-waste-examples/">full list of common e-waste
+      examples</a> for specifics.
+    </p>
+  </section>
+
+  <section>
+    <h2>Why e-waste is treated differently from regular trash</h2>
+    <p>
+      Electronics contain a mix of valuable and hazardous materials —
+      copper, aluminum, and small amounts of precious metals alongside
+      things like lead, mercury, and flame retardants, depending on the
+      device. Batteries specifically carry a fire and chemical-leak risk
+      when crushed in general garbage handling. Proper e-waste recycling
+      recovers what's valuable and safely handles what's hazardous, instead
+      of letting all of it end up mixed into a landfill.
+    </p>
+  </section>
+
+  <section>
+    <h2>Why it matters</h2>
+    <p>
+      When e-waste ends up in general trash or informal scrap processing,
+      harmful materials can leach into soil and groundwater, and workers
+      handling it without proper safety measures can be exposed to toxic
+      substances. Routing devices through a proper recycling channel — one
+      that follows Pollution Control Board-authorized processes — keeps
+      both people and the environment safer, and recovers materials that
+      would otherwise be wasted.
+    </p>
+  </section>
+
+  <section>
+    <h2>What Kochi households and offices can do</h2>
+    <p>
+      The simplest starting point is a doorstep pickup — no need to find a
+      drop-off location or figure out sorting yourself. We collect from
+      homes and offices across Kochi and Ernakulam district, wipe any
+      stored data first, and route everything to compliant
+      <a href="/recycling/">recycling</a>. Batteries are collected too, but
+      processed separately through <a href="/battery-recycling/">battery
+      recycling</a> since they need different handling. Not sure if your
+      area is covered? Check
+      <a href="/services/electronics-recycling-near-me/">electronics
+      recycling near me</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Safe next step</h2>
+    <p>
+      If you have old electronics sitting around, the easiest thing to do
+      is message us with what you have and your location — we'll confirm
+      pickup and take it from there. See our <a href="/pickup/">pickup
+      page</a> for how scheduling works.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

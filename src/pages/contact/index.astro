@@ -1,0 +1,84 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import LangSwitch from "../../components/LangSwitch.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../data/site";
+import { getHreflang } from "../../data/routes";
+
+const title = "Contact Ewaste Kochi | Book a Pickup or Ask a Question";
+const description =
+  "Reach Ewaste Kochi by phone, WhatsApp, or email. Address, business hours, and quick links to book a pickup or request a quote.";
+const lastUpdated = "2026-07-07";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Contact", path: "/contact/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/contact/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+---
+
+<Layout title={title} description={description} path="/contact/" jsonLd={jsonLd} hreflang={getHreflang("/contact/")}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <LangSwitch current="en" otherPath="/ml/contact/" />
+  <h1>Contact Us</h1>
+  <p class="lede">
+    WhatsApp is usually the fastest way to reach us — for pickups, quotes,
+    and general questions alike.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to get in touch." />
+
+  <section class="contact-grid">
+    <div>
+      <h2>Details</h2>
+      <p><strong>Phone / WhatsApp:</strong> <a href={telLink()}>{BUSINESS.phoneDisplay}</a></p>
+      <p><strong>Email:</strong> <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a></p>
+      <p><strong>Address:</strong> {BUSINESS.address.streetAddress}, {BUSINESS.address.addressLocality}, {BUSINESS.address.addressRegion} {BUSINESS.address.postalCode}</p>
+      <p><strong>Hours:</strong> {BUSINESS.hoursDisplay}</p>
+    </div>
+    <div>
+      <h2>What to include when you message us</h2>
+      <ul>
+        <li>What you have (device type, quantity)</li>
+        <li>Your area in Kochi/Kerala</li>
+        <li>Whether you want to recycle, sell, or need data destruction</li>
+        <li>For businesses: rough asset count and timeline</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Documentation requests</h2>
+    <p>
+      If you need a recycling certificate, data destruction certificate, or
+      compliance documentation (ISO 14001:2015 / Pollution Control Board
+      authorization) for your records, mention this when you contact us and
+      we'll arrange it.
+    </p>
+  </section>
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .contact-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; margin: 1.5rem 0; }
+  .contact-grid h2 { font-size: 1.1rem; }
+  .contact-grid p { margin: 0.3rem 0; }
+  .contact-grid ul { padding-left: 1.25rem; color: var(--color-muted); }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  @media (min-width: 700px) {
+    .contact-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
