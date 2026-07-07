@@ -1,12 +1,14 @@
 # Staging Deployment Checklist
 
-Status: checklist only — **not executed**. No deployment has happened. This is what to do when the user decides to actually stand up a staging environment.
+Status: **executed twice** — Phase 2H (initial deploy) and Phase 2K (fresh redeploy after the chatbot and hero rebuild, plus the git baseline). Kept as a checklist for the next redeploy, whenever that happens.
 
-## Pre-deploy state (confirmed as of Phase 2G)
+## Pre-deploy state (confirmed as of Phase 2K)
 
-- 43 pages, `npm run build` and `npm run validate` both green (464/464 checks).
-- `vercel.json` has **297 redirect rules** (13 pre-existing + 284 legacy-matrix redirects added in Phase 2G), all target-verified, no chains (see `reports/phase-2f-staging-readiness-audit.md` for the original 13, `reports/phase-2g-legacy-matrix-redirect-report.md` for the 284 added since).
+- 43 pages, `npm run build` and `npm run validate` both green (**469/469 checks**, up from 464 — includes the Phase 2I-A chatbot's 5 safety checks).
+- `vercel.json` has **297 redirect rules** (13 pre-existing + 284 legacy-matrix redirects added in Phase 2G), all target-verified, no chains.
+- The site now includes the **Phase 2I-A lead-funnel chatbot** (mounted globally via `Layout.astro`, no backend, no LLM calls) and the **Phase 2J-flagged, Phase-2I-rebuilt homepage hero** (`.hero-features`, inline SVG icons, no raster images, no fabricated claims).
 - No environment variables are used anywhere in the codebase (confirmed by grep for `import.meta.env` / `process.env` — this is a fully static site with no external API calls or secrets). **Nothing needs to be configured in Vercel's environment variables panel for this to work.**
+- **Git baseline exists as of Phase 2K**: commit `0841992ecd21faeac1976dace853f604aa0d9333`, tag `v2-pre-production-baseline`. See `docs/deployment/rollback-safety-plan.md`.
 
 ## 1. Environment variables
 
@@ -71,11 +73,11 @@ This section applies only once this codebase actually replaces the live producti
 
 ## 7. Rollback plan
 
-Since nothing is deployed yet, there is no live rollback scenario to plan against today — but for when a real production cutover happens:
+See `docs/deployment/rollback-safety-plan.md` for the full plan (git baseline commit/tag, deployment targets, domain-level and code-level rollback strategy). Summary:
 
 - [ ] Confirm with the user, before cutover, whether the current live site's deployment (wherever it's hosted now) can be quickly restored if something goes wrong — this repository has no visibility into how the current live site is actually deployed (it was audited via crawling only, per `reports/v2-initial-repo-audit.md`), so the rollback mechanism has to come from wherever that deployment actually lives.
 - [ ] Keep the old site's DNS/hosting configuration untouched until the new deployment is verified stable — don't decommission the old deployment path as part of the same change that goes live.
-- [ ] Because `vercel.json` redirects are permanent (301), a rollback that un-does the redirect layer specifically (not the whole site) means simply not deploying this `vercel.json` — the old site's existing redirect behavior (documented in `reports/v2-initial-repo-audit.md`) would resume once this deployment is reverted.
+- [ ] Because `vercel.json` redirects are permanent (301/308), a rollback that un-does the redirect layer specifically (not the whole site) means reverting just that file to a prior git commit — this is now possible for the first time as of the Phase 2K git baseline (`v2-pre-production-baseline`).
 
 ## 8. Post-deploy crawl checklist
 

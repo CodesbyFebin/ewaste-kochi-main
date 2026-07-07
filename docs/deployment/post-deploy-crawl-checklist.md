@@ -1,6 +1,14 @@
 # Post-Deploy Crawl Checklist
 
-Status: checklist only — **not executed**, since nothing has been deployed yet. Run this immediately after any deploy (staging preview or eventual production cutover).
+Status: **executed twice** against staging (Phase 2H, then again in Phase 2K after the chatbot and hero rebuild — see `reports/phase-2k-git-safety-fresh-staging-report.md` for the latest results). Still never run against real production. Run this immediately after any deploy.
+
+## 0. Chatbot check (new as of Phase 2I-A / verified in Phase 2K)
+
+- [ ] `ew-lead-chat-root` present in every page's HTML (mounted via `Layout.astro`, should be on all 43).
+- [ ] Launcher opens the panel; a full flow (e.g. Book a Pickup) can be completed end to end.
+- [ ] The generated WhatsApp link uses the correct number (`917500555454`) and a correctly encoded message.
+- [ ] Close button and Escape key both close the panel.
+- [ ] Zero browser console/page errors during the interaction.
 
 ## 1. Basic reachability (all 43 pages)
 
@@ -35,6 +43,7 @@ This mirrors what `scripts/validate-seo-v2.ts` already checks locally — the po
 - [ ] Confirm none of the 7 resolved-loser URLs (`/e-waste-recycling/`, `/data-destruction-services-kochi/`, `/scrap-price/`, `/free-e-waste-pickup-kochi/`, `/blog/sell-old-laptop-kochi-best-price/`, `/locations/ernakulam/`, `/locations/kalamassery-hitech-park/`) serve real content directly — each should only exist as a redirect source.
 - [ ] Confirm `/blogs/` returns 404 (not accidentally resolved by some catch-all routing behavior in the hosting environment).
 - [ ] Confirm `/hi/` behaves exactly as it did pre-deploy (untouched, per the standing manual-review decision) — this is a regression check, not an expectation of new behavior.
+- [ ] Confirm the homepage has no fabricated rating/review claims, no named client logos, and no unverified "government authorized" style certification claims — this became relevant after a user-supplied hero graphic containing exactly this content was reviewed and rejected; the rebuilt hero (`.hero-features`) should be the only thing present.
 
 ## 6. Mobile/rendering spot check
 
