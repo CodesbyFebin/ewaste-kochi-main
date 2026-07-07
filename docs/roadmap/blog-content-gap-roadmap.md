@@ -129,3 +129,115 @@ Roughly 70 of the 100 titles were excluded on one of the grounds above. The ~27 
 ### Note on the 5 titles flagged as a likely "Phase 2E starting point"
 
 A follow-up message named 5 specific slugs as candidates for whichever future phase actually starts writing posts: `/blog/what-is-e-waste/`, `/blog/e-waste-examples/`, `/blog/e-waste-collection-near-me/`, `/blog/what-is-epr-in-e-waste/`, `/blog/e-waste-management-rules-2022/`. These map directly to items #1, #2, #7, #16, and #15 above — a reasonable, genuinely non-duplicate starting set if a content phase is opened. **Not built in this phase** — this remains planning only, per the user's explicit "fold into roadmap" decision, not "start publishing."
+
+## Structural content reference — extracted from a found file, fabrication stripped (2026-07-07)
+
+A reference file (`recy.html`, a single-page "wiki-style" recycling guide for a *different* domain — `ewastekochi.in`, not the real `ewastekochi.com`) was shared for review. It's the same category as the AMP file and the 15-page PDF template flagged earlier in this project: **structure worth learning from, content not worth trusting.** It carried a fabricated `4.9★ / 127 reviews` schema rating, invented statistics ("2,400+ tonnes recycled," "50,000+ devices processed," recovery rates to a decimal place), named real hospitals as served clients with no relationship on record, an unverified 2018 founding date, and a 50+ page device×city interlink matrix — the exact pSEO pattern `data/legacyRedirectCandidates.json` and this project's own "100 blog posts" rejection already documented as a mistake. **None of that is captured below.** What follows is only the reusable table/section *structure*, with every number replaced by a sourcing requirement.
+
+### 1. Precious-metal urban-mining table (maps to Tier 5 item #14)
+
+Column structure worth reusing for "Gold and Precious Metal Recovery from E-Waste":
+
+| Metal | Typical geological ore grade | Concentration in e-waste | Primary source in electronics |
+|---|---|---|---|
+| Gold (Au) | *[needs a real, cited source — e.g. USGS or an industry report]* | *[needs a real, cited source — do not reuse the reference file's gram-per-tonne figures, they're unverified]* | CPU pins, connectors, PCB edge contacts |
+| Silver (Ag) | *[cite source]* | *[cite source]* | SMT solder, conductive adhesives |
+| Palladium (Pd) | *[cite source]* | *[cite source]* | Multilayer ceramic capacitors |
+| Copper (Cu) | *[cite source]* | *[cite source]* | PCB traces, wiring, connectors |
+
+**Before this gets written**: confirm whether EwasteKochi actually has visibility into refinery-level recovery data (a real downstream partner relationship), or whether this has to be framed as third-party industry data with attribution rather than "our facility recovers X%" — the reference file's mistake was presenting industry-general figures as this specific business's own audited numbers.
+
+### 2. Hazardous-materials table (maps to Tier 5 item #4, "Why Is E-Waste Dangerous")
+
+Column structure:
+
+| Material | Where it's found | Health/environmental risk | Typical quantity |
+|---|---|---|---|
+| Lead (Pb) | CRT glass, older solder | Neurological damage, especially in children | *[cite a real source before stating a per-unit figure]* |
+| Mercury (Hg) | CCFL LCD backlights | Neurological/kidney damage, bioaccumulates in fish | *[cite source]* |
+| Cadmium (Cd) | NiCd batteries, some board components | Carcinogen, persistent in soil | *[cite source]* |
+| Brominated flame retardants | Circuit boards, plastic casings | Forms dioxins/furans if informally burned | — |
+| Hexavalent chromium | Metal part coatings | Carcinogen, leaches from landfills | — |
+
+The reference file's Periyar/Vembanad Lake/CUSAT-study claims are a real, checkable category of evidence (a real university, real waterways) but the specific study and figures were not independently verified here — **do not cite a specific study without pulling the actual paper**, consistent with this project's citation standard (Tier 5 item #31: "must cite real published sources — not estimate").
+
+### 3. Regulatory compliance table (maps to Tier 5 items #15–24, the regulatory cluster)
+
+This table's *structure* is the most directly reusable piece — the regulations themselves are real and citable, unlike the metal/hazard figures above:
+
+| Regulation | Governing body | Who it affects | Key requirement |
+|---|---|---|---|
+| E-Waste (Management) Rules 2022 | CPCB / KSPCB | Businesses, institutions, consumers | Must channel e-waste through EPR-authorized collectors/recyclers |
+| DPDP Act 2023 | Data Protection Board | Organizations handling personal data | Verifiable data destruction for data-bearing devices |
+| IT Act 2000, Section 43A | MeitY | Organizations with sensitive personal data | Liability for negligent data handling, including disposal |
+| Environment Protection Act 1986 | KSPCB | Entities generating hazardous waste | Prohibited from unauthorized hazardous-waste disposal |
+| SEBI BRSR requirements | SEBI | Listed companies | Must report e-waste generated/recycled in BRSR filings |
+
+**Before this gets written**: verify penalty amounts, thresholds, and any specific figures directly against the actual rule text or a KSPCB/CPCB source — the reference file's specific fine amounts ("up to ₹1 lakh," "up to ₹250 crore" for DPDP) were not verified here and should not be copied without independent confirmation.
+
+### 4. "Certified recycler vs. informal scrap dealer" comparison table — a `/recycling/` page idea, not a blog post
+
+This is structurally strong for the existing `/recycling/` service page's trust/differentiation section, not a new blog post:
+
+| Factor | Certified recycler | Informal scrap dealer |
+|---|---|---|
+| Data security | Certified destruction, documentation issued | No data destruction — drives often resold as-is |
+| Legal compliance | Documented compliance | Non-compliant — exposes the customer to penalties |
+| Environmental handling | Hazardous materials safely processed | Materials often dumped or informally burned |
+| Documentation | Certificate issued | None |
+
+**Important constraint**: every claim in the "certified recycler" column must match what the real site can actually back up today. Per this project's Key Decisions, real ISO/CPCB/KSPCB certificate numbers are still pending from the user — the site currently uses "documentation available on request" placeholder language rather than claiming specific certifications outright. This table can't claim more than that until the real certificate numbers arrive.
+
+### Explicitly not carried over
+
+- The 4.9★/127-review rating and any other aggregateRating-style claim.
+- Every "2,400+ tonnes," "50,000+ devices," and decimal-precision recovery-rate figure.
+- The named-hospital "clients" list.
+- The 50+ page device×city interlink matrix and its underlying URL pattern (`/e-waste-{city}.html`, `/{device}-recycling-kochi.html`) — same pattern already rejected in the legacy-matrix work and the "100 blog posts" plan.
+- Any specific SLA/turnaround claim ("2–4 hour pickup," "24/7 including holidays") not already verified against the real site's actual operations.
+
+## Real feature/content proposal — `/blog/` index page (2026-07-07, from reference file `blog.html`)
+
+Unlike `recy.html`, this reference file used the real business phone and address — but every URL it links to (`/itad-kochi`, `/data-destruction-kochi`, a dozen `/blog/{slug}` article slugs, etc.) matches nothing that was ever actually live on the real site (checked against `data/urlInventory.json`). Treated as another draft from the same source as `SWARM/`/the chatbot zip/the AMP file, per `PROJECT_TRACKER.md`. It's covered here — not discarded outright — because it exposes one confirmed real gap and validates several already-planned content items with a second, independent signal.
+
+### The real gap: there is no `/blog/` index page
+
+`src/pages/blog/` currently holds 6 individual posts (`what-is-ewaste`, `e-waste-examples`, `e-waste-collection-near-me`, `what-is-epr-in-e-waste`, `e-waste-management-rules-2022`, `free-e-waste-pickup-kochi`, `sell-old-laptop-kochi`) with no page listing them — `/blog/` itself isn't a route. This was already an open question in `PROJECT_TRACKER.md`'s Next Tasks ("Consider whether a `/blog/` index page is needed once enough posts exist"). `blog.html`'s structure (category filter pills, card grid with excerpt/date/read-time, an FAQ block) is a reasonable design reference for whenever that page gets built — once there are enough real posts to justify an index, not before.
+
+### Topics that corroborate items already in this roadmap (second independent signal, same finding)
+
+- **NIST 800-88 vs. DoD 5220.22-M** — exact match to Tier 2 item #9. `blog.html`'s treatment (Clear/Purge/Destroy three-tier breakdown, an HDD/SSD/NVMe-by-destruction-method comparison table, an on-site-vs-off-site decision framework) is a genuinely good structural template for whenever #9 gets written — the underlying standards (NIST SP 800-88 Rev. 1, DoD 5220.22-M) are real and correctly described, unlike the tonnage/recovery-rate figures from `recy.html`.
+- **Data centre decommissioning checklist** — the reference file's "12-Step Server Disposal Checklist" is a checklist-format treatment of exactly Tier 2 item #10.
+- **Kerala e-waste statistics** — overlaps Tier 5 item #31. The reference file's specific numbers (38,000 metric tonnes generated in 2025, 35–40% from Kochi, 12% YoY growth, "400+ Infopark companies / 75,000+ employees," "only 22% reaches authorized recyclers") are **not verified** and must not be reused without a real citation (e.g. an actual CPCB or KSPCB annual report) — the 22% figure also appears verbatim in `recy.html`, which is a reason for more suspicion, not less, since it suggests the number is being copied between mockups rather than sourced independently each time.
+- **Vendor-vetting / "how to verify an authorized recycler"** — close overlap with Tier 5 item #7 ("E-Waste Collection Near Me: How to Choose a Safe Recycler"); consolidate rather than duplicate if both get written.
+
+### Genuinely new candidate topics (not currently in this roadmap)
+
+- **Bulk/enterprise IT disposal project management** (staging logistics, parallel destruction workflows, bulk CoD formats) — a real, non-duplicate angle distinct from the individual-consumer content already planned.
+- **A full DPDP Act 2023 compliance pillar guide** — Tier 5 #24 currently scopes this narrowly ("DPDP Act 2023 and IT Asset Disposal: What Businesses Should Know"); the reference file's version is a much fuller standalone treatment. Worth expanding #24 into a proper pillar if a content phase opens — **but the specific penalty-tier breakdown table (₹250cr / ₹200cr / ₹150cr / ₹50cr by violation category) needs verification against the actual Act and Schedule text before publishing**. The ₹250 crore maximum-penalty figure itself is real and well-known, but the exact tier-by-violation breakdown shown in the reference file was not independently confirmed here.
+
+### Explicitly reframed, not copied as-is
+
+- "How Improper IT Disposal Caused These 5 Data Breaches" implies 5 real, specific documented incidents. Unless real, citable incidents exist, this needs to be framed as illustrative/hypothetical scenarios, not presented as real breach case studies.
+- "Why Infopark Companies Are Switching to On-Site Hard Drive Shredding in 2026" asserts an observed market trend with no evidence. The underlying on-site-vs-off-site content is legitimate; the "switching" trend framing is not.
+- "Laptop Buyback Prices in Kochi 2026" and any fixed price ranges (e.g. "₹15,000–₹90,000+") — this project doesn't publish fixed pricing; real quotes are individualized per device/condition, consistent with the existing `/marketplace/` and `/sell-electronics/` pages.
+- "Free E-Waste Pickup in Kochi: Every Pincode, Zone" claims coverage of "47 zones" — not a verified figure, and duplicates the existing `/pickup/` page's scope.
+
+## Real feature/content proposal — `/services/` hub depth (2026-07-07, from reference file `services.html`)
+
+Same provenance and same caveat as `blog.html` above (real phone/address, fabricated everything else, non-existent URL structure). Two things worth separating: a real structural tension worth naming, and one genuinely new content angle.
+
+### The mega-page pattern conflicts with an already-chosen approach — don't adopt it wholesale
+
+The real `/services/` page (`src/pages/services/index.astro`) is a thin directory: 15 real service links, each a one-line blurb, pointing to dedicated pages (`/itad/`, `/data-destruction/`, `/hard-drive-shredding/`, `/server-recycling-kochi/`, etc.). `services.html` takes the opposite approach — one long page with a full deep-dive section per service (compliance standards, detail grids, FAQ-length copy, a price row) instead of linking out. Building it that way would put substantial ranking content for "ITAD," "data destruction," and "hard drive shredding" on `/services/` itself, directly competing with the dedicated pages that already exist for those exact terms — the same keyword-cannibalization risk this project has already spent multiple phases resolving (`reports/v2-gsc-data-analysis.md`, Findings D1–D5). **Do not restructure `/services/` into a mega-page** — the current thin-hub-plus-deep-individual-pages split is the deliberate, already-correct pattern.
+
+### What's actually new: audience-segmented content
+
+`services.html`'s "Industries We Serve" section (Banking & Finance, Healthcare & Hospitals, IT/Infopark Companies, Government & PSUs, Educational Institutions, Manufacturing, Hospitality & Retail, Households) organizes by *who the customer is* rather than *what service they need* — a genuinely different content axis from anything currently on the site. This doesn't compete with the existing service pages for the same keywords, so it doesn't carry the cannibalization risk above. Worth considering as a new section on `/services/` or `/about/`, or a dedicated page — **only with claims the site can actually back**: no invented compliance-framework badges (RBI/PCI-DSS "aware" claims), no specific client counts per industry, no named client examples of any kind (this is the same real, identifiable-company risk flagged earlier this session with the fabricated dashboard mockup).
+
+### Explicitly not carried over
+
+- The 6-card "Why Choose Us" section's underlying structure is fine; every claim inside it (5,000+ businesses since 2020, zero-data-leakage "guarantee," specific 24–48hr SLA) is unverified and must not be reused as written.
+- Fixed per-device/per-drive pricing (`₹99/device`, `₹149/device`, `₹199/drive`) — not this project's pricing model.
+- The three named testimonials (Rajesh K., Dr. Priya M., Arun T.) with fabricated quotes and company affiliations — fully discard, same category as the fabricated-client dashboard mockup rejected earlier this session.
+- The DPDP Act / NIST 800-88 / E-Waste Rules 2022 regulatory content duplicates `blog.html`'s treatment above — if both ever get built, write it once (the blog pillar guide) and link to it from `/services/`, rather than duplicating the explanation in two places.

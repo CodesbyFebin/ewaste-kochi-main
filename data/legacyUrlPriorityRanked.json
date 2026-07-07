@@ -1,0 +1,1654 @@
+{
+  "source": "data/legacyRedirectCandidates.json (medium-confidence only) + data/legacyRedirectManualReview.json, combined and ranked 2026-07-07",
+  "method": "All 183 not-yet-actioned legacy URLs (leftover after Phase 2G implemented the 284 high-confidence redirects), ranked by real GSC clicks then impressions. See reports/legacy-url-priority-list.md for the full analysis.",
+  "count": 183,
+  "entries": [
+    {
+      "source": "/blogs/disposal/",
+      "clicks": 2,
+      "impressions": 49,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/scrap-electronics/pcb-and-motherboard-scrap-buyers-in-kakkanad-kochi/",
+      "clicks": 1,
+      "impressions": 48,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/",
+      "clicks": 1,
+      "impressions": 26,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/disposal/how-to-dispose-mixed-household-e-waste-in-kollam/",
+      "clicks": 1,
+      "impressions": 17,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/battery-recycling/office-battery-pickup-in-thiruvananthapuram-how-to-stage-mixed-loads/",
+      "clicks": 1,
+      "impressions": 13,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/locations/kadavanthra/corporate-ewaste-kochi/",
+      "clicks": 1,
+      "impressions": 11,
+      "bucket": "medium-confidence-candidate",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "sourceGroup": "service:corporate-ewaste-kochi"
+    },
+    {
+      "source": "/blogs/disposal/where-to-dispose-old-laptops-in-infopark-kochi-free-pickup-guide/",
+      "clicks": 1,
+      "impressions": 11,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/battery-recycling/phone-battery-recycling-in-thrippunithura-kochi-what-to-do-with-loose-cells/",
+      "clicks": 1,
+      "impressions": 11,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/recycling/laptop-recycling-in-kollam-reuse-buyback-or-scrap/",
+      "clicks": 1,
+      "impressions": 11,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/environmental-impact/precious-metal-recovery-from-e-waste-in-kakkanad-kochi/",
+      "clicks": 1,
+      "impressions": 10,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/corporate-itad/bank-and-hospital-itad-in-kottayam-documentation-that-actually-matters/",
+      "clicks": 1,
+      "impressions": 10,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/locations/thrippunithura/corporate-ewaste-kochi/",
+      "clicks": 1,
+      "impressions": 9,
+      "bucket": "medium-confidence-candidate",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "sourceGroup": "service:corporate-ewaste-kochi"
+    },
+    {
+      "source": "/locations/kannur/old-computer-disposal/",
+      "clicks": 1,
+      "impressions": 8,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "Generic disposal intent, reasonably close to recycling hub",
+      "sourceGroup": "service:old-computer-disposal"
+    },
+    {
+      "source": "/blogs/laptop-disposal/laptop-resale-value-in-kottayam-what-changes-the-price-fast/",
+      "clicks": 1,
+      "impressions": 5,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/locations/palakkad/mobile-recycling-kochi/",
+      "clicks": 1,
+      "impressions": 4,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "sourceGroup": "service:mobile-recycling-kochi"
+    },
+    {
+      "source": "/locations/infopark-kochi/corporate-ewaste-kochi/",
+      "clicks": 1,
+      "impressions": 4,
+      "bucket": "medium-confidence-candidate",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "sourceGroup": "service:corporate-ewaste-kochi"
+    },
+    {
+      "source": "/locations/vyttila/printer-recycling-kochi/",
+      "clicks": 1,
+      "impressions": 2,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "No dedicated printer hub exists; recycling is the closest fit",
+      "sourceGroup": "service:printer-recycling-kochi"
+    },
+    {
+      "source": "/locations/kollam/printer-recycling-kochi/",
+      "clicks": 1,
+      "impressions": 2,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "No dedicated printer hub exists; recycling is the closest fit",
+      "sourceGroup": "service:printer-recycling-kochi"
+    },
+    {
+      "source": "/locations/angamaly/air-conditioner-recycling-kochi/",
+      "clicks": 1,
+      "impressions": 1,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "No dedicated AC-recycling hub page exists yet",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/recycling/how-electronics-recycling-works-in-thiruvananthapuram/",
+      "clicks": 0,
+      "impressions": 65,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/itad-process/nist-800-88-vs-dod-5220-22-m-which-standard-to-choose-in-vyttila-kochi/",
+      "clicks": 0,
+      "impressions": 40,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/battery-recycling/how-to-store-batteries-before-pickup-in-vyttila-kochi/",
+      "clicks": 0,
+      "impressions": 34,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/itad-process/the-ultimate-server-decommissioning-checklist-for-data-centres-in-vyttila-kochi/",
+      "clicks": 0,
+      "impressions": 33,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/recycling/zero-landfill-electronics-recycling-in-thiruvananthapuram-what-it-really-means/",
+      "clicks": 0,
+      "impressions": 26,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/ewaste-laws/kspcb-authorized-recyclers-list-how-thiruvananthapuram-businesses-verify-vendors/",
+      "clicks": 0,
+      "impressions": 23,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/recycling/battery-recycling-in-vyttila-kochi-what-needs-separate-handling/",
+      "clicks": 0,
+      "impressions": 21,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/disposal/where-to-dispose-old-laptops-in-kollam-free-pickup-guide/",
+      "clicks": 0,
+      "impressions": 20,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/recycling/computer-recycling-in-thrippunithura-kochi-for-homes-and-offices/",
+      "clicks": 0,
+      "impressions": 19,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/disposal/where-to-dispose-old-phones-in-edappally-kochi-without-data-risk/",
+      "clicks": 0,
+      "impressions": 18,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/environmental-impact/toxic-components-in-electronics-collected-in-kakkanad-kochi/",
+      "clicks": 0,
+      "impressions": 18,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/disposal/how-to-dispose-office-computers-in-kakkanad-kochi-safely/",
+      "clicks": 0,
+      "impressions": 18,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/recycling/computer-recycling-in-vyttila-kochi-for-homes-and-offices/",
+      "clicks": 0,
+      "impressions": 18,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/laptop-disposal/",
+      "clicks": 0,
+      "impressions": 18,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/scrap-electronics/network-equipment-scrap-in-edappally-kochi-switches-routers-firewalls/",
+      "clicks": 0,
+      "impressions": 17,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/disposal/how-to-dispose-office-computers-in-thiruvananthapuram-safely/",
+      "clicks": 0,
+      "impressions": 17,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/mobile-recycling/damaged-phone-recycling-in-kozhikode-what-still-counts-as-value/",
+      "clicks": 0,
+      "impressions": 15,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/recycling/how-electronics-recycling-works-in-kozhikode/",
+      "clicks": 0,
+      "impressions": 14,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/scrap-electronics/server-scrap-buyers-in-thrippunithura-kochi-recovering-more-from-old-racks/",
+      "clicks": 0,
+      "impressions": 12,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/recycling/laptop-recycling-in-infopark-kochi-reuse-buyback-or-scrap/",
+      "clicks": 0,
+      "impressions": 12,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/laptop-disposal/laptop-resale-value-in-thiruvananthapuram-what-changes-the-price-fast/",
+      "clicks": 0,
+      "impressions": 11,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/laptop-disposal/employee-laptop-returns-and-disposal-workflow-in-thiruvananthapuram/",
+      "clicks": 0,
+      "impressions": 11,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/locations/kozhikode/old-computer-disposal/",
+      "clicks": 0,
+      "impressions": 10,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "Generic disposal intent, reasonably close to recycling hub",
+      "sourceGroup": "service:old-computer-disposal"
+    },
+    {
+      "source": "/blogs/battery-recycling/lead-acid-battery-recycling-in-kottayam-what-businesses-need-to-track/",
+      "clicks": 0,
+      "impressions": 10,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/disposal/monitor-and-tv-disposal-in-vyttila-kochi-what-to-do-first/",
+      "clicks": 0,
+      "impressions": 10,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/government-rules/e-waste-rules-2022-for-businesses-in-kozhikode/",
+      "clicks": 0,
+      "impressions": 10,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/recycling/laptop-recycling-in-kalamassery-kochi-reuse-buyback-or-scrap/",
+      "clicks": 0,
+      "impressions": 10,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/government-rules/how-to-verify-a-kspcb-authorized-recycler-in-infopark-kochi/",
+      "clicks": 0,
+      "impressions": 10,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/locations/kozhikode/secure-computer-recycling/",
+      "clicks": 0,
+      "impressions": 9,
+      "bucket": "medium-confidence-candidate",
+      "target": "/data-destruction/",
+      "reason": "Ambiguous between data-destruction (for \"secure\") and recycling",
+      "sourceGroup": "service:secure-computer-recycling"
+    },
+    {
+      "source": "/blogs/disposal/corporate-e-waste-clearance-checklist-for-vyttila-kochi/",
+      "clicks": 0,
+      "impressions": 9,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/battery-recycling/solar-battery-disposal-in-thiruvananthapuram-practical-steps-for-safe-collection/",
+      "clicks": 0,
+      "impressions": 9,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/locations/edappally/corporate-ewaste-kochi/",
+      "clicks": 0,
+      "impressions": 8,
+      "bucket": "medium-confidence-candidate",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "sourceGroup": "service:corporate-ewaste-kochi"
+    },
+    {
+      "source": "/locations/palakkad/secure-computer-recycling/",
+      "clicks": 0,
+      "impressions": 8,
+      "bucket": "medium-confidence-candidate",
+      "target": "/data-destruction/",
+      "reason": "Ambiguous between data-destruction (for \"secure\") and recycling",
+      "sourceGroup": "service:secure-computer-recycling"
+    },
+    {
+      "source": "/blogs/disposal/where-to-dispose-old-laptops-in-vyttila-kochi-free-pickup-guide/",
+      "clicks": 0,
+      "impressions": 8,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/laptop-disposal/school-and-college-laptop-disposal-in-kakkanad-kochi/",
+      "clicks": 0,
+      "impressions": 8,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/itad-process/the-ultimate-server-decommissioning-checklist-for-data-centres-in-kalamassery-kochi/",
+      "clicks": 0,
+      "impressions": 8,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/battery-recycling/ups-and-inverter-battery-disposal-in-thiruvananthapuram/",
+      "clicks": 0,
+      "impressions": 8,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/recycling/pickup-vs-drop-off-recycling-in-kozhikode-which-option-fits-better/",
+      "clicks": 0,
+      "impressions": 8,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/disposal/corporate-e-waste-clearance-checklist-for-kottayam/",
+      "clicks": 0,
+      "impressions": 8,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/locations/north-paravur/mobile-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 7,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "sourceGroup": "service:mobile-recycling-kochi"
+    },
+    {
+      "source": "/locations/kozhikode/mobile-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 7,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "sourceGroup": "service:mobile-recycling-kochi"
+    },
+    {
+      "source": "/blogs/environmental-impact/what-happens-when-electronics-reach-landfills-in-kollam/",
+      "clicks": 0,
+      "impressions": 7,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/data-destruction/server-drive-sanitization-in-edappally-kochi-for-itad-projects/",
+      "clicks": 0,
+      "impressions": 7,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/locations/palakkad/old-computer-disposal/",
+      "clicks": 0,
+      "impressions": 6,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "Generic disposal intent, reasonably close to recycling hub",
+      "sourceGroup": "service:old-computer-disposal"
+    },
+    {
+      "source": "/locations/palarivattom/corporate-ewaste-kochi/",
+      "clicks": 0,
+      "impressions": 6,
+      "bucket": "medium-confidence-candidate",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "sourceGroup": "service:corporate-ewaste-kochi"
+    },
+    {
+      "source": "/blogs/laptop-disposal/laptop-resale-value-in-kalamassery-kochi-what-changes-the-price-fast/",
+      "clicks": 0,
+      "impressions": 6,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/government-rules/forms-and-manifests-for-e-waste-pickup-in-kalamassery-kochi/",
+      "clicks": 0,
+      "impressions": 6,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/battery-recycling/ups-and-inverter-battery-disposal-in-kakkanad-kochi/",
+      "clicks": 0,
+      "impressions": 6,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/environmental-impact/precious-metal-recovery-from-e-waste-in-kottayam/",
+      "clicks": 0,
+      "impressions": 6,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/laptop-disposal/business-laptop-buyback-in-infopark-kochi-what-it-teams-should-expect/",
+      "clicks": 0,
+      "impressions": 6,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/locations/north-paravur/network-equipment-disposal-kochi/",
+      "clicks": 0,
+      "impressions": 5,
+      "bucket": "medium-confidence-candidate",
+      "target": "/server-recycling-kochi/",
+      "reason": "Could also fit ITAD; server-recycling chosen as more specific",
+      "sourceGroup": "service:network-equipment-disposal-kochi"
+    },
+    {
+      "source": "/blogs/scrap-electronics/electronics-price-factors-in-kottayam-why-two-loads-get-different-rates/",
+      "clicks": 0,
+      "impressions": 5,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/environmental-impact/apartment-and-community-e-waste-drives-in-kakkanad-kochi/",
+      "clicks": 0,
+      "impressions": 5,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/government-rules/how-disposal-mistakes-create-data-breach-risk-in-kakkanad-kochi/",
+      "clicks": 0,
+      "impressions": 5,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/government-rules/forms-and-manifests-for-e-waste-pickup-in-kollam/",
+      "clicks": 0,
+      "impressions": 5,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/environmental-impact/why-recycle-electronics-in-kottayam-the-local-impact/",
+      "clicks": 0,
+      "impressions": 5,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/mobile-recycling/phone-buyback-in-thrippunithura-kochi-best-route-for-fast-local-quotes/",
+      "clicks": 0,
+      "impressions": 5,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/government-rules/school-and-hospital-e-waste-compliance-in-kozhikode/",
+      "clicks": 0,
+      "impressions": 5,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/locations/edappally/old-computer-disposal/",
+      "clicks": 0,
+      "impressions": 4,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "Generic disposal intent, reasonably close to recycling hub",
+      "sourceGroup": "service:old-computer-disposal"
+    },
+    {
+      "source": "/locations/kottayam/corporate-ewaste-kochi/",
+      "clicks": 0,
+      "impressions": 4,
+      "bucket": "medium-confidence-candidate",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "sourceGroup": "service:corporate-ewaste-kochi"
+    },
+    {
+      "source": "/locations/edappally/mobile-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 4,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "sourceGroup": "service:mobile-recycling-kochi"
+    },
+    {
+      "source": "/locations/thiruvananthapuram/corporate-ewaste-kochi/",
+      "clicks": 0,
+      "impressions": 4,
+      "bucket": "medium-confidence-candidate",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "sourceGroup": "service:corporate-ewaste-kochi"
+    },
+    {
+      "source": "/locations/vyttila/corporate-ewaste-kochi/",
+      "clicks": 0,
+      "impressions": 4,
+      "bucket": "medium-confidence-candidate",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "sourceGroup": "service:corporate-ewaste-kochi"
+    },
+    {
+      "source": "/locations/maradu/corporate-ewaste-kochi/",
+      "clicks": 0,
+      "impressions": 4,
+      "bucket": "medium-confidence-candidate",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "sourceGroup": "service:corporate-ewaste-kochi"
+    },
+    {
+      "source": "/locations/thrissur/corporate-ewaste-kochi/",
+      "clicks": 0,
+      "impressions": 4,
+      "bucket": "medium-confidence-candidate",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "sourceGroup": "service:corporate-ewaste-kochi"
+    },
+    {
+      "source": "/blogs/disposal/corporate-e-waste-clearance-checklist-for-edappally-kochi/",
+      "clicks": 0,
+      "impressions": 4,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/government-rules/certificate-of-destruction-for-audits-in-thiruvananthapuram/",
+      "clicks": 0,
+      "impressions": 4,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/laptop-disposal/damaged-laptop-recycling-in-thrippunithura-kochi-what-still-has-value/",
+      "clicks": 0,
+      "impressions": 4,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/data-destruction/certificate-of-destruction-in-kozhikode-what-auditors-expect-to-see/",
+      "clicks": 0,
+      "impressions": 4,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/itad-process/nist-800-88-vs-dod-5220-22-m-which-standard-to-choose-in-kalamassery-kochi/",
+      "clicks": 0,
+      "impressions": 4,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/recycling/battery-recycling-in-kalamassery-kochi-what-needs-separate-handling/",
+      "clicks": 0,
+      "impressions": 4,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/government-rules/dpdp-act-and-retired-devices-in-vyttila-kochi-what-changes-for-disposal/",
+      "clicks": 0,
+      "impressions": 4,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/recycling/how-to-run-an-office-electronics-recycling-drive-in-thrippunithura-kochi/",
+      "clicks": 0,
+      "impressions": 4,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/environmental-impact/why-recycle-electronics-in-infopark-kochi-the-local-impact/",
+      "clicks": 0,
+      "impressions": 4,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/locations/kollam/network-equipment-disposal-kochi/",
+      "clicks": 0,
+      "impressions": 3,
+      "bucket": "medium-confidence-candidate",
+      "target": "/server-recycling-kochi/",
+      "reason": "Could also fit ITAD; server-recycling chosen as more specific",
+      "sourceGroup": "service:network-equipment-disposal-kochi"
+    },
+    {
+      "source": "/locations/angamaly/printer-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 3,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "No dedicated printer hub exists; recycling is the closest fit",
+      "sourceGroup": "service:printer-recycling-kochi"
+    },
+    {
+      "source": "/locations/kalady/corporate-ewaste-kochi/",
+      "clicks": 0,
+      "impressions": 3,
+      "bucket": "medium-confidence-candidate",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "sourceGroup": "service:corporate-ewaste-kochi"
+    },
+    {
+      "source": "/locations/kollam/mobile-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 3,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "sourceGroup": "service:mobile-recycling-kochi"
+    },
+    {
+      "source": "/locations/kalady/mobile-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 3,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "sourceGroup": "service:mobile-recycling-kochi"
+    },
+    {
+      "source": "/locations/malappuram/mobile-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 3,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "sourceGroup": "service:mobile-recycling-kochi"
+    },
+    {
+      "source": "/locations/thrippunithura/mobile-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 3,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "sourceGroup": "service:mobile-recycling-kochi"
+    },
+    {
+      "source": "/locations/kannur/network-equipment-disposal-kochi/",
+      "clicks": 0,
+      "impressions": 3,
+      "bucket": "medium-confidence-candidate",
+      "target": "/server-recycling-kochi/",
+      "reason": "Could also fit ITAD; server-recycling chosen as more specific",
+      "sourceGroup": "service:network-equipment-disposal-kochi"
+    },
+    {
+      "source": "/blogs/environmental-impact/school-e-waste-drives-in-vyttila-kochi-planning-a-safer-collection-day/",
+      "clicks": 0,
+      "impressions": 3,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/government-rules/bulk-consumer-e-waste-obligations-in-thrippunithura-kochi/",
+      "clicks": 0,
+      "impressions": 3,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/data-destruction/nist-800-88-wiping-in-thiruvananthapuram-what-it-covers-and-what-it-does-not/",
+      "clicks": 0,
+      "impressions": 3,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/battery-recycling/how-to-store-batteries-before-pickup-in-thrippunithura-kochi/",
+      "clicks": 0,
+      "impressions": 3,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/laptop-disposal/employee-laptop-returns-and-disposal-workflow-in-kakkanad-kochi/",
+      "clicks": 0,
+      "impressions": 3,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/mobile-recycling/same-day-mobile-pickup-in-vyttila-kochi-for-shops-and-offices/",
+      "clicks": 0,
+      "impressions": 3,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/environmental-impact/what-happens-when-electronics-reach-landfills-in-kozhikode/",
+      "clicks": 0,
+      "impressions": 3,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/laptop-disposal/laptop-resale-value-in-infopark-kochi-what-changes-the-price-fast/",
+      "clicks": 0,
+      "impressions": 3,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/locations/kottayam/dpdp-act-compliance-kochi/",
+      "clicks": 0,
+      "impressions": 3,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "No dedicated DPDP Act compliance content exists yet",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/government-rules/how-to-choose-an-authorized-e-waste-vendor-in-kalamassery-kochi/",
+      "clicks": 0,
+      "impressions": 3,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/data-destruction/server-drive-sanitization-in-kollam-for-itad-projects/",
+      "clicks": 0,
+      "impressions": 3,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/locations/smart-city-kochi/mobile-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "sourceGroup": "service:mobile-recycling-kochi"
+    },
+    {
+      "source": "/locations/kadavanthra/mobile-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "sourceGroup": "service:mobile-recycling-kochi"
+    },
+    {
+      "source": "/locations/fort-kochi/mobile-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "sourceGroup": "service:mobile-recycling-kochi"
+    },
+    {
+      "source": "/locations/muvattupuzha/secure-laptop-disposal/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "medium-confidence-candidate",
+      "target": "/data-destruction/",
+      "reason": "Same ambiguity as secure-computer-recycling",
+      "sourceGroup": "service:secure-laptop-disposal"
+    },
+    {
+      "source": "/locations/infopark-kochi/printer-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "No dedicated printer hub exists; recycling is the closest fit",
+      "sourceGroup": "service:printer-recycling-kochi"
+    },
+    {
+      "source": "/locations/fort-kochi/printer-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "No dedicated printer hub exists; recycling is the closest fit",
+      "sourceGroup": "service:printer-recycling-kochi"
+    },
+    {
+      "source": "/locations/aluva/mobile-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "sourceGroup": "service:mobile-recycling-kochi"
+    },
+    {
+      "source": "/locations/infopark-kochi/network-equipment-disposal-kochi/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "medium-confidence-candidate",
+      "target": "/server-recycling-kochi/",
+      "reason": "Could also fit ITAD; server-recycling chosen as more specific",
+      "sourceGroup": "service:network-equipment-disposal-kochi"
+    },
+    {
+      "source": "/locations/thiruvananthapuram/mobile-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "sourceGroup": "service:mobile-recycling-kochi"
+    },
+    {
+      "source": "/locations/edappally/printer-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "No dedicated printer hub exists; recycling is the closest fit",
+      "sourceGroup": "service:printer-recycling-kochi"
+    },
+    {
+      "source": "/locations/muvattupuzha/corporate-ewaste-kochi/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "medium-confidence-candidate",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "sourceGroup": "service:corporate-ewaste-kochi"
+    },
+    {
+      "source": "/locations/angamaly/corporate-ewaste-kochi/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "medium-confidence-candidate",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "sourceGroup": "service:corporate-ewaste-kochi"
+    },
+    {
+      "source": "/locations/kannur/printer-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "No dedicated printer hub exists; recycling is the closest fit",
+      "sourceGroup": "service:printer-recycling-kochi"
+    },
+    {
+      "source": "/locations/angamaly/mobile-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "sourceGroup": "service:mobile-recycling-kochi"
+    },
+    {
+      "source": "/locations/kottayam/printer-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "No dedicated printer hub exists; recycling is the closest fit",
+      "sourceGroup": "service:printer-recycling-kochi"
+    },
+    {
+      "source": "/locations/kothamangalam/corporate-ewaste-kochi/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "medium-confidence-candidate",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "sourceGroup": "service:corporate-ewaste-kochi"
+    },
+    {
+      "source": "/locations/maradu/network-equipment-disposal-kochi/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "medium-confidence-candidate",
+      "target": "/server-recycling-kochi/",
+      "reason": "Could also fit ITAD; server-recycling chosen as more specific",
+      "sourceGroup": "service:network-equipment-disposal-kochi"
+    },
+    {
+      "source": "/locations/smart-city-kochi/corporate-ewaste-kochi/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "medium-confidence-candidate",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "sourceGroup": "service:corporate-ewaste-kochi"
+    },
+    {
+      "source": "/locations/edappally/network-equipment-disposal-kochi/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "medium-confidence-candidate",
+      "target": "/server-recycling-kochi/",
+      "reason": "Could also fit ITAD; server-recycling chosen as more specific",
+      "sourceGroup": "service:network-equipment-disposal-kochi"
+    },
+    {
+      "source": "/locations/fort-kochi/corporate-ewaste-kochi/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "medium-confidence-candidate",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "sourceGroup": "service:corporate-ewaste-kochi"
+    },
+    {
+      "source": "/locations/kothamangalam/network-equipment-disposal-kochi/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "medium-confidence-candidate",
+      "target": "/server-recycling-kochi/",
+      "reason": "Could also fit ITAD; server-recycling chosen as more specific",
+      "sourceGroup": "service:network-equipment-disposal-kochi"
+    },
+    {
+      "source": "/locations/thrikkakara/air-conditioner-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "No dedicated AC-recycling hub page exists yet",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/environmental-impact/how-e-waste-recycling-reduces-carbon-footprint-in-edappally-kochi/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/mobile-recycling/secure-mobile-data-wipe-in-vyttila-kochi-before-buyback-or-recycling/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/corporate-itad/asset-recovery-and-remarketing-in-kakkanad-kochi-how-itad-recovers-budget/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/mobile-recycling/residential-phone-drop-off-in-infopark-kochi-what-to-bring-and-what-to-avoid/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/scrap-electronics/office-clearance-scrap-quotes-in-kollam-how-to-prepare-the-inventory/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/locations/muvattupuzha/dpdp-act-compliance-kochi/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "No dedicated DPDP Act compliance content exists yet",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/data-destruction/server-drive-sanitization-in-kottayam-for-itad-projects/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/environmental-impact/school-e-waste-drives-in-edappally-kochi-planning-a-safer-collection-day/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/locations/fort-kochi/air-conditioner-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "No dedicated AC-recycling hub page exists yet",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/corporate-itad/data-centre-refresh-and-retirement-planning-in-kottayam/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/scrap-electronics/working-vs-broken-device-value-in-kollam-what-gets-a-better-quote/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/environmental-impact/precious-metal-recovery-from-e-waste-in-edappally-kochi/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/laptop-disposal/macbook-buyback-in-kottayam-when-to-resell-vs-recycle/",
+      "clicks": 0,
+      "impressions": 2,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/locations/infopark-kochi/mobile-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "sourceGroup": "service:mobile-recycling-kochi"
+    },
+    {
+      "source": "/locations/perumbavoor/mobile-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "sourceGroup": "service:mobile-recycling-kochi"
+    },
+    {
+      "source": "/locations/thrissur/mobile-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "sourceGroup": "service:mobile-recycling-kochi"
+    },
+    {
+      "source": "/locations/maradu/mobile-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "sourceGroup": "service:mobile-recycling-kochi"
+    },
+    {
+      "source": "/locations/kannur/corporate-ewaste-kochi/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "medium-confidence-candidate",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "sourceGroup": "service:corporate-ewaste-kochi"
+    },
+    {
+      "source": "/locations/smart-city-kochi/network-equipment-disposal-kochi/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "medium-confidence-candidate",
+      "target": "/server-recycling-kochi/",
+      "reason": "Could also fit ITAD; server-recycling chosen as more specific",
+      "sourceGroup": "service:network-equipment-disposal-kochi"
+    },
+    {
+      "source": "/locations/maradu/printer-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "No dedicated printer hub exists; recycling is the closest fit",
+      "sourceGroup": "service:printer-recycling-kochi"
+    },
+    {
+      "source": "/locations/palakkad/corporate-ewaste-kochi/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "medium-confidence-candidate",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "sourceGroup": "service:corporate-ewaste-kochi"
+    },
+    {
+      "source": "/locations/willingdon-island/printer-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "No dedicated printer hub exists; recycling is the closest fit",
+      "sourceGroup": "service:printer-recycling-kochi"
+    },
+    {
+      "source": "/locations/kalady/old-computer-disposal/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "Generic disposal intent, reasonably close to recycling hub",
+      "sourceGroup": "service:old-computer-disposal"
+    },
+    {
+      "source": "/locations/kannur/mobile-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "sourceGroup": "service:mobile-recycling-kochi"
+    },
+    {
+      "source": "/locations/thrikkakara/mobile-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "sourceGroup": "service:mobile-recycling-kochi"
+    },
+    {
+      "source": "/locations/vyttila/mobile-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "sourceGroup": "service:mobile-recycling-kochi"
+    },
+    {
+      "source": "/locations/perumbavoor/network-equipment-disposal-kochi/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "medium-confidence-candidate",
+      "target": "/server-recycling-kochi/",
+      "reason": "Could also fit ITAD; server-recycling chosen as more specific",
+      "sourceGroup": "service:network-equipment-disposal-kochi"
+    },
+    {
+      "source": "/locations/kozhikode/corporate-ewaste-kochi/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "medium-confidence-candidate",
+      "target": "/itad/",
+      "reason": "Business framing suggests ITAD, but could also be general recycling for smaller offices",
+      "sourceGroup": "service:corporate-ewaste-kochi"
+    },
+    {
+      "source": "/locations/palarivattom/mobile-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "Could plausibly also fit sell-electronics; recycling chosen as broader default",
+      "sourceGroup": "service:mobile-recycling-kochi"
+    },
+    {
+      "source": "/locations/palakkad/network-equipment-disposal-kochi/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "medium-confidence-candidate",
+      "target": "/server-recycling-kochi/",
+      "reason": "Could also fit ITAD; server-recycling chosen as more specific",
+      "sourceGroup": "service:network-equipment-disposal-kochi"
+    },
+    {
+      "source": "/locations/aluva/printer-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "medium-confidence-candidate",
+      "target": "/recycling/",
+      "reason": "No dedicated printer hub exists; recycling is the closest fit",
+      "sourceGroup": "service:printer-recycling-kochi"
+    },
+    {
+      "source": "/locations/kozhikode/secure-laptop-disposal/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "medium-confidence-candidate",
+      "target": "/data-destruction/",
+      "reason": "Same ambiguity as secure-computer-recycling",
+      "sourceGroup": "service:secure-laptop-disposal"
+    },
+    {
+      "source": "/locations/palakkad/secure-laptop-disposal/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "medium-confidence-candidate",
+      "target": "/data-destruction/",
+      "reason": "Same ambiguity as secure-computer-recycling",
+      "sourceGroup": "service:secure-laptop-disposal"
+    },
+    {
+      "source": "/locations/aluva/air-conditioner-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "No dedicated AC-recycling hub page exists yet",
+      "sourceGroup": null
+    },
+    {
+      "source": "/locations/fort-kochi/dpdp-act-compliance-kochi/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "No dedicated DPDP Act compliance content exists yet",
+      "sourceGroup": null
+    },
+    {
+      "source": "/locations/thrissur/air-conditioner-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "No dedicated AC-recycling hub page exists yet",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/environmental-impact/school-e-waste-drives-in-kalamassery-kochi-planning-a-safer-collection-day/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/locations/north-paravur/air-conditioner-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "No dedicated AC-recycling hub page exists yet",
+      "sourceGroup": null
+    },
+    {
+      "source": "/locations/edappally/dpdp-act-compliance-kochi/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "No dedicated DPDP Act compliance content exists yet",
+      "sourceGroup": null
+    },
+    {
+      "source": "/locations/palakkad/air-conditioner-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "No dedicated AC-recycling hub page exists yet",
+      "sourceGroup": null
+    },
+    {
+      "source": "/locations/vyttila/air-conditioner-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "No dedicated AC-recycling hub page exists yet",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/laptop-disposal/macbook-buyback-in-kollam-when-to-resell-vs-recycle/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/locations/malappuram/air-conditioner-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "No dedicated AC-recycling hub page exists yet",
+      "sourceGroup": null
+    },
+    {
+      "source": "/locations/infopark-kochi/dpdp-act-compliance-kochi/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "No dedicated DPDP Act compliance content exists yet",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/environmental-impact/school-e-waste-drives-in-kottayam-planning-a-safer-collection-day/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/laptop-disposal/secure-laptop-disposal-in-kottayam-for-teams-handling-client-data/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/government-rules/how-to-verify-a-kspcb-authorized-recycler-in-thrippunithura-kochi/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/blogs/environmental-impact/circular-economy-and-e-waste-in-vyttila-kochi-what-recovery-actually-looks-like/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "Individual /blogs/ article \u2014 no 1:1 canonical page exists; per docs/roadmap/legacy-matrix-redirect-strategy.md, these get evaluated against new /blog/ posts as they are built, not bulk-mapped now.",
+      "sourceGroup": null
+    },
+    {
+      "source": "/locations/thiruvananthapuram/dpdp-act-compliance-kochi/",
+      "clicks": 0,
+      "impressions": 1,
+      "bucket": "manual-review",
+      "target": null,
+      "reason": "No dedicated DPDP Act compliance content exists yet",
+      "sourceGroup": null
+    }
+  ]
+}
