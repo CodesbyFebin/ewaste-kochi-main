@@ -262,6 +262,10 @@ function renderMenu(messages: HTMLElement, actionArea: HTMLElement) {
   }
 }
 
+function isFlowId(value: string | null): value is Exclude<FlowType, "malayalam"> {
+  return Boolean(value && value in FLOWS);
+}
+
 function startMalayalam(messages: HTMLElement, actionArea: HTMLElement) {
   addBotBubble(messages, MALAYALAM_GREETING);
   clearActionArea(actionArea);
@@ -439,6 +443,8 @@ function closePanel(root: HTMLElement) {
 function init() {
   const root = document.getElementById("ew-lead-chat-root");
   if (!root) return;
+  if (root.dataset.ewlfInitialized === "true") return;
+  root.dataset.ewlfInitialized = "true";
 
   root.innerHTML = `
     <button type="button" class="ewlf-launcher" aria-haspopup="dialog" aria-expanded="false" aria-controls="ewlf-panel" aria-label="Open chat to book a pickup or get a quote">
@@ -462,16 +468,34 @@ function init() {
   const messages = root.querySelector<HTMLElement>("#ewlf-messages")!;
   const actionArea = root.querySelector<HTMLElement>("#ewlf-actions")!;
 
+  const openLeadFunnel = (flowId?: Exclude<FlowType, "malayalam">) => {
+    openPanel(root);
+    if (flowId) {
+      messages.innerHTML = "";
+      addBotBubble(messages, `Let's get the right details for ${BUSINESS.name}.`);
+      startFlow(messages, actionArea, flowId, false);
+      return;
+    }
+    if (messages.children.length === 0) {
+      addBotBubble(messages, `Hi, I'm here to help with pickups, quotes, and recycling questions for ${BUSINESS.name}. What do you need?`);
+      renderMenu(messages, actionArea);
+    }
+  };
+
   launcher.addEventListener("click", () => {
     if (isOpen) {
       closePanel(root);
     } else {
-      openPanel(root);
-      if (messages.children.length === 0) {
-        addBotBubble(messages, `Hi, I'm here to help with pickups, quotes, and recycling questions for ${BUSINESS.name}. What do you need?`);
-        renderMenu(messages, actionArea);
-      }
+      openLeadFunnel();
     }
+  });
+
+  document.querySelectorAll<HTMLElement>("[data-ewlf-open]").forEach((trigger) => {
+    trigger.addEventListener("click", (event) => {
+      event.preventDefault();
+      const requestedFlow = trigger.dataset.ewlfFlow ?? null;
+      openLeadFunnel(isFlowId(requestedFlow) ? requestedFlow : undefined);
+    });
   });
 
   closeBtn.addEventListener("click", () => closePanel(root));

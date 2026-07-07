@@ -1,14 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import CtaBar from "../components/CtaBar.astro";
 import Faq from "../components/Faq.astro";
 import LangSwitch from "../components/LangSwitch.astro";
-import { BUSINESS, SITE_URL } from "../data/site";
+import { BUSINESS, SITE_URL, telLink, whatsappLink } from "../data/site";
 import { getHreflang } from "../data/routes";
 
-const title = "E-Waste Recycling Kochi | Free Pickup + Instant Quote";
+const title = "E-Waste Recycling Kochi | Free Pickup for Electronics, Batteries & IT Scrap";
 const description =
-  "Ewaste Kochi collects, recycles and securely destroys data on old electronics across Kochi and Kerala. Free doorstep pickup, instant quotes, ISO-aligned data destruction.";
+  "Book e-waste pickup in Kochi for old electronics, laptops, batteries, IT assets and data destruction. WhatsApp Ewaste Kochi for safe recycling and pickup support.";
+
+const pickupMessage =
+  "Hi Ewaste Kochi, I want to book a free e-waste pickup in Kochi. Please help me with a quote and pickup slot.";
+const quoteMessage =
+  "Hi Ewaste Kochi, I want a quick quote for old electronics or IT assets. I can share item details and photos.";
 
 const jsonLd = [
   {
@@ -33,7 +37,7 @@ const jsonLd = [
     "@type": "LocalBusiness",
     "@id": `${SITE_URL}/#localbusiness`,
     name: BUSINESS.legalName,
-    image: `${SITE_URL}/og-image.jpg`,
+    image: `${SITE_URL}/images/homepage-hero-scene.jpg`,
     telephone: BUSINESS.phone,
     priceRange: "₹₹",
     address: {
@@ -49,202 +53,1016 @@ const jsonLd = [
   },
   {
     "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${SITE_URL}/#ewaste-pickup-service`,
+    name: "E-waste pickup and recycling in Kochi",
+    serviceType: "E-waste recycling, electronics pickup, IT asset disposal, data destruction",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: "Kochi, Ernakulam, Kerala",
+    url: SITE_URL,
+  },
+  {
+    "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": `${SITE_URL}/#website`,
     url: SITE_URL,
     name: "Ewaste Kochi",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: `${SITE_URL}/search/?q={search_term_string}`,
-      "query-input": "required name=search_term_string",
-    },
   },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/#webpage`,
+    url: SITE_URL,
+    name: title,
+    description,
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+  },
+];
+
+const servicePaths = [
+  {
+    label: "Home pickup",
+    title: "Old laptops, phones, TVs and batteries",
+    copy: "Send item photos, confirm your area, and get a pickup slot without visiting a drop-off center or holding on to old devices any longer than you need to.",
+    href: "/pickup/",
+    flow: "pickup",
+  },
+  {
+    label: "Office / ITAD",
+    title: "Bulk IT assets with data security",
+    copy: "Inventory, collection, data destruction options, and disposal documentation for offices and IT teams handling more than a handful of devices at once.",
+    href: "/itad/",
+    flow: "business-itad",
+  },
+  {
+    label: "Sell electronics",
+    title: "Working or damaged devices for resale value",
+    copy: "Get an indicative scrap or resale quote before pickup, based on model, age and condition. Final value is always confirmed after inspection.",
+    href: "/sell-electronics/",
+    flow: "sell-electronics",
+  },
+];
+
+const howItWorks = [
+  { title: "Share item details", copy: "Send the type of electronics, quantity and condition on WhatsApp so the team knows what they're dealing with before anything is scheduled." },
+  { title: "Send location and photos", copy: "Photos help identify batteries, damaged items, bulky devices and server equipment ahead of the visit, not after the team arrives." },
+  { title: "Get pickup / quote confirmation", copy: "The team confirms feasibility, service type and quote details where applicable, based on what you've shared so far." },
+  { title: "Schedule collection", copy: "Pick a slot based on availability in your area — home, office or bulk pickups are scheduled differently." },
+  { title: "Recycling, reuse or responsible handling", copy: "Items are routed to reuse, resale enquiry, recycling or battery separation depending on condition and type." },
+  { title: "Documentation where applicable", copy: "Business and data destruction pickups can include agreed documentation as part of the handling process." },
+];
+
+const collectItems = [
+  "Laptops", "Desktops", "Monitors", "Keyboards", "Printers", "Routers",
+  "Cables", "UPS systems", "Inverter batteries", "Lithium batteries",
+  "Mobile phones", "Tablets", "Servers", "Hard drives", "CCTV equipment",
+  "Office IT scrap", "TVs", "Mixed electronic waste",
+];
+
+const quickServices = [
+  { name: "E-Waste Recycling", copy: "Safe disposal for laptops, desktops, monitors, printers and mixed electronics from homes and small offices.", href: "/recycling/", flow: "pickup" },
+  { name: "Battery Recycling", copy: "UPS, inverter, lithium and damaged battery collection, handled separately from general e-waste.", href: "/battery-recycling/", flow: "battery-recycling" },
+  { name: "Data Destruction", copy: "Wiping, degaussing and hard drive shredding options for laptops, drives and servers.", href: "/data-destruction/", flow: "data-destruction" },
+  { name: "Hard Drive Shredding", copy: "Physical destruction for drives that must not be reused or resold afterward.", href: "/hard-drive-shredding/", flow: "data-destruction" },
+  { name: "Electronics Recycling Near Me", copy: "Check pickup feasibility for your specific Kochi-metro area before booking.", href: "/services/electronics-recycling-near-me/", flow: "service-area" },
+  { name: "Marketplace", copy: "Explore buy, sell and reuse options for electronics that still have value.", href: "/marketplace/", flow: "sell-electronics" },
+  { name: "Scrap Price Guide", copy: "Reference pricing to understand condition-based value before you sell.", href: "/e-waste-scrap-prices-kochi/", flow: "scrap-price" },
+];
+
+const audienceCards = [
+  {
+    title: "Home pickups",
+    copy: "Old laptops, phones, chargers, batteries, TVs and mixed electronics that have been sitting in a drawer or store room longer than they should.",
+    href: "/pickup/",
+  },
+  {
+    title: "Business pickups",
+    copy: "Office IT scrap, bulk computers, servers, UPS systems, network devices and asset lists — usually coordinated around a specific pickup date.",
+    href: "/itad/",
+  },
+  {
+    title: "Data-bearing devices",
+    copy: "Hard drives, laptops, servers and storage media that may need data destruction support before they leave your premises.",
+    href: "/data-destruction/",
+  },
+];
+
+const locationCards = [
+  { name: "Kakkanad", copy: "Near Infopark and SmartCity — homes, apartments and IT offices.", href: "/locations/kakkanad/" },
+  { name: "Kalamassery", copy: "Industrial and residential pickups across the Kalamassery belt.", href: "/locations/kalamassery/" },
+  { name: "Ernakulam South", copy: "Central Ernakulam homes, shops and small offices.", href: "/locations/ernakulam-south/" },
+];
+
+const comparisonRows = [
+  { option: "Ewaste pickup", best: "Mixed electronics", check: "Item list, quantity and location" },
+  { option: "Sell electronics", best: "Working or reusable devices", check: "Condition, age, model and photos" },
+  { option: "Battery recycling", best: "UPS, inverter and lithium batteries", check: "Chemistry, swelling and leakage" },
+  { option: "Data destruction", best: "Hard drives, laptops and servers", check: "Storage type and documentation need" },
+  { option: "Corporate ITAD", best: "Offices and IT teams", check: "Asset list, quantity and pickup timing" },
 ];
 
 const faqItems = [
   {
+    q: "Where can I recycle old electronics in Kochi?",
+    a: "You can recycle old electronics in Kochi by booking a pickup with Ewaste Kochi for laptops, desktops, batteries, cables, printers, TVs, servers and mixed IT scrap. Share your item list, location and photos on WhatsApp, and the team will confirm pickup feasibility and the right handling option for your items.",
+  },
+  {
+    q: "How do I get the fastest pickup confirmation?",
+    a: "Use WhatsApp or the quick quote flow with your area, item list, quantity and photos if available. That gives the team enough context to confirm a slot quickly instead of going back and forth over multiple messages.",
+  },
+  {
     q: "Does Ewaste Kochi offer free e-waste pickup?",
-    a: "Yes. We collect old electronics, batteries, and IT equipment directly from homes and offices across Kochi at no charge for qualifying quantities. Book a pickup slot via WhatsApp or the pickup form.",
+    a: "Yes, for qualifying pickups. Availability depends on item type, quantity, condition and location, so share those details on WhatsApp and the team will confirm before scheduling anything.",
+  },
+  {
+    q: "Does Ewaste Kochi collect e-waste from homes?",
+    a: "Yes. Home users can enquire about pickup for old laptops, phones, chargers, batteries, TVs, printers and mixed electronics — items that shouldn't sit around indefinitely or go out with household waste.",
+  },
+  {
+    q: "Is pickup available near me in Kochi?",
+    a: "Ewaste Kochi primarily supports Kochi, Ernakulam and nearby metro areas, including Kakkanad, Kalamassery and Ernakulam South. Send your location to check pickup feasibility for your specific area.",
   },
   {
     q: "What electronics do you accept?",
-    a: "Laptops, desktops, servers, monitors, TVs, printers, mobile phones, batteries (UPS, inverter, laptop, phone), and general IT hardware. For items outside this list, contact us to confirm.",
+    a: "Laptops, desktops, servers, monitors, TVs, printers, mobile phones, UPS batteries, inverter batteries, laptop batteries and general IT hardware. For items outside this list, ask on WhatsApp to confirm.",
   },
   {
-    q: "Is my data wiped before recycling?",
-    a: "Yes, for any device with storage we offer certified data destruction — wiping, degaussing, or physical hard drive shredding — before the unit is recycled or resold.",
+    q: "Do you collect batteries?",
+    a: "Yes. Battery pickup support is available for common battery types, including UPS, inverter, laptop and lithium batteries — kept separate from other e-waste for safe handling.",
   },
   {
-    q: "Do you serve businesses and bulk IT asset disposal?",
-    a: "Yes. Our ITAD service handles corporate pickups, asset inventory, secure data destruction, and disposal documentation for offices, IT parks, and enterprises across Kochi.",
+    q: "Do you collect damaged or swollen batteries?",
+    a: "Mention damaged, leaking or swollen batteries before pickup and share photos if possible — these items need careful, separate handling and shouldn't be moved more than necessary.",
+  },
+  {
+    q: "Can businesses request secure data destruction?",
+    a: "Yes. For devices with storage, we offer wiping, degaussing or physical hard drive shredding depending on the asset type and requirement, discussed before the devices are collected.",
+  },
+  {
+    q: "Can offices book bulk e-waste pickup?",
+    a: "Yes. Offices can enquire about bulk pickup for computers, servers, UPS systems, printers, network devices and mixed IT scrap, with asset lists and quantities shared ahead of time where possible.",
+  },
+  {
+    q: "Do you provide documentation?",
+    a: "Documentation may be available for business pickups, data destruction requests and other agreed service types. Availability depends on the specific service, so confirm this before pickup if it's required.",
+  },
+  {
+    q: "Can I recycle TVs and monitors?",
+    a: "Yes. Old TVs and monitors can be included in an e-waste pickup enquiry along with other electronics — share photos and location for confirmation.",
+  },
+  {
+    q: "Can I sell old electronics instead of recycling them?",
+    a: "Yes. Working and partially working devices may qualify for resale or scrap value. Final pricing depends on model, condition, quantity and inspection, not a fixed rate quoted upfront.",
   },
   {
     q: "Which areas in Kochi do you cover?",
-    a: "We currently serve 30+ neighborhoods across Kochi and Ernakulam district, including Kakkanad, Edappally, Aluva, Vyttila, Infopark, and Kalamassery, plus wider coverage across Kerala.",
+    a: "We serve Kochi and Ernakulam district, including Kakkanad, Kalamassery, Ernakulam South and nearby Kochi-metro locations. Contact us to check feasibility outside this area before planning a pickup.",
   },
   {
-    q: "Can I sell my old electronics for cash instead of just recycling?",
-    a: "Yes — our Marketplace and Sell Electronics services let you get an instant quote and doorstep payment for working or partially working laptops, phones, and other devices.",
+    q: "What details should I send on WhatsApp?",
+    a: "Send your item list, quantity, location, photos, working condition and whether data destruction is required — the more detail upfront, the faster pickup can be confirmed.",
+  },
+  {
+    q: "How do I book pickup?",
+    a: "Use the Book Pickup button, WhatsApp or the phone number on this page. Sharing item photos and location helps speed up confirmation, especially for bulk or business pickups.",
   },
 ];
 ---
 
 <Layout title={title} description={description} path="/" jsonLd={jsonLd} hreflang={getHreflang("/")}>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-shell">
+      <div class="hero-copy">
+        <p class="eyebrow">Doorstep e-waste pickup across Kochi</p>
+        <h1 id="hero-title">E-Waste Recycling & Pickup in Kochi</h1>
+        <p class="lede">
+          Recycle old electronics, laptops, batteries, IT scrap and data-bearing devices with
+          safe pickup support across Kochi and nearby Ernakulam locations — for homes, offices
+          and IT teams alike.
+        </p>
+        <div class="hero-actions" aria-label="Primary actions">
+          <a
+            class="action action-primary"
+            href={whatsappLink(pickupMessage)}
+            target="_blank"
+            rel="noopener"
+            data-ewlf-open
+            data-ewlf-flow="pickup"
+          >
+            Book Free Pickup
+          </a>
+          <a
+            class="action action-whatsapp"
+            href={whatsappLink(quoteMessage)}
+            target="_blank"
+            rel="noopener"
+            data-ewlf-open
+            data-ewlf-flow="scrap-price"
+          >
+            WhatsApp for Quote
+          </a>
+          <a class="action action-secondary" href={telLink()}>Call {BUSINESS.phoneDisplay}</a>
+        </div>
+      </div>
+      <div class="hero-trust-grid" aria-label="Service highlights">
+        <div>
+          <strong>Kochi-metro pickup</strong>
+          <span>Doorstep support across serviceable areas</span>
+        </div>
+        <div>
+          <strong>WhatsApp-first</strong>
+          <span>Fast response for pickup and quotes</span>
+        </div>
+        <div>
+          <strong>Home & business</strong>
+          <span>Individual devices to bulk IT assets</span>
+        </div>
+        <div>
+          <strong>Data destruction</strong>
+          <span>Documentation available on request</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <LangSwitch current="en" otherPath="/ml/" />
-  <h1>E-Waste Recycling in Kochi — Free Pickup, Instant Quote, Secure Data Destruction</h1>
-  <p class="lede">
-    Ewaste Kochi picks up old electronics, batteries, and IT equipment from homes and
-    offices across Kochi and Kerala — free of charge for qualifying pickups — and
-    handles recycling, resale, or certified data destruction depending on what you need.
-    Wondering <a href="/recycling/">where to recycle old electronics</a> nearby? Start there.
-  </p>
 
-  <CtaBar whatsappMessage="Hi, I'd like to book a free e-waste pickup in Kochi." />
-
-  <section class="hero-features" aria-label="Why choose Ewaste Kochi">
-    <div class="hero-feature">
-      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-        <path d="M12 2 4 5v6c0 5 3.4 9 8 11 4.6-2 8-6 8-11V5l-8-3Z" stroke-linejoin="round" />
-      </svg>
-      <strong>Data Security</strong>
-      <span>Certified data destruction available</span>
-    </div>
-    <div class="hero-feature">
-      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-        <path d="M12 3 8 7h3v4M12 21l4-4h-3v-4M4 12a8 8 0 0 1 4.5-7.2M20 12a8 8 0 0 1-4.5 7.2" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-      <strong>Eco-Friendly</strong>
-      <span>Environment-first recycling process</span>
-    </div>
-    <div class="hero-feature">
-      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-        <circle cx="12" cy="12" r="9" />
-        <path d="m8.5 12.5 2.3 2.3 4.7-5" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-      <strong>Compliant Process</strong>
-      <span>ISO 14001:2015-aligned, Pollution Control Board authorized</span>
-    </div>
-    <div class="hero-feature">
-      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-        <path d="M3 16V7a1 1 0 0 1 1-1h9v10M3 16h10M13 10h5l3 3v3h-2M3 16a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm10 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-      <strong>Free Pickup</strong>
-      <span>Doorstep collection across Kochi</span>
-    </div>
-  </section>
-
-  <section>
-    <h2>Our Core Services</h2>
-    <p><a href="/services/">View all services →</a></p>
-    <div class="service-grid">
-      <a class="service-card" href="/recycling/">
-        <h3>E-Waste Recycling</h3>
-        <p>Safe, compliant disposal for laptops, desktops, monitors, printers and more.</p>
-      </a>
-      <a class="service-card" href="/battery-recycling/">
-        <h3>Battery Recycling</h3>
-        <p>UPS, inverter, laptop and phone battery collection and safe recycling.</p>
-      </a>
-      <a class="service-card" href="/marketplace/">
-        <h3>Marketplace</h3>
-        <p>Sell working or partially working electronics for an instant quote.</p>
-      </a>
-      <a class="service-card" href="/data-destruction/">
-        <h3>Data Destruction</h3>
-        <p>Certified wiping, degaussing, and hard drive shredding for businesses.</p>
-      </a>
-      <a class="service-card" href="/itad/">
-        <h3>ITAD for Business</h3>
-        <p>Corporate IT asset disposal, inventory audits, and compliant reporting.</p>
-      </a>
-      <a class="service-card" href="/pickup/">
-        <h3>Free Pickup</h3>
-        <p>Doorstep collection across Kochi — schedule a slot in minutes.</p>
-      </a>
-    </div>
-  </section>
-
-  <section>
-    <h2>Serving Kochi and Beyond</h2>
+  <section class="quick-answer" aria-labelledby="quick-answer-title">
+    <h2 id="quick-answer-title">Where Can I Recycle Old Electronics in Kochi?</h2>
     <p>
-      We operate across 30+ neighborhoods in Kochi and Ernakulam district — including
-      <a href="/locations/kakkanad/">Kakkanad</a>, Edappally, Aluva, and Infopark —
-      plus wider service across Kerala. See the full <a href="/locations/">locations directory</a>.
+      You can recycle old electronics in Kochi by booking a pickup with Ewaste Kochi for laptops,
+      desktops, batteries, cables, printers, TVs, servers and mixed IT scrap. Share your item
+      list, location and photos on WhatsApp, and the team will confirm pickup feasibility,
+      recycling options and quote details where applicable.
+    </p>
+    <p>
+      Ewaste Kochi helps homes, offices and businesses responsibly handle unused electronics,
+      computer scrap, batteries, servers, hard drives, mobile phones, printers, cables and mixed
+      e-waste. The right next step — recycling, resale enquiry, battery handling or data
+      destruction — depends on what the items are and what condition they're in, so the team
+      confirms this with you before anything is collected.
+    </p>
+    <p class="muted-note">
+      Primary service area: Kochi, Ernakulam, Kakkanad, Kalamassery, Aluva and nearby Kochi-metro
+      locations. For other Kerala districts, contact us to check pickup feasibility.
     </p>
   </section>
 
+  <section class="intent-section" aria-labelledby="intent-title">
+    <div class="section-heading">
+      <p class="eyebrow">Built for high-intent visitors</p>
+      <h2 id="intent-title">Choose the path that matches what you need today</h2>
+      <p>
+        Most visitors already know roughly what they need — a pickup, a business ITAD process,
+        or a quote on something they want to sell. Pick the closest match below to skip straight
+        to the right questions instead of a generic contact form.
+      </p>
+    </div>
+    <div class="path-grid">
+      {servicePaths.map((item) => (
+        <article class="path-card">
+          <p>{item.label}</p>
+          <h3>{item.title}</h3>
+          <p>{item.copy}</p>
+          <a href={item.href} data-ewlf-open data-ewlf-flow={item.flow}>Start this flow</a>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="pipeline-section" aria-labelledby="how-it-works-title">
+    <div class="pipeline-copy">
+      <p class="eyebrow">Pickup process</p>
+      <h2 id="how-it-works-title">How e-waste pickup works</h2>
+      <p>
+        First, send your item details on WhatsApp — the type of electronics, quantity, condition
+        and pickup location. Photos help the team identify batteries, damaged items, bulky
+        devices, server equipment and mixed scrap before confirming a slot.
+      </p>
+      <p>
+        Final quote and pickup feasibility depend on item type, quantity, condition, location
+        and current market rate. For business and IT asset pickups, documentation may be
+        available depending on the service type and agreed handling process.
+      </p>
+      <a class="text-link" href="/contact/">Talk to the team</a>
+    </div>
+    <ol class="pipeline-list">
+      {howItWorks.map((step) => (
+        <li><strong>{step.title}.</strong> {step.copy}</li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="services-section" aria-labelledby="services-title">
+    <div class="section-heading">
+      <p class="eyebrow">What we handle</p>
+      <h2 id="services-title">Recycling, resale and secure disposal from one pickup request</h2>
+      <p>
+        Each service below links straight into the right chat flow, so you can jump to recycling,
+        battery handling, data destruction or the scrap price guide without repeating yourself.
+      </p>
+    </div>
+    <div class="service-grid">
+      {quickServices.map((item) => (
+        <a class="service-card" href={item.href} data-ewlf-open data-ewlf-flow={item.flow}>
+          <h3>{item.name}</h3>
+          <p>{item.copy}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="collect-section" aria-labelledby="collect-title">
+    <div class="section-heading">
+      <p class="eyebrow">What we help you recycle</p>
+      <h2 id="collect-title">Common home and office electronics we collect</h2>
+      <p>
+        Ewaste Kochi supports safe collection and responsible handling for common home and
+        office electronics — from single laptops to bulk office IT scrap. Some devices may have
+        reuse or resale value depending on condition, age, working status and market demand.
+        Other items may be better suited for recycling or separate battery handling.
+      </p>
+    </div>
+    <ul class="collect-grid">
+      {collectItems.map((item) => <li>{item}</li>)}
+    </ul>
+    <p class="collect-note">
+      Not sure if something on this list applies to you, or have an item that isn't listed here?
+      Send a photo on WhatsApp and the team will confirm whether it can be collected as part of
+      a standard pickup.
+    </p>
+  </section>
+
+  <section class="audience-section" aria-labelledby="audience-title">
+    <div class="section-heading">
+      <p class="eyebrow">For homes, offices and institutions</p>
+      <h2 id="audience-title">Pickup support for individuals, businesses and IT teams</h2>
+      <p>
+        Home users usually need help with old laptops, phones, chargers, batteries, TVs, printers
+        and mixed electronics — items that shouldn't be stored indefinitely or dumped with
+        household waste. Offices and businesses often need help with bulk computers, servers,
+        UPS systems, routers, printers, hard drives, monitors and IT asset lists, which usually
+        need more coordination and item-level detail. Data-bearing devices need extra care:
+        laptops, servers, hard drives, SSDs and backup devices can hold sensitive information, so
+        mention this before pickup if it applies. "Institutions" here means the type of visitor,
+        not a client list — Ewaste Kochi does not publish named clients.
+      </p>
+    </div>
+    <div class="path-grid">
+      {audienceCards.map((card) => (
+        <article class="path-card">
+          <h3>{card.title}</h3>
+          <p>{card.copy}</p>
+          <a href={card.href}>Learn more</a>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="coverage-section" aria-labelledby="coverage-title">
+    <div>
+      <p class="eyebrow">Local coverage</p>
+      <h2 id="coverage-title">Kochi locations we support</h2>
+      <p>
+        Ewaste Kochi primarily supports Kochi, Ernakulam and nearby metro locations. Current
+        focus areas include Kakkanad, Kalamassery and Ernakulam South, plus nearby pickup
+        enquiries for Aluva, Edappally, Vyttila, Kadavanthra and Infopark. For areas outside
+        Kochi-metro, contact us to check pickup feasibility before planning collection — coverage
+        depends on route availability and pickup volume, not a fixed statewide guarantee.
+      </p>
+      <div class="location-links">
+        {locationCards.map((loc) => (
+          <a href={loc.href}>
+            <strong>{loc.name}</strong>
+            <span>{loc.copy}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+    <a class="action action-secondary" href="/locations/">View Service Areas</a>
+  </section>
+
+  <section class="why-section" aria-labelledby="why-title">
+    <h2 id="why-title">Why responsible e-waste recycling matters</h2>
+    <p>
+      Electronic waste can contain metals, plastics, batteries, circuit boards and data-bearing
+      components. When handled carelessly — dumped with household waste, dismantled informally,
+      or handed over without wiping storage — it can create safety, privacy and environmental
+      risks that are easy to avoid with the right process.
+    </p>
+    <p>
+      Responsible e-waste handling helps keep electronics out of informal dumping and landfill,
+      separates batteries from general waste so they don't leak or ignite, supports reuse and
+      resale where a device is still viable, and improves documentation for offices and IT teams
+      that need a paper trail for their asset disposal. None of this requires overnight storage
+      of old devices — a confirmed pickup slot is usually enough.
+    </p>
+  </section>
+
+  <section class="data-section" aria-labelledby="data-title">
+    <h2 id="data-title">Data destruction and business ITAD</h2>
+    <p>
+      Laptops, hard drives, servers and storage media may contain personal or business data.
+      If data security matters to you, request data destruction support before handing over
+      devices rather than after — that's the point where wiping, degaussing or physical
+      shredding can still be discussed and agreed on.
+    </p>
+    <p>
+      Businesses can enquire about IT asset pickup, inventory-style collection covering asset
+      lists and quantities, data destruction support for laptops and servers, and certificate
+      samples for reference. Documentation availability depends on the service type and agreed
+      handling process for each pickup.
+    </p>
+    <div class="link-row">
+      <a href="/data-destruction/">Data Destruction</a>
+      <a href="/hard-drive-shredding/">Hard Drive Shredding</a>
+      <a href="/itad/">ITAD</a>
+      <a href="/data-destruction-certificate-sample/">Certificate Sample</a>
+    </div>
+  </section>
+
+  <section class="battery-section" aria-labelledby="battery-title">
+    <h2 id="battery-title">Battery recycling safety</h2>
+    <p>
+      Batteries need careful handling because they're the part of e-waste most likely to cause a
+      safety incident if mishandled. UPS batteries, inverter batteries, lithium batteries, laptop
+      batteries and any swollen or damaged battery should never be mixed with regular e-waste or
+      household waste.
+    </p>
+    <p>
+      Do not puncture, crush or open batteries. Keep swollen, leaking or damaged batteries
+      separate from other electronics, and store batteries in a dry place rather than direct
+      sun or heat. If you have a damaged battery, share photos before pickup so the team can
+      guide you on safe handling ahead of time.
+    </p>
+    <a class="text-link" href="/battery-recycling/">Battery Recycling</a>
+  </section>
+
+  <section class="sell-section" aria-labelledby="sell-title">
+    <h2 id="sell-title">Buy, sell or recycle old electronics in Kochi</h2>
+    <p>
+      Not every old electronic item should go directly to recycling. Some devices may still be
+      reusable, repairable or sellable. Others may have scrap value. Some may need safe
+      recycling simply because they're damaged, outdated or no longer useful. Ewaste Kochi helps
+      you find the right path — resale enquiry, scrap quote, pickup, battery handling or
+      recycling — for whichever of these applies.
+    </p>
+    <p>
+      Because the marketplace is one of the fastest-growing parts of the site, expect a price
+      estimate after inspection and a market-linked, condition-based value rather than a fixed
+      quote upfront — final value depends on model, age, working status and current demand.
+    </p>
+    <div class="link-row">
+      <a href="/marketplace/">Marketplace</a>
+      <a href="/sell-electronics/">Sell Electronics</a>
+      <a href="/e-waste-scrap-prices-kochi/">Scrap Price Guide</a>
+    </div>
+  </section>
+
+  <section class="comparison-section" aria-labelledby="comparison-title">
+    <h2 id="comparison-title">E-waste options compared</h2>
+    <p>
+      If you're not sure which flow applies to you, use this as a quick reference — then start
+      the matching chat above or on WhatsApp with the details it asks you to check.
+    </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Option</th>
+            <th scope="col">Best for</th>
+            <th scope="col">What to check</th>
+          </tr>
+        </thead>
+        <tbody>
+          {comparisonRows.map((row) => (
+            <tr>
+              <td>{row.option}</td>
+              <td>{row.best}</td>
+              <td>{row.check}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
   <Faq items={faqItems} />
+
+  <section class="final-cta" aria-labelledby="final-cta-title">
+    <h2 id="final-cta-title">Ready to Recycle Your Old Electronics in Kochi?</h2>
+    <p>
+      Share your item list, location and photos for faster pickup confirmation — whether it's a
+      single laptop, a battery, or a full office clearout.
+    </p>
+    <div class="hero-actions">
+      <a
+        class="action action-primary"
+        href={whatsappLink(pickupMessage)}
+        target="_blank"
+        rel="noopener"
+        data-ewlf-open
+        data-ewlf-flow="pickup"
+      >
+        Book Pickup
+      </a>
+      <a
+        class="action action-whatsapp"
+        href={whatsappLink(quoteMessage)}
+        target="_blank"
+        rel="noopener"
+        data-ewlf-open
+      >
+        WhatsApp Ewaste Kochi
+      </a>
+      <a class="action action-secondary" href={telLink()}>Call Now</a>
+    </div>
+  </section>
 </Layout>
 
 <style>
-  .lede {
-    font-size: 1.1rem;
-    color: var(--color-muted);
-    max-width: 46rem;
+  .hero {
+    width: 100vw;
+    min-height: min(760px, calc(100vh - 112px));
+    margin: -2rem calc(50% - 50vw) 3rem;
+    padding: clamp(3rem, 8vw, 6.5rem) 1.25rem 1.25rem;
+    display: flex;
+    align-items: stretch;
+    background:
+      linear-gradient(90deg, rgba(2, 24, 12, 0.98) 0%, rgba(2, 24, 12, 0.88) 34%, rgba(2, 24, 12, 0.32) 66%, rgba(2, 24, 12, 0.12) 100%),
+      url("/images/homepage-hero-scene.jpg") center right / cover no-repeat;
+    color: #fff;
   }
-  .hero-features {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    margin: 1.75rem 0 2.5rem;
-  }
-  .hero-feature {
+
+  .hero-shell {
+    width: min(72rem, 100%);
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
-    padding: 1.1rem;
-    background: var(--color-surface);
-    border-radius: 0.75rem;
+    justify-content: space-between;
+    gap: 2rem;
   }
-  .hero-feature svg {
-    width: 28px;
-    height: 28px;
-    color: var(--color-primary);
-    flex-shrink: 0;
+
+  .hero-copy,
+  .section-heading,
+  .pipeline-copy {
+    max-width: 48rem;
   }
-  .hero-feature strong {
+
+  .eyebrow {
+    margin: 0 0 0.65rem;
+    color: #1b4965;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    max-width: 44rem;
+    margin: 0;
+    color: inherit;
+    font-size: clamp(2.6rem, 7vw, 5.35rem);
+    line-height: 0.98;
+  }
+
+  .hero .eyebrow {
+    color: #7fe35f;
+  }
+
+  .lede {
+    max-width: 43rem;
+    margin: 1.2rem 0 0;
+    color: var(--color-muted);
+    font-size: 1.1rem;
+  }
+
+  .hero .lede {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: clamp(1.05rem, 2vw, 1.35rem);
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+  }
+
+  .action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0.78rem 1.05rem;
+    border-radius: 0.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .action-primary {
+    background: var(--color-primary);
+    color: #fff;
+  }
+
+  .action-whatsapp {
+    background: #25d366;
+    color: #063d1e;
+  }
+
+  .action-secondary {
+    border: 1.5px solid var(--color-border);
     color: var(--color-text);
+    background: var(--color-bg);
+  }
+
+  .hero .action-secondary {
+    border-color: rgba(255, 255, 255, 0.42);
+    color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .action:hover,
+  .path-card a:hover,
+  .text-link:hover,
+  .link-row a:hover {
+    filter: brightness(0.96);
+  }
+
+  .hero-trust-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1px;
+    margin-top: auto;
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  .hero-trust-grid div {
+    min-height: 94px;
+    padding: 1rem;
+    background: rgba(0, 63, 31, 0.86);
+  }
+
+  .hero-trust-grid strong,
+  .hero-trust-grid span {
+    display: block;
+  }
+
+  .hero-trust-grid strong {
+    color: #fff;
     font-size: 0.95rem;
   }
-  .hero-feature span {
+
+  .hero-trust-grid span {
+    margin-top: 0.2rem;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 0.88rem;
+    line-height: 1.35;
+  }
+
+  section {
+    margin: 3rem 0;
+  }
+
+  .quick-answer {
+    padding: 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+
+  .quick-answer h2 {
+    margin: 0 0 0.75rem;
+    font-size: clamp(1.35rem, 3vw, 1.9rem);
+  }
+
+  .quick-answer p {
+    margin: 0 0 0.75rem;
     color: var(--color-muted);
-    font-size: 0.85rem;
-    line-height: 1.4;
   }
-  @media (min-width: 700px) {
-    .hero-features {
-      grid-template-columns: repeat(4, 1fr);
-    }
+
+  .muted-note {
+    margin: 0 !important;
+    font-size: 0.92rem;
   }
+
+  .collect-note {
+    max-width: 46rem;
+    margin: 1.2rem 0 0;
+    color: var(--color-muted);
+    font-size: 0.92rem;
+  }
+
+  .section-heading h2,
+  .pipeline-copy h2,
+  .coverage-section h2,
+  .why-section h2,
+  .data-section h2,
+  .battery-section h2,
+  .sell-section h2,
+  .comparison-section h2,
+  .final-cta h2 {
+    max-width: 42rem;
+    margin: 0;
+    font-size: clamp(1.6rem, 3.5vw, 2.55rem);
+  }
+
+  .why-section p,
+  .data-section p,
+  .battery-section p,
+  .sell-section p {
+    max-width: 48rem;
+    margin: 0.75rem 0 0;
+    color: var(--color-muted);
+  }
+
+  .path-grid,
   .service-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-    margin-top: 1rem;
+    margin-top: 1.2rem;
   }
+
+  .path-card,
   .service-card {
     display: block;
+    padding: 1.15rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    color: var(--color-text);
+    background: var(--color-bg);
+    text-decoration: none;
+  }
+
+  .path-card {
+    border-top: 4px solid var(--color-primary);
+  }
+
+  .path-card p:first-child {
+    margin: 0 0 0.65rem;
+    color: #1b4965;
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .path-card h3,
+  .service-card h3 {
+    margin: 0 0 0.45rem;
+  }
+
+  .path-card p,
+  .service-card p,
+  .pipeline-copy p,
+  .coverage-section p,
+  .collect-section p,
+  .section-heading p,
+  .comparison-section p {
+    color: var(--color-muted);
+  }
+
+  .section-heading p,
+  .comparison-section p {
+    max-width: 46rem;
+    margin: 0.75rem 0 0;
+  }
+
+  .path-card a,
+  .text-link {
+    display: inline-flex;
+    margin-top: 0.75rem;
+    color: var(--color-primary);
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .pipeline-section,
+  .coverage-section {
+    display: grid;
+    gap: 1.25rem;
     padding: 1.25rem;
     border: 1px solid var(--color-border);
-    border-radius: 0.75rem;
-    text-decoration: none;
-    color: var(--color-text);
+    border-radius: 0.5rem;
+    background: linear-gradient(135deg, var(--color-surface), var(--color-bg));
   }
-  .service-card:hover {
+
+  .pipeline-list {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    counter-reset: pipeline;
+    list-style: none;
+  }
+
+  .pipeline-list li {
+    position: relative;
+    padding: 0.85rem 0.9rem 0.85rem 3rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-weight: 650;
+  }
+
+  .pipeline-list li::before {
+    counter-increment: pipeline;
+    content: counter(pipeline);
+    position: absolute;
+    left: 0.8rem;
+    top: 0.8rem;
+    display: grid;
+    place-items: center;
+    width: 1.55rem;
+    height: 1.55rem;
+    border-radius: 999px;
+    background: #1b4965;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 800;
+  }
+
+  .service-card:hover,
+  .path-card:hover {
     border-color: var(--color-primary);
   }
-  .service-card h3 {
-    margin: 0 0 0.4rem;
-    color: var(--color-primary-dark);
+
+  .collect-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+    margin: 1.2rem 0 0;
+    padding: 0;
+    list-style: none;
   }
-  .service-card p {
-    margin: 0;
-    color: var(--color-muted);
+
+  .collect-grid li {
+    padding: 0.6rem 0.85rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-weight: 650;
     font-size: 0.92rem;
   }
-  @media (min-width: 700px) {
-    .service-grid {
+
+  .location-links {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+    margin-top: 1rem;
+  }
+
+  .location-links a {
+    display: block;
+    padding: 0.7rem 0.9rem;
+    border: 1.5px solid var(--color-border);
+    border-radius: 0.5rem;
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .location-links a strong {
+    display: block;
+    font-size: 0.92rem;
+  }
+
+  .location-links a span {
+    display: block;
+    margin-top: 0.2rem;
+    color: var(--color-muted);
+    font-size: 0.82rem;
+  }
+
+  .location-links a:hover {
+    border-color: var(--color-primary);
+  }
+
+  .location-links a:hover strong {
+    color: var(--color-primary);
+  }
+
+  @media (min-width: 480px) {
+    .location-links {
       grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .link-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1.25rem;
+    margin-top: 1rem;
+  }
+
+  .link-row a {
+    color: var(--color-primary);
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .table-scroll {
+    overflow-x: auto;
+    margin-top: 1.2rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+
+  table {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+
+  th,
+  td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+    white-space: nowrap;
+  }
+
+  th {
+    background: var(--color-surface);
+    font-weight: 800;
+  }
+
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .final-cta {
+    padding: 1.75rem 1.25rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--color-surface), var(--color-bg));
+    border: 1px solid var(--color-border);
+  }
+
+  .final-cta p {
+    margin: 0.5rem 0 0;
+    color: var(--color-muted);
+  }
+
+  .final-cta .hero-actions {
+    justify-content: center;
+  }
+
+  .coverage-section {
+    align-items: center;
+  }
+
+  @media (min-width: 640px) {
+    .hero-trust-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .collect-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (min-width: 820px) {
+    .path-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .service-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .collect-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .pipeline-section,
+    .coverage-section {
+      grid-template-columns: minmax(0, 0.92fr) minmax(320px, 1fr);
+      padding: 1.5rem;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .hero-actions .action {
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 2.45rem;
+    }
+
+    .hero {
+      min-height: auto;
+      background:
+        linear-gradient(180deg, rgba(2, 24, 12, 0.96) 0%, rgba(2, 24, 12, 0.9) 58%, rgba(2, 24, 12, 0.62) 100%),
+        url("/images/homepage-hero-scene.jpg") center bottom / cover no-repeat;
     }
   }
 </style>

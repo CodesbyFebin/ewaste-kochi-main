@@ -24,9 +24,9 @@ export const ROUTES: RouteEntry[] = [
     path: "/",
     changefreq: "weekly",
     priority: 1.0,
-    title: "E-Waste Recycling Kochi | Free Pickup + Instant Quote",
+    title: "E-Waste Recycling Kochi | Free Pickup for Electronics, Batteries & IT Scrap",
     description:
-      "Ewaste Kochi collects, recycles and securely destroys data on old electronics across Kochi and Kerala. Free doorstep pickup, instant quotes.",
+      "Book e-waste pickup in Kochi for old electronics, laptops, batteries, IT assets and data destruction. WhatsApp Ewaste Kochi for safe recycling and pickup support.",
     type: "core",
     sitemapGroup: "core",
     lang: "en-IN",

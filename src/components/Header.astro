@@ -3,6 +3,14 @@ import { BUSINESS, telLink } from "../data/site";
 ---
 
 <header class="site-header">
+  <div class="trust-bar" aria-label="Trust and contact highlights">
+    <div class="trust-wrap">
+      <span>Secure data handling</span>
+      <span>Responsible recycling support</span>
+      <span>Free pickup assistance in Kochi</span>
+      <a href={telLink()}>Have e-waste? {BUSINESS.phoneDisplay}</a>
+    </div>
+  </div>
   <div class="wrap">
     <a href="/" class="brand">Ewaste Kochi</a>
     <nav class="main-nav" aria-label="Primary">
@@ -25,6 +33,30 @@ import { BUSINESS, telLink } from "../data/site";
     top: 0;
     background: var(--color-bg);
     z-index: 10;
+  }
+  .trust-bar {
+    background: #063d1e;
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+  .trust-wrap {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 0.42rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+  .trust-wrap span {
+    display: none;
+    white-space: nowrap;
+  }
+  .trust-wrap a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: auto;
   }
   .wrap {
     max-width: 72rem;
@@ -62,6 +94,9 @@ import { BUSINESS, telLink } from "../data/site";
     white-space: nowrap;
   }
   @media (min-width: 860px) {
+    .trust-wrap span {
+      display: inline;
+    }
     .main-nav {
       display: flex;
     }
