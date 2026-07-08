@@ -1,142 +1,1005 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Breadcrumbs from "../../components/Breadcrumbs.astro";
-import CtaBar from "../../components/CtaBar.astro";
 import Faq from "../../components/Faq.astro";
 import LangSwitch from "../../components/LangSwitch.astro";
-import { SITE_URL } from "../../data/site";
+import { BUSINESS, SITE_URL, telLink, whatsappLink } from "../../data/site";
 import { getHreflang } from "../../data/routes";
+
+const title = "ഇ-വേസ്റ്റ് റീസൈക്ലിംഗ് കൊച്ചി | ഇലക്ട്രോണിക്സ്, ബാറ്ററി, ഐടി സ്ക്രാപ്പിന് സൗജന്യ പിക്കപ്പ്";
+const description =
+  "കൊച്ചിയിൽ പഴയ ഇലക്ട്രോണിക്സ്, ലാപ്ടോപ്പ്, ബാറ്ററി, ഐടി ആസ്തികൾ, ഡാറ്റ നശിപ്പിക്കൽ എന്നിവയ്ക്ക് ഇ-വേസ്റ്റ് പിക്കപ്പ് ബുക്ക് ചെയ്യൂ. സുരക്ഷിത റീസൈക്ലിംഗിനും പിക്കപ്പ് സഹായത്തിനും Ewaste Kochi-യെ വാട്സ്ആപ്പിൽ ബന്ധപ്പെടുക.";
+
+const pickupMessage =
+  "നമസ്കാരം Ewaste Kochi, കൊച്ചിയിൽ സൗജന്യ ഇ-വേസ്റ്റ് പിക്കപ്പ് ബുക്ക് ചെയ്യണം. ക്വോട്ടും പിക്കപ്പ് സ്ലോട്ടും വേണം.";
+const quoteMessage =
+  "നമസ്കാരം Ewaste Kochi, പഴയ ഇലക്ട്രോണിക്സിനോ ഐടി ആസ്തികൾക്കോ വേഗത്തിലുള്ള ക്വോട്ട് വേണം. സാധനങ്ങളുടെ വിവരവും ഫോട്ടോയും അയക്കാം.";
 
 const breadcrumbItems = [
   { name: "ഹോം", path: "/" },
   { name: "മലയാളം", path: "/ml/" },
 ];
 
-const title = "ഇ-വേസ്റ്റ് കൊച്ചി | സൗജന്യ പിക്കപ്പ് + തൽക്ഷണ ക്വോട്ട്";
-const description =
-  "കൊച്ചിയിലും കേരളത്തിലും പഴയ ഇലക്ട്രോണിക്സ് ശേഖരിച്ച് റീസൈക്കിൾ ചെയ്യുകയും ഡാറ്റ സുരക്ഷിതമായി നശിപ്പിക്കുകയും ചെയ്യുന്നു. സൗജന്യ പിക്കപ്പ്, തൽക്ഷണ ക്വോട്ട്.";
-
 const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${SITE_URL}/ml/#ewaste-pickup-service`,
+    name: "E-waste pickup and recycling in Kochi (Malayalam)",
+    serviceType: "E-waste recycling, electronics pickup, IT asset disposal, data destruction",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: "Kochi, Ernakulam, Kerala",
+    url: `${SITE_URL}/ml/`,
+  },
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": `${SITE_URL}/ml/`,
+    url: `${SITE_URL}/ml/`,
     name: title,
     description,
     inLanguage: "ml-IN",
+    isPartOf: { "@id": `${SITE_URL}/#website` },
   },
 ];
 
+const servicePaths = [
+  {
+    label: "വീട് പിക്കപ്പ്",
+    title: "പഴയ ലാപ്ടോപ്പ്, ഫോൺ, ടിവി, ബാറ്ററി",
+    copy: "സാധനങ്ങളുടെ ഫോട്ടോ അയക്കൂ, നിങ്ങളുടെ പ്രദേശം സ്ഥിരീകരിക്കൂ, ഡ്രോപ്പ്-ഓഫ് സെന്ററിൽ പോകാതെ പിക്കപ്പ് സ്ലോട്ട് നേടൂ.",
+    href: "/ml/pickup/",
+    flow: "pickup",
+  },
+  {
+    label: "ഓഫീസ് / ITAD",
+    title: "ഡാറ്റ സുരക്ഷയോടെ ബൾക്ക് ഐടി ആസ്തികൾ",
+    copy: "ഓഫീസുകൾക്കും ഐടി ടീമുകൾക്കുമായി ഇൻവെന്ററി, ശേഖരണം, ഡാറ്റ നശിപ്പിക്കൽ ഓപ്ഷനുകൾ, നിർമാർജന ഡോക്യുമെന്റേഷൻ.",
+    href: "/itad/",
+    flow: "business-itad",
+  },
+  {
+    label: "ഇലക്ട്രോണിക്സ് വിൽക്കുക",
+    title: "പ്രവർത്തിക്കുന്നതോ കേടായതോ ആയ ഉപകരണങ്ങൾക്ക് വിൽപ്പന മൂല്യം",
+    copy: "പിക്കപ്പിന് മുൻപ് ഒരു സൂചക സ്ക്രാപ്പ് അല്ലെങ്കിൽ വിൽപ്പന ക്വോട്ട് നേടൂ. അന്തിമ മൂല്യം എപ്പോഴും പരിശോധനയ്ക്ക് ശേഷം സ്ഥിരീകരിക്കും.",
+    href: "/ml/sell-electronics/",
+    flow: "sell-electronics",
+  },
+];
+
+const howItWorks = [
+  { title: "സാധന വിവരങ്ങൾ പങ്കിടൂ", copy: "ഇലക്ട്രോണിക്സിന്റെ തരം, അളവ്, അവസ്ഥ എന്നിവ വാട്സ്ആപ്പിൽ അയക്കൂ, എന്തെങ്കിലും ഷെഡ്യൂൾ ചെയ്യുന്നതിന് മുൻപ് ടീമിന് ഇത് അറിയാൻ." },
+  { title: "സ്ഥലവും ഫോട്ടോയും അയക്കൂ", copy: "ടീം എത്തുന്നതിന് മുൻപ് ബാറ്ററി, കേടായ സാധനങ്ങൾ, വലിയ ഉപകരണങ്ങൾ, സെർവർ എന്നിവ തിരിച്ചറിയാൻ ഫോട്ടോകൾ സഹായിക്കുന്നു." },
+  { title: "പിക്കപ്പ് / ക്വോട്ട് സ്ഥിരീകരണം നേടൂ", copy: "നിങ്ങൾ പങ്കിട്ട വിവരങ്ങളുടെ അടിസ്ഥാനത്തിൽ ടീം സാധ്യത, സേവന തരം, ബാധകമെങ്കിൽ ക്വോട്ട് വിവരം എന്നിവ സ്ഥിരീകരിക്കുന്നു." },
+  { title: "ശേഖരണം ഷെഡ്യൂൾ ചെയ്യൂ", copy: "നിങ്ങളുടെ പ്രദേശത്തെ ലഭ്യതയുടെ അടിസ്ഥാനത്തിൽ സ്ലോട്ട് തിരഞ്ഞെടുക്കൂ — വീട്, ഓഫീസ്, ബൾക്ക് പിക്കപ്പുകൾ വ്യത്യസ്തമായി ഷെഡ്യൂൾ ചെയ്യുന്നു." },
+  { title: "റീസൈക്ലിംഗ്, പുനരുപയോഗം അല്ലെങ്കിൽ ഉത്തരവാദിത്ത കൈകാര്യം", copy: "അവസ്ഥയും തരവും അനുസരിച്ച് സാധനങ്ങൾ പുനരുപയോഗം, വിൽപ്പന അന്വേഷണം, റീസൈക്ലിംഗ് അല്ലെങ്കിൽ ബാറ്ററി വേർതിരിക്കൽ എന്നിവയിലേക്ക് നയിക്കുന്നു." },
+  { title: "ബാധകമെങ്കിൽ ഡോക്യുമെന്റേഷൻ", copy: "ബിസിനസ്, ഡാറ്റ നശിപ്പിക്കൽ പിക്കപ്പുകളിൽ അംഗീകരിച്ച കൈകാര്യരീതിയുടെ ഭാഗമായി ഡോക്യുമെന്റേഷൻ ഉൾപ്പെടുത്താം." },
+];
+
+const collectItems = [
+  "ലാപ്ടോപ്പ്", "ഡെസ്ക്ടോപ്പ്", "മോണിറ്റർ", "കീബോർഡ്", "പ്രിന്റർ", "റൂട്ടർ",
+  "കേബിളുകൾ", "യുപിഎസ് സിസ്റ്റങ്ങൾ", "ഇൻവെർട്ടർ ബാറ്ററികൾ", "ലിഥിയം ബാറ്ററികൾ",
+  "മൊബൈൽ ഫോണുകൾ", "ടാബ്‌ലെറ്റുകൾ", "സെർവറുകൾ", "ഹാർഡ് ഡ്രൈവുകൾ", "സിസിടിവി ഉപകരണങ്ങൾ",
+  "ഓഫീസ് ഐടി സ്ക്രാപ്പ്", "ടിവികൾ", "മിക്സഡ് ഇലക്ട്രോണിക് വേസ്റ്റ്",
+];
+
+const quickServices = [
+  { name: "ഇ-വേസ്റ്റ് റീസൈക്ലിംഗ്", copy: "വീടുകളിൽ നിന്നും ചെറിയ ഓഫീസുകളിൽ നിന്നുമുള്ള ലാപ്ടോപ്പ്, ഡെസ്ക്ടോപ്പ്, മോണിറ്റർ, പ്രിന്റർ, മിക്സഡ് ഇലക്ട്രോണിക്സിന്റെ സുരക്ഷിത നിർമാർജനം.", href: "/ml/recycling/", flow: "pickup" },
+  { name: "ബാറ്ററി റീസൈക്ലിംഗ്", copy: "യുപിഎസ്, ഇൻവെർട്ടർ, ലിഥിയം, കേടായ ബാറ്ററി ശേഖരണം, പൊതു ഇ-വേസ്റ്റിൽ നിന്ന് വേറിട്ട്.", href: "/ml/battery-recycling/", flow: "battery-recycling" },
+  { name: "ഡാറ്റ നശിപ്പിക്കൽ", copy: "ലാപ്ടോപ്പ്, ഡ്രൈവ്, സെർവർ എന്നിവയ്ക്ക് വൈപ്പിംഗ്, ഡീഗോസിംഗ്, ഹാർഡ് ഡ്രൈവ് ശ്രെഡിംഗ് ഓപ്ഷനുകൾ.", href: "/ml/data-destruction/", flow: "data-destruction" },
+  { name: "ഹാർഡ് ഡ്രൈവ് ശ്രെഡിംഗ്", copy: "വീണ്ടും ഉപയോഗിക്കുകയോ വിൽക്കുകയോ ചെയ്യരുതാത്ത ഡ്രൈവുകൾക്ക് ഭൗതിക നശിപ്പിക്കൽ.", href: "/hard-drive-shredding/", flow: "data-destruction" },
+  { name: "സമീപത്തുള്ള ഇലക്ട്രോണിക്സ് റീസൈക്ലിംഗ്", copy: "ബുക്ക് ചെയ്യുന്നതിന് മുൻപ് നിങ്ങളുടെ കൊച്ചി-മെട്രോ പ്രദേശത്തിന്റെ പിക്കപ്പ് സാധ്യത പരിശോധിക്കൂ.", href: "/services/electronics-recycling-near-me/", flow: "service-area" },
+  { name: "മാർക്കറ്റ്പ്ലേസ്", copy: "ഇപ്പോഴും മൂല്യമുള്ള ഇലക്ട്രോണിക്സിന് വാങ്ങൽ, വിൽപ്പന, പുനരുപയോഗ ഓപ്ഷനുകൾ പര്യവേക്ഷണം ചെയ്യൂ.", href: "/marketplace/", flow: "sell-electronics" },
+  { name: "സ്ക്രാപ്പ് വില ഗൈഡ്", copy: "വിൽക്കുന്നതിന് മുൻപ് അവസ്ഥ അടിസ്ഥാനമാക്കിയുള്ള മൂല്യം മനസ്സിലാക്കാൻ റഫറൻസ് വില.", href: "/e-waste-scrap-prices-kochi/", flow: "scrap-price" },
+];
+
+const audienceCards = [
+  {
+    title: "വീട് പിക്കപ്പുകൾ",
+    copy: "പഴയ ലാപ്ടോപ്പ്, ഫോൺ, ചാർജർ, ബാറ്ററി, ടിവി, മിക്സഡ് ഇലക്ട്രോണിക്സ് — ആവശ്യമുള്ളതിലും കൂടുതൽ കാലം ഡ്രോയറിലോ സ്റ്റോർ റൂമിലോ ഇരിക്കുന്നവ.",
+    href: "/ml/pickup/",
+  },
+  {
+    title: "ബിസിനസ് പിക്കപ്പുകൾ",
+    copy: "ഓഫീസ് ഐടി സ്ക്രാപ്പ്, ബൾക്ക് കമ്പ്യൂട്ടറുകൾ, സെർവറുകൾ, യുപിഎസ് സിസ്റ്റങ്ങൾ, നെറ്റ്‌വർക്ക് ഉപകരണങ്ങൾ, ആസ്തി ലിസ്റ്റുകൾ — സാധാരണയായി ഒരു നിശ്ചിത പിക്കപ്പ് തീയതി ചുറ്റി ഏകോപിപ്പിക്കുന്നു.",
+    href: "/itad/",
+  },
+  {
+    title: "ഡാറ്റയുള്ള ഉപകരണങ്ങൾ",
+    copy: "ഹാർഡ് ഡ്രൈവ്, ലാപ്ടോപ്പ്, സെർവർ, സ്റ്റോറേജ് മീഡിയ എന്നിവ പരിസരം വിടുന്നതിന് മുൻപ് ഡാറ്റ നശിപ്പിക്കൽ പിന്തുണ ആവശ്യമായേക്കാം.",
+    href: "/ml/data-destruction/",
+  },
+];
+
+const locationCards = [
+  { name: "കക്കനാട്", copy: "ഇൻഫോപാർക്കിനും സ്മാർട്ട്സിറ്റിക്കും സമീപം — വീടുകൾ, അപ്പാർട്ട്മെന്റുകൾ, ഐടി ഓഫീസുകൾ.", href: "/locations/kakkanad/" },
+  { name: "കളമശ്ശേരി", copy: "കളമശ്ശേരി മേഖലയിലുടനീളം വ്യാവസായിക, റെസിഡൻഷ്യൽ പിക്കപ്പുകൾ.", href: "/locations/kalamassery/" },
+  { name: "എറണാകുളം സൗത്ത്", copy: "സെൻട്രൽ എറണാകുളത്തെ വീടുകൾ, കടകൾ, ചെറിയ ഓഫീസുകൾ.", href: "/locations/ernakulam-south/" },
+];
+
+const comparisonRows = [
+  { option: "ഇ-വേസ്റ്റ് പിക്കപ്പ്", best: "മിക്സഡ് ഇലക്ട്രോണിക്സ്", check: "സാധന ലിസ്റ്റ്, അളവ്, സ്ഥലം" },
+  { option: "ഇലക്ട്രോണിക്സ് വിൽക്കുക", best: "പ്രവർത്തിക്കുന്നതോ വീണ്ടും ഉപയോഗിക്കാവുന്നതോ ആയ ഉപകരണങ്ങൾ", check: "അവസ്ഥ, പ്രായം, മോഡൽ, ഫോട്ടോ" },
+  { option: "ബാറ്ററി റീസൈക്ലിംഗ്", best: "യുപിഎസ്, ഇൻവെർട്ടർ, ലിഥിയം ബാറ്ററികൾ", check: "കെമിസ്ട്രി, വീർക്കൽ, ചോർച്ച" },
+  { option: "ഡാറ്റ നശിപ്പിക്കൽ", best: "ഹാർഡ് ഡ്രൈവ്, ലാപ്ടോപ്പ്, സെർവർ", check: "സ്റ്റോറേജ് തരം, ഡോക്യുമെന്റേഷൻ ആവശ്യം" },
+  { option: "കോർപ്പറേറ്റ് ITAD", best: "ഓഫീസുകളും ഐടി ടീമുകളും", check: "ആസ്തി ലിസ്റ്റ്, അളവ്, പിക്കപ്പ് സമയം" },
+];
+
 const faqItems = [
-  {
-    q: "പിക്കപ്പ് സൗജന്യമാണോ?",
-    a: "അതെ, യോഗ്യമായ അളവിന് വീട്ടിലെത്തി പിക്കപ്പ് സൗജന്യമാണ്. നിങ്ങളുടെ സാധനങ്ങളും സ്ഥലവും വാട്സ്ആപ്പിൽ അയക്കൂ.",
-  },
-  {
-    q: "ഏതെല്ലാം സാധനങ്ങൾ സ്വീകരിക്കും?",
-    a: "ലാപ്ടോപ്പ്, ഡെസ്ക്ടോപ്പ്, മോണിറ്റർ, പ്രിന്റർ, ബാറ്ററികൾ, ടിവി എന്നിവയും പൊതുവായ ഐടി ഉപകരണങ്ങളും.",
-  },
-  {
-    q: "എന്റെ ഡാറ്റ സുരക്ഷിതമാണോ?",
-    a: "സ്റ്റോറേജുള്ള ഏതു ഉപകരണവും റീസൈക്കിൾ ചെയ്യുന്നതിന് മുൻപ് ഡാറ്റ സുരക്ഷിതമായി നീക്കം ചെയ്യുന്നു.",
-  },
-  {
-    q: "ഏതെല്ലാം സ്ഥലങ്ങളിൽ സേവനം ലഭ്യമാണ്?",
-    a: "കൊച്ചിയിലും എറണാകുളം ജില്ലയിലും 30+ പ്രദേശങ്ങളിൽ ഞങ്ങൾ സേവനം നൽകുന്നു, കൂടാതെ കേരളത്തിലുടനീളം വിശാലമായ കവറേജും ഉണ്ട്.",
-  },
+  { q: "കൊച്ചിയിൽ പഴയ ഇലക്ട്രോണിക്സ് എവിടെ റീസൈക്കിൾ ചെയ്യാം?", a: "ലാപ്ടോപ്പ്, ഡെസ്ക്ടോപ്പ്, ബാറ്ററി, കേബിൾ, പ്രിന്റർ, ടിവി, സെർവർ, മിക്സഡ് ഐടി സ്ക്രാപ്പ് എന്നിവയ്ക്ക് Ewaste Kochi-യുമായി പിക്കപ്പ് ബുക്ക് ചെയ്ത് കൊച്ചിയിൽ പഴയ ഇലക്ട്രോണിക്സ് റീസൈക്കിൾ ചെയ്യാം. സാധന ലിസ്റ്റ്, സ്ഥലം, ഫോട്ടോ എന്നിവ വാട്സ്ആപ്പിൽ അയക്കൂ." },
+  { q: "വേഗത്തിൽ പിക്കപ്പ് സ്ഥിരീകരണം എങ്ങനെ നേടാം?", a: "പ്രദേശം, സാധന ലിസ്റ്റ്, അളവ്, ലഭ്യമെങ്കിൽ ഫോട്ടോ എന്നിവയോടെ വാട്സ്ആപ്പോ ക്വിക്ക് ക്വോട്ട് ഫ്ലോയോ ഉപയോഗിക്കൂ. ഇത് ടീമിന് വേഗത്തിൽ സ്ലോട്ട് സ്ഥിരീകരിക്കാൻ മതിയായ വിവരം നൽകുന്നു." },
+  { q: "Ewaste Kochi സൗജന്യ ഇ-വേസ്റ്റ് പിക്കപ്പ് നൽകുന്നുണ്ടോ?", a: "യോഗ്യമായ പിക്കപ്പുകൾക്ക്, അതെ. ലഭ്യത സാധന തരം, അളവ്, അവസ്ഥ, സ്ഥലം എന്നിവയെ ആശ്രയിച്ചിരിക്കുന്നു — ഷെഡ്യൂൾ ചെയ്യുന്നതിന് മുൻപ് വാട്സ്ആപ്പിൽ വിവരങ്ങൾ പങ്കിടൂ." },
+  { q: "Ewaste Kochi വീടുകളിൽ നിന്ന് ഇ-വേസ്റ്റ് ശേഖരിക്കുമോ?", a: "അതെ. പഴയ ലാപ്ടോപ്പ്, ഫോൺ, ചാർജർ, ബാറ്ററി, ടിവി, പ്രിന്റർ, മിക്സഡ് ഇലക്ട്രോണിക്സ് എന്നിവയ്ക്ക് വീട്ടിലുള്ളവർക്ക് പിക്കപ്പിനായി അന്വേഷിക്കാം." },
+  { q: "കൊച്ചിയിൽ എന്റെ സമീപം പിക്കപ്പ് ലഭ്യമാണോ?", a: "Ewaste Kochi പ്രധാനമായും കൊച്ചി, എറണാകുളം, സമീപ മെട്രോ പ്രദേശങ്ങൾ എന്നിവയെ പിന്തുണക്കുന്നു, കക്കനാട്, കളമശ്ശേരി, എറണാകുളം സൗത്ത് ഉൾപ്പെടെ. നിങ്ങളുടെ പ്രത്യേക പ്രദേശത്തിന്റെ പിക്കപ്പ് സാധ്യത പരിശോധിക്കാൻ സ്ഥലം അയക്കൂ." },
+  { q: "ഏതെല്ലാം ഇലക്ട്രോണിക്സ് നിങ്ങൾ സ്വീകരിക്കും?", a: "ലാപ്ടോപ്പ്, ഡെസ്ക്ടോപ്പ്, സെർവർ, മോണിറ്റർ, ടിവി, പ്രിന്റർ, മൊബൈൽ ഫോൺ, യുപിഎസ് ബാറ്ററി, ഇൻവെർട്ടർ ബാറ്ററി, ലാപ്ടോപ്പ് ബാറ്ററി, പൊതു ഐടി ഹാർഡ്‌വെയർ. ലിസ്റ്റിന് പുറത്തുള്ള സാധനങ്ങൾക്ക് സ്ഥിരീകരിക്കാൻ വാട്സ്ആപ്പിൽ ചോദിക്കൂ." },
+  { q: "നിങ്ങൾ ബാറ്ററി ശേഖരിക്കുമോ?", a: "അതെ. യുപിഎസ്, ഇൻവെർട്ടർ, ലാപ്ടോപ്പ്, ലിഥിയം ബാറ്ററി ഉൾപ്പെടെ സാധാരണ ബാറ്ററി തരങ്ങൾക്ക് പിക്കപ്പ് പിന്തുണ ലഭ്യമാണ് — സുരക്ഷിത കൈകാര്യത്തിനായി മറ്റ് ഇ-വേസ്റ്റിൽ നിന്ന് വേറിട്ട്." },
+  { q: "കേടായതോ വീർത്തതോ ആയ ബാറ്ററി നിങ്ങൾ ശേഖരിക്കുമോ?", a: "പിക്കപ്പിന് മുൻപ് കേടായതോ ചോർച്ചയുള്ളതോ വീർത്തതോ ആയ ബാറ്ററി സൂചിപ്പിക്കൂ, കഴിയുമെങ്കിൽ ഫോട്ടോ അയക്കൂ — ഈ സാധനങ്ങൾക്ക് ശ്രദ്ധയോടെയുള്ള, വേറിട്ട കൈകാര്യം വേണം." },
+  { q: "ബിസിനസുകൾക്ക് സുരക്ഷിത ഡാറ്റ നശിപ്പിക്കൽ അഭ്യർത്ഥിക്കാമോ?", a: "അതെ. സ്റ്റോറേജുള്ള ഉപകരണങ്ങൾക്ക്, ആസ്തി തരവും ആവശ്യകതയും അനുസരിച്ച് വൈപ്പിംഗ്, ഡീഗോസിംഗ് അല്ലെങ്കിൽ ഭൗതിക ഹാർഡ് ഡ്രൈവ് ശ്രെഡിംഗ് ഞങ്ങൾ വാഗ്ദാനം ചെയ്യുന്നു." },
+  { q: "ഓഫീസുകൾക്ക് ബൾക്ക് ഇ-വേസ്റ്റ് പിക്കപ്പ് ബുക്ക് ചെയ്യാമോ?", a: "അതെ. കമ്പ്യൂട്ടറുകൾ, സെർവറുകൾ, യുപിഎസ് സിസ്റ്റങ്ങൾ, പ്രിന്ററുകൾ, നെറ്റ്‌വർക്ക് ഉപകരണങ്ങൾ, മിക്സഡ് ഐടി സ്ക്രാപ്പ് എന്നിവയ്ക്ക് ഓഫീസുകൾക്ക് ബൾക്ക് പിക്കപ്പിനായി അന്വേഷിക്കാം." },
+  { q: "നിങ്ങൾ ഡോക്യുമെന്റേഷൻ നൽകുമോ?", a: "ബിസിനസ് പിക്കപ്പുകൾക്കും ഡാറ്റ നശിപ്പിക്കൽ അഭ്യർത്ഥനകൾക്കും മറ്റ് അംഗീകരിച്ച സേവന തരങ്ങൾക്കും ഡോക്യുമെന്റേഷൻ ലഭ്യമായേക്കാം." },
+  { q: "ടിവിയും മോണിറ്ററും റീസൈക്കിൾ ചെയ്യാമോ?", a: "അതെ. പഴയ ടിവിയും മോണിറ്ററും മറ്റ് ഇലക്ട്രോണിക്സിനൊപ്പം ഒരു ഇ-വേസ്റ്റ് പിക്കപ്പ് അന്വേഷണത്തിൽ ഉൾപ്പെടുത്താം — സ്ഥിരീകരണത്തിനായി ഫോട്ടോയും സ്ഥലവും അയക്കൂ." },
+  { q: "റീസൈക്ലിംഗിന് പകരം പഴയ ഇലക്ട്രോണിക്സ് വിൽക്കാമോ?", a: "അതെ. പ്രവർത്തിക്കുന്നതും ഭാഗികമായി പ്രവർത്തിക്കുന്നതുമായ ഉപകരണങ്ങൾക്ക് വിൽപ്പനയോ സ്ക്രാപ്പ് മൂല്യമോ യോഗ്യത നേടിയേക്കാം. അന്തിമ വില മോഡൽ, അവസ്ഥ, അളവ്, പരിശോധന എന്നിവയെ ആശ്രയിച്ചിരിക്കുന്നു." },
+  { q: "കൊച്ചിയിലെ ഏതെല്ലാം പ്രദേശങ്ങൾ നിങ്ങൾ കവർ ചെയ്യുന്നു?", a: "കക്കനാട്, കളമശ്ശേരി, എറണാകുളം സൗത്ത്, സമീപ കൊച്ചി-മെട്രോ പ്രദേശങ്ങൾ ഉൾപ്പെടെ കൊച്ചിയിലും എറണാകുളം ജില്ലയിലും ഞങ്ങൾ സേവനം നൽകുന്നു. ഈ പ്രദേശത്തിന് പുറത്ത് സാധ്യത പരിശോധിക്കാൻ ഞങ്ങളെ ബന്ധപ്പെടുക." },
+  { q: "വാട്സ്ആപ്പിൽ ഞാൻ എന്ത് വിവരങ്ങൾ അയക്കണം?", a: "സാധന ലിസ്റ്റ്, അളവ്, സ്ഥലം, ഫോട്ടോ, പ്രവർത്തന അവസ്ഥ, ഡാറ്റ നശിപ്പിക്കൽ ആവശ്യമുണ്ടോ എന്നിവ അയക്കൂ — കൂടുതൽ വിശദാംശം നൽകുന്തോറും പിക്കപ്പ് വേഗത്തിൽ സ്ഥിരീകരിക്കാം." },
+  { q: "പിക്കപ്പ് എങ്ങനെ ബുക്ക് ചെയ്യാം?", a: "ഈ പേജിലെ ബുക്ക് പിക്കപ്പ് ബട്ടണോ വാട്സ്ആപ്പോ ഫോൺ നമ്പറോ ഉപയോഗിക്കൂ. സാധന ഫോട്ടോയും സ്ഥലവും പങ്കിടുന്നത് സ്ഥിരീകരണം വേഗത്തിലാക്കാൻ സഹായിക്കുന്നു." },
 ];
 ---
 
 <Layout title={title} description={description} path="/ml/" jsonLd={jsonLd} lang="ml-IN" hreflang={getHreflang("/ml/")}>
   <Breadcrumbs items={breadcrumbItems} />
-  <LangSwitch current="ml" otherPath="/" />
-  <h1>കൊച്ചിയിൽ ഇ-മാലിന്യ റീസൈക്ലിംഗ്</h1>
-  <p class="lede">
-    പഴയ ലാപ്ടോപ്പ്, ബാറ്ററി, ഐടി ഉപകരണങ്ങൾ എന്നിവ ഞങ്ങൾ വീട്ടിൽ നിന്നോ ഓഫീസിൽ
-    നിന്നോ ശേഖരിക്കുന്നു — യോഗ്യമായ അളവിന് സൗജന്യമായി — തുടർന്ന് റീസൈക്ലിംഗ്,
-    വിൽപ്പന, അല്ലെങ്കിൽ സാക്ഷ്യപ്പെടുത്തിയ ഡാറ്റ നശിപ്പിക്കൽ എന്നിവയിലേക്ക്
-    നയിക്കുന്നു.
-  </p>
 
-  <CtaBar
-    whatsappMessage="നമസ്കാരം, കൊച്ചിയിൽ ഒരു സൗജന്യ ഇ-വേസ്റ്റ് പിക്കപ്പ് ബുക്ക് ചെയ്യണം."
-    pickupHref="/ml/pickup/"
-    labels={{ call: "വിളിക്കുക", whatsapp: "വാട്സ്ആപ്പ് ചെയ്യുക", pickup: "സൗജന്യ പിക്കപ്പ് ബുക്ക് ചെയ്യുക" }}
-  />
-
-  <section>
-    <h2>ഞങ്ങളുടെ പ്രധാന സേവനങ്ങൾ</h2>
-    <div class="service-grid">
-      <a class="service-card" href="/ml/recycling/">
-        <h3>ഇ-വേസ്റ്റ് റീസൈക്ലിംഗ്</h3>
-        <p>ലാപ്ടോപ്പ്, ഡെസ്ക്ടോപ്പ്, മോണിറ്റർ, പ്രിന്റർ എന്നിവയുടെ സുരക്ഷിത നിർമാർജനം.</p>
-      </a>
-      <a class="service-card" href="/ml/battery-recycling/">
-        <h3>ബാറ്ററി റീസൈക്ലിംഗ്</h3>
-        <p>യുപിഎസ്, ഇൻവെർട്ടർ, ലാപ്ടോപ്പ്, ഫോൺ ബാറ്ററികളുടെ ശേഖരണവും റീസൈക്ലിംഗും.</p>
-      </a>
-      <a class="service-card" href="/ml/sell-electronics/">
-        <h3>പഴയ ഇലക്ട്രോണിക്സ് വിൽക്കുക</h3>
-        <p>പ്രവർത്തിക്കുന്ന ഉപകരണങ്ങൾക്ക് തൽക്ഷണ ക്വോട്ട് നേടുക.</p>
-      </a>
-      <a class="service-card" href="/ml/data-destruction/">
-        <h3>ഡാറ്റ നശിപ്പിക്കൽ</h3>
-        <p>സ്റ്റോറേജുള്ള ഏതു ഉപകരണത്തിനും സാക്ഷ്യപ്പെടുത്തിയ വൈപ്പിംഗ്, ഡീഗോസിംഗ്, ശ്രെഡിംഗ്.</p>
-      </a>
-      <a class="service-card" href="/ml/pickup/">
-        <h3>സൗജന്യ പിക്കപ്പ്</h3>
-        <p>കൊച്ചിയിലുടനീളം വീട്ടിലെത്തി ശേഖരണം.</p>
-      </a>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-shell">
+      <div class="hero-copy">
+        <p class="eyebrow">കൊച്ചിയിലുടനീളം ഡോർസ്റ്റെപ്പ് ഇ-വേസ്റ്റ് പിക്കപ്പ്</p>
+        <h1 id="hero-title">കൊച്ചിയിൽ ഇ-വേസ്റ്റ് റീസൈക്ലിംഗും പിക്കപ്പും</h1>
+        <p class="lede">
+          പഴയ ഇലക്ട്രോണിക്സ്, ലാപ്ടോപ്പ്, ബാറ്ററി, ഐടി സ്ക്രാപ്പ്, ഡാറ്റയുള്ള ഉപകരണങ്ങൾ എന്നിവ
+          കൊച്ചിയിലും സമീപ എറണാകുളം പ്രദേശങ്ങളിലും സുരക്ഷിതമായ പിക്കപ്പ് സഹായത്തോടെ
+          റീസൈക്കിൾ ചെയ്യൂ — വീടുകൾക്കും ഓഫീസുകൾക്കും ഐടി ടീമുകൾക്കും ഒരുപോലെ.
+        </p>
+        <div class="hero-actions" aria-label="Primary actions">
+          <a
+            class="action action-primary"
+            href={whatsappLink(pickupMessage)}
+            target="_blank"
+            rel="noopener"
+            data-ewlf-open
+            data-ewlf-flow="pickup"
+          >
+            സൗജന്യ പിക്കപ്പ് ബുക്ക് ചെയ്യൂ
+          </a>
+          <a
+            class="action action-whatsapp"
+            href={whatsappLink(quoteMessage)}
+            target="_blank"
+            rel="noopener"
+            data-ewlf-open
+            data-ewlf-flow="scrap-price"
+          >
+            ക്വോട്ടിന് വാട്സ്ആപ്പ് ചെയ്യൂ
+          </a>
+          <a class="action action-secondary" href={telLink()}>വിളിക്കുക {BUSINESS.phoneDisplay}</a>
+        </div>
+      </div>
+      <div class="hero-trust-grid" aria-label="Service highlights">
+        <div>
+          <strong>കൊച്ചി-മെട്രോ പിക്കപ്പ്</strong>
+          <span>സേവനം ലഭ്യമായ പ്രദേശങ്ങളിൽ ഡോർസ്റ്റെപ്പ് സഹായം</span>
+        </div>
+        <div>
+          <strong>വാട്സ്ആപ്പ്-ഫസ്റ്റ്</strong>
+          <span>പിക്കപ്പിനും ക്വോട്ടിനും വേഗത്തിലുള്ള മറുപടി</span>
+        </div>
+        <div>
+          <strong>വീടും ബിസിനസും</strong>
+          <span>ഒറ്റ ഉപകരണം മുതൽ വലിയ ഐടി ആസ്തികൾ വരെ</span>
+        </div>
+        <div>
+          <strong>ഡാറ്റ നശിപ്പിക്കൽ</strong>
+          <span>ആവശ്യാനുസരണം ഡോക്യുമെന്റേഷൻ ലഭ്യം</span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section>
-    <h2>സേവന പ്രദേശം</h2>
+  <LangSwitch current="ml" otherPath="/" />
+
+  <section class="quick-answer" aria-labelledby="quick-answer-title">
+    <h2 id="quick-answer-title">കൊച്ചിയിൽ പഴയ ഇലക്ട്രോണിക്സ് എവിടെ റീസൈക്കിൾ ചെയ്യാം?</h2>
     <p>
-      കൊച്ചി, എറണാകുളം ജില്ല എന്നിവിടങ്ങളിലെ 30+ പ്രദേശങ്ങളിൽ ഞങ്ങൾ
-      പ്രവർത്തിക്കുന്നു, കൂടാതെ കേരളത്തിലുടനീളം വിശാലമായ സേവനവും ഉണ്ട്. കൂടുതൽ
-      വിവരങ്ങൾക്ക് <a href="/locations/">locations directory</a> കാണുക.
+      ലാപ്ടോപ്പ്, ഡെസ്ക്ടോപ്പ്, ബാറ്ററി, കേബിൾ, പ്രിന്റർ, ടിവി, സെർവർ, മിക്സഡ് ഐടി സ്ക്രാപ്പ്
+      എന്നിവയ്ക്ക് Ewaste Kochi-യുമായി പിക്കപ്പ് ബുക്ക് ചെയ്ത് കൊച്ചിയിൽ പഴയ ഇലക്ട്രോണിക്സ്
+      റീസൈക്കിൾ ചെയ്യാം. നിങ്ങളുടെ സാധന ലിസ്റ്റ്, സ്ഥലം, ഫോട്ടോ എന്നിവ വാട്സ്ആപ്പിൽ അയക്കൂ,
+      പിക്കപ്പ് സാധ്യതയും റീസൈക്ലിംഗ് ഓപ്ഷനുകളും ബാധകമെങ്കിൽ ക്വോട്ട് വിവരവും ടീം
+      സ്ഥിരീകരിക്കും.
+    </p>
+    <p>
+      വീടുകൾക്കും ഓഫീസുകൾക്കും ബിസിനസുകൾക്കും ഉപയോഗിക്കാത്ത ഇലക്ട്രോണിക്സ്, കമ്പ്യൂട്ടർ
+      സ്ക്രാപ്പ്, ബാറ്ററി, സെർവർ, ഹാർഡ് ഡ്രൈവ്, മൊബൈൽ ഫോൺ, പ്രിന്റർ, കേബിൾ, മിക്സഡ്
+      ഇ-വേസ്റ്റ് എന്നിവ ഉത്തരവാദിത്തത്തോടെ കൈകാര്യം ചെയ്യാൻ Ewaste Kochi സഹായിക്കുന്നു.
+      റീസൈക്ലിംഗ്, വിൽപ്പന അന്വേഷണം, ബാറ്ററി കൈകാര്യം, ഡാറ്റ നശിപ്പിക്കൽ എന്നിവയിൽ ശരിയായ
+      അടുത്ത നടപടി സാധനങ്ങൾ എന്താണെന്നും അവയുടെ അവസ്ഥയും അനുസരിച്ചാണ്, അതിനാൽ എന്തെങ്കിലും
+      ശേഖരിക്കുന്നതിന് മുൻപ് ടീം ഇത് നിങ്ങളുമായി സ്ഥിരീകരിക്കും.
+    </p>
+    <p class="muted-note">
+      പ്രധാന സേവന പ്രദേശം: കൊച്ചി, എറണാകുളം, കക്കനാട്, കളമശ്ശേരി, ആലുവ എന്നിവയും സമീപ
+      കൊച്ചി-മെട്രോ പ്രദേശങ്ങളും. കേരളത്തിലെ മറ്റ് ജില്ലകൾക്ക്, പിക്കപ്പ് സാധ്യത
+      പരിശോധിക്കാൻ ഞങ്ങളെ ബന്ധപ്പെടുക.
     </p>
   </section>
 
+  <section class="intent-section" aria-labelledby="intent-title">
+    <div class="section-heading">
+      <p class="eyebrow">ഉയർന്ന ഉദ്ദേശ്യമുള്ള സന്ദർശകർക്കായി</p>
+      <h2 id="intent-title">ഇന്ന് നിങ്ങൾക്ക് വേണ്ടതിന് അനുയോജ്യമായ വഴി തിരഞ്ഞെടുക്കുക</h2>
+      <p>
+        മിക്ക സന്ദർശകർക്കും എന്താണ് വേണ്ടതെന്ന് ഏകദേശം അറിയാം — ഒരു പിക്കപ്പ്, ഒരു ബിസിനസ്
+        ITAD പ്രോസസ്, അല്ലെങ്കിൽ വിൽക്കാൻ ആഗ്രഹിക്കുന്ന എന്തിനെങ്കിലും ഒരു ക്വോട്ട്. സാധാരണ
+        കോൺടാക്റ്റ് ഫോമിന് പകരം നേരിട്ട് ശരിയായ ചോദ്യങ്ങളിലേക്ക് പോകാൻ അടുത്തത്
+        തിരഞ്ഞെടുക്കുക.
+      </p>
+    </div>
+    <div class="path-grid">
+      {servicePaths.map((item) => (
+        <article class="path-card">
+          <p>{item.label}</p>
+          <h3>{item.title}</h3>
+          <p>{item.copy}</p>
+          <a href={item.href} data-ewlf-open data-ewlf-flow={item.flow}>ഈ ഫ്ലോ തുടങ്ങൂ</a>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="pipeline-section" aria-labelledby="how-it-works-title">
+    <div class="pipeline-copy">
+      <p class="eyebrow">പിക്കപ്പ് പ്രോസസ്</p>
+      <h2 id="how-it-works-title">ഇ-വേസ്റ്റ് പിക്കപ്പ് എങ്ങനെ പ്രവർത്തിക്കുന്നു</h2>
+      <p>
+        ആദ്യം, സാധനങ്ങളുടെ തരം, അളവ്, സ്ഥലം എന്നിവ വാട്സ്ആപ്പിൽ അയക്കൂ. ബാറ്ററി, കേടായ
+        സാധനങ്ങൾ, വലിയ ഉപകരണങ്ങൾ, സെർവർ എന്നിവ തിരിച്ചറിയാൻ ഫോട്ടോകൾ സ്ലോട്ട്
+        സ്ഥിരീകരിക്കുന്നതിന് മുൻപ് ടീമിനെ സഹായിക്കുന്നു.
+      </p>
+      <p>
+        അന്തിമ ക്വോട്ടും പിക്കപ്പ് സാധ്യതയും സാധനത്തിന്റെ തരം, അളവ്, അവസ്ഥ, സ്ഥലം, നിലവിലെ
+        മാർക്കറ്റ് നിരക്ക് എന്നിവയെ ആശ്രയിച്ചിരിക്കുന്നു. ബിസിനസ്, ഐടി ആസ്തി പിക്കപ്പുകൾക്ക്,
+        സേവന തരവും അംഗീകരിച്ച കൈകാര്യരീതിയും അനുസരിച്ച് ഡോക്യുമെന്റേഷൻ ലഭ്യമായേക്കാം.
+      </p>
+      <a class="text-link" href="/ml/contact/">ടീമുമായി സംസാരിക്കൂ</a>
+    </div>
+    <ol class="pipeline-list">
+      {howItWorks.map((step) => (
+        <li><strong>{step.title}.</strong> {step.copy}</li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="services-section" aria-labelledby="services-title">
+    <div class="section-heading">
+      <p class="eyebrow">ഞങ്ങൾ കൈകാര്യം ചെയ്യുന്നത്</p>
+      <h2 id="services-title">ഒരു പിക്കപ്പ് അഭ്യർത്ഥനയിൽ നിന്ന് റീസൈക്ലിംഗ്, വിൽപ്പന, സുരക്ഷിത നിർമാർജനം</h2>
+      <p>
+        താഴെയുള്ള ഓരോ സേവനവും ശരിയായ ചാറ്റ് ഫ്ലോയിലേക്ക് നേരിട്ട് ലിങ്ക് ചെയ്യുന്നു, അതിനാൽ
+        ആവർത്തിക്കാതെ റീസൈക്ലിംഗ്, ബാറ്ററി കൈകാര്യം, ഡാറ്റ നശിപ്പിക്കൽ അല്ലെങ്കിൽ സ്ക്രാപ്പ്
+        വില ഗൈഡിലേക്ക് നേരിട്ട് പോകാം.
+      </p>
+    </div>
+    <div class="service-grid">
+      {quickServices.map((item) => (
+        <a class="service-card" href={item.href} data-ewlf-open data-ewlf-flow={item.flow}>
+          <h3>{item.name}</h3>
+          <p>{item.copy}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="collect-section" aria-labelledby="collect-title">
+    <div class="section-heading">
+      <p class="eyebrow">ഞങ്ങൾ റീസൈക്കിൾ ചെയ്യാൻ സഹായിക്കുന്നത്</p>
+      <h2 id="collect-title">ഞങ്ങൾ ശേഖരിക്കുന്ന സാധാരണ വീട്, ഓഫീസ് ഇലക്ട്രോണിക്സ്</h2>
+      <p>
+        ഒറ്റ ലാപ്ടോപ്പ് മുതൽ ബൾക്ക് ഓഫീസ് ഐടി സ്ക്രാപ്പ് വരെ സാധാരണ വീട്, ഓഫീസ്
+        ഇലക്ട്രോണിക്സിന്റെ സുരക്ഷിത ശേഖരണവും ഉത്തരവാദിത്ത കൈകാര്യവും Ewaste Kochi
+        പിന്തുണക്കുന്നു. ചില ഉപകരണങ്ങൾക്ക് അവസ്ഥ, പ്രായം, പ്രവർത്തന നില, മാർക്കറ്റ് ഡിമാൻഡ്
+        എന്നിവയെ ആശ്രയിച്ച് പുനരുപയോഗ അല്ലെങ്കിൽ വിൽപ്പന മൂല്യം ഉണ്ടാകാം. മറ്റ് സാധനങ്ങൾ
+        റീസൈക്ലിംഗിനോ പ്രത്യേക ബാറ്ററി കൈകാര്യത്തിനോ കൂടുതൽ അനുയോജ്യമായേക്കാം.
+      </p>
+    </div>
+    <ul class="collect-grid">
+      {collectItems.map((item) => <li>{item}</li>)}
+    </ul>
+    <p class="collect-note">
+      ഇതിൽ എന്തെങ്കിലും നിങ്ങൾക്ക് ബാധകമാണോ എന്ന് ഉറപ്പില്ലേ, അല്ലെങ്കിൽ ഇവിടെ ലിസ്റ്റ്
+      ചെയ്യാത്ത ഒരു സാധനം ഉണ്ടോ? വാട്സ്ആപ്പിൽ ഒരു ഫോട്ടോ അയക്കൂ, സാധാരണ പിക്കപ്പിന്റെ
+      ഭാഗമായി ഇത് ശേഖരിക്കാൻ കഴിയുമോ എന്ന് ടീം സ്ഥിരീകരിക്കും.
+    </p>
+  </section>
+
+  <section class="audience-section" aria-labelledby="audience-title">
+    <div class="section-heading">
+      <p class="eyebrow">വീടുകൾക്കും ഓഫീസുകൾക്കും സ്ഥാപനങ്ങൾക്കും</p>
+      <h2 id="audience-title">വ്യക്തികൾക്കും ബിസിനസുകൾക്കും ഐടി ടീമുകൾക്കും പിക്കപ്പ് പിന്തുണ</h2>
+      <p>
+        വീട്ടിലുള്ളവർക്ക് സാധാരണയായി പഴയ ലാപ്ടോപ്പ്, ഫോൺ, ചാർജർ, ബാറ്ററി, ടിവി, പ്രിന്റർ,
+        മിക്സഡ് ഇലക്ട്രോണിക്സ് എന്നിവയ്ക്ക് സഹായം വേണം. ഓഫീസുകൾക്കും ബിസിനസുകൾക്കും
+        പലപ്പോഴും ബൾക്ക് കമ്പ്യൂട്ടറുകൾ, സെർവറുകൾ, യുപിഎസ് സിസ്റ്റങ്ങൾ, റൂട്ടറുകൾ,
+        പ്രിന്ററുകൾ, ഹാർഡ് ഡ്രൈവുകൾ, മോണിറ്ററുകൾ, ഐടി ആസ്തി ലിസ്റ്റുകൾ എന്നിവയ്ക്ക് സഹായം
+        വേണം, ഇവയ്ക്ക് സാധാരണയായി കൂടുതൽ ഏകോപനവും വിശദാംശങ്ങളും വേണ്ടിവരും. ഡാറ്റയുള്ള
+        ഉപകരണങ്ങൾക്ക് പ്രത്യേക ശ്രദ്ധ വേണം: ലാപ്ടോപ്പ്, സെർവർ, ഹാർഡ് ഡ്രൈവ്, എസ്എസ്ഡി,
+        ബാക്കപ്പ് ഉപകരണങ്ങൾ എന്നിവയിൽ സെൻസിറ്റീവ് വിവരങ്ങൾ ഉണ്ടാകാം, അതിനാൽ ബാധകമെങ്കിൽ
+        പിക്കപ്പിന് മുൻപ് ഇത് സൂചിപ്പിക്കുക. ഇവിടെ "സ്ഥാപനങ്ങൾ" എന്നത് സന്ദർശകന്റെ
+        തരത്തെയാണ് സൂചിപ്പിക്കുന്നത്, ക്ലയന്റ് ലിസ്റ്റല്ല — Ewaste Kochi പേരുള്ള
+        ക്ലയന്റുകളെ പ്രസിദ്ധീകരിക്കുന്നില്ല.
+      </p>
+    </div>
+    <div class="path-grid">
+      {audienceCards.map((card) => (
+        <article class="path-card">
+          <h3>{card.title}</h3>
+          <p>{card.copy}</p>
+          <a href={card.href}>കൂടുതൽ അറിയൂ</a>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="coverage-section" aria-labelledby="coverage-title">
+    <div>
+      <p class="eyebrow">പ്രാദേശിക കവറേജ്</p>
+      <h2 id="coverage-title">ഞങ്ങൾ പിന്തുണക്കുന്ന കൊച്ചി പ്രദേശങ്ങൾ</h2>
+      <p>
+        Ewaste Kochi പ്രധാനമായും കൊച്ചി, എറണാകുളം, സമീപ മെട്രോ പ്രദേശങ്ങൾ എന്നിവയെ
+        പിന്തുണക്കുന്നു. നിലവിലെ ഫോക്കസ് പ്രദേശങ്ങളിൽ കക്കനാട്, കളമശ്ശേരി, എറണാകുളം
+        സൗത്ത് എന്നിവ ഉൾപ്പെടുന്നു, കൂടാതെ ആലുവ, എടപ്പള്ളി, വൈറ്റില, കടവന്ത്ര,
+        ഇൻഫോപാർക്ക് എന്നിവിടങ്ങളിലേക്കുള്ള സമീപ പിക്കപ്പ് അന്വേഷണങ്ങളും. കൊച്ചി-മെട്രോയ്ക്ക്
+        പുറത്തുള്ള പ്രദേശങ്ങൾക്ക്, ശേഖരണം ആസൂത്രണം ചെയ്യുന്നതിന് മുൻപ് പിക്കപ്പ് സാധ്യത
+        പരിശോധിക്കാൻ ഞങ്ങളെ ബന്ധപ്പെടുക — കവറേജ് റൂട്ട് ലഭ്യതയെയും പിക്കപ്പ് അളവിനെയും
+        ആശ്രയിച്ചിരിക്കുന്നു, നിശ്ചിത സംസ്ഥാനവ്യാപക ഗ്യാരണ്ടിയല്ല.
+      </p>
+      <div class="location-links">
+        {locationCards.map((loc) => (
+          <a href={loc.href}>
+            <strong>{loc.name}</strong>
+            <span>{loc.copy}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+    <a class="action action-secondary" href="/locations/">സേവന പ്രദേശങ്ങൾ കാണുക</a>
+  </section>
+
+  <section class="why-section" aria-labelledby="why-title">
+    <h2 id="why-title">ഉത്തരവാദിത്ത ഇ-വേസ്റ്റ് റീസൈക്ലിംഗ് പ്രധാനമായിരിക്കുന്നത് എന്തുകൊണ്ട്</h2>
+    <p>
+      ഇലക്ട്രോണിക് വേസ്റ്റിൽ ലോഹങ്ങൾ, പ്ലാസ്റ്റിക്, ബാറ്ററി, സർക്യൂട്ട് ബോർഡ്, ഡാറ്റയുള്ള
+      ഘടകങ്ങൾ എന്നിവ അടങ്ങിയിരിക്കാം. ശ്രദ്ധയില്ലാതെ കൈകാര്യം ചെയ്താൽ — വീട്ടുമാലിന്യത്തോടൊപ്പം
+      കളയുക, അനൗപചാരികമായി പൊളിക്കുക, അല്ലെങ്കിൽ സ്റ്റോറേജ് വൈപ്പ് ചെയ്യാതെ കൈമാറുക —
+      ശരിയായ പ്രോസസിലൂടെ ഒഴിവാക്കാവുന്ന സുരക്ഷ, സ്വകാര്യത, പരിസ്ഥിതി അപകടസാധ്യതകൾ ഇത്
+      സൃഷ്ടിക്കാം.
+    </p>
+    <p>
+      ഉത്തരവാദിത്ത ഇ-വേസ്റ്റ് കൈകാര്യം ചെയ്യൽ ഇലക്ട്രോണിക്സിനെ അനൗപചാരിക ഡമ്പിംഗിൽ
+      നിന്നും ലാൻഡ്‌ഫില്ലിൽ നിന്നും അകറ്റി നിർത്താൻ സഹായിക്കുന്നു, ബാറ്ററികളെ പൊതു
+      മാലിന്യത്തിൽ നിന്ന് വേർതിരിക്കുന്നു, ഒരു ഉപകരണം ഇപ്പോഴും ഉപയോഗപ്രദമാണെങ്കിൽ
+      പുനരുപയോഗത്തെയും വിൽപ്പനയെയും പിന്തുണക്കുന്നു, ആസ്തി നിർമാർജനത്തിന് രേഖകൾ വേണ്ട
+      ഓഫീസുകൾക്കും ഐടി ടീമുകൾക്കും ഡോക്യുമെന്റേഷൻ മെച്ചപ്പെടുത്തുന്നു. ഇതിനൊന്നും പഴയ
+      ഉപകരണങ്ങൾ രാത്രി മുഴുവൻ സൂക്ഷിക്കേണ്ട ആവശ്യമില്ല — ഒരു സ്ഥിരീകരിച്ച പിക്കപ്പ്
+      സ്ലോട്ട് സാധാരണയായി മതി.
+    </p>
+  </section>
+
+  <section class="data-section" aria-labelledby="data-title">
+    <h2 id="data-title">ഡാറ്റ നശിപ്പിക്കലും ബിസിനസ് ITAD-യും</h2>
+    <p>
+      ലാപ്ടോപ്പ്, ഹാർഡ് ഡ്രൈവ്, സെർവർ, സ്റ്റോറേജ് മീഡിയ എന്നിവയിൽ വ്യക്തിഗതമോ ബിസിനസ്
+      ഡാറ്റയോ ഉണ്ടാകാം. ഡാറ്റ സുരക്ഷ പ്രധാനമാണെങ്കിൽ, ഉപകരണങ്ങൾ കൈമാറുന്നതിന് ശേഷമല്ല
+      മുൻപ് ഡാറ്റ നശിപ്പിക്കൽ പിന്തുണ അഭ്യർത്ഥിക്കുക — അപ്പോഴാണ് വൈപ്പിംഗ്, ഡീഗോസിംഗ്
+      അല്ലെങ്കിൽ ഭൗതിക ശ്രെഡിംഗ് ഇപ്പോഴും ചർച്ച ചെയ്ത് അംഗീകരിക്കാൻ കഴിയുന്നത്.
+    </p>
+    <p>
+      ബിസിനസുകൾക്ക് ആസ്തി ലിസ്റ്റുകളും അളവുകളും ഉൾപ്പെടുന്ന ഇൻവെന്ററി-സ്റ്റൈൽ ശേഖരണം,
+      ലാപ്ടോപ്പുകൾക്കും സെർവറുകൾക്കുമുള്ള ഡാറ്റ നശിപ്പിക്കൽ പിന്തുണ, റഫറൻസിനായി
+      സർട്ടിഫിക്കറ്റ് സാമ്പിളുകൾ എന്നിവയ്ക്കായി അന്വേഷിക്കാം. ഓരോ പിക്കപ്പിലും സേവന
+      തരവും അംഗീകരിച്ച കൈകാര്യരീതിയും അനുസരിച്ചാണ് ഡോക്യുമെന്റേഷൻ ലഭ്യത.
+    </p>
+    <div class="link-row">
+      <a href="/ml/data-destruction/">ഡാറ്റ നശിപ്പിക്കൽ</a>
+      <a href="/hard-drive-shredding/">ഹാർഡ് ഡ്രൈവ് ശ്രെഡിംഗ്</a>
+      <a href="/itad/">ITAD</a>
+      <a href="/data-destruction-certificate-sample/">സർട്ടിഫിക്കറ്റ് സാമ്പിൾ</a>
+    </div>
+  </section>
+
+  <section class="battery-section" aria-labelledby="battery-title">
+    <h2 id="battery-title">ബാറ്ററി റീസൈക്ലിംഗ് സുരക്ഷ</h2>
+    <p>
+      ബാറ്ററികൾക്ക് ശ്രദ്ധയോടെയുള്ള കൈകാര്യം വേണം, കാരണം തെറ്റായി കൈകാര്യം ചെയ്താൽ
+      സുരക്ഷാ പ്രശ്നത്തിന് ഏറ്റവും സാധ്യതയുള്ള ഇ-വേസ്റ്റിന്റെ ഭാഗമാണിത്. യുപിഎസ്
+      ബാറ്ററി, ഇൻവെർട്ടർ ബാറ്ററി, ലിഥിയം ബാറ്ററി, ലാപ്ടോപ്പ് ബാറ്ററി, കേടായതോ
+      വീർത്തതോ ആയ ഏത് ബാറ്ററിയും സാധാരണ ഇ-വേസ്റ്റുമായോ വീട്ടുമാലിന്യവുമായോ ഒരിക്കലും
+      കലർത്തരുത്.
+    </p>
+    <p>
+      ബാറ്ററികൾ കുത്തുകയോ ഞെക്കി പൊട്ടിക്കുകയോ തുറക്കുകയോ ചെയ്യരുത്. വീർത്തതോ
+      ചോർച്ചയുള്ളതോ കേടായതോ ആയ ബാറ്ററികൾ മറ്റ് ഇലക്ട്രോണിക്സിൽ നിന്ന് വേറിട്ട്
+      സൂക്ഷിക്കുക, ബാറ്ററികൾ നേരിട്ട് സൂര്യപ്രകാശത്തിലോ ചൂടിലോ അല്ലാതെ ഉണങ്ങിയ
+      സ്ഥലത്ത് സൂക്ഷിക്കുക. കേടായ ബാറ്ററി ഉണ്ടെങ്കിൽ, സുരക്ഷിതമായ കൈകാര്യത്തെക്കുറിച്ച്
+      ടീമിന് നിങ്ങളെ നയിക്കാൻ പിക്കപ്പിന് മുൻപ് ഫോട്ടോ അയക്കൂ.
+    </p>
+    <a class="text-link" href="/ml/battery-recycling/">ബാറ്ററി റീസൈക്ലിംഗ്</a>
+  </section>
+
+  <section class="sell-section" aria-labelledby="sell-title">
+    <h2 id="sell-title">കൊച്ചിയിൽ പഴയ ഇലക്ട്രോണിക്സ് വാങ്ങുക, വിൽക്കുക അല്ലെങ്കിൽ റീസൈക്കിൾ ചെയ്യുക</h2>
+    <p>
+      എല്ലാ പഴയ ഇലക്ട്രോണിക് സാധനങ്ങളും നേരിട്ട് റീസൈക്ലിംഗിലേക്ക് പോകേണ്ടതില്ല. ചില
+      ഉപകരണങ്ങൾ ഇപ്പോഴും വീണ്ടും ഉപയോഗിക്കാവുന്നതോ, നന്നാക്കാവുന്നതോ, വിൽക്കാവുന്നതോ
+      ആയേക്കാം. മറ്റുള്ളവയ്ക്ക് സ്ക്രാപ്പ് മൂല്യം ഉണ്ടാകാം. ചിലതിന് കേടായതോ
+      കാലഹരണപ്പെട്ടതോ ഇനി ഉപയോഗപ്രദമല്ലാത്തതോ ആയതിനാൽ സുരക്ഷിത റീസൈക്ലിംഗ്
+      വേണ്ടിവന്നേക്കാം. ഇവയിൽ ഏതാണ് ബാധകമെന്നത് അനുസരിച്ച് ശരിയായ വഴി — വിൽപ്പന
+      അന്വേഷണം, സ്ക്രാപ്പ് ക്വോട്ട്, പിക്കപ്പ്, ബാറ്ററി കൈകാര്യം അല്ലെങ്കിൽ റീസൈക്ലിംഗ് —
+      കണ്ടെത്താൻ Ewaste Kochi സഹായിക്കുന്നു.
+    </p>
+    <p>
+      മാർക്കറ്റ്പ്ലേസ് സൈറ്റിലെ ഏറ്റവും വേഗത്തിൽ വളരുന്ന ഭാഗങ്ങളിലൊന്നായതിനാൽ, മുൻകൂട്ടി
+      നിശ്ചയിച്ച ക്വോട്ടിന് പകരം പരിശോധനയ്ക്ക് ശേഷമുള്ള വില കണക്കാക്കലും
+      മാർക്കറ്റ്-ലിങ്ക്ഡ്, അവസ്ഥ അടിസ്ഥാനമാക്കിയുള്ള മൂല്യവും പ്രതീക്ഷിക്കുക — അന്തിമ
+      മൂല്യം മോഡൽ, പ്രായം, പ്രവർത്തന നില, നിലവിലെ ഡിമാൻഡ് എന്നിവയെ ആശ്രയിച്ചിരിക്കുന്നു.
+    </p>
+    <div class="link-row">
+      <a href="/marketplace/">മാർക്കറ്റ്പ്ലേസ്</a>
+      <a href="/ml/sell-electronics/">ഇലക്ട്രോണിക്സ് വിൽക്കുക</a>
+      <a href="/e-waste-scrap-prices-kochi/">സ്ക്രാപ്പ് വില ഗൈഡ്</a>
+    </div>
+  </section>
+
+  <section class="comparison-section" aria-labelledby="comparison-title">
+    <h2 id="comparison-title">ഇ-വേസ്റ്റ് ഓപ്ഷനുകൾ താരതമ്യം</h2>
+    <p>
+      ഏത് ഫ്ലോയാണ് നിങ്ങൾക്ക് ബാധകമെന്ന് ഉറപ്പില്ലെങ്കിൽ, ഇത് ഒരു വേഗത്തിലുള്ള
+      റഫറൻസായി ഉപയോഗിക്കുക — എന്നിട്ട് മുകളിലുള്ള മാച്ചിംഗ് ചാറ്റോ വാട്സ്ആപ്പോ അത്
+      പരിശോധിക്കാൻ ആവശ്യപ്പെടുന്ന വിവരങ്ങളോടെ തുടങ്ങുക.
+    </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">ഓപ്ഷൻ</th>
+            <th scope="col">ഏറ്റവും അനുയോജ്യം</th>
+            <th scope="col">എന്ത് പരിശോധിക്കണം</th>
+          </tr>
+        </thead>
+        <tbody>
+          {comparisonRows.map((row) => (
+            <tr>
+              <td>{row.option}</td>
+              <td>{row.best}</td>
+              <td>{row.check}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
   <Faq items={faqItems} heading="പതിവ് ചോദ്യങ്ങൾ" />
+
+  <section class="final-cta" aria-labelledby="final-cta-title">
+    <h2 id="final-cta-title">കൊച്ചിയിൽ നിങ്ങളുടെ പഴയ ഇലക്ട്രോണിക്സ് റീസൈക്കിൾ ചെയ്യാൻ തയ്യാറാണോ?</h2>
+    <p>
+      സാധന ലിസ്റ്റ്, സ്ഥലം, ഫോട്ടോ എന്നിവ പങ്കിടൂ — ഒരു ലാപ്ടോപ്പോ ബാറ്ററിയോ ഒരു
+      മുഴുവൻ ഓഫീസ് ക്ലിയറൗട്ടോ ആയാലും വേഗത്തിലുള്ള പിക്കപ്പ് സ്ഥിരീകരണത്തിന്.
+    </p>
+    <div class="hero-actions">
+      <a
+        class="action action-primary"
+        href={whatsappLink(pickupMessage)}
+        target="_blank"
+        rel="noopener"
+        data-ewlf-open
+        data-ewlf-flow="pickup"
+      >
+        പിക്കപ്പ് ബുക്ക് ചെയ്യൂ
+      </a>
+      <a
+        class="action action-whatsapp"
+        href={whatsappLink(quoteMessage)}
+        target="_blank"
+        rel="noopener"
+        data-ewlf-open
+      >
+        Ewaste Kochi-യെ വാട്സ്ആപ്പ് ചെയ്യൂ
+      </a>
+      <a class="action action-secondary" href={telLink()}>ഇപ്പോൾ വിളിക്കൂ</a>
+    </div>
+  </section>
 </Layout>
 
 <style>
-  .lede {
-    font-size: 1.1rem;
-    color: var(--color-muted);
-    max-width: 46rem;
+  .hero {
+    width: 100vw;
+    min-height: min(760px, calc(100vh - 112px));
+    margin: -2rem calc(50% - 50vw) 3rem;
+    padding: clamp(3rem, 8vw, 6.5rem) 1.25rem 1.25rem;
+    display: flex;
+    align-items: stretch;
+    background:
+      linear-gradient(90deg, rgba(2, 24, 12, 0.98) 0%, rgba(2, 24, 12, 0.88) 34%, rgba(2, 24, 12, 0.32) 66%, rgba(2, 24, 12, 0.12) 100%),
+      url("/images/homepage-hero-scene.jpg") center right / cover no-repeat;
+    color: #fff;
   }
+
+  .hero-shell {
+    width: min(72rem, 100%);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .hero-copy,
+  .section-heading,
+  .pipeline-copy {
+    max-width: 48rem;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.65rem;
+    color: #1b4965;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    max-width: 44rem;
+    margin: 0;
+    color: inherit;
+    font-size: clamp(2.1rem, 6vw, 4rem);
+    line-height: 1.08;
+  }
+
+  .hero .eyebrow {
+    color: #7fe35f;
+  }
+
+  .lede {
+    max-width: 43rem;
+    margin: 1.2rem 0 0;
+    color: var(--color-muted);
+    font-size: 1.1rem;
+  }
+
+  .hero .lede {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: clamp(1.05rem, 2vw, 1.35rem);
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+  }
+
+  .action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0.78rem 1.05rem;
+    border-radius: 0.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .action-primary {
+    background: var(--color-primary);
+    color: #fff;
+  }
+
+  .action-whatsapp {
+    background: #25d366;
+    color: #063d1e;
+  }
+
+  .action-secondary {
+    border: 1.5px solid var(--color-border);
+    color: var(--color-text);
+    background: var(--color-bg);
+  }
+
+  .hero .action-secondary {
+    border-color: rgba(255, 255, 255, 0.42);
+    color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .action:hover,
+  .path-card a:hover,
+  .text-link:hover,
+  .link-row a:hover {
+    filter: brightness(0.96);
+  }
+
+  .hero-trust-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1px;
+    margin-top: auto;
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  .hero-trust-grid div {
+    min-height: 94px;
+    padding: 1rem;
+    background: rgba(0, 63, 31, 0.86);
+  }
+
+  .hero-trust-grid strong,
+  .hero-trust-grid span {
+    display: block;
+  }
+
+  .hero-trust-grid strong {
+    color: #fff;
+    font-size: 0.95rem;
+  }
+
+  .hero-trust-grid span {
+    margin-top: 0.2rem;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 0.88rem;
+    line-height: 1.35;
+  }
+
+  section {
+    margin: 3rem 0;
+  }
+
+  .quick-answer {
+    padding: 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+
+  .quick-answer h2 {
+    margin: 0 0 0.75rem;
+    font-size: clamp(1.35rem, 3vw, 1.9rem);
+  }
+
+  .quick-answer p {
+    margin: 0 0 0.75rem;
+    color: var(--color-muted);
+  }
+
+  .muted-note {
+    margin: 0 !important;
+    font-size: 0.92rem;
+  }
+
+  .collect-note {
+    max-width: 46rem;
+    margin: 1.2rem 0 0;
+    color: var(--color-muted);
+    font-size: 0.92rem;
+  }
+
+  .section-heading h2,
+  .pipeline-copy h2,
+  .coverage-section h2,
+  .why-section h2,
+  .data-section h2,
+  .battery-section h2,
+  .sell-section h2,
+  .comparison-section h2,
+  .final-cta h2 {
+    max-width: 42rem;
+    margin: 0;
+    font-size: clamp(1.5rem, 3.5vw, 2.3rem);
+  }
+
+  .why-section p,
+  .data-section p,
+  .battery-section p,
+  .sell-section p {
+    max-width: 48rem;
+    margin: 0.75rem 0 0;
+    color: var(--color-muted);
+  }
+
+  .path-grid,
   .service-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-    margin-top: 1rem;
+    margin-top: 1.2rem;
   }
+
+  .path-card,
   .service-card {
     display: block;
+    padding: 1.15rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    color: var(--color-text);
+    background: var(--color-bg);
+    text-decoration: none;
+  }
+
+  .path-card {
+    border-top: 4px solid var(--color-primary);
+  }
+
+  .path-card p:first-child {
+    margin: 0 0 0.65rem;
+    color: #1b4965;
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .path-card h3,
+  .service-card h3 {
+    margin: 0 0 0.45rem;
+  }
+
+  .path-card p,
+  .service-card p,
+  .pipeline-copy p,
+  .coverage-section p,
+  .collect-section p,
+  .section-heading p,
+  .comparison-section p {
+    color: var(--color-muted);
+  }
+
+  .section-heading p,
+  .comparison-section p {
+    max-width: 46rem;
+    margin: 0.75rem 0 0;
+  }
+
+  .path-card a,
+  .text-link {
+    display: inline-flex;
+    margin-top: 0.75rem;
+    color: var(--color-primary);
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .pipeline-section,
+  .coverage-section {
+    display: grid;
+    gap: 1.25rem;
     padding: 1.25rem;
     border: 1px solid var(--color-border);
-    border-radius: 0.75rem;
-    text-decoration: none;
-    color: var(--color-text);
+    border-radius: 0.5rem;
+    background: linear-gradient(135deg, var(--color-surface), var(--color-bg));
   }
-  .service-card:hover {
+
+  .pipeline-list {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    counter-reset: pipeline;
+    list-style: none;
+  }
+
+  .pipeline-list li {
+    position: relative;
+    padding: 0.85rem 0.9rem 0.85rem 3rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-weight: 650;
+  }
+
+  .pipeline-list li::before {
+    counter-increment: pipeline;
+    content: counter(pipeline);
+    position: absolute;
+    left: 0.8rem;
+    top: 0.8rem;
+    display: grid;
+    place-items: center;
+    width: 1.55rem;
+    height: 1.55rem;
+    border-radius: 999px;
+    background: #1b4965;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 800;
+  }
+
+  .service-card:hover,
+  .path-card:hover {
     border-color: var(--color-primary);
   }
-  .service-card h3 {
-    margin: 0 0 0.4rem;
-    color: var(--color-primary-dark);
+
+  .collect-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+    margin: 1.2rem 0 0;
+    padding: 0;
+    list-style: none;
   }
-  .service-card p {
-    margin: 0;
-    color: var(--color-muted);
+
+  .collect-grid li {
+    padding: 0.6rem 0.85rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-weight: 650;
     font-size: 0.92rem;
   }
-  @media (min-width: 700px) {
+
+  .location-links {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+    margin-top: 1rem;
+  }
+
+  .location-links a {
+    display: block;
+    padding: 0.7rem 0.9rem;
+    border: 1.5px solid var(--color-border);
+    border-radius: 0.5rem;
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .location-links a strong {
+    display: block;
+    font-size: 0.92rem;
+  }
+
+  .location-links a span {
+    display: block;
+    margin-top: 0.2rem;
+    color: var(--color-muted);
+    font-size: 0.82rem;
+  }
+
+  .location-links a:hover {
+    border-color: var(--color-primary);
+  }
+
+  .location-links a:hover strong {
+    color: var(--color-primary);
+  }
+
+  .link-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1.25rem;
+    margin-top: 1rem;
+  }
+
+  .link-row a {
+    color: var(--color-primary);
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .table-scroll {
+    overflow-x: auto;
+    margin-top: 1.2rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+
+  table {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+
+  th,
+  td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+    white-space: nowrap;
+  }
+
+  th {
+    background: var(--color-surface);
+    font-weight: 800;
+  }
+
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .final-cta {
+    padding: 1.75rem 1.25rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--color-surface), var(--color-bg));
+    border: 1px solid var(--color-border);
+  }
+
+  .final-cta p {
+    margin: 0.5rem 0 0;
+    color: var(--color-muted);
+  }
+
+  .final-cta .hero-actions {
+    justify-content: center;
+  }
+
+  .coverage-section {
+    align-items: center;
+  }
+
+  @media (min-width: 480px) {
+    .location-links {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (min-width: 640px) {
+    .hero-trust-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .collect-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (min-width: 820px) {
+    .path-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
     .service-grid {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .collect-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .pipeline-section,
+    .coverage-section {
+      grid-template-columns: minmax(0, 0.92fr) minmax(320px, 1fr);
+      padding: 1.5rem;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .hero-actions .action {
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    .hero {
+      min-height: auto;
+      background:
+        linear-gradient(180deg, rgba(2, 24, 12, 0.96) 0%, rgba(2, 24, 12, 0.9) 58%, rgba(2, 24, 12, 0.62) 100%),
+        url("/images/homepage-hero-scene.jpg") center bottom / cover no-repeat;
     }
   }
 </style>
