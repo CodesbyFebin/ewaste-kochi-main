@@ -78,6 +78,17 @@ export const ROUTES: RouteEntry[] = [
     lang: "en-IN",
   },
   {
+    path: "/blog/",
+    changefreq: "weekly",
+    priority: 0.8,
+    title: "E-Waste Recycling Blog Kochi | Pickup, Scrap Price, Battery & ITAD Guides",
+    description:
+      "Read Ewaste Kochi guides on e-waste recycling, pickup near me, battery disposal, laptop recycling, scrap value, data destruction, ITAD and safe electronics disposal in Kochi.",
+    type: "blog",
+    sitemapGroup: "blog",
+    lang: "en-IN",
+  },
+  {
     path: "/blog/free-e-waste-pickup-kochi/",
     changefreq: "monthly",
     priority: 0.6,

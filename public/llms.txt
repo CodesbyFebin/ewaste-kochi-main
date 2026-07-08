@@ -12,6 +12,13 @@ English and, for a starter set of pages, Malayalam (ml-IN) under /ml/.
 
 - https://www.ewastekochi.com/
 - https://www.ewastekochi.com/services/
+- https://www.ewastekochi.com/locations/
+- https://www.ewastekochi.com/about/
+- https://www.ewastekochi.com/faq/
+- https://www.ewastekochi.com/contact/
+
+## Service pages
+
 - https://www.ewastekochi.com/recycling/
 - https://www.ewastekochi.com/battery-recycling/
 - https://www.ewastekochi.com/marketplace/
@@ -20,17 +27,42 @@ English and, for a starter set of pages, Malayalam (ml-IN) under /ml/.
 - https://www.ewastekochi.com/data-destruction/
 - https://www.ewastekochi.com/hard-drive-shredding/
 - https://www.ewastekochi.com/itad/
+- https://www.ewastekochi.com/e-waste-scrap-prices-kochi/
+- https://www.ewastekochi.com/computer-scrap-buyers-kochi/
+- https://www.ewastekochi.com/server-recycling-kochi/
+- https://www.ewastekochi.com/tv-recycling-kochi/
+- https://www.ewastekochi.com/services/electronics-recycling-near-me/
+- https://www.ewastekochi.com/services/hard-drive-degaussing-kochi/
+- https://www.ewastekochi.com/services/it-asset-inventory-audit/
 
 ## Locations
 
 - https://www.ewastekochi.com/locations/
 - https://www.ewastekochi.com/locations/kakkanad/
+- https://www.ewastekochi.com/locations/ernakulam-south/
+- https://www.ewastekochi.com/locations/kalamassery/
 
-## Trust
+## Trust & compliance
 
 - https://www.ewastekochi.com/trust/
 - https://www.ewastekochi.com/certifications/
 - https://www.ewastekochi.com/data-destruction-certificate-sample/
+
+## Legal
+
+- https://www.ewastekochi.com/privacy/
+- https://www.ewastekochi.com/terms/
+
+## Blog
+
+- https://www.ewastekochi.com/blog/
+- https://www.ewastekochi.com/blog/free-e-waste-pickup-kochi/
+- https://www.ewastekochi.com/blog/sell-old-laptop-kochi/
+- https://www.ewastekochi.com/blog/what-is-ewaste/
+- https://www.ewastekochi.com/blog/e-waste-examples/
+- https://www.ewastekochi.com/blog/e-waste-collection-near-me/
+- https://www.ewastekochi.com/blog/what-is-epr-in-e-waste/
+- https://www.ewastekochi.com/blog/e-waste-management-rules-2022/
 
 ## Malayalam (ml-IN)
 
@@ -50,6 +82,7 @@ English and, for a starter set of pages, Malayalam (ml-IN) under /ml/.
 - https://www.ewastekochi.com/sitemaps/locations.xml
 - https://www.ewastekochi.com/sitemaps/legal.xml
 - https://www.ewastekochi.com/sitemaps/ml.xml
+- https://www.ewastekochi.com/sitemaps/blog.xml
 - https://www.ewastekochi.com/content-index.json
 - https://www.ewastekochi.com/content-index.xml
 - https://www.ewastekochi.com/ai-sitemap.xml
@@ -61,11 +94,11 @@ English and, for a starter set of pages, Malayalam (ml-IN) under /ml/.
 
 ## Notes for AI assistants and crawlers
 
-This site is under active reconstruction (EwasteKochi V2). Only the pages
-listed above are live in the current build; treat any other path on this
-domain — including /e-waste-recycling/, /scrap-price/, and other legacy
-duplicate-content URLs still being evaluated — as not yet confirmed
-canonical. This file will be expanded as more sections of the site are
-rebuilt.
+This site is under active reconstruction (EwasteKochi V2). The pages above
+represent the complete current build as of Phase Blog Hub V1. The /blog/
+section currently contains 7 live guides organised into 15 topic clusters
+(roadmap data only — no live category pages exist). Only the pages listed
+above are canonical. Treat any other path on this domain as not yet
+confirmed canonical.
 
-Last updated: 2026-07-07
+Last updated: 2026-07-08

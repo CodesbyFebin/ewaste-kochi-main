@@ -1490,6 +1490,36 @@
       "source": "/locations/willingdon-island/ups-inverter-recycling-kochi/",
       "destination": "/battery-recycling/",
       "permanent": true
+    },
+    {
+      "source": "/locations/kadavanthra/corporate-ewaste-kochi/",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/thrippunithura/corporate-ewaste-kochi/",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/infopark-kochi/corporate-ewaste-kochi/",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/vyttila/printer-recycling-kochi/",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/disposal/",
+      "destination": "/blog/",
+      "permanent": true
     }
   ]
 }

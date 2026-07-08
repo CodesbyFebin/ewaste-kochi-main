@@ -1,5 +1,19 @@
 ---
 import { BUSINESS, telLink } from "../data/site";
+
+const navLinks = [
+  { href: "/recycling/", label: "Recycling" },
+  { href: "/battery-recycling/", label: "Battery" },
+  { href: "/marketplace/", label: "Marketplace" },
+  { href: "/data-destruction/", label: "Data Destruction" },
+  { href: "/itad/", label: "ITAD" },
+  { href: "/locations/", label: "Locations" },
+  { href: "/blog/", label: "Blog" },
+  { href: "/contact/", label: "Contact" },
+];
+
+const currentPath = Astro.url.pathname;
+const isCurrent = (href: string) => currentPath === href;
 ---
 
 <header class="site-header">
@@ -14,17 +28,66 @@ import { BUSINESS, telLink } from "../data/site";
   <div class="wrap">
     <a href="/" class="brand">Ewaste Kochi</a>
     <nav class="main-nav" aria-label="Primary">
-      <a href="/recycling/">Recycling</a>
-      <a href="/battery-recycling/">Battery</a>
-      <a href="/marketplace/">Marketplace</a>
-      <a href="/data-destruction/">Data Destruction</a>
-      <a href="/itad/">ITAD</a>
-      <a href="/locations/">Locations</a>
-      <a href="/contact/">Contact</a>
+      {navLinks.map((link) => (
+        <a href={link.href} aria-current={isCurrent(link.href) ? "page" : undefined}>{link.label}</a>
+      ))}
     </nav>
     <a class="header-call" href={telLink()}>{BUSINESS.phoneDisplay}</a>
+    <button
+      type="button"
+      class="nav-toggle"
+      aria-expanded="false"
+      aria-controls="mobile-nav"
+      aria-label="Open menu"
+    >
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path class="icon-open" d="M3 6h18M3 12h18M3 18h18" />
+        <path class="icon-close" d="M6 6l12 12M18 6 6 18" style="display:none" />
+      </svg>
+    </button>
   </div>
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile" hidden>
+    {navLinks.map((link) => (
+      <a href={link.href} aria-current={isCurrent(link.href) ? "page" : undefined}>{link.label}</a>
+    ))}
+  </nav>
 </header>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>(".nav-toggle");
+  const mobileNav = document.getElementById("mobile-nav");
+  const iconOpen = toggle?.querySelector<SVGPathElement>(".icon-open");
+  const iconClose = toggle?.querySelector<SVGPathElement>(".icon-close");
+
+  function setOpen(open: boolean) {
+    if (!toggle || !mobileNav) return;
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    mobileNav.hidden = !open;
+    if (iconOpen) iconOpen.style.display = open ? "none" : "";
+    if (iconClose) iconClose.style.display = open ? "" : "none";
+  }
+
+  toggle?.addEventListener("click", () => {
+    const isOpen = toggle.getAttribute("aria-expanded") === "true";
+    setOpen(!isOpen);
+  });
+
+  mobileNav?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setOpen(false));
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && toggle?.getAttribute("aria-expanded") === "true") {
+      setOpen(false);
+      toggle.focus();
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 860) setOpen(false);
+  });
+</script>
 
 <style>
   .site-header {
@@ -86,12 +149,58 @@ import { BUSINESS, telLink } from "../data/site";
   .main-nav a:hover {
     color: var(--color-primary);
   }
+  .main-nav a[aria-current="page"] {
+    color: var(--color-primary);
+    font-weight: 700;
+  }
   .header-call {
     margin-left: auto;
     font-weight: 700;
     color: var(--color-primary);
     text-decoration: none;
     white-space: nowrap;
+  }
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-left: 0.5rem;
+    padding: 0;
+    border: 1px solid var(--color-border);
+    border-radius: 0.4rem;
+    background: var(--color-bg);
+    color: var(--color-text);
+    cursor: pointer;
+  }
+  .nav-toggle svg {
+    width: 22px;
+    height: 22px;
+  }
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    padding: 0.5rem 1.25rem 1rem;
+    border-top: 1px solid var(--color-border);
+  }
+  .mobile-nav a {
+    padding: 0.7rem 0.25rem;
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 0.95rem;
+    border-bottom: 1px solid var(--color-border);
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  .mobile-nav a:last-child {
+    border-bottom: none;
+  }
+  .mobile-nav a[aria-current="page"] {
+    color: var(--color-primary);
+    font-weight: 700;
   }
   @media (min-width: 860px) {
     .trust-wrap span {
@@ -102,6 +211,10 @@ import { BUSINESS, telLink } from "../data/site";
     }
     .header-call {
       margin-left: 0;
+    }
+    .nav-toggle,
+    .mobile-nav {
+      display: none;
     }
   }
 </style>

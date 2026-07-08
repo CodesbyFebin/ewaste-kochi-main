@@ -1,10 +1,12 @@
 ---
 import { BUSINESS } from "../data/site";
 const year = new Date().getFullYear();
+const currentPath = Astro.url.pathname;
+const isCurrent = (href: string) => currentPath === href;
 ---
 
 <footer class="site-footer">
-  <div class="wrap">
+  <nav class="wrap" aria-label="Footer">
     <div class="col">
       <h3><a href="/services/">Services</a></h3>
       <a href="/recycling/">E-Waste Recycling</a>
@@ -18,15 +20,18 @@ const year = new Date().getFullYear();
     </div>
     <div class="col">
       <h3>Top Locations</h3>
-      <a href="/locations/kakkanad/">Kakkanad</a>
+      <a href="/locations/kakkanad/" aria-current={isCurrent("/locations/kakkanad/") ? "page" : undefined}>Kakkanad</a>
+      <a href="/locations/kalamassery/" aria-current={isCurrent("/locations/kalamassery/") ? "page" : undefined}>Kalamassery</a>
+      <a href="/locations/ernakulam-south/" aria-current={isCurrent("/locations/ernakulam-south/") ? "page" : undefined}>Ernakulam South</a>
       <a href="/locations/">All Locations</a>
     </div>
     <div class="col">
       <h3>Company</h3>
-      <a href="/about/">About</a>
-      <a href="/trust/">Trust & Compliance</a>
-      <a href="/faq/">FAQ</a>
-      <a href="/contact/">Contact</a>
+      <a href="/about/" aria-current={isCurrent("/about/") ? "page" : undefined}>About</a>
+      <a href="/blog/" aria-current={isCurrent("/blog/") ? "page" : undefined}>Blog</a>
+      <a href="/trust/" aria-current={isCurrent("/trust/") ? "page" : undefined}>Trust & Compliance</a>
+      <a href="/faq/" aria-current={isCurrent("/faq/") ? "page" : undefined}>FAQ</a>
+      <a href="/contact/" aria-current={isCurrent("/contact/") ? "page" : undefined}>Contact</a>
       <a href="/privacy/">Privacy Policy</a>
       <a href="/terms/">Terms</a>
       <a href="/ml/">മലയാളം</a>
@@ -38,7 +43,7 @@ const year = new Date().getFullYear();
       <a href={`tel:${BUSINESS.phone}`}>{BUSINESS.phoneDisplay}</a>
       <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a>
     </div>
-  </div>
+  </nav>
   <div class="legal">
     <div class="wrap">
       <span>&copy; {year} Ewaste Kochi. All rights reserved.</span>
@@ -86,6 +91,10 @@ const year = new Date().getFullYear();
   }
   .col a:hover {
     color: var(--color-primary);
+  }
+  .col a[aria-current="page"] {
+    color: var(--color-primary);
+    font-weight: 700;
   }
   .col p {
     margin: 0;

@@ -427,7 +427,6 @@ function openPanel(root: HTMLElement) {
   launcher?.setAttribute("aria-expanded", "true");
   const panel = root.querySelector<HTMLElement>(".ewlf-panel");
   panel?.setAttribute("aria-hidden", "false");
-  panel?.focus();
 }
 
 function closePanel(root: HTMLElement) {
@@ -458,7 +457,7 @@ function init() {
           <button type="button" class="ewlf-close" aria-label="Close chat">×</button>
         </div>
       </div>
-      <div class="ewlf-messages" id="ewlf-messages"></div>
+      <div class="ewlf-messages" id="ewlf-messages" aria-live="polite"></div>
       <div class="ewlf-actions" id="ewlf-actions"></div>
     </div>
   `;
@@ -468,18 +467,26 @@ function init() {
   const messages = root.querySelector<HTMLElement>("#ewlf-messages")!;
   const actionArea = root.querySelector<HTMLElement>("#ewlf-actions")!;
 
+  const focusFirstInteractive = () => {
+    const target =
+      actionArea.querySelector<HTMLElement>("button, a[href]") ?? closeBtn;
+    target?.focus();
+  };
+
   const openLeadFunnel = (flowId?: Exclude<FlowType, "malayalam">) => {
     openPanel(root);
     if (flowId) {
       messages.innerHTML = "";
       addBotBubble(messages, `Let's get the right details for ${BUSINESS.name}.`);
       startFlow(messages, actionArea, flowId, false);
+      focusFirstInteractive();
       return;
     }
     if (messages.children.length === 0) {
       addBotBubble(messages, `Hi, I'm here to help with pickups, quotes, and recycling questions for ${BUSINESS.name}. What do you need?`);
       renderMenu(messages, actionArea);
     }
+    focusFirstInteractive();
   };
 
   launcher.addEventListener("click", () => {
