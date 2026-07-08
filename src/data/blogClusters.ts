@@ -62,9 +62,14 @@ export const BLOG_CLUSTERS: BlogCluster[] = [
         excerpt:
           "Category-by-category list of common e-waste items, and which ones need data wiping or battery-safe handling before recycling.",
       },
+      {
+        title: "Where to Recycle Old Electronics in Kochi",
+        href: "/blog/where-to-recycle-old-electronics-kochi/",
+        excerpt:
+          "Doorstep pickup, drop-off options, resale, and scrap quotes compared, with what to prepare before collection.",
+      },
     ],
     plannedPosts: [
-      "Where to Recycle Old Electronics in Kochi | Pickup, Reuse & Scrap Quote Guide",
       "What Is E-Waste Recycling? A Complete Beginner Guide",
       "How E-Waste Recycling Works Step by Step",
       "What Happens to Old Electronics After Collection?",
@@ -220,9 +225,14 @@ export const BLOG_CLUSTERS: BlogCluster[] = [
         excerpt:
           "What to check before handing over devices, pickup vs drop-off, and why informal disposal carries real risk.",
       },
+      {
+        title: "How to Book an E-Waste Pickup in Kochi",
+        href: "/blog/how-to-book-ewaste-pickup-kochi/",
+        excerpt:
+          "What to send on WhatsApp, how feasibility and quotes are confirmed, and what to expect on pickup day.",
+      },
     ],
     plannedPosts: [
-      "How to Book an E-Waste Pickup in Kochi",
       "E-Waste Collection Near Me in Kochi: What to Send First",
       "Electronic Waste Disposal Near Me: Safe Options in Kochi",
       "What to Expect During an E-Waste Pickup",
@@ -374,9 +384,14 @@ export const BLOG_CLUSTERS: BlogCluster[] = [
         excerpt:
           "Condition checklist, data wiping, what drives your quote, and options for damaged or bulk office laptops.",
       },
+      {
+        title: "How to Sell Old Electronics in Kochi",
+        href: "/blog/how-to-sell-old-electronics-kochi/",
+        excerpt:
+          "How condition-based quotes work, what to prepare, wiping your data first, and doorstep pickup for payment.",
+      },
     ],
     plannedPosts: [
-      "How to Sell Old Electronics in Kochi",
       "Sell Old Laptop in Kochi: Condition, Age and Quote Factors",
       "What Affects the Value of Old Electronics?",
       "Scrap Price vs Resale Value: What Is the Difference?",
@@ -385,7 +400,6 @@ export const BLOG_CLUSTERS: BlogCluster[] = [
       "Bulk Office Electronics Scrap: How Quotes Work",
       "How to Prepare Your Device for Sale or Recycling",
       "Should You Sell, Donate or Recycle Old Electronics?",
-      "How E-Waste Scrap Quotes Work in Kochi",
       "How to Get a Condition-Based Quote for Old Electronics",
       "What Photos Should You Send Before Selling Electronics?",
       "Old Laptop Value: What Buyers Usually Check",
@@ -519,9 +533,15 @@ export const BLOG_CLUSTERS: BlogCluster[] = [
       { label: "Battery Recycling", href: "/battery-recycling/" },
       { label: "Book Pickup", href: "/pickup/" },
     ],
-    existingPosts: [],
+    existingPosts: [
+      {
+        title: "Battery Recycling Near Me in Kochi",
+        href: "/blog/battery-recycling-near-me-kochi/",
+        excerpt:
+          "Safe handling for UPS, inverter, laptop and lithium batteries, including what to do with swollen or damaged cells.",
+      },
+    ],
     plannedPosts: [
-      "Battery Recycling Near Me in Kochi: Safe Disposal Guide",
       "UPS Battery Recycling: What Homes and Offices Should Know",
       "Inverter Battery Disposal: Safety and Pickup Tips",
       "Lithium Battery Disposal: What Not to Do",
@@ -673,9 +693,14 @@ export const BLOG_CLUSTERS: BlogCluster[] = [
         excerpt:
           "Practical checklist and quote guide for selling old laptops in Kochi, including options for damaged or bulk office laptops.",
       },
+      {
+        title: "Laptop Recycling in Kochi",
+        href: "/blog/laptop-recycling-kochi/",
+        excerpt:
+          "How to decide between resale and recycling, wiping your data first, and what happens to laptops after pickup.",
+      },
     ],
     plannedPosts: [
-      "Laptop Recycling in Kochi: Pickup, Resale or Disposal?",
       "Computer Recycling in Kochi: What Parts Can Be Reused?",
       "Old Desktop Disposal: What to Remove First",
       "Monitor Recycling: LCD, LED and Broken Screens",
@@ -968,9 +993,15 @@ export const BLOG_CLUSTERS: BlogCluster[] = [
       { label: "Server Recycling", href: "/server-recycling-kochi/" },
       { label: "Certificate Sample", href: "/data-destruction-certificate-sample/" },
     ],
-    existingPosts: [],
+    existingPosts: [
+      {
+        title: "Data Destruction in Kochi",
+        href: "/blog/data-destruction-kochi-guide/",
+        excerpt:
+          "Wiping, degaussing and shredding options, documentation, and what businesses should ask for.",
+      },
+    ],
     plannedPosts: [
-      "Data Destruction in Kochi: What Businesses Should Know",
       "Hard Drive Shredding vs Degaussing: Which Is Right for You?",
       "ITAD Services in Kochi: A Guide for Businesses",
       "Why Data Destruction Matters for Small Businesses",
@@ -1116,9 +1147,15 @@ export const BLOG_CLUSTERS: BlogCluster[] = [
       { label: "Data Destruction", href: "/data-destruction/" },
       { label: "Book Pickup", href: "/pickup/" },
     ],
-    existingPosts: [],
+    existingPosts: [
+      {
+        title: "Corporate E-Waste Pickup in Kochi",
+        href: "/blog/corporate-ewaste-pickup-kochi/",
+        excerpt:
+          "How bulk office IT scrap, asset inventory and data destruction fit together, and what to prepare before a business pickup.",
+      },
+    ],
     plannedPosts: [
-      "Corporate E-Waste Pickup in Kochi: Step-by-Step Guide",
       "Office E-Waste Disposal: What IT Teams Should Prepare",
       "Bulk E-Waste Pickup for Companies: Checklist",
       "IT Asset Inventory Before E-Waste Collection",
@@ -2030,9 +2067,14 @@ export const BLOG_CLUSTERS: BlogCluster[] = [
         excerpt:
           "Practical checklist and quote guide for selling old laptops, including what drives your quote and options for damaged devices.",
       },
+      {
+        title: "How E-Waste Scrap Quotes Work in Kochi",
+        href: "/blog/how-ewaste-scrap-quotes-work-kochi/",
+        excerpt:
+          "What drives condition-based pricing, why final value depends on inspection, and how to get an accurate estimate.",
+      },
     ],
     plannedPosts: [
-      "How E-Waste Scrap Quotes Work in Kochi",
       "What Affects the Value of Old Electronics?",
       "Laptop Scrap Value: What Factors Matter?",
       "Computer Scrap Price: Condition and Component Guide",

@@ -1,0 +1,317 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Data Destruction in Kochi | Hard Drive, Laptop & Business ITAD Guide";
+const description =
+  "Data destruction in Kochi for hard drives, laptops and servers — wiping, degaussing and shredding options, documentation, and what businesses should ask for.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Data Destruction in Kochi", path: "/blog/data-destruction-kochi-guide/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/data-destruction-kochi-guide/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/data-destruction-kochi-guide/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "What is data destruction, in plain terms?",
+    a: "It's the process of making data on a storage device unrecoverable — through wiping, degaussing, or physical shredding — before the device is recycled, resold or disposed of.",
+  },
+  {
+    q: "Which method should I use for my hard drive?",
+    a: "It depends on the device and requirement — wiping suits reusable drives, degaussing suits magnetic media that won't be reused, and shredding suits drives that must never be reused. Ask the team to recommend based on your case.",
+  },
+  {
+    q: "Do you provide a certificate of destruction?",
+    a: "Documentation may be available for data destruction requests, depending on the service type. Ask about this when you book.",
+  },
+  {
+    q: "Can businesses get bulk data destruction for multiple drives?",
+    a: "Yes, this typically routes through our ITAD service, which handles asset lists and bulk collection alongside data destruction.",
+  },
+  {
+    q: "Is data destruction only for hard drives?",
+    a: "No — laptops, servers, SSDs and other storage media can all require data destruction depending on what they contain.",
+  },
+  {
+    q: "How much does data destruction cost?",
+    a: "Final quote depends on item type, quantity, condition, location and current market rate. Ask for details specific to your devices.",
+  },
+  {
+    q: "Which areas offer data destruction pickup?",
+    a: "Ewaste Kochi primarily supports Kochi, Ernakulam, Kakkanad, Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro enquiry areas. For other Kerala districts, contact us to check pickup feasibility.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/data-destruction-kochi-guide/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Data Destruction in Kochi: Hard Drive, Laptop & Business Guide</h1>
+  <p class="lede">
+    A factory reset isn't the same as making data genuinely unrecoverable.
+    If a hard drive, laptop or server ever held anything sensitive, here's
+    what actual data destruction involves and how to ask for it correctly.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I need data destruction for a device in Kochi. Can you help?" />
+  <p class="view-service"><a href="/data-destruction/">View our data destruction service →</a></p>
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Data destruction in Kochi means having a storage device — a hard
+      drive, SSD, laptop or server — wiped, degaussed or physically shredded
+      before it's recycled or resold. Ask about it before handing over any
+      device that held personal or business data, since it's much simpler
+      to arrange upfront than after the fact.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>A factory reset alone is not the same as certified data destruction.</li>
+    <li>Method depends on the device and whether it will be reused.</li>
+    <li>Documentation may be available for business requests.</li>
+    <li>Ask before handover, not after — it's simpler that way.</li>
+  </ul>
+
+  <section>
+    <h2>What data destruction actually means</h2>
+    <p>
+      "Deleting" a file, or even reformatting a drive, often leaves data
+      recoverable with the right tools. Genuine data destruction goes
+      further — overwriting storage so old data can't be reconstructed,
+      using a degausser to scramble magnetic media, or physically shredding
+      a drive so it can never be read again. Which one applies depends on
+      the device and what happens to it afterward.
+    </p>
+  </section>
+
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Method</th>
+          <th scope="col">Best for</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Wiping (overwrite)</td><td>Drives that will be reused or resold</td></tr>
+        <tr><td>Degaussing</td><td>Magnetic media not being reused</td></tr>
+        <tr><td>Physical shredding</td><td>Drives that must never be reused</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <section>
+    <h2>Step by step: how a data destruction request works</h2>
+    <ol class="steps-list">
+      <li><strong>Tell us what you have.</strong> Hard drives, laptops, servers, SSDs — type and quantity.</li>
+      <li><strong>Mention the sensitivity.</strong> Personal data, business data, or both.</li>
+      <li><strong>Discuss the right method.</strong> Wiping, degaussing or shredding, based on your case.</li>
+      <li><strong>Arrange pickup.</strong> Devices are collected with data handling planned in advance.</li>
+      <li><strong>Get documentation if applicable.</strong> Availability depends on the service type.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>For businesses and IT teams</h2>
+    <p>
+      Offices retiring computers, servers or storage arrays usually need
+      more than a one-off wipe — an asset list, a documented handling
+      process, and a clear record of what happened to each device. This is
+      what our ITAD service is built around, combining bulk pickup with data
+      destruction and documentation in one process rather than treating them
+      separately.
+    </p>
+  </section>
+
+  <section>
+    <h2>Hard drive shredding specifically</h2>
+    <p>
+      For drives that absolutely cannot risk being reconstructed — highly
+      sensitive business data, compliance-driven disposal, or simply a drive
+      too old or damaged to trust with software wiping — physical shredding
+      is the more certain option. See our hard drive shredding page for more
+      detail on when this makes sense over wiping or degaussing.
+    </p>
+  </section>
+
+  <section>
+    <h2>What documentation can look like</h2>
+    <p>
+      Depending on the service type and what's agreed in advance,
+      documentation may be available covering what was destroyed and how.
+      If your business needs this for audit or compliance purposes, raise it
+      at the start of the conversation rather than after collection — it
+      shapes which method and process gets used.
+    </p>
+  </section>
+
+  <section>
+    <h2>Why "deleted" doesn't mean "gone"</h2>
+    <p>
+      Deleting a file typically just removes the pointer to it — the actual
+      data often remains on the drive until it's overwritten by something
+      else, which can take a long time or never happen at all on a drive
+      that's about to be recycled. This is the gap between what feels like
+      data removal and what genuinely makes data unrecoverable, and it's the
+      reason data destruction is treated as a distinct step rather than
+      something that happens automatically during recycling.
+    </p>
+  </section>
+
+  <section>
+    <h2>SSDs vs. traditional hard drives</h2>
+    <p>
+      Solid-state drives don't behave the same way as traditional spinning
+      hard drives when it comes to data destruction — the underlying storage
+      technology is different, and some methods that work well for one
+      don't apply cleanly to the other. Mention the drive type when you ask
+      about destruction so the right method gets recommended rather than
+      applying a one-size-fits-all approach.
+    </p>
+  </section>
+
+  <section>
+    <h2>Mistakes to avoid</h2>
+    <ul class="check-list">
+      <li>Assuming a factory reset is equivalent to certified destruction</li>
+      <li>Handing over drives without mentioning they held business data</li>
+      <li>Leaving documentation requirements until after pickup</li>
+      <li>Treating all storage devices as needing the same method</li>
+    </ul>
+  </section>
+
+  <div class="disclaimer-box">
+    <p>
+      Documentation availability depends on the service type and agreed
+      handling process. Ewaste Kochi primarily supports Kochi, Ernakulam,
+      Kakkanad, Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro
+      enquiry areas. For other Kerala districts, contact us to check pickup
+      feasibility.
+    </p>
+  </div>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/data-destruction/">Data Destruction</a>
+      <a href="/hard-drive-shredding/">Hard Drive Shredding</a>
+      <a href="/itad/">ITAD for Business</a>
+      <a href="/data-destruction-certificate-sample/">Certificate Sample</a>
+    </div>
+    <p class="related-posts">
+      Related guides: <a href="/blog/corporate-ewaste-pickup-kochi/">Corporate E-Waste Pickup</a>,
+      <a href="/blog/laptop-recycling-kochi/">Laptop Recycling in Kochi</a>.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <section class="final-cta">
+    <h2>Need Data Destroyed Before Disposal?</h2>
+    <p>Tell us what you have and the sensitivity level for a recommended method.</p>
+    <CtaBar whatsappMessage="Hi, I need data destruction for a device in Kochi." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .view-service { margin: -0.5rem 0 1.5rem; }
+  .view-service a { font-weight: 700; }
+  .quick-answer {
+    padding: 1.1rem 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    margin: 1.5rem 0;
+  }
+  .quick-answer-label {
+    margin: 0 0 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-primary);
+  }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways {
+    display: grid;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+    padding-left: 1.25rem;
+  }
+  .steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding-left: 1.25rem;
+  }
+  .table-scroll {
+    overflow-x: auto;
+    margin-top: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  table { width: 100%; min-width: 480px; border-collapse: collapse; font-size: 0.92rem; }
+  th, td { padding: 0.65rem 0.9rem; text-align: left; border-bottom: 1px solid var(--color-border); }
+  th { background: var(--color-bg); font-weight: 800; }
+  tbody tr:last-child td { border-bottom: none; }
+  .disclaimer-box {
+    padding: 0.9rem 1.1rem;
+    border-left: 3px solid var(--color-primary);
+    background: var(--color-surface);
+    border-radius: 0 0.5rem 0.5rem 0;
+    margin: 1.5rem 0;
+    font-size: 0.92rem;
+    color: var(--color-muted);
+  }
+  .disclaimer-box p { margin: 0; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .related-posts { margin-top: 0.75rem; font-size: 0.92rem; color: var(--color-muted); }
+  .final-cta {
+    padding: 1.5rem 1.25rem;
+    border-radius: 0.75rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    text-align: center;
+    margin: 2.5rem 0;
+  }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

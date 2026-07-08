@@ -1,0 +1,349 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "How to Book an E-Waste Pickup in Kochi | Step-by-Step Guide";
+const description =
+  "How to book an e-waste pickup in Kochi, step by step — what to send on WhatsApp, how feasibility and quotes are confirmed, and what to expect on pickup day.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "How to Book an E-Waste Pickup in Kochi", path: "/blog/how-to-book-ewaste-pickup-kochi/" },
+];
+
+const howToSteps = [
+  { name: "List your items", text: "Write down what you have — type, rough quantity and condition." },
+  { name: "Note your location", text: "Confirm your area so pickup feasibility can be checked." },
+  { name: "Send photos", text: "Especially for batteries, damaged items or bulky equipment." },
+  { name: "Message on WhatsApp", text: "Share the list, location and photos together." },
+  { name: "Get confirmation", text: "The team confirms feasibility and any quote details." },
+  { name: "Agree a pickup slot", text: "Choose a time that works for your home or office." },
+  { name: "Hand over items at pickup", text: "The team collects directly from your door." },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/how-to-book-ewaste-pickup-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to Book an E-Waste Pickup in Kochi",
+    description: "Step-by-step process for booking a doorstep e-waste pickup in Kochi.",
+    step: howToSteps.map((s) => ({ "@type": "HowToStep", name: s.name, text: s.text })),
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/how-to-book-ewaste-pickup-kochi/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "How do I book an e-waste pickup in Kochi?",
+    a: "Message your item list, location and photos on WhatsApp. The team confirms pickup feasibility and any quote details, then you agree on a slot.",
+  },
+  {
+    q: "What details speed up confirmation?",
+    a: "Item type, approximate quantity, condition, your area, and photos — especially for batteries or anything damaged or bulky.",
+  },
+  {
+    q: "How long does it take to get pickup confirmed?",
+    a: "It depends on how complete the details you send are — a full item list, location and photos usually gets a faster response than a vague message.",
+  },
+  {
+    q: "Can I book pickup for someone else's address?",
+    a: "Yes, just make sure the address and a contact person for that location are included when you message.",
+  },
+  {
+    q: "What if I only have one small item?",
+    a: "A single item is fine to include in a booking — mention it as you would a larger list.",
+  },
+  {
+    q: "Is pickup available same day?",
+    a: "Pickup feasibility depends on item type, quantity, condition and location, including scheduling availability, so confirm timing on WhatsApp rather than assuming.",
+  },
+  {
+    q: "Do I need to be home for the whole visit?",
+    a: "You or someone available to hand over the items should be present. Confirm the arrangement when scheduling.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/how-to-book-ewaste-pickup-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>How to Book an E-Waste Pickup in Kochi</h1>
+  <p class="lede">
+    Booking a pickup isn't complicated, but a few details up front make the
+    difference between a same-day confirmation and a slow back-and-forth.
+    Here's exactly what to send and what happens at each stage.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to book an e-waste pickup in Kochi." />
+  <p class="view-service"><a href="/pickup/">View our pickup service →</a></p>
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      To book an e-waste pickup in Kochi, message your item list, location
+      and photos on WhatsApp. The team confirms pickup feasibility and any
+      quote details, you agree on a slot, and the items are collected
+      directly from your door — usually with no need to visit a drop-off
+      point at all.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>WhatsApp is the fastest way to start — no forms required.</li>
+    <li>Photos speed up confirmation, especially for batteries or damage.</li>
+    <li>Home and office pickups are scheduled slightly differently.</li>
+    <li>Feasibility depends on item type, quantity, condition and location.</li>
+  </ul>
+
+  <section>
+    <h2>Step-by-step: booking your pickup</h2>
+    <ol class="steps-list">
+      {howToSteps.map((step) => (
+        <li><strong>{step.name}.</strong> {step.text}</li>
+      ))}
+    </ol>
+  </section>
+
+  <section>
+    <h2>What to include in your first message</h2>
+    <p>
+      The single biggest thing that speeds up confirmation is sending
+      everything together in one message rather than in pieces. A good first
+      message includes what you have (laptops, batteries, a printer, mixed
+      cables — whatever applies), roughly how many, your area in Kochi, and
+      a photo or two if anything is bulky, damaged, or a battery.
+    </p>
+  </section>
+
+  <section>
+    <h2>Home pickup vs. office pickup</h2>
+    <p>
+      The core process is identical, but office pickups more often involve
+      larger quantities, multiple desks or floors, and sometimes a rough
+      inventory list. If you already have one — even a simple spreadsheet —
+      share it. It saves time on both sides and helps the team plan for the
+      right vehicle and crew size.
+    </p>
+  </section>
+
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Situation</th>
+          <th scope="col">What to send</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Few household items</td><td>Item list, area, photos if unsure</td></tr>
+        <tr><td>Batteries included</td><td>Battery type, condition, photos</td></tr>
+        <tr><td>Bulk office items</td><td>Inventory list or rough count, floor/access details</td></tr>
+        <tr><td>Data-bearing devices</td><td>Mention data destruction needs upfront</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <section>
+    <h2>What happens after you message</h2>
+    <p>
+      The team reviews what you've sent and confirms whether pickup is
+      feasible for your items and area, and whether anything commercial
+      applies. From there it's just a matter of agreeing a time. For most
+      home pickups this is a short exchange; larger office jobs may need a
+      little more back-and-forth to plan logistics properly.
+    </p>
+  </section>
+
+  <section>
+    <h2>On pickup day</h2>
+    <p>
+      Have your items in one accessible spot if you can — it makes the visit
+      faster for everyone. If anything wasn't mentioned earlier, that's fine,
+      just flag it when the team arrives. Any data-bearing devices should be
+      confirmed at this point if data destruction wasn't already discussed.
+    </p>
+  </section>
+
+  <section>
+    <h2>Weekday vs. weekend pickups</h2>
+    <p>
+      Availability can vary depending on the day, particularly for office
+      pickups that need to fit around business hours or building access
+      rules. If timing matters for your situation, mention your preference
+      early rather than assuming a specific day will automatically work.
+    </p>
+  </section>
+
+  <section>
+    <h2>If you're not sure an item is worth including</h2>
+    <p>
+      A common hesitation is not knowing whether something is "enough" to
+      bother booking a pickup for — a single old router, one dead phone
+      battery, a printer nobody uses. All of these are worth including.
+      There's no minimum quantity for most household pickups, and mentioning
+      a small item alongside anything else you're clearing out costs nothing
+      extra to ask about.
+    </p>
+  </section>
+
+  <section>
+    <h2>Booking for someone else, or for a shared space</h2>
+    <p>
+      If you're booking on behalf of a family member, a housing society, or
+      a shared office, include a contact person and phone number for the
+      actual pickup location, even if you're the one messaging. It avoids
+      confusion on the day and means the team can reach the right person if
+      plans change.
+    </p>
+  </section>
+
+  <section>
+    <h2>What happens if plans change</h2>
+    <p>
+      If you need to reschedule or the item list changes after you've
+      booked, just message with the update — it's far easier to adjust
+      before the visit than to sort it out on the day. The same goes if you
+      realize you've forgotten to mention something like a battery or a
+      bulky item; flag it as soon as you remember rather than waiting.
+    </p>
+  </section>
+
+  <section>
+    <h2>Mistakes that slow down booking</h2>
+    <ul class="check-list">
+      <li>Sending a vague message with no item list or location</li>
+      <li>Leaving out that a battery is damaged until pickup day</li>
+      <li>Assuming a bulk office job can be scheduled same-day without notice</li>
+      <li>Not mentioning data-bearing devices until the team arrives</li>
+    </ul>
+  </section>
+
+  <div class="disclaimer-box">
+    <p>
+      Pickup feasibility depends on item type, quantity, condition and
+      location. Ewaste Kochi primarily supports Kochi, Ernakulam, Kakkanad,
+      Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro enquiry
+      areas. For other Kerala districts, contact us to check pickup
+      feasibility.
+    </p>
+  </div>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/pickup/">Book Pickup</a>
+      <a href="/recycling/">E-Waste Recycling</a>
+      <a href="/battery-recycling/">Battery Recycling</a>
+      <a href="/itad/">ITAD for Business</a>
+    </div>
+    <p class="related-posts">
+      Related guides: <a href="/blog/where-to-recycle-old-electronics-kochi/">Where to Recycle Old Electronics</a>,
+      <a href="/blog/corporate-ewaste-pickup-kochi/">Corporate E-Waste Pickup</a>.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <section class="final-cta">
+    <h2>Ready to Book Your Pickup?</h2>
+    <p>Share your item list, location and photos for faster pickup confirmation.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to book an e-waste pickup in Kochi." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .view-service { margin: -0.5rem 0 1.5rem; }
+  .view-service a { font-weight: 700; }
+  .quick-answer {
+    padding: 1.1rem 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    margin: 1.5rem 0;
+  }
+  .quick-answer-label {
+    margin: 0 0 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-primary);
+  }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways {
+    display: grid;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+    padding-left: 1.25rem;
+  }
+  .steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding-left: 1.25rem;
+  }
+  .table-scroll {
+    overflow-x: auto;
+    margin-top: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  table { width: 100%; min-width: 480px; border-collapse: collapse; font-size: 0.92rem; }
+  th, td { padding: 0.65rem 0.9rem; text-align: left; border-bottom: 1px solid var(--color-border); }
+  th { background: var(--color-bg); font-weight: 800; }
+  tbody tr:last-child td { border-bottom: none; }
+  .disclaimer-box {
+    padding: 0.9rem 1.1rem;
+    border-left: 3px solid var(--color-primary);
+    background: var(--color-surface);
+    border-radius: 0 0.5rem 0.5rem 0;
+    margin: 1.5rem 0;
+    font-size: 0.92rem;
+    color: var(--color-muted);
+  }
+  .disclaimer-box p { margin: 0; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .related-posts { margin-top: 0.75rem; font-size: 0.92rem; color: var(--color-muted); }
+  .final-cta {
+    padding: 1.5rem 1.25rem;
+    border-radius: 0.75rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    text-align: center;
+    margin: 2.5rem 0;
+  }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

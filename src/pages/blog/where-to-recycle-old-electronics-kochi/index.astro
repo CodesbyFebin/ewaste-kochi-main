@@ -1,0 +1,383 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Where to Recycle Old Electronics in Kochi | Pickup, Reuse & Scrap Quote Guide";
+const description =
+  "Where to recycle old electronics in Kochi — doorstep pickup, drop-off options, resale, and scrap quotes compared, with what to prepare before collection.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Where to Recycle Old Electronics in Kochi", path: "/blog/where-to-recycle-old-electronics-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/where-to-recycle-old-electronics-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/where-to-recycle-old-electronics-kochi/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Where can I recycle old electronics in Kochi?",
+    a: "You can book a doorstep pickup with Ewaste Kochi for laptops, desktops, batteries, cables, printers, TVs, servers and mixed IT scrap. Share your item list, location and photos on WhatsApp to get started.",
+  },
+  {
+    q: "Is there a drop-off point instead of pickup?",
+    a: "Doorstep pickup is the standard route since it avoids you having to transport items yourself. Message us if a drop-off would work better for your situation and we'll confirm what's possible.",
+  },
+  {
+    q: "Do I have to pay to recycle old electronics?",
+    a: "Pickup is free for qualifying quantities. Pickup feasibility depends on item type, quantity, condition and location, so share details on WhatsApp to confirm before scheduling.",
+  },
+  {
+    q: "Can I get paid instead of just recycling?",
+    a: "If a device still works or is repairable, it may qualify for resale rather than recycling. See our sell electronics guide for how condition-based quotes work.",
+  },
+  {
+    q: "What if I don't know whether an item counts as e-waste?",
+    a: "If it plugs in, runs on a battery, or has a circuit board, it's almost certainly e-waste. Send a photo on WhatsApp if you're unsure and the team will confirm.",
+  },
+  {
+    q: "Do you recycle old batteries too?",
+    a: "Yes, but batteries are handled separately from general e-waste for safety. See our battery recycling guide, especially if a battery is swollen, leaking or damaged.",
+  },
+  {
+    q: "Which Kochi areas can book pickup?",
+    a: "Ewaste Kochi primarily supports Kochi, Ernakulam, Kakkanad, Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro enquiry areas. For other Kerala districts, contact us to check pickup feasibility.",
+  },
+  {
+    q: "What should I do before booking a pickup?",
+    a: "List out what you have, take a few photos, and note your area. That's usually enough for the team to confirm feasibility and next steps quickly.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/where-to-recycle-old-electronics-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Where to Recycle Old Electronics in Kochi</h1>
+  <p class="lede">
+    A drawer full of dead chargers, an old laptop that won't boot, a monitor
+    nobody uses anymore — most people in Kochi eventually end up asking the
+    same question: where does this actually go? Here's a straight answer,
+    plus the tradeoffs between pickup, drop-off, resale and scrap.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I have old electronics I'd like to recycle in Kochi. Can you help?" />
+  <p class="view-service"><a href="/recycling/">View our recycling service →</a></p>
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      The most reliable way to recycle old electronics in Kochi is to book a
+      doorstep pickup rather than search for a drop-off center. Share your
+      item list, location and photos on WhatsApp, and the team confirms
+      pickup feasibility and the right handling route — recycling, resale, or
+      battery-safe handling — before anything is collected.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Doorstep pickup is usually simpler than finding a drop-off point.</li>
+    <li>Working devices may be worth more sold than recycled — check first.</li>
+    <li>Batteries need separate, careful handling, not general e-waste bins.</li>
+    <li>Final feasibility and quote always depend on inspection, not a fixed rate.</li>
+  </ul>
+
+  <section>
+    <h2>What actually counts as e-waste</h2>
+    <p>
+      Anything with a plug, a battery, or a circuit board qualifies —
+      laptops, desktops, monitors, keyboards, printers, routers, cables, UPS
+      and inverter batteries, lithium batteries, mobile phones, tablets,
+      servers, hard drives, CCTV equipment, TVs, and general office IT scrap.
+      If you're not sure whether something counts, a quick photo on WhatsApp
+      is usually enough to confirm.
+    </p>
+    <p>
+      People often assume only "big" items like computers and TVs qualify,
+      but the small stuff adds up too — old phone chargers, HDMI and USB
+      cables, dead power banks, broken earphones, and the tangle of
+      miscellaneous adapters most households accumulate over the years. None
+      of it belongs in a regular household bin, mainly because of the
+      metals, plastics and occasional battery cells mixed into these small
+      items.
+    </p>
+  </section>
+
+  <section>
+    <h2>Why this matters more than it seems</h2>
+    <p>
+      Old electronics left in a drawer aren't doing any harm sitting there,
+      but once they're thrown out with regular waste, they usually end up
+      handled informally — dismantled by hand without safety equipment, or
+      dumped somewhere that isn't equipped for it. That's a real risk for
+      whoever handles it, and it's avoidable with a proper pickup instead of
+      the regular trash.
+    </p>
+  </section>
+
+  <section>
+    <h2>Your real options: pickup, drop-off, resale, or scrap</h2>
+    <p>
+      Not every old device needs the same treatment. Some are genuinely done
+      and just need safe recycling. Others still work and might be worth
+      selling. A few — mainly batteries — need extra care regardless of
+      condition. The table below is a quick way to see which route fits.
+    </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Route</th>
+            <th scope="col">Best for</th>
+            <th scope="col">What happens</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Doorstep pickup</td>
+            <td>Mixed electronics, no resale value</td>
+            <td>Collected, sorted, recycled responsibly</td>
+          </tr>
+          <tr>
+            <td>Sell electronics</td>
+            <td>Working or repairable devices</td>
+            <td>Condition-based quote, doorstep handover</td>
+          </tr>
+          <tr>
+            <td>Battery recycling</td>
+            <td>UPS, inverter, lithium batteries</td>
+            <td>Separated and handled for safety</td>
+          </tr>
+          <tr>
+            <td>Data destruction</td>
+            <td>Anything with storage</td>
+            <td>Wiped, degaussed or shredded first</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>How pickup works, step by step</h2>
+    <ol class="steps-list">
+      <li>
+        <strong>Message your item list, quantity and area on WhatsApp.</strong>
+        A rough count is fine — "2 laptops, a printer, some cables" is
+        enough to start.
+      </li>
+      <li>
+        <strong>Share photos, especially for batteries or damaged items.</strong>
+        Photos help the team spot anything that needs special handling
+        before a visit is scheduled.
+      </li>
+      <li>
+        <strong>The team confirms feasibility and any quote details.</strong>
+        You'll hear back on whether pickup is possible for your area and
+        items, and what if anything applies commercially.
+      </li>
+      <li>
+        <strong>You agree on a pickup slot that works for you.</strong>
+        Home and office pickups are scheduled a little differently, so
+        mention which applies.
+      </li>
+      <li>
+        <strong>Items are collected and routed appropriately.</strong>
+        Recycling, resale enquiry, or battery-safe handling, depending on
+        what's actually in the pickup.
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>What happens after collection</h2>
+    <p>
+      Once your items are picked up, they're sorted by type. Devices with
+      storage go through data handling first if that's been requested.
+      Batteries are separated immediately and never mixed back in with
+      general electronics. Anything genuinely reusable may be routed toward
+      resale rather than straight recycling — that decision is made on
+      inspection, not guessed from a text description, so don't be surprised
+      if a device you assumed was scrap gets flagged as sellable instead.
+    </p>
+  </section>
+
+  <section>
+    <h2>Why pickup beats an informal scrap dealer</h2>
+    <p>
+      Kochi has no shortage of informal scrap buyers who'll take electronics
+      off your hands for a quick cash offer. The tradeoff is that informal
+      handling usually means no data wiping, no battery safety process, and
+      no real accountability for where the materials end up. A proper pickup
+      costs you nothing extra in most cases and adds a layer of safety —
+      particularly if any device still has personal files, photos, or
+      business data on it.
+    </p>
+  </section>
+
+  <section>
+    <h2>Common mistakes to avoid</h2>
+    <ul class="check-list">
+      <li>Throwing batteries in with general electronics or household trash</li>
+      <li>Handing over a device with photos, accounts, or files still on it</li>
+      <li>Assuming a broken device has zero value without checking first</li>
+      <li>Waiting for a "big enough" pile before booking — a single item is fine</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>How to tell if something still has value</h2>
+    <p>
+      Before assuming an old device is pure scrap, it's worth a second look.
+      Working laptops and phones, even a few years old, often have resale
+      value — especially if the screen and battery are intact. Non-working
+      devices can still have component value depending on the model.
+      Printers, routers and small accessories usually don't carry much
+      individual value but are still worth including in a pickup rather than
+      binning separately. If you're unsure either way, mention it when you
+      message — the team can flag anything worth a second look before it's
+      routed straight to recycling.
+    </p>
+  </section>
+
+  <section>
+    <h2>Areas we can pick up from</h2>
+    <p>
+      {BUSINESS.legalName} primarily supports Kochi, Ernakulam, Kakkanad,
+      Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro enquiry
+      areas. For other Kerala districts, contact us to check pickup
+      feasibility before assuming coverage.
+    </p>
+  </section>
+
+  <div class="disclaimer-box">
+    <p>
+      Pickup feasibility depends on item type, quantity, condition and
+      location. Final quote, where applicable, depends on item type,
+      quantity, condition, location and current market rate — not a number
+      quoted before inspection.
+    </p>
+  </div>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/recycling/">E-Waste Recycling</a>
+      <a href="/pickup/">Book Pickup</a>
+      <a href="/sell-electronics/">Sell Electronics</a>
+      <a href="/battery-recycling/">Battery Recycling</a>
+      <a href="/data-destruction/">Data Destruction</a>
+    </div>
+    <p class="related-posts">
+      Related guides: <a href="/blog/what-is-ewaste/">What Is E-Waste?</a>,
+      <a href="/blog/e-waste-examples/">E-Waste Examples</a>,
+      <a href="/blog/how-to-book-ewaste-pickup-kochi/">How to Book an E-Waste Pickup</a>.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <section class="final-cta">
+    <h2>Ready to Recycle Your Old Electronics?</h2>
+    <p>Share your item list, location and photos for faster pickup confirmation.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to book a pickup for old electronics in Kochi." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .view-service { margin: -0.5rem 0 1.5rem; }
+  .view-service a { font-weight: 700; }
+  .quick-answer {
+    padding: 1.1rem 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    margin: 1.5rem 0;
+  }
+  .quick-answer-label {
+    margin: 0 0 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-primary);
+  }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways {
+    display: grid;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+    padding-left: 1.25rem;
+  }
+  .steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding-left: 1.25rem;
+  }
+  .table-scroll {
+    overflow-x: auto;
+    margin-top: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  table { width: 100%; min-width: 480px; border-collapse: collapse; font-size: 0.92rem; }
+  th, td { padding: 0.65rem 0.9rem; text-align: left; border-bottom: 1px solid var(--color-border); }
+  th { background: var(--color-bg); font-weight: 800; }
+  tbody tr:last-child td { border-bottom: none; }
+  .disclaimer-box {
+    padding: 0.9rem 1.1rem;
+    border-left: 3px solid var(--color-primary);
+    background: var(--color-surface);
+    border-radius: 0 0.5rem 0.5rem 0;
+    margin: 1.5rem 0;
+    font-size: 0.92rem;
+    color: var(--color-muted);
+  }
+  .disclaimer-box p { margin: 0; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .related-posts { margin-top: 0.75rem; font-size: 0.92rem; color: var(--color-muted); }
+  .final-cta {
+    padding: 1.5rem 1.25rem;
+    border-radius: 0.75rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    text-align: center;
+    margin: 2.5rem 0;
+  }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

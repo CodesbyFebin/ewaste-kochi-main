@@ -1,0 +1,330 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "How E-Waste Scrap Quotes Work in Kochi | Condition-Based Value Guide";
+const description =
+  "How e-waste scrap quotes work in Kochi — what drives condition-based pricing, why final value depends on inspection, and how to get an accurate estimate.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "How E-Waste Scrap Quotes Work in Kochi", path: "/blog/how-ewaste-scrap-quotes-work-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/how-ewaste-scrap-quotes-work-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/how-ewaste-scrap-quotes-work-kochi/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "How is an e-waste scrap quote calculated?",
+    a: "Final quote depends on item type, quantity, condition, location and current market rate. It's confirmed after inspection rather than fixed from a description.",
+  },
+  {
+    q: "Why can't I get an exact price over WhatsApp?",
+    a: "A preliminary estimate is possible from photos and details, but the final number depends on physically inspecting condition, which can change the outcome either way.",
+  },
+  {
+    q: "Does device age always lower the quote?",
+    a: "Usually, but not always — some older devices still have demand or component value. Condition and working status often matter more than age alone.",
+  },
+  {
+    q: "Do quotes differ for scrap vs. resale?",
+    a: "Yes. Scrap quotes reflect material and component value; resale quotes reflect a working device's market demand. See our sell electronics guide for the resale side.",
+  },
+  {
+    q: "What can I do to get a more accurate estimate upfront?",
+    a: "Provide accurate condition details and clear photos when you first message — it leads to a more reliable preliminary estimate.",
+  },
+  {
+    q: "Do bulk quantities get a different quote process?",
+    a: "Yes, bulk or office quantities are usually quoted based on an itemized or estimated list rather than a single flat number.",
+  },
+  {
+    q: "Which areas can get a scrap quote?",
+    a: "Ewaste Kochi primarily supports Kochi, Ernakulam, Kakkanad, Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro enquiry areas. For other Kerala districts, contact us to check pickup feasibility.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/how-ewaste-scrap-quotes-work-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>How E-Waste Scrap Quotes Work in Kochi</h1>
+  <p class="lede">
+    "How much is this worth?" is usually the first question, and the
+    honest answer is: it depends. Here's what actually goes into a scrap
+    quote, and why a number given before inspection is always preliminary.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like a scrap quote for old electronics in Kochi." />
+  <p class="view-service"><a href="/e-waste-scrap-prices-kochi/">View our scrap price guide →</a></p>
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      E-waste scrap quotes in Kochi are condition-based — final quote
+      depends on item type, quantity, condition, location and current
+      market rate. A preliminary estimate can be given from photos and
+      details, but the confirmed number is set after inspection, since
+      condition often changes the outcome once the item is actually seen.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Quotes are confirmed at inspection, not fixed from a description.</li>
+    <li>Condition, quantity and current market rate all factor in.</li>
+    <li>Scrap value and resale value are calculated differently.</li>
+    <li>Clear photos and honest condition details give the best estimate.</li>
+  </ul>
+
+  <section>
+    <h2>What "market-linked" pricing actually means</h2>
+    <p>
+      Scrap value for electronics isn't fixed — it moves with material and
+      component demand over time, similar to other commodity markets. That's
+      why a quote given today can differ from one given a few months ago for
+      a similar item. It's not arbitrary; it reflects real market
+      conditions, which is also why no reputable recycler can promise a
+      fixed rate indefinitely.
+    </p>
+  </section>
+
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Factor</th>
+          <th scope="col">Why it matters</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Item type</td><td>Different materials and components carry different value</td></tr>
+        <tr><td>Condition</td><td>Working, damaged or non-functional changes the outcome</td></tr>
+        <tr><td>Quantity</td><td>Bulk quantities are often quoted differently than single items</td></tr>
+        <tr><td>Current market rate</td><td>Scrap material value shifts over time</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <section>
+    <h2>Step by step: getting a quote</h2>
+    <ol class="steps-list">
+      <li><strong>Describe the item.</strong> Type, brand/model if known, and quantity.</li>
+      <li><strong>Share the condition honestly.</strong> Working, damaged, or non-functional.</li>
+      <li><strong>Send photos.</strong> Clearer photos lead to a more accurate estimate.</li>
+      <li><strong>Get a preliminary estimate.</strong> Based on what you've shared so far.</li>
+      <li><strong>Confirm at inspection.</strong> The final number is set once the item is seen.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Scrap value vs. resale value</h2>
+    <p>
+      These aren't the same thing. Scrap value reflects the materials and
+      components inside a device that's being recycled — copper, certain
+      metals, reusable parts. Resale value reflects what a working device
+      can sell for as a functioning product. A device that's a poor
+      candidate for resale can still have scrap value, and vice versa; see
+      our sell electronics guide for the resale side specifically.
+    </p>
+  </section>
+
+  <section>
+    <h2>Why quotes can differ between recyclers</h2>
+    <p>
+      If you've compared quotes and seen different numbers from different
+      places, that's not unusual — it can reflect different market
+      relationships, processing capabilities, or simply differing
+      assessments of condition. What's worth being cautious of is a quote
+      that seems unusually high with no clear reasoning, or a "final" price
+      given without ever inspecting the item.
+    </p>
+  </section>
+
+  <section>
+    <h2>Getting a second opinion</h2>
+    <p>
+      There's nothing wrong with checking more than one source before
+      deciding, especially for higher-value items or bulk lots. What matters
+      more than comparing numbers alone is comparing the reasoning — a quote
+      that's explained by condition, quantity and current rates is more
+      trustworthy than one given with no context at all.
+    </p>
+  </section>
+
+  <section>
+    <h2>Bulk and office quantities</h2>
+    <p>
+      For a larger batch — a stack of old office computers, a mixed pile of
+      accumulated IT scrap — quotes are usually built from an itemized or
+      estimated list rather than one flat number for everything. Share a
+      rough breakdown by item type where possible; it makes the estimate
+      more useful upfront.
+    </p>
+  </section>
+
+  <section>
+    <h2>What "condition" really covers</h2>
+    <p>
+      Condition isn't just "working or not." It includes physical state
+      (cracks, corrosion, missing parts), completeness (is the charger or
+      power supply included), and how the item has been stored (a device
+      kept dry and upright generally fares better than one left damp or
+      crushed under other items). All of this factors into the final
+      assessment, which is part of why photos alone only get you a
+      preliminary estimate.
+    </p>
+  </section>
+
+  <section>
+    <h2>How timing can affect your quote</h2>
+    <p>
+      Because scrap value is market-linked, the same item could receive a
+      slightly different quote a few weeks apart, simply due to shifts in
+      material demand. This isn't something to game — trying to time a sale
+      around market movements for household quantities isn't practical —
+      but it explains why a quote you remember from a while back might not
+      match what you're offered today.
+    </p>
+  </section>
+
+  <section>
+    <h2>Mistakes to avoid</h2>
+    <ul class="check-list">
+      <li>Expecting a fixed final price before any inspection</li>
+      <li>Understating or overstating condition to influence the estimate</li>
+      <li>Skipping photos, which usually makes estimates less accurate</li>
+      <li>Assuming scrap and resale value are calculated the same way</li>
+    </ul>
+  </section>
+
+  <div class="disclaimer-box">
+    <p>
+      Final quote depends on item type, quantity, condition, location and
+      current market rate. Ewaste Kochi primarily supports Kochi, Ernakulam,
+      Kakkanad, Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro
+      enquiry areas. For other Kerala districts, contact us to check pickup
+      feasibility.
+    </p>
+  </div>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/e-waste-scrap-prices-kochi/">Scrap Price Guide</a>
+      <a href="/sell-electronics/">Sell Electronics</a>
+      <a href="/marketplace/">Marketplace</a>
+      <a href="/computer-scrap-buyers-kochi/">Computer Scrap Buyers</a>
+    </div>
+    <p class="related-posts">
+      Related guides: <a href="/blog/how-to-sell-old-electronics-kochi/">How to Sell Old Electronics</a>,
+      <a href="/blog/laptop-recycling-kochi/">Laptop Recycling in Kochi</a>.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <section class="final-cta">
+    <h2>Want a Scrap Quote for Your Electronics?</h2>
+    <p>Share item details, quantity and photos for a preliminary estimate.</p>
+    <CtaBar whatsappMessage="Hi, I'd like a scrap quote for old electronics in Kochi." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .view-service { margin: -0.5rem 0 1.5rem; }
+  .view-service a { font-weight: 700; }
+  .quick-answer {
+    padding: 1.1rem 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    margin: 1.5rem 0;
+  }
+  .quick-answer-label {
+    margin: 0 0 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-primary);
+  }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways {
+    display: grid;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+    padding-left: 1.25rem;
+  }
+  .steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding-left: 1.25rem;
+  }
+  .table-scroll {
+    overflow-x: auto;
+    margin-top: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  table { width: 100%; min-width: 480px; border-collapse: collapse; font-size: 0.92rem; }
+  th, td { padding: 0.65rem 0.9rem; text-align: left; border-bottom: 1px solid var(--color-border); }
+  th { background: var(--color-bg); font-weight: 800; }
+  tbody tr:last-child td { border-bottom: none; }
+  .disclaimer-box {
+    padding: 0.9rem 1.1rem;
+    border-left: 3px solid var(--color-primary);
+    background: var(--color-surface);
+    border-radius: 0 0.5rem 0.5rem 0;
+    margin: 1.5rem 0;
+    font-size: 0.92rem;
+    color: var(--color-muted);
+  }
+  .disclaimer-box p { margin: 0; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .related-posts { margin-top: 0.75rem; font-size: 0.92rem; color: var(--color-muted); }
+  .final-cta {
+    padding: 1.5rem 1.25rem;
+    border-radius: 0.75rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    text-align: center;
+    margin: 2.5rem 0;
+  }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

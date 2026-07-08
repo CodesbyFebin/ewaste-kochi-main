@@ -1,0 +1,330 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Corporate E-Waste Pickup in Kochi | Office IT Scrap & ITAD Checklist";
+const description =
+  "Corporate e-waste pickup in Kochi — how bulk office IT scrap, asset inventory and data destruction fit together, and what to prepare before a business pickup.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Corporate E-Waste Pickup in Kochi", path: "/blog/corporate-ewaste-pickup-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/corporate-ewaste-pickup-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/corporate-ewaste-pickup-kochi/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "How does corporate e-waste pickup differ from a home pickup?",
+    a: "The core process is similar, but business pickups usually involve larger quantities, an asset list, and sometimes data destruction documentation — this typically routes through our ITAD service.",
+  },
+  {
+    q: "Do you provide an asset inventory before pickup?",
+    a: "Businesses can request inventory-style collection covering asset lists and quantities. Ask about this when planning a bulk pickup.",
+  },
+  {
+    q: "Can you handle servers and networking equipment, not just laptops?",
+    a: "Yes, servers, UPS systems, network equipment and general IT hardware are all part of typical corporate pickups.",
+  },
+  {
+    q: "Is data destruction included in corporate pickups?",
+    a: "It can be, if requested. Mention data-bearing devices and any documentation needs upfront so the right process is planned.",
+  },
+  {
+    q: "How much notice do you need for a bulk pickup?",
+    a: "More notice generally means better logistics planning. Share rough numbers as early as possible rather than at the last minute.",
+  },
+  {
+    q: "Can offices outside Kochi book a pickup?",
+    a: "Ewaste Kochi primarily supports Kochi, Ernakulam, Kakkanad, Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro enquiry areas. For other Kerala districts, contact us to check pickup feasibility.",
+  },
+  {
+    q: "What documentation is available for compliance purposes?",
+    a: "Documentation availability depends on the service type and agreed handling process. Raise your specific requirement before pickup is scheduled.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/corporate-ewaste-pickup-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Corporate E-Waste Pickup in Kochi</h1>
+  <p class="lede">
+    Office IT cleanouts are a different job from a single household pickup —
+    more devices, more coordination, and usually a data or documentation
+    requirement attached. Here's how to plan one properly.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to arrange a corporate e-waste pickup in Kochi." />
+  <p class="view-service"><a href="/itad/">View our ITAD service →</a></p>
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Corporate e-waste pickup in Kochi covers bulk collection of computers,
+      servers, UPS systems and general IT scrap from offices, usually
+      alongside an asset list and, where needed, data destruction. Share
+      rough quantities, device types and any documentation requirements
+      upfront so the pickup can be planned properly rather than treated like
+      a standard home collection.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Bulk office pickups need more planning than a household pickup.</li>
+    <li>An asset list, even rough, speeds up quoting and scheduling.</li>
+    <li>Data-bearing devices should be flagged before, not during, pickup.</li>
+    <li>Documentation availability depends on the service and what's agreed.</li>
+  </ul>
+
+  <section>
+    <h2>What counts as corporate e-waste</h2>
+    <p>
+      Beyond the obvious — desktops, laptops, monitors — corporate pickups
+      commonly include servers, UPS and backup power systems, network
+      switches and routers, printers and multifunction devices, and
+      accumulated cables and peripherals from IT storerooms. If your office
+      has a storage room full of retired hardware, all of it is fair game
+      for a single coordinated pickup.
+    </p>
+  </section>
+
+  <section>
+    <h2>Step by step: planning a corporate pickup</h2>
+    <ol class="steps-list">
+      <li><strong>Estimate your quantities.</strong> A rough count by device type is enough to start.</li>
+      <li><strong>Note data-bearing devices.</strong> Laptops, servers, drives — flag these specifically.</li>
+      <li><strong>Decide on documentation needs.</strong> Compliance or audit requirements shape the process.</li>
+      <li><strong>Share access details.</strong> Floor, building access, and any logistics constraints.</li>
+      <li><strong>Confirm a pickup date.</strong> More notice generally means smoother scheduling.</li>
+    </ol>
+  </section>
+
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Item type</th>
+          <th scope="col">What to prepare</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Desktops/laptops</td><td>Rough count, data destruction needs</td></tr>
+        <tr><td>Servers/network gear</td><td>Asset details, access and weight considerations</td></tr>
+        <tr><td>UPS/batteries</td><td>Type and condition, kept separate on-site</td></tr>
+        <tr><td>Mixed peripherals</td><td>General count, no itemization usually needed</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <section>
+    <h2>Why office pickups need more lead time than home pickups</h2>
+    <p>
+      A household pickup can often be arranged within a day or two. Office
+      pickups usually involve more coordination — building access approvals,
+      the right vehicle for the volume, sometimes a specific loading dock or
+      time window. None of this is a blocker, but it's worth planning around
+      rather than expecting the same turnaround as a single-item home
+      collection.
+    </p>
+  </section>
+
+  <section>
+    <h2>Asset inventory and documentation</h2>
+    <p>
+      For offices that need a record of what was collected — common for IT
+      teams managing compliance or internal audit requirements — an
+      inventory-style pickup can capture asset details and quantities as
+      part of the process. Raise this requirement early, since it changes
+      how the pickup is structured compared to a straightforward bulk
+      collection.
+    </p>
+  </section>
+
+  <section>
+    <h2>Data destruction for business devices</h2>
+    <p>
+      Any device that held business data — client records, financial files,
+      internal documents — should be flagged before collection, not
+      discovered during it. Depending on the device and requirement, this
+      might mean wiping, degaussing or physical shredding; see our data
+      destruction guide for how that decision gets made.
+    </p>
+  </section>
+
+  <section>
+    <h2>Scheduling a large cleanout</h2>
+    <p>
+      If you're planning a full office relocation, a large-scale IT refresh,
+      or clearing out a storeroom that's been accumulating for years, treat
+      it as its own project rather than an add-on to a small pickup. Share
+      the scale honestly upfront — it affects vehicle and crew planning, and
+      surprises on pickup day slow things down for everyone.
+    </p>
+  </section>
+
+  <section>
+    <h2>Coordinating across departments or floors</h2>
+    <p>
+      Larger organizations often have IT equipment scattered across
+      multiple departments or floors, sometimes with different people
+      responsible for different areas. Nominating a single point of contact
+      to consolidate the full list before reaching out saves a lot of back
+      and forth, and helps avoid a pickup where items keep turning up after
+      the crew has already left.
+    </p>
+  </section>
+
+  <section>
+    <h2>When to route through ITAD instead of a standard pickup</h2>
+    <p>
+      Not every business pickup needs the full ITAD treatment — a handful of
+      old office peripherals can go through a standard pickup. But once
+      data-bearing devices, asset documentation, or compliance requirements
+      are involved, routing through ITAD from the start avoids having to
+      redo part of the process later because a requirement surfaced too
+      late.
+    </p>
+  </section>
+
+  <section>
+    <h2>Mistakes to avoid</h2>
+    <ul class="check-list">
+      <li>Underestimating quantities when first reaching out</li>
+      <li>Not mentioning data-bearing devices until the team arrives</li>
+      <li>Leaving documentation requirements undiscussed until after pickup</li>
+      <li>Assuming building access won't need advance coordination</li>
+    </ul>
+  </section>
+
+  <div class="disclaimer-box">
+    <p>
+      Documentation availability depends on the service type and agreed
+      handling process. Ewaste Kochi primarily supports Kochi, Ernakulam,
+      Kakkanad, Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro
+      enquiry areas. For other Kerala districts, contact us to check pickup
+      feasibility.
+    </p>
+  </div>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/itad/">ITAD for Business</a>
+      <a href="/data-destruction/">Data Destruction</a>
+      <a href="/server-recycling-kochi/">Server Recycling</a>
+      <a href="/services/it-asset-inventory-audit/">Asset Inventory Audit</a>
+    </div>
+    <p class="related-posts">
+      Related guides: <a href="/blog/data-destruction-kochi-guide/">Data Destruction in Kochi</a>,
+      <a href="/blog/how-to-book-ewaste-pickup-kochi/">How to Book an E-Waste Pickup</a>.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <section class="final-cta">
+    <h2>Planning an Office IT Cleanout?</h2>
+    <p>Share your rough quantities and data destruction needs to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to arrange a corporate e-waste pickup in Kochi." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .view-service { margin: -0.5rem 0 1.5rem; }
+  .view-service a { font-weight: 700; }
+  .quick-answer {
+    padding: 1.1rem 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    margin: 1.5rem 0;
+  }
+  .quick-answer-label {
+    margin: 0 0 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-primary);
+  }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways {
+    display: grid;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+    padding-left: 1.25rem;
+  }
+  .steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding-left: 1.25rem;
+  }
+  .table-scroll {
+    overflow-x: auto;
+    margin-top: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  table { width: 100%; min-width: 480px; border-collapse: collapse; font-size: 0.92rem; }
+  th, td { padding: 0.65rem 0.9rem; text-align: left; border-bottom: 1px solid var(--color-border); }
+  th { background: var(--color-bg); font-weight: 800; }
+  tbody tr:last-child td { border-bottom: none; }
+  .disclaimer-box {
+    padding: 0.9rem 1.1rem;
+    border-left: 3px solid var(--color-primary);
+    background: var(--color-surface);
+    border-radius: 0 0.5rem 0.5rem 0;
+    margin: 1.5rem 0;
+    font-size: 0.92rem;
+    color: var(--color-muted);
+  }
+  .disclaimer-box p { margin: 0; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .related-posts { margin-top: 0.75rem; font-size: 0.92rem; color: var(--color-muted); }
+  .final-cta {
+    padding: 1.5rem 1.25rem;
+    border-radius: 0.75rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    text-align: center;
+    margin: 2.5rem 0;
+  }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

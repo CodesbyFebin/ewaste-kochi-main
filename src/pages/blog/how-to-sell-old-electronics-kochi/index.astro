@@ -1,0 +1,329 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "How to Sell Old Electronics in Kochi | Quote, Pickup & Safety Guide";
+const description =
+  "How to sell old electronics in Kochi safely — how condition-based quotes work, what to prepare, wiping your data first, and doorstep pickup for payment.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "How to Sell Old Electronics in Kochi", path: "/blog/how-to-sell-old-electronics-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/how-to-sell-old-electronics-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/how-to-sell-old-electronics-kochi/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Where can I sell old electronics in Kochi?",
+    a: "Message Ewaste Kochi with your item, its condition, and photos. You'll get a condition-based quote and can arrange doorstep pickup if you accept it.",
+  },
+  {
+    q: "How is the quote decided?",
+    a: "Final quote depends on item type, quantity, condition, location and current market rate — it's confirmed after inspection, not fixed from a description alone.",
+  },
+  {
+    q: "Can I sell a device that doesn't turn on?",
+    a: "Yes, non-working devices can still have value depending on the model and parts. Mention that it doesn't power on when you send details.",
+  },
+  {
+    q: "Do I need to wipe my data before selling?",
+    a: "Yes, ideally before handover. If you're not confident doing this yourself, ask about data destruction support before the device changes hands.",
+  },
+  {
+    q: "What if I don't like the quote?",
+    a: "You're not obligated to accept it. You can choose to recycle the item instead, which is always an option regardless of resale value.",
+  },
+  {
+    q: "Is payment on the spot or after inspection?",
+    a: "Arrangements are confirmed as part of the quote discussion — ask directly when you get your quote so there are no surprises at pickup.",
+  },
+  {
+    q: "Which areas can book a sell-electronics pickup?",
+    a: "Ewaste Kochi primarily supports Kochi, Ernakulam, Kakkanad, Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro enquiry areas. For other Kerala districts, contact us to check pickup feasibility.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/how-to-sell-old-electronics-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>How to Sell Old Electronics in Kochi</h1>
+  <p class="lede">
+    Not every old device belongs in the recycling pile. If something still
+    works — or even mostly works — it might be worth selling instead. Here's
+    how the process actually goes, from quote to doorstep handover.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to sell an old device in Kochi. Can you give me a quote?" />
+  <p class="view-service"><a href="/sell-electronics/">View our sell electronics service →</a></p>
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      To sell old electronics in Kochi, send the item type, brand/model,
+      condition and photos to Ewaste Kochi on WhatsApp. You'll get a
+      condition-based quote, and if you accept it, pickup and payment are
+      arranged directly at your door — final value is always confirmed after
+      inspection, not guessed from a text description.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Working and non-working devices can both have value — ask either way.</li>
+    <li>Quotes are condition-based, confirmed after inspection.</li>
+    <li>Wipe your data before handover, or ask about data destruction support.</li>
+    <li>You can still choose recycling if you don't like the quote.</li>
+  </ul>
+
+  <section>
+    <h2>What affects the value of your device</h2>
+    <p>
+      A handful of factors drive most of the difference between quotes:
+      whether the device powers on and functions normally, its age and
+      model, physical condition (screen, body, battery health), and whether
+      original accessories like chargers are included. Market demand for
+      that specific model also plays a role, which is why quotes are
+      confirmed at the time of sale rather than fixed in advance.
+    </p>
+  </section>
+
+  <section>
+    <h2>Step by step: selling your device</h2>
+    <ol class="steps-list">
+      <li><strong>Identify the item.</strong> Brand, model, and roughly how old it is.</li>
+      <li><strong>Describe the condition honestly.</strong> Working, partially working, or not powering on.</li>
+      <li><strong>Send photos.</strong> Front, back, and any visible damage.</li>
+      <li><strong>Get your quote.</strong> Confirmed based on what you've shared, finalized at inspection.</li>
+      <li><strong>Wipe your data or ask for help.</strong> Do this before handover, not after.</li>
+      <li><strong>Arrange pickup.</strong> Doorstep collection and payment, as agreed.</li>
+    </ol>
+  </section>
+
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Condition</th>
+          <th scope="col">What to expect</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Fully working, good condition</td><td>Highest resale potential for the model</td></tr>
+        <tr><td>Working, visible wear</td><td>Still sellable, condition reflected in quote</td></tr>
+        <tr><td>Partially working</td><td>Value depends on what still functions</td></tr>
+        <tr><td>Not powering on</td><td>May still have component or scrap value</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <section>
+    <h2>Wiping your data before you sell</h2>
+    <p>
+      This step matters more than people expect. A factory reset is a
+      reasonable starting point for phones and laptops, but if you're unsure
+      whether it fully removed everything — or the device has business data
+      on it — ask about data destruction support before handing it over
+      rather than after. It's much easier to sort out beforehand.
+    </p>
+  </section>
+
+  <section>
+    <h2>How payment and pickup usually connect</h2>
+    <p>
+      Once a quote is accepted, pickup and payment happen together at your
+      door in most cases — there's no need to ship a device anywhere or
+      meet a stranger separately for cash. Confirm the specific arrangement
+      when your quote is finalized so you know exactly what to expect on the
+      day.
+    </p>
+  </section>
+
+  <section>
+    <h2>When recycling makes more sense than selling</h2>
+    <p>
+      Not everything is worth selling, and that's fine — very old, badly
+      damaged, or extremely low-demand devices may be better suited to
+      straightforward recycling. If your quote comes back lower than
+      expected, or a device just isn't worth the hassle of a resale
+      conversation, recycling is always the fallback option, with no
+      pressure to sell first.
+    </p>
+  </section>
+
+  <section>
+    <h2>Selling multiple or office devices</h2>
+    <p>
+      If you're clearing out several devices at once — old office laptops,
+      a batch of phones, spare monitors — mention the full list together
+      rather than one at a time. Bulk lists are easier to quote accurately,
+      and you can decide item by item whether to sell or recycle once
+      quotes come back.
+    </p>
+  </section>
+
+  <section>
+    <h2>Devices that surprise people with their value</h2>
+    <p>
+      It's worth checking before assuming something is worthless. Older
+      laptops with decent specs still see demand for basic use — students,
+      backup machines, secondary devices. Phones a couple of generations old
+      often retain more value than expected if the screen and battery are
+      healthy. Even non-working devices sometimes have salvageable parts
+      that carry value on their own. The only way to know is to ask rather
+      than assume.
+    </p>
+  </section>
+
+  <section>
+    <h2>Preparing accessories and originals</h2>
+    <p>
+      If you still have the original box, charger, or accessories for a
+      device, include them — it can make a modest difference to the quote
+      and definitely doesn't hurt. This matters less for very old devices
+      but is worth doing for anything from the last few years, especially
+      laptops and higher-value phones.
+    </p>
+  </section>
+
+  <section>
+    <h2>Mistakes to avoid</h2>
+    <ul class="check-list">
+      <li>Handing over a device before wiping personal data or accounts</li>
+      <li>Describing condition inaccurately, which delays the final quote</li>
+      <li>Assuming a non-working device has zero value without asking</li>
+      <li>Skipping photos, which usually slows down quote confirmation</li>
+    </ul>
+  </section>
+
+  <div class="disclaimer-box">
+    <p>
+      Final quote depends on item type, quantity, condition, location and
+      current market rate. Ewaste Kochi primarily supports Kochi, Ernakulam,
+      Kakkanad, Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro
+      enquiry areas. For other Kerala districts, contact us to check pickup
+      feasibility.
+    </p>
+  </div>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/sell-electronics/">Sell Electronics</a>
+      <a href="/marketplace/">Marketplace</a>
+      <a href="/e-waste-scrap-prices-kochi/">Scrap Price Guide</a>
+      <a href="/data-destruction/">Data Destruction</a>
+    </div>
+    <p class="related-posts">
+      Related guides: <a href="/blog/how-ewaste-scrap-quotes-work-kochi/">How E-Waste Scrap Quotes Work</a>,
+      <a href="/blog/laptop-recycling-kochi/">Laptop Recycling in Kochi</a>.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <section class="final-cta">
+    <h2>Ready to Sell Your Old Electronics?</h2>
+    <p>Share the item, condition and photos for a condition-based quote.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to sell an old device in Kochi." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .view-service { margin: -0.5rem 0 1.5rem; }
+  .view-service a { font-weight: 700; }
+  .quick-answer {
+    padding: 1.1rem 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    margin: 1.5rem 0;
+  }
+  .quick-answer-label {
+    margin: 0 0 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-primary);
+  }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways {
+    display: grid;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+    padding-left: 1.25rem;
+  }
+  .steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding-left: 1.25rem;
+  }
+  .table-scroll {
+    overflow-x: auto;
+    margin-top: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  table { width: 100%; min-width: 480px; border-collapse: collapse; font-size: 0.92rem; }
+  th, td { padding: 0.65rem 0.9rem; text-align: left; border-bottom: 1px solid var(--color-border); }
+  th { background: var(--color-bg); font-weight: 800; }
+  tbody tr:last-child td { border-bottom: none; }
+  .disclaimer-box {
+    padding: 0.9rem 1.1rem;
+    border-left: 3px solid var(--color-primary);
+    background: var(--color-surface);
+    border-radius: 0 0.5rem 0.5rem 0;
+    margin: 1.5rem 0;
+    font-size: 0.92rem;
+    color: var(--color-muted);
+  }
+  .disclaimer-box p { margin: 0; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .related-posts { margin-top: 0.75rem; font-size: 0.92rem; color: var(--color-muted); }
+  .final-cta {
+    padding: 1.5rem 1.25rem;
+    border-radius: 0.75rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    text-align: center;
+    margin: 2.5rem 0;
+  }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

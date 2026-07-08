@@ -1,0 +1,328 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Laptop Recycling in Kochi | Pickup, Resale or Safe Disposal?";
+const description =
+  "Laptop recycling in Kochi — how to decide between resale and recycling, wiping your data first, and what happens to laptops after pickup.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Laptop Recycling in Kochi", path: "/blog/laptop-recycling-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/laptop-recycling-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/laptop-recycling-kochi/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Where can I recycle a laptop in Kochi?",
+    a: "Book a pickup with Ewaste Kochi. Mention whether the laptop works, its rough age, and whether it still has your data on it.",
+  },
+  {
+    q: "Should I sell my old laptop instead of recycling it?",
+    a: "If it still works or is repairable, it may be worth more sold than recycled. See our sell electronics guide for how quotes work.",
+  },
+  {
+    q: "Do you wipe data from laptops before recycling?",
+    a: "Devices with storage can go through data destruction before recycling if requested — mention this when you book.",
+  },
+  {
+    q: "What if my laptop's screen is broken?",
+    a: "It can still be included in a pickup. A broken screen affects resale value but doesn't stop it from being collected for recycling.",
+  },
+  {
+    q: "Can I recycle just the charger, without the laptop?",
+    a: "Yes, chargers and cables are accepted on their own as part of general e-waste.",
+  },
+  {
+    q: "Is laptop recycling free?",
+    a: "Pickup feasibility depends on item type, quantity, condition and location. Confirm on WhatsApp before scheduling.",
+  },
+  {
+    q: "Which areas can book laptop pickup?",
+    a: "Ewaste Kochi primarily supports Kochi, Ernakulam, Kakkanad, Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro enquiry areas. For other Kerala districts, contact us to check pickup feasibility.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/laptop-recycling-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Laptop Recycling in Kochi</h1>
+  <p class="lede">
+    An old laptop sitting in a cupboard isn't doing anything for anyone.
+    Whether it still boots or died years ago, here's how to figure out the
+    right next step — resale, recycling, or data destruction first.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I have an old laptop I'd like to recycle in Kochi." />
+  <p class="view-service"><a href="/recycling/">View our recycling service →</a></p>
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      To recycle a laptop in Kochi, book a pickup and mention whether it
+      still works, its approximate age, and whether it has personal or
+      business data on it. Working laptops may be worth selling instead —
+      non-working ones go straight to responsible recycling, with data
+      destruction available first if needed.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Working laptops may have resale value — check before recycling.</li>
+    <li>Data should be wiped or destroyed before the laptop leaves your hands.</li>
+    <li>Broken screens or dead batteries don't disqualify a laptop from pickup.</li>
+    <li>Chargers and accessories can be recycled separately too.</li>
+  </ul>
+
+  <section>
+    <h2>Resale or recycling: how to decide</h2>
+    <p>
+      The first question is simple: does it power on, and is it usable? If
+      yes, it's worth getting a resale quote before assuming recycling is
+      the only option — see our sell electronics guide. If it's dead,
+      severely damaged, or simply too old to be worth repairing, recycling
+      is the more practical route, and there's no shame in skipping the
+      resale conversation entirely for a laptop that's clearly done.
+    </p>
+  </section>
+
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Laptop condition</th>
+          <th scope="col">Likely route</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Working, decent condition</td><td>Resale quote worth checking first</td></tr>
+        <tr><td>Working, heavily worn</td><td>Resale possible, lower quote likely</td></tr>
+        <tr><td>Not powering on</td><td>Recycling, possible component value</td></tr>
+        <tr><td>Physically damaged</td><td>Recycling, mention damage upfront</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <section>
+    <h2>Data on your laptop: handle this first</h2>
+    <p>
+      Laptops are one of the most common sources of leftover personal or
+      business data — saved passwords, documents, photos, browser history.
+      A factory reset removes a lot, but if you want certainty, especially
+      for a laptop that held business files, ask about data destruction
+      support before the device changes hands. This applies whether you're
+      selling or recycling.
+    </p>
+  </section>
+
+  <section>
+    <h2>Step by step: what happens to a recycled laptop</h2>
+    <ol class="steps-list">
+      <li><strong>Pickup is booked</strong> based on your item details and area.</li>
+      <li><strong>Data handling</strong> happens first if requested — wiping or destruction.</li>
+      <li><strong>Battery is separated</strong> from the rest of the device for safe handling.</li>
+      <li><strong>Reusable parts are assessed</strong> where the device has any remaining value.</li>
+      <li><strong>Remaining materials are recycled</strong> through the appropriate process.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>What about the battery?</h2>
+    <p>
+      Laptop batteries are handled separately from the rest of the machine.
+      If the battery is swollen or the laptop has been getting unusually hot
+      near the battery area, mention this specifically — see our battery
+      recycling guide for safe handling of damaged cells.
+    </p>
+  </section>
+
+  <section>
+    <h2>Screens, keyboards and other visible damage</h2>
+    <p>
+      A cracked screen, missing keys, or a hinge that doesn't close properly
+      won't stop a laptop from being recycled, and it doesn't necessarily
+      rule out resale either — some buyers specifically look for
+      parts-only or repairable units. Mention the damage honestly rather
+      than leaving it as a surprise; it changes which route makes sense but
+      doesn't close off options entirely.
+    </p>
+  </section>
+
+  <section>
+    <h2>Recycling laptops for a household vs. an office</h2>
+    <p>
+      A single household laptop is a straightforward pickup. If you're
+      clearing out several laptops from an office — a common situation
+      during upgrades or downsizing — mention the full count and whether an
+      asset list or data destruction documentation is needed. That usually
+      routes through our ITAD service rather than a standard pickup.
+    </p>
+  </section>
+
+  <section>
+    <h2>What happens to the parts inside</h2>
+    <p>
+      A laptop isn't a single material — it's a mix of aluminum or plastic
+      casing, a circuit board, a screen, a battery, and often a storage
+      drive, each of which needs different handling. This is why recycling
+      a laptop properly takes more than tossing it in a bin: the components
+      have to be separated so each part goes through the right process
+      instead of being treated as one lump of "electronics."
+    </p>
+  </section>
+
+  <section>
+    <h2>Old laptops that still have some life left</h2>
+    <p>
+      Before assuming a laptop is only good for recycling, consider whether
+      it could still serve a lighter purpose — basic browsing, a backup
+      machine, a device for a student. If it's not worth your time to keep
+      or pass along, that's completely fine, but it's worth a moment's
+      thought before defaulting straight to recycling for anything that
+      still boots normally.
+    </p>
+  </section>
+
+  <section>
+    <h2>Mistakes to avoid</h2>
+    <ul class="check-list">
+      <li>Handing over a laptop without wiping saved passwords and accounts</li>
+      <li>Assuming a non-working laptop has no value without checking</li>
+      <li>Leaving a swollen battery installed instead of flagging it</li>
+      <li>Forgetting to include the charger and any accessories</li>
+    </ul>
+  </section>
+
+  <div class="disclaimer-box">
+    <p>
+      Pickup feasibility depends on item type, quantity, condition and
+      location. Ewaste Kochi primarily supports Kochi, Ernakulam, Kakkanad,
+      Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro enquiry
+      areas. For other Kerala districts, contact us to check pickup
+      feasibility.
+    </p>
+  </div>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/recycling/">E-Waste Recycling</a>
+      <a href="/sell-electronics/">Sell Electronics</a>
+      <a href="/data-destruction/">Data Destruction</a>
+      <a href="/computer-scrap-buyers-kochi/">Computer Scrap Buyers</a>
+    </div>
+    <p class="related-posts">
+      Related guides: <a href="/blog/how-to-sell-old-electronics-kochi/">How to Sell Old Electronics</a>,
+      <a href="/blog/data-destruction-kochi-guide/">Data Destruction in Kochi</a>.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <section class="final-cta">
+    <h2>Ready to Recycle Your Laptop?</h2>
+    <p>Share the model, condition and whether you need data destruction.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to recycle an old laptop in Kochi." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .view-service { margin: -0.5rem 0 1.5rem; }
+  .view-service a { font-weight: 700; }
+  .quick-answer {
+    padding: 1.1rem 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    margin: 1.5rem 0;
+  }
+  .quick-answer-label {
+    margin: 0 0 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-primary);
+  }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways {
+    display: grid;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+    padding-left: 1.25rem;
+  }
+  .steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding-left: 1.25rem;
+  }
+  .table-scroll {
+    overflow-x: auto;
+    margin-top: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  table { width: 100%; min-width: 480px; border-collapse: collapse; font-size: 0.92rem; }
+  th, td { padding: 0.65rem 0.9rem; text-align: left; border-bottom: 1px solid var(--color-border); }
+  th { background: var(--color-bg); font-weight: 800; }
+  tbody tr:last-child td { border-bottom: none; }
+  .disclaimer-box {
+    padding: 0.9rem 1.1rem;
+    border-left: 3px solid var(--color-primary);
+    background: var(--color-surface);
+    border-radius: 0 0.5rem 0.5rem 0;
+    margin: 1.5rem 0;
+    font-size: 0.92rem;
+    color: var(--color-muted);
+  }
+  .disclaimer-box p { margin: 0; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .related-posts { margin-top: 0.75rem; font-size: 0.92rem; color: var(--color-muted); }
+  .final-cta {
+    padding: 1.5rem 1.25rem;
+    border-radius: 0.75rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    text-align: center;
+    margin: 2.5rem 0;
+  }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

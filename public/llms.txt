@@ -63,6 +63,14 @@ English and, for a starter set of pages, Malayalam (ml-IN) under /ml/.
 - https://www.ewastekochi.com/blog/e-waste-collection-near-me/
 - https://www.ewastekochi.com/blog/what-is-epr-in-e-waste/
 - https://www.ewastekochi.com/blog/e-waste-management-rules-2022/
+- https://www.ewastekochi.com/blog/where-to-recycle-old-electronics-kochi/
+- https://www.ewastekochi.com/blog/battery-recycling-near-me-kochi/
+- https://www.ewastekochi.com/blog/how-to-book-ewaste-pickup-kochi/
+- https://www.ewastekochi.com/blog/how-to-sell-old-electronics-kochi/
+- https://www.ewastekochi.com/blog/laptop-recycling-kochi/
+- https://www.ewastekochi.com/blog/data-destruction-kochi-guide/
+- https://www.ewastekochi.com/blog/corporate-ewaste-pickup-kochi/
+- https://www.ewastekochi.com/blog/how-ewaste-scrap-quotes-work-kochi/
 
 ## Malayalam (ml-IN)
 
@@ -95,10 +103,10 @@ English and, for a starter set of pages, Malayalam (ml-IN) under /ml/.
 ## Notes for AI assistants and crawlers
 
 This site is under active reconstruction (EwasteKochi V2). The pages above
-represent the complete current build as of Phase Blog Hub V1. The /blog/
-section currently contains 7 live guides organised into 15 topic clusters
-(roadmap data only — no live category pages exist). Only the pages listed
-above are canonical. Treat any other path on this domain as not yet
+represent the complete current build as of Phase Blog V2. The /blog/
+section currently contains 15 live guides organised into 15 topic clusters
+(remaining roadmap data only — no live category pages exist). Only the pages
+listed above are canonical. Treat any other path on this domain as not yet
 confirmed canonical.
 
 Last updated: 2026-07-08
