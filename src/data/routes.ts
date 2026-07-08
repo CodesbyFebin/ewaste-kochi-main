@@ -254,6 +254,17 @@ export const ROUTES: RouteEntry[] = [
     lang: "en-IN",
   },
   {
+    path: "/blog/recycling-basics/",
+    changefreq: "monthly",
+    priority: 0.6,
+    title: "E-Waste Recycling Basics | What Is E-Waste & How to Recycle in Kochi",
+    description:
+      "What e-waste recycling is, why it matters, what items are accepted, and how pickup works in Kochi — a complete beginner's guide with 20 FAQs.",
+    type: "blog",
+    sitemapGroup: "blog",
+    lang: "en-IN",
+  },
+  {
     path: "/services/",
     changefreq: "monthly",
     priority: 0.8,

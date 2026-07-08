@@ -68,6 +68,12 @@ export const BLOG_CLUSTERS: BlogCluster[] = [
         excerpt:
           "Doorstep pickup, drop-off options, resale, and scrap quotes compared, with what to prepare before collection.",
       },
+      {
+        title: "E-Waste Recycling Basics: Complete Beginner's Guide",
+        href: "/blog/recycling-basics/",
+        excerpt:
+          "What e-waste recycling is, why it matters, what items are accepted, and how pickup works — with 20 FAQs.",
+      },
     ],
     plannedPosts: [
       "What Is E-Waste Recycling? A Complete Beginner Guide",

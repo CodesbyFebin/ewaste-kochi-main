@@ -1,0 +1,306 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+import { BLOG_ROADMAP_20 } from "../../../data/blogRoadmap20";
+
+const title = "E-Waste Recycling Basics | What Is E-Waste & How to Recycle in Kochi";
+const description =
+  "What e-waste recycling is, why it matters, what items are accepted, and how pickup works in Kochi — a complete beginner's guide with 20 FAQs.";
+const datePublished = "2026-07-09";
+const dateModified = "2026-07-09";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "E-Waste Recycling Basics", path: "/blog/recycling-basics/" },
+];
+
+const cluster = BLOG_ROADMAP_20.find((c) => c.slug === "e-waste-recycling-basics")!;
+
+// Only the 3 topics below correspond to real, published posts — everything else
+// in cluster.blogTopics is roadmap data only (src/data/blogRoadmap20.ts), not a
+// live route. Linking all 30 would create dangling links, so the rest render as
+// plain text.
+const publishedTopics: Record<string, string> = {
+  "Where to Recycle Old Electronics in Kochi": "/blog/where-to-recycle-old-electronics-kochi/",
+  "What Is E-Waste Recycling?": "/blog/what-is-ewaste/",
+  "Common E-Waste Items Found in Homes": "/blog/e-waste-examples/",
+};
+
+const collectItems = [
+  "Laptops", "Desktops", "Monitors", "Keyboards", "Printers", "Routers",
+  "Cables", "UPS systems", "Inverter batteries", "Lithium batteries",
+  "Mobile phones", "Tablets", "Servers", "Hard drives", "CCTV equipment",
+  "Mixed IT scrap", "TVs", "Chargers",
+];
+
+const howItWorks = [
+  { title: "Share item details", copy: "Send the type of electronics, quantity and condition on WhatsApp." },
+  { title: "Send location and photos", copy: "Photos help identify batteries, damaged items and bulky or server equipment." },
+  { title: "Get pickup / quote confirmation", copy: "The team confirms feasibility, service type and quote details where applicable." },
+  { title: "Schedule collection", copy: "Pick a slot based on availability in your area." },
+  { title: "Recycling, reuse or responsible handling", copy: "Items are routed to reuse, resale enquiry, recycling or battery separation." },
+  { title: "Documentation where applicable", copy: "Business and data destruction pickups can include agreed documentation." },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/recycling-basics/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/recycling-basics/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+// The 20 real FAQ questions for this cluster (src/data/blogRoadmap20.ts), each
+// given a genuine, specific answer rather than a templated one.
+const faqItems = [
+  { q: "What is e-waste recycling?", a: "It's the process of collecting, sorting and processing discarded electronics to recover reusable materials and safely handle hazardous components like battery cells, rather than sending them to landfill or informal scrap dealers." },
+  { q: "Where can I recycle old electronics in Kochi?", a: "Book a pickup with Ewaste Kochi. Share your item list, location and photos on WhatsApp, and the team confirms feasibility and the right handling route." },
+  { q: "What electronics can be recycled?", a: "Laptops, desktops, monitors, keyboards, printers, routers, cables, UPS and inverter batteries, lithium batteries, mobile phones, tablets, servers, hard drives, CCTV equipment, TVs and mixed IT scrap." },
+  { q: "Can broken electronics be recycled?", a: "Yes. A device not powering on or physically damaged doesn't disqualify it from pickup — mention the damage so it can be handled appropriately." },
+  { q: "Is e-waste pickup available in Kochi?", a: "Yes, doorstep pickup is the standard route. Pickup feasibility depends on item type, quantity, condition and location." },
+  { q: "What should I send before booking pickup?", a: "Your item list, approximate quantity, area, and photos — especially for batteries or anything damaged or bulky." },
+  { q: "Do I need to remove data before recycling?", a: "For anything with storage — laptops, hard drives, phones — yes, ideally beforehand. Ask about data destruction support if you're not confident doing it yourself." },
+  { q: "Can batteries be mixed with e-waste?", a: "They can be collected in the same pickup but are processed separately from general electronics for safety. Mention batteries specifically when you book." },
+  { q: "Can old cables and chargers be recycled?", a: "Yes, cables, chargers and adapters are accepted as part of general e-waste, including on their own without an accompanying device." },
+  { q: "What happens after e-waste is collected?", a: "Items are sorted by type. Data-bearing devices go through data handling first if requested, batteries are separated, and anything reusable may be routed toward resale rather than recycling." },
+  { q: "Is recycling better than dumping?", a: "Yes. Dumping electronics with household waste risks unsafe informal handling and environmental harm; proper recycling keeps materials out of landfill and handles hazardous components correctly." },
+  { q: "Can reusable devices be resold instead?", a: "Yes. Working or repairable devices may have resale value — see our sell electronics guide for how condition-based quotes work." },
+  { q: "Does Ewaste Kochi collect from homes?", a: "Yes, home pickups are a standard part of the service, from a single old phone to a full household cleanout." },
+  { q: "Does pickup depend on location?", a: "Yes. Ewaste Kochi primarily supports Kochi, Ernakulam, Kakkanad, Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro enquiry areas. For other Kerala districts, contact us to check pickup feasibility." },
+  { q: "Is recycling available for offices?", a: "Yes. Office and bulk pickups are supported, and larger jobs with data destruction or documentation needs typically route through our ITAD service." },
+  { q: "Are TVs and monitors accepted?", a: "Yes, including damaged screens — share photos and location so the team can confirm handling." },
+  { q: "Should I share photos before pickup?", a: "It helps a lot, particularly for batteries, damaged items, or anything bulky — it speeds up confirmation and avoids surprises on pickup day." },
+  { q: "What items need special handling?", a: "Batteries (especially swollen, leaking or damaged ones) and any device holding personal or business data need separate, careful handling." },
+  { q: "Can I recycle mixed electronics?", a: "Yes, a single pickup can include a mix of item types — laptops, cables, batteries, peripherals — just list everything together when you book." },
+  { q: "How do I start?", a: "Message Ewaste Kochi on WhatsApp with your item list, location and photos, or use the Book Pickup button on this page." },
+];
+---
+
+<Layout title={title} description={description} path="/blog/recycling-basics/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Recycling Basics: What It Is and How It Works in Kochi</h1>
+  <p class="lede">
+    A complete beginner's guide to recycling old electronics, batteries and IT
+    scrap in Kochi — what counts as e-waste, why it matters, and exactly how
+    pickup works.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to recycle old electronics in Kochi. Can you help?" />
+
+  <div class="quick-facts">
+    <p class="quick-facts-label">Quick facts</p>
+    <ul>
+      <li><strong>Service area:</strong> Kochi, Ernakulam, Kakkanad, Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro enquiry areas. For other Kerala districts, contact us to check pickup feasibility.</li>
+      <li><strong>Pickup:</strong> Feasibility depends on item type, quantity, condition and location.</li>
+      <li><strong>Accepted items:</strong> Laptops, desktops, batteries, cables, printers, TVs, servers, hard drives, mobile phones and mixed IT scrap.</li>
+      <li><strong>Data destruction:</strong> Available for hard drives, laptops, servers and storage media. Documentation availability depends on the agreed service.</li>
+      <li><strong>Batteries:</strong> UPS, inverter, lithium and laptop batteries accepted. Damaged or swollen batteries need photos before pickup.</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2>What Is E-Waste Recycling?</h2>
+    <p>
+      E-waste recycling is the collection, sorting and processing of discarded
+      electronic devices to recover reusable materials — metals, plastics and
+      working components — while safely handling hazardous parts like battery
+      cells rather than letting them end up in landfill or informal scrap
+      handling.
+    </p>
+    <p>In Kochi, that generally looks like:</p>
+    <ul class="check-list">
+      <li><strong>Collection</strong> — doorstep pickup based on your item list and location.</li>
+      <li><strong>Sorting</strong> — separating items by type and condition.</li>
+      <li><strong>Handling</strong> — data destruction, battery separation or component recovery as needed.</li>
+      <li><strong>Routing</strong> — recycling, resale enquiry, or responsible disposal depending on what's actually there.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Why It Matters</h2>
+    <p>
+      Electronics left in household waste usually end up handled informally —
+      dismantled by hand without safety equipment, or dumped somewhere that
+      isn't equipped for it. That's avoidable with a proper pickup instead.
+      Responsible recycling keeps electronics out of landfill, separates
+      batteries so they don't leak or ignite, supports reuse where a device is
+      still viable, and protects any personal or business data still on the
+      device before it changes hands.
+    </p>
+  </section>
+
+  <section>
+    <h2>What Items Can Be Recycled</h2>
+    <ul class="collect-grid">
+      {collectItems.map((item) => <li>{item}</li>)}
+    </ul>
+    <p class="muted-note">
+      Some devices may have reuse or resale value depending on condition, age,
+      working status and market demand. Other items may be better suited for
+      recycling or separate battery handling. Final quote and pickup
+      feasibility depend on item type, quantity, condition, location and
+      current market rate.
+    </p>
+  </section>
+
+  <section>
+    <h2>How E-Waste Pickup Works</h2>
+    <ol class="steps-list">
+      {howItWorks.map((step) => (
+        <li><strong>{step.title}.</strong> {step.copy}</li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="cross-links">
+    <div class="cross-link-card">
+      <h3>Batteries need separate handling</h3>
+      <p>UPS, inverter, laptop and lithium batteries — safe collection for damaged or healthy cells alike.</p>
+      <a href="/battery-recycling/">Battery Recycling →</a>
+    </div>
+    <div class="cross-link-card">
+      <h3>Wondering what your electronics are worth?</h3>
+      <p>Reference pricing to understand condition-based value before you sell or recycle.</p>
+      <a href="/e-waste-scrap-prices-kochi/">Scrap Price Guide →</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Explore the E-Waste Recycling Basics Cluster</h2>
+    <p class="muted-note">
+      This is the full topic roadmap for this cluster. The 3 linked titles
+      below are live guides; the rest are planned topics — data only, not yet
+      published.
+    </p>
+    <ol class="topic-list">
+      {cluster.blogTopics.map((topic) => (
+        publishedTopics[topic]
+          ? <li><a href={publishedTopics[topic]}>{topic}</a></li>
+          : <li class="planned">{topic}</li>
+      ))}
+    </ol>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <section class="final-cta">
+    <h2>Ready to Recycle Your Old Electronics in Kochi?</h2>
+    <p>Share your item list, location and photos for faster pickup confirmation.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to recycle old electronics in Kochi." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .quick-facts {
+    padding: 1.1rem 1.25rem;
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-primary);
+    border-radius: 0 0.5rem 0.5rem 0;
+    background: var(--color-surface);
+    margin: 1.5rem 0;
+  }
+  .quick-facts-label {
+    margin: 0 0 0.6rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-primary);
+  }
+  .quick-facts ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    display: grid;
+    gap: 0.5rem;
+  }
+  .quick-facts li { color: var(--color-text); }
+  .check-list, .steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-left: 1.25rem;
+  }
+  .collect-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+    margin: 1.2rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .collect-grid li {
+    padding: 0.6rem 0.85rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-weight: 650;
+    font-size: 0.92rem;
+  }
+  .muted-note { color: var(--color-muted); font-size: 0.92rem; }
+  .cross-links {
+    display: grid;
+    gap: 1rem;
+    margin: 3rem 0;
+  }
+  .cross-link-card {
+    padding: 1.15rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .cross-link-card h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+  .cross-link-card p { margin: 0; color: var(--color-muted); font-size: 0.92rem; }
+  .cross-link-card a { display: inline-block; margin-top: 0.65rem; color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .topic-list {
+    margin: 1.2rem 0 0;
+    padding-left: 1.4rem;
+    display: grid;
+    gap: 0.4rem;
+    font-size: 0.95rem;
+  }
+  .topic-list a { color: var(--color-primary); font-weight: 700; }
+  .topic-list li.planned { color: var(--color-muted); }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .final-cta {
+    padding: 1.75rem 1.25rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--color-surface), var(--color-bg));
+    border: 1px solid var(--color-border);
+    margin: 2.5rem 0;
+  }
+  .final-cta p { margin: 0.5rem 0 0; color: var(--color-muted); }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  @media (min-width: 640px) {
+    .collect-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (min-width: 700px) {
+    .cross-links { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
