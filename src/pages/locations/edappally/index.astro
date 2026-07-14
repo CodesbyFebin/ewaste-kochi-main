@@ -1,0 +1,140 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "E-Waste Collection in Edappally | Free Pickup Near Lulu Mall & NH66";
+const description =
+  "Doorstep e-waste pickup in Edappally, Kochi — homes, shops, and offices near Lulu Mall and the NH66 junction. Free collection, battery recycling, and data destruction.";
+const lastUpdated = "2026-07-15";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Locations", path: "/locations/" },
+  { name: "Edappally", path: "/locations/edappally/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "E-waste collection",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: {
+      "@type": "Place",
+      name: "Edappally, Kochi, Kerala",
+    },
+    url: `${SITE_URL}/locations/edappally/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/locations/edappally/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Do you collect from apartments near Lulu Mall and the NH66 stretch?",
+    a: "Yes — Edappally's dense apartment blocks around the mall and highway junction are a regular part of our coverage. Include your building name, floor and any access instructions when you book.",
+  },
+  {
+    q: "Can retail shops or small offices near the junction schedule pickup?",
+    a: "Yes. Small businesses and shops in the Edappally commercial stretch can book the same way as any household — mention it's a shop or office and roughly what you have.",
+  },
+  {
+    q: "Is same-day pickup realistic in Edappally?",
+    a: "Sometimes, given how central and frequently-serviced the area is, but it isn't guaranteed — it depends on current scheduling. Message early in the day for the best chance.",
+  },
+  {
+    q: "Do you collect old TVs and large appliances in Edappally?",
+    a: "Yes, including damaged screens — share photos and any access notes (lift availability, floor) so the team can plan transport correctly.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/locations/edappally/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Collection in Edappally</h1>
+  <p class="lede">
+    Edappally — a major junction on NH66 known for Lulu Mall and Oberon
+    Mall, and one of the more densely built-up residential and commercial
+    stretches in Kochi — is a regular part of our doorstep pickup coverage.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to schedule an e-waste pickup in Edappally." />
+
+  <section>
+    <h2>Services available in Edappally</h2>
+    <p>
+      <a href="/recycling/">General e-waste recycling</a> for laptops,
+      desktops, monitors, and printers; <a href="/battery-recycling/">battery
+      recycling</a> for UPS, inverter, and device batteries;
+      <a href="/data-destruction/">data destruction</a> for any device with
+      storage; and a <a href="/marketplace/">marketplace</a> quote if you'd
+      rather sell working equipment than recycle it.
+    </p>
+  </section>
+
+  <section>
+    <h2>Apartment and household pickup</h2>
+    <p>
+      Edappally's residential blocks — many of them multi-storey apartment
+      complexes near the mall district and along the NH66 corridor — are a
+      normal part of daily coverage. Include the building name, floor and
+      any access instructions (lift availability, security desk) when you
+      message us, and a combined pickup across a few neighbouring flats is
+      often more efficient than several separate visits.
+    </p>
+  </section>
+
+  <section>
+    <h2>Retail and small business pickup</h2>
+    <p>
+      The shops and small offices around the Edappally junction and mall
+      area can book pickup the same way as any household — old billing
+      computers, printers, routers, and display electronics are all
+      accepted. Mention it's a business pickup so the team can plan for
+      access during business hours.
+    </p>
+  </section>
+
+  <section>
+    <h2>Compliance</h2>
+    <p>
+      Collection and recycling in Edappally follows the same documented
+      environmental handling practices used across all our service areas.
+      Documentation support may be available depending on the service type
+      and agreed handling process — contact us via our
+      <a href="/contact/">contact page</a> to confirm what's available.
+    </p>
+  </section>
+
+  <section>
+    <h2>Nearby areas</h2>
+    <p>
+      Also serving Kakkanad, Kalamassery, Vyttila, and Palarivattom — see
+      the full <a href="/locations/">locations directory</a> for all areas
+      we cover.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} heading="Edappally Pickup FAQs" />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

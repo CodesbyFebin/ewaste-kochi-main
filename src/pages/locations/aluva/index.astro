@@ -1,0 +1,141 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "E-Waste Collection in Aluva | Free Pickup Near Kochi Metro & Airport";
+const description =
+  "Doorstep e-waste pickup in Aluva, Kochi — homes and offices near the Kochi Metro terminus and Cochin International Airport corridor. Free collection, battery recycling, data destruction.";
+const lastUpdated = "2026-07-15";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Locations", path: "/locations/" },
+  { name: "Aluva", path: "/locations/aluva/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "E-waste collection",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: {
+      "@type": "Place",
+      name: "Aluva, Ernakulam, Kerala",
+    },
+    url: `${SITE_URL}/locations/aluva/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/locations/aluva/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Is Aluva covered even though it's further from central Kochi?",
+    a: "Yes — Aluva is one of our core Kochi-metro service areas, not an outlying add-on. Pickup works the same way as anywhere else: send your item list, photos, and location.",
+  },
+  {
+    q: "Do you collect from businesses near the airport corridor?",
+    a: "Yes. Offices and businesses along the Aluva–airport stretch can book pickup the same way as any business — mention it's a business job and roughly what you have.",
+  },
+  {
+    q: "Can I book pickup near the Aluva metro station or railway station?",
+    a: "Yes, both areas are well within regular coverage — share your specific building or landmark so the team can plan the visit precisely.",
+  },
+  {
+    q: "Do you collect inverter and UPS batteries in Aluva?",
+    a: "Yes — these are a common household item in Aluva given how many homes rely on backup power, and they're collected in the same visit as general e-waste, processed through a separate stream for safety.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/locations/aluva/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Collection in Aluva</h1>
+  <p class="lede">
+    Aluva — home to the Kochi Metro's northern terminus and close to
+    Cochin International Airport — is one of our core service areas, not
+    an occasional add-on. We run the same doorstep pickup process here as
+    anywhere else in Kochi.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to schedule an e-waste pickup in Aluva." />
+
+  <section>
+    <h2>Services available in Aluva</h2>
+    <p>
+      <a href="/recycling/">General e-waste recycling</a> for laptops,
+      desktops, monitors, and printers; <a href="/battery-recycling/">battery
+      recycling</a> for UPS, inverter, and device batteries — a
+      particularly common item in Aluva households given how many rely on
+      backup power; <a href="/data-destruction/">data destruction</a> for
+      any device with storage; and a <a href="/marketplace/">marketplace</a>
+      quote for working equipment you'd rather sell.
+    </p>
+  </section>
+
+  <section>
+    <h2>Household pickup</h2>
+    <p>
+      Aluva's residential areas, including neighbourhoods near the railway
+      station, metro terminus, and the town centre, are covered the same
+      way as any other part of our service area. There's no minimum
+      quantity for household pickups — a single old phone or a full
+      cleanout are both normal bookings.
+    </p>
+  </section>
+
+  <section>
+    <h2>Business and office pickup near the airport corridor</h2>
+    <p>
+      Offices and businesses along the Aluva–airport stretch can schedule
+      pickup the same way as any business — mention it's an office job and
+      share a rough item list. For larger, structured jobs needing asset
+      tracking and documentation, see our <a href="/itad/">ITAD
+      service</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Compliance</h2>
+    <p>
+      Collection and recycling in Aluva follows the same documented
+      environmental handling practices used across all our service areas.
+      Documentation support may be available depending on the service type
+      and agreed handling process — contact us via our
+      <a href="/contact/">contact page</a> to confirm what's available.
+    </p>
+  </section>
+
+  <section>
+    <h2>Nearby areas</h2>
+    <p>
+      Also serving Kalamassery, Angamaly, North Paravur, and other nearby
+      neighborhoods — see the full <a href="/locations/">locations
+      directory</a> for all areas we cover.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} heading="Aluva Pickup FAQs" />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

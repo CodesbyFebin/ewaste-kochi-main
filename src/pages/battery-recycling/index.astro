@@ -10,7 +10,7 @@ import { getHreflang } from "../../data/routes";
 const title = "Where to Recycle Batteries in Kochi | Free Doorstep Pickup";
 const description =
   "Recycle UPS, inverter, laptop, and phone batteries in Kochi with free doorstep pickup. Safe, compliant disposal — batteries should never go in household trash.";
-const lastUpdated = "2026-07-07";
+const lastUpdated = "2026-07-15";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
@@ -59,7 +59,31 @@ const faqItems = [
   },
   {
     q: "What happens to batteries after collection?",
-    a: "Batteries are sorted by chemistry and routed to compliant recycling processes rather than general landfill disposal, in line with Pollution Control Board requirements for battery waste.",
+    a: "Batteries are sorted by chemistry and routed to compliant recycling processes rather than general landfill disposal. Documentation support may be available depending on the service type and agreed handling process.",
+  },
+  {
+    q: "Do you accept lithium-ion batteries specifically, not just lead-acid?",
+    a: "Yes. Lithium-ion cells from phones, laptops, and power banks are accepted alongside lead-acid UPS and inverter batteries — they're processed through different streams because the chemistries carry different risks.",
+  },
+  {
+    q: "Is there a minimum quantity for battery pickup?",
+    a: "No — a single old phone battery is a completely normal booking, not just bulk office UPS clearouts.",
+  },
+  {
+    q: "Can I get a quote if the batteries still have scrap value?",
+    a: "Some battery types may carry material value depending on type, quantity, condition and current market rate — mention this when you book and we'll advise, though it's never guaranteed before inspection.",
+  },
+  {
+    q: "How do I safely store a battery until pickup?",
+    a: "Keep it dry, away from heat and direct sun, and don't stack heavy items on top. Anything visibly damaged should be kept separate from healthy batteries.",
+  },
+  {
+    q: "Is same-day battery pickup available?",
+    a: "Sometimes, depending on your area and current scheduling, but it isn't guaranteed. Message early in the day with complete details for the best chance.",
+  },
+  {
+    q: "Do you collect e-bike or scooter batteries?",
+    a: "These larger lithium packs have their own handling considerations — message us with details first so feasibility can be confirmed case by case rather than assumed.",
   },
 ];
 ---
@@ -124,11 +148,54 @@ const faqItems = [
   </section>
 
   <section>
+    <h2>Battery types, at a glance</h2>
+    <ul class="check-list">
+      <li><strong>UPS &amp; inverter batteries</strong> — heavy, sealed lead-acid units, usually the largest single battery item a household or office deals with.</li>
+      <li><strong>Laptop &amp; mobile batteries</strong> — lithium-ion, whether still inside the device or removed.</li>
+      <li><strong>Power banks</strong> — same lithium-cell risk profile as phone batteries; flag anything that's stopped holding charge or feels warm.</li>
+      <li><strong>Mixed household batteries</strong> — remotes, toys, and other small batteries, generally lower risk but still handled separately from general electronics.</li>
+    </ul>
+    <p class="muted-note">
+      For the fuller safety breakdown — what to do with a swollen or leaking
+      cell specifically, and how each chemistry is handled after collection
+      — see our <a href="/blog/battery-recycling-near-me-kochi/">battery
+      recycling guide</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Household battery pickup</h2>
+    <p>
+      A single old phone battery is a completely normal booking — there's
+      no minimum quantity. Most household pickups are a mixed batch: a
+      couple of dead power banks, an old laptop battery, maybe an inverter
+      battery that's stopped holding charge. Apartment pickups work the
+      same way as standalone homes — include the building name, floor and
+      any access instructions when you message us.
+    </p>
+  </section>
+
+  <section>
+    <h2>Business and UPS-room battery pickup</h2>
+    <p>
+      Offices replacing a UPS battery bank, or clearing out a server room
+      during an equipment upgrade, can schedule bulk collection coordinated
+      around the maintenance or replacement schedule. Mention the
+      approximate count and whether documentation is needed for your
+      records. For larger IT decommissioning where batteries are just one
+      part of a bigger job, see our <a href="/itad/">ITAD service</a>.
+    </p>
+  </section>
+
+  <section>
     <h2>Compliance</h2>
     <p>
-      Battery collection and recycling follows Pollution Control
-      Board-authorized handling procedures. Documentation is available on
-      request via our <a href="/contact/">contact page</a>.
+      Battery collection and recycling follows documented environmental
+      handling practices, with pickup, sorting and documentation support
+      depending on the service type. If you need compliance documentation
+      for business or ITAD work, contact us before pickup via our
+      <a href="/contact/">contact page</a> so the required handling
+      process can be confirmed.
     </p>
   </section>
 
@@ -154,6 +221,8 @@ const faqItems = [
 <style>
   .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
   .process-list { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 1.25rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .muted-note { color: var(--color-muted); font-size: 0.9rem; margin-top: 0.7rem; }
   .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
   .updated { font-size: 0.8rem; color: var(--color-muted); }
 </style>

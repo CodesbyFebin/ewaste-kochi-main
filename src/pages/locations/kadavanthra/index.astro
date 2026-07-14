@@ -1,0 +1,141 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "E-Waste Collection in Kadavanthra | Free Doorstep Pickup Near Metro";
+const description =
+  "Doorstep e-waste pickup in Kadavanthra, Kochi — homes and offices near the Kochi Metro station and Kaloor-Vyttila corridor. Free collection, battery recycling, data destruction.";
+const lastUpdated = "2026-07-15";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Locations", path: "/locations/" },
+  { name: "Kadavanthra", path: "/locations/kadavanthra/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "E-waste collection",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: {
+      "@type": "Place",
+      name: "Kadavanthra, Kochi, Kerala",
+    },
+    url: `${SITE_URL}/locations/kadavanthra/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/locations/kadavanthra/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Do you cover apartments near the Kadavanthra metro station?",
+    a: "Yes — the residential blocks around the metro station and along the Kaloor-Vyttila stretch are a regular part of our coverage. Include your building name and floor when you book.",
+  },
+  {
+    q: "Can government or institutional offices in Kadavanthra schedule pickup?",
+    a: "Yes. Kadavanthra has a mix of government and private offices alongside residential areas — office pickups are booked the same way as any business, with a rough item list and location.",
+  },
+  {
+    q: "Is Kadavanthra covered for same-day pickup?",
+    a: "Sometimes, given its central location, but it isn't guaranteed — it depends on current scheduling. Message early with complete details for the best chance.",
+  },
+  {
+    q: "Do you collect batteries and mixed electronics together in Kadavanthra?",
+    a: "Yes, in the same visit, though batteries are always processed through a separate stream for safety — mention them specifically when you book.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/locations/kadavanthra/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Collection in Kadavanthra</h1>
+  <p class="lede">
+    Kadavanthra — a well-connected central Kochi locality near the Kochi
+    Metro and the Kaloor-Vyttila corridor, with a mix of residential
+    buildings, government offices, and small businesses — is a regular
+    part of our doorstep pickup coverage.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to schedule an e-waste pickup in Kadavanthra." />
+
+  <section>
+    <h2>Services available in Kadavanthra</h2>
+    <p>
+      <a href="/recycling/">General e-waste recycling</a> for laptops,
+      desktops, monitors, and printers; <a href="/battery-recycling/">battery
+      recycling</a> for UPS, inverter, and device batteries;
+      <a href="/data-destruction/">data destruction</a> for any device with
+      storage; and a <a href="/marketplace/">marketplace</a> quote for
+      working equipment you'd rather sell than recycle.
+    </p>
+  </section>
+
+  <section>
+    <h2>Household and apartment pickup</h2>
+    <p>
+      Kadavanthra's residential blocks — including buildings near the
+      metro station and along the main Kaloor-Vyttila stretch — are a
+      normal part of daily coverage. Include the building name, floor, and
+      any access instructions when you message us, and a combined pickup
+      across neighbouring flats is often more efficient than several
+      separate visits.
+    </p>
+  </section>
+
+  <section>
+    <h2>Office and institutional pickup</h2>
+    <p>
+      Kadavanthra's mix of government and private offices can schedule
+      pickup the same way as any household — mention it's an office job
+      and roughly what you have. For larger, structured decommissioning
+      with asset lists and documentation, see our <a href="/itad/">ITAD
+      service</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Compliance</h2>
+    <p>
+      Collection and recycling in Kadavanthra follows the same documented
+      environmental handling practices used across all our service areas.
+      Documentation support may be available depending on the service type
+      and agreed handling process — contact us via our
+      <a href="/contact/">contact page</a> to confirm what's available.
+    </p>
+  </section>
+
+  <section>
+    <h2>Nearby areas</h2>
+    <p>
+      Also serving Kaloor, Vyttila, Palarivattom, and Ernakulam South —
+      see the full <a href="/locations/">locations directory</a> for all
+      areas we cover.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} heading="Kadavanthra Pickup FAQs" />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

@@ -7,8 +7,8 @@ import { SITE_URL } from "../../data/site";
 
 const title = "E-Waste Pickup Locations in Kochi & Kerala | Ewaste Kochi";
 const description =
-  "Doorstep e-waste pickup areas across Kochi, Ernakulam district, and wider Kerala. Find your neighborhood and book a free pickup.";
-const lastUpdated = "2026-07-07";
+  "Doorstep e-waste pickup areas across Kochi and Ernakulam district. Find your neighborhood and book a free pickup — contact us to check other Kerala districts.";
+const lastUpdated = "2026-07-15";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
@@ -30,28 +30,30 @@ const builtLocations = [
   { name: "Kakkanad", href: "/locations/kakkanad/" },
   { name: "Ernakulam South", href: "/locations/ernakulam-south/" },
   { name: "Kalamassery", href: "/locations/kalamassery/" },
+  { name: "Edappally", href: "/locations/edappally/" },
+  { name: "Infopark Kochi", href: "/locations/infopark-kochi/" },
+  { name: "Kadavanthra", href: "/locations/kadavanthra/" },
+  { name: "Aluva", href: "/locations/aluva/" },
 ];
 
 const otherServedAreas = [
-  "Edappally", "Aluva", "Vyttila", "Palarivattom", "Thrippunithura", "Kaloor",
-  "Kadavanthra", "Infopark Kochi", "Angamaly", "North Paravur",
-  "Perumbavoor", "Smart City Kochi", "Thrikkakara", "Maradu", "Kothamangalam",
-  "Muvattupuzha", "Willingdon Island", "Kozhikode", "Thiruvananthapuram",
-  "Thrissur", "Kottayam", "Kollam", "Kannur", "Palakkad",
+  "Vyttila", "Palarivattom", "Thrippunithura", "Kaloor", "Angamaly",
+  "North Paravur", "Perumbavoor", "Smart City Kochi", "Thrikkakara",
+  "Maradu", "Kothamangalam", "Muvattupuzha", "Willingdon Island",
 ];
 
 const faqItems = [
   {
     q: "Do you cover areas outside Kochi city?",
-    a: "Yes — we serve most of Ernakulam district and have wider coverage across Kerala including Kottayam, Thrissur, Kozhikode, and Thiruvananthapuram. Message us your address to confirm.",
+    a: "We primarily support Kochi, Ernakulam, Kakkanad, Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro enquiry areas. For other Kerala districts, contact us to check pickup feasibility rather than assuming coverage.",
   },
   {
     q: "What if my neighborhood isn't listed with its own page yet?",
-    a: "We're still building out dedicated pages for every area we serve. If you don't see your neighborhood here, message us directly — we very likely still cover it.",
+    a: "We're still building out dedicated pages for every area we serve within the Kochi-metro area. If you don't see your neighborhood here, message us directly to confirm coverage rather than assuming either way.",
   },
   {
     q: "Is pickup free everywhere you serve?",
-    a: "Doorstep pickup is free for qualifying quantities across all our service areas, whether or not that area has its own page yet.",
+    a: "Doorstep pickup is free for qualifying quantities across our core service areas, whether or not that area has its own page yet. Feasibility still depends on item type, quantity, condition and location.",
   },
 ];
 ---
@@ -60,10 +62,12 @@ const faqItems = [
   <Breadcrumbs items={breadcrumbItems} />
   <h1>Locations We Serve</h1>
   <p class="lede">
-    We run doorstep e-waste pickup across Kochi and Ernakulam district, with
-    wider coverage across Kerala. Below are the areas with a dedicated local
-    page, plus the full list of neighborhoods we currently serve. Not sure if
-    we cover your street? See
+    We primarily support Kochi, Ernakulam, Kakkanad, Kalamassery, Ernakulam
+    South, Aluva and nearby Kochi-metro enquiry areas. Below are the areas
+    with a dedicated local page, plus other neighborhoods we currently
+    serve. For other Kerala districts, contact us to check pickup
+    feasibility rather than assuming coverage. Not sure if we cover your
+    street? See
     <a href="/services/electronics-recycling-near-me/">electronics recycling
     near me</a> for how to check quickly.
   </p>

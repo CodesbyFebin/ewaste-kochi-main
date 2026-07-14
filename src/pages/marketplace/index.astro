@@ -5,10 +5,10 @@ import CtaBar from "../../components/CtaBar.astro";
 import Faq from "../../components/Faq.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../data/site";
 
-const title = "Sell Old Electronics in Kochi | Best Quote + Free Pickup";
+const title = "Sell Old Electronics in Kochi | Condition-Based Quote + Free Pickup";
 const description =
-  "List your used laptop, phone, or IT equipment for an instant quote, or browse inspected refurbished devices. Doorstep pickup and payment across Kochi.";
-const lastUpdated = "2026-07-07";
+  "List your used laptop, phone, or IT equipment for a condition-based quote, or browse inspected refurbished devices. Doorstep pickup and payment across Kochi.";
+const lastUpdated = "2026-07-15";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
@@ -55,6 +55,22 @@ const faqItems = [
     q: "Can I sell non-working devices too?",
     a: "Non-working devices are usually better suited to our recycling or sell-electronics scrap valuation rather than the marketplace, since marketplace listings are for functional resale. Ask us and we'll point you to the right option.",
   },
+  {
+    q: "Is the quote guaranteed before you actually see the device?",
+    a: "No. What you get over WhatsApp is a preliminary estimate based on your description and photos — the confirmed number is always set after a quick inspection at pickup, never assumed in advance.",
+  },
+  {
+    q: "What are the refurbished units you mentioned?",
+    a: "From time to time we have inspected, working devices available after going through our resale assessment. Ask us directly for what's currently available rather than assuming a fixed catalog.",
+  },
+  {
+    q: "Can businesses list multiple devices at once?",
+    a: "Yes — offices liquidating several working devices after an upgrade can list them together for a combined quote rather than one at a time.",
+  },
+  {
+    q: "Do I need to wipe my own data before listing a device?",
+    a: "It's a good idea to back up and sign out of accounts yourself, and any device with storage is also checked and, on request, wiped before resale as an added step — see our data destruction page for details.",
+  },
 ];
 ---
 
@@ -63,8 +79,8 @@ const faqItems = [
   <h1>Marketplace</h1>
   <p class="lede">
     Our marketplace is where working electronics change hands in Kochi —
-    list your own device for an instant quote and doorstep payment, or ask us
-    about currently available inspected refurbished units.
+    list your own device for a condition-based quote and doorstep payment,
+    or ask us about currently available inspected refurbished units.
   </p>
 
   <CtaBar whatsappMessage="Hi, I'd like to list a device on the marketplace." />
@@ -87,7 +103,7 @@ const faqItems = [
       <li><strong>Get a preliminary quote</strong> based on your description.</li>
       <li><strong>Schedule doorstep pickup</strong> at a convenient time.</li>
       <li><strong>Quick inspection and final quote</strong> confirmed on the spot.</li>
-      <li><strong>Instant payment</strong> once you accept the final quote.</li>
+      <li><strong>Payment</strong> arranged once you accept the final quote — typically via UPI or cash at pickup.</li>
     </ol>
   </section>
 
@@ -102,6 +118,32 @@ const faqItems = [
       <a href="/e-waste-scrap-prices-kochi/">e-waste scrap prices</a> for
       what drives valuation, and <a href="/computer-scrap-buyers-kochi/">
       computer scrap buyers</a> for bulk office IT lots.
+    </p>
+  </section>
+
+  <section>
+    <h2>What affects your quote</h2>
+    <p>
+      Device type, brand and model, age, working condition, battery
+      health, and accessories included (original charger, box) all factor
+      into the estimate — alongside current market demand for that
+      specific model, which is why quotes are confirmed at pickup rather
+      than fixed upfront. See <a href="/e-waste-scrap-prices-kochi/">e-waste
+      scrap prices</a> for the fuller breakdown of how condition-based
+      pricing works.
+    </p>
+  </section>
+
+  <section>
+    <h2>Marketplace vs. recycling vs. ITAD</h2>
+    <p>
+      These aren't competing options — they're different outcomes for
+      different devices. Marketplace fits a working device with genuine
+      resale demand. Recycling fits anything without realistic resale
+      value. ITAD fits structured, business-scale asset disposal needing
+      tracking and documentation. If you're not sure which applies,
+      describe what you have and we'll point you to the right one rather
+      than making you choose blind.
     </p>
   </section>
 

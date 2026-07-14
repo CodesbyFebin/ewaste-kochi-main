@@ -1,0 +1,156 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "E-Waste Pickup for Infopark Kochi IT Offices | Bulk & ITAD Collection";
+const description =
+  "Bulk e-waste and IT asset pickup for Infopark Kochi offices — laptops, servers, networking gear, and data destruction with documentation support for business records.";
+const lastUpdated = "2026-07-15";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Locations", path: "/locations/" },
+  { name: "Infopark Kochi", path: "/locations/infopark-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "IT asset e-waste collection",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: {
+      "@type": "Place",
+      name: "Infopark Kochi, Kakkanad, Kochi, Kerala",
+    },
+    url: `${SITE_URL}/locations/infopark-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/locations/infopark-kochi/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Do you handle recurring pickup for IT offices in Infopark?",
+    a: "Yes — recurring or scheduled pickup is common for Infopark offices doing regular hardware refreshes. Mention your typical cadence when you first reach out and we'll set up a repeatable process." ,
+  },
+  {
+    q: "Can you provide an asset list or disposal documentation?",
+    a: "Yes. For office and IT asset pickups, we can work from an itemized list you provide, and documentation support may be available depending on the service type and agreed handling process.",
+  },
+  {
+    q: "Do you collect servers and networking equipment, not just laptops?",
+    a: "Yes — servers, switches, routers, and rack equipment are all accepted. Larger decommissioning jobs are usually a better fit for our ITAD service, which adds asset tracking to the same process.",
+  },
+  {
+    q: "Is data wiped from office laptops before they leave the building?",
+    a: "Any device with storage goes through data handling as part of the same visit — see our data destruction service for the specific methods available and how to request them.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/locations/infopark-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Pickup for Infopark Kochi IT Offices</h1>
+  <p class="lede">
+    Infopark Kochi — the IT park in Kakkanad that's home to a large
+    concentration of technology companies — generates a steady stream of
+    laptops, desktops, and networking equipment that needs proper
+    collection. This page covers the business/IT-office side specifically;
+    for general household pickup in the wider Kakkanad area, see our
+    <a href="/locations/kakkanad/">Kakkanad location page</a>.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to arrange e-waste pickup for our Infopark office." />
+
+  <section>
+    <h2>What Infopark offices typically need</h2>
+    <p>
+      Hardware refreshes replacing a batch of laptops or desktops at once;
+      old servers, switches and routers from an infrastructure upgrade;
+      decommissioned monitors and peripherals during an office move; and
+      UPS or backup battery replacement in server rooms. All of these are
+      handled through the same booking process — a rough asset list and
+      your office location is enough to start.
+    </p>
+  </section>
+
+  <section>
+    <h2>Bulk and recurring pickup</h2>
+    <p>
+      For offices with an ongoing hardware refresh cycle rather than a
+      one-time clearout, we can set up a recurring or scheduled pickup
+      arrangement instead of booking each batch separately. Mention this
+      when you first reach out so it can be planned in from the start.
+    </p>
+  </section>
+
+  <section>
+    <h2>Asset lists and documentation</h2>
+    <p>
+      For structured decommissioning — asset tracking, itemized disposal
+      records, and compliance documentation for internal IT registers — see
+      our <a href="/itad/">ITAD service</a>, which is built specifically
+      for this kind of business-scale job rather than a standard pickup.
+      For smaller, occasional office pickups, mentioning that it's a
+      business job when you book is enough to get the right handling.
+    </p>
+  </section>
+
+  <section>
+    <h2>Data destruction for office devices</h2>
+    <p>
+      Laptops, desktops, and server drives leaving an Infopark office are
+      flagged for <a href="/data-destruction/">data destruction</a> as part
+      of the same conversation — wiping, degaussing, or physical
+      destruction depending on the device and what your business needs.
+      Documentation support may be available depending on the service type
+      and agreed handling process.
+    </p>
+  </section>
+
+  <section>
+    <h2>Compliance</h2>
+    <p>
+      Collection and recycling for Infopark offices follows the same
+      documented environmental handling practices used across all our
+      service areas. Contact us via our <a href="/contact/">contact
+      page</a> to confirm what documentation is available for your
+      specific job.
+    </p>
+  </section>
+
+  <section>
+    <h2>Nearby areas</h2>
+    <p>
+      Infopark Kochi sits within the wider Kakkanad area — see our
+      <a href="/locations/kakkanad/">Kakkanad location page</a> for general
+      household and SmartCity coverage, or the full
+      <a href="/locations/">locations directory</a> for everywhere else we
+      serve.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} heading="Infopark Kochi Pickup FAQs" />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

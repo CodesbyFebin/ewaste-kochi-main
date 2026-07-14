@@ -86,6 +86,50 @@ export const ROUTES: RouteEntry[] = [
     lang: "en-IN",
   },
   {
+    path: "/locations/edappally/",
+    changefreq: "monthly",
+    priority: 0.8,
+    title: "E-Waste Collection in Edappally | Free Pickup Near Lulu Mall & NH66",
+    description:
+      "Doorstep e-waste pickup in Edappally, Kochi — homes, shops, and offices near Lulu Mall and the NH66 junction. Free collection, battery recycling, and data destruction.",
+    type: "location",
+    sitemapGroup: "locations",
+    lang: "en-IN",
+  },
+  {
+    path: "/locations/infopark-kochi/",
+    changefreq: "monthly",
+    priority: 0.8,
+    title: "E-Waste Pickup for Infopark Kochi IT Offices | Bulk & ITAD Collection",
+    description:
+      "Bulk e-waste and IT asset pickup for Infopark Kochi offices — laptops, servers, networking gear, and data destruction with documentation support for business records.",
+    type: "location",
+    sitemapGroup: "locations",
+    lang: "en-IN",
+  },
+  {
+    path: "/locations/kadavanthra/",
+    changefreq: "monthly",
+    priority: 0.8,
+    title: "E-Waste Collection in Kadavanthra | Free Doorstep Pickup Near Metro",
+    description:
+      "Doorstep e-waste pickup in Kadavanthra, Kochi — homes and offices near the Kochi Metro station and Kaloor-Vyttila corridor. Free collection, battery recycling, data destruction.",
+    type: "location",
+    sitemapGroup: "locations",
+    lang: "en-IN",
+  },
+  {
+    path: "/locations/aluva/",
+    changefreq: "monthly",
+    priority: 0.8,
+    title: "E-Waste Collection in Aluva | Free Pickup Near Kochi Metro & Airport",
+    description:
+      "Doorstep e-waste pickup in Aluva, Kochi — homes and offices near the Kochi Metro terminus and Cochin International Airport corridor. Free collection, battery recycling, data destruction.",
+    type: "location",
+    sitemapGroup: "locations",
+    lang: "en-IN",
+  },
+  {
     path: "/blog/",
     changefreq: "weekly",
     priority: 0.8,

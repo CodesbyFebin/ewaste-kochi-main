@@ -8,7 +8,7 @@ import { BUSINESS, SITE_URL, telLink } from "../../data/site";
 const title = "Computer Scrap Buyers in Kochi | Desktops, Laptops & Office IT";
 const description =
   "Sell computer and IT scrap in Kochi — desktops, laptops, motherboards, RAM, CPUs, servers, and mixed office lots. Instant quote, doorstep pickup, bulk buying for businesses.";
-const lastUpdated = "2026-07-07";
+const lastUpdated = "2026-07-15";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
@@ -55,6 +55,26 @@ const faqItems = [
     q: "How is the price determined?",
     a: "Item type, condition, quantity, and current market rate — see our e-waste scrap prices page for the full breakdown of pricing factors.",
   },
+  {
+    q: "Is the quote final before you inspect the items?",
+    a: "No. An initial estimate is given from your description and photos, but the final number is always confirmed once the items are actually inspected at pickup.",
+  },
+  {
+    q: "How is payment arranged?",
+    a: "Payment is confirmed as part of the quote discussion — ask directly when you get your quote so there are no surprises at pickup.",
+  },
+  {
+    q: "Do you buy non-working desktops and laptops, not just working ones?",
+    a: "Yes — non-working devices can still have component or scrap value. Mention that it doesn't power on when you send details rather than assuming it's worthless.",
+  },
+  {
+    q: "Can I sell a mixed lot of old computer parts I've collected over time?",
+    a: "Yes, a mixed batch of components, cables, and old systems is a normal sale — list everything together for a combined quote.",
+  },
+  {
+    q: "Do you buy printers, scanners, and other office peripherals too?",
+    a: "Yes, printers, scanners, routers, and mixed office peripherals are accepted alongside desktops and laptops in the same pickup.",
+  },
 ];
 ---
 
@@ -99,7 +119,7 @@ const faqItems = [
       <li><strong>Get a preliminary quote</strong> over WhatsApp.</li>
       <li><strong>Schedule pickup</strong> — same-day or next-day in most areas.</li>
       <li><strong>Inspection and final quote</strong> confirmed on the spot.</li>
-      <li><strong>Instant payment</strong> once you accept.</li>
+      <li><strong>Payment</strong> arranged once you accept the quote — ask about the specific arrangement when you book.</li>
     </ol>
   </section>
 
@@ -115,6 +135,34 @@ const faqItems = [
     </p>
   </section>
 
+  <section>
+    <h2>Components we buy individually</h2>
+    <ul class="check-list">
+      <li><strong>Motherboards</strong> — from desktops, servers, or workstations, working or not.</li>
+      <li><strong>RAM modules</strong> — any generation, loose or still installed.</li>
+      <li><strong>CPUs</strong> — desktop and server processors.</li>
+      <li><strong>Power supplies and drives</strong> — hard drives (see our data destruction page if they hold data), SSDs, and PSUs.</li>
+      <li><strong>Cables and peripherals</strong> — keyboards, mice, monitor cables, and adapters.</li>
+    </ul>
+    <p class="muted-note">
+      You don't need to sort or separate components before we arrive —
+      mention roughly what you have and the team sorts it out at pickup.
+    </p>
+  </section>
+
+  <section>
+    <h2>Office IT clearance</h2>
+    <p>
+      A full office IT clearance — every desktop, monitor, and peripheral
+      from a space being cleared or refreshed — is one of the most common
+      jobs we handle. Share a rough asset list rather than itemizing every
+      single piece; a combined pickup and quote for the whole batch is
+      simpler than processing it item by item. For jobs that need asset
+      tracking or compliance documentation rather than just a scrap quote,
+      see <a href="/itad/">ITAD</a> instead.
+    </p>
+  </section>
+
   <p class="mal-support">
     മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
   </p>
@@ -127,6 +175,8 @@ const faqItems = [
 <style>
   .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
   .process-list { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 1.25rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .muted-note { color: var(--color-muted); font-size: 0.9rem; margin-top: 0.7rem; }
   .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
   .updated { font-size: 0.8rem; color: var(--color-muted); }
 </style>
