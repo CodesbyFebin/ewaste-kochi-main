@@ -52,6 +52,7 @@ const POST_META: PostMeta[] = [
   { href: "/blog/ewaste-recycling-vs-reuse/", datePublished: "2026-07-14", beginner: false, popular: false },
   { href: "/blog/how-responsible-ewaste-collection-works/", datePublished: "2026-07-14", beginner: false, popular: false },
   { href: "/blog/ewaste-pickup-near-me/", datePublished: "2026-07-14", beginner: true, popular: false },
+  { href: "/blog/sell-old-electronics-kochi/", datePublished: "2026-07-14", beginner: false, popular: false },
 
 ];
 

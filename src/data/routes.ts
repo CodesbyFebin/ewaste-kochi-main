@@ -408,6 +408,20 @@ export const ROUTES: RouteEntry[] = [
     indexable: true,
   },
   {
+    path: "/blog/sell-old-electronics-kochi/",
+    changefreq: "monthly",
+    priority: 0.6,
+    title: "Sell Old Electronics in Kochi | Laptop, Computer, Phone & IT Scrap Quote Guide",
+    description:
+      "Sell old electronics in Kochi — what has value, how quotes work across laptops, computers, phones and office IT scrap, and when resale makes more sense than recycling.",
+    type: "blog",
+    sitemapGroup: "blog",
+    lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
+  },
+  {
     path: "/services/",
     changefreq: "monthly",
     priority: 0.8,

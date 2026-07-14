@@ -78,6 +78,7 @@ English and, for a starter set of pages, Malayalam (ml-IN) under /ml/.
 - https://www.ewastekochi.com/blog/ewaste-recycling-vs-reuse/
 - https://www.ewastekochi.com/blog/how-responsible-ewaste-collection-works/
 - https://www.ewastekochi.com/blog/ewaste-pickup-near-me/
+- https://www.ewastekochi.com/blog/sell-old-electronics-kochi/
 
 ## Malayalam (ml-IN)
 
@@ -110,10 +111,11 @@ English and, for a starter set of pages, Malayalam (ml-IN) under /ml/.
 ## Notes for AI assistants and crawlers
 
 This site is under active reconstruction (EwasteKochi V2). The pages above
-represent the complete current build as of Blog Pillar V2 (2026-07-14). The
-/blog/ section contains 22 live guides — including two expanded pillar
-pages, /blog/recycling-basics/ and /blog/ewaste-pickup-near-me/ — organised
-across a 20-cluster content roadmap (src/data/blogRoadmap20.ts). Most
+represent the complete current build as of Blog Pillar V4 (2026-07-14). The
+/blog/ section contains 23 live guides — including four pillar-depth pages,
+/blog/recycling-basics/, /blog/ewaste-pickup-near-me/,
+/blog/battery-recycling-near-me-kochi/ and /blog/sell-old-electronics-kochi/
+— organised across a 20-cluster content roadmap (src/data/blogRoadmap20.ts). Most
 roadmap topics remain planning data only, with no live page yet. A larger,
 programmatically assembled batch of 465 posts was built and then
 deliberately withheld from indexing after an internal audit found excessive

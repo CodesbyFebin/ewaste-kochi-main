@@ -194,6 +194,7 @@ export const BLOG_CLUSTERS: BlogCluster[] = [
       { title: "How to Sell Old Electronics in Kochi | Quote, Pickup & Safety Guide", href: "/blog/how-to-sell-old-electronics-kochi/", excerpt: "How to sell old electronics in Kochi safely — how condition-based quotes work, what to prepare, wiping your data first, and doorstep pickup for payment." },
       { title: "Sell Old Laptop in Kochi | Condition Checklist & Quote Guide", href: "/blog/sell-old-laptop-kochi/", excerpt: "A practical guide to selling your old laptop in Kochi — condition checklist, data wiping, what drives your quote, and options for damaged or bulk office laptops." },
       { title: "How E-Waste Scrap Quotes Work in Kochi | Condition-Based Value Guide", href: "/blog/how-ewaste-scrap-quotes-work-kochi/", excerpt: "How e-waste scrap quotes work in Kochi — what drives condition-based pricing, why final value depends on inspection, and how to get an accurate estimate." },
+      { title: "Sell Old Electronics in Kochi | Laptop, Computer, Phone & IT Scrap Quote Guide", href: "/blog/sell-old-electronics-kochi/", excerpt: "Sell old electronics in Kochi — what has value, how quotes work across laptops, computers, phones and office IT scrap, and when resale makes more sense than recycling." },
     ],
     plannedPosts: [
       "What Affects the Value of Old Electronics?",

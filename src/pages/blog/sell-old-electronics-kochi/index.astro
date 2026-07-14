@@ -1,0 +1,501 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Sell Old Electronics in Kochi | Laptop, Computer, Phone & IT Scrap Quote Guide";
+const description =
+  "Sell old electronics in Kochi — what has value, how quotes work across laptops, computers, phones and office IT scrap, and when resale makes more sense than recycling.";
+const datePublished = "2026-07-14";
+const dateModified = "2026-07-14";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Sell Old Electronics in Kochi", path: "/blog/sell-old-electronics-kochi/" },
+];
+
+const quoteSteps = [
+  { name: "List your electronics", text: "What you have, roughly how many, and whether it's a single item or a mixed batch." },
+  { name: "Take clear photos", text: "Front, back, and any visible damage or missing parts." },
+  { name: "Mention working or non-working condition", text: "Be specific — powers on, partially working, or completely dead all get quoted differently." },
+  { name: "Share your area or location", text: "For pickup feasibility and payment arrangement." },
+  { name: "Mention data or battery concerns", text: "Anything with storage, or anything showing battery damage, gets flagged into the same conversation." },
+  { name: "Receive feasibility and quote guidance", text: "An initial estimate based on what you've shared." },
+  { name: "Schedule pickup if feasible", text: "Doorstep collection, same as any other pickup." },
+  { name: "Final quote confirmed after inspection", text: "The number you agreed to upfront is checked against the item in hand before anything changes hands." },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/sell-old-electronics-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/sell-old-electronics-kochi/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const valueFactorRows = [
+  { factor: "Device type", why: "A laptop, a phone and a monitor all follow different value curves — category matters before anything else.", send: "A plain description: laptop, desktop, phone, etc." },
+  { factor: "Brand / model", why: "Demand and parts availability vary a lot by model, even within the same device type.", send: "Brand and model if you know it — a photo of the label works too." },
+  { factor: "Working status", why: "Fully working, partially working and non-working devices are quoted on different scales entirely.", send: "A specific description, not just \"old\" or \"broken.\"" },
+  { factor: "Physical condition", why: "Screen cracks, body damage and battery health all factor into the final number.", send: "Photos showing any visible damage." },
+  { factor: "Age", why: "Newer devices generally hold more resale demand, though specific models can buck this.", send: "Approximate purchase year if you know it." },
+  { factor: "Battery condition", why: "A swollen or fast-draining battery affects both value and how the item needs to be handled.", send: "Whether it holds charge normally, and any swelling." },
+  { factor: "Accessories included", why: "Original chargers, boxes and cables can nudge the quote, especially for recent devices.", send: "A note on what's included beyond the device itself." },
+  { factor: "Quantity", why: "A single phone and a 15-laptop office refresh are quoted through different processes.", send: "An approximate count, not an exact inventory." },
+  { factor: "Data-bearing storage", why: "Laptops, phones, drives and servers need a data plan folded into the same conversation.", send: "Which items hold data, and whether you want destruction handled for you." },
+  { factor: "Pickup location", why: "Feasibility and logistics both depend on where you are.", send: "Area name or a WhatsApp location pin." },
+  { factor: "Current market rate", why: "Resale and scrap values shift with market demand, which is why quotes are confirmed at the time of sale.", send: "Nothing extra — this one is on our end, not yours." },
+];
+
+const scenarios = [
+  { title: "One working laptop, upgrading to a new one", copy: "A strong resale candidate if it's in reasonable shape — worth checking value before defaulting to recycling." },
+  { title: "A dead laptop with its charger", copy: "Still worth listing — non-working devices can have component or scrap value depending on the model." },
+  { title: "An old phone with a battery issue", copy: "Mention the battery condition specifically; it affects both handling and the quote." },
+  { title: "Home cleanout with mixed electronics", copy: "List everything together rather than one at a time — mixed batches are easier to quote as a set." },
+  { title: "Office IT refresh", copy: "A batch of laptops or desktops being replaced at once — a rough asset list speeds up scheduling." },
+  { title: "Bulk desktops and monitors", copy: "Larger, uniform batches are usually quoted and collected together rather than item by item." },
+  { title: "UPS and server-room equipment", copy: "Often has component value alongside its recycling value — worth mentioning explicitly rather than assuming it's scrap-only." },
+];
+
+const faqItems = [
+  { q: "Where can I sell old electronics in Kochi?", a: "Message Ewaste Kochi with your item list, condition and photos on WhatsApp, or use the Request Quote button on this page. You'll get feasibility and quote guidance, confirmed after inspection." },
+  { q: "Can I sell an old laptop?", a: "Yes — laptops are one of the most common items we quote. See our dedicated laptop guide for a condition-specific checklist, or just send details here to get started." },
+  { q: "Can I sell a non-working laptop?", a: "Yes. Non-working laptops can still have component or scrap value depending on the model — mention that it doesn't power on when you send details, don't assume it's worthless." },
+  { q: "Can I sell an old phone?", a: "Yes, working or not. A single phone is a completely normal enquiry, not too small to bother with." },
+  { q: "Can offices sell bulk electronics?", a: "Yes. Office IT refreshes, bulk desktop and monitor clearouts, and server-room equipment are all handled — share a rough asset list to speed up quoting." },
+  { q: "How is the quote decided?", a: "Device type, brand/model, working status, physical condition, age, battery health, accessories, quantity and current market rate together determine the number — confirmed after inspection, not fixed from a description alone." },
+  { q: "Is the quote guaranteed before inspection?", a: "No. An initial estimate is given from your description and photos, but the final number is always confirmed once the item is actually inspected." },
+  { q: "What photos should I send?", a: "Front, back, and anything showing damage — a cracked screen, dented body, or swollen battery. Clear photos consistently lead to faster, more accurate quotes than a text description alone." },
+  { q: "Can broken electronics have value?", a: "Yes, often more than people expect. Non-working devices can still have salvageable components or scrap value — the only way to know is to ask rather than assume." },
+  { q: "When is recycling better than selling?", a: "When a device is very old, badly damaged, or has essentially no resale demand for that model, recycling is the more realistic option — you're never obligated to sell before recycling either way." },
+  { q: "Can batteries be sold?", a: "Some battery types may carry material value depending on type, quantity and condition, but this isn't guaranteed — see our battery recycling guide for safety-first handling of damaged cells specifically." },
+  { q: "Can UPS or inverter batteries have value?", a: "Healthy, higher-quantity battery lots are more likely to be worth asking about than a single small unit — mention them alongside the rest of what you're selling to get a combined view." },
+  { q: "Do I need to remove data first?", a: "Yes, ideally before handover — back up what you want to keep and sign out of accounts. If you're not confident doing this yourself, ask about data destruction support before the device changes hands." },
+  { q: "Can hard drives be destroyed before resale or recycling?", a: "Yes. Wiping, degaussing or physical shredding are all options depending on the device and what you need — see our data destruction service for the full breakdown." },
+  { q: "Is pickup available in Kakkanad?", a: "Yes, Kakkanad is within our core coverage area for both resale and recycling pickups." },
+  { q: "Is pickup available in Kalamassery?", a: "Yes, Kalamassery is covered for both household and office enquiries." },
+  { q: "Is pickup available in Ernakulam South?", a: "Yes. Share your building or area name and we'll confirm feasibility for your specific address." },
+  { q: "Is pickup available outside Kochi?", a: "Ewaste Kochi primarily supports Kochi, Ernakulam, Kakkanad, Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro enquiry areas. For other Kerala districts, contact us to check pickup feasibility." },
+  { q: "Can I include accessories and cables?", a: "Yes — original chargers, boxes and cables can help the quote for recent devices, and loose cables on their own can still be included in a combined pickup." },
+  { q: "How do I start?", a: "Message Ewaste Kochi on WhatsApp with your item list, condition and photos, or use the Request Quote button on this page." },
+];
+---
+
+<Layout title={title} description={description} path="/blog/sell-old-electronics-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Sell Old Electronics in Kochi: Laptop, Computer, Phone & IT Scrap Quote Guide</h1>
+  <p class="lede">
+    You can sell old electronics in Kochi by sharing the item type,
+    quantity, working condition, photos and pickup location with Ewaste
+    Kochi. The final quote depends on device type, age, condition, working
+    status, accessories, location and current market rate — some items
+    are suited to resale, others to recycling, and this guide covers what
+    typically has value and why.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like a quote for old electronics in Kochi." />
+  <p class="view-service"><a href="/sell-electronics/">View our sell electronics service →</a></p>
+
+  <div class="quick-facts">
+    <p class="quick-facts-label">Quick facts</p>
+    <ul>
+      <li>Ewaste Kochi primarily supports Kochi, Ernakulam, Kakkanad, Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro enquiry areas.</li>
+      <li>Final quote depends on item type, quantity, condition, working status, location and current market rate.</li>
+      <li>Working or repairable devices may have resale value; damaged or outdated devices may be better suited for recycling.</li>
+      <li>Data-bearing devices such as laptops, phones, hard drives and servers should be discussed before handover.</li>
+      <li>For other Kerala districts, contact us to check pickup feasibility.</li>
+    </ul>
+  </div>
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Direct answer</p>
+    <p>
+      You can sell old electronics in Kochi by sharing the item type,
+      quantity, working condition, photos and pickup location with Ewaste
+      Kochi. The final quote depends on device type, age, condition,
+      working status, accessories, location and current market rate. Some
+      items may be suitable for resale, while others may be routed for
+      recycling.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Quote is condition-based, not guaranteed before inspection.</li>
+    <li>Photos help estimate value faster and more accurately than a text description.</li>
+    <li>Working devices may have resale value — check before assuming otherwise.</li>
+    <li>Damaged devices may still be recyclable, or even sellable for parts.</li>
+    <li>Data-bearing devices need a data-safety plan before they change hands.</li>
+  </ul>
+
+  <section>
+    <h2>What "Selling Old Electronics" Actually Covers</h2>
+    <p>
+      "Selling" here spans a wider range than it might sound like. It
+      includes a straightforward resale enquiry for a working laptop, a
+      scrap quote for a device that's well past working condition, and
+      everything in between — the process is the same conversation either
+      way, just with a different outcome depending on what the item
+      actually is. If resale isn't realistic for a specific device, that
+      same conversation routes it to recycling instead, at no extra step
+      for you.
+    </p>
+    <p>
+      The distinction that matters most isn't "new vs. old," it's
+      condition-based value: a five-year-old laptop in good working order
+      can be worth more than a two-year-old one with a cracked screen and a
+      failing battery. Data safety and, where relevant, battery condition
+      are folded into the same process rather than treated as separate
+      concerns — see <a href="/blog/how-to-sell-old-electronics-kochi/">how
+      to sell old electronics in Kochi</a> for the full step-by-step
+      version of this process if you'd like it in more detail than the
+      short version below.
+    </p>
+  </section>
+
+  <section>
+    <h2>Items That May Have Value</h2>
+    <div class="category-grid">
+      <div class="category-card">
+        <h3>Home electronics</h3>
+        <ul class="check-list">
+          <li>Laptops — see our <a href="/blog/sell-old-laptop-kochi/">dedicated laptop guide</a></li>
+          <li>Desktops</li>
+          <li>Mobile phones</li>
+          <li>Tablets</li>
+          <li>Monitors</li>
+          <li>Accessories and chargers</li>
+        </ul>
+      </div>
+      <div class="category-card">
+        <h3>Office electronics</h3>
+        <ul class="check-list">
+          <li>Desktops and laptops (bulk)</li>
+          <li>Monitors</li>
+          <li>Servers</li>
+          <li>Routers and switches</li>
+          <li>UPS units</li>
+          <li>Printers and mixed IT scrap</li>
+        </ul>
+      </div>
+      <div class="category-card">
+        <h3>Parts &amp; components</h3>
+        <ul class="check-list">
+          <li>Cables and adapters</li>
+          <li>Hard drives</li>
+          <li>RAM modules</li>
+          <li>Batteries — see <a href="/battery-recycling/">battery recycling</a></li>
+          <li>Networking equipment</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What Affects Quote Value</h2>
+    <p>Quote value isn't one factor — it's several considered together:</p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Factor</th>
+            <th scope="col">Why it matters</th>
+            <th scope="col">What to send</th>
+          </tr>
+        </thead>
+        <tbody>
+          {valueFactorRows.map((row) => (
+            <tr>
+              <td><strong>{row.factor}</strong></td>
+              <td>{row.why}</td>
+              <td>{row.send}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="muted-note">Final quote depends on item type, quantity, condition, working status, location and current market rate — always confirmed after inspection, never assumed from a description alone.</p>
+  </section>
+
+  <section>
+    <h2>Sell vs. Reuse vs. Recycle</h2>
+    <p>
+      These aren't three separate decisions — they're one decision with
+      three possible outcomes, and the right one depends on the device in
+      front of you:
+    </p>
+    <ul class="check-list">
+      <li><strong>Sell:</strong> working or recent devices with real resale demand — the quote conversation covers this by default.</li>
+      <li><strong>Reuse within your own household:</strong> sometimes the best option is simply keeping a device as a backup rather than selling or recycling it — worth considering before either.</li>
+      <li><strong>Recycle:</strong> old, damaged, or genuinely obsolete devices with no realistic resale demand — never a failure state, just the right outcome for that item.</li>
+    </ul>
+    <p>
+      Data-bearing items shouldn't be handed over casually regardless of
+      which path they take — see the data-safety section below. Batteries
+      showing any damage need safety-first handling before value even
+      enters the conversation.
+    </p>
+  </section>
+
+  <section>
+    <h2>How the Quote Process Works</h2>
+    <p>
+      This is the short version — for the fully detailed walkthrough,
+      including payment arrangement and what happens if you don't like the
+      quote, see
+      <a href="/blog/how-to-sell-old-electronics-kochi/">how to sell old
+      electronics in Kochi</a>.
+    </p>
+    <ol class="steps-list">
+      {quoteSteps.map((step) => (
+        <li><strong>{step.name}.</strong> {step.text}</li>
+      ))}
+    </ol>
+  </section>
+
+  <section>
+    <h2>Selling From Home</h2>
+    <p>
+      Home sellers are usually offloading one device or a small mixed
+      batch — an old laptop being replaced, a phone with a cracked screen,
+      a drawer's worth of chargers and accessories. There's no minimum
+      quantity; a single item gets the same process as a larger batch.
+      Personal data precautions matter most here specifically because it's
+      your own accounts and files on the device — see the data-safety
+      section below before you hand anything over. If a device turns out
+      to have no real resale demand, recycling picks up seamlessly from the
+      same conversation, with no separate booking needed.
+    </p>
+  </section>
+
+  <section>
+    <h2>Selling From an Office</h2>
+    <p>
+      Office sellers more often deal with a batch rather than a single
+      item — a hardware refresh replacing a fleet of laptops, decommissioned
+      servers and networking gear, or a full desktop-and-monitor clearout.
+      A rough asset list shared upfront speeds up scheduling considerably
+      compared to itemizing everything one device at a time. For jobs that
+      need documentation or structured asset tracking rather than a simple
+      resale quote, our <a href="/itad/">ITAD service</a> may be the better
+      fit — mention this when you reach out and the team will point you to
+      the right process. Any device holding business data should go
+      through <a href="/data-destruction/">data destruction</a> as part of
+      the same conversation, with documentation available depending on the
+      agreed service type.
+    </p>
+  </section>
+
+  <section>
+    <h2>Data Safety Before Selling</h2>
+    <p>
+      This matters more than people expect, and it's worth doing in the
+      right order rather than as an afterthought:
+    </p>
+    <ul class="check-list">
+      <li>Back up anything you want to keep — photos, documents, files</li>
+      <li>Sign out of accounts and remove stored logins where you can</li>
+      <li>Do a factory reset as a starting point for phones and laptops</li>
+      <li>For hard drives, business devices, or anything you're not confident wiping yourself, ask about <a href="/data-destruction/">data destruction</a> support before handover</li>
+    </ul>
+    <p>
+      Don't attempt physical drive destruction yourself if you're
+      unfamiliar with doing it safely — this is exactly what the data
+      destruction service exists for, and it's a better outcome than an
+      improvised approach either way.
+    </p>
+  </section>
+
+  <section>
+    <h2>Battery and Damage Safety</h2>
+    <p>
+      A swollen or otherwise damaged battery should be mentioned when you
+      first reach out, not discovered on pickup day — this affects both
+      handling and how quickly the item can be quoted. Leaking batteries
+      need the same safety-first treatment as any other damaged cell; don't
+      mix one in with a bag of general accessories or other devices. Cracked
+      screens and other physical damage are worth photographing clearly
+      rather than described in words alone — see
+      <a href="/battery-recycling/">battery recycling</a> for the fuller
+      safety guidance on damaged cells specifically.
+    </p>
+  </section>
+
+  <section>
+    <h2>Sell Electronics Near Me by Kochi-Metro Area</h2>
+    <p>
+      Resale and scrap-quote pickups follow the same coverage as general
+      e-waste pickup: Kochi, Ernakulam, Kakkanad, Kalamassery, Ernakulam
+      South, Aluva and nearby Kochi-metro enquiry areas. Send your area or
+      a location pin as part of your first message to confirm your
+      specific address. For other parts of Kerala, it's still worth asking
+      directly — feasibility is checked case by case rather than ruled out
+      automatically.
+    </p>
+  </section>
+
+  <section>
+    <h2>What to Send on WhatsApp</h2>
+    <ul class="check-list">
+      <li>Item names</li>
+      <li>Quantity</li>
+      <li>Brand and model, if known</li>
+      <li>Working / non-working status</li>
+      <li>Photos</li>
+      <li>Battery condition</li>
+      <li>Accessories included</li>
+      <li>Your area or location</li>
+      <li>Whether data destruction is needed</li>
+      <li>Preferred pickup timing</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Common Selling Scenarios</h2>
+    <div class="scenario-grid">
+      {scenarios.map((s) => (
+        <div class="scenario-card">
+          <h3>{s.title}</h3>
+          <p>{s.copy}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section>
+    <h2>Mistakes to Avoid</h2>
+    <ul class="check-list">
+      <li>Assuming a quote is final before the item is actually inspected</li>
+      <li>Handing over data-bearing devices without wiping or discussing data handling first</li>
+      <li>Mixing a damaged battery in with general accessories or scrap</li>
+      <li>Accepting vague value promises from an unverified buyer with no accountability</li>
+      <li>Describing damage vaguely instead of sending a clear photo</li>
+      <li>Expecting guaranteed resale value for a genuinely obsolete device — recycling is a normal outcome, not a failure</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Related Reading</h2>
+    <ul class="related-list">
+      <li><a href="/blog/recycling-basics/">E-Waste Recycling Basics</a> — the fundamentals, if resale isn't the right fit for your device.</li>
+      <li><a href="/blog/where-to-recycle-old-electronics-kochi/">Where to Recycle Old Electronics in Kochi</a> — pickup, resale and scrap-quote options compared.</li>
+      <li><a href="/blog/how-to-sell-old-electronics-kochi/">How to Sell Old Electronics in Kochi</a> — the full step-by-step selling process in detail.</li>
+      <li><a href="/blog/sell-old-laptop-kochi/">Sell Old Laptop in Kochi</a> — a dedicated condition checklist and quote guide for laptops specifically.</li>
+      <li><a href="/blog/how-ewaste-scrap-quotes-work-kochi/">How E-Waste Scrap Quotes Work in Kochi</a> — more on condition-based pricing.</li>
+      <li><a href="/blog/ewaste-pickup-near-me/">E-Waste Pickup Near Me in Kochi</a> — for items headed to recycling rather than resale.</li>
+      <li><a href="/blog/how-to-prepare-electronics-for-recycling/">How to Prepare Electronics Before Recycling</a> — backing up and data safety before handover.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/sell-electronics/">Sell Electronics</a>
+      <a href="/marketplace/">Marketplace</a>
+      <a href="/e-waste-scrap-prices-kochi/">Scrap Price Guide</a>
+      <a href="/computer-scrap-buyers-kochi/">Computer Scrap Buyers</a>
+      <a href="/pickup/">Book Pickup</a>
+      <a href="/recycling/">E-Waste Recycling</a>
+      <a href="/battery-recycling/">Battery Recycling</a>
+      <a href="/data-destruction/">Data Destruction</a>
+      <a href="/itad/">ITAD</a>
+      <a href="/locations/">Locations</a>
+      <a href="/locations/kakkanad/">Kakkanad</a>
+      <a href="/locations/kalamassery/">Kalamassery</a>
+      <a href="/locations/ernakulam-south/">Ernakulam South</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/sell-old-electronics-kochi/" />
+
+  <section class="final-cta">
+    <h2>Ready to Sell Your Old Electronics?</h2>
+    <p>Share your item photos and details on WhatsApp for a condition-based quote.</p>
+    <CtaBar whatsappMessage="Hi, I'd like a quote for old electronics in Kochi." compact />
+    <p class="view-service"><a href="/sell-electronics/">View our sell electronics service →</a></p>
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .view-service { margin: 0.5rem 0 0; }
+  .view-service a { color: var(--color-primary); font-weight: 700; text-decoration: none; }
+  .quick-facts {
+    padding: 1.1rem 1.25rem;
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-primary);
+    border-radius: 0 0.5rem 0.5rem 0;
+    background: var(--color-surface);
+    margin: 1.5rem 0;
+  }
+  .quick-facts-label {
+    margin: 0 0 0.6rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-primary);
+  }
+  .quick-facts ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.5rem; }
+  .quick-facts li { color: var(--color-text); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .check-list, .steps-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .category-grid { display: grid; grid-template-columns: 1fr; gap: 0.9rem; margin-top: 1rem; }
+  .category-card { padding: 1rem 1.1rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); }
+  .category-card h3 { margin: 0 0 0.5rem; font-size: 1rem; color: var(--color-primary); }
+  .category-card ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.35rem; font-size: 0.92rem; }
+  .table-scroll { overflow-x: auto; margin-top: 1rem; border: 1px solid var(--color-border); border-radius: 0.5rem; }
+  table { border-collapse: collapse; width: 100%; min-width: 680px; font-size: 0.88rem; }
+  th, td { text-align: left; padding: 0.6rem 0.85rem; border-bottom: 1px solid var(--color-border); vertical-align: top; }
+  th { background: var(--color-bg); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--color-muted); font-weight: 800; }
+  tbody tr:last-child td { border-bottom: none; }
+  .muted-note { color: var(--color-muted); font-size: 0.9rem; margin-top: 0.9rem; }
+  .scenario-grid { display: grid; grid-template-columns: 1fr; gap: 0.9rem; margin-top: 1rem; }
+  .scenario-card { padding: 1rem 1.1rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); }
+  .scenario-card h3 { margin: 0 0 0.4rem; font-size: 0.98rem; }
+  .scenario-card p { margin: 0; color: var(--color-muted); font-size: 0.9rem; }
+  .related-list { display: grid; gap: 0.6rem; padding-left: 1.25rem; }
+  .related-list a { color: var(--color-primary); font-weight: 700; text-decoration: none; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .final-cta { padding: 1.75rem 1.25rem; border-radius: 0.75rem; text-align: center; background: linear-gradient(135deg, var(--color-surface), var(--color-bg)); border: 1px solid var(--color-border); margin: 2.5rem 0; }
+  .final-cta p { margin: 0.5rem 0 0; color: var(--color-muted); }
+  .final-cta .view-service { text-align: center; }
+  @media (min-width: 640px) {
+    .category-grid { grid-template-columns: repeat(3, 1fr); }
+    .scenario-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 900px) {
+    .scenario-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+</style>
