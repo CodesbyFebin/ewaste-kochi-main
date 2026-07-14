@@ -394,6 +394,20 @@ export const ROUTES: RouteEntry[] = [
     indexable: true,
   },
   {
+    path: "/blog/ewaste-pickup-near-me/",
+    changefreq: "monthly",
+    priority: 0.6,
+    title: "E-Waste Pickup Near Me in Kochi | Doorstep Collection Guide",
+    description:
+      "How e-waste pickup near you works in Kochi — what items are collected, how feasibility and quotes are confirmed, and doorstep collection for homes, offices and apartments.",
+    type: "blog",
+    sitemapGroup: "blog",
+    lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
+  },
+  {
     path: "/services/",
     changefreq: "monthly",
     priority: 0.8,

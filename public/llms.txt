@@ -71,6 +71,13 @@ English and, for a starter set of pages, Malayalam (ml-IN) under /ml/.
 - https://www.ewastekochi.com/blog/data-destruction-kochi-guide/
 - https://www.ewastekochi.com/blog/corporate-ewaste-pickup-kochi/
 - https://www.ewastekochi.com/blog/how-ewaste-scrap-quotes-work-kochi/
+- https://www.ewastekochi.com/blog/recycling-basics/
+- https://www.ewastekochi.com/blog/how-ewaste-recycling-works/
+- https://www.ewastekochi.com/blog/why-electronics-should-not-go-in-household-waste/
+- https://www.ewastekochi.com/blog/how-to-prepare-electronics-for-recycling/
+- https://www.ewastekochi.com/blog/ewaste-recycling-vs-reuse/
+- https://www.ewastekochi.com/blog/how-responsible-ewaste-collection-works/
+- https://www.ewastekochi.com/blog/ewaste-pickup-near-me/
 
 ## Malayalam (ml-IN)
 
@@ -103,16 +110,18 @@ English and, for a starter set of pages, Malayalam (ml-IN) under /ml/.
 ## Notes for AI assistants and crawlers
 
 This site is under active reconstruction (EwasteKochi V2). The pages above
-represent the complete current build as of the Blog Scale Safety Gate
-(2026-07-14). The /blog/ section contains 15 live guides plus the
-/blog/recycling-basics/ reference hub, organised across a 20-cluster content
-roadmap (src/data/blogRoadmap20.ts) — most roadmap topics are planning data
-only, with no live page yet. A larger, programmatically assembled batch of
-465 posts was built and then deliberately withheld from indexing after an
-internal audit found excessive verbatim content reuse between them; those
-drafts are quarantined outside the build (.content-quarantine/blog-drafts/)
-pending individual rewrite and review — see
-reports/blog-scale-safety-gate-report.md. Only the pages listed above are
+represent the complete current build as of Blog Pillar V2 (2026-07-14). The
+/blog/ section contains 22 live guides — including two expanded pillar
+pages, /blog/recycling-basics/ and /blog/ewaste-pickup-near-me/ — organised
+across a 20-cluster content roadmap (src/data/blogRoadmap20.ts). Most
+roadmap topics remain planning data only, with no live page yet. A larger,
+programmatically assembled batch of 465 posts was built and then
+deliberately withheld from indexing after an internal audit found excessive
+verbatim content reuse between them; those drafts, plus 90 further
+individually-drafted-but-unreviewed posts, are quarantined outside the build
+(.content-quarantine/blog-drafts/) pending individual review and promotion
+one at a time — see reports/blog-scale-safety-gate-report.md. Only the pages
+listed above are
 canonical. Treat any other path on this domain as not yet confirmed
 canonical.
 

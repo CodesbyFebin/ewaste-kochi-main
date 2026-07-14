@@ -123,6 +123,7 @@ export const BLOG_CLUSTERS: BlogCluster[] = [
       { title: "How to Book an E-Waste Pickup in Kochi | Step-by-Step Guide", href: "/blog/how-to-book-ewaste-pickup-kochi/", excerpt: "How to book an e-waste pickup in Kochi, step by step — what to send on WhatsApp, how feasibility and quotes are confirmed, and what to expect on pickup day." },
       { title: "E-Waste Collection Near Me: How to Choose a Safe Recycler", href: "/blog/e-waste-collection-near-me/", excerpt: "How to find safe, legitimate e-waste collection near you — what to ask before handing over devices, pickup vs." },
       { title: "Free E-Waste Pickup in Kochi | Areas, Items & What to Prepare", href: "/blog/free-e-waste-pickup-kochi/", excerpt: "How free e-waste pickup works in Kochi — covered areas, accepted items, home vs office pickup, bulk pickup, and what to have ready before the team arrives." },
+      { title: "E-Waste Pickup Near Me in Kochi | Doorstep Collection Guide", href: "/blog/ewaste-pickup-near-me/", excerpt: "How e-waste pickup near you works in Kochi — what items are collected, how feasibility and quotes are confirmed, and doorstep collection for homes, offices and apartments." },
     ],
     plannedPosts: [
       "Electronic Waste Disposal Near Me",
