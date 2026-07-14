@@ -1,0 +1,114 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Data Destruction for Small Offices";
+const description = "Data Destruction for Small Offices — practical guidance for Kochi households and businesses, covering data destruction Kochi, hard drive shredding, ITAD.";
+const datePublished = "2026-07-14";
+const dateModified = "2026-07-14";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Data Destruction for Small Offices", path: "/blog/data-destruction-for-small-offices/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/data-destruction-for-small-offices/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/data-destruction-for-small-offices/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  { q: "Can offices book bulk data destruction?", a: "Yes, this typically routes through ITAD, which combines bulk collection with data destruction and documentation." },
+  { q: "Is data destruction legal advice?", a: "This is general educational information, not legal advice — verify specific requirements with official sources or a qualified advisor." },
+  { q: "Can servers need data destruction?", a: "Yes, server storage is a common candidate for certified destruction, particularly for compliance-driven disposal." },
+  { q: "Which devices need data destruction?", a: "Any device with storage: laptops, desktops, hard drives, SSDs, servers, and some printers or network devices with internal memory." },
+];
+---
+
+<Layout title={title} description={description} path="/blog/data-destruction-for-small-offices/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Data Destruction for Small Offices</h1>
+  <p class="lede">What this looks like specifically for your situation, not just general advice. Solid-state drives don't behave the same way as spinning hard drives when it comes to data destruction — some wiping methods that work well for one don't apply cleanly to the other.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about data destruction for small offices." />
+
+  <ul class="key-takeaways">
+    <li>A factory reset alone is not the same as certified data destruction.</li>
+    <li>Method depends on the device and whether it will be reused.</li>
+    <li>Documentation may be available for business requests — ask upfront.</li>
+  </ul>
+
+  <section>
+    <h2>SSDs vs traditional hard drives</h2>
+    <p>Solid-state drives don't behave the same way as spinning hard drives when it comes to data destruction — some wiping methods that work well for one don't apply cleanly to the other. Mention the drive type so the right method gets recommended.</p>
+  </section>
+
+  <section>
+    <h2>The three main methods</h2>
+    <p>Wiping (overwriting data) suits drives that will be reused or resold. Degaussing scrambles magnetic media that won't be reused. Physical shredding is for drives that must never be readable again. Which one applies depends on the device and what happens to it afterward.</p>
+  </section>
+
+  <section>
+    <h2>Documentation for businesses</h2>
+    <p>Documentation covering what was destroyed and how may be available depending on the service type and what's agreed in advance. Raise this requirement at the start of the conversation, since it shapes which method and process gets used.</p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/data-destruction/">Data Destruction</a>
+      <a href="/itad/">ITAD for Business</a>
+      <a href="/hard-drive-shredding/">Hard Drive Shredding</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/data-destruction-for-small-offices/" />
+
+  <section class="final-cta">
+    <h2>Have Questions About Data Destruction for Small Offices?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I have a question about data destruction for small offices." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  section p { line-height: 1.7; margin-bottom: 1rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

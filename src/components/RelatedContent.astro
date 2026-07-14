@@ -1,0 +1,109 @@
+---
+// Internal linking engine — render layer.
+// Strategy covered on this component (see src/data/blogLinking.ts for the
+// data layer): Article -> Cluster, Article -> Related Articles,
+// Article -> Related Cluster, Article -> Popular/Latest/Beginner Guides,
+// Article -> FAQ hub. Cluster -> Articles already exists on /blog/ (the
+// cluster-card "Live guides" lists) and isn't duplicated here.
+import {
+  getArticle,
+  getCluster,
+  getRelatedArticles,
+  getRelatedCluster,
+  getPopularGuides,
+  getLatestGuides,
+  getBeginnerGuides,
+} from "../data/blogLinking";
+
+interface Props {
+  href: string; // this page's own /blog/... path, e.g. "/blog/what-is-ewaste/"
+}
+
+const { href } = Astro.props;
+const current = getArticle(href);
+const cluster = current ? getCluster(current.clusterSlug) : undefined;
+const related = getRelatedArticles(href, 3);
+const relatedCluster = getRelatedCluster(href);
+const popular = getPopularGuides(4).filter((a) => a.href !== href);
+const latest = getLatestGuides(4, href);
+const beginner = getBeginnerGuides(4).filter((a) => a.href !== href);
+---
+
+{cluster && (
+  <section class="related-content" aria-labelledby="related-content-heading">
+    <div class="rc-block">
+      <h2 id="related-content-heading">Part of: {cluster.name}</h2>
+      <p class="rc-desc">{cluster.description}</p>
+      <a href={`/blog/#${cluster.slug}`} class="rc-cluster-link">See the full {cluster.name} cluster →</a>
+    </div>
+
+    {related.length > 0 && (
+      <div class="rc-block">
+        <h3>Related articles</h3>
+        <ul class="rc-list">
+          {related.map((a) => <li><a href={a.href}>{a.title}</a></li>)}
+        </ul>
+      </div>
+    )}
+
+    {relatedCluster && (
+      <div class="rc-block">
+        <h3>Related cluster</h3>
+        <a href={`/blog/#${relatedCluster.slug}`} class="rc-cluster-link">{relatedCluster.name} →</a>
+      </div>
+    )}
+
+    <div class="rc-grid">
+      {popular.length > 0 && (
+        <div class="rc-col">
+          <h3>Popular guides</h3>
+          <ul class="rc-list">{popular.map((a) => <li><a href={a.href}>{a.title}</a></li>)}</ul>
+        </div>
+      )}
+      {latest.length > 0 && (
+        <div class="rc-col">
+          <h3>Latest guides</h3>
+          <ul class="rc-list">{latest.map((a) => <li><a href={a.href}>{a.title}</a></li>)}</ul>
+        </div>
+      )}
+      {beginner.length > 0 && (
+        <div class="rc-col">
+          <h3>Beginner guides</h3>
+          <ul class="rc-list">{beginner.map((a) => <li><a href={a.href}>{a.title}</a></li>)}</ul>
+        </div>
+      )}
+    </div>
+
+    <p class="rc-faq"><a href="/faq/">Have more questions? See our full FAQ →</a></p>
+  </section>
+)}
+
+<style>
+  .related-content {
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    background: var(--color-surface);
+  }
+  .rc-block { margin-bottom: 1.25rem; }
+  .rc-block:last-of-type { margin-bottom: 0; }
+  .related-content h2 { font-size: 1.1rem; margin: 0 0 0.4rem; }
+  .related-content h3 { font-size: 0.9rem; margin: 0 0 0.5rem; color: var(--color-text); }
+  .rc-desc { color: var(--color-muted); font-size: 0.88rem; margin: 0 0 0.5rem; }
+  .rc-cluster-link { color: var(--color-primary); font-weight: 800; text-decoration: none; font-size: 0.9rem; }
+  .rc-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.4rem; }
+  .rc-list a { color: var(--color-primary); font-weight: 650; text-decoration: none; font-size: 0.88rem; }
+  .rc-grid {
+    display: grid;
+    gap: 1.25rem;
+    margin: 1.25rem 0;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--color-border);
+  }
+  .rc-faq { margin: 0; padding-top: 1rem; border-top: 1px solid var(--color-border); font-size: 0.9rem; }
+  .rc-faq a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  @media (min-width: 700px) {
+    .rc-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+</style>

@@ -1,0 +1,94 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Desktop CPU Disposal in Kochi | Old Desktop Computer Recycling";
+const description =
+  "How to dispose of old desktop CPUs and computers in Kochi. Data safety, component recycling, preparation tips and what to do with old desktop towers.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Desktop CPU Disposal in Kochi", path: "/blog/desktop-cpu-disposal-kochi/" },
+];
+
+const jsonLd = [
+  { "@context": "https://schema.org", "@type": "BlogPosting", headline: title, description, datePublished, dateModified, author: { "@type": "Organization", name: BUSINESS.legalName }, publisher: { "@id": `${SITE_URL}/#organization` }, mainEntityOfPage: `${SITE_URL}/blog/desktop-cpu-disposal-kochi/` },
+  { "@context": "https://schema.org", "@type": "WebPage", "@id": `${SITE_URL}/blog/desktop-cpu-disposal-kochi/`, name: title, description, dateModified },
+];
+
+const faqItems = [
+  { q: "Can old desktop CPUs be recycled in Kochi?", a: "Yes. Desktop towers, CPUs, motherboards and internal components are accepted for recycling. Contact us with the item list." },
+  { q: "Do I need to remove components before pickup?", a: "Not necessarily. You can hand over the whole tower. If you have removed components like RAM or graphics cards, mention them separately." },
+  { q: "Can broken desktops be recycled?", a: "Yes. Non-functional desktops are accepted. They still contain metals, circuit boards and other materials that can be recovered." },
+  { q: "Should I wipe the hard drive before recycling a desktop?", a: "Yes. Back up any data you want to keep, then wipe the drive. If you cannot do it yourself, ask about data destruction services." },
+  { q: "Do desktop computers have scrap value?", a: "Some desktops may have value depending on age, components and condition. Working systems with good specs have better resale potential. Send details for a quote." },
+];
+---
+
+<Layout title={title} description={description} path="/blog/desktop-cpu-disposal-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Desktop CPU Disposal in Kochi</h1>
+  <p class="lede">Old desktop computers — towers, CPUs and all-in-one PCs — eventually need responsible disposal. Here is how to recycle them in Kochi, from data safety to pickup.</p>
+  <CtaBar whatsappMessage="Hi, I have an old desktop computer for recycling." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Old desktop towers, CPUs and all-in-one PCs can be recycled in
+      Kochi, working or not. Back up and wipe any drives before handover
+      — or ask about data destruction if you're not confident doing this
+      yourself — and mention the approximate age and specifications for a
+      quicker assessment.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Non-working desktops are still accepted — they retain material value.</li>
+    <li>Wipe drives before handover, or request data destruction support.</li>
+    <li>Removed components (RAM, graphics cards) should be listed separately.</li>
+    <li>Working systems with decent specs may be worth more sold than recycled.</li>
+  </ul>
+
+  <section><h2>What desktop components are accepted</h2><ul><li>Desktop towers and all-in-one PCs</li><li>Motherboards, CPUs and RAM</li><li>Graphics cards and expansion cards</li><li>Power supply units (PSU)</li><li>Hard drives (HDD) and solid-state drives (SSD)</li><li>Optical drives (CD/DVD/Blu-ray)</li><li>Cooling systems and fans</li><li>Cases and chassis</li></ul></section>
+  <section><h2>Data safety before desktop disposal</h2><p>Desktop computers often store years of personal or business data — documents, photos, spreadsheets and financial records. Before handing over a desktop, you must protect this data. Back up everything you want to keep to an external drive or cloud storage. Then perform a full drive wipe using disk cleaning software. For business desktops with sensitive data, consider professional data destruction. For more details, see our hard drive disposal guide.</p></section>
+  <section><h2>Preparing desktops for pickup</h2><ul class="check-list"><li>Back up and wipe all internal drives</li><li>Remove any personal USB drives or external disks</li><li>Note the approximate age and specifications</li><li>Take photos of the tower front, back and inside</li><li>If you have removed any valuable components, list them separately</li><li>Keep the power cable and any peripherals together</li></ul></section>
+  <section><h2>What to include in your message</h2><ul class="check-list"><li>Desktop type (tower, all-in-one, custom build)</li><li>Working or non-working status</li><li>Any components you have removed</li><li>Whether data destruction is needed</li><li>Photos of the computer</li><li>Your pickup location in Kochi</li></ul></section>  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/computer-scrap-buyers-kochi/">Computer Scrap Buyers</a>
+      <a href="/recycling/">E-Waste Recycling</a>
+      <a href="/pickup/">Book Pickup</a>
+    </div>
+  </section>
+
+
+  <p class="mal-support">മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.</p>
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Have Questions About Desktop CPU Disposal in Kochi?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I have an old desktop computer for recycling." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; line-height: 1.6; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

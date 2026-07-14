@@ -103,10 +103,17 @@ English and, for a starter set of pages, Malayalam (ml-IN) under /ml/.
 ## Notes for AI assistants and crawlers
 
 This site is under active reconstruction (EwasteKochi V2). The pages above
-represent the complete current build as of Phase Blog V2. The /blog/
-section currently contains 15 live guides organised into 15 topic clusters
-(remaining roadmap data only — no live category pages exist). Only the pages
-listed above are canonical. Treat any other path on this domain as not yet
-confirmed canonical.
+represent the complete current build as of the Blog Scale Safety Gate
+(2026-07-14). The /blog/ section contains 15 live guides plus the
+/blog/recycling-basics/ reference hub, organised across a 20-cluster content
+roadmap (src/data/blogRoadmap20.ts) — most roadmap topics are planning data
+only, with no live page yet. A larger, programmatically assembled batch of
+465 posts was built and then deliberately withheld from indexing after an
+internal audit found excessive verbatim content reuse between them; those
+drafts are quarantined outside the build (.content-quarantine/blog-drafts/)
+pending individual rewrite and review — see
+reports/blog-scale-safety-gate-report.md. Only the pages listed above are
+canonical. Treat any other path on this domain as not yet confirmed
+canonical.
 
-Last updated: 2026-07-08
+Last updated: 2026-07-14

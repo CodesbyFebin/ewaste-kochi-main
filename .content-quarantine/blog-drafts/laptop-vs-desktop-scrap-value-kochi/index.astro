@@ -1,0 +1,92 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Laptop vs Desktop Scrap Value in Kochi | Which Is Worth More?";
+const description =
+  "Laptop and desktop scrap value compared in Kochi — what affects worth, when to sell, when to recycle and how condition changes quote. Practical tips for sellers.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Laptop vs Desktop Scrap Value", path: "/blog/laptop-vs-desktop-scrap-value-kochi/" },
+];
+
+const jsonLd = [
+  { "@context": "https://schema.org", "@type": "BlogPosting", headline: title, description, datePublished, dateModified, author: { "@type": "Organization", name: BUSINESS.legalName }, publisher: { "@id": `${SITE_URL}/#organization` }, mainEntityOfPage: `${SITE_URL}/blog/laptop-vs-desktop-scrap-value-kochi/` },
+  { "@context": "https://schema.org", "@type": "WebPage", "@id": `${SITE_URL}/blog/laptop-vs-desktop-scrap-value-kochi/`, name: title, description, dateModified },
+];
+
+const faqItems = [
+  { q: "Do laptops or desktops have more scrap value in Kochi?", a: "It depends on the machine, not just the form factor. A working laptop with good specs can be worth more than an old desktop. Send details for a quote." },
+  { q: "Can broken laptops or desktops have any value?", a: "Broken devices generally have lower value than working ones. However, they still contain metals and components. Send photos and details for an estimate." },
+  { q: "Does screen condition affect laptop value?", a: "Yes. A cracked laptop screen reduces value significantly. A working screen without cracks keeps more resale or quote value." },
+  { q: "Do desktop components have separate value?", a: "Yes. Some desktop components — graphics cards, RAM, SSDs — may have value even if the rest of the system is old. Remove and list valuable parts separately." },
+  { q: "Is resale better than recycling for my old laptop?", a: "If the laptop is still functional, resale is often worth considering. Very old or damaged devices are usually better for recycling. Compare options before deciding." },
+];
+---
+
+<Layout title={title} description={description} path="/blog/laptop-vs-desktop-scrap-value-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Laptop vs Desktop Scrap Value in Kochi</h1>
+  <p class="lede">Both laptops and desktops have scrap value, but the worth depends on condition, working status and components. Here is what affects the value of each.</p>
+  <CtaBar whatsappMessage="Hi, I'd like to know the scrap value for my old laptop or desktop." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Neither form factor wins by default — a working laptop with good
+      specs can be worth more than an old desktop, and vice versa. What
+      really affects value is working status, screen/component
+      condition, specifications and age. Send photos and specs for an
+      accurate quote.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Working status matters more than form factor for resale or scrap value.</li>
+    <li>Desktop components (GPU, RAM, SSD) can have separate value even if the system is old.</li>
+    <li>Very old or non-functional devices are usually better suited for recycling than resale.</li>
+  </ul>
+
+  <section><h2>What affects laptop value</h2><ul><li>Brand and model — some brands resell better than others</li><li>Working status — a functional laptop carries more value</li><li>Screen condition — cracks reduce value significantly</li><li>Battery health — a swelling or dead battery lowers value</li><li>Specifications — processor, RAM, storage type and capacity</li><li>Age and condition — newer devices generally have higher value</li></ul></section>
+  <section><h2>What affects desktop value</h2><ul><li>Form factor — towers are bulkier to collect and process</li><li>Working status — working systems are easier to resell</li><li>Valuable components — GPUs, SSDs, RAM can be worth removing first</li><li>Monitor inclusion — bundled monitors may add value</li><li>Age and specifications — older systems have lower overall value</li><li>Office batch vs single unit — bulk pickup planning changes quote</li></ul></section>
+  <section><h2>When to sell vs recycle</h2><p>A working laptop or desktop that is still useful for basic tasks — browsing, documents, video calls — usually has better resale value than scrap value. Very old devices that cannot run modern software are often better for recycling. If you are unsure, send photos and a list of specs. We can help you decide whether resale, donation or recycling is the best next step.</p></section>
+  <section><h2>How to get a quote</h2><ul class="check-list"><li>Take clear photos showing the device from the front and back</li><li>Mention the working status — does it power on?</li><li>Note any damage — screen cracks, dents, missing keys</li><li>If a desktop, list any valuable components separately</li><li>Mention approximate age and specifications</li><li>Send the photos and details via WhatsApp</li></ul></section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/sell-electronics/">Sell Electronics</a>
+      <a href="/e-waste-scrap-prices-kochi/">Scrap Price Guide</a>
+    </div>
+  </section>
+
+  <p class="mal-support">മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.</p>
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Want a Scrap Value Quote?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to know the scrap value for my old laptop or desktop." compact />
+  </section>
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; line-height: 1.6; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

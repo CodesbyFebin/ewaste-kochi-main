@@ -27,3 +27,13 @@ ewastekochi-v3-chatbot.zip
 ewastekochi-amp.html
 Homepage Hero image.png
 ewastekochi.com-*.zip
+
+# BLOG SCALE SAFETY GATE (2026-07-14) - see reports/blog-scale-safety-gate-report.md.
+# .content-quarantine/blog-drafts/ holds 555 unreviewed/generated blog posts
+# pulled out of src/pages/blog/ so Astro can't build them; kept as an internal
+# editorial backlog, tracked in git so the drafts aren't lost.
+# .content-quarantine/images-blog-generated/ holds 600 programmatically
+# generated images (19MB) that were never wired into any page and sat in an
+# unservable location (project-root images/, not public/) - not tracked, not
+# needed until a future pass moves+wires them correctly.
+.content-quarantine/images-blog-generated/

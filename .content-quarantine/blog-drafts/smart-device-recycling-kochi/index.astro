@@ -1,0 +1,115 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Smart Device Recycling in Kochi | Smartwatch, Speaker & Gadget Disposal";
+const description =
+  "How to recycle smart devices in Kochi — smartwatches, smart speakers, smart doorbells and home automation gadgets. Battery safety and data tips.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Smart Device Recycling in Kochi", path: "/blog/smart-device-recycling-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/smart-device-recycling-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/smart-device-recycling-kochi/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+const faqItems = [
+  { q: "Can smartwatches be recycled in Kochi?", a: "Yes. Smartwatches, fitness bands and wearable gadgets are accepted for recycling. They contain batteries that need safe handling." },
+  { q: "Do smart speakers store personal data?", a: "Some smart speakers store account information or voice recordings. Perform a factory reset before handing over the device." },
+  { q: "Can smart doorbells and home automation devices be recycled?", a: "Yes. Smart doorbells, motion sensors, smart plugs and other automation gadgets are accepted. Include them in your e-waste list." },
+  { q: "Should I remove batteries from smart devices before pickup?", a: "If the battery is removable, take it out and keep it separate. For built-in batteries, leave them and let us know." },
+  { q: "Can I include smart devices with other e-waste?", a: "Yes. Smart devices can be included with other electronics in the same pickup. Mention them when you send your item list." },
+];
+---
+
+<Layout title={title} description={description} path="/blog/smart-device-recycling-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Smart Device Recycling in Kochi</h1>
+  <p class="lede">Smart home devices, wearables and gadgets are becoming common in Kochi households. Here is how to recycle them safely.</p>
+  <CtaBar whatsappMessage="Hi, I have smart devices for recycling." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Smartwatches, smart speakers, doorbells and home automation
+      gadgets are all accepted for recycling in Kochi. Factory reset
+      any device with an app or account link first, and remove
+      batteries if they're easily accessible.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Many smart devices store account or Wi-Fi data — reset before handing over.</li>
+    <li>Removable batteries should be taken out and kept separate; built-in ones can stay.</li>
+    <li>Smart devices can be included in the same pickup as other electronics.</li>
+  </ul>
+
+  <section><h2>What smart devices are accepted?</h2><ul>
+    <li>Smartwatches and fitness bands</li><li>Smart speakers (Alexa, Google Home, etc.)</li>
+    <li>Smart doorbells and security cameras</li><li>Smart plugs, lights and switches</li>
+    <li>Home automation hubs and controllers</li><li>Motion sensors and environmental sensors</li>
+    <li>Smart thermostats and air quality monitors</li>
+  </ul></section>
+  <section><h2>Data safety for smart devices</h2><p>Many smart devices store account information, Wi-Fi credentials or usage history. Before disposal: perform a factory reset through the device settings or app, remove the device from your account, and delete any associated cloud data if possible.</p></section>
+  <section><h2>Battery safety for wearables</h2><p>Smartwatches and fitness bands contain small lithium-ion batteries. Check for swelling or damage before pickup. If the battery is swollen, flag it when you contact us and store it in a cool, dry place.</p></section>
+  <section><h2>What to include in your message</h2><ul class="check-list">
+    <li>Device types and approximate quantity</li><li>Any damaged or swollen batteries</li>
+    <li>Whether you performed a factory reset</li><li>Your pickup location in Kochi</li>
+  </ul></section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/pickup/">Book Pickup</a>
+      <a href="/battery-recycling/">Battery Recycling</a>
+    </div>
+  </section>
+
+  <p class="mal-support">മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.</p>
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Have Smart Devices to Recycle?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I have smart devices for recycling." compact />
+  </section>
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

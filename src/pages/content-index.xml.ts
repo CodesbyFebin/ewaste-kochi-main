@@ -1,6 +1,7 @@
 import type { APIRoute } from "astro";
 import { ROUTES } from "../data/routes";
 import { SITE_URL } from "../data/site";
+import { isIndexable } from "../lib/indexable";
 
 function escapeXml(input: string): string {
   return input
@@ -15,7 +16,7 @@ function escapeXml(input: string): string {
 // single source of truth, for consumers that prefer XML over JSON.
 export const GET: APIRoute = () => {
   const today = new Date().toISOString().slice(0, 10);
-  const entries = ROUTES.map(
+  const entries = ROUTES.filter(isIndexable).map(
     (r) => `  <page>
     <url>${SITE_URL}${r.path}</url>
     <title>${escapeXml(r.title)}</title>

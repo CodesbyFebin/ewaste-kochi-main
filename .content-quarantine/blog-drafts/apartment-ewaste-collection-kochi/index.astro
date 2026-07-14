@@ -1,0 +1,189 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Apartment E-Waste Collection in Kochi | Housing Society Pickup";
+const description =
+  "How to organize e-waste collection for apartments and housing societies in Kochi. Bulk pickup planning, resident participation, and what items to include.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Apartment E-Waste Collection", path: "/blog/apartment-ewaste-collection-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/apartment-ewaste-collection-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/apartment-ewaste-collection-kochi/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Can apartments in Kochi organize e-waste pickup?",
+    a: "Yes. Apartment complexes, housing societies and gated communities can request bulk e-waste collection. Contact us with resident count and estimated items.",
+  },
+  {
+    q: "What items can residents include in a community pickup?",
+    a: "Old laptops, phones, cables, chargers, TVs, monitors, printers, batteries and other household electronics. Flag any damaged batteries separately.",
+  },
+  {
+    q: "How should we announce the collection to residents?",
+    a: "Share a simple notice with the date, items accepted, and preparation tips. Residents should separate batteries and remove data from devices beforehand.",
+  },
+  {
+    q: "Is pickup feasible for large communities?",
+    a: "We can assess feasibility based on quantity, item types and your location. Send us the expected number of participating households and we can plan accordingly.",
+  },
+  {
+    q: "What should not be included in a community e-waste drive?",
+    a: "General household waste, large appliances like refrigerators and AC units, and hazardous materials should not be mixed with e-waste. Contact us if unsure.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/apartment-ewaste-collection-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Apartment E-Waste Collection in Kochi</h1>
+  <p class="lede">
+    Apartment complexes and housing societies in Kochi can organize
+    bulk e-waste pickup for residents. Here is how to plan a community
+    electronics collection drive.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to organize an e-waste collection for my apartment." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Apartment complexes and housing societies in Kochi can organize a
+      single bulk pickup for residents' old electronics rather than each
+      household booking separately. Share your building name, estimated
+      participant count and a rough item list on WhatsApp, and the team
+      confirms feasibility and a collection date.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>A single community drive is usually more efficient than individual pickups.</li>
+    <li>Give residents at least a week's notice with clear preparation guidelines.</li>
+    <li>Batteries must be separated and flagged, not mixed with general electronics.</li>
+    <li>Feasibility depends on participant count, item types and your specific location.</li>
+  </ul>
+
+  <section>
+    <h2>Why organize a community e-waste drive?</h2>
+    <p>
+      Many residents in apartment complexes have old electronics stored
+      at home — unused phones, broken chargers, old laptops, cables and
+      batteries. A community collection drive makes it convenient for
+      everyone to dispose of these items responsibly in one go.
+    </p>
+  </section>
+
+  <section>
+    <h2>Items residents can bring</h2>
+    <ul>
+      <li>Old mobile phones and tablets</li>
+      <li>Laptops, computers and monitors</li>
+      <li>Printers, scanners and peripherals</li>
+      <li>Cables, chargers and adapters</li>
+      <li>TVs (LED, LCD, CRT — mention size)</li>
+      <li>Batteries — UPS, inverter, power banks (flag damage)</li>
+      <li>Small home electronics and gadgets</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Planning checklist for apartment associations</h2>
+    <ul class="check-list">
+      <li>Choose a date and inform residents at least one week in advance</li>
+      <li>Share a list of accepted items and preparation guidelines</li>
+      <li>Ask residents to remove data from phones and laptops beforehand</li>
+      <li>Request residents to separate batteries from other items</li>
+      <li>Identify a common area for collection (parking lot, clubhouse, etc.)</li>
+      <li>Contact us with estimated quantities for feasibility check</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Safety considerations for community pickups</h2>
+    <ul>
+      <li>Keep batteries separate from other electronics</li>
+      <li>Flag any swollen or leaking batteries for special handling</li>
+      <li>Do not accept household waste, large appliances or hazardous materials</li>
+      <li>Ensure the collection area is dry and shaded for battery items</li>
+      <li>Have a simple sign-in sheet if you want to track participation</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What to include in your message</h2>
+    <ul class="check-list">
+      <li>Apartment name and location in Kochi</li>
+      <li>Estimated number of participating households</li>
+      <li>Approximate types and quantities of items expected</li>
+      <li>Preferred date and timeframe</li>
+      <li>Collection area details (parking lot, clubhouse, etc.)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/pickup/">Book Pickup</a>
+      <a href="/battery-recycling/">Battery Recycling</a>
+      <a href="/locations/">Service Areas</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <section class="final-cta">
+    <h2>Ready to Organize Your Apartment's E-Waste Drive?</h2>
+    <p>Share your building name, estimated participation and preferred date to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to organize an e-waste collection for my apartment." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

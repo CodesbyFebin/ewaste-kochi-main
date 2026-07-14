@@ -1,0 +1,167 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Pickup Planning for Bulk Electronics in Kochi | Office Guide";
+const description =
+  "How to plan a bulk electronics pickup in Kochi for offices and organisations — inventory, data handling, battery separation, access details, and booking a dedicated visit.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Pickup Planning for Bulk Electronics", path: "/blog/bulk-electronics-pickup-planning/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/bulk-electronics-pickup-planning/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/bulk-electronics-pickup-planning/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "How far in advance should we contact you for a bulk pickup?",
+    a: "A few days to a week in advance is ideal for medium-volume pickups. Larger volumes benefit from more lead time — contact us as early as possible.",
+  },
+  {
+    q: "Can we stage items across multiple days before a single pickup?",
+    a: "Yes — collect items over time and book a single pickup once everything is ready.",
+  },
+  {
+    q: "Is an asset inventory mandatory?",
+    a: "Not mandatory for all pickups, but very helpful for large volumes and essential if you need documentation or data destruction records.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/bulk-electronics-pickup-planning/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Pickup Planning for Bulk Electronics</h1>
+  <p class="lede">
+    Bulk pickups — large office IT refreshes, building clearances, or
+    institutional e-waste — need more preparation than a household
+    collection. Here's a planning approach that makes the process
+    efficient.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'm planning a bulk e-waste pickup for an office in Kochi." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Planning a bulk electronics pickup in Kochi means building a rough
+      inventory, flagging data-bearing devices, separating batteries, and
+      confirming site access details before you contact the team. This
+      upfront planning turns a large office cleanout into a single,
+      well-scheduled visit instead of a chaotic one.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>A rough inventory (type and count) is enough to start — exact serials aren't needed.</li>
+    <li>Flag data-bearing devices early so data destruction can be planned properly.</li>
+    <li>Batteries should be physically separated from other equipment.</li>
+    <li>Access details (floor, lift, timing) matter more for bulk pickups than home ones.</li>
+  </ul>
+
+  <section>
+    <h2>Step 1: Build a rough inventory</h2>
+    <p>
+      Before contacting us, walk through the items to be collected and
+      create a rough count: laptops (working / non-working), desktops,
+      monitors, printers, UPS units, servers, networking gear, batteries.
+      Exact serial numbers aren't required at this stage — type and
+      quantity is enough for an initial feasibility check.
+    </p>
+  </section>
+
+  <section>
+    <h2>Step 2: Identify data-bearing devices</h2>
+    <p>
+      Flag all laptops, desktops, phones, tablets, servers, and hard
+      drives that hold or may have held business data. Decide whether
+      you'll wipe them yourselves or request
+      <a href="/data-destruction/">certified data destruction</a>.
+      For larger volumes, ITAD with documentation is usually the right
+      approach — see <a href="/itad/">ITAD services</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Step 3: Separate batteries</h2>
+    <p>
+      All batteries — UPS, laptop battery packs, power banks — should
+      be physically separated from other equipment. Flag any damaged or
+      swollen batteries specifically. See
+      <a href="/battery-recycling/">battery recycling</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Step 4: Confirm access details</h2>
+    <p>
+      For office pickups, confirm: floor, lift dimensions for large items,
+      loading bay availability, security or visitor procedures, and
+      preferred pickup window (early morning before staff arrive, for
+      example, works well for some offices).
+    </p>
+  </section>
+
+  <section>
+    <h2>Step 5: Contact us with the inventory and access details</h2>
+    <p>
+      Send your rough inventory, access details, and any photos of large
+      or unusual items. We'll confirm feasibility, any quote details, and
+      schedule a dedicated visit.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <section class="final-cta">
+    <h2>Planning a Bulk Pickup?</h2>
+    <p>Share your rough inventory and access details to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'm planning a bulk e-waste pickup for an office in Kochi." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

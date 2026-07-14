@@ -1,0 +1,114 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Broken Screen Disposal Safety";
+const description = "Broken Screen Disposal Safety — practical guidance for Kochi households and businesses, covering old TV disposal Kochi, TV recycling near me, monitor disposal.";
+const datePublished = "2026-07-14";
+const dateModified = "2026-07-14";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Broken Screen Disposal Safety", path: "/blog/broken-screen-disposal-safety/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/broken-screen-disposal-safety/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/broken-screen-disposal-safety/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  { q: "How do I book TV disposal?", a: "Message the TV type, approximate size, condition and location on WhatsApp." },
+  { q: "Can broken TVs be collected?", a: "Yes, a broken or non-functional TV is still accepted — mention the damage when booking." },
+  { q: "Does TV pickup depend on location?", a: "Ewaste Kochi primarily supports Kochi, Ernakulam, Kakkanad, Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro enquiry areas. For other Kerala districts, contact us to check pickup feasibility." },
+  { q: "Can damaged screens be recycled?", a: "Yes, cracked or non-functional screens are accepted." },
+];
+---
+
+<Layout title={title} description={description} path="/blog/broken-screen-disposal-safety/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Broken Screen Disposal Safety</h1>
+  <p class="lede">Here's what you need to know, in plain terms. A cracked or non-functional screen doesn't stop a TV or monitor from being collected — a piece of cardboard over sharp edges is helpful but not required.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about broken screen disposal safety." />
+
+  <ul class="key-takeaways">
+    <li>Small appliances with a plug, motor or circuit board count as e-waste too.</li>
+    <li>Broken screens and damaged casings don't disqualify an item from pickup.</li>
+    <li>CRT sets are heavy and need advance notice, especially without lift access.</li>
+  </ul>
+
+  <section>
+    <h2>Broken screens</h2>
+    <p>A cracked or non-functional screen doesn't stop a TV or monitor from being collected — a piece of cardboard over sharp edges is helpful but not required. Flag the damage when you book so the team knows what to expect.</p>
+  </section>
+
+  <section>
+    <h2>Office monitor recycling</h2>
+    <p>Offices replacing multiple monitors at once can request a bulk pickup — a rough count is enough to get started.</p>
+  </section>
+
+  <section>
+    <h2>Repair or resale first?</h2>
+    <p>A working TV or monitor with no major issues may be worth checking for resale before recycling. Once a display has failed or the repair cost outweighs the value, recycling is the more practical route.</p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/tv-recycling-kochi/">TV Recycling</a>
+      <a href="/recycling/">E-Waste Recycling</a>
+      <a href="/pickup/">Pickup</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/broken-screen-disposal-safety/" />
+
+  <section class="final-cta">
+    <h2>Have Questions About Broken Screen Disposal Safety?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I have a question about broken screen disposal safety." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  section p { line-height: 1.7; margin-bottom: 1rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

@@ -1,0 +1,92 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Home Appliance E-Waste Guide in Kochi | Small Appliance Disposal";
+const description =
+  "How to dispose of old home appliances in Kochi — mixers, iron boxes, kettles, microwaves, toasters and other small appliances. What counts as e-waste and how to prepare for pickup.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Home Appliance E-Waste Guide", path: "/blog/home-appliance-ewaste-guide-kochi/" },
+];
+
+const jsonLd = [
+  { "@context": "https://schema.org", "@type": "BlogPosting", headline: title, description, datePublished, dateModified, author: { "@type": "Organization", name: BUSINESS.legalName }, publisher: { "@id": `${SITE_URL}/#organization` }, mainEntityOfPage: `${SITE_URL}/blog/home-appliance-ewaste-guide-kochi/` },
+  { "@context": "https://schema.org", "@type": "WebPage", "@id": `${SITE_URL}/blog/home-appliance-ewaste-guide-kochi/`, name: title, description, dateModified },
+];
+
+const faqItems = [
+  { q: "Can small home appliances be recycled in Kochi?", a: "Yes. Small appliances with electronic components — mixers, iron boxes, kettles, toasters, microwaves and similar items — are accepted for e-waste collection." },
+  { q: "What home appliances count as e-waste?", a: "Any appliance with a plug, battery, circuit board or motor that is no longer needed. Common examples include kitchen appliances, cleaning devices, heating and cooling gadgets, and personal care electronics." },
+  { q: "Should I unplug appliances before pickup?", a: "Yes. Always unplug appliances before packing them for pickup. For larger appliances, coil the cable neatly and secure it with tape." },
+  { q: "Can broken or damaged appliances be recycled?", a: "Yes. Non-functional appliances are accepted. If parts are loose, place the appliance in a bag or box to contain them. Flag the damage when contacting us." },
+  { q: "Do home appliances have any scrap value?", a: "Some appliances contain valuable metals and components. However, small home appliances usually have lower scrap value than larger electronics. Contact us for confirmation." },
+];
+---
+
+<Layout title={title} description={description} path="/blog/home-appliance-ewaste-guide-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Home Appliance E-Waste Guide in Kochi</h1>
+  <p class="lede">Every home in Kochi accumulates small appliances over time — mixers, irons, kettles, toasters, grinders and more. When they stop working or are replaced, here is how to dispose of them responsibly.</p>
+  <CtaBar whatsappMessage="Hi, I have old home appliances for recycling." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Any home appliance with a plug, battery, motor or circuit board —
+      mixers, iron boxes, kettles, microwaves, even washing machines and
+      ACs — counts as e-waste and can be included in a pickup. Unplug,
+      clean out any liquid or food residue, and note working status when
+      you message us.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Simple appliances like iron boxes still contain wiring and heating elements that shouldn't go in general waste.</li>
+    <li>Draining liquids and removing detachable parts speeds up pickup.</li>
+    <li>Small appliances usually have lower scrap value than larger electronics — ask us to confirm.</li>
+  </ul>
+
+  <section><h2>What home appliances are commonly accepted</h2><ul><li>Kitchen appliances — mixers, grinders, toasters, kettles, microwaves, ovens</li><li>Laundry appliances — washing machines, dryers, iron boxes</li><li>Heating and cooling — room heaters, air coolers, air conditioners, fans</li><li>Personal care — hair dryers, trimmers, straighteners, electric shavers</li><li>Cleaning appliances — vacuum cleaners, mops, floor polishers</li><li>Other small electronics — coffee makers, blenders, juicers, sandwich makers</li></ul></section>
+  <section><h2>What makes an appliance e-waste</h2><p>If an appliance has a plug, battery, circuit board, motor or heating element, it is e-waste. Even simple devices like an iron box contain thermostats, heating coils and wiring that should not go into household waste. Large appliances like washing machines and refrigerators contain compressors, motors and control boards. All of these need responsible recycling rather than dumping with regular trash.</p></section>
+  <section><h2>Preparing home appliances for pickup</h2><ul class="check-list"><li>Unplug the appliance and let it cool down if it was recently used</li><li>Remove detachable parts — trays, filters, blades, cords</li><li>Clean out any food residue or liquid from kitchen appliances</li><li>Take photos showing the appliance from different angles</li><li>For larger items — note the approximate size and weight</li><li>If the appliance has water or liquid inside, drain it completely</li></ul></section>
+  <section><h2>What to include in your message</h2><ul class="check-list"><li>Appliance type and quantity</li><li>Working or non-working status</li><li>Any damage or missing parts</li><li>Whether it needs disassembly</li><li>Photos of each appliance</li><li>Your pickup location in Kochi</li></ul></section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/recycling/">E-Waste Recycling</a>
+      <a href="/pickup/">Book Pickup</a>
+    </div>
+  </section>
+
+  <p class="mal-support">മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.</p>
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Have Old Appliances to Recycle?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I have old home appliances for recycling." compact />
+  </section>
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; line-height: 1.6; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

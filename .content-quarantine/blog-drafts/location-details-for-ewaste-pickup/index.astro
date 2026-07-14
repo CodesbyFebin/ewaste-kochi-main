@@ -1,0 +1,162 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Why Location Details Matter for E-Waste Pickup in Kochi";
+const description =
+  "Why accurate location details matter when booking an e-waste pickup in Kochi — what to include for homes, apartments, offices, and how to share map location on WhatsApp.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Why Location Details Matter for Pickup", path: "/blog/location-details-for-ewaste-pickup/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/location-details-for-ewaste-pickup/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/location-details-for-ewaste-pickup/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Is a Google Maps pin sufficient for location?",
+    a: "A pin helps, but also include a text description — building name, floor, landmark — since GPS pins aren't always precise for specific buildings.",
+  },
+  {
+    q: "What if I'm in an area without a registered address?",
+    a: "Share a map pin plus a nearby landmark and any helpful navigation notes. We'll work with what you provide.",
+  },
+  {
+    q: "Can I share my location live on WhatsApp when the team is on the way?",
+    a: "Yes — a live WhatsApp location is the most accurate option once the team is en route.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/location-details-for-ewaste-pickup/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Why Location Details Matter for Pickup</h1>
+  <p class="lede">
+    Accurate location details prevent delays on pickup day. Here's what
+    to include for different property types — and how to share your
+    location effectively on WhatsApp.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to confirm pickup details for my location." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Accurate location details prevent pickup-day delays. Share a
+      WhatsApp location pin plus a text description — building/street
+      name, floor, landmark and access notes (lift, gate, security) —
+      for the fastest, most reliable confirmation.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>A GPS pin alone isn't always precise enough for a specific building — pair it with a text description.</li>
+    <li>Apartments need floor, lift availability and access procedure details.</li>
+    <li>Offices should mention loading bay access and a preferred pickup window.</li>
+  </ul>
+
+  <section>
+    <h2>For standalone houses</h2>
+    <ul class="check-list">
+      <li>Full address including street name and house number</li>
+      <li>Nearby landmark (temple, school, junction, petrol station)</li>
+      <li>Gate access — is the gate always open, or does it need a call to open?</li>
+      <li>WhatsApp your location pin for easy navigation</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>For apartments and flats</h2>
+    <ul class="check-list">
+      <li>Building or complex name</li>
+      <li>Block number if applicable</li>
+      <li>Floor number</li>
+      <li>Whether lift is available (especially for bulky items)</li>
+      <li>Security or visitor access procedure</li>
+      <li>Whether items will be at your door or in the lobby</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>For offices and commercial properties</h2>
+    <ul class="check-list">
+      <li>Building name and floor</li>
+      <li>Reception or entry procedure for visitors</li>
+      <li>Loading bay availability for bulk pickups</li>
+      <li>Preferred pickup window (e.g. before 10am, after office hours)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Sharing location on WhatsApp</h2>
+    <p>
+      The easiest method: open WhatsApp, tap the attachment icon, and
+      share your current location. This gives accurate GPS coordinates.
+      Combine with a text description of the building for the most
+      reliable navigation.
+    </p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/pickup/">Book Pickup</a>
+      <a href="/locations/">Locations</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Ready to Confirm Your Pickup Details?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to confirm pickup details for my location." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

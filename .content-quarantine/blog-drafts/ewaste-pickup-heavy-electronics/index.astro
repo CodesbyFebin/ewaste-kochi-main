@@ -1,0 +1,162 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "What to Do If You Have Heavy Electronics Before E-Waste Pickup";
+const description =
+  "How to handle heavy or bulky electronics before an e-waste pickup in Kochi — flagging items in advance, access details, and what to do with large UPS, CRT TVs, and server racks.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "What to Do If You Have Heavy Electronics Before Pickup", path: "/blog/ewaste-pickup-heavy-electronics/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/ewaste-pickup-heavy-electronics/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/ewaste-pickup-heavy-electronics/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Can you pick up a large inverter battery that I can't move?",
+    a: "Yes — flag the size and weight when booking so we can plan accordingly. Don't attempt to move a heavy battery yourself if it's damaged.",
+  },
+  {
+    q: "Can you collect a server rack or full IT rack from an office?",
+    a: "Yes, with advance notice. Share dimensions and access details — floor, lift availability, loading bay — when booking.",
+  },
+  {
+    q: "What if a CRT TV is upstairs and I can't get it to ground level?",
+    a: "Flag this when booking with your floor and access details. We'll confirm what's possible.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/ewaste-pickup-heavy-electronics/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>What to Do If You Have Heavy Electronics Before Pickup</h1>
+  <p class="lede">
+    Heavy or bulky electronics — old CRT TVs, large UPS units, server
+    racks, heavy inverter batteries — are completely collectible, but
+    they need advance planning. Here's how to handle them.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I have some heavy electronics I'd like to recycle." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Heavy items like CRT TVs, server racks and large UPS or inverter
+      batteries are collectible — just flag size, weight and access
+      details (floor, lift, loading bay) when you first message us so
+      the team can plan the visit. Never move a damaged heavy battery
+      yourself.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Describe heavy items specifically, not just as "electronics" — size and access matter.</li>
+    <li>Photos of large or bulky items help the team plan before arrival.</li>
+    <li>Damaged, leaking or warm batteries should stay put — don't move them yourself.</li>
+  </ul>
+
+  <section>
+    <h2>Flag heavy items when you first contact us</h2>
+    <p>
+      When you send your item list, describe any heavy or bulky items
+      specifically — not just "electronics." Include type, approximate
+      weight or size, and location (floor, room, whether there's lift
+      access). This gives the team time to plan the visit correctly.
+    </p>
+  </section>
+
+  <section>
+    <h2>Common heavy items and what to note</h2>
+    <ul class="check-list">
+      <li><strong>CRT TVs:</strong> Note size (inches), whether it's upstairs, whether there's lift access</li>
+      <li><strong>Large UPS units:</strong> Note whether the battery is still inside; any damage</li>
+      <li><strong>Inverter batteries:</strong> Note size and condition, any visible damage or leakage</li>
+      <li><strong>Server racks:</strong> Note number of rack units, floor, lift, and loading bay access</li>
+      <li><strong>Large printers/copiers:</strong> Note size and whether on wheels or fixed</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Don't move damaged heavy batteries yourself</h2>
+    <p>
+      If a large UPS or inverter battery looks damaged, leaking, or
+      unusually warm, don't attempt to move it to another location before
+      pickup. Keep the area ventilated and contact us for guidance. See
+      <a href="/battery-recycling/">battery recycling</a> for safe
+      interim handling.
+    </p>
+  </section>
+
+  <section>
+    <h2>Send photos in advance</h2>
+    <p>
+      Photos of large items are especially helpful — they show real size,
+      condition, and access constraints before the team arrives. This
+      avoids surprises on pickup day.
+    </p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/tv-recycling-kochi/">TV Recycling</a>
+      <a href="/battery-recycling/">Battery Recycling</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Have Heavy Electronics to Recycle?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I have some heavy electronics I'd like to recycle." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

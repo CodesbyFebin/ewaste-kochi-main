@@ -1,0 +1,175 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "How Responsible E-Waste Collection Works | Kochi Guide";
+const description =
+  "What makes e-waste collection responsible — authorized handling, data destruction, battery safety, and why the difference between compliant and informal recyclers matters.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "How Responsible E-Waste Collection Works", path: "/blog/how-responsible-ewaste-collection-works/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/how-responsible-ewaste-collection-works/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/how-responsible-ewaste-collection-works/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "How do I know a recycler is legitimate?",
+    a: "Ask about their authorization status, whether they provide pickup documentation, and how they handle data destruction. A legitimate operator will answer clearly.",
+  },
+  {
+    q: "What is the difference between a recycler and a scrap dealer?",
+    a: "A scrap dealer buys materials for value without necessarily following compliant environmental or data handling processes. A legitimate recycler operates under authorization and follows required handling standards for hazardous materials and data.",
+  },
+  {
+    q: "Is documentation always provided?",
+    a: "Documentation is available on request for business and data destruction pickups. Ask when booking to confirm what's available for your specific situation.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/how-responsible-ewaste-collection-works/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>How Responsible E-Waste Collection Works</h1>
+  <p class="lede">
+    Not all e-waste collection is equal. Here's what distinguishes
+    responsible collection from informal scrap handling — and why the
+    difference matters for your data, your devices, and the environment.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to book responsible e-waste collection." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Responsible e-waste collection means authorized handling, data
+      destruction before any onward processing, batteries kept
+      physically separate for safe handling, and compliant downstream
+      routing — the opposite of an informal scrap dealer who can't
+      verify any of this.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Authorization governs how hazardous materials and batteries are handled, not just collection.</li>
+    <li>Data destruction happens before devices move further down the process, not as an afterthought.</li>
+    <li>Documentation creates an audit trail — useful for business compliance and client assurance.</li>
+  </ul>
+
+  <section>
+    <h2>What authorized handling means</h2>
+    <p>
+      Responsible collection operates under Pollution Control Board
+      authorization — meaning processes are regulated, not arbitrary.
+      This covers how hazardous materials inside electronics are handled,
+      how batteries are separated and processed, and where materials end
+      up after collection. Informal scrap dealers operate outside this
+      framework.
+    </p>
+  </section>
+
+  <section>
+    <h2>Data destruction as part of the process</h2>
+    <p>
+      A responsible recycler treats data-bearing devices differently from
+      general scrap. Storage is wiped, degaussed, or shredded before
+      any onward handling. Business customers can request a certificate.
+      An informal scrap dealer typically does none of this. See
+      <a href="/data-destruction/">data destruction</a> for options.
+    </p>
+  </section>
+
+  <section>
+    <h2>Battery separation and safe handling</h2>
+    <p>
+      Batteries are a safety issue, not just a recycling one. Responsible
+      collection keeps batteries physically separate from general e-waste
+      from the point of pickup. They go to processing channels that handle
+      the specific chemistry of lead-acid, lithium, or other battery types
+      correctly. See <a href="/battery-recycling/">battery recycling</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Compliant downstream routing</h2>
+    <p>
+      Where devices go after collection matters as much as how they're
+      collected. A responsible recycler routes materials to authorized
+      processing — not to informal dismantlers or general waste. Materials
+      that can be recovered (copper, aluminium, steel) are extracted;
+      materials that can't are safely disposed of.
+    </p>
+  </section>
+
+  <section>
+    <h2>Documentation for accountability</h2>
+    <p>
+      For businesses, documentation — pickup records, data destruction
+      certificates — creates an audit trail. This is relevant for
+      compliance, client assurance, and internal governance. Ask about
+      available documentation when booking a business pickup.
+    </p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/trust/">Trust and Compliance</a>
+      <a href="/data-destruction/">Data Destruction</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Ready to Book Responsible Collection?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to book responsible e-waste collection." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

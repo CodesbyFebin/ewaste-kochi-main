@@ -1,0 +1,114 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Monitor and TV Quote Factors";
+const description = "Monitor and TV Quote Factors — practical guidance for Kochi households and businesses, covering e-waste scrap price, computer scrap price, condition-based quote.";
+const datePublished = "2026-07-14";
+const dateModified = "2026-07-14";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Monitor and TV Quote Factors", path: "/blog/monitor-and-tv-quote-factors/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/monitor-and-tv-quote-factors/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/monitor-and-tv-quote-factors/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  { q: "How do I request quote?", a: "Message the item type, condition and photos on WhatsApp for a preliminary estimate." },
+  { q: "What affects quote value?", a: "Item type, quantity, condition, location and current market rate." },
+  { q: "Can offices request bulk quote?", a: "Yes, share an itemized or estimated list for a consolidated quote." },
+  { q: "What is condition-based quote?", a: "A quote that reflects the device's actual working status and physical condition rather than a flat rate by model alone." },
+];
+---
+
+<Layout title={title} description={description} path="/blog/monitor-and-tv-quote-factors/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Monitor and TV Quote Factors</h1>
+  <p class="lede">Here's what you need to know, in plain terms. Different item types carry different value factors — a laptop's value hinges on specs and working condition, a battery's on type and condition, a monitor or TV's on size and display type.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about monitor and tv quote factors." />
+
+  <ul class="key-takeaways">
+    <li>Clear photos and honest condition details give the best estimate.</li>
+    <li>Scrap value and resale value are calculated differently.</li>
+    <li>Condition, quantity and current market rate all factor into value.</li>
+  </ul>
+
+  <section>
+    <h2>Value by item type</h2>
+    <p>Different item types carry different value factors — a laptop's value hinges on specs and working condition, a battery's on type and condition, a monitor or TV's on size and display type.</p>
+  </section>
+
+  <section>
+    <h2>What determines a quote</h2>
+    <p>Item type, quantity, condition and current market rate all factor in. Clear photos and honest condition details lead to a more reliable preliminary estimate ahead of physical inspection.</p>
+  </section>
+
+  <section>
+    <h2>Bulk and office quantities</h2>
+    <p>For a larger batch, quotes are usually built from an itemized or estimated list rather than one flat number for everything — a rough breakdown by item type is useful upfront.</p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/e-waste-scrap-prices-kochi/">Scrap Price Guide</a>
+      <a href="/sell-electronics/">Sell Electronics</a>
+      <a href="/marketplace/">Marketplace</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/monitor-and-tv-quote-factors/" />
+
+  <section class="final-cta">
+    <h2>Have Questions About Monitor and TV Quote Factors?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I have a question about monitor and tv quote factors." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  section p { line-height: 1.7; margin-bottom: 1rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

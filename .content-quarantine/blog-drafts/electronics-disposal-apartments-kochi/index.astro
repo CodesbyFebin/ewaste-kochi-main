@@ -1,0 +1,180 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Safe Electronics Disposal for Apartments and Flats in Kochi";
+const description =
+  "How apartment residents in Kochi can safely dispose of old electronics — doorstep pickup, what to prepare, battery handling, and how to coordinate building access.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Safe Electronics Disposal for Apartments and Flats in Kochi", path: "/blog/electronics-disposal-apartments-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/electronics-disposal-apartments-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/electronics-disposal-apartments-kochi/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Does the team come up to my flat, or do I need to bring items to the lobby?",
+    a: "Confirm access details when booking — we'll advise whether collection from your floor is possible or whether bringing items to the lobby is easier.",
+  },
+  {
+    q: "Can multiple residents in the same building book a single pickup?",
+    a: "Yes — coordinating a combined pickup with neighbours is more efficient. Contact us with a combined item list and building address.",
+  },
+  {
+    q: "What if my apartment association has rules about external visitors?",
+    a: "Mention any visitor restrictions when booking. We can work within standard building access procedures.",
+  },
+  {
+    q: "Is there a minimum quantity for an apartment pickup?",
+    a: "Contact us with your item list and we'll advise on the best approach for your quantity.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/electronics-disposal-apartments-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Safe Electronics Disposal for Apartments and Flats in Kochi</h1>
+  <p class="lede">
+    Living in an apartment doesn't mean electronics recycling is harder —
+    doorstep pickup works for flats just as well as standalone homes.
+    Here's what to know.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'm in an apartment and would like to book an e-waste pickup." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Apartment and flat residents in Kochi can book the same doorstep
+      pickup as standalone homes — just include your building name,
+      floor and any access instructions when you message. Batteries and
+      data-bearing devices need the same care as anywhere else, and
+      neighbours can coordinate a combined pickup for efficiency.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Building name, floor and access instructions speed up confirmation.</li>
+    <li>A combined pickup with neighbours is often more efficient than individual visits.</li>
+    <li>Batteries need separate, careful storage — flag any damage with photos.</li>
+    <li>Coverage follows the same Kochi-metro service area as other pickups.</li>
+  </ul>
+
+  <section>
+    <h2>Pickup works for apartment residents</h2>
+    <p>
+      Doorstep pickup is available for apartments and flats across our
+      Kochi service area. When you contact us, include your building name,
+      floor, and any access instructions. We'll confirm feasibility and
+      whether collection can happen from your door or from the lobby.
+    </p>
+  </section>
+
+  <section>
+    <h2>What to have ready before the team arrives</h2>
+    <ul class="check-list">
+      <li>Gather all items in one accessible place — inside the flat or near the entrance</li>
+      <li>Keep batteries in a separate bag; mention any swollen or damaged cells</li>
+      <li>Back up and wipe data-bearing devices (phones, laptops, tablets)</li>
+      <li>Remove SIM cards and memory cards from phones</li>
+      <li>Flag anything bulky — heavy UPS batteries, old CRT monitors — in advance</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Coordinating with neighbours</h2>
+    <p>
+      If several flats in the same building have old electronics to dispose
+      of, a combined pickup is more efficient. Collect items from interested
+      neighbours, compile a rough item list, and book one visit for the
+      whole building. See if your apartment association can help coordinate.
+    </p>
+  </section>
+
+  <section>
+    <h2>Batteries need extra care in apartment settings</h2>
+    <p>
+      Don't store damaged or swollen batteries in enclosed storerooms or
+      near flammable materials. If you have a battery that looks swollen
+      or is leaking, contact us with a photo before pickup for safe
+      handling guidance. See <a href="/battery-recycling/">battery
+      recycling</a> for details.
+    </p>
+  </section>
+
+  <section>
+    <h2>Areas covered</h2>
+    <p>
+      Ewaste Kochi primarily supports Kochi, Ernakulam, Kakkanad,
+      Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro enquiry
+      areas. For other Kerala districts, contact us to check pickup
+      feasibility. See <a href="/locations/">locations</a> for area-specific
+      pages.
+    </p>
+  </section>  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/pickup/">Book Pickup</a>
+      <a href="/recycling/">E-Waste Recycling</a>
+    </div>
+  </section>
+
+
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Have Questions About Safe Electronics Disposal for Apartments and Flats in Kochi?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'm in an apartment and would like to book an e-waste pickup." compact />
+  </section>
+
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

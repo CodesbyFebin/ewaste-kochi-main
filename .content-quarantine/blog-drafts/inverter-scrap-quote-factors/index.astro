@@ -1,0 +1,114 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Inverter Scrap Quote Factors";
+const description = "Inverter Scrap Quote Factors — practical guidance for Kochi households and businesses, covering inverter battery disposal, solar equipment recycling, power electr...";
+const datePublished = "2026-07-14";
+const dateModified = "2026-07-14";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Inverter Scrap Quote Factors", path: "/blog/inverter-scrap-quote-factors/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/inverter-scrap-quote-factors/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/inverter-scrap-quote-factors/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  { q: "Can inverter batteries be recycled?", a: "Yes, inverter batteries are accepted for recycling." },
+  { q: "Is quote guaranteed?", a: "Final quote depends on item type, quantity, condition, location and current market rate." },
+  { q: "How do I prepare inverter batteries?", a: "Disconnect from power if safe to do so, keep upright, and photograph any damage." },
+  { q: "Can solar equipment be recycled?", a: "Handled case-by-case — contact us with the equipment type, quantity and condition to check feasibility." },
+];
+---
+
+<Layout title={title} description={description} path="/blog/inverter-scrap-quote-factors/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Inverter Scrap Quote Factors</h1>
+  <p class="lede">Here's what you need to know, in plain terms. Inverter batteries are heavy, sealed lead-acid units and one of the largest single items most households deal with.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about inverter scrap quote factors." />
+
+  <ul class="key-takeaways">
+    <li>Inverter batteries and power backup equipment are accepted for recycling.</li>
+    <li>Solar equipment is handled case-by-case — contact us to check feasibility.</li>
+    <li>Heavy batteries need advance notice for floor and access details.</li>
+  </ul>
+
+  <section>
+    <h2>Inverter and UPS batteries</h2>
+    <p>Inverter batteries are heavy, sealed lead-acid units and one of the largest single items most households deal with. Keep them upright, note the approximate size, and flag any damage.</p>
+  </section>
+
+  <section>
+    <h2>Weight and access</h2>
+    <p>Power backup batteries can be genuinely heavy — mention floor level and lift access when booking so the team can plan safely.</p>
+  </section>
+
+  <section>
+    <h2>Solar equipment</h2>
+    <p>Solar panels, inverters and charge controllers are handled on a case-by-case basis — contact us with the equipment type, quantity and condition for a feasibility check before assuming pickup is possible.</p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/battery-recycling/">Battery Recycling</a>
+      <a href="/pickup/">Book Pickup</a>
+      <a href="/recycling/">Recycling</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/inverter-scrap-quote-factors/" />
+
+  <section class="final-cta">
+    <h2>Have Questions About Inverter Scrap Quote Factors?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I have a question about inverter scrap quote factors." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  section p { line-height: 1.7; margin-bottom: 1rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

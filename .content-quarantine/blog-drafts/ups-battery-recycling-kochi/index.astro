@@ -1,0 +1,91 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "UPS Battery Recycling in Kochi | Old UPS & Battery Backup Disposal";
+const description =
+  "How to recycle old UPS batteries in Kochi. Safety tips, preparation, pickup considerations for UPS units and battery backup systems from homes and offices.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "UPS Battery Recycling in Kochi", path: "/blog/ups-battery-recycling-kochi/" },
+];
+
+const jsonLd = [
+  { "@context": "https://schema.org", "@type": "BlogPosting", headline: title, description, datePublished, dateModified, author: { "@type": "Organization", name: BUSINESS.legalName }, publisher: { "@id": `${SITE_URL}/#organization` }, mainEntityOfPage: `${SITE_URL}/blog/ups-battery-recycling-kochi/` },
+  { "@context": "https://schema.org", "@type": "WebPage", "@id": `${SITE_URL}/blog/ups-battery-recycling-kochi/`, name: title, description, dateModified },
+];
+
+const faqItems = [
+  { q: "Can UPS batteries be recycled in Kochi?", a: "Yes. UPS backup batteries — both sealed lead-acid and lithium-ion — are accepted for recycling. Contact us with the type, size and quantity." },
+  { q: "Are small UPS units accepted as well?", a: "Yes. Small UPS units with built-in batteries are accepted. You can hand over the whole unit or remove the battery separately." },
+  { q: "Do UPS batteries have scrap value?", a: "UPS batteries, especially lead-acid types, may have scrap value based on condition and quantity. Send details for a quote." },
+  { q: "Can offices with multiple UPS units request pickup?", a: "Yes. Offices with multiple UPS batteries from server rooms or workstations can request bulk pickup. Send quantities and types for planning." },
+  { q: "How should I prepare a UPS battery for pickup?", a: "Disconnect from power if safe. Check for leaks or swelling. Keep upright. Take a photo showing the battery type and size." },
+];
+---
+
+<Layout title={title} description={description} path="/blog/ups-battery-recycling-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>UPS Battery Recycling in Kochi</h1>
+  <p class="lede">UPS systems and backup batteries are found in many Kochi homes and offices. Here is how to recycle them safely.</p>
+  <CtaBar whatsappMessage="Hi, I have UPS batteries for recycling." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Sealed lead-acid and lithium-ion UPS batteries are both accepted
+      for recycling in Kochi. Keep them upright, check for swelling or
+      leaks before handling, and store away from flammable materials
+      until pickup.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Both lead-acid and lithium-ion UPS batteries are accepted, but need different handling.</li>
+    <li>Leaking batteries should go in a sealed plastic bag and be flagged immediately.</li>
+    <li>Offices with multiple UPS units from server rooms can request a bulk pickup.</li>
+  </ul>
+
+  <section><h2>Types of UPS batteries accepted</h2><ul><li>Sealed lead-acid UPS batteries (common in desktop UPS units)</li><li>Lithium-ion UPS batteries (newer models)</li><li>UPS units with built-in non-removable batteries</li><li>External battery packs for UPS systems</li><li>Server room UPS batteries</li></ul></section>
+  <section><h2>Safety considerations</h2><ul><li>Check for swelling, leaks or damage before handling</li><li>Keep UPS batteries upright — do not lay on side</li><li>If leaking, place in a sealed plastic bag and flag to us</li><li>Store in a cool, dry area away from flammable materials</li><li>Do not stack heavy items on top of UPS batteries</li></ul></section>
+  <section><h2>Preparing UPS batteries for pickup</h2><ul class="check-list"><li>Disconnect the UPS from mains power and unplug devices</li><li>If the battery is removable, take it out and protect terminals with tape</li><li>Take photos showing the battery type, size and any damage</li><li>Note the quantity if you have multiple units</li><li>For offices — create a simple list</li></ul></section>
+  <section><h2>What to include in your message</h2><ul class="check-list"><li>Battery type (lead-acid or lithium-ion)</li><li>Approximate size and quantity</li><li>Condition — any leaks, swelling or damage</li><li>Photos of the battery</li><li>Your pickup location in Kochi</li></ul></section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/battery-recycling/">Battery Recycling</a>
+      <a href="/pickup/">Book Pickup</a>
+    </div>
+  </section>
+
+  <p class="mal-support">മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.</p>
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Have UPS Batteries to Recycle?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I have UPS batteries for recycling." compact />
+  </section>
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

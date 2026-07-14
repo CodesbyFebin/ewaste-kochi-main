@@ -1,0 +1,114 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "What Happens to Office Accessories?";
+const description = "What Happens to Office Accessories? — practical guidance for Kochi households and businesses, covering printer recycling, scanner disposal, router recycling.";
+const datePublished = "2026-07-14";
+const dateModified = "2026-07-14";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "What Happens to Office Accessories?", path: "/blog/what-happens-to-office-accessories/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/what-happens-to-office-accessories/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/what-happens-to-office-accessories/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  { q: "What happens after collection?", a: "Items are sorted by type and routed to appropriate recycling channels; any data-bearing components are flagged for data handling." },
+  { q: "What affects pickup feasibility?", a: "Pickup feasibility depends on item type, quantity, condition and location." },
+  { q: "Can mixed accessories be collected?", a: "Yes, mixed peripherals can be collected together without needing to sort by type first." },
+  { q: "Are keyboards accepted?", a: "Yes, keyboards and mice are accepted individually or with a computer pickup." },
+];
+---
+
+<Layout title={title} description={description} path="/blog/what-happens-to-office-accessories/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>What Happens to Office Accessories?</h1>
+  <p class="lede">What this looks like specifically for your situation, not just general advice. A desk or storeroom accumulation of printers, cables and small IT accessories is a common pickup — a rough count by type is enough to plan the visit.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about what happens to office accessories." />
+
+  <ul class="key-takeaways">
+    <li>Mixed peripherals can be collected together, no need to sort by type.</li>
+    <li>Routers can store Wi-Fi passwords — factory reset before handover.</li>
+    <li>Cartridges don't need to be removed first, but it helps if easily done.</li>
+  </ul>
+
+  <section>
+    <h2>Office peripheral cleanouts</h2>
+    <p>A desk or storeroom accumulation of printers, cables and small IT accessories is a common pickup — a rough count by type is enough to plan the visit.</p>
+  </section>
+
+  <section>
+    <h2>Keyboards, mice and small peripherals</h2>
+    <p>These are accepted alongside larger equipment or on their own — no need to sort by type before pickup, general grouping is enough.</p>
+  </section>
+
+  <section>
+    <h2>Routers and network devices</h2>
+    <p>Routers can store Wi-Fi passwords and configuration data — a factory reset through the settings page clears this before the device is handed over.</p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/recycling/">E-Waste Recycling</a>
+      <a href="/itad/">ITAD for Business</a>
+      <a href="/pickup/">Pickup</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/what-happens-to-office-accessories/" />
+
+  <section class="final-cta">
+    <h2>Have Questions About What Happens to Office Accessories?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I have a question about what happens to office accessories." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  section p { line-height: 1.7; margin-bottom: 1rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

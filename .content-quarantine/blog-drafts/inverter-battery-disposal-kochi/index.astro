@@ -1,0 +1,191 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Inverter Battery Disposal in Kochi | UPS & Power Backup Recycling";
+const description =
+  "How to dispose of old inverter and UPS batteries in Kochi. Safety tips, pickup considerations, and what to do with damaged power backup batteries.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Inverter Battery Disposal in Kochi", path: "/blog/inverter-battery-disposal-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/inverter-battery-disposal-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/inverter-battery-disposal-kochi/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Can inverter batteries be recycled in Kochi?",
+    a: "Yes. Lead-acid inverter and UPS batteries are accepted for recycling. Contact us with the battery type, size and quantity to confirm pickup feasibility.",
+  },
+  {
+    q: "What if the inverter battery is damaged or leaking?",
+    a: "Damaged or leaking batteries need special handling. Place the battery in a safe, contained location and flag the damage when you contact us.",
+  },
+  {
+    q: "Are UPS batteries different from inverter batteries for recycling?",
+    a: "Both are typically lead-acid batteries and are accepted similarly. Lithium-ion backup batteries need different handling — mention the type when contacting us.",
+  },
+  {
+    q: "Can offices request pickup for multiple inverter batteries?",
+    a: "Yes. Offices with multiple UPS units or server room batteries can request bulk pickup. Send the quantity and type for a feasibility check.",
+  },
+  {
+    q: "How should I store used inverter batteries before pickup?",
+    a: "Keep batteries upright in a cool, dry area. Do not stack other items on top. If the battery is leaking, place it in a plastic container.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/inverter-battery-disposal-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Inverter Battery Disposal in Kochi</h1>
+  <p class="lede">
+    Old inverter and UPS batteries need careful handling due to their
+    size, weight and chemical content. Here is how to dispose of them
+    safely in Kochi.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I have inverter or UPS batteries for disposal." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Lead-acid inverter and UPS batteries, and lithium-ion backup
+      batteries, are accepted for recycling in Kochi. Keep them upright
+      in a cool, dry spot, avoid stacking heavy items on top, and flag
+      any leaking or swollen battery when you contact us.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Inverter batteries can weigh 15-30 kg — mention floor level and lift access when booking.</li>
+    <li>Lithium-ion backup batteries need different handling than lead-acid — mention the type.</li>
+    <li>A leaking battery should go in a plastic container, not be moved loosely.</li>
+  </ul>
+
+  <section>
+    <h2>Types of power backup batteries accepted</h2>
+    <ul>
+      <li>Lead-acid inverter batteries — flatplate and tubular</li>
+      <li>UPS backup batteries — sealed lead-acid</li>
+      <li>Lithium-ion backup batteries — for modern UPS systems</li>
+      <li>Battery banks — multiple batteries connected together</li>
+      <li>Small UPS units — with built-in batteries</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Safety guidelines for inverter batteries</h2>
+    <p>
+      Inverter and UPS batteries are heavy and contain acid or lithium
+      compounds. Before pickup:
+    </p>
+    <ul>
+      <li>Check for any visible damage, leaks or swelling</li>
+      <li>If the battery is leaking, place it in a plastic bag or container</li>
+      <li>Keep batteries upright — do not lay them on their side</li>
+      <li>Store in a cool, dry place away from direct sunlight</li>
+      <li>Do not stack heavy items on top of batteries</li>
+      <li>Let us know if you need help moving them to the collection point</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Preparing inverter batteries for pickup</h2>
+    <ul class="check-list">
+      <li>Disconnect the battery from the inverter or UPS if safe to do so</li>
+      <li>Wipe any dust or dirt from the casing</li>
+      <li>Take a photo showing the battery type, size and any damage</li>
+      <li>Note the approximate weight if known</li>
+      <li>Keep related cables and connectors together if available</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Pickup considerations for heavy batteries</h2>
+    <p>
+      Inverter batteries can weigh 15–30 kg or more. When requesting pickup:
+    </p>
+    <ul>
+      <li>Let us know if the battery is on the ground floor or upper floor</li>
+      <li>For apartment pickups, mention if lift access is available</li>
+      <li>If you have multiple batteries, mention the total quantity</li>
+      <li>For office UPS room cleanouts, send photos of the setup</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What to include in your message</h2>
+    <ul class="check-list">
+      <li>Battery type (inverter, UPS, lithium backup)</li>
+      <li>Approximate size and quantity</li>
+      <li>Condition — any leaks, damage or swelling</li>
+      <li>Photos of the battery</li>
+      <li>Your pickup location in Kochi</li>
+      <li>Any access considerations (floor level, lift availability)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/battery-recycling/">Battery Recycling</a>
+      <a href="/pickup/">Book Pickup</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Have Inverter or UPS Batteries to Dispose Of?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I have inverter or UPS batteries for disposal." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

@@ -1,0 +1,164 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "E-Waste Pickup for Shops and Small Businesses in Kochi";
+const description =
+  "How shops and small businesses in Kochi can arrange responsible e-waste pickup — old POS terminals, computers, printers, cable tangles, and how to handle business devices safely.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "E-Waste Pickup for Shops and Small Businesses in Kochi", path: "/blog/ewaste-pickup-shops-businesses-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/ewaste-pickup-shops-businesses-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/ewaste-pickup-shops-businesses-kochi/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Can a shop on a busy street get e-waste pickup?",
+    a: "Yes — confirm your address and access details. We'll advise on the best time for collection.",
+  },
+  {
+    q: "Do shop POS machines need data wiping?",
+    a: "Yes — point-of-sale terminals and any device that held customer transaction data should go through data destruction before disposal.",
+  },
+  {
+    q: "Can we recycle a whole set of old CCTV cameras along with other electronics?",
+    a: "Yes — CCTV equipment, DVRs, and security cameras are accepted. Flag any data storage components for data destruction.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/ewaste-pickup-shops-businesses-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Pickup for Shops and Small Businesses in Kochi</h1>
+  <p class="lede">
+    Shops and small businesses replace electronics regularly — POS
+    terminals, computers, CCTV cameras, routers — but don't always
+    have a clear plan for responsible disposal. Here's how to handle it.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I run a shop in Kochi and need to dispose of old electronics." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Shops and small businesses in Kochi can book the same doorstep
+      pickup as households — the key extra step is data: wipe or reset
+      POS terminals, computers and CCTV DVRs before they leave your
+      premises, or request certified data destruction for anything you
+      can't clear yourself.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>POS terminals and CCTV DVRs can hold customer data — treat them like any business device.</li>
+    <li>UPS batteries should be kept separate and flagged if swollen or leaking.</li>
+    <li>A rough item list plus business address is enough to get a pickup confirmed.</li>
+  </ul>
+
+  <section>
+    <h2>Common shop e-waste items</h2>
+    <ul class="item-list">
+      <li>Old POS terminals and barcode scanners</li>
+      <li>Computers used for billing or stock management</li>
+      <li>Old routers and networking equipment</li>
+      <li>CCTV cameras, DVRs, and hard drives</li>
+      <li>Printers and label printers</li>
+      <li>UPS units and batteries</li>
+      <li>Mobile phones used for business</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Data is the priority for business devices</h2>
+    <p>
+      POS terminals, computers, and CCTV DVRs all hold customer or
+      business data. Wipe or factory reset where possible, or request
+      <a href="/data-destruction/">certified data destruction</a> for
+      hard drives and devices you can't clear yourself. This is
+          especially important before any device leaves your premises.
+    </p>
+  </section>
+
+  <section>
+    <h2>Batteries from UPS and backup systems</h2>
+    <p>
+      Keep UPS batteries separate from other items. Flag any that are
+      old, swollen, or leaking. See <a href="/battery-recycling/">battery
+      recycling</a> for safe handling guidance.
+    </p>
+  </section>
+
+  <section>
+    <h2>How to book</h2>
+    <p>
+      Message us with your item list, business address, and any access
+      details. For mixed lots including data-bearing devices, specify
+      data destruction requirements upfront. We'll confirm feasibility
+      and a pickup slot.
+    </p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/data-destruction/">Data Destruction</a>
+      <a href="/pickup/">Book Pickup</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Need to Clear Out Old Shop Electronics?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I run a shop in Kochi and need to dispose of old electronics." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .item-list { display: flex; flex-direction: column; gap: 0.35rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

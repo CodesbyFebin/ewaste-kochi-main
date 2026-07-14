@@ -1,0 +1,175 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Old TV Disposal in Kochi | TV Recycling Guide";
+const description =
+  "How to dispose of old TVs in Kochi — CRT, LED, LCD, broken screens. What to do, what photos to send, and how pickup works for large televisions.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Old TV Disposal in Kochi", path: "/blog/old-tv-disposal-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/old-tv-disposal-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/old-tv-disposal-kochi/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Can old TVs be recycled in Kochi?",
+    a: "Yes. CRT, LED, LCD and plasma TVs are accepted for recycling. Contact us with the type, size and condition to confirm pickup feasibility.",
+  },
+  {
+    q: "What photos should I send before TV pickup?",
+    a: "A photo showing the screen condition, the back panel ports, and any visible damage helps us confirm pickup and provide guidance.",
+  },
+  {
+    q: "Is there a charge for TV disposal?",
+    a: "Pickup feasibility and any costs depend on the TV type, size, quantity and your location. Send us the details and we will let you know.",
+  },
+  {
+    q: "Can broken or damaged TVs be collected?",
+    a: "Yes, but please mention any cracked screens or damaged casing when you contact us. This helps us handle the item safely during pickup.",
+  },
+  {
+    q: "Do I need to pack the TV before pickup?",
+    a: "If you still have the original box or sturdy packaging, that helps. Otherwise we can handle it — just let us know what to expect.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/old-tv-disposal-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Old TV Disposal in Kochi</h1>
+  <p class="lede">
+    If you have an old TV taking up space — CRT, LED, LCD, or a broken screen —
+    here is how to dispose of it safely in Kochi. TVs contain glass, metals,
+    and components that should not go into household waste.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I have an old TV for disposal. Here are the details." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      CRT, LED, LCD, plasma and smart TVs are all accepted for
+      recycling in Kochi. Send photos of the screen and back panel,
+      note the approximate size, and mention if you're in an apartment
+      without lift access — CRT sets are heavy and need extra planning.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>CRT TVs are the heaviest and need advance notice, especially without lift access.</li>
+    <li>Smart TVs that store data should be factory reset before pickup.</li>
+    <li>Broken screens and damaged casings are still accepted — just flag them.</li>
+  </ul>
+
+  <section>
+    <h2>What types of TVs are accepted?</h2>
+    <p>
+      Most television types can be recycled. The process differs depending on
+      the technology used:
+    </p>
+    <ul>
+      <li><strong>CRT (cathode ray tube)</strong> — older bulky televisions with a glass screen. Heavier and needs careful handling.</li>
+      <li><strong>LED / LCD</strong> — flat-screen televisions. Lighter but contain backlight components.</li>
+      <li><strong>Plasma</strong> — less common now, but still accepted.</li>
+      <li><strong>Smart TVs</strong> — accepted. If the device stores data, consider a factory reset.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>How to prepare your TV for pickup</h2>
+    <ul class="check-list">
+      <li>Unplug all cables and remove any wall mounts or stands if possible</li>
+      <li>Take a photo of the screen (showing any cracks or damage)</li>
+      <li>Take a photo of the back panel showing ports and model details</li>
+      <li>Measure the approximate size (screen diagonal) for our reference</li>
+      <li>If you have the remote and cables, keep them together</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What to include in your message</h2>
+    <ul class="check-list">
+      <li>TV type (CRT, LED, LCD or smart TV)</li>
+      <li>Approximate screen size</li>
+      <li>Condition — working, broken screen, or damaged casing</li>
+      <li>Photos of the screen and back panel</li>
+      <li>Your pickup location in Kochi</li>
+      <li>Any other electronics you want to include in the same pickup</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Large TV pickup considerations</h2>
+    <p>
+      CRT televisions are heavy and may need extra care during pickup.
+      If you live in an apartment without lift access, let us know in advance.
+      For large quantities — such as office monitor or TV clear-outs —
+      contact us with the list and we can plan accordingly.
+    </p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/tv-recycling-kochi/">TV Recycling</a>
+      <a href="/pickup/">Book Pickup</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Have an Old TV to Dispose Of?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I have an old TV for disposal. Here are the details." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

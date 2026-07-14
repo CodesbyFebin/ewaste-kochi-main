@@ -1,0 +1,95 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Broken Electronics Value in Kochi | Can Damaged Devices Be Recycled?";
+const description =
+  "What happens to broken electronics in Kochi — cracked screens, water damage, non-working devices. How value is assessed and whether damaged items are accepted for recycling.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Broken Electronics Value in Kochi", path: "/blog/broken-electronics-value-recycling-kochi/" },
+];
+
+const jsonLd = [
+  { "@context": "https://schema.org", "@type": "BlogPosting", headline: title, description, datePublished, dateModified, author: { "@type": "Organization", name: BUSINESS.legalName }, publisher: { "@id": `${SITE_URL}/#organization` }, mainEntityOfPage: `${SITE_URL}/blog/broken-electronics-value-recycling-kochi/` },
+  { "@context": "https://schema.org", "@type": "WebPage", "@id": `${SITE_URL}/blog/broken-electronics-value-recycling-kochi/`, name: title, description, dateModified },
+];
+
+const faqItems = [
+  { q: "Can broken electronics be recycled in Kochi?", a: "Yes. Cracked screens, water-damaged devices and non-functional electronics are accepted for recycling. Mention the damage when contacting us." },
+  { q: "Do broken electronics have any value?", a: "Some broken electronics may have scrap value based on material content. However, value is generally lower than working devices. Send photos and details for a quote." },
+  { q: "Can water-damaged phones and laptops be recycled?", a: "Yes. Water-damaged devices are accepted. Let us know about the water exposure as it may affect handling." },
+  { q: "What should I do if a device is physically shattered?", a: "Place shattered devices in a bag or container to contain small pieces. Flag the damage when you contact us so we can plan safe handling." },
+  { q: "Can I recycle a device that has no resale value?", a: "Yes. Devices with no resale value can still be recycled responsibly. Contact us to confirm pickup feasibility." },
+];
+---
+
+<Layout title={title} description={description} path="/blog/broken-electronics-value-recycling-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Broken Electronics Value in Kochi</h1>
+  <p class="lede">Not all old electronics are in working condition. Here is how broken devices are handled in Kochi — what can be recycled, what value they may have, and how to prepare them for pickup.</p>
+  <CtaBar whatsappMessage="Hi, I have broken or damaged electronics for recycling." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Broken electronics — cracked screens, water damage, non-working
+      devices — are still accepted for recycling in Kochi. They may have
+      modest scrap value depending on materials and condition, though
+      generally less than working devices. Share photos and details for
+      an estimate rather than assuming a damaged item is worthless.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Damage doesn't disqualify a device from pickup or from having some value.</li>
+    <li>Scrap value depends on materials, extent of damage and quantity.</li>
+    <li>Handle cracked screens and swollen batteries carefully before pickup.</li>
+    <li>Photos help set accurate expectations before the team arrives.</li>
+  </ul>
+
+  <section><h2>Types of damage commonly accepted</h2><ul><li>Cracked screens — phones, laptops, monitors, TVs</li><li>Water or liquid damage</li><li>Non-working devices that do not power on</li><li>Physically damaged casing or components</li><li>Devices with missing parts or connectors</li><li>Swollen or leaking batteries (handle with care)</li></ul></section>
+  <section><h2>Value assessment for broken devices</h2><p>Broken electronics may still have scrap value based on the materials they contain — metals, circuit boards, copper wiring and components. The value depends on the type of device, extent of damage and quantity. Working devices generally have higher resale value, while non-working items are valued as scrap. Send photos and details for an estimate.</p></section>
+  <section><h2>Safety tips for damaged electronics</h2><ul><li>If a device has a cracked screen, handle carefully to avoid glass splinters</li><li>If a battery is swollen or leaking, do not try to remove it yourself</li><li>Place damaged items in a bag or box separate from undamaged items</li><li>Take photos showing the damage clearly</li><li>Wash hands after handling damaged electronics</li></ul></section>
+  <section><h2>What to include in your message</h2><ul class="check-list"><li>Device type and model</li><li>Type and extent of damage</li><li>Whether the device powers on</li><li>Photos showing the damage clearly</li><li>Your pickup location in Kochi</li></ul></section>
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/recycling/">E-Waste Recycling</a>
+      <a href="/sell-electronics/">Sell Electronics</a>
+      <a href="/e-waste-scrap-prices-kochi/">Scrap Price Guide</a>
+    </div>
+  </section>
+
+  <p class="mal-support">മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.</p>
+  <Faq items={faqItems} />
+
+  <section class="final-cta">
+    <h2>Have Damaged Electronics to Recycle?</h2>
+    <p>Share photos and details for an estimate, no matter the condition.</p>
+    <CtaBar whatsappMessage="Hi, I have broken or damaged electronics for recycling." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

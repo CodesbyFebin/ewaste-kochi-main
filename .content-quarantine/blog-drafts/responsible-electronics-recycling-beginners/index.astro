@@ -1,0 +1,173 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Responsible Electronics Recycling for Beginners | Kochi Guide";
+const description =
+  "A beginner's guide to responsible electronics recycling in Kochi — what responsible means, how to find a legitimate recycler, and the simple steps that make it easy.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Responsible Electronics Recycling for Beginners", path: "/blog/responsible-electronics-recycling-beginners/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/responsible-electronics-recycling-beginners/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/responsible-electronics-recycling-beginners/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Is responsible recycling more expensive than just giving electronics to a scrap dealer?",
+    a: "Standard household pickup is free. For devices with value, you receive payment. Responsibility doesn't cost more — it's just a different kind of collector.",
+  },
+  {
+    q: "What's the minimum I need to do to recycle responsibly?",
+    a: "Back up and wipe your data, keep batteries separate, and contact a legitimate recycler for pickup rather than an informal scrap dealer. That covers the key steps.",
+  },
+  {
+    q: "Do I need to research certifications and authorizations myself?",
+    a: "You can ask the recycler directly about their authorization status. A legitimate operator will answer clearly.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/responsible-electronics-recycling-beginners/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Responsible Electronics Recycling for Beginners</h1>
+  <p class="lede">
+    "Responsible recycling" sounds complicated, but for most people it
+    comes down to a few clear choices. Here's what it means and how to
+    do it without needing to become an expert.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to start recycling my old electronics responsibly." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Responsible recycling for beginners comes down to three steps:
+      prepare (back up, wipe, separate batteries), choose a legitimate
+      recycler who can confirm authorization and data destruction, and
+      book pickup on WhatsApp — no drop-off, no research required.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Responsibility doesn't cost more — standard household pickup is free either way.</li>
+    <li>You don't need to understand recycling chemistry or material categories.</li>
+    <li>Asking about authorization directly is normal — a legitimate recycler answers clearly.</li>
+  </ul>
+
+  <section>
+    <h2>What responsible recycling actually means</h2>
+    <p>
+      Responsible recycling means routing old electronics through a
+      legitimate, authorized collection channel rather than general waste
+      or informal scrap buyers. That channel ensures: (1) hazardous
+      materials are handled safely, (2) batteries are separated and
+      processed correctly, (3) data-bearing devices go through proper data
+      destruction, and (4) recovered materials enter authorised recycling
+      rather than uncontrolled disposal.
+    </p>
+  </section>
+
+  <section>
+    <h2>Three simple steps for beginners</h2>
+    <ol class="steps">
+      <li>
+        <strong>Prepare:</strong> Back up data, factory reset phones and
+        tablets, separate batteries from other items
+      </li>
+      <li>
+        <strong>Choose right:</strong> Use a legitimate recycler —
+        one that can confirm authorization and offers data destruction
+        options
+      </li>
+      <li>
+        <strong>Book pickup:</strong> Contact us on WhatsApp with your
+        item list and location — no drop-off needed
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>What you don't need to do</h2>
+    <p>
+      You don't need to research materials, understand recycling chemistry,
+      or sort items into technical categories. The preparation above
+      (data, batteries, location) is everything a household user needs to
+      do before handing items over.
+    </p>
+  </section>
+
+  <section>
+    <h2>Where to start if you have a pile of old electronics</h2>
+    <p>
+      Start with our <a href="/recycling/">recycling page</a> for what's
+      accepted, our <a href="/pickup/">pickup page</a> for how collection
+      works, and our <a href="/battery-recycling/">battery recycling
+      page</a> if you have UPS, inverter, or phone batteries. Or just
+      message us directly with what you have.
+    </p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/recycling/">E-Waste Recycling</a>
+      <a href="/pickup/">Book Pickup</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Ready to Start Recycling Responsibly?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to start recycling my old electronics responsibly." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .steps { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.5rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

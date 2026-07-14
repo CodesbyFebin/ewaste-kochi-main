@@ -1,0 +1,113 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Safe Legal Questions to Ask a Recycler";
+const description = "Safe Legal Questions to Ask a Recycler — practical guidance for Kochi households and businesses, covering E-Waste Rules 2022, EPR, responsible disposal.";
+const datePublished = "2026-07-14";
+const dateModified = "2026-07-14";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Safe Legal Questions to Ask a Recycler", path: "/blog/safe-legal-questions-to-ask-a-recycler/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/safe-legal-questions-to-ask-a-recycler/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/safe-legal-questions-to-ask-a-recycler/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  { q: "How do I stay safe?", a: "Choose a recycler who answers authorization and data-handling questions clearly, and keep records of what you hand over if it matters for your situation." },
+  { q: "Is this legal advice?", a: "This is general educational information, not legal advice — verify specific requirements with official sources or a qualified advisor." },
+  { q: "What is a recycler?", a: "An operator authorized to process e-waste for material recovery under required environmental standards." },
+  { q: "How do I check a recycler?", a: "Ask about their authorization status, data handling process, and documentation options — a legitimate operator answers clearly." },
+];
+---
+
+<Layout title={title} description={description} path="/blog/safe-legal-questions-to-ask-a-recycler/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Safe Legal Questions to Ask a Recycler</h1>
+  <p class="lede">Direct answers to the questions people ask most on this topic. Recyclers process materials for recovery under required environmental standards; dismantlers break down devices into components.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about safe legal questions to ask a recycler." />
+
+  <ul class="key-takeaways">
+    <li>For anything you need to rely on formally, check official sources or a qualified advisor.</li>
+    <li>A legitimate recycler should answer authorization questions clearly and directly.</li>
+    <li>Formal compliance obligations sit mainly with producers and recyclers, not individual consumers.</li>
+  </ul>
+
+  <section>
+    <h2>Recycler vs dismantler</h2>
+    <p>Recyclers process materials for recovery under required environmental standards; dismantlers break down devices into components. Both roles have registration requirements within the same regulatory system.</p>
+  </section>
+
+  <section>
+    <h2>What EPR means</h2>
+    <p>Extended Producer Responsibility is the idea that manufacturers, brand owners and importers of electronics share responsibility for what happens to products once discarded — not just consumers who eventually throw them away.</p>
+  </section>
+
+  <section>
+    <h2>What businesses should know</h2>
+    <p>Keeping a record of how IT assets and e-waste were disposed of — what was collected and where it went — is good practice for internal audits and client assurance, even where it isn't always a strict legal requirement.</p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/blog/e-waste-management-rules-2022/">E-Waste Management Rules 2022</a>
+      <a href="/trust/">Trust & Compliance</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/safe-legal-questions-to-ask-a-recycler/" />
+
+  <section class="final-cta">
+    <h2>Have Questions About Safe Legal Questions to Ask a Recycler?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I have a question about safe legal questions to ask a recycler." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  section p { line-height: 1.7; margin-bottom: 1rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

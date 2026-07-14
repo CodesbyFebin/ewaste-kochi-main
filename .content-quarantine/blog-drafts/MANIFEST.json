@@ -1,0 +1,2777 @@
+[
+  {
+    "slug": "access-control-device-disposal",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "accessory-sorting-checklist",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "annual-e-waste-cleanout-plan",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "apartment-battery-collection-safety",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "apartment-ewaste-collection-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "appliance-e-waste",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "area-based-pickup-checklist",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "asset-list-for-server-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "asset-list-template-for-e-waste-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "avoiding-informal-business-e-waste-disposal",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "awareness-poster-ideas-for-e-waste-drives",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "battery-bank-cleanup-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "battery-disposal-mistakes-to-avoid",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "battery-pickup-for-bulk-quantities",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "battery-pickup-for-offices-and-ups-rooms",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "battery-recycling-faq-for-kochi-residents",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "battery-recycling-for-apartments-and-flats",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "battery-recycling-for-small-businesses",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "battery-safety-and-environment",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "battery-safety-before-ewaste-pickup",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "battery-safety-for-power-backup-systems",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "battery-scrap-quote-factors",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "battery-waste-rules-for-users",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "battery-waste-vs-e-waste",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "biometric-device-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "broken-electronics-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "broken-electronics-value-recycling-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "broken-screen-disposal-safety",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "broken-smartphone-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "bulk-cable-pickup-for-offices",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "bulk-e-waste-pickup-for-companies",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "bulk-electronics-pickup-list",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "bulk-electronics-pickup-planning",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "bulk-electronics-quote-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "bulk-laptop-collection-safety",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "bulk-office-electronics-scrap",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "bulk-pickup-for-flats-and-societies",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "bulk-pickup-preparation-for-businesses",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "bulk-ups-and-battery-pickup-for-offices",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "business-data-disposal-checklist",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "business-e-waste-documentation-terms",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "business-pickup-scheduling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "business-printer-disposal-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "business-recycling-documentation-basics",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "business-server-disposal-questions",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "cable-adapter-and-charger-sorting-tips",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "cable-and-wire-recycling-faq",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "cable-recycling-checklist",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "cable-recycling-for-offices",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "cable-recycling-for-shops",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "cable-recycling-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "cable-recycling-mistakes-to-avoid",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "cables-and-components-value-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "camera-and-recorder-pickup-checklist",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "camera-battery-disposal",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "can-apartments-book-e-waste-pickup-in-kochi",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "can-damaged-screens-be-recycled",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "cctv-cable-and-adapter-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "cctv-data-destruction-questions",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "cctv-disposal-guide-for-kochi-users",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "cctv-equipment-recycling-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "cctv-recycling-faq",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "cctv-recycling-for-apartments",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "cctv-recycling-for-offices",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "chain-of-custody-in-it-asset-disposal",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "charger-and-adapter-safety",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "charger-and-cable-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "charger-recycling-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "charging-cable-waste-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "choosing-a-data-destruction-partner",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "collection-checklist-for-apartment-associations",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "collection-day-safety-checklist",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "collection-planning-for-gated-communities",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "common-e-waste-items-found-in-homes",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "common-mistakes-old-electronics",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "community-e-waste-drive-checklist",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "community-e-waste-mistakes-to-avoid",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "community-electronics-recycling-faq",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "community-recycling-questions-to-ask",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "comparing-recycling-and-resale-options",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "compliance-mistakes-businesses-should-avoid",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "compliance-questions-before-bulk-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "compliance-questions-small-businesses-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "computer-cable-recycling-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "computer-recycling-for-apartments",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "computer-recycling-for-students-and-home-users",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "computer-recycling-guide-for-offices",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "computer-recycling-in-kochi",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "computer-recycling-mistakes-to-avoid",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "computer-scrap-buyers-in-kochi",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "computer-scrap-price-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "computer-scrap-quote-factors",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "consumer-responsibilities-in-e-waste-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "copier-disposal-for-offices",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "copier-photocopier-recycling-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "copper-wire-scrap-quote-factors",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "corporate-e-waste-checklist",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "corporate-electronics-recycling-faq",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "corporate-itad-readiness-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "cpcb-and-e-waste-what-consumers-should-know",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "damaged-inverter-battery-safety",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "damaged-power-bank-safety",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "data-bearing-devices-before-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "data-center-equipment-disposal-basics",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "data-destruction-documentation-explained",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "data-destruction-faq-for-kochi-businesses",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "data-destruction-for-old-laptops-and-hard-drives",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "data-destruction-for-server-storage",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "data-destruction-for-small-offices",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "data-safety-before-laptop-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "data-safety-before-selling-phone",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "data-safety-checklist-before-recycling-devices",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "data-safety-for-community-e-waste-drives",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "data-safety-for-dvrs-and-nvrs",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "data-security-questions-before-corporate-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "desktop-cpu-disposal-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "display-device-recycling-questions",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "documentation-for-business-e-waste-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "documentation-terms-in-e-waste-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "doorstep-ewaste-collection-homes-offices",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "dvr-and-nvr-disposal-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "e-waste-awareness-for-local-communities",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "e-waste-awareness-guide-for-residents",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "e-waste-collection-for-kochi-offices",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "e-waste-documentation-for-offices",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "e-waste-legal-basics-without-jargon",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "e-waste-pickup-faq-for-first-time-users",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "e-waste-pickup-for-co-working-spaces",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "e-waste-pickup-for-kochi-flats",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "e-waste-pickup-near-apartments-in-kochi",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "e-waste-pickup-near-business-areas",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "e-waste-pickup-near-tech-parks-in-kochi",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "e-waste-pollution-what-users-should-know",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "e-waste-preparation-faq",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "e-waste-reduction-checklist",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "e-waste-rules-2022-simple-guide-for-consumers",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "e-waste-rules-faq-for-kerala-residents",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "e-waste-rules-for-first-time-readers",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "e-waste-scrap-quote-faq",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "earbuds-and-headphones-disposal",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "electronic-appliance-disposal-mistakes",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "electronic-waste-disposal-near-me-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "electronics-accessories-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "electronics-collection-guide-for-resident-groups",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "electronics-desk-cleanout-checklist",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "electronics-disposal-apartments-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "electronics-recycling-checklist-before-pickup",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "electronics-recycling-near-kochi-metro-areas",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "electronics-resale-checklist-for-kochi-users",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "electronics-waste-and-household-safety",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "enterprise-it-asset-pickup-planning",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "enterprise-it-scrap-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "environmental-e-waste-faq",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "environmental-impact-of-e-waste",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "ewaste-collection-near-me-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "ewaste-data-privacy-risks-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "ewaste-donation-reuse-guide-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "ewaste-office-relocation-readiness-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "ewaste-pickup-aluva-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "ewaste-pickup-edappally-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "ewaste-pickup-ernakulam-south",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "ewaste-pickup-heavy-electronics",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "ewaste-pickup-home-cleanouts-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "ewaste-pickup-housing-societies-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "ewaste-pickup-kadavanthra-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "ewaste-pickup-kakkanad",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "ewaste-pickup-kalamassery",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "ewaste-pickup-near-infopark-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "ewaste-pickup-shops-businesses-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "ewaste-pickup-small-offices-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "ewaste-pickup-vyttila-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "ewaste-recycling-checklist-kochi-homes",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "ewaste-recycling-for-families-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "ewaste-recycling-guide-kochi-residents",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "ewaste-recycling-myths-facts",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "ewaste-recycling-questions-every-user-should-ask",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "ewaste-recycling-students-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "ewaste-recycling-vs-reuse",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "family-e-waste-cleanup-day",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "final-checklist-before-handing-over-electronics",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "gadget-recycling-for-apartments",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "hard-drive-disposal-data-safety-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "hard-drive-disposal-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "hard-drive-shredding-vs-degaussing",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "home-appliance-ewaste-guide-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "home-backup-battery-disposal",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "home-computer-cleanout-checklist",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "home-electronics-cleanout-guide",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "home-security-device-disposal",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "housing-society-e-waste-pickup-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-broken-electronics-are-valued",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-businesses-can-reduce-electronics-waste",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-businesses-should-prepare-old-pcs-for-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-businesses-should-think-about-e-waste-records",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-cable-condition-affects-quote",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-condition-affects-quote",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-demand-affects-resale-value",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-device-age-affects-electronics-value",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-ewaste-recycling-works",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "how-households-can-reduce-e-waste",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-itad-protects-business-data",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-location-affects-pickup-scheduling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-location-affects-quote",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-offices-can-avoid-e-waste-buildup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-offices-should-sort-it-accessories",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-pickup-scheduling-works",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "how-quantity-affects-cable-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-quantity-affects-quote",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-responsible-ewaste-collection-works",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "how-reuse-extends-device-life",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-reuse-reduces-e-waste",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-announce-an-e-waste-collection-drive",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-ask-for-e-waste-documentation",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-avoid-informal-ewaste-disposal",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "how-to-avoid-informal-scrap-collection-in-apartments",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-avoid-pickup-delays",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-avoid-unsafe-informal-scrap-handling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-check-whether-an-e-waste-recycler-is-responsible",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-check-whether-your-kochi-area-is-serviceable",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-compare-resale-and-recycling-options",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-dispose-of-old-home-electronics",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-get-a-condition-based-quote",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-handle-leaking-batteries-safely",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-identify-damaged-batteries",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-identify-inverter-battery-risk",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-label-office-it-assets",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-list-data-bearing-assets",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-list-items-for-faster-pickup-confirmation",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-list-security-devices-for-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-move-large-electronics-safely",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-organize-an-e-waste-collection-day",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-pack-electronics-before-pickup",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "how-to-pack-small-electronics-for-collection",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-prepare-a-broken-tv-for-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-prepare-an-it-store-room-cleanout",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-prepare-cctv-devices-for-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-prepare-devices-for-data-destruction",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-prepare-electronics-for-recycling",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "how-to-prepare-laptops-for-sale-or-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-prepare-mixed-electronics",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-prepare-old-tvs-for-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-prepare-phones-for-resale-or-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-prepare-printers-before-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-prepare-servers-for-itad",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-prepare-your-device-for-sale-or-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-prepare-your-e-waste-for-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-read-an-e-waste-collection-document",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-reduce-e-waste-at-home-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "how-to-remove-data-before-recycling-a-phone",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-remove-personal-data-before-recycling-a-computer",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-request-a-scrap-estimate",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-sell-old-mobile-phones-safely",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-separate-batteries-from-electronics",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-separate-batteries-from-mixed-e-waste",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-separate-cables-from-devices",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-separate-data-bearing-devices",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-share-accurate-location",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-share-item-list-before-community-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-share-photos-for-faster-pickup-confirmation",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-sort-batteries-in-community-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-sort-electronics-before-pickup",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "how-to-sort-server-room-e-waste",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-store-swollen-batteries",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-store-used-batteries-before-collection",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-to-store-used-inverter-batteries",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "how-working-condition-changes-quote",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "identify-recyclable-electronics-at-home",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "ink-toner-and-printer-waste",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "inverter-battery-disposal-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "inverter-battery-pickup-checklist",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "inverter-battery-safety-checklist",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "inverter-disposal-guide-for-kochi-users",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "inverter-scrap-quote-factors",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "inverter-wiring-and-cable-disposal",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "it-asset-inventory-before-collection",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "it-scrap-handling-for-small-offices",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "it-team-recycling-checklist",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "itad-readiness-checklist",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "itad-services-in-kochi",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "items-to-separate-before-ewaste-pickup",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "kerala-e-waste-awareness-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "kerala-e-waste-disposal-safe-options-for-homes",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "kerala-users-and-e-waste-disposal-basics",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "keyboard-and-cable-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "keyboard-and-mouse-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "keyboard-mouse-and-cable-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "kochi-community-e-waste-drive-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "kochi-ewaste-pickup-area-check",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "kochi-ewaste-pickup-busy-users",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "kochi-location-pickup-faq",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "kochi-metro-e-waste-pickup-areas",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "laptop-battery-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "laptop-battery-swelling-warning-signs",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "laptop-data-safety-before-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "laptop-pickup-guide-for-kochi",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "laptop-recycling-faq-for-kochi-users",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "laptop-scrap-value-factors",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "laptop-vs-desktop-scrap-value-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "large-electronics-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "lcd-monitor-disposal-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "led-tv-recycling-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "lithium-backup-battery-disposal",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "lithium-battery-disposal",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "lithium-battery-fire-risk",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "local-e-waste-pickup-guide-for-first-time-users",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "local-electronics-recycling-options-in-kochi",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "local-office-pickup-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "location-details-for-ewaste-pickup",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "market-linked-cable-quote-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "market-linked-electronics-quotes",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "mistakes-before-ewaste-pickup",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "mistakes-in-server-disposal",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "mistakes-when-selling-electronics-scrap",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "mixed-appliance-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "mixed-cable-pickup-checklist",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "mixed-peripheral-recycling-for-businesses",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "mobile-accessories-cleanout-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "mobile-battery-disposal",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "mobile-battery-safety",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "mobile-phone-quote-factors",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "mobile-phone-recycling-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "mobile-recycling-mistakes-to-avoid",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "monitor-and-tv-quote-factors",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "monitor-disposal-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "monitor-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "network-cable-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "network-camera-disposal",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "network-device-recycling-for-offices",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "network-equipment-disposal-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "network-equipment-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "network-rack-cleanup-checklist",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "office-accessory-recycling-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "office-cable-cleanup-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "office-computer-scrap-pickup-checklist",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "office-e-waste-disposal",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "office-e-waste-preparation-checklist",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "office-electronics-cleanout-guide-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "office-electronics-disposal-questions",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "office-laptop-disposal-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "office-monitor-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "office-monitor-recycling-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "office-network-equipment-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "office-park-e-waste-collection-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "office-peripheral-pickup-checklist",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "office-peripheral-sorting-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "office-security-equipment-disposal",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "office-ups-room-battery-cleanup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "old-alarm-system-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "old-battery-collection-guide-for-kochi",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "old-cctv-system-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "old-charge-controller-disposal",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "old-computer-accessories-recycling-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "old-device-quote-checklist",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "old-display-devices-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "old-electronics-recycling-first-time-users",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "old-extension-cord-disposal",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "old-laptop-value-what-buyers-usually-check",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "old-mobile-phone-value",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "old-monitor-recycling-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "old-printers-and-cartridges",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "old-smartwatch-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "old-surveillance-equipment-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "old-switch-and-router-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "old-tv-disposal-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "old-wi-fi-router-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "peripheral-recycling-mistakes-to-avoid",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "personal-device-recycling-for-families",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "photos-for-pickup-confirmation",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "photos-that-help-estimate-electronics-value",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "pickup-checklist-for-old-laptops-batteries-and-cables",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "pickup-feasibility-for-large-communities",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "pickup-feasibility-guide-for-kochi-metro-areas",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "pickup-for-damaged-electronics",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "pickup-on-whatsapp-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "pickup-readiness-checklist-for-kochi-users",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "pickup-request-what-to-mention",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "power-backup-e-waste-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "power-bank-recycling-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "power-cord-disposal-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "power-electronics-pickup-feasibility",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "power-electronics-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "power-electronics-sorting-checklist",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "power-equipment-recycling-for-homes",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "power-equipment-recycling-for-offices",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "power-supply-unit-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "preparing-hard-drives-for-data-destruction",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "printer-and-scanner-disposal-checklist",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "printer-cartridge-toner-recycling-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "printer-pickup-feasibility-in-kochi",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "printer-recycling-faq",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "printer-recycling-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "producer-responsibility-explained-simply",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "quantity-and-pickup-feasibility",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "quote-checklist-for-old-electronics",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "quote-safety-guide-for-kochi-users",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "rack-server-pickup-checklist",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "recycle-electronics-without-losing-data",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "recycling-broken-laptops",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "recycling-old-accessories-and-chargers",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "recycling-old-computer-parts",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "recycling-old-ups-accessories",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "reducing-e-waste-at-home",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "repair-resale-or-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "repair-reuse-and-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "resource-recovery-from-old-electronics",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "responsible-disposal-vs-informal-scrap-handling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "responsible-e-waste-recycling-checklist",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "responsible-electronics-recycling-beginners",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "responsible-recycler-checklist",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "responsible-recycling-for-apartments",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "responsible-recycling-for-business-electronics",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "responsible-recycling-questions-to-ask",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "reuse-resale-or-recycling-old-electronics",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "reuse-vs-recycling-for-old-mobile-phones",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "router-and-network-device-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "router-disposal-and-data-safety",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "router-modem-recycling-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "safe-disposal-of-data-storing-security-devices",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "safe-disposal-of-gadgets-with-batteries",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "safe-e-waste-disposal-around-ernakulam",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "safe-electronics-pickup-around-kochi",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "safe-legal-questions-to-ask-a-recycler",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "safe-local-pickup-guide-for-homes",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "safe-pickup-for-heavy-batteries",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "safe-printer-disposal-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "safe-quote-terms-to-understand",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "safe-selling-guide-for-old-electronics",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "safe-storage-before-collection-day",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "safe-storage-of-old-wires",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "safe-storage-tips-before-e-waste-collection",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "safe-storage-tips-for-old-ups-batteries",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "safe-tv-disposal-for-first-time-users",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "safer-recycling-habits-for-families",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "safety-guide-for-heavy-electronics",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "safety-mistakes-to-avoid-with-old-electronics",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "same-day-ewaste-pickup-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "scanner-and-copier-disposal",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "school-e-waste-awareness-collection-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "scrap-price-vs-resale-value",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "scrap-quote-checklist-for-offices",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "scrap-quote-questions-for-first-time-users",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "screen-damage-and-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "secure-disposal-checklist-for-it-teams",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "secure-it-scrap-collection-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "secure-server-disposal-checklist",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "security-camera-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "security-e-waste-mistakes",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "security-equipment-itad-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "security-router-disposal",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "sell-electronics-safely-without-losing-personal-data",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "sell-old-it-assets-from-offices",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "selling-old-office-computers",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "server-data-safety-before-disposal",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "server-hard-drive-handling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "server-hardware-value-factors",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "server-itad-faq",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "server-pickup-documentation-basics",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "server-recycling-data-checklist",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "server-recycling-for-small-businesses",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "server-recycling-guide-for-kochi-it-teams",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "server-recycling-kochi-guide",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "server-recycling-vs-resale",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "server-room-cleanout-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "server-ups-and-network-equipment-disposal",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "service-area-questions-for-ewaste-kochi",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "small-device-recycling-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "small-gadget-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "small-office-it-scrap-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "smart-device-recycling-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "smart-doorbell-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "smart-home-hub-recycling-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "solar-accessories-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "solar-and-inverter-recycling-faq",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "solar-equipment-recycling-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "solar-inverter-recycling-basics",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "solar-panel-disposal-questions",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "solar-panel-recycling-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "sorting-cables-before-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "ssd-vs-hdd-data-destruction",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "storage-array-disposal-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "storage-media-disposal-mistakes",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "sustainable-electronics-disposal-in-kochi",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "sustainable-electronics-habits",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "sustainable-it-asset-disposal",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "swollen-battery-disposal",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "tablet-disposal-for-students",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "tablet-recycling-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "tv-and-monitor-recycling-checklist",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "tv-cable-and-av-wire-disposal",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "tv-recycling-near-me",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "tv-vs-monitor-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "ups-and-server-room-battery-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "ups-battery-quote-factors",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "ups-battery-recycling-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "usb-cable-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-affects-old-laptop-value-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "what-areas-need-feasibility-confirmation",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-consumers-should-know-before-recycling-electronics",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-details-to-send-on-whatsapp",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-documentation-may-be-available",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-epr-means-for-regular-consumers",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-happens-after-ewaste-collection",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "what-happens-to-office-accessories",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-happens-when-batteries-are-dumped-incorrectly",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-is-a-dismantler-vs-recycler",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-is-e-waste-recycling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-is-extended-producer-responsibility-in-e-waste",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-items-count-as-ewaste-kochi",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "what-items-need-special-handling",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-items-to-accept-in-a-community-drive",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-makes-an-electronic-item-sellable",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-makes-electronics-unsafe-to-dump",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "what-makes-laptop-recycling-safe",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-makes-office-it-scrap-valuable",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-not-to-do-before-recycling-electronics",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-offices-should-separate-before-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-photos-help-confirm-mobile-quote",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-photos-should-you-send-before-selling-electronics",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-photos-to-send-before-e-waste-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-photos-to-send-for-battery-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-residents-should-bring-for-e-waste-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-to-ask-before-giving-electronics-to-collector",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "what-to-ask-before-handing-over-hard-drives",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-to-confirm-before-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-to-do-before-giving-away-an-old-laptop",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-to-do-with-dead-phones",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-to-do-with-old-chargers",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-to-do-with-old-remotes-and-cables",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-to-do-with-unsellable-electronics",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-to-expect-during-ewaste-pickup",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "what-to-include-in-a-computer-scrap-pickup-list",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-to-remove-before-selling-old-devices",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-to-remove-before-server-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-to-send-before-requesting-local-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "what-to-tell-the-team-before-battery-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "when-recycling-is-better-than-resale",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "when-to-sell-a-laptop-and-when-to-recycle-it",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "why-authorized-handling-matters",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "why-batteries-should-not-be-mixed-with-household-waste",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "why-damaged-batteries-need-special-care",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "why-data-destruction-matters-for-small-businesses",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "why-electronics-should-not-go-in-household-waste",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "why-electronics-should-not-go-to-landfills",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "why-ewaste-needs-separate-handling",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "why-final-price-depends-on-inspection",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "why-final-quote-depends-on-inspection",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "why-informal-e-waste-disposal-is-risky",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "why-informal-recycling-can-be-risky",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "why-old-electronics-should-be-sorted",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "why-prices-change-over-time",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "why-responsible-ewaste-recycling-matters",
+    "contentSource": "legacy",
+    "status": "review"
+  },
+  {
+    "slug": "why-separating-batteries-matters",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "wire-scrap-recycling-guide",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "working-status-and-electronics-value",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "working-vs-non-working-electronics",
+    "contentSource": "generated",
+    "status": "draft"
+  }
+]

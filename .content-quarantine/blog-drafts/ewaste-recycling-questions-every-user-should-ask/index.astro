@@ -1,0 +1,170 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "E-Waste Recycling Questions Every User Should Ask | Kochi Guide";
+const description =
+  "Key questions to ask about e-waste recycling before handing over devices in Kochi — data safety, battery handling, authorization, documentation, and service area coverage.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "E-Waste Recycling Questions Every User Should Ask", path: "/blog/ewaste-recycling-questions-every-user-should-ask/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/ewaste-recycling-questions-every-user-should-ask/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/ewaste-recycling-questions-every-user-should-ask/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "What's the most important question to ask any recycler?",
+    a: "How do you handle data on storage devices? This one question separates legitimate operators from informal handlers more reliably than almost any other.",
+  },
+  {
+    q: "Is it unreasonable to ask for authorization details?",
+    a: "Not at all — a legitimate recycler expects this question and can answer it. Hesitation or vagueness is a warning sign.",
+  },
+  {
+    q: "Do households need the same level of documentation as businesses?",
+    a: "Households rarely need formal documentation. Businesses should ask about documentation options — especially for data destruction and large-scale IT pickups.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/ewaste-recycling-questions-every-user-should-ask/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Recycling Questions Every User Should Ask</h1>
+  <p class="lede">
+    Asking the right questions before handing over old electronics protects
+    your data, confirms responsible handling, and avoids informal disposal
+    risks. Here are the ones that matter most.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I have some questions before booking an e-waste pickup." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Before handing over electronics, ask any recycler how they handle
+      data on storage devices, whether batteries are separated safely,
+      whether pickup and authorization details are clear, and what
+      documentation is available. Hesitation or vagueness on these
+      questions is a warning sign.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Data handling is the single most revealing question to ask any recycler.</li>
+    <li>Legitimate operators expect authorization and documentation questions — they won't dodge them.</li>
+    <li>Households rarely need formal documentation; businesses usually should ask for it.</li>
+  </ul>
+
+  <section>
+    <h2>About authorization</h2>
+    <ul class="check-list">
+      <li>Do you operate under Pollution Control Board authorization?</li>
+      <li>Are your downstream recycling partners also authorized?</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>About data destruction</h2>
+    <ul class="check-list">
+      <li>How do you handle data on hard drives, phones, and laptops?</li>
+      <li>Is data wiped, degaussed, or physically destroyed?</li>
+      <li>Can you provide a certificate of data destruction?</li>
+      <li>When does data destruction happen — before or after other processing?</li>
+    </ul>
+    <p>See <a href="/data-destruction/">data destruction</a> for how we handle this.</p>
+  </section>
+
+  <section>
+    <h2>About battery handling</h2>
+    <ul class="check-list">
+      <li>Are batteries separated from general e-waste at collection?</li>
+      <li>How are different battery types (lead-acid, lithium) handled?</li>
+      <li>Can you accept damaged or swollen batteries safely?</li>
+    </ul>
+    <p>See <a href="/battery-recycling/">battery recycling</a> for our process.</p>
+  </section>
+
+  <section>
+    <h2>About the pickup itself</h2>
+    <ul class="check-list">
+      <li>Is pickup available in my area?</li>
+      <li>Is pickup free for my quantity and item types?</li>
+      <li>What do I need to prepare before the team arrives?</li>
+      <li>Can you handle large or heavy items?</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>About documentation (businesses)</h2>
+    <ul class="check-list">
+      <li>Can you provide a pickup record?</li>
+      <li>Is an asset inventory available for IT equipment pickups?</li>
+      <li>What documentation options are available for compliance purposes?</li>
+    </ul>
+    <p>See <a href="/trust/">trust and compliance</a> for what's available.</p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/data-destruction/">Data Destruction</a>
+      <a href="/trust/">Trust and Compliance</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Have More Questions Before Booking?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I have some questions before booking an e-waste pickup." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

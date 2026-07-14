@@ -298,7 +298,7 @@ const statusColor: Record<string, string> = {
     </p>
     <div class="cluster-grid">
       {BLOG_CLUSTERS.map((cluster) => (
-        <div class="cluster-card">
+        <div class="cluster-card" id={cluster.slug}>
           <div class="cluster-header">
             <h3 class="cluster-name">{cluster.name}</h3>
             <span class={`cluster-badge ${statusColor[cluster.status] ?? "badge-roadmap"}`}>

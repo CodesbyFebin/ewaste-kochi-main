@@ -1,0 +1,170 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Why E-Waste Needs Separate Handling | Safety & Compliance Guide";
+const description =
+  "Why e-waste must be handled separately from regular waste — hazardous materials, battery risks, data safety, regulatory requirements, and what this means for Kochi residents.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Why E-Waste Needs Separate Handling", path: "/blog/why-ewaste-needs-separate-handling/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/why-ewaste-needs-separate-handling/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/why-ewaste-needs-separate-handling/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Is it a legal requirement to separate e-waste in India?",
+    a: "E-waste is regulated separately from household waste under India's E-Waste Management Rules. This article is general educational guidance — verify specific obligations with official sources.",
+  },
+  {
+    q: "What's the main environmental argument for separate handling?",
+    a: "Electronics contain hazardous substances — lead, mercury, cadmium — that should not enter landfills or be burned with general waste. Separate handling routes these to processes that contain and neutralise them.",
+  },
+  {
+    q: "What should I do with a single old phone I want to dispose of?",
+    a: "Include it in your next e-waste pickup. Even a single small device should not go in general waste — contact us to arrange collection.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/why-ewaste-needs-separate-handling/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Why E-Waste Needs Separate Handling</h1>
+  <p class="lede">
+    E-waste is treated differently from paper, plastic, and other
+    household waste for three distinct reasons: hazardous materials,
+    battery safety, and data. Here's why each matters.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to arrange separate e-waste collection." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      E-waste needs separate handling for three reasons: hazardous
+      materials (lead, mercury, cadmium) that shouldn't enter landfills,
+      battery fire and chemical risk, and data security on storage
+      devices. India's E-Waste Management Rules reflect this too.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Lead, mercury and cadmium in older electronics need controlled disposal, not general waste.</li>
+    <li>Lithium and lead-acid batteries each pose a distinct fire or chemical risk.</li>
+    <li>Even a single old phone should go through e-waste collection, not general bins.</li>
+  </ul>
+
+  <section>
+    <h2>Hazardous materials inside electronics</h2>
+    <p>
+      Electronics contain substances that are harmful when they end up in
+      landfills or are incinerated with general waste. Older devices may
+      contain lead in solder and screens; fluorescent backlights in some
+      monitors and older TVs use mercury; certain batteries contain
+      cadmium; and many circuit boards use chemical compounds that require
+      controlled disposal. These materials need to be routed through
+      processes that handle them safely — not compacted with kitchen waste.
+    </p>
+  </section>
+
+  <section>
+    <h2>Battery fire and chemical risk</h2>
+    <p>
+      Lithium batteries — in phones, laptops, tablets, and power banks —
+      can ignite when punctured or crushed. This is a real operational
+      hazard for waste collection vehicles and processing facilities.
+      Lead-acid batteries (UPS, inverter) contain acid that can leak.
+      Both need separate collection and processing. See
+      <a href="/battery-recycling/">battery recycling</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Data security</h2>
+    <p>
+      Storage devices — hard drives, phones, SSDs — retain data even after
+      basic deletion. Electronics in general waste can be retrieved and
+      partially accessed. Separate e-waste collection through a legitimate
+      recycler who offers data destruction closes this gap in a way that
+      general waste collection doesn't. See
+      <a href="/data-destruction/">data destruction</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Regulatory framework</h2>
+    <p>
+      India's E-Waste Management Rules set out requirements for producers,
+      recyclers, and dismantlers to handle electronics separately from
+      general waste streams. While formal compliance obligations primarily
+      sit with producers and businesses, the intent applies to all
+      disposal: electronics should go through authorized channels, not
+      household bins. See our guide on
+      <a href="/blog/e-waste-management-rules-2022/">E-Waste Management
+      Rules 2022</a> for a plain-language overview.
+    </p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/battery-recycling/">Battery Recycling</a>
+      <a href="/data-destruction/">Data Destruction</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Ready to Arrange Separate E-Waste Collection?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to arrange separate e-waste collection." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

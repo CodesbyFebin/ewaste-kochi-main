@@ -1,0 +1,165 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "How to Avoid Informal E-Waste Disposal in Kochi | Safe Guide";
+const description =
+  "Why informal e-waste disposal is a risk in Kochi — and how to avoid it by choosing compliant pickup, asking the right questions, and verifying legitimate handling.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "How to Avoid Informal E-Waste Disposal", path: "/blog/how-to-avoid-informal-ewaste-disposal/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/how-to-avoid-informal-ewaste-disposal/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/how-to-avoid-informal-ewaste-disposal/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "How do I tell a legitimate recycler from an informal one?",
+    a: "Ask directly about authorization status, data destruction practices, and available documentation. A legitimate operator answers clearly. Vague responses are a warning sign.",
+  },
+  {
+    q: "Is it enough if someone pays me well for old electronics?",
+    a: "Payment doesn't mean compliant handling. An informal dealer who pays well may still be stripping devices unsafely and leaving hazardous materials in uncontrolled disposal.",
+  },
+  {
+    q: "What should I do if I've already used an informal dealer in the past?",
+    a: "Going forward, use a legitimate recycler for future devices. If a device with personal data was handed over without wiping, consider reviewing your accounts for any unusual activity.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/how-to-avoid-informal-ewaste-disposal/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>How to Avoid Informal E-Waste Disposal</h1>
+  <p class="lede">
+    Informal scrap collection is a common default for old electronics in
+    Kochi and across Kerala — convenient, but not the same as responsible
+    recycling. Here's how to tell the difference and avoid the risks.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to recycle electronics responsibly." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      To avoid informal e-waste disposal, ask any collector three
+      questions before handing over devices: are you authorized, how do
+      you handle data, and can you provide documentation? A legitimate
+      recycler answers all three clearly — vague answers are a warning
+      sign.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Payment alone doesn't mean compliant handling — a good price can still mean unsafe stripping.</li>
+    <li>Data risk is the biggest hidden cost of informal disposal — devices aren't wiped.</li>
+    <li>Doorstep pickup through a compliant recycler closes every gap informal disposal leaves open.</li>
+  </ul>
+
+  <section>
+    <h2>What informal disposal looks like</h2>
+    <p>
+      Informal disposal means handing devices to unregistered scrap
+      dealers, putting electronics in general waste, or giving them to
+      collectors who operate without environmental authorization. It
+      includes roadside scrap dealers, informal "kabadiwala"-type buyers,
+      and anyone who can't confirm how devices are processed after
+      collection.
+    </p>
+  </section>
+
+  <section>
+    <h2>The risks</h2>
+    <ul class="check-list">
+      <li><strong>Data risk:</strong> Storage devices aren't wiped — your personal or business data goes with the device to wherever it ends up</li>
+      <li><strong>Environmental risk:</strong> Hazardous materials aren't handled safely — they end up in general waste streams or are burned</li>
+      <li><strong>Battery risk:</strong> Batteries aren't separated correctly, increasing fire and chemical hazards</li>
+      <li><strong>No accountability:</strong> No documentation, no audit trail, no way to verify what happened</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>How to verify before handing over devices</h2>
+    <p>
+      Ask any collector three questions: Are you authorized? How do you
+      handle data on storage devices? Can you provide documentation? A
+      legitimate recycler answers all three directly. See our guide on
+      <a href="/blog/what-to-ask-before-giving-electronics-to-collector/">
+      what to ask before giving electronics to a collector</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>The legitimate alternative</h2>
+    <p>
+      <a href="/pickup/">Doorstep pickup</a> through a compliant recycler
+      closes every gap informal disposal leaves open: data destruction,
+      battery safety, authorized downstream routing, and documentation
+      where needed. It's available across Kochi and Ernakulam district,
+      and standard household pickup is free.
+    </p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/pickup/">Book Pickup</a>
+      <a href="/trust/">Trust and Compliance</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Ready to Recycle Responsibly?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to recycle electronics responsibly." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

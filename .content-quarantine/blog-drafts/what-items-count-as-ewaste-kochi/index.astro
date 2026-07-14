@@ -1,0 +1,199 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "What Items Count as E-Waste in Kochi? | Complete Category List";
+const description =
+  "A complete guide to what counts as e-waste in Kochi — categories, examples, what to keep separate, and which items need data handling before recycling.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "What Items Count as E-Waste in Kochi?", path: "/blog/what-items-count-as-ewaste-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/what-items-count-as-ewaste-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/what-items-count-as-ewaste-kochi/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Do kitchen appliances like microwaves count as e-waste?",
+    a: "Appliances with electronic controls or components are generally considered e-waste. Contact us with details about specific items to confirm collection feasibility.",
+  },
+  {
+    q: "Do CDs, DVDs, and storage media count?",
+    a: "Storage media like CDs and DVDs are not typically accepted as e-waste in the same way as electronics. Contact us with details for guidance on specific items.",
+  },
+  {
+    q: "What about smart home devices like doorbells or bulbs?",
+    a: "Smart devices with circuit boards and batteries are e-waste. Mention these when booking — they're usually small enough to include in a mixed pickup.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/what-items-count-as-ewaste-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>What Items Count as E-Waste in Kochi?</h1>
+  <p class="lede">
+    E-waste is broader than most people expect — it covers everything from
+    a laptop down to an old phone charger. Here's a practical breakdown
+    of what counts, organised by category.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to check whether my items count as e-waste." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      E-waste covers far more than computers and phones — it includes
+      cables, chargers, smart devices, batteries, and any appliance
+      with a circuit board, motor or plug. If you're unsure about a
+      specific item, send a photo on WhatsApp and we'll confirm.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Small accessories like cables and chargers are e-waste too — don't put them in general bins.</li>
+    <li>Batteries always need separate handling regardless of what device they came from.</li>
+    <li>Most computing devices have storage and need data handling before recycling.</li>
+  </ul>
+
+  <section>
+    <h2>Computing and IT equipment</h2>
+    <ul class="item-list">
+      <li>Laptops and notebooks</li>
+      <li>Desktop computers (tower units)</li>
+      <li>Monitors (LED, LCD, old CRT)</li>
+      <li>Keyboards, mice, and pointing devices</li>
+      <li>Servers and network switches</li>
+      <li>Routers and modems</li>
+      <li>Docking stations and hubs</li>
+      <li>Hard drives and SSDs (internal and external)</li>
+    </ul>
+    <p>Most of these have storage and need <a href="/data-destruction/">data handling</a> before recycling.</p>
+  </section>
+
+  <section>
+    <h2>Mobile and personal devices</h2>
+    <ul class="item-list">
+      <li>Smartphones and feature phones</li>
+      <li>Tablets</li>
+      <li>Smartwatches and fitness trackers</li>
+      <li>E-readers</li>
+      <li>Portable media players</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Batteries and power equipment</h2>
+    <ul class="item-list">
+      <li>UPS batteries (sealed lead-acid)</li>
+      <li>Inverter batteries</li>
+      <li>Laptop battery packs</li>
+      <li>Phone and tablet batteries</li>
+      <li>Power banks</li>
+    </ul>
+    <p>Batteries always need to be kept separate from other items. See <a href="/battery-recycling/">battery recycling</a>.</p>
+  </section>
+
+  <section>
+    <h2>Display and entertainment electronics</h2>
+    <ul class="item-list">
+      <li>Televisions (LED, LCD, plasma, CRT)</li>
+      <li>Projectors</li>
+      <li>DVD and Blu-ray players</li>
+      <li>Set-top boxes and streaming devices</li>
+      <li>Home audio equipment</li>
+    </ul>
+    <p>See <a href="/tv-recycling-kochi/">TV recycling in Kochi</a> for display-specific guidance.</p>
+  </section>
+
+  <section>
+    <h2>Office and printing equipment</h2>
+    <ul class="item-list">
+      <li>Printers (inkjet, laser, thermal)</li>
+      <li>Scanners and copiers</li>
+      <li>Fax machines</li>
+      <li>Label printers and point-of-sale terminals</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Cables, chargers, and accessories</h2>
+    <ul class="item-list">
+      <li>Power adapters and chargers</li>
+      <li>USB, HDMI, ethernet, and AV cables</li>
+      <li>Extension cords with circuit breakers</li>
+      <li>Earphones and headsets</li>
+    </ul>
+    <p>Easy to overlook but genuine e-waste — don't put these in household bins.</p>
+  </section>
+
+  <section>
+    <h2>Not sure about a specific item?</h2>
+    <p>
+      Send us a photo on WhatsApp and we'll confirm whether it's accepted
+      and how to handle it before pickup.
+    </p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/recycling/">E-Waste Recycling</a>
+      <a href="/pickup/">Book Pickup</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Ready to Recycle Your Electronics?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to check whether my items count as e-waste." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .item-list { display: flex; flex-direction: column; gap: 0.35rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

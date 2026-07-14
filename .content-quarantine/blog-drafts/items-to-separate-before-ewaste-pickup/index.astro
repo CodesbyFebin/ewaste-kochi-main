@@ -1,0 +1,168 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "What Items Should You Separate Before E-Waste Pickup? | Kochi";
+const description =
+  "Which items to separate before an e-waste pickup in Kochi — batteries, damaged electronics, data-bearing devices, and what to keep apart for safety and efficiency.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "What Items Should You Separate Before Pickup?", path: "/blog/items-to-separate-before-ewaste-pickup/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/items-to-separate-before-ewaste-pickup/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/items-to-separate-before-ewaste-pickup/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Do I need to remove laptop batteries before pickup?",
+    a: "Not required — but mention if the battery is swollen or damaged, and keep it separate from other items if you can.",
+  },
+  {
+    q: "What if I can't remove a battery from a device?",
+    a: "That's fine. Flag the battery status (especially if damaged) when booking so the team knows what to expect.",
+  },
+  {
+    q: "Can I put all data devices in one bag for data destruction?",
+    a: "Yes. Grouping data-bearing devices together and labelling them 'data destruction needed' helps the team process them correctly.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/items-to-separate-before-ewaste-pickup/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>What Items Should You Separate Before Pickup?</h1>
+  <p class="lede">
+    Most items can go in one pile — but a few specific categories need
+    to be kept apart for safety, data protection, and efficient processing.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to prepare my items correctly before an e-waste pickup." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Four categories need to be kept apart before pickup: batteries
+      (always), damaged electronics, data-bearing devices needing
+      destruction, and items you want a resale quote for. Everything
+      else — cables, printers, monitors — can go in one pile.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Batteries are the one category that must always be separated, no exceptions.</li>
+    <li>Labelling data-destruction devices with a sticky note prevents mix-ups.</li>
+    <li>Items you want a quote for should be set aside so they're assessed correctly.</li>
+  </ul>
+
+  <section>
+    <h2>1. Batteries — always separate</h2>
+    <p>
+      Any loose battery — UPS, inverter, laptop battery pack, phone
+      battery, power bank — should go in its own bag or box.
+      Never put batteries under heavy items or stack them compressed.
+      If a battery is swollen, leaking, or damaged, keep it especially
+      isolated and flag it when booking. See
+      <a href="/battery-recycling/">battery recycling</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>2. Damaged electronics</h2>
+    <p>
+      Items with cracked screens, broken casings, water damage, or
+      visible corrosion should be flagged separately. Not because they
+      can't be collected, but so the team knows what to expect and can
+      handle them safely.
+    </p>
+  </section>
+
+  <section>
+    <h2>3. Data-bearing devices requiring destruction</h2>
+    <p>
+      If you've identified phones, laptops, tablets, or hard drives that
+      need certified data destruction, group them together. Label them
+      clearly (a sticky note is fine) so the team doesn't mix them with
+      general items. See <a href="/data-destruction/">data destruction</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>4. Items you want to sell or get a quote for</h2>
+    <p>
+      If some devices have potential resale value and you want a quote,
+      set those aside separately so they can be assessed correctly at
+      pickup rather than being grouped with general recycling items.
+    </p>
+  </section>
+
+  <section>
+    <h2>Everything else</h2>
+    <p>
+      Standard electronics — working or not, cables, chargers, printers,
+      routers, monitors — can all go together in one accessible pile or
+      area. No further sorting required.
+    </p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/battery-recycling/">Battery Recycling</a>
+      <a href="/data-destruction/">Data Destruction</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Ready to Book Your Pickup?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to prepare my items correctly before an e-waste pickup." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

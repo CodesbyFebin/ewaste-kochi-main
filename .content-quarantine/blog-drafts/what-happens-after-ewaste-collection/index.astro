@@ -1,0 +1,192 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "What Happens to Old Electronics After Collection? | Kochi Guide";
+const description =
+  "Where old electronics go after e-waste pickup in Kochi — assessment, data destruction, reuse, material recovery and compliant disposal explained clearly.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "What Happens to Old Electronics After Collection?", path: "/blog/what-happens-after-ewaste-collection/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/what-happens-after-ewaste-collection/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/what-happens-after-ewaste-collection/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Can I request documentation of what happened to my devices?",
+    a: "For business pickups and data destruction jobs, documentation is available on request. Ask when you book.",
+  },
+  {
+    q: "Are old electronics ever resold?",
+    a: "Working devices in good condition may be refurbished and resold, which extends their useful life. Non-working items go to material recovery.",
+  },
+  {
+    q: "What happens to batteries specifically?",
+    a: "Batteries are separated from other e-waste at collection and routed through compliant battery processing channels, which handle lead-acid, lithium, and other chemistries differently.",
+  },
+  {
+    q: "Is anything sent to landfill?",
+    a: "The goal is to route everything through reuse, resale, or responsible recycling. Ask us directly about specific items if you have concerns.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/what-happens-after-ewaste-collection/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>What Happens to Old Electronics After Collection?</h1>
+  <p class="lede">
+    Handing over old electronics is the easy part — but knowing where they
+    go next matters. Here's an honest account of what happens after pickup
+    in Kochi.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to recycle my old electronics and understand what happens after collection." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      After collection, devices are assessed and sorted: working ones go
+      toward refurbishment or resale, non-working ones go to material
+      recovery, batteries are processed separately by chemistry, and
+      data-bearing devices go through destruction before anything else
+      happens to them.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Data destruction happens before any other processing on data-bearing devices.</li>
+    <li>Working devices get a chance at reuse or resale before recycling is considered.</li>
+    <li>Documentation is available on request for business and data destruction pickups.</li>
+  </ul>
+
+  <section>
+    <h2>First: assessment and sorting</h2>
+    <p>
+      After collection, every item is assessed. Working devices are
+      separated from non-working ones. Data-bearing devices — laptops,
+      phones, hard drives, servers — are flagged immediately for
+      <a href="/data-destruction/">data destruction</a> before any other
+      handling. Batteries are kept physically separate from the moment of
+      collection because they need a different process.
+    </p>
+  </section>
+
+  <section>
+    <h2>Working devices: reuse and resale</h2>
+    <p>
+      A device in good working condition has a chance at a second life —
+      through refurbishment, resale, or donation to a reuse channel. This
+      is the best outcome: it extends the device's useful life, delays
+      material recovery to a later date, and gives you a credit if you sold
+      the item rather than recycling for free.
+    </p>
+  </section>
+
+  <section>
+    <h2>Non-working devices: material recovery</h2>
+    <p>
+      Devices that can't be reused go to compliant recycling partners for
+      disassembly and material recovery. Copper, aluminium, steel, and
+      small amounts of precious metals are extracted. Hazardous materials
+      — older CRT glass, circuit board chemicals, mercury from fluorescent
+      backlights — are handled through authorized disposal channels, not
+      dumped in general waste.
+    </p>
+  </section>
+
+  <section>
+    <h2>Batteries: separate processing</h2>
+    <p>
+      Lead-acid batteries (UPS, inverter), lithium batteries (laptops,
+      phones, power banks), and other battery chemistries each require
+      different processing. They are never mixed with general e-waste
+      recycling. See <a href="/battery-recycling/">battery recycling</a>
+      for the full detail on how each type is handled.
+    </p>
+  </section>
+
+  <section>
+    <h2>Data destruction: before anything else</h2>
+    <p>
+      No storage device leaves our custody until data has been handled —
+      wiped, degaussed, or physically shredded depending on the device type
+      and what was agreed at booking. Businesses can request a certificate
+      confirming this. See <a href="/data-destruction/">data destruction
+      services</a> for options.
+    </p>
+  </section>
+
+  <section>
+    <h2>Why the chain matters</h2>
+    <p>
+      Informal scrap handling skips most of this — devices may be partially
+      stripped, with leftover materials dumped or burned. Using a legitimate
+      collection service means the full chain is compliant, from pickup to
+      final disposal. That protects your data, protects workers handling the
+      material, and keeps hazardous substances out of landfills.
+    </p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/data-destruction/">Data Destruction</a>
+      <a href="/battery-recycling/">Battery Recycling</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Ready to Recycle Your Electronics?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to recycle my old electronics and understand what happens after collection." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

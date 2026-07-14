@@ -1,0 +1,217 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Compliance Questions for Small Businesses | E-Waste Rules Kochi";
+const description =
+  "Common e-waste compliance questions for small businesses in Kochi. E-Waste Rules 2022, documentation, and what businesses should know about responsible disposal.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Compliance Questions for Small Businesses", path: "/blog/compliance-questions-small-businesses-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/compliance-questions-small-businesses-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/compliance-questions-small-businesses-kochi/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Is this legal advice?",
+    a: "No. This article provides general information about e-waste rules. For legal advice specific to your business, consult a qualified professional or refer to the official E-Waste Rules 2022 document.",
+  },
+  {
+    q: "Do small businesses in Kochi need compliance documents for e-waste?",
+    a: "Requirements vary based on the type and volume of e-waste your business generates. Contact us with your specific situation and we can discuss what documentation may be relevant.",
+  },
+  {
+    q: "What is EPR and does it apply to my business?",
+    a: "Extended Producer Responsibility (EPR) applies to producers and manufacturers. Small businesses that generate e-waste should focus on responsible disposal through authorized channels.",
+  },
+  {
+    q: "What documentation may be available when disposing of business e-waste?",
+    a: "Documentation may be available on request for business pickups. Contact us with your requirements and we will confirm what can be provided.",
+  },
+  {
+    q: "How can I choose a responsible e-waste recycler?",
+    a: "Ask about their handling process, whether they provide documentation, how they handle data-bearing devices, and how batteries are processed separately.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/compliance-questions-small-businesses-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Compliance Questions for Small Businesses</h1>
+  <p class="lede">
+    Small businesses in Kochi often have questions about e-waste rules and
+    compliance. Here are common queries and general information to help
+    you make informed decisions.
+  </p>
+
+  <div class="disclaimer">
+    <strong>Disclaimer:</strong> This article provides general information
+    about e-waste compliance. It does not constitute legal advice. Consult
+    a qualified professional for advice specific to your business.
+  </div>
+
+  <CtaBar whatsappMessage="Hi, I have a question about business e-waste compliance." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Small businesses in Kochi should hand over e-waste to a recycler
+      who can explain their data-handling and battery-separation process
+      and confirm what documentation, if any, is available for your
+      records. This article is general information, not legal advice —
+      verify specific obligations against the official E-Waste
+      (Management) Rules, 2022 or a qualified advisor.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>This is general information, not legal advice for your specific business.</li>
+    <li>EPR applies to producers/manufacturers, not typically to businesses disposing of e-waste.</li>
+    <li>Documentation availability depends on the service type — ask upfront.</li>
+    <li>Verify current rules against CPCB/KSPCB official sources, not third-party summaries.</li>
+  </ul>
+
+  <section>
+    <h2>What are the E-Waste Rules 2022?</h2>
+    <p>
+      The E-Waste (Management) Rules 2022 are India's framework for
+      managing electronic waste. They cover responsibilities of producers,
+      manufacturers, recyclers and consumers. The rules aim to ensure
+      environmentally sound management of e-waste.
+    </p>
+    <p>
+      For small businesses, the key takeaway is to ensure that e-waste
+      is handed over to authorized recyclers and that any data-bearing
+      devices are handled securely.
+    </p>
+  </section>
+
+  <section>
+    <h2>What is EPR (Extended Producer Responsibility)?</h2>
+    <p>
+      EPR requires producers of electronic products to manage the end-of-life
+      disposal of their products. This means manufacturers must arrange for
+      collection and recycling. For small businesses that are consumers of
+      electronics, EPR means you can ask your equipment supplier about
+      take-back options.
+    </p>
+  </section>
+
+  <section>
+    <h2>What documents should businesses keep?</h2>
+    <p>
+      While individual consumers typically do not need compliance documents,
+      businesses may benefit from maintaining records of e-waste disposal,
+      especially for audit purposes. Documents that may be relevant include:
+    </p>
+    <ul>
+      <li>E-waste collection receipts or certificates (available on request)</li>
+      <li>Asset disposal lists for IT equipment</li>
+      <li>Data destruction certificates (if applicable)</li>
+    </ul>
+    <p>
+      Contact us with your requirements and we will confirm what
+      documentation can be provided for your pickup.
+    </p>
+  </section>
+
+  <section>
+    <h2>How to identify a responsible recycler</h2>
+    <p>
+      When choosing an e-waste collection service, consider asking:
+    </p>
+    <ul>
+      <li>How do they handle data-bearing devices?</li>
+      <li>Do they separate batteries from general e-waste?</li>
+      <li>Can they provide any documentation?</li>
+      <li>What is their process for material recovery?</li>
+      <li>Do they work with authorized downstream recyclers?</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Common compliance mistakes businesses make</h2>
+    <ul>
+      <li>Mixing e-waste with regular office waste</li>
+      <li>Handing over data-bearing devices without data destruction</li>
+      <li>Not separating batteries from other electronics</li>
+      <li>Using informal scrap collectors without proper handling</li>
+      <li>Not keeping any records of disposed IT assets</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Where to verify e-waste rules</h2>
+    <p>
+      For official information, refer to the Central Pollution Control Board
+      (CPCB) website or the Kerala State Pollution Control Board (KSPCB).
+      Rules and guidelines are updated periodically, so check the latest
+      versions for current requirements.
+    </p>
+  </section>  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/data-destruction/">Data Destruction</a>
+      <a href="/itad/">ITAD for Business</a>
+    </div>
+  </section>
+
+
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Have Questions About Compliance Questions for Small Businesses?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I have a question about business e-waste compliance." compact />
+  </section>
+
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .disclaimer { font-size: 0.85rem; padding: 0.75rem 1rem; background: #fff8e1; border-left: 3px solid #f59e0b; border-radius: 0.25rem; margin: 1.5rem 0; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

@@ -1,0 +1,95 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "E-Waste and Data Privacy Risks in Kochi | What You Need to Know";
+const description =
+  "How e-waste disposal connects to data privacy. Risks of leaving data on old devices, safe disposal habits and what to do before recycling electronics in Kochi.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "E-Waste and Data Privacy Risks", path: "/blog/ewaste-data-privacy-risks-kochi/" },
+];
+
+const jsonLd = [
+  { "@context": "https://schema.org", "@type": "BlogPosting", headline: title, description, datePublished, dateModified, author: { "@type": "Organization", name: BUSINESS.legalName }, publisher: { "@id": `${SITE_URL}/#organization` }, mainEntityOfPage: `${SITE_URL}/blog/ewaste-data-privacy-risks-kochi/` },
+  { "@context": "https://schema.org", "@type": "WebPage", "@id": `${SITE_URL}/blog/ewaste-data-privacy-risks-kochi/`, name: title, description, dateModified },
+];
+
+const faqItems = [
+  { q: "Can data be recovered from recycled phones?", a: "Yes, unless a proper wipe is done first. Photos, messages and contacts on an old phone can potentially be recovered. Perform a factory reset and remove all accounts before handing over any phone for recycling." },
+  { q: "What personal data is stored on old electronics?", a: "Old devices can retain photos, messages, contacts, banking apps, email accounts, browser history, saved passwords and cloud-synced data. Review each device carefully before disposal." },
+  { q: "Is a factory reset enough for data safety?", a: "A factory reset removes most user data for everyday purposes. For highly sensitive information, a professional data destruction service provides a stronger guarantee. Contact us if you need this." },
+  { q: "Can data be recovered from hard drives?", a: "Yes. Even after files are deleted, data on a hard drive can often be recovered. Use disk-wiping software or consider physical destruction for drives that held sensitive information." },
+  { q: "What should I remove before recycling my laptop?", a: "Before recycling a laptop, back up any files you want to keep, sign out of all accounts (Microsoft, Google, Apple ID), remove external drives and SD cards, then perform a factory reset." },
+];
+---
+
+<Layout title={title} description={description} path="/blog/ewaste-data-privacy-risks-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste and Data Privacy Risks in Kochi</h1>
+  <p class="lede">Every old phone, laptop or hard drive carries personal data. Recycling is good for the environment, but data privacy must come first. Here is what Kochi residents should know before handing over electronics.</p>
+  <CtaBar whatsappMessage="Hi, I have questions about data privacy before e-waste recycling." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Old phones, laptops and hard drives can still hold recoverable
+      photos, messages, passwords and account access even after you
+      "delete" everything. Back up what you need, sign out of every
+      account, and run a full factory reset or disk wipe before handing
+      a device over for recycling in Kochi.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Deleted files are often still recoverable — a factory reset or disk wipe is what actually protects you.</li>
+    <li>Phones, laptops and hard drives each need a slightly different wipe step.</li>
+    <li>Business devices with sensitive records may need professional data destruction, not just a reset.</li>
+    <li>Treat every old device as if it still contains sensitive data, even if you think it's already been cleared.</li>
+  </ul>
+
+  <section><h2>What personal data might still be on your old devices</h2><ul><li>Photos, videos and voice recordings</li><li>Messages — WhatsApp, SMS, iMessage, chat apps</li><li>Contacts and call history</li><li>Email accounts and passwords</li><li>Banking and payment apps</li><li>Browser history and saved passwords</li><li>Cloud-synced files and documents</li><li>Location history and app usage data</li></ul></section>
+  <section><h2>Common e-waste data privacy mistakes</h2><p>Many people hand over old devices without realizing the data risk. A recycled phone may still have WhatsApp chats accessible. An old laptop may allow someone to log back into your email. A donated hard drive may let the next person browse your saved files. Even when you think you have deleted everything, traces can remain. The safest approach is to treat every old device as if it still contains sensitive data and act accordingly.</p></section>
+  <section><h2>Steps to protect your data before recycling</h2><ul class="check-list"><li>Back up any files you want to keep</li><li>Log out of all accounts on the device</li><li>Remove SIM cards, memory cards and external drives</li><li>Perform a factory reset on phones and laptops</li><li>For hard drives — use disk wiping software or ask about data destruction</li><li>For phones — encrypt the device before resetting if possible</li></ul></section>
+  <section><h2>When to ask about data destruction services</h2><p>If you are recycling a business laptop, a device with financial records, or a hard drive that once held sensitive project data, consider professional data destruction. This includes physical shredding or certified wiping that provides documentation. For personal devices, a factory reset and careful checking is usually enough.</p></section>
+  <section><h2>Simple habits for every household</h2><p>Make data safety part of your electronics cleanout routine. Before any device leaves your home, ask yourself: have I removed my data? If the answer is no, take a few minutes to back up, log out and reset. These small steps protect your privacy and give you peace of mind when handing over electronics for recycling.</p></section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/data-destruction/">Data Destruction</a>
+      <a href="/itad/">ITAD for Business</a>
+    </div>
+  </section>
+
+  <p class="mal-support">മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.</p>
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Have Questions About Data Privacy and E-Waste?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I have questions about data privacy before e-waste recycling." compact />
+  </section>
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; line-height: 1.6; }
+  section p { line-height: 1.7; margin-bottom: 1rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

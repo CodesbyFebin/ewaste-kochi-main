@@ -77,10 +77,41 @@ const faqItems = [
 
   <Faq items={faqItems} heading="General Questions" />
 
+  <section class="related-guides" aria-labelledby="related-guides-heading">
+    <h2 id="related-guides-heading">Related Guides</h2>
+    <p class="rg-desc">
+      Each question above links to a fuller guide where one exists. A few
+      starting points if you're not sure where to look:
+    </p>
+    <ul class="rg-list">
+      <li><a href="/blog/free-e-waste-pickup-kochi/">Free E-Waste Pickup in Kochi</a> — areas, accepted items, what to prepare</li>
+      <li><a href="/blog/how-to-sell-old-electronics-kochi/">How to Sell Old Electronics in Kochi</a> — how condition-based quotes work</li>
+      <li><a href="/blog/data-destruction-kochi-guide/">Data Destruction in Kochi</a> — wiping, degaussing and shredding explained</li>
+      <li><a href="/blog/corporate-ewaste-pickup-kochi/">Corporate E-Waste Pickup in Kochi</a> — bulk and recurring office pickups</li>
+      <li><a href="/blog/where-to-recycle-old-electronics-kochi/">Where to Recycle Old Electronics in Kochi</a> — coverage areas and options</li>
+      <li><a href="/blog/e-waste-examples/">E-Waste Examples: What Actually Counts</a> — what's accepted and what needs extra care</li>
+    </ul>
+    <p class="rg-hub"><a href="/blog/">Browse all guides in the blog →</a></p>
+  </section>
+
   <p class="updated">Last updated: {lastUpdated}</p>
 </Layout>
 
 <style>
   .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .related-guides {
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    background: var(--color-surface);
+  }
+  .related-guides h2 { font-size: 1.1rem; margin: 0 0 0.5rem; }
+  .rg-desc { color: var(--color-muted); font-size: 0.9rem; margin: 0 0 0.9rem; }
+  .rg-list { list-style: none; margin: 0 0 1rem; padding: 0; display: grid; gap: 0.6rem; }
+  .rg-list a { color: var(--color-primary); font-weight: 700; text-decoration: none; }
+  .rg-list li { font-size: 0.92rem; color: var(--color-muted); }
+  .rg-hub { margin: 0; padding-top: 1rem; border-top: 1px solid var(--color-border); }
+  .rg-hub a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
   .updated { font-size: 0.8rem; color: var(--color-muted); }
 </style>

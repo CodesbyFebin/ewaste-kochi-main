@@ -1,0 +1,218 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "What Affects Old Laptop Value in Kochi? | Selling Tips";
+const description =
+  "Key factors that determine old laptop value in Kochi — brand, age, working condition, screen quality, and what buyers check before offering a quote.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "What Affects Old Laptop Value in Kochi?", path: "/blog/what-affects-old-laptop-value-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/what-affects-old-laptop-value-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/what-affects-old-laptop-value-kochi/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "What brand of old laptop has the best resale value?",
+    a: "Popular brands like Dell, HP, Lenovo and Apple tend to have better resale value. However, value depends on model, age and condition rather than brand alone.",
+  },
+  {
+    q: "Does a working laptop have more value than a non-working one?",
+    a: "Yes. Functional laptops that power on and run normally have significantly higher value than non-working ones. Even broken laptops may have scrap value.",
+  },
+  {
+    q: "How much does screen condition affect laptop value?",
+    a: "A cracked or damaged screen reduces value considerably. A laptop with a clean, intact display will command a better price.",
+  },
+  {
+    q: "Should I include the charger and accessories when selling?",
+    a: "Including the original charger adds some value. Missing accessories may reduce the price slightly but laptops are still accepted without them.",
+  },
+  {
+    q: "Does age affect laptop value significantly?",
+    a: "Yes. Newer laptops with better specifications generally have higher value. Older models may have limited resale potential but can still be recycled.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/what-affects-old-laptop-value-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>What Affects Old Laptop Value in Kochi?</h1>
+  <p class="lede">
+    If you are planning to sell an old laptop in Kochi, understanding the
+    factors that affect its value helps set expectations. Here is what
+    buyers typically evaluate.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like a quote for my old laptop." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Laptop value depends mainly on working condition, age,
+      specifications and screen condition — not brand alone. A
+      functional laptop under 5 years old with an intact screen and
+      original charger will command the best quote; non-working
+      laptops still have component and scrap value.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Working condition matters more than brand for determining resale value.</li>
+    <li>A cracked screen reduces value considerably but doesn't disqualify the laptop.</li>
+    <li>Non-working laptops still have scrap value from components like RAM and storage.</li>
+  </ul>
+
+  <section>
+    <h2>Key factors that determine laptop value</h2>
+    <table class="value-table">
+      <tr>
+        <th>Factor</th>
+        <th>Impact on Value</th>
+      </tr>
+      <tr>
+        <td>Brand and model</td>
+        <td>Popular business and premium models retain more value</td>
+      </tr>
+      <tr>
+        <td>Age</td>
+        <td>Laptops under 5 years old generally have more value</td>
+      </tr>
+      <tr>
+        <td>Working condition</td>
+        <td>Fully functional laptops are worth significantly more</td>
+      </tr>
+      <tr>
+        <td>Screen condition</td>
+        <td>Cracks, dead pixels and discoloration reduce value</td>
+      </tr>
+      <tr>
+        <td>Battery health</td>
+        <td>Good battery life adds value; swollen batteries reduce it</td>
+      </tr>
+      <tr>
+        <td>Specifications</td>
+        <td>Higher RAM, storage and processor models are worth more</td>
+      </tr>
+      <tr>
+        <td>Physical condition</td>
+        <td>Dents, scratches and missing keys or parts reduce value</td>
+      </tr>
+      <tr>
+        <td>Accessories</td>
+        <td>Original charger adds some value</td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Working vs non-working laptops</h2>
+    <p>
+      A laptop that powers on, runs normally and has no major issues will
+      have the best resale value. Non-working laptops may still be valued
+      based on their components — hard drives, RAM, screen and casing
+      materials all have scrap value.
+    </p>
+  </section>
+
+  <section>
+    <h2>What photos help with laptop quotes</h2>
+    <ul class="check-list">
+      <li>Laptop open — showing the screen, keyboard and trackpad</li>
+      <li>Laptop closed — showing the lid and casing condition</li>
+      <li>Side and port views — showing any physical damage</li>
+      <li>Bottom panel — showing model number and any damage</li>
+      <li>Screen on — showing display works (if functional)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Preparing your laptop for sale or recycle</h2>
+    <ul class="check-list">
+      <li>Back up files and data you want to keep</li>
+      <li>Sign out of all accounts and software licences</li>
+      <li>Factory reset or wipe the hard drive</li>
+      <li>Remove any SIM cards or external storage</li>
+      <li>If you cannot wipe the drive, ask about data destruction</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What to include in your message</h2>
+    <ul class="check-list">
+      <li>Laptop brand, model and approximate age</li>
+      <li>Working or non-working status</li>
+      <li>Any damage or defects</li>
+      <li>Photos showing condition</li>
+      <li>Whether you have the charger</li>
+      <li>Your pickup location in Kochi</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/sell-electronics/">Sell Electronics</a>
+      <a href="/computer-scrap-buyers-kochi/">Computer Scrap Buyers</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Want a Quote for Your Old Laptop?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'd like a quote for my old laptop." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .value-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+  .value-table th, .value-table td { border: 1px solid var(--color-border); padding: 0.5rem 0.75rem; text-align: left; }
+  .value-table th { background: var(--color-surface); font-weight: 600; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

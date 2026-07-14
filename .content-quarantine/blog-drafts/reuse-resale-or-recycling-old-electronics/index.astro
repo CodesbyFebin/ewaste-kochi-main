@@ -1,0 +1,176 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Reuse, Resale or Recycling: Which Option Fits Your Device?";
+const description =
+  "How to decide between reusing, reselling or recycling old electronics in Kochi — a practical decision guide for households and offices based on device condition and value.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Reuse, Resale or Recycling: Which Option Fits Your Device?", path: "/blog/reuse-resale-or-recycling-old-electronics/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/reuse-resale-or-recycling-old-electronics/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/reuse-resale-or-recycling-old-electronics/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "What if a device is borderline — worth selling but also old?",
+    a: "Send us a photo and model details. We'll give you an honest assessment of whether it has resale value or is better recycled.",
+  },
+  {
+    q: "Can I sell a device with a cracked screen?",
+    a: "Yes — cracked-screen devices still have component and scrap value, assessed at a reduced rate based on the damage.",
+  },
+  {
+    q: "Is there any option between selling and full recycling?",
+    a: "Sometimes — devices in reasonable condition that have low resale value may still be worth donating to a user who can benefit from them.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/reuse-resale-or-recycling-old-electronics/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Reuse, Resale or Recycling: Which Option Fits Your Device?</h1>
+  <p class="lede">
+    Three options — in descending order of what preserves value. The right
+    one depends on your device's condition, age, and how much time you
+    want to spend.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to check whether my old device is worth selling or should be recycled." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Keep using a device if it still works for you; sell it if it
+      works but you no longer need it; recycle it once it doesn't turn
+      on, is physically broken, or has effectively zero value. When
+      unsure, send photos and model details for an honest assessment.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Reuse preserves the most value — repair before you replace where possible.</li>
+    <li>Cracked-screen and non-working devices can still have component or scrap value.</li>
+    <li>A swollen battery always goes through battery recycling, regardless of the device's overall path.</li>
+  </ul>
+
+  <section>
+    <h2>Option 1: Reuse (keep using it)</h2>
+    <p>
+      If a device still works for its intended purpose — even if slowly —
+      the simplest and most sustainable choice is to keep using it. A
+      laptop that takes two minutes to boot is still functional. A phone
+      that can't run the latest apps might still serve someone for calls
+      and messaging. Repair can extend a device's life significantly where
+      parts are available.
+    </p>
+  </section>
+
+  <section>
+    <h2>Option 2: Resale (sell it)</h2>
+    <p>
+      When you no longer want a device but it still has working value —
+      it powers on, functions, and someone else could use it — selling is
+      worth exploring. The value depends on brand, model, age, condition,
+      and current demand. See <a href="/sell-electronics/">sell
+      electronics</a> for a condition-based quote, or
+      <a href="/marketplace/">our marketplace</a> if you want to list
+      the item directly.
+    </p>
+  </section>
+
+  <section>
+    <h2>Option 3: Recycling</h2>
+    <p>
+      When reuse and resale aren't realistic — the device doesn't turn on,
+      it's physically broken, the battery is dead, or its value is
+      effectively zero — responsible recycling is the right path. This
+      recovers materials and handles hazardous components safely. See
+      <a href="/recycling/">recycling</a> for what's accepted and how
+      pickup works.
+    </p>
+  </section>
+
+  <section>
+    <h2>Quick decision guide</h2>
+    <table class="decision-table">
+      <thead>
+        <tr><th>Device state</th><th>Best option</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Works, still useful to you</td><td>Keep using it (reuse)</td></tr>
+        <tr><td>Works, no longer needed</td><td>Sell or donate (resale)</td></tr>
+        <tr><td>Works but very old / low value</td><td>Sell or recycle — get a quote first</td></tr>
+        <tr><td>Doesn't turn on</td><td>Recycle (scrap value may still apply)</td></tr>
+        <tr><td>Physically damaged</td><td>Recycle (reduced scrap value)</td></tr>
+        <tr><td>Swollen battery</td><td>Battery recycling — handle separately</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/sell-electronics/">Sell Electronics</a>
+      <a href="/recycling/">E-Waste Recycling</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Not Sure Which Option Fits Your Device?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to check whether my old device is worth selling or should be recycled." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .decision-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+  .decision-table th, .decision-table td { border: 1px solid var(--color-border); padding: 0.6rem 0.9rem; text-align: left; }
+  .decision-table th { background: var(--color-surface); font-weight: 700; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

@@ -1,0 +1,114 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Service Area Questions for Ewaste Kochi";
+const description = "Service Area Questions for Ewaste Kochi — practical guidance for Kochi households and businesses, covering e-waste pickup Kakkanad, Kalamassery, Ernakulam South.";
+const datePublished = "2026-07-14";
+const dateModified = "2026-07-14";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Service Area Questions for Ewaste Kochi", path: "/blog/service-area-questions-for-ewaste-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/service-area-questions-for-ewaste-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/service-area-questions-for-ewaste-kochi/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  { q: "What is Kochi-metro enquiry area?", a: "The broader zone around Kochi and Ernakulam district where pickup is typically feasible, beyond the specific areas with dedicated pages." },
+  { q: "How do I check area feasibility?", a: "Message your address or area name on WhatsApp for a quick confirmation." },
+  { q: "Is pickup guaranteed in every area?", a: "Pickup feasibility depends on item type, quantity, condition and location." },
+  { q: "What if my area is not listed?", a: "Most Kochi-metro addresses are still serviceable even without a dedicated page — message to confirm." },
+];
+---
+
+<Layout title={title} description={description} path="/blog/service-area-questions-for-ewaste-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Service Area Questions for Ewaste Kochi</h1>
+  <p class="lede">Direct answers to the questions people ask most on this topic. Kalamassery is a core service area with a dedicated location page — homes, apartments and small offices in the area are all covered.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about service area questions for ewaste kochi." />
+
+  <ul class="key-takeaways">
+    <li>Areas outside the core Kochi-metro zone should always be checked first.</li>
+    <li>A precise address or WhatsApp location pin speeds up confirmation.</li>
+    <li>Kakkanad, Kalamassery and Ernakulam South have dedicated location pages.</li>
+  </ul>
+
+  <section>
+    <h2>Kalamassery</h2>
+    <p>Kalamassery is a core service area with a dedicated location page — homes, apartments and small offices in the area are all covered.</p>
+  </section>
+
+  <section>
+    <h2>Aluva</h2>
+    <p>Aluva town and surrounding residential areas are within the Kochi-metro service zone — message your specific area to confirm.</p>
+  </section>
+
+  <section>
+    <h2>Kakkanad and Infopark area</h2>
+    <p>Kakkanad, including the Infopark and SmartCity zones, is a core part of the service area covering both residential and office pickups.</p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/locations/">Locations</a>
+      <a href="/locations/kakkanad/">Kakkanad Location</a>
+      <a href="/locations/kalamassery/">Kalamassery</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/service-area-questions-for-ewaste-kochi/" />
+
+  <section class="final-cta">
+    <h2>Have Questions About Service Area Questions for Ewaste Kochi?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I have a question about service area questions for ewaste kochi." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  section p { line-height: 1.7; margin-bottom: 1rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

@@ -3,8 +3,8 @@ import Layout from "../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
 import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
-import { BLOG_ROADMAP_20 } from "../../../data/blogRoadmap20";
 
 const title = "E-Waste Recycling Basics | What Is E-Waste & How to Recycle in Kochi";
 const description =
@@ -18,17 +18,120 @@ const breadcrumbItems = [
   { name: "E-Waste Recycling Basics", path: "/blog/recycling-basics/" },
 ];
 
-const cluster = BLOG_ROADMAP_20.find((c) => c.slug === "e-waste-recycling-basics")!;
-
-// Only the 3 topics below correspond to real, published posts — everything else
-// in cluster.blogTopics is roadmap data only (src/data/blogRoadmap20.ts), not a
-// live route. Linking all 30 would create dangling links, so the rest render as
-// plain text.
+// BLOG SCALE SAFETY GATE (2026-07-14): only the 3 topics below correspond to
+// real, reviewed, indexable posts. The other 27 generated posts that briefly
+// covered this cluster's remaining topics were quarantined — see
+// .content-quarantine/blog-drafts/MANIFEST.json and
+// reports/blog-scale-safety-gate-report.md — pending a rewrite that clears
+// the duplicate-content gate. Linking all 30 here would again link an
+// indexable page to non-indexable draft content, which is exactly what the
+// gate exists to prevent.
 const publishedTopics: Record<string, string> = {
   "Where to Recycle Old Electronics in Kochi": "/blog/where-to-recycle-old-electronics-kochi/",
   "What Is E-Waste Recycling?": "/blog/what-is-ewaste/",
   "Common E-Waste Items Found in Homes": "/blog/e-waste-examples/",
 };
+
+// One-line description per roadmap topic (src/data/blogRoadmap20.ts, cluster
+// "e-waste-recycling-basics"). Keys must match cluster.blogTopics exactly.
+const topicDescriptions: Record<string, string> = {
+  "Where to Recycle Old Electronics in Kochi": "Confirmed pickup options across Kochi and how to check if your specific area is covered.",
+  "What Is E-Waste Recycling?": "A plain-language definition of e-waste recycling and why it's treated differently from regular household waste.",
+  "How E-Waste Recycling Works Step by Step": "The full journey from booking pickup to sorting, data destruction and material recovery.",
+  "What Happens to Old Electronics After Collection?": "Where devices actually go after pickup — reuse, resale, recycling or safe hazardous handling.",
+  "E-Waste Recycling vs Reuse": "When to keep using, resell or recycle a device, and why reuse usually comes first.",
+  "How to Prepare Electronics Before Recycling": "Backing up data, wiping devices and separating batteries before your pickup.",
+  "Common E-Waste Items Found in Homes": "A room-by-room list of electronics people often forget still count as e-waste.",
+  "Why Electronics Should Not Go into Household Waste": "The real risks — battery fires, hazardous materials, exposed data — of tossing devices in the bin.",
+  "E-Waste Recycling Checklist for Kochi Homes": "A step-by-step prep checklist to run through before booking a household pickup.",
+  "Common Mistakes People Make with Old Electronics": "The avoidable oversights — unwiped data, mixed batteries, vague location — that slow pickups down.",
+  "How to Recycle Old Electronics Without Losing Data": "Backing up, signing out and wiping devices properly before they leave your hands.",
+  "What Items Count as E-Waste in Kochi?": "A category-by-category breakdown of what actually qualifies as e-waste.",
+  "Safe Electronics Disposal for Apartments and Flats": "How doorstep pickup works for apartment residents, including building access and combined pickups.",
+  "How Responsible E-Waste Collection Works": "What separates authorized, compliant collection from informal scrap handling.",
+  "Reuse, Resale or Recycling: Which Option Fits Your Device?": "A decision guide based on your device's condition and remaining value.",
+  "Old Electronics Recycling for First-Time Users": "What to expect if you've never booked an e-waste pickup before.",
+  "How to Sort Electronics Before Pickup": "The one separation that actually matters (batteries) and what can be left as-is.",
+  "What to Ask Before Giving Electronics to a Collector": "Direct questions that separate legitimate recyclers from informal ones.",
+  "E-Waste Recycling Myths and Safe Facts": "Common misconceptions about deleting data, e-waste categories and informal recyclers, corrected.",
+  "Electronics Recycling Checklist Before You Book Pickup": "Everything to prepare — data, batteries, access details — before you message us.",
+  "Why E-Waste Needs Separate Handling": "The hazardous-material, battery-safety and data-security reasons e-waste can't go in general bins.",
+  "How to Identify Recyclable Electronics at Home": "A room-by-room guide to finding e-waste hiding in drawers and cupboards.",
+  "E-Waste Recycling for Families in Kochi": "How households can turn old devices, cables and toys into a single family cleanout.",
+  "How to Avoid Informal E-Waste Disposal": "The risks of informal scrap dealers and how to verify a collector is legitimate.",
+  "Responsible Electronics Recycling for Beginners": "Three simple steps to recycling responsibly without needing to become an expert.",
+  "What Makes Electronics Unsafe to Dump?": "The batteries, heavy metals and chemicals inside devices that make general waste unsafe.",
+  "How to Plan a Home Electronics Cleanout": "A room-by-room method for clearing years of accumulated electronics in one pickup.",
+  "E-Waste Recycling Questions Every User Should Ask": "The key questions to ask about authorization, data handling and documentation.",
+  "Where Old Electronics Should Go After Use": "Deciding between donation, resale and recycling based on a device's condition.",
+  "E-Waste Recycling Guide for Kochi Residents": "A complete overview of what's accepted, how pickup works and how to get a quote.",
+};
+
+// Learning path: the same 30 topics grouped into a suggested reading order,
+// from foundational concepts through to situation-specific guides. Purely an
+// editorial grouping of existing roadmap data — no new topics, no new routes.
+const learningPath: { stage: string; topics: string[] }[] = [
+  {
+    stage: "1. Start Here: The Basics",
+    topics: [
+      "What Is E-Waste Recycling?",
+      "How E-Waste Recycling Works Step by Step",
+      "What Happens to Old Electronics After Collection?",
+      "What Items Count as E-Waste in Kochi?",
+      "Common E-Waste Items Found in Homes",
+      "How to Identify Recyclable Electronics at Home",
+    ],
+  },
+  {
+    stage: "2. Why It Matters",
+    topics: [
+      "Why Electronics Should Not Go into Household Waste",
+      "Why E-Waste Needs Separate Handling",
+      "What Makes Electronics Unsafe to Dump?",
+      "E-Waste Recycling Myths and Safe Facts",
+    ],
+  },
+  {
+    stage: "3. Preparing for Pickup",
+    topics: [
+      "How to Prepare Electronics Before Recycling",
+      "How to Recycle Old Electronics Without Losing Data",
+      "How to Sort Electronics Before Pickup",
+      "E-Waste Recycling Checklist for Kochi Homes",
+      "Electronics Recycling Checklist Before You Book Pickup",
+      "How to Plan a Home Electronics Cleanout",
+      "Common Mistakes People Make with Old Electronics",
+    ],
+  },
+  {
+    stage: "4. Making the Right Choice",
+    topics: [
+      "E-Waste Recycling vs Reuse",
+      "Reuse, Resale or Recycling: Which Option Fits Your Device?",
+      "Where Old Electronics Should Go After Use",
+    ],
+  },
+  {
+    stage: "5. Trust & Responsible Handling",
+    topics: [
+      "How Responsible E-Waste Collection Works",
+      "What to Ask Before Giving Electronics to a Collector",
+      "How to Avoid Informal E-Waste Disposal",
+      "E-Waste Recycling Questions Every User Should Ask",
+      "Responsible Electronics Recycling for Beginners",
+    ],
+  },
+  {
+    stage: "6. For Specific Situations",
+    topics: [
+      "Where to Recycle Old Electronics in Kochi",
+      "Safe Electronics Disposal for Apartments and Flats",
+      "E-Waste Recycling for Families in Kochi",
+      "Old Electronics Recycling for First-Time Users",
+      "E-Waste Recycling Guide for Kochi Residents",
+    ],
+  },
+];
 
 const collectItems = [
   "Laptops", "Desktops", "Monitors", "Keyboards", "Printers", "Routers",
@@ -184,19 +287,31 @@ const faqItems = [
   </section>
 
   <section>
-    <h2>Explore the E-Waste Recycling Basics Cluster</h2>
+    <h2>Learning Path: E-Waste Recycling Basics</h2>
     <p class="muted-note">
-      This is the full topic roadmap for this cluster. The 3 linked titles
-      below are live guides; the rest are planned topics — data only, not yet
-      published.
+      The 30 topics in this cluster's roadmap, grouped into a suggested
+      reading order — from what e-waste actually is through to
+      situation-specific guides. The 3 linked titles below are live guides;
+      the rest are planned topics (data only, not yet published) shown here
+      with a short description so you know what each will cover.
     </p>
-    <ol class="topic-list">
-      {cluster.blogTopics.map((topic) => (
-        publishedTopics[topic]
-          ? <li><a href={publishedTopics[topic]}>{topic}</a></li>
-          : <li class="planned">{topic}</li>
-      ))}
-    </ol>
+    {learningPath.map((group) => (
+      <div class="learning-stage">
+        <h3>{group.stage}</h3>
+        <ol class="topic-list">
+          {group.topics.map((topic) => (
+            <li class={publishedTopics[topic] ? "" : "planned"}>
+              {publishedTopics[topic]
+                ? <a href={publishedTopics[topic]}>{topic}</a>
+                : <span class="topic-title">{topic}</span>}
+              {topicDescriptions[topic] && (
+                <p class="topic-desc">{topicDescriptions[topic]}</p>
+              )}
+            </li>
+          ))}
+        </ol>
+      </div>
+    ))}
   </section>
 
   <p class="mal-support">
@@ -204,6 +319,8 @@ const faqItems = [
   </p>
 
   <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/recycling-basics/" />
 
   <section class="final-cta">
     <h2>Ready to Recycle Your Old Electronics in Kochi?</h2>
@@ -277,15 +394,23 @@ const faqItems = [
   .cross-link-card h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
   .cross-link-card p { margin: 0; color: var(--color-muted); font-size: 0.92rem; }
   .cross-link-card a { display: inline-block; margin-top: 0.65rem; color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .learning-stage { margin: 1.75rem 0; }
+  .learning-stage h3 {
+    font-size: 1rem;
+    margin: 0 0 0.6rem;
+    color: var(--color-primary);
+  }
   .topic-list {
-    margin: 1.2rem 0 0;
+    margin: 0;
     padding-left: 1.4rem;
     display: grid;
-    gap: 0.4rem;
+    gap: 0.75rem;
     font-size: 0.95rem;
   }
   .topic-list a { color: var(--color-primary); font-weight: 700; }
-  .topic-list li.planned { color: var(--color-muted); }
+  .topic-list .topic-title { color: var(--color-text); font-weight: 700; }
+  .topic-list li.planned .topic-title { color: var(--color-muted); }
+  .topic-desc { margin: 0.2rem 0 0; color: var(--color-muted); font-size: 0.88rem; font-weight: 400; }
   .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
   .final-cta {
     padding: 1.75rem 1.25rem;

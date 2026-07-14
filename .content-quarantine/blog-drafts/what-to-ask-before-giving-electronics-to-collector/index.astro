@@ -1,0 +1,172 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "What to Ask Before Giving Electronics to a Collector | Kochi";
+const description =
+  "Key questions to ask any e-waste collector before handing over your devices in Kochi — authorization, data destruction, battery handling, and documentation.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "What to Ask Before Giving Electronics to a Collector", path: "/blog/what-to-ask-before-giving-electronics-to-collector/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/what-to-ask-before-giving-electronics-to-collector/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/what-to-ask-before-giving-electronics-to-collector/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "What if a collector says they're authorized but can't prove it?",
+    a: "A legitimate operator should be willing to discuss their authorization status. Vague or evasive answers are a sign to look elsewhere.",
+  },
+  {
+    q: "Is it enough that the collector is local and well-known?",
+    a: "Reputation in the local area doesn't automatically mean compliant handling — ask the specific questions, not just whether someone is familiar.",
+  },
+  {
+    q: "Do households really need documentation?",
+    a: "Individuals usually don't require formal documentation. For businesses, documentation creates an audit trail that's valuable for internal governance and compliance.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/what-to-ask-before-giving-electronics-to-collector/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>What to Ask Before Giving Electronics to a Collector</h1>
+  <p class="lede">
+    Not all e-waste collectors handle devices the same way. A few direct
+    questions before handing anything over can protect your data and
+    confirm the electronics end up in the right place.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to check your collection process before handing over my electronics." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Before handing over electronics, ask any collector five things:
+      are you authorized, how is data handled, how are batteries
+      separated, where do devices end up, and can you provide
+      documentation. A legitimate operator answers all five clearly.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Vague or evasive answers to any of these five questions is a warning sign.</li>
+    <li>Local reputation alone doesn't guarantee compliant handling — ask the specific questions.</li>
+    <li>Businesses benefit most from documentation; individuals usually don't need it.</li>
+  </ul>
+
+  <section>
+    <h2>1. Are you authorized to collect e-waste?</h2>
+    <p>
+      Ask whether they operate under Pollution Control Board authorization.
+      A legitimate recycler should answer clearly. Informal scrap dealers
+      typically can't confirm authorization and may not handle hazardous
+      materials correctly.
+    </p>
+  </section>
+
+  <section>
+    <h2>2. How do you handle data on storage devices?</h2>
+    <p>
+      This is the most important question for phones, laptops, and hard
+      drives. Does the collector wipe, degauss, or physically destroy
+      storage before reselling or recycling? Can they confirm when data
+      is destroyed and provide documentation? See
+      <a href="/data-destruction/">data destruction</a> for the options
+      available.
+    </p>
+  </section>
+
+  <section>
+    <h2>3. How are batteries separated and processed?</h2>
+    <p>
+      Batteries should never be mixed with general e-waste — they need
+      separate processing. A collector who mixes everything together
+      without separating batteries is not following safe handling
+      practices. See <a href="/battery-recycling/">battery recycling</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>4. Where do collected devices end up?</h2>
+    <p>
+      Ask whether devices go to authorized recycling facilities. Informal
+      handlers often pass items to further-informal channels where the
+      end destination is unclear. A legitimate recycler can describe
+      their downstream process.
+    </p>
+  </section>
+
+  <section>
+    <h2>5. Can you provide any documentation?</h2>
+    <p>
+      For business pickups in particular, ask about available
+      documentation — pickup records, data destruction certificates. A
+      legitimate operator will have options; an informal one typically
+      won't. See <a href="/trust/">trust and compliance</a> for what
+      documentation looks like.
+    </p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/trust/">Trust and Compliance</a>
+      <a href="/data-destruction/">Data Destruction</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Ready to Recycle With a Trusted Collector?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to check your collection process before handing over my electronics." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

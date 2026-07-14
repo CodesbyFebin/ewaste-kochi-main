@@ -1,0 +1,194 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "E-Waste Recycling vs Reuse | Which Is Better for Old Electronics?";
+const description =
+  "Should you recycle or reuse old electronics? How to decide between recycling, reselling, donating or keeping a device, with practical guidance for Kochi households and offices.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "E-Waste Recycling vs Reuse", path: "/blog/ewaste-recycling-vs-reuse/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/ewaste-recycling-vs-reuse/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/ewaste-recycling-vs-reuse/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Is a working device always better reused than recycled?",
+    a: "Generally yes — reuse extends the device's life and delays material recovery. If the device has any value remaining, selling or donating it before recycling is worth considering.",
+  },
+  {
+    q: "Can I sell a device that no longer turns on?",
+    a: "Possibly — non-working devices still have scrap or component value. Contact us with the model and condition for a quote.",
+  },
+  {
+    q: "What if I have both working and non-working devices in the same pickup?",
+    a: "That's fine — mixed pickups are common. Mention both so the team can assess each item correctly.",
+  },
+  {
+    q: "Does recycling always mean the device is destroyed?",
+    a: "Not always. Recycling includes assessment for reuse and refurbishment first — destruction only happens when the device genuinely has no further use.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/ewaste-recycling-vs-reuse/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Recycling vs Reuse: Which Is Better?</h1>
+  <p class="lede">
+    Reuse and recycling are both better than dumping old electronics —
+    but they're not the same thing, and choosing the right one for your
+    device can save value and reduce waste at the same time.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to check whether my old electronics can be reused or recycled." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Reuse (repair, resell, donate) is better than recycling whenever a
+      device still works — it avoids the energy cost of disassembly and
+      material recovery. Recycle only once a device genuinely has no
+      working life left: broken beyond repair, swollen battery, or too
+      old to run current software safely.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>The hierarchy is: repair first, reuse or resell second, recycle only if neither is realistic.</li>
+    <li>Non-working devices can still have scrap or component value — get a quote before assuming zero.</li>
+    <li>Mixed pickups with both working and non-working devices are completely normal.</li>
+  </ul>
+
+  <section>
+    <h2>What reuse means</h2>
+    <p>
+      Reuse means the device gets a second life — repaired, refurbished,
+      or passed on to another user as-is. This could mean selling your old
+      laptop, donating a working phone, or having a device professionally
+      refurbished for resale. The device stays as a device and keeps its
+      materials locked inside it.
+    </p>
+  </section>
+
+  <section>
+    <h2>What recycling means</h2>
+    <p>
+      Recycling means the device is disassembled, materials are recovered
+      (copper, aluminium, steel, recoverable metals), and hazardous
+      components are safely handled. The device stops being a device and
+      becomes raw material input. This is the right path when the device
+      genuinely has no working value left.
+    </p>
+  </section>
+
+  <section>
+    <h2>The general rule</h2>
+    <p>
+      Reuse is better than recycling where it's possible — it avoids the
+      energy and process cost of disassembly and recovery. The hierarchy
+      is: repair first, reuse or resell second, recycle if neither is
+      realistic. Only reach for "recycling" when the device has run out
+      of useful life.
+    </p>
+  </section>
+
+  <section>
+    <h2>When recycling is clearly the right choice</h2>
+    <ul class="check-list">
+      <li>The device doesn't turn on and repair isn't worth the cost</li>
+      <li>The screen or body is physically broken beyond practical use</li>
+      <li>The battery is swollen or damaged — see <a href="/battery-recycling/">battery recycling</a></li>
+      <li>The device is too old to run current software safely</li>
+      <li>The resale value is effectively zero</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>When reuse is worth exploring first</h2>
+    <ul class="check-list">
+      <li>The device powers on and functions, even if slow</li>
+      <li>It's a relatively recent model with parts still available</li>
+      <li>Someone else could genuinely use it with light repair</li>
+      <li>It has enough resale value to be worth the selling process</li>
+    </ul>
+    <p>
+      See <a href="/sell-electronics/">sell electronics</a> for a
+      condition-based quote, or <a href="/marketplace/">our marketplace</a>
+      for how selling works.
+    </p>
+  </section>
+
+  <section>
+    <h2>What about donation?</h2>
+    <p>
+      If a device works but has no resale value to you, donation to a
+      verified recipient (a school, family member, small business) is a
+      genuine reuse option. Just make sure data is wiped first — see
+      <a href="/data-destruction/">data destruction</a> for how.
+    </p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/sell-electronics/">Sell Electronics</a>
+      <a href="/recycling/">E-Waste Recycling</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Not Sure Whether to Reuse or Recycle?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to check whether my old electronics can be reused or recycled." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

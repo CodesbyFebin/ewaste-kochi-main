@@ -3,6 +3,7 @@ import Layout from "../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
 import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
 
 const title = "Sell Old Laptop in Kochi | Condition Checklist & Quote Guide";
@@ -149,6 +150,8 @@ const faqItems = [
   </p>
 
   <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/sell-old-laptop-kochi/" />
 
   <p class="updated">Last updated: {dateModified}</p>
 </Layout>

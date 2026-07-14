@@ -1,0 +1,114 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Data Safety for Community E-Waste Drives";
+const description = "Data Safety for Community E-Waste Drives — practical guidance for Kochi households and businesses, covering housing society e-waste pickup, apartment e-waste coll...";
+const datePublished = "2026-07-14";
+const dateModified = "2026-07-14";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Data Safety for Community E-Waste Drives", path: "/blog/data-safety-for-community-e-waste-drives/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/data-safety-for-community-e-waste-drives/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/data-safety-for-community-e-waste-drives/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  { q: "Can offices join community drives?", a: "Office park or co-working space collections are handled the same way as residential ones — contact us to plan." },
+  { q: "Can schools run awareness drives?", a: "Contact us directly to discuss scope and feasibility — this is handled case-by-case." },
+  { q: "How do we book a community pickup?", a: "Contact us with the estimated scale and building or community address to discuss scheduling." },
+  { q: "How should collection be announced?", a: "Set a date and common area, and share a rough list of accepted items with residents in advance." },
+];
+---
+
+<Layout title={title} description={description} path="/blog/data-safety-for-community-e-waste-drives/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Data Safety for Community E-Waste Drives</h1>
+  <p class="lede">Here's what you need to know, in plain terms. Don't store large quantities of batteries in an enclosed common area without ventilation.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about data safety for community e-waste drives." />
+
+  <ul class="key-takeaways">
+    <li>A resident or association can coordinate a combined collection for a building.</li>
+    <li>Individual flats can still book their own pickup — a drive isn't mandatory.</li>
+    <li>Batteries need separate, well-ventilated storage at a community collection point.</li>
+  </ul>
+
+  <section>
+    <h2>Battery safety at a community collection point</h2>
+    <p>Don't store large quantities of batteries in an enclosed common area without ventilation. Flag any damaged batteries in advance and keep them isolated from other collected items.</p>
+  </section>
+
+  <section>
+    <h2>Individual pickups still work</h2>
+    <p>A community drive isn't required — any individual flat can book its own pickup at any time, the same as a standalone home.</p>
+  </section>
+
+  <section>
+    <h2>School and community awareness drives</h2>
+    <p>Schools and community groups interested in an e-waste awareness or collection day should contact us directly to discuss scope and feasibility — this is handled case-by-case rather than as a standard advertised service.</p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/pickup/">Book Pickup</a>
+      <a href="/locations/">Locations</a>
+      <a href="/recycling/">Recycling</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/data-safety-for-community-e-waste-drives/" />
+
+  <section class="final-cta">
+    <h2>Have Questions About Data Safety for Community E-Waste Drives?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I have a question about data safety for community e-waste drives." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  section p { line-height: 1.7; margin-bottom: 1rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

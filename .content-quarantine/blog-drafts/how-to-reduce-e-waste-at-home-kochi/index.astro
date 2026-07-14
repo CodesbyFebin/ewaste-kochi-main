@@ -1,0 +1,128 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "How to Reduce E-Waste at Home in Kochi | Practical Tips for Families";
+const description =
+  "Practical tips for Kochi households to reduce e-waste at home — extending device life, responsible disposal, repair options, and habits that make a difference.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "How to Reduce E-Waste at Home", path: "/blog/how-to-reduce-e-waste-at-home-kochi/" },
+];
+
+const jsonLd = [
+  { "@context": "https://schema.org", "@type": "BlogPosting", headline: title, description, datePublished, dateModified, author: { "@type": "Organization", name: BUSINESS.legalName }, publisher: { "@id": `${SITE_URL}/#organization` }, mainEntityOfPage: `${SITE_URL}/blog/how-to-reduce-e-waste-at-home-kochi/` },
+  { "@context": "https://schema.org", "@type": "WebPage", "@id": `${SITE_URL}/blog/how-to-reduce-e-waste-at-home-kochi/`, name: title, description, dateModified },
+];
+
+const faqItems = [
+  { q: "What is the easiest way to reduce e-waste at home?", a: "The simplest step is to stop throwing electronics in the household waste bin. Collect them separately and hand them over for responsible recycling when you have enough." },
+  { q: "Is repairing electronics always better than replacing?", a: "Not always. If a device is very old or the repair cost is high, replacement may be more practical. But for minor issues like battery replacement or screen repair, fixing is usually worthwhile." },
+  { q: "Can donating old electronics help reduce e-waste?", a: "Yes. Working devices that you no longer use can be donated to someone who needs them. This extends the device life and delays recycling." },
+  { q: "How often should I do an e-waste cleanout at home?", a: "Once a year works well for most households. You can do a quick room-by-room check and gather items you no longer use." },
+  { q: "Does separating batteries from e-waste really help?", a: "Yes. Batteries need separate handling for safety and recycling. Removing them from devices before disposal makes the entire process safer and more efficient." },
+];
+---
+
+<Layout title={title} description={description} path="/blog/how-to-reduce-e-waste-at-home-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>How to Reduce E-Waste at Home in Kochi</h1>
+  <p class="lede">Every household in Kochi accumulates old electronics — phones, chargers, laptops, cables and gadgets that are no longer used. Reducing e-waste starts with small everyday habits. Here is a practical guide for Kochi families who want to make a difference.</p>
+
+  <CtaBar whatsappMessage="Hi, I'd like tips on reducing e-waste at home." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Reducing e-waste at home starts with small habits: extend device
+      life through basic care and repair, donate or sell working
+      devices instead of storing them, separate batteries as you go, and
+      set up a home collection box so items don't get forgotten in
+      drawers or thrown into general waste.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Most households find 10-20 unused electronic items during a first cleanout.</li>
+    <li>Repair is often cheaper than replacement for battery, screen or charging port issues.</li>
+    <li>A dedicated home collection box makes future cleanouts far easier.</li>
+  </ul>
+
+  <section>
+    <h2>Start with a household electronics audit</h2>
+    <p>Walk through your home room by room. Check drawers, cupboards, desk corners and storage boxes. You will likely find phones you replaced years ago, chargers that do not match any device you own, cables you kept "just in case," and gadgets that stopped working but were never thrown away. List everything you find. This gives you a clear picture of what you have and what needs attention. Most households in Kochi find 10 to 20 unused electronic items during a first cleanout. Once you know what you have, you can decide what to keep, what to donate, what to sell and what to recycle.</p>
+  </section>
+
+  <section>
+    <h2>Extend the life of your devices</h2>
+    <p>The best way to reduce e-waste is to make your electronics last longer. Simple habits help: use a screen protector and case for your phone, keep laptops on a hard surface for ventilation, unplug chargers when not in use, and clean dust from computer vents regularly. When a device develops a problem, check if repair is possible before deciding to replace it. Battery replacement, screen repair and charging port fixes are often affordable. In Kochi, there are many local repair shops that can handle common issues. A repaired device that lasts another two years means one less item in the waste stream.</p>
+  </section>
+
+  <section>
+    <h2>Donate or sell working devices</h2>
+    <p>Not every old device needs to be recycled. Working phones, laptops and tablets can be donated to someone who needs them — a family member, a friend, or a local organisation. If the device has resale value, you can sell it. This gives the device a second life and keeps it out of the recycling stream for a few more years. When you hand over a device, make sure to remove your personal data first — factory reset phones, wipe computers and remove SIM and memory cards. For more details on selling, see our guide on what affects old laptop value.</p>
+  </section>
+
+  <section>
+    <h2>Separate batteries from devices</h2>
+    <p>This is one of the most important habits for reducing e-waste risk. Batteries — especially lithium-ion ones in phones, laptops and power banks — can swell, leak or catch fire if damaged. When you dispose of a device, remove the battery if it is easily accessible. Keep batteries in a separate container, away from metal objects and heat. If a battery is swollen or leaking, handle it with extra care. Flag damaged batteries when you hand them over for recycling. Proper battery separation makes the entire recycling process safer and helps recover valuable materials like cobalt, lithium and nickel.</p>
+  </section>
+
+  <section>
+    <h2>Buy smarter, replace less often</h2>
+    <p>When you do need to buy new electronics, choose quality over price. A slightly more expensive laptop or phone that lasts five years is better for the environment — and often your wallet — than a cheaper model that needs replacement in two years. Look for devices with replaceable batteries, sufficient storage and upgradeable RAM if possible. Avoid buying new chargers and cables with every device — check if your existing ones are compatible first. When you upgrade, recycle the old device responsibly instead of leaving it in a drawer.</p>
+  </section>
+
+  <section>
+    <h2>Set up a home e-waste collection point</h2>
+    <p>Designate a small box or bag in a cupboard for old electronics. Whenever you replace a device or find an old cable, put it in the box. Once the box is full — typically every 6 to 12 months — contact us for a pickup. This simple habit prevents electronics from being forgotten in drawers or accidentally thrown into household waste. It also makes the cleanout process much easier when the time comes.</p>
+  </section>
+
+  <section>
+    <h2>What to avoid</h2>
+    <p>Do not throw old electronics in the household waste bin. Do not burn cables or devices to recover metal — this releases toxic fumes. Do not hand over electronics to informal scrap collectors who may process them unsafely. Do not leave old devices with batteries in direct sunlight or hot areas. Do not keep old electronics indefinitely "just in case" — if you have not used it in a year, it is time to decide: keep, donate, sell or recycle.</p>
+  </section>
+
+  <section>
+    <h2>Small steps add up</h2>
+    <p>Reducing e-waste does not require drastic changes. Start with one room. Clear out the drawer of old cables. Repair that phone with a cracked screen. Donate the laptop you no longer use. Every device that gets reused, repaired or responsibly recycled is one less item that could end up in a landfill. Over time, these small habits become routine, and your household contributes less to the growing e-waste challenge.</p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/pickup/">Book Pickup</a>
+      <a href="/sell-electronics/">Sell Electronics</a>
+    </div>
+  </section>
+
+  <p class="mal-support">മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.</p>
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Ready to Recycle What You've Found?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'd like tips on reducing e-waste at home." compact />
+  </section>
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; line-height: 1.6; }
+  section p { line-height: 1.7; margin-bottom: 1rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

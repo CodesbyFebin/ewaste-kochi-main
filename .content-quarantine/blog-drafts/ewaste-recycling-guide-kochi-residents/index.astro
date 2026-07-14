@@ -1,0 +1,189 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "E-Waste Recycling Guide for Kochi Residents | Full Overview";
+const description =
+  "A complete e-waste recycling guide for Kochi residents — what counts, how pickup works, areas covered, data handling, battery safety, and how to get a scrap quote.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "E-Waste Recycling Guide for Kochi Residents", path: "/blog/ewaste-recycling-guide-kochi-residents/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/ewaste-recycling-guide-kochi-residents/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/ewaste-recycling-guide-kochi-residents/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Where can I find a full list of accepted items?",
+    a: "See our recycling page for what's accepted in a standard pickup, and our battery recycling page for battery-specific guidance.",
+  },
+  {
+    q: "I'm in a part of Kochi not listed on the locations page — can I still book?",
+    a: "Very likely yes — message us your address and we'll confirm. The locations pages cover confirmed areas but our service area is broader than what's individually listed.",
+  },
+  {
+    q: "Do I get paid for any of my old electronics?",
+    a: "It depends on condition and value. Many devices have scrap or resale value — contact us for a quote before assuming something is worthless.",
+  },
+  {
+    q: "Is this a free service?",
+    a: "Standard household pickup is free for qualifying quantities. Some items with value may result in payment to you rather than a charge.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/ewaste-recycling-guide-kochi-residents/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Recycling Guide for Kochi Residents</h1>
+  <p class="lede">
+    Everything a Kochi resident needs to know about recycling old
+    electronics — from understanding what counts as e-waste to booking
+    a free doorstep pickup and getting a quote for devices with value.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to recycle my old electronics in Kochi." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      To recycle electronics in Kochi: message us your item list and
+      location on WhatsApp, back up and wipe any data-bearing devices,
+      separate batteries, and we'll confirm a free doorstep pickup slot
+      — devices with resale or scrap value get a quote too.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Standard household pickup is a doorstep service — no drop-off point needed.</li>
+    <li>Data wiping and battery separation apply to almost every pickup.</li>
+    <li>Areas outside the listed location pages are often still serviceable — just ask.</li>
+    <li>Many devices carry scrap or resale value — get a quote before assuming otherwise.</li>
+  </ul>
+
+  <section>
+    <h2>What counts as e-waste</h2>
+    <p>
+      Any discarded electrical or electronic device: laptops, desktops,
+      monitors, phones, tablets, TVs, printers, routers, batteries, cables,
+      chargers, and UPS and inverter units. If it runs on electricity or
+      stores a charge, it's e-waste when you're done with it. See
+      <a href="/blog/what-is-ewaste/">what is e-waste</a> for a full
+      explanation.
+    </p>
+  </section>
+
+  <section>
+    <h2>Service area</h2>
+    <p>
+      Ewaste Kochi primarily supports Kochi, Ernakulam, Kakkanad,
+      Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro enquiry
+      areas. For other Kerala districts, contact us to check pickup
+      feasibility. See <a href="/locations/">locations</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>How pickup works</h2>
+    <p>
+      Message us on WhatsApp with your item list, location, and photos of
+      anything damaged or battery-related. We confirm feasibility and quote
+      details, then agree a pickup slot. Our team collects from your door
+      — no drop-off needed. See <a href="/pickup/">pickup</a> for the
+      full process.
+    </p>
+  </section>
+
+  <section>
+    <h2>Data safety</h2>
+    <p>
+      Back up your data, then factory reset phones and wipe computer
+      drives. Or ask us to arrange <a href="/data-destruction/">certified
+      data destruction</a> as part of the pickup. Always do this before
+      handing over any device with personal or business data.
+    </p>
+  </section>
+
+  <section>
+    <h2>Battery handling</h2>
+    <p>
+      Keep batteries separate from other electronics. Check for swelling
+      or damage and flag it before pickup. All battery types — UPS,
+      inverter, laptop, phone — are accepted but processed separately.
+      See <a href="/battery-recycling/">battery recycling</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Getting a quote</h2>
+    <p>
+      Many devices have scrap or resale value. Send photos and details
+      on WhatsApp for a preliminary quote. Final value is confirmed at
+      pickup after inspection. See
+      <a href="/e-waste-scrap-prices-kochi/">scrap price guidance</a> or
+      <a href="/sell-electronics/">sell electronics</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/recycling/">E-Waste Recycling</a>
+      <a href="/pickup/">Book Pickup</a>
+      <a href="/sell-electronics/">Sell Electronics</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Ready to Recycle Your Electronics in Kochi?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to recycle my old electronics in Kochi." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

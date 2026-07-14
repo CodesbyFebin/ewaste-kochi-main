@@ -3,6 +3,7 @@ import Layout from "../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
 import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
 
 const title = "Laptop Recycling in Kochi | Pickup, Resale or Safe Disposal?";
@@ -249,6 +250,8 @@ const faqItems = [
   </p>
 
   <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/laptop-recycling-kochi/" />
 
   <section class="final-cta">
     <h2>Ready to Recycle Your Laptop?</h2>

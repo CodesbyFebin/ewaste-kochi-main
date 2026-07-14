@@ -1,0 +1,177 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "How to Recycle Old Electronics Without Losing Data | Kochi";
+const description =
+  "How to protect your personal and business data when recycling old electronics in Kochi — what to back up, how wiping works, and when to request certified data destruction.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "How to Recycle Old Electronics Without Losing Data", path: "/blog/recycle-electronics-without-losing-data/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/recycle-electronics-without-losing-data/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/recycle-electronics-without-losing-data/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Is a factory reset enough to protect my data?",
+    a: "For most personal devices, a full factory reset removes accessible personal data. For business devices or sensitive use cases, certified wiping to a recognised standard or physical destruction is the reliable option.",
+  },
+  {
+    q: "What data can remain after a simple delete?",
+    a: "Deleted files on a hard drive or SSD are often recoverable with readily available tools until the storage space is overwritten. Simple deletion is not data destruction.",
+  },
+  {
+    q: "Can you handle data destruction as part of pickup?",
+    a: "Yes — ask about data destruction when booking. See our data destruction page for options including wiping, degaussing, and shredding.",
+  },
+  {
+    q: "Do phones and tablets need the same data handling as computers?",
+    a: "Yes. A factory reset removes personal accounts and data from phones and tablets. For devices with sensitive business data, certified wiping is advisable.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/recycle-electronics-without-losing-data/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>How to Recycle Old Electronics Without Losing Data</h1>
+  <p class="lede">
+    "Losing data" when recycling usually means one of two things: losing
+    files you wanted to keep, or losing control of files you didn't realise
+    were still there. This guide covers both.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to recycle old electronics and need help with data safety." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      To recycle without losing control of your data: back up what you
+      want to keep, sign out of every account, wipe the device with a
+      proper factory reset or secure erase, and ask a recycler how
+      data-bearing devices are handled — handing it over doesn't
+      automatically mean it's destroyed unless you confirm it.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Handing a device to a recycler doesn't guarantee data destruction unless you specifically ask.</li>
+    <li>Formatting a drive is not the same as securely erasing it.</li>
+    <li>Business devices need certified destruction with documentation, not just a consumer reset.</li>
+  </ul>
+
+  <section>
+    <h2>Step 1: Back up what you want to keep</h2>
+    <p>
+      Before anything else, copy photos, documents, contacts, and any
+      other files you want to preserve — to an external drive, cloud
+      storage, or another device. Once a device is wiped or destroyed,
+      that data cannot be recovered.
+    </p>
+  </section>
+
+  <section>
+    <h2>Step 2: Sign out of accounts</h2>
+    <p>
+      On phones and tablets: sign out of email, social accounts, and app
+      store accounts before a factory reset. On laptops: sign out of
+      cloud services (Google, Microsoft, iCloud) and deauthorise the
+      device from any licensed software.
+    </p>
+  </section>
+
+  <section>
+    <h2>Step 3: Wipe the device</h2>
+    <p>
+      For phones and tablets, a full factory reset is the standard
+      approach. For computers, a secure erase (not just formatting the
+      drive) is needed to overwrite the storage properly. For drives you
+      can't access or that belong to a failed device, ask about
+      <a href="/data-destruction/">certified data destruction</a> — wiping,
+      degaussing, or physical shredding depending on the situation.
+    </p>
+  </section>
+
+  <section>
+    <h2>What "recycling" doesn't automatically do</h2>
+    <p>
+      Handing a device to a recycler — even a legitimate one — does not
+      guarantee the data is destroyed unless you specifically request and
+      confirm it. Always ask how data-bearing devices will be handled and
+      whether a certificate is available.
+    </p>
+  </section>
+
+  <section>
+    <h2>Business devices need extra care</h2>
+    <p>
+      Devices that held business data — client records, financial
+      information, employee details — should go through certified
+      destruction with documentation, not just a consumer factory reset.
+      See <a href="/data-destruction/">data destruction</a> and
+      <a href="/itad/">ITAD services</a> for business options.
+    </p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/data-destruction/">Data Destruction</a>
+      <a href="/itad/">ITAD for Business</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Need Help With Data Safety Before Recycling?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to recycle old electronics and need help with data safety." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

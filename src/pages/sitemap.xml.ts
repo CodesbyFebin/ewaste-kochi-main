@@ -1,6 +1,7 @@
 import type { APIRoute } from "astro";
 import { ROUTES } from "../data/routes";
 import { SITE_URL } from "../data/site";
+import { isIndexable } from "../lib/indexable";
 
 // Sitemap index — one <sitemap> entry per sub-sitemap group that actually has
 // at least one built page. A group with zero routes is omitted rather than
@@ -16,7 +17,7 @@ const GROUP_FILES: Record<string, string> = {
 
 export const GET: APIRoute = () => {
   const today = new Date().toISOString().slice(0, 10);
-  const presentGroups = Array.from(new Set(ROUTES.map((r) => r.sitemapGroup))).filter(
+  const presentGroups = Array.from(new Set(ROUTES.filter(isIndexable).map((r) => r.sitemapGroup))).filter(
     (g) => GROUP_FILES[g]
   );
 

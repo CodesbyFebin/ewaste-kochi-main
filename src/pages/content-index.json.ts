@@ -1,6 +1,7 @@
 import type { APIRoute } from "astro";
 import { ROUTES } from "../data/routes";
 import { SITE_URL } from "../data/site";
+import { isIndexable } from "../lib/indexable";
 
 export const GET: APIRoute = () => {
   const today = new Date().toISOString().slice(0, 10);
@@ -10,7 +11,7 @@ export const GET: APIRoute = () => {
     canonicalDomain: SITE_URL,
     lastUpdated: today,
     language: ["en-IN", "ml-IN"],
-    pages: ROUTES.map((r) => ({
+    pages: ROUTES.filter(isIndexable).map((r) => ({
       url: `${SITE_URL}${r.path}`,
       title: r.title,
       description: r.description,

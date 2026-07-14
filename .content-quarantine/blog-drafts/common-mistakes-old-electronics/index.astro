@@ -1,0 +1,192 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Common Mistakes People Make with Old Electronics | Kochi Guide";
+const description =
+  "The most common mistakes Kochi households and offices make with old electronics — from skipping data wipes to using informal scrap dealers, and how to avoid each one.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Common Mistakes People Make with Old Electronics", path: "/blog/common-mistakes-old-electronics/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/common-mistakes-old-electronics/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/common-mistakes-old-electronics/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Is it really that risky to give devices to an informal scrap dealer?",
+    a: "Yes — informal dealers typically cannot guarantee data destruction, don't separate batteries safely, and have no accountability for where devices end up. The risk is real, especially for devices with personal or business data.",
+  },
+  {
+    q: "What if I deleted everything before giving the device away?",
+    a: "Deleting files or even formatting a drive does not guarantee data cannot be recovered. Certified data destruction — wiping to a recognized standard or physical shredding — is the reliable option.",
+  },
+  {
+    q: "Does it matter if I leave batteries mixed in with other electronics?",
+    a: "Yes — batteries, especially lithium ones, need separate handling. Mixed in with general e-waste, they can be crushed or punctured, which creates a fire risk.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/common-mistakes-old-electronics/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Common Mistakes People Make with Old Electronics</h1>
+  <p class="lede">
+    Most people want to do the right thing with old electronics — the
+    mistakes below usually happen through oversight, not intention. Here
+    are the most common ones, and how to avoid each.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to recycle old electronics safely." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      The most common mistakes with old electronics in Kochi are binning
+      them with household waste, handing them over without wiping data,
+      using an informal scrap dealer, and mixing batteries in with
+      general e-waste. Each is easy to avoid once you know a proper
+      pickup covers all of it in one visit.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Deleting files isn't the same as certified data destruction.</li>
+    <li>Informal dealers can't guarantee safe battery or data handling.</li>
+    <li>Batteries need to be separated and flagged, not left mixed in.</li>
+    <li>Working devices are often recycled for free when they could be sold instead.</li>
+  </ul>
+
+  <section>
+    <h2>1. Putting electronics in the regular bin</h2>
+    <p>
+      Old phones, chargers, and laptops in household waste create fire
+      risks from batteries, allow hazardous materials to enter the general
+      waste stream, and waste recoverable materials. See
+      <a href="/recycling/">recycling</a> for what to do instead.
+    </p>
+  </section>
+
+  <section>
+    <h2>2. Giving devices away without wiping data</h2>
+    <p>
+      Simply deleting files or handing over a device logged in to accounts
+      is not data destruction. Old devices change hands unexpectedly — the
+      right approach is a factory reset for personal devices, or
+      <a href="/data-destruction/">certified data destruction</a> for
+      business devices before they leave your hands.
+    </p>
+  </section>
+
+  <section>
+    <h2>3. Using an informal scrap dealer</h2>
+    <p>
+      Informal buyers typically cannot provide documentation, cannot
+      guarantee data destruction, don't follow safe battery handling
+      practices, and have no accountability for downstream disposal.
+      Using a legitimate recycler closes all of these gaps.
+    </p>
+  </section>
+
+  <section>
+    <h2>4. Mixing batteries with general e-waste</h2>
+    <p>
+      Batteries — UPS, inverter, laptop, phone — need to be separated
+      and declared before pickup. Mixed in with other electronics, they
+      can be damaged during handling in ways that create fire or chemical
+      risks. See <a href="/battery-recycling/">battery recycling</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>5. Stockpiling indefinitely</h2>
+    <p>
+      Many households hold onto old electronics for years "in case we need
+      them." Most of the time, they accumulate in drawers and eventually
+      lose any remaining value. A regular cleanout — once a year is
+      enough — is easier than one giant backlog.
+    </p>
+  </section>
+
+  <section>
+    <h2>6. Assuming nothing has value</h2>
+    <p>
+      Many people recycle working devices that could be sold. If something
+      still powers on, check <a href="/sell-electronics/">sell
+      electronics</a> for a condition-based quote before handing it over
+      for free recycling.
+    </p>
+  </section>
+
+  <section>
+    <h2>7. Not flagging damaged items before pickup</h2>
+    <p>
+      Swollen batteries, cracked screens, or leaking components need to
+      be mentioned before the team arrives. Describing damage upfront
+      helps the team handle items safely and avoids delays on pickup day.
+    </p>
+  </section>  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/recycling/">E-Waste Recycling</a>
+      <a href="/pickup/">Book Pickup</a>
+    </div>
+  </section>
+
+
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Have Questions About Common Mistakes People Make with Old Electronics?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to recycle old electronics safely." compact />
+  </section>
+
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

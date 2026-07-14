@@ -17,6 +17,14 @@ export interface RouteEntry {
   lang: "en-IN" | "ml-IN";
   // Path of this page's translation counterpart, if one exists and is built.
   hreflangPair?: string;
+  // Publication governance for blog content (BLOG SCALE SAFETY GATE). Optional
+  // and defaulted (published / manual / indexable) for every non-blog route;
+  // every route of type "blog" carries an explicit value. A post is only
+  // discoverable (sitemap, content-index, ai-sitemap, linked as a live guide)
+  // when indexable is true — see src/lib/indexable.ts.
+  status?: "published" | "review" | "draft";
+  contentSource?: "manual" | "legacy" | "generated";
+  indexable?: boolean;
 }
 
 export const ROUTES: RouteEntry[] = [
@@ -87,6 +95,9 @@ export const ROUTES: RouteEntry[] = [
     type: "blog",
     sitemapGroup: "blog",
     lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
   },
   {
     path: "/blog/free-e-waste-pickup-kochi/",
@@ -98,6 +109,9 @@ export const ROUTES: RouteEntry[] = [
     type: "blog",
     sitemapGroup: "blog",
     lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
   },
   {
     path: "/blog/sell-old-laptop-kochi/",
@@ -109,6 +123,9 @@ export const ROUTES: RouteEntry[] = [
     type: "blog",
     sitemapGroup: "blog",
     lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
   },
   {
     path: "/blog/what-is-ewaste/",
@@ -120,6 +137,9 @@ export const ROUTES: RouteEntry[] = [
     type: "blog",
     sitemapGroup: "blog",
     lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
   },
   {
     path: "/blog/e-waste-examples/",
@@ -131,6 +151,9 @@ export const ROUTES: RouteEntry[] = [
     type: "blog",
     sitemapGroup: "blog",
     lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
   },
   {
     path: "/blog/e-waste-collection-near-me/",
@@ -142,6 +165,9 @@ export const ROUTES: RouteEntry[] = [
     type: "blog",
     sitemapGroup: "blog",
     lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
   },
   {
     path: "/blog/what-is-epr-in-e-waste/",
@@ -153,6 +179,9 @@ export const ROUTES: RouteEntry[] = [
     type: "blog",
     sitemapGroup: "blog",
     lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
   },
   {
     path: "/blog/e-waste-management-rules-2022/",
@@ -164,6 +193,9 @@ export const ROUTES: RouteEntry[] = [
     type: "blog",
     sitemapGroup: "blog",
     lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
   },
   {
     path: "/blog/where-to-recycle-old-electronics-kochi/",
@@ -175,6 +207,9 @@ export const ROUTES: RouteEntry[] = [
     type: "blog",
     sitemapGroup: "blog",
     lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
   },
   {
     path: "/blog/battery-recycling-near-me-kochi/",
@@ -186,6 +221,9 @@ export const ROUTES: RouteEntry[] = [
     type: "blog",
     sitemapGroup: "blog",
     lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
   },
   {
     path: "/blog/how-to-book-ewaste-pickup-kochi/",
@@ -197,6 +235,9 @@ export const ROUTES: RouteEntry[] = [
     type: "blog",
     sitemapGroup: "blog",
     lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
   },
   {
     path: "/blog/how-to-sell-old-electronics-kochi/",
@@ -208,6 +249,9 @@ export const ROUTES: RouteEntry[] = [
     type: "blog",
     sitemapGroup: "blog",
     lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
   },
   {
     path: "/blog/laptop-recycling-kochi/",
@@ -219,6 +263,9 @@ export const ROUTES: RouteEntry[] = [
     type: "blog",
     sitemapGroup: "blog",
     lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
   },
   {
     path: "/blog/data-destruction-kochi-guide/",
@@ -230,6 +277,9 @@ export const ROUTES: RouteEntry[] = [
     type: "blog",
     sitemapGroup: "blog",
     lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
   },
   {
     path: "/blog/corporate-ewaste-pickup-kochi/",
@@ -241,6 +291,9 @@ export const ROUTES: RouteEntry[] = [
     type: "blog",
     sitemapGroup: "blog",
     lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
   },
   {
     path: "/blog/how-ewaste-scrap-quotes-work-kochi/",
@@ -252,6 +305,9 @@ export const ROUTES: RouteEntry[] = [
     type: "blog",
     sitemapGroup: "blog",
     lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
   },
   {
     path: "/blog/recycling-basics/",
@@ -263,6 +319,9 @@ export const ROUTES: RouteEntry[] = [
     type: "blog",
     sitemapGroup: "blog",
     lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
   },
   {
     path: "/services/",

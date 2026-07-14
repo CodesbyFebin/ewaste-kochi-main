@@ -1,0 +1,196 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Office Electronics Cleanout Guide | Corporate E-Waste Pickup Kochi";
+const description =
+  "How to plan an office electronics cleanout in Kochi. IT asset inventory, data destruction planning, bulk pickup scheduling and what to separate before collection.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Office Electronics Cleanout Guide", path: "/blog/office-electronics-cleanout-guide-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/office-electronics-cleanout-guide-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/office-electronics-cleanout-guide-kochi/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Can offices in Kochi book e-waste pickup?",
+    a: "Yes. Offices of all sizes can request e-waste collection. Send an item list and your location and we will confirm pickup feasibility.",
+  },
+  {
+    q: "Should we prepare an IT asset list before pickup?",
+    a: "An asset list helps streamline the process. Include device type, model and quantity. It is particularly useful for IT storage room cleanouts.",
+  },
+  {
+    q: "Is documentation available for business e-waste disposal?",
+    a: "Documentation may be available on request for business pickups. Contact us with your requirements and we will confirm what can be provided.",
+  },
+  {
+    q: "Can servers and network equipment be included in office pickup?",
+    a: "Yes. Servers, switches, routers and UPS systems can be included. For data-bearing devices, consider data destruction services.",
+  },
+  {
+    q: "What should IT teams prepare before an office cleanout?",
+    a: "Identify data-bearing devices, separate batteries, create an asset list, and flag any large or heavy items. Notify us of any data destruction needs.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/office-electronics-cleanout-guide-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Office Electronics Cleanout Guide</h1>
+  <p class="lede">
+    Planning an office electronics cleanout in Kochi? Here is a step-by-step
+    guide for IT teams and office managers — from inventory to pickup.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, we're planning an office electronics cleanout." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Plan an office cleanout in four steps: inventory your IT assets,
+      sort and separate data-bearing devices and batteries, plan data
+      destruction for sensitive storage, then contact us with your item
+      list, location and access details to book pickup.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>An asset list (device type, model, quantity) streamlines feasibility and scheduling.</li>
+    <li>Servers, switches and UPS systems are accepted — flag data-bearing ones for destruction.</li>
+    <li>Documentation for audit records may be available on request for business pickups.</li>
+  </ul>
+
+  <section>
+    <h2>Why plan an office e-waste cleanout?</h2>
+    <p>
+      Offices accumulate old IT equipment — laptops, monitors, printers,
+      cables and networking gear. Regular cleanouts free up storage space,
+      ensure responsible disposal of outdated equipment, and help maintain
+      an organised workplace.
+    </p>
+  </section>
+
+  <section>
+    <h2>Step 1: Inventory your IT assets</h2>
+    <p>
+      Walk through your office and identify all electronics that need
+      disposal. Common office e-waste includes:
+    </p>
+    <ul>
+      <li>Old laptops and desktop computers</li>
+      <li>Monitors and displays</li>
+      <li>Printers, scanners and copiers</li>
+      <li>Servers, switches and routers</li>
+      <li>UPS units and batteries</li>
+      <li>Cables, adapters and accessories</li>
+      <li>Keyboards, mice and peripherals</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Step 2: Sort and prepare items</h2>
+    <ul class="check-list">
+      <li>Separate data-bearing devices (laptops, desktops, servers, hard drives)</li>
+      <li>Separate batteries (UPS, laptop batteries, power banks)</li>
+      <li>Group similar items together (all monitors, all printers, etc.)</li>
+      <li>Create a simple list with device types and quantities</li>
+      <li>Flag any large or heavy items that need special handling</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Step 3: Plan data destruction</h2>
+    <p>
+      If your office handles sensitive data, plan for secure disposal of
+      storage devices. Options include:
+    </p>
+    <ul>
+      <li>Hard drive shredding for physical destruction</li>
+      <li>Degaussing for magnetic media</li>
+      <li>Certificate of data destruction for audit records</li>
+    </ul>
+    <p>
+      Note: Data destruction is a separate service. Contact us with your
+      requirements and we will confirm feasibility.
+    </p>
+  </section>
+
+  <section>
+    <h2>Step 4: Contact us</h2>
+    <p>
+      Once your inventory is ready, contact us via WhatsApp with:
+    </p>
+    <ul class="check-list">
+      <li>Item list with types and quantities</li>
+      <li>Any data destruction requirements</li>
+      <li>Office location in Kochi</li>
+      <li>Preferred pickup date or timeframe</li>
+      <li>Access details (floor, reception, parking)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/itad/">ITAD for Business</a>
+      <a href="/data-destruction/">Data Destruction</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Ready to Plan Your Office Cleanout?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, we're planning an office electronics cleanout." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

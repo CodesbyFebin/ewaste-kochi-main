@@ -1,0 +1,94 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "E-Waste Readiness for Office Relocation in Kochi | IT Cleanout Guide";
+const description =
+  "How to handle e-waste during office relocation in Kochi. IT asset planning, data safety, bulk pickup scheduling and what to do with old office electronics during a move.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Office Relocation E-Waste Guide", path: "/blog/ewaste-office-relocation-readiness-kochi/" },
+];
+
+const jsonLd = [
+  { "@context": "https://schema.org", "@type": "BlogPosting", headline: title, description, datePublished, dateModified, author: { "@type": "Organization", name: BUSINESS.legalName }, publisher: { "@id": `${SITE_URL}/#organization` }, mainEntityOfPage: `${SITE_URL}/blog/ewaste-office-relocation-readiness-kochi/` },
+  { "@context": "https://schema.org", "@type": "WebPage", "@id": `${SITE_URL}/blog/ewaste-office-relocation-readiness-kochi/`, name: title, description, dateModified },
+];
+
+const faqItems = [
+  { q: "Can I recycle e-waste during office relocation in Kochi?", a: "Yes. Office relocations are a good time to clear out old electronics. We can coordinate pickup around your move schedule." },
+  { q: "What should I do with old office electronics before moving?", a: "Separate items into keep, donate, sell and recycle piles. Wipe data from all devices. Take photos for quote. Contact us to schedule pickup for the items you are disposing." },
+  { q: "Can bulk pickup be timed with office relocation?", a: "Yes. If you know your moving date, contact us in advance. We can plan a pickup before or after the move depending on your preference." },
+  { q: "Are servers and network equipment accepted during relocation?", a: "Yes. Servers, switches, routers and UPS batteries are accepted. They require careful handling, so mention them early in planning." },
+  { q: "Do you need an inventory list for office relocation pickup?", a: "An inventory list helps us plan. It does not need to be detailed — a rough list with item types and quantities is enough." },
+];
+---
+
+<Layout title={title} description={description} path="/blog/ewaste-office-relocation-readiness-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Readiness for Office Relocation in Kochi</h1>
+  <p class="lede">Relocating an office is the right time to clear out old electronics that have accumulated over time. Here is how to handle e-waste during an office move in Kochi — from planning to pickup.</p>
+  <CtaBar whatsappMessage="Hi, we are relocating our office and need e-waste pickup." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Before an office move in Kochi, sort electronics into keep, sell,
+      donate and recycle piles, wipe data from every device, and share a
+      rough inventory with us so pickup can be scheduled before or after
+      the move — servers, UPS units and networking gear just need to be
+      flagged early.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>An IT asset review before the move prevents last-minute, rushed decisions.</li>
+    <li>Data wiping applies to desktops, laptops, servers and storage — not just phones.</li>
+    <li>Timing the e-waste pickup separately from the moving truck avoids mix-ups.</li>
+    <li>Servers, switches and UPS batteries are accepted but need advance notice.</li>
+  </ul>
+
+  <section><h2>Start with an IT asset review</h2><p>Before the move, walk through every desk, server room, storage area and meeting room. List the electronics you plan to keep, the ones you plan to dispose, and anything that is still usable but no longer needed. Make separate lists for: working devices that may have resale value, devices that need data destruction, broken or obsolete items for recycling, and accessories like cables, chargers and peripherals. This review prevents last-minute decisions and ensures nothing important is accidentally discarded.</p></section>
+  <section><h2>Data safety before disposal</h2><p>Every device being handed over must be checked for data. Desktops, laptops, servers and hard drives may contain business documents, client information, financial records and project data. Back up files you want to keep, log out of all accounts, and perform a full drive wipe. For devices with sensitive data, arrange professional data destruction. For servers and storage arrays, create a separate list so we can plan secure handling.</p></section>
+  <section><h2>What to include in your relocation plan</h2><ul class="check-list"><li>List of items to keep, recycle, donate or sell</li><li>Preferred pickup date before or after the move</li><li>Access details — office floor, lift availability, loading dock</li><li>Inventory of servers, UPS systems and networking gear</li><li>Photos of large or bulky items</li><li>Any damaged or leaking batteries flagged separately</li></ul></section>
+  <section><h2>Working with the moving team</h2><p>Coordination between the moving team and the e-waste pickup team matters. If possible, schedule the e-waste pickup a day before the move so cleared items do not get loaded into the moving truck. If that is not possible, label e-waste boxes clearly and set them aside at the new location for later pickup. Either way, communication prevents confusion and ensures a smooth transition.</p></section>
+  <section><h2>Reducing future e-waste at the new office</h2><p>As you set up the new office, consider habits that reduce future e-waste. Keep only the devices you truly need. Donate working equipment that is surplus. Set up a storage area for old cables and accessories. Schedule an annual cleanout so electronics do not pile up again. Responsible e-waste habits now make the next relocation easier.</p></section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/itad/">ITAD for Business</a>
+      <a href="/data-destruction/">Data Destruction</a>
+    </div>
+  </section>
+
+  <p class="mal-support">മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.</p>
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Have Questions About Office Relocation E-Waste Pickup?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, we are relocating our office and need e-waste pickup." compact />
+  </section>
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; line-height: 1.6; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

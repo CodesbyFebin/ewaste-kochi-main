@@ -1,0 +1,184 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "How to Prepare Electronics Before Recycling | Kochi Checklist";
+const description =
+  "What to do before handing over electronics for recycling in Kochi — backing up data, wiping devices, separating batteries, and flagging damaged items for safe pickup.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "How to Prepare Electronics Before Recycling", path: "/blog/how-to-prepare-electronics-for-recycling/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/how-to-prepare-electronics-for-recycling/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/how-to-prepare-electronics-for-recycling/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Is it necessary to clean devices before pickup?",
+    a: "Basic cleaning is not required. Focus on removing personal items, SIM cards, memory cards, and ensuring data is backed up before wiping.",
+  },
+  {
+    q: "What should I do with a device I cannot turn on?",
+    a: "Non-working devices are still accepted. Describe the condition clearly — whether it powers on, any physical damage — so the team can handle it correctly.",
+  },
+  {
+    q: "Do I need to remove the battery before recycling a laptop?",
+    a: "You don't need to remove it yourself. Just let the team know if the battery is swollen or damaged, and keep such items separate from other electronics.",
+  },
+  {
+    q: "What if I forget to wipe a device?",
+    a: "Ask about data destruction when booking — we can arrange wiping or shredding as part of the pickup rather than expecting you to do it yourself.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/how-to-prepare-electronics-for-recycling/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>How to Prepare Electronics Before Recycling</h1>
+  <p class="lede">
+    A few simple steps before pickup make the process smoother and protect
+    your data. Here's what to do — and what you don't need to worry about.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like help preparing my electronics for pickup." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Before recycling: back up your data, factory reset or wipe
+      devices (or ask us to arrange data destruction), remove SIM and
+      memory cards, keep batteries separate, and flag anything heavy or
+      damaged. You don't need to clean, disassemble or box most items.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Back up first — once a device is wiped or destroyed, data can't be recovered.</li>
+    <li>Business devices with sensitive data should go through certified data destruction.</li>
+    <li>The team handles sorting and processing after collection — you don't need to prep beyond this.</li>
+  </ul>
+
+  <section>
+    <h2>Back up your data first</h2>
+    <p>
+      Before anything else: copy any files, photos, or documents you want
+      to keep from phones, laptops, tablets, and computers. Once a device
+      is wiped or physically destroyed, data cannot be recovered. This
+      applies to external hard drives too.
+    </p>
+  </section>
+
+  <section>
+    <h2>Wipe or request data destruction</h2>
+    <p>
+      After backing up, delete accounts, sign out of services, and do a
+      factory reset where possible. For hard drives and SSDs that you can't
+      wipe yourself, or that are physically damaged, ask us to arrange
+      <a href="/data-destruction/">certified data destruction</a> as part
+      of the pickup. This is especially important for business devices.
+    </p>
+  </section>
+
+  <section>
+    <h2>Remove personal accessories</h2>
+    <ul class="check-list">
+      <li>SIM cards and memory cards from phones and tablets</li>
+      <li>Accessories you want to keep (cases, cables you still use)</li>
+      <li>Any stickers, labels, or tags that identify you personally</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Separate batteries from other electronics</h2>
+    <p>
+      Keep batteries — UPS, inverter, laptop, phone — in a separate bag or
+      box. If a battery is swollen, leaking, or damaged, do not stack other
+      items on top of it and flag this clearly when booking. See
+      <a href="/battery-recycling/">battery recycling</a> for safe interim
+      storage.
+    </p>
+  </section>
+
+  <section>
+    <h2>Flag heavy or bulky items</h2>
+    <p>
+      Tell us in advance if you have old CRT monitors, server racks, or
+      large UPS units — these need planning for safe transport. Knowing
+      ahead of time avoids delays on pickup day.
+    </p>
+  </section>
+
+  <section>
+    <h2>What you don't need to do</h2>
+    <ul class="check-list">
+      <li>You don't need to disassemble anything</li>
+      <li>You don't need to clean devices</li>
+      <li>You don't need to box or package most items</li>
+      <li>You don't need to sort by material type</li>
+    </ul>
+    <p>The team handles sorting and processing after collection.</p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/data-destruction/">Data Destruction</a>
+      <a href="/pickup/">Book Pickup</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Ready to Prepare and Book Pickup?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'd like help preparing my electronics for pickup." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

@@ -1,0 +1,201 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Battery Safety Before E-Waste Pickup | Kochi Recycling Guide";
+const description =
+  "Battery safety checklist for e-waste pickup in Kochi — swollen batteries, lithium risks, storage tips, and what to flag before collection.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Battery Safety Before E-Waste Pickup", path: "/blog/battery-safety-before-ewaste-pickup/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/battery-safety-before-ewaste-pickup/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/battery-safety-before-ewaste-pickup/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Why do batteries need special handling before pickup?",
+    a: "Batteries can leak, swell or catch fire if damaged. Separating them from other e-waste and flagging any damage helps ensure safe collection.",
+  },
+  {
+    q: "What should I do if a battery is swollen?",
+    a: "Keep it in a cool, dry place away from flammable materials. Do not attempt to puncture or remove it. Flag it when you contact us.",
+  },
+  {
+    q: "Can leaking batteries be collected?",
+    a: "Yes, but they need special handling. Place the battery in a plastic bag or container and let us know about the leak before pickup.",
+  },
+  {
+    q: "Should I remove batteries from devices before pickup?",
+    a: "If easily removable, take batteries out and keep them separate. If the battery is built-in or difficult to remove, leave it and let us know.",
+  },
+  {
+    q: "How should I store batteries before pickup?",
+    a: "Keep batteries in a cool, dry place away from direct sunlight. Do not stack heavy items on top of batteries. Keep terminals covered with tape if possible.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/battery-safety-before-ewaste-pickup/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Battery Safety Before E-Waste Pickup</h1>
+  <p class="lede">
+    Batteries are one of the most important items to handle carefully
+    before an e-waste pickup. Here is a safety checklist for Kochi
+    residents preparing batteries for collection.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I have batteries to include in my e-waste pickup." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Before an e-waste pickup in Kochi, inspect every battery for
+      swelling, leaks or damage, keep them separate from other
+      electronics, and photograph anything unusual. Swollen or leaking
+      batteries need extra care — don't puncture or force them — and
+      should be flagged when you book so the team can plan safe handling.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Never mix batteries with general e-waste or household trash.</li>
+    <li>Swollen batteries should be kept cool, dry and away from flammable items.</li>
+    <li>Cover exposed terminals with tape to prevent short circuits.</li>
+    <li>Photos help the team plan safe handling before they arrive.</li>
+  </ul>
+
+  <section>
+    <h2>Why batteries need separate handling</h2>
+    <p>
+      Batteries contain reactive materials that can be hazardous if
+      damaged or improperly handled. Lithium-ion batteries in phones,
+      laptops and power banks can swell or catch fire. Lead-acid
+      batteries in UPS and inverter systems contain acid that can leak.
+      Separating batteries from general e-waste and flagging damage
+      keeps the pickup process safe for everyone.
+    </p>
+  </section>
+
+  <section>
+    <h2>Types of batteries commonly collected</h2>
+    <ul>
+      <li>Lithium-ion — phones, laptops, power banks, tablets</li>
+      <li>Lead-acid — UPS systems, inverter batteries</li>
+      <li>Nickel-metal hydride — older devices, cordless tools</li>
+      <li>Alkaline — household batteries (AA, AAA)</li>
+      <li>Lithium polymer — slim devices, smartwatches</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Battery safety checklist</h2>
+    <ul class="check-list">
+      <li>Inspect each battery for swelling, leaks or damage before pickup</li>
+      <li>If a battery is swollen (bulging), place it in a cool, dry location away from flammable items</li>
+      <li>If a battery is leaking, place it in a sealed plastic bag or container</li>
+      <li>Cover battery terminals with electrical tape or masking tape to prevent short circuits</li>
+      <li>Do not stack heavy electronics on top of batteries</li>
+      <li>Keep batteries separate from other e-waste items</li>
+      <li>Do not attempt to puncture, crush or open any battery</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What to flag before pickup</h2>
+    <ul class="check-list">
+      <li>Any swollen or bulging batteries — send a photo</li>
+      <li>Any leaking batteries — describe the type of leak</li>
+      <li>Batteries that feel unusually hot</li>
+      <li>Large or heavy batteries (UPS, inverter) that need careful handling</li>
+      <li>Built-in batteries that cannot be removed from the device</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What not to do with batteries</h2>
+    <ul>
+      <li>Do not throw batteries in regular household waste</li>
+      <li>Do not burn batteries</li>
+      <li>Do not attempt to remove a swollen battery yourself</li>
+      <li>Do not mix damaged batteries with general e-waste without flagging them</li>
+      <li>Do not store batteries in direct sunlight or hot areas</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What to include in your message</h2>
+    <ul class="check-list">
+      <li>Battery types and approximate quantity</li>
+      <li>Any damaged, swollen or leaking batteries (with photos)</li>
+      <li>Whether batteries are removed or still inside devices</li>
+      <li>Large batteries that may need extra handling</li>
+      <li>Your pickup location in Kochi</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/battery-recycling/">Battery Recycling</a>
+      <a href="/pickup/">Book Pickup</a>
+      <a href="/recycling/">E-Waste Recycling</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <section class="final-cta">
+    <h2>Have Batteries to Include in Your Pickup?</h2>
+    <p>Flag any damaged or swollen batteries with photos for safe handling.</p>
+    <CtaBar whatsappMessage="Hi, I have batteries to include in my e-waste pickup." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

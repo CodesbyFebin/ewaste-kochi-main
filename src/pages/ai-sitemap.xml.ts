@@ -1,13 +1,14 @@
 import type { APIRoute } from "astro";
 import { ROUTES } from "../data/routes";
 import { SITE_URL } from "../data/site";
+import { isIndexable } from "../lib/indexable";
 
 // Non-standard, AI-crawler-facing companion to sitemap.xml: same canonical URL
 // set, but with title/description inline so an LLM doesn't need a second fetch
 // per page to know what each URL is about.
 export const GET: APIRoute = () => {
   const today = new Date().toISOString().slice(0, 10);
-  const entries = ROUTES.map(
+  const entries = ROUTES.filter(isIndexable).map(
     (r) => `  <page>
     <loc>${SITE_URL}${r.path}</loc>
     <title>${escapeXml(r.title)}</title>

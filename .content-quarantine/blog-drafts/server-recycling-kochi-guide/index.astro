@@ -1,0 +1,194 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Server Recycling in Kochi | Enterprise IT Asset Disposal";
+const description =
+  "Server recycling, network equipment disposal and ITAD services in Kochi. How to prepare servers, switches and data center hardware for pickup.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Server Recycling in Kochi", path: "/blog/server-recycling-kochi-guide/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/server-recycling-kochi-guide/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/server-recycling-kochi-guide/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Can servers be recycled in Kochi?",
+    a: "Yes. Servers, network switches, routers, firewalls and storage arrays are accepted for recycling. Contact us with the list for pickup feasibility.",
+  },
+  {
+    q: "Do servers need data destruction before recycling?",
+    a: "Yes. Server storage devices should be wiped or physically destroyed. Our ITAD process covers hard drive shredding and degaussing. Documentation is available on request.",
+  },
+  {
+    q: "What is ITAD?",
+    a: "IT Asset Disposition (ITAD) is the secure disposal of IT equipment including data destruction, asset tracking and environmental compliance. It is designed for businesses handling bulk IT scrap.",
+  },
+  {
+    q: "Can server racks and UPS batteries be collected?",
+    a: "Yes. Server racks, UPS units and server room batteries can be included. Flag large or heavy items when contacting us so we can plan the pickup.",
+  },
+  {
+    q: "Should I prepare an asset list for server pickup?",
+    a: "An asset list helps streamline the process. Include device type, model and quantity. This is especially useful for office server room cleanouts.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/server-recycling-kochi-guide/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Server Recycling in Kochi</h1>
+  <p class="lede">
+    Servers, network equipment and data center hardware require careful
+    handling — both for data security and material recovery. Here is how
+    server recycling works in Kochi for businesses.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I have servers and network equipment for recycling." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Servers, switches, storage arrays and racks are all accepted for
+      recycling in Kochi. Data destruction (hard drive shredding,
+      degaussing, certificate on request) is available for
+      business-critical storage — even small offices with just a few
+      servers can request pickup.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>You don't need enterprise-scale quantities — small offices are served too.</li>
+    <li>An asset list (device type, model, quantity) streamlines server room cleanouts.</li>
+    <li>Chain of custody documentation is available for auditable tracking.</li>
+  </ul>
+
+  <section>
+    <h2>What server and network equipment is accepted?</h2>
+    <ul>
+      <li>Rack servers and tower servers</li>
+      <li>Network switches and routers</li>
+      <li>Firewalls and security appliances</li>
+      <li>Storage arrays and NAS devices</li>
+      <li>Server racks and cabinets</li>
+      <li>UPS units and server room batteries</li>
+      <li>Network cables and patch panels</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Data safety for server equipment</h2>
+    <p>
+      Servers and storage devices contain business-critical data. Before
+      disposal, data should be securely erased or the storage media
+      physically destroyed. Our ITAD services include:
+    </p>
+    <ul>
+      <li>Hard drive shredding — physical destruction of drives</li>
+      <li>Degaussing — magnetic destruction of data on HDDs</li>
+      <li>Certificate of data destruction — available on request</li>
+      <li>Chain of custody documentation for auditable tracking</li>
+    </ul>
+    <p>
+      Note: Data destruction services are separate from general recycling.
+      Contact us with your requirements and we will confirm feasibility.
+    </p>
+  </section>
+
+  <section>
+    <h2>Preparing servers for pickup</h2>
+    <ul class="check-list">
+      <li>Remove all data-bearing drives if you plan to keep them separate</li>
+      <li>Identify drives that need data destruction services</li>
+      <li>Create an asset list with device types and quantities</li>
+      <li>Flag any large or heavy items (server racks, large UPS units)</li>
+      <li>Separate batteries from equipment if possible</li>
+      <li>Take photos of the equipment room for planning</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Server recycling for small businesses</h2>
+    <p>
+      Even small offices with a few servers or network devices can request
+      pickup. You do not need enterprise-level quantities. Contact us with
+      your item list and we will advise on pickup feasibility and any data
+      destruction options that may suit your needs.
+    </p>
+  </section>
+
+  <section>
+    <h2>What to include in your message</h2>
+    <ul class="check-list">
+      <li>Device types and quantities (servers, switches, routers, etc.)</li>
+      <li>Whether data destruction is needed</li>
+      <li>Any large or heavy items that need special handling</li>
+      <li>Your pickup location in Kochi</li>
+      <li>Preferred pickup timeframe</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/itad/">ITAD for Business</a>
+      <a href="/data-destruction/">Data Destruction</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Have Servers or Network Equipment to Recycle?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I have servers and network equipment for recycling." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

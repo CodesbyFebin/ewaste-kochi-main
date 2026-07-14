@@ -1,0 +1,211 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "How E-Waste Recycling Works Step by Step | Kochi Guide";
+const description =
+  "What actually happens when you hand over old electronics for recycling in Kochi — from booking a pickup to collection, sorting, data handling and material recovery.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "How E-Waste Recycling Works Step by Step", path: "/blog/how-ewaste-recycling-works/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/how-ewaste-recycling-works/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/how-ewaste-recycling-works/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Do I need to sort items before the team arrives?",
+    a: "Basic separation helps — keep batteries apart from other electronics and flag any damaged or swollen batteries before pickup.",
+  },
+  {
+    q: "What happens to my data during recycling?",
+    a: "Any device with storage should have data wiped or destroyed before or at collection. Ask about data destruction when you book if this matters for your devices.",
+  },
+  {
+    q: "How long does the process take from booking to pickup?",
+    a: "Scheduling depends on availability and location. Contact us with your details for a current estimate.",
+  },
+  {
+    q: "Can I track what happens to my old devices after collection?",
+    a: "For business pickups, documentation options are available on request. For household pickups, ask the team for details at the time of collection.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/how-ewaste-recycling-works/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>How E-Waste Recycling Works Step by Step</h1>
+  <p class="lede">
+    Most people know they should recycle old electronics — fewer know what
+    actually happens after they hand them over. Here's the full process,
+    from booking a pickup to what happens at each stage.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to book an e-waste pickup and understand the process." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      E-waste recycling runs through a set process: you contact us with
+      item details, we confirm feasibility and schedule a pickup, the
+      team collects from your door, devices are sorted and data-bearing
+      ones go through destruction, then materials are recovered through
+      compliant downstream partners — nothing is dumped in general waste.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Data destruction happens before any device moves further down the process.</li>
+    <li>Batteries are collected in the same visit but processed separately for safety.</li>
+    <li>Working devices are evaluated for resale or reuse before recycling.</li>
+  </ul>
+
+  <section>
+    <h2>Step 1: Contact and item details</h2>
+    <p>
+      The process starts when you message us on WhatsApp or call with a
+      rough list of what you have — type of electronics, quantity, condition,
+      and your pickup location. Photos of batteries, damaged items, or bulky
+      equipment help confirm feasibility faster. See our
+      <a href="/pickup/">pickup page</a> for what to include.
+    </p>
+  </section>
+
+  <section>
+    <h2>Step 2: Feasibility and quote confirmation</h2>
+    <p>
+      Based on your item list and location, we confirm whether pickup is
+      available in your area, what's accepted, and any quote details for
+      items that have scrap or resale value. Pickup is free for standard
+      household and office quantities — unusual jobs or special handling are
+      discussed upfront.
+    </p>
+  </section>
+
+  <section>
+    <h2>Step 3: Scheduling</h2>
+    <p>
+      Once feasibility is confirmed, we agree a pickup slot based on
+      current availability. Office pickups with larger quantities may need
+      more lead time. Apartment or society pickups should include building
+      access details.
+    </p>
+  </section>
+
+  <section>
+    <h2>Step 4: Collection at your door</h2>
+    <p>
+      Our team collects directly from your home or office. No need to pack
+      or box most items — just have them accessible. Batteries are collected
+      in the same visit but kept physically separate for safety, since they
+      need different processing. See <a href="/battery-recycling/">battery
+      recycling</a> for why this matters.
+    </p>
+  </section>
+
+  <section>
+    <h2>Step 5: Sorting and assessment</h2>
+    <p>
+      After collection, items are assessed: working devices go through a
+      resale or reuse evaluation; non-working devices go to material
+      recovery. Data-bearing devices — laptops, phones, hard drives,
+      servers — are flagged for <a href="/data-destruction/">data
+      destruction</a> before any onward processing.
+    </p>
+  </section>
+
+  <section>
+    <h2>Step 6: Data destruction (where applicable)</h2>
+    <p>
+      Storage devices are wiped, degaussed, or physically shredded depending
+      on the device type and what the customer has requested. For business
+      customers, a certificate of data destruction is available on request.
+      See <a href="/data-destruction/">data destruction</a> for the full
+      options.
+    </p>
+  </section>
+
+  <section>
+    <h2>Step 7: Responsible onward handling</h2>
+    <p>
+      Electronics that can be reused go to refurbishment or resale channels.
+      Everything else is routed to compliant recycling partners for material
+      recovery — copper, aluminium, and other recoverable materials are
+      extracted; hazardous components are handled through authorized
+      disposal. Nothing is dumped in general waste.
+    </p>
+  </section>
+
+  <section>
+    <h2>What this process avoids</h2>
+    <p>
+      Informal scrap dealers typically skip data destruction, don't separate
+      batteries safely, and have no accountability for where devices end up.
+      Using a legitimate recycling service closes those gaps — your data is
+      gone, batteries are handled safely, and materials are recovered rather
+      than buried.
+    </p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/data-destruction/">Data Destruction</a>
+      <a href="/pickup/">Book Pickup</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Ready to Start the Recycling Process?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to book an e-waste pickup and understand the process." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

@@ -1,0 +1,176 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "What Makes Electronics Unsafe to Dump? | E-Waste Safety Guide";
+const description =
+  "Why dumping old electronics in general waste or landfills is unsafe — hazardous materials, battery risks, and the environmental and safety case for proper e-waste recycling.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "What Makes Electronics Unsafe to Dump?", path: "/blog/what-makes-electronics-unsafe-to-dump/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/what-makes-electronics-unsafe-to-dump/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/what-makes-electronics-unsafe-to-dump/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Is it actually dangerous to put an old phone in the bin?",
+    a: "The phone itself has low immediate risk, but the battery inside is the concern — lithium batteries can cause fires in waste vehicles when crushed. Beyond fire risk, the phone also contains small amounts of hazardous materials.",
+  },
+  {
+    q: "What happens to electronics dumped in landfills?",
+    a: "Hazardous materials can leach into soil and groundwater over time. Batteries can degrade and release their contents. Materials that could be recovered are permanently lost.",
+  },
+  {
+    q: "Is informal burning of e-waste a problem?",
+    a: "Yes — burning electronics to extract metals releases toxic fumes including heavy metals and flame-retardant compounds. This is a serious worker and community health hazard.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/what-makes-electronics-unsafe-to-dump/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>What Makes Electronics Unsafe to Dump?</h1>
+  <p class="lede">
+    Old electronics look inert — a dead phone, a broken laptop, a pile of
+    old cables. But several components inside them create real hazards
+    when they end up in landfills or general waste.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to safely dispose of old electronics." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Electronics are unsafe in general waste mainly because of
+      batteries (fire risk when crushed), lead and mercury in older
+      screens, and toxic fumes released when circuit boards are burned
+      for metal recovery. Authorized collection handles each hazard
+      correctly instead of dumping it.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Lithium batteries can ignite when compacted in waste collection vehicles.</li>
+    <li>Older CRT monitors and TVs can contain substantial lead in the glass.</li>
+    <li>Burning circuit boards for metal recovery releases toxic, persistent chemicals.</li>
+  </ul>
+
+  <section>
+    <h2>Batteries: the most immediate risk</h2>
+    <p>
+      Lithium batteries — in phones, laptops, tablets, and power banks —
+      can ignite when crushed or punctured. In waste collection vehicles,
+      compaction can pierce cells that are still partly charged, causing
+      fires. Lead-acid batteries (UPS, inverter) contain corrosive sulfuric
+      acid that can leak when damaged. Both types need separate processing,
+      not general waste. See <a href="/battery-recycling/">battery
+      recycling</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Lead and heavy metals</h2>
+    <p>
+      Older electronics — particularly CRT monitors and televisions — can
+      contain substantial amounts of lead in the glass. Circuit board
+      solder in older devices also used lead-based alloys. When these end
+      up in landfills and degrade over time, lead can leach into soil and
+      groundwater.
+    </p>
+  </section>
+
+  <section>
+    <h2>Mercury in backlights</h2>
+    <p>
+      Some older LCD monitors and televisions used fluorescent tubes
+      containing mercury for backlighting. Mercury is toxic at low
+      concentrations and persists in the environment. Modern LED-backlit
+      displays don't have this issue, but older CFL-backlit screens do.
+    </p>
+  </section>
+
+  <section>
+    <h2>Flame retardants and circuit board chemicals</h2>
+    <p>
+      Circuit boards use chemical flame retardants, some of which are
+      persistent organic pollutants. When burned — as happens in informal
+      recycling to extract metal — these release toxic fumes. Even in
+      landfills, some compounds can break down and leach.
+    </p>
+  </section>
+
+  <section>
+    <h2>The answer: authorized collection</h2>
+    <p>
+      Authorized e-waste recycling routes electronics to processes that
+      handle each hazardous component correctly. Batteries are separated
+      and processed by chemistry. Hazardous materials are contained and
+      neutralised. Recoverable materials are extracted rather than buried.
+      Book a <a href="/pickup/">pickup</a> to keep electronics out of
+      general waste entirely.
+    </p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/battery-recycling/">Battery Recycling</a>
+      <a href="/pickup/">Book Pickup</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Ready to Dispose of Electronics Safely?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to safely dispose of old electronics." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

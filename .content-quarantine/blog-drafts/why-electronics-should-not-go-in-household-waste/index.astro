@@ -1,0 +1,178 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Why Electronics Should Not Go into Household Waste | Kochi";
+const description =
+  "Why old electronics must be kept out of regular bins and general waste — hazardous materials, battery fire risk, data exposure, and what to do instead in Kochi.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Why Electronics Should Not Go into Household Waste", path: "/blog/why-electronics-should-not-go-in-household-waste/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/why-electronics-should-not-go-in-household-waste/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/why-electronics-should-not-go-in-household-waste/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Is it actually illegal to put electronics in household bins?",
+    a: "E-waste is regulated separately from household waste in India under the E-Waste Management Rules. For specifics on compliance, check official regulatory sources or consult a qualified advisor — this article is educational, not legal advice.",
+  },
+  {
+    q: "What's the safest thing to do with a small broken device?",
+    a: "Keep it aside, don't put it in general trash, and include it in your next e-waste pickup. Even small items like chargers and earbuds should not go in regular bins.",
+  },
+  {
+    q: "Can batteries in household bins cause fires?",
+    a: "Yes — lithium batteries in particular can puncture in a waste collection vehicle and cause fires. This is a real and documented risk, not a theoretical one.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/why-electronics-should-not-go-in-household-waste/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Why Electronics Should Not Go into Household Waste</h1>
+  <p class="lede">
+    Throwing an old phone or a dead laptop in the regular bin might feel
+    harmless, but electronics are different from household rubbish in
+    several important ways — and the consequences go beyond just wasted
+    materials.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I have old electronics I'd like to recycle safely." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Electronics shouldn't go in household bins because they can leak
+      hazardous materials, cause battery fires in waste vehicles, expose
+      personal data, and waste recoverable metals. Even small items like
+      chargers and earbuds should go through proper e-waste collection.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Lithium battery fires in waste trucks are a real, documented risk, not theoretical.</li>
+    <li>A device thrown in the bin doesn't lose its data automatically.</li>
+    <li>Even small items like chargers and earbuds belong in e-waste collection, not general bins.</li>
+  </ul>
+
+  <section>
+    <h2>Hazardous materials inside ordinary-looking devices</h2>
+    <p>
+      Electronics contain materials that are genuinely hazardous when
+      crushed, burned, or left to break down in a landfill — lead in older
+      circuit boards, mercury in certain backlights, cadmium in some
+      batteries, and various chemical compounds in smaller components.
+      These don't disappear in general waste; they leach into soil and
+      groundwater or are released as toxic fumes during waste processing.
+    </p>
+  </section>
+
+  <section>
+    <h2>Battery fire risk in waste collection</h2>
+    <p>
+      Lithium batteries — in phones, laptops, tablets, and power banks —
+      are the single biggest safety argument for keeping electronics out
+      of regular bins. When compacted or punctured by collection
+      vehicles, lithium cells can ignite. Battery fires in waste trucks
+      and processing facilities are a real, reported problem, not a
+      remote possibility. See <a href="/battery-recycling/">battery
+      recycling</a> for safe handling.
+    </p>
+  </section>
+
+  <section>
+    <h2>Personal data still on devices</h2>
+    <p>
+      A phone or laptop thrown in the bin doesn't automatically lose its
+      data. Old devices in general waste can be retrieved and still
+      contain accessible personal data — account details, photos, messages,
+      banking apps. Putting a device in regular trash is not a data
+      destruction method. See <a href="/data-destruction/">data
+      destruction</a> for how to handle this properly.
+    </p>
+  </section>
+
+  <section>
+    <h2>Valuable materials that should be recovered</h2>
+    <p>
+      Electronics contain recoverable copper, aluminium, steel, and small
+      amounts of precious metals. When they end up in general waste, these
+      materials are lost. Responsible recycling recovers them and reduces
+      the demand for virgin mining.
+    </p>
+  </section>
+
+  <section>
+    <h2>What to do instead</h2>
+    <p>
+      Keep old electronics aside and book a <a href="/pickup/">doorstep
+      pickup</a>. Even small items — chargers, earbuds, broken phones —
+      should go through proper e-waste collection rather than general
+      bins. See our <a href="/recycling/">recycling page</a> for what's
+      accepted.
+    </p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/pickup/">Book Pickup</a>
+      <a href="/battery-recycling/">Battery Recycling</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Ready to Recycle Safely?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I have old electronics I'd like to recycle safely." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

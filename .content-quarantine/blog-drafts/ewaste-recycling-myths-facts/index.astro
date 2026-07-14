@@ -1,0 +1,182 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "E-Waste Recycling Myths and Safe Facts | Kochi Guide";
+const description =
+  "Common e-waste recycling myths corrected with safe, accurate facts — including data safety, battery disposal, what counts as e-waste, and what recycling actually involves.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "E-Waste Recycling Myths and Safe Facts", path: "/blog/ewaste-recycling-myths-facts/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/ewaste-recycling-myths-facts/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/ewaste-recycling-myths-facts/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Is it really unsafe to put electronics in general waste?",
+    a: "Yes — batteries can cause fires in waste collection vehicles, and other components contain hazardous materials that should not enter the general waste stream.",
+  },
+  {
+    q: "Can a recycler really guarantee my data is destroyed?",
+    a: "A recycler who offers certified data destruction — with a documented process and certificate available on request — can confirm destruction happened and how. This is different from a vague assurance.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/ewaste-recycling-myths-facts/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Recycling Myths and Safe Facts</h1>
+  <p class="lede">
+    Several common beliefs about e-waste recycling lead people to make
+    worse decisions about their old devices. Here are the most persistent
+    myths and what's actually true.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to recycle old electronics safely." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      The most persistent e-waste myths — "deleting means it's gone,"
+      "it's only computers and phones," "informal dealers recycle
+      properly" — are all false. Certified data destruction, proper
+      battery handling and authorized doorstep pickup are the safe,
+      accurate alternatives.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Deleted files are usually still recoverable — only certified wiping or destruction is reliable.</li>
+    <li>E-waste includes far more than computers and phones — chargers, cables and appliances count too.</li>
+    <li>Informal scrap dealers can't guarantee data destruction or safe battery handling.</li>
+  </ul>
+
+  <section>
+    <h2>Myth 1: "Deleting files means my data is gone"</h2>
+    <p>
+      <strong>Fact:</strong> Deleting files removes their directory
+      entry but usually leaves the underlying data on the drive until it's
+      overwritten. Formatted drives often retain recoverable data too.
+      Certified data destruction — wiping to a recognised standard,
+      degaussing, or physical shredding — is the reliable option. See
+      <a href="/data-destruction/">data destruction</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Myth 2: "E-waste only means computers and phones"</h2>
+    <p>
+      <strong>Fact:</strong> E-waste covers anything electrical or
+      electronic that's been discarded — including chargers, cables,
+      UPS batteries, inverter batteries, printers, TVs, routers, power
+      banks, and kitchen appliances with electronic controls. Many people
+      overlook small items like chargers and earbuds.
+    </p>
+  </section>
+
+  <section>
+    <h2>Myth 3: "I can put old batteries in the bin"</h2>
+    <p>
+      <strong>Fact:</strong> Batteries — especially lithium — can cause
+      fires when crushed in waste collection vehicles and processing
+      facilities. All batteries should go through separate, proper
+      collection channels. See <a href="/battery-recycling/">battery
+      recycling</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Myth 4: "Informal scrap dealers recycle properly"</h2>
+    <p>
+      <strong>Fact:</strong> Informal scrap dealers typically don't
+      follow authorized environmental handling processes, can't guarantee
+      data destruction, and don't separate batteries safely. "Recycling"
+      through informal channels often means partial stripping and
+      uncontrolled disposal of the remainder.
+    </p>
+  </section>
+
+  <section>
+    <h2>Myth 5: "Old electronics have no value, so recycling costs me"</h2>
+    <p>
+      <strong>Fact:</strong> Standard household e-waste pickup is free.
+      Many devices still have scrap or resale value — a non-working laptop
+      may still have component value. Get a quote before assuming
+      something is worthless. See <a href="/sell-electronics/">sell
+      electronics</a> or <a href="/e-waste-scrap-prices-kochi/">scrap
+      price guidance</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Myth 6: "I need to find a drop-off point"</h2>
+    <p>
+      <strong>Fact:</strong> Doorstep pickup is available across Kochi
+      and Ernakulam district. You don't need to transport items anywhere.
+      See <a href="/pickup/">pickup</a> for how it works.
+    </p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/data-destruction/">Data Destruction</a>
+      <a href="/battery-recycling/">Battery Recycling</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+  <section class="final-cta">
+    <h2>Ready to Recycle Safely?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to recycle old electronics safely." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>
