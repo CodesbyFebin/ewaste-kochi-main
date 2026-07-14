@@ -3,13 +3,14 @@ import Layout from "../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
 import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
 
 const title = "How to Prepare Electronics Before Recycling | Kochi Checklist";
 const description =
   "What to do before handing over electronics for recycling in Kochi — backing up data, wiping devices, separating batteries, and flagging damaged items for safe pickup.";
-const datePublished = "2026-07-08";
-const dateModified = "2026-07-08";
+const datePublished = "2026-07-14";
+const dateModified = "2026-07-14";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
@@ -159,6 +160,9 @@ const faqItems = [
   </p>
 
   <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/how-to-prepare-electronics-for-recycling/" />
+
   <section class="final-cta">
     <h2>Ready to Prepare and Book Pickup?</h2>
     <p>Share your item details and location on WhatsApp to get started.</p>

@@ -3,13 +3,14 @@ import Layout from "../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
 import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
 
 const title = "How E-Waste Recycling Works Step by Step | Kochi Guide";
 const description =
   "What actually happens when you hand over old electronics for recycling in Kochi — from booking a pickup to collection, sorting, data handling and material recovery.";
-const datePublished = "2026-07-08";
-const dateModified = "2026-07-08";
+const datePublished = "2026-07-14";
+const dateModified = "2026-07-14";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
@@ -187,6 +188,9 @@ const faqItems = [
   </p>
 
   <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/how-ewaste-recycling-works/" />
+
   <section class="final-cta">
     <h2>Ready to Start the Recycling Process?</h2>
     <p>Share your item details and location on WhatsApp to get started.</p>

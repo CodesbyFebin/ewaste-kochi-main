@@ -46,6 +46,11 @@ const POST_META: PostMeta[] = [
   { href: "/blog/corporate-ewaste-pickup-kochi/", datePublished: "2026-07-08", beginner: false, popular: false },
   { href: "/blog/how-ewaste-scrap-quotes-work-kochi/", datePublished: "2026-07-08", beginner: false, popular: false },
   { href: "/blog/recycling-basics/", datePublished: "2026-07-09", beginner: true, popular: true },
+  { href: "/blog/how-ewaste-recycling-works/", datePublished: "2026-07-14", beginner: true, popular: false },
+  { href: "/blog/why-electronics-should-not-go-in-household-waste/", datePublished: "2026-07-14", beginner: true, popular: false },
+  { href: "/blog/how-to-prepare-electronics-for-recycling/", datePublished: "2026-07-14", beginner: false, popular: false },
+  { href: "/blog/ewaste-recycling-vs-reuse/", datePublished: "2026-07-14", beginner: false, popular: false },
+  { href: "/blog/how-responsible-ewaste-collection-works/", datePublished: "2026-07-14", beginner: false, popular: false },
 
 ];
 

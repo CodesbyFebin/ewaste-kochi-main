@@ -885,11 +885,6 @@
     "status": "review"
   },
   {
-    "slug": "ewaste-recycling-vs-reuse",
-    "contentSource": "legacy",
-    "status": "review"
-  },
-  {
     "slug": "family-e-waste-cleanup-day",
     "contentSource": "generated",
     "status": "draft"
@@ -990,11 +985,6 @@
     "status": "draft"
   },
   {
-    "slug": "how-ewaste-recycling-works",
-    "contentSource": "legacy",
-    "status": "review"
-  },
-  {
     "slug": "how-households-can-reduce-e-waste",
     "contentSource": "generated",
     "status": "draft"
@@ -1038,11 +1028,6 @@
     "slug": "how-quantity-affects-quote",
     "contentSource": "generated",
     "status": "draft"
-  },
-  {
-    "slug": "how-responsible-ewaste-collection-works",
-    "contentSource": "legacy",
-    "status": "review"
   },
   {
     "slug": "how-reuse-extends-device-life",
@@ -1183,11 +1168,6 @@
     "slug": "how-to-prepare-devices-for-data-destruction",
     "contentSource": "generated",
     "status": "draft"
-  },
-  {
-    "slug": "how-to-prepare-electronics-for-recycling",
-    "contentSource": "legacy",
-    "status": "review"
   },
   {
     "slug": "how-to-prepare-laptops-for-sale-or-recycling",
@@ -2703,11 +2683,6 @@
     "slug": "why-data-destruction-matters-for-small-businesses",
     "contentSource": "generated",
     "status": "draft"
-  },
-  {
-    "slug": "why-electronics-should-not-go-in-household-waste",
-    "contentSource": "legacy",
-    "status": "review"
   },
   {
     "slug": "why-electronics-should-not-go-to-landfills",

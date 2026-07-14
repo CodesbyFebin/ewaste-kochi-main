@@ -10,7 +10,7 @@ const title = "E-Waste Recycling Basics | What Is E-Waste & How to Recycle in Ko
 const description =
   "What e-waste recycling is, why it matters, what items are accepted, and how pickup works in Kochi — a complete beginner's guide with 20 FAQs.";
 const datePublished = "2026-07-09";
-const dateModified = "2026-07-09";
+const dateModified = "2026-07-14";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
@@ -18,18 +18,23 @@ const breadcrumbItems = [
   { name: "E-Waste Recycling Basics", path: "/blog/recycling-basics/" },
 ];
 
-// BLOG SCALE SAFETY GATE (2026-07-14): only the 3 topics below correspond to
-// real, reviewed, indexable posts. The other 27 generated posts that briefly
-// covered this cluster's remaining topics were quarantined — see
-// .content-quarantine/blog-drafts/MANIFEST.json and
-// reports/blog-scale-safety-gate-report.md — pending a rewrite that clears
-// the duplicate-content gate. Linking all 30 here would again link an
-// indexable page to non-indexable draft content, which is exactly what the
-// gate exists to prevent.
+// BLOG SCALE SAFETY GATE (2026-07-14): 8 of 30 topics below correspond to
+// real, reviewed, indexable posts — the original 3, plus 5 promoted this
+// pass from .content-quarantine/blog-drafts/ (contentSource: "legacy",
+// individually hand-fixed earlier this session, verified duplicate-free
+// against every other live post before promotion — see
+// reports/blog-scale-safety-gate-report.md). The remaining 22 quarantined
+// topics stay unlinked pending the same rewrite-and-verify treatment.
+// Linking a quarantined draft from here would defeat the point of the gate.
 const publishedTopics: Record<string, string> = {
   "Where to Recycle Old Electronics in Kochi": "/blog/where-to-recycle-old-electronics-kochi/",
   "What Is E-Waste Recycling?": "/blog/what-is-ewaste/",
   "Common E-Waste Items Found in Homes": "/blog/e-waste-examples/",
+  "How E-Waste Recycling Works Step by Step": "/blog/how-ewaste-recycling-works/",
+  "Why Electronics Should Not Go into Household Waste": "/blog/why-electronics-should-not-go-in-household-waste/",
+  "How to Prepare Electronics Before Recycling": "/blog/how-to-prepare-electronics-for-recycling/",
+  "E-Waste Recycling vs Reuse": "/blog/ewaste-recycling-vs-reuse/",
+  "How Responsible E-Waste Collection Works": "/blog/how-responsible-ewaste-collection-works/",
 };
 
 // One-line description per roadmap topic (src/data/blogRoadmap20.ts, cluster
@@ -235,6 +240,15 @@ const faqItems = [
       <li><strong>Handling</strong> — data destruction, battery separation or component recovery as needed.</li>
       <li><strong>Routing</strong> — recycling, resale enquiry, or responsible disposal depending on what's actually there.</li>
     </ul>
+    <p>
+      The word "recycling" undersells what actually happens, though. A device
+      that still works rarely goes straight to material recovery — it's
+      assessed for reuse or resale first, since a laptop or phone that can
+      keep serving someone is worth more whole than broken down for parts.
+      "E-waste recycling" as most recyclers practise it is really a triage
+      process: keep what still has life in it moving, and only recover raw
+      materials from what genuinely doesn't.
+    </p>
   </section>
 
   <section>
@@ -247,6 +261,17 @@ const faqItems = [
       batteries so they don't leak or ignite, supports reuse where a device is
       still viable, and protects any personal or business data still on the
       device before it changes hands.
+    </p>
+    <p>
+      Informal handling isn't just an abstract environmental concern — it has
+      direct, personal downsides. Hand-dismantled electronics often mean
+      circuit boards burned in the open to recover copper, batteries pried
+      apart without protective equipment, and devices changing hands with
+      whatever data was left on them still intact. None of that is
+      hypothetical; it's simply what happens when a device skips a
+      compliant handling chain. Choosing a proper pickup instead closes each
+      of those gaps at once, rather than requiring you to solve them
+      individually.
     </p>
   </section>
 
@@ -273,6 +298,199 @@ const faqItems = [
     </ol>
   </section>
 
+  <section>
+    <h2>What Happens at Each Stage, in More Detail</h2>
+    <p>
+      The six steps above cover the outline; here's what's actually going on
+      at the stages people usually have questions about.
+    </p>
+    <p>
+      <strong>Booking and feasibility.</strong> When you send an item list on
+      WhatsApp, the team is checking three things: whether your area is
+      serviceable, whether the item mix is something a standard pickup can
+      handle (versus needing a scheduled bulk or ITAD-style visit), and
+      whether anything in the list — a swollen battery, a server rack, a
+      pile of CRT monitors — needs advance planning. This is also when any
+      quote discussion starts, since resale or scrap value depends on
+      condition and quantity, not just item type.
+    </p>
+    <p>
+      <strong>Collection and initial sorting.</strong> At pickup, items are
+      grouped by broad category — working electronics, non-working
+      electronics, batteries, and data-bearing devices — rather than by
+      brand or exact model. Batteries are physically separated from the
+      rest of the load at this point specifically because they're handled
+      through a different downstream process than general electronics; see
+      <a href="/blog/why-electronics-should-not-go-in-household-waste/">why
+      electronics shouldn't go in household waste</a> for the safety reasoning.
+    </p>
+    <p>
+      <strong>Data destruction.</strong> Anything with storage — laptops,
+      desktops, phones, external drives, servers — is set aside for data
+      handling before it moves further into the process. Depending on the
+      device and what's agreed at booking, that can mean a software wipe, a
+      degaussing pass for magnetic media, or physical shredding for drives
+      that are damaged or where the customer wants destruction rather than
+      wiping. See <a href="/data-destruction/">data destruction</a> for how
+      the different methods compare.
+    </p>
+    <p>
+      <strong>Assessment for reuse.</strong> Working devices don't go
+      straight to material recovery. They're checked for functional
+      condition and, where there's genuine resale or reuse value, routed
+      toward that instead — see <a href="/sell-electronics/">sell
+      electronics</a> for how condition-based quotes work. This step is why
+      recycling and reuse aren't really competing options; reuse is simply
+      the first check inside the recycling process itself.
+    </p>
+    <p>
+      <strong>Material recovery and responsible disposal.</strong>
+      Whatever's left after reuse assessment and data handling — devices
+      that are broken beyond practical repair, or too old to have resale
+      demand — goes to material recovery. Metals like copper, aluminium and
+      steel are extracted for reuse in manufacturing; components that
+      contain hazardous material are routed to handling processes designed
+      for them rather than general disposal.
+    </p>
+  </section>
+
+  <section>
+    <h2>Where the Materials Actually Go</h2>
+    <p>
+      It's a fair question: once a device is taken apart, what actually
+      happens to the pieces? In general terms, disassembled electronics
+      separate into a handful of broad material streams:
+    </p>
+    <ul class="check-list">
+      <li><strong>Metals</strong> — copper wiring, aluminium casings, steel frames and small amounts of other recoverable metals go back into manufacturing supply chains rather than being newly mined.</li>
+      <li><strong>Plastics</strong> — casings and housings are sorted by plastic type where practical, since mixed plastics are harder to process than a single grade.</li>
+      <li><strong>Batteries</strong> — handled through a separate stream entirely because of fire risk and the different chemistries involved (lithium-ion, lead-acid, nickel-based) — see <a href="/battery-recycling/">battery recycling</a>.</li>
+      <li><strong>Glass and displays</strong> — screens and CRT glass require careful handling distinct from general glass recycling.</li>
+      <li><strong>Hazardous components</strong> — anything containing materials like lead solder or certain flame retardants is routed to handling designed specifically for those materials, not general waste streams.</li>
+    </ul>
+    <p class="muted-note">
+      Exactly which downstream partner handles which material stream, and
+      what recovery rates look like for a specific device, varies by item
+      and isn't something we'll put an exact number on here without a real
+      source to cite — if that level of detail matters for your situation
+      (a compliance audit, for instance), ask directly and we'll point you
+      to what documentation is available.
+    </p>
+  </section>
+
+  <section>
+    <h2>E-Waste Recycling for Households vs Businesses</h2>
+    <p>
+      The basic recycling process is the same regardless of who's booking,
+      but the practical shape of a household pickup and a business pickup
+      tends to look quite different.
+    </p>
+    <p>
+      <strong>Households</strong> typically bring a mixed, irregular batch —
+      a few old phones, a laptop that's been in a drawer for years, some
+      cables and a dead router, maybe an inverter battery. These pickups are
+      usually one-off or occasional, don't need documentation beyond a
+      confirmation, and the main preparation is backing up and wiping
+      personal devices — see
+      <a href="/blog/how-to-prepare-electronics-for-recycling/">how to
+      prepare electronics before recycling</a>.
+    </p>
+    <p>
+      <strong>Businesses and offices</strong> more often deal with larger,
+      more uniform batches — a fleet of laptops being refreshed, retired
+      servers, decommissioned networking equipment — where documentation,
+      asset tracking and certified data destruction matter for internal or
+      regulatory records. These jobs typically route through our
+      <a href="/itad/">ITAD (IT asset disposition)</a> service rather than a
+      standard household pickup, since the process includes asset lists and
+      agreed documentation rather than a simple item count.
+    </p>
+    <p>
+      If you're not sure which category your situation falls into — say, a
+      small business with a modest number of devices — just describe what
+      you have on WhatsApp and the team will point you to the right process
+      rather than making you guess.
+    </p>
+  </section>
+
+  <section>
+    <h2>E-Waste Rules and Your Responsibility as a Consumer</h2>
+    <p>
+      E-waste in India is governed separately from general municipal waste,
+      under the E-Waste (Management) Rules framework, which puts recovery
+      and recycling obligations on producers (a system called Extended
+      Producer Responsibility, or EPR) while also shaping how collection and
+      recycling is expected to work downstream. Two things worth knowing as
+      a consumer, not a producer:
+    </p>
+    <ul class="check-list">
+      <li>You're not expected to know the regulatory detail — that's the recycler's obligation to operate compliantly, not yours to verify line by line.</li>
+      <li>Choosing a pickup over a general bin or an unverified informal buyer is the practical way an individual consumer participates in that system.</li>
+    </ul>
+    <p>
+      If you want the fuller picture — what EPR actually means, or what the
+      current rules cover — we've written these up separately rather than
+      compressing them here: see
+      <a href="/blog/what-is-epr-in-e-waste/">what is EPR in e-waste
+      management</a> and
+      <a href="/blog/e-waste-management-rules-2022/">E-Waste Management
+      Rules 2022, explained simply</a>. For documentation questions specific
+      to your own pickup, see <a href="/trust/">Trust &amp; Compliance</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Common Myths About E-Waste Recycling, Corrected</h2>
+    <div class="myth-grid">
+      <div class="myth-card">
+        <p class="myth-label">Myth</p>
+        <p class="myth-text">"Deleting files or doing a factory reset is enough before I recycle a device."</p>
+        <p class="fact-label">Fact</p>
+        <p>A factory reset removes the everyday view of your data, not the underlying data itself — recoverable with the right tools unless the storage is properly wiped or physically destroyed. See <a href="/data-destruction/">data destruction</a> for what actually clears it.</p>
+      </div>
+      <div class="myth-card">
+        <p class="myth-label">Myth</p>
+        <p class="myth-text">"A broken device has nothing worth recycling."</p>
+        <p class="fact-label">Fact</p>
+        <p>Non-working devices still contain recoverable metals and, in some cases, working components. A device not powering on doesn't disqualify it from pickup — mention the condition and it'll be handled appropriately.</p>
+      </div>
+      <div class="myth-card">
+        <p class="myth-label">Myth</p>
+        <p class="myth-text">"An informal scrap buyer is basically the same as a recycler, just cheaper."</p>
+        <p class="fact-label">Fact</p>
+        <p>The difference isn't price — it's accountability. An informal buyer generally can't confirm how data is handled, how batteries are processed, or where materials end up. A verified recycler can answer all three.</p>
+      </div>
+      <div class="myth-card">
+        <p class="myth-label">Myth</p>
+        <p class="myth-text">"Batteries can just go in with the rest of the electronics."</p>
+        <p class="fact-label">Fact</p>
+        <p>Batteries are collected in the same visit but processed through a separate stream, because different battery chemistries carry real fire and chemical-handling risks that general electronics don't.</p>
+      </div>
+      <div class="myth-card">
+        <p class="myth-label">Myth</p>
+        <p class="myth-text">"Recycling e-waste always costs money."</p>
+        <p class="fact-label">Fact</p>
+        <p>Standard household and office pickups are free; some items may even carry resale or scrap value depending on condition and market demand. Unusual jobs (very large volumes, special handling) are discussed upfront, not charged as a surprise.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>A Note on Safety Before You Book</h2>
+    <p>
+      Two things are worth flagging clearly rather than leaving implicit.
+      First, if any battery in your pickup is swollen, leaking, or visibly
+      damaged, say so when you book and keep it away from heat and away from
+      stacking other items on top of it in the meantime — this is a genuine
+      fire-risk item, not routine e-waste. Second, if a device holds
+      personal or business data you haven't backed up yet, do that before
+      pickup day if at all possible; once a device leaves for data
+      destruction, recovery isn't the goal and shouldn't be relied on.
+      Neither of these should stop you from booking — they're just worth
+      doing in the right order.
+    </p>
+  </section>
+
   <section class="cross-links">
     <div class="cross-link-card">
       <h3>Batteries need separate handling</h3>
@@ -291,7 +509,7 @@ const faqItems = [
     <p class="muted-note">
       The 30 topics in this cluster's roadmap, grouped into a suggested
       reading order — from what e-waste actually is through to
-      situation-specific guides. The 3 linked titles below are live guides;
+      situation-specific guides. The 8 linked titles below are live guides;
       the rest are planned topics (data only, not yet published) shown here
       with a short description so you know what each will cover.
     </p>
@@ -380,6 +598,28 @@ const faqItems = [
     font-size: 0.92rem;
   }
   .muted-note { color: var(--color-muted); font-size: 0.92rem; }
+  .myth-grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .myth-card {
+    padding: 1.1rem 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .myth-label, .fact-label {
+    margin: 0 0 0.3rem;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .myth-label { color: var(--color-muted); }
+  .fact-label { color: var(--color-primary); margin-top: 0.8rem; }
+  .myth-text { font-style: italic; color: var(--color-text); margin: 0; }
+  .myth-card p:last-child { margin: 0; color: var(--color-text); }
   .cross-links {
     display: grid;
     gap: 1rem;

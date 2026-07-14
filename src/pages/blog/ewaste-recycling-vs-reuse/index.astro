@@ -3,13 +3,14 @@ import Layout from "../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
 import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
 
 const title = "E-Waste Recycling vs Reuse | Which Is Better for Old Electronics?";
 const description =
   "Should you recycle or reuse old electronics? How to decide between recycling, reselling, donating or keeping a device, with practical guidance for Kochi households and offices.";
-const datePublished = "2026-07-08";
-const dateModified = "2026-07-08";
+const datePublished = "2026-07-14";
+const dateModified = "2026-07-14";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
@@ -169,6 +170,9 @@ const faqItems = [
   </p>
 
   <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/ewaste-recycling-vs-reuse/" />
+
   <section class="final-cta">
     <h2>Not Sure Whether to Reuse or Recycle?</h2>
     <p>Share your item details and location on WhatsApp to get started.</p>

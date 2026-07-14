@@ -10,7 +10,7 @@ import { getHreflang } from "../../data/routes";
 const title = "Where to Recycle Old Electronics in Kochi | Free Pickup";
 const description =
   "Recycle old electronics in Kochi with free doorstep pickup — laptops, desktops, monitors, printers and more. Data wiped first, no drop-off needed.";
-const lastUpdated = "2026-07-07";
+const lastUpdated = "2026-07-14";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
@@ -77,6 +77,46 @@ const faqItems = [
     q: "What should I do before giving old electronics for recycling?",
     a: "Back up anything you want to keep, remove personal accessories, and let us know about any items needing data wiped — see our data destruction page. Gathering items in one spot before pickup also helps things go faster.",
   },
+  {
+    q: "Is there a drop-off option, or is it pickup only?",
+    a: "Doorstep pickup is our standard collection method — most customers never need to travel anywhere. If a drop-off arrangement would genuinely work better for your situation, message us and we'll discuss whether that's feasible.",
+  },
+  {
+    q: "How quickly can pickup happen after I contact you?",
+    a: "It depends on your area and current scheduling — some slots are available same-day or next-day, others need a bit more lead time. Message your item list and location and we'll confirm the earliest realistic slot.",
+  },
+  {
+    q: "Is there a minimum quantity for pickup?",
+    a: "No — a single old phone or laptop is a normal-sized pickup, not just bulk office loads. The same booking process applies whether it's one item or a full household cleanout.",
+  },
+  {
+    q: "Does recycling cost anything?",
+    a: "Standard pickups are free. Some items may carry scrap or resale value depending on condition, which would work in your favor rather than costing you anything. Unusual jobs (very large volumes or special handling) are discussed upfront.",
+  },
+  {
+    q: "What's the difference between recycling and your ITAD service?",
+    a: "Recycling covers general household and office e-waste pickup. ITAD is built for businesses that need structured asset tracking, inventory lists, and compliance documentation across a larger, more uniform batch of equipment — see our ITAD page for specifics.",
+  },
+  {
+    q: "Can I recycle electronics that still work?",
+    a: "Yes, but it's worth checking resale value first — a working device is often worth more sold than recycled. We can route it to recycling, or point you to our marketplace or sell-electronics service if resale makes more sense for that item.",
+  },
+  {
+    q: "What happens if an item turns out not to be accepted?",
+    a: "This is rare, but if it happens the team will explain why and, where possible, point you to who does handle that specific item. Sending a photo before booking is the best way to avoid this altogether.",
+  },
+  {
+    q: "Can I cancel or reschedule a pickup?",
+    a: "Yes — contact us as early as you can so the slot can be reallocated smoothly and rebooked for a time that works.",
+  },
+  {
+    q: "Do you serve apartment complexes and gated communities, not just individual homes?",
+    a: "Yes. Apartment and society pickups work the same way as standalone homes — just include the building name, floor, and any access instructions when you book. A combined pickup for multiple flats is often more efficient than several separate visits.",
+  },
+  {
+    q: "How is recycling different from just throwing electronics in the regular bin?",
+    a: "Regular waste collection isn't built to handle battery fire risk, hazardous materials inside devices, or the personal data still on them — recycling pickup handles all three deliberately, rather than by accident. See our recycling basics guide for the fuller explanation.",
+  },
 ];
 ---
 
@@ -89,7 +129,10 @@ const faqItems = [
     doorstep pickup — no need to find a drop-off point. We collect laptops,
     desktops, monitors, printers, and general IT hardware directly from your
     home or office, wipe any stored data first, and recycle everything
-    through compliant channels.
+    through compliant channels. Whether it's a single old phone, a full
+    household cleanout, or an office hardware refresh, the process below
+    covers what's accepted, how pickup actually works, and what happens to
+    your devices and data after they leave your hands.
   </p>
 
   <CtaBar whatsappMessage="Hi, I'd like to schedule an e-waste recycling pickup in Kochi." />
@@ -109,6 +152,33 @@ const faqItems = [
       handling. Not sure if something qualifies? Send a photo over WhatsApp
       and we'll confirm before you schedule a pickup.
     </p>
+    <p>Broken down by category, a typical pickup can include:</p>
+    <div class="category-grid">
+      <div class="category-card">
+        <h3>Computers</h3>
+        <p>Laptops, desktops, all-in-ones, monitors, keyboards, mice and docking stations — working or not.</p>
+      </div>
+      <div class="category-card">
+        <h3>Mobile &amp; small devices</h3>
+        <p>Phones, tablets, e-readers, smartwatches, earbuds and chargers — see <a href="/e-waste-scrap-prices-kochi/">scrap pricing</a> if any still have resale value.</p>
+      </div>
+      <div class="category-card">
+        <h3>Office equipment</h3>
+        <p>Printers, scanners, photocopiers, shredders, and networking gear like routers and switches.</p>
+      </div>
+      <div class="category-card">
+        <h3>Displays</h3>
+        <p>LCD/LED TVs and monitors, and older CRT units — see <a href="/tv-recycling-kochi/">TV recycling</a> for handling specifics.</p>
+      </div>
+      <div class="category-card">
+        <h3>Power &amp; batteries</h3>
+        <p>UPS and inverter batteries, laptop and phone batteries, power banks — collected separately, see <a href="/battery-recycling/">battery recycling</a>.</p>
+      </div>
+      <div class="category-card">
+        <h3>Servers &amp; bulk IT</h3>
+        <p>Racks, server hardware and large-quantity office decommissions, routed through <a href="/itad/">ITAD</a> for asset tracking.</p>
+      </div>
+    </div>
   </section>
 
   <section>
@@ -120,17 +190,166 @@ const faqItems = [
       <li><strong>Data handling.</strong> Any device with storage is wiped or destroyed before further processing.</li>
       <li><strong>Recycling or resale.</strong> Items are recycled through compliant channels, or — if still functional — routed to our <a href="/marketplace/">marketplace</a> for resale with your consent.</li>
     </ol>
+    <p>
+      What that looks like in practice: when you message us, we're figuring
+      out feasibility for your specific address and item mix, not running a
+      generic script — that's why a rough item list and location upfront
+      gets you a faster, more accurate answer than "can you collect
+      electronics?" on its own. Once a slot is set, the visit itself is
+      usually quick — the team collects what's ready, confirms the item
+      count against what you described, and separates out anything that
+      needs special handling (batteries, anything visibly damaged) on the
+      spot.
+    </p>
   </section>
 
   <section>
-    <h2>Who this is for</h2>
+    <h2>Why doorstep pickup instead of drop-off</h2>
     <p>
-      Households clearing out old electronics, IT teams decommissioning office
-      hardware, and businesses that need periodic e-waste pickup as part of
-      routine IT asset turnover. For large-scale corporate disposal with
-      inventory audits and compliance documentation, see our
-      <a href="/itad/">ITAD service</a> instead — it's built specifically for
-      that use case.
+      A drop-off point sounds simple until you're the one carrying a broken
+      monitor down four floors, or trying to fit a decommissioned office
+      printer in a car. Doorstep pickup removes that logistics problem
+      entirely — you point at what needs to go, and it leaves from wherever
+      it already is. For businesses, it also means the equipment doesn't
+      leave the building until the pickup team is actually there, which
+      matters if you're tracking assets internally right up to handover.
+    </p>
+  </section>
+
+  <section>
+    <h2>Recycling for homes</h2>
+    <p>
+      Household pickups tend to be a mixed, occasional batch rather than a
+      recurring service — a laptop that's been sitting in a cupboard, a
+      couple of old phones, a dead router, maybe an inverter battery that's
+      stopped holding charge. There's no minimum quantity; a single device
+      is a completely normal booking. The main thing worth doing beforehand
+      is backing up and signing out of anything with your data on it — see
+      our
+      <a href="/blog/how-to-prepare-electronics-for-recycling/">preparation
+      guide</a> for the short version.
+    </p>
+  </section>
+
+  <section>
+    <h2>Recycling for offices and businesses</h2>
+    <p>
+      Business pickups more often involve a larger, more uniform batch —
+      laptops from a hardware refresh, retired networking equipment, or
+      office electronics from a move. For occasional or moderate-volume
+      pickups, the standard recycling process here covers it. For anything
+      that needs asset lists, inventory tracking, or compliance
+      documentation for internal or regulatory records, that's specifically
+      what our <a href="/itad/">ITAD service</a> is built for — it's a
+      different process, not just a bigger version of the same one. If
+      you're unsure which fits, describe your situation on WhatsApp and
+      we'll point you to the right one rather than making you guess.
+    </p>
+  </section>
+
+  <section>
+    <h2>What happens to your data</h2>
+    <p>
+      Any device with storage — laptops, desktops, phones, external drives,
+      servers — goes through data handling before it moves further into the
+      recycling process, not as an optional add-on. Depending on the device
+      and what's agreed at booking, that can mean a software wipe, a
+      degaussing pass for magnetic media, or physical shredding where the
+      drive is damaged or destruction is specifically requested. Business
+      customers can request a certificate documenting that this happened.
+      See <a href="/data-destruction/">data destruction</a> for the full
+      breakdown of methods and when each one applies.
+    </p>
+  </section>
+
+  <section>
+    <h2>Understanding resale and scrap value</h2>
+    <p>
+      Not everything that comes in for recycling ends up as recycled
+      material — working or repairable devices are checked for resale value
+      first, since a device that still functions is generally worth more
+      whole than broken down for parts. If you'd like a sense of what a
+      specific device might be worth before you commit to recycling it, see
+      our <a href="/e-waste-scrap-prices-kochi/">scrap price guide</a> for
+      how condition-based pricing works, or go straight to
+      <a href="/sell-electronics/">sell electronics</a> if you already know
+      you'd rather sell than recycle.
+    </p>
+  </section>
+
+  <section>
+    <h2>Recycling vs. throwing it away</h2>
+    <p>
+      Old electronics in the regular bin isn't a shortcut — it just moves
+      the same problems somewhere less controlled. Batteries inside
+      discarded devices are a genuine fire risk in general waste collection;
+      a phone or laptop thrown out doesn't lose its stored data just because
+      it left the house; and materials that could have been recovered
+      (copper, aluminium, and other recoverables) are lost instead of
+      re-entering supply chains. A proper pickup handles all of this by
+      design rather than leaving it to chance — see our
+      <a href="/blog/why-electronics-should-not-go-in-household-waste/">full
+      breakdown of the risks</a> if you want the detail.
+    </p>
+  </section>
+
+  <section>
+    <h2>Getting an accurate estimate before you commit</h2>
+    <p>
+      If part of what you're recycling might have scrap or resale value, the
+      fastest way to a reliable estimate is photos plus real detail — not a
+      one-line description. A quote based on "an old laptop" versus one
+      based on a photo showing the model, screen condition, and whether it
+      powers on will look very different, and the second one is far less
+      likely to change once the team actually inspects the item. Useful
+      detail to include: approximate age or model if you know it, whether it
+      turns on, any visible damage, and roughly how many units if it's more
+      than one or two items. This isn't about getting a perfect number
+      upfront — final value is always confirmed at inspection — it's about
+      making sure the initial estimate is close enough that pickup day
+      doesn't bring surprises either way.
+    </p>
+  </section>
+
+  <section>
+    <h2>Recycling, data destruction, or ITAD — which do you need?</h2>
+    <p>
+      These three terms get used interchangeably, but they're not quite the
+      same thing, and picking the right one gets you a faster, more
+      accurate response:
+    </p>
+    <ul class="check-list">
+      <li><strong>Recycling</strong> (this page) — general household and office e-waste pickup, any quantity, no formal documentation required by default.</li>
+      <li><strong><a href="/data-destruction/">Data destruction</a></strong> — specifically about what happens to storage devices before or during recycling; relevant whenever a device holds personal or business data.</li>
+      <li><strong><a href="/itad/">ITAD</a></strong> — structured, documented disposal for businesses that need asset tracking and compliance records across a larger equipment batch.</li>
+    </ul>
+    <p>
+      If you're not sure which applies to your situation, default to
+      recycling and mention any data or documentation needs when you book —
+      the team will route you correctly rather than requiring you to pick
+      the exact category yourself.
+    </p>
+  </section>
+
+  <section>
+    <h2>Planning a larger cleanout</h2>
+    <p>
+      Some pickups are triggered by a specific event rather than routine
+      turnover — moving house, renovating an office, upgrading a full team's
+      laptops at once, or clearing out a relative's accumulated electronics.
+      These tend to produce a bigger, more mixed batch than a typical
+      pickup, and a little planning ahead helps:
+    </p>
+    <ul class="check-list">
+      <li><strong>Moving house.</strong> Set old electronics aside early rather than boxing them with things you're keeping — it's easier to book one clear pickup than to sort through packed boxes later.</li>
+      <li><strong>Office relocation or renovation.</strong> Larger, more uniform batches (a whole floor of workstations, for instance) are usually a better fit for <a href="/itad/">ITAD</a> than a standard pickup, mainly because of the asset-tracking and documentation involved.</li>
+      <li><strong>Device upgrade cycles.</strong> If you're replacing several devices at once — a family upgrading multiple phones, or a small team getting new laptops — a single combined pickup for the old devices is simpler than booking one per device.</li>
+      <li><strong>Clearing an estate or old household.</strong> Electronics accumulated over years often includes outdated formats (old cameras, CRT monitors, early-generation routers) alongside more recent devices — all of it is still fine to include in one pickup.</li>
+    </ul>
+    <p>
+      In every case, the booking process itself doesn't change — send the
+      item list and location, and the team will confirm whether it needs a
+      standard visit or more lead time based on the actual volume.
     </p>
   </section>
 
@@ -167,13 +386,83 @@ const faqItems = [
       neighborhood on the <a href="/locations/">locations page</a>, or just
       message us your address and we'll confirm.
     </p>
+    <p>
+      Coverage isn't uniform in every sense — a residential street and an
+      IT park building have different access logistics, for instance — but
+      the booking process is the same either way: send your location along
+      with your item list, and feasibility gets confirmed as part of that
+      same conversation rather than as a separate step. If you're outside
+      the core Kochi-metro area, it's still worth asking; reach depends on
+      the specific address and current scheduling more than on a fixed
+      boundary line.
+    </p>
+  </section>
+
+  <section>
+    <h2>What to expect on pickup day</h2>
+    <p>
+      You don't need to be home for anything beyond the actual handover —
+      there's no paperwork to fill out in advance for a standard household
+      or office pickup. Have the items in one accessible spot rather than
+      scattered across different rooms; it's not required, but it noticeably
+      speeds things up. If a battery in the pickup is swollen, leaking, or
+      otherwise damaged, mention it again to the team on arrival even if you
+      already flagged it when booking — a second confirmation at the point
+      of physical handling is just good practice for anything in that
+      category. For office pickups, having a rough count ready to compare
+      against what's collected helps close out the visit quickly, especially
+      if any of it is going toward a documented handover.
+    </p>
+  </section>
+
+  <section>
+    <h2>Items people often forget count as e-waste</h2>
+    <p>
+      Beyond the obvious laptops and TVs, a lot of what qualifies for
+      recycling tends to sit forgotten in drawers and cupboards rather than
+      being deliberately kept:
+    </p>
+    <ul class="check-list">
+      <li>Old phone and laptop chargers, even without the device they came with</li>
+      <li>Cables, adapters and dongles that no longer match anything you own</li>
+      <li>Dead remote controls, old routers, and modems replaced years ago</li>
+      <li>Power banks and portable battery packs that no longer hold charge</li>
+      <li>Old external hard drives and USB sticks — worth a data check before handover</li>
+      <li>Small kitchen or personal electronics — old cameras, calculators, electric shavers</li>
+    </ul>
+    <p>
+      None of these need their own separate booking — fold them into
+      whatever pickup you're already scheduling. A single combined pickup is
+      simpler for you and no less thorough than several smaller ones.
+    </p>
+  </section>
+
+  <section>
+    <h2>Questions worth asking any recycler, including us</h2>
+    <p>
+      It's reasonable to want a straight answer to these before you commit,
+      whichever recycler you're considering: how is my data actually
+      destroyed, not just deleted? Where do batteries go, and are they kept
+      separate from general handling? What happens to devices that don't
+      have recycling value — are they disposed of responsibly or does that
+      part go unanswered? Can I get documentation if I need it for my own
+      records? A recycler that can answer all four clearly, rather than
+      deflecting, is generally the one worth using — and it's exactly the
+      standard we'd want to be held to as well.
+    </p>
   </section>
 
   <section>
     <h2>New to e-waste recycling?</h2>
     <p>
-      If you're not sure what counts as e-waste or why it matters, see our
-      guide: <a href="/blog/what-is-ewaste/">What Is E-Waste?</a>
+      If you're not sure what counts as e-waste or why it matters, our
+      <a href="/blog/recycling-basics/">E-Waste Recycling Basics</a> guide
+      covers the fundamentals in one place — including
+      <a href="/blog/what-is-ewaste/">what e-waste actually is</a>,
+      <a href="/blog/how-ewaste-recycling-works/">how the recycling process
+      works step by step</a>, and
+      <a href="/blog/how-to-prepare-electronics-for-recycling/">how to
+      prepare your devices</a> before your pickup.
     </p>
   </section>
 
@@ -197,6 +486,40 @@ const faqItems = [
     flex-direction: column;
     gap: 0.6rem;
     padding-left: 1.25rem;
+  }
+  .check-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-left: 1.25rem;
+  }
+  .category-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+  .category-card {
+    padding: 0.9rem 1.1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .category-card h3 {
+    margin: 0 0 0.35rem;
+    font-size: 0.98rem;
+    color: var(--color-primary);
+  }
+  .category-card p {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+  }
+  @media (min-width: 640px) {
+    .category-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 900px) {
+    .category-grid { grid-template-columns: repeat(3, 1fr); }
   }
   .mal-support {
     font-size: 0.9rem;

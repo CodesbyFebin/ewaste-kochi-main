@@ -3,13 +3,14 @@ import Layout from "../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
 import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
 
 const title = "Why Electronics Should Not Go into Household Waste | Kochi";
 const description =
   "Why old electronics must be kept out of regular bins and general waste — hazardous materials, battery fire risk, data exposure, and what to do instead in Kochi.";
-const datePublished = "2026-07-08";
-const dateModified = "2026-07-08";
+const datePublished = "2026-07-14";
+const dateModified = "2026-07-14";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
@@ -154,6 +155,9 @@ const faqItems = [
   </p>
 
   <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/why-electronics-should-not-go-in-household-waste/" />
+
   <section class="final-cta">
     <h2>Ready to Recycle Safely?</h2>
     <p>Share your item details and location on WhatsApp to get started.</p>
