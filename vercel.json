@@ -1522,6 +1522,76 @@
       "source": "/blogs/disposal/",
       "destination": "/blog/",
       "permanent": true
+    },
+    {
+      "source": "/sell-electronics-kochi",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/services/tv-monitor-recycling-kochi",
+      "destination": "/tv-recycling-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/services/free-ewaste-pickup-kochi",
+      "destination": "/pickup/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/palakkad/mobile-recycling-kochi",
+      "destination": "/locations/palakkad/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/kannur/old-computer-disposal",
+      "destination": "/locations/kannur/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/kollam/printer-recycling-kochi",
+      "destination": "/locations/kollam/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/angamaly/air-conditioner-recycling-kochi",
+      "destination": "/locations/",
+      "permanent": true
+    },
+    {
+      "source": "/services/server-recycling-kochi",
+      "destination": "/server-recycling-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/services/tv-monitor-recycling-kochi",
+      "destination": "/tv-recycling-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/services/hard-drive-shredding-kochi",
+      "destination": "/data-destruction/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/services/server-recycling-kochi",
+      "destination": "/server-recycling-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/services/corporate-ewaste-kochi",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
+      "source": "/buyback/laptops/sell-thinkpad-t458p-kochi",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/nist-data-destruction-kerala",
+      "destination": "/data-destruction/",
+      "permanent": true
     }
   ]
 }

@@ -1,0 +1,146 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "E-Waste Recycling in Kozhikode, Kerala | Pickup Feasibility Check";
+const description =
+  "Kozhikode isn't a standard doorstep pickup area for Ewaste Kochi, but we check feasibility for Kozhikode enquiries — bulk, business, and drop-off options. Contact us to find out what's possible.";
+const lastUpdated = "2026-07-15";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Locations", path: "/locations/" },
+  { name: "Kozhikode", path: "/locations/kozhikode/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "E-waste pickup feasibility check",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: { "@type": "Place", name: "Kozhikode, Kerala" },
+    url: `${SITE_URL}/locations/kozhikode/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/locations/kozhikode/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Do you offer doorstep e-waste pickup in Kozhikode?",
+    a: "Not as a standard, scheduled service — Kozhikode is well outside our core Kochi-metro coverage. We check feasibility for individual Kozhikode enquiries, particularly bulk or business volumes, rather than promising pickup upfront.",
+  },
+  {
+    q: "What makes pickup feasible from Kozhikode?",
+    a: "Mostly item volume, type, and exact location, weighed against the roughly 190 km distance from Kochi. A single device is a hard case; office IT clearances or bulk lots from Cyberpark-area businesses are more workable. Message us with details for an honest answer.",
+  },
+  {
+    q: "Can Kozhikode IT or business offices get pickup arranged?",
+    a: "Sometimes — bulk volume from a business changes the logistics. If your Kozhikode office has a genuine IT asset clearance, contact us with an item list and we'll confirm feasibility rather than assume either way.",
+  },
+  {
+    q: "Is there an extra cost given the distance?",
+    a: "If a pickup is arranged, any additional logistics cost for the distance would be discussed and agreed upfront — never assumed or added after the fact.",
+  },
+  {
+    q: "What should I do if pickup isn't feasible for my situation?",
+    a: "See our recycling guide for general, responsible disposal guidance that applies wherever you are in Kerala, and check locally for authorized collection points on the Malabar coast in the meantime.",
+  },
+  {
+    q: "If you do collect from Kozhikode, are the same safety and data standards used?",
+    a: "Yes — the same handling process, battery safety precautions, and data destruction standards apply regardless of location. Distance changes whether pickup is feasible, not how it's handled once collected.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/locations/kozhikode/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Recycling in Kozhikode</h1>
+  <p class="lede">
+    Ewaste Kochi is based in Ernakulam, and our standard free doorstep
+    pickup covers Kochi, Ernakulam, Kakkanad, Kalamassery, Ernakulam South,
+    Aluva and nearby Kochi-metro areas. Kozhikode is roughly 190 km away
+    along NH66 — outside that core zone, so we don't run scheduled routes
+    here. We do check feasibility for Kozhikode enquiries case by case,
+    especially for bulk or business volumes.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'm in Kozhikode and want to check if e-waste pickup is feasible for my situation." />
+
+  <section>
+    <h2>About Kozhikode</h2>
+    <p>
+      Kozhikode (Calicut) is a historic Malabar coast port city that was
+      once a major hub of the spice trade. Today it's also a growing IT
+      and business centre, anchored by the Cyberpark technology campus.
+    </p>
+  </section>
+
+  <section>
+    <h2>What's possible from Kozhikode</h2>
+    <p>
+      A single old phone or laptop usually doesn't justify a dedicated trip
+      over this distance. Office IT decommissioning from Cyberpark-area
+      businesses, bulk battery lots, and other genuinely large volumes are
+      a different calculation — message us with a rough item list and
+      quantity so we can give an honest feasibility answer rather than a
+      guess.
+    </p>
+  </section>
+
+  <section>
+    <h2>Compliance</h2>
+    <p>
+      If a pickup is arranged from Kozhikode, it follows the same
+      documented environmental handling practices used across all our
+      service areas. Documentation support may be available depending on
+      the service type and agreed handling process — contact us via our
+      <a href="/contact/">contact page</a> to confirm what's available.
+    </p>
+  </section>
+
+  <section>
+    <h2>Not feasible right now?</h2>
+    <p>
+      If a Kozhikode pickup doesn't work out for your specific case, our
+      <a href="/recycling/">recycling guide</a> covers responsible disposal
+      principles that apply anywhere in Kerala, and our
+      <a href="/blog/recycling-basics/">recycling basics</a> guide is a good
+      starting point for finding a locally authorized option in the
+      meantime.
+    </p>
+  </section>
+
+  <section>
+    <h2>Other areas</h2>
+    <p>
+      See the full <a href="/locations/">locations directory</a> for our
+      core Kochi-metro service areas and other Kerala districts we check
+      feasibility for.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} heading="Kozhikode Pickup FAQs" />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

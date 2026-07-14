@@ -42,6 +42,17 @@ const otherServedAreas = [
   "Maradu", "Kothamangalam", "Muvattupuzha", "Willingdon Island",
 ];
 
+const feasibilityCheckAreas = [
+  { name: "Kottayam", href: "/locations/kottayam/" },
+  { name: "Kozhikode", href: "/locations/kozhikode/" },
+  { name: "Palakkad", href: "/locations/palakkad/" },
+  { name: "Kollam", href: "/locations/kollam/" },
+  { name: "Thiruvananthapuram", href: "/locations/thiruvananthapuram/" },
+  { name: "Kannur", href: "/locations/kannur/" },
+  { name: "Thrissur", href: "/locations/thrissur/" },
+  { name: "Malappuram", href: "/locations/malappuram/" },
+];
+
 const faqItems = [
   {
     q: "Do you cover areas outside Kochi city?",
@@ -95,6 +106,21 @@ const faqItems = [
     </p>
   </section>
 
+  <section>
+    <h2>Other Kerala districts — feasibility check, not guaranteed pickup</h2>
+    <p class="note">
+      These districts are outside our core Kochi-metro coverage, so we
+      don't run scheduled doorstep routes there. We do check feasibility
+      for individual enquiries — especially bulk or business volumes —
+      rather than promising pickup upfront.
+    </p>
+    <div class="location-grid feasibility-grid">
+      {feasibilityCheckAreas.map((loc) => (
+        <a class="location-card feasibility-card" href={loc.href}>{loc.name}</a>
+      ))}
+    </div>
+  </section>
+
   <Faq items={faqItems} />
 
   <p class="updated">Last updated: {lastUpdated}</p>
@@ -128,6 +154,14 @@ const faqItems = [
   .area-chips {
     color: var(--color-muted);
     line-height: 2;
+  }
+  .feasibility-card {
+    color: var(--color-muted);
+    border-style: dashed;
+    font-weight: 500;
+  }
+  .feasibility-card:hover {
+    color: var(--color-primary-dark);
   }
   .note {
     font-size: 0.9rem;

@@ -1,14 +1,14 @@
 source,target,clicks,impressions,reason,status
 /blogs/disposal,(see vercel.json),2,49,Already implemented as a redirect in vercel.json.,already_implemented
 /blogs,(see vercel.json),1,26,Already implemented as a redirect in vercel.json.,already_implemented
-/sell-electronics-kochi,/sell-electronics/,6,116,Clean keyword match to an existing V2 service page (6 clicks / 116 impressions).,proposed_new
+/sell-electronics-kochi,/sell-electronics/,6,116,Clean keyword match to an existing V2 service page (6 clicks / 116 impressions).,implemented_2026-07-15
 /locations/edappally/certificate-of-destruction-kochi,(see vercel.json),0,1,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/thrikkakara/data-destruction-kochi,(see vercel.json),0,6,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/kottayam/e-waste-recycling-kochi,(see vercel.json),0,15,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/edappally/e-waste-recycling-kochi,(see vercel.json),1,18,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/kakkanad/ups-inverter-recycling-kochi,(see vercel.json),0,4,Already implemented as a redirect in vercel.json.,already_implemented
-/services/tv-monitor-recycling-kochi,/tv-recycling-kochi/,1,22,Clean keyword match to an existing V2 service page (1 clicks / 22 impressions).,proposed_new
-/services/free-ewaste-pickup-kochi,/pickup/,1,20,Clean keyword match to an existing V2 service page (1 clicks / 20 impressions).,proposed_new
+/services/tv-monitor-recycling-kochi,/tv-recycling-kochi/,1,22,Clean keyword match to an existing V2 service page (1 clicks / 22 impressions).,implemented_2026-07-15
+/services/free-ewaste-pickup-kochi,/pickup/,1,20,Clean keyword match to an existing V2 service page (1 clicks / 20 impressions).,implemented_2026-07-15
 /locations/smart-city-kochi/itad-kochi,(see vercel.json),2,7,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/thrippunithura/corporate-ewaste-kochi,(see vercel.json),1,9,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/smart-city-kochi/data-destruction-kochi,(see vercel.json),0,2,Already implemented as a redirect in vercel.json.,already_implemented
@@ -72,11 +72,11 @@ source,target,clicks,impressions,reason,status
 /locations/ernakulam-south/data-destruction-kochi,(see vercel.json),1,16,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/ernakulam-south/e-waste-recycling-kochi,(see vercel.json),0,11,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/palakkad/business-it-decommissioning,(see vercel.json),0,2,Already implemented as a redirect in vercel.json.,already_implemented
-/locations/palakkad/mobile-recycling-kochi,/locations/palakkad/,1,4,Thin legacy matrix page with real clicks (1); parent location hub not built — redirect to closest matching service page or parent hub once it exists.,proposed_new
+/locations/palakkad/mobile-recycling-kochi,/locations/palakkad/,1,4,Thin legacy matrix page with real clicks (1); parent location hub not built — redirect to closest matching service page or parent hub once it exists.,implemented_2026-07-15
 /locations/palakkad/sell-old-electronics,(see vercel.json),3,9,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/kalamassery/data-destruction-kochi,(see vercel.json),0,7,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/kalamassery/server-recycling-kochi,(see vercel.json),0,4,Already implemented as a redirect in vercel.json.,already_implemented
-/locations/kannur/old-computer-disposal,/locations/kannur/,1,8,Thin legacy matrix page with real clicks (1); parent location hub not built — redirect to closest matching service page or parent hub once it exists.,proposed_new
+/locations/kannur/old-computer-disposal,/locations/kannur/,1,8,Thin legacy matrix page with real clicks (1); parent location hub not built — redirect to closest matching service page or parent hub once it exists.,implemented_2026-07-15
 /locations/vyttila/server-recycling-kochi,(see vercel.json),1,9,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/vyttila/tv-monitor-recycling-kochi,(see vercel.json),0,3,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/kottayam/free-ewaste-pickup-kochi,(see vercel.json),1,8,Already implemented as a redirect in vercel.json.,already_implemented
@@ -104,13 +104,13 @@ source,target,clicks,impressions,reason,status
 /locations/kothamangalam/ups-inverter-recycling-kochi,(see vercel.json),0,3,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/maradu/ups-inverter-recycling-kochi,(see vercel.json),0,1,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/willingdon-island/free-ewaste-pickup-kochi,(see vercel.json),0,2,Already implemented as a redirect in vercel.json.,already_implemented
-/locations/kollam/printer-recycling-kochi,/locations/kollam/,1,2,Thin legacy matrix page with real clicks (1); parent location hub not built — redirect to closest matching service page or parent hub once it exists.,proposed_new
+/locations/kollam/printer-recycling-kochi,/locations/kollam/,1,2,Thin legacy matrix page with real clicks (1); parent location hub not built — redirect to closest matching service page or parent hub once it exists.,implemented_2026-07-15
 /locations/kakkanad/certificate-of-destruction-kochi,(see vercel.json),0,2,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/kakkanad/e-waste-recycling-kochi,(see vercel.json),2,13,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/kakkanad/server-recycling-kochi,(see vercel.json),0,2,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/north-paravur/tv-monitor-recycling-kochi,(see vercel.json),0,2,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/kozhikode/business-it-decommissioning,(see vercel.json),0,2,Already implemented as a redirect in vercel.json.,already_implemented
-/locations/angamaly/air-conditioner-recycling-kochi,/locations/angamaly/,1,1,Thin legacy matrix page with real clicks (1); parent location hub not built — redirect to closest matching service page or parent hub once it exists.,proposed_new
+/locations/angamaly/air-conditioner-recycling-kochi,/locations/angamaly/,1,1,Thin legacy matrix page with real clicks (1); parent location hub not built — redirect to closest matching service page or parent hub once it exists.,implemented_2026-07-15
 /locations/palakkad/computer-recycling,(see vercel.json),1,31,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/ernakulam-south/air-conditioner-recycling-kochi,(see vercel.json),0,4,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/ernakulam-south/free-ewaste-pickup-kochi,(see vercel.json),0,8,Already implemented as a redirect in vercel.json.,already_implemented
@@ -166,7 +166,7 @@ source,target,clicks,impressions,reason,status
 /locations/malappuram/certificate-of-destruction-kochi,(see vercel.json),0,3,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/edappally/free-ewaste-pickup-kochi,(see vercel.json),0,2,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/kalady/data-destruction-kochi,(see vercel.json),0,1,Already implemented as a redirect in vercel.json.,already_implemented
-/services/server-recycling-kochi,/server-recycling-kochi/,0,35,Clean keyword match to an existing V2 service page (0 clicks / 35 impressions).,proposed_new
+/services/server-recycling-kochi,/server-recycling-kochi/,0,35,Clean keyword match to an existing V2 service page (0 clicks / 35 impressions).,implemented_2026-07-15
 /locations/thrissur/tv-monitor-recycling-kochi,(see vercel.json),1,2,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/maradu/hard-drive-shredding-kochi,(see vercel.json),0,4,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/edappally/tv-monitor-recycling-kochi,(see vercel.json),0,1,Already implemented as a redirect in vercel.json.,already_implemented
@@ -174,11 +174,11 @@ source,target,clicks,impressions,reason,status
 /locations/kozhikode/tv-monitor-recycling-kochi,(see vercel.json),3,5,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/kakkanad/dpdp-act-compliance-kochi,(see vercel.json),0,1,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/maradu/electronic-waste-disposal,(see vercel.json),2,9,Already implemented as a redirect in vercel.json.,already_implemented
-/ml/services/tv-monitor-recycling-kochi,/tv-recycling-kochi/,9,137,Clean keyword match to an existing V2 service page (9 clicks / 137 impressions).,proposed_new
+/ml/services/tv-monitor-recycling-kochi,/tv-recycling-kochi/,9,137,Clean keyword match to an existing V2 service page (9 clicks / 137 impressions).,implemented_2026-07-15
 /locations/kozhikode/server-recycling-kochi,(see vercel.json),0,1,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/perumbavoor/tv-monitor-recycling-kochi,(see vercel.json),0,1,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/kalamassery-hitech-park/itad-kochi,(see vercel.json),0,3,Already implemented as a redirect in vercel.json.,already_implemented
-/services/hard-drive-shredding-kochi,/data-destruction/,0,47,Clean keyword match to an existing V2 service page (0 clicks / 47 impressions).,proposed_new
+/services/hard-drive-shredding-kochi,/data-destruction/,0,47,Clean keyword match to an existing V2 service page (0 clicks / 47 impressions).,implemented_2026-07-15
 /locations/infopark-kochi/ups-inverter-recycling-kochi,(see vercel.json),0,1,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/thrippunithura/data-destruction-kochi,(see vercel.json),0,1,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/ernakulam-south/corporate-ewaste-kochi,(see vercel.json),0,2,Already implemented as a redirect in vercel.json.,already_implemented
@@ -200,7 +200,7 @@ source,target,clicks,impressions,reason,status
 /locations/palakkad/battery-recycling-kochi,(see vercel.json),0,1,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/muvattupuzha/ups-inverter-recycling-kochi,(see vercel.json),0,2,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/muvattupuzha/battery-recycling-kochi,(see vercel.json),0,2,Already implemented as a redirect in vercel.json.,already_implemented
-/ml/services/server-recycling-kochi,/server-recycling-kochi/,0,24,Clean keyword match to an existing V2 service page (0 clicks / 24 impressions).,proposed_new
+/ml/services/server-recycling-kochi,/server-recycling-kochi/,0,24,Clean keyword match to an existing V2 service page (0 clicks / 24 impressions).,implemented_2026-07-15
 /locations/willingdon-island/tv-monitor-recycling-kochi,(see vercel.json),1,2,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/muvattupuzha/data-destruction-kochi,(see vercel.json),0,1,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/palakkad/laptop-recycling-near-me,(see vercel.json),0,1,Already implemented as a redirect in vercel.json.,already_implemented
@@ -263,7 +263,7 @@ source,target,clicks,impressions,reason,status
 /locations/willingdon-island/e-waste-recycling-kochi,(see vercel.json),0,4,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/ernakulam-south/itad-kochi,(see vercel.json),0,18,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/perumbavoor/ups-inverter-recycling-kochi,(see vercel.json),0,2,Already implemented as a redirect in vercel.json.,already_implemented
-/services/corporate-ewaste-kochi,/itad/,1,11,Clean keyword match to an existing V2 service page (1 clicks / 11 impressions).,proposed_new
+/services/corporate-ewaste-kochi,/itad/,1,11,Clean keyword match to an existing V2 service page (1 clicks / 11 impressions).,implemented_2026-07-15
 /locations/maradu/server-recycling-kochi,(see vercel.json),0,3,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/vyttila/electronics-recycling-near-me,(see vercel.json),0,1,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/north-paravur/sell-electronics-kochi,(see vercel.json),0,4,Already implemented as a redirect in vercel.json.,already_implemented
@@ -287,8 +287,8 @@ source,target,clicks,impressions,reason,status
 /locations/kollam/tv-monitor-recycling-kochi,(see vercel.json),1,2,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/thrissur/battery-recycling-kochi,(see vercel.json),0,65,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/malappuram/battery-recycling-kochi,(see vercel.json),0,25,Already implemented as a redirect in vercel.json.,already_implemented
-/buyback/laptops/sell-thinkpad-t458p-kochi,/sell-electronics/,0,22,Clean keyword match to an existing V2 service page (0 clicks / 22 impressions).,proposed_new
-/nist-data-destruction-kerala,/data-destruction/,0,20,Clean keyword match to an existing V2 service page (0 clicks / 20 impressions).,proposed_new
+/buyback/laptops/sell-thinkpad-t458p-kochi,/sell-electronics/,0,22,Clean keyword match to an existing V2 service page (0 clicks / 22 impressions).,implemented_2026-07-15
+/nist-data-destruction-kerala,/data-destruction/,0,20,Clean keyword match to an existing V2 service page (0 clicks / 20 impressions).,implemented_2026-07-15
 /data-destruction-services-kochi,(see vercel.json),0,16,Already implemented as a redirect in vercel.json.,already_implemented
 /e-waste-recycling,(see vercel.json),0,11,Already implemented as a redirect in vercel.json.,already_implemented
 /locations/thrippunithura/free-ewaste-pickup-kochi,(see vercel.json),0,7,Already implemented as a redirect in vercel.json.,already_implemented

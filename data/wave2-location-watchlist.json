@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-07-15",
+  "note": "Kochi-metro / Ernakulam-district areas with real but modest GSC traffic (Tier 2) and no dedicated V2 page yet. Not launch blockers — flagged in reports/v2-gsc-gap-report.md and PROJECT_TRACKER.md. Not built this phase. Distinct from the far-city feasibility-check pages (kottayam, kozhikode, palakkad, kollam, thiruvananthapuram, kannur, thrissur, malappuram), which ARE built this phase since they cleared Tier 1.",
+  "areas": [
+    { "name": "Angamaly", "clicks": 6, "impressions": 134 },
+    { "name": "Kaloor", "clicks": 5, "impressions": 55 },
+    { "name": "Thrippunithura", "clicks": 4, "impressions": 150 },
+    { "name": "Palarivattom", "clicks": 3, "impressions": 107 },
+    { "name": "North Paravur", "clicks": 3, "impressions": 46 },
+    { "name": "Fort Kochi", "clicks": 3, "impressions": 38 },
+    { "name": "Perumbavoor", "clicks": 3, "impressions": 36 },
+    { "name": "Smart City Kochi", "clicks": 2, "impressions": 36 },
+    { "name": "Kothamangalam", "clicks": 2, "impressions": 47 },
+    { "name": "Muvattupuzha", "clicks": 1, "impressions": 60 },
+    { "name": "Thrikkakara", "clicks": 1, "impressions": 54 },
+    { "name": "Maradu", "clicks": 1, "impressions": 23 },
+    { "name": "Vyttila", "clicks": 0, "impressions": 77 },
+    { "name": "Willingdon Island", "clicks": 0, "impressions": 25 },
+    { "name": "Kalady", "clicks": 0, "impressions": 32 }
+  ]
+}

@@ -1,7 +1,7 @@
 {
  "source": "ewastekochi.com-Performance-on-Search-2026-07-06.zip + ewastekochi.com-Coverage-2026-07-06.zip + 7x Coverage-Drilldown-2026-07-06 zips (all already present in project root, first processed 2026-07-07 for reports/v2-gsc-data-analysis.md — reprocessed 2026-07-15 for this phase with full per-URL drilldown detail that the earlier pass summarized but did not export row-by-row)",
  "generatedAt": "2026-07-15",
- "note": "Traffic tiers: Tier1 = clicks>=10 OR impressions>=100. Tier2 = clicks 1-9 OR impressions 20-99. Tier3 = 0 clicks, impressions 1-19. Tier4 = no data / issue-only. | 2026-07-10 addendum: cross-checked against the live GSC 'Indexed pages' list (414 URLs, user-pasted) — 307 already matched, 107 new rows added (52 blog.ewastekochi.com flagged manual_review, 55 legacy matrix/buyback/blog confirmed 0-traffic leave_404).",
+ "note": "Traffic tiers: Tier1 = clicks>=10 OR impressions>=100. Tier2 = clicks 1-9 OR impressions 20-99. Tier3 = 0 clicks, impressions 1-19. Tier4 = no data / issue-only. | 2026-07-10 addendum: cross-checked against the live GSC 'Indexed pages' list (414 URLs, user-pasted) — 307 already matched, 107 new rows added (52 blog.ewastekochi.com flagged manual_review, 55 legacy matrix/buyback/blog confirmed 0-traffic leave_404). | 2026-07-15 GSC-P2: 8 far-city rebuild_safe_200 pages built and live; 14 proposed redirects added to vercel.json.",
  "count": 1942,
  "rows": [
   {
@@ -1402,7 +1402,7 @@
    "target_url": "/sell-electronics/",
    "reason": "Clean keyword match to an existing V2 service page (6 clicks / 116 impressions).",
    "risk_level": "low",
-   "notes": "classification_source=rule"
+   "notes": "classification_source=rule;implemented_in_vercel.json_2026-07-15"
   },
   {
    "url": "https://www.ewastekochi.com/blog/e-waste-collection-prices-in-edappally-2026-edappally-1",
@@ -19482,7 +19482,7 @@
    "target_url": "/tv-recycling-kochi/",
    "reason": "Clean keyword match to an existing V2 service page (1 clicks / 22 impressions).",
    "risk_level": "low",
-   "notes": "classification_source=rule"
+   "notes": "classification_source=rule;implemented_in_vercel.json_2026-07-15"
   },
   {
    "url": "https://www.ewastekochi.com/services/free-ewaste-pickup-kochi",
@@ -19502,7 +19502,7 @@
    "target_url": "/pickup/",
    "reason": "Clean keyword match to an existing V2 service page (1 clicks / 20 impressions).",
    "risk_level": "low",
-   "notes": "classification_source=rule"
+   "notes": "classification_source=rule;implemented_in_vercel.json_2026-07-15"
   },
   {
    "url": "https://www.ewastekochi.com/locations/smart-city-kochi/itad-kochi",
@@ -20882,7 +20882,7 @@
    "target_url": "",
    "reason": "Real organic traffic on a legacy far-city page already indexed by Google (8 clicks / 271 impressions). Rebuild as an honest, feasibility-only page using the standard hedged wording (\"contact us to check pickup feasibility\") rather than losing the traffic or overclaiming guaranteed service.",
    "risk_level": "high",
-   "notes": "classification_source=rule;confirmed_indexed_2026-07-10"
+   "notes": "classification_source=rule;confirmed_indexed_2026-07-10;built_2026-07-15"
   },
   {
    "url": "https://www.ewastekochi.com/locations/thiruvananthapuram/mobile-recycling-kochi",
@@ -21482,7 +21482,7 @@
    "target_url": "/locations/palakkad/",
    "reason": "Thin legacy matrix page with real clicks (1); parent location hub not built — redirect to closest matching service page or parent hub once it exists.",
    "risk_level": "low",
-   "notes": "classification_source=rule"
+   "notes": "classification_source=rule;implemented_in_vercel.json_2026-07-15"
   },
   {
    "url": "https://www.ewastekochi.com/locations/palakkad/sell-old-electronics",
@@ -21562,7 +21562,7 @@
    "target_url": "/locations/kannur/",
    "reason": "Thin legacy matrix page with real clicks (1); parent location hub not built — redirect to closest matching service page or parent hub once it exists.",
    "risk_level": "low",
-   "notes": "classification_source=rule"
+   "notes": "classification_source=rule;implemented_in_vercel.json_2026-07-15"
   },
   {
    "url": "https://www.ewastekochi.com/locations/north-paravur/mobile-recycling-kochi",
@@ -22362,7 +22362,7 @@
    "target_url": "/locations/kollam/",
    "reason": "Thin legacy matrix page with real clicks (1); parent location hub not built — redirect to closest matching service page or parent hub once it exists.",
    "risk_level": "low",
-   "notes": "classification_source=rule"
+   "notes": "classification_source=rule;implemented_in_vercel.json_2026-07-15"
   },
   {
    "url": "https://www.ewastekochi.com/locations/kakkanad/certificate-of-destruction-kochi",
@@ -22542,7 +22542,7 @@
    "target_url": "/locations/angamaly/",
    "reason": "Thin legacy matrix page with real clicks (1); parent location hub not built — redirect to closest matching service page or parent hub once it exists.",
    "risk_level": "low",
-   "notes": "classification_source=rule"
+   "notes": "classification_source=rule;implemented_in_vercel.json_2026-07-15"
   },
   {
    "url": "https://www.ewastekochi.com/locations/palakkad/computer-recycling",
@@ -23382,7 +23382,7 @@
    "target_url": "",
    "reason": "Real organic traffic on a legacy far-city page already indexed by Google (15 clicks / 768 impressions). Rebuild as an honest, feasibility-only page using the standard hedged wording (\"contact us to check pickup feasibility\") rather than losing the traffic or overclaiming guaranteed service.",
    "risk_level": "high",
-   "notes": "classification_source=rule;confirmed_indexed_2026-07-10"
+   "notes": "classification_source=rule;confirmed_indexed_2026-07-10;built_2026-07-15"
   },
   {
    "url": "https://www.ewastekochi.com/sell-old-phone-kochi",
@@ -23462,7 +23462,7 @@
    "target_url": "",
    "reason": "Real organic traffic on a legacy far-city page already indexed by Google (30 clicks / 394 impressions). Rebuild as an honest, feasibility-only page using the standard hedged wording (\"contact us to check pickup feasibility\") rather than losing the traffic or overclaiming guaranteed service.",
    "risk_level": "high",
-   "notes": "classification_source=rule;confirmed_indexed_2026-07-10"
+   "notes": "classification_source=rule;confirmed_indexed_2026-07-10;built_2026-07-15"
   },
   {
    "url": "https://www.ewastekochi.com/locations/kakkanad/laptop-recycling-near-me",
@@ -23902,7 +23902,7 @@
    "target_url": "",
    "reason": "Real organic traffic on a legacy far-city page already indexed by Google (22 clicks / 1022 impressions). Rebuild as an honest, feasibility-only page using the standard hedged wording (\"contact us to check pickup feasibility\") rather than losing the traffic or overclaiming guaranteed service.",
    "risk_level": "high",
-   "notes": "classification_source=rule;confirmed_indexed_2026-07-10"
+   "notes": "classification_source=rule;confirmed_indexed_2026-07-10;built_2026-07-15"
   },
   {
    "url": "https://www.ewastekochi.com/locations/thrikkakara/tv-monitor-recycling-kochi",
@@ -24542,7 +24542,7 @@
    "target_url": "",
    "reason": "Real organic traffic on a legacy far-city page already indexed by Google (7 clicks / 313 impressions). Rebuild as an honest, feasibility-only page using the standard hedged wording (\"contact us to check pickup feasibility\") rather than losing the traffic or overclaiming guaranteed service.",
    "risk_level": "high",
-   "notes": "classification_source=rule;confirmed_indexed_2026-07-10"
+   "notes": "classification_source=rule;confirmed_indexed_2026-07-10;built_2026-07-15"
   },
   {
    "url": "https://www.ewastekochi.com/locations/malappuram/certificate-of-destruction-kochi",
@@ -24742,7 +24742,7 @@
    "target_url": "/server-recycling-kochi/",
    "reason": "Clean keyword match to an existing V2 service page (0 clicks / 35 impressions).",
    "risk_level": "low",
-   "notes": "classification_source=rule"
+   "notes": "classification_source=rule;implemented_in_vercel.json_2026-07-15"
   },
   {
    "url": "https://www.ewastekochi.com/locations/willingdon-island",
@@ -25382,7 +25382,7 @@
    "target_url": "/tv-recycling-kochi/",
    "reason": "Clean keyword match to an existing V2 service page (9 clicks / 137 impressions).",
    "risk_level": "low",
-   "notes": "classification_source=rule;confirmed_indexed_2026-07-10"
+   "notes": "classification_source=rule;confirmed_indexed_2026-07-10;implemented_in_vercel.json_2026-07-15"
   },
   {
    "url": "https://www.ewastekochi.com/blog/laptop-resale-value-2026.html",
@@ -25562,7 +25562,7 @@
    "target_url": "",
    "reason": "Real organic traffic on a legacy far-city page already indexed by Google (14 clicks / 249 impressions). Rebuild as an honest, feasibility-only page using the standard hedged wording (\"contact us to check pickup feasibility\") rather than losing the traffic or overclaiming guaranteed service.",
    "risk_level": "high",
-   "notes": "classification_source=rule;confirmed_indexed_2026-07-10"
+   "notes": "classification_source=rule;confirmed_indexed_2026-07-10;built_2026-07-15"
   },
   {
    "url": "https://www.ewastekochi.com/buyback/laptops/sell-hp-elitebook-882-kochi.html",
@@ -25682,7 +25682,7 @@
    "target_url": "",
    "reason": "Real organic traffic on a legacy far-city page already indexed by Google (19 clicks / 225 impressions). Rebuild as an honest, feasibility-only page using the standard hedged wording (\"contact us to check pickup feasibility\") rather than losing the traffic or overclaiming guaranteed service.",
    "risk_level": "high",
-   "notes": "classification_source=rule;confirmed_indexed_2026-07-10"
+   "notes": "classification_source=rule;confirmed_indexed_2026-07-10;built_2026-07-15"
   },
   {
    "url": "https://www.ewastekochi.com/locations/kollam",
@@ -25702,7 +25702,7 @@
    "target_url": "",
    "reason": "Real organic traffic on a legacy far-city page already indexed by Google (19 clicks / 313 impressions). Rebuild as an honest, feasibility-only page using the standard hedged wording (\"contact us to check pickup feasibility\") rather than losing the traffic or overclaiming guaranteed service.",
    "risk_level": "high",
-   "notes": "classification_source=rule;confirmed_indexed_2026-07-10"
+   "notes": "classification_source=rule;confirmed_indexed_2026-07-10;built_2026-07-15"
   },
   {
    "url": "https://www.ewastekochi.com/buyback/laptops/sell-asus-rog-zephyrus-g14-kochi.html",
@@ -26842,7 +26842,7 @@
    "target_url": "/data-destruction/",
    "reason": "Clean keyword match to an existing V2 service page (0 clicks / 47 impressions).",
    "risk_level": "low",
-   "notes": "classification_source=rule"
+   "notes": "classification_source=rule;implemented_in_vercel.json_2026-07-15"
   },
   {
    "url": "https://www.ewastekochi.com/locations/infopark-kochi/ups-inverter-recycling-kochi",
@@ -27722,7 +27722,7 @@
    "target_url": "/server-recycling-kochi/",
    "reason": "Clean keyword match to an existing V2 service page (0 clicks / 24 impressions).",
    "risk_level": "low",
-   "notes": "classification_source=rule"
+   "notes": "classification_source=rule;implemented_in_vercel.json_2026-07-15"
   },
   {
    "url": "https://www.ewastekochi.com/locations/thrissur/dpdp-act-compliance-kochi",
@@ -30942,7 +30942,7 @@
    "target_url": "/itad/",
    "reason": "Clean keyword match to an existing V2 service page (1 clicks / 11 impressions).",
    "risk_level": "low",
-   "notes": "classification_source=rule"
+   "notes": "classification_source=rule;implemented_in_vercel.json_2026-07-15"
   },
   {
    "url": "https://www.ewastekochi.com/locations/kakkanad/battery-recycling-kochi",
@@ -34742,7 +34742,7 @@
    "target_url": "/sell-electronics/",
    "reason": "Clean keyword match to an existing V2 service page (0 clicks / 22 impressions).",
    "risk_level": "low",
-   "notes": "classification_source=rule;confirmed_indexed_2026-07-10"
+   "notes": "classification_source=rule;confirmed_indexed_2026-07-10;implemented_in_vercel.json_2026-07-15"
   },
   {
    "url": "https://www.ewastekochi.com/comparisons/cashify-vs-ewastekochi.html",
@@ -34802,7 +34802,7 @@
    "target_url": "/data-destruction/",
    "reason": "Clean keyword match to an existing V2 service page (0 clicks / 20 impressions).",
    "risk_level": "low",
-   "notes": "classification_source=rule;confirmed_indexed_2026-07-10"
+   "notes": "classification_source=rule;confirmed_indexed_2026-07-10;implemented_in_vercel.json_2026-07-15"
   },
   {
    "url": "https://www.ewastekochi.com/server-recycling-kochi",

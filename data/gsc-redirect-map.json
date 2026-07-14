@@ -24,7 +24,7 @@
       "clicks": 6,
       "impressions": 116,
       "reason": "Clean keyword match to an existing V2 service page (6 clicks / 116 impressions).",
-      "status": "proposed_new"
+      "status": "implemented_2026-07-15"
     },
     {
       "source": "/locations/edappally/certificate-of-destruction-kochi",
@@ -72,7 +72,7 @@
       "clicks": 1,
       "impressions": 22,
       "reason": "Clean keyword match to an existing V2 service page (1 clicks / 22 impressions).",
-      "status": "proposed_new"
+      "status": "implemented_2026-07-15"
     },
     {
       "source": "/services/free-ewaste-pickup-kochi",
@@ -80,7 +80,7 @@
       "clicks": 1,
       "impressions": 20,
       "reason": "Clean keyword match to an existing V2 service page (1 clicks / 20 impressions).",
-      "status": "proposed_new"
+      "status": "implemented_2026-07-15"
     },
     {
       "source": "/locations/smart-city-kochi/itad-kochi",
@@ -592,7 +592,7 @@
       "clicks": 1,
       "impressions": 4,
       "reason": "Thin legacy matrix page with real clicks (1); parent location hub not built — redirect to closest matching service page or parent hub once it exists.",
-      "status": "proposed_new"
+      "status": "implemented_2026-07-15"
     },
     {
       "source": "/locations/palakkad/sell-old-electronics",
@@ -624,7 +624,7 @@
       "clicks": 1,
       "impressions": 8,
       "reason": "Thin legacy matrix page with real clicks (1); parent location hub not built — redirect to closest matching service page or parent hub once it exists.",
-      "status": "proposed_new"
+      "status": "implemented_2026-07-15"
     },
     {
       "source": "/locations/vyttila/server-recycling-kochi",
@@ -848,7 +848,7 @@
       "clicks": 1,
       "impressions": 2,
       "reason": "Thin legacy matrix page with real clicks (1); parent location hub not built — redirect to closest matching service page or parent hub once it exists.",
-      "status": "proposed_new"
+      "status": "implemented_2026-07-15"
     },
     {
       "source": "/locations/kakkanad/certificate-of-destruction-kochi",
@@ -896,7 +896,7 @@
       "clicks": 1,
       "impressions": 1,
       "reason": "Thin legacy matrix page with real clicks (1); parent location hub not built — redirect to closest matching service page or parent hub once it exists.",
-      "status": "proposed_new"
+      "status": "implemented_2026-07-15"
     },
     {
       "source": "/locations/palakkad/computer-recycling",
@@ -1344,7 +1344,7 @@
       "clicks": 0,
       "impressions": 35,
       "reason": "Clean keyword match to an existing V2 service page (0 clicks / 35 impressions).",
-      "status": "proposed_new"
+      "status": "implemented_2026-07-15"
     },
     {
       "source": "/locations/thrissur/tv-monitor-recycling-kochi",
@@ -1408,7 +1408,7 @@
       "clicks": 9,
       "impressions": 137,
       "reason": "Clean keyword match to an existing V2 service page (9 clicks / 137 impressions).",
-      "status": "proposed_new"
+      "status": "implemented_2026-07-15"
     },
     {
       "source": "/locations/kozhikode/server-recycling-kochi",
@@ -1440,7 +1440,7 @@
       "clicks": 0,
       "impressions": 47,
       "reason": "Clean keyword match to an existing V2 service page (0 clicks / 47 impressions).",
-      "status": "proposed_new"
+      "status": "implemented_2026-07-15"
     },
     {
       "source": "/locations/infopark-kochi/ups-inverter-recycling-kochi",
@@ -1616,7 +1616,7 @@
       "clicks": 0,
       "impressions": 24,
       "reason": "Clean keyword match to an existing V2 service page (0 clicks / 24 impressions).",
-      "status": "proposed_new"
+      "status": "implemented_2026-07-15"
     },
     {
       "source": "/locations/willingdon-island/tv-monitor-recycling-kochi",
@@ -2120,7 +2120,7 @@
       "clicks": 1,
       "impressions": 11,
       "reason": "Clean keyword match to an existing V2 service page (1 clicks / 11 impressions).",
-      "status": "proposed_new"
+      "status": "implemented_2026-07-15"
     },
     {
       "source": "/locations/maradu/server-recycling-kochi",
@@ -2312,7 +2312,7 @@
       "clicks": 0,
       "impressions": 22,
       "reason": "Clean keyword match to an existing V2 service page (0 clicks / 22 impressions).",
-      "status": "proposed_new"
+      "status": "implemented_2026-07-15"
     },
     {
       "source": "/nist-data-destruction-kerala",
@@ -2320,7 +2320,7 @@
       "clicks": 0,
       "impressions": 20,
       "reason": "Clean keyword match to an existing V2 service page (0 clicks / 20 impressions).",
-      "status": "proposed_new"
+      "status": "implemented_2026-07-15"
     },
     {
       "source": "/data-destruction-services-kochi",
