@@ -1,0 +1,2526 @@
+{
+  "generatedAt": "2026-07-15",
+  "count": 315,
+  "redirects": [
+    {
+      "source": "/blogs/disposal",
+      "target": "(see vercel.json)",
+      "clicks": 2,
+      "impressions": 49,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/blogs",
+      "target": "(see vercel.json)",
+      "clicks": 1,
+      "impressions": 26,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/sell-electronics-kochi",
+      "target": "/sell-electronics/",
+      "clicks": 6,
+      "impressions": 116,
+      "reason": "Clean keyword match to an existing V2 service page (6 clicks / 116 impressions).",
+      "status": "proposed_new"
+    },
+    {
+      "source": "/locations/edappally/certificate-of-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thrikkakara/data-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 6,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kottayam/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 15,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/edappally/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 1,
+      "impressions": 18,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kakkanad/ups-inverter-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 4,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/services/tv-monitor-recycling-kochi",
+      "target": "/tv-recycling-kochi/",
+      "clicks": 1,
+      "impressions": 22,
+      "reason": "Clean keyword match to an existing V2 service page (1 clicks / 22 impressions).",
+      "status": "proposed_new"
+    },
+    {
+      "source": "/services/free-ewaste-pickup-kochi",
+      "target": "/pickup/",
+      "clicks": 1,
+      "impressions": 20,
+      "reason": "Clean keyword match to an existing V2 service page (1 clicks / 20 impressions).",
+      "status": "proposed_new"
+    },
+    {
+      "source": "/locations/smart-city-kochi/itad-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 2,
+      "impressions": 7,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thrippunithura/corporate-ewaste-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 1,
+      "impressions": 9,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/smart-city-kochi/data-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/smart-city-kochi/tv-monitor-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 3,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thrippunithura/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 4,
+      "impressions": 16,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/vyttila/free-ewaste-pickup-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 4,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/ernakulam-south/tv-monitor-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 7,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kozhikode/free-ewaste-pickup-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 7,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/smart-city-kochi/hard-drive-shredding-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/infopark-kochi/corporate-ewaste-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 1,
+      "impressions": 4,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thrissur/itad-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/fort-kochi/tv-monitor-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 3,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kalamassery/battery-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kalamassery/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 5,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kalamassery/electronic-waste-disposal",
+      "target": "(see vercel.json)",
+      "clicks": 3,
+      "impressions": 22,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kalady/free-ewaste-pickup-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 4,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kalady/ups-inverter-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 5,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thiruvananthapuram/ups-inverter-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kakkanad/electronics-recycling-near-me",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 17,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/angamaly/itad-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kadavanthra/data-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 9,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/services/battery-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 5,
+      "impressions": 400,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/edappally/server-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thiruvananthapuram/itad-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/aluva/server-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kalamassery/free-ewaste-pickup-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 3,
+      "impressions": 21,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/perumbavoor/laptop-buyback-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/angamaly/server-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/perumbavoor/free-ewaste-pickup-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kadavanthra/corporate-ewaste-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 1,
+      "impressions": 11,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kadavanthra/itad-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 3,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kadavanthra/sell-electronics-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 2,
+      "impressions": 46,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kalady/tv-monitor-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/vyttila/certificate-of-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/palarivattom/ups-inverter-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 4,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kothamangalam/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 10,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/aluva/data-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 3,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/aluva/free-ewaste-pickup-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 1,
+      "impressions": 15,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thrikkakara/battery-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 3,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thrikkakara/free-ewaste-pickup-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 31,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kakkanad/corporate-ewaste-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 2,
+      "impressions": 16,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/palakkad/electronic-waste-disposal",
+      "target": "(see vercel.json)",
+      "clicks": 1,
+      "impressions": 32,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/aluva/laptop-buyback-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 1,
+      "impressions": 5,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/angamaly/battery-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/angamaly/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 5,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thrissur/laptop-buyback-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 3,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/fort-kochi/data-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 8,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kannur/certificate-of-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 4,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kannur/free-ewaste-pickup-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 7,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kannur/laptop-buyback-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/ernakulam-south/dpdp-act-compliance-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/palarivattom/free-ewaste-pickup-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 14,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/services/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 2,
+      "impressions": 193,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kozhikode/sell-old-electronics",
+      "target": "(see vercel.json)",
+      "clicks": 1,
+      "impressions": 27,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/angamaly/free-ewaste-pickup-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 1,
+      "impressions": 10,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/angamaly/ups-inverter-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 5,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/aluva/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 20,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/aluva/ups-inverter-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 6,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kollam/battery-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 1,
+      "impressions": 47,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kollam/free-ewaste-pickup-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/ernakulam-south/data-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 1,
+      "impressions": 16,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/ernakulam-south/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 11,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/palakkad/business-it-decommissioning",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/palakkad/mobile-recycling-kochi",
+      "target": "/locations/palakkad/",
+      "clicks": 1,
+      "impressions": 4,
+      "reason": "Thin legacy matrix page with real clicks (1); parent location hub not built — redirect to closest matching service page or parent hub once it exists.",
+      "status": "proposed_new"
+    },
+    {
+      "source": "/locations/palakkad/sell-old-electronics",
+      "target": "(see vercel.json)",
+      "clicks": 3,
+      "impressions": 9,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kalamassery/data-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 7,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kalamassery/server-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 4,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kannur/old-computer-disposal",
+      "target": "/locations/kannur/",
+      "clicks": 1,
+      "impressions": 8,
+      "reason": "Thin legacy matrix page with real clicks (1); parent location hub not built — redirect to closest matching service page or parent hub once it exists.",
+      "status": "proposed_new"
+    },
+    {
+      "source": "/locations/vyttila/server-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 1,
+      "impressions": 9,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/vyttila/tv-monitor-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 3,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kottayam/free-ewaste-pickup-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 1,
+      "impressions": 8,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thrissur/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 9,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thrissur/free-ewaste-pickup-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 6,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kozhikode/battery-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 124,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kozhikode/itad-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 3,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/infopark-kochi/certificate-of-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/infopark-kochi/server-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thiruvananthapuram/data-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 4,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thiruvananthapuram/free-ewaste-pickup-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 12,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thiruvananthapuram/tv-monitor-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/maradu/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 8,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kannur/battery-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 2,
+      "impressions": 27,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kothamangalam/battery-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kakkanad/air-conditioner-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 3,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thiruvananthapuram/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 18,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thiruvananthapuram/laptop-buyback-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 4,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/infopark-kochi/hard-drive-shredding-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 1,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thrippunithura/tv-monitor-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/muvattupuzha/certificate-of-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kalamassery-hitech-park/corporate-ewaste-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kothamangalam/certificate-of-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kothamangalam/free-ewaste-pickup-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 6,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kothamangalam/ups-inverter-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 3,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/maradu/ups-inverter-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/willingdon-island/free-ewaste-pickup-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kollam/printer-recycling-kochi",
+      "target": "/locations/kollam/",
+      "clicks": 1,
+      "impressions": 2,
+      "reason": "Thin legacy matrix page with real clicks (1); parent location hub not built — redirect to closest matching service page or parent hub once it exists.",
+      "status": "proposed_new"
+    },
+    {
+      "source": "/locations/kakkanad/certificate-of-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kakkanad/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 2,
+      "impressions": 13,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kakkanad/server-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/north-paravur/tv-monitor-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kozhikode/business-it-decommissioning",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/angamaly/air-conditioner-recycling-kochi",
+      "target": "/locations/angamaly/",
+      "clicks": 1,
+      "impressions": 1,
+      "reason": "Thin legacy matrix page with real clicks (1); parent location hub not built — redirect to closest matching service page or parent hub once it exists.",
+      "status": "proposed_new"
+    },
+    {
+      "source": "/locations/palakkad/computer-recycling",
+      "target": "(see vercel.json)",
+      "clicks": 1,
+      "impressions": 31,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/ernakulam-south/air-conditioner-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 4,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/ernakulam-south/free-ewaste-pickup-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 8,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/ernakulam-south/hard-drive-shredding-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 5,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/ernakulam-south/laptop-buyback-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 7,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/ernakulam-south/mobile-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 5,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/palarivattom/data-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/palarivattom/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 4,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kalamassery/hard-drive-shredding-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 6,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kalamassery/laptop-buyback-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thrippunithura/sell-electronics-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/services/itad-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 44,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/ernakulam-south/battery-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 1,
+      "impressions": 11,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/ernakulam-south/hard-drive-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 15,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/ernakulam-south/ups-inverter-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 4,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/palarivattom/server-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/palakkad/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 4,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/infopark-kochi/laptop-buyback-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kozhikode/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 1,
+      "impressions": 26,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/infopark-kochi/electronic-waste-disposal",
+      "target": "(see vercel.json)",
+      "clicks": 1,
+      "impressions": 43,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kalamassery/tv-monitor-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/malappuram/electronics-recycling-near-me",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 12,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/fort-kochi/itad-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 4,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kothamangalam/laptop-recycling-near-me",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 4,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kollam/hard-drive-shredding-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kakkanad/data-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 1,
+      "impressions": 5,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kakkanad/free-ewaste-pickup-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 10,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thrippunithura/battery-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/fort-kochi/free-ewaste-pickup-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 7,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/infopark-kochi/data-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 1,
+      "impressions": 6,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kakkanad/mobile-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 7,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kozhikode/electronic-waste-disposal",
+      "target": "(see vercel.json)",
+      "clicks": 2,
+      "impressions": 37,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thiruvananthapuram/server-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kottayam/tv-monitor-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 4,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kalamassery-hitech-park/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/muvattupuzha/free-ewaste-pickup-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/palakkad/ups-inverter-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 1,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thrissur/it-asset-inventory-audit",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/maradu/itad-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 4,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kalamassery-hitech-park/tv-monitor-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thiruvananthapuram/battery-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 97,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/maradu/free-ewaste-pickup-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 13,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/north-paravur/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 5,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kalamassery-hitech-park",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 43,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kannur/tv-monitor-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thiruvananthapuram/hard-drive-shredding-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 4,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/malappuram/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 4,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kalady/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 3,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/muvattupuzha/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 5,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/aluva/battery-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kakkanad/tv-monitor-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 4,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/north-paravur/free-ewaste-pickup-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 5,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/malappuram/certificate-of-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 3,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/edappally/free-ewaste-pickup-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kalady/data-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/services/server-recycling-kochi",
+      "target": "/server-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 35,
+      "reason": "Clean keyword match to an existing V2 service page (0 clicks / 35 impressions).",
+      "status": "proposed_new"
+    },
+    {
+      "source": "/locations/thrissur/tv-monitor-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 1,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/maradu/hard-drive-shredding-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 4,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/edappally/tv-monitor-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kalamassery/ups-inverter-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kozhikode/tv-monitor-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 3,
+      "impressions": 5,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kakkanad/dpdp-act-compliance-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/maradu/electronic-waste-disposal",
+      "target": "(see vercel.json)",
+      "clicks": 2,
+      "impressions": 9,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/ml/services/tv-monitor-recycling-kochi",
+      "target": "/tv-recycling-kochi/",
+      "clicks": 9,
+      "impressions": 137,
+      "reason": "Clean keyword match to an existing V2 service page (9 clicks / 137 impressions).",
+      "status": "proposed_new"
+    },
+    {
+      "source": "/locations/kozhikode/server-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/perumbavoor/tv-monitor-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kalamassery-hitech-park/itad-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 3,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/services/hard-drive-shredding-kochi",
+      "target": "/data-destruction/",
+      "clicks": 0,
+      "impressions": 47,
+      "reason": "Clean keyword match to an existing V2 service page (0 clicks / 47 impressions).",
+      "status": "proposed_new"
+    },
+    {
+      "source": "/locations/infopark-kochi/ups-inverter-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thrippunithura/data-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/ernakulam-south/corporate-ewaste-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/palakkad/hard-drive-degaussing-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thrikkakara/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 5,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/smart-city-kochi/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kadavanthra/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 3,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/north-paravur/hard-drive-shredding-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/vyttila/printer-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 1,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kadavanthra/battery-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thrissur/data-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kalamassery-hitech-park/air-conditioner-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/aluva/itad-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/vyttila/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 1,
+      "impressions": 13,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/palakkad/hard-drive-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 6,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kozhikode/laptop-recycling-near-me",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 3,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kozhikode/hard-drive-degaussing-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/muvattupuzha/server-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 3,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/palakkad/battery-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/muvattupuzha/ups-inverter-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/muvattupuzha/battery-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/ml/services/server-recycling-kochi",
+      "target": "/server-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 24,
+      "reason": "Clean keyword match to an existing V2 service page (0 clicks / 24 impressions).",
+      "status": "proposed_new"
+    },
+    {
+      "source": "/locations/willingdon-island/tv-monitor-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 1,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/muvattupuzha/data-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/palakkad/laptop-recycling-near-me",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/palakkad/tv-monitor-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/palakkad/free-ewaste-pickup-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 3,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kadavanthra/tv-monitor-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kalamassery-hitech-park/data-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kottayam/laptop-buyback-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/perumbavoor/battery-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/vyttila/ups-inverter-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/north-paravur/ups-inverter-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 5,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thrippunithura/server-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/vyttila/laptop-buyback-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kalamassery/mobile-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/smart-city-kochi/certificate-of-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 3,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kalamassery-hitech-park/server-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thiruvananthapuram/certificate-of-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 3,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thrissur/hard-drive-shredding-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kakkanad/printer-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kannur/hard-drive-shredding-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/infopark-kochi/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 10,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kakkanad/network-equipment-disposal-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 4,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kannur/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 9,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kadavanthra/free-ewaste-pickup-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 5,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kothamangalam/tv-monitor-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/palarivattom/itad-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/vyttila/data-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/willingdon-island/ups-inverter-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kottayam/hard-drive-shredding-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kozhikode/laptop-buyback-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/ernakulam-south/printer-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/malappuram/data-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 4,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/perumbavoor/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 1,
+      "impressions": 10,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/ernakulam-south/network-equipment-disposal-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 5,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/vyttila/battery-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/malappuram/itad-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kakkanad/hard-drive-shredding-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 7,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/perumbavoor/server-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kothamangalam/server-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thrikkakara/server-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/services/data-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 14,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/malappuram/server-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kalamassery-hitech-park/printer-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/maradu/data-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 5,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kollam/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 14,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kannur/itad-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 5,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/ernakulam-south/server-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kakkanad/itad-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 3,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/muvattupuzha/laptop-buyback-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kannur/data-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/fort-kochi/hard-drive-shredding-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 3,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/edappally/laptop-buyback-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 3,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/palarivattom/battery-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 3,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/maradu/tv-monitor-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thrippunithura/itad-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 3,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/palakkad/itad-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 1,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kalamassery/corporate-ewaste-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 1,
+      "impressions": 12,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/north-paravur/laptop-buyback-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kadavanthra/laptop-buyback-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/willingdon-island/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 4,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/ernakulam-south/itad-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 18,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/perumbavoor/ups-inverter-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/services/corporate-ewaste-kochi",
+      "target": "/itad/",
+      "clicks": 1,
+      "impressions": 11,
+      "reason": "Clean keyword match to an existing V2 service page (1 clicks / 11 impressions).",
+      "status": "proposed_new"
+    },
+    {
+      "source": "/locations/maradu/server-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 3,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/vyttila/electronics-recycling-near-me",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/north-paravur/sell-electronics-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 4,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/malappuram/sell-old-electronics",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 13,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kozhikode/hard-drive-shredding-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kadavanthra/electronic-waste-disposal",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 7,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kannur/hard-drive-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 7,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thrippunithura/computer-recycling",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/palarivattom/hard-drive-degaussing-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kakkanad/hard-drive-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 10,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/smart-city-kochi/hard-drive-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 3,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thrissur/server-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/scrap-price",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 27,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/aluva/sell-electronics-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 5,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/infopark-kochi/itad-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 13,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kalady/itad-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kozhikode/data-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/blog/sell-old-laptop-kochi-best-price",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 0,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/free-e-waste-pickup-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 0,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/ernakulam",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 0,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kollam/tv-monitor-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 1,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thrissur/battery-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 65,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/malappuram/battery-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 25,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/buyback/laptops/sell-thinkpad-t458p-kochi",
+      "target": "/sell-electronics/",
+      "clicks": 0,
+      "impressions": 22,
+      "reason": "Clean keyword match to an existing V2 service page (0 clicks / 22 impressions).",
+      "status": "proposed_new"
+    },
+    {
+      "source": "/nist-data-destruction-kerala",
+      "target": "/data-destruction/",
+      "clicks": 0,
+      "impressions": 20,
+      "reason": "Clean keyword match to an existing V2 service page (0 clicks / 20 impressions).",
+      "status": "proposed_new"
+    },
+    {
+      "source": "/data-destruction-services-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 16,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/e-waste-recycling",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 11,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thrippunithura/free-ewaste-pickup-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 7,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/fort-kochi/e-waste-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 6,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kottayam/battery-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 3,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/smart-city-kochi/free-ewaste-pickup-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 3,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kothamangalam/itad-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 3,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/perumbavoor/itad-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 3,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kollam/certificate-of-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/palakkad/laptop-buyback-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kalady/server-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/edappally/battery-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/ernakulam-south/certificate-of-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 2,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kadavanthra/ups-inverter-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kalady/battery-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/infopark-kochi/battery-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/willingdon-island/server-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kottayam/itad-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thrikkakara/hard-drive-shredding-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thrippunithura/ups-inverter-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/north-paravur/battery-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kalamassery/certificate-of-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/kollam/server-recycling-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/edappally/itad-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    },
+    {
+      "source": "/locations/thrissur/certificate-of-destruction-kochi",
+      "target": "(see vercel.json)",
+      "clicks": 0,
+      "impressions": 1,
+      "reason": "Already implemented as a redirect in vercel.json.",
+      "status": "already_implemented"
+    }
+  ]
+}

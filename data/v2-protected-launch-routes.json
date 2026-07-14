@@ -1,0 +1,392 @@
+{
+  "generatedAt": "2026-07-15",
+  "existingV2Routes": [
+    "/",
+    "/about/",
+    "/battery-recycling/",
+    "/blog/",
+    "/blog/battery-recycling-near-me-kochi/",
+    "/blog/corporate-ewaste-pickup-kochi/",
+    "/blog/data-destruction-kochi-guide/",
+    "/blog/e-waste-collection-near-me/",
+    "/blog/e-waste-examples/",
+    "/blog/e-waste-management-rules-2022/",
+    "/blog/ewaste-pickup-near-me/",
+    "/blog/ewaste-recycling-vs-reuse/",
+    "/blog/free-e-waste-pickup-kochi/",
+    "/blog/how-ewaste-recycling-works/",
+    "/blog/how-ewaste-scrap-quotes-work-kochi/",
+    "/blog/how-responsible-ewaste-collection-works/",
+    "/blog/how-to-book-ewaste-pickup-kochi/",
+    "/blog/how-to-prepare-electronics-for-recycling/",
+    "/blog/how-to-sell-old-electronics-kochi/",
+    "/blog/laptop-recycling-kochi/",
+    "/blog/recycling-basics/",
+    "/blog/sell-old-electronics-kochi/",
+    "/blog/sell-old-laptop-kochi/",
+    "/blog/what-is-epr-in-e-waste/",
+    "/blog/what-is-ewaste/",
+    "/blog/where-to-recycle-old-electronics-kochi/",
+    "/blog/why-electronics-should-not-go-in-household-waste/",
+    "/certifications/",
+    "/computer-scrap-buyers-kochi/",
+    "/contact/",
+    "/data-destruction-certificate-sample/",
+    "/data-destruction/",
+    "/e-waste-scrap-prices-kochi/",
+    "/faq/",
+    "/hard-drive-shredding/",
+    "/itad/",
+    "/locations/",
+    "/locations/aluva/",
+    "/locations/edappally/",
+    "/locations/ernakulam-south/",
+    "/locations/infopark-kochi/",
+    "/locations/kadavanthra/",
+    "/locations/kakkanad/",
+    "/locations/kalamassery/",
+    "/marketplace/",
+    "/ml/",
+    "/ml/battery-recycling/",
+    "/ml/contact/",
+    "/ml/data-destruction/",
+    "/ml/pickup/",
+    "/ml/recycling/",
+    "/ml/sell-electronics/",
+    "/pickup/",
+    "/privacy/",
+    "/recycling/",
+    "/sell-electronics/",
+    "/server-recycling-kochi/",
+    "/services/",
+    "/services/electronics-recycling-near-me/",
+    "/services/hard-drive-degaussing-kochi/",
+    "/services/it-asset-inventory-audit/",
+    "/terms/",
+    "/trust/",
+    "/tv-recycling-kochi/"
+  ],
+  "existingV2RouteCount": 64,
+  "tier1UrlsAlreadyLive": [
+    {
+      "path": "/marketplace",
+      "clicks": 66,
+      "impressions": 2247
+    },
+    {
+      "path": "/",
+      "clicks": 265,
+      "impressions": 4393
+    },
+    {
+      "path": "/locations/thrissur",
+      "clicks": 8,
+      "impressions": 271
+    },
+    {
+      "path": "/contact",
+      "clicks": 10,
+      "impressions": 310
+    },
+    {
+      "path": "/locations/thiruvananthapuram",
+      "clicks": 15,
+      "impressions": 768
+    },
+    {
+      "path": "/itad",
+      "clicks": 2,
+      "impressions": 162
+    },
+    {
+      "path": "/recycling",
+      "clicks": 72,
+      "impressions": 3571
+    },
+    {
+      "path": "/locations/kottayam",
+      "clicks": 30,
+      "impressions": 394
+    },
+    {
+      "path": "/locations/kakkanad",
+      "clicks": 34,
+      "impressions": 793
+    },
+    {
+      "path": "/about",
+      "clicks": 6,
+      "impressions": 152
+    },
+    {
+      "path": "/locations/aluva",
+      "clicks": 17,
+      "impressions": 293
+    },
+    {
+      "path": "/faq",
+      "clicks": 11,
+      "impressions": 324
+    },
+    {
+      "path": "/locations/kozhikode",
+      "clicks": 22,
+      "impressions": 1022
+    },
+    {
+      "path": "/locations/ernakulam-south",
+      "clicks": 7,
+      "impressions": 442
+    },
+    {
+      "path": "/locations/kalamassery",
+      "clicks": 3,
+      "impressions": 145
+    },
+    {
+      "path": "/locations/malappuram",
+      "clicks": 7,
+      "impressions": 313
+    },
+    {
+      "path": "/locations/edappally",
+      "clicks": 4,
+      "impressions": 244
+    },
+    {
+      "path": "/services/electronics-recycling-near-me",
+      "clicks": 42,
+      "impressions": 3258
+    },
+    {
+      "path": "/locations/kadavanthra",
+      "clicks": 10,
+      "impressions": 426
+    },
+    {
+      "path": "/locations/infopark-kochi",
+      "clicks": 6,
+      "impressions": 145
+    },
+    {
+      "path": "/locations/kannur",
+      "clicks": 14,
+      "impressions": 249
+    },
+    {
+      "path": "/locations/palakkad",
+      "clicks": 19,
+      "impressions": 225
+    },
+    {
+      "path": "/locations/kollam",
+      "clicks": 19,
+      "impressions": 313
+    },
+    {
+      "path": "/battery-recycling",
+      "clicks": 31,
+      "impressions": 1524
+    },
+    {
+      "path": "/sell-electronics",
+      "clicks": 17,
+      "impressions": 792
+    },
+    {
+      "path": "/pickup",
+      "clicks": 14,
+      "impressions": 183
+    },
+    {
+      "path": "/tv-recycling-kochi",
+      "clicks": 10,
+      "impressions": 134
+    },
+    {
+      "path": "/blog/free-e-waste-pickup-kochi",
+      "clicks": 8,
+      "impressions": 137
+    },
+    {
+      "path": "/data-destruction",
+      "clicks": 5,
+      "impressions": 191
+    },
+    {
+      "path": "/e-waste-scrap-prices-kochi",
+      "clicks": 3,
+      "impressions": 106
+    }
+  ],
+  "rebuildBeforeCutover": [
+    {
+      "path": "/locations/thrissur",
+      "clicks": 8,
+      "impressions": 271,
+      "risk_level": "high",
+      "reason": "Real organic traffic on a legacy far-city page already indexed by Google (8 clicks / 271 impressions). Rebuild as an honest, feasibility-only page using the standard hedged wording (\"contact us to check pickup feasibility\") rather than losing the traffic or overclaiming guaranteed service.",
+      "requiredWording": "Ewaste Kochi primarily supports Kochi, Ernakulam, Kakkanad, Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro enquiry areas. For other Kerala districts, contact us to check pickup feasibility."
+    },
+    {
+      "path": "/locations/thiruvananthapuram",
+      "clicks": 15,
+      "impressions": 768,
+      "risk_level": "high",
+      "reason": "Real organic traffic on a legacy far-city page already indexed by Google (15 clicks / 768 impressions). Rebuild as an honest, feasibility-only page using the standard hedged wording (\"contact us to check pickup feasibility\") rather than losing the traffic or overclaiming guaranteed service.",
+      "requiredWording": "Ewaste Kochi primarily supports Kochi, Ernakulam, Kakkanad, Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro enquiry areas. For other Kerala districts, contact us to check pickup feasibility."
+    },
+    {
+      "path": "/locations/kottayam",
+      "clicks": 30,
+      "impressions": 394,
+      "risk_level": "high",
+      "reason": "Real organic traffic on a legacy far-city page already indexed by Google (30 clicks / 394 impressions). Rebuild as an honest, feasibility-only page using the standard hedged wording (\"contact us to check pickup feasibility\") rather than losing the traffic or overclaiming guaranteed service.",
+      "requiredWording": "Ewaste Kochi primarily supports Kochi, Ernakulam, Kakkanad, Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro enquiry areas. For other Kerala districts, contact us to check pickup feasibility."
+    },
+    {
+      "path": "/locations/kozhikode",
+      "clicks": 22,
+      "impressions": 1022,
+      "risk_level": "high",
+      "reason": "Real organic traffic on a legacy far-city page already indexed by Google (22 clicks / 1022 impressions). Rebuild as an honest, feasibility-only page using the standard hedged wording (\"contact us to check pickup feasibility\") rather than losing the traffic or overclaiming guaranteed service.",
+      "requiredWording": "Ewaste Kochi primarily supports Kochi, Ernakulam, Kakkanad, Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro enquiry areas. For other Kerala districts, contact us to check pickup feasibility."
+    },
+    {
+      "path": "/locations/malappuram",
+      "clicks": 7,
+      "impressions": 313,
+      "risk_level": "high",
+      "reason": "Real organic traffic on a legacy far-city page already indexed by Google (7 clicks / 313 impressions). Rebuild as an honest, feasibility-only page using the standard hedged wording (\"contact us to check pickup feasibility\") rather than losing the traffic or overclaiming guaranteed service.",
+      "requiredWording": "Ewaste Kochi primarily supports Kochi, Ernakulam, Kakkanad, Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro enquiry areas. For other Kerala districts, contact us to check pickup feasibility."
+    },
+    {
+      "path": "/locations/kannur",
+      "clicks": 14,
+      "impressions": 249,
+      "risk_level": "high",
+      "reason": "Real organic traffic on a legacy far-city page already indexed by Google (14 clicks / 249 impressions). Rebuild as an honest, feasibility-only page using the standard hedged wording (\"contact us to check pickup feasibility\") rather than losing the traffic or overclaiming guaranteed service.",
+      "requiredWording": "Ewaste Kochi primarily supports Kochi, Ernakulam, Kakkanad, Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro enquiry areas. For other Kerala districts, contact us to check pickup feasibility."
+    },
+    {
+      "path": "/locations/palakkad",
+      "clicks": 19,
+      "impressions": 225,
+      "risk_level": "high",
+      "reason": "Real organic traffic on a legacy far-city page already indexed by Google (19 clicks / 225 impressions). Rebuild as an honest, feasibility-only page using the standard hedged wording (\"contact us to check pickup feasibility\") rather than losing the traffic or overclaiming guaranteed service.",
+      "requiredWording": "Ewaste Kochi primarily supports Kochi, Ernakulam, Kakkanad, Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro enquiry areas. For other Kerala districts, contact us to check pickup feasibility."
+    },
+    {
+      "path": "/locations/kollam",
+      "clicks": 19,
+      "impressions": 313,
+      "risk_level": "high",
+      "reason": "Real organic traffic on a legacy far-city page already indexed by Google (19 clicks / 313 impressions). Rebuild as an honest, feasibility-only page using the standard hedged wording (\"contact us to check pickup feasibility\") rather than losing the traffic or overclaiming guaranteed service.",
+      "requiredWording": "Ewaste Kochi primarily supports Kochi, Ernakulam, Kakkanad, Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro enquiry areas. For other Kerala districts, contact us to check pickup feasibility."
+    }
+  ],
+  "redirectsNeededBeforeCutover": [
+    {
+      "source": "/sell-electronics-kochi",
+      "target": "/sell-electronics/",
+      "clicks": 6,
+      "impressions": 116,
+      "reason": "Clean keyword match to an existing V2 service page (6 clicks / 116 impressions)."
+    },
+    {
+      "source": "/services/tv-monitor-recycling-kochi",
+      "target": "/tv-recycling-kochi/",
+      "clicks": 1,
+      "impressions": 22,
+      "reason": "Clean keyword match to an existing V2 service page (1 clicks / 22 impressions)."
+    },
+    {
+      "source": "/services/free-ewaste-pickup-kochi",
+      "target": "/pickup/",
+      "clicks": 1,
+      "impressions": 20,
+      "reason": "Clean keyword match to an existing V2 service page (1 clicks / 20 impressions)."
+    },
+    {
+      "source": "/locations/palakkad/mobile-recycling-kochi",
+      "target": "/locations/palakkad/",
+      "clicks": 1,
+      "impressions": 4,
+      "reason": "Thin legacy matrix page with real clicks (1); parent location hub not built — redirect to closest matching service page or parent hub once it exists."
+    },
+    {
+      "source": "/locations/kannur/old-computer-disposal",
+      "target": "/locations/kannur/",
+      "clicks": 1,
+      "impressions": 8,
+      "reason": "Thin legacy matrix page with real clicks (1); parent location hub not built — redirect to closest matching service page or parent hub once it exists."
+    },
+    {
+      "source": "/locations/kollam/printer-recycling-kochi",
+      "target": "/locations/kollam/",
+      "clicks": 1,
+      "impressions": 2,
+      "reason": "Thin legacy matrix page with real clicks (1); parent location hub not built — redirect to closest matching service page or parent hub once it exists."
+    },
+    {
+      "source": "/locations/angamaly/air-conditioner-recycling-kochi",
+      "target": "/locations/angamaly/",
+      "clicks": 1,
+      "impressions": 1,
+      "reason": "Thin legacy matrix page with real clicks (1); parent location hub not built — redirect to closest matching service page or parent hub once it exists."
+    },
+    {
+      "source": "/services/server-recycling-kochi",
+      "target": "/server-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 35,
+      "reason": "Clean keyword match to an existing V2 service page (0 clicks / 35 impressions)."
+    },
+    {
+      "source": "/ml/services/tv-monitor-recycling-kochi",
+      "target": "/tv-recycling-kochi/",
+      "clicks": 9,
+      "impressions": 137,
+      "reason": "Clean keyword match to an existing V2 service page (9 clicks / 137 impressions)."
+    },
+    {
+      "source": "/services/hard-drive-shredding-kochi",
+      "target": "/data-destruction/",
+      "clicks": 0,
+      "impressions": 47,
+      "reason": "Clean keyword match to an existing V2 service page (0 clicks / 47 impressions)."
+    },
+    {
+      "source": "/ml/services/server-recycling-kochi",
+      "target": "/server-recycling-kochi/",
+      "clicks": 0,
+      "impressions": 24,
+      "reason": "Clean keyword match to an existing V2 service page (0 clicks / 24 impressions)."
+    },
+    {
+      "source": "/services/corporate-ewaste-kochi",
+      "target": "/itad/",
+      "clicks": 1,
+      "impressions": 11,
+      "reason": "Clean keyword match to an existing V2 service page (1 clicks / 11 impressions)."
+    },
+    {
+      "source": "/buyback/laptops/sell-thinkpad-t458p-kochi",
+      "target": "/sell-electronics/",
+      "clicks": 0,
+      "impressions": 22,
+      "reason": "Clean keyword match to an existing V2 service page (0 clicks / 22 impressions)."
+    },
+    {
+      "source": "/nist-data-destruction-kerala",
+      "target": "/data-destruction/",
+      "clicks": 0,
+      "impressions": 20,
+      "reason": "Clean keyword match to an existing V2 service page (0 clicks / 20 impressions)."
+    }
+  ],
+  "alreadyImplementedRedirects": 301,
+  "manualReviewCount": 59,
+  "quarantinedOrLowQualityExcluded": "555 mass-generated blog posts remain in .content-quarantine/ per the Blog Scale Safety Gate (Phase 2O) — none included as indexable routes here, consistent with that decision.",
+  "noteOnScope": "This file is a PLAN, not an implementation. The 8 rebuild_safe_200 far-city pages and the 14 new redirect_301 rules below are NOT yet built/added — see reports/gsc-p1-url-protection-map-report.md for the recommended next phase."
+}
