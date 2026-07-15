@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../components/DirectAnswer.astro";
 import CtaBar from "../../components/CtaBar.astro";
 import Faq from "../../components/Faq.astro";
 import { SITE_URL } from "../../data/site";
@@ -73,6 +74,10 @@ const faqItems = [
     <a href="/battery-recycling/">where to recycle batteries</a>.
   </p>
 
+  <DirectAnswer>
+    <p>{description}</p>
+  </DirectAnswer>
+
   <CtaBar whatsappMessage="Hi, I have a question that's not covered in your FAQ." />
 
   <Faq items={faqItems} heading="General Questions" />
@@ -94,7 +99,7 @@ const faqItems = [
     <p class="rg-hub"><a href="/blog/">Browse all guides in the blog →</a></p>
   </section>
 
-  <p class="updated">Last updated: {lastUpdated}</p>
+  <p class="updated">Last updated: <time datetime={lastUpdated}>{lastUpdated}</time></p>
 </Layout>
 
 <style>

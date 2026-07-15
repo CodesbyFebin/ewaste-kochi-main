@@ -5,6 +5,7 @@ import DirectAnswer from "../../components/DirectAnswer.astro";
 import CtaBar from "../../components/CtaBar.astro";
 import Faq from "../../components/Faq.astro";
 import LongformExpansion from "../../components/LongformExpansion.astro";
+import Sources from "../../components/Sources.astro";
 import { BUSINESS, SITE_URL } from "../../data/site";
 
 const title = "E-Waste Rules 2022 India | Kochi Business Disposal Guide";
@@ -38,6 +39,21 @@ const faqItems = [
   {
     q: "Can Ewaste Kochi provide documentation?",
     a: "Documentation support may be discussed for business collections depending on the agreed service and item scope. Ask before pickup so expectations are clear.",
+  },
+];
+
+const sourceItems = [
+  {
+    title: "E-Waste Management Rules and related regulatory resources",
+    href: "https://cpcb.nic.in/rules-6/",
+    publisher: "Central Pollution Control Board",
+    note: "Official CPCB resource page for e-waste rules and updates.",
+  },
+  {
+    title: "EPR E-Waste portal",
+    href: "https://eprewastecpcb.in/",
+    publisher: "Central Pollution Control Board",
+    note: "Official e-waste EPR portal for producer and recycler workflows.",
   },
 ];
 
@@ -100,6 +116,15 @@ const jsonLd = [
       </p>
     </DirectAnswer>
 
+    <DirectAnswer heading="Definitive answer">
+      <p>
+        For a Kochi business, the practical rule is simple: do not let old IT
+        assets leave the office as an untracked pile. Prepare an inventory,
+        separate batteries, identify storage media and confirm what records are
+        available before pickup is scheduled.
+      </p>
+    </DirectAnswer>
+
     <CtaBar whatsappMessage="Hi, I need help planning business e-waste disposal under current rules." />
 
     <section class="process" aria-labelledby="rules-process">
@@ -142,6 +167,8 @@ const jsonLd = [
         "How this guide connects to current service pages",
       ]}
     />
+
+    <Sources items={sourceItems} />
 
     <Faq items={faqItems} heading="E-Waste Rules FAQs" />
   </article>

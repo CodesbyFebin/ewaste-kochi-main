@@ -1,6 +1,7 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
 import CtaBar from "../../../components/CtaBar.astro";
 import LangSwitch from "../../../components/LangSwitch.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
@@ -39,6 +40,10 @@ const jsonLd = [
     ഏറ്റവും വേഗതയുള്ള മാർഗ്ഗം.
   </p>
 
+  <DirectAnswer heading="ചുരുക്കം">
+    <p>{description}</p>
+  </DirectAnswer>
+
   <CtaBar
     whatsappMessage="നമസ്കാരം, എനിക്ക് ബന്ധപ്പെടണം."
     pickupHref="/ml/pickup/"
@@ -62,7 +67,7 @@ const jsonLd = [
     </ul>
   </section>
 
-  <p class="updated">അവസാനം പുതുക്കിയത്: {lastUpdated}</p>
+  <p class="updated">അവസാനം പുതുക്കിയത്: <time datetime={lastUpdated}>{lastUpdated}</time></p>
 </Layout>
 
 <style>

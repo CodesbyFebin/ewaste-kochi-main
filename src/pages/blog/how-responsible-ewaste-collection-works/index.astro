@@ -162,7 +162,7 @@ const faqItems = [
     <CtaBar whatsappMessage="Hi, I'd like to book responsible e-waste collection." compact />
   </section>
 
-  <p class="updated">Last updated: {dateModified}</p>
+  <p class="updated">Last updated: <time datetime={dateModified}>{dateModified}</time></p>
 </Layout>
 
 <style>

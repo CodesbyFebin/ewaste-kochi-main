@@ -27,7 +27,7 @@ const jsonLd = [
 <Layout title={title} description={description} path="/terms/" jsonLd={jsonLd}>
   <Breadcrumbs items={breadcrumbItems} />
   <h1>Terms of Service</h1>
-  <p class="updated">Last updated: {lastUpdated}</p>
+  <p class="updated">Last updated: <time datetime={lastUpdated}>{lastUpdated}</time></p>
 
   <section>
     <h2>Our services</h2>

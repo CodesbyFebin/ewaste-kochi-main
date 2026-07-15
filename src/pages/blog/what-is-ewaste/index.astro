@@ -1,6 +1,7 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
 import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
 import RelatedContent from "../../../components/RelatedContent.astro";
@@ -70,6 +71,10 @@ const faqItems = [
     different handling than regular household trash because of what's
     inside it.
   </p>
+
+  <DirectAnswer>
+    <p>{description}</p>
+  </DirectAnswer>
 
   <CtaBar whatsappMessage="Hi, I have some e-waste I'd like to recycle." />
 
@@ -146,7 +151,7 @@ const faqItems = [
 
   <RelatedContent href="/blog/what-is-ewaste/" />
 
-  <p class="updated">Last updated: {dateModified}</p>
+  <p class="updated">Last updated: <time datetime={dateModified}>{dateModified}</time></p>
 </Layout>
 
 <style>

@@ -1,6 +1,7 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
 import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
@@ -68,6 +69,10 @@ const faqItems = [
     suited to bulk drive retirement where reuse isn't the goal.
   </p>
 
+  <DirectAnswer>
+    <p>{description}</p>
+  </DirectAnswer>
+
   <CtaBar whatsappMessage="Hi, I need hard drive degaussing for some old drives." />
 
   <section>
@@ -124,7 +129,7 @@ const faqItems = [
 
   <Faq items={faqItems} />
 
-  <p class="updated">Last updated: {lastUpdated}</p>
+  <p class="updated">Last updated: <time datetime={lastUpdated}>{lastUpdated}</time></p>
 </Layout>
 
 <style>

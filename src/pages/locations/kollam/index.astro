@@ -1,6 +1,7 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
 import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
@@ -76,6 +77,10 @@ const faqItems = [
     bulk or business volumes.
   </p>
 
+  <DirectAnswer>
+    <p>{description}</p>
+  </DirectAnswer>
+
   <CtaBar whatsappMessage="Hi, I'm in Kollam and want to check if e-waste pickup is feasible for my situation." />
 
   <section>
@@ -138,7 +143,7 @@ const faqItems = [
 
   <Faq items={faqItems} heading="Kollam Pickup FAQs" />
 
-  <p class="updated">Last updated: {lastUpdated}</p>
+  <p class="updated">Last updated: <time datetime={lastUpdated}>{lastUpdated}</time></p>
 </Layout>
 
 <style>

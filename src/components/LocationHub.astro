@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Breadcrumbs from "./Breadcrumbs.astro";
+import DirectAnswer from "./DirectAnswer.astro";
 import CtaBar from "./CtaBar.astro";
 import Faq from "./Faq.astro";
 import { SITE_URL } from "../data/site";
@@ -14,6 +15,7 @@ interface Props {
 }
 
 const { name, path, title, description, context } = Astro.props;
+const lastUpdated = "2026-07-18";
 const breadcrumbItems = [
   { name: "Home", path: "/" },
   { name: "Locations", path: "/locations/" },
@@ -38,6 +40,7 @@ const jsonLd = [
     url: `${SITE_URL}${path}`,
     name: title,
     description,
+    dateModified: lastUpdated,
   },
 ];
 
@@ -65,6 +68,10 @@ const faqItems = [
   <Breadcrumbs items={breadcrumbItems} />
   <h1>{title}</h1>
   <p class="lede">{description}</p>
+
+  <DirectAnswer>
+    <p>{description}</p>
+  </DirectAnswer>
 
   <CtaBar whatsappMessage={`Hi Ewaste Kochi, I need e-waste pickup support in ${name}. I can share item details and photos.`} />
 
@@ -110,6 +117,7 @@ const faqItems = [
   </section>
 
   <Faq items={faqItems} />
+  <p class="updated">Last updated: <time datetime={lastUpdated}>{lastUpdated}</time></p>
 </Layout>
 
 <style>
@@ -123,5 +131,9 @@ const faqItems = [
   }
   li {
     margin-block: 0.4rem;
+  }
+  .updated {
+    font-size: 0.8rem;
+    color: var(--color-muted);
   }
 </style>

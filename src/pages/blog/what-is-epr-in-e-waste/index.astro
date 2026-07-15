@@ -1,9 +1,11 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
 import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
 import RelatedContent from "../../../components/RelatedContent.astro";
+import Sources from "../../../components/Sources.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
 
 const title = "What Is EPR in E-Waste Management? A Plain-Language Explainer";
@@ -54,6 +56,21 @@ const faqItems = [
     a: "The Central Pollution Control Board (CPCB) publishes official guidance and the EPR portal for producers and recyclers. For anything you need to rely on formally, check CPCB's own resources or a qualified advisor.",
   },
 ];
+
+const sourceItems = [
+  {
+    title: "EPR E-Waste portal",
+    href: "https://eprewastecpcb.in/",
+    publisher: "Central Pollution Control Board",
+    note: "Official Indian e-waste EPR portal for registrations and compliance workflows.",
+  },
+  {
+    title: "Central Pollution Control Board",
+    href: "https://cpcb.nic.in/",
+    publisher: "Government of India",
+    note: "National pollution-control authority referenced in India's e-waste framework.",
+  },
+];
 ---
 
 <Layout title={title} description={description} path="/blog/what-is-epr-in-e-waste/" jsonLd={jsonLd}>
@@ -66,11 +83,17 @@ const faqItems = [
     eventually throw them away.
   </p>
 
+  <DirectAnswer>
+    <p>{description}</p>
+  </DirectAnswer>
+
   <p class="disclaimer">
     This page is general educational information, not legal advice.
     Businesses should verify current requirements with official sources
     (such as the Central Pollution Control Board) or a qualified advisor.
   </p>
+
+  <Sources items={sourceItems} />
 
   <CtaBar whatsappMessage="Hi, I have a question about e-waste compliance." />
 
@@ -155,7 +178,7 @@ const faqItems = [
 
   <RelatedContent href="/blog/what-is-epr-in-e-waste/" />
 
-  <p class="updated">Last updated: {dateModified}</p>
+  <p class="updated">Last updated: <time datetime={dateModified}>{dateModified}</time></p>
 </Layout>
 
 <style>

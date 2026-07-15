@@ -1,6 +1,7 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
 import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
 import RelatedContent from "../../../components/RelatedContent.astro";
@@ -72,6 +73,10 @@ const faqItems = [
     service area — here's exactly how it works, what's covered, and what to
     have ready before our team arrives.
   </p>
+
+  <DirectAnswer>
+    <p>{description}</p>
+  </DirectAnswer>
 
   <CtaBar whatsappMessage="Hi, I'd like to book a free e-waste pickup." />
 
@@ -160,7 +165,7 @@ const faqItems = [
 
   <RelatedContent href="/blog/free-e-waste-pickup-kochi/" />
 
-  <p class="updated">Last updated: {dateModified}</p>
+  <p class="updated">Last updated: <time datetime={dateModified}>{dateModified}</time></p>
 </Layout>
 
 <style>

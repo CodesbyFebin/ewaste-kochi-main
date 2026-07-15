@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../components/DirectAnswer.astro";
 import CtaBar from "../../components/CtaBar.astro";
 import { BUSINESS, SITE_URL } from "../../data/site";
 
@@ -34,6 +35,10 @@ const jsonLd = [
     working with households, offices, and IT parks across Ernakulam district
     and wider Kerala.
   </p>
+
+  <DirectAnswer>
+    <p>{description}</p>
+  </DirectAnswer>
 
   <CtaBar whatsappMessage="Hi, I have a question about Ewaste Kochi's services." />
 
@@ -82,7 +87,7 @@ const jsonLd = [
     </p>
   </section>
 
-  <p class="updated">Last updated: {lastUpdated}</p>
+  <p class="updated">Last updated: <time datetime={lastUpdated}>{lastUpdated}</time></p>
 </Layout>
 
 <style>

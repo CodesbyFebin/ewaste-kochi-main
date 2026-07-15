@@ -1,6 +1,7 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
 import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
 import RelatedContent from "../../../components/RelatedContent.astro";
@@ -72,6 +73,10 @@ const faqItems = [
     a better, more accurate quote. Here's a practical checklist, plus what
     actually determines the price.
   </p>
+
+  <DirectAnswer>
+    <p>{description}</p>
+  </DirectAnswer>
 
   <CtaBar whatsappMessage="Hi, I'd like to sell my old laptop — please give me a quote." />
 
@@ -153,7 +158,7 @@ const faqItems = [
 
   <RelatedContent href="/blog/sell-old-laptop-kochi/" />
 
-  <p class="updated">Last updated: {dateModified}</p>
+  <p class="updated">Last updated: <time datetime={dateModified}>{dateModified}</time></p>
 </Layout>
 
 <style>

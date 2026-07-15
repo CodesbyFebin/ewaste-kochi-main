@@ -1,6 +1,7 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
 import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
 import RelatedContent from "../../../components/RelatedContent.astro";
@@ -64,6 +65,10 @@ const faqItems = [
     category-by-category list of common items, plus which ones need extra
     care — data wiping, battery safety — before they're recycled.
   </p>
+
+  <DirectAnswer>
+    <p>{description}</p>
+  </DirectAnswer>
 
   <CtaBar whatsappMessage="Hi, I'd like to check what items you can collect." />
 
@@ -154,7 +159,7 @@ const faqItems = [
 
   <RelatedContent href="/blog/e-waste-examples/" />
 
-  <p class="updated">Last updated: {dateModified}</p>
+  <p class="updated">Last updated: <time datetime={dateModified}>{dateModified}</time></p>
 </Layout>
 
 <style>

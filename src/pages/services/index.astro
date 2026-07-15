@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../components/DirectAnswer.astro";
 import CtaBar from "../../components/CtaBar.astro";
 import Faq from "../../components/Faq.astro";
 import { SITE_URL } from "../../data/site";
@@ -74,6 +75,10 @@ const faqItems = [
     with accepted items, process, and local coverage detail.
   </p>
 
+  <DirectAnswer>
+    <p>{description}</p>
+  </DirectAnswer>
+
   <CtaBar whatsappMessage="Hi, I'd like to know which service fits my e-waste pickup needs." />
 
   <section>
@@ -89,7 +94,7 @@ const faqItems = [
 
   <Faq items={faqItems} />
 
-  <p class="updated">Last updated: {lastUpdated}</p>
+  <p class="updated">Last updated: <time datetime={lastUpdated}>{lastUpdated}</time></p>
 </Layout>
 
 <style>

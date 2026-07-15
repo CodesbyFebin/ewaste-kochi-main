@@ -483,7 +483,7 @@ const faqItems = [
 
   <Faq items={faqItems} />
 
-  <p class="updated">Last updated: {lastUpdated}</p>
+  <p class="updated">Last updated: <time datetime={lastUpdated}>{lastUpdated}</time></p>
 </Layout>
 
 <style>

@@ -1,0 +1,60 @@
+---
+interface SourceItem {
+  title: string;
+  href: string;
+  publisher?: string;
+  note?: string;
+}
+
+interface Props {
+  items: SourceItem[];
+  heading?: string;
+}
+
+const { items, heading = "Sources and official references" } = Astro.props;
+---
+
+<section class="sources" aria-labelledby="sources-heading">
+  <h2 id="sources-heading">{heading}</h2>
+  <ul>
+    {items.map((item) => (
+      <li>
+        <a href={item.href} target="_blank" rel="noopener noreferrer">{item.title}</a>
+        {item.publisher && <span> — {item.publisher}</span>}
+        {item.note && <p>{item.note}</p>}
+      </li>
+    ))}
+  </ul>
+</section>
+
+<style>
+  .sources {
+    margin-block: 2.5rem;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .sources h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.15rem;
+  }
+  .sources ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+  .sources li {
+    margin-block: 0.65rem;
+  }
+  .sources a {
+    font-weight: 800;
+  }
+  .sources span,
+  .sources p {
+    color: var(--color-muted);
+  }
+  .sources p {
+    margin: 0.2rem 0 0;
+    font-size: 0.9rem;
+  }
+</style>

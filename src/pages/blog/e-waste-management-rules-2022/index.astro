@@ -1,9 +1,11 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
 import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
 import RelatedContent from "../../../components/RelatedContent.astro";
+import Sources from "../../../components/Sources.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
 
 const title = "E-Waste Management Rules 2022: A Simple Guide for Businesses";
@@ -58,6 +60,21 @@ const faqItems = [
     a: "The Ministry of Environment, Forest and Climate Change and the Central Pollution Control Board publish official rule text and guidance — check their resources directly for anything you need to rely on formally.",
   },
 ];
+
+const sourceItems = [
+  {
+    title: "E-Waste Management Rules and related regulatory resources",
+    href: "https://cpcb.nic.in/rules-6/",
+    publisher: "Central Pollution Control Board",
+    note: "Use official CPCB resources for current rule text and compliance references.",
+  },
+  {
+    title: "EPR E-Waste portal",
+    href: "https://eprewastecpcb.in/",
+    publisher: "Central Pollution Control Board",
+    note: "Official portal for producer, recycler and related e-waste EPR workflows.",
+  },
+];
 ---
 
 <Layout title={title} description={description} path="/blog/e-waste-management-rules-2022/" jsonLd={jsonLd}>
@@ -70,12 +87,18 @@ const faqItems = [
     legal jargon.
   </p>
 
+  <DirectAnswer>
+    <p>{description}</p>
+  </DirectAnswer>
+
   <p class="disclaimer">
     This page is general educational information, not legal advice.
     Businesses should verify current requirements with official sources
     (Ministry of Environment, Forest and Climate Change; Central Pollution
     Control Board) or a qualified advisor.
   </p>
+
+  <Sources items={sourceItems} />
 
   <CtaBar whatsappMessage="Hi, I have a question about e-waste compliance for my business." />
 
@@ -167,7 +190,7 @@ const faqItems = [
 
   <RelatedContent href="/blog/e-waste-management-rules-2022/" />
 
-  <p class="updated">Last updated: {dateModified}</p>
+  <p class="updated">Last updated: <time datetime={dateModified}>{dateModified}</time></p>
 </Layout>
 
 <style>

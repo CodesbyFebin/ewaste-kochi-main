@@ -1,6 +1,7 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
 import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
 import LangSwitch from "../../../components/LangSwitch.astro";
@@ -68,6 +69,10 @@ const faqItems = [
     പറയൂ, ഞങ്ങൾ സ്ലോട്ട് സ്ഥിരീകരിച്ച് വീട്ടിലെത്തി ശേഖരിക്കും.
   </p>
 
+  <DirectAnswer heading="ചുരുക്കം">
+    <p>{description}</p>
+  </DirectAnswer>
+
   <CtaBar
     whatsappMessage="നമസ്കാരം, ഒരു ഇ-വേസ്റ്റ് പിക്കപ്പ് ബുക്ക് ചെയ്യണം."
     pickupHref="/ml/pickup/"
@@ -105,7 +110,7 @@ const faqItems = [
 
   <Faq items={faqItems} heading="പതിവ് ചോദ്യങ്ങൾ" />
 
-  <p class="updated">അവസാനം പുതുക്കിയത്: {lastUpdated}</p>
+  <p class="updated">അവസാനം പുതുക്കിയത്: <time datetime={lastUpdated}>{lastUpdated}</time></p>
 </Layout>
 
 <style>

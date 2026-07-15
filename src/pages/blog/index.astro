@@ -443,7 +443,7 @@ const statusColor: Record<string, string> = {
     </div>
   </section>
 
-  <p class="updated">Last updated: {dateModified}</p>
+  <p class="updated">Last updated: <time datetime={dateModified}>{dateModified}</time></p>
 </Layout>
 
 <style>

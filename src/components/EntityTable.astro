@@ -1,0 +1,81 @@
+---
+interface EntityItem {
+  term: string;
+  definition: string;
+  href?: string;
+  sourceLabel?: string;
+}
+
+interface Props {
+  items: EntityItem[];
+  heading?: string;
+}
+
+const { items, heading = "Key entities" } = Astro.props;
+
+const isExternal = (href: string) => /^https?:\/\//.test(href);
+---
+
+<section class="entity-table" aria-labelledby="entity-table-heading">
+  <h2 id="entity-table-heading">{heading}</h2>
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Entity</th>
+          <th scope="col">Plain meaning</th>
+          <th scope="col">Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        {items.map((item) => (
+          <tr>
+            <td><strong>{item.term}</strong></td>
+            <td>{item.definition}</td>
+            <td>
+              {item.href ? (
+                isExternal(item.href) ? (
+                  <a href={item.href} target="_blank" rel="noopener noreferrer">{item.sourceLabel ?? "Reference"}</a>
+                ) : (
+                  <a href={item.href}>{item.sourceLabel ?? "Reference"}</a>
+                )
+              ) : (
+                <span>Internal context</span>
+              )}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<style>
+  .entity-table {
+    margin-block: 2.5rem;
+  }
+  .table-scroll {
+    overflow-x: auto;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 42rem;
+  }
+  th,
+  td {
+    padding: 0.8rem;
+    border: 1px solid var(--color-border);
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--color-surface);
+  }
+  td {
+    color: var(--color-muted);
+  }
+  td strong {
+    color: var(--color-text);
+  }
+</style>
