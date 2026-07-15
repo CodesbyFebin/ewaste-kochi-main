@@ -7,6 +7,7 @@ import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
 import LongformExpansion from "../../../components/LongformExpansion.astro";
 import Sources from "../../../components/Sources.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
 import { BUSINESS, SITE_URL } from "../../../data/site";
 
 const title = "Ultimate Guide to E-Waste Recycling in Kochi | Ewaste Kochi";
@@ -323,6 +324,7 @@ const jsonLd = [
     <CtaBar whatsappMessage="Hi, I read the ultimate e-waste recycling guide and need help choosing the right route." />
     <Sources items={sourceItems} />
     <Faq items={faqItems} heading="Ultimate E-Waste Recycling FAQs" />
+    <RelatedContent href={path} />
   </article>
 </Layout>
 

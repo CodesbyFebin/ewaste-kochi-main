@@ -526,6 +526,7 @@ const POST_META: PostMeta[] = [
   { href: "/blog/wire-scrap-recycling-guide/", datePublished: "2026-07-15", beginner: false, popular: false },
   { href: "/blog/working-status-and-electronics-value/", datePublished: "2026-07-15", beginner: false, popular: false },
   { href: "/blog/working-vs-non-working-electronics/", datePublished: "2026-07-15", beginner: false, popular: false },
+  { href: "/blog/ultimate-guide-e-waste-recycling-kochi/", datePublished: "2026-07-18", beginner: true, popular: false },
 ];
 
 export interface LinkedArticle {

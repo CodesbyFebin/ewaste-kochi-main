@@ -87,6 +87,7 @@ export const BLOG_CLUSTERS: BlogCluster[] = [
       { title: "Safe Electronics Disposal for Apartments and Flats in Kochi", href: "/blog/electronics-disposal-apartments-kochi/", excerpt: "How apartment residents in Kochi can safely dispose of old electronics — doorstep pickup, what to prepare, battery handling, and how to coordinate building access." },
       { title: "Reuse, Resale or Recycling: Which Option Fits Your Device?", href: "/blog/reuse-resale-or-recycling-old-electronics/", excerpt: "How to decide between reusing, reselling or recycling old electronics in Kochi — a practical decision guide for households and offices based on device condition and value." },
       { title: "How to Recycle Old Electronics Without Losing Data | Kochi", href: "/blog/recycle-electronics-without-losing-data/", excerpt: "How to protect your personal and business data when recycling old electronics in Kochi — what to back up, how wiping works, and when to request verified data destruction." },
+      { title: "Ultimate Guide to E-Waste Recycling in Kochi | Ewaste Kochi", href: "/blog/ultimate-guide-e-waste-recycling-kochi/", excerpt: "Complete Kochi guide to e-waste recycling: what counts as e-waste, how recycling works, pickup preparation, data handling, battery safety and business planning." },
     ],
     plannedPosts: [
       "What Is E-Waste Recycling?",
