@@ -14,6 +14,12 @@ export const BUSINESS = {
     postalCode: "682301",
     addressCountry: "IN",
   },
+  // From the verified Google Business Profile pin (maps.app.goo.gl/WvVq5q78v8LKrMDH7),
+  // cross-checked against the address above — both place this in Thrippunithura.
+  geo: {
+    latitude: 9.9453044,
+    longitude: 76.3501359,
+  },
   hours: "Mo-Sa 09:00-18:00",
   hoursDisplay: "Mon–Sat, 9:00 AM – 6:00 PM",
   // Do not encode certification or authorization status as structured data until

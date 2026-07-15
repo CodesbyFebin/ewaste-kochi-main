@@ -723,3 +723,26 @@ All checks passed.
 - Failures: 0
 
 All checks passed.
+
+## Validation run 2026-07-15T14:20:18.034Z
+
+- Routes checked: 355
+- Checks passed: 1578
+- Failures: 6
+
+| Path | Check | Detail |
+| --- | --- | --- |
+| / | schema-type-not-allowed | Top-level schema type is not in the OLD-P0B allowlist: Organization, LocalBusiness |
+| / | schema-denied-type | Forbidden schema type emitted: LocalBusiness |
+| / | schema-denied-property | Forbidden schema property emitted: geo |
+| / | schema-denied-type | Forbidden schema type emitted: GeoCoordinates |
+| / | schema-denied-property | Forbidden schema property emitted: latitude |
+| / | schema-denied-property | Forbidden schema property emitted: longitude |
+
+## Validation run 2026-07-15T14:21:13.063Z
+
+- Routes checked: 355
+- Checks passed: 1578
+- Failures: 0
+
+All checks passed.

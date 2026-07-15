@@ -1,5 +1,6 @@
 const ALLOWED_TOP_LEVEL_TYPES = new Set([
   "Organization",
+  "LocalBusiness",
   "WebSite",
   "WebPage",
   "Service",
@@ -9,12 +10,13 @@ const ALLOWED_TOP_LEVEL_TYPES = new Set([
   "Article",
 ]);
 
+// GeoCoordinates/geo/latitude/longitude were denied until a verified pin
+// (matching the existing BUSINESS.address) was available — see
+// src/pages/index.astro's Organization block for the one place this is used.
 const DENIED_TYPES = new Set([
   "AggregateRating",
   "Review",
-  "GeoCoordinates",
   "QAPage",
-  "LocalBusiness",
   "HowTo",
   "HowToStep",
   "Certification",
@@ -29,10 +31,6 @@ const DENIED_KEYS = new Set([
   "reviewCount",
   "bestRating",
   "worstRating",
-  "geo",
-  "hasMap",
-  "latitude",
-  "longitude",
   "award",
   "awards",
   "certification",

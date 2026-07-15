@@ -17,7 +17,7 @@ const quoteMessage =
 const jsonLd = [
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": ["Organization", "LocalBusiness"],
     "@id": `${SITE_URL}/#organization`,
     name: BUSINESS.legalName,
     url: SITE_URL,
@@ -31,6 +31,12 @@ const jsonLd = [
       postalCode: BUSINESS.address.postalCode,
       addressCountry: BUSINESS.address.addressCountry,
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: BUSINESS.geo.latitude,
+      longitude: BUSINESS.geo.longitude,
+    },
+    openingHours: BUSINESS.hours,
   },
   {
     "@context": "https://schema.org",
