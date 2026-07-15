@@ -612,9 +612,9 @@ export const ROUTES: RouteEntry[] = [
     path: "/blog/where-to-recycle-old-electronics-kochi/",
     changefreq: "monthly",
     priority: 0.6,
-    title: "Where to Recycle Old Electronics in Kochi | Pickup, Reuse & Scrap Quote Guide",
+    title: "Where to Recycle Old Electronics in Kochi | Complete Pickup, Reuse & Scrap Guide",
     description:
-      "Where to recycle old electronics in Kochi — doorstep pickup, drop-off options, resale, and scrap quotes compared, with what to prepare before collection.",
+      "Complete guide to where to recycle old electronics in Kochi — doorstep pickup, resale checks, battery-safe handling, data prep and what to send before collection.",
     type: "blog",
     sitemapGroup: "blog",
     lang: "en-IN",

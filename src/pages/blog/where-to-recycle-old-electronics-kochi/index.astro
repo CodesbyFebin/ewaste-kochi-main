@@ -6,11 +6,11 @@ import Faq from "../../../components/Faq.astro";
 import RelatedContent from "../../../components/RelatedContent.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
 
-const title = "Where to Recycle Old Electronics in Kochi | Pickup, Reuse & Scrap Quote Guide";
+const title = "Where to Recycle Old Electronics in Kochi | Complete Pickup, Reuse & Scrap Guide";
 const description =
-  "Where to recycle old electronics in Kochi — doorstep pickup, drop-off options, resale, and scrap quotes compared, with what to prepare before collection.";
+  "Complete guide to where to recycle old electronics in Kochi — doorstep pickup, resale checks, battery-safe handling, data prep and what to send before collection.";
 const datePublished = "2026-07-08";
-const dateModified = "2026-07-08";
+const dateModified = "2026-07-18";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
@@ -73,6 +73,14 @@ const faqItems = [
     q: "What should I do before booking a pickup?",
     a: "List out what you have, take a few photos, and note your area. That's usually enough for the team to confirm feasibility and next steps quickly.",
   },
+  {
+    q: "Can offices and shops recycle old electronics in Kochi?",
+    a: "Yes. Offices, shops and small businesses can request pickup for computers, laptops, printers, routers, UPS units, cables, batteries and mixed IT scrap. Larger jobs should share a rough asset list first.",
+  },
+  {
+    q: "What photos should I send for faster confirmation?",
+    a: "Send a group photo of all items, close photos of labels or model numbers where visible, and separate photos for batteries, cracked screens, bulky items or anything that may contain data.",
+  },
 ];
 ---
 
@@ -107,6 +115,28 @@ const faqItems = [
     <li>Final feasibility and quote always depend on inspection, not a fixed rate.</li>
   </ul>
 
+  <section class="guide-snapshot" aria-labelledby="snapshot-heading">
+    <h2 id="snapshot-heading">Best recycling route by item type</h2>
+    <div class="snapshot-grid">
+      <div>
+        <h3>Laptops and desktops</h3>
+        <p>Check resale value first, then wipe data before pickup or ask about data destruction support.</p>
+      </div>
+      <div>
+        <h3>Batteries and UPS units</h3>
+        <p>Keep them separate from general electronics and share photos, especially if swollen, leaking or damaged.</p>
+      </div>
+      <div>
+        <h3>Phones and tablets</h3>
+        <p>Back up files, remove accounts and factory reset before handover whenever possible.</p>
+      </div>
+      <div>
+        <h3>Printers and accessories</h3>
+        <p>Include them in the same pickup list with cables, adapters, routers and other small peripherals.</p>
+      </div>
+    </div>
+  </section>
+
   <section>
     <h2>What actually counts as e-waste</h2>
     <p>
@@ -137,6 +167,27 @@ const faqItems = [
       dumped somewhere that isn't equipped for it. That's a real risk for
       whoever handles it, and it's avoidable with a proper pickup instead of
       the regular trash.
+    </p>
+  </section>
+
+  <section>
+    <h2>Before you search for a drop-off center</h2>
+    <p>
+      Searching for an electronics drop-off point sounds convenient, but it
+      often creates more work than it solves. You still have to pack the
+      items, transport bulky devices, separate batteries, and decide what to
+      do with anything that contains personal data. For most Kochi homes and
+      offices, a pickup-first approach is cleaner: you describe the items
+      once, get confirmation on feasibility, and avoid carrying old equipment
+      across town without knowing whether it can actually be accepted.
+    </p>
+    <p>
+      A drop-off may still make sense if you have a very small item and a
+      confirmed receiving point. But for mixed electronics, offices,
+      apartment cleanouts, batteries, printers, monitors, UPS units or
+      anything heavy, confirm pickup first. It reduces uncertainty and gives
+      the recycler a chance to flag data, battery or handling concerns before
+      the item leaves your control.
     </p>
   </section>
 
@@ -215,6 +266,26 @@ const faqItems = [
   </section>
 
   <section>
+    <h2>What to photograph before you message</h2>
+    <p>
+      Clear photos make pickup confirmation faster because they reduce
+      guessing. Take one wide photo of everything together so the team can
+      estimate quantity. Then take closer photos of high-risk or high-value
+      items: laptops, desktops, hard drives, batteries, screens, UPS units,
+      printers and anything physically damaged. If a model label is visible,
+      include it. If a battery is swollen or leaking, do not press or pack it
+      tightly — photograph it separately and mention the condition plainly.
+    </p>
+    <p>
+      For offices, add context that a photo cannot show: number of floors,
+      lift access, parking or loading restrictions, whether devices are in
+      use, and whether an asset list or data destruction record is needed.
+      That information helps route the enquiry as a simple pickup, a resale
+      quote, or an ITAD-style collection with more structured handling.
+    </p>
+  </section>
+
+  <section>
     <h2>What happens after collection</h2>
     <p>
       Once your items are picked up, they're sorted by type. Devices with
@@ -224,6 +295,26 @@ const faqItems = [
       resale rather than straight recycling — that decision is made on
       inspection, not guessed from a text description, so don't be surprised
       if a device you assumed was scrap gets flagged as sellable instead.
+    </p>
+  </section>
+
+  <section>
+    <h2>Home, apartment and office recycling are slightly different</h2>
+    <p>
+      A home pickup is usually simple: collect the items in one place,
+      separate batteries, wipe devices and share photos. Apartment pickups
+      need a little more detail: building name, floor, lift availability,
+      security instructions and whether parking is possible. A small office
+      or shop may need an item list with rough quantities, because ten
+      desktops, twenty monitors and several UPS units require different
+      planning than a single household laptop.
+    </p>
+    <p>
+      The service route can also differ. A family cleanout may go mainly to
+      recycling with one or two resale checks. A business collection may need
+      data handling, asset separation, documentation support or a scheduled
+      bulk pickup. Naming the setting clearly in your first WhatsApp message
+      helps avoid back-and-forth and makes the handover smoother.
     </p>
   </section>
 
@@ -266,6 +357,27 @@ const faqItems = [
   </section>
 
   <section>
+    <h2>Data safety before recycling old electronics</h2>
+    <p>
+      Before handing over a laptop, desktop, phone, tablet, hard drive, SSD
+      or server, assume it contains data until you prove otherwise. Back up
+      anything you want to keep, sign out of accounts, remove memory cards
+      and SIM cards, and run a factory reset or data wipe where you can. For
+      businesses, a casual reset may not be enough; ask about the appropriate
+      data destruction route before pickup if the devices held customer,
+      staff, finance, HR or operational records.
+    </p>
+    <p>
+      Data destruction does not need to be confusing, but it does need to be
+      planned before collection. Some devices can be wiped, while drives that
+      are damaged, obsolete or high-risk may need physical destruction. If
+      you are unsure which route applies, say so when you send the item list.
+      The important point is simple: do not treat data-bearing electronics as
+      ordinary scrap.
+    </p>
+  </section>
+
+  <section>
     <h2>Areas we can pick up from</h2>
     <p>
       {BUSINESS.legalName} primarily supports Kochi, Ernakulam, Kakkanad,
@@ -273,6 +385,14 @@ const faqItems = [
       areas. For other Kerala districts, contact us to check pickup
       feasibility before assuming coverage.
     </p>
+    <div class="local-links" aria-label="Popular pickup areas">
+      <a href="/locations/kakkanad/">Kakkanad</a>
+      <a href="/locations/kalamassery/">Kalamassery</a>
+      <a href="/locations/edappally/">Edappally</a>
+      <a href="/locations/aluva/">Aluva</a>
+      <a href="/locations/ernakulam-south/">Ernakulam South</a>
+      <a href="/locations/thrippunithura/">Thrippunithura</a>
+    </div>
   </section>
 
   <div class="disclaimer-box">
@@ -292,11 +412,14 @@ const faqItems = [
       <a href="/sell-electronics/">Sell Electronics</a>
       <a href="/battery-recycling/">Battery Recycling</a>
       <a href="/data-destruction/">Data Destruction</a>
+      <a href="/services/electronics-recycling-near-me/">Electronics Recycling Near Me</a>
     </div>
     <p class="related-posts">
       Related guides: <a href="/blog/what-is-ewaste/">What Is E-Waste?</a>,
       <a href="/blog/e-waste-examples/">E-Waste Examples</a>,
-      <a href="/blog/how-to-book-ewaste-pickup-kochi/">How to Book an E-Waste Pickup</a>.
+      <a href="/blog/how-to-book-ewaste-pickup-kochi/">How to Book an E-Waste Pickup</a>,
+      <a href="/blog/how-ewaste-recycling-works/">How E-Waste Recycling Works</a>,
+      <a href="/blog/how-to-prepare-electronics-for-recycling/">Prepare Electronics Before Recycling</a>.
     </p>
   </section>
 
@@ -343,6 +466,29 @@ const faqItems = [
     margin: 1.5rem 0;
     padding-left: 1.25rem;
   }
+  .guide-snapshot {
+    padding: 1.15rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    margin: 1.75rem 0;
+  }
+  .guide-snapshot h2 { margin-top: 0; }
+  .snapshot-grid {
+    display: grid;
+    gap: 0.85rem;
+  }
+  .snapshot-grid div {
+    padding: 0.9rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-bg);
+  }
+  .snapshot-grid h3 {
+    margin: 0 0 0.35rem;
+    font-size: 1rem;
+  }
+  .snapshot-grid p { margin: 0; color: var(--color-muted); }
   .steps-list {
     display: flex;
     flex-direction: column;
@@ -371,6 +517,24 @@ const faqItems = [
   .disclaimer-box p { margin: 0; }
   .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
   .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .local-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 0.85rem;
+  }
+  .local-links a {
+    display: inline-flex;
+    min-height: 38px;
+    align-items: center;
+    padding: 0.4rem 0.7rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.45rem;
+    color: var(--color-primary);
+    font-weight: 800;
+    text-decoration: none;
+    background: var(--color-surface);
+  }
   .related-posts { margin-top: 0.75rem; font-size: 0.92rem; color: var(--color-muted); }
   .final-cta {
     padding: 1.5rem 1.25rem;
@@ -383,4 +547,7 @@ const faqItems = [
   .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
   .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
   .updated { font-size: 0.8rem; color: var(--color-muted); }
+  @media (min-width: 760px) {
+    .snapshot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
 </style>

@@ -49,7 +49,7 @@ export const BLOG_CLUSTERS: BlogCluster[] = [
       { label: "Electronics Recycling Near Me", href: "/services/electronics-recycling-near-me/" },
     ],
     existingPosts: [
-      { title: "Where to Recycle Old Electronics in Kochi | Pickup, Reuse & Scrap Quote Guide", href: "/blog/where-to-recycle-old-electronics-kochi/", excerpt: "Where to recycle old electronics in Kochi — doorstep pickup, drop-off options, resale, and scrap quotes compared, with what to prepare before collection." },
+      { title: "Where to Recycle Old Electronics in Kochi | Complete Pickup, Reuse & Scrap Guide", href: "/blog/where-to-recycle-old-electronics-kochi/", excerpt: "Complete guide to recycling old electronics in Kochi — doorstep pickup, resale checks, battery-safe handling, data prep and what to send before collection." },
       { title: "What Is E-Waste? A Beginner's Guide for Kochi Households & Offices", href: "/blog/what-is-ewaste/", excerpt: "What e-waste actually means, common examples, why it matters, and what to do with old electronics in Kochi instead of throwing them in the regular bin." },
       { title: "E-Waste Examples: Common Electronic Items You Should Recycle", href: "/blog/e-waste-examples/", excerpt: "A practical list of common e-waste items — computers, phones, batteries, office electronics, cables, and more — and which ones need extra care before recycling." },
       { title: "How E-Waste Recycling Works Step by Step | Kochi Guide", href: "/blog/how-ewaste-recycling-works/", excerpt: "What actually happens when you hand over old electronics for recycling in Kochi — from booking a pickup to collection, sorting, data handling and material recovery." },
