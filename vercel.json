@@ -2257,6 +2257,86 @@
       "source": "/nist-data-destruction-kerala/",
       "destination": "/data-destruction/",
       "permanent": true
+    },
+    {
+      "source": "/buyback/laptops/sell-hp-elitebook-904-kochi.html",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/buyback/laptops/sell-hp-elitebook-904-kochi.html/",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/buyback/laptops/sell-hp-elitebook-932-kochi.html",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/buyback/laptops/sell-hp-elitebook-932-kochi.html/",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/buyback/laptops/sell-hp-elitebook-939-kochi.html",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/buyback/laptops/sell-hp-elitebook-939-kochi.html/",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/buyback/laptops/sell-asus-rog-zephyrus-g110-kochi.html",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/buyback/laptops/sell-asus-rog-zephyrus-g110-kochi.html/",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/buyback/laptops/sell-hp-elitebook-879-kochi.html",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/buyback/laptops/sell-hp-elitebook-879-kochi.html/",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/buyback/laptops/sell-hp-elitebook-882-kochi.html",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/buyback/laptops/sell-hp-elitebook-882-kochi.html/",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/buyback/laptops/sell-thinkpad-t438s-kochi.html",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/ml/buyback/laptops/sell-thinkpad-t438s-kochi.html/",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/ewaste",
+      "destination": "/e-waste/",
+      "permanent": true
+    },
+    {
+      "source": "/ewaste/",
+      "destination": "/e-waste/",
+      "permanent": true
     }
   ]
 }

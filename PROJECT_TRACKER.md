@@ -500,6 +500,18 @@ Verified reproducibility for real, not just via `git status`: a full `git clone`
 
 **Production: still not deployed.** The original routes.ts blocker is resolved and proven reproducible, but the 2 findings above surfaced mid-gate and weren't part of the original scope — recommending an explicit decision on both before `PROD-PATCH-361` runs rather than calling this fully green. Full detail: `reports/pre-prod-release-integrity-gate-report.md`, `reports/pre-prod-route-parity-report.md`.
 
+## Pre-Prod Blocker Patch (2026-07-15)
+
+Fixed both findings from the integrity gate, per explicit user decision.
+
+**Buyback `.html` URLs**: root cause wasn't the trailing-slash config, it was a filter gap — `gscIndexedGeneratedPages.ts`'s `buildPage()` excluded rows with `upgrade_action: "redirect_301"` but not `"leave_404"`, so 7 buyback rows got built anyway despite the source data explicitly saying `build_required: false` / "do not rebuild model-specific quote spam" (0 traffic on 6 of 7, 12 impressions/0 clicks on the 7th). Fixed narrowly, inside the two buyback-specific branches only — 207 rows across the dataset carry `upgrade_action: "leave_404"`, and a blanket fix would have silently deleted ~200 unrelated, intentionally-live location-service pages. Caught that before running the build and reverted the first (broad) version. Added 14 redirects (both slash variants × 7 URLs) to `/sell-electronics/`, matching the source data's own `target_url`.
+
+**`/e-waste/` vs `/ewaste/`**: `/e-waste/` confirmed as canonical per user decision. Removed `/ewaste/`'s `routes.ts` entry and page file, updated the one internal link (`Footer.astro`) and `llms.txt`, added a 301 redirect.
+
+Verified: build 363 → 355 pages (−7 buyback, −1 `/ewaste/`, nothing else). Route parity re-run: `missingMetadataRoutes` and `metadataRoutesWithoutPages` both went from 7 → 0. Full validation suite clean (1,578/1,578). Redeployed staging (`dpl_AcmLiUQ4whLWDX7XnaKTvixvhmFu`). Redirect mechanism confirmed live on production using a structurally identical existing rule (staging's own SSO protection blocks direct redirect testing, same limitation as every staging deploy this session).
+
+**`PROD-PATCH-361` approved.** Full detail: `reports/pre-prod-blocker-patch-report.md`.
+
 ## Known Risks
 
 * **`/recycling/`'s ISO/Pollution Control Board wording — RESOLVED 2026-07-14, pre-Phase 2L.** User chose to soften rather than verify (no certificate in hand). Replaced "Our recycling processes follow ISO 14001:2015-aligned environmental management practices, and we operate under Pollution Control Board authorization for e-waste handling" with "Our recycling process follows documented environmental handling practices, with pickup, sorting and documentation support depending on the service type. If you need compliance documentation for business or ITAD work, contact us before pickup so the required handling process can be confirmed." `npm run check`/`build`/`validate` all clean (60 routes, 526/526), word count unaffected (3,030, still clears the 3,000 pillar target). Commit `a274774`.

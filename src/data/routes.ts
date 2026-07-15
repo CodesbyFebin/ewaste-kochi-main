@@ -860,17 +860,6 @@ export const ROUTES: RouteEntry[] = [
     lang: "en-IN",
   },
   {
-    path: "/ewaste/",
-    changefreq: "monthly",
-    priority: 0.8,
-    title: "What Is E-Waste? Kochi Guide to Electronics, Batteries & IT Scrap",
-    description:
-      "Educational guide to e-waste in Kochi: what counts as electronic waste, how to prepare items, when recycling, pickup, battery handling or data destruction may be needed.",
-    type: "core",
-    sitemapGroup: "core",
-    lang: "en-IN",
-  },
-  {
     path: "/e-waste-rules-2022-india/",
     changefreq: "monthly",
     priority: 0.6,

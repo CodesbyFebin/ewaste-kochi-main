@@ -126,12 +126,6 @@ path,in_metadata,in_built,in_sitemap,in_content_index,in_ai_sitemap,in_llms,is_r
 /blog/why-data-destruction-important-businesses/,true,true,true,true,true,false,false
 /blog/why-electronics-should-not-go-in-household-waste/,true,true,true,true,true,true,false
 /blog/zero-landfill-ewaste-checklist-kochi/,true,true,true,true,true,false,false
-/buyback/laptops/sell-hp-elitebook-904-kochi.html,true,false,true,true,true,false,false
-/buyback/laptops/sell-hp-elitebook-904-kochi.html/,false,true,false,false,false,false,false
-/buyback/laptops/sell-hp-elitebook-932-kochi.html,true,false,true,true,true,false,false
-/buyback/laptops/sell-hp-elitebook-932-kochi.html/,false,true,false,false,false,false,false
-/buyback/laptops/sell-hp-elitebook-939-kochi.html,true,false,true,true,true,false,false
-/buyback/laptops/sell-hp-elitebook-939-kochi.html/,false,true,false,false,false,false,false
 /certifications/,true,true,true,true,true,true,false
 /computer-scrap-buyers-kochi/,true,true,true,true,true,true,false
 /contact/,true,true,true,true,true,true,false
@@ -139,8 +133,7 @@ path,in_metadata,in_built,in_sitemap,in_content_index,in_ai_sitemap,in_llms,is_r
 /data-destruction/,true,true,true,true,true,true,false
 /e-waste-rules-2022-india/,true,true,true,true,true,true,false
 /e-waste-scrap-prices-kochi/,true,true,true,true,true,true,false
-/e-waste/,true,true,true,true,true,false,false
-/ewaste/,true,true,true,true,true,true,false
+/e-waste/,true,true,true,true,true,true,false
 /faq/,true,true,true,true,true,true,false
 /hard-drive-shredding/,true,true,true,true,true,true,false
 /itad/,true,true,true,true,true,true,false
@@ -331,14 +324,6 @@ path,in_metadata,in_built,in_sitemap,in_content_index,in_ai_sitemap,in_llms,is_r
 /marketplace/,true,true,true,true,true,true,false
 /ml/,true,true,true,true,true,true,false
 /ml/battery-recycling/,true,true,true,true,true,true,false
-/ml/buyback/laptops/sell-asus-rog-zephyrus-g110-kochi.html,true,false,true,true,true,false,false
-/ml/buyback/laptops/sell-asus-rog-zephyrus-g110-kochi.html/,false,true,false,false,false,false,false
-/ml/buyback/laptops/sell-hp-elitebook-879-kochi.html,true,false,true,true,true,false,false
-/ml/buyback/laptops/sell-hp-elitebook-879-kochi.html/,false,true,false,false,false,false,false
-/ml/buyback/laptops/sell-hp-elitebook-882-kochi.html,true,false,true,true,true,false,false
-/ml/buyback/laptops/sell-hp-elitebook-882-kochi.html/,false,true,false,false,false,false,false
-/ml/buyback/laptops/sell-thinkpad-t438s-kochi.html,true,false,true,true,true,false,false
-/ml/buyback/laptops/sell-thinkpad-t438s-kochi.html/,false,true,false,false,false,false,false
 /ml/contact/,true,true,true,true,true,true,false
 /ml/data-destruction/,true,true,true,true,true,true,false
 /ml/pickup/,true,true,true,true,true,true,false
