@@ -1,0 +1,139 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../../components/CtaBar.astro";
+import Faq from "../../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../../data/site";
+
+const title = "ITAD for Kottayam Publishing Houses & Institutions | Asset Disposition";
+const description =
+  "IT asset disposition for Kottayam publishing houses, offices and institutions — structured collection, asset lists and data destruction, feasibility checked in advance.";
+const lastUpdated = "2026-07-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Locations", path: "/locations/" },
+  { name: "Kottayam", path: "/locations/kottayam/" },
+  { name: "ITAD", path: "/locations/kottayam/itad/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "IT asset disposition feasibility check",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: { "@type": "Place", name: "Kottayam, Kerala" },
+    url: `${SITE_URL}/locations/kottayam/itad/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/locations/kottayam/itad/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Kottayam is outside your standard pickup zone — how does ITAD work there?",
+    a: "The same way general Kottayam pickup does: we check feasibility case by case. ITAD volumes — a publishing house decommissioning a batch of office computers, for example — are exactly the kind of bulk, business enquiry that's more often workable than a single device.",
+  },
+  {
+    q: "Why would a publishing or printing business need ITAD specifically, not just a pickup?",
+    a: "Publishing houses often retain layout, editorial, and business records on office computers for years. ITAD adds an itemized asset record and a data destruction step to the collection, which a standard pickup doesn't include.",
+  },
+  {
+    q: "Do you work with institutions — colleges, schools, offices — not just private businesses?",
+    a: "Yes. Institutional IT decommissioning, such as a lab or office computer refresh, follows the same ITAD process — share an asset list and we'll confirm feasibility.",
+  },
+  {
+    q: "Is there an extra cost for ITAD pickup from Kottayam given the distance?",
+    a: "If a collection is arranged, any additional logistics cost for the distance is discussed and agreed upfront, the same as for any Kottayam pickup — never assumed or added afterward.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/locations/kottayam/itad/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>ITAD for Kottayam Publishing Houses & Institutions</h1>
+  <p class="lede">
+    Kottayam is known for its publishing and printing industry, and
+    offices in that sector — along with schools, colleges and other
+    institutions in the district — periodically retire batches of office
+    computers rather than one device at a time. This page covers that
+    structured, asset-tracked side specifically. For general Kottayam
+    pickup feasibility, see the
+    <a href="/locations/kottayam/">Kottayam location page</a>; for the
+    full service description, see <a href="/itad/">IT asset
+    disposition</a>.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to check ITAD/asset disposition feasibility for our Kottayam office." />
+
+  <section>
+    <h2>Why this fits Kottayam's business mix</h2>
+    <p>
+      A single old laptop from Kottayam usually doesn't justify a dedicated
+      trip over this distance — the same logic that applies to general
+      pickup. A publishing house's office refresh, a school's lab
+      decommissioning, or an institution's IT upgrade is a different
+      calculation: real volume changes what's feasible, and ITAD's
+      itemized tracking is built for exactly that kind of batch.
+    </p>
+  </section>
+
+  <section>
+    <h2>What's typically included</h2>
+    <ul>
+      <li>Office desktops, laptops and monitors from a refresh</li>
+      <li>An asset list matched against what's physically collected</li>
+      <li>Data destruction for any device holding editorial, administrative or business records</li>
+      <li>Documentation support, depending on the service type and agreed handling process</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Getting a feasibility answer</h2>
+    <p>
+      Message us with a rough asset list, item condition, and your exact
+      Kottayam location. We'll give an honest answer on feasibility rather
+      than a guess — the same approach used for all Kottayam enquiries.
+    </p>
+  </section>
+
+  <section>
+    <h2>Not a full ITAD job?</h2>
+    <p>
+      For a smaller, occasional pickup rather than a tracked
+      decommissioning, see the general
+      <a href="/locations/kottayam/">Kottayam location page</a> — mention
+      it's a business job when you enquire.
+    </p>
+  </section>
+
+  <section>
+    <h2>Other areas</h2>
+    <p>
+      See the full <a href="/locations/">locations directory</a> for our
+      core Kochi-metro service areas and other Kerala districts we check
+      feasibility for.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} heading="Kottayam ITAD FAQs" />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

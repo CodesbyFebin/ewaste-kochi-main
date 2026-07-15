@@ -1,0 +1,139 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../../components/CtaBar.astro";
+import Faq from "../../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../../data/site";
+
+const title = "ITAD Services for Edappally Offices | Asset Disposition";
+const description =
+  "IT asset disposition for Edappally offices and commercial establishments — structured collection, asset lists, data destruction and documentation support.";
+const lastUpdated = "2026-07-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Locations", path: "/locations/" },
+  { name: "Edappally", path: "/locations/edappally/" },
+  { name: "ITAD", path: "/locations/edappally/itad/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "IT asset disposition",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: { "@type": "Place", name: "Edappally, Kochi, Kerala" },
+    url: `${SITE_URL}/locations/edappally/itad/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/locations/edappally/itad/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "How is ITAD different from the general pickup covered on the Edappally location page?",
+    a: "A standard pickup collects and processes hardware; ITAD adds an itemized asset record and a structured data destruction step, aimed at offices that need a documented trail rather than just physical removal.",
+  },
+  {
+    q: "Does Edappally get enough office-scale enquiries to justify this?",
+    a: "Edappally is a dense commercial corridor with a mix of retail, offices and business establishments alongside residential areas, so office-scale hardware refreshes come up alongside household pickups.",
+  },
+  {
+    q: "Can this cover a full office relocation?",
+    a: "Yes — office moves and full decommissioning are common ITAD scenarios. Share an asset list and timeline and the collection is planned around it.",
+  },
+  {
+    q: "Is data destruction included, or booked separately?",
+    a: "Any data-bearing device collected as part of an ITAD engagement is flagged for data destruction in the same visit — see our data destruction service for the specific methods available.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/locations/edappally/itad/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>ITAD Services for Edappally Offices</h1>
+  <p class="lede">
+    Edappally is one of Kochi's busiest commercial corridors — a mix of
+    retail, offices and business establishments alongside dense
+    residential areas. This page covers the structured, asset-tracked
+    side of office hardware retirement specifically. For general
+    household and area pickup context, see the
+    <a href="/locations/edappally/">Edappally location page</a>; for the
+    full service description, see <a href="/itad/">IT asset
+    disposition</a>.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to arrange ITAD/asset disposition for our Edappally office." />
+
+  <section>
+    <h2>Why ITAD fits this corridor</h2>
+    <p>
+      Offices and commercial establishments along the Edappally corridor
+      generate hardware turnover in batches — a refresh across a floor, a
+      relocation, or a full office wind-down — rather than one device at a
+      time. ITAD's itemized tracking is built for exactly that pattern,
+      distinct from the household and small-business pickups the general
+      location page covers.
+    </p>
+  </section>
+
+  <section>
+    <h2>What's typically included</h2>
+    <ul>
+      <li>Laptops, desktops and monitors from a hardware refresh</li>
+      <li>Networking gear and small server setups</li>
+      <li>An asset list matched against what's physically collected</li>
+      <li>Data destruction for any device with storage</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Documentation for internal records</h2>
+    <p>
+      For businesses that need to close out an asset in an internal
+      register, documentation support may be available depending on the
+      service type and agreed handling process. Confirm what's needed via
+      our <a href="/contact/">contact page</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Not a full ITAD job?</h2>
+    <p>
+      For a smaller, occasional office pickup, see the general
+      <a href="/locations/edappally/">Edappally location page</a> —
+      mention it's a business job when you book.
+    </p>
+  </section>
+
+  <section>
+    <h2>Other areas</h2>
+    <p>
+      See the <a href="/locations/edappally/">Edappally location page</a>
+      for general pickup context, or the full
+      <a href="/locations/">locations directory</a> for everywhere else we
+      serve.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} heading="Edappally ITAD FAQs" />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

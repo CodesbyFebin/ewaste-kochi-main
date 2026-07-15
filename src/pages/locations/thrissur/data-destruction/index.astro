@@ -1,0 +1,138 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../../components/CtaBar.astro";
+import Faq from "../../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../../data/site";
+
+const title = "Data Destruction for Thrissur Jewellery & Trade Businesses";
+const description =
+  "Secure data destruction for Thrissur gold and jewellery trade offices — POS systems, security DVRs and business records, feasibility checked in advance.";
+const lastUpdated = "2026-07-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Locations", path: "/locations/" },
+  { name: "Thrissur", path: "/locations/thrissur/" },
+  { name: "Data Destruction", path: "/locations/thrissur/data-destruction/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Data destruction feasibility check",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: { "@type": "Place", name: "Thrissur, Kerala" },
+    url: `${SITE_URL}/locations/thrissur/data-destruction/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/locations/thrissur/data-destruction/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Why would a jewellery business need data destruction specifically?",
+    a: "Thrissur's gold and jewellery trade runs its own POS systems, security DVRs, and billing software with retained transaction and customer records. When that equipment is retired, deleting files or reformatting isn't the same as verified destruction.",
+  },
+  {
+    q: "Do you handle DVR and CCTV storage, not just office computers?",
+    a: "Yes — security system storage is treated the same as any other data-bearing device. Mention the device type when you enquire so the right method is planned.",
+  },
+  {
+    q: "Thrissur is outside your standard pickup zone — how does this work?",
+    a: "The same feasibility-check process applies as general Thrissur pickup. A business volume with a genuine data-security need is exactly the kind of enquiry worth messaging us about directly.",
+  },
+  {
+    q: "What methods are available?",
+    a: "Overwriting, degaussing and physical shredding, depending on the device — see our data destruction page for the full breakdown of which method suits which device.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/locations/thrissur/data-destruction/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Data Destruction for Thrissur Jewellery & Trade Businesses</h1>
+  <p class="lede">
+    Thrissur is a major centre for the gold and jewellery trade — a
+    business sector with its own IT and security equipment turnover, from
+    POS systems to CCTV storage. This page covers the data-security side
+    of retiring that equipment specifically. For general Thrissur pickup
+    feasibility, see the <a href="/locations/thrissur/">Thrissur location
+    page</a>; for the full service breakdown, see
+    <a href="/data-destruction/">data destruction</a>.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I need data destruction for business equipment in Thrissur — can you check feasibility?" />
+
+  <section>
+    <h2>Why this matters for this sector</h2>
+    <p>
+      Jewellery and trade businesses in Thrissur often run POS systems,
+      billing software, and security DVRs that retain customer and
+      transaction records for years. When that hardware is replaced or
+      retired, a verified destruction step closes a real risk that simple
+      deletion doesn't.
+    </p>
+  </section>
+
+  <section>
+    <h2>What's typically involved</h2>
+    <ul>
+      <li>POS terminals and billing computers</li>
+      <li>Security DVR and CCTV storage units</li>
+      <li>Office laptops and desktops with business records</li>
+      <li>Overwriting, degaussing or shredding depending on the device</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Feasibility still applies</h2>
+    <p>
+      Thrissur sits outside our core Kochi-metro coverage, so pickup
+      feasibility is checked individually, the same as any Thrissur
+      enquiry. A business volume with a clear data-security need is
+      usually the kind of case worth messaging us about directly.
+    </p>
+  </section>
+
+  <section>
+    <h2>Compliance</h2>
+    <p>
+      Collection follows the same documented environmental handling
+      practices used across all our service areas. Documentation support
+      may be available depending on the service type and agreed handling
+      process — confirm via our <a href="/contact/">contact page</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Other areas</h2>
+    <p>
+      See the <a href="/locations/thrissur/">Thrissur location page</a>
+      for general pickup feasibility, or the full
+      <a href="/locations/">locations directory</a> for everywhere else we
+      serve.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} heading="Thrissur Data Destruction FAQs" />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

@@ -1,0 +1,139 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../../components/CtaBar.astro";
+import Faq from "../../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../../data/site";
+
+const title = "ITAD for Kozhikode IT & Business Offices | Asset Disposition";
+const description =
+  "IT asset disposition for Kozhikode offices, including Cyberpark tenants — structured collection, asset lists and data destruction, feasibility checked in advance.";
+const lastUpdated = "2026-07-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Locations", path: "/locations/" },
+  { name: "Kozhikode", path: "/locations/kozhikode/" },
+  { name: "ITAD", path: "/locations/kozhikode/itad/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "IT asset disposition feasibility check",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: { "@type": "Place", name: "Kozhikode, Kerala" },
+    url: `${SITE_URL}/locations/kozhikode/itad/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/locations/kozhikode/itad/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Kozhikode is outside your standard pickup zone — how does ITAD work there?",
+    a: "The same way general Kozhikode pickup does: we check feasibility case by case. A Cyberpark tenant refreshing a batch of office laptops, for example, is exactly the kind of bulk enquiry that's more often workable than a single device.",
+  },
+  {
+    q: "Do you specifically handle Cyberpark and other IT-park tenants?",
+    a: "Yes — Kozhikode's Cyberpark campus has a similar tenant profile to Kochi's IT parks, and the same ITAD process applies: an itemized asset list, structured collection, and data destruction for storage devices.",
+  },
+  {
+    q: "Can this cover a full office relocation, not just a periodic refresh?",
+    a: "Yes. Office moves and full decommissioning are common ITAD scenarios — share an asset list and timeline and the collection is planned around it.",
+  },
+  {
+    q: "Is there an extra cost for ITAD pickup from Kozhikode given the distance?",
+    a: "If a collection is arranged, any additional logistics cost for the distance is discussed and agreed upfront — never assumed or added afterward.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/locations/kozhikode/itad/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>ITAD for Kozhikode IT & Business Offices</h1>
+  <p class="lede">
+    Kozhikode (Calicut) has grown into an IT and business centre anchored
+    by the Cyberpark technology campus, alongside its established trading
+    and services economy. This page covers the structured, asset-tracked
+    side of office hardware retirement specifically. For general Kozhikode
+    pickup feasibility, see the
+    <a href="/locations/kozhikode/">Kozhikode location page</a>; for the
+    full service description, see <a href="/itad/">IT asset
+    disposition</a>.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to check ITAD/asset disposition feasibility for our Kozhikode office." />
+
+  <section>
+    <h2>Why this fits Kozhikode's business mix</h2>
+    <p>
+      A single old laptop from Kozhikode usually doesn't justify a
+      dedicated trip over this distance — the same logic that applies to
+      general pickup. A Cyberpark tenant's hardware refresh or a trading
+      office's IT upgrade is a different calculation: real batch volume
+      changes what's feasible, and ITAD's itemized tracking is built for
+      exactly that.
+    </p>
+  </section>
+
+  <section>
+    <h2>What's typically included</h2>
+    <ul>
+      <li>Office laptops, desktops and monitors from a refresh</li>
+      <li>Networking gear from an infrastructure change</li>
+      <li>An asset list matched against what's physically collected</li>
+      <li>Data destruction for any device with storage</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Getting a feasibility answer</h2>
+    <p>
+      Message us with a rough asset list, item condition, and your exact
+      Kozhikode location. We'll give an honest answer on feasibility
+      rather than a guess — the same approach used for all Kozhikode
+      enquiries.
+    </p>
+  </section>
+
+  <section>
+    <h2>Not a full ITAD job?</h2>
+    <p>
+      For a smaller, occasional pickup rather than a tracked
+      decommissioning, see the general
+      <a href="/locations/kozhikode/">Kozhikode location page</a> —
+      mention it's a business job when you enquire.
+    </p>
+  </section>
+
+  <section>
+    <h2>Other areas</h2>
+    <p>
+      See the full <a href="/locations/">locations directory</a> for our
+      core Kochi-metro service areas and other Kerala districts we check
+      feasibility for.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} heading="Kozhikode ITAD FAQs" />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

@@ -1,0 +1,127 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../../components/CtaBar.astro";
+import Faq from "../../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../../data/site";
+
+const title = "Sell Old Electronics in Aluva | Condition-Based Quotes";
+const description =
+  "Sell laptops, phones and other working electronics in Aluva. Condition-based quotes for households and businesses near the airport and industrial corridor.";
+const lastUpdated = "2026-07-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Locations", path: "/locations/" },
+  { name: "Aluva", path: "/locations/aluva/" },
+  { name: "Sell Electronics", path: "/locations/aluva/sell-electronics/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Electronics resale collection",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: { "@type": "Place", name: "Aluva, Kochi, Kerala" },
+    url: `${SITE_URL}/locations/aluva/sell-electronics/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/locations/aluva/sell-electronics/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Do you buy from businesses near the airport and industrial corridor, not just households?",
+    a: "Yes — Aluva's mix of airport-linked businesses, logistics offices and industrial units means office laptops and equipment come up alongside household devices. Mention it's a business item when you enquire.",
+  },
+  {
+    q: "What determines the quote for my device?",
+    a: "Condition, working status, age, and current demand for that device type — see our sell-electronics guide for the full condition-tier breakdown.",
+  },
+  {
+    q: "Is pickup available across all of Aluva?",
+    a: "Aluva is within our core Kochi-metro coverage, so doorstep pickup is the standard route — share your exact address and item details to confirm scheduling.",
+  },
+  {
+    q: "What if my device isn't in sellable condition?",
+    a: "It can still be collected for responsible recycling instead — see our sell-electronics page for how sell, reuse and recycle decisions are made.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/locations/aluva/sell-electronics/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Sell Old Electronics in Aluva</h1>
+  <p class="lede">
+    Aluva's mix of airport-linked businesses, logistics offices and
+    residential neighborhoods means resale enquiries here span both
+    households and small businesses. This page covers the sell/resale
+    side specifically. For general pickup context, see the
+    <a href="/locations/aluva/">Aluva location page</a>; for the full
+    quote breakdown, see <a href="/sell-electronics/">sell
+    electronics</a>.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like a quote for a device I want to sell in Aluva." />
+
+  <section>
+    <h2>What sells from this area</h2>
+    <p>
+      Laptops, phones, and office equipment from airport-corridor
+      businesses and logistics offices come up alongside household
+      devices. Working condition and a clear fault description get the
+      fastest, most accurate quote.
+    </p>
+  </section>
+
+  <section>
+    <h2>Business volumes</h2>
+    <p>
+      For an office or logistics setup clearing out several devices at
+      once, mention the approximate quantity when you enquire so it can
+      be scheduled correctly — larger lots are handled the same way but
+      with more lead time.
+    </p>
+  </section>
+
+  <section>
+    <h2>What to send</h2>
+    <ul>
+      <li>Clear photos of the device, including any visible damage</li>
+      <li>Working status and any known faults</li>
+      <li>Age and original specs if known</li>
+      <li>Your exact address in Aluva</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Other areas</h2>
+    <p>
+      See the <a href="/locations/aluva/">Aluva location page</a> for
+      general pickup context, or the full
+      <a href="/locations/">locations directory</a> for everywhere else we
+      serve.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} heading="Aluva Sell Electronics FAQs" />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

@@ -1,0 +1,138 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../../components/CtaBar.astro";
+import Faq from "../../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../../data/site";
+
+const title = "Data Destruction for Kannur Port & Cantonment Offices";
+const description =
+  "Secure data destruction for Kannur port-linked, airport-area and cantonment offices — wiping, degaussing and shredding, feasibility checked in advance.";
+const lastUpdated = "2026-07-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Locations", path: "/locations/" },
+  { name: "Kannur", path: "/locations/kannur/" },
+  { name: "Data Destruction", path: "/locations/kannur/data-destruction/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Data destruction feasibility check",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: { "@type": "Place", name: "Kannur, Kerala" },
+    url: `${SITE_URL}/locations/kannur/data-destruction/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/locations/kannur/data-destruction/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Why would Kannur offices need dedicated data destruction rather than a standard pickup?",
+    a: "Kannur's working port, growing airport, and cantonment area have brought newer business and administrative activity to the district — offices that retire equipment holding operational and administrative records, the same as any port or government-linked facility.",
+  },
+  {
+    q: "Kannur is outside your standard pickup zone — how does this work?",
+    a: "The same feasibility-check process applies as general Kannur pickup. A business or institutional volume with a genuine data-security need is worth messaging us about directly.",
+  },
+  {
+    q: "What methods are available?",
+    a: "Overwriting, degaussing and physical shredding, depending on the device — see our data destruction page for the full breakdown.",
+  },
+  {
+    q: "Do you provide documentation for compliance purposes?",
+    a: "Documentation support may be available depending on the service type and agreed handling process. Confirm what your office needs before scheduling via our contact page.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/locations/kannur/data-destruction/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Data Destruction for Kannur Port & Cantonment Offices</h1>
+  <p class="lede">
+    Kannur is a Malabar-region city known for its handloom weaving
+    tradition, a working port, and a growing airport and cantonment area
+    that has brought newer business activity to the district. This page
+    covers the data-security side of retiring office hardware there
+    specifically. For general Kannur pickup feasibility, see the
+    <a href="/locations/kannur/">Kannur location page</a>; for the full
+    service breakdown, see <a href="/data-destruction/">data
+    destruction</a>.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I need data destruction for office equipment in Kannur — can you check feasibility?" />
+
+  <section>
+    <h2>Why this matters here</h2>
+    <p>
+      Offices tied to port operations, the airport, or cantonment-area
+      administration tend to hold operational and administrative records
+      on retired laptops, desktops and servers. Deleting files or
+      reformatting a drive doesn't guarantee the data is unrecoverable —
+      proper destruction does.
+    </p>
+  </section>
+
+  <section>
+    <h2>What's typically involved</h2>
+    <ul>
+      <li>Office laptops and desktops with administrative records</li>
+      <li>Servers and storage from institutional or facility offices</li>
+      <li>Overwriting, degaussing or shredding depending on the device</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Feasibility still applies</h2>
+    <p>
+      Kannur sits outside our core Kochi-metro coverage, so pickup
+      feasibility is checked individually, the same as any Kannur
+      enquiry. Bulk or business volumes are more often workable than a
+      single device, but neither is ruled out without asking.
+    </p>
+  </section>
+
+  <section>
+    <h2>Compliance</h2>
+    <p>
+      Collection follows the same documented environmental handling
+      practices used across all our service areas. Documentation support
+      may be available depending on the service type and agreed handling
+      process — confirm via our <a href="/contact/">contact page</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Other areas</h2>
+    <p>
+      See the <a href="/locations/kannur/">Kannur location page</a> for
+      general pickup feasibility, or the full
+      <a href="/locations/">locations directory</a> for everywhere else we
+      serve.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} heading="Kannur Data Destruction FAQs" />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

@@ -1,0 +1,136 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../../components/CtaBar.astro";
+import Faq from "../../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../../data/site";
+
+const title = "Sell Old Electronics in Fort Kochi | Condition-Based Quotes";
+const description =
+  "Sell laptops, phones and other working or repairable electronics in Fort Kochi. Condition-based quotes, pickup access checked in advance for heritage-area addresses.";
+const lastUpdated = "2026-07-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Locations", path: "/locations/" },
+  { name: "Fort Kochi", path: "/locations/fort-kochi/" },
+  { name: "Sell Electronics", path: "/locations/fort-kochi/sell-electronics/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Electronics resale collection",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: { "@type": "Place", name: "Fort Kochi, Kerala" },
+    url: `${SITE_URL}/locations/fort-kochi/sell-electronics/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/locations/fort-kochi/sell-electronics/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Do you buy electronics from homestays and small businesses in Fort Kochi, not just households?",
+    a: "Yes — guesthouses, cafes, and small offices in the area often clear out old laptops, POS devices, or networking gear the same way households do. Mention it's a business item when you reach out so it's handled correctly.",
+  },
+  {
+    q: "Fort Kochi has narrow lanes and heritage-zone access rules — does that affect pickup?",
+    a: "It can, for some addresses. Share your exact location on WhatsApp when you enquire and we'll confirm access and timing before a pickup is scheduled, rather than assume every address is reachable the same way.",
+  },
+  {
+    q: "What determines the quote for my device?",
+    a: "Condition, working status, age, and current demand for that device type. Send clear photos and a description of any faults — see our sell-electronics guide for the full breakdown of what affects a quote.",
+  },
+  {
+    q: "Can I sell a non-working device too?",
+    a: "Yes, though the quote will reflect that. Non-working devices are usually routed to recycling rather than resale, and we'll be upfront about which applies before you agree to anything.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/locations/fort-kochi/sell-electronics/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Sell Old Electronics in Fort Kochi</h1>
+  <p class="lede">
+    Fort Kochi's mix of heritage homes, homestays, and small tourism-linked
+    businesses means resale enquiries here often come with an access or
+    scheduling question attached, not just a pricing one. This page covers
+    the sell/resale side specifically. For general pickup feasibility in the
+    area, see the <a href="/locations/fort-kochi/">Fort Kochi location
+    page</a>; for the full quote breakdown, see
+    <a href="/sell-electronics/">sell electronics</a>.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like a quote for an old device I want to sell in Fort Kochi." />
+
+  <section>
+    <h2>What sells well from this area</h2>
+    <p>
+      Laptops, phones, and small office equipment from guesthouses and
+      independent businesses come up regularly. Working condition and a
+      clear description of any faults get you the fastest, most accurate
+      quote — see our <a href="/sell-electronics/">sell electronics
+      page</a> for the full condition-tier breakdown.
+    </p>
+  </section>
+
+  <section>
+    <h2>Access and scheduling</h2>
+    <p>
+      Some Fort Kochi addresses — particularly in the older heritage lanes —
+      need a quick access check before a pickup slot is confirmed. This
+      isn't a blanket restriction; it's just something we confirm per
+      address rather than assume works the same as a standard street pickup.
+    </p>
+  </section>
+
+  <section>
+    <h2>What to send</h2>
+    <ul>
+      <li>Clear photos of the device, including any visible damage</li>
+      <li>Working status — does it power on, any known faults</li>
+      <li>Age and original specs if known</li>
+      <li>Your exact address or a location pin</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Not sellable? Still an option</h2>
+    <p>
+      If a device isn't in resalable condition, it can still be collected
+      for responsible <a href="/recycling/">recycling</a> instead — see our
+      <a href="/locations/fort-kochi/">Fort Kochi location page</a> for
+      general pickup feasibility.
+    </p>
+  </section>
+
+  <section>
+    <h2>Other areas</h2>
+    <p>
+      See the full <a href="/locations/">locations directory</a> for
+      everywhere else we serve.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} heading="Fort Kochi Sell Electronics FAQs" />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

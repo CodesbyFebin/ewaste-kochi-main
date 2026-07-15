@@ -1,0 +1,130 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../../components/CtaBar.astro";
+import Faq from "../../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../../data/site";
+
+const title = "Sell Old Electronics in Kollam | Condition-Based Quotes";
+const description =
+  "Sell laptops, phones and other working electronics in Kollam. Condition-based quotes and pickup feasibility checked for individual and retail-business sellers.";
+const lastUpdated = "2026-07-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Locations", path: "/locations/" },
+  { name: "Kollam", path: "/locations/kollam/" },
+  { name: "Sell Electronics", path: "/locations/kollam/sell-electronics/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Electronics resale collection feasibility check",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: { "@type": "Place", name: "Kollam, Kerala" },
+    url: `${SITE_URL}/locations/kollam/sell-electronics/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/locations/kollam/sell-electronics/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Kollam is outside your standard pickup zone — can I still sell a device from there?",
+    a: "Yes, the same feasibility-check process applies as general Kollam pickup. A single device is harder to justify a dedicated trip for; a bulk lot from a retail business is a different calculation.",
+  },
+  {
+    q: "Do you buy from shops and small retail businesses, not just individuals?",
+    a: "Yes — Kollam's coastal retail and services economy means shops occasionally clear out old billing systems, phones, or office laptops. Mention it's a business volume when you enquire.",
+  },
+  {
+    q: "What determines my quote?",
+    a: "Condition, working status, age, and current demand for that device type — see our sell-electronics guide for the full breakdown.",
+  },
+  {
+    q: "What if the device isn't in sellable condition?",
+    a: "It can still be collected for responsible recycling instead, subject to the same pickup feasibility check as any Kollam enquiry.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/locations/kollam/sell-electronics/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Sell Old Electronics in Kollam</h1>
+  <p class="lede">
+    Kollam's economy — centred on the Ashtamudi backwaters, with a
+    long-standing cashew and coir industry base alongside a growing
+    coastal retail and services sector — means resale enquiries here
+    range from individual households to small businesses clearing out
+    equipment. This page covers the sell/resale side specifically. For
+    general pickup feasibility, see the
+    <a href="/locations/kollam/">Kollam location page</a>; for the full
+    quote breakdown, see <a href="/sell-electronics/">sell
+    electronics</a>.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'm in Kollam and want a quote for a device I want to sell." />
+
+  <section>
+    <h2>What sells from this area</h2>
+    <p>
+      Laptops, phones, and small retail or office equipment come up
+      regularly from Kollam's services and retail businesses, alongside
+      household enquiries. Working condition and a clear fault
+      description get the fastest, most accurate quote.
+    </p>
+  </section>
+
+  <section>
+    <h2>Feasibility still applies</h2>
+    <p>
+      Kollam sits outside our core Kochi-metro coverage, so — as with any
+      Kollam enquiry — pickup feasibility is checked individually rather
+      than promised upfront. Bulk or business volumes are more often
+      workable than a single item, but neither is ruled out without
+      asking.
+    </p>
+  </section>
+
+  <section>
+    <h2>What to send</h2>
+    <ul>
+      <li>Clear photos of the device, including any visible damage</li>
+      <li>Working status and any known faults</li>
+      <li>Quantity, if it's a multi-device or business lot</li>
+      <li>Your exact location in Kollam</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Other areas</h2>
+    <p>
+      See the <a href="/locations/kollam/">Kollam location page</a> for
+      general pickup feasibility, or the full
+      <a href="/locations/">locations directory</a> for everywhere else we
+      serve.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} heading="Kollam Sell Electronics FAQs" />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>
