@@ -3,6 +3,11 @@
   "outputDirectory": "dist",
   "redirects": [
     {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {
@@ -19,7 +24,17 @@
       "permanent": true
     },
     {
+      "source": "/services/battery-recycling-kochi/",
+      "destination": "/battery-recycling/",
+      "permanent": true
+    },
+    {
       "source": "/services/data-destruction-kochi",
+      "destination": "/data-destruction/",
+      "permanent": true
+    },
+    {
+      "source": "/services/data-destruction-kochi/",
       "destination": "/data-destruction/",
       "permanent": true
     },
@@ -29,7 +44,17 @@
       "permanent": true
     },
     {
+      "source": "/services/itad-kochi/",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
       "source": "/locations/v2/kakkanad",
+      "destination": "/locations/kakkanad/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/v2/kakkanad/",
       "destination": "/locations/kakkanad/",
       "permanent": true
     },
@@ -39,7 +64,17 @@
       "permanent": true
     },
     {
+      "source": "/e-waste-recycling/",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
       "source": "/services/e-waste-recycling-kochi",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/e-waste-recycling-kochi/",
       "destination": "/recycling/",
       "permanent": true
     },
@@ -49,7 +84,17 @@
       "permanent": true
     },
     {
+      "source": "/data-destruction-services-kochi/",
+      "destination": "/data-destruction/",
+      "permanent": true
+    },
+    {
       "source": "/scrap-price",
+      "destination": "/e-waste-scrap-prices-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/scrap-price/",
       "destination": "/e-waste-scrap-prices-kochi/",
       "permanent": true
     },
@@ -59,7 +104,17 @@
       "permanent": true
     },
     {
+      "source": "/free-e-waste-pickup-kochi/",
+      "destination": "/blog/free-e-waste-pickup-kochi/",
+      "permanent": true
+    },
+    {
       "source": "/blog/sell-old-laptop-kochi-best-price",
+      "destination": "/blog/sell-old-laptop-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sell-old-laptop-kochi-best-price/",
       "destination": "/blog/sell-old-laptop-kochi/",
       "permanent": true
     },
@@ -69,7 +124,17 @@
       "permanent": true
     },
     {
+      "source": "/locations/ernakulam/",
+      "destination": "/locations/ernakulam-south/",
+      "permanent": true
+    },
+    {
       "source": "/locations/kalamassery-hitech-park",
+      "destination": "/locations/kalamassery/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/kalamassery-hitech-park/",
       "destination": "/locations/kalamassery/",
       "permanent": true
     },
@@ -1949,7 +2014,17 @@
       "permanent": true
     },
     {
+      "source": "/sell-electronics-kochi/",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
       "source": "/services/tv-monitor-recycling-kochi",
+      "destination": "/tv-recycling-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/services/tv-monitor-recycling-kochi/",
       "destination": "/tv-recycling-kochi/",
       "permanent": true
     },
@@ -1959,7 +2034,17 @@
       "permanent": true
     },
     {
+      "source": "/services/free-ewaste-pickup-kochi/",
+      "destination": "/pickup/",
+      "permanent": true
+    },
+    {
       "source": "/locations/palakkad/mobile-recycling-kochi",
+      "destination": "/locations/palakkad/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/palakkad/mobile-recycling-kochi/",
       "destination": "/locations/palakkad/",
       "permanent": true
     },
@@ -1969,7 +2054,17 @@
       "permanent": true
     },
     {
+      "source": "/locations/kannur/old-computer-disposal/",
+      "destination": "/locations/kannur/",
+      "permanent": true
+    },
+    {
       "source": "/locations/kollam/printer-recycling-kochi",
+      "destination": "/locations/kollam/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/kollam/printer-recycling-kochi/",
       "destination": "/locations/kollam/",
       "permanent": true
     },
@@ -1979,7 +2074,17 @@
       "permanent": true
     },
     {
+      "source": "/locations/angamaly/air-conditioner-recycling-kochi/",
+      "destination": "/locations/",
+      "permanent": true
+    },
+    {
       "source": "/services/server-recycling-kochi",
+      "destination": "/server-recycling-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/services/server-recycling-kochi/",
       "destination": "/server-recycling-kochi/",
       "permanent": true
     },
@@ -1989,7 +2094,17 @@
       "permanent": true
     },
     {
+      "source": "/ml/services/tv-monitor-recycling-kochi/",
+      "destination": "/tv-recycling-kochi/",
+      "permanent": true
+    },
+    {
       "source": "/services/hard-drive-shredding-kochi",
+      "destination": "/data-destruction/",
+      "permanent": true
+    },
+    {
+      "source": "/services/hard-drive-shredding-kochi/",
       "destination": "/data-destruction/",
       "permanent": true
     },
@@ -1999,7 +2114,17 @@
       "permanent": true
     },
     {
+      "source": "/ml/services/server-recycling-kochi/",
+      "destination": "/server-recycling-kochi/",
+      "permanent": true
+    },
+    {
       "source": "/services/corporate-ewaste-kochi",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
+      "source": "/services/corporate-ewaste-kochi/",
       "destination": "/itad/",
       "permanent": true
     },
@@ -2009,7 +2134,17 @@
       "permanent": true
     },
     {
+      "source": "/buyback/laptops/sell-thinkpad-t458p-kochi/",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
       "source": "/nist-data-destruction-kerala",
+      "destination": "/data-destruction/",
+      "permanent": true
+    },
+    {
+      "source": "/nist-data-destruction-kerala/",
       "destination": "/data-destruction/",
       "permanent": true
     }

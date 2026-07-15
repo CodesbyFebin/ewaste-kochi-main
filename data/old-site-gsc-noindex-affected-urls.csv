@@ -1,0 +1,6 @@
+url,issue_type,last_crawled,current_live_status,final_url,clicks,impressions,classification,recommended_action,reason
+https://www.ewastekochi.com/,Excluded by noindex tag,2026-06-30,200,https://www.ewastekochi.com/,124,1421,P0,fixed_by_v2_cutover,Old noindex alert is pre-cutover; live V2 is indexable or canonicalized.
+https://www.ewastekochi.com/index.html,Excluded by noindex tag,2026-06-30,200,https://www.ewastekochi.com/index.html,0,0,P3,redirect_301,Now duplicate live homepage path; redirect to canonical /.
+https://ewastekochi.com/,Excluded by noindex tag,2026-06-28,308,https://www.ewastekochi.com/,141,2970,P0,manual_review,Old noindex alert is pre-cutover; live V2 is indexable or canonicalized.
+https://ewastekochi.com/index.html,Excluded by noindex tag,2026-06-28,308,https://www.ewastekochi.com/index.html,0,0,P3,redirect_301,Now duplicate live homepage path; redirect to canonical /.
+https://www.ewastekochi.com/?q=%7Bsearch_term_string%7D,Excluded by noindex tag,2026-06-26,200,https://www.ewastekochi.com/?q=%7Bsearch_term_string%7D,0,0,P0,fixed_by_v2_cutover,Old noindex alert is pre-cutover; live V2 is indexable or canonicalized.

@@ -1,0 +1,275 @@
+{
+  "generatedAt": "2026-07-15T04:52:23.225Z",
+  "rows": [
+    {
+      "source_url": "https://www.ewastekochi.com/index.html",
+      "source_path": "/index.html",
+      "target_url": "https://www.ewastekochi.com/",
+      "status_before": "404_or_duplicate_200",
+      "action": "redirect_301_308",
+      "reason": "Duplicate index.html should consolidate to canonical homepage.",
+      "clicks": 0,
+      "impressions": 0
+    },
+    {
+      "source_url": "https://www.ewastekochi.com/services/battery-recycling-kochi/",
+      "source_path": "/services/battery-recycling-kochi/",
+      "target_url": "https://www.ewastekochi.com/battery-recycling/",
+      "status_before": "404_or_duplicate_200",
+      "action": "redirect_301_308",
+      "reason": "Trailing-slash twin of approved permanent legacy redirect; reduces crawl waste without adding pages.",
+      "clicks": 0,
+      "impressions": 0
+    },
+    {
+      "source_url": "https://www.ewastekochi.com/services/data-destruction-kochi/",
+      "source_path": "/services/data-destruction-kochi/",
+      "target_url": "https://www.ewastekochi.com/data-destruction/",
+      "status_before": "404_or_duplicate_200",
+      "action": "redirect_301_308",
+      "reason": "Trailing-slash twin of approved permanent legacy redirect; reduces crawl waste without adding pages.",
+      "clicks": 0,
+      "impressions": 0
+    },
+    {
+      "source_url": "https://www.ewastekochi.com/services/itad-kochi/",
+      "source_path": "/services/itad-kochi/",
+      "target_url": "https://www.ewastekochi.com/itad/",
+      "status_before": "404_or_duplicate_200",
+      "action": "redirect_301_308",
+      "reason": "Trailing-slash twin of approved permanent legacy redirect; reduces crawl waste without adding pages.",
+      "clicks": 0,
+      "impressions": 0
+    },
+    {
+      "source_url": "https://www.ewastekochi.com/locations/v2/kakkanad/",
+      "source_path": "/locations/v2/kakkanad/",
+      "target_url": "https://www.ewastekochi.com/locations/kakkanad/",
+      "status_before": "404_or_duplicate_200",
+      "action": "redirect_301_308",
+      "reason": "Trailing-slash twin of approved permanent legacy redirect; reduces crawl waste without adding pages.",
+      "clicks": 0,
+      "impressions": 0
+    },
+    {
+      "source_url": "https://www.ewastekochi.com/e-waste-recycling/",
+      "source_path": "/e-waste-recycling/",
+      "target_url": "https://www.ewastekochi.com/recycling/",
+      "status_before": "404_or_duplicate_200",
+      "action": "redirect_301_308",
+      "reason": "Trailing-slash twin of approved permanent legacy redirect; reduces crawl waste without adding pages.",
+      "clicks": 0,
+      "impressions": 11
+    },
+    {
+      "source_url": "https://www.ewastekochi.com/services/e-waste-recycling-kochi/",
+      "source_path": "/services/e-waste-recycling-kochi/",
+      "target_url": "https://www.ewastekochi.com/recycling/",
+      "status_before": "404_or_duplicate_200",
+      "action": "redirect_301_308",
+      "reason": "Trailing-slash twin of approved permanent legacy redirect; reduces crawl waste without adding pages.",
+      "clicks": 0,
+      "impressions": 0
+    },
+    {
+      "source_url": "https://www.ewastekochi.com/data-destruction-services-kochi/",
+      "source_path": "/data-destruction-services-kochi/",
+      "target_url": "https://www.ewastekochi.com/data-destruction/",
+      "status_before": "404_or_duplicate_200",
+      "action": "redirect_301_308",
+      "reason": "Trailing-slash twin of approved permanent legacy redirect; reduces crawl waste without adding pages.",
+      "clicks": 0,
+      "impressions": 16
+    },
+    {
+      "source_url": "https://www.ewastekochi.com/scrap-price/",
+      "source_path": "/scrap-price/",
+      "target_url": "https://www.ewastekochi.com/e-waste-scrap-prices-kochi/",
+      "status_before": "404_or_duplicate_200",
+      "action": "redirect_301_308",
+      "reason": "Trailing-slash twin of approved permanent legacy redirect; reduces crawl waste without adding pages.",
+      "clicks": 0,
+      "impressions": 27
+    },
+    {
+      "source_url": "https://www.ewastekochi.com/free-e-waste-pickup-kochi/",
+      "source_path": "/free-e-waste-pickup-kochi/",
+      "target_url": "https://www.ewastekochi.com/blog/free-e-waste-pickup-kochi/",
+      "status_before": "404_or_duplicate_200",
+      "action": "redirect_301_308",
+      "reason": "Trailing-slash twin of approved permanent legacy redirect; reduces crawl waste without adding pages.",
+      "clicks": 0,
+      "impressions": 0
+    },
+    {
+      "source_url": "https://www.ewastekochi.com/blog/sell-old-laptop-kochi-best-price/",
+      "source_path": "/blog/sell-old-laptop-kochi-best-price/",
+      "target_url": "https://www.ewastekochi.com/blog/sell-old-laptop-kochi/",
+      "status_before": "404_or_duplicate_200",
+      "action": "redirect_301_308",
+      "reason": "Trailing-slash twin of approved permanent legacy redirect; reduces crawl waste without adding pages.",
+      "clicks": 0,
+      "impressions": 0
+    },
+    {
+      "source_url": "https://www.ewastekochi.com/locations/ernakulam/",
+      "source_path": "/locations/ernakulam/",
+      "target_url": "https://www.ewastekochi.com/locations/ernakulam-south/",
+      "status_before": "404_or_duplicate_200",
+      "action": "redirect_301_308",
+      "reason": "Trailing-slash twin of approved permanent legacy redirect; reduces crawl waste without adding pages.",
+      "clicks": 0,
+      "impressions": 0
+    },
+    {
+      "source_url": "https://www.ewastekochi.com/locations/kalamassery-hitech-park/",
+      "source_path": "/locations/kalamassery-hitech-park/",
+      "target_url": "https://www.ewastekochi.com/locations/kalamassery/",
+      "status_before": "404_or_duplicate_200",
+      "action": "redirect_301_308",
+      "reason": "Trailing-slash twin of approved permanent legacy redirect; reduces crawl waste without adding pages.",
+      "clicks": 0,
+      "impressions": 25
+    },
+    {
+      "source_url": "https://www.ewastekochi.com/sell-electronics-kochi/",
+      "source_path": "/sell-electronics-kochi/",
+      "target_url": "https://www.ewastekochi.com/sell-electronics/",
+      "status_before": "404_or_duplicate_200",
+      "action": "redirect_301_308",
+      "reason": "Trailing-slash twin of approved permanent legacy redirect; reduces crawl waste without adding pages.",
+      "clicks": 3,
+      "impressions": 46
+    },
+    {
+      "source_url": "https://www.ewastekochi.com/services/tv-monitor-recycling-kochi/",
+      "source_path": "/services/tv-monitor-recycling-kochi/",
+      "target_url": "https://www.ewastekochi.com/tv-recycling-kochi/",
+      "status_before": "404_or_duplicate_200",
+      "action": "redirect_301_308",
+      "reason": "Trailing-slash twin of approved permanent legacy redirect; reduces crawl waste without adding pages.",
+      "clicks": 0,
+      "impressions": 0
+    },
+    {
+      "source_url": "https://www.ewastekochi.com/services/free-ewaste-pickup-kochi/",
+      "source_path": "/services/free-ewaste-pickup-kochi/",
+      "target_url": "https://www.ewastekochi.com/pickup/",
+      "status_before": "404_or_duplicate_200",
+      "action": "redirect_301_308",
+      "reason": "Trailing-slash twin of approved permanent legacy redirect; reduces crawl waste without adding pages.",
+      "clicks": 0,
+      "impressions": 0
+    },
+    {
+      "source_url": "https://www.ewastekochi.com/locations/palakkad/mobile-recycling-kochi/",
+      "source_path": "/locations/palakkad/mobile-recycling-kochi/",
+      "target_url": "https://www.ewastekochi.com/locations/palakkad/",
+      "status_before": "404_or_duplicate_200",
+      "action": "redirect_301_308",
+      "reason": "Trailing-slash twin of approved permanent legacy redirect; reduces crawl waste without adding pages.",
+      "clicks": 0,
+      "impressions": 0
+    },
+    {
+      "source_url": "https://www.ewastekochi.com/locations/kannur/old-computer-disposal/",
+      "source_path": "/locations/kannur/old-computer-disposal/",
+      "target_url": "https://www.ewastekochi.com/locations/kannur/",
+      "status_before": "404_or_duplicate_200",
+      "action": "redirect_301_308",
+      "reason": "Trailing-slash twin of approved permanent legacy redirect; reduces crawl waste without adding pages.",
+      "clicks": 0,
+      "impressions": 0
+    },
+    {
+      "source_url": "https://www.ewastekochi.com/locations/kollam/printer-recycling-kochi/",
+      "source_path": "/locations/kollam/printer-recycling-kochi/",
+      "target_url": "https://www.ewastekochi.com/locations/kollam/",
+      "status_before": "404_or_duplicate_200",
+      "action": "redirect_301_308",
+      "reason": "Trailing-slash twin of approved permanent legacy redirect; reduces crawl waste without adding pages.",
+      "clicks": 0,
+      "impressions": 0
+    },
+    {
+      "source_url": "https://www.ewastekochi.com/locations/angamaly/air-conditioner-recycling-kochi/",
+      "source_path": "/locations/angamaly/air-conditioner-recycling-kochi/",
+      "target_url": "https://www.ewastekochi.com/locations/",
+      "status_before": "404_or_duplicate_200",
+      "action": "redirect_301_308",
+      "reason": "Trailing-slash twin of approved permanent legacy redirect; reduces crawl waste without adding pages.",
+      "clicks": 0,
+      "impressions": 0
+    },
+    {
+      "source_url": "https://www.ewastekochi.com/services/server-recycling-kochi/",
+      "source_path": "/services/server-recycling-kochi/",
+      "target_url": "https://www.ewastekochi.com/server-recycling-kochi/",
+      "status_before": "404_or_duplicate_200",
+      "action": "redirect_301_308",
+      "reason": "Trailing-slash twin of approved permanent legacy redirect; reduces crawl waste without adding pages.",
+      "clicks": 0,
+      "impressions": 0
+    },
+    {
+      "source_url": "https://www.ewastekochi.com/ml/services/tv-monitor-recycling-kochi/",
+      "source_path": "/ml/services/tv-monitor-recycling-kochi/",
+      "target_url": "https://www.ewastekochi.com/tv-recycling-kochi/",
+      "status_before": "404_or_duplicate_200",
+      "action": "redirect_301_308",
+      "reason": "Trailing-slash twin of approved permanent legacy redirect; reduces crawl waste without adding pages.",
+      "clicks": 8,
+      "impressions": 111
+    },
+    {
+      "source_url": "https://www.ewastekochi.com/services/hard-drive-shredding-kochi/",
+      "source_path": "/services/hard-drive-shredding-kochi/",
+      "target_url": "https://www.ewastekochi.com/data-destruction/",
+      "status_before": "404_or_duplicate_200",
+      "action": "redirect_301_308",
+      "reason": "Trailing-slash twin of approved permanent legacy redirect; reduces crawl waste without adding pages.",
+      "clicks": 0,
+      "impressions": 0
+    },
+    {
+      "source_url": "https://www.ewastekochi.com/ml/services/server-recycling-kochi/",
+      "source_path": "/ml/services/server-recycling-kochi/",
+      "target_url": "https://www.ewastekochi.com/server-recycling-kochi/",
+      "status_before": "404_or_duplicate_200",
+      "action": "redirect_301_308",
+      "reason": "Trailing-slash twin of approved permanent legacy redirect; reduces crawl waste without adding pages.",
+      "clicks": 0,
+      "impressions": 1
+    },
+    {
+      "source_url": "https://www.ewastekochi.com/services/corporate-ewaste-kochi/",
+      "source_path": "/services/corporate-ewaste-kochi/",
+      "target_url": "https://www.ewastekochi.com/itad/",
+      "status_before": "404_or_duplicate_200",
+      "action": "redirect_301_308",
+      "reason": "Trailing-slash twin of approved permanent legacy redirect; reduces crawl waste without adding pages.",
+      "clicks": 0,
+      "impressions": 0
+    },
+    {
+      "source_url": "https://www.ewastekochi.com/buyback/laptops/sell-thinkpad-t458p-kochi/",
+      "source_path": "/buyback/laptops/sell-thinkpad-t458p-kochi/",
+      "target_url": "https://www.ewastekochi.com/sell-electronics/",
+      "status_before": "404_or_duplicate_200",
+      "action": "redirect_301_308",
+      "reason": "Trailing-slash twin of approved permanent legacy redirect; reduces crawl waste without adding pages.",
+      "clicks": 0,
+      "impressions": 22
+    },
+    {
+      "source_url": "https://www.ewastekochi.com/nist-data-destruction-kerala/",
+      "source_path": "/nist-data-destruction-kerala/",
+      "target_url": "https://www.ewastekochi.com/data-destruction/",
+      "status_before": "404_or_duplicate_200",
+      "action": "redirect_301_308",
+      "reason": "Trailing-slash twin of approved permanent legacy redirect; reduces crawl waste without adding pages.",
+      "clicks": 0,
+      "impressions": 20
+    }
+  ]
+}
