@@ -62,6 +62,7 @@ export const BLOG_CLUSTERS: BlogCluster[] = [
       { title: "E-Waste Recycling Myths and Safe Facts | Kochi Guide", href: "/blog/ewaste-recycling-myths-facts/", excerpt: "Common e-waste recycling myths corrected with safe, accurate facts — including data safety, battery disposal, what counts as e-waste, and what recycling actually involves." },
       { title: "E-Waste Recycling Guide for Kochi Residents | Full Overview", href: "/blog/ewaste-recycling-guide-kochi-residents/", excerpt: "A complete e-waste recycling guide for Kochi residents — what counts, how pickup works, areas covered, data handling, battery safety, and how to get a scrap quote." },
       { title: "Safe Electronics Disposal for Apartments and Flats in Kochi", href: "/blog/electronics-disposal-apartments-kochi/", excerpt: "How apartment residents in Kochi can safely dispose of old electronics — doorstep pickup, what to prepare, battery handling, and how to coordinate building access." },
+      { title: "Reuse, Resale or Recycling: Which Option Fits Your Device?", href: "/blog/reuse-resale-or-recycling-old-electronics/", excerpt: "How to decide between reusing, reselling or recycling old electronics in Kochi — a practical decision guide for households and offices based on device condition and value." },
     ],
     plannedPosts: [
       "What Is E-Waste Recycling?",
@@ -71,7 +72,6 @@ export const BLOG_CLUSTERS: BlogCluster[] = [
       "Common Mistakes People Make with Old Electronics",
       "How to Recycle Old Electronics Without Losing Data",
       "What Items Count as E-Waste in Kochi?",
-      "Reuse, Resale or Recycling: Which Option Fits Your Device?",
       "Old Electronics Recycling for First-Time Users",
       "How to Sort Electronics Before Pickup",
       "What to Ask Before Giving Electronics to a Collector",

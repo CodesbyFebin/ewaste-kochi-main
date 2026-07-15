@@ -917,6 +917,20 @@ export const ROUTES: RouteEntry[] = [
     indexable: true,
   },
   {
+    path: "/blog/reuse-resale-or-recycling-old-electronics/",
+    changefreq: "monthly",
+    priority: 0.6,
+    title: "Reuse, Resale or Recycling: Which Option Fits Your Device?",
+    description:
+      "How to decide between reusing, reselling or recycling old electronics in Kochi — a practical decision guide for households and offices based on device condition and value.",
+    type: "blog",
+    sitemapGroup: "blog",
+    lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
+  },
+  {
     path: "/blog/ewaste-pickup-near-me/",
     changefreq: "monthly",
     priority: 0.6,

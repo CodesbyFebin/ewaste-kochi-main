@@ -3,13 +3,14 @@ import Layout from "../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
 import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
 
 const title = "Reuse, Resale or Recycling: Which Option Fits Your Device?";
 const description =
   "How to decide between reusing, reselling or recycling old electronics in Kochi — a practical decision guide for households and offices based on device condition and value.";
 const datePublished = "2026-07-08";
-const dateModified = "2026-07-08";
+const dateModified = "2026-07-15";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
@@ -39,6 +40,15 @@ const jsonLd = [
   },
 ];
 
+const decisionRows = [
+  { state: "Works, still useful to you", option: "Keep using it (reuse)" },
+  { state: "Works, no longer needed", option: "Sell or donate (resale)" },
+  { state: "Works but very old / low value", option: "Sell or recycle — get a quote first" },
+  { state: "Doesn't turn on", option: "Recycle (scrap value may still apply)" },
+  { state: "Physically damaged", option: "Recycle (reduced scrap value)" },
+  { state: "Swollen battery", option: "Battery recycling — handle separately" },
+];
+
 const faqItems = [
   {
     q: "What if a device is borderline — worth selling but also old?",
@@ -51,6 +61,34 @@ const faqItems = [
   {
     q: "Is there any option between selling and full recycling?",
     a: "Sometimes — devices in reasonable condition that have low resale value may still be worth donating to a user who can benefit from them.",
+  },
+  {
+    q: "How is this different from just choosing between reuse and recycling?",
+    a: "Resale is its own path with its own logic — a device might not be worth keeping for yourself, but still be worth real money to someone else. Treating it as a third option, not a footnote to recycling, usually surfaces value that gets missed otherwise.",
+  },
+  {
+    q: "What's the most common decision-making mistake here?",
+    a: "Skipping straight to recycling without checking resale value first. It costs nothing to ask for a quote, and 'probably not worth anything' is often wrong for devices that still power on.",
+  },
+  {
+    q: "Does the same three-option framework apply to office equipment, not just personal devices?",
+    a: "Largely yes, though offices should also weigh a fourth factor: data sensitivity. See our ITAD page for how that changes the calculus for business-owned data-bearing devices specifically.",
+  },
+  {
+    q: "How do I estimate resale value before deciding?",
+    a: "Send photos, brand, model, and condition details on WhatsApp for a preliminary estimate — see our sell-electronics guide for the full breakdown of what affects the number.",
+  },
+  {
+    q: "Is donating the same as reuse, or a separate category?",
+    a: "It's a form of reuse — the device continues to function for someone, just not you. It sits between straightforward resale (you get paid) and recycling (the device stops being used as a device).",
+  },
+  {
+    q: "What if I can't decide and just want the device gone?",
+    a: "Message us with the details and let us know you're open to whichever path makes sense — we can advise on resale value versus recycling rather than you needing to research it yourself.",
+  },
+  {
+    q: "Does repairing a device first change which option makes sense?",
+    a: "It can — a cheap, quick repair can shift a device from 'recycle' to 'sell' territory. Whether it's worth doing depends on the repair cost relative to the resale gain, which is worth checking before deciding either way.",
   },
 ];
 ---
@@ -78,9 +116,24 @@ const faqItems = [
 
   <ul class="key-takeaways">
     <li>Reuse preserves the most value — repair before you replace where possible.</li>
+    <li>Resale is worth checking even for devices that feel "too old to be worth anything."</li>
     <li>Cracked-screen and non-working devices can still have component or scrap value.</li>
     <li>A swollen battery always goes through battery recycling, regardless of the device's overall path.</li>
   </ul>
+
+  <section>
+    <h2>Why resale deserves its own category</h2>
+    <p>
+      It's easy to think of the decision as just "keep it or recycle
+      it," with selling treated as an afterthought. In practice, resale
+      often gets skipped simply because people assume an older device
+      has no market value — and that assumption is wrong often enough
+      to be worth checking every time, not just for obviously
+      high-value devices. A working laptop that's three or four years
+      old, or a phone with a cracked screen but a working motherboard,
+      can still be worth real money to the right buyer.
+    </p>
+  </section>
 
   <section>
     <h2>Option 1: Reuse (keep using it)</h2>
@@ -120,20 +173,37 @@ const faqItems = [
   </section>
 
   <section>
+    <h2>A simple way to work through the decision</h2>
+    <p>
+      Rather than trying to judge a device's fate all at once, it helps
+      to ask three questions in order. First: does it still work well
+      enough for me to use it? If yes, that's often the simplest answer.
+      Second, if not for you: would it work for someone else, and is it
+      worth asking for a quote? Most devices that power on are worth at
+      least checking. Third, only once both of those are ruled out:
+      what's the responsible way to recycle it? Working through the
+      questions in that order avoids the common mistake of jumping
+      straight to recycling out of convenience.
+    </p>
+  </section>
+
+  <section>
     <h2>Quick decision guide</h2>
-    <table class="decision-table">
-      <thead>
-        <tr><th>Device state</th><th>Best option</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Works, still useful to you</td><td>Keep using it (reuse)</td></tr>
-        <tr><td>Works, no longer needed</td><td>Sell or donate (resale)</td></tr>
-        <tr><td>Works but very old / low value</td><td>Sell or recycle — get a quote first</td></tr>
-        <tr><td>Doesn't turn on</td><td>Recycle (scrap value may still apply)</td></tr>
-        <tr><td>Physically damaged</td><td>Recycle (reduced scrap value)</td></tr>
-        <tr><td>Swollen battery</td><td>Battery recycling — handle separately</td></tr>
-      </tbody>
-    </table>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Device state</th><th>Best option</th></tr>
+        </thead>
+        <tbody>
+          {decisionRows.map((row) => (
+            <tr>
+              <td>{row.state}</td>
+              <td>{row.option}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   </section>
 
   <section>
@@ -141,6 +211,8 @@ const faqItems = [
     <div class="link-row">
       <a href="/sell-electronics/">Sell Electronics</a>
       <a href="/recycling/">E-Waste Recycling</a>
+      <a href="/marketplace/">Marketplace</a>
+      <a href="/itad/">ITAD (for businesses)</a>
     </div>
   </section>
 
@@ -149,6 +221,9 @@ const faqItems = [
   </p>
 
   <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/reuse-resale-or-recycling-old-electronics/" />
+
   <section class="final-cta">
     <h2>Not Sure Which Option Fits Your Device?</h2>
     <p>Share your item details and location on WhatsApp to get started.</p>
@@ -160,9 +235,6 @@ const faqItems = [
 
 <style>
   .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
-  .decision-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
-  .decision-table th, .decision-table td { border: 1px solid var(--color-border); padding: 0.6rem 0.9rem; text-align: left; }
-  .decision-table th { background: var(--color-surface); font-weight: 700; }
   .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
   .updated { font-size: 0.8rem; color: var(--color-muted); }
   .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
@@ -173,4 +245,8 @@ const faqItems = [
   .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
   .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
   .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+  .table-scroll { overflow-x: auto; margin: 1rem 0; }
+  table { width: 100%; border-collapse: collapse; min-width: 420px; }
+  th, td { text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--color-border); font-size: 0.92rem; }
+  th { color: var(--color-muted); font-weight: 700; }
 </style>
