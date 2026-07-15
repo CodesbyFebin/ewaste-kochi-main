@@ -25,6 +25,9 @@ const safeJsonLd = sanitizeJsonLdBlocks(jsonLd);
 <meta name="description" content={description} />
 <link rel="canonical" href={canonicalUrl} />
 <link rel="alternate" type="application/rss+xml" title="Ewaste Kochi Blog RSS" href={new URL("/feed.xml", SITE_URL).toString()} />
+<link rel="llms" href={new URL("/llms.txt", SITE_URL).toString()} />
+<link rel="ai-sitemap" href={new URL("/ai-sitemap.xml", SITE_URL).toString()} />
+<link rel="content-index" type="application/json" href={new URL("/content-index.json", SITE_URL).toString()} />
 {noindex && <meta name="robots" content="noindex,follow" />}
 
 <meta property="og:type" content="website" />
