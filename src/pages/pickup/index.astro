@@ -11,7 +11,7 @@ import { getHreflang } from "../../data/routes";
 const title = "E-Waste Pickup in Kochi | Doorstep Collection for Electronics";
 const description =
   "Schedule doorstep e-waste pickup in Kochi for laptops, batteries, and IT hardware. Timing is confirmed after item, area and route review.";
-const lastUpdated = "2026-07-15";
+const lastUpdated = "2026-07-18";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
@@ -58,13 +58,13 @@ const feasibilityRows = [
   { factor: "Quantity", why: "A single phone and a 30-laptop office refresh are scheduled differently.", send: "An approximate count, not an exact inventory." },
   { factor: "Condition", why: "Working, non-working and physically damaged items are all accepted, but noting condition avoids day-of surprises.", send: "Whether it powers on and any visible damage." },
   { factor: "Pickup location", why: "Coverage and scheduling both depend on exactly where you are.", send: "Area name, building/floor for apartments, or a location pin." },
-  { factor: "Batteries", why: "Swollen, leaking or damaged batteries need advance handling, not a same-day discovery.", send: "Battery type and condition, with a photo if damaged." },
+  { factor: "Batteries", why: "Swollen, leaking or damaged batteries need advance handling before a pickup slot is confirmed.", send: "Battery type and condition, with a photo if damaged." },
   { factor: "Data-bearing devices", why: "Laptops, phones, drives and servers may need data destruction planned into the same visit.", send: "Which items hold data, and whether you want destruction handled for you." },
   { factor: "Bulky or heavy items", why: "Server racks, old CRT monitors and large UPS units need transport planning.", send: "Approximate size/weight and floor or lift access." },
 ];
 
 const scenarios = [
-  { title: "One old laptop and its charger", copy: "A completely normal booking — there's no minimum quantity." },
+  { title: "One old laptop and its charger", copy: "A common enquiry that can be reviewed against area, route timing and item condition." },
   { title: "Apartment cleanout", copy: "Include building name, floor and access notes; a combined pickup with neighbours is often more efficient than several visits." },
   { title: "Office IT refresh", copy: "A batch of laptops or desktops being replaced — mention the rough count so scheduling can plan for it." },
   { title: "UPS or inverter battery swap", copy: "Flag the old battery's condition specifically, especially if it's swollen or leaking." },
@@ -79,7 +79,7 @@ const faqItems = [
   },
   {
     q: "Is there a minimum quantity for pickup?",
-    a: "No strict minimum for most household pickups. For a single small item, let us know and we'll confirm whether a dedicated pickup makes sense or if it's better combined with a nearby scheduled route.",
+    a: "Small household pickups can be requested. For a single small item, let us know and we'll confirm whether a dedicated pickup makes sense or if it is better combined with a nearby scheduled route.",
   },
   {
     q: "Do I need to be present at pickup?",
@@ -94,8 +94,8 @@ const faqItems = [
     a: "Have items gathered in one place if possible, and let us know in advance about anything heavy (servers, CRT monitors) so the team comes prepared.",
   },
   {
-    q: "Which areas get free pickup?",
-    a: "Free doorstep pickup covers Kochi and most of Ernakulam district for qualifying quantities. Message us your address to confirm for your specific location.",
+    q: "Which areas can request pickup?",
+    a: "Kochi and many Ernakulam-district enquiries can be reviewed for doorstep pickup. Message your address, item list and photos to confirm feasibility for your specific location.",
   },
   {
     q: "What counts as a data-bearing device I should flag?",
@@ -127,14 +127,26 @@ const faqItems = [
 <Layout title={title} description={description} path="/pickup/" jsonLd={jsonLd} hreflang={getHreflang("/pickup/")}>
   <Breadcrumbs items={breadcrumbItems} />
   <LangSwitch current="en" otherPath="/ml/pickup/" />
-  <h1>Free E-Waste Pickup in Kochi</h1>
+  <h1>E-Waste Pickup in Kochi</h1>
   <p class="lede">
-    Doorstep pickup is how most of our customers get started — no need to
-    drop anything off. Tell us what you have, we confirm a slot, and our
-    team collects directly from your home or office. This page covers what
-    we collect, how scheduling actually works, what affects feasibility,
-    and what to expect for both household and business pickups.
+    Doorstep pickup is how most customers get started. Tell us what you
+    have, share your area and photos, then we review feasibility and confirm
+    the next practical slot. This page covers what we collect, how
+    scheduling works, what affects feasibility, and what to expect for both
+    household and business pickups.
   </p>
+
+  <figure class="hero-image">
+    <img
+      src="/images/pickup-hero.webp"
+      width="1536"
+      height="1024"
+      alt="Ewaste Kochi doorstep pickup visual showing an e-waste pickup team collecting electronics from a customer, with service cues for scheduling, collection, safe handling, and responsible recycling."
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+    />
+  </figure>
 
   <DirectAnswer>
     <p>
@@ -148,7 +160,7 @@ const faqItems = [
   <CtaBar whatsappMessage="Hi, I'd like to schedule an e-waste pickup." />
 
   <ul class="key-takeaways">
-    <li>No minimum quantity — a single old phone is as valid a booking as a full office clearout.</li>
+    <li>Small pickups can be requested, but feasibility depends on area, route timing, item type and condition.</li>
     <li>Complete details upfront (item list, photos, location) get a faster, more accurate feasibility answer.</li>
     <li>Batteries and data-bearing devices should be flagged before pickup, not discovered on the day.</li>
     <li>Pickup timing is confirmed after area, item and route review.</li>
@@ -239,14 +251,13 @@ const faqItems = [
   <section>
     <h2>Household pickup</h2>
     <p>
-      No strict minimum quantity for most residential pickups — old
-      laptops, TVs, kitchen electronics, and batteries are all fine to
-      combine in one visit. For apartments and flats, include the building
-      name, floor and any access instructions when you message; a
+      Small residential pickups can be requested, and old laptops, TVs,
+      kitchen electronics and batteries are often easier to review when
+      combined in one enquiry. For apartments and flats, include the
+      building name, floor and any access instructions when you message; a
       combined pickup across a few neighbouring flats is often more
-      efficient than several separate visits. Family cleanouts — clearing
-      a full household's worth of accumulated electronics at once — work
-      the same way, with no need to split it into multiple bookings.
+      efficient than several separate visits. Family cleanouts work the same
+      way: share the full item list first so the route can be planned.
     </p>
   </section>
 
@@ -314,10 +325,11 @@ const faqItems = [
   <section>
     <h2>Coverage area</h2>
     <p>
-      Pickup runs across Kakkanad, Edappally, Aluva, Vyttila, Palarivattom,
-      Thrippunithura, Kalamassery, Infopark, and 25+ other neighborhoods —
-      plus wider coverage across Ernakulam district and Kerala. Full list on
-      the <a href="/locations/">locations page</a>.
+      Pickup enquiries commonly come from Kakkanad, Edappally, Aluva,
+      Vyttila, Palarivattom, Thrippunithura, Kalamassery, Infopark and
+      nearby Kochi locations. Wider Ernakulam and Kerala requests should be
+      treated as feasibility checks. Full list on the
+      <a href="/locations/">locations page</a>.
     </p>
     <p>
       New to how pickup works? See our guide:
@@ -345,6 +357,15 @@ const faqItems = [
 
 <style>
   .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .hero-image { margin: 1.5rem 0 1.75rem; }
+  .hero-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    border-radius: 0.5rem;
+    box-shadow: 0 1rem 2.5rem rgba(5, 68, 47, 0.12);
+  }
   .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
   .process-list, .check-list { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 1.25rem; }
   .item-grid { display: grid; grid-template-columns: 1fr; gap: 0.9rem; margin-top: 1rem; }

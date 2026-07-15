@@ -1,6 +1,7 @@
 export type FlowType =
   | "pickup"
   | "scrap-price"
+  | "price-match"
   | "sell-electronics"
   | "data-destruction"
   | "battery-recycling"

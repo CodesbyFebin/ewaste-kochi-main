@@ -1,0 +1,21 @@
+---
+import IndexedLegacyGuide from "../../../../components/IndexedLegacyGuide.astro";
+import { INDEXED_ML_SERVICE_ALIAS_PAGES } from "../../../../data/gscIndexedGeneratedPages";
+
+export function getStaticPaths() {
+  return INDEXED_ML_SERVICE_ALIAS_PAGES.map((page) => ({
+    params: { service: page.serviceSlug },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+const breadcrumbs = [
+  { name: "Home", path: "/" },
+  { name: "Malayalam", path: "/ml/" },
+  { name: "Services", path: "/ml/services/" },
+  { name: page.serviceName, path: page.path },
+];
+---
+
+<IndexedLegacyGuide page={page} breadcrumbs={breadcrumbs} />

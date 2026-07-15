@@ -9,8 +9,8 @@ import { PILLAR_BLOG_PAGES } from "../../data/pillarBlogPages";
 
 const title = "E-Waste Recycling Blog Kochi | Pickup, Scrap Price, Battery & ITAD Guides";
 const description =
-  "Read Ewaste Kochi guides on e-waste recycling, pickup near me, battery disposal, laptop recycling, scrap value, data destruction, ITAD and safe electronics disposal in Kochi.";
-const dateModified = "2026-07-08";
+  "Read Ewaste Kochi guides on e-waste meaning, recycling, pickup near me, battery disposal, laptop recycling, scrap value, data destruction, ITAD and safe electronics disposal in Kochi.";
+const dateModified = "2026-07-18";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
@@ -20,6 +20,12 @@ const breadcrumbItems = [
 // ── Featured live posts ──────────────────────────────────────────────────────
 const featuredPosts = [
   {
+    title: "What Is E-Waste? Complete Kochi Guide",
+    href: "/e-waste/",
+    excerpt: "Plain-language pillar explaining e-waste meaning, examples, risks, rules, preparation and the safest next step in Kochi.",
+    cluster: "E-Waste Meaning",
+  },
+  {
     title: "Ultimate Guide to E-Waste Recycling in Kochi",
     href: "/blog/ultimate-guide-e-waste-recycling-kochi/",
     excerpt: "A complete planning guide for electronics recycling, pickup preparation, data handling, battery safety and business disposal.",
@@ -28,7 +34,7 @@ const featuredPosts = [
   {
     title: "Free E-Waste Pickup in Kochi",
     href: "/blog/free-e-waste-pickup-kochi/",
-    excerpt: "How free doorstep pickup works, covered areas, accepted items, and what to have ready before the team arrives.",
+    excerpt: "How pickup feasibility works, covered enquiry areas, accepted items, and what to have ready before the team arrives.",
     cluster: "E-Waste Pickup Near Me",
   },
   {
@@ -122,7 +128,12 @@ const intentCards = [
   {
     q: "Where to recycle old electronics in Kochi",
     href: "/recycling/",
-    text: "Doorstep collection for laptops, desktops, monitors, printers, and general IT hardware across Kochi. No drop-off needed.",
+    text: "Pickup and recycling guidance for laptops, desktops, monitors, printers and general IT hardware. Share item details to confirm feasibility.",
+  },
+  {
+    q: "What is e-waste?",
+    href: "/e-waste/",
+    text: "Start with the meaning of e-waste, common examples, why electronics need separate handling, and which Kochi service route may fit.",
   },
   {
     q: "E-waste collection near me",
@@ -147,7 +158,7 @@ const intentCards = [
   {
     q: "Data destruction and ITAD",
     href: "/data-destruction/",
-    text: "Certified data destruction for hard drives, laptops, and servers. Certificate available on request for business compliance.",
+    text: "Data handling options for hard drives, laptops and servers. Documentation needs should be agreed before business pickup.",
   },
   {
     q: "E-waste rules and compliance",
@@ -266,15 +277,17 @@ const statusColor: Record<string, string> = {
         <a href="/pickup/" class="btn btn-primary">Book Pickup</a>
         <a href="/recycling/" class="btn btn-outline">View Recycling Services</a>
         <a href="/battery-recycling/" class="btn btn-outline">Battery Recycling</a>
+        <a href="/feed.xml" class="btn btn-outline">RSS Feed</a>
       </div>
       <img
         class="hero-image"
-        src="/images/blog-pillars/blog-hub.webp"
-        alt="Ewaste Kochi blog hub for recycling, pickup, battery and ITAD guides"
-        width="1200"
-        height="675"
+        src="/images/blog-hero.webp"
+        alt="Ewaste Kochi blog hero visual for e-waste recycling insights, data security guides, sustainability tips, and practical resources for Kerala."
+        width="1536"
+        height="1024"
         loading="eager"
         decoding="async"
+        fetchpriority="high"
       />
     </div>
   </section>
@@ -402,7 +415,7 @@ const statusColor: Record<string, string> = {
   <LongformExpansion
     label="Ewaste Kochi blog hub"
     audience="Kochi households, offices, apartment residents, IT teams and business owners using the blog to choose the right e-waste route"
-    localIntent="The hub serves Kochi, Ernakulam, Kakkanad, Kalamassery, Aluva and nearby Kochi-metro search intent, with wider Kerala pages treated as feasibility checks rather than guaranteed service promises."
+    localIntent="The hub serves Kochi, Ernakulam, Kakkanad, Kalamassery, Aluva and nearby Kochi-metro search intent, with wider Kerala pages treated as feasibility checks rather than blanket service promises."
     items={["laptops", "phones", "batteries", "printers", "TVs", "servers", "cables", "office IT assets"]}
     themes={[
       "How to use the blog hub",
@@ -462,7 +475,8 @@ const statusColor: Record<string, string> = {
   .hero-image {
     display: block;
     width: 100%;
-    aspect-ratio: 16 / 9;
+    height: auto;
+    aspect-ratio: 3 / 2;
     object-fit: cover;
     margin-top: 1.5rem;
     border-radius: 0.5rem;

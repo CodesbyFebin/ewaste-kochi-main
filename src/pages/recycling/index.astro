@@ -8,14 +8,176 @@ import DirectAnswer from "../../components/DirectAnswer.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../data/site";
 import { getHreflang } from "../../data/routes";
 
-const title = "Where to Recycle Old Electronics in Kochi | Free Pickup";
+const title = "E-Waste Recycling in Kochi | Pickup, Process & Safe Disposal";
 const description =
-  "Recycle old electronics in Kochi with free doorstep pickup — laptops, desktops, monitors, printers and more. Data wiped first, no drop-off needed.";
-const lastUpdated = "2026-07-14";
+  "Recycle old electronics in Kochi: laptops, desktops, phones, printers, TVs, batteries and IT scrap. Share photos and location to confirm pickup, data handling and recycling route.";
+const lastUpdated = "2026-07-18";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
   { name: "Recycling", path: "/recycling/" },
+];
+
+const clusterSections = [
+  {
+    title: "E-waste recycling basics",
+    copy:
+      "Start here if you want to understand what counts as e-waste, why electronics need separate handling, and how pickup, sorting, reuse and recycling fit together.",
+    href: "/blog/recycling-basics/",
+    link: "Read the basics guide",
+  },
+  {
+    title: "Computer scrap and IT assets",
+    copy:
+      "Laptops, desktops, monitors, servers and networking equipment are checked for condition, data risk, resale potential and recycling route before final handling.",
+    href: "/computer-scrap-buyers-kochi/",
+    link: "Computer scrap buyers",
+  },
+  {
+    title: "Home electronics disposal",
+    copy:
+      "Household pickups usually combine phones, chargers, routers, batteries, small devices and old computers into one confirmed collection instead of several separate visits.",
+    href: "/pickup/",
+    link: "Book a pickup",
+  },
+  {
+    title: "Apartment and society pickups",
+    copy:
+      "For flats and gated communities, building access, lift timing, security instructions and combined resident pickups matter as much as the item list.",
+    href: "/locations/",
+    link: "Check service areas",
+  },
+  {
+    title: "Business and bulk recycling",
+    copy:
+      "Office batches often need asset lists, data handling, invoice or internal handover notes and scheduled collection windows, especially around IT refresh cycles.",
+    href: "/itad/",
+    link: "ITAD for businesses",
+  },
+  {
+    title: "Data destruction",
+    copy:
+      "Devices with storage should be backed up, signed out and routed through agreed data handling before recycling or resale continues.",
+    href: "/data-destruction/",
+    link: "Data destruction options",
+  },
+  {
+    title: "Battery handling",
+    copy:
+      "UPS, inverter, laptop, phone and lithium batteries can be part of a pickup, but they need separate handling from general electronics.",
+    href: "/battery-recycling/",
+    link: "Battery recycling",
+  },
+  {
+    title: "Reuse, resale and marketplace",
+    copy:
+      "Working or repairable electronics may be better suited for sale or reuse before material recycling, depending on condition and current demand.",
+    href: "/marketplace/",
+    link: "Browse marketplace",
+  },
+  {
+    title: "TVs, monitors and peripherals",
+    copy:
+      "Displays, printers, scanners, keyboards and cables are common in both household and office pickups, but bulky or damaged items are easier to plan with photos.",
+    href: "/tv-recycling-kochi/",
+    link: "TV recycling",
+  },
+  {
+    title: "Rules, trust and documentation",
+    copy:
+      "If you need documentation, regulatory context or business records, confirm those needs before pickup so the correct service type is agreed.",
+    href: "/trust/",
+    link: "Trust and compliance",
+  },
+];
+
+const processDetails = [
+  {
+    title: "Identify the item mix",
+    copy:
+      "List laptops, phones, batteries, cables, TVs, printers, servers or mixed IT scrap separately so the pickup route can be planned accurately.",
+  },
+  {
+    title: "Flag safety and data needs",
+    copy:
+      "Mention swollen batteries, damaged screens, hard drives, phones, laptops and business devices before pickup rather than waiting until handover.",
+  },
+  {
+    title: "Confirm pickup feasibility",
+    copy:
+      "Share location, access details and photos. Feasibility depends on area, item type, quantity, condition and current collection schedule.",
+  },
+  {
+    title: "Sort at collection",
+    copy:
+      "Items are separated into broad handling groups such as batteries, data-bearing devices, reusable electronics, bulky displays and general e-waste.",
+  },
+  {
+    title: "Choose the right downstream route",
+    copy:
+      "Depending on condition and service needs, items may move toward reuse, resale quote, data destruction, battery handling, ITAD or material recovery.",
+  },
+];
+
+const howToSteps = [
+  {
+    name: "List your electronics",
+    text:
+      "Group laptops, phones, batteries, TVs, printers, servers, cables and mixed IT scrap so the item mix is clear before pickup.",
+  },
+  {
+    name: "Flag data and battery risks",
+    text:
+      "Mention storage devices, phones, hard drives, swollen batteries, damaged screens and heavy items before collection is confirmed.",
+  },
+  {
+    name: "Share photos and location",
+    text:
+      "Send photos, quantity, area, access notes and preferred timing so pickup feasibility can be reviewed.",
+  },
+  {
+    name: "Confirm the handling route",
+    text:
+      "Choose recycling, resale review, data destruction, battery handling or ITAD based on item condition and service needs.",
+  },
+  {
+    name: "Prepare for collection",
+    text:
+      "Keep items dry and grouped, separate damaged batteries, back up data where needed and have the confirmed items ready.",
+  },
+];
+
+const decisionRows = [
+  {
+    situation: "It works and still has demand",
+    route: "Resale or reuse may come before recycling.",
+    href: "/sell-electronics/",
+    link: "Sell electronics",
+  },
+  {
+    situation: "It holds personal or business data",
+    route: "Back it up first, then request wiping or destruction support.",
+    href: "/data-destruction/",
+    link: "Data destruction",
+  },
+  {
+    situation: "It includes UPS, inverter or lithium batteries",
+    route: "Keep batteries separate and share photos if damaged or swollen.",
+    href: "/battery-recycling/",
+    link: "Battery recycling",
+  },
+  {
+    situation: "It is an office or bulk IT batch",
+    route: "Use a business workflow with asset tracking where needed.",
+    href: "/itad/",
+    link: "ITAD",
+  },
+  {
+    situation: "It is mixed household clutter",
+    route: "Combine the items into one confirmed pickup request.",
+    href: "/pickup/",
+    link: "Pickup",
+  },
 ];
 
 const jsonLd = [
@@ -35,16 +197,28 @@ const jsonLd = [
     description,
     dateModified: lastUpdated,
   },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to recycle e-waste in Kochi",
+    description:
+      "A practical process for preparing electronics, batteries and data-bearing devices before e-waste pickup in Kochi.",
+    step: howToSteps.map((step) => ({
+      "@type": "HowToStep",
+      name: step.name,
+      text: step.text,
+    })),
+  },
 ];
 
 const faqItems = [
   {
     q: "Where can I recycle old electronics in Kochi?",
-    a: "Ewaste Kochi collects electronics for recycling directly from your home or office anywhere in Kochi and most of Ernakulam district — no need to drop items off yourself.",
+    a: "Start by sharing your item list, photos and location with Ewaste Kochi. The team confirms whether pickup is feasible for your address and which handling route fits the items.",
   },
   {
     q: "Does Ewaste Kochi collect electronics from home?",
-    a: "Yes, doorstep pickup is our default collection method for both households and offices. Schedule a slot via WhatsApp, phone, or the pickup form.",
+    a: "Doorstep pickup can be requested for households and offices. Feasibility depends on item type, quantity, condition, location and available collection slots.",
   },
   {
     q: "What electronics can be recycled?",
@@ -52,15 +226,15 @@ const faqItems = [
   },
   {
     q: "Can businesses schedule bulk e-waste pickup?",
-    a: "Yes. For offices, IT parks, and enterprises we offer scheduled bulk pickups, asset lists, and disposal documentation as part of our ITAD service.",
+    a: "Yes. Offices, IT parks and enterprises can request scheduled bulk pickup. Asset lists, data handling and documentation should be agreed before collection through the ITAD workflow.",
   },
   {
     q: "Is data removed before recycling?",
-    a: "Any device with storage (laptops, desktops, servers, drives) goes through data wiping or destruction before recycling. See our Data Destruction service for details on methods and certificates.",
+    a: "Devices with storage should be flagged before pickup. Depending on the device and agreed service, data handling may include wiping, physical destruction or customer-side preparation before recycling or resale.",
   },
   {
     q: "Do you provide recycling certificates?",
-    a: "Yes, on request — useful for offices that need to document compliant disposal for internal or regulatory records.",
+    a: "Documentation may be available for business, ITAD or data-destruction jobs when agreed before pickup. Standard household pickups do not automatically include certificates.",
   },
   {
     q: "Can batteries be mixed with electronics for pickup?",
@@ -68,7 +242,7 @@ const faqItems = [
   },
   {
     q: "Which areas in Kochi do you cover for recycling pickup?",
-    a: "Kakkanad, Edappally, Aluva, Vyttila, Palarivattom, Thrippunithura, Kalamassery, Infopark, and 20+ other neighborhoods — see our full locations directory for the complete list.",
+    a: "Common enquiry areas include Kakkanad, Edappally, Aluva, Vyttila, Palarivattom, Thrippunithura, Kalamassery, Infopark and nearby Kochi-metro locations. Use the locations directory or send your address for confirmation.",
   },
   {
     q: "Can I donate old electronics instead of recycling them?",
@@ -76,23 +250,23 @@ const faqItems = [
   },
   {
     q: "What should I do before giving old electronics for recycling?",
-    a: "Back up anything you want to keep, remove personal accessories, and let us know about any items needing data wiped — see our data destruction page. Gathering items in one spot before pickup also helps things go faster.",
+    a: "Back up anything you want to keep, remove personal accessories, and let us know about any devices needing data handling. Gathering items in one spot before pickup also helps things go faster.",
   },
   {
     q: "Is there a drop-off option, or is it pickup only?",
-    a: "Doorstep pickup is our standard collection method — most customers never need to travel anywhere. If a drop-off arrangement would genuinely work better for your situation, message us and we'll discuss whether that's feasible.",
+    a: "Most requests start as pickup enquiries. If a drop-off arrangement would work better for your situation, message first so feasibility and timing can be confirmed.",
   },
   {
     q: "How quickly can pickup happen after I contact you?",
-    a: "It depends on your area and current scheduling — some slots are available same-day or next-day, others need a bit more lead time. Message your item list and location and we'll confirm the earliest realistic slot.",
+    a: "Timing depends on your area, item list and current scheduling. Send the item list, photos and location to confirm the earliest realistic slot.",
   },
   {
     q: "Is there a minimum quantity for pickup?",
-    a: "No — a single old phone or laptop is a normal-sized pickup, not just bulk office loads. The same booking process applies whether it's one item or a full household cleanout.",
+    a: "Small pickups can be requested, including one or two devices, but feasibility is confirmed case by case based on location, schedule and item type.",
   },
   {
     q: "Does recycling cost anything?",
-    a: "Standard pickups are free. Some items may carry scrap or resale value depending on condition, which would work in your favor rather than costing you anything. Unusual jobs (very large volumes or special handling) are discussed upfront.",
+    a: "Cost, pickup feasibility and any resale or scrap value depend on item type, condition, quantity, location and current market rates. Any unusual handling should be discussed before pickup.",
   },
   {
     q: "What's the difference between recycling and your ITAD service?",
@@ -124,17 +298,29 @@ const faqItems = [
 <Layout title={title} description={description} path="/recycling/" jsonLd={jsonLd} hreflang={getHreflang("/recycling/")}>
   <Breadcrumbs items={breadcrumbItems} />
   <LangSwitch current="en" otherPath="/ml/recycling/" />
-  <h1>Where to Recycle Old Electronics in Kochi</h1>
+  <h1>E-Waste Recycling in Kochi</h1>
   <p class="lede">
-    You can recycle old electronics in Kochi through Ewaste Kochi's free
-    doorstep pickup — no need to find a drop-off point. We collect laptops,
-    desktops, monitors, printers, and general IT hardware directly from your
-    home or office, wipe any stored data first, and recycle everything
-    through compliant channels. Whether it's a single old phone, a full
-    household cleanout, or an office hardware refresh, the process below
-    covers what's accepted, how pickup actually works, and what happens to
-    your devices and data after they leave your hands.
+    Use this page to plan safe electronics recycling in Kochi and nearby
+    Ernakulam enquiry areas. Ewaste Kochi helps route laptops, desktops,
+    monitors, phones, printers, TVs, batteries and mixed IT scrap toward
+    pickup, resale, data handling, ITAD or recycling based on the actual
+    item list, condition and location. Whether you have one old device, a
+    household cleanout or an office hardware refresh, the guide below
+    explains what is accepted, how pickup confirmation works, what to do
+    about stored data, and when recycling is better than resale or reuse.
   </p>
+
+  <figure class="hero-image">
+    <img
+      src="/images/recycling-hero.webp"
+      width="1672"
+      height="941"
+      alt="Ewaste Kochi e-waste recycling pickup visual with electronics, recycling arrows, a Kochi location marker, and service cues for pickup, disposal, scrap value guidance, and data destruction."
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+    />
+  </figure>
 
   <DirectAnswer>
     <p>
@@ -146,6 +332,30 @@ const faqItems = [
   </DirectAnswer>
 
   <CtaBar whatsappMessage="Hi, I'd like to schedule an e-waste recycling pickup in Kochi." />
+
+  <section class="cluster-overview" aria-labelledby="cluster-overview-title">
+    <div class="section-heading-row">
+      <div>
+        <h2 id="cluster-overview-title">Recycling Topics Covered</h2>
+        <p>
+          These are the core questions people ask before handing over old
+          electronics. Each topic links to the most relevant service or guide
+          so this page works as a practical recycling hub, not a dead-end
+          article.
+        </p>
+      </div>
+      <a class="rss-link" href="/feed.xml">RSS feed</a>
+    </div>
+    <div class="cluster-grid">
+      {clusterSections.map((cluster) => (
+        <article class="cluster-card">
+          <h3>{cluster.title}</h3>
+          <p>{cluster.copy}</p>
+          <a href={cluster.href}>{cluster.link}</a>
+        </article>
+      ))}
+    </div>
+  </section>
 
   <section>
     <h2>What we accept</h2>
@@ -195,10 +405,10 @@ const faqItems = [
     <h2>How pickup and recycling works</h2>
     <ol class="process-list">
       <li><strong>Request a pickup.</strong> Message us on WhatsApp, call, or use the pickup form with a rough list of items and your location.</li>
-      <li><strong>We confirm a slot.</strong> Same-day or next-day pickup is available across most of Kochi.</li>
-      <li><strong>Doorstep collection.</strong> Our team collects the items directly from your home or office — no drop-off required.</li>
-      <li><strong>Data handling.</strong> Any device with storage is wiped or destroyed before further processing.</li>
-      <li><strong>Recycling or resale.</strong> Items are recycled through compliant channels, or — if still functional — routed to our <a href="/marketplace/">marketplace</a> for resale with your consent.</li>
+      <li><strong>We confirm feasibility.</strong> Pickup timing depends on your area, item mix, quantity, condition and current route availability.</li>
+      <li><strong>Doorstep collection.</strong> If confirmed, the team collects the items directly from your home or office.</li>
+      <li><strong>Data handling.</strong> Devices with storage are flagged for the agreed data preparation, wiping or destruction route.</li>
+      <li><strong>Recycling or resale.</strong> Items are routed to recycling, repair, reuse, resale enquiry, battery handling or <a href="/itad/">ITAD</a> depending on condition and customer needs.</li>
     </ol>
     <p>
       What that looks like in practice: when you message us, we're figuring
@@ -211,6 +421,49 @@ const faqItems = [
       needs special handling (batteries, anything visibly damaged) on the
       spot.
     </p>
+  </section>
+
+  <section>
+    <h2>E-Waste Recycling Process</h2>
+    <p>
+      Good recycling is a sequence of decisions, not a single bin. The most
+      useful information you can share is the item category, whether it works,
+      whether it has a battery, whether it holds data, and where pickup would
+      happen.
+    </p>
+    <div class="process-detail-grid">
+      {processDetails.map((step, index) => (
+        <article class="process-detail-card">
+          <span>{index + 1}</span>
+          <h3>{step.title}</h3>
+          <p>{step.copy}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section>
+    <h2>Recycle, Reuse, Resell or Destroy?</h2>
+    <p>
+      The right route depends on risk and remaining value. A working laptop
+      should not be treated the same way as a swollen battery, an unwiped hard
+      drive or a large office decommission. Use this quick decision guide
+      before booking.
+    </p>
+    <div class="decision-table" role="table" aria-label="E-waste handling decision guide">
+      <div class="decision-row decision-head" role="row">
+        <span role="columnheader">Situation</span>
+        <span role="columnheader">Best next step</span>
+        <span role="columnheader">Related page</span>
+      </div>
+      {decisionRows.map((row) => (
+        <div class="decision-row" role="row">
+          <span role="cell">{row.situation}</span>
+          <span role="cell">{row.route}</span>
+          <a role="cell" href={row.href}>{row.link}</a>
+        </div>
+      ))}
+    </div>
   </section>
 
   <section>
@@ -232,9 +485,9 @@ const faqItems = [
       Household pickups tend to be a mixed, occasional batch rather than a
       recurring service — a laptop that's been sitting in a cupboard, a
       couple of old phones, a dead router, maybe an inverter battery that's
-      stopped holding charge. There's no minimum quantity; a single device
-      is a completely normal booking. The main thing worth doing beforehand
-      is backing up and signing out of anything with your data on it — see
+      stopped holding charge. Small pickups can be requested, but route
+      feasibility is confirmed case by case. The main thing worth doing
+      beforehand is backing up and signing out of anything with your data on it — see
       our
       <a href="/blog/how-to-prepare-electronics-for-recycling/">preparation
       guide</a> for the short version.
@@ -261,12 +514,12 @@ const faqItems = [
     <h2>What happens to your data</h2>
     <p>
       Any device with storage — laptops, desktops, phones, external drives,
-      servers — goes through data handling before it moves further into the
-      recycling process, not as an optional add-on. Depending on the device
-      and what's agreed at booking, that can mean a software wipe, a
-      degaussing pass for magnetic media, or physical shredding where the
-      drive is damaged or destruction is specifically requested. Business
-      customers can request a certificate documenting that this happened.
+      servers — should be identified before pickup so data handling can be
+      agreed. Depending on the device and service type, that can mean
+      customer-side preparation, a software wipe, a degaussing pass for
+      magnetic media, or physical shredding where the drive is damaged or
+      destruction is specifically requested. Business customers who need
+      documentation should confirm that requirement before pickup.
       See <a href="/data-destruction/">data destruction</a> for the full
       breakdown of methods and when each one applies.
     </p>
@@ -376,13 +629,15 @@ const faqItems = [
   </section>
 
   <section>
-    <h2>Compliance</h2>
+    <h2>Rules and Documentation</h2>
     <p>
-      Our recycling process follows documented environmental handling
-      practices, with pickup, sorting and documentation support depending
-      on the service type. If you need compliance documentation for
-      business or ITAD work, contact us before pickup so the required
-      handling process can be confirmed — see our
+      E-waste is handled separately from normal household waste in India, and
+      business disposals often need a clearer record than a normal home
+      pickup. If you need documentation for ITAD, data destruction, an
+      internal audit or a vendor file, contact us before pickup so the
+      required handling process can be confirmed. For a plain-language
+      overview of the rules, see our
+      <a href="/e-waste-rules-2022-india/">E-Waste Rules 2022 guide</a> and
       <a href="/contact/">contact page</a> to get in touch.
     </p>
   </section>
@@ -492,6 +747,117 @@ const faqItems = [
     color: var(--color-muted);
     max-width: 46rem;
   }
+  .hero-image {
+    margin: 1.5rem 0 1.75rem;
+  }
+  .hero-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1672 / 941;
+    border-radius: 0.5rem;
+    box-shadow: 0 1rem 2.5rem rgba(5, 68, 47, 0.12);
+  }
+  .section-heading-row {
+    display: grid;
+    gap: 0.75rem;
+    align-items: end;
+    margin-bottom: 1rem;
+  }
+  .section-heading-row h2 {
+    margin-bottom: 0.35rem;
+  }
+  .section-heading-row p {
+    margin: 0;
+    color: var(--color-muted);
+    max-width: 48rem;
+  }
+  .rss-link {
+    justify-self: start;
+    font-weight: 800;
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+  .cluster-grid,
+  .process-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  .cluster-card,
+  .process-detail-card {
+    padding: 0.95rem 1.05rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .cluster-card h3,
+  .process-detail-card h3 {
+    margin: 0 0 0.35rem;
+    font-size: 1rem;
+    color: var(--color-primary);
+  }
+  .cluster-card p,
+  .process-detail-card p {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 0.92rem;
+  }
+  .cluster-card a {
+    display: inline-block;
+    margin-top: 0.7rem;
+    color: var(--color-primary);
+    font-weight: 800;
+    text-decoration: none;
+  }
+  .process-detail-card span {
+    display: inline-grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 0.65rem;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--color-primary), white 86%);
+    color: var(--color-primary);
+    font-weight: 900;
+    font-size: 0.9rem;
+  }
+  .decision-table {
+    display: grid;
+    gap: 0;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background: var(--color-surface);
+  }
+  .decision-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+    padding: 0.9rem 1rem;
+    border-top: 1px solid var(--color-border);
+  }
+  .decision-row:first-child {
+    border-top: 0;
+  }
+  .decision-head {
+    display: none;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-weight: 800;
+  }
+  .decision-row span:first-child {
+    font-weight: 800;
+    color: var(--color-text);
+  }
+  .decision-row span:nth-child(2) {
+    color: var(--color-muted);
+  }
+  .decision-row a {
+    color: var(--color-primary);
+    font-weight: 800;
+    text-decoration: none;
+  }
   .process-list {
     display: flex;
     flex-direction: column;
@@ -528,9 +894,23 @@ const faqItems = [
   }
   @media (min-width: 640px) {
     .category-grid { grid-template-columns: repeat(2, 1fr); }
+    .cluster-grid { grid-template-columns: repeat(2, 1fr); }
+    .process-detail-grid { grid-template-columns: repeat(2, 1fr); }
   }
   @media (min-width: 900px) {
     .category-grid { grid-template-columns: repeat(3, 1fr); }
+    .section-heading-row {
+      grid-template-columns: 1fr auto;
+    }
+    .cluster-grid { grid-template-columns: repeat(5, 1fr); }
+    .process-detail-grid { grid-template-columns: repeat(5, 1fr); }
+    .decision-head {
+      display: grid;
+    }
+    .decision-row {
+      grid-template-columns: 1fr 1.55fr 0.85fr;
+      align-items: start;
+    }
   }
   .mal-support {
     font-size: 0.9rem;

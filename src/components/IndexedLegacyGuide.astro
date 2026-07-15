@@ -1,0 +1,255 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Breadcrumbs from "./Breadcrumbs.astro";
+import DirectAnswer from "./DirectAnswer.astro";
+import CtaBar from "./CtaBar.astro";
+import Faq from "./Faq.astro";
+import LongformExpansion from "./LongformExpansion.astro";
+import { BUSINESS, SITE_URL } from "../data/site";
+import type { IndexedGeneratedPage } from "../data/gscIndexedGeneratedPages";
+
+interface Crumb {
+  name: string;
+  path: string;
+}
+
+interface Props {
+  page: IndexedGeneratedPage;
+  breadcrumbs: Crumb[];
+}
+
+const { page, breadcrumbs } = Astro.props;
+const datePublished = "2026-07-18";
+const dateModified = "2026-07-18";
+
+const articleSchema =
+  page.category === "legacy-blog"
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: page.title,
+        description: page.description,
+        datePublished,
+        dateModified,
+        author: { "@type": "Organization", name: BUSINESS.legalName },
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        mainEntityOfPage: `${SITE_URL}${page.path}`,
+        image: `${SITE_URL}/images/blog-pillars/legacy-indexed-guide.webp`,
+      }
+    : undefined;
+
+const serviceSchema =
+  page.category !== "legacy-blog" && page.category !== "legal"
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        serviceType: page.serviceName,
+        provider: { "@id": `${SITE_URL}/#organization` },
+        areaServed: { "@type": "Place", name: page.locationName ?? "Kochi and Kerala feasibility areas" },
+        url: `${SITE_URL}${page.path}`,
+      }
+    : undefined;
+
+const jsonLd = [
+  articleSchema,
+  serviceSchema,
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${page.path}`,
+    name: page.title,
+    description: page.description,
+    dateModified,
+  },
+].filter(Boolean) as Record<string, unknown>[];
+---
+
+<Layout title={page.title} description={page.description} path={page.path} jsonLd={jsonLd} lang={page.lang}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <article class="indexed-guide">
+    <section class="guide-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">{page.eyebrow}</p>
+        <h1>{page.h1}</h1>
+        <p class="lede">{page.description}</p>
+        <div class="hero-actions">
+          <a class="btn primary" href={page.serviceHref}>Current Service</a>
+          <a class="btn secondary" href="/feed.xml">RSS Feed</a>
+        </div>
+      </div>
+      <img
+        src="/images/blog-pillars/legacy-indexed-guide.webp"
+        alt="Safe indexed Ewaste Kochi guide"
+        width="1200"
+        height="675"
+        loading="eager"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>{page.quickAnswer}</p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage={`Hi, I found your page about ${page.h1}. I can share item photos, condition and location.`} />
+
+    <section class="snapshot" aria-labelledby="snapshot-heading">
+      <h2 id="snapshot-heading">Current Guidance Snapshot</h2>
+      <div class="snapshot-grid">
+        <div>
+          <h3>Best next step</h3>
+          <p>Share clear photos, quantity, condition and location before assuming pickup, price or documentation.</p>
+        </div>
+        <div>
+          <h3>Common items</h3>
+          <p>{page.items.join(", ")}.</p>
+        </div>
+        <div>
+          <h3>Audience</h3>
+          <p>{page.audience}.</p>
+        </div>
+        <div>
+          <h3>Local note</h3>
+          <p>{page.localIntent}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-panel" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Current Pages</h2>
+      <div class="related-grid">
+        {page.relatedLinks.map((link) => <a href={link.href}>{link.label}</a>)}
+      </div>
+    </section>
+
+    <LongformExpansion
+      label={page.h1}
+      audience={page.audience}
+      localIntent={page.localIntent}
+      items={page.items}
+      themes={page.themes}
+    />
+
+    <Faq items={page.faqs} heading={`${page.serviceName} FAQs`} />
+
+    <p class="updated">Last updated: <time datetime={dateModified}>{dateModified}</time></p>
+  </article>
+</Layout>
+
+<style>
+  .indexed-guide {
+    display: grid;
+    gap: 1.75rem;
+  }
+  .guide-hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .hero-copy {
+    display: grid;
+    gap: 0.8rem;
+  }
+  .eyebrow {
+    margin: 0;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    max-width: 16ch;
+    font-size: clamp(2rem, 8vw, 3.25rem);
+  }
+  .lede {
+    margin: 0;
+    max-width: 52rem;
+    color: var(--color-muted);
+    font-size: 1.05rem;
+  }
+  .guide-hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .btn {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    padding: 0.72rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 800;
+    text-decoration: none;
+  }
+  .btn.primary {
+    background: var(--color-primary);
+    color: #fff;
+  }
+  .btn.secondary {
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    color: var(--color-primary);
+  }
+  .snapshot,
+  .related-panel {
+    padding: 1.1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .snapshot h2,
+  .related-panel h2 {
+    margin-top: 0;
+  }
+  .snapshot-grid,
+  .related-grid {
+    display: grid;
+    gap: 0.85rem;
+  }
+  .snapshot-grid > div,
+  .related-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-bg);
+  }
+  .snapshot-grid h3 {
+    margin: 0 0 0.35rem;
+    font-size: 1rem;
+  }
+  .snapshot-grid p {
+    margin: 0;
+    color: var(--color-muted);
+  }
+  .related-grid a {
+    font-weight: 800;
+    text-decoration: none;
+  }
+  .updated {
+    color: var(--color-muted);
+    font-size: 0.82rem;
+  }
+  @media (min-width: 780px) {
+    .guide-hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .snapshot-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .related-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+</style>

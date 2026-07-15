@@ -43,6 +43,8 @@ const ALLOWED_SCHEMA_TYPES = new Set([
   "Answer",
   "ListItem",
   "Place",
+  "HowTo",
+  "HowToStep",
 ]);
 
 const DENIED_SCHEMA_TYPES = new Set([
@@ -51,8 +53,6 @@ const DENIED_SCHEMA_TYPES = new Set([
   "GeoCoordinates",
   "QAPage",
   "LocalBusiness",
-  "HowTo",
-  "HowToStep",
   "Certification",
 ]);
 

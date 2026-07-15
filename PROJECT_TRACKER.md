@@ -459,6 +459,23 @@ GSC's Performance export contains 805 URL rows vs. 103 in the current live sitem
 
 **Follow-up priority ranking (2026-07-07)**: the 183 URLs Phase 2G left unresolved were ranked by real GSC clicks/impressions and analyzed for structural patterns — see `reports/legacy-url-priority-list.md`. Headline findings: 70 of 183 target cities outside the real Kochi-metro service area (recommended never built as location pages); the 72 medium-confidence candidates collapse into just 7 real service topics city-swapped repeatedly, not 72 independent pages; 19 of 183 have real click history, of which 11 (Kochi-metro, defensible target) are a safe next redirect batch. Still analysis only — nothing implemented this pass.
 
+## Indexed + Top URL Presence Audit (2026-07-18)
+
+User requested a final pass over the top/indexed URL list and explicitly approved push + deploy. The current build now contains 363 routes. The high-intent expected list is covered by either canonical 200 pages or existing one-hop redirects.
+
+Two missing high-intent service aliases were created through the safe indexed legacy guide engine:
+
+* `/services/computer-recycling-near-me/`
+* `/services/air-conditioner-recycling-kochi/`
+
+Three expected alias/location URLs remain redirects instead of new pages because stronger canonical targets already exist:
+
+* `/data-destruction-services-kochi/` -> `/data-destruction/`
+* `/services/e-waste-recycling-kochi/` -> `/recycling/`
+* `/locations/kalamassery-hitech-park/` -> `/locations/kalamassery/`
+
+Audit exports were generated in `data/gsc-all-known-urls-normalized.*`, `data/current-v2-route-inventory.*`, `data/gsc-url-presence-gap-map.*`, `data/missing-high-intent-pages-to-build.*`, and `data/missing-url-redirect-recommendations.*`. Reports: `reports/indexed-and-top-url-presence-audit-report.md` and `reports/blog-url-presence-decision-report.md`.
+
 Three things surfaced that need a decision from the user — now tracked as explicit `manual-review` decisions (not actioned):
 1. **`/hi/` (Hindi) pages exist** (6 URLs) — never scoped in any brief (only Malayalam was). User decision 2026-07-07: manual-review, needs a dedicated audit before any action.
 2. **`blog.ewastekochi.com` subdomain has real content** — different from `blogs.ewastekochi.com` (which 404s and is the one the original brief referenced). User decision 2026-07-07: manual-review, `/blog/{slug}/` stays on main domain.

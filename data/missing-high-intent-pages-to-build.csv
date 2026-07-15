@@ -1,0 +1,3 @@
+url,path,page_type,status_after_patch,build_decision,reason,final_target
+https://www.ewastekochi.com/services/air-conditioner-recycling-kochi/,/services/air-conditioner-recycling-kochi/,service,present_200,created_this_release,High-intent expected service URL had no 200 route and no safe redirect; now generated through the safe legacy service template.,https://www.ewastekochi.com/services/air-conditioner-recycling-kochi/
+https://www.ewastekochi.com/services/computer-recycling-near-me/,/services/computer-recycling-near-me/,service,present_200,created_this_release,High-intent expected service URL had no 200 route and no safe redirect; now generated through the safe legacy service template.,https://www.ewastekochi.com/services/computer-recycling-near-me/

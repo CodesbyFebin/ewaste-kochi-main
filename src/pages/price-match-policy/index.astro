@@ -1,0 +1,162 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import DirectAnswer from "../../components/DirectAnswer.astro";
+import Faq from "../../components/Faq.astro";
+import { SITE_URL, whatsappLink } from "../../data/site";
+
+const title = "Ewaste Kochi Price Match Policy | Refurbished Electronics";
+const description =
+  "Read Ewaste Kochi's eligible price match policy for refurbished electronics in Kochi: terms, exclusions, proof needed and how to request review.";
+const lastUpdated = "2026-07-15";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Marketplace", path: "/marketplace/" },
+  { name: "Price Match Policy", path: "/price-match-policy/" },
+];
+
+const priceMatchMessage =
+  "Hi Ewaste Kochi, I want to request a price match review for a refurbished marketplace item. I can share the link or screenshot.";
+
+const faqItems = [
+  {
+    q: "What items are eligible for price match?",
+    a: "The comparison must be for the same brand, model, configuration, condition, accessories and seller availability. The item must be available from an India-based seller at the time of review.",
+  },
+  {
+    q: "How quickly is a request reviewed?",
+    a: "Most requests are reviewed after you share a link, screenshot and item details. Timing depends on whether the comparison is clear and whether the item is still available.",
+  },
+  {
+    q: "Can I claim after purchase?",
+    a: "You can share proof within 7 days of purchase. If the comparison qualifies, the team will discuss the adjustment route with you.",
+  },
+  {
+    q: "What happens if Ewaste Kochi cannot match the price?",
+    a: "If the item is eligible but direct matching is not possible, Ewaste Kochi may apply a 5% discount to the listed marketplace price.",
+  },
+  {
+    q: "Are auction or clearance prices eligible?",
+    a: "No. Auction listings, clearance items, damaged or non-comparable units, membership-only offers and out-of-stock listings are excluded.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/price-match-policy/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+---
+
+<Layout title={title} description={description} path="/price-match-policy/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <h1>Ewaste Kochi Price Match Policy</h1>
+  <p class="lede">
+    Ewaste Kochi wants refurbished electronics buying in Kochi to feel
+    transparent and fair. If you find a lower available price for an
+    eligible identical refurbished item, share proof and we will review it
+    before confirming a match or policy discount.
+  </p>
+
+  <DirectAnswer heading="Quick answer: how price match works">
+    <p>
+      Price match applies to eligible identical refurbished items: same
+      brand, model, configuration, condition, accessories and availability.
+      Send a link or screenshot by WhatsApp or chatbot for verification.
+    </p>
+  </DirectAnswer>
+
+  <CtaBar
+    whatsappMessage={priceMatchMessage}
+    labels={{ call: "Call", whatsapp: "Request Review", pickup: "Marketplace" }}
+    pickupHref="/marketplace/"
+  />
+
+  <section>
+    <h2>What the promise means</h2>
+    <p>
+      If an eligible comparison shows a lower current price, Ewaste Kochi can
+      match the verified price. If direct matching is not possible but the
+      comparison is still eligible, Ewaste Kochi may apply a 5% discount to
+      the marketplace price.
+    </p>
+  </section>
+
+  <section>
+    <h2>Eligibility conditions</h2>
+    <ul class="check-list">
+      <li>Same brand, model and configuration, including processor, RAM, storage and display where relevant.</li>
+      <li>Same condition level, visible wear, battery health and included accessories.</li>
+      <li>The competitor item must be in stock and available to buy when reviewed.</li>
+      <li>The comparison must be from an India-based seller with visible price and terms.</li>
+      <li>Post-purchase requests must be sent within 7 days of your Ewaste Kochi purchase.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>How to request a review</h2>
+    <ol class="process-list">
+      <li><strong>Share the Ewaste Kochi item.</strong> Send the product name, model or marketplace conversation reference.</li>
+      <li><strong>Share proof.</strong> Send a competitor link, screenshot, shop name, price and date.</li>
+      <li><strong>Confirm comparability.</strong> Include condition, accessories, warranty/support and stock status if visible.</li>
+      <li><strong>Wait for review.</strong> The team checks whether the items are truly comparable before confirming the outcome.</li>
+    </ol>
+    <p>
+      Start here:
+      <a href={whatsappLink(priceMatchMessage)} target="_blank" rel="noopener">request a price match review on WhatsApp</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Exclusions</h2>
+    <ul class="check-list">
+      <li>Auction listings, bid prices and informal listings without clear seller terms.</li>
+      <li>Clearance, damaged, open-box or liquidation items that are not comparable.</li>
+      <li>Membership-only, coupon-only, bank-offer-only or bundle prices.</li>
+      <li>Out-of-stock listings or prices that cannot be verified at review time.</li>
+      <li>Items with missing charger, lower battery health, different specs or unclear condition.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Why terms matter</h2>
+    <p>
+      Refurbished electronics vary by condition. Two listings with the same
+      model name can differ in battery health, cosmetic condition, included
+      charger, support period, operating system, delivery terms and seller
+      accountability. The policy keeps comparisons fair so customers get a
+      real value check instead of a misleading headline price.
+    </p>
+  </section>
+
+  <Faq items={faqItems} />
+
+  <p class="updated">Last updated: <time datetime={lastUpdated}>{lastUpdated}</time></p>
+</Layout>
+
+<style>
+  .lede {
+    max-width: 46rem;
+    color: var(--color-muted);
+    font-size: 1.1rem;
+  }
+  .check-list,
+  .process-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding-left: 1.25rem;
+  }
+  .updated {
+    color: var(--color-muted);
+    font-size: 0.8rem;
+  }
+</style>

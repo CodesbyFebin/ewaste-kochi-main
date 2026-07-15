@@ -1,0 +1,80 @@
+# Indexed + Top URL Presence Audit Report
+
+Generated: 2026-07-15T12:22:57.340Z
+
+## Production Build Source
+
+- Checked built route output from `dist/**/*.html`.
+- Checked discovery output from `dist/sitemap.xml`, `dist/sitemaps/*.xml`, `dist/content-index.json`, `dist/ai-sitemap.xml`, and `dist/llms.txt`.
+- Checked redirect sources from `vercel.json`.
+- Normalized GSC/indexed inputs from `data/gsc-indexed-url-upgrade-map.json`, `data/gsc-url-protection-map.json`, and `data/gsc-indexed-redirect-map.json`.
+
+## Export Files
+
+- `data/gsc-all-known-urls-normalized.csv` / `.json`
+- `data/current-v2-route-inventory.csv` / `.json`
+- `data/gsc-url-presence-gap-map.csv` / `.json`
+- `data/missing-high-intent-pages-to-build.csv` / `.json`
+- `data/missing-url-redirect-recommendations.csv` / `.json`
+
+## Counts
+
+- Known normalized URL rows: 1942
+- Current built routes: 363
+- Sitemap URL count: 369
+- Content index URL count: 363
+- Vercel redirect rules: 450
+- Presence statuses: present_200=276, missing_no_redirect=1351, redirects_to_200_target=315
+- Route types: core=16, service=26, blog=124, unknown=7, trust=3, legal=4, location=183
+
+## High-Intent URL Results
+
+| URL | Result | Final target | Decision |
+| --- | --- | --- | --- |
+| / | present_200 | https://www.ewastekochi.com/ | keep_indexable |
+| /battery-recycling/ | present_200 | https://www.ewastekochi.com/battery-recycling/ | keep_indexable |
+| /blog/best-scrap-dealers-kochi-electronics/ | present_200 | https://www.ewastekochi.com/blog/best-scrap-dealers-kochi-electronics/ | keep_indexable |
+| /blog/e-waste-management-it-companies/ | present_200 | https://www.ewastekochi.com/blog/e-waste-management-it-companies/ | keep_indexable |
+| /blog/electronic-waste-disposal-kerala/ | present_200 | https://www.ewastekochi.com/blog/electronic-waste-disposal-kerala/ | keep_indexable |
+| /blog/free-e-waste-pickup-kochi/ | present_200 | https://www.ewastekochi.com/blog/free-e-waste-pickup-kochi/ | keep_indexable |
+| /blog/free-laptop-recycling-kochi/ | present_200 | https://www.ewastekochi.com/blog/free-laptop-recycling-kochi/ | keep_indexable |
+| /blog/how-to-choose-itad-provider/ | present_200 | https://www.ewastekochi.com/blog/how-to-choose-itad-provider/ | keep_indexable |
+| /blog/laptop-scrap-price-kochi/ | present_200 | https://www.ewastekochi.com/blog/laptop-scrap-price-kochi/ | keep_indexable |
+| /blog/mobile-scrap-price-kochi/ | present_200 | https://www.ewastekochi.com/blog/mobile-scrap-price-kochi/ | keep_indexable |
+| /blog/old-tv-disposal-kochi/ | present_200 | https://www.ewastekochi.com/blog/old-tv-disposal-kochi/ | keep_indexable |
+| /blog/secure-data-destruction-kochi/ | present_200 | https://www.ewastekochi.com/blog/secure-data-destruction-kochi/ | keep_indexable |
+| /blog/server-scrap-price-kochi/ | present_200 | https://www.ewastekochi.com/blog/server-scrap-price-kochi/ | keep_indexable |
+| /contact/ | present_200 | https://www.ewastekochi.com/contact/ | keep_indexable |
+| /data-destruction-services-kochi/ | redirects_to_200_target | https://www.ewastekochi.com/data-destruction/ | keep_redirect |
+| /e-waste/ | present_200 | https://www.ewastekochi.com/e-waste/ | keep_indexable |
+| /locations/kalady/ | present_200 | https://www.ewastekochi.com/locations/kalady/ | keep_indexable |
+| /locations/kalamassery-hitech-park/ | redirects_to_200_target | https://www.ewastekochi.com/locations/kalamassery/ | keep_redirect |
+| /locations/maradu/ | present_200 | https://www.ewastekochi.com/locations/maradu/ | keep_indexable |
+| /locations/perumbavoor/ | present_200 | https://www.ewastekochi.com/locations/perumbavoor/ | keep_indexable |
+| /locations/willingdon-island/ | present_200 | https://www.ewastekochi.com/locations/willingdon-island/ | keep_indexable |
+| /marketplace/ | present_200 | https://www.ewastekochi.com/marketplace/ | keep_indexable |
+| /pickup/ | present_200 | https://www.ewastekochi.com/pickup/ | keep_indexable |
+| /recycling/ | present_200 | https://www.ewastekochi.com/recycling/ | keep_indexable |
+| /sell-electronics/ | present_200 | https://www.ewastekochi.com/sell-electronics/ | keep_indexable |
+| /services/air-conditioner-recycling-kochi/ | present_200 | https://www.ewastekochi.com/services/air-conditioner-recycling-kochi/ | keep_indexable |
+| /services/computer-recycling-near-me/ | present_200 | https://www.ewastekochi.com/services/computer-recycling-near-me/ | keep_indexable |
+| /services/e-waste-recycling-kochi/ | redirects_to_200_target | https://www.ewastekochi.com/recycling/ | keep_redirect |
+| /services/electronics-recycling-near-me/ | present_200 | https://www.ewastekochi.com/services/electronics-recycling-near-me/ | keep_indexable |
+| /services/ups-inverter-recycling-kochi/ | present_200 | https://www.ewastekochi.com/services/ups-inverter-recycling-kochi/ | keep_indexable |
+
+## Pages Created In This Patch
+
+- `/services/computer-recycling-near-me/`
+- `/services/air-conditioner-recycling-kochi/`
+
+Both are generated by the safe indexed legacy guide engine rather than handwritten thin pSEO copies. They are present in the built route inventory, service sitemap, content index, and AI sitemap.
+
+## Redirects Kept Instead Of Rebuilding
+
+- `/data-destruction-services-kochi/` -> https://www.ewastekochi.com/data-destruction/
+- `/locations/kalamassery-hitech-park/` -> https://www.ewastekochi.com/locations/kalamassery/
+- `/services/e-waste-recycling-kochi/` -> https://www.ewastekochi.com/recycling/
+
+## Remaining Risk
+
+Large low-value legacy URL sets remain intentionally unbuilt unless a specific page has a safe canonical purpose. This preserves the post-cutover containment strategy while covering the manually named high-intent pages.

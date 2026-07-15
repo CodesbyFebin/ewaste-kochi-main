@@ -1,0 +1,20 @@
+---
+import IndexedLegacyGuide from "../../../components/IndexedLegacyGuide.astro";
+import { INDEXED_BUYBACK_PAGES } from "../../../data/gscIndexedGeneratedPages";
+
+export function getStaticPaths() {
+  return INDEXED_BUYBACK_PAGES.map((page) => ({
+    params: { model: page.modelParam },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+const breadcrumbs = [
+  { name: "Home", path: "/" },
+  { name: "Sell Electronics", path: "/sell-electronics/" },
+  { name: page.h1, path: page.path },
+];
+---
+
+<IndexedLegacyGuide page={page} breadcrumbs={breadcrumbs} />

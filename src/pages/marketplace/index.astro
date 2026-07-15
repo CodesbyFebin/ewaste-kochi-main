@@ -4,12 +4,14 @@ import Breadcrumbs from "../../components/Breadcrumbs.astro";
 import CtaBar from "../../components/CtaBar.astro";
 import Faq from "../../components/Faq.astro";
 import DirectAnswer from "../../components/DirectAnswer.astro";
-import { BUSINESS, SITE_URL, telLink } from "../../data/site";
+import { BUSINESS, SITE_URL, telLink, whatsappLink } from "../../data/site";
 
-const title = "Sell Old Electronics in Kochi | Condition-Based Quote + Free Pickup";
+const title = "Buy Refurbished Electronics in Kochi | Lowest Price Guarantee";
 const description =
-  "List your used laptop, phone, or IT equipment for a condition-based quote, or browse inspected refurbished devices. Doorstep pickup and payment across Kochi.";
-const lastUpdated = "2026-07-15";
+  "Shop refurbished laptops, desktops, printers and IT gear in Kochi with eligible price match review, local delivery discussion and device preparation support.";
+const lastUpdated = "2026-07-18";
+const priceMatchMessage =
+  "Hi Ewaste Kochi, I found a lower price for a refurbished marketplace item. Can you check if it is eligible for price match?";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
@@ -24,6 +26,7 @@ const jsonLd = [
     provider: { "@id": `${SITE_URL}/#organization` },
     areaServed: "Kochi, Ernakulam, Kerala",
     url: `${SITE_URL}/marketplace/`,
+    termsOfService: `${SITE_URL}/price-match-policy/`,
   },
   {
     "@context": "https://schema.org",
@@ -36,6 +39,22 @@ const jsonLd = [
 ];
 
 const faqItems = [
+  {
+    q: "Does Ewaste Kochi offer a price match guarantee?",
+    a: "Eligible identical refurbished items can be reviewed under the price match policy. The item must have the same brand, model, configuration, condition and included accessories, and proof must be shared for verification.",
+  },
+  {
+    q: "How do I claim a price match?",
+    a: "Send the competitor link, screenshot, model details and condition notes through WhatsApp or the chatbot. The team checks whether the item is identical, available and comparable before confirming the outcome.",
+  },
+  {
+    q: "What if I find a lower price after buying?",
+    a: "Share proof within 7 days of purchase. If the comparison is eligible under the policy, the team will discuss the available adjustment route with you.",
+  },
+  {
+    q: "Are refurbished items as good as new?",
+    a: "Refurbished items are not new, but they can be a better-value choice when they are inspected, prepared, tested and matched to your actual use case. Always compare condition, support terms and included accessories before buying.",
+  },
   {
     q: "What's the difference between Marketplace and Sell Electronics?",
     a: "Marketplace is our two-sided platform — it covers both listing your device for sale and the inspected devices we have available. Sell Electronics is the dedicated flow if you specifically want to sell and get paid, with valuation guidance for common device conditions.",
@@ -73,96 +92,223 @@ const faqItems = [
     a: "It's a good idea to back up and sign out of accounts yourself, and any device with storage is also checked and, on request, wiped before resale as an added step — see our data destruction page for details.",
   },
 ];
+
+const shoppingCategories = [
+  {
+    name: "Refurbished laptops",
+    copy: "Business laptops for students, home offices and Kochi teams. Ask for current Dell, HP, Lenovo and similar availability.",
+    fit: "Best for study, office work and remote teams",
+  },
+  {
+    name: "Desktops and mini PCs",
+    copy: "Budget-friendly office desktops and compact systems for billing counters, admin desks and home workstations.",
+    fit: "Best for fixed desks and business use",
+  },
+  {
+    name: "Printers and peripherals",
+    copy: "Used printers, monitors, keyboards, networking gear and accessories when inspected stock is available.",
+    fit: "Best for add-ons and replacements",
+  },
+  {
+    name: "Bulk office lots",
+    copy: "Multiple working devices from office refreshes can be assessed for resale, refurbishment or ITAD routing.",
+    fit: "Best for companies buying or selling batches",
+  },
+];
+
+const guaranteeSteps = [
+  "Same brand, model, configuration, condition and included accessories.",
+  "The lower price must be currently available from an India-based seller.",
+  "Share proof by WhatsApp or chatbot before buying, or within 7 days after purchase.",
+  "Auction listings, clearance offers, membership-only deals and non-comparable items are excluded.",
+];
+
+const trustSignals = [
+  { label: "Eligible price match", text: "Lower verified comparable price? Ask us to review it under the policy before purchase." },
+  { label: "Local delivery review", text: "Kochi and nearby Ernakulam delivery options are confirmed with each order." },
+  { label: "Device preparation", text: "Storage devices are checked and prepared before resale where applicable." },
+  { label: "Inspection-led quotes", text: "Condition, accessories and warranty support are confirmed before purchase." },
+];
+
+const comparisonRows = [
+  { factor: "Price", refurbished: "Usually lower upfront cost for similar everyday performance.", newDevice: "Higher upfront cost, especially for business-class models." },
+  { factor: "Condition", refurbished: "Varies by unit, so inspection notes and photos matter.", newDevice: "Factory-new cosmetic condition." },
+  { factor: "Warranty", refurbished: "Support period depends on the item and is confirmed before purchase.", newDevice: "Manufacturer warranty based on the retail model." },
+  { factor: "Environmental impact", refurbished: "Extends device life and reduces avoidable e-waste.", newDevice: "Creates new manufacturing demand." },
+];
 ---
 
 <Layout title={title} description={description} path="/marketplace/" jsonLd={jsonLd}>
   <Breadcrumbs items={breadcrumbItems} />
-  <h1>Marketplace</h1>
+  <div class="guarantee-kicker">Lowest Price Guarantee for eligible refurbished electronics</div>
+  <h1>Buy Refurbished Electronics in Kochi</h1>
   <p class="lede">
-    Our marketplace is where working electronics change hands in Kochi —
-    list your own device for a condition-based quote and doorstep payment,
-    or ask us about currently available inspected refurbished units.
+    Shop inspected refurbished laptops, desktops, printers, networking gear
+    and accessories with confidence. If you find a verified lower price for
+    an eligible identical item, ask for a review under the price-match
+    policy. Availability, condition and final price are confirmed before
+    purchase, so you are comparing real details rather than a vague listing.
   </p>
 
-  <DirectAnswer>
+  <figure class="hero-image">
+    <img
+      src="/images/marketplace-hero.webp"
+      width="1672"
+      height="941"
+      alt="Ewaste Kochi marketplace visual with refurbished laptops, desktops, networking gear, accessories, Kochi location marker, and service cues for tested devices, affordable pricing, secure purchase, and circular economy."
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+    />
+  </figure>
+
+  <div class="hero-actions">
+    <a href="#shop-categories" class="hero-btn hero-btn-primary">Browse categories</a>
+    <a href="/price-match-policy/" class="hero-btn hero-btn-outline">Price match policy</a>
+    <a href={whatsappLink(priceMatchMessage)} class="hero-btn hero-btn-whatsapp" target="_blank" rel="noopener">Report lower price</a>
+  </div>
+
+  <DirectAnswer heading="Quick answer: price match guarantee">
     <p>
-      Use Marketplace when a device may still have resale value. Quotes are
-      condition-based and confirmed only after inspection, so send photos,
-      model details and working status before pickup.
+      Ewaste Kochi reviews eligible price match requests for refurbished
+      electronics. If you find a lower available price for the same brand,
+      model, configuration, condition and included accessories, send proof
+      by WhatsApp or chatbot so the team can verify it under the policy.
     </p>
   </DirectAnswer>
 
-  <CtaBar whatsappMessage="Hi, I'd like to list a device on the marketplace." />
+  <section class="price-match-panel" aria-labelledby="price-match-heading">
+    <div>
+      <p class="panel-eyebrow">Price confidence</p>
+      <h2 id="price-match-heading">Lowest Price Guarantee</h2>
+      <p>
+        Found a comparable refurbished laptop, desktop, printer or accessory
+        at a lower available price? Share the link or screenshot. If the
+        item qualifies under the policy, the team will confirm the available
+        price-match outcome before purchase.
+      </p>
+    </div>
+    <a href="/price-match-policy/" class="panel-link">Read full terms</a>
+  </section>
 
-  <section>
-    <h2>What you can do here</h2>
+  <CtaBar
+    whatsappMessage="Hi, I'd like to ask about refurbished electronics on the Ewaste Kochi marketplace."
+    labels={{ call: "Call Marketplace", whatsapp: "WhatsApp Products", pickup: "Sell a Device" }}
+    pickupHref="/sell-electronics/"
+  />
+
+  <section id="shop-categories">
+    <h2>Shop by category</h2>
     <p>
-      Sell a working or partially working laptop, phone, or IT accessory for
-      cash with doorstep pickup and payment. If you're specifically looking
-      to sell rather than browse, our <a href="/sell-electronics/">Sell
-      Electronics</a> page has device-condition and valuation guidance built
-      for that flow.
+      Current marketplace stock changes as devices are inspected and sold.
+      Use these categories to tell the team what you want, then ask for live
+      availability, photos, condition notes and price-match review before
+      you commit.
     </p>
+    <div class="shop-grid">
+      {shoppingCategories.map((category) => (
+        <article class="shop-card">
+          <h3>{category.name}</h3>
+          <p>{category.copy}</p>
+          <span>{category.fit}</span>
+          <a
+            href={whatsappLink(`Hi Ewaste Kochi, I want to check current marketplace availability for ${category.name}.`)}
+            target="_blank"
+            rel="noopener"
+          >Check availability</a>
+        </article>
+      ))}
+    </div>
   </section>
 
   <section>
-    <h2>How listing and selling works</h2>
+    <h2>How buying works</h2>
     <ol class="process-list">
-      <li><strong>Tell us about your device</strong> — type, age, and condition — over WhatsApp.</li>
-      <li><strong>Get a preliminary quote</strong> based on your description.</li>
-      <li><strong>Schedule doorstep pickup</strong> at a convenient time.</li>
-      <li><strong>Quick inspection and final quote</strong> confirmed on the spot.</li>
-      <li><strong>Payment</strong> arranged once you accept the final quote — typically via UPI or cash at pickup.</li>
+      <li><strong>Tell us what you need.</strong> Share category, budget, preferred brand and use case over WhatsApp or the chatbot.</li>
+      <li><strong>Review live options.</strong> We share available units, condition notes, accessories and support period where applicable.</li>
+      <li><strong>Compare the price.</strong> If you found an eligible lower comparable price, send proof before purchase for review.</li>
+      <li><strong>Confirm delivery.</strong> Local delivery options are discussed for Kochi and nearby Ernakulam locations before payment.</li>
+      <li><strong>Buy only after details are clear.</strong> Final price, condition and any support terms are confirmed before checkout or handover.</li>
     </ol>
   </section>
 
   <section>
-    <h2>Who this is for</h2>
+    <h2>Price match terms at a glance</h2>
     <p>
-      Anyone upgrading a working laptop or phone and wanting a fair cash
-      return instead of letting it sit unused, plus offices looking to
-      liquidate functional equipment after an upgrade cycle. For bulk
-      corporate resale as part of an asset refresh, see <a href="/itad/">ITAD</a>
-      for the fuller process including data destruction and reporting. See
-      <a href="/e-waste-scrap-prices-kochi/">e-waste scrap prices</a> for
-      what drives valuation, and <a href="/computer-scrap-buyers-kochi/">
-      computer scrap buyers</a> for bulk office IT lots.
+      The guarantee is meant to keep comparisons fair, not to compare unlike
+      items. A scratched unit without charger, an auction listing and a
+      verified inspected unit are not the same purchase.
     </p>
+    <ul class="check-list">
+      {guaranteeSteps.map((step) => <li>{step}</li>)}
+    </ul>
+    <div class="inline-actions">
+      <a href={whatsappLink(priceMatchMessage)} target="_blank" rel="noopener">Start price match request</a>
+      <a href="#" data-ewlf-open data-ewlf-flow="price-match">Open chatbot flow</a>
+    </div>
   </section>
 
   <section>
-    <h2>What affects your quote</h2>
+    <h2>Why buy refurbished</h2>
     <p>
-      Device type, brand and model, age, working condition, battery
-      health, and accessories included (original charger, box) all factor
-      into the estimate — alongside current market demand for that
-      specific model, which is why quotes are confirmed at pickup rather
-      than fixed upfront. See <a href="/e-waste-scrap-prices-kochi/">e-waste
-      scrap prices</a> for the fuller breakdown of how condition-based
-      pricing works.
+      Refurbished electronics are often the best value when the device is
+      tested, honestly described and matched to your actual workload. You
+      avoid paying new-device pricing for routine use, and you help extend
+      the life of working electronics that should not become e-waste early.
     </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Factor</th>
+            <th scope="col">Refurbished</th>
+            <th scope="col">New</th>
+          </tr>
+        </thead>
+        <tbody>
+          {comparisonRows.map((row) => (
+            <tr>
+              <td><strong>{row.factor}</strong></td>
+              <td>{row.refurbished}</td>
+              <td>{row.newDevice}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   </section>
 
   <section>
-    <h2>Marketplace vs. recycling vs. ITAD</h2>
+    <h2>Trust and safety checks</h2>
+    <div class="trust-grid">
+      {trustSignals.map((signal) => (
+        <article class="trust-card">
+          <h3>{signal.label}</h3>
+          <p>{signal.text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section>
+    <h2>Buying, selling, recycling or ITAD?</h2>
     <p>
-      These aren't competing options — they're different outcomes for
-      different devices. Marketplace fits a working device with genuine
-      resale demand. Recycling fits anything without realistic resale
-      value. ITAD fits structured, business-scale asset disposal needing
-      tracking and documentation. If you're not sure which applies,
-      describe what you have and we'll point you to the right one rather
-      than making you choose blind.
+      Marketplace fits working refurbished devices with resale value.
+      <a href="/sell-electronics/">Sell Electronics</a> is for users who
+      want to sell a device and get a condition-based quote.
+      <a href="/recycling/">Recycling</a> fits damaged or obsolete items.
+      <a href="/itad/">ITAD</a> fits business-scale asset disposal with
+      inventory and data-handling requirements.
     </p>
   </section>
 
   <section>
     <h2>Compliance and data safety</h2>
     <p>
-      Any device with storage is checked and, on request, wiped before resale
-      to make sure your personal data doesn't travel with the device. See
-      our <a href="/data-destruction/">data destruction</a> page for details
-      on wiping standards.
+      Any marketplace device with storage is checked and, where applicable,
+      wiped before resale to reduce the risk of personal data travelling
+      with the device. See our <a href="/data-destruction/">data destruction</a>
+      page for details on wiping, shredding and documentation options.
     </p>
   </section>
 
@@ -181,12 +327,225 @@ const faqItems = [
 
   <Faq items={faqItems} />
 
+  <aside class="price-match-sticky" aria-label="Price match shortcut">
+    <span>Found it cheaper?</span>
+    <a href={whatsappLink(priceMatchMessage)} target="_blank" rel="noopener">Report lower price</a>
+  </aside>
+
   <p class="updated">Last updated: <time datetime={lastUpdated}>{lastUpdated}</time></p>
 </Layout>
 
 <style>
+  .guarantee-kicker {
+    display: inline-flex;
+    margin-bottom: 0.85rem;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    background: #d1fae5;
+    color: #065f46;
+    font-size: 0.82rem;
+    font-weight: 800;
+  }
   .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .hero-image { margin: 1.5rem 0 1.75rem; }
+  .hero-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1672 / 941;
+    border-radius: 0.5rem;
+    box-shadow: 0 1rem 2.5rem rgba(5, 68, 47, 0.12);
+  }
+  .hero-actions,
+  .inline-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.25rem 0;
+  }
+  .hero-btn,
+  .inline-actions a,
+  .panel-link,
+  .shop-card a,
+  .price-match-sticky a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .hero-btn {
+    padding: 0.75rem 1.15rem;
+  }
+  .hero-btn-primary,
+  .inline-actions a:first-child {
+    background: var(--color-primary);
+    color: #fff;
+  }
+  .hero-btn-outline,
+  .inline-actions a:last-child {
+    border: 1.5px solid var(--color-primary);
+    color: var(--color-primary);
+    background: transparent;
+  }
+  .hero-btn-whatsapp {
+    background: #25d366;
+    color: #063d1e;
+  }
+  .price-match-panel {
+    display: grid;
+    gap: 1rem;
+    margin: 1.75rem 0;
+    padding: 1.25rem;
+    border: 1px solid #a7f3d0;
+    border-radius: 0.75rem;
+    background: linear-gradient(135deg, #ecfdf5, #ffffff);
+  }
+  .panel-eyebrow {
+    margin: 0 0 0.25rem;
+    color: #047857;
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .price-match-panel h2 {
+    margin: 0 0 0.5rem;
+  }
+  .price-match-panel p {
+    margin: 0;
+    color: #365447;
+  }
+  .panel-link {
+    align-self: start;
+    padding: 0.65rem 0.9rem;
+    background: #065f46;
+    color: #fff;
+  }
+  .shop-grid,
+  .trust-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+    margin-top: 1rem;
+  }
+  .shop-card,
+  .trust-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .shop-card h3,
+  .trust-card h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--color-primary);
+  }
+  .shop-card p,
+  .trust-card p {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 0.92rem;
+  }
+  .shop-card span {
+    color: var(--color-text);
+    font-size: 0.84rem;
+    font-weight: 700;
+  }
+  .shop-card a {
+    align-self: flex-start;
+    margin-top: auto;
+    padding: 0.55rem 0.8rem;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+  }
+  .check-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    padding-left: 1.25rem;
+  }
+  .table-scroll {
+    overflow-x: auto;
+    margin-top: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 640px;
+    font-size: 0.9rem;
+  }
+  th,
+  td {
+    padding: 0.65rem 0.85rem;
+    border-bottom: 1px solid var(--color-border);
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--color-surface);
+    color: var(--color-muted);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
   .process-list { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 1.25rem; }
   .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .price-match-sticky {
+    position: fixed;
+    right: 0.75rem;
+    bottom: 5.8rem;
+    left: 0.75rem;
+    z-index: 8998;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid #a7f3d0;
+    border-radius: 0.75rem;
+    background: #064e3b;
+    color: #fff;
+    box-shadow: 0 0.75rem 2rem rgba(5, 68, 47, 0.2);
+  }
+  .price-match-sticky span {
+    font-size: 0.9rem;
+    font-weight: 800;
+  }
+  .price-match-sticky a {
+    min-height: 40px;
+    padding: 0.45rem 0.7rem;
+    background: #d1fae5;
+    color: #064e3b;
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
   .updated { font-size: 0.8rem; color: var(--color-muted); }
+  @media (min-width: 640px) {
+    .shop-grid,
+    .trust-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .price-match-panel {
+      grid-template-columns: 1fr auto;
+      align-items: center;
+    }
+  }
+  @media (min-width: 820px) {
+    .price-match-sticky {
+      display: none;
+    }
+  }
 </style>

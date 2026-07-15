@@ -69,6 +69,16 @@
       "permanent": true
     },
     {
+      "source": "/E-waste",
+      "destination": "/e-waste/",
+      "permanent": true
+    },
+    {
+      "source": "/E-waste/",
+      "destination": "/e-waste/",
+      "permanent": true
+    },
+    {
       "source": "/services/e-waste-recycling-kochi",
       "destination": "/recycling/",
       "permanent": true

@@ -77,6 +77,30 @@ const FLOWS: Record<Exclude<FlowType, "malayalam">, FlowDef> = {
       `Please share an indicative quote. I understand final price depends on inspection.`,
   },
 
+  "price-match": {
+    id: "price-match",
+    menuLabel: "Price match request",
+    steps: [
+      { id: "itemDetails", kind: "text", question: "Which marketplace item are you comparing?", placeholder: "e.g. Dell laptop, i5, 16GB RAM" },
+      { id: "condition", kind: "choice", question: "Is the other item the same model and condition?", options: ["Same model and condition", "Similar item", "Not sure"] },
+      { id: "notes", kind: "text", question: "Paste the lower-price link or describe the screenshot.", placeholder: "Competitor link, shop name, price, or screenshot note" },
+      { id: "location", kind: "text", question: "Your name and contact/location?", placeholder: "e.g. Arun, Kakkanad, phone/WhatsApp" },
+    ],
+    safeNotice: "Price match applies only to eligible identical items after verification: same brand, model, condition, included accessories, available stock and India-based seller terms.",
+    quickLinksAfter: [
+      { label: "Price match policy", href: "/price-match-policy/" },
+      { label: "Marketplace", href: "/marketplace/" },
+    ],
+    buildMessage: (a, pagePath) =>
+      `Hi Ewaste Kochi, I want to request a marketplace price match.\n` +
+      `Item: ${a.itemDetails}\n` +
+      `Comparison status: ${a.condition}\n` +
+      `Lower-price proof/details: ${a.notes}\n` +
+      `Contact/location: ${a.location}\n` +
+      `Page source: ${pagePath}\n` +
+      `Please verify whether this is eligible under the price match policy.`,
+  },
+
   "sell-electronics": {
     id: "sell-electronics",
     menuLabel: "Sell old electronics",

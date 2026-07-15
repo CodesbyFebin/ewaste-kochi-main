@@ -5,13 +5,14 @@ import CtaBar from "../../components/CtaBar.astro";
 import Faq from "../../components/Faq.astro";
 import LangSwitch from "../../components/LangSwitch.astro";
 import DirectAnswer from "../../components/DirectAnswer.astro";
+import Sources from "../../components/Sources.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../data/site";
 import { getHreflang } from "../../data/routes";
 
-const title = "Where to Recycle Batteries in Kochi | Free Doorstep Pickup";
+const title = "Battery Recycling in Kochi | UPS, Inverter & Lithium Pickup";
 const description =
-  "Recycle UPS, inverter, laptop, and phone batteries in Kochi with free doorstep pickup. Safe, compliant disposal — batteries should never go in household trash.";
-const lastUpdated = "2026-07-15";
+  "Recycle UPS, inverter, laptop, mobile, lithium-ion and lead-acid batteries in Kochi. Pickup feasibility, safety guidance and business collection support.";
+const lastUpdated = "2026-07-18";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
@@ -40,7 +41,7 @@ const jsonLd = [
 const faqItems = [
   {
     q: "Where can I recycle batteries in Kochi?",
-    a: "Ewaste Kochi collects batteries directly from your home or office — no need to find a drop-off point. Schedule a pickup over WhatsApp or phone.",
+    a: "Ewaste Kochi reviews battery pickup requests from Kochi homes and offices. Share the battery type, quantity, condition, photos and location so feasibility can be confirmed.",
   },
   {
     q: "Which battery types do you accept?",
@@ -56,19 +57,19 @@ const faqItems = [
   },
   {
     q: "Do offices with UPS systems get bulk battery collection?",
-    a: "Yes. Offices replacing UPS battery banks can schedule bulk collection, and we can coordinate around your maintenance/replacement schedule.",
+    a: "Offices replacing UPS battery banks can request bulk collection review, and scheduling can be discussed around a maintenance or replacement window.",
   },
   {
     q: "What happens to batteries after collection?",
-    a: "Batteries are sorted by chemistry and routed to compliant recycling processes rather than general landfill disposal. Documentation support may be available depending on the service type and agreed handling process.",
+    a: "Batteries are sorted by chemistry and routed separately from general electronics. Documentation support may be available depending on the service type and agreed handling process.",
   },
   {
     q: "Do you accept lithium-ion batteries specifically, not just lead-acid?",
-    a: "Yes. Lithium-ion cells from phones, laptops, and power banks are accepted alongside lead-acid UPS and inverter batteries — they're processed through different streams because the chemistries carry different risks.",
+    a: "Lithium-ion cells from phones, laptops and power banks can be reviewed alongside lead-acid UPS and inverter batteries. They are routed differently because the chemistries carry different risks.",
   },
   {
     q: "Is there a minimum quantity for battery pickup?",
-    a: "No — a single old phone battery is a completely normal booking, not just bulk office UPS clearouts.",
+    a: "Small battery pickups can be requested, but feasibility is confirmed case by case based on battery type, condition, location and route timing.",
   },
   {
     q: "Can I get a quote if the batteries still have scrap value?",
@@ -79,12 +80,141 @@ const faqItems = [
     a: "Keep it dry, away from heat and direct sun, and don't stack heavy items on top. Anything visibly damaged should be kept separate from healthy batteries.",
   },
   {
-    q: "Is same-day battery pickup available?",
-    a: "Sometimes, depending on your area and current scheduling, but it isn't guaranteed. Message early in the day with complete details for the best chance.",
+    q: "How quickly can battery pickup be arranged?",
+    a: "Timing depends on your area, battery type, condition, quantity and current route schedule. Message with complete details to confirm the earliest practical slot.",
   },
   {
     q: "Do you collect e-bike or scooter batteries?",
     a: "These larger lithium packs have their own handling considerations — message us with details first so feasibility can be confirmed case by case rather than assumed.",
+  },
+  {
+    q: "Can lithium-ion batteries be recycled in Kochi?",
+    a: "Yes, lithium-ion batteries from phones, laptops, power banks and some electronics can be reviewed for pickup. Larger lithium packs such as e-bike or scooter batteries should be checked case by case with photos and specifications.",
+  },
+  {
+    q: "Can UPS and inverter batteries be recycled?",
+    a: "Yes. UPS and inverter batteries are common lead-acid battery recycling requests. Share the battery count, approximate size, condition and location before pickup is confirmed.",
+  },
+  {
+    q: "Can damaged or swollen batteries be collected?",
+    a: "Often, but they must be flagged before pickup. Keep swollen, leaking, hot or punctured batteries separate, away from heat and pressure, and share photos so safe handling can be planned.",
+  },
+  {
+    q: "Do battery scrap prices change?",
+    a: "Yes. Battery value depends on chemistry, weight, condition, quantity and current material markets. Treat any WhatsApp estimate as preliminary until inspection confirms details.",
+  },
+  {
+    q: "What is the difference between lead-acid and lithium battery recycling?",
+    a: "Lead-acid batteries such as UPS and inverter units are heavy and commonly handled by weight. Lithium batteries need extra attention to fire risk, chemistry and physical damage before collection.",
+  },
+  {
+    q: "Are EV batteries accepted?",
+    a: "Small EV, e-bike or scooter battery requests are reviewed case by case. Full vehicle battery packs can require specialist logistics, documentation and partner routing, so do not assume pickup before review.",
+  },
+  {
+    q: "What are the Battery Waste Management Rules?",
+    a: "India's Battery Waste Management Rules set a regulatory framework for environmentally sound battery waste management and producer responsibility. This page is practical guidance, not legal advice.",
+  },
+  {
+    q: "Can businesses arrange recurring battery collection?",
+    a: "Yes, businesses with regular UPS-room, maintenance or IT refresh battery waste can ask about scheduled or recurring collection. Feasibility depends on volume, location and battery condition.",
+  },
+  {
+    q: "Do you provide documentation for business battery pickup?",
+    a: "Documentation support may be discussed for business pickups depending on item type, quantity, agreed handling route and service scope.",
+  },
+  {
+    q: "Can batteries be sent with normal courier?",
+    a: "Do not courier damaged, swollen, leaking or unidentified batteries without checking applicable transport rules and packaging requirements. For local pickup, tell us the condition before collection.",
+  },
+  {
+    q: "How do I prepare batteries for pickup?",
+    a: "Keep batteries dry, separate damaged units, avoid heat or pressure, do not dismantle them, and share photos, quantity and location before pickup is confirmed.",
+  },
+];
+
+const batteryTypeRows = [
+  {
+    type: "Lithium-ion portable batteries",
+    examples: "Phones, laptops, tablets, power banks, Bluetooth devices",
+    handling: "Flag swelling, heat, punctures, charging failure or visible damage.",
+    route: "Pickup reviewed by item type, quantity and condition.",
+  },
+  {
+    type: "UPS and inverter batteries",
+    examples: "Home inverter batteries, office UPS banks, small server-room backup units",
+    handling: "Keep upright where possible and mention acid leaks, cracks or bulging.",
+    route: "Common lead-acid collection request; bulk jobs can be scheduled.",
+  },
+  {
+    type: "Mixed household batteries",
+    examples: "Remote batteries, toys, small appliances, chargers with embedded cells",
+    handling: "Keep loose cells together in a dry container; do not mix with wet waste.",
+    route: "Can usually be combined with an electronics pickup.",
+  },
+  {
+    type: "E-bike, scooter and EV packs",
+    examples: "E-bike packs, scooter modules, larger lithium packs",
+    handling: "Do not open the pack. Share photos, label details, vehicle type and condition.",
+    route: "Case-by-case feasibility review before any pickup promise.",
+  },
+];
+
+const clusterCards = [
+  {
+    title: "Lithium-ion battery recycling",
+    copy: "For laptop, phone, power-bank and portable lithium batteries. The key issue is safe handling before collection, especially for swollen or damaged cells.",
+  },
+  {
+    title: "UPS and inverter battery recycling",
+    copy: "For households, offices, apartments and server rooms replacing lead-acid backup batteries. Count, condition and access details help plan pickup.",
+  },
+  {
+    title: "EV and e-bike battery review",
+    copy: "For larger battery packs where logistics, chemistry and condition matter. These requests need photos and feasibility confirmation first.",
+  },
+  {
+    title: "Battery rules and EPR basics",
+    copy: "For businesses wanting plain-language orientation around Battery Waste Management Rules, producer responsibility and documentation questions.",
+  },
+  {
+    title: "Battery scrap value",
+    copy: "For users asking whether batteries carry material value. Quotes depend on chemistry, quantity, weight, condition and current market rate.",
+  },
+  {
+    title: "Battery safety and hazardous handling",
+    copy: "For urgent questions about swelling, leakage, heat, punctures, storage, fire risk and what not to do before pickup.",
+  },
+];
+
+const quoteFactors = [
+  "Battery chemistry: lead-acid, lithium-ion, nickel-based or unknown.",
+  "Approximate weight or count, especially for UPS and inverter batteries.",
+  "Condition: normal, swollen, leaking, cracked, hot, punctured or mixed.",
+  "Location and access: apartment floor, lift availability, parking and loading constraints.",
+  "Whether the request is household, business, ITAD, maintenance or bulk replacement.",
+];
+
+const businessChecklist = [
+  "Prepare a simple item count before messaging.",
+  "Separate visibly damaged or leaking batteries from normal units.",
+  "Mention whether documentation or internal handover records are needed.",
+  "Share pickup location, access notes and preferred maintenance window.",
+  "For IT hardware with embedded batteries, mention data destruction or ITAD needs too.",
+];
+
+const sourceItems = [
+  {
+    title: "Battery Waste Management Rules",
+    href: "https://cpcb.nic.in/rules-5/",
+    publisher: "Central Pollution Control Board",
+    note: "Official CPCB rules page for battery waste management resources and amendments.",
+  },
+  {
+    title: "EPR Portal for Battery Waste Management",
+    href: "https://eprbattery.cpcb.gov.in/",
+    publisher: "Central Pollution Control Board",
+    note: "Official portal for producer, recycler and refurbisher workflows under battery waste EPR.",
   },
 ];
 ---
@@ -94,12 +224,23 @@ const faqItems = [
   <LangSwitch current="en" otherPath="/ml/battery-recycling/" />
   <h1>Where to Recycle Batteries in Kochi</h1>
   <p class="lede">
-    You can recycle batteries in Kochi through Ewaste Kochi's free doorstep
-    pickup — UPS, inverter, laptop, and phone batteries all qualify. Battery
-    handling depends on chemistry, condition, and quantity, so we collect
-    directly from your home or office and route everything through compliant
-    recycling, never household trash.
+    Battery recycling requests in Kochi can include UPS, inverter, laptop,
+    phone, power-bank and lithium-ion batteries. Handling depends on
+    chemistry, condition, quantity and location, so share photos and details
+    first; Ewaste Kochi then confirms the safest available pickup route.
   </p>
+
+  <figure class="hero-image">
+    <img
+      src="/images/battery-recycling-hero.webp"
+      width="1672"
+      height="941"
+      alt="Ewaste Kochi battery recycling pickup visual with UPS, inverter, laptop and lithium-ion batteries, recycling arrows, a Kochi location marker, and safety-focused service cues."
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+    />
+  </figure>
 
   <DirectAnswer>
     <p>
@@ -112,111 +253,185 @@ const faqItems = [
   <CtaBar whatsappMessage="Hi, I'd like to schedule a battery recycling pickup in Kochi." />
 
   <section>
-    <h2>What we accept</h2>
+    <h2>Battery recycling services covered</h2>
     <p>
-      UPS batteries, inverter batteries, laptop and phone batteries, and most
-      sealed lead-acid or lithium-ion batteries from household or office
-      devices. If you're replacing an office UPS bank or clearing out old
-      power backup equipment, message us with quantities and we'll confirm
-      collection logistics.
+      This page covers the main battery recycling intents people search for
+      in Kochi: lithium-ion battery disposal, UPS battery recycling, inverter
+      battery pickup, lead-acid battery handling, damaged battery safety,
+      business battery collection, and condition-based scrap value checks.
+      The right route depends on chemistry, condition, quantity and location,
+      so we confirm feasibility before making pickup or pricing promises.
     </p>
+    <div class="cluster-grid">
+      {clusterCards.map((cluster) => (
+        <article class="cluster-card">
+          <h3>{cluster.title}</h3>
+          <p>{cluster.copy}</p>
+        </article>
+      ))}
+    </div>
   </section>
 
   <section>
-    <h2>Why batteries can't just go in the trash</h2>
+    <h2>Battery types and safe routing</h2>
     <p>
-      Damaged, swollen, or leaking batteries should not be stored with
-      regular household waste. Batteries contain metals and chemicals that
-      can leak into soil and water if dumped in general waste, and
-      lithium-ion cells carry a real fire risk when crushed in regular
-      garbage handling. Routing them
-      through a dedicated recycling stream keeps both people and the
-      environment safer.
+      A battery is not just "small e-waste." Lead-acid, lithium-ion and
+      mixed household batteries behave differently during storage,
+      transport and recycling. Use the table below to describe your request
+      clearly before pickup.
     </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Battery type</th>
+            <th scope="col">Common examples</th>
+            <th scope="col">What to flag</th>
+            <th scope="col">Pickup route</th>
+          </tr>
+        </thead>
+        <tbody>
+          {batteryTypeRows.map((row) => (
+            <tr>
+              <td><strong>{row.type}</strong></td>
+              <td>{row.examples}</td>
+              <td>{row.handling}</td>
+              <td>{row.route}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   </section>
 
   <section>
-    <h2>How pickup works</h2>
+    <h2>How battery pickup works</h2>
     <ol class="process-list">
-      <li><strong>Message us</strong> with battery type and rough quantity over WhatsApp or phone.</li>
-      <li><strong>We confirm a slot</strong> — same-day or next-day pickup is available across most of Kochi.</li>
-      <li><strong>Doorstep collection</strong> from your home or office.</li>
-      <li><strong>Compliant recycling</strong> — batteries are sorted by chemistry and processed accordingly, not landfilled.</li>
+      <li><strong>Message battery details.</strong> Send type, quantity, location and photos, especially for swollen, leaking or cracked batteries.</li>
+      <li><strong>Feasibility is reviewed.</strong> The team checks chemistry, condition, access, quantity and route before confirming pickup.</li>
+      <li><strong>Keep batteries separate.</strong> Do not mix damaged batteries with ordinary electronics, paper, household waste or wet material.</li>
+      <li><strong>Collection is arranged.</strong> Household, apartment, office and UPS-room pickups are scheduled based on practical route availability.</li>
+      <li><strong>Sorting and onward handling follow chemistry.</strong> Batteries are routed separately from general e-waste because materials and risks differ.</li>
     </ol>
   </section>
 
   <section>
-    <h2>Who this is for</h2>
+    <h2>Lithium-ion battery recycling</h2>
     <p>
-      Households clearing out old device batteries, offices replacing UPS or
-      inverter battery banks, and IT teams decommissioning hardware that
-      still has batteries installed (laptops, UPS units, networking gear with
-      backup cells). For general electronics alongside batteries, our
-      <a href="/recycling/">recycling service</a> covers both in one pickup.
+      Lithium-ion batteries are common in phones, laptops, tablets, power
+      banks, smart devices, camera batteries and many rechargeable
+      accessories. They should not be crushed, punctured, opened or thrown
+      into household waste. If a battery is swollen, heating, leaking,
+      giving off smell, or damaged after a fall, mention that before pickup
+      so the team can advise on interim storage and collection feasibility.
+    </p>
+    <p>
+      For larger packs such as e-bike, scooter or EV battery modules, send
+      photos of the label, approximate size, vehicle type, condition and
+      location. These are reviewed case by case because transport, weight,
+      chemistry and safety requirements can differ from ordinary portable
+      batteries.
     </p>
   </section>
 
   <section>
-    <h2>Battery types, at a glance</h2>
+    <h2>Lead-acid, UPS and inverter battery recycling</h2>
+    <p>
+      UPS and inverter batteries are usually lead-acid units. They are heavy,
+      may contain corrosive electrolyte and should be kept upright where
+      possible. If there are cracks, leaks, unusual smell, white residue,
+      bulging sides or corrosion on terminals, mention that in the first
+      message. Offices replacing UPS banks should share the approximate
+      count, battery rating if known, floor/access details and whether a
+      maintenance window must be followed.
+    </p>
+  </section>
+
+  <section>
+    <h2>Battery scrap value and quotes</h2>
+    <p>
+      Some batteries may carry material value, but a fixed online battery
+      scrap price is risky because chemistry, weight, market rate, physical
+      condition and quantity all matter. A WhatsApp estimate is only a
+      starting point; the confirmed value is set after the item details are
+      reviewed and, where needed, inspected.
+    </p>
     <ul class="check-list">
-      <li><strong>UPS &amp; inverter batteries</strong> — heavy, sealed lead-acid units, usually the largest single battery item a household or office deals with.</li>
-      <li><strong>Laptop &amp; mobile batteries</strong> — lithium-ion, whether still inside the device or removed.</li>
-      <li><strong>Power banks</strong> — same lithium-cell risk profile as phone batteries; flag anything that's stopped holding charge or feels warm.</li>
-      <li><strong>Mixed household batteries</strong> — remotes, toys, and other small batteries, generally lower risk but still handled separately from general electronics.</li>
+      {quoteFactors.map((factor) => <li>{factor}</li>)}
     </ul>
-    <p class="muted-note">
-      For the fuller safety breakdown — what to do with a swollen or leaking
-      cell specifically, and how each chemistry is handled after collection
-      — see our <a href="/blog/battery-recycling-near-me-kochi/">battery
-      recycling guide</a>.
+  </section>
+
+  <section>
+    <h2>Battery rules and EPR basics</h2>
+    <p>
+      India has a separate battery waste regulatory framework alongside
+      e-waste rules. Businesses, producers, refurbishers and recyclers may
+      have obligations that go beyond a normal household pickup. Ewaste
+      Kochi can help businesses plan collection details and documentation
+      questions, but this page is general guidance, not legal advice. For
+      formal obligations, check official CPCB resources or speak with a
+      qualified compliance advisor.
     </p>
   </section>
 
   <section>
-    <h2>Household battery pickup</h2>
+    <h2>Business and bulk battery collection</h2>
     <p>
-      A single old phone battery is a completely normal booking — there's
-      no minimum quantity. Most household pickups are a mixed batch: a
-      couple of dead power banks, an old laptop battery, maybe an inverter
-      battery that's stopped holding charge. Apartment pickups work the
-      same way as standalone homes — include the building name, floor and
-      any access instructions when you message us.
+      Offices, apartments, schools, clinics, shops, maintenance teams and IT
+      rooms often generate batteries in batches rather than one at a time.
+      For bulk UPS-room replacements or recurring maintenance waste, send a
+      clear item list before booking so collection, access and documentation
+      expectations can be aligned.
+    </p>
+    <ul class="check-list">
+      {businessChecklist.map((item) => <li>{item}</li>)}
+    </ul>
+    <p>
+      If the batteries are part of a larger office equipment disposal, the
+      better route may be <a href="/itad/">ITAD</a> or
+      <a href="/data-destruction/">data destruction</a> alongside battery
+      collection.
     </p>
   </section>
 
   <section>
-    <h2>Business and UPS-room battery pickup</h2>
-    <p>
-      Offices replacing a UPS battery bank, or clearing out a server room
-      during an equipment upgrade, can schedule bulk collection coordinated
-      around the maintenance or replacement schedule. Mention the
-      approximate count and whether documentation is needed for your
-      records. For larger IT decommissioning where batteries are just one
-      part of a bigger job, see our <a href="/itad/">ITAD service</a>.
-    </p>
+    <h2>Safety checklist before pickup</h2>
+    <ul class="safety-grid">
+      <li><strong>Do not charge</strong> a battery that is swollen, hot, leaking or physically damaged.</li>
+      <li><strong>Do not puncture or open</strong> any battery pack, even if it looks dead.</li>
+      <li><strong>Keep damaged batteries separate</strong> from paper, cloth, electronics and household waste.</li>
+      <li><strong>Store in a cool, dry place</strong> away from direct sun, heat and pressure.</li>
+      <li><strong>Share photos first</strong> if the battery is cracked, swollen, corroded or leaking.</li>
+      <li><strong>Flag data devices too</strong> when batteries are still inside laptops, phones or servers.</li>
+    </ul>
   </section>
 
   <section>
-    <h2>Compliance</h2>
+    <h2>Sustainability and circular economy</h2>
     <p>
-      Battery collection and recycling follows documented environmental
-      handling practices, with pickup, sorting and documentation support
-      depending on the service type. If you need compliance documentation
-      for business or ITAD work, contact us before pickup via our
-      <a href="/contact/">contact page</a> so the required handling
-      process can be confirmed.
+      Responsible battery recycling reduces unsafe disposal, keeps hazardous
+      materials out of ordinary waste streams and supports recovery of
+      useful materials where recycling routes allow. For households, the
+      most useful action is simple: do not keep old batteries indefinitely,
+      do not put them in the regular bin, and describe the condition clearly
+      before collection. For businesses, a documented battery collection
+      process also supports cleaner internal ESG and facility-management
+      records.
     </p>
   </section>
 
   <section>
     <h2>Local coverage</h2>
     <p>
-      Battery pickup runs across Kakkanad, Edappally, Aluva, Vyttila,
-      Thrippunithura, Kalamassery, and 25+ other neighborhoods in Kochi and
-      Ernakulam district. See the full <a href="/locations/">locations
-      directory</a>, or just message us your address.
+      Battery pickup enquiries commonly come from Kakkanad, Edappally,
+      Aluva, Vyttila, Thrippunithura, Kalamassery and nearby Kochi
+      locations. Wider Ernakulam requests should be treated as feasibility
+      checks. See the full <a href="/locations/">locations directory</a>,
+      or message us your address.
     </p>
   </section>
+
+  <Sources items={sourceItems} />
 
   <p class="mal-support">
     മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
@@ -229,9 +444,98 @@ const faqItems = [
 
 <style>
   .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .hero-image { margin: 1.5rem 0 1.75rem; }
+  .hero-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1672 / 941;
+    border-radius: 0.5rem;
+    box-shadow: 0 1rem 2.5rem rgba(5, 68, 47, 0.12);
+  }
   .process-list { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 1.25rem; }
   .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .cluster-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+    margin-top: 1rem;
+  }
+  .cluster-card {
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .cluster-card h3 {
+    margin: 0 0 0.4rem;
+    color: var(--color-primary);
+    font-size: 1rem;
+  }
+  .cluster-card p {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 0.92rem;
+  }
+  .table-scroll {
+    overflow-x: auto;
+    margin-top: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  table {
+    width: 100%;
+    min-width: 760px;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+  th,
+  td {
+    padding: 0.65rem 0.85rem;
+    border-bottom: 1px solid var(--color-border);
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--color-surface);
+    color: var(--color-muted);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+  .safety-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 0;
+    list-style: none;
+  }
+  .safety-grid li {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    color: var(--color-muted);
+  }
+  .safety-grid strong {
+    color: var(--color-text);
+  }
   .muted-note { color: var(--color-muted); font-size: 0.9rem; margin-top: 0.7rem; }
   .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
   .updated { font-size: 0.8rem; color: var(--color-muted); }
+  @media (min-width: 640px) {
+    .cluster-grid,
+    .safety-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 960px) {
+    .cluster-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 </style>

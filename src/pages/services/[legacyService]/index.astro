@@ -1,0 +1,20 @@
+---
+import IndexedLegacyGuide from "../../../components/IndexedLegacyGuide.astro";
+import { INDEXED_SERVICE_ALIAS_PAGES } from "../../../data/gscIndexedGeneratedPages";
+
+export function getStaticPaths() {
+  return INDEXED_SERVICE_ALIAS_PAGES.map((page) => ({
+    params: { legacyService: page.serviceSlug },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+const breadcrumbs = [
+  { name: "Home", path: "/" },
+  { name: "Services", path: "/services/" },
+  { name: page.serviceName, path: page.path },
+];
+---
+
+<IndexedLegacyGuide page={page} breadcrumbs={breadcrumbs} />

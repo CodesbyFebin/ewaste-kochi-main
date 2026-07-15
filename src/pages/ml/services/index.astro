@@ -1,0 +1,17 @@
+---
+import IndexedLegacyGuide from "../../../components/IndexedLegacyGuide.astro";
+import { INDEXED_ML_SERVICES_INDEX_PAGE } from "../../../data/gscIndexedGeneratedPages";
+
+if (!INDEXED_ML_SERVICES_INDEX_PAGE) {
+  throw new Error("Missing indexed Malayalam services page data.");
+}
+
+const page = INDEXED_ML_SERVICES_INDEX_PAGE;
+const breadcrumbs = [
+  { name: "Home", path: "/" },
+  { name: "Malayalam", path: "/ml/" },
+  { name: "Services", path: page.path },
+];
+---
+
+<IndexedLegacyGuide page={page} breadcrumbs={breadcrumbs} />

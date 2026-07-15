@@ -5,13 +5,14 @@ import CtaBar from "../../components/CtaBar.astro";
 import Faq from "../../components/Faq.astro";
 import LangSwitch from "../../components/LangSwitch.astro";
 import DirectAnswer from "../../components/DirectAnswer.astro";
+import Sources from "../../components/Sources.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../data/site";
 import { getHreflang } from "../../data/routes";
 
-const title = "Data Destruction Services in Kochi | Secure Wiping & Certificate";
+const title = "Data Destruction Services in Kochi | Wiping & Drive Shredding";
 const description =
-  "Data destruction in Kochi — wiping, degaussing, and hard drive shredding for laptops, servers, and drives, aligned with NIST 800-88. Certificates available on request.";
-const lastUpdated = "2026-07-15";
+  "Data destruction in Kochi for laptops, servers and drives: wiping, degaussing, hard drive shredding and documentation options agreed before service.";
+const lastUpdated = "2026-07-18";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
@@ -38,9 +39,9 @@ const jsonLd = [
 ];
 
 const methodRows = [
-  { method: "Wiping (software overwrite)", bestFor: "Working drives you want to reuse or resell", outcome: "Drive stays functional, data is unrecoverable by standard tools" },
-  { method: "Degaussing", bestFor: "Magnetic media (HDDs) being retired, not reused", outcome: "Drive is rendered unreadable and unusable — not effective on SSDs" },
-  { method: "Physical shredding", bestFor: "Damaged, failed, or policy-mandated destruction", outcome: "Drive is physically destroyed — the most conclusive method" },
+  { method: "Wiping (software overwrite)", bestFor: "Working drives you want to reuse or resell", outcome: "Drive stays functional after the agreed wipe method is completed" },
+  { method: "Degaussing", bestFor: "Magnetic media (HDDs) being retired, not reused", outcome: "Drive is rendered unreadable and unusable; not effective on SSDs" },
+  { method: "Physical shredding", bestFor: "Damaged, failed, or policy-mandated destruction", outcome: "Drive is physically destroyed and routed onward as e-waste material" },
 ];
 
 const deviceRows = [
@@ -54,7 +55,7 @@ const deviceRows = [
 const faqItems = [
   {
     q: "Do you provide a certificate of data destruction?",
-    a: "Yes, on request — useful for businesses that need to document compliant disposal for internal records or client assurance.",
+    a: "Documentation can be discussed before service for business jobs that need internal records or client assurance. Availability depends on service scope, method and device details.",
   },
   {
     q: "What's the difference between wiping and shredding?",
@@ -62,11 +63,11 @@ const faqItems = [
   },
   {
     q: "Do you follow NIST 800-88 style wiping standards?",
-    a: "Our wiping process is aligned with NIST 800-88 media sanitization guidance for the methods we use. Ask us for specifics relevant to your compliance needs.",
+    a: "NIST 800-88 is a useful media-sanitization reference for method selection and terminology. Ask us what method is available for your device and confirm any compliance requirement before booking.",
   },
   {
     q: "Can you destroy data from servers, not just laptops?",
-    a: "Yes — server drives, desktop drives, laptop drives, and mobile device storage are all covered. Large server or rack decommissioning is typically handled alongside our ITAD service.",
+    a: "Server drives, desktop drives, laptop drives and mobile device storage can be reviewed. Large server or rack decommissioning is typically handled alongside our ITAD service.",
   },
   {
     q: "Is formatting a laptop enough before disposal?",
@@ -74,11 +75,11 @@ const faqItems = [
   },
   {
     q: "Can companies request chain-of-custody documentation?",
-    a: "Yes, for bulk or corporate jobs we can provide handover and destruction records tracking custody of devices from pickup through processing.",
+    a: "For bulk or corporate jobs, handover and destruction records can be discussed before service so custody expectations are clear.",
   },
   {
     q: "What's actually on the certificate?",
-    a: "Device identifiers (make, model, serial where available), the method used, and the date processed. See our data destruction certificate sample page for a real example of the format.",
+    a: "A record may include available device identifiers, the method used and the processing date. See our data destruction certificate sample page for an example format.",
   },
   {
     q: "Do you destroy data from phones and tablets, not just computers?",
@@ -124,21 +125,19 @@ const faqItems = [
   <LangSwitch current="en" otherPath="/ml/data-destruction/" />
   <h1>Data Destruction Services in Kochi</h1>
   <p class="lede">
-    Before any device with storage is recycled or resold, we make sure the
-    data on it is gone — not just deleted, but destroyed in a way that
-    can't be recovered. This page covers the methods we use, which one
-    fits which device, and what documentation is available for businesses
-    that need to prove it.
+    Before any device with storage is recycled or resold, the data handling
+    plan should be agreed. This page covers wiping, degaussing, shredding,
+    which method fits which device, and what documentation can be discussed
+    for businesses.
   </p>
 
   <DirectAnswer>
     <p>
-      Data destruction in Kochi covers wiping, degaussing, and physical
-      shredding for laptops, desktops, servers, and mobile devices,
-      aligned with NIST 800-88 media sanitization guidance. Message your
-      device type and quantity on WhatsApp — the right method depends on
-      whether the drive is working, damaged, and whether it needs to stay
-      reusable.
+      Data destruction in Kochi covers wiping, degaussing and physical
+      shredding for laptops, desktops, servers and mobile devices. NIST
+      800-88 is used here as an educational reference for media-sanitization
+      terminology; the actual method is confirmed after device type,
+      condition, quantity and documentation needs are reviewed.
     </p>
   </DirectAnswer>
 
@@ -147,7 +146,7 @@ const faqItems = [
   <ul class="key-takeaways">
     <li>A factory reset or format is not the same as data destruction — it doesn't reliably prevent recovery.</li>
     <li>Wiping keeps a drive usable; shredding is for drives that are damaged or where policy requires physical destruction.</li>
-    <li>Certificates and chain-of-custody documentation are available on request for business jobs.</li>
+    <li>Documentation and chain-of-custody records can be discussed before business jobs are confirmed.</li>
     <li>A single device is a normal booking — this isn't only for bulk office jobs.</li>
   </ul>
 
@@ -229,7 +228,7 @@ const faqItems = [
       Anyone disposing of or selling a device that held personal accounts,
       photos, or documents; offices decommissioning laptops, desktops, or
       servers; and any business with a regulatory or client obligation to
-      prove secure disposal. If you're managing a larger office
+      keep records of disposal. If you're managing a larger office
       decommission alongside data destruction, our <a href="/itad/">ITAD
       service</a> bundles both.
     </p>
@@ -252,9 +251,9 @@ const faqItems = [
     <h2>For businesses</h2>
     <p>
       Offices decommissioning laptops, desktops, or servers can request
-      chain-of-custody documentation tracking devices from pickup through
-      processing, alongside individual destruction certificates per device
-      or a consolidated batch record. For larger jobs involving asset
+      handover or chain-of-custody records before pickup. Depending on the
+      agreed scope, documentation may be per device or consolidated for a
+      batch. For larger jobs involving asset
       tracking across many devices, our <a href="/itad/">ITAD service</a>
       is typically the better fit than booking data destruction on its
       own.
@@ -266,8 +265,8 @@ const faqItems = [
     <ol class="process-list">
       <li><strong>Pickup or drop-off</strong> — schedule collection of the device or drive.</li>
       <li><strong>Method selection</strong> — wiping, degaussing, or shredding, based on drive condition and your requirements.</li>
-      <li><strong>Destruction/wiping performed</strong> by our team.</li>
-      <li><strong>Certificate issued</strong> on request, documenting the method and device details.</li>
+      <li><strong>Destruction/wiping performed</strong> after the method and scope are confirmed.</li>
+      <li><strong>Records discussed</strong> before service if documentation is required for the job.</li>
     </ol>
   </section>
 
@@ -287,7 +286,7 @@ const faqItems = [
     <ul class="check-list">
       <li>Assuming a factory reset or format is sufficient before selling or recycling a device</li>
       <li>Handing over a damaged drive without mentioning it — this changes which method applies</li>
-      <li>Skipping documentation for a business job that later needs to prove compliant disposal</li>
+      <li>Skipping documentation planning for a business job that later needs internal or client records</li>
       <li>Attempting to physically destroy a drive yourself rather than having it shredded properly</li>
     </ul>
   </section>
@@ -295,12 +294,12 @@ const faqItems = [
   <section>
     <h2>Compliance</h2>
     <p>
-      Our data destruction methods are aligned with NIST 800-88 media
-      sanitization guidance. Recycling of the resulting materials follows
-      documented environmental handling practices, with documentation
-      support available depending on the service type and agreed handling
-      process — contact us via our <a href="/contact/">contact page</a> to
-      confirm what's available for your specific job.
+      NIST 800-88 is a respected reference for media sanitization planning,
+      but each job still needs method, device condition and documentation
+      requirements confirmed before service. Recycling of resulting
+      materials follows the agreed e-waste handling route. Contact us via
+      our <a href="/contact/">contact page</a> to confirm what's available
+      for your specific job.
     </p>
   </section>
 
@@ -321,6 +320,17 @@ const faqItems = [
   </p>
 
   <Faq items={faqItems} />
+
+  <Sources
+    items={[
+      {
+        title: "NIST Special Publication 800-88 Rev. 1: Guidelines for Media Sanitization",
+        href: "https://csrc.nist.gov/pubs/sp/800/88/r1/final",
+        publisher: "National Institute of Standards and Technology",
+        note: "Official NIST guidance used here as an educational reference for sanitization terminology and planning.",
+      },
+    ]}
+  />
 
   <section class="final-cta">
     <h2>Need Devices Securely Destroyed?</h2>

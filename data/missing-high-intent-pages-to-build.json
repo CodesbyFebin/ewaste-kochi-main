@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-07-15T12:22:57.340Z",
+  "count": 2,
+  "rows": [
+    {
+      "url": "https://www.ewastekochi.com/services/air-conditioner-recycling-kochi/",
+      "path": "/services/air-conditioner-recycling-kochi/",
+      "page_type": "service",
+      "status_after_patch": "present_200",
+      "build_decision": "created_this_release",
+      "reason": "High-intent expected service URL had no 200 route and no safe redirect; now generated through the safe legacy service template.",
+      "final_target": "https://www.ewastekochi.com/services/air-conditioner-recycling-kochi/"
+    },
+    {
+      "url": "https://www.ewastekochi.com/services/computer-recycling-near-me/",
+      "path": "/services/computer-recycling-near-me/",
+      "page_type": "service",
+      "status_after_patch": "present_200",
+      "build_decision": "created_this_release",
+      "reason": "High-intent expected service URL had no 200 route and no safe redirect; now generated through the safe legacy service template.",
+      "final_target": "https://www.ewastekochi.com/services/computer-recycling-near-me/"
+    }
+  ]
+}

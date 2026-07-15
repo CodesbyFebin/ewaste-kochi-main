@@ -1,0 +1,740 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../components/DirectAnswer.astro";
+import EntityTable from "../../components/EntityTable.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import Faq from "../../components/Faq.astro";
+import LongformExpansion from "../../components/LongformExpansion.astro";
+import Sources from "../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../data/site";
+
+const title = "What Is E-Waste? Complete Kochi Guide to Electronic Waste";
+const description =
+  "Learn what e-waste means, common examples, why electronics need separate handling, and how to recycle, reuse, sell or prepare e-waste in Kochi.";
+const path = "/e-waste/";
+const lastUpdated = "2026-07-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Guide", path },
+];
+
+const tocItems = [
+  { id: "definition", label: "What e-waste means" },
+  { id: "definitive-answer", label: "Definitive answer" },
+  { id: "entities", label: "Key entities" },
+  { id: "types", label: "Types of e-waste" },
+  { id: "examples", label: "Common examples" },
+  { id: "why-problem", label: "Why e-waste is a problem" },
+  { id: "materials", label: "What's inside e-waste" },
+  { id: "management", label: "Reduce, reuse, recycle" },
+  { id: "rules", label: "Rules and responsibility" },
+  { id: "kochi", label: "How to handle it in Kochi" },
+  { id: "prepare", label: "How to prepare items" },
+  { id: "faq-heading", label: "FAQs" },
+];
+
+const entityItems = [
+  {
+    term: "E-waste",
+    definition:
+      "Discarded electrical and electronic equipment such as computers, phones, displays, batteries, printers, cables and IT hardware.",
+    href: "https://en.wikipedia.org/wiki/Electronic_waste",
+    sourceLabel: "Electronic waste overview",
+  },
+  {
+    term: "CPCB",
+    definition:
+      "India's Central Pollution Control Board, a key official source for e-waste and battery-waste rule references.",
+    href: "https://cpcb.nic.in/",
+    sourceLabel: "CPCB",
+  },
+  {
+    term: "EPR",
+    definition:
+      "Extended Producer Responsibility, the framework used for producer obligations, collection systems and formal recycling responsibilities.",
+    href: "https://eprewastecpcb.in/",
+    sourceLabel: "CPCB EPR portal",
+  },
+  {
+    term: "ITAD",
+    definition:
+      "IT asset disposition, a business workflow for retiring IT assets with inventory, data handling and agreed records.",
+    href: "/itad/",
+    sourceLabel: "ITAD service",
+  },
+  {
+    term: "Data-bearing device",
+    definition:
+      "Any laptop, phone, drive, server, tablet or storage media that may contain personal, business or client data before resale or recycling.",
+    href: "/data-destruction/",
+    sourceLabel: "Data destruction",
+  },
+  {
+    term: "Battery waste",
+    definition:
+      "Portable, UPS, inverter, lithium-ion and other batteries that need separate condition checks before collection or recycling.",
+    href: "/battery-recycling/",
+    sourceLabel: "Battery recycling",
+  },
+];
+
+const sourceItems = [
+  {
+    title: "E-Waste Management Rules and related regulatory resources",
+    href: "https://cpcb.nic.in/rules-6/",
+    publisher: "Central Pollution Control Board",
+    note: "Official CPCB resource page for e-waste rules and updates.",
+  },
+  {
+    title: "EPR E-Waste portal",
+    href: "https://eprewastecpcb.in/",
+    publisher: "Central Pollution Control Board",
+    note: "Official portal for e-waste EPR registration and compliance workflows.",
+  },
+];
+
+const typeCards = [
+  {
+    title: "IT and telecom equipment",
+    copy:
+      "Laptops, desktops, servers, hard drives, routers, switches, CCTV equipment, phones, tablets, cables and chargers.",
+    href: "/computer-scrap-buyers-kochi/",
+  },
+  {
+    title: "Consumer electronics",
+    copy:
+      "Televisions, monitors, audio systems, cameras, game consoles, remotes, set-top boxes and small smart devices.",
+    href: "/tv-recycling-kochi/",
+  },
+  {
+    title: "Power and batteries",
+    copy:
+      "UPS batteries, inverter batteries, laptop batteries, mobile batteries, power banks and lithium-ion packs.",
+    href: "/battery-recycling/",
+  },
+  {
+    title: "Office equipment",
+    copy:
+      "Printers, scanners, photocopiers, shredders, docking stations, keyboards, mice and mixed office peripherals.",
+    href: "/services/electronics-recycling-near-me/",
+  },
+  {
+    title: "Business IT assets",
+    copy:
+      "Office laptop fleets, servers, storage devices, networking racks and decommissioned hardware needing records.",
+    href: "/itad/",
+  },
+  {
+    title: "Reusable electronics",
+    copy:
+      "Working or repairable devices that may be better suited for resale, reuse or marketplace enquiry before recycling.",
+    href: "/sell-electronics/",
+  },
+];
+
+const exampleGroups = [
+  {
+    title: "In homes",
+    items: ["old phones", "unused chargers", "dead routers", "broken laptops", "power banks", "TV remotes"],
+  },
+  {
+    title: "In apartments",
+    items: ["shared UPS batteries", "old intercom units", "cables", "small appliances", "TVs", "monitors"],
+  },
+  {
+    title: "In offices",
+    items: ["laptop batches", "printers", "servers", "hard drives", "network switches", "CCTV equipment"],
+  },
+  {
+    title: "In shops",
+    items: ["billing machines", "barcode scanners", "card readers", "display screens", "routers", "battery backups"],
+  },
+];
+
+const decisionCards = [
+  {
+    title: "Reduce",
+    copy:
+      "Buy only what you need, repair when practical, avoid storing broken devices indefinitely and choose durable accessories.",
+  },
+  {
+    title: "Reuse",
+    copy:
+      "If a device still works, resale, donation or internal reuse may preserve more value than immediate material recycling.",
+  },
+  {
+    title: "Recycle",
+    copy:
+      "When a device is broken, obsolete or unsafe to keep, route it to recycling with batteries and data-bearing parts identified first.",
+  },
+  {
+    title: "Document",
+    copy:
+      "For business e-waste, record device counts, storage media, handover needs and any data-destruction documentation before pickup.",
+  },
+];
+
+const quickLinks = [
+  { label: "Recycle electronics", href: "/recycling/" },
+  { label: "Book pickup", href: "/pickup/" },
+  { label: "Battery recycling", href: "/battery-recycling/" },
+  { label: "Data destruction", href: "/data-destruction/" },
+  { label: "Sell electronics", href: "/sell-electronics/" },
+  { label: "ITAD", href: "/itad/" },
+  { label: "Rules guide", href: "/e-waste-rules-2022-india/" },
+  { label: "Blog hub", href: "/blog/" },
+  { label: "RSS feed", href: "/feed.xml" },
+];
+
+const faqItems = [
+  {
+    q: "What is e-waste?",
+    a: "E-waste means unwanted or end-of-life electrical and electronic items, including laptops, phones, batteries, printers, monitors, TVs, cables, servers, network devices and small appliances.",
+  },
+  {
+    q: "What is the simple meaning of e-waste?",
+    a: "In simple terms, e-waste is any electronic item you no longer use and should not put in the regular bin because it may contain batteries, data, metals, circuit boards or hazardous components.",
+  },
+  {
+    q: "What are common examples of e-waste?",
+    a: "Common examples include laptops, desktops, mobile phones, tablets, printers, routers, monitors, TVs, UPS units, inverter batteries, chargers, cables, hard drives and power banks.",
+  },
+  {
+    q: "Are batteries e-waste?",
+    a: "Yes. UPS, inverter, laptop, phone, lithium and power-bank batteries should be treated as e-waste and handled separately from general electronics.",
+  },
+  {
+    q: "Why is e-waste a problem?",
+    a: "E-waste is a problem because it can contain batteries, toxic materials, recoverable metals and personal data. Regular waste handling is not designed for those risks.",
+  },
+  {
+    q: "Can I put e-waste in household waste?",
+    a: "No. Keep electronics separate from household waste and confirm a responsible route for recycling, battery handling, resale or data destruction.",
+  },
+  {
+    q: "What should I do with old electronics in Kochi?",
+    a: "Prepare a list, separate batteries, identify data-bearing devices, take photos and share your location so the right route can be confirmed.",
+  },
+  {
+    q: "Can working electronics be reused instead of recycled?",
+    a: "Yes. Working or repairable electronics may be better suited for resale or reuse before recycling, depending on condition and current demand.",
+  },
+  {
+    q: "Does every e-waste item have scrap value?",
+    a: "No. Value depends on item type, condition, quantity, age and market rate. Some items have resale or scrap value, while others are primarily a recycling responsibility.",
+  },
+  {
+    q: "How do I protect my data before e-waste pickup?",
+    a: "Back up what you need, sign out of accounts, remove memory cards where practical and ask about data handling for laptops, drives, phones and servers.",
+  },
+  {
+    q: "What should offices do before e-waste disposal?",
+    a: "Offices should prepare an inventory, identify storage devices, separate batteries, note access instructions and agree any documentation requirements before collection.",
+  },
+  {
+    q: "Is e-waste recycling the same as ITAD?",
+    a: "No. Recycling is the broad handling route for end-of-life electronics. ITAD is a business workflow for asset retirement, inventory, data handling and agreed records.",
+  },
+  {
+    q: "What is EPR in e-waste?",
+    a: "Extended Producer Responsibility is a rules framework that makes electronics producers responsible for collection and recycling obligations. Consumers mainly need to avoid unsafe disposal and choose a responsible route.",
+  },
+  {
+    q: "Is this page legal advice?",
+    a: "No. This page is educational. Businesses should verify current obligations with official sources or a qualified advisor.",
+  },
+  {
+    q: "How do I book e-waste pickup?",
+    a: "Use the pickup page or WhatsApp. Share item names, quantity, photos, location, working condition and any battery or data concerns.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+    image: `${SITE_URL}/images/blog-pillars/recycling-basics.webp`,
+    about: {
+      "@type": "Thing",
+      name: "E-waste",
+      description: "Discarded electrical and electronic equipment requiring separate handling.",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="ewaste-pillar">
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">E-waste pillar guide</p>
+        <h1>What Is E-Waste?</h1>
+        <p class="lede">
+          E-waste is the broad category for unwanted electronics, batteries and
+          IT equipment that should not be handled like ordinary household
+          waste. This guide explains the meaning of e-waste, common examples,
+          why it matters, and how Kochi residents and businesses can choose a
+          safe next step.
+        </p>
+        <div class="hero-actions" aria-label="Primary actions">
+          <a class="button primary" href="/pickup/">Book Pickup</a>
+          <a class="button secondary" href="/recycling/">Recycling Services</a>
+          <a class="button secondary" href="/blog/recycling-basics/">Recycling Basics</a>
+        </div>
+      </div>
+      <figure>
+        <img
+          src="/images/blog-pillars/recycling-basics.webp"
+          alt="Sorted electronic waste prepared for responsible recycling in Kochi"
+          width="1200"
+          height="675"
+          loading="eager"
+          decoding="async"
+        />
+      </figure>
+    </header>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        E-waste means discarded or unwanted electronic items such as phones,
+        laptops, printers, TVs, batteries, cables and IT hardware. Before
+        handing over e-waste in Kochi, separate batteries, identify devices
+        that store data, share photos and location, then confirm whether the
+        right route is recycling, resale, data destruction, pickup or ITAD.
+      </p>
+    </DirectAnswer>
+
+    <section id="definitive-answer">
+      <h2>The Definitive Answer</h2>
+      <p>
+        E-waste is any unwanted electrical or electronic item that needs a
+        separate handling decision before disposal. In Kochi, the practical
+        choice is to sort the item by risk and remaining value: reusable
+        devices can be reviewed for resale, batteries need separate handling,
+        data-bearing devices need preparation, and broken or obsolete
+        electronics can be routed toward recycling after feasibility is
+        confirmed.
+      </p>
+    </section>
+
+    <section id="entities">
+      <EntityTable items={entityItems} heading="Key e-waste entities and terms" />
+    </section>
+
+    <nav class="toc" aria-labelledby="toc-heading">
+      <h2 id="toc-heading">What's Inside This Guide</h2>
+      <ol>
+        {tocItems.map((item) => (
+          <li><a href={`#${item.id}`}>{item.label}</a></li>
+        ))}
+      </ol>
+    </nav>
+
+    <CtaBar whatsappMessage="Hi, I need help identifying and handling e-waste in Kochi." />
+
+    <section id="definition">
+      <h2>What E-Waste Means</h2>
+      <p>
+        E-waste, short for electronic waste, covers electrical and electronic
+        products that are no longer wanted, no longer useful, damaged beyond
+        practical repair, obsolete for the owner, or ready for replacement.
+        The category is wide because electronics appear in every part of daily
+        life: phones in a drawer, a laptop that will not turn on, a router
+        replaced by a newer broadband connection, an office printer retired
+        after a move, a UPS battery that no longer holds charge, or a server
+        removed during an IT refresh.
+      </p>
+      <p>
+        The important idea is not whether the item is large or small. The
+        important idea is that electronic items can contain circuit boards,
+        batteries, metals, plastics, display glass, power components and
+        storage media. Those parts make e-waste different from ordinary
+        household waste. A broken phone can still hold personal data. A small
+        battery can still create a fire risk if crushed or overheated. A
+        non-working monitor can still contain recoverable materials. That is
+        why e-waste needs a separate decision path.
+      </p>
+      <p>
+        In Kochi, the practical first step is simple: do not guess the final
+        route too early. A device may be reusable, resellable, recyclable,
+        suited for battery handling, or better managed under a business ITAD
+        workflow. The right answer depends on item type, condition, quantity,
+        location, access details and any data or documentation requirement.
+      </p>
+    </section>
+
+    <section id="types">
+      <h2>Types of E-Waste</h2>
+      <p>
+        Most people search for e-waste as a single topic, but the actual items
+        fall into useful groups. Grouping your items before pickup makes the
+        enquiry easier to review and helps avoid surprises on collection day.
+      </p>
+      <div class="type-grid">
+        {typeCards.map((card) => (
+          <a class="type-card" href={card.href}>
+            <h3>{card.title}</h3>
+            <p>{card.copy}</p>
+            <span>Related page</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section id="examples">
+      <h2>Common E-Waste Examples</h2>
+      <p>
+        E-waste is often hidden in ordinary places: the cable drawer, the
+        apartment utility room, the office storeroom, the old laptop bag, the
+        school computer lab, or the shop counter. The examples below are not
+        a fixed acceptance guarantee; they are a practical checklist for
+        spotting items that should be reviewed before disposal.
+      </p>
+      <div class="example-grid">
+        {exampleGroups.map((group) => (
+          <section class="example-card">
+            <h3>{group.title}</h3>
+            <ul>
+              {group.items.map((item) => <li>{item}</li>)}
+            </ul>
+          </section>
+        ))}
+      </div>
+    </section>
+
+    <section id="why-problem">
+      <h2>Why E-Waste Is a Problem</h2>
+      <p>
+        E-waste creates a problem when useful devices, risky components and
+        recoverable materials are treated as ordinary rubbish. Regular waste
+        collection is not built around battery separation, data protection,
+        component recovery or hazardous-material awareness. Once electronics
+        are mixed into general waste, it becomes harder to recover value and
+        easier for risky handling to happen downstream.
+      </p>
+      <p>
+        There are three everyday risks. First, batteries can be punctured,
+        crushed or exposed to heat. Second, devices with storage may leave
+        personal or business data behind. Third, usable devices may lose their
+        chance at repair, resale or reuse if they are damaged in mixed waste.
+        A responsible e-waste route tries to catch those issues before the
+        item leaves your home or office.
+      </p>
+    </section>
+
+    <section id="materials">
+      <h2>What's Inside E-Waste</h2>
+      <p>
+        Electronics can contain a mixture of recoverable materials and parts
+        that need care. A laptop may include aluminium, steel, copper wiring,
+        plastics, display glass, a battery, circuit boards and storage. A
+        printer may include motors, rollers, plastics, metal frames, toner
+        residue and control boards. A UPS may combine electronics with a
+        battery that must not be treated as ordinary mixed scrap.
+      </p>
+      <p>
+        This is why the same pickup can contain several handling paths. One
+        working laptop may be reviewed for resale, one damaged hard drive may
+        need destruction, one swollen battery may need special attention, and
+        one box of cables may simply be routed as mixed e-waste. The word
+        "e-waste" is the umbrella; the handling route is decided by the
+        actual item.
+      </p>
+    </section>
+
+    <section id="management">
+      <h2>E-Waste Management: Reduce, Reuse, Recycle</h2>
+      <p>
+        The best e-waste decision is usually the one that preserves value
+        without hiding risk. For a working device, that may mean reuse or
+        resale. For a damaged device, it may mean recycling after data and
+        battery concerns are handled. For a business batch, it may mean ITAD
+        with records agreed before collection.
+      </p>
+      <div class="decision-grid">
+        {decisionCards.map((card) => (
+          <article class="decision-card">
+            <h3>{card.title}</h3>
+            <p>{card.copy}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section id="rules">
+      <h2>E-Waste Rules and Responsibility in India</h2>
+      <p>
+        India treats e-waste separately from ordinary municipal waste. For
+        consumers, the practical responsibility is straightforward: avoid the
+        regular bin, avoid untraceable handover where data or batteries are
+        involved, and choose a route that can explain what happens next. For
+        producers and many businesses, the regulatory picture is more
+        structured and should be checked against current official sources.
+      </p>
+      <p>
+        If you need a plain-language starting point, read the
+        <a href="/e-waste-rules-2022-india/">E-Waste Rules 2022 India guide</a>.
+        If your business needs asset lists, data handling or records, review
+        <a href="/itad/">ITAD</a> and <a href="/data-destruction/">data
+        destruction</a> before collection is scheduled.
+      </p>
+    </section>
+
+    <section id="kochi">
+      <h2>How to Handle E-Waste in Kochi</h2>
+      <p>
+        For Kochi households, apartments and offices, the safest workflow is
+        to describe the items before committing to a route. Send the item
+        list, photos, quantity, area, working condition and any battery or
+        data concern. That allows the team to confirm pickup feasibility,
+        explain whether resale or recycling is more suitable, and flag any
+        business documentation requirements.
+      </p>
+      <div class="quick-link-grid" aria-label="Related e-waste routes">
+        {quickLinks.map((link) => <a href={link.href}>{link.label}</a>)}
+      </div>
+    </section>
+
+    <section id="prepare">
+      <h2>How to Prepare E-Waste Before Handover</h2>
+      <ul class="check-list">
+        <li>Back up phones, laptops, drives and tablets before pickup day.</li>
+        <li>Sign out of accounts and remove SIM cards or memory cards where practical.</li>
+        <li>Separate batteries, especially swollen, leaking or damaged ones.</li>
+        <li>Keep screens and fragile items where they will not be crushed.</li>
+        <li>Group cables, adapters and small devices in a bag or box.</li>
+        <li>For offices, prepare a rough inventory and identify storage media.</li>
+        <li>Share photos, location and access details before the slot is confirmed.</li>
+      </ul>
+    </section>
+
+    <LongformExpansion
+      label="E-waste meaning and management"
+      audience="Kochi households, apartment residents, students, shops, offices, IT teams and business owners trying to understand electronic waste"
+      localIntent="This e-waste pillar answers broad informational searches first, then routes Kochi and Ernakulam enquiries toward recycling, pickup, resale, battery handling, data destruction or ITAD only after the item details are clear."
+      items={["laptops", "phones", "printers", "monitors", "TVs", "UPS units", "inverter batteries", "servers", "hard drives", "routers", "cables", "tablets"]}
+      themes={[
+        "What e-waste means in simple language",
+        "How to identify e-waste at home",
+        "How to identify e-waste in offices",
+        "How students can explain e-waste clearly",
+        "Why e-waste is not ordinary waste",
+        "Why batteries change the handling route",
+        "Why stored data changes the handling route",
+        "How reuse fits e-waste management",
+        "How resale fits e-waste management",
+        "How recycling fits e-waste management",
+        "How ITAD fits business e-waste",
+        "How to prepare mixed electronics",
+        "How to avoid unsafe disposal",
+        "How to ask a collector better questions",
+        "How Kochi location details affect feasibility",
+        "How this guide connects to service pages",
+      ]}
+    />
+
+    <Faq items={faqItems} heading="E-Waste FAQs" />
+
+    <Sources items={sourceItems} />
+
+    <section class="final-cta">
+      <h2>Ready to Sort Your E-Waste?</h2>
+      <p>
+        Share your item list, photos and pickup location so Ewaste Kochi can
+        confirm the right handling route.
+      </p>
+      <CtaBar whatsappMessage="Hi, I have e-waste in Kochi. I can share photos and item details." compact />
+    </section>
+
+    <p class="updated">Last updated: <time datetime={lastUpdated}>{lastUpdated}</time></p>
+  </article>
+</Layout>
+
+<style>
+  .ewaste-pillar {
+    display: grid;
+    gap: 1.75rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3.4rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 52rem;
+  }
+  .hero figure {
+    margin: 0;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .hero-actions,
+  .quick-link-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+  }
+  .button,
+  .quick-link-grid a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0.7rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 800;
+    text-decoration: none;
+  }
+  .button.primary {
+    background: var(--color-primary);
+    color: #fff;
+  }
+  .button.secondary,
+  .quick-link-grid a {
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    color: var(--color-primary);
+  }
+  .toc {
+    padding: 1rem 1.15rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .toc h2 {
+    margin: 0 0 0.6rem;
+    font-size: 1rem;
+  }
+  .toc ol {
+    margin: 0;
+    padding-left: 1.2rem;
+    columns: 1;
+  }
+  .type-grid,
+  .example-grid,
+  .decision-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+  .type-card,
+  .example-card,
+  .decision-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .type-card {
+    display: grid;
+    gap: 0.35rem;
+    color: var(--color-text);
+    text-decoration: none;
+  }
+  .type-card h3,
+  .example-card h3,
+  .decision-card h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--color-primary);
+  }
+  .type-card p,
+  .decision-card p {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 0.92rem;
+  }
+  .type-card span {
+    margin-top: 0.25rem;
+    color: var(--color-primary);
+    font-size: 0.82rem;
+    font-weight: 800;
+  }
+  .example-card ul,
+  .check-list {
+    margin: 0.65rem 0 0;
+    padding-left: 1.15rem;
+  }
+  .check-list {
+    display: grid;
+    gap: 0.45rem;
+  }
+  .final-cta {
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    background: var(--color-surface);
+    text-align: center;
+  }
+  .final-cta h2 {
+    margin: 0 0 0.5rem;
+  }
+  .final-cta p {
+    margin: 0;
+    color: var(--color-muted);
+  }
+  .updated {
+    font-size: 0.8rem;
+    color: var(--color-muted);
+  }
+  @media (min-width: 640px) {
+    .toc ol {
+      columns: 2;
+    }
+    .type-grid,
+    .example-grid,
+    .decision-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 860px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.92fr) minmax(320px, 1.08fr);
+    }
+    .type-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .decision-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+</style>

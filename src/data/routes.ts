@@ -8,6 +8,7 @@ import { SITE_URL } from "./site";
 import { PILLAR_BLOG_ROUTES } from "./pillarBlogPages";
 import { LEGACY_INDEXED_BLOG_ROUTES } from "./legacyIndexedBlogPages";
 import { TOOL_ROUTES } from "./toolPages";
+import { INDEXED_GENERATED_ROUTES } from "./gscIndexedGeneratedPages";
 
 export interface RouteEntry {
   path: string;
@@ -47,9 +48,9 @@ export const ROUTES: RouteEntry[] = [
     path: "/recycling/",
     changefreq: "monthly",
     priority: 0.9,
-    title: "Where to Recycle Old Electronics in Kochi | Free Pickup",
+    title: "E-Waste Recycling in Kochi | Pickup, Process & Safe Disposal",
     description:
-      "Recycle old electronics in Kochi with free doorstep pickup — laptops, desktops, monitors, printers and more. Data wiped first, no drop-off needed.",
+      "Recycle old electronics in Kochi: laptops, desktops, phones, printers, TVs, batteries and IT scrap. Share photos and location to confirm pickup, data handling and recycling route.",
     type: "service",
     sitemapGroup: "services",
     lang: "en-IN",
@@ -100,6 +101,17 @@ export const ROUTES: RouteEntry[] = [
     lang: "en-IN",
   },
   {
+    path: "/locations/edappally/itad/",
+    changefreq: "monthly",
+    priority: 0.55,
+    title: "ITAD Services for Edappally Offices | Asset Disposition",
+    description:
+      "IT asset disposition for Edappally offices and commercial establishments — structured collection, asset lists, data destruction and documentation support.",
+    type: "location",
+    sitemapGroup: "locations",
+    lang: "en-IN",
+  },
+  {
     path: "/locations/infopark-kochi/",
     changefreq: "monthly",
     priority: 0.8,
@@ -133,6 +145,17 @@ export const ROUTES: RouteEntry[] = [
     lang: "en-IN",
   },
   {
+    path: "/locations/aluva/sell-electronics/",
+    changefreq: "monthly",
+    priority: 0.55,
+    title: "Sell Old Electronics in Aluva | Condition-Based Quotes",
+    description:
+      "Sell laptops, phones and other working electronics in Aluva. Condition-based quotes for households and businesses near the airport and industrial corridor.",
+    type: "location",
+    sitemapGroup: "locations",
+    lang: "en-IN",
+  },
+  {
     path: "/locations/angamaly/",
     changefreq: "monthly",
     priority: 0.7,
@@ -161,6 +184,17 @@ export const ROUTES: RouteEntry[] = [
     title: "E-Waste Recycling in Fort Kochi | Pickup Feasibility Check",
     description:
       "E-waste recycling and pickup feasibility checks for Fort Kochi homes, shops and small offices. Send item details to confirm what can be collected.",
+    type: "location",
+    sitemapGroup: "locations",
+    lang: "en-IN",
+  },
+  {
+    path: "/locations/fort-kochi/sell-electronics/",
+    changefreq: "monthly",
+    priority: 0.5,
+    title: "Sell Old Electronics in Fort Kochi | Condition-Based Quotes",
+    description:
+      "Sell laptops, phones and other working or repairable electronics in Fort Kochi. Condition-based quotes, pickup access checked in advance for heritage-area addresses.",
     type: "location",
     sitemapGroup: "locations",
     lang: "en-IN",
@@ -276,6 +310,17 @@ export const ROUTES: RouteEntry[] = [
     lang: "en-IN",
   },
   {
+    path: "/locations/perumbavoor/battery-recycling/",
+    changefreq: "monthly",
+    priority: 0.5,
+    title: "Battery Recycling in Perumbavoor | UPS, Inverter & Lithium Pickup",
+    description:
+      "Battery recycling collection for Perumbavoor households and businesses — UPS, inverter, lithium and power-tool batteries, checked for pickup feasibility before scheduling.",
+    type: "location",
+    sitemapGroup: "locations",
+    lang: "en-IN",
+  },
+  {
     path: "/locations/maradu/",
     changefreq: "monthly",
     priority: 0.6,
@@ -293,17 +338,6 @@ export const ROUTES: RouteEntry[] = [
     title: "E-Waste Pickup in Willingdon Island | Business IT Support",
     description:
       "E-waste pickup checks for Willingdon Island offices, facilities and nearby homes, including IT assets, batteries and data-bearing devices.",
-    type: "location",
-    sitemapGroup: "locations",
-    lang: "en-IN",
-  },
-  {
-    path: "/locations/willingdon-island/data-destruction/",
-    changefreq: "monthly",
-    priority: 0.55,
-    title: "Data Destruction for Willingdon Island Offices | Secure Drive Handling",
-    description:
-      "Data destruction planning for Willingdon Island offices, port-linked businesses and facilities - wiping, degaussing, shredding choices and documentation discussions.",
     type: "location",
     sitemapGroup: "locations",
     lang: "en-IN",
@@ -331,12 +365,34 @@ export const ROUTES: RouteEntry[] = [
     lang: "en-IN",
   },
   {
+    path: "/locations/kottayam/itad/",
+    changefreq: "monthly",
+    priority: 0.45,
+    title: "ITAD for Kottayam Publishing Houses & Institutions | Asset Disposition",
+    description:
+      "IT asset disposition for Kottayam publishing houses, offices and institutions — structured collection, asset lists and data destruction, feasibility checked in advance.",
+    type: "location",
+    sitemapGroup: "locations",
+    lang: "en-IN",
+  },
+  {
     path: "/locations/kozhikode/",
     changefreq: "monthly",
     priority: 0.5,
     title: "E-Waste Recycling in Kozhikode, Kerala | Pickup Feasibility Check",
     description:
       "Kozhikode isn't a standard doorstep pickup area for Ewaste Kochi, but we check feasibility for Kozhikode enquiries — bulk, business, and drop-off options. Contact us to find out what's possible.",
+    type: "location",
+    sitemapGroup: "locations",
+    lang: "en-IN",
+  },
+  {
+    path: "/locations/kozhikode/itad/",
+    changefreq: "monthly",
+    priority: 0.45,
+    title: "ITAD for Kozhikode IT & Business Offices | Asset Disposition",
+    description:
+      "IT asset disposition for Kozhikode offices, including Cyberpark tenants — structured collection, asset lists and data destruction, feasibility checked in advance.",
     type: "location",
     sitemapGroup: "locations",
     lang: "en-IN",
@@ -364,6 +420,17 @@ export const ROUTES: RouteEntry[] = [
     lang: "en-IN",
   },
   {
+    path: "/locations/kollam/sell-electronics/",
+    changefreq: "monthly",
+    priority: 0.45,
+    title: "Sell Old Electronics in Kollam | Condition-Based Quotes",
+    description:
+      "Sell laptops, phones and other working electronics in Kollam. Condition-based quotes and pickup feasibility checked for individual and retail-business sellers.",
+    type: "location",
+    sitemapGroup: "locations",
+    lang: "en-IN",
+  },
+  {
     path: "/locations/thiruvananthapuram/",
     changefreq: "monthly",
     priority: 0.5,
@@ -386,12 +453,34 @@ export const ROUTES: RouteEntry[] = [
     lang: "en-IN",
   },
   {
+    path: "/locations/kannur/data-destruction/",
+    changefreq: "monthly",
+    priority: 0.45,
+    title: "Data Destruction for Kannur Port & Cantonment Offices",
+    description:
+      "Secure data destruction for Kannur port-linked, airport-area and cantonment offices — wiping, degaussing and shredding, feasibility checked in advance.",
+    type: "location",
+    sitemapGroup: "locations",
+    lang: "en-IN",
+  },
+  {
     path: "/locations/thrissur/",
     changefreq: "monthly",
     priority: 0.5,
     title: "E-Waste Recycling in Thrissur, Kerala | Pickup Feasibility Check",
     description:
       "Thrissur isn't a standard doorstep pickup area for Ewaste Kochi, but we check feasibility for Thrissur enquiries — bulk, business, and drop-off options. Contact us to find out what's possible.",
+    type: "location",
+    sitemapGroup: "locations",
+    lang: "en-IN",
+  },
+  {
+    path: "/locations/thrissur/data-destruction/",
+    changefreq: "monthly",
+    priority: 0.45,
+    title: "Data Destruction for Thrissur Jewellery & Trade Businesses",
+    description:
+      "Secure data destruction for Thrissur gold and jewellery trade offices — POS systems, security DVRs and business records, feasibility checked in advance.",
     type: "location",
     sitemapGroup: "locations",
     lang: "en-IN",
@@ -413,7 +502,7 @@ export const ROUTES: RouteEntry[] = [
     priority: 0.8,
     title: "E-Waste Recycling Blog Kochi | Pickup, Scrap Price, Battery & ITAD Guides",
     description:
-      "Read Ewaste Kochi guides on e-waste recycling, pickup near me, battery disposal, laptop recycling, scrap value, data destruction, ITAD and safe electronics disposal in Kochi.",
+      "Read Ewaste Kochi guides on e-waste meaning, recycling, pickup near me, battery disposal, laptop recycling, scrap value, data destruction, ITAD and safe electronics disposal in Kochi.",
     type: "blog",
     sitemapGroup: "blog",
     lang: "en-IN",
@@ -707,7 +796,7 @@ export const ROUTES: RouteEntry[] = [
     priority: 0.6,
     title: "How Responsible E-Waste Collection Works | Kochi Guide",
     description:
-      "What makes e-waste collection responsible — authorized handling, data destruction, battery safety, and why the difference between compliant and informal recyclers matters.",
+      "What makes e-waste collection responsible: traceable handling, data destruction, battery safety, and clear answers before handover.",
     type: "blog",
     sitemapGroup: "blog",
     lang: "en-IN",
@@ -759,6 +848,17 @@ export const ROUTES: RouteEntry[] = [
   },
   ...PILLAR_BLOG_ROUTES,
   ...LEGACY_INDEXED_BLOG_ROUTES,
+  {
+    path: "/e-waste/",
+    changefreq: "monthly",
+    priority: 0.85,
+    title: "What Is E-Waste? Complete Kochi Guide to Electronic Waste",
+    description:
+      "Learn what e-waste means, common examples, why electronics need separate handling, and how to recycle, reuse, sell or prepare e-waste in Kochi.",
+    type: "core",
+    sitemapGroup: "core",
+    lang: "en-IN",
+  },
   {
     path: "/ewaste/",
     changefreq: "monthly",
@@ -819,9 +919,9 @@ export const ROUTES: RouteEntry[] = [
     path: "/battery-recycling/",
     changefreq: "monthly",
     priority: 0.9,
-    title: "Where to Recycle Batteries in Kochi | Free Doorstep Pickup",
+    title: "Battery Recycling in Kochi | UPS, Inverter & Lithium Pickup",
     description:
-      "Recycle UPS, inverter, laptop, and phone batteries in Kochi with free doorstep pickup. Safe, compliant disposal — batteries should never go in household trash.",
+      "Recycle UPS, inverter, laptop, mobile, lithium-ion and lead-acid batteries in Kochi. Pickup feasibility, safety guidance and business collection support.",
     type: "service",
     sitemapGroup: "services",
     lang: "en-IN",
@@ -831,9 +931,20 @@ export const ROUTES: RouteEntry[] = [
     path: "/marketplace/",
     changefreq: "weekly",
     priority: 0.9,
-    title: "Sell Old Electronics in Kochi | Condition-Based Quote + Pickup",
+    title: "Buy Refurbished Electronics in Kochi | Lowest Price Guarantee",
     description:
-      "List your used laptop, phone, or IT equipment for a condition-based quote, or browse inspected refurbished devices. Doorstep pickup support across Kochi.",
+      "Shop refurbished laptops, desktops, printers and IT gear in Kochi with eligible price match review, local delivery discussion and device preparation support.",
+    type: "service",
+    sitemapGroup: "services",
+    lang: "en-IN",
+  },
+  {
+    path: "/price-match-policy/",
+    changefreq: "monthly",
+    priority: 0.7,
+    title: "Ewaste Kochi Price Match Policy | Refurbished Electronics",
+    description:
+      "Read Ewaste Kochi's eligible price match policy for refurbished electronics in Kochi: terms, exclusions, proof needed and how to request review.",
     type: "service",
     sitemapGroup: "services",
     lang: "en-IN",
@@ -866,9 +977,9 @@ export const ROUTES: RouteEntry[] = [
     path: "/data-destruction/",
     changefreq: "monthly",
     priority: 0.9,
-    title: "Data Destruction Services in Kochi | Secure Wiping & Certificate",
+    title: "Data Destruction Services in Kochi | Wiping & Drive Shredding",
     description:
-      "Certified data destruction in Kochi — wiping, degaussing, and hard drive shredding for laptops, servers, and drives. Certificates available on request.",
+      "Data destruction in Kochi for laptops, servers and drives: wiping, degaussing, hard drive shredding and documentation options agreed before service.",
     type: "service",
     sitemapGroup: "services",
     lang: "en-IN",
@@ -991,7 +1102,7 @@ export const ROUTES: RouteEntry[] = [
     priority: 0.7,
     title: "TV Recycling in Kochi | LED, LCD & Old CRT Disposal",
     description:
-      "Recycle old TVs and monitors in Kochi — LED, LCD, and CRT displays. Free doorstep pickup for households, apartments, and offices across Ernakulam district.",
+      "Recycle old TVs and monitors in Kochi — LED, LCD and CRT displays. Pickup feasibility for households, apartments and offices is confirmed after item and location review.",
     type: "service",
     sitemapGroup: "services",
     lang: "en-IN",
@@ -1002,7 +1113,7 @@ export const ROUTES: RouteEntry[] = [
     priority: 0.7,
     title: "Electronics Recycling Near Me in Kochi | Find Local Pickup",
     description:
-      "Looking for electronics recycling near you in Kochi? We collect from your exact location — no need to find or travel to a drop-off point.",
+      "Looking for electronics recycling near you in Kochi? Share your item list, photos and area so local pickup feasibility can be confirmed.",
     type: "service",
     sitemapGroup: "services",
     lang: "en-IN",
@@ -1013,7 +1124,7 @@ export const ROUTES: RouteEntry[] = [
     priority: 0.7,
     title: "Hard Drive Degaussing in Kochi | Magnetic Data Erasure",
     description:
-      "Hard drive degaussing in Kochi — magnetic erasure for hard disk drives, distinct from wiping or physical shredding. Certificate available on request.",
+      "Hard drive degaussing in Kochi — magnetic erasure for hard disk drives, distinct from wiping or physical shredding. Documentation options are agreed before service.",
     type: "service",
     sitemapGroup: "services",
     lang: "en-IN",
@@ -1157,6 +1268,7 @@ export const ROUTES: RouteEntry[] = [
     lang: "ml-IN",
     hreflangPair: "/contact/",
   },
+  ...INDEXED_GENERATED_ROUTES,
 ];
 
 export function getHreflang(path: string): { lang: string; href: string }[] | undefined {
