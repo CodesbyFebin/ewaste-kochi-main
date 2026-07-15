@@ -20,8 +20,17 @@ const FAIL_MAX_FAQ_REUSE = 3;
 const FAIL_MAX_LONG_PARAGRAPH_REUSE = 5;
 const LONG_PARAGRAPH_WORD_COUNT = 25;
 
-const indexableBlogSlugs = ROUTES.filter((r) => r.type === "blog" && isIndexable(r) && r.path !== "/blog/")
-  .map((r) => r.path.replace(/^\/blog\//, "").replace(/\/$/, ""));
+// De-duplicate by slug: a route can legitimately appear twice in ROUTES (e.g.
+// a generated GSC-indexed entry colliding with a hand-written page at the
+// same path) -- without this, the same file gets parsed twice and every one
+// of its own paragraphs looks "shared with itself".
+const indexableBlogSlugs = [
+  ...new Set(
+    ROUTES.filter((r) => r.type === "blog" && isIndexable(r) && r.path !== "/blog/").map((r) =>
+      r.path.replace(/^\/blog\//, "").replace(/\/$/, "")
+    )
+  ),
+];
 
 interface PostData {
   slug: string;
@@ -37,13 +46,17 @@ for (const slug of indexableBlogSlugs) {
     continue;
   }
   const content = readFileSync(file, "utf8");
-  const sectionRe = /<section[^>]*>\s*<h2[^>]*>([^<]*)<\/h2>\s*<p[^>]*>([\s\S]*?)<\/p>/g;
+  const sectionRe = /<section([^>]*)>\s*<h2[^>]*>([^<]*)<\/h2>\s*<p[^>]*>([\s\S]*?)<\/p>/g;
   const paragraphs: string[] = [];
   let m: RegExpExecArray | null;
   while ((m = sectionRe.exec(content))) {
-    const heading = m[1].trim();
-    if (heading.startsWith("Have Questions") || heading === "Related services") continue;
-    const text = m[2].replace(/\s+/g, " ").trim();
+    const sectionAttrs = m[1];
+    const heading = m[2].trim();
+    // Final-CTA sections are boilerplate UI chrome, not body content -- their
+    // heading text varies ("Have Questions About X?", "Have an Old TV to
+    // Dispose Of?", etc.) so match on the class, not the heading string.
+    if (sectionAttrs.includes("final-cta") || heading === "Related services") continue;
+    const text = m[3].replace(/\s+/g, " ").trim();
     if (text.length > 20) paragraphs.push(text);
   }
   const faqBlock = content.match(/const faqItems = \[([\s\S]*?)\n\];/);

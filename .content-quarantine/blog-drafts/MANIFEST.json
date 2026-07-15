@@ -343,5 +343,50 @@
     "slug": "why-ewaste-needs-separate-handling",
     "contentSource": "legacy",
     "status": "review"
+  },
+  {
+    "slug": "electronics-recycling-checklist-before-pickup",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "ewaste-pickup-aluva-kochi",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "ewaste-pickup-edappally-kochi",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "ewaste-pickup-kadavanthra-kochi",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "ewaste-pickup-near-infopark-kochi",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "ewaste-pickup-vyttila-kochi",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "old-computer-accessories-recycling-kochi",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "printer-cartridge-toner-recycling-kochi",
+    "contentSource": "generated",
+    "status": "draft"
+  },
+  {
+    "slug": "ups-battery-recycling-kochi",
+    "contentSource": "generated",
+    "status": "draft"
   }
 ]

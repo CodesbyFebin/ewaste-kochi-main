@@ -31,7 +31,7 @@ export interface RouteEntry {
   indexable?: boolean;
 }
 
-export const ROUTES: RouteEntry[] = [
+const BASE_ROUTES: RouteEntry[] = [
   {
     path: "/",
     changefreq: "weekly",
@@ -2560,19 +2560,6 @@ export const ROUTES: RouteEntry[] = [
     indexable: true,
   },
   {
-    path: "/blog/electronics-recycling-checklist-before-pickup/",
-    changefreq: "monthly",
-    priority: 0.5,
-    title: "Electronics Recycling Checklist Before You Book Pickup | Kochi",
-    description: "A complete checklist to run through before booking an e-waste pickup in Kochi — data, batteries, building access, bulky items, and what to include in your WhatsApp message.",
-    type: "blog",
-    sitemapGroup: "blog",
-    lang: "en-IN",
-    status: "published",
-    contentSource: "legacy",
-    indexable: true,
-  },
-  {
     path: "/blog/electronics-recycling-near-kochi-metro-areas/",
     changefreq: "monthly",
     priority: 0.5,
@@ -2690,32 +2677,6 @@ export const ROUTES: RouteEntry[] = [
     indexable: true,
   },
   {
-    path: "/blog/ewaste-pickup-aluva-kochi/",
-    changefreq: "monthly",
-    priority: 0.5,
-    title: "E-Waste Pickup in Aluva | Electronics Collection Near Kochi",
-    description: "E-waste pickup and recycling services in Aluva, Kochi. Book electronics collection near Aluva apartments, homes and business areas.",
-    type: "blog",
-    sitemapGroup: "blog",
-    lang: "en-IN",
-    status: "published",
-    contentSource: "legacy",
-    indexable: true,
-  },
-  {
-    path: "/blog/ewaste-pickup-edappally-kochi/",
-    changefreq: "monthly",
-    priority: 0.5,
-    title: "E-Waste Pickup in Edappally | Kochi Electronics Collection",
-    description: "E-waste pickup and recycling services in Edappally, Kochi. Book electronics collection near Edappally apartments, offices and business areas.",
-    type: "blog",
-    sitemapGroup: "blog",
-    lang: "en-IN",
-    status: "published",
-    contentSource: "legacy",
-    indexable: true,
-  },
-  {
     path: "/blog/ewaste-pickup-ernakulam-south/",
     changefreq: "monthly",
     priority: 0.5,
@@ -2768,19 +2729,6 @@ export const ROUTES: RouteEntry[] = [
     indexable: true,
   },
   {
-    path: "/blog/ewaste-pickup-kadavanthra-kochi/",
-    changefreq: "monthly",
-    priority: 0.5,
-    title: "E-Waste Pickup Near Kadavanthra | Kochi Electronics Collection",
-    description: "E-waste pickup and recycling services near Kadavanthra, Kochi. Book electronics collection from Kadavanthra apartments, homes and offices.",
-    type: "blog",
-    sitemapGroup: "blog",
-    lang: "en-IN",
-    status: "published",
-    contentSource: "legacy",
-    indexable: true,
-  },
-  {
     path: "/blog/ewaste-pickup-kakkanad/",
     changefreq: "monthly",
     priority: 0.5,
@@ -2807,37 +2755,11 @@ export const ROUTES: RouteEntry[] = [
     indexable: true,
   },
   {
-    path: "/blog/ewaste-pickup-near-infopark-kochi/",
-    changefreq: "monthly",
-    priority: 0.5,
-    title: "E-Waste Pickup Near Infopark, Kochi | Tech Park Electronics Collection",
-    description: "E-waste pickup and recycling near Infopark, Kakkanad and Kochi tech parks. Electronics collection for offices, startups and IT companies in the Infopark area.",
-    type: "blog",
-    sitemapGroup: "blog",
-    lang: "en-IN",
-    status: "published",
-    contentSource: "legacy",
-    indexable: true,
-  },
-  {
     path: "/blog/ewaste-pickup-small-offices-kochi/",
     changefreq: "monthly",
     priority: 0.5,
     title: "E-Waste Pickup for Small Offices in Kochi | IT Scrap Guide",
     description: "How small offices in Kochi can book e-waste pickup — what to prepare, data security basics, bulk quote options, and how to handle old IT equipment responsibly.",
-    type: "blog",
-    sitemapGroup: "blog",
-    lang: "en-IN",
-    status: "published",
-    contentSource: "legacy",
-    indexable: true,
-  },
-  {
-    path: "/blog/ewaste-pickup-vyttila-kochi/",
-    changefreq: "monthly",
-    priority: 0.5,
-    title: "E-Waste Pickup Near Vyttila | Kochi Electronics Collection",
-    description: "E-waste pickup and recycling services near Vyttila, Kochi. Book electronics collection from Vyttila apartments, offices and business areas.",
     type: "blog",
     sitemapGroup: "blog",
     lang: "en-IN",
@@ -4887,19 +4809,6 @@ export const ROUTES: RouteEntry[] = [
     indexable: true,
   },
   {
-    path: "/blog/old-computer-accessories-recycling-kochi/",
-    changefreq: "monthly",
-    priority: 0.5,
-    title: "Old Computer Accessories Recycling in Kochi | Keyboards, Mice & Parts",
-    description: "How to recycle old computer accessories in Kochi — keyboards, mice, speakers, webcams, hard drives and other peripherals. Preparation and pickup tips.",
-    type: "blog",
-    sitemapGroup: "blog",
-    lang: "en-IN",
-    status: "published",
-    contentSource: "legacy",
-    indexable: true,
-  },
-  {
     path: "/blog/old-device-quote-checklist/",
     changefreq: "monthly",
     priority: 0.5,
@@ -5347,19 +5256,6 @@ export const ROUTES: RouteEntry[] = [
     priority: 0.5,
     title: "Printer and Scanner Disposal Checklist",
     description: "Printer and Scanner Disposal Checklist — practical guidance for Kochi households and businesses, covering printer recycling, scanner disposal, router recycling.",
-    type: "blog",
-    sitemapGroup: "blog",
-    lang: "en-IN",
-    status: "published",
-    contentSource: "legacy",
-    indexable: true,
-  },
-  {
-    path: "/blog/printer-cartridge-toner-recycling-kochi/",
-    changefreq: "monthly",
-    priority: 0.5,
-    title: "Printer Cartridge and Toner Disposal in Kochi | Ink Recycling",
-    description: "How to dispose of old printer ink cartridges and toner in Kochi. Separation tips, recycling options, and what to do with used cartridges before pickup.",
     type: "blog",
     sitemapGroup: "blog",
     lang: "en-IN",
@@ -6499,19 +6395,6 @@ export const ROUTES: RouteEntry[] = [
     indexable: true,
   },
   {
-    path: "/blog/ups-battery-recycling-kochi/",
-    changefreq: "monthly",
-    priority: 0.5,
-    title: "UPS Battery Recycling in Kochi | Old UPS & Battery Backup Disposal",
-    description: "How to recycle old UPS batteries in Kochi. Safety tips, preparation, pickup considerations for UPS units and battery backup systems from homes and offices.",
-    type: "blog",
-    sitemapGroup: "blog",
-    lang: "en-IN",
-    status: "published",
-    contentSource: "legacy",
-    indexable: true,
-  },
-  {
     path: "/blog/usb-cable-recycling/",
     changefreq: "monthly",
     priority: 0.5,
@@ -7520,8 +7403,19 @@ export const ROUTES: RouteEntry[] = [
     lang: "ml-IN",
     hreflangPair: "/contact/",
   },
-  ...INDEXED_GENERATED_ROUTES,
 ];
+
+// A hand-written route can occasionally share a path with one pulled in from
+// LEGACY_INDEXED_BLOG_ROUTES/INDEXED_GENERATED_ROUTES (same slug picked
+// independently); keep the first occurrence and drop the rest, rather than
+// shipping two ROUTES entries -- and two rendered copies during any
+// path-keyed processing -- for the same URL.
+const seenPaths = new Set<string>();
+export const ROUTES: RouteEntry[] = [...BASE_ROUTES, ...INDEXED_GENERATED_ROUTES].filter((r) => {
+  if (seenPaths.has(r.path)) return false;
+  seenPaths.add(r.path);
+  return true;
+});
 
 export function getHreflang(path: string): { lang: string; href: string }[] | undefined {
   const route = ROUTES.find((r) => r.path === path);
