@@ -30,6 +30,28 @@
       "permanent": true
     },
     {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "blog.ewastekochi.com"
+        }
+      ],
+      "destination": "https://www.ewastekochi.com/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "wiki.ewastekochi.com"
+        }
+      ],
+      "destination": "https://www.ewastekochi.com/blog/",
+      "permanent": true
+    },
+    {
       "source": "/services/battery-recycling-kochi",
       "destination": "/battery-recycling/",
       "permanent": true
