@@ -1,7 +1,7 @@
 # GSC-P2 — Far-City Pages + Redirects Implementation
 
 Date: 2026-07-15
-Status: **Complete. Committed. Staging deploy is the next step below — not yet done as of writing this report.**
+Status: **Complete. Committed. Staging deploy done and crawl-verified — see below.**
 
 ## Trigger
 
@@ -60,14 +60,27 @@ All 14 rules from the GSC-P1 `redirect_301` proposal list, in the existing `{sou
 | Rule | Status |
 | --- | --- |
 | Routes pass validation | ✅ 72 routes, 576/576 checks (not "68" — the actual net addition was 8 pages on top of 64, not a rebuild to a different total) |
-| 8 far-city pages live | ✅ built, validated locally — **staging deploy is the next step, not yet done as of this report** |
-| 14 redirects resolve to 200 targets | ✅ verified locally against the route registry; live-200 verification happens at staging deploy |
+| 8 far-city pages live | ✅ built, deployed to staging, all 200 on live crawl |
+| 14 redirects resolve to 200 targets | ✅ verified live on staging — 0 bad statuses, 0 chains across all 316 testable redirects |
 | No clicked URL left 404 | ✅ unchanged from GSC-P1's 92.1%-protected baseline, now materially improved since the 8 highest-value gaps are closed |
 | No unsafe claims return | ✅ swept clean |
 | `vercel.json` has `framework: astro` and `outputDirectory: dist` | ✅ already committed since the earlier phase (`8e6499d`) |
 
+## Staging deploy + crawl — done
+
+Deployed to the isolated `ewastekochi-v2-staging` project (confirmed via `.vercel/project.json` — not `ewaste-kochi-main`/production), landed as an unaliased Preview per the usual pattern, aliased to `ewastekochi-v2-staging.vercel.app` (staging-only operation, `www.ewastekochi.com` untouched).
+
+Full automated crawl against the live staging URL:
+
+| Check | Result |
+| --- | --- |
+| All 72 routes | **200**, 0 failures |
+| All 316 testable `vercel.json` redirects (317 total minus 1 host-based wildcard rule not directly path-testable) | **0 bad statuses, 0 chains** — every redirect resolves in a single hop to a real 200 |
+| Homepage, `/locations/` hub, all 8 new far-city pages | 200 (spot-checked individually first) |
+| All 11 originally-named "protect at all cost" pages still built (12th is the homepage) | 200 (spot-checked individually) |
+| Sample redirects incl. the bug-fixed Angamaly rule | 308 → final 200, confirmed correct |
+
 ## Not done in this phase
 
-- Staging deploy + live crawl test (next step, described below).
 - Wave-2 watchlist pages (explicitly out of scope this phase).
 - Phase 2L production cutover retry (explicitly deferred — "then Phase 2L-RETRY" was named as the step *after* this one, not part of this instruction).
