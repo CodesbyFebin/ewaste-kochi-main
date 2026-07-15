@@ -3,13 +3,14 @@ import Layout from "../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
 import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
 
 const title = "How to Recycle Old Electronics Without Losing Data | Kochi";
 const description =
-  "How to protect your personal and business data when recycling old electronics in Kochi — what to back up, how wiping works, and when to request certified data destruction.";
+  "How to protect your personal and business data when recycling old electronics in Kochi — what to back up, how wiping works, and when to request verified data destruction.";
 const datePublished = "2026-07-08";
-const dateModified = "2026-07-08";
+const dateModified = "2026-07-15";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
@@ -39,10 +40,18 @@ const jsonLd = [
   },
 ];
 
+const deviceRows = [
+  { device: "Phone / tablet", step: "Sign out of accounts, then a full factory reset", note: "Standard consumer approach is usually sufficient for personal use" },
+  { device: "Laptop (HDD)", step: "Secure erase / overwrite, not just formatting", note: "Formatting alone leaves recoverable data on a mechanical drive" },
+  { device: "Laptop (SSD)", step: "Manufacturer secure-erase tool or physical destruction", note: "Overwriting works differently on SSDs than HDDs — ask if unsure" },
+  { device: "Desktop / server drives", step: "Wiping, degaussing or shredding depending on sensitivity", note: "See data destruction for the full method breakdown" },
+  { device: "Business devices (any type)", step: "Verified destruction with documentation", note: "Not just a consumer reset — see ITAD for structured handling" },
+];
+
 const faqItems = [
   {
     q: "Is a factory reset enough to protect my data?",
-    a: "For most personal devices, a full factory reset removes accessible personal data. For business devices or sensitive use cases, certified wiping to a recognised standard or physical destruction is the reliable option.",
+    a: "For most personal devices, a full factory reset removes accessible personal data. For business devices or sensitive use cases, verified wiping to a recognised standard or physical destruction is the reliable option.",
   },
   {
     q: "What data can remain after a simple delete?",
@@ -54,7 +63,31 @@ const faqItems = [
   },
   {
     q: "Do phones and tablets need the same data handling as computers?",
-    a: "Yes. A factory reset removes personal accounts and data from phones and tablets. For devices with sensitive business data, certified wiping is advisable.",
+    a: "Yes. A factory reset removes personal accounts and data from phones and tablets. For devices with sensitive business data, verified wiping is advisable.",
+  },
+  {
+    q: "Does an SSD need different handling than a traditional hard drive?",
+    a: "Yes — the way SSDs store data means standard overwriting methods designed for mechanical drives don't always work the same way. A manufacturer's secure-erase tool or physical destruction is the more reliable approach for SSDs.",
+  },
+  {
+    q: "What if I can't factory reset a device because it's broken?",
+    a: "A device that won't boot can still hold recoverable data on its drive. In that case, the drive itself needs to be removed or the device sent for physical destruction rather than relying on a software reset.",
+  },
+  {
+    q: "How do I know if I need degaussing versus shredding versus wiping?",
+    a: "It depends on whether the drive needs to remain reusable (wiping), whether it's a magnetic drive being retired entirely (degaussing), or whether the highest level of certainty is needed (shredding) — see our data destruction page for the full comparison.",
+  },
+  {
+    q: "Should I worry about data on printers or smart devices, not just computers?",
+    a: "Some printers, routers, and smart devices do store data — configuration details, cached documents, saved credentials. If a device has any onboard storage, it's worth mentioning when you book, even if it's not an obvious 'computer.'",
+  },
+  {
+    q: "Can I get documentation that my data was actually destroyed?",
+    a: "For business pickups and data destruction jobs specifically, documentation support may be available depending on the service type and agreed handling process — ask about this when you book.",
+  },
+  {
+    q: "What's the single biggest data-safety mistake people make when recycling?",
+    a: "Assuming that handing a device to any recycler automatically means the data is gone. It doesn't, unless you specifically confirm what handling is being used — that's true everywhere, not just with informal dealers.",
   },
 ];
 ---
@@ -84,8 +117,32 @@ const faqItems = [
   <ul class="key-takeaways">
     <li>Handing a device to a recycler doesn't guarantee data destruction unless you specifically ask.</li>
     <li>Formatting a drive is not the same as securely erasing it.</li>
-    <li>Business devices need certified destruction with documentation, not just a consumer reset.</li>
+    <li>Business devices need verified destruction with documentation, not just a consumer reset.</li>
   </ul>
+
+  <section>
+    <h2>What to do by device type</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Device</th>
+            <th>What to do</th>
+            <th>Note</th>
+          </tr>
+        </thead>
+        <tbody>
+          {deviceRows.map((row) => (
+            <tr>
+              <td><strong>{row.device}</strong></td>
+              <td>{row.step}</td>
+              <td>{row.note}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
 
   <section>
     <h2>Step 1: Back up what you want to keep</h2>
@@ -114,8 +171,21 @@ const faqItems = [
       approach. For computers, a secure erase (not just formatting the
       drive) is needed to overwrite the storage properly. For drives you
       can't access or that belong to a failed device, ask about
-      <a href="/data-destruction/">certified data destruction</a> — wiping,
+      <a href="/data-destruction/">verified data destruction</a> — wiping,
       degaussing, or physical shredding depending on the situation.
+    </p>
+  </section>
+
+  <section>
+    <h2>Why SSDs need a different approach than hard drives</h2>
+    <p>
+      Traditional overwriting methods were designed around how
+      mechanical hard drives store data. Solid-state drives distribute
+      data differently across memory cells, which means a standard
+      overwrite pass doesn't guarantee the same result. For SSDs, a
+      manufacturer's dedicated secure-erase tool, or physical
+      destruction for drives being fully retired, is the more reliable
+      approach.
     </p>
   </section>
 
@@ -125,7 +195,7 @@ const faqItems = [
       Handing a device to a recycler — even a legitimate one — does not
       guarantee the data is destroyed unless you specifically request and
       confirm it. Always ask how data-bearing devices will be handled and
-      whether a certificate is available.
+      whether documentation is available.
     </p>
   </section>
 
@@ -133,7 +203,7 @@ const faqItems = [
     <h2>Business devices need extra care</h2>
     <p>
       Devices that held business data — client records, financial
-      information, employee details — should go through certified
+      information, employee details — should go through verified
       destruction with documentation, not just a consumer factory reset.
       See <a href="/data-destruction/">data destruction</a> and
       <a href="/itad/">ITAD services</a> for business options.
@@ -145,6 +215,7 @@ const faqItems = [
     <div class="link-row">
       <a href="/data-destruction/">Data Destruction</a>
       <a href="/itad/">ITAD for Business</a>
+      <a href="/hard-drive-shredding/">Hard Drive Shredding</a>
     </div>
   </section>
 
@@ -153,6 +224,9 @@ const faqItems = [
   </p>
 
   <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/recycle-electronics-without-losing-data/" />
+
   <section class="final-cta">
     <h2>Need Help With Data Safety Before Recycling?</h2>
     <p>Share your item details and location on WhatsApp to get started.</p>
@@ -174,4 +248,8 @@ const faqItems = [
   .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
   .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
   .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+  .table-scroll { overflow-x: auto; margin: 1rem 0; }
+  table { width: 100%; border-collapse: collapse; min-width: 600px; }
+  th, td { text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--color-border); font-size: 0.92rem; }
+  th { color: var(--color-muted); font-weight: 700; }
 </style>

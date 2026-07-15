@@ -931,6 +931,20 @@ export const ROUTES: RouteEntry[] = [
     indexable: true,
   },
   {
+    path: "/blog/recycle-electronics-without-losing-data/",
+    changefreq: "monthly",
+    priority: 0.6,
+    title: "How to Recycle Old Electronics Without Losing Data | Kochi",
+    description:
+      "How to protect your personal and business data when recycling old electronics in Kochi — what to back up, how wiping works, and when to request verified data destruction.",
+    type: "blog",
+    sitemapGroup: "blog",
+    lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
+  },
+  {
     path: "/blog/ewaste-pickup-near-me/",
     changefreq: "monthly",
     priority: 0.6,

@@ -62,6 +62,7 @@ const POST_META: PostMeta[] = [
   { href: "/blog/ewaste-recycling-guide-kochi-residents/", datePublished: "2026-07-15", beginner: true, popular: false },
   { href: "/blog/electronics-disposal-apartments-kochi/", datePublished: "2026-07-15", beginner: true, popular: false },
   { href: "/blog/reuse-resale-or-recycling-old-electronics/", datePublished: "2026-07-15", beginner: false, popular: false },
+  { href: "/blog/recycle-electronics-without-losing-data/", datePublished: "2026-07-15", beginner: false, popular: false },
 
 ];
 
