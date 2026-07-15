@@ -520,6 +520,14 @@ Verified: build 363 → 355 pages (−7 buyback, −1 `/ewaste/`, nothing else).
 
 Given production already existed and had the `/ewaste/` bug live, deployed the tested blocker-patch commit (`3408ceeb`) straight to production rather than leaving a known bug live and waiting: `dpl_GYpvyPQeDr8gU7cJESrcLda4a4gA`, aliased to `www.ewastekochi.com`. Verified immediately: homepage 200, `/ewaste/` → 308 → `/e-waste/`, buyback `.html` URLs → 308 → `/sell-electronics/`, 10 core/curated pages spot-checked at 200, chatbot present, canonical correct. No rollback needed.
 
+## GSC-P4 — sitemap submission + priority indexing, re-verified (2026-07-15)
+
+**Still blocked on the same wall the prior GSC-P4 pass hit** — no GSC API credentials, no browser-automation tool in this environment. The prior attempt already tried the more capable path (`gcloud` with `kochiewaste@gmail.com`, application-default credentials) and got `403 ACCESS_TOKEN_SCOPE_INSUFFICIENT`; nothing here changes that, so it wasn't re-attempted expecting a different result. Sitemap not submitted, no Request Indexing calls made, no Validate Fix clicked.
+
+What was actually done: full re-verification of the post-patch production state (355 sitemap URLs, 0 staging/redirect-source/noindex leaks, `/ewaste/` and all 7 buyback URLs confirmed absent from discovery and correctly 308-redirecting) plus live 200/canonical checks on all 36 priority URLs (12 P1 + 14 P2 + 10 new P3 curated pages) — all clean, all ready to paste into GSC the moment someone has access. Updated `reports/gsc-p4-sitemap-submission-log.md` to the current deployment; full detail and exact manual steps in `reports/gsc-p4-final-submission-and-indexing-report.md`.
+
+**Next step needs a human with Search Console access** — submit the sitemap, run the 36 Request Indexing calls, validate old issues. `GSC-P5` (24h/72h monitoring) is gated on that happening.
+
 ## Known Risks
 
 * **`/recycling/`'s ISO/Pollution Control Board wording — RESOLVED 2026-07-14, pre-Phase 2L.** User chose to soften rather than verify (no certificate in hand). Replaced "Our recycling processes follow ISO 14001:2015-aligned environmental management practices, and we operate under Pollution Control Board authorization for e-waste handling" with "Our recycling process follows documented environmental handling practices, with pickup, sorting and documentation support depending on the service type. If you need compliance documentation for business or ITAD work, contact us before pickup so the required handling process can be confirmed." `npm run check`/`build`/`validate` all clean (60 routes, 526/526), word count unaffected (3,030, still clears the 3,000 pillar target). Commit `a274774`.

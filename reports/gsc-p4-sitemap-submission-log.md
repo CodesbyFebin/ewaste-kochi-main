@@ -1,42 +1,37 @@
 # GSC-P4 Sitemap Submission Log
 
 Phase: GSC-P4 — sitemap submission + priority indexing
-Generated: 2026-07-18
+Generated: 2026-07-15 (updated after the URL canonical blocker patch)
 
 ## Production Baseline
 
 - Live: `https://www.ewastekochi.com`
-- Deployment: `dpl_6sP1qDXFwoS5CYbXJTFbPYBSYWbd`
-- Branch: `expanded-indexed-clusters-20260718`
-- Commit: `9b0a376`
-- Production pages: 363
-- Validation baseline: 1,586 checks, 0 failures
+- Deployment: `dpl_GYpvyPQeDr8gU7cJESrcLda4a4gA`
+- Commits: `3408ceeb` (URL canonical blocker patch) + `5c02fdd0` (doc correction)
+- Production pages: 355 (was 363 before this patch — buyback `.html` spam pages and `/ewaste/` removed)
+- Validation baseline: 1,578 checks, 0 failures
 
 ## Submission Status
 
-Sitemap submission was **not completed from this environment**.
+Sitemap submission was **not completed from this environment** — same blocker the prior GSC-P4 pass hit, re-confirmed rather than assumed still true:
 
-Blocked access paths:
+- No Google Search Console API credentials are configured in this environment (checked for service-account JSON, OAuth token files, `GOOGLE_APPLICATION_CREDENTIALS` — none found).
+- No browser-automation tool is available to this session to open the Search Console UI and submit interactively.
+- The prior attempt (this same phase, an earlier pass) documented `403 ACCESS_TOKEN_SCOPE_INSUFFICIENT` against both `SitesService.List` and `SitemapsService.Submit` using `kochiewaste@gmail.com` and application-default credentials, and found no in-app browser target (`agent.browsers.list()` returned `[]`). Nothing in this environment changes that outcome — there's no different credential or tool to try.
 
-- Search Console API using active gcloud user `kochiewaste@gmail.com`: `403 ACCESS_TOKEN_SCOPE_INSUFFICIENT` for both `SitesService.List` and `SitemapsService.Submit`.
-- Search Console API using application-default credentials: `403 ACCESS_TOKEN_SCOPE_INSUFFICIENT` for both `SitesService.List` and `SitemapsService.Submit`.
-- In-app browser: unavailable; `agent.browsers.list()` returned `[]`, so the Search Console UI could not be opened from this session.
-
-No staging URL was submitted. No sitemap was submitted. No URL Inspection indexing request was performed.
+No sitemap was submitted. No URL Inspection indexing request was performed. No Validate Fix action was clicked.
 
 ## Intended Submission
 
 - Intended GSC property: not confirmed through UI/API from this session
 - Recommended property: verified domain property for `ewastekochi.com`, or URL-prefix property `https://www.ewastekochi.com/`
-- Sitemap submitted: not submitted
 - Sitemap to submit manually: `https://www.ewastekochi.com/sitemap.xml`
 - Submission time: not submitted
 - Initial sitemap status: not available
 - Discovered URL count shown in GSC: not available
 - Immediate warnings/errors in GSC: not available
-- API warning/error observed locally: `ACCESS_TOKEN_SCOPE_INSUFFICIENT`
 
-## Final Live Discovery Check
+## Final Live Discovery Check (re-verified against the current, post-patch deployment)
 
 | URL | HTTP status | Result |
 | --- | ---: | --- |
@@ -49,20 +44,14 @@ No staging URL was submitted. No sitemap was submitted. No URL Inspection indexi
 
 Discovery safety checks:
 
-- `robots.txt` references `https://www.ewastekochi.com/sitemap.xml`.
+- `robots.txt` references both `https://www.ewastekochi.com/sitemap.xml` and `https://www.ewastekochi.com/ai-sitemap.xml`.
 - `sitemap.xml` is a sitemap index with 6 production `www` sub-sitemaps.
-- Sub-sitemap counts: core 15, services 24, blog 124, legal 4, locations 184, ml 12.
-- Unique sitemap URLs: 363.
-- Sitemap URLs returning 200: 363/363.
-- Sitemap URLs with redirect final URL mismatch: 0.
-- Sitemap URLs with noindex: 0.
-- Sitemap URLs with non-production hosts: 0.
-- Staging, Vercel preview, localhost, and `127.0.0.1` URLs: 0.
-- 404 URLs in sitemap: 0.
-- Redirect sources in sitemap: 0.
-- `content-index.json` is live and production-hosted.
-- `ai-sitemap.xml` is live and production-hosted.
-- `feed.xml` is live and production-hosted.
+- Unique sitemap URLs (summed across sub-sitemaps): **355**.
+- Sitemap URLs with non-production hosts (staging/vercel.app/localhost): **0**.
+- `/ewaste/` in any sitemap: **0** (confirmed removed; it now 308s to `/e-waste/`).
+- Buyback `.html` URLs in any sitemap: **0** (confirmed removed; they now 308 to `/sell-electronics/`).
+- Redirect sources leaking into the sitemap (checked against all 466 `vercel.json` rules): **0**.
+- Spot-checked for noindex meta tag on `/e-waste/`: none found.
 
 ## Manual Action Required
 
