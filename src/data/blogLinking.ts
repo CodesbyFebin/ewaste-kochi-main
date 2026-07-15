@@ -59,6 +59,7 @@ const POST_META: PostMeta[] = [
   { href: "/blog/inverter-battery-disposal-kochi/", datePublished: "2026-07-15", beginner: false, popular: false },
   { href: "/blog/ewaste-recycling-myths-facts/", datePublished: "2026-07-15", beginner: true, popular: false },
   { href: "/blog/what-affects-old-laptop-value-kochi/", datePublished: "2026-07-15", beginner: false, popular: false },
+  { href: "/blog/ewaste-recycling-guide-kochi-residents/", datePublished: "2026-07-15", beginner: true, popular: false },
 
 ];
 

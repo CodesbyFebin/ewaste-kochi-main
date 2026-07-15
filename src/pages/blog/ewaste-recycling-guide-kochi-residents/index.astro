@@ -3,13 +3,14 @@ import Layout from "../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
 import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
 
 const title = "E-Waste Recycling Guide for Kochi Residents | Full Overview";
 const description =
   "A complete e-waste recycling guide for Kochi residents — what counts, how pickup works, areas covered, data handling, battery safety, and how to get a scrap quote.";
 const datePublished = "2026-07-08";
-const dateModified = "2026-07-08";
+const dateModified = "2026-07-15";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
@@ -39,6 +40,15 @@ const jsonLd = [
   },
 ];
 
+const overviewRows = [
+  { step: "1. Check what counts", detail: "Almost anything electrical or electronic — see the full list below", link: "/blog/what-is-ewaste/" },
+  { step: "2. Confirm your area", detail: "Core Kochi-metro areas get standard pickup; other districts are feasibility-checked", link: "/locations/" },
+  { step: "3. Prepare data-bearing devices", detail: "Back up, then wipe or request destruction before handover", link: "/data-destruction/" },
+  { step: "4. Separate batteries", detail: "Keep them apart from other items and flag any damage", link: "/battery-recycling/" },
+  { step: "5. Message us to book", detail: "Item list, photos, and location — we confirm feasibility and a slot", link: "/pickup/" },
+  { step: "6. Get a quote if relevant", detail: "Devices with resale or scrap value are quoted separately from free recycling", link: "/sell-electronics/" },
+];
+
 const faqItems = [
   {
     q: "Where can I find a full list of accepted items?",
@@ -55,6 +65,30 @@ const faqItems = [
   {
     q: "Is this a free service?",
     a: "Standard household pickup is free for qualifying quantities. Some items with value may result in payment to you rather than a charge.",
+  },
+  {
+    q: "Who is this guide actually for?",
+    a: "Mainly Kochi and Ernakulam-area households doing a first-time or occasional cleanout who want the full picture before messaging us — if you already know what you need, our specific service pages (pickup, battery recycling, data destruction) go into more depth on each part.",
+  },
+  {
+    q: "What's the most common thing people get wrong when starting out?",
+    a: "Assuming they need to sort everything perfectly before contacting us, or find a drop-off point themselves. Neither is necessary — send a rough list and photos, and we help you sort the rest from there.",
+  },
+  {
+    q: "Do I need to do all six steps in the overview before messaging you?",
+    a: "No — messaging us first is often the easiest starting point. We'll walk through data and battery prep with you as part of confirming the pickup, rather than requiring it all done in advance.",
+  },
+  {
+    q: "How is this guide different from your recycling page?",
+    a: "The recycling page is the direct service description. This guide is a broader starting point for residents who want the full context — what counts, how areas are covered, what to prepare — with links out to the specific pages for more depth.",
+  },
+  {
+    q: "Does this guide apply to businesses too, or just households?",
+    a: "It's written with households in mind. Businesses, especially for data-bearing devices or bulk IT assets, should see our ITAD page for the structured version of this process.",
+  },
+  {
+    q: "What if my situation doesn't fit neatly into this guide?",
+    a: "Most situations don't need to — message us directly with what's actually happening (an unusual item, a large mixed batch, a specific concern) and we'll work from there rather than force-fitting it into a general guide.",
   },
 ];
 ---
@@ -86,6 +120,28 @@ const faqItems = [
     <li>Areas outside the listed location pages are often still serviceable — just ask.</li>
     <li>Many devices carry scrap or resale value — get a quote before assuming otherwise.</li>
   </ul>
+
+  <section>
+    <h2>The whole process at a glance</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Step</th>
+            <th>What it involves</th>
+          </tr>
+        </thead>
+        <tbody>
+          {overviewRows.map((row) => (
+            <tr>
+              <td><strong>{row.step}</strong></td>
+              <td>{row.detail} — <a href={row.link}>more detail</a></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
 
   <section>
     <h2>What counts as e-waste</h2>
@@ -124,7 +180,7 @@ const faqItems = [
     <h2>Data safety</h2>
     <p>
       Back up your data, then factory reset phones and wipe computer
-      drives. Or ask us to arrange <a href="/data-destruction/">certified
+      drives. Or ask us to arrange <a href="/data-destruction/">verified
       data destruction</a> as part of the pickup. Always do this before
       handing over any device with personal or business data.
     </p>
@@ -152,11 +208,24 @@ const faqItems = [
   </section>
 
   <section>
+    <h2>If you're not sure where to start</h2>
+    <p>
+      This guide covers the general case, but real situations vary —
+      a mixed pile of old cables and a single damaged laptop don't need
+      the same approach. The reliable shortcut is the same either way:
+      message us what you actually have, and we'll tell you what applies
+      to your specific case rather than you having to map it onto a
+      general guide yourself.
+    </p>
+  </section>
+
+  <section>
     <h2>Related services</h2>
     <div class="link-row">
       <a href="/recycling/">E-Waste Recycling</a>
       <a href="/pickup/">Book Pickup</a>
       <a href="/sell-electronics/">Sell Electronics</a>
+      <a href="/itad/">ITAD (for businesses)</a>
     </div>
   </section>
 
@@ -165,6 +234,9 @@ const faqItems = [
   </p>
 
   <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/ewaste-recycling-guide-kochi-residents/" />
+
   <section class="final-cta">
     <h2>Ready to Recycle Your Electronics in Kochi?</h2>
     <p>Share your item details and location on WhatsApp to get started.</p>
@@ -186,4 +258,8 @@ const faqItems = [
   .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
   .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
   .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+  .table-scroll { overflow-x: auto; margin: 1rem 0; }
+  table { width: 100%; border-collapse: collapse; min-width: 560px; }
+  th, td { text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--color-border); font-size: 0.92rem; }
+  th { color: var(--color-muted); font-weight: 700; }
 </style>

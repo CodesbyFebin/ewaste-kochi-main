@@ -60,6 +60,7 @@ export const BLOG_CLUSTERS: BlogCluster[] = [
       { title: "Common Mistakes People Make with Old Electronics | Kochi Guide", href: "/blog/common-mistakes-old-electronics/", excerpt: "The most common mistakes Kochi households and offices make with old electronics — from skipping data wipes to using informal scrap dealers, and how to avoid each one." },
       { title: "What Happens to Old Electronics After Collection? | Kochi Guide", href: "/blog/what-happens-after-ewaste-collection/", excerpt: "Where old electronics go after e-waste pickup in Kochi — assessment, data destruction, reuse, material recovery and responsible disposal explained clearly." },
       { title: "E-Waste Recycling Myths and Safe Facts | Kochi Guide", href: "/blog/ewaste-recycling-myths-facts/", excerpt: "Common e-waste recycling myths corrected with safe, accurate facts — including data safety, battery disposal, what counts as e-waste, and what recycling actually involves." },
+      { title: "E-Waste Recycling Guide for Kochi Residents | Full Overview", href: "/blog/ewaste-recycling-guide-kochi-residents/", excerpt: "A complete e-waste recycling guide for Kochi residents — what counts, how pickup works, areas covered, data handling, battery safety, and how to get a scrap quote." },
     ],
     plannedPosts: [
       "What Is E-Waste Recycling?",
@@ -85,7 +86,6 @@ export const BLOG_CLUSTERS: BlogCluster[] = [
       "How to Plan a Home Electronics Cleanout",
       "E-Waste Recycling Questions Every User Should Ask",
       "Where Old Electronics Should Go After Use",
-      "E-Waste Recycling Guide for Kochi Residents",
     ],
     faqs: [
       { question: "What is e-waste recycling?", answer: "It's the process of collecting, sorting and processing discarded electronics to recover reusable materials and safely handle hazardous components like battery cells, rather than sending them to landfill or informal scrap dealers." },

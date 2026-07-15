@@ -889,6 +889,20 @@ export const ROUTES: RouteEntry[] = [
     indexable: true,
   },
   {
+    path: "/blog/ewaste-recycling-guide-kochi-residents/",
+    changefreq: "monthly",
+    priority: 0.6,
+    title: "E-Waste Recycling Guide for Kochi Residents | Full Overview",
+    description:
+      "A complete e-waste recycling guide for Kochi residents — what counts, how pickup works, areas covered, data handling, battery safety, and how to get a scrap quote.",
+    type: "blog",
+    sitemapGroup: "blog",
+    lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
+  },
+  {
     path: "/blog/ewaste-pickup-near-me/",
     changefreq: "monthly",
     priority: 0.6,
