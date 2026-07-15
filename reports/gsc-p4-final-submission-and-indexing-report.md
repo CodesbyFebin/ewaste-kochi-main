@@ -1,95 +1,146 @@
 # GSC-P4 Final Submission and Indexing Report
 
-**Date:** 2026-07-15
-**Scope requested:** submit the corrected production sitemap to Google Search Console and request indexing for priority URLs.
+Date: 2026-07-18
 
-## Blocker, stated up front
+## Status
 
-This environment has no Google Search Console API credentials and no browser-automation tool. GSC submission and URL Inspection / Request Indexing both require an authenticated Google account session — there's no way to establish one here. This isn't a new finding: the prior GSC-P4 pass documented the identical wall using more capable tooling than is available in this session (`gcloud` with `kochiewaste@gmail.com`, application-default credentials) and got `403 ACCESS_TOKEN_SCOPE_INSUFFICIENT` on both `SitesService.List` and `SitemapsService.Submit`, plus no in-app browser target. Nothing about this session changes that outcome, so I didn't re-attempt the same calls expecting a different result — I re-confirmed no new credential or tool path exists, then focused on everything that *is* achievable: verifying the production state is actually correct and ready, so submission is a clean copy-paste job for whoever has GSC access.
+GSC-P4 manual submission is **ready but not completed from this environment**.
 
-**Sitemap: not submitted. Indexing: not requested. Validate Fix: not clicked.** Everything below is verification and readiness — real, live-tested — not a substitute for the actual GSC actions.
+The live production readiness gate passed, but authenticated Google Search Console access is still unavailable here. No deployment, page creation, redirect change, sitemap ping, Google Indexing API call, or bulk indexing request was performed.
 
-## What was verified (Task 1)
+## Readiness Command Result
 
-All 6 discovery files return 200 on production and are clean:
+Command run:
 
-| File | Status | Notes |
-|---|---|---|
-| `/robots.txt` | 200 | References both `sitemap.xml` and `ai-sitemap.xml` |
-| `/sitemap.xml` | 200 | Sitemap index, 6 sub-sitemaps |
-| `/content-index.json` | 200 | |
-| `/ai-sitemap.xml` | 200 | |
-| `/llms.txt` | 200 | |
-| `/feed.xml` | 200 | |
+```bash
+npm run gsc:indexing-readiness
+```
 
-Sitemap contents (355 unique URLs total, summed across sub-sitemaps):
+Result:
 
-- Non-production hosts (staging/vercel.app/localhost): **0**
-- `/ewaste/` present: **0** (correctly removed — now 308s to `/e-waste/`)
-- Buyback `.html` URLs present: **0** (correctly removed — now 308 to `/sell-electronics/`)
-- Redirect sources leaking into the sitemap (checked against all 466 `vercel.json` rules): **0**
-- Noindex URLs in sitemap: spot-checked, none found
+- Discovery files: 6/6 returned 200.
+- Sitemap URLs: 355/355 passed.
+- Priority queue: 29/29 passed.
+- Staging/localhost URLs: 0.
+- Sitemap failures: 0.
+- `/ewaste/` in discovery/sitemap: 0.
+- Buyback URLs in discovery/sitemap: 0.
 
-## Priority URLs — all live-verified, none actually submitted for indexing
+## Sitemap Submission Result
 
-### P1 (12 URLs) — all 200, all self-canonical
+- Sitemap submitted: no.
+- Sitemap URL intended for submission: `https://www.ewastekochi.com/sitemap.xml`.
+- GSC property used: not available from this environment.
+- Submission date/time: not submitted.
+- Initial status: not available.
+- Discovered URL count in GSC: not available.
+- Errors/warnings: Search Console access blocked locally.
 
-`/`, `/recycling/`, `/services/electronics-recycling-near-me/`, `/services/computer-recycling-near-me/`, `/services/air-conditioner-recycling-kochi/`, `/marketplace/`, `/battery-recycling/`, `/sell-electronics/`, `/pickup/`, `/data-destruction/`, `/e-waste/`, `/contact/`
+Access attempts:
 
-Intentionally excluded per instruction: `/ewaste/` (redirect source, confirmed 308 → `/e-waste/`, not requested).
+- Active gcloud user `kochiewaste@gmail.com`: `403 ACCESS_TOKEN_SCOPE_INSUFFICIENT` for `SitesService.List` and `SitemapsService.Submit`.
+- Application-default credentials: `403 ACCESS_TOKEN_SCOPE_INSUFFICIENT` for `SitesService.List` and `SitemapsService.Submit`.
+- In-app browser: unavailable; browser list returned `[]`.
 
-### P2 (14 URLs) — clicked location pages, all 200
+## Priority URLs Requested
 
-`/locations/kottayam/`, `/locations/palakkad/`, `/locations/thrissur/`, `/locations/kozhikode/`, `/locations/thiruvananthapuram/`, `/locations/kollam/`, `/locations/kannur/`, `/locations/malappuram/`, `/locations/kakkanad/`, `/locations/aluva/`, `/locations/ernakulam-south/`, `/locations/edappally/`, `/locations/kalamassery/`, `/locations/perumbavoor/`
+No URL Inspection or Request Indexing actions were completed from this environment.
 
-### P3 (10 URLs) — new curated location×service pages, all 200
+The following 29 URLs are ready for manual URL Inspection -> Test Live URL -> Request Indexing:
 
-`/locations/smart-city-kochi/itad/`, `/locations/edappally/itad/`, `/locations/kottayam/itad/`, `/locations/kozhikode/itad/`, `/locations/fort-kochi/sell-electronics/`, `/locations/kollam/sell-electronics/`, `/locations/aluva/sell-electronics/`, `/locations/perumbavoor/battery-recycling/`, `/locations/thrissur/data-destruction/`, `/locations/kannur/data-destruction/`
+| Tier | URL | Live result | Canonical/indexability | Request indexing result | Warning |
+| --- | --- | ---: | --- | --- | --- |
+| P1 | `https://www.ewastekochi.com/` | 200 | Self-canonical, indexable | Not requested; GSC access blocked | No warning from live readiness check |
+| P1 | `https://www.ewastekochi.com/recycling/` | 200 | Self-canonical, indexable | Not requested; GSC access blocked | No warning from live readiness check |
+| P1 | `https://www.ewastekochi.com/services/electronics-recycling-near-me/` | 200 | Self-canonical, indexable | Not requested; GSC access blocked | No warning from live readiness check |
+| P1 | `https://www.ewastekochi.com/services/computer-recycling-near-me/` | 200 | Self-canonical, indexable | Not requested; GSC access blocked | No warning from live readiness check |
+| P1 | `https://www.ewastekochi.com/services/air-conditioner-recycling-kochi/` | 200 | Self-canonical, indexable | Not requested; GSC access blocked | No warning from live readiness check |
+| P1 | `https://www.ewastekochi.com/marketplace/` | 200 | Self-canonical, indexable | Not requested; GSC access blocked | No warning from live readiness check |
+| P1 | `https://www.ewastekochi.com/battery-recycling/` | 200 | Self-canonical, indexable | Not requested; GSC access blocked | No warning from live readiness check |
+| P1 | `https://www.ewastekochi.com/sell-electronics/` | 200 | Self-canonical, indexable | Not requested; GSC access blocked | No warning from live readiness check |
+| P1 | `https://www.ewastekochi.com/pickup/` | 200 | Self-canonical, indexable | Not requested; GSC access blocked | No warning from live readiness check |
+| P1 | `https://www.ewastekochi.com/e-waste/` | 200 | Self-canonical, indexable | Not requested; GSC access blocked | No warning from live readiness check |
+| P1 | `https://www.ewastekochi.com/contact/` | 200 | Self-canonical, indexable | Not requested; GSC access blocked | No warning from live readiness check |
+| P2 | `https://www.ewastekochi.com/locations/kottayam/` | 200 | Self-canonical, indexable | Not requested; GSC access blocked | No warning from live readiness check |
+| P2 | `https://www.ewastekochi.com/locations/palakkad/` | 200 | Self-canonical, indexable | Not requested; GSC access blocked | No warning from live readiness check |
+| P2 | `https://www.ewastekochi.com/locations/thrissur/` | 200 | Self-canonical, indexable | Not requested; GSC access blocked | No warning from live readiness check |
+| P2 | `https://www.ewastekochi.com/locations/kozhikode/` | 200 | Self-canonical, indexable | Not requested; GSC access blocked | No warning from live readiness check |
+| P2 | `https://www.ewastekochi.com/locations/thiruvananthapuram/` | 200 | Self-canonical, indexable | Not requested; GSC access blocked | No warning from live readiness check |
+| P2 | `https://www.ewastekochi.com/locations/kollam/` | 200 | Self-canonical, indexable | Not requested; GSC access blocked | No warning from live readiness check |
+| P2 | `https://www.ewastekochi.com/locations/kannur/` | 200 | Self-canonical, indexable | Not requested; GSC access blocked | No warning from live readiness check |
+| P2 | `https://www.ewastekochi.com/locations/malappuram/` | 200 | Self-canonical, indexable | Not requested; GSC access blocked | No warning from live readiness check |
+| P2 | `https://www.ewastekochi.com/locations/kakkanad/` | 200 | Self-canonical, indexable | Not requested; GSC access blocked | No warning from live readiness check |
+| P2 | `https://www.ewastekochi.com/locations/aluva/` | 200 | Self-canonical, indexable | Not requested; GSC access blocked | No warning from live readiness check |
+| P2 | `https://www.ewastekochi.com/locations/ernakulam-south/` | 200 | Self-canonical, indexable | Not requested; GSC access blocked | No warning from live readiness check |
+| P2 | `https://www.ewastekochi.com/locations/edappally/` | 200 | Self-canonical, indexable | Not requested; GSC access blocked | No warning from live readiness check |
+| P2 | `https://www.ewastekochi.com/locations/kalamassery/` | 200 | Self-canonical, indexable | Not requested; GSC access blocked | No warning from live readiness check |
+| P3 | `https://www.ewastekochi.com/blog/free-e-waste-pickup-kochi/` | 200 | Self-canonical, indexable | Not requested; GSC access blocked | No warning from live readiness check |
+| P3 | `https://www.ewastekochi.com/blog/laptop-scrap-price-kochi/` | 200 | Self-canonical, indexable | Not requested; GSC access blocked | No warning from live readiness check |
+| P3 | `https://www.ewastekochi.com/blog/electronic-waste-disposal-kerala/` | 200 | Self-canonical, indexable | Not requested; GSC access blocked | No warning from live readiness check |
+| P3 | `https://www.ewastekochi.com/blog/how-to-choose-itad-provider/` | 200 | Self-canonical, indexable | Not requested; GSC access blocked | No warning from live readiness check |
+| P3 | `https://www.ewastekochi.com/tools/scrap-value-calculator/` | 200 | Self-canonical, indexable | Not requested; GSC access blocked | No warning from live readiness check |
 
-**36 of 36 priority URLs confirmed live and correct.** All are ready to paste into GSC's URL Inspection tool the moment someone with access is available.
+## URLs Skipped Intentionally
 
-## URLs intentionally skipped
+- `/ewaste/` — redirect source, not present in sitemap, should not be requested for indexing.
+- Buyback URLs — not present in sitemap, should not be requested for indexing.
+- Redirected URLs — skipped; request indexing only for canonical final targets.
+- Retired URLs — skipped.
+- Noindex URLs — none found in the sitemap readiness check; do not request any if found later in GSC.
+- Staging URLs — none found and none submitted.
+- All 355 sitemap URLs as a batch — skipped by design; individual requests are only for the 29 priority URLs.
 
-- `/ewaste/` — redirect source, would show as "Page with redirect" in GSC, not a URL to request indexing for.
-- Buyback `.html` URLs — redirect sources to `/sell-electronics/`, same reasoning; also the source GSC data itself already classified these as 0-traffic and not worth indexing.
-- All 355 sitemap URLs as a blanket request — instruction was explicit not to do this; sitemap submission covers full-site discovery on its own, individual Request Indexing is reserved for the 36 priority URLs above.
+## GSC Issue Validations Started
 
-## `/ewaste/` redirect note
+None. Validate Fix actions require opening the issue examples in GSC and confirming the affected live production URLs are clean. That authenticated GSC UI/API access is not available from this environment.
 
-Confirmed live: `curl -I https://www.ewastekochi.com/ewaste/` returns `308` with `location: /e-waste/`. If GSC's old index still has `/ewaste/` listed as indexed from before this patch, expect it to transition to "Page with redirect" over the next crawl cycles — this is expected and correct, not something to intervene on.
+## GSC Issue Validations Skipped
 
-## Buyback redirect note
+Skipped until manual GSC access is available:
 
-All 7 buyback `.html` URLs (3 under `/buyback/laptops/`, 4 under `/ml/buyback/laptops/`) confirmed live-redirecting to `/sell-electronics/` with `308`, both slash variants. Same expectation: any prior GSC "indexed" status on these should transition to "Page with redirect," not an error state.
+- Review snippets.
+- Excluded by noindex.
+- Server error 5xx.
+- Soft 404.
+- Indexed though blocked by robots.txt.
+- Redirect error.
+- Duplicate, Google chose different canonical.
 
-## GSC issue validation (Task 6)
+Rules preserved:
 
-**Not performed** — same access blocker. The prior GSC-P4 pass's issue-by-issue readiness table (Review snippets, Excluded by noindex, Server error 5xx, Soft 404, Indexed though blocked by robots.txt, Redirect error, Duplicate canonical) is still the right reference; nothing in this patch changed the underlying live-production preconditions it checked against, except that `/e-waste/`/`/ewaste/` and the buyback URLs are now cleanly resolved rather than ambiguous. No Validate Fix action was clicked from here, consistent with "only click Validate Fix if the affected live URL is confirmed clean" — confirming that requires opening the issue inside GSC itself, which needs the access this environment doesn't have.
+- No `Review` schema added.
+- No `AggregateRating` added.
+- No `itemReviewed` added.
+- No intentional noindex removed.
+- Low-value buyback pages not revived.
+- Unrelated URLs not redirected to homepage.
 
-## What's actually needed to finish this phase
+## Manual Completion Steps
 
-A human with Search Console access needs to, in order:
+1. Open the verified GSC property for `ewastekochi.com` or `https://www.ewastekochi.com/`.
+2. Submit `https://www.ewastekochi.com/sitemap.xml`.
+3. Record the property, submission time, status, discovered URL count, and warnings/errors.
+4. Use `data/gsc-p4-indexing-priority-queue.csv` for the 29 manual URL Inspection requests.
+5. For each priority URL: inspect URL, test live URL, request indexing only if the live test passes.
+6. Do not request `/ewaste/`, redirected buyback URLs, retired URLs, noindex URLs, staging URLs, or all 355 sitemap URLs.
+7. Start Validate Fix only after checking live sample URLs inside each GSC issue group.
 
-1. Open the verified property for `ewastekochi.com` (domain property) or `https://www.ewastekochi.com/` (URL-prefix property).
-2. Submit `https://www.ewastekochi.com/sitemap.xml` under Sitemaps.
-3. Run URL Inspection → Request Indexing for the 12 P1 URLs, then the 14 P2 URLs, then the 10 P3 URLs listed above (36 total) — all pre-verified live and correct, so this should be a fast pass with no surprises.
-4. For each of the 5-7 old GSC issue types, open the issue, check whether the listed example URLs are now clean (most should be, given this patch), and only then click Validate Fix.
-5. Do not request indexing for `/ewaste/` or any buyback `.html` URL — they're redirect sources now, not content pages.
+## Next 24h Monitoring Checklist
 
-## Next 24h monitoring checklist
+- Confirm sitemap status after manual submission.
+- Record GSC discovered URL count and compare with the 355 live sitemap URLs.
+- Check whether P1 URLs show fresh crawl/indexing activity.
+- Watch Page Indexing for 404, Soft 404, Server error 5xx, Redirect error, Duplicate canonical, and Blocked by robots.txt spikes.
+- Re-run `npm run gsc:indexing-readiness` if GSC reports discovery inconsistencies.
 
-- Confirm sitemap status moves from "Submitted"/"Pending" to "Success" once someone submits it.
-- Record GSC's discovered URL count and compare against the live 355-URL sitemap.
-- Watch for `/ewaste/` and the 7 buyback URLs transitioning to "Page with redirect" status (expected, not an error).
-- Watch Page Indexing for any new 404/Soft 404/Server error/Blocked-by-robots spikes — none expected given the live crawl above, but worth confirming once GSC actually re-crawls.
+## Next 72h Monitoring Checklist
 
-## Next 72h monitoring checklist
+- Confirm fresh crawl dates for P1/P2/P3 requested URLs.
+- Track clicks/impressions for the priority core/service/location/blog/tool URLs.
+- Confirm `/ewaste/` and buyback redirect sources settle as redirects rather than indexable content.
+- Keep `blog.ewastekochi.com` out of this phase.
+- Do not start new page generation unless GSC-P5 monitoring shows a specific validated gap.
 
-- Confirm the 36 priority URLs show fresh crawl dates after indexing requests are made.
-- Compare clicks/impressions for the P1 set plus the newly-added P3 curated pages (these are new URLs with no prior history — worth a specific look).
-- Confirm no redirect-loop or soft-404 warnings appear for the `/ewaste/` or buyback redirect sources as they age out of the old index.
-- Keep `blog.ewastekochi.com` out of scope, per the existing standing decision.
+## Next Phase
 
-## Next phase
-
-`GSC-P5 — 24h/72h monitoring`, gated on a human actually completing the manual sitemap submission and indexing requests above — same gate the prior GSC-P4 pass identified, still accurate.
+Next phase: GSC-P5 — 24h / 72h monitoring, after the sitemap submission and priority indexing requests are completed manually in Search Console.
