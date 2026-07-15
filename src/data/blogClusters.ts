@@ -58,6 +58,7 @@ export const BLOG_CLUSTERS: BlogCluster[] = [
       { title: "E-Waste Recycling vs Reuse | Which Is Better for Old Electronics?", href: "/blog/ewaste-recycling-vs-reuse/", excerpt: "Should you recycle or reuse old electronics? How to decide between recycling, reselling, donating or keeping a device, with practical guidance for Kochi households and offices." },
       { title: "How Responsible E-Waste Collection Works | Kochi Guide", href: "/blog/how-responsible-ewaste-collection-works/", excerpt: "What makes e-waste collection responsible — authorized handling, data destruction, battery safety, and why the difference between compliant and informal recyclers matters." },
       { title: "Common Mistakes People Make with Old Electronics | Kochi Guide", href: "/blog/common-mistakes-old-electronics/", excerpt: "The most common mistakes Kochi households and offices make with old electronics — from skipping data wipes to using informal scrap dealers, and how to avoid each one." },
+      { title: "What Happens to Old Electronics After Collection? | Kochi Guide", href: "/blog/what-happens-after-ewaste-collection/", excerpt: "Where old electronics go after e-waste pickup in Kochi — assessment, data destruction, reuse, material recovery and responsible disposal explained clearly." },
     ],
     plannedPosts: [
       "What Is E-Waste Recycling?",

@@ -833,6 +833,20 @@ export const ROUTES: RouteEntry[] = [
     indexable: true,
   },
   {
+    path: "/blog/what-happens-after-ewaste-collection/",
+    changefreq: "monthly",
+    priority: 0.6,
+    title: "What Happens to Old Electronics After Collection? | Kochi Guide",
+    description:
+      "Where old electronics go after e-waste pickup in Kochi — assessment, data destruction, reuse, material recovery and responsible disposal explained clearly.",
+    type: "blog",
+    sitemapGroup: "blog",
+    lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
+  },
+  {
     path: "/blog/ewaste-pickup-near-me/",
     changefreq: "monthly",
     priority: 0.6,

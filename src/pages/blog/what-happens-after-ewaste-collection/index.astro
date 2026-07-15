@@ -3,13 +3,14 @@ import Layout from "../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
 import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
 
 const title = "What Happens to Old Electronics After Collection? | Kochi Guide";
 const description =
-  "Where old electronics go after e-waste pickup in Kochi — assessment, data destruction, reuse, material recovery and compliant disposal explained clearly.";
+  "Where old electronics go after e-waste pickup in Kochi — assessment, data destruction, reuse, material recovery and responsible disposal explained clearly.";
 const datePublished = "2026-07-08";
-const dateModified = "2026-07-08";
+const dateModified = "2026-07-15";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
@@ -39,10 +40,19 @@ const jsonLd = [
   },
 ];
 
+const stageRows = [
+  { stage: "1. Assessment", whatHappens: "Every item checked for working condition; data-bearing devices and batteries flagged immediately" },
+  { stage: "2. Data destruction", whatHappens: "Storage devices wiped, degaussed or shredded before anything else happens to them" },
+  { stage: "3. Battery separation", whatHappens: "Lead-acid, lithium and other chemistries routed through separate handling, never mixed with general e-waste" },
+  { stage: "4. Reuse or resale check", whatHappens: "Working, undamaged devices considered for refurbishment or resale before recycling" },
+  { stage: "5. Material recovery", whatHappens: "Non-working devices disassembled; metals and recoverable materials extracted" },
+  { stage: "6. Hazardous material handling", whatHappens: "CRT glass, circuit board chemicals and similar materials routed through specialised handling, not general waste" },
+];
+
 const faqItems = [
   {
     q: "Can I request documentation of what happened to my devices?",
-    a: "For business pickups and data destruction jobs, documentation is available on request. Ask when you book.",
+    a: "For business pickups and data destruction jobs, documentation support may be available depending on the service type and agreed handling process. Ask when you book.",
   },
   {
     q: "Are old electronics ever resold?",
@@ -50,11 +60,35 @@ const faqItems = [
   },
   {
     q: "What happens to batteries specifically?",
-    a: "Batteries are separated from other e-waste at collection and routed through compliant battery processing channels, which handle lead-acid, lithium, and other chemistries differently.",
+    a: "Batteries are separated from other e-waste at collection and routed through dedicated battery processing, which handles lead-acid, lithium, and other chemistries differently.",
   },
   {
     q: "Is anything sent to landfill?",
     a: "The goal is to route everything through reuse, resale, or responsible recycling. Ask us directly about specific items if you have concerns.",
+  },
+  {
+    q: "How long does the whole process take, from pickup to final disposal?",
+    a: "It varies by item type and volume — data destruction and battery separation happen quickly after collection, while material recovery for non-working devices can take longer depending on batch processing schedules.",
+  },
+  {
+    q: "Do you tell me what happened to my specific device, or just a general process?",
+    a: "For most residential pickups, the general process description applies. For business and data destruction jobs where documentation is requested, we can confirm specifics for that batch.",
+  },
+  {
+    q: "What's the difference between reuse and material recovery?",
+    a: "Reuse means the device (or its components) continues functioning, usually after refurbishment. Material recovery means the device is broken down so raw materials like metals can be extracted and reused elsewhere — the device itself doesn't continue as a working unit.",
+  },
+  {
+    q: "Why does data destruction happen before anything else?",
+    a: "Once a device moves into sorting, refurbishment, or material recovery, it may pass through more hands. Clearing data first, before any of that happens, removes the risk rather than trying to manage it at a later stage.",
+  },
+  {
+    q: "What happens to devices that are only partly working?",
+    a: "They're assessed case by case. Some components may be reusable even if the device as a whole isn't resold — the same assessment step that sorts fully-working devices covers this.",
+  },
+  {
+    q: "Can I ask what will happen before I hand over my devices, not just after?",
+    a: "Yes — message us with your item list and any concerns, and we can walk through what to expect for your specific items before you commit to a pickup.",
   },
 ];
 ---
@@ -65,7 +99,7 @@ const faqItems = [
   <p class="lede">
     Handing over old electronics is the easy part — but knowing where they
     go next matters. Here's an honest account of what happens after pickup
-    in Kochi.
+    in Kochi, stage by stage.
   </p>
 
   <CtaBar whatsappMessage="Hi, I'd like to recycle my old electronics and understand what happens after collection." />
@@ -84,8 +118,30 @@ const faqItems = [
   <ul class="key-takeaways">
     <li>Data destruction happens before any other processing on data-bearing devices.</li>
     <li>Working devices get a chance at reuse or resale before recycling is considered.</li>
-    <li>Documentation is available on request for business and data destruction pickups.</li>
+    <li>Documentation support may be available on request for business and data destruction pickups.</li>
   </ul>
+
+  <section>
+    <h2>The process, stage by stage</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Stage</th>
+            <th>What happens</th>
+          </tr>
+        </thead>
+        <tbody>
+          {stageRows.map((row) => (
+            <tr>
+              <td><strong>{row.stage}</strong></td>
+              <td>{row.whatHappens}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
 
   <section>
     <h2>First: assessment and sorting</h2>
@@ -95,7 +151,10 @@ const faqItems = [
       phones, hard drives, servers — are flagged immediately for
       <a href="/data-destruction/">data destruction</a> before any other
       handling. Batteries are kept physically separate from the moment of
-      collection because they need a different process.
+      collection because they need a different process. This first sort
+      is what determines everything that follows — a device that could
+      have been resold but gets mixed in with scrap loses that option
+      permanently, which is exactly why the check happens immediately.
     </p>
   </section>
 
@@ -106,19 +165,23 @@ const faqItems = [
       through refurbishment, resale, or donation to a reuse channel. This
       is the best outcome: it extends the device's useful life, delays
       material recovery to a later date, and gives you a credit if you sold
-      the item rather than recycling for free.
+      the item rather than recycling for free. Not every working device
+      qualifies — age, damage history, and current demand all factor in —
+      but it's always checked before being routed toward recycling.
     </p>
   </section>
 
   <section>
     <h2>Non-working devices: material recovery</h2>
     <p>
-      Devices that can't be reused go to compliant recycling partners for
+      Devices that can't be reused go to recycling partners for
       disassembly and material recovery. Copper, aluminium, steel, and
       small amounts of precious metals are extracted. Hazardous materials
       — older CRT glass, circuit board chemicals, mercury from fluorescent
-      backlights — are handled through authorized disposal channels, not
-      dumped in general waste.
+      backlights — are routed through specialised handling channels, not
+      dumped in general waste. This is the slower, less visible part of
+      the process, but it's where most of the environmental benefit of
+      proper recycling actually comes from.
     </p>
   </section>
 
@@ -136,22 +199,38 @@ const faqItems = [
   <section>
     <h2>Data destruction: before anything else</h2>
     <p>
-      No storage device leaves our custody until data has been handled —
-      wiped, degaussed, or physically shredded depending on the device type
-      and what was agreed at booking. Businesses can request a certificate
-      confirming this. See <a href="/data-destruction/">data destruction
-      services</a> for options.
+      No storage device moves further into the process until data has
+      been handled — wiped, degaussed, or physically shredded depending
+      on the device type and what was agreed at booking. Businesses can
+      request documentation confirming this. See
+      <a href="/data-destruction/">data destruction services</a> for
+      options.
     </p>
   </section>
 
   <section>
-    <h2>Why the chain matters</h2>
+    <h2>Why the order matters, not just the steps</h2>
     <p>
-      Informal scrap handling skips most of this — devices may be partially
-      stripped, with leftover materials dumped or burned. Using a legitimate
-      collection service means the full chain is compliant, from pickup to
-      final disposal. That protects your data, protects workers handling the
-      material, and keeps hazardous substances out of landfills.
+      It's not just that each of these things happens — it's that they
+      happen in a specific sequence for a reason. Data destruction comes
+      before sorting, not after, because a device sitting in a
+      resale-or-recycle queue with intact data is a risk the whole time
+      it's there. Battery separation happens at collection, not later,
+      because a damaged cell mixed in with general scrap is a hazard from
+      the moment it's mishandled, not just at the end of the chain.
+    </p>
+  </section>
+
+  <section>
+    <h2>Why this matters compared to informal handling</h2>
+    <p>
+      Informal scrap handling often skips most of this — devices may be
+      partially stripped for the most valuable parts, with the rest
+      dumped or burned. A structured collection process means the full
+      chain — from pickup to final disposal — follows documented handling
+      practices at each stage. That protects your data, protects the
+      people handling the material, and keeps hazardous substances out of
+      landfills.
     </p>
   </section>
 
@@ -160,6 +239,8 @@ const faqItems = [
     <div class="link-row">
       <a href="/data-destruction/">Data Destruction</a>
       <a href="/battery-recycling/">Battery Recycling</a>
+      <a href="/recycling/">E-Waste Recycling</a>
+      <a href="/sell-electronics/">Sell Electronics</a>
     </div>
   </section>
 
@@ -168,6 +249,9 @@ const faqItems = [
   </p>
 
   <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/what-happens-after-ewaste-collection/" />
+
   <section class="final-cta">
     <h2>Ready to Recycle Your Electronics?</h2>
     <p>Share your item details and location on WhatsApp to get started.</p>
@@ -189,4 +273,8 @@ const faqItems = [
   .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
   .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
   .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+  .table-scroll { overflow-x: auto; margin: 1rem 0; }
+  table { width: 100%; border-collapse: collapse; min-width: 560px; }
+  th, td { text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--color-border); font-size: 0.92rem; }
+  th { color: var(--color-muted); font-weight: 700; }
 </style>
