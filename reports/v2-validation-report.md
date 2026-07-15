@@ -519,3 +519,35 @@ All checks passed.
 - Failures: 0
 
 All checks passed.
+
+## Validation run 2026-07-15T01:23:31.083Z
+
+- Routes checked: 88
+- Checks passed: 624
+- Failures: 7
+
+| Path | Check | Detail |
+| --- | --- | --- |
+| /locations/kalamassery-hitech-park/ | canonical-resolved-loser | Canonical points to "/locations/kalamassery-hitech-park/", which lost its manual-review pair per GSC data (see reports/v2-gsc-data-analysis.md). No V2 page may canonicalize to it. |
+| /locations/ | links-to-resolved-loser | Links to "/locations/kalamassery-hitech-park/", which lost its manual-review pair. Point this link at the winner instead. |
+| /locations/ | links-to-redirect-source | Links to "/locations/kalamassery-hitech-park/", which is a legacy URL that only exists as a vercel.json redirect source. Point this link directly at the redirect's destination instead. |
+| /sitemaps/locations.xml | sitemap-contains-loser | Sub-sitemap contains resolved-loser URL "/locations/kalamassery-hitech-park/". |
+| /locations/kalamassery-hitech-park | redirect-source-in-route-registry | "/locations/kalamassery-hitech-park" is a vercel.json redirect source but also appears in the route registry (src/data/routes.ts) — a URL cannot be both a live page and a dead legacy redirect. |
+| /locations/kalamassery-hitech-park | redirect-source-in-sitemap | "/locations/kalamassery-hitech-park" is a vercel.json redirect source but also appears in a sitemap — redirect sources must never be submitted to search engines as canonical URLs. |
+| /locations/kalamassery-hitech-park | redirect-source-in-content-index | "/locations/kalamassery-hitech-park" is a vercel.json redirect source but also appears in content-index.json. |
+
+## Validation run 2026-07-15T01:23:57.225Z
+
+- Routes checked: 87
+- Checks passed: 625
+- Failures: 0
+
+All checks passed.
+
+## Validation run 2026-07-15T01:27:12.055Z
+
+- Routes checked: 87
+- Checks passed: 625
+- Failures: 0
+
+All checks passed.

@@ -4,6 +4,7 @@ import Breadcrumbs from "../../components/Breadcrumbs.astro";
 import CtaBar from "../../components/CtaBar.astro";
 import Faq from "../../components/Faq.astro";
 import LangSwitch from "../../components/LangSwitch.astro";
+import DirectAnswer from "../../components/DirectAnswer.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../data/site";
 import { getHreflang } from "../../data/routes";
 
@@ -99,6 +100,14 @@ const faqItems = [
     directly from your home or office and route everything through compliant
     recycling, never household trash.
   </p>
+
+  <DirectAnswer>
+    <p>
+      Battery pickup is suitable for UPS, inverter, laptop, mobile and power
+      bank batteries. Mention swollen, leaking, hot or damaged batteries
+      before pickup so safe handling can be planned.
+    </p>
+  </DirectAnswer>
 
   <CtaBar whatsappMessage="Hi, I'd like to schedule a battery recycling pickup in Kochi." />
 

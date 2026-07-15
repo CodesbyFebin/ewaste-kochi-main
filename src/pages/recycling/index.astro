@@ -4,6 +4,7 @@ import Breadcrumbs from "../../components/Breadcrumbs.astro";
 import CtaBar from "../../components/CtaBar.astro";
 import Faq from "../../components/Faq.astro";
 import LangSwitch from "../../components/LangSwitch.astro";
+import DirectAnswer from "../../components/DirectAnswer.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../data/site";
 import { getHreflang } from "../../data/routes";
 
@@ -134,6 +135,15 @@ const faqItems = [
     covers what's accepted, how pickup actually works, and what happens to
     your devices and data after they leave your hands.
   </p>
+
+  <DirectAnswer>
+    <p>
+      Use this page for general e-waste recycling in Kochi: laptops,
+      desktops, monitors, printers, phones, cables, routers, TVs and mixed
+      office IT scrap. Send item photos and location first so pickup and
+      handling can be confirmed safely.
+    </p>
+  </DirectAnswer>
 
   <CtaBar whatsappMessage="Hi, I'd like to schedule an e-waste recycling pickup in Kochi." />
 

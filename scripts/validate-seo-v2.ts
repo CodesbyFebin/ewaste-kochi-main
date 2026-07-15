@@ -651,6 +651,121 @@ if (!chatbotFilesExist) {
   }
 }
 
+// GSC-P3 — indexed URL action-map safety.
+const indexedUpgradeMapPath = join(process.cwd(), "data", "gsc-indexed-url-upgrade-map.json");
+const indexedRedirectMapPath = join(process.cwd(), "data", "gsc-indexed-redirect-map.json");
+if (!existsSync(indexedUpgradeMapPath) || !existsSync(indexedRedirectMapPath)) {
+  fail("/data/gsc-indexed-url-upgrade-map.json", "indexed-map-missing", "GSC-P3 indexed URL action maps were not generated.");
+} else {
+  const upgradeMap = JSON.parse(readFileSync(indexedUpgradeMapPath, "utf-8")) as {
+    count: number;
+    rows: {
+      url: string;
+      path: string;
+      clicks: number;
+      impressions: number;
+      upgrade_action: string;
+      current_v2_status: string;
+      target_url: string;
+      canonical_url: string;
+    }[];
+  };
+  const redirectMap = JSON.parse(readFileSync(indexedRedirectMapPath, "utf-8")) as {
+    count: number;
+    rows: { source_path: string; target_url: string; redirect_configured: boolean }[];
+  };
+
+  if (upgradeMap.count !== 414 || upgradeMap.rows.length !== 414) {
+    fail("/data/gsc-indexed-url-upgrade-map.json", "indexed-map-count", `Expected 414 indexed URLs, found count=${upgradeMap.count}, rows=${upgradeMap.rows.length}.`);
+  } else {
+    pass("indexed-map-count:414");
+  }
+
+  const allowedActions = new Set([
+    "upgrade_existing_200",
+    "build_safe_200",
+    "redirect_301",
+    "canonicalize",
+    "noindex",
+    "leave_404",
+    "return_410",
+    "manual_review",
+  ]);
+
+  for (const row of upgradeMap.rows) {
+    if (!allowedActions.has(row.upgrade_action)) {
+      fail(row.url, "indexed-map-action-invalid", `Invalid upgrade_action "${row.upgrade_action}".`);
+    }
+    if (row.clicks > 0 && ["leave_404", "return_410"].includes(row.upgrade_action)) {
+      fail(row.url, "clicked-indexed-url-left-dead", "Clicked indexed URL is left 404/410, which is not allowed.");
+    }
+    if (row.impressions >= 100 && ["leave_404", "return_410"].includes(row.upgrade_action)) {
+      fail(row.url, "high-impression-indexed-url-left-dead", "100+ impression indexed URL must be rebuilt, redirected, canonicalized, noindexed, or manual_review.");
+    }
+    if (["upgrade_existing_200", "build_safe_200"].includes(row.upgrade_action)) {
+      const routePath = normalize(new URL(row.canonical_url).pathname);
+      if (!ROUTES.some((route) => normalize(route.path) === routePath)) {
+        fail(row.url, "indexed-map-built-target-missing", `Action is ${row.upgrade_action} but canonical "${row.canonical_url}" is not a built route.`);
+      }
+    }
+  }
+
+  const configuredRedirectSources = new Set(allRedirectSources.map(normalize));
+  for (const row of redirectMap.rows) {
+    if (!row.redirect_configured) {
+      fail(row.source_path, "indexed-redirect-not-configured", `Indexed redirect source is not configured in vercel.json: ${row.source_path}`);
+    }
+    if (!configuredRedirectSources.has(normalize(row.source_path)) && normalize(row.source_path) !== "/") {
+      fail(row.source_path, "indexed-redirect-source-missing", `Redirect source missing from vercel.json: ${row.source_path}`);
+    }
+    if (!row.target_url.startsWith("https://www.ewastekochi.com/")) {
+      fail(row.source_path, "indexed-redirect-target-host", `Redirect target is not canonical www URL: ${row.target_url}`);
+    }
+  }
+  if (failures.filter((f) => f.check.startsWith("indexed-")).length === 0) {
+    pass(`indexed-url-action-map-safe:${upgradeMap.rows.length}`);
+    pass(`indexed-redirect-map-safe:${redirectMap.rows.length}`);
+  }
+}
+
+// GSC-P3 — rendered unsafe claim sweep.
+const renderedUnsafePatterns: RegExp[] = [
+  /AggregateRating/i,
+  /"Review"/i,
+  /ratingValue/i,
+  /reviewCount/i,
+  /\b4\.9\b/i,
+  /500\+ reviews/i,
+  /CPCB Authorized/i,
+  /KSPCB Authorized/i,
+  /ISO Certified/i,
+  /ISO 14001/i,
+  /Pollution Control Board authorization/i,
+  /government-authorized/i,
+  /Best Price/i,
+  /Best Market Price/i,
+  /Instant Cash/i,
+  /Instant UPI/i,
+  /Free Same-Day Pickup/i,
+  /same-day pickup guaranteed/i,
+  /all Kerala free pickup/i,
+  /100% Data Security/i,
+  /zero landfill/i,
+];
+let renderedUnsafeHit = false;
+for (const route of ROUTES) {
+  const filePath = distFileFor(route.path);
+  if (!existsSync(filePath)) continue;
+  const html = readFileSync(filePath, "utf-8");
+  for (const pattern of renderedUnsafePatterns) {
+    if (pattern.test(html)) {
+      fail(route.path, "rendered-unsafe-claim", `Rendered HTML matched unsafe pattern ${pattern}.`);
+      renderedUnsafeHit = true;
+    }
+  }
+}
+if (!renderedUnsafeHit) pass("rendered-unsafe-claim-sweep-clean");
+
 // Report
 const timestamp = new Date().toISOString();
 const reportLines: string[] = [];

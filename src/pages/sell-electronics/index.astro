@@ -4,12 +4,13 @@ import Breadcrumbs from "../../components/Breadcrumbs.astro";
 import CtaBar from "../../components/CtaBar.astro";
 import Faq from "../../components/Faq.astro";
 import LangSwitch from "../../components/LangSwitch.astro";
+import DirectAnswer from "../../components/DirectAnswer.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../data/site";
 import { getHreflang } from "../../data/routes";
 
-const title = "Sell Old Electronics in Kochi | Instant Quote, Doorstep Payment";
+const title = "Sell Old Electronics in Kochi | Condition-Based Quote & Pickup";
 const description =
-  "Sell your old laptop, phone, or computer in Kochi for an instant quote. Free doorstep pickup, on-the-spot payment, condition-based pricing guidance.";
+  "Sell your old laptop, phone, or computer in Kochi with a condition-based estimate, doorstep inspection and confirmed quote after review.";
 const lastUpdated = "2026-07-07";
 
 const breadcrumbItems = [
@@ -51,7 +52,7 @@ const faqItems = [
   },
   {
     q: "How fast is the process?",
-    a: "Most pickups are same-day or next-day once you confirm a slot, with payment made on the spot after a quick condition check.",
+    a: "Timing depends on your area, item details and current scheduling. Share complete photos and model details for the fastest realistic confirmation.",
   },
   {
     q: "Can businesses sell multiple devices at once?",
@@ -66,12 +67,21 @@ const faqItems = [
   <h1>Sell Your Old Electronics in Kochi</h1>
   <p class="lede">
     If you have a laptop, phone, or computer you'd rather sell than let sit
-    unused, we give an instant quote and pay on the spot at doorstep pickup —
-    whether the device is fully working, partially working, or scrap. Not
+    unused, we give a preliminary estimate and confirm the quote after
+    inspection at doorstep pickup — whether the device is fully working,
+    partially working, or scrap. Not
     sure whether to <a href="/recycling/">donate, sell or recycle old
     electronics</a>? This page covers selling specifically — the linked
     guide covers the other options.
   </p>
+
+  <DirectAnswer>
+    <p>
+      Send model, age, working condition, battery status and photos for an
+      indicative quote. Final value is confirmed after inspection, so there is
+      no best-price, instant-cash or guaranteed quote before pickup.
+    </p>
+  </DirectAnswer>
 
   <CtaBar whatsappMessage="Hi, I'd like to sell an old device — please give me a quote." />
 

@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Breadcrumbs from "./Breadcrumbs.astro";
 import CtaBar from "./CtaBar.astro";
 import Faq from "./Faq.astro";
-import { BUSINESS, SITE_URL } from "../data/site";
+import { SITE_URL } from "../data/site";
 
 interface Props {
   name: string;
@@ -72,6 +72,11 @@ const faqItems = [
     <h2>E-waste pickup in {name}</h2>
     <p>{context}</p>
     <p>
+      Pickup feasibility depends on item type, quantity, condition and
+      location. Contact us to confirm pickup availability for this area before
+      assuming a collection can be scheduled.
+    </p>
+    <p>
       Send photos, quantity, working condition, battery details and your exact
       location before pickup is confirmed. This helps the team advise on reuse,
       recycling, battery handling, resale enquiry or data destruction options
@@ -91,6 +96,11 @@ const faqItems = [
 
   <section>
     <h2>How confirmation works</h2>
+    <p>
+      Ewaste Kochi primarily supports Kochi, Ernakulam, Kakkanad, Kalamassery,
+      Ernakulam South, Aluva and nearby Kochi-metro enquiry areas. For other
+      Kerala districts, contact us to check pickup feasibility.
+    </p>
     <ol>
       <li>Message your item list and area in {name}.</li>
       <li>Send photos, quantity and any battery or data-security concerns.</li>

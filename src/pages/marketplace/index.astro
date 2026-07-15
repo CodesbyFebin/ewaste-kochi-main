@@ -3,6 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import Breadcrumbs from "../../components/Breadcrumbs.astro";
 import CtaBar from "../../components/CtaBar.astro";
 import Faq from "../../components/Faq.astro";
+import DirectAnswer from "../../components/DirectAnswer.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../data/site";
 
 const title = "Sell Old Electronics in Kochi | Condition-Based Quote + Free Pickup";
@@ -82,6 +83,14 @@ const faqItems = [
     list your own device for a condition-based quote and doorstep payment,
     or ask us about currently available inspected refurbished units.
   </p>
+
+  <DirectAnswer>
+    <p>
+      Use Marketplace when a device may still have resale value. Quotes are
+      condition-based and confirmed only after inspection, so send photos,
+      model details and working status before pickup.
+    </p>
+  </DirectAnswer>
 
   <CtaBar whatsappMessage="Hi, I'd like to list a device on the marketplace." />
 
