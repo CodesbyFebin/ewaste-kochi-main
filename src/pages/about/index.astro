@@ -8,7 +8,7 @@ import { BUSINESS, SITE_URL } from "../../data/site";
 const title = "About Ewaste Kochi | E-Waste Recycling & ITAD in Kerala";
 const description =
   "Ewaste Kochi collects, recycles, and securely destroys data on old electronics across Kochi and Kerala, serving households, offices, and IT parks.";
-const lastUpdated = "2026-07-07";
+const lastUpdated = "2026-07-18";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
@@ -73,6 +73,33 @@ const jsonLd = [
       compliance documentation for business or ITAD work, contact us
       before pickup so the required handling process can be confirmed —
       see our <a href="/contact/">contact page</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Business details</h2>
+    <p>
+      Ewaste Kochi can be reached by phone at
+      <a href={`tel:${BUSINESS.phone}`}>{BUSINESS.phoneDisplay}</a> or by
+      email at <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a>.
+      Our listed business address is {BUSINESS.address.streetAddress},
+      {BUSINESS.address.addressLocality}, {BUSINESS.address.addressRegion}
+      {BUSINESS.address.postalCode}. Standard enquiry hours are
+      {BUSINESS.hoursDisplay}.
+    </p>
+  </section>
+
+  <section>
+    <h2>How we publish service information</h2>
+    <p>
+      The guides on this site are written for people making real recycling,
+      resale, pickup, and data-destruction decisions in Kochi and Kerala.
+      We avoid fabricated reviews, fake ratings, invented certificate
+      numbers, and unsupported "authorized" claims. When a page discusses
+      regulations such as the E-Waste Rules, CPCB, DPDP, or data wiping
+      methods, the copy is treated as practical guidance and should be
+      confirmed with your own compliance advisor for formal business
+      decisions.
     </p>
   </section>
 
