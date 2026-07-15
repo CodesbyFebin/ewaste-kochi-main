@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-07-18T19:15:00+05:30",
+  "generatedAt": "2026-07-15T15:20:10.521Z",
   "mode": "editorial_queue_only_no_routes_created",
   "minWordsToPromote": 1200,
   "targetQueueSize": 20,
-  "liveIndexableBlogPosts": 123,
-  "quarantinedDrafts": 550,
-  "quarantinedReviewPosts": 85,
+  "liveIndexableBlogPosts": 128,
+  "quarantinedDrafts": 545,
+  "quarantinedReviewPosts": 80,
   "quarantinedGeneratedDrafts": 465,
-  "duplicateRoadmapMappings": 27,
+  "duplicateRoadmapMappings": 22,
   "clusterSummaries": [
     {
       "cluster": "E-Waste Recycling Basics",
       "clusterSlug": "e-waste-recycling-basics",
       "priority": "Very high",
       "topics": 30,
-      "live": 7,
-      "quarantined": 23,
+      "live": 10,
+      "quarantined": 20,
       "missing": 0
     },
     {
@@ -41,8 +41,8 @@
       "clusterSlug": "battery-recycling",
       "priority": "Very high",
       "topics": 30,
-      "live": 2,
-      "quarantined": 28,
+      "live": 5,
+      "quarantined": 25,
       "missing": 0
     },
     {
@@ -104,8 +104,8 @@
       "clusterSlug": "mobile-small-device-recycling",
       "priority": "Medium-high",
       "topics": 30,
-      "live": 4,
-      "quarantined": 26,
+      "live": 5,
+      "quarantined": 25,
       "missing": 0
     },
     {
@@ -140,8 +140,8 @@
       "clusterSlug": "preparation-safety-guides-before-recycling",
       "priority": "High support content",
       "topics": 30,
-      "live": 1,
-      "quarantined": 29,
+      "live": 2,
+      "quarantined": 28,
       "missing": 0
     },
     {
@@ -167,8 +167,8 @@
       "clusterSlug": "solar-inverter-power-electronics-recycling",
       "priority": "Medium emerging",
       "topics": 30,
-      "live": 2,
-      "quarantined": 28,
+      "live": 4,
+      "quarantined": 26,
       "missing": 0
     },
     {
@@ -191,71 +191,6 @@
     }
   ],
   "queueRows": [
-    {
-      "batch": "Batch 1 - AdSense quality expansion",
-      "cluster": "Battery Recycling",
-      "clusterSlug": "battery-recycling",
-      "priority": "Very high",
-      "topicTitle": "Battery Safety Before E-Waste Pickup",
-      "targetPath": "/blog/battery-safety-before-ewaste-pickup/",
-      "slug": "battery-safety-before-ewaste-pickup",
-      "source": "quarantine-review",
-      "currentWordCount": 476,
-      "currentFaqCount": 5,
-      "recommendedAction": "Expand to 1200+ original words, fact-check, then promote only after validation."
-    },
-    {
-      "batch": "Batch 1 - AdSense quality expansion",
-      "cluster": "E-Waste Recycling Basics",
-      "clusterSlug": "e-waste-recycling-basics",
-      "priority": "Very high",
-      "topicTitle": "Common Mistakes People Make with Old Electronics",
-      "targetPath": "/blog/common-mistakes-old-electronics/",
-      "slug": "common-mistakes-old-electronics",
-      "source": "quarantine-review",
-      "currentWordCount": 462,
-      "currentFaqCount": 3,
-      "recommendedAction": "Expand to 1200+ original words, fact-check, then promote only after validation."
-    },
-    {
-      "batch": "Batch 1 - AdSense quality expansion",
-      "cluster": "E-Waste Recycling Basics",
-      "clusterSlug": "e-waste-recycling-basics",
-      "priority": "Very high",
-      "topicTitle": "What Happens to Old Electronics After Collection?",
-      "targetPath": "/blog/what-happens-after-ewaste-collection/",
-      "slug": "what-happens-after-ewaste-collection",
-      "source": "quarantine-review",
-      "currentWordCount": 453,
-      "currentFaqCount": 4,
-      "recommendedAction": "Expand to 1200+ original words, fact-check, then promote only after validation."
-    },
-    {
-      "batch": "Batch 1 - AdSense quality expansion",
-      "cluster": "Battery Recycling",
-      "clusterSlug": "battery-recycling",
-      "priority": "Very high",
-      "topicTitle": "Inverter Battery Disposal",
-      "targetPath": "/blog/inverter-battery-disposal-kochi/",
-      "slug": "inverter-battery-disposal-kochi",
-      "source": "quarantine-review",
-      "currentWordCount": 422,
-      "currentFaqCount": 5,
-      "recommendedAction": "Expand to 1200+ original words, fact-check, then promote only after validation."
-    },
-    {
-      "batch": "Batch 1 - AdSense quality expansion",
-      "cluster": "E-Waste Recycling Basics",
-      "clusterSlug": "e-waste-recycling-basics",
-      "priority": "Very high",
-      "topicTitle": "E-Waste Recycling Myths and Safe Facts",
-      "targetPath": "/blog/ewaste-recycling-myths-facts/",
-      "slug": "ewaste-recycling-myths-facts",
-      "source": "quarantine-review",
-      "currentWordCount": 413,
-      "currentFaqCount": 2,
-      "recommendedAction": "Expand to 1200+ original words, fact-check, then promote only after validation."
-    },
     {
       "batch": "Batch 1 - AdSense quality expansion",
       "cluster": "Sell Old Electronics",
@@ -452,7 +387,7 @@
       "recommendedAction": "Expand to 1200+ original words, fact-check, then promote only after validation."
     },
     {
-      "batch": "Batch 2 - next quality expansion",
+      "batch": "Batch 1 - AdSense quality expansion",
       "cluster": "E-Waste Pickup Near Me",
       "clusterSlug": "e-waste-pickup-near-me",
       "priority": "Very high",
@@ -465,7 +400,7 @@
       "recommendedAction": "Expand to 1200+ original words, fact-check, then promote only after validation."
     },
     {
-      "batch": "Batch 2 - next quality expansion",
+      "batch": "Batch 1 - AdSense quality expansion",
       "cluster": "E-Waste Recycling Basics",
       "clusterSlug": "e-waste-recycling-basics",
       "priority": "Very high",
@@ -478,7 +413,7 @@
       "recommendedAction": "Expand to 1200+ original words, fact-check, then promote only after validation."
     },
     {
-      "batch": "Batch 2 - next quality expansion",
+      "batch": "Batch 1 - AdSense quality expansion",
       "cluster": "E-Waste Recycling Basics",
       "clusterSlug": "e-waste-recycling-basics",
       "priority": "Very high",
@@ -491,7 +426,7 @@
       "recommendedAction": "Expand to 1200+ original words, fact-check, then promote only after validation."
     },
     {
-      "batch": "Batch 2 - next quality expansion",
+      "batch": "Batch 1 - AdSense quality expansion",
       "cluster": "E-Waste Recycling Basics",
       "clusterSlug": "e-waste-recycling-basics",
       "priority": "Very high",
@@ -504,7 +439,7 @@
       "recommendedAction": "Expand to 1200+ original words, fact-check, then promote only after validation."
     },
     {
-      "batch": "Batch 2 - next quality expansion",
+      "batch": "Batch 1 - AdSense quality expansion",
       "cluster": "E-Waste Pickup Near Me",
       "clusterSlug": "e-waste-pickup-near-me",
       "priority": "Very high",
@@ -712,7 +647,7 @@
       "recommendedAction": "Expand to 1200+ original words, fact-check, then promote only after validation."
     },
     {
-      "batch": "Backlog",
+      "batch": "Batch 2 - next quality expansion",
       "cluster": "E-Waste Pickup Near Me",
       "clusterSlug": "e-waste-pickup-near-me",
       "priority": "Very high",
@@ -725,7 +660,7 @@
       "recommendedAction": "Expand to 1200+ original words, fact-check, then promote only after validation."
     },
     {
-      "batch": "Backlog",
+      "batch": "Batch 2 - next quality expansion",
       "cluster": "E-Waste Pickup Near Me",
       "clusterSlug": "e-waste-pickup-near-me",
       "priority": "Very high",
@@ -738,7 +673,7 @@
       "recommendedAction": "Expand to 1200+ original words, fact-check, then promote only after validation."
     },
     {
-      "batch": "Backlog",
+      "batch": "Batch 2 - next quality expansion",
       "cluster": "E-Waste Pickup Near Me",
       "clusterSlug": "e-waste-pickup-near-me",
       "priority": "Very high",
@@ -751,7 +686,7 @@
       "recommendedAction": "Expand to 1200+ original words, fact-check, then promote only after validation."
     },
     {
-      "batch": "Backlog",
+      "batch": "Batch 2 - next quality expansion",
       "cluster": "E-Waste Pickup Near Me",
       "clusterSlug": "e-waste-pickup-near-me",
       "priority": "Very high",
@@ -764,7 +699,7 @@
       "recommendedAction": "Expand to 1200+ original words, fact-check, then promote only after validation."
     },
     {
-      "batch": "Backlog",
+      "batch": "Batch 2 - next quality expansion",
       "cluster": "E-Waste Pickup Near Me",
       "clusterSlug": "e-waste-pickup-near-me",
       "priority": "Very high",
