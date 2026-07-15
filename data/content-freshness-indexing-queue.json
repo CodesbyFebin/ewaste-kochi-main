@@ -1,0 +1,751 @@
+{
+  "generatedAt": "2026-07-18T18:00:00+05:30",
+  "mode": "readiness_only_no_google_submission",
+  "siteUrl": "https://www.ewastekochi.com",
+  "gitRange": "HEAD~1..HEAD",
+  "includeWorkingTree": false,
+  "changedFiles": [
+    "reports/v2-validation-report.md",
+    "scripts/validate-seo-v2.ts",
+    "src/data/site.ts",
+    "src/lib/schemaSafety.ts",
+    "src/pages/contact/index.astro",
+    "src/pages/index.astro"
+  ],
+  "candidates": [
+    {
+      "path": "/",
+      "url": "https://www.ewastekochi.com/",
+      "tier": "P1",
+      "reason": "discovery or site metadata changed; priority URL queued; page source changed",
+      "sourceFiles": [
+        "src/data/site.ts",
+        "src/pages/index.astro"
+      ]
+    },
+    {
+      "path": "/battery-recycling/",
+      "url": "https://www.ewastekochi.com/battery-recycling/",
+      "tier": "P1",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ]
+    },
+    {
+      "path": "/contact/",
+      "url": "https://www.ewastekochi.com/contact/",
+      "tier": "P1",
+      "reason": "discovery or site metadata changed; priority URL queued; page source changed",
+      "sourceFiles": [
+        "src/data/site.ts",
+        "src/pages/contact/index.astro"
+      ]
+    },
+    {
+      "path": "/e-waste/",
+      "url": "https://www.ewastekochi.com/e-waste/",
+      "tier": "P1",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ]
+    },
+    {
+      "path": "/marketplace/",
+      "url": "https://www.ewastekochi.com/marketplace/",
+      "tier": "P1",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ]
+    },
+    {
+      "path": "/pickup/",
+      "url": "https://www.ewastekochi.com/pickup/",
+      "tier": "P1",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ]
+    },
+    {
+      "path": "/recycling/",
+      "url": "https://www.ewastekochi.com/recycling/",
+      "tier": "P1",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ]
+    },
+    {
+      "path": "/sell-electronics/",
+      "url": "https://www.ewastekochi.com/sell-electronics/",
+      "tier": "P1",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ]
+    },
+    {
+      "path": "/services/air-conditioner-recycling-kochi/",
+      "url": "https://www.ewastekochi.com/services/air-conditioner-recycling-kochi/",
+      "tier": "P1",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ]
+    },
+    {
+      "path": "/services/computer-recycling-near-me/",
+      "url": "https://www.ewastekochi.com/services/computer-recycling-near-me/",
+      "tier": "P1",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ]
+    },
+    {
+      "path": "/services/electronics-recycling-near-me/",
+      "url": "https://www.ewastekochi.com/services/electronics-recycling-near-me/",
+      "tier": "P1",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ]
+    },
+    {
+      "path": "/locations/aluva/",
+      "url": "https://www.ewastekochi.com/locations/aluva/",
+      "tier": "P2",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ]
+    },
+    {
+      "path": "/locations/edappally/",
+      "url": "https://www.ewastekochi.com/locations/edappally/",
+      "tier": "P2",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ]
+    },
+    {
+      "path": "/locations/ernakulam-south/",
+      "url": "https://www.ewastekochi.com/locations/ernakulam-south/",
+      "tier": "P2",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ]
+    },
+    {
+      "path": "/locations/kakkanad/",
+      "url": "https://www.ewastekochi.com/locations/kakkanad/",
+      "tier": "P2",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ]
+    },
+    {
+      "path": "/locations/kalamassery/",
+      "url": "https://www.ewastekochi.com/locations/kalamassery/",
+      "tier": "P2",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ]
+    },
+    {
+      "path": "/locations/kannur/",
+      "url": "https://www.ewastekochi.com/locations/kannur/",
+      "tier": "P2",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ]
+    },
+    {
+      "path": "/locations/kollam/",
+      "url": "https://www.ewastekochi.com/locations/kollam/",
+      "tier": "P2",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ]
+    },
+    {
+      "path": "/locations/kottayam/",
+      "url": "https://www.ewastekochi.com/locations/kottayam/",
+      "tier": "P2",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ]
+    },
+    {
+      "path": "/locations/kozhikode/",
+      "url": "https://www.ewastekochi.com/locations/kozhikode/",
+      "tier": "P2",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ]
+    },
+    {
+      "path": "/locations/malappuram/",
+      "url": "https://www.ewastekochi.com/locations/malappuram/",
+      "tier": "P2",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ]
+    },
+    {
+      "path": "/locations/palakkad/",
+      "url": "https://www.ewastekochi.com/locations/palakkad/",
+      "tier": "P2",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ]
+    },
+    {
+      "path": "/locations/thiruvananthapuram/",
+      "url": "https://www.ewastekochi.com/locations/thiruvananthapuram/",
+      "tier": "P2",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ]
+    },
+    {
+      "path": "/locations/thrissur/",
+      "url": "https://www.ewastekochi.com/locations/thrissur/",
+      "tier": "P2",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ]
+    },
+    {
+      "path": "/blog/electronic-waste-disposal-kerala/",
+      "url": "https://www.ewastekochi.com/blog/electronic-waste-disposal-kerala/",
+      "tier": "P3",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ]
+    },
+    {
+      "path": "/blog/free-e-waste-pickup-kochi/",
+      "url": "https://www.ewastekochi.com/blog/free-e-waste-pickup-kochi/",
+      "tier": "P3",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ]
+    },
+    {
+      "path": "/blog/how-to-choose-itad-provider/",
+      "url": "https://www.ewastekochi.com/blog/how-to-choose-itad-provider/",
+      "tier": "P3",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ]
+    },
+    {
+      "path": "/blog/laptop-scrap-price-kochi/",
+      "url": "https://www.ewastekochi.com/blog/laptop-scrap-price-kochi/",
+      "tier": "P3",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ]
+    },
+    {
+      "path": "/tools/scrap-value-calculator/",
+      "url": "https://www.ewastekochi.com/tools/scrap-value-calculator/",
+      "tier": "P3",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "path": "/",
+      "url": "https://www.ewastekochi.com/",
+      "tier": "P1",
+      "reason": "discovery or site metadata changed; priority URL queued; page source changed",
+      "sourceFiles": [
+        "src/data/site.ts",
+        "src/pages/index.astro"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/",
+      "canonical": "https://www.ewastekochi.com/",
+      "noindex": false,
+      "ok": true,
+      "issue": "",
+      "recommendation": "After production deployment, inspect live URL in GSC and request indexing if the content update is important."
+    },
+    {
+      "path": "/battery-recycling/",
+      "url": "https://www.ewastekochi.com/battery-recycling/",
+      "tier": "P1",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/battery-recycling/",
+      "canonical": "https://www.ewastekochi.com/battery-recycling/",
+      "noindex": false,
+      "ok": true,
+      "issue": "",
+      "recommendation": "After production deployment, inspect live URL in GSC and request indexing if the content update is important."
+    },
+    {
+      "path": "/contact/",
+      "url": "https://www.ewastekochi.com/contact/",
+      "tier": "P1",
+      "reason": "discovery or site metadata changed; priority URL queued; page source changed",
+      "sourceFiles": [
+        "src/data/site.ts",
+        "src/pages/contact/index.astro"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/contact/",
+      "canonical": "https://www.ewastekochi.com/contact/",
+      "noindex": false,
+      "ok": true,
+      "issue": "",
+      "recommendation": "After production deployment, inspect live URL in GSC and request indexing if the content update is important."
+    },
+    {
+      "path": "/e-waste/",
+      "url": "https://www.ewastekochi.com/e-waste/",
+      "tier": "P1",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/e-waste/",
+      "canonical": "https://www.ewastekochi.com/e-waste/",
+      "noindex": false,
+      "ok": true,
+      "issue": "",
+      "recommendation": "After production deployment, inspect live URL in GSC and request indexing if the content update is important."
+    },
+    {
+      "path": "/marketplace/",
+      "url": "https://www.ewastekochi.com/marketplace/",
+      "tier": "P1",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/marketplace/",
+      "canonical": "https://www.ewastekochi.com/marketplace/",
+      "noindex": false,
+      "ok": true,
+      "issue": "",
+      "recommendation": "After production deployment, inspect live URL in GSC and request indexing if the content update is important."
+    },
+    {
+      "path": "/pickup/",
+      "url": "https://www.ewastekochi.com/pickup/",
+      "tier": "P1",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/pickup/",
+      "canonical": "https://www.ewastekochi.com/pickup/",
+      "noindex": false,
+      "ok": true,
+      "issue": "",
+      "recommendation": "After production deployment, inspect live URL in GSC and request indexing if the content update is important."
+    },
+    {
+      "path": "/recycling/",
+      "url": "https://www.ewastekochi.com/recycling/",
+      "tier": "P1",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/recycling/",
+      "canonical": "https://www.ewastekochi.com/recycling/",
+      "noindex": false,
+      "ok": true,
+      "issue": "",
+      "recommendation": "After production deployment, inspect live URL in GSC and request indexing if the content update is important."
+    },
+    {
+      "path": "/sell-electronics/",
+      "url": "https://www.ewastekochi.com/sell-electronics/",
+      "tier": "P1",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/sell-electronics/",
+      "canonical": "https://www.ewastekochi.com/sell-electronics/",
+      "noindex": false,
+      "ok": true,
+      "issue": "",
+      "recommendation": "After production deployment, inspect live URL in GSC and request indexing if the content update is important."
+    },
+    {
+      "path": "/services/air-conditioner-recycling-kochi/",
+      "url": "https://www.ewastekochi.com/services/air-conditioner-recycling-kochi/",
+      "tier": "P1",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/services/air-conditioner-recycling-kochi/",
+      "canonical": "https://www.ewastekochi.com/services/air-conditioner-recycling-kochi/",
+      "noindex": false,
+      "ok": true,
+      "issue": "",
+      "recommendation": "After production deployment, inspect live URL in GSC and request indexing if the content update is important."
+    },
+    {
+      "path": "/services/computer-recycling-near-me/",
+      "url": "https://www.ewastekochi.com/services/computer-recycling-near-me/",
+      "tier": "P1",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/services/computer-recycling-near-me/",
+      "canonical": "https://www.ewastekochi.com/services/computer-recycling-near-me/",
+      "noindex": false,
+      "ok": true,
+      "issue": "",
+      "recommendation": "After production deployment, inspect live URL in GSC and request indexing if the content update is important."
+    },
+    {
+      "path": "/services/electronics-recycling-near-me/",
+      "url": "https://www.ewastekochi.com/services/electronics-recycling-near-me/",
+      "tier": "P1",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/services/electronics-recycling-near-me/",
+      "canonical": "https://www.ewastekochi.com/services/electronics-recycling-near-me/",
+      "noindex": false,
+      "ok": true,
+      "issue": "",
+      "recommendation": "After production deployment, inspect live URL in GSC and request indexing if the content update is important."
+    },
+    {
+      "path": "/locations/aluva/",
+      "url": "https://www.ewastekochi.com/locations/aluva/",
+      "tier": "P2",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/locations/aluva/",
+      "canonical": "https://www.ewastekochi.com/locations/aluva/",
+      "noindex": false,
+      "ok": true,
+      "issue": "",
+      "recommendation": "After production deployment, inspect live URL in GSC and request indexing if the content update is important."
+    },
+    {
+      "path": "/locations/edappally/",
+      "url": "https://www.ewastekochi.com/locations/edappally/",
+      "tier": "P2",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/locations/edappally/",
+      "canonical": "https://www.ewastekochi.com/locations/edappally/",
+      "noindex": false,
+      "ok": true,
+      "issue": "",
+      "recommendation": "After production deployment, inspect live URL in GSC and request indexing if the content update is important."
+    },
+    {
+      "path": "/locations/ernakulam-south/",
+      "url": "https://www.ewastekochi.com/locations/ernakulam-south/",
+      "tier": "P2",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/locations/ernakulam-south/",
+      "canonical": "https://www.ewastekochi.com/locations/ernakulam-south/",
+      "noindex": false,
+      "ok": true,
+      "issue": "",
+      "recommendation": "After production deployment, inspect live URL in GSC and request indexing if the content update is important."
+    },
+    {
+      "path": "/locations/kakkanad/",
+      "url": "https://www.ewastekochi.com/locations/kakkanad/",
+      "tier": "P2",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/locations/kakkanad/",
+      "canonical": "https://www.ewastekochi.com/locations/kakkanad/",
+      "noindex": false,
+      "ok": true,
+      "issue": "",
+      "recommendation": "After production deployment, inspect live URL in GSC and request indexing if the content update is important."
+    },
+    {
+      "path": "/locations/kalamassery/",
+      "url": "https://www.ewastekochi.com/locations/kalamassery/",
+      "tier": "P2",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/locations/kalamassery/",
+      "canonical": "https://www.ewastekochi.com/locations/kalamassery/",
+      "noindex": false,
+      "ok": true,
+      "issue": "",
+      "recommendation": "After production deployment, inspect live URL in GSC and request indexing if the content update is important."
+    },
+    {
+      "path": "/locations/kannur/",
+      "url": "https://www.ewastekochi.com/locations/kannur/",
+      "tier": "P2",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/locations/kannur/",
+      "canonical": "https://www.ewastekochi.com/locations/kannur/",
+      "noindex": false,
+      "ok": true,
+      "issue": "",
+      "recommendation": "After production deployment, inspect live URL in GSC and request indexing if the content update is important."
+    },
+    {
+      "path": "/locations/kollam/",
+      "url": "https://www.ewastekochi.com/locations/kollam/",
+      "tier": "P2",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/locations/kollam/",
+      "canonical": "https://www.ewastekochi.com/locations/kollam/",
+      "noindex": false,
+      "ok": true,
+      "issue": "",
+      "recommendation": "After production deployment, inspect live URL in GSC and request indexing if the content update is important."
+    },
+    {
+      "path": "/locations/kottayam/",
+      "url": "https://www.ewastekochi.com/locations/kottayam/",
+      "tier": "P2",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/locations/kottayam/",
+      "canonical": "https://www.ewastekochi.com/locations/kottayam/",
+      "noindex": false,
+      "ok": true,
+      "issue": "",
+      "recommendation": "After production deployment, inspect live URL in GSC and request indexing if the content update is important."
+    },
+    {
+      "path": "/locations/kozhikode/",
+      "url": "https://www.ewastekochi.com/locations/kozhikode/",
+      "tier": "P2",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/locations/kozhikode/",
+      "canonical": "https://www.ewastekochi.com/locations/kozhikode/",
+      "noindex": false,
+      "ok": true,
+      "issue": "",
+      "recommendation": "After production deployment, inspect live URL in GSC and request indexing if the content update is important."
+    },
+    {
+      "path": "/locations/malappuram/",
+      "url": "https://www.ewastekochi.com/locations/malappuram/",
+      "tier": "P2",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/locations/malappuram/",
+      "canonical": "https://www.ewastekochi.com/locations/malappuram/",
+      "noindex": false,
+      "ok": true,
+      "issue": "",
+      "recommendation": "After production deployment, inspect live URL in GSC and request indexing if the content update is important."
+    },
+    {
+      "path": "/locations/palakkad/",
+      "url": "https://www.ewastekochi.com/locations/palakkad/",
+      "tier": "P2",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/locations/palakkad/",
+      "canonical": "https://www.ewastekochi.com/locations/palakkad/",
+      "noindex": false,
+      "ok": true,
+      "issue": "",
+      "recommendation": "After production deployment, inspect live URL in GSC and request indexing if the content update is important."
+    },
+    {
+      "path": "/locations/thiruvananthapuram/",
+      "url": "https://www.ewastekochi.com/locations/thiruvananthapuram/",
+      "tier": "P2",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/locations/thiruvananthapuram/",
+      "canonical": "https://www.ewastekochi.com/locations/thiruvananthapuram/",
+      "noindex": false,
+      "ok": true,
+      "issue": "",
+      "recommendation": "After production deployment, inspect live URL in GSC and request indexing if the content update is important."
+    },
+    {
+      "path": "/locations/thrissur/",
+      "url": "https://www.ewastekochi.com/locations/thrissur/",
+      "tier": "P2",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/locations/thrissur/",
+      "canonical": "https://www.ewastekochi.com/locations/thrissur/",
+      "noindex": false,
+      "ok": true,
+      "issue": "",
+      "recommendation": "After production deployment, inspect live URL in GSC and request indexing if the content update is important."
+    },
+    {
+      "path": "/blog/electronic-waste-disposal-kerala/",
+      "url": "https://www.ewastekochi.com/blog/electronic-waste-disposal-kerala/",
+      "tier": "P3",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/blog/electronic-waste-disposal-kerala/",
+      "canonical": "https://www.ewastekochi.com/blog/electronic-waste-disposal-kerala/",
+      "noindex": false,
+      "ok": true,
+      "issue": "",
+      "recommendation": "After production deployment, inspect live URL in GSC and request indexing if the content update is important."
+    },
+    {
+      "path": "/blog/free-e-waste-pickup-kochi/",
+      "url": "https://www.ewastekochi.com/blog/free-e-waste-pickup-kochi/",
+      "tier": "P3",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/blog/free-e-waste-pickup-kochi/",
+      "canonical": "https://www.ewastekochi.com/blog/free-e-waste-pickup-kochi/",
+      "noindex": false,
+      "ok": true,
+      "issue": "",
+      "recommendation": "After production deployment, inspect live URL in GSC and request indexing if the content update is important."
+    },
+    {
+      "path": "/blog/how-to-choose-itad-provider/",
+      "url": "https://www.ewastekochi.com/blog/how-to-choose-itad-provider/",
+      "tier": "P3",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/blog/how-to-choose-itad-provider/",
+      "canonical": "https://www.ewastekochi.com/blog/how-to-choose-itad-provider/",
+      "noindex": false,
+      "ok": true,
+      "issue": "",
+      "recommendation": "After production deployment, inspect live URL in GSC and request indexing if the content update is important."
+    },
+    {
+      "path": "/blog/laptop-scrap-price-kochi/",
+      "url": "https://www.ewastekochi.com/blog/laptop-scrap-price-kochi/",
+      "tier": "P3",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/blog/laptop-scrap-price-kochi/",
+      "canonical": "https://www.ewastekochi.com/blog/laptop-scrap-price-kochi/",
+      "noindex": false,
+      "ok": true,
+      "issue": "",
+      "recommendation": "After production deployment, inspect live URL in GSC and request indexing if the content update is important."
+    },
+    {
+      "path": "/tools/scrap-value-calculator/",
+      "url": "https://www.ewastekochi.com/tools/scrap-value-calculator/",
+      "tier": "P3",
+      "reason": "discovery or site metadata changed; priority URL queued",
+      "sourceFiles": [
+        "src/data/site.ts"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/tools/scrap-value-calculator/",
+      "canonical": "https://www.ewastekochi.com/tools/scrap-value-calculator/",
+      "noindex": false,
+      "ok": true,
+      "issue": "",
+      "recommendation": "After production deployment, inspect live URL in GSC and request indexing if the content update is important."
+    }
+  ],
+  "googlePingPerformed": false,
+  "indexingApiPerformed": false,
+  "sitemapSubmitted": false
+}
