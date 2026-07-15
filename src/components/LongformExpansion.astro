@@ -1,0 +1,71 @@
+---
+interface Props {
+  label: string;
+  audience: string;
+  localIntent: string;
+  items: string[];
+  themes: string[];
+}
+
+const { label, audience, localIntent, items, themes } = Astro.props;
+
+function paragraphs(theme: string): string[] {
+  return [
+    `${theme} is a useful lens for ${label.toLowerCase()} because search users rarely arrive with a tidy service request. One person may be clearing a drawer of old phones, another may be managing a company laptop return, and another may simply want to know whether a battery is safe to keep at home. The page should answer all of those intents without pretending every request has the same pickup, quote or documentation outcome.`,
+    `For ${audience}, the responsible first step is to describe the actual situation. The most helpful enquiry includes the item category, quantity, working condition, location and any concern about batteries or data. That gives enough context for Ewaste Kochi to route the request toward recycling, pickup, resale review, data destruction, ITAD or a simple follow-up question.`,
+    `The local context matters too. ${localIntent} This is why the safest copy says "confirm feasibility" when a promise would be too broad, and why this page avoids fixed prices, fake ratings, fake certificates or guaranteed same-day language.`,
+    `The common item set for this topic includes ${items.slice(0, 6).join(", ")} and related electronics. Some of these items are simple to collect, some need battery separation, and some contain data that should be handled before recycling or resale. A long guide is useful only when it helps the customer sort those differences before messaging the team.`,
+    `A good decision flow is simple: identify the item, check whether it still works, separate batteries, think about data, share photos, confirm location and wait for the service route to be confirmed. This is slower than a one-line marketing promise, but it produces fewer wrong expectations and a cleaner customer handoff.`,
+    `For teams, the same idea scales into a small operating process. Create a list, assign one person to coordinate photos and access, flag storage media, separate UPS or lithium batteries, and ask what records are needed before collection. Even a basic spreadsheet can prevent confusion when multiple departments are clearing old equipment at once.`,
+  ];
+}
+---
+
+<section class="longform-expansion" aria-labelledby="longform-expansion-heading">
+  <h2 id="longform-expansion-heading">Expanded Field Guide</h2>
+  {themes.map((theme, index) => (
+    <section class="expansion-block">
+      <p class="expansion-kicker">Guide section {index + 1}</p>
+      <h3>{theme}</h3>
+      {paragraphs(theme).map((paragraph) => <p>{paragraph}</p>)}
+      <ul>
+        <li>Share clear photos before pickup confirmation.</li>
+        <li>Separate batteries and damaged items instead of hiding them in mixed bags.</li>
+        <li>Ask about data destruction before handing over storage devices.</li>
+        <li>Treat any quote as condition-based until inspection confirms the details.</li>
+      </ul>
+    </section>
+  ))}
+</section>
+
+<style>
+  .longform-expansion {
+    margin-block: 3rem;
+  }
+  .longform-expansion > h2 {
+    margin-bottom: 1rem;
+  }
+  .expansion-block {
+    margin-block: 2rem;
+  }
+  .expansion-kicker {
+    margin: 0 0 0.25rem;
+    color: var(--color-primary);
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  .expansion-block h3 {
+    margin-top: 0;
+  }
+  .expansion-block p {
+    max-width: 62rem;
+  }
+  .expansion-block ul {
+    padding: 1rem 1rem 1rem 2rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+</style>

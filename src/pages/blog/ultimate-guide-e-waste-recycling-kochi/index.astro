@@ -1,0 +1,304 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import LongformExpansion from "../../../components/LongformExpansion.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Ultimate Guide to E-Waste Recycling in Kochi | Ewaste Kochi";
+const description =
+  "Complete Kochi guide to e-waste recycling: what counts as e-waste, how recycling works, pickup preparation, data handling, battery safety and business planning.";
+const path = "/blog/ultimate-guide-e-waste-recycling-kochi/";
+const lastUpdated = "2026-07-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Ultimate Guide to E-Waste Recycling in Kochi", path },
+];
+
+const faqItems = [
+  {
+    q: "What is e-waste recycling?",
+    a: "E-waste recycling is the responsible sorting and processing of unwanted electronics so reusable devices, recyclable materials, batteries and data-bearing parts are routed correctly.",
+  },
+  {
+    q: "What items can I ask about?",
+    a: "Common enquiries include laptops, desktops, phones, monitors, TVs, printers, UPS units, inverter batteries, servers, hard drives, cables, routers and mixed office IT assets.",
+  },
+  {
+    q: "How do I prepare electronics for pickup?",
+    a: "Make a simple item list, separate batteries, flag devices with data, keep items dry and share photos, quantity and location before pickup is confirmed.",
+  },
+  {
+    q: "Do I need data destruction?",
+    a: "You should plan data handling for laptops, phones, hard drives, SSDs, servers and storage media before resale or recycling.",
+  },
+  {
+    q: "Are batteries handled with normal electronics?",
+    a: "Batteries should be separated and mentioned in advance, especially if swollen, leaking, hot or damaged.",
+  },
+  {
+    q: "Is every pickup available everywhere in Kerala?",
+    a: "No. Kochi and nearby Ernakulam locations are the primary focus. Wider Kerala district requests should be treated as feasibility checks.",
+  },
+  {
+    q: "Can businesses request documentation?",
+    a: "Documentation support may be discussed for business pickups depending on the agreed service, item scope and handling route.",
+  },
+  {
+    q: "Can I sell instead of recycle?",
+    a: "Working or repairable devices may deserve a condition-based resale review. Damaged or obsolete items are often better routed to recycling.",
+  },
+  {
+    q: "Is this guide legal advice?",
+    a: "No. It is educational guidance for planning disposal. Businesses should verify current obligations with official sources or a qualified advisor.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+    image: `${SITE_URL}/images/blog-pillars/recycling-basics.webp`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="ultimate-guide">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Ultimate guide</p>
+        <h1>Ultimate Guide to E-Waste Recycling in Kochi</h1>
+        <p class="lede">
+          A practical guide for households, apartments, shops and businesses
+          deciding what to do with old electronics, batteries and IT scrap.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/recycling-basics.webp"
+        alt="Sorted electronics prepared for e-waste recycling guidance"
+        width="1200"
+        height="675"
+        loading="eager"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        E-waste recycling in Kochi starts with sorting electronics, separating
+        batteries, identifying data-bearing devices and confirming pickup
+        feasibility. Share photos, quantity, condition and location so Ewaste
+        Kochi can route the enquiry to recycling, resale review, data
+        destruction, battery handling or ITAD.
+      </p>
+    </DirectAnswer>
+
+    <section class="toc" aria-labelledby="toc-heading">
+      <h2 id="toc-heading">Guide Sections</h2>
+      <div>
+        <a href="#what-counts">What counts as e-waste</a>
+        <a href="#process">How recycling works</a>
+        <a href="#pickup">Pickup preparation</a>
+        <a href="#data">Data handling</a>
+        <a href="#battery">Battery safety</a>
+        <a href="#business">Business disposal</a>
+      </div>
+    </section>
+
+    <section id="what-counts">
+      <h2>What Counts as E-Waste</h2>
+      <p>
+        E-waste includes unwanted or end-of-life electrical and electronic
+        items: laptops, phones, desktops, servers, TVs, printers, routers,
+        cables, UPS units, inverter batteries, power banks and small office
+        electronics. The common mistake is treating all of them the same. Some
+        items contain batteries, some contain data, some may be suitable for
+        resale review and some should move directly into recycling.
+      </p>
+    </section>
+
+    <section id="process">
+      <h2>How E-Waste Recycling Works</h2>
+      <p>
+        A responsible recycling route starts with collection and sorting. Items
+        are grouped by type, condition and risk: devices with data, batteries,
+        displays, computers, peripherals and mixed scrap. Working or repairable
+        devices may be reviewed for reuse or resale, while damaged items are
+        routed toward material recovery after any data or battery concerns are
+        handled.
+      </p>
+    </section>
+
+    <section id="pickup">
+      <h2>How to Prepare for Pickup</h2>
+      <p>
+        Send a clear item list, rough quantity, photos, location and access
+        notes. Apartments should mention floor, lift and security instructions.
+        Offices should prepare an inventory and identify one coordinator. Heavy
+        displays, printers and UPS batteries should be photographed separately
+        so collection requirements can be checked before scheduling.
+      </p>
+    </section>
+
+    <section id="data">
+      <h2>Data Handling Before Recycling</h2>
+      <p>
+        Data handling should be planned before devices leave your control.
+        Laptops, phones, servers, hard drives, SSDs, NAS devices and backup
+        media may need wiping, degaussing where suitable, physical destruction
+        or a business record. Choose the method based on device type, risk and
+        whether the asset may be reused.
+      </p>
+    </section>
+
+    <section id="battery">
+      <h2>Battery Safety</h2>
+      <p>
+        UPS, inverter, laptop, mobile and lithium batteries should be separated
+        from mixed electronics. Damaged, swollen, leaking or hot batteries need
+        extra caution. Do not press, puncture, charge or pack them tightly.
+        Share photos before pickup so the team can guide the next step.
+      </p>
+    </section>
+
+    <section id="business">
+      <h2>Business and ITAD Planning</h2>
+      <p>
+        Businesses should treat disposal as a small project: prepare an asset
+        list, identify storage media, separate batteries, note access
+        requirements and ask about records before collection. ITAD is useful
+        when inventory, data handling, resale review, recycling and internal
+        documentation need to be coordinated together.
+      </p>
+    </section>
+
+    <LongformExpansion
+      label="Ultimate e-waste recycling guide"
+      audience="Kochi households, apartments, shops, IT offices, facility teams and business administrators"
+      localIntent="Kochi searches often combine pickup, price, recycling, battery and data concerns in one query. This guide separates those intents before recommending a next step."
+      items={["laptops", "phones", "desktops", "printers", "TVs", "monitors", "UPS units", "batteries", "servers", "hard drives"]}
+      themes={[
+        "How to identify e-waste categories",
+        "How to separate resale, recycling and disposal intent",
+        "How pickup feasibility should be confirmed",
+        "How to handle data-bearing devices",
+        "How to handle batteries safely",
+        "How apartments should prepare electronics",
+        "How offices should prepare inventory",
+        "How quote expectations should work",
+        "How Kochi location details affect the route",
+        "How to choose between service pages",
+        "How to avoid unsafe disposal shortcuts",
+        "How this guide connects to the wider blog",
+      ]}
+    />
+
+    <section class="internal-links" aria-labelledby="internal-links-heading">
+      <h2 id="internal-links-heading">Explore Related Pages</h2>
+      <div>
+        <a href="/recycling/">Recycling service</a>
+        <a href="/pickup/">Pickup planning</a>
+        <a href="/battery-recycling/">Battery recycling</a>
+        <a href="/data-destruction/">Data destruction</a>
+        <a href="/itad/">ITAD</a>
+        <a href="/tools/scrap-value-calculator/">Scrap value calculator</a>
+      </div>
+    </section>
+
+    <CtaBar whatsappMessage="Hi, I read the ultimate e-waste recycling guide and need help choosing the right route." />
+    <Faq items={faqItems} heading="Ultimate E-Waste Recycling FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .ultimate-guide {
+    display: grid;
+    gap: 1.75rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3.25rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .toc,
+  .internal-links {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .toc h2,
+  .internal-links h2 {
+    margin-top: 0;
+  }
+  .toc div,
+  .internal-links div {
+    display: grid;
+    gap: 0.65rem;
+  }
+  .toc a,
+  .internal-links a {
+    min-height: 44px;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-bg);
+    font-weight: 800;
+    text-decoration: none;
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .toc div,
+    .internal-links div {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

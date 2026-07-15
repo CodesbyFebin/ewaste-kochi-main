@@ -1,0 +1,347 @@
+---
+import { SCRAP_CATEGORIES, SCRAP_CONDITIONS, SCRAP_LOCATIONS } from "../data/scrapRates";
+---
+
+<section class="scrap-calculator" id="scrap-calculator" aria-labelledby="scrap-calculator-heading">
+  <div class="calculator-copy">
+    <p class="eyebrow">Interactive estimate planner</p>
+    <h2 id="scrap-calculator-heading">Scrap Value Calculator</h2>
+    <p>
+      Estimate a planning range for electronics scrap before you message the
+      team. This is not a final quote; inspection, condition, data handling,
+      location and current market factors still decide the real value.
+    </p>
+  </div>
+
+  <div class="estimate-display" aria-live="polite">
+    <span>Planning estimate</span>
+    <strong id="estimate-amount">₹350</strong>
+    <em id="estimate-range">Likely range: ₹315 to ₹385</em>
+  </div>
+
+  <form class="calculator-form">
+    <label>
+      <span>Item category</span>
+      <select id="scrap-category" name="category">
+        {SCRAP_CATEGORIES.map((category) => (
+          <option
+            value={category.id}
+            data-rate={category.baseRate}
+            data-weight={category.typicalWeight}
+          >
+            {category.label}
+          </option>
+        ))}
+      </select>
+    </label>
+
+    <div class="inline-fields">
+      <label>
+        <span>Quantity</span>
+        <div class="stepper">
+          <button type="button" data-step="-1" aria-label="Decrease quantity">-</button>
+          <input id="scrap-quantity" name="quantity" type="number" min="1" max="500" value="1" inputmode="numeric" />
+          <button type="button" data-step="1" aria-label="Increase quantity">+</button>
+        </div>
+      </label>
+
+      <label>
+        <span>Weight each (kg)</span>
+        <input id="scrap-weight" name="weight" type="number" min="0.1" max="200" step="0.1" value="2.5" inputmode="decimal" />
+      </label>
+    </div>
+
+    <div class="inline-fields">
+      <label>
+        <span>Rate used (₹/kg)</span>
+        <input id="scrap-rate" name="rate" type="number" min="5" max="500" step="1" value="70" inputmode="numeric" />
+      </label>
+
+      <label>
+        <span>Condition</span>
+        <select id="scrap-condition" name="condition">
+          {SCRAP_CONDITIONS.map((condition) => (
+            <option value={condition.id} data-multiplier={condition.multiplier}>{condition.label}</option>
+          ))}
+        </select>
+      </label>
+    </div>
+
+    <label>
+      <span>Pickup area</span>
+      <select id="scrap-location" name="location">
+        {SCRAP_LOCATIONS.map((location) => (
+          <option value={location.id} data-multiplier={location.multiplier}>{location.label}</option>
+        ))}
+      </select>
+    </label>
+
+    <div class="checkboxes">
+      <label>
+        <input id="scrap-bulk" type="checkbox" />
+        <span>Business or bulk quantity enquiry</span>
+      </label>
+      <label>
+        <input id="scrap-data" type="checkbox" />
+        <span>Contains data-bearing devices</span>
+      </label>
+    </div>
+
+    <div class="result-grid">
+      <div><span>Low</span><strong id="result-low">₹315</strong></div>
+      <div><span>Likely</span><strong id="result-likely">₹350</strong></div>
+      <div><span>High</span><strong id="result-high">₹385</strong></div>
+    </div>
+
+    <p class="result-note" id="result-note">
+      Laptop / notebook selected. Final quote needs photos and inspection.
+    </p>
+
+    <button type="button" id="scrap-whatsapp">Open WhatsApp enquiry</button>
+  </form>
+</section>
+
+<script>
+  const root = document.getElementById("scrap-calculator");
+
+  if (root) {
+    const category = root.querySelector<HTMLSelectElement>("#scrap-category");
+    const quantity = root.querySelector<HTMLInputElement>("#scrap-quantity");
+    const weight = root.querySelector<HTMLInputElement>("#scrap-weight");
+    const rate = root.querySelector<HTMLInputElement>("#scrap-rate");
+    const condition = root.querySelector<HTMLSelectElement>("#scrap-condition");
+    const location = root.querySelector<HTMLSelectElement>("#scrap-location");
+    const bulk = root.querySelector<HTMLInputElement>("#scrap-bulk");
+    const data = root.querySelector<HTMLInputElement>("#scrap-data");
+    const estimateAmount = root.querySelector<HTMLElement>("#estimate-amount");
+    const estimateRange = root.querySelector<HTMLElement>("#estimate-range");
+    const resultLow = root.querySelector<HTMLElement>("#result-low");
+    const resultLikely = root.querySelector<HTMLElement>("#result-likely");
+    const resultHigh = root.querySelector<HTMLElement>("#result-high");
+    const resultNote = root.querySelector<HTMLElement>("#result-note");
+    const whatsappButton = root.querySelector<HTMLButtonElement>("#scrap-whatsapp");
+
+    const formatter = new Intl.NumberFormat("en-IN", {
+      style: "currency",
+      currency: "INR",
+      maximumFractionDigits: 0,
+    });
+
+    function selectedOption(select: HTMLSelectElement): HTMLOptionElement {
+      return select.options[select.selectedIndex];
+    }
+
+    function numberValue(input: HTMLInputElement, fallback: number): number {
+      const value = Number(input.value);
+      return Number.isFinite(value) && value > 0 ? value : fallback;
+    }
+
+    function calculate() {
+      if (!category || !quantity || !weight || !rate || !condition || !location) return;
+      const item = selectedOption(category);
+      const conditionMultiplier = Number(selectedOption(condition).dataset.multiplier ?? 1);
+      const locationMultiplier = Number(selectedOption(location).dataset.multiplier ?? 1);
+      const qty = Math.max(1, numberValue(quantity, 1));
+      const weightEach = numberValue(weight, Number(item.dataset.weight ?? 2.5));
+      const rateUsed = numberValue(rate, Number(item.dataset.rate ?? 70));
+      const totalWeight = qty * weightEach;
+
+      let likely = totalWeight * rateUsed * conditionMultiplier * locationMultiplier;
+      if (bulk?.checked && qty >= 10) likely *= 0.95;
+      if (data?.checked) likely -= Math.min(likely * 0.15, qty * 50);
+      likely = Math.max(likely, 0);
+
+      const low = likely * 0.85;
+      const high = likely * 1.15;
+
+      if (estimateAmount) estimateAmount.textContent = formatter.format(likely);
+      if (estimateRange) estimateRange.textContent = `Likely range: ${formatter.format(low)} to ${formatter.format(high)}`;
+      if (resultLow) resultLow.textContent = formatter.format(low);
+      if (resultLikely) resultLikely.textContent = formatter.format(likely);
+      if (resultHigh) resultHigh.textContent = formatter.format(high);
+      if (resultNote) {
+        const notes = [
+          `${item.textContent?.trim() ?? "Item"} selected`,
+          `${totalWeight.toFixed(1)} kg planning weight`,
+          data?.checked ? "data handling should be discussed before handover" : "no data-bearing device selected",
+          location.value === "kerala" ? "wider Kerala feasibility needs confirmation" : "local pickup feasibility still needs confirmation",
+        ];
+        resultNote.textContent = `${notes.join(". ")}.`;
+      }
+    }
+
+    category?.addEventListener("change", () => {
+      const item = selectedOption(category);
+      if (weight) weight.value = item.dataset.weight ?? weight.value;
+      if (rate) rate.value = item.dataset.rate ?? rate.value;
+      calculate();
+    });
+
+    root.querySelectorAll<HTMLButtonElement>("[data-step]").forEach((button) => {
+      button.addEventListener("click", () => {
+        if (!quantity) return;
+        const next = Math.max(1, numberValue(quantity, 1) + Number(button.dataset.step ?? 0));
+        quantity.value = String(next);
+        calculate();
+      });
+    });
+
+    root.querySelectorAll("input, select").forEach((field) => {
+      field.addEventListener("input", calculate);
+      field.addEventListener("change", calculate);
+    });
+
+    whatsappButton?.addEventListener("click", () => {
+      if (!category || !quantity || !weight || !rate || !condition || !location || !resultLow || !resultHigh) return;
+      const message = [
+        "Hi, I used the Ewaste Kochi scrap value calculator.",
+        `Item: ${selectedOption(category).textContent?.trim()}`,
+        `Quantity: ${quantity.value}`,
+        `Planning weight: ${weight.value} kg each`,
+        `Rate used: ₹${rate.value}/kg`,
+        `Condition: ${selectedOption(condition).textContent?.trim()}`,
+        `Area: ${selectedOption(location).textContent?.trim()}`,
+        `Planning range: ${resultLow.textContent} to ${resultHigh.textContent}`,
+        bulk?.checked ? "Bulk enquiry: yes" : "Bulk enquiry: no",
+        data?.checked ? "Data-bearing device: yes" : "Data-bearing device: no",
+        "Please confirm the real quote after photos and inspection.",
+      ].join("\n");
+      window.open(`https://wa.me/${"917500555454"}?text=${encodeURIComponent(message)}`, "_blank", "noopener");
+    });
+
+    calculate();
+  }
+</script>
+
+<style>
+  .scrap-calculator {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .calculator-copy h2 {
+    margin: 0;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+  .estimate-display {
+    display: grid;
+    gap: 0.1rem;
+    padding: 1rem;
+    border: 1px solid #aadfbd;
+    border-radius: 0.5rem;
+    background: #f0fbf4;
+    color: #10422a;
+  }
+  .estimate-display strong {
+    font-size: clamp(2rem, 12vw, 3.25rem);
+    line-height: 1;
+  }
+  .estimate-display em {
+    font-style: normal;
+  }
+  .calculator-form {
+    display: grid;
+    gap: 0.9rem;
+  }
+  .calculator-form label {
+    display: grid;
+    gap: 0.35rem;
+    font-weight: 800;
+  }
+  .calculator-form select,
+  .calculator-form input {
+    min-height: 44px;
+    width: 100%;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font: inherit;
+  }
+  .inline-fields {
+    display: grid;
+    gap: 0.9rem;
+  }
+  .stepper {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr) 44px;
+    gap: 0.45rem;
+  }
+  .stepper button,
+  .calculator-form > button {
+    min-height: 44px;
+    border: 0;
+    border-radius: 0.5rem;
+    background: var(--color-primary);
+    color: #fff;
+    font: inherit;
+    font-weight: 900;
+    cursor: pointer;
+  }
+  .checkboxes {
+    display: grid;
+    gap: 0.6rem;
+  }
+  .checkboxes label {
+    grid-template-columns: 22px minmax(0, 1fr);
+    align-items: start;
+  }
+  .checkboxes input {
+    width: 20px;
+    min-height: 20px;
+    margin-top: 0.15rem;
+  }
+  .result-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+  .result-grid div {
+    min-width: 0;
+    padding: 0.75rem 0.4rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-bg);
+    text-align: center;
+  }
+  .result-grid span {
+    display: block;
+    color: var(--color-muted);
+    font-size: 0.78rem;
+  }
+  .result-grid strong {
+    display: block;
+    font-size: clamp(0.95rem, 4vw, 1.25rem);
+  }
+  .result-note {
+    margin: 0;
+    color: var(--color-muted);
+  }
+  @media (min-width: 760px) {
+    .scrap-calculator {
+      grid-template-columns: minmax(0, 0.85fr) minmax(360px, 1.15fr);
+      align-items: start;
+    }
+    .estimate-display {
+      grid-column: 1;
+    }
+    .calculator-form {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+    }
+    .inline-fields {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

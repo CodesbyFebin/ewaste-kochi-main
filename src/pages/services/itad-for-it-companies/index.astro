@@ -1,0 +1,275 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import LongformExpansion from "../../../components/LongformExpansion.astro";
+import { SITE_URL } from "../../../data/site";
+
+const title = "ITAD Services for IT Companies in Kochi | Asset Disposal Planning";
+const description =
+  "ITAD planning for Kochi IT companies: asset inventory, data destruction choices, pickup coordination, resale review, recycling and documentation discussions.";
+const path = "/services/itad-for-it-companies/";
+const lastUpdated = "2026-07-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Services", path: "/services/" },
+  { name: "ITAD for IT Companies", path },
+];
+
+const lifecycleSteps = [
+  { name: "Inventory", text: "Prepare item categories, quantities, serials where available and asset-owner notes." },
+  { name: "Data review", text: "Flag laptops, servers, drives, SSDs, phones, tapes and other storage media before handover." },
+  { name: "Collection planning", text: "Confirm access, loading, security desk instructions and pickup feasibility." },
+  { name: "Disposition route", text: "Separate resale review, data destruction, recycling and battery handling paths." },
+  { name: "Records discussion", text: "Ask what documentation is available before pickup so internal audit expectations are clear." },
+];
+
+const faqItems = [
+  {
+    q: "What is ITAD?",
+    a: "ITAD means IT Asset Disposition: the planned retirement of IT assets through inventory, data handling, resale review, recycling and documentation discussions.",
+  },
+  {
+    q: "Why do IT companies need a planned ITAD process?",
+    a: "IT companies often retire devices that contain business data, client records or access credentials. Planning reduces confusion around data handling, asset lists and disposal records.",
+  },
+  {
+    q: "Which assets can be included?",
+    a: "Common ITAD enquiries include laptops, desktops, servers, storage arrays, hard drives, SSDs, routers, switches, UPS units, monitors and mixed IT peripherals.",
+  },
+  {
+    q: "Can usable equipment be reviewed for resale?",
+    a: "Yes. Working or repairable devices may be reviewed for resale or reuse potential, while obsolete or damaged items can be routed to recycling.",
+  },
+  {
+    q: "Can data destruction be planned before pickup?",
+    a: "Yes. Data handling should be discussed before collection so the right route is selected for drives, laptops, servers and other storage media.",
+  },
+  {
+    q: "Do you provide documentation?",
+    a: "Documentation support may be discussed depending on the agreed service, asset scope and handling process. Ask before pickup so expectations are clear.",
+  },
+  {
+    q: "Is this page legal advice?",
+    a: "No. It is operational planning guidance. Companies should verify legal obligations with official sources or qualified advisors.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "ITAD planning for IT companies",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: { "@type": "Place", name: "Kochi, Kerala" },
+    url: `${SITE_URL}${path}`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="industry-page">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Industry service page</p>
+        <h1>ITAD Services for IT Companies in Kochi</h1>
+        <p class="lede">
+          A practical ITAD route for software firms, IT parks, managed service
+          providers and tech teams retiring laptops, servers, storage media and
+          office IT assets.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/itad.webp"
+        alt="IT assets prepared for ITAD planning in Kochi"
+        width="1200"
+        height="675"
+        loading="eager"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        ITAD for IT companies should start with an asset list, data-bearing
+        device review, pickup access notes and a clear decision on resale,
+        recycling, battery handling and documentation needs. Ewaste Kochi can
+        help route the enquiry after photos, quantities and location are shared.
+      </p>
+    </DirectAnswer>
+
+    <section class="process" aria-labelledby="itad-process-heading">
+      <h2 id="itad-process-heading">ITAD Planning Workflow</h2>
+      <ol>
+        {lifecycleSteps.map((step) => (
+          <li>
+            <strong>{step.name}</strong>
+            <span>{step.text}</span>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section>
+      <h2>Assets Commonly Included</h2>
+      <p>
+        IT company enquiries often include employee laptops, desktops, monitors,
+        rack servers, storage arrays, external drives, SSDs, hard drives,
+        switches, routers, firewalls, UPS units, docking stations, keyboards,
+        mice and mixed cables. The right handling route depends on working
+        condition, data risk, battery presence and whether resale review is
+        appropriate.
+      </p>
+    </section>
+
+    <section>
+      <h2>Data Comes Before Disposal</h2>
+      <p>
+        A retired laptop or server is not just hardware. It can contain cached
+        credentials, client files, internal repositories, backups and access
+        tokens. Before pickup, identify devices with storage media and decide
+        whether wiping, physical destruction or another data-handling route is
+        needed.
+      </p>
+    </section>
+
+    <section>
+      <h2>For Infopark, Smart City and Kochi IT Teams</h2>
+      <p>
+        Kochi IT teams usually need practical coordination: one point of
+        contact, item photos, access instructions, security desk notes, asset
+        lists and a realistic pickup window. Wider Kerala requests should be
+        checked as feasibility enquiries before internal project dates are
+        fixed.
+      </p>
+    </section>
+
+    <LongformExpansion
+      label="ITAD for IT companies"
+      audience="Kochi IT administrators, operations teams, finance teams, office managers and security coordinators"
+      localIntent="ITAD searches in Kochi usually combine asset retirement, data risk, pickup logistics and documentation expectations. The safest page separates those needs before confirming a service route."
+      items={["laptops", "desktops", "servers", "hard drives", "SSDs", "network devices", "UPS units", "monitors", "phones", "mixed peripherals"]}
+      themes={[
+        "How IT companies should prepare asset lists",
+        "How to identify data-bearing devices",
+        "How to separate resale and recycling candidates",
+        "How to plan pickup access at IT parks",
+        "How to discuss documentation needs",
+        "How to handle batteries and UPS units",
+        "How to coordinate IT, finance and facilities",
+        "How to avoid informal disposal risk",
+        "How to message Ewaste Kochi clearly",
+        "How this service connects to data destruction",
+      ]}
+    />
+
+    <section class="internal-links" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Service Pages</h2>
+      <div>
+        <a href="/itad/">ITAD service</a>
+        <a href="/data-destruction/">Data destruction</a>
+        <a href="/server-recycling-kochi/">Server recycling</a>
+        <a href="/services/it-asset-inventory-audit/">IT asset inventory audit</a>
+        <a href="/tools/data-destruction-cost-estimator/">Data destruction estimator</a>
+        <a href="/blog/corporate-ewaste/">Corporate e-waste guide</a>
+      </div>
+    </section>
+
+    <CtaBar whatsappMessage="Hi, I need ITAD planning for an IT company in Kochi." />
+    <Faq items={faqItems} heading="ITAD for IT Companies FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .industry-page {
+    display: grid;
+    gap: 1.75rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3.25rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .process ol {
+    display: grid;
+    gap: 0.75rem;
+    padding: 0;
+    list-style: none;
+  }
+  .process li,
+  .internal-links {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .process strong,
+  .process span {
+    display: block;
+  }
+  .process span {
+    color: var(--color-muted);
+  }
+  .internal-links h2 {
+    margin-top: 0;
+  }
+  .internal-links div {
+    display: grid;
+    gap: 0.65rem;
+  }
+  .internal-links a {
+    min-height: 44px;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-bg);
+    font-weight: 800;
+    text-decoration: none;
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .process ol,
+    .internal-links div {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

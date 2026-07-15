@@ -1,0 +1,164 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../components/DirectAnswer.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import { SITE_URL } from "../../data/site";
+import { TOOL_PAGES } from "../../data/toolPages";
+
+const title = "E-Waste Tools & Calculators Kochi | Ewaste Kochi";
+const description =
+  "Planning tools for e-waste scrap value, data destruction scope, pickup feasibility, sell-or-recycle decisions and battery safety in Kochi.";
+const path = "/tools/";
+const lastUpdated = "2026-07-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Tools", path },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <section class="tools-hero">
+    <p class="eyebrow">Planning tools</p>
+    <h1>E-Waste Tools & Calculators</h1>
+    <p class="lede">
+      Use these lightweight tools before messaging Ewaste Kochi. They help you
+      describe the item, choose the right service path and avoid unclear
+      pickup, quote or data-handling expectations.
+    </p>
+  </section>
+
+  <DirectAnswer heading="Quick answer">
+    <p>
+      Start with the tool that matches your question: quote potential, data
+      destruction scope, pickup feasibility, sell-or-recycle choice, or battery
+      safety. The result is a planning guide, not a final service decision.
+    </p>
+  </DirectAnswer>
+
+  <section class="tool-grid" aria-labelledby="tools-heading">
+    <h2 id="tools-heading">Choose a Tool</h2>
+    {TOOL_PAGES.map((tool) => (
+      <a href={`/tools/${tool.slug}/`} class="tool-card">
+        <span>{tool.eyebrow}</span>
+        <strong>{tool.h1}</strong>
+        <p>{tool.quickAnswer}</p>
+      </a>
+    ))}
+  </section>
+
+  <section class="silo-panel" aria-labelledby="silo-heading">
+    <h2 id="silo-heading">Related Service Silos</h2>
+    <div>
+      <a href="/recycling/">Recycling</a>
+      <a href="/pickup/">Pickup</a>
+      <a href="/battery-recycling/">Battery recycling</a>
+      <a href="/sell-electronics/">Sell electronics</a>
+      <a href="/data-destruction/">Data destruction</a>
+      <a href="/itad/">ITAD</a>
+    </div>
+  </section>
+
+  <CtaBar whatsappMessage="Hi, I used the Ewaste Kochi tools and need help choosing the right service." />
+</Layout>
+
+<style>
+  .tools-hero {
+    margin-bottom: 1.25rem;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3.25rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .tool-grid {
+    display: grid;
+    gap: 0.9rem;
+    margin-block: 2rem;
+  }
+  .tool-grid h2 {
+    margin-bottom: 0;
+  }
+  .tool-card {
+    display: grid;
+    gap: 0.35rem;
+    min-height: 12rem;
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+  }
+  .tool-card span {
+    color: var(--color-primary);
+    font-size: 0.76rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  .tool-card strong {
+    color: var(--color-text);
+    font-size: 1.15rem;
+    line-height: 1.25;
+  }
+  .tool-card p {
+    margin: 0;
+    color: var(--color-muted);
+  }
+  .silo-panel {
+    margin-block: 2rem;
+  }
+  .silo-panel div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+  }
+  .silo-panel a {
+    min-height: 44px;
+    padding: 0.7rem 0.9rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-bg);
+    font-weight: 800;
+    text-decoration: none;
+  }
+  @media (min-width: 760px) {
+    .tool-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .tool-grid h2 {
+      grid-column: 1 / -1;
+    }
+  }
+  @media (min-width: 1040px) {
+    .tool-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

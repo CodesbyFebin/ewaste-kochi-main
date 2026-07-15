@@ -119,6 +119,106 @@
       "permanent": true
     },
     {
+      "source": "/blog/where-to-recycle-batteries",
+      "destination": "/blog/where-to-recycle-batteries-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/where-to-recycle-batteries/",
+      "destination": "/blog/where-to-recycle-batteries-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/e-waste-recycling-kakkanad",
+      "destination": "/blog/e-waste-recycling-kakkanad-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/e-waste-recycling-kakkanad/",
+      "destination": "/blog/e-waste-recycling-kakkanad-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/e-waste-recycling-kalamassery",
+      "destination": "/blog/e-waste-recycling-kalamassery-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/e-waste-recycling-kalamassery/",
+      "destination": "/blog/e-waste-recycling-kalamassery-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/old-electronic-buyers-near-me",
+      "destination": "/blog/old-electronic-buyers-near-me-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/old-electronic-buyers-near-me/",
+      "destination": "/blog/old-electronic-buyers-near-me-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/data-security-disposal-checklist",
+      "destination": "/blog/data-security-disposal-checklist-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/data-security-disposal-checklist/",
+      "destination": "/blog/data-security-disposal-checklist-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/battery-disposal-safety-checklist",
+      "destination": "/blog/battery-disposal-safety-checklist-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/battery-disposal-safety-checklist/",
+      "destination": "/blog/battery-disposal-safety-checklist-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/epr-compliance-checklist-india",
+      "destination": "/blog/epr-compliance-checklist-india-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/epr-compliance-checklist-india/",
+      "destination": "/blog/epr-compliance-checklist-india-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/esg-ewaste-reporting-template",
+      "destination": "/blog/esg-ewaste-reporting-template-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/esg-ewaste-reporting-template/",
+      "destination": "/blog/esg-ewaste-reporting-template-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/e-waste-rules-2022-compliance-checklist",
+      "destination": "/blog/e-waste-rules-2022-compliance-checklist-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/e-waste-rules-2022-compliance-checklist/",
+      "destination": "/blog/e-waste-rules-2022-compliance-checklist-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/zero-landfill-ewaste-checklist",
+      "destination": "/blog/zero-landfill-ewaste-checklist-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/zero-landfill-ewaste-checklist/",
+      "destination": "/blog/zero-landfill-ewaste-checklist-kochi/",
+      "permanent": true
+    },
+    {
       "source": "/locations/ernakulam",
       "destination": "/locations/ernakulam-south/",
       "permanent": true

@@ -1,0 +1,146 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../../components/CtaBar.astro";
+import Faq from "../../../../components/Faq.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../../data/site";
+
+const title = "ITAD Services for Smart City Kochi Offices | Asset Disposition";
+const description =
+  "IT asset disposition for Smart City Kochi businesses — structured collection, asset lists, data destruction and documentation support for office hardware refreshes.";
+const lastUpdated = "2026-07-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Locations", path: "/locations/" },
+  { name: "Smart City Kochi", path: "/locations/smart-city-kochi/" },
+  { name: "ITAD", path: "/locations/smart-city-kochi/itad/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "IT asset disposition",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: { "@type": "Place", name: "Smart City Kochi, Kerala" },
+    url: `${SITE_URL}/locations/smart-city-kochi/itad/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/locations/smart-city-kochi/itad/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+];
+
+const faqItems = [
+  {
+    q: "How is ITAD different from a standard office pickup for Smart City Kochi tenants?",
+    a: "A standard pickup collects and processes hardware; ITAD adds asset-level tracking — an itemized record of what was collected, by serial number where relevant — plus a structured data destruction step for anything with storage. It suits offices that need a documented trail for internal IT registers, not just physical removal.",
+  },
+  {
+    q: "Do you work directly with facility or IT managers rather than individual employees?",
+    a: "Yes — ITAD engagements are usually coordinated with whoever manages the asset register or the office IT setup, since they can confirm quantities, access, and any compliance documentation the business needs.",
+  },
+  {
+    q: "Can this cover a full office move or shutdown, not just a periodic refresh?",
+    a: "Yes. Office relocations and full decommissioning are common ITAD scenarios — the process is the same either way: share an asset list and timeline, and the collection is planned around it.",
+  },
+  {
+    q: "What happens to data on drives collected from a Smart City Kochi office?",
+    a: "Any data-bearing device is flagged for data destruction as part of the same engagement — see our data destruction service for the specific methods and how documentation support works.",
+  },
+  {
+    q: "Is this service only for large enterprises, or do smaller Smart City Kochi offices use it too?",
+    a: "Both. Smaller offices with a modest but structured asset list still benefit from ITAD's tracking and documentation; very small, one-off pickups without those needs are usually simpler to handle as a standard pickup instead.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/locations/smart-city-kochi/itad/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>ITAD Services for Smart City Kochi Offices</h1>
+  <p class="lede">
+    Smart City Kochi enquiries tend to be business or ITAD oriented rather
+    than household pickups — the campus is built around office tenants, not
+    residential units. This page covers the structured, asset-tracked side
+    of that specifically. For general pickup context for the area, see the
+    <a href="/locations/smart-city-kochi/">Smart City Kochi location page</a>;
+    for the full service description, see
+    <a href="/itad/">IT asset disposition</a>.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to arrange ITAD/asset disposition for our Smart City Kochi office." />
+
+  <section>
+    <h2>Why ITAD fits this campus</h2>
+    <p>
+      Office tenants at Smart City Kochi generate hardware turnover in
+      batches — a refresh cycle across a floor, a department relocation, or
+      a full office wind-down — rather than one device at a time. That
+      pattern is exactly what ITAD is built for: a single engagement covers
+      the full batch, with an itemized record of what left the building
+      instead of a loose pile of collected equipment.
+    </p>
+  </section>
+
+  <section>
+    <h2>What's typically included</h2>
+    <ul>
+      <li>Laptops, desktops and monitors from a hardware refresh</li>
+      <li>Servers, switches and rack equipment from an infrastructure change</li>
+      <li>UPS and backup batteries from server or comms rooms</li>
+      <li>An asset list matched against what's physically collected</li>
+      <li>Data destruction for any device with storage</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Documentation for internal records</h2>
+    <p>
+      For businesses that need to close out an asset in an internal
+      register, documentation support may be available depending on the
+      service type and agreed handling process. Confirm what's needed
+      before the collection date via our
+      <a href="/contact/">contact page</a> so it can be arranged correctly.
+    </p>
+  </section>
+
+  <section>
+    <h2>Not a full ITAD job?</h2>
+    <p>
+      If it's a smaller, occasional office pickup rather than a tracked
+      decommissioning, mentioning that it's a business job when you book is
+      usually enough — see our general <a href="/pickup/">pickup service</a>
+      for that path, or the <a href="/itad/">ITAD page</a> for the full
+      breakdown of when each fits.
+    </p>
+  </section>
+
+  <section>
+    <h2>Other areas</h2>
+    <p>
+      See the <a href="/locations/smart-city-kochi/">Smart City Kochi
+      location page</a> for general pickup context, or the full
+      <a href="/locations/">locations directory</a> for everywhere else we
+      serve.
+    </p>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} heading="Smart City Kochi ITAD FAQs" />
+
+  <p class="updated">Last updated: {lastUpdated}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+</style>

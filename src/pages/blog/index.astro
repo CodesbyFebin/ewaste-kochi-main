@@ -2,8 +2,10 @@
 import Layout from "../../layouts/Layout.astro";
 import Breadcrumbs from "../../components/Breadcrumbs.astro";
 import Faq from "../../components/Faq.astro";
+import LongformExpansion from "../../components/LongformExpansion.astro";
 import { SITE_URL, whatsappLink, telLink } from "../../data/site";
 import { BLOG_CLUSTERS } from "../../data/blogClusters";
+import { PILLAR_BLOG_PAGES } from "../../data/pillarBlogPages";
 
 const title = "E-Waste Recycling Blog Kochi | Pickup, Scrap Price, Battery & ITAD Guides";
 const description =
@@ -17,6 +19,12 @@ const breadcrumbItems = [
 
 // ── Featured live posts ──────────────────────────────────────────────────────
 const featuredPosts = [
+  {
+    title: "Ultimate Guide to E-Waste Recycling in Kochi",
+    href: "/blog/ultimate-guide-e-waste-recycling-kochi/",
+    excerpt: "A complete planning guide for electronics recycling, pickup preparation, data handling, battery safety and business disposal.",
+    cluster: "E-Waste Recycling Basics",
+  },
   {
     title: "Free E-Waste Pickup in Kochi",
     href: "/blog/free-e-waste-pickup-kochi/",
@@ -208,7 +216,10 @@ const jsonLd = [
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Featured E-Waste Guides",
-    itemListElement: featuredPosts.map((post, i) => ({
+    itemListElement: [...featuredPosts, ...PILLAR_BLOG_PAGES.map((page) => ({
+      title: page.title,
+      href: `/blog/${page.slug}/`,
+    }))].map((post, i) => ({
       "@type": "ListItem",
       position: i + 1,
       name: post.title,
@@ -256,6 +267,15 @@ const statusColor: Record<string, string> = {
         <a href="/recycling/" class="btn btn-outline">View Recycling Services</a>
         <a href="/battery-recycling/" class="btn btn-outline">Battery Recycling</a>
       </div>
+      <img
+        class="hero-image"
+        src="/images/blog-pillars/blog-hub.webp"
+        alt="Ewaste Kochi blog hub for recycling, pickup, battery and ITAD guides"
+        width="1200"
+        height="675"
+        loading="eager"
+        decoding="async"
+      />
     </div>
   </section>
 
@@ -284,6 +304,30 @@ const statusColor: Record<string, string> = {
           <strong class="post-title">{post.title}</strong>
           <p class="post-excerpt">{post.excerpt}</p>
           <span class="post-badge">Live Guide</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="pillar-heading">
+    <h2 id="pillar-heading">Expanded Pillar Guides</h2>
+    <p class="section-intro">
+      Long-form guides for the highest-value service clusters: pickup, batteries, resale, data
+      destruction, ITAD, device categories, preparation and corporate e-waste.
+    </p>
+    <div class="post-grid">
+      <a href="/blog/recycling-basics/" class="post-card">
+        <span class="post-cluster">Recycling Basics</span>
+        <strong class="post-title">E-Waste Recycling Basics</strong>
+        <p class="post-excerpt">The beginner pillar for what counts as e-waste, how pickup works, and how to recycle safely in Kochi.</p>
+        <span class="post-badge">Pillar Guide</span>
+      </a>
+      {PILLAR_BLOG_PAGES.map((page) => (
+        <a href={`/blog/${page.slug}/`} class="post-card">
+          <span class="post-cluster">{page.eyebrow}</span>
+          <strong class="post-title">{page.h1}</strong>
+          <p class="post-excerpt">{page.description}</p>
+          <span class="post-badge">Pillar Guide</span>
         </a>
       ))}
     </div>
@@ -355,6 +399,31 @@ const statusColor: Record<string, string> = {
     </div>
   </section>
 
+  <LongformExpansion
+    label="Ewaste Kochi blog hub"
+    audience="Kochi households, offices, apartment residents, IT teams and business owners using the blog to choose the right e-waste route"
+    localIntent="The hub serves Kochi, Ernakulam, Kakkanad, Kalamassery, Aluva and nearby Kochi-metro search intent, with wider Kerala pages treated as feasibility checks rather than guaranteed service promises."
+    items={["laptops", "phones", "batteries", "printers", "TVs", "servers", "cables", "office IT assets"]}
+    themes={[
+      "How to use the blog hub",
+      "Finding the right service guide",
+      "Understanding pickup intent",
+      "Understanding recycling intent",
+      "Understanding resale intent",
+      "Understanding data destruction intent",
+      "Understanding battery safety intent",
+      "Using location pages safely",
+      "Avoiding old pSEO confusion",
+      "Choosing between article and service pages",
+      "Preparing before you contact the team",
+      "How the hub supports AI answers",
+      "How the hub supports internal linking",
+      "How the hub supports crawl discovery",
+      "What not to infer from the blog",
+      "Next steps after reading",
+    ]}
+  />
+
   {/* ── Hub FAQ ───────────────────────────────────────────────────────────── */}
   <Faq items={hubFaqs} heading="Frequently Asked Questions About This Blog" />
 
@@ -389,6 +458,15 @@ const statusColor: Record<string, string> = {
   .hero-inner {
     max-width: 52rem;
     padding: 2.5rem 2rem;
+  }
+  .hero-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    margin-top: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255,255,255,0.24);
   }
   .blog-hero h1 {
     color: #fff;

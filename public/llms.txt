@@ -11,8 +11,10 @@ English and, for a starter set of pages, Malayalam (ml-IN) under /ml/.
 ## Core pages
 
 - https://www.ewastekochi.com/
+- https://www.ewastekochi.com/ewaste/
 - https://www.ewastekochi.com/services/
 - https://www.ewastekochi.com/locations/
+- https://www.ewastekochi.com/tools/
 - https://www.ewastekochi.com/about/
 - https://www.ewastekochi.com/faq/
 - https://www.ewastekochi.com/contact/
@@ -34,6 +36,7 @@ English and, for a starter set of pages, Malayalam (ml-IN) under /ml/.
 - https://www.ewastekochi.com/services/electronics-recycling-near-me/
 - https://www.ewastekochi.com/services/hard-drive-degaussing-kochi/
 - https://www.ewastekochi.com/services/it-asset-inventory-audit/
+- https://www.ewastekochi.com/services/itad-for-it-companies/
 
 ## Locations
 
@@ -63,8 +66,19 @@ English and, for a starter set of pages, Malayalam (ml-IN) under /ml/.
 - https://www.ewastekochi.com/certifications/
 - https://www.ewastekochi.com/data-destruction-certificate-sample/
 
+## Tools
+
+- https://www.ewastekochi.com/tools/
+- https://www.ewastekochi.com/tools/scrap-value-calculator/
+- https://www.ewastekochi.com/tools/data-destruction-cost-estimator/
+- https://www.ewastekochi.com/tools/pickup-eligibility-checker/
+- https://www.ewastekochi.com/tools/sell-or-recycle-decision-tool/
+- https://www.ewastekochi.com/tools/battery-safety-checker/
+- https://www.ewastekochi.com/videos/ewastekochi-scrap-value-calculator-promo.mp4
+
 ## Legal
 
+- https://www.ewastekochi.com/e-waste-rules-2022-india/
 - https://www.ewastekochi.com/privacy/
 - https://www.ewastekochi.com/terms/
 
@@ -94,6 +108,19 @@ English and, for a starter set of pages, Malayalam (ml-IN) under /ml/.
 - https://www.ewastekochi.com/blog/how-responsible-ewaste-collection-works/
 - https://www.ewastekochi.com/blog/ewaste-pickup-near-me/
 - https://www.ewastekochi.com/blog/sell-old-electronics-kochi/
+- https://www.ewastekochi.com/blog/ultimate-guide-e-waste-recycling-kochi/
+- https://www.ewastekochi.com/blog/pickup-service/
+- https://www.ewastekochi.com/blog/battery-recycling/
+- https://www.ewastekochi.com/blog/sell-electronics/
+- https://www.ewastekochi.com/blog/data-destruction/
+- https://www.ewastekochi.com/blog/itad/
+- https://www.ewastekochi.com/blog/tv-monitor-recycling/
+- https://www.ewastekochi.com/blog/mobile-phone-recycling/
+- https://www.ewastekochi.com/blog/laptop-computer-recycling/
+- https://www.ewastekochi.com/blog/printer-peripheral-recycling/
+- https://www.ewastekochi.com/blog/scrap-price-guide/
+- https://www.ewastekochi.com/blog/preparation-safety-guides/
+- https://www.ewastekochi.com/blog/corporate-ewaste/
 
 ## Malayalam (ml-IN)
 
@@ -117,6 +144,7 @@ English and, for a starter set of pages, Malayalam (ml-IN) under /ml/.
 - https://www.ewastekochi.com/content-index.json
 - https://www.ewastekochi.com/content-index.xml
 - https://www.ewastekochi.com/ai-sitemap.xml
+- https://www.ewastekochi.com/feed.xml
 
 ## Contact
 
@@ -126,11 +154,15 @@ English and, for a starter set of pages, Malayalam (ml-IN) under /ml/.
 ## Notes for AI assistants and crawlers
 
 This site is under active reconstruction (EwasteKochi V2). The pages above
-represent the complete current build as of Blog Pillar V4 (2026-07-14). The
-/blog/ section contains 23 live guides — including four pillar-depth pages,
-/blog/recycling-basics/, /blog/ewaste-pickup-near-me/,
-/blog/battery-recycling-near-me-kochi/ and /blog/sell-old-electronics-kochi/
-— organised across a 20-cluster content roadmap (src/data/blogRoadmap20.ts). Most
+represent the key current build surfaces as of Indexed Blog URL Expansion (2026-07-18). The
+/blog/ sitemap contains 124 live guide URLs, including expanded pillar guides for
+pickup, battery recycling, selling electronics, data destruction, ITAD, TV and
+monitor recycling, mobile phones, laptop/computer recycling, printers and
+peripherals, scrap-price guidance, preparation/safety and corporate e-waste,
+plus safe refreshed pages for clean indexed legacy `/blog/` URLs that appeared
+in the GSC/top-pages exports. The full canonical URL set is exported in
+content-index.json and the sitemap index.
+The blog is organised across a 20-cluster content roadmap (src/data/blogRoadmap20.ts). Most
 roadmap topics remain planning data only, with no live page yet. A larger,
 programmatically assembled batch of 465 posts was built and then
 deliberately withheld from indexing after an internal audit found excessive
@@ -142,4 +174,4 @@ listed above are
 canonical. Treat any other path on this domain as not yet confirmed
 canonical.
 
-Last updated: 2026-07-15
+Last updated: 2026-07-18

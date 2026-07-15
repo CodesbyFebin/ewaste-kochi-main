@@ -2,7 +2,9 @@
 import Layout from "../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
 import CtaBar from "../../../components/CtaBar.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
 import Faq from "../../../components/Faq.astro";
+import LongformExpansion from "../../../components/LongformExpansion.astro";
 import RelatedContent from "../../../components/RelatedContent.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
 
@@ -210,8 +212,25 @@ const faqItems = [
     scrap in Kochi — what counts as e-waste, why it matters, and exactly how
     pickup works.
   </p>
+  <img
+    class="pillar-image"
+    src="/images/blog-pillars/recycling-basics.webp"
+    alt="E-waste recycling basics guide for old electronics in Kochi"
+    width="1200"
+    height="675"
+    loading="eager"
+    decoding="async"
+  />
 
   <CtaBar whatsappMessage="Hi, I'd like to recycle old electronics in Kochi. Can you help?" />
+
+  <DirectAnswer heading="Quick answer">
+    <p>
+      E-waste recycling in Kochi starts by identifying old electronics, separating batteries
+      and data-bearing devices, sharing photos and location, then confirming whether the
+      right route is pickup, resale, data destruction or recycling.
+    </p>
+  </DirectAnswer>
 
   <div class="quick-facts">
     <p class="quick-facts-label">Quick facts</p>
@@ -274,6 +293,31 @@ const faqItems = [
       individually.
     </p>
   </section>
+
+  <LongformExpansion
+    label="E-waste recycling basics"
+    audience="Kochi residents, apartments, students, families, offices and first-time users trying to understand what to do with old electronics"
+    localIntent="The recycling-basics pillar answers Kochi and Ernakulam search intent first, then points wider Kerala district enquiries toward feasibility confirmation instead of a blanket pickup promise."
+    items={collectItems}
+    themes={[
+      "What counts as e-waste",
+      "Why electronics need a separate route",
+      "How doorstep pickup fits recycling",
+      "How reuse fits recycling",
+      "How resale fits recycling",
+      "How batteries change the process",
+      "How data changes the process",
+      "How offices should prepare",
+      "How households should prepare",
+      "How apartments should prepare",
+      "How damaged electronics should be described",
+      "What photos make clear",
+      "What happens after pickup",
+      "What questions to ask a collector",
+      "What to avoid before handover",
+      "How to start safely",
+    ]}
+  />
 
   <section>
     <h2>What Items Can Be Recycled</h2>
@@ -551,6 +595,14 @@ const faqItems = [
 
 <style>
   .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .pillar-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-border);
+    margin: 1rem 0 1.5rem;
+  }
   .quick-facts {
     padding: 1.1rem 1.25rem;
     border: 1px solid var(--color-border);

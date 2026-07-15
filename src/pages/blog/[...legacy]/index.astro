@@ -1,0 +1,225 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import LongformExpansion from "../../../components/LongformExpansion.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+import { LEGACY_INDEXED_BLOG_PAGES, type LegacyIndexedBlogPage } from "../../../data/legacyIndexedBlogPages";
+
+interface Props {
+  page: LegacyIndexedBlogPage;
+}
+
+export function getStaticPaths() {
+  return LEGACY_INDEXED_BLOG_PAGES.map((page) => ({
+    params: { legacy: page.path.replace(/^\/blog\//, "").replace(/\/$/, "") },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+const datePublished = "2026-07-18";
+const dateModified = "2026-07-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: page.topic, path: page.path },
+];
+
+const faqItems = [
+  {
+    q: `What is this ${page.topic.toLowerCase()} page for?`,
+    a: `This is a current, safe Ewaste Kochi guide for an indexed legacy URL about ${page.topic.toLowerCase()}. It preserves the useful search path while routing users toward current recycling, pickup, quote, data destruction or ITAD services.`,
+  },
+  {
+    q: "Does this page guarantee pickup?",
+    a: "No. Pickup feasibility depends on item type, quantity, condition and location. Share photos and location first so the team can confirm the right option.",
+  },
+  {
+    q: "Can I ask for a quote from this page?",
+    a: "Yes. Share item photos, working condition, quantity and location. Any estimate is preliminary until inspection confirms condition and current market factors.",
+  },
+  {
+    q: "Should I remove data before handover?",
+    a: "Yes, for laptops, phones, drives, servers and storage media. If you need help, ask about data destruction before pickup.",
+  },
+  {
+    q: "Are batteries handled separately?",
+    a: "Yes. Batteries should be separated and mentioned in advance, especially if swollen, leaking or damaged.",
+  },
+  {
+    q: "Is this legal advice?",
+    a: "No. Compliance information on this page is general educational guidance. Businesses should verify obligations with current official sources or a qualified advisor.",
+  },
+  {
+    q: "Why does the URL look like an older article?",
+    a: "Some URLs were already indexed before the current V2 cleanup. This page keeps the URL useful while replacing older generated content patterns with safer, current guidance.",
+  },
+  {
+    q: "Where should I go next?",
+    a: "Use the related service links on this page, or message Ewaste Kochi with your item list, photos and location for a practical next step.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: page.title,
+    description: page.description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${page.path}`,
+    image: `${SITE_URL}/images/blog-pillars/legacy-indexed-guide.webp`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${page.path}`,
+    name: page.title,
+    description: page.description,
+    dateModified,
+  },
+];
+---
+
+<Layout title={page.title} description={page.description} path={page.path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="legacy-guide">
+    <section class="legacy-hero">
+      <div>
+        <p class="eyebrow">Indexed legacy guide, safely refreshed</p>
+        <h1>{page.h1}</h1>
+        <p class="lede">{page.description}</p>
+      </div>
+      <img
+        src="/images/blog-pillars/legacy-indexed-guide.webp"
+        alt="Safe indexed e-waste guide for Kochi users"
+        width="1200"
+        height="675"
+        loading="eager"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        This indexed Ewaste Kochi guide keeps a known search URL live while giving current,
+        safer guidance. For {page.topic.toLowerCase()}, share item details, photos, condition
+        and location first so the right route can be confirmed.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage={`Hi, I found your guide about ${page.topic}. I need help with e-waste pickup or recycling.`} />
+
+    <section class="related-panel" aria-labelledby="related-heading">
+      <h2 id="related-heading">Current Service Links</h2>
+      <div class="related-grid">
+        {page.relatedLinks.map((link) => <a href={link.href}>{link.label}</a>)}
+      </div>
+    </section>
+
+    <LongformExpansion
+      label={page.topic}
+      audience={page.audience}
+      localIntent="This page is written for Kochi and Ernakulam search intent first. Wider Kerala district references should be treated as feasibility checks, not blanket service guarantees."
+      items={["laptops", "desktops", "phones", "batteries", "printers", "TVs", "servers", "hard drives", "cables", "mixed IT scrap"]}
+      themes={[
+        `Understanding ${page.topic}`,
+        `When ${page.topic} needs pickup`,
+        `When ${page.topic} needs recycling`,
+        `When ${page.topic} needs data handling`,
+        `When ${page.topic} needs battery safety`,
+        `How to prepare photos for ${page.topic}`,
+        `How to describe condition for ${page.topic}`,
+        `How quote expectations should work`,
+        `How Kochi location details affect the answer`,
+        `How homes should prepare`,
+        `How apartments should prepare`,
+        `How offices should prepare`,
+        `How business records may be planned`,
+        `How to avoid old generated-claim confusion`,
+        `How to choose a current Ewaste Kochi service`,
+        `How to message the team clearly`,
+        `What to do after pickup`,
+        `What to avoid before handover`,
+        `How this guide connects to the blog hub`,
+        `How this guide connects to service pages`,
+      ]}
+    />
+
+    <Faq items={faqItems} heading={`${page.topic} FAQs`} />
+  </article>
+</Layout>
+
+<style>
+  .legacy-guide {
+    display: grid;
+    gap: 1.75rem;
+  }
+  .legacy-hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3.25rem);
+    max-width: 13ch;
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.05rem;
+    max-width: 48rem;
+  }
+  .legacy-hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .related-panel {
+    padding: 1.1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .related-panel h2 {
+    margin-top: 0;
+  }
+  .related-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .related-grid a {
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-bg);
+    font-weight: 800;
+    text-decoration: none;
+  }
+  @media (min-width: 780px) {
+    .legacy-hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .related-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

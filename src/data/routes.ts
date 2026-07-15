@@ -5,6 +5,9 @@
 // commit as each new page template.
 
 import { SITE_URL } from "./site";
+import { PILLAR_BLOG_ROUTES } from "./pillarBlogPages";
+import { LEGACY_INDEXED_BLOG_ROUTES } from "./legacyIndexedBlogPages";
+import { TOOL_ROUTES } from "./toolPages";
 
 export interface RouteEntry {
   path: string;
@@ -207,6 +210,17 @@ export const ROUTES: RouteEntry[] = [
     lang: "en-IN",
   },
   {
+    path: "/locations/smart-city-kochi/itad/",
+    changefreq: "monthly",
+    priority: 0.55,
+    title: "ITAD Services for Smart City Kochi Offices | Asset Disposition",
+    description:
+      "IT asset disposition for Smart City Kochi businesses - structured collection, asset lists, data destruction and documentation support for office hardware refreshes.",
+    type: "location",
+    sitemapGroup: "locations",
+    lang: "en-IN",
+  },
+  {
     path: "/locations/kothamangalam/",
     changefreq: "monthly",
     priority: 0.6,
@@ -279,6 +293,17 @@ export const ROUTES: RouteEntry[] = [
     title: "E-Waste Pickup in Willingdon Island | Business IT Support",
     description:
       "E-waste pickup checks for Willingdon Island offices, facilities and nearby homes, including IT assets, batteries and data-bearing devices.",
+    type: "location",
+    sitemapGroup: "locations",
+    lang: "en-IN",
+  },
+  {
+    path: "/locations/willingdon-island/data-destruction/",
+    changefreq: "monthly",
+    priority: 0.55,
+    title: "Data Destruction for Willingdon Island Offices | Secure Drive Handling",
+    description:
+      "Data destruction planning for Willingdon Island offices, port-linked businesses and facilities - wiping, degaussing, shredding choices and documentation discussions.",
     type: "location",
     sitemapGroup: "locations",
     lang: "en-IN",
@@ -705,6 +730,20 @@ export const ROUTES: RouteEntry[] = [
     indexable: true,
   },
   {
+    path: "/blog/ultimate-guide-e-waste-recycling-kochi/",
+    changefreq: "monthly",
+    priority: 0.75,
+    title: "Ultimate Guide to E-Waste Recycling in Kochi | Ewaste Kochi",
+    description:
+      "Complete Kochi guide to e-waste recycling: what counts as e-waste, how recycling works, pickup preparation, data handling, battery safety and business planning.",
+    type: "blog",
+    sitemapGroup: "blog",
+    lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
+  },
+  {
     path: "/blog/sell-old-electronics-kochi/",
     changefreq: "monthly",
     priority: 0.6,
@@ -718,6 +757,42 @@ export const ROUTES: RouteEntry[] = [
     contentSource: "manual",
     indexable: true,
   },
+  ...PILLAR_BLOG_ROUTES,
+  ...LEGACY_INDEXED_BLOG_ROUTES,
+  {
+    path: "/ewaste/",
+    changefreq: "monthly",
+    priority: 0.8,
+    title: "What Is E-Waste? Kochi Guide to Electronics, Batteries & IT Scrap",
+    description:
+      "Educational guide to e-waste in Kochi: what counts as electronic waste, how to prepare items, when recycling, pickup, battery handling or data destruction may be needed.",
+    type: "core",
+    sitemapGroup: "core",
+    lang: "en-IN",
+  },
+  {
+    path: "/e-waste-rules-2022-india/",
+    changefreq: "monthly",
+    priority: 0.6,
+    title: "E-Waste Rules 2022 India | Kochi Business Disposal Guide",
+    description:
+      "General educational guide to India's e-waste rules for Kochi businesses: sorting, records, data-bearing devices, batteries, pickup planning and compliance questions.",
+    type: "legal",
+    sitemapGroup: "legal",
+    lang: "en-IN",
+  },
+  {
+    path: "/tools/",
+    changefreq: "monthly",
+    priority: 0.7,
+    title: "E-Waste Tools & Calculators Kochi | Ewaste Kochi",
+    description:
+      "Planning tools for e-waste scrap value, data destruction scope, pickup feasibility, sell-or-recycle decisions and battery safety in Kochi.",
+    type: "core",
+    sitemapGroup: "core",
+    lang: "en-IN",
+  },
+  ...TOOL_ROUTES,
   {
     path: "/services/",
     changefreq: "monthly",
@@ -781,7 +856,7 @@ export const ROUTES: RouteEntry[] = [
     priority: 0.9,
     title: "E-Waste Pickup in Kochi | Doorstep Collection for Electronics",
     description:
-      "Schedule free doorstep e-waste pickup in Kochi for laptops, batteries, and IT hardware. Same-day and next-day slots available across Ernakulam district.",
+      "Schedule doorstep e-waste pickup in Kochi for laptops, batteries, and IT hardware. Timing is confirmed after item, area and route review.",
     type: "service",
     sitemapGroup: "services",
     lang: "en-IN",
@@ -950,6 +1025,17 @@ export const ROUTES: RouteEntry[] = [
     title: "IT Asset Inventory Audit in Kochi | Pre-Disposal Asset Tracking",
     description:
       "IT asset inventory audits in Kochi ahead of disposal — serial number capture, asset tagging, chain-of-custody records, and reporting for ITAD projects.",
+    type: "service",
+    sitemapGroup: "services",
+    lang: "en-IN",
+  },
+  {
+    path: "/services/itad-for-it-companies/",
+    changefreq: "monthly",
+    priority: 0.75,
+    title: "ITAD Services for IT Companies in Kochi | Asset Disposal Planning",
+    description:
+      "ITAD planning for Kochi IT companies: asset inventory, data destruction choices, pickup coordination, resale review, recycling and documentation discussions.",
     type: "service",
     sitemapGroup: "services",
     lang: "en-IN",

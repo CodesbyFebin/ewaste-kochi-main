@@ -1,0 +1,246 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../components/DirectAnswer.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import Faq from "../../components/Faq.astro";
+import LongformExpansion from "../../components/LongformExpansion.astro";
+import { BUSINESS, SITE_URL } from "../../data/site";
+
+const title = "What Is E-Waste? Kochi Guide to Electronics, Batteries & IT Scrap";
+const description =
+  "Educational guide to e-waste in Kochi: what counts as electronic waste, how to prepare items, when recycling, pickup, battery handling or data destruction may be needed.";
+const path = "/ewaste/";
+const lastUpdated = "2026-07-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Guide", path },
+];
+
+const faqItems = [
+  {
+    q: "What is e-waste?",
+    a: "E-waste means end-of-life or unwanted electrical and electronic items such as laptops, phones, batteries, cables, printers, monitors, TVs, servers, network equipment and small appliances.",
+  },
+  {
+    q: "Can I put e-waste in normal household waste?",
+    a: "No. Electronics can contain batteries, metals, plastics, circuit boards and data storage, so they should be separated and routed for appropriate recycling or handling.",
+  },
+  {
+    q: "How do I ask Ewaste Kochi about e-waste pickup?",
+    a: "Share item names, quantity, photos, working condition, location and any battery or data concern. Pickup feasibility and the right handling route are confirmed after review.",
+  },
+  {
+    q: "Does every e-waste item have resale value?",
+    a: "No. Working or repairable devices may have resale potential, while damaged, obsolete or incomplete items may be better suited to recycling. Any estimate depends on inspection.",
+  },
+  {
+    q: "What should businesses do before e-waste handover?",
+    a: "Businesses should prepare an inventory, identify data-bearing devices, separate batteries, note access instructions and confirm what records are needed before collection.",
+  },
+  {
+    q: "Is this page legal advice?",
+    a: "No. This page gives general educational guidance. Businesses should verify current legal obligations with official sources or a qualified advisor.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+    image: `${SITE_URL}/images/blog-pillars/recycling-basics.webp`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="ewaste-guide">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Educational pillar</p>
+        <h1>What Is E-Waste?</h1>
+        <p class="lede">
+          E-waste is the everyday electronics problem hiding in drawers,
+          storerooms, IT racks and apartment cupboards. This guide explains
+          what counts as e-waste in Kochi, how to sort it, and which Ewaste
+          Kochi service path may fit the item.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/recycling-basics.webp"
+        alt="Sorted electronic waste items prepared for responsible recycling"
+        width="1200"
+        height="675"
+        loading="eager"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        E-waste includes unwanted electronics, batteries and IT hardware. In
+        Kochi, the safest first step is to separate batteries and data-bearing
+        devices, share photos and location, then confirm whether recycling,
+        pickup, resale review, data destruction or ITAD is the right route.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="Hi, I need help identifying and handling e-waste in Kochi." />
+
+    <section>
+      <h2>What Counts as E-Waste</h2>
+      <p>
+        E-waste is a practical category, not just a technical label. If an item
+        uses electricity, stores data, contains a circuit board, includes a
+        rechargeable battery, or connects to an IT system, it should be checked
+        before disposal. Common Kochi enquiries include laptops, desktops,
+        monitors, printers, routers, CCTV equipment, mobile phones, tablets,
+        power banks, UPS units, inverter batteries, server hardware, cables and
+        old televisions.
+      </p>
+      <p>
+        The important point is separation. Mixed household waste hides risk:
+        batteries can be damaged, screens can break, drives can leave data
+        behind, and usable devices may lose resale or reuse potential. A small
+        amount of sorting before pickup usually produces a better service
+        decision.
+      </p>
+    </section>
+
+    <section class="link-grid" aria-labelledby="ewaste-next-links">
+      <h2 id="ewaste-next-links">Choose the Right Next Page</h2>
+      <a href="/recycling/">
+        <strong>Recycling</strong>
+        <span>For old electronics that should be routed into material recovery.</span>
+      </a>
+      <a href="/pickup/">
+        <strong>Pickup</strong>
+        <span>For homes, apartments, shops and offices that need collection support.</span>
+      </a>
+      <a href="/battery-recycling/">
+        <strong>Battery recycling</strong>
+        <span>For UPS, inverter, laptop, mobile, lithium and power-bank batteries.</span>
+      </a>
+      <a href="/data-destruction/">
+        <strong>Data destruction</strong>
+        <span>For laptops, phones, hard drives, SSDs, servers and storage media.</span>
+      </a>
+      <a href="/sell-electronics/">
+        <strong>Sell electronics</strong>
+        <span>For working or repairable devices that may deserve a condition-based review.</span>
+      </a>
+      <a href="/itad/">
+        <strong>ITAD</strong>
+        <span>For offices planning asset retirement, records and data handling.</span>
+      </a>
+    </section>
+
+    <LongformExpansion
+      label="E-waste identification and handling"
+      audience="Kochi households, apartment residents, shops, IT offices, schools, facilities teams and small businesses"
+      localIntent="Kochi searches often mix item questions, pickup questions and price questions in the same enquiry. A responsible answer separates those intents before promising an outcome."
+      items={["laptops", "phones", "printers", "monitors", "TVs", "UPS units", "inverter batteries", "servers", "hard drives", "cables"]}
+      themes={[
+        "How to identify e-waste at home",
+        "How offices should sort electronics before disposal",
+        "Why batteries should be separated early",
+        "Why data-bearing devices need a different path",
+        "When resale review is better than recycling",
+        "When recycling is the cleaner decision",
+        "How apartment pickups should be described",
+        "How business pickups should be documented",
+        "How to send useful photos before collection",
+        "How Kochi location details affect feasibility",
+        "How to avoid unsafe old generated claims",
+        "How this guide connects to Ewaste Kochi services",
+      ]}
+    />
+
+    <Faq items={faqItems} heading="E-Waste FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .ewaste-guide {
+    display: grid;
+    gap: 1.75rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3.35rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.8rem;
+  }
+  .link-grid h2 {
+    margin-bottom: 0;
+  }
+  .link-grid a {
+    display: grid;
+    gap: 0.25rem;
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+  }
+  .link-grid span {
+    color: var(--color-muted);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .link-grid h2 {
+      grid-column: 1 / -1;
+    }
+  }
+</style>

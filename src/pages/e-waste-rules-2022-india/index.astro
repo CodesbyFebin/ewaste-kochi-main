@@ -1,0 +1,216 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../components/DirectAnswer.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import Faq from "../../components/Faq.astro";
+import LongformExpansion from "../../components/LongformExpansion.astro";
+import { BUSINESS, SITE_URL } from "../../data/site";
+
+const title = "E-Waste Rules 2022 India | Kochi Business Disposal Guide";
+const description =
+  "General educational guide to India's e-waste rules for Kochi businesses: sorting, records, data-bearing devices, batteries, pickup planning and compliance questions.";
+const path = "/e-waste-rules-2022-india/";
+const lastUpdated = "2026-07-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Rules 2022 India", path },
+];
+
+const faqItems = [
+  {
+    q: "Is this an official legal interpretation of the E-Waste Rules?",
+    a: "No. This page is general educational guidance for disposal planning. Businesses should check current official sources or consult a qualified advisor for legal interpretation.",
+  },
+  {
+    q: "What should a Kochi business prepare before disposing IT assets?",
+    a: "Prepare an asset list, identify storage media, separate batteries, note device condition, decide whether records are needed and confirm the handling route before pickup.",
+  },
+  {
+    q: "Do batteries need a separate disposal plan?",
+    a: "Yes. UPS, inverter, laptop, mobile and lithium batteries should be identified and separated because they can require different handling from general electronics.",
+  },
+  {
+    q: "Should data destruction be planned before recycling?",
+    a: "Yes. Laptops, phones, drives, servers and storage media should be reviewed for data before leaving your control.",
+  },
+  {
+    q: "Can Ewaste Kochi provide documentation?",
+    a: "Documentation support may be discussed for business collections depending on the agreed service and item scope. Ask before pickup so expectations are clear.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+    image: `${SITE_URL}/images/blog-pillars/corporate-ewaste.webp`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="rules-guide">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Compliance education</p>
+        <h1>E-Waste Rules 2022 India</h1>
+        <p class="lede">
+          This Kochi-focused guide helps businesses turn e-waste compliance
+          questions into a practical disposal checklist. It does not replace
+          official guidance, but it does explain what to sort, document and ask
+          before electronics leave your premises.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/corporate-ewaste.webp"
+        alt="Office electronics prepared for business e-waste disposal planning"
+        width="1200"
+        height="675"
+        loading="eager"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        Businesses should treat e-waste disposal as a planned workflow: list
+        assets, identify data-bearing devices, separate batteries, confirm the
+        service route, and ask what records are available before pickup. This
+        page is educational and not legal advice.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="Hi, I need help planning business e-waste disposal under current rules." />
+
+    <section class="process" aria-labelledby="rules-process">
+      <h2 id="rules-process">Business Disposal Checklist</h2>
+      <ol>
+        <li>Prepare an inventory with item type, quantity and condition.</li>
+        <li>Flag laptops, phones, drives, servers and storage media for data review.</li>
+        <li>Separate UPS, inverter, lithium and device batteries.</li>
+        <li>Share photos and location before scheduling collection.</li>
+        <li>Ask about records or documentation before pickup if your team needs them.</li>
+        <li>Route usable assets, scrap electronics and batteries through the right service path.</li>
+      </ol>
+    </section>
+
+    <section class="link-grid" aria-labelledby="rules-links">
+      <h2 id="rules-links">Related Current Pages</h2>
+      <a href="/itad/">ITAD for business asset retirement</a>
+      <a href="/data-destruction/">Data destruction before disposal</a>
+      <a href="/battery-recycling/">Battery recycling and preparation</a>
+      <a href="/blog/corporate-ewaste/">Corporate e-waste pillar guide</a>
+      <a href="/blog/data-destruction/">Data destruction pillar guide</a>
+      <a href="/contact/">Ask a disposal question</a>
+    </section>
+
+    <LongformExpansion
+      label="E-waste rules and business disposal planning"
+      audience="Kochi business owners, IT administrators, facility managers, finance teams and compliance coordinators"
+      localIntent="Kochi and Kerala businesses often need a practical operational checklist before they can confirm whether recycling, ITAD, data destruction, battery handling or documentation support is the right next step."
+      items={["laptops", "desktops", "servers", "network gear", "hard drives", "SSDs", "UPS batteries", "printers", "monitors", "phones"]}
+      themes={[
+        "How businesses should read disposal obligations",
+        "Why asset lists matter before pickup",
+        "How to separate data-bearing devices",
+        "How to separate batteries and power equipment",
+        "How to plan ITAD without overclaiming compliance",
+        "How to ask for records before collection",
+        "How to coordinate finance and IT teams",
+        "How to reduce informal disposal risk",
+        "How to prepare offices in Kochi",
+        "How this guide connects to current service pages",
+      ]}
+    />
+
+    <Faq items={faqItems} heading="E-Waste Rules FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .rules-guide {
+    display: grid;
+    gap: 1.75rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3.25rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .process ol {
+    padding: 1rem 1rem 1rem 2rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid h2 {
+    margin-bottom: 0;
+  }
+  .link-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    font-weight: 800;
+    text-decoration: none;
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .link-grid h2 {
+      grid-column: 1 / -1;
+    }
+  }
+</style>

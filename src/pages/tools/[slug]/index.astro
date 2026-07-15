@@ -1,0 +1,404 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import ScrapCalculator from "../../../components/ScrapCalculator.astro";
+import { SITE_URL } from "../../../data/site";
+import { TOOL_PAGES, type ToolPage } from "../../../data/toolPages";
+
+interface Props {
+  page: ToolPage;
+}
+
+export function getStaticPaths() {
+  return TOOL_PAGES.map((page) => ({
+    params: { slug: page.slug },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+const path = `/tools/${page.slug}/`;
+const lastUpdated = "2026-07-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Tools", path: "/tools/" },
+  { name: page.h1, path },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}`,
+    name: page.title,
+    description: page.description,
+    dateModified: lastUpdated,
+  },
+];
+---
+
+<Layout title={page.title} description={page.description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="tool-page">
+    <section class="tool-hero">
+      <p class="eyebrow">{page.eyebrow}</p>
+      <h1>{page.h1}</h1>
+      <p class="lede">{page.description}</p>
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>{page.quickAnswer}</p>
+    </DirectAnswer>
+
+    {page.toolType === "scrap" ? (
+      <>
+        <section class="promo-video" aria-labelledby="promo-video-heading">
+          <div>
+            <p class="eyebrow">Promo video</p>
+            <h2 id="promo-video-heading">How the calculator helps</h2>
+            <p>
+              Use the calculator to prepare a clearer WhatsApp enquiry. The
+              estimate is only a planning band; final value still depends on
+              photos, condition, quantity, location and inspection.
+            </p>
+          </div>
+          <video
+            src="/videos/ewastekochi-scrap-value-calculator-promo.mp4"
+            width="1280"
+            height="720"
+            controls
+            preload="metadata"
+            playsinline
+          >
+            Your browser does not support the video tag.
+          </video>
+        </section>
+        <ScrapCalculator />
+      </>
+    ) : (
+      <section class="tool-panel" aria-labelledby="tool-heading">
+        <div>
+          <h2 id="tool-heading">Enter Your Details</h2>
+          <p>
+            Keep the answer practical: choose the closest option, then send photos
+            and location if you want the team to confirm the real service route.
+          </p>
+        </div>
+
+        <form class="tool-form" data-tool={page.toolType}>
+          {page.questions.map((question) => (
+            <label>
+              <span>{question.label}</span>
+              {question.type === "select" ? (
+                <select name={question.id}>
+                  {question.options?.map((option) => <option value={option.value}>{option.label}</option>)}
+                </select>
+              ) : question.type === "number" ? (
+                <input
+                  type="number"
+                  name={question.id}
+                  min={question.min}
+                  max={question.max}
+                  value={question.placeholder ?? "1"}
+                  inputmode="numeric"
+                />
+              ) : (
+                <input type="text" name={question.id} placeholder={question.placeholder} />
+              )}
+            </label>
+          ))}
+          <button type="submit">Show guidance</button>
+        </form>
+
+        <output class="tool-result" aria-live="polite">
+          <strong>Result will appear here.</strong>
+          <span>Choose the details above and run the tool.</span>
+        </output>
+      </section>
+    )}
+
+    <section class="next-links" aria-labelledby="next-links-heading">
+      <h2 id="next-links-heading">Useful Next Pages</h2>
+      <div>
+        {page.relatedLinks.map((link) => <a href={link.href}>{link.label}</a>)}
+      </div>
+    </section>
+
+    <CtaBar whatsappMessage={page.ctaMessage} />
+
+    <Faq items={page.faqs} heading={`${page.h1} FAQs`} />
+  </article>
+</Layout>
+
+<script>
+  type ToolKey = "scrap" | "data" | "pickup" | "decision" | "battery";
+  type Resolver = (score: number, values: string[]) => [string, string];
+
+  const scoreValue = (value: string): number => {
+    if (["high", "sell", "bulk", "records", "data"].includes(value)) return 2;
+    if (["medium", "needs-check", "near", "battery"].includes(value)) return 1;
+    if (["very-low", "recycle"].includes(value)) return -1;
+    return 0;
+  };
+
+  const quantityBand = (quantity: number): number => {
+    if (quantity >= 25) return 2;
+    if (quantity >= 5) return 1;
+    return 0;
+  };
+
+  const messages: Record<ToolKey, Resolver> = {
+    scrap(score: number) {
+      if (score >= 5) {
+        return [
+          "Higher quote potential",
+          "This looks worth a condition-based resale or scrap review. Send clear photos, model details, accessories and location before expecting a final quote.",
+        ];
+      }
+      if (score >= 2) {
+        return [
+          "Moderate quote potential",
+          "This may still have value, but condition and inspection will matter. Include working status, item count and any data concern when you message.",
+        ];
+      }
+      return [
+        "Recycling-first enquiry",
+        "This looks more like a recycling or low-value scrap enquiry. Photos still help confirm whether any part has resale or recovery potential.",
+      ];
+    },
+    data(score: number) {
+      if (score >= 5) {
+        return [
+          "Detailed data destruction planning needed",
+          "Prepare an asset list, identify media types and ask about records before pickup. Mixed media, SSDs, servers and documentation needs add handling complexity.",
+        ];
+      }
+      if (score >= 2) {
+        return [
+          "Standard data handling review",
+          "Discuss method choice before collection. The team will need media count, device type and whether records are required.",
+        ];
+      }
+      return [
+        "Simple review may be enough",
+        "A smaller or simpler set may be straightforward, but confirm the media type and desired method before handover.",
+      ];
+    },
+    pickup(score: number) {
+      if (score >= 5) {
+        return [
+          "Needs feasibility review",
+          "This request has location, access, quantity or safety details that should be reviewed before scheduling. Send photos, address area and item count.",
+        ];
+      }
+      if (score >= 2) {
+        return [
+          "Likely workable after confirmation",
+          "This looks practical to review for pickup. The team still needs photos, area and access details before confirming a slot.",
+        ];
+      }
+      return [
+        "Simple pickup enquiry",
+        "This looks like a simpler enquiry. Share photos, item count and area so the team can confirm the current route fit.",
+      ];
+    },
+    decision(score: number, values: string[]) {
+      if (values.includes("data")) {
+        return [
+          "Handle data before deciding",
+          "Plan data removal or destruction first. After that, working devices can be reviewed for resale and damaged devices can be routed to recycling.",
+        ];
+      }
+      if (score >= 4) {
+        return [
+          "Resale review makes sense",
+          "The device may deserve a condition-based quote. Send photos, model details, age, accessories and location.",
+        ];
+      }
+      if (score <= 0) {
+        return [
+          "Recycling may be cleaner",
+          "The answers point toward recycling or parts recovery rather than resale. Photos can still confirm the right route.",
+        ];
+      }
+      return [
+        "Needs condition review",
+        "This sits between resale and recycling. A photo-based review is the best next step.",
+      ];
+    },
+    battery(score: number, values: string[]) {
+      if (values.includes("high")) {
+        return [
+          "Use extra battery caution",
+          "Separate the battery, keep it dry and away from heat, and do not press, puncture or charge it. Send photos before pickup guidance.",
+        ];
+      }
+      if (score >= 2) {
+        return [
+          "Separate before pickup",
+          "Mention the battery type and count in advance. Keep batteries separate from mixed electronics and share condition photos.",
+        ];
+      }
+      return [
+        "Basic preparation",
+        "Keep the battery dry, separated and visible in photos. Mention it before collection so it is routed correctly.",
+      ];
+    },
+  };
+
+  document.querySelectorAll<HTMLFormElement>(".tool-form").forEach((form) => {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const data = new FormData(form);
+      const values = Array.from(data.values()).map(String);
+      const quantity = Number(values.find((value) => /^\d+$/.test(value)) ?? 1);
+      const score = values.reduce((total, value) => total + scoreValue(value), 0) + quantityBand(quantity);
+      const toolValue = form.getAttribute("data-tool");
+      const tool: ToolKey = toolValue && toolValue in messages ? (toolValue as ToolKey) : "pickup";
+      const result = form.parentElement?.querySelector(".tool-result");
+      const resolver = messages[tool];
+      const [heading, text] = resolver(score, values);
+      if (result) {
+        result.innerHTML = `<strong>${heading}</strong><span>${text}</span>`;
+      }
+    });
+  });
+</script>
+
+<style>
+  .tool-page {
+    display: grid;
+    gap: 1.75rem;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3.25rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .tool-panel {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .promo-video {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .promo-video h2 {
+    margin: 0;
+  }
+  .promo-video p {
+    color: var(--color-muted);
+  }
+  .promo-video video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: #000;
+  }
+  .tool-panel h2 {
+    margin: 0;
+  }
+  .tool-panel p {
+    color: var(--color-muted);
+  }
+  .tool-form {
+    display: grid;
+    gap: 0.9rem;
+  }
+  .tool-form label {
+    display: grid;
+    gap: 0.35rem;
+    font-weight: 800;
+  }
+  .tool-form select,
+  .tool-form input {
+    min-height: 44px;
+    width: 100%;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font: inherit;
+  }
+  .tool-form button {
+    min-height: 44px;
+    border: 0;
+    border-radius: 0.5rem;
+    background: var(--color-primary);
+    color: #fff;
+    font: inherit;
+    font-weight: 900;
+    cursor: pointer;
+  }
+  .tool-result {
+    display: grid;
+    gap: 0.25rem;
+    min-height: 6rem;
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-bg);
+  }
+  .tool-result span {
+    color: var(--color-muted);
+  }
+  .next-links {
+    margin-block: 1rem;
+  }
+  .next-links div {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .next-links a {
+    min-height: 44px;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    font-weight: 800;
+    text-decoration: none;
+  }
+  @media (min-width: 760px) {
+    .promo-video {
+      grid-template-columns: minmax(0, 0.8fr) minmax(360px, 1.2fr);
+      align-items: center;
+    }
+    .tool-panel {
+      grid-template-columns: minmax(0, 0.8fr) minmax(320px, 1fr);
+    }
+    .tool-result {
+      grid-column: 1 / -1;
+    }
+    .next-links div {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

@@ -1,0 +1,316 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+import { PILLAR_BLOG_PAGES, type PillarBlogPage } from "../../../data/pillarBlogPages";
+
+interface Props {
+  pillar: PillarBlogPage;
+}
+
+export function getStaticPaths() {
+  return PILLAR_BLOG_PAGES.map((pillar) => ({
+    params: { slug: pillar.slug },
+    props: { pillar },
+  }));
+}
+
+const { pillar } = Astro.props;
+const path = `/blog/${pillar.slug}/`;
+const datePublished = "2026-07-18";
+const dateModified = "2026-07-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: pillar.h1, path },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: pillar.title,
+    description: pillar.description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+    image: `${SITE_URL}${pillar.heroImage}`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}`,
+    name: pillar.title,
+    description: pillar.description,
+    dateModified,
+  },
+];
+
+const localAreas = [
+  "Kochi city",
+  "Ernakulam",
+  "Kakkanad",
+  "Kalamassery",
+  "Aluva",
+  "Vyttila",
+  "Edappally",
+  "Thrippunithura",
+];
+
+function sectionParagraphs(theme: string, index: number): string[] {
+  return [
+    `${theme} matters because ${pillar.serviceLabel.toLowerCase()} decisions are rarely just about removing unwanted electronics. The safer path is to understand the device type, condition, location and data or battery risk before anything leaves your home or office. For ${pillar.audience}, a little preparation prevents confused pickup requests, wrong quote expectations and unsafe handover.`,
+    `For ${pillar.localIntent}, the practical starting point is simple: write a short item list, add clear photos and mention anything unusual. If the request includes ${pillar.itemTypes.slice(0, 4).join(", ")} or similar items, those details help the team decide whether the route is recycling, resale review, data destruction, battery handling or an ITAD-style business pickup.`,
+    `The safest version of ${theme.toLowerCase()} avoids big promises. Pickup, price and documentation can vary by item type, quantity, working condition and access details. Ewaste Kochi uses a confirmation-first flow: the team reviews your message, clarifies the service route and then schedules the next step when the request is realistic for the service area.`,
+    `A useful rule is to keep the highest-risk items visible instead of hiding them inside a mixed box. Batteries, cracked screens, drives, phones, laptops and servers should be named directly. That makes ${pillar.handlingFocus} easier and gives both sides a shared understanding before the pickup slot is agreed.`,
+    `If you are comparing options, use this chapter as a decision checkpoint rather than a sales promise. Ask whether the item should be reused, sold, recycled, destroyed for data safety, or held back until more information is available. That slower, cleaner decision is better for search users, customers and the business than publishing a fake guarantee.`,
+    `For a first message, say: "I am in ${localAreas[index % localAreas.length]}; I have ${pillar.itemTypes.slice(0, 3).join(", ")}; here are photos; please confirm the best route." That one sentence gives enough context to start a useful conversation without forcing the customer to understand the entire recycling chain.`,
+    `For ${pillar.serviceLabel.toLowerCase()}, the best customer experience is not a rushed yes or no. It is a clean handoff: the customer explains the items, Ewaste Kochi checks the practical constraints, and both sides understand what will happen next. This is especially important when a request crosses service categories, such as ${pillar.itemTypes[0]} with batteries, storage media, accessories and possible resale value in the same pickup.`,
+    `Use the guidance here as a repeatable operating note. If the request is small, it helps the customer prepare quickly. If the request is a business lot, it helps the team ask for inventory, access and data details early. If the request is outside the usual Kochi-metro pattern, it keeps the language honest by asking for feasibility confirmation instead of implying a guaranteed doorstep route.`,
+  ];
+}
+
+const checklistItems = [
+  `List the items clearly, including ${pillar.itemTypes.slice(0, 5).join(", ")} if relevant.`,
+  "Share photos from more than one angle, especially for damage, swelling, missing parts or heavy equipment.",
+  "Mention location, floor, lift access, parking or loading restrictions before the team confirms a slot.",
+  "Separate batteries and data-bearing devices from general accessories wherever possible.",
+  "Ask whether the route is recycling, resale review, data destruction, ITAD or a mixed pickup.",
+  "Treat any price as preliminary until physical inspection confirms condition and quantity.",
+];
+---
+
+<Layout title={pillar.title} description={pillar.description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="pillar-article">
+    <section class="pillar-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">{pillar.eyebrow}</p>
+        <h1>{pillar.h1}</h1>
+        <p class="lede">{pillar.description}</p>
+        <div class="hero-actions">
+          <a href={pillar.serviceHref} class="btn primary">View {pillar.serviceLabel}</a>
+          <a href="/feed.xml" class="btn secondary">RSS Feed</a>
+        </div>
+      </div>
+      <img src={pillar.heroImage} alt={pillar.heroAlt} width="1200" height="675" loading="eager" decoding="async" />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>{pillar.quickAnswer}</p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage={pillar.ctaMessage} />
+
+    <nav class="toc" aria-labelledby="toc-heading">
+      <h2 id="toc-heading">On this page</h2>
+      <ol>
+        {pillar.sectionThemes.map((theme, index) => <li><a href={`#section-${index + 1}`}>{theme}</a></li>)}
+      </ol>
+    </nav>
+
+    <section class="snapshot" aria-labelledby="snapshot-heading">
+      <h2 id="snapshot-heading">Service Snapshot</h2>
+      <div class="snapshot-grid">
+        <div>
+          <h3>Best for</h3>
+          <p>{pillar.audience}.</p>
+        </div>
+        <div>
+          <h3>Common items</h3>
+          <p>{pillar.itemTypes.join(", ")}.</p>
+        </div>
+        <div>
+          <h3>Local intent</h3>
+          <p>{pillar.localIntent}.</p>
+        </div>
+        <div>
+          <h3>Safety focus</h3>
+          <p>{pillar.handlingFocus}.</p>
+        </div>
+      </div>
+    </section>
+
+    {pillar.sectionThemes.map((theme, index) => (
+      <section class="long-section" id={`section-${index + 1}`}>
+        <p class="section-kicker">Chapter {index + 1}</p>
+        <h2>{theme}</h2>
+        {sectionParagraphs(theme, index).map((paragraph) => <p>{paragraph}</p>)}
+        <div class="chapter-panel">
+          <h3>Practical checklist</h3>
+          <ul>
+            {checklistItems.map((item) => <li>{item}</li>)}
+          </ul>
+        </div>
+      </section>
+    ))}
+
+    <section class="related-panel" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Ewaste Kochi Pages</h2>
+      <div class="related-grid">
+        {pillar.relatedLinks.map((link) => (
+          <a href={link.href}>{link.label}</a>
+        ))}
+      </div>
+    </section>
+
+    <Faq items={pillar.faqs} heading={`${pillar.serviceLabel} FAQs`} />
+  </article>
+</Layout>
+
+<style>
+  .pillar-article {
+    display: grid;
+    gap: 1.75rem;
+  }
+  .pillar-hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  .hero-copy {
+    display: grid;
+    gap: 0.85rem;
+  }
+  .eyebrow,
+  .section-kicker {
+    margin: 0;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3.3rem);
+    max-width: 12ch;
+  }
+  .lede {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 1.05rem;
+    max-width: 48rem;
+  }
+  .pillar-hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+  }
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0.72rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 800;
+    text-decoration: none;
+  }
+  .btn.primary {
+    background: var(--color-primary);
+    color: #fff;
+  }
+  .btn.secondary {
+    border: 1px solid var(--color-border);
+    color: var(--color-primary);
+    background: var(--color-surface);
+  }
+  .toc,
+  .snapshot,
+  .related-panel,
+  .chapter-panel {
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .toc,
+  .snapshot,
+  .related-panel {
+    padding: 1.1rem;
+  }
+  .toc h2,
+  .snapshot h2,
+  .related-panel h2 {
+    margin-top: 0;
+  }
+  .toc ol {
+    columns: 1;
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+  .toc li {
+    break-inside: avoid;
+    margin-bottom: 0.35rem;
+  }
+  .snapshot-grid,
+  .related-grid {
+    display: grid;
+    gap: 1rem;
+  }
+  .snapshot-grid h3 {
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+  }
+  .snapshot-grid p {
+    margin: 0;
+    color: var(--color-muted);
+  }
+  .long-section {
+    scroll-margin-top: 1rem;
+  }
+  .long-section h2 {
+    margin-top: 0.25rem;
+  }
+  .long-section p {
+    max-width: 62rem;
+  }
+  .chapter-panel {
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  .chapter-panel h3 {
+    margin-top: 0;
+    font-size: 1rem;
+  }
+  .chapter-panel ul {
+    margin: 0;
+    padding-left: 1.15rem;
+  }
+  .related-grid a {
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-bg);
+    font-weight: 800;
+    text-decoration: none;
+  }
+  @media (min-width: 780px) {
+    .pillar-hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .toc ol {
+      columns: 2;
+    }
+    .snapshot-grid,
+    .related-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

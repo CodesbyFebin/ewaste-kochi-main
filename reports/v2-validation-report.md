@@ -551,3 +551,127 @@ All checks passed.
 - Failures: 0
 
 All checks passed.
+
+## Validation run 2026-07-15T05:40:38.012Z
+
+- Routes checked: 99
+- Checks passed: 772
+- Failures: 0
+
+All checks passed.
+
+## Validation run 2026-07-15T05:41:09.014Z
+
+- Routes checked: 99
+- Checks passed: 772
+- Failures: 0
+
+All checks passed.
+
+## Validation run 2026-07-15T05:43:40.349Z
+
+- Routes checked: 99
+- Checks passed: 772
+- Failures: 0
+
+All checks passed.
+
+## Validation run 2026-07-15T05:55:00.649Z
+
+- Routes checked: 166
+- Checks passed: 973
+- Failures: 4
+
+| Path | Check | Detail |
+| --- | --- | --- |
+| /blog/itad/enterprise/government-approved-itad-enterprise-trivandrum-94/, /blog/itad/enterprise/verified-itad-enterprise-trivandrum-165/ | duplicate-title | Title "ITAD Enterprise Trivandrum \| Ewaste Kochi Indexed Guide" is reused across multiple pages. |
+| /blog/laptop-scrap-price-kochi-2026/, /blog/laptop-scrap-price-kochi/ | duplicate-title | Title "Laptop Scrap Price Kochi \| Ewaste Kochi Indexed Guide" is reused across multiple pages. |
+| /blog/itad/enterprise/government-approved-itad-enterprise-trivandrum-94/, /blog/itad/enterprise/verified-itad-enterprise-trivandrum-165/ | duplicate-description | Meta description reused across multiple pages. |
+| /blog/laptop-scrap-price-kochi-2026/, /blog/laptop-scrap-price-kochi/ | duplicate-description | Meta description reused across multiple pages. |
+
+## Validation run 2026-07-15T05:55:29.299Z
+
+- Routes checked: 166
+- Checks passed: 973
+- Failures: 0
+
+All checks passed.
+
+## Validation run 2026-07-15T05:56:12.876Z
+
+- Routes checked: 166
+- Checks passed: 973
+- Failures: 0
+
+All checks passed.
+
+## Validation run 2026-07-15T06:07:27.132Z
+
+- Routes checked: 188
+- Checks passed: 1058
+- Failures: 1
+
+| Path | Check | Detail |
+| --- | --- | --- |
+| /pickup/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /same-day pickup guaranteed/i. |
+
+## Validation run 2026-07-15T06:08:13.941Z
+
+- Routes checked: 188
+- Checks passed: 1059
+- Failures: 0
+
+All checks passed.
+
+## Validation run 2026-07-15T06:08:43.125Z
+
+- Routes checked: 188
+- Checks passed: 1059
+- Failures: 0
+
+All checks passed.
+
+## Validation run 2026-07-15T06:11:41.213Z
+
+- Routes checked: 188
+- Checks passed: 1059
+- Failures: 0
+
+All checks passed.
+
+## Validation run 2026-07-15T06:14:55.856Z
+
+- Routes checked: 194
+- Checks passed: 1076
+- Failures: 4
+
+| Path | Check | Detail |
+| --- | --- | --- |
+| /tools/data-destruction-cost-estimator/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /"Review"/i. |
+| /tools/pickup-eligibility-checker/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /"Review"/i. |
+| /tools/sell-or-recycle-decision-tool/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /"Review"/i. |
+| /tools/battery-safety-checker/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /"Review"/i. |
+
+## Validation run 2026-07-15T06:15:47.079Z
+
+- Routes checked: 194
+- Checks passed: 1077
+- Failures: 0
+
+All checks passed.
+
+## Validation run 2026-07-15T06:22:51.863Z
+
+- Routes checked: 196
+- Checks passed: 1083
+- Failures: 0
+
+All checks passed.
+
+## Validation run 2026-07-15T06:33:05.351Z
+
+- Routes checked: 198
+- Checks passed: 1089
+- Failures: 0
+
+All checks passed.
