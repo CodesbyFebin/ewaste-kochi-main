@@ -512,6 +512,14 @@ Verified: build 363 → 355 pages (−7 buyback, −1 `/ewaste/`, nothing else).
 
 **`PROD-PATCH-361` approved.** Full detail: `reports/pre-prod-blocker-patch-report.md`.
 
+## PROD-PATCH-361 — production deploy (2026-07-15/18)
+
+**Discovered mid-patch that production had already been deployed by the concurrent session** (commit `0a94eba3`, "submit sitemap and priority URLs after production launch") — ahead of and without this blocker patch. Verified live: `/ewaste/` was still returning 200 (the duplicate not yet fixed) on production at that point. GSC submission itself had **not** actually happened despite the commit title — its own report body says "Submitted sitemap: not submitted" (same `ACCESS_TOKEN_SCOPE_INSUFFICIENT` blocker as earlier phases), so no external, hard-to-reverse action had occurred.
+
+**Correction to the integrity gate report's Finding 1**: live-tested the "7 buyback URLs 404" claim directly against production and it does not reproduce — Vercel's actual static-file serving returns 200 for the no-trailing-slash `.html` URLs (`content-disposition: inline` header shows it's served as a direct file match, not routed through Astro's stricter trailing-slash logic that `astro preview` enforces locally). The 404 in the original gate report was a local-testing artifact, not a real production defect. The fix (remove from discovery + redirect to `/sell-electronics/`) was kept anyway — independently justified by the source data's own "0 traffic, do not rebuild model-specific quote spam" classification — but the technical "will 404 on Google" framing was wrong and is corrected here.
+
+Given production already existed and had the `/ewaste/` bug live, deployed the tested blocker-patch commit (`3408ceeb`) straight to production rather than leaving a known bug live and waiting: `dpl_GYpvyPQeDr8gU7cJESrcLda4a4gA`, aliased to `www.ewastekochi.com`. Verified immediately: homepage 200, `/ewaste/` → 308 → `/e-waste/`, buyback `.html` URLs → 308 → `/sell-electronics/`, 10 core/curated pages spot-checked at 200, chatbot present, canonical correct. No rollback needed.
+
 ## Known Risks
 
 * **`/recycling/`'s ISO/Pollution Control Board wording — RESOLVED 2026-07-14, pre-Phase 2L.** User chose to soften rather than verify (no certificate in hand). Replaced "Our recycling processes follow ISO 14001:2015-aligned environmental management practices, and we operate under Pollution Control Board authorization for e-waste handling" with "Our recycling process follows documented environmental handling practices, with pickup, sorting and documentation support depending on the service type. If you need compliance documentation for business or ITAD work, contact us before pickup so the required handling process can be confirmed." `npm run check`/`build`/`validate` all clean (60 routes, 526/526), word count unaffected (3,030, still clears the 3,000 pillar target). Commit `a274774`.
