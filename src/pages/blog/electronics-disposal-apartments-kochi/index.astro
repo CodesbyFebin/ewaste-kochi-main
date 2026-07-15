@@ -3,13 +3,14 @@ import Layout from "../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
 import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
 
 const title = "Safe Electronics Disposal for Apartments and Flats in Kochi";
 const description =
   "How apartment residents in Kochi can safely dispose of old electronics — doorstep pickup, what to prepare, battery handling, and how to coordinate building access.";
 const datePublished = "2026-07-08";
-const dateModified = "2026-07-08";
+const dateModified = "2026-07-15";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
@@ -39,6 +40,14 @@ const jsonLd = [
   },
 ];
 
+const comparisonRows = [
+  { aspect: "Booking info needed", standaloneHome: "Address and rough item list", apartment: "Address, building name, floor, and access instructions" },
+  { aspect: "Access coordination", standaloneHome: "Usually straightforward", apartment: "May need security gate pass or association sign-off" },
+  { aspect: "Collection point", standaloneHome: "Directly from the house", apartment: "From the flat door or building lobby, depending on access" },
+  { aspect: "Bulk items (UPS, old TVs)", standaloneHome: "Ground-level, easy access", apartment: "May need lift access confirmed in advance" },
+  { aspect: "Combined pickups", standaloneHome: "Less common", apartment: "Often practical — several flats can combine into one visit" },
+];
+
 const faqItems = [
   {
     q: "Does the team come up to my flat, or do I need to bring items to the lobby?",
@@ -55,6 +64,30 @@ const faqItems = [
   {
     q: "Is there a minimum quantity for an apartment pickup?",
     a: "Contact us with your item list and we'll advise on the best approach for your quantity.",
+  },
+  {
+    q: "Do I need a security gate pass arranged before the pickup date?",
+    a: "If your building requires visitor passes, arranging it in advance (or informing security of the expected visit) avoids delays on the day. Mention this when you book so it can be factored into scheduling.",
+  },
+  {
+    q: "What's different about a heavy UPS battery pickup from an upper floor?",
+    a: "Lift access matters more than for a ground-floor home. Let us know if lift access is available and reliable, or if stairs are involved — it changes how the visit is planned.",
+  },
+  {
+    q: "Can the building's facility management team coordinate on residents' behalf?",
+    a: "Yes — some buildings prefer this. If facility management wants to organise a building-wide collection, they can contact us directly with a consolidated list.",
+  },
+  {
+    q: "Is there a difference in what's accepted compared to standalone homes?",
+    a: "No — the same range of items (laptops, batteries, appliances, cables, and more) is accepted regardless of whether you're in a flat or a standalone house.",
+  },
+  {
+    q: "How far in advance should I book for a combined building pickup?",
+    a: "A few days' notice helps, especially if you're still gathering interest from other residents — it gives time to compile a full item list and confirm a slot that works for the building's access rules.",
+  },
+  {
+    q: "What if my society doesn't allow outside pickup vehicles inside the compound?",
+    a: "Let us know the compound's rules when booking — a drop-point just inside or outside the gate can usually be worked out instead of requiring the vehicle to enter.",
   },
 ];
 ---
@@ -89,6 +122,34 @@ const faqItems = [
   </ul>
 
   <section>
+    <h2>Apartment pickup vs. standalone home pickup</h2>
+    <p>
+      The service itself is identical — what changes is the logistics
+      around access:
+    </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Aspect</th>
+            <th>Standalone home</th>
+            <th>Apartment / flat</th>
+          </tr>
+        </thead>
+        <tbody>
+          {comparisonRows.map((row) => (
+            <tr>
+              <td><strong>{row.aspect}</strong></td>
+              <td>{row.standaloneHome}</td>
+              <td>{row.apartment}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
     <h2>Pickup works for apartment residents</h2>
     <p>
       Doorstep pickup is available for apartments and flats across our
@@ -110,12 +171,26 @@ const faqItems = [
   </section>
 
   <section>
+    <h2>Security gates and building access</h2>
+    <p>
+      Many apartment complexes and gated communities require visitor
+      passes or advance notice to security. If your building has this
+      kind of process, mention it when you book — either arranging the
+      pass yourself in advance, or letting us know so we can coordinate
+      timing around it. This is usually a quick step, but skipping it
+      is the most common reason a pickup gets delayed at the gate.
+    </p>
+  </section>
+
+  <section>
     <h2>Coordinating with neighbours</h2>
     <p>
       If several flats in the same building have old electronics to dispose
       of, a combined pickup is more efficient. Collect items from interested
       neighbours, compile a rough item list, and book one visit for the
-      whole building. See if your apartment association can help coordinate.
+      whole building. See if your apartment association or facility
+      management team can help coordinate — some buildings prefer to
+      organise this centrally rather than flat by flat.
     </p>
   </section>
 
@@ -139,27 +214,30 @@ const faqItems = [
       feasibility. See <a href="/locations/">locations</a> for area-specific
       pages.
     </p>
-  </section>  <section>
+  </section>
+
+  <section>
     <h2>Related services</h2>
     <div class="link-row">
       <a href="/pickup/">Book Pickup</a>
       <a href="/recycling/">E-Waste Recycling</a>
+      <a href="/battery-recycling/">Battery Recycling</a>
     </div>
   </section>
-
-
 
   <p class="mal-support">
     മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
   </p>
 
   <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/electronics-disposal-apartments-kochi/" />
+
   <section class="final-cta">
     <h2>Have Questions About Safe Electronics Disposal for Apartments and Flats in Kochi?</h2>
     <p>Share your item details and location on WhatsApp to get started.</p>
     <CtaBar whatsappMessage="Hi, I'm in an apartment and would like to book an e-waste pickup." compact />
   </section>
-
 
   <p class="updated">Last updated: {dateModified}</p>
 </Layout>
@@ -177,4 +255,8 @@ const faqItems = [
   .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
   .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
   .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+  .table-scroll { overflow-x: auto; margin: 1rem 0; }
+  table { width: 100%; border-collapse: collapse; min-width: 560px; }
+  th, td { text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--color-border); font-size: 0.92rem; }
+  th { color: var(--color-muted); font-weight: 700; }
 </style>

@@ -903,6 +903,20 @@ export const ROUTES: RouteEntry[] = [
     indexable: true,
   },
   {
+    path: "/blog/electronics-disposal-apartments-kochi/",
+    changefreq: "monthly",
+    priority: 0.6,
+    title: "Safe Electronics Disposal for Apartments and Flats in Kochi",
+    description:
+      "How apartment residents in Kochi can safely dispose of old electronics — doorstep pickup, what to prepare, battery handling, and how to coordinate building access.",
+    type: "blog",
+    sitemapGroup: "blog",
+    lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
+  },
+  {
     path: "/blog/ewaste-pickup-near-me/",
     changefreq: "monthly",
     priority: 0.6,
