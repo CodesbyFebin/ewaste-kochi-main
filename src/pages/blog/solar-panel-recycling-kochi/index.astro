@@ -1,0 +1,94 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Solar Panel & Equipment Recycling in Kochi | Renewable E-Waste";
+const description =
+  "How to recycle solar panels, inverters and related equipment in Kochi. What to know about solar e-waste disposal and pickup options.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Solar Panel Recycling in Kochi", path: "/blog/solar-panel-recycling-kochi/" },
+];
+
+const jsonLd = [
+  { "@context": "https://schema.org", "@type": "BlogPosting", headline: title, description, datePublished, dateModified, author: { "@type": "Organization", name: BUSINESS.legalName }, publisher: { "@id": `${SITE_URL}/#organization` }, mainEntityOfPage: `${SITE_URL}/blog/solar-panel-recycling-kochi/` },
+  { "@context": "https://schema.org", "@type": "WebPage", "@id": `${SITE_URL}/blog/solar-panel-recycling-kochi/`, name: title, description, dateModified },
+];
+
+const faqItems = [
+  { q: "Can solar panels be recycled in Kochi?", a: "We handle enquiries on a case-by-case basis. Contact us with the panel type, quantity and condition for a feasibility check." },
+  { q: "What solar equipment is accepted?", a: "Solar panels, solar inverters, charge controllers and related wiring may be accepted depending on type. Send details for confirmation." },
+  { q: "Are solar panels hazardous waste?", a: "Solar panels contain glass, metals and semiconductor materials. They should not be mixed with regular household waste. Proper recycling channels are recommended." },
+  { q: "Can solar inverters be recycled with other e-waste?", a: "Solar inverters are electronic devices and can often be included with general e-waste. Confirm with us before including them." },
+  { q: "How do I prepare solar equipment for pickup?", a: "Disconnect panels safely if possible. Take photos showing panel size, type and any damage. Contact us with details for feasibility." },
+];
+---
+
+<Layout title={title} description={description} path="/blog/solar-panel-recycling-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Solar Panel & Equipment Recycling in Kochi</h1>
+  <p class="lede">Solar energy systems are becoming more common in Kochi, and old panels and equipment eventually need responsible disposal. Here is what to know.</p>
+  <CtaBar whatsappMessage="Hi, I have solar equipment for recycling." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Solar equipment is handled on a case-by-case basis — panels,
+      inverters, charge controllers and solar batteries may be accepted
+      depending on type and quantity. Contact us with the equipment
+      details, condition and your location for a feasibility check.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Solar panels contain glass, aluminium and silicon — never mix with general household waste.</li>
+    <li>Solar inverters are electronic devices and often recyclable alongside general e-waste.</li>
+    <li>Not every recycler handles panels the same way — always confirm before assuming pickup is possible.</li>
+  </ul>
+
+  <section><h2>What solar equipment may be accepted</h2><ul><li>Solar photovoltaic (PV) panels</li><li>Solar inverters and string inverters</li><li>Charge controllers</li><li>Solar cables and connectors</li><li>Mounting structures and racks</li><li>Solar batteries and storage systems</li></ul></section>
+  <section><h2>Important considerations</h2><p>Solar panel recycling is a specialised process. Panels contain glass, aluminium, silicon and sometimes small amounts of hazardous materials. Not all recycling services handle solar panels the same way. Contact us with the panel type, quantity and your location, and we will confirm if pickup is feasible.</p></section>
+  <section><h2>Solar inverter disposal</h2><p>Solar inverters are electronic devices similar to other power electronics. They can often be recycled alongside general e-waste. Prepare them as you would any electronic device — disconnect, inspect for damage, and send photos.</p></section>
+  <section><h2>What to include in your message</h2><ul class="check-list"><li>Equipment type (panels, inverter, batteries)</li><li>Approximate quantity and size</li><li>Condition — any cracks, damage or leaks</li><li>Photos of the equipment</li><li>Your pickup location in Kochi</li></ul></section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/battery-recycling/">Battery Recycling</a>
+      <a href="/pickup/">Book Pickup</a>
+    </div>
+  </section>
+
+  <p class="mal-support">മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.</p>
+  <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/solar-panel-recycling-kochi/" />
+  <section class="final-cta">
+    <h2>Have Solar Equipment to Recycle?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I have solar equipment for recycling." compact />
+  </section>
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

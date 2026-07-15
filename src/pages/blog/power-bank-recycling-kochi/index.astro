@@ -1,0 +1,94 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Power Bank Recycling in Kochi | Old Power Bank Disposal";
+const description =
+  "How to recycle old power banks in Kochi. Lithium battery safety, swelling risks, preparation tips and what to do before handing over portable chargers.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Power Bank Recycling in Kochi", path: "/blog/power-bank-recycling-kochi/" },
+];
+
+const jsonLd = [
+  { "@context": "https://schema.org", "@type": "BlogPosting", headline: title, description, datePublished, dateModified, author: { "@type": "Organization", name: BUSINESS.legalName }, publisher: { "@id": `${SITE_URL}/#organization` }, mainEntityOfPage: `${SITE_URL}/blog/power-bank-recycling-kochi/` },
+  { "@context": "https://schema.org", "@type": "WebPage", "@id": `${SITE_URL}/blog/power-bank-recycling-kochi/`, name: title, description, dateModified },
+];
+
+const faqItems = [
+  { q: "Can old power banks be recycled in Kochi?", a: "Yes. Power banks are accepted for recycling. They contain lithium-ion batteries that need safe handling. Mention them when you book pickup." },
+  { q: "What if my power bank is swollen or damaged?", a: "A swollen power bank needs careful handling. Do not use or charge it. Place it in a cool, dry place and flag the damage when you contact us." },
+  { q: "Should I discharge a power bank before recycling?", a: "It is not necessary to fully discharge it. If the power bank is damaged, do not attempt to charge or discharge it. Let us know the condition." },
+  { q: "Can offices recycle multiple power banks at once?", a: "Yes. Offices with old promotional or bulk power banks can include them in an e-waste pickup. Send quantities for planning." },
+  { q: "Can power banks be included with other e-waste?", a: "Yes. Power banks can be included with other electronics. Keep them separate from general items if they are damaged." },
+];
+---
+
+<Layout title={title} description={description} path="/blog/power-bank-recycling-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Power Bank Recycling in Kochi</h1>
+  <p class="lede">Power banks contain lithium-ion batteries that need careful handling at end of life. Here is how to recycle old power banks in Kochi safely.</p>
+  <CtaBar whatsappMessage="Hi, I have old power banks for recycling." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Power banks are portable lithium-ion batteries and carry a fire
+      risk if damaged. Never charge or use a swollen unit — keep it in
+      a cool, dry spot away from flammable items and flag the damage
+      with a photo when you contact us.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Swelling, overheating or leaking are signs a power bank needs isolated handling.</li>
+    <li>You don't need to fully discharge a power bank before recycling.</li>
+    <li>Damaged units should be kept separate from other e-waste, not mixed in.</li>
+  </ul>
+
+  <section><h2>Why power banks need special handling</h2><p>Power banks are essentially portable lithium-ion batteries. Unlike general electronics, they carry a fire risk if damaged, punctured or short-circuited. A swollen power bank should never be thrown into regular waste. When recycling power banks, the lithium cells need to be separated and processed through proper channels. This is why we ask you to flag power banks when booking a pickup — especially if they show signs of damage.</p></section>
+  <section><h2>Signs of power bank damage</h2><ul><li>Swelling or bulging — the casing looks puffy or distorted</li><li>Overheating — the power bank feels hot even when not charging</li><li>Leaking — any liquid coming from the unit</li><li>Not charging — the power bank no longer holds or delivers charge</li><li>Rattling sounds — internal components may be loose</li></ul></section>
+  <section><h2>Preparing power banks for pickup</h2><ul class="check-list"><li>Check for any signs of swelling, heat or leakage</li><li>If swollen, place in a cool dry location away from flammable items</li><li>Keep cables and adapters with the power bank if available</li><li>Take a photo showing the condition</li><li>Separate damaged power banks from other e-waste</li></ul></section>
+  <section><h2>What to include in your message</h2><ul class="check-list"><li>Number of power banks</li><li>Condition — working, swollen, damaged</li><li>Photos of any damaged units</li><li>Your pickup location in Kochi</li></ul></section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/battery-recycling/">Battery Recycling</a>
+      <a href="/pickup/">Book Pickup</a>
+    </div>
+  </section>
+
+  <p class="mal-support">മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.</p>
+  <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/power-bank-recycling-kochi/" />
+  <section class="final-cta">
+    <h2>Have Old Power Banks to Recycle?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I have old power banks for recycling." compact />
+  </section>
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; line-height: 1.6; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

@@ -1,0 +1,97 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "E-Waste Recycling for Students in Kochi | School and College Guide";
+const description =
+  "How students and schools in Kochi can participate in e-waste recycling. Collection drives, battery safety, data tips for student devices and community involvement.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "E-Waste Recycling for Students", path: "/blog/ewaste-recycling-students-kochi/" },
+];
+
+const jsonLd = [
+  { "@context": "https://schema.org", "@type": "BlogPosting", headline: title, description, datePublished, dateModified, author: { "@type": "Organization", name: BUSINESS.legalName }, publisher: { "@id": `${SITE_URL}/#organization` }, mainEntityOfPage: `${SITE_URL}/blog/ewaste-recycling-students-kochi/` },
+  { "@context": "https://schema.org", "@type": "WebPage", "@id": `${SITE_URL}/blog/ewaste-recycling-students-kochi/`, name: title, description, dateModified },
+];
+
+const faqItems = [
+  { q: "Can students recycle old electronics in Kochi?", a: "Yes. Students can recycle phones, laptops, chargers, cables and other electronics through our pickup service." },
+  { q: "Can schools organize e-waste collection drives?", a: "Yes. Schools and colleges can organize e-waste collection drives for students and staff. Contact us with the expected date and quantities." },
+  { q: "Should students remove data before recycling devices?", a: "Yes. Students should factory reset phones and laptops before handing them over. Remove school accounts, personal files and photos." },
+  { q: "Are batteries from student devices accepted?", a: "Yes. Phone batteries, laptop batteries and power banks are accepted. Keep them separate and flag any damage." },
+  { q: "Can engineering colleges recycle lab equipment?", a: "Yes. Old lab equipment, circuit boards and electronic components from labs can be included in a pickup. Send details for confirmation." },
+];
+---
+
+<Layout title={title} description={description} path="/blog/ewaste-recycling-students-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Recycling for Students in Kochi</h1>
+  <p class="lede">Students generate a surprising amount of e-waste — old phones, laptops, chargers, cables and gadgets that are replaced as new semesters begin. Here is how students and schools in Kochi can recycle responsibly.</p>
+  <CtaBar whatsappMessage="Hi, I'm a student and want to recycle my old electronics." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Students in Kochi can recycle individual devices anytime, or
+      organise a class or campus collection drive — factory reset
+      phones and laptops first, keep batteries separate, and message us
+      a date and expected quantity to plan logistics for group drives.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>A single phone or laptop is enough to book a pickup — no group required.</li>
+    <li>College fests, orientation week and semester-end are natural times for drives.</li>
+    <li>Lab equipment and circuit boards from engineering departments are accepted too.</li>
+  </ul>
+
+  <section><h2>Common student e-waste items</h2><ul><li>Smartphones — replaced every 1-3 years</li><li>Laptops and tablets — engineering, design and computer science students upgrade regularly</li><li>Chargers and cables — accumulate quickly as chargers change with new phones</li><li>Power banks — often replaced when they no longer hold charge</li><li>Headphones and earphones — wired and wireless</li><li>Printers and scanners — used for assignments and projects</li></ul></section>
+  <section><h2>Data safety for student devices</h2><p>Before recycling or selling a phone or laptop, students must remove personal data. This includes photos, messages, social media accounts, banking apps and college email access. Perform a factory reset on phones and laptops. Remove SIM cards and memory cards. Log out of all accounts — Google, Apple ID, Microsoft, Instagram and others. If the device belonged to a college or lab, check with IT staff about additional steps. For devices with sensitive project data, consider asking about data destruction.</p></section>
+  <section><h2>How to get involved as a student</h2><p>As an individual student, you can recycle your own devices through our pickup service. You do not need a large group — even a single phone or laptop can be collected. If you are part of a student organisation or club, consider organizing a collection drive. Here is how: set a date, spread the word through class groups, ask students to bring old electronics to a central location, and contact us to schedule a pickup. Drives work well during college events, fests or at the end of the semester when students are clearing out their rooms.</p></section>
+  <section><h2>How schools and colleges can participate</h2><p>Educational institutions can play a significant role in e-waste awareness. Schools can include e-waste education in environmental science or social studies curriculum. Colleges can host collection drives during orientation week, annual fests or at the end of the academic year. IT departments in colleges can manage bulk collection from computer labs. Student clubs — especially environment and sustainability clubs — can lead initiatives. Contact us with your planned date, expected quantities and location. We can help plan the logistics.</p></section>
+  <section><h2>Preparation for student pickups</h2><ul class="check-list"><li>Separate devices by type — phones, laptops, cables, batteries</li><li>Remove personal data from all devices</li><li>Keep chargers and accessories together with their devices</li><li>Flag any damaged or swollen batteries</li><li>For group drives — create a simple list of item types and quantities</li><li>Choose a dry, shaded collection point for the pickup</li></ul></section>
+  <section><h2>Awareness ideas for student communities</h2><p>Spread the word about e-waste recycling through class announcements, social media groups, notice boards and college websites. Share simple infographics: what counts as e-waste, how to prepare devices and how to book pickup. Partner with local e-waste services for talks or workshops. Make e-waste collection a part of annual campus sustainability initiatives. Students who participate today become advocates for responsible disposal tomorrow.</p></section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/pickup/">Book Pickup</a>
+      <a href="/data-destruction/">Data Destruction</a>
+    </div>
+  </section>
+
+  <p class="mal-support">മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.</p>
+  <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/ewaste-recycling-students-kochi/" />
+  <section class="final-cta">
+    <h2>Ready to Recycle Your Old Electronics?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'm a student and want to recycle my old electronics." compact />
+  </section>
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; line-height: 1.6; }
+  section p { line-height: 1.7; margin-bottom: 1rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

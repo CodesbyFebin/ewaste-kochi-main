@@ -1,0 +1,94 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Old Monitor Recycling in Kochi | LCD, LED & CRT Disposal";
+const description =
+  "How to recycle old computer monitors in Kochi — LCD, LED, CRT. Preparation tips, pickup considerations, and what to do with broken screens.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Old Monitor Recycling in Kochi", path: "/blog/old-monitor-recycling-kochi/" },
+];
+
+const jsonLd = [
+  { "@context": "https://schema.org", "@type": "BlogPosting", headline: title, description, datePublished, dateModified, author: { "@type": "Organization", name: BUSINESS.legalName }, publisher: { "@id": `${SITE_URL}/#organization` }, mainEntityOfPage: `${SITE_URL}/blog/old-monitor-recycling-kochi/` },
+  { "@context": "https://schema.org", "@type": "WebPage", "@id": `${SITE_URL}/blog/old-monitor-recycling-kochi/`, name: title, description, dateModified },
+];
+
+const faqItems = [
+  { q: "Can old computer monitors be recycled in Kochi?", a: "Yes. LCD, LED and CRT monitors are accepted for recycling. Contact us with the type and condition to confirm pickup." },
+  { q: "Are CRT monitors heavier to handle?", a: "Yes. CRT monitors are significantly heavier than flat screens. Let us know in advance so we can plan the pickup accordingly." },
+  { q: "Can broken monitors be recycled?", a: "Yes. Cracked screens and non-functional monitors are accepted. Flag the damage when you contact us." },
+  { q: "Can offices recycle multiple monitors at once?", a: "Yes. Offices with multiple old monitors can request bulk pickup. Send quantities and types for planning." },
+  { q: "Should I include monitor cables with the pickup?", a: "Yes. Keep the power cable and any video cables (VGA, HDMI, DisplayPort) with the monitor if available." },
+];
+---
+
+<Layout title={title} description={description} path="/blog/old-monitor-recycling-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Old Monitor Recycling in Kochi</h1>
+  <p class="lede">Old computer monitors — LCD, LED or CRT — need careful disposal. Here is how to recycle them in Kochi.</p>
+  <CtaBar whatsappMessage="Hi, I have old monitors for recycling." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      LCD, LED and CRT monitors are all accepted for recycling in
+      Kochi. CRT monitors are significantly heavier and contain leaded
+      glass, so mention the type and approximate size when you contact
+      us — flat-screen monitors are much simpler to collect.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>CRT monitors need advance notice due to weight and glass content.</li>
+    <li>Bundle power and video cables (VGA, HDMI, DisplayPort) with the monitor.</li>
+    <li>Broken or cracked screens are still accepted — just flag the damage.</li>
+  </ul>
+
+  <section><h2>Types of monitors accepted</h2><ul><li>LCD monitors — flat screen</li><li>LED monitors</li><li>CRT monitors — older box-style</li><li>Ultrawide and gaming monitors</li><li>Touchscreen displays</li></ul></section>
+  <section><h2>Preparing monitors for pickup</h2><ul class="check-list"><li>Take a photo showing the screen condition (any cracks or damage)</li><li>Take a photo of the back panel showing ports and model</li><li>Keep the stand attached or remove if it folds flat</li><li>Bundle the power cable and any video cables</li><li>For CRT monitors — mention the approximate size and weight</li></ul></section>
+  <section><h2>Monitor recycling considerations</h2><p>CRT monitors contain glass with lead content and need special handling. Flat-screen LCD/LED monitors contain backlight components. Both are recyclable but may have different processing requirements. Mention the type when contacting us.</p></section>
+  <section><h2>What to include in your message</h2><ul class="check-list"><li>Monitor type (LCD, LED or CRT)</li><li>Approximate screen size</li><li>Condition — working, cracked, or non-functional</li><li>Quantity</li><li>Photos of screen and back panel</li><li>Your pickup location in Kochi</li></ul></section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/tv-recycling-kochi/">TV Recycling</a>
+      <a href="/computer-scrap-buyers-kochi/">Computer Scrap Buyers</a>
+    </div>
+  </section>
+
+  <p class="mal-support">മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.</p>
+  <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/old-monitor-recycling-kochi/" />
+  <section class="final-cta">
+    <h2>Have Old Monitors to Recycle?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I have old monitors for recycling." compact />
+  </section>
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

@@ -762,3 +762,101 @@ All checks passed.
 - Failures: 0
 
 All checks passed.
+
+## Validation run 2026-07-15T15:00:21.751Z
+
+- Routes checked: 356
+- Checks passed: 1581
+- Failures: 0
+
+All checks passed.
+
+## Validation run 2026-07-15T15:08:44.914Z
+
+- Routes checked: 357
+- Checks passed: 1584
+- Failures: 0
+
+All checks passed.
+
+## Validation run 2026-07-15T15:12:43.519Z
+
+- Routes checked: 358
+- Checks passed: 1587
+- Failures: 0
+
+All checks passed.
+
+## Validation run 2026-07-15T15:16:04.007Z
+
+- Routes checked: 359
+- Checks passed: 1590
+- Failures: 0
+
+All checks passed.
+
+## Validation run 2026-07-15T15:19:40.646Z
+
+- Routes checked: 360
+- Checks passed: 1593
+- Failures: 0
+
+All checks passed.
+
+## Validation run 2026-07-15T15:50:13.864Z
+
+- Routes checked: 361
+- Checks passed: 1596
+- Failures: 0
+
+All checks passed.
+
+## Validation run 2026-07-15T15:53:55.491Z
+
+- Routes checked: 362
+- Checks passed: 1599
+- Failures: 0
+
+All checks passed.
+
+## Validation run 2026-07-15T15:57:21.685Z
+
+- Routes checked: 363
+- Checks passed: 1602
+- Failures: 0
+
+All checks passed.
+
+## Validation run 2026-07-15T16:01:13.548Z
+
+- Routes checked: 364
+- Checks passed: 1605
+- Failures: 0
+
+All checks passed.
+
+## Validation run 2026-07-15T16:06:45.199Z
+
+- Routes checked: 365
+- Checks passed: 1608
+- Failures: 0
+
+All checks passed.
+
+## Validation run 2026-07-15T16:44:22.515Z
+
+- Routes checked: 836
+- Checks passed: 3019
+- Failures: 1
+
+| Path | Check | Detail |
+| --- | --- | --- |
+| /blog/same-day-ewaste-pickup-kochi/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /same-day pickup guaranteed/i. |
+
+## Validation run 2026-07-15T16:46:16.432Z
+
+- Routes checked: 836
+- Checks passed: 3020
+- Failures: 0
+
+All checks passed.

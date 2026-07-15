@@ -1,0 +1,171 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "How to Pack Electronics Before E-Waste Pickup in Kochi";
+const description =
+  "Do you need to pack electronics before an e-waste pickup in Kochi? What's worth boxing, what can be left as-is, and how to keep batteries safe during preparation.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "How to Pack Electronics Before Pickup", path: "/blog/how-to-pack-electronics-before-pickup/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/how-to-pack-electronics-before-pickup/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/how-to-pack-electronics-before-pickup/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Do I need to find original packaging for laptops?",
+    a: "No — original packaging is not required. Any sturdy box or just leaving items accessible is fine.",
+  },
+  {
+    q: "Can I put cables in a bin bag?",
+    a: "Yes — loose cables and small accessories can go in a bag or box. Just keep batteries separate.",
+  },
+  {
+    q: "Should I wrap screens before pickup?",
+    a: "Wrapping cracked or fragile screens is helpful but not required. Flag any broken screens when booking.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/how-to-pack-electronics-before-pickup/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>How to Pack Electronics Before Pickup</h1>
+  <p class="lede">
+    You don't need to pack most electronics before e-waste pickup —
+    but a few simple steps make the collection faster and keep sensitive
+    items protected.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to know how to prepare my electronics for pickup." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Most electronics don't need packing before pickup — laptops, TVs
+      and printers can be left as-is. Just bag small items and cables,
+      keep batteries in their own separate bag, and flag any cracked
+      screens or physical damage when you book.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Large items like laptops and TVs don't need boxing — just gather them in one spot.</li>
+    <li>Batteries always go in their own bag, never mixed with other items.</li>
+    <li>You don't need to disassemble anything to make it "easier" to transport.</li>
+  </ul>
+
+  <section>
+    <h2>Most items don't need packing</h2>
+    <p>
+      Laptops, monitors, TVs, printers, and routers can be left as-is.
+      The team is equipped to handle items that aren't boxed. Simply
+      gather them in one accessible spot — a room, a corner, the lobby
+      of a building.
+    </p>
+  </section>
+
+  <section>
+    <h2>What's worth putting in a bag or box</h2>
+    <ul class="check-list">
+      <li><strong>Cables and chargers:</strong> Loose cables in a bag are easier to carry than a tangle on the floor</li>
+      <li><strong>Small items:</strong> Earbuds, USB drives, memory cards, small gadgets — put these in a bag so nothing gets lost</li>
+      <li><strong>Batteries:</strong> Always in their own separate bag — never mixed with other items</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Fragile items</h2>
+    <p>
+      If a screen is already cracked or a device has physical damage,
+      you don't need to wrap it — but flag the damage when booking so the
+      team knows what to expect.
+    </p>
+  </section>
+
+  <section>
+    <h2>Battery packing</h2>
+    <p>
+      Keep battery terminals from touching metal surfaces or other
+      batteries. A plastic bag or box keeps loose cells contained. For
+      swollen or damaged batteries, keep them in an isolated spot and
+      flag before pickup. See <a href="/battery-recycling/">battery
+      recycling</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>What not to do</h2>
+    <ul class="check-list">
+      <li>Don't put batteries in the same box as other electronics</li>
+      <li>Don't leave items on upper floors without confirming access with the team first</li>
+      <li>Don't attempt to disassemble items to make them "easier" to transport</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/pickup/">Book Pickup</a>
+      <a href="/battery-recycling/">Battery Recycling</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/how-to-pack-electronics-before-pickup/" />
+  <section class="final-cta">
+    <h2>Ready to Book Your Pickup?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to know how to prepare my electronics for pickup." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

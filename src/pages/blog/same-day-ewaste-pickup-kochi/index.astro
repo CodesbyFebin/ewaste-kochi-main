@@ -1,0 +1,162 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Same-Day E-Waste Pickup in Kochi | What Is Realistic?";
+const description =
+  "What to expect when requesting same-day or next-day e-waste pickup in Kochi — what affects availability, how to maximise chances of quick scheduling, and how to book.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Same-Day E-Waste Pickup: What Is Realistic?", path: "/blog/same-day-ewaste-pickup-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/same-day-ewaste-pickup-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/same-day-ewaste-pickup-kochi/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Can you guarantee a same-day slot?",
+    a: "No — same-day availability depends on current scheduling and your location. Contact us as early in the day as possible if you need urgent collection.",
+  },
+  {
+    q: "What's the fastest way to book a pickup?",
+    a: "Message us on WhatsApp with your item list, location, and photos. Having all the details ready speeds up confirmation.",
+  },
+  {
+    q: "Does a swollen battery need urgent pickup?",
+    a: "Swollen batteries should be handled carefully. Contact us quickly, keep the battery in a cool ventilated place, and away from flammable materials while waiting. See battery recycling for safe interim storage.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/same-day-ewaste-pickup-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Same-Day E-Waste Pickup: What Is Realistic?</h1>
+  <p class="lede">
+    Same-day pickup depends on availability, location, and item type.
+    Here's an honest picture of what to expect and how to maximise
+    your chances of quick collection.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I need an urgent e-waste pickup in Kochi. Here are my items:" />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Same-day pickup isn't guaranteed — it depends on current
+      scheduling, your location and item type. Message us as early in
+      the day as possible with your item list, location and photos
+      ready to maximise your chances of quick collection.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Morning requests have better odds of same-day scheduling than afternoon ones.</li>
+    <li>Standard household items are easier to fit into a quick slot than large bulk pickups.</li>
+    <li>A swollen or damaged battery is treated as urgent — contact us immediately.</li>
+  </ul>
+
+  <section>
+    <h2>What affects same-day availability</h2>
+    <ul class="check-list">
+      <li>Current schedule and available slots in your area</li>
+      <li>Your location within the Kochi metro</li>
+      <li>Item type — standard household items are easier to schedule quickly than large bulk pickups</li>
+      <li>Time of day the request comes in — morning requests have better chances</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What to do if you need urgent collection</h2>
+    <p>
+      Contact us as early as possible — WhatsApp or call. Have your item
+      list, location, and photos ready to send immediately so we can
+      assess feasibility without back-and-forth. If same-day isn't
+      possible, we'll confirm the earliest available slot.
+    </p>
+  </section>
+
+  <section>
+    <h2>Situations where faster pickup matters</h2>
+    <ul class="check-list">
+      <li>Swollen or damaged battery that needs safe removal — contact us immediately</li>
+      <li>Office clearance with a deadline (vacating premises, renovation)</li>
+      <li>Large item taking up space that needs to go urgently</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Planning ahead is easier</h2>
+    <p>
+      For most households, a few days' notice makes scheduling much
+      smoother. Contact us when you decide to do a cleanout — don't
+      wait until the day. See <a href="/pickup/">pickup</a> for the
+      full booking process.
+    </p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/pickup/">Book Pickup</a>
+      <a href="/battery-recycling/">Battery Recycling</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/same-day-ewaste-pickup-kochi/" />
+  <section class="final-cta">
+    <h2>Need Urgent Pickup?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I need an urgent e-waste pickup in Kochi. Here are my items:" compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

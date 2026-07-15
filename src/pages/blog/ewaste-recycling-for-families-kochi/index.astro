@@ -1,0 +1,181 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "E-Waste Recycling for Families in Kochi | Home Pickup Guide";
+const description =
+  "How families in Kochi can recycle old electronics together — what devices to collect, how to handle children's old gadgets safely, and booking a household pickup.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "E-Waste Recycling for Families in Kochi", path: "/blog/ewaste-recycling-for-families-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/ewaste-recycling-for-families-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/ewaste-recycling-for-families-kochi/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Can children's old tablets and toys be recycled?",
+    a: "Yes — tablets, electronic learning devices, and battery-powered toys with circuit boards all count as e-waste. Remove any batteries and include them separately.",
+  },
+  {
+    q: "How do we handle a family member's old phone that has lots of personal photos?",
+    a: "Back up photos to another device or cloud storage first. Then do a factory reset before the phone is handed over for recycling.",
+  },
+  {
+    q: "Can we combine everyone's devices from different rooms in one pickup?",
+    a: "Yes — gather everything in one place before the team arrives. Mixed pickups covering the whole household are completely normal.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/ewaste-recycling-for-families-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Recycling for Families in Kochi</h1>
+  <p class="lede">
+    A family household accumulates more e-waste than any one person
+    realises — phones from different years, old tablets, broken gadgets,
+    dead chargers. A once-a-year family cleanout is usually all it takes
+    to clear the backlog responsibly.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, our family would like to book a household e-waste pickup." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Families in Kochi can recycle old electronics together with a
+      once-a-year cleanout — have each person set aside what they no
+      longer use, back up and factory reset phones and tablets, keep
+      batteries (including toy batteries) separate, then book one
+      combined pickup for the whole household.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>A once-a-year family cleanout is usually enough to clear the backlog.</li>
+    <li>Children's tablets and battery-powered toys count as e-waste too.</li>
+    <li>Keep all batteries away from children until pickup, in a cool, ventilated spot.</li>
+  </ul>
+
+  <section>
+    <h2>What a typical family household has</h2>
+    <ul class="item-list">
+      <li>Old phones that have been replaced over several years</li>
+      <li>Tablets the children have grown out of</li>
+      <li>A laptop that stopped working</li>
+      <li>Cables and chargers for devices no longer owned</li>
+      <li>Dead power banks</li>
+      <li>A TV or monitor that was replaced</li>
+      <li>An old UPS unit in the study</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>How to make it a family cleanout</h2>
+    <p>
+      Ask each person in the household to go through their own space and
+      put anything they no longer use into a collection point in one room
+      — a spare cupboard or a corner of the living room. Once everyone
+      has contributed, go through the pile together. Separate batteries
+      from everything else at this stage.
+    </p>
+  </section>
+
+  <section>
+    <h2>Data to sort out before pickup</h2>
+    <p>
+      For each phone, tablet, or laptop: back up any photos or files
+      that matter. Then factory reset phones and tablets. For computers,
+      wipe the drive or ask us to arrange
+      <a href="/data-destruction/">data destruction</a>. Remove SIM cards
+      from all phones.
+    </p>
+  </section>
+
+  <section>
+    <h2>Safe battery handling for families</h2>
+    <p>
+      Collect all battery-containing items separately — phones, laptops,
+      power banks, toy batteries. Keep them away from children and in a
+      cool, ventilated spot until pickup. If any battery looks swollen or
+      damaged, flag it before pickup. See
+      <a href="/battery-recycling/">battery recycling</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Booking the pickup</h2>
+    <p>
+      Message us on WhatsApp with a rough count of items and your
+      location. Photos of anything unusual help. Book a
+      <a href="/pickup/">pickup slot</a> and have everything accessible
+      when the team arrives.
+    </p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/pickup/">Book Pickup</a>
+      <a href="/battery-recycling/">Battery Recycling</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/ewaste-recycling-for-families-kochi/" />
+  <section class="final-cta">
+    <h2>Ready to Recycle Your Family's Old Electronics?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, our family would like to book a household e-waste pickup." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .item-list { display: flex; flex-direction: column; gap: 0.35rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

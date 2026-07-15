@@ -1,0 +1,195 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "CCTV Equipment Recycling in Kochi | Security Camera Disposal";
+const description =
+  "How to recycle CCTV cameras, DVRs, NVRs and security equipment in Kochi. Data safety for recording devices, pickup and preparation tips.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "CCTV Equipment Recycling in Kochi", path: "/blog/cctv-equipment-recycling-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/cctv-equipment-recycling-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/cctv-equipment-recycling-kochi/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Can CCTV cameras be recycled in Kochi?",
+    a: "Yes. CCTV cameras, DVRs, NVRs and related security equipment are accepted for recycling. Contact us with the type and quantity.",
+  },
+  {
+    q: "Do CCTV devices store recorded footage?",
+    a: "Yes. DVRs and NVRs contain hard drives that store video footage. Data destruction may be needed if you require secure disposal of recordings.",
+  },
+  {
+    q: "Can old security systems like alarms and access controls be recycled?",
+    a: "Yes. Alarm systems, access control panels, biometric devices and smart doorbells are accepted. Include them in your item list.",
+  },
+  {
+    q: "Can offices request pickup for multiple CCTV devices?",
+    a: "Yes. Offices with multiple cameras and recording units can request bulk pickup. Send the quantity and types for a feasibility check.",
+  },
+  {
+    q: "Should I remove hard drives from DVRs before pickup?",
+    a: "If you want to keep the hard drives or have them destroyed separately, you can remove them. Otherwise, mention data destruction when booking.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/cctv-equipment-recycling-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>CCTV Equipment Recycling in Kochi</h1>
+  <p class="lede">
+    Old CCTV cameras, DVRs and security equipment accumulate in offices
+    and homes over time. Here is how to recycle them safely in Kochi,
+    including data considerations for recording devices.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I have CCTV and security equipment for recycling." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Old CCTV cameras, DVRs and NVRs can be recycled in Kochi, but they
+      often store recorded footage, so data handling matters before
+      pickup. Mention how many units you have and whether recordings need
+      to be wiped, and the team can plan collection alongside data
+      destruction if needed.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>DVRs and NVRs may hold stored footage — factor this in before handover.</li>
+    <li>Cameras, cables and recorders can all be included in one pickup.</li>
+    <li>Offices with larger CCTV systems should mention unit count upfront.</li>
+    <li>Damaged or non-functional units are still accepted for recycling.</li>
+  </ul>
+
+  <section>
+    <h2>What security equipment is accepted?</h2>
+    <ul>
+      <li>CCTV cameras — analog, IP, dome and bullet cameras</li>
+      <li>DVRs and NVRs — digital and network video recorders</li>
+      <li>Alarm systems — control panels and sensors</li>
+      <li>Access control devices — card readers, keypads</li>
+      <li>Biometric devices — fingerprint and face recognition</li>
+      <li>Smart doorbells and smart home cameras</li>
+      <li>CCTV cables, power adapters and mounting brackets</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Data safety for recording devices</h2>
+    <p>
+      DVRs and NVRs contain hard drives that may store recorded footage.
+      If you are concerned about the data on these devices:
+    </p>
+    <ul>
+      <li>Remove the hard drive if you want to keep or destroy it separately</li>
+      <li>If the device has a factory reset option, perform it before pickup</li>
+      <li>If you need secure data destruction, let us know when booking</li>
+      <li>Note: data destruction services are separate from recycling</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Preparing CCTV equipment for pickup</h2>
+    <ul class="check-list">
+      <li>Disconnect all cameras from the recording unit</li>
+      <li>Remove any hard drives if you plan to handle them separately</li>
+      <li>Bundle cables and adapters together</li>
+      <li>Take photos of the equipment — especially DVR/NVR models</li>
+      <li>For offices with multiple units, create a simple item list</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Pickup for offices and apartments</h2>
+    <p>
+      Offices upgrading their security systems often have multiple cameras
+      and recorders to dispose of. Apartments with older CCTV setups can
+      also request collection. Let us know the quantity and location, and
+      we will confirm pickup feasibility.
+    </p>
+  </section>
+
+  <section>
+    <h2>What to include in your message</h2>
+    <ul class="check-list">
+      <li>Device types (cameras, DVR, NVR, alarm, etc.)</li>
+      <li>Approximate quantity of each type</li>
+      <li>Whether data destruction is needed</li>
+      <li>Photos of the equipment</li>
+      <li>Your pickup location in Kochi</li>
+      <li>Any access considerations</li>
+    </ul>
+  </section>  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/tv-recycling-kochi/">TV Recycling</a>
+      <a href="/recycling/">E-Waste Recycling</a>
+      <a href="/pickup/">Book Pickup</a>
+    </div>
+  </section>
+
+
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/cctv-equipment-recycling-kochi/" />
+  <section class="final-cta">
+    <h2>Have Questions About CCTV Equipment Recycling in Kochi?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I have CCTV and security equipment for recycling." compact />
+  </section>
+
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

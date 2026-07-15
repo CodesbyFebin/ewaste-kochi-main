@@ -1,0 +1,97 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "E-Waste Donation and Reuse Guide in Kochi | Give Devices a Second Life";
+const description =
+  "How to donate and reuse old electronics in Kochi. What devices are suitable for donation, how to prepare them, and when recycling is better than giving away.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "E-Waste Donation and Reuse Guide", path: "/blog/ewaste-donation-reuse-guide-kochi/" },
+];
+
+const jsonLd = [
+  { "@context": "https://schema.org", "@type": "BlogPosting", headline: title, description, datePublished, dateModified, author: { "@type": "Organization", name: BUSINESS.legalName }, publisher: { "@id": `${SITE_URL}/#organization` }, mainEntityOfPage: `${SITE_URL}/blog/ewaste-donation-reuse-guide-kochi/` },
+  { "@context": "https://schema.org", "@type": "WebPage", "@id": `${SITE_URL}/blog/ewaste-donation-reuse-guide-kochi/`, name: title, description, dateModified },
+];
+
+const faqItems = [
+  { q: "Can I donate old electronics in Kochi?", a: "Yes. Working devices that you no longer need can be donated to individuals or organisations. Ensure data is removed before donation." },
+  { q: "What devices are suitable for donation?", a: "Functional laptops, phones, tablets and accessories are good candidates. Devices with cracked screens or battery issues may still be useful if the recipient can repair them." },
+  { q: "Is donation better than recycling?", a: "For working devices, donation extends device life and is often better than recycling. For damaged or very old devices, recycling is usually the safer option." },
+  { q: "Should I remove data before donating a device?", a: "Yes. Always perform a factory reset and remove accounts before donating. For laptops, wipe the drive and remove external disks." },
+  { q: "Can broken devices be donated?", a: "Sometimes. If the recipient has the skills to repair the device, a broken item may still be useful. Otherwise, recycling is better." },
+];
+---
+
+<Layout title={title} description={description} path="/blog/ewaste-donation-reuse-guide-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Donation and Reuse Guide in Kochi</h1>
+  <p class="lede">Not every old electronic needs to be recycled. If it still works, donating or reusing it can be better for the environment and helpful to someone else. Here is how to do it safely.</p>
+  <CtaBar whatsappMessage="Hi, I want to donate old electronics." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      If a device still powers on and runs basic tasks, donating or
+      reusing it is usually better than recycling — wipe the data first
+      (factory reset, sign out of accounts), then offer it to schools,
+      community groups or family before considering recycling.
+      Damaged or very old devices are safer to recycle.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Working devices are better donated than recycled — reuse extends their life.</li>
+    <li>Always wipe data and sign out of accounts before handing a device to someone else.</li>
+    <li>A complete package (device + charger) is far more useful to a recipient than a bare device.</li>
+    <li>Broken or unrepairable devices should go to recycling, not donation.</li>
+  </ul>
+
+  <section><h2>Devices that are good for donation</h2><ul><li>Laptops that still power on and run basic tasks</li><li>Smartphones that are functional and unlocked</li><li>Tablets with working screens and batteries</li><li>Working monitors, keyboards and mice</li><li>Functional printers and scanners</li><li>Working routers and modems</li><li>Chargers and cables that match the device</li></ul></section>
+  <section><h2>Prepare devices before donating</h2><p>Every device you donate must be safe for the next user. Start by backing up any files you want to keep. Log out of all accounts — email, app stores, social media, cloud services. Perform a factory reset on phones and laptops. Remove SIM cards, memory cards and any external disks. Check that the device powers on and charges properly. Include the charger and essential cables if available. A complete, working package is far more useful than a bare device.</p></section>
+  <section><h2>Where to donate in Kochi</h2><p>Consider local schools, colleges, non-profit organisations, community centres and religious institutions. Some may accept electronics for refurbishing and redistribution. If you are unsure, ask them what condition they need. Family members, friends and neighbours are also good options — a working laptop given to a student can make a real difference. Document the donation with a photo for your records.</p></section>
+  <section><h2>When recycling is better than donation</h2><p>Do not donate devices that are broken beyond repair, have swollen or leaking batteries, or are so old that they cannot run basic software. These items are better handled through recycling. A damaged device handed to someone without repair skills can create frustration and eventually end up in the waste stream anyway. Be honest about the condition when offering a donation.</p></section>
+  <section><h2>What to include in your message</h2><ul class="check-list"><li>Device types and quantities</li><li>Working or non-working status</li><li>Whether you have performed a factory reset</li><li>Any damage or missing parts</li><li>Preferred donation arrangement — pickup or drop-off</li><li>Your location in Kochi</li></ul></section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/sell-electronics/">Sell Electronics</a>
+      <a href="/recycling/">E-Waste Recycling</a>
+    </div>
+  </section>
+
+  <p class="mal-support">മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.</p>
+  <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/ewaste-donation-reuse-guide-kochi/" />
+  <section class="final-cta">
+    <h2>Have Questions About Donating or Reusing Electronics?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I want to donate old electronics." compact />
+  </section>
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; line-height: 1.6; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

@@ -1,0 +1,177 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "E-Waste Pickup for Home Cleanouts in Kochi | Disposal Guide";
+const description =
+  "How to include e-waste pickup in a home cleanout in Kochi — what electronics to set aside, how to sort items, data handling, and booking a single pickup for everything.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "E-Waste Pickup for Home Cleanouts in Kochi", path: "/blog/ewaste-pickup-home-cleanouts-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/ewaste-pickup-home-cleanouts-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/ewaste-pickup-home-cleanouts-kochi/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Can I combine e-waste pickup with a general house clearance?",
+    a: "E-waste pickup handles electronics specifically. For general clearances, contact us about what falls within the e-waste scope so items are handled correctly.",
+  },
+  {
+    q: "What if I find old electronics I know nothing about — age, model?",
+    a: "A photo and rough description is enough. We'll confirm whether it's accepted.",
+  },
+  {
+    q: "Can a home cleanout be done in stages?",
+    a: "Yes — you can book multiple pickups as you find items, or do one big pickup once you've gathered everything.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/ewaste-pickup-home-cleanouts-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Pickup for Home Cleanouts in Kochi</h1>
+  <p class="lede">
+    Home cleanouts often turn up a surprising amount of electronics.
+    Making e-waste pickup part of your cleanout plan keeps devices out
+    of general waste and handles them responsibly in the same visit.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'm doing a home cleanout and have electronics to recycle." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      During a home cleanout in Kochi, set old electronics aside in one
+      area as you go, wipe data from phones and laptops during the
+      cleanout itself, separate batteries into their own bag, then
+      message us a rough list and photos to book a single pickup for
+      everything at once.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Keep electronics separate from general rubbish from the start, not sorted at the end.</li>
+    <li>Wipe data during the cleanout — don't leave it for pickup day.</li>
+    <li>Cleanouts can be done in stages or as one combined pickup, whichever suits you.</li>
+  </ul>
+
+  <section>
+    <h2>Set aside electronics as you clean</h2>
+    <p>
+      As you go through each room, put old electronics aside in one
+      collection area. Don't mix them with general rubbish. By the end
+      of the cleanout, you'll have a pile to contact us about rather
+      than losing track of items.
+    </p>
+  </section>
+
+  <section>
+    <h2>Common home cleanout electronics finds</h2>
+    <ul class="item-list">
+      <li>Phones from previous replacement cycles</li>
+      <li>Old laptops stored in cases or drawers</li>
+      <li>Cables and chargers with no matching devices</li>
+      <li>An old TV that was moved to a storage room</li>
+      <li>Dead UPS unit in the study</li>
+      <li>Non-working printer or scanner</li>
+      <li>Old gaming console or media player</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Data: handle before pickup day</h2>
+    <p>
+      For any phone, laptop, or tablet in the cleanout pile: back up
+      what you need, wipe the device, remove SIM cards. Don't leave
+      devices wiped for pickup day — do it during the cleanout itself
+      so it's done before the team arrives.
+    </p>
+  </section>
+
+  <section>
+    <h2>Batteries: separate as you find them</h2>
+    <p>
+      Any battery — UPS, phone, laptop battery pack, power bank — goes
+      in its own bag as you find it. Never pack batteries under heavy
+      items. Flag any that look swollen or damaged. See
+      <a href="/battery-recycling/">battery recycling</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Booking</h2>
+    <p>
+      Once your cleanout pile is ready, message us with a rough item list
+      and photos of anything unusual or large. Book a
+      <a href="/pickup/">pickup slot</a> to have everything collected in
+      one visit.
+    </p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/pickup/">Book Pickup</a>
+      <a href="/battery-recycling/">Battery Recycling</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/ewaste-pickup-home-cleanouts-kochi/" />
+  <section class="final-cta">
+    <h2>Have Electronics From a Home Cleanout?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'm doing a home cleanout and have electronics to recycle." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .item-list { display: flex; flex-direction: column; gap: 0.35rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

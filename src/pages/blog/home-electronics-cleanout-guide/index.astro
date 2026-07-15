@@ -1,0 +1,172 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "How to Plan a Home Electronics Cleanout in Kochi | Step-by-Step";
+const description =
+  "A step-by-step guide to planning and completing a home electronics cleanout in Kochi — finding devices, sorting by disposal route, handling data, and booking pickup.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "How to Plan a Home Electronics Cleanout", path: "/blog/home-electronics-cleanout-guide/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/home-electronics-cleanout-guide/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/home-electronics-cleanout-guide/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "How long does a typical home cleanout take?",
+    a: "For most households, finding and sorting takes an hour or two. Data handling (backing up and wiping devices) is the step that takes the most time — plan for this before pickup day.",
+  },
+  {
+    q: "Do I need to do it all at once?",
+    a: "No. You can start with one room or one category, and book pickup when you have a useful quantity. There's no minimum.",
+  },
+  {
+    q: "What should I do with accessories like charging cables?",
+    a: "Include them in the pickup. Old cables and chargers are e-waste and shouldn't go in general bins.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/home-electronics-cleanout-guide/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>How to Plan a Home Electronics Cleanout</h1>
+  <p class="lede">
+    A home cleanout doesn't need to be overwhelming. A methodical room-by-
+    room approach, clear sorting, and one pickup visit is usually all it
+    takes to clear years of accumulated e-waste.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'm planning a home electronics cleanout and need to book a pickup." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      A home electronics cleanout works best room by room: sort into
+      "might have value," "no value" and "batteries" piles, handle data
+      before anything else, check batteries for damage, then message us
+      once everything is gathered in one place.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Data handling takes the most time — plan for it before pickup day, not on the day.</li>
+    <li>There's no minimum quantity — you can start with one room and book when ready.</li>
+    <li>Old cables and chargers count as e-waste too, not just devices.</li>
+  </ul>
+
+  <section>
+    <h2>Step 1: Go room by room</h2>
+    <p>
+      Start with the rooms most likely to have accumulated electronics —
+      the study, bedroom, and living room. Check every drawer, cupboard,
+      and shelf. Many households find phones from three or four replacement
+      cycles, old laptops, and a tangle of cables for devices long gone.
+    </p>
+  </section>
+
+  <section>
+    <h2>Step 2: Sort into three piles</h2>
+    <ul class="check-list">
+      <li><strong>Works, might have value</strong> — check for resale before recycling; see <a href="/sell-electronics/">sell electronics</a></li>
+      <li><strong>Doesn't work or no value</strong> — straight to recycling</li>
+      <li><strong>Batteries</strong> — separate from everything else, always</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Step 3: Handle data before anything else</h2>
+    <p>
+      For phones, tablets, and computers in the recycling or resale pile:
+      back up what you need, then factory reset or wipe. Remove SIM cards
+      and memory cards. For devices you can't wipe yourself, ask about
+      <a href="/data-destruction/">data destruction</a> at booking.
+    </p>
+  </section>
+
+  <section>
+    <h2>Step 4: Check batteries for damage</h2>
+    <p>
+      Before putting batteries in a bag, check for swelling or leakage.
+      Flag these before pickup and keep them away from other items.
+      See <a href="/battery-recycling/">battery recycling</a> for safe
+      handling tips.
+    </p>
+  </section>
+
+  <section>
+    <h2>Step 5: Contact us and book pickup</h2>
+    <p>
+      Message us on WhatsApp with your item list and location. Photos of
+      anything unusual (damaged batteries, bulky items) help us confirm
+      feasibility faster. Book a <a href="/pickup/">pickup slot</a> and
+      have everything accessible when the team arrives.
+    </p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/pickup/">Book Pickup</a>
+      <a href="/sell-electronics/">Sell Electronics</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/home-electronics-cleanout-guide/" />
+  <section class="final-cta">
+    <h2>Ready to Plan Your Home Cleanout?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'm planning a home electronics cleanout and need to book a pickup." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

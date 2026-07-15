@@ -1,0 +1,93 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "E-Waste Pickup Near Infopark, Kochi | Tech Park Electronics Collection";
+const description =
+  "E-waste pickup and recycling near Infopark, Kakkanad and Kochi tech parks. Electronics collection for offices, startups and IT companies in the Infopark area.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "E-Waste Pickup Near Infopark", path: "/blog/ewaste-pickup-near-infopark-kochi/" },
+];
+
+const jsonLd = [
+  { "@context": "https://schema.org", "@type": "BlogPosting", headline: title, description, datePublished, dateModified, author: { "@type": "Organization", name: BUSINESS.legalName }, publisher: { "@id": `${SITE_URL}/#organization` }, mainEntityOfPage: `${SITE_URL}/blog/ewaste-pickup-near-infopark-kochi/` },
+  { "@context": "https://schema.org", "@type": "WebPage", "@id": `${SITE_URL}/blog/ewaste-pickup-near-infopark-kochi/`, name: title, description, dateModified },
+];
+
+const faqItems = [
+  { q: "Is e-waste pickup available near Infopark?", a: "Yes. Infopark, Kakkanad and nearby tech park areas are serviceable. Contact us with your location and item details to confirm pickup feasibility." },
+  { q: "Can offices in Infopark request bulk pickup?", a: "Yes. Offices, startups and IT companies in Infopark can request bulk electronics pickup. Send quantities and types for planning." },
+  { q: "What items can offices include from Infopark?", a: "Laptops, desktops, monitors, printers, servers, UPS batteries, cables and network equipment. Send a list and we will confirm." },
+  { q: "Is data destruction available for Infopark offices?", a: "Yes. Data destruction services are available for business devices. Mention it when you contact us so we can plan accordingly." },
+  { q: "How do I check if my Infopark location is serviceable?", a: "Message us on WhatsApp with your building name or area in Infopark, and we will confirm pickup feasibility." },
+];
+---
+
+<Layout title={title} description={description} path="/blog/ewaste-pickup-near-infopark-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Pickup Near Infopark, Kochi</h1>
+  <p class="lede">Infopark and the Kakkanad tech corridor are major IT hubs in Kochi. Here is how to book an electronics pickup near Infopark for offices, startups and businesses.</p>
+  <CtaBar whatsappMessage="Hi, I need e-waste pickup near Infopark." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Yes — Infopark and the Kakkanad tech corridor are within our
+      service zone. Offices, startups and IT companies can message their
+      building name, item types and quantity, and any servers or
+      data-bearing devices, to get bulk pickup confirmed.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Infopark campuses, nearby business parks and co-working spaces are all covered.</li>
+    <li>Data destruction is available for business devices — mention it upfront.</li>
+    <li>Servers and networking gear need floor, lift and loading-dock details in advance.</li>
+  </ul>
+
+  <section><h2>Service availability near Infopark</h2><p>Ewaste Kochi primarily serves Kochi, Ernakulam, Kakkanad, Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro enquiry areas. For other Kerala districts, contact us to check pickup feasibility.</p><p>Infopark and the surrounding Kakkanad area are within our service zone. Whether you are in an Infopark campus, a nearby business park, or an office in Kakkanad, reach out with your location and item details.</p></section>
+  <section><h2>Common pickup locations near Infopark</h2><ul><li>Infopark buildings and tech campuses</li><li>Kakkanad business parks</li><li>Startup offices and co-working spaces</li><li>Offices near the Kakkanad junction</li><li>Nearby residential areas for staff</li></ul></section>
+  <section><h2>What to include in your message</h2><ul class="check-list"><li>Building name or area near Infopark</li><li>Item types and approximate quantity</li><li>Any servers or data-bearing devices</li><li>Preferred pickup date or timeframe</li><li>Access details — floor, lift, loading dock</li><li>Photos of large or bulky items</li></ul></section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/itad/">ITAD for Business</a>
+      <a href="/data-destruction/">Data Destruction</a>
+    </div>
+  </section>
+
+  <p class="mal-support">മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.</p>
+  <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/ewaste-pickup-near-infopark-kochi/" />
+  <section class="final-cta">
+    <h2>Have Questions About E-Waste Pickup Near Infopark?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I need e-waste pickup near Infopark." compact />
+  </section>
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; line-height: 1.6; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

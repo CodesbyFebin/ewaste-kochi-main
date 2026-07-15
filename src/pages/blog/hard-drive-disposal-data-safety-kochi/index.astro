@@ -1,0 +1,129 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Hard Drive Disposal in Kochi | Data Safety Before Recycling";
+const description =
+  "How to safely dispose of old hard drives in Kochi. Wiping, physical destruction, data destruction services and what to do before handing over storage devices.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Hard Drive Disposal in Kochi", path: "/blog/hard-drive-disposal-data-safety-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/hard-drive-disposal-data-safety-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/hard-drive-disposal-data-safety-kochi/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  { q: "Can I just delete files to erase data on a hard drive?", a: "No. Deleting files only removes the references — the data remains recoverable. A full wipe, encryption or physical destruction is needed for secure data removal." },
+  { q: "What is hard drive shredding?", a: "Hard drive shredding is physical destruction of the drive using industrial equipment, rendering the platters unreadable. It is one of the most secure data destruction methods." },
+  { q: "Does overwriting data make it unrecoverable?", a: "Overwriting (wiping) data multiple times can make recovery very difficult. However, for businesses with sensitive data, physical destruction is often preferred." },
+  { q: "Can I get a certificate of data destruction?", a: "A certificate of data destruction may be available on request for drives processed through our data destruction services. Contact us with your requirements." },
+  { q: "Is hard drive recycling different from data destruction?", a: "Yes. Recycling processes the materials after data is removed. Data destruction is the secure erasure or physical destruction of the storage media before recycling. Both can be arranged together." },
+];
+---
+
+<Layout title={title} description={description} path="/blog/hard-drive-disposal-data-safety-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Hard Drive Disposal in Kochi</h1>
+  <p class="lede">Old hard drives contain sensitive personal and business data. Here is how to dispose of them safely in Kochi — whether through wiping, destruction, or professional data destruction services.</p>
+
+  <CtaBar whatsappMessage="Hi, I have hard drives that need secure disposal." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Deleting files is not enough — old hard drives need a software
+      wipe, encryption, degaussing or physical shredding to make data
+      unrecoverable. Back up what you need first, then mention data
+      destruction requirements when you contact us so drives are handled
+      correctly.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Deleted files remain recoverable — only a full wipe or destruction removes them reliably.</li>
+    <li>Physical shredding is the most secure option for highly sensitive drives.</li>
+    <li>A certificate of data destruction is available on request for processed drives.</li>
+  </ul>
+
+  <section><h2>What storage devices need data protection?</h2>
+    <ul><li>Desktop and laptop hard drives (HDD)</li><li>Solid-state drives (SSD)</li><li>External hard drives</li><li>Server and NAS drives</li><li>DVR and NVR drives (from CCTV systems)</li><li>USB drives and memory cards</li></ul>
+  </section>
+
+  <section><h2>Data removal options</h2>
+    <p>Depending on your security needs, different options are available:</p>
+    <ul><li><strong>Software wipe</strong> — using disk wiping tools to overwrite data. Suitable for personal use.</li>
+    <li><strong>Encryption</strong> — encrypt the drive before disposal so data cannot be read.</li>
+    <li><strong>Degaussing</strong> — magnetic destruction of data on HDDs using a strong magnetic field.</li>
+    <li><strong>Physical shredding</strong> — mechanical destruction of the drive platters.</li></ul>
+    <p>Note: Data destruction services are separate from standard recycling. Contact us with your requirements and we will confirm what is available.</p>
+  </section>
+
+  <section><h2>Preparing drives for disposal</h2>
+    <ul class="check-list"><li>Back up any data you want to keep before wiping</li><li>If wiping yourself, use a trusted disk wiping tool</li><li>If sending drives to us, mention that data destruction is required</li><li>Keep drives in a safe place before pickup</li><li>If the drive is damaged or non-functional, flag this when booking</li></ul>
+  </section>
+
+  <section><h2>What to include in your message</h2>
+    <ul class="check-list"><li>Number and type of drives (HDD, SSD, external)</li><li>Whether data destruction is needed</li><li>If you have wiped the drives yourself</li><li>Any damaged drives</li><li>Your pickup location in Kochi</li></ul>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/data-destruction/">Data Destruction</a>
+      <a href="/itad/">ITAD for Business</a>
+    </div>
+  </section>
+
+  <p class="mal-support">മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.</p>
+  <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/hard-drive-disposal-data-safety-kochi/" />
+  <section class="final-cta">
+    <h2>Need Secure Hard Drive Disposal?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I have hard drives that need secure disposal." compact />
+  </section>
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

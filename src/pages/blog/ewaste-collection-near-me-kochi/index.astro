@@ -1,0 +1,166 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "E-Waste Collection Near Me in Kochi | Doorstep Pickup Guide";
+const description =
+  "E-waste collection near you in Kochi — how to check if your area is covered, what items are collected, and how to book a doorstep pickup quickly.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "E-Waste Collection Near Me in Kochi", path: "/blog/ewaste-collection-near-me-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/ewaste-collection-near-me-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/ewaste-collection-near-me-kochi/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "How do I check if you collect near me?",
+    a: "Message us your address on WhatsApp. We'll confirm feasibility quickly.",
+  },
+  {
+    q: "Which Kochi areas are confirmed?",
+    a: "Kakkanad, Kalamassery, and Ernakulam South have dedicated location pages. We cover most of the Kochi metro — message us to confirm your specific address.",
+  },
+  {
+    q: "Is there a drop-off option near me?",
+    a: "We primarily offer doorstep pickup. Contact us to discuss options if you prefer to drop items off.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/ewaste-collection-near-me-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Collection Near Me in Kochi</h1>
+  <p class="lede">
+    Looking for e-waste collection near you in Kochi? Doorstep pickup
+    covers most of the city — here's how to check your area and book.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to check if e-waste collection is available near me in Kochi." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      To find e-waste collection near you in Kochi, message your address
+      on WhatsApp — most Kochi-metro locations are serviceable, and the
+      team confirms feasibility quickly. Kakkanad, Kalamassery and
+      Ernakulam South have dedicated location pages; other areas are
+      confirmed individually.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Messaging your exact address is faster than guessing from a general list.</li>
+    <li>Kakkanad, Kalamassery and Ernakulam South are confirmed core areas.</li>
+    <li>Doorstep pickup is the primary option, not drop-off points.</li>
+    <li>Preparation (data wipe, battery separation) speeds up the visit.</li>
+  </ul>
+
+  <section>
+    <h2>Coverage across Kochi</h2>
+    <p>
+      Ewaste Kochi primarily supports Kochi, Ernakulam, Kakkanad,
+      Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro areas.
+      For other Kerala districts, contact us to check pickup feasibility.
+      See our <a href="/locations/">locations directory</a> for areas with
+      dedicated pages, including <a href="/locations/kakkanad/">Kakkanad</a>,
+      <a href="/locations/kalamassery/">Kalamassery</a>, and
+      <a href="/locations/ernakulam-south/">Ernakulam South</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>How to check your specific area</h2>
+    <p>
+      The fastest way is to message us your address on WhatsApp. We'll
+      confirm whether pickup is available at your location and when the
+      next available slot is. Most Kochi-metro addresses are serviceable.
+    </p>
+  </section>
+
+  <section>
+    <h2>What can be collected near you</h2>
+    <p>
+      Laptops, desktops, monitors, phones, tablets, printers, routers,
+      cables, batteries, TVs, and mixed IT scrap — see
+      <a href="/recycling/">recycling</a> for the full list.
+    </p>
+  </section>
+
+  <section>
+    <h2>How to prepare before the team arrives</h2>
+    <p>
+      Back up and wipe data from storage devices, keep batteries in a
+      separate bag, flag any damaged or swollen cells, and gather items
+      in one accessible place. See our
+      <a href="/blog/how-to-prepare-electronics-for-recycling/">preparation
+      guide</a> for the full checklist.
+    </p>
+  </section>  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/recycling/">E-Waste Recycling</a>
+      <a href="/pickup/">Book Pickup</a>
+    </div>
+  </section>
+
+
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/ewaste-collection-near-me-kochi/" />
+  <section class="final-cta">
+    <h2>Have Questions About E-Waste Collection Near Me in Kochi?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to check if e-waste collection is available near me in Kochi." compact />
+  </section>
+
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

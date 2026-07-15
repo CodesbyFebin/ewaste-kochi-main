@@ -1,0 +1,173 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "How Quantity Affects E-Waste Pickup Feasibility in Kochi";
+const description =
+  "How the quantity of electronics you have affects pickup feasibility in Kochi — what's typically covered, how to handle very small or very large volumes, and what to ask when booking.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "How Quantity Affects Pickup Feasibility", path: "/blog/quantity-and-pickup-feasibility/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/quantity-and-pickup-feasibility/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/quantity-and-pickup-feasibility/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "Can I get pickup for just one old phone?",
+    a: "Contact us with details. For a single small item, we can advise on the most efficient approach.",
+  },
+  {
+    q: "Is there an upper limit on how much can be collected in one visit?",
+    a: "Very large volumes may require multiple trips or a dedicated large-vehicle visit. Describe the scope when booking so we can plan correctly.",
+  },
+  {
+    q: "Should I wait until I have more items before calling?",
+    a: "Not necessarily — a small number of batteries or data-bearing devices may justify immediate collection for safety or security reasons.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/quantity-and-pickup-feasibility/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>How Quantity Affects Pickup Feasibility</h1>
+  <p class="lede">
+    Pickup feasibility depends on item type, condition, location —
+    and quantity. Here's how volume affects what's possible and how
+    to handle it at both ends of the scale.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I have some old electronics and would like to understand pickup options." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      There's no minimum quantity for standard household pickup —
+      even a single phone qualifies. Larger volumes (50+ items or bulk
+      corporate) need a dedicated visit with advance planning. Contact
+      us with a rough count and we'll confirm the right approach.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Small quantities aren't turned away — urgent items (damaged batteries) take priority regardless of volume.</li>
+    <li>Medium volumes (10-50 items) just need a rough count in your message.</li>
+    <li>Large or bulk corporate volumes benefit from an inventory and data destruction plan upfront.</li>
+  </ul>
+
+  <section>
+    <h2>Standard household quantities</h2>
+    <p>
+      A typical household pickup — a few phones, a laptop, some cables,
+      maybe an old printer — is a standard, straightforward collection.
+      No minimum quantity threshold applies for most household items.
+      Contact us with your list to confirm.
+    </p>
+  </section>
+
+  <section>
+    <h2>Very small quantities</h2>
+    <p>
+      A single phone or a bag of cables can sometimes be combined with
+      a nearby pickup for efficiency. Contact us with what you have —
+      we'll advise on the most practical approach. Urgent situations
+      (swollen battery, security-sensitive device) take priority over
+      quantity considerations.
+    </p>
+  </section>
+
+  <section>
+    <h2>Medium volumes (10–50 items)</h2>
+    <p>
+      A small office clearance or large household cleanout falls here.
+      Standard pickup with advance notice. Include a rough count in your
+      message so we can plan the visit.
+    </p>
+  </section>
+
+  <section>
+    <h2>Large volumes (50+ items, bulk corporate)</h2>
+    <p>
+      Larger volumes need a dedicated visit with advance planning. Share
+      an inventory, access details, and any data destruction requirements.
+      See <a href="/itad/">ITAD</a> and
+      <a href="/blog/bulk-electronics-pickup-planning/">bulk pickup
+      planning</a> for the full approach.
+    </p>
+  </section>
+
+  <section>
+    <h2>What to mention when you have a lot</h2>
+    <p>
+      Rough item counts by type (not exact numbers), any large or heavy
+      items, batteries or damaged items, and whether data destruction
+      is needed. This gets the planning started without requiring a
+      full inventory first.
+    </p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/itad/">ITAD for Business</a>
+      <a href="/pickup/">Book Pickup</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/quantity-and-pickup-feasibility/" />
+  <section class="final-cta">
+    <h2>Ready to Check Your Pickup Options?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I have some old electronics and would like to understand pickup options." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

@@ -1,0 +1,97 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Copier and Photocopier Recycling in Kochi | Office Equipment Disposal";
+const description =
+  "How to recycle old copiers and photocopiers in Kochi. Safety tips, preparation for bulk office pickup and what to do with toner and drum units.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Copier and Photocopier Recycling", path: "/blog/copier-photocopier-recycling-kochi/" },
+];
+
+const jsonLd = [
+  { "@context": "https://schema.org", "@type": "BlogPosting", headline: title, description, datePublished, dateModified, author: { "@type": "Organization", name: BUSINESS.legalName }, publisher: { "@id": `${SITE_URL}/#organization` }, mainEntityOfPage: `${SITE_URL}/blog/copier-photocopier-recycling-kochi/` },
+  { "@context": "https://schema.org", "@type": "WebPage", "@id": `${SITE_URL}/blog/copier-photocopier-recycling-kochi/`, name: title, description, dateModified },
+];
+
+const faqItems = [
+  { q: "Can old photocopiers be recycled in Kochi?", a: "Yes. Old copiers and photocopiers are accepted for recycling. They contain electronics, plastic, metal and toner components." },
+  { q: "Should toner and drum units be removed before pickup?", a: "It helps to flag toner and drum units. If they are easily removable, remove them. If not, let us know and we can handle them during processing." },
+  { q: "Can offices recycle multiple copiers at once?", a: "Yes. Offices upgrading equipment can request bulk pickup for multiple copiers. Send quantities and types for planning." },
+  { q: "Are large office copiers accepted?", a: "Yes. Large floor-standing copiers are accepted. They may require special handling due to size and weight. Let us know in advance." },
+  { q: "Do copiers have any scrap value?", a: "Some copiers have scrap value based on model, age and working condition. Functional copiers may have better resale potential. Send details for a quote." },
+];
+---
+
+<Layout title={title} description={description} path="/blog/copier-photocopier-recycling-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Copier and Photocopier Recycling in Kochi</h1>
+  <p class="lede">Offices in Kochi regularly upgrade copiers and photocopiers. Here is how to dispose of old office copiers, including toner handling, bulk pickup and preparation tips.</p>
+  <CtaBar whatsappMessage="Hi, I have an old office copier for recycling." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      Old copiers and photocopiers can be recycled in Kochi, including
+      toner cartridges, drum units and paper feeders. Flag whether toner
+      is leaking or units are damaged, and offices upgrading multiple
+      machines at once should send a simple list with model names and
+      quantities.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Toner cartridges and drum units are accepted alongside the main unit.</li>
+    <li>Leaking or damaged toner should be bagged separately before pickup.</li>
+    <li>Large floor-standing copiers may need advance notice for handling.</li>
+    <li>Functional copiers may carry resale value depending on model and age.</li>
+  </ul>
+
+  <section><h2>What copier components are accepted</h2><ul><li>Complete copier units — desktop and floor-standing</li><li>Toner cartridges and drum units</li><li>Developer units and waste toner bottles</li><li>Paper trays and feeders</li><li>Control panels and circuit boards</li><li>Fuser assemblies and rollers</li></ul></section>
+  <section><h2>Preparing copiers for pickup</h2><ul class="check-list"><li>Unplug the copier and disconnect power</li><li>Remove any paper from trays and document feeders</li><li>Flag toner cartridges and drum units if accessible</li><li>Take photos showing the copier size and condition</li><li>For multiple units — create a simple list with model names</li><li>Note any damage — cracked glass, jammed trays, error codes</li></ul></section>
+  <section><h2>Toner and consumables safety</h2><p>Toner powder is fine and can create dust if not handled carefully. If a toner cartridge is leaking or damaged, place it in a sealed plastic bag before pickup. Drum units should be kept upright. For offices with multiple empty toner cartridges, bag them separately from the main copier unit. This keeps the pickup clean and makes processing easier.</p></section>
+  <section><h2>What to include in your message</h2><ul class="check-list"><li>Copier make and model</li><li>Quantity and approximate size</li><li>Working or non-working status</li><li>Toner cartridges and drum units included</li><li>Photos of each unit</li><li>Your pickup location in Kochi</li></ul></section>  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/data-destruction/">Data Destruction</a>
+      <a href="/itad/">ITAD for Business</a>
+      <a href="/computer-scrap-buyers-kochi/">Computer Scrap Buyers</a>
+    </div>
+  </section>
+
+
+  <p class="mal-support">മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.</p>
+  <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/copier-photocopier-recycling-kochi/" />
+  <section class="final-cta">
+    <h2>Have Questions About Copier and Photocopier Recycling in Kochi?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I have an old office copier for recycling." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; line-height: 1.6; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

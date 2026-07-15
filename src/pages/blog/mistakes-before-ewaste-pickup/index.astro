@@ -1,0 +1,181 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "Mistakes to Avoid Before E-Waste Pickup in Kochi";
+const description =
+  "Common mistakes Kochi residents and offices make before an e-waste pickup — from missing data wipes to unclear location details and unseparated batteries — and how to avoid them.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Mistakes to Avoid Before E-Waste Pickup", path: "/blog/mistakes-before-ewaste-pickup/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/mistakes-before-ewaste-pickup/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/mistakes-before-ewaste-pickup/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "What's the single most important preparation before any pickup?",
+    a: "Separating batteries from other electronics and flagging any damaged cells. This is the most common oversight and the one with real safety consequences.",
+  },
+  {
+    q: "Is it a problem if I forget to wipe a device before pickup?",
+    a: "Yes — ask about data destruction when booking so it can be arranged as part of the collection rather than an afterthought.",
+  },
+  {
+    q: "What if I don't know exactly what I have?",
+    a: "A rough description is fine. Photos of anything unclear help more than trying to be precise with descriptions.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/mistakes-before-ewaste-pickup/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Mistakes to Avoid Before E-Waste Pickup</h1>
+  <p class="lede">
+    Most pickup delays and problems come from the same few avoidable
+    oversights. Here are the common ones and the simple fix for each.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to prepare correctly before booking an e-waste pickup." />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      The most common pickup mistakes are: not separating batteries, not
+      wiping data-bearing devices, vague location details, and not
+      flagging damaged or heavy items in advance. All are easy to avoid
+      with a bit of upfront planning.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Battery separation is the single most consequential thing people skip.</li>
+    <li>"Near the temple" isn't enough — building name, floor and access details matter.</li>
+    <li>A rough item list upfront makes booking faster and more accurate.</li>
+  </ul>
+
+  <section>
+    <h2>1. Not separating batteries</h2>
+    <p>
+      The most common and most consequential oversight. Batteries — loose
+      or still in devices — mixed with general e-waste can create fire
+      and handling risks. Always put batteries in a separate bag and flag
+      them. See <a href="/battery-recycling/">battery recycling</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>2. Not wiping devices before pickup</h2>
+    <p>
+      Handing over a phone or laptop with active accounts and personal
+      data is a real risk. Back up and factory reset phones and tablets;
+      wipe computer drives. Or ask about <a href="/data-destruction/">data
+      destruction</a> at booking.
+    </p>
+  </section>
+
+  <section>
+    <h2>3. Not flagging damaged items</h2>
+    <p>
+      Swollen batteries, cracked screens, water damage, and physically
+      broken devices all need to be mentioned before pickup — not
+      discovered on arrival. Send photos and describe damage when you
+      first contact us.
+    </p>
+  </section>
+
+  <section>
+    <h2>4. Vague location details</h2>
+    <p>
+      "Near the temple" is not enough. Include building name, floor,
+      area, and any access details. Especially for apartments, include
+      whether there's a lift and where items will be when the team
+      arrives. See our guide on
+      <a href="/blog/location-details-for-ewaste-pickup/">location
+      details for pickup</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>5. Not mentioning large or heavy items</h2>
+    <p>
+      Old CRT TVs, server racks, and large UPS units need advance
+      planning. Mentioning these only when the team arrives creates
+      delays. Flag them at the first message.
+    </p>
+  </section>
+
+  <section>
+    <h2>6. Booking without an item list</h2>
+    <p>
+      "I have old electronics" is not enough to confirm feasibility or
+      quote. A rough list — type and quantity — makes the booking process
+      much faster and more accurate.
+    </p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/pickup/">Book Pickup</a>
+      <a href="/battery-recycling/">Battery Recycling</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/mistakes-before-ewaste-pickup/" />
+  <section class="final-cta">
+    <h2>Ready to Prepare and Book?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to prepare correctly before booking an e-waste pickup." compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>

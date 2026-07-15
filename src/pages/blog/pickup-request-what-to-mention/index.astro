@@ -1,0 +1,169 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+
+const title = "What to Mention in an E-Waste Pickup Request | Kochi Guide";
+const description =
+  "What to include when contacting us for an e-waste pickup in Kochi — item types, quantities, location, battery flags, data requirements, and timing preferences.";
+const datePublished = "2026-07-08";
+const dateModified = "2026-07-08";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "What to Mention in a Pickup Request", path: "/blog/pickup-request-what-to-mention/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/pickup-request-what-to-mention/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/pickup-request-what-to-mention/`,
+    name: title,
+    description,
+    dateModified,
+  },
+];
+
+const faqItems = [
+  {
+    q: "What if I'm not sure about the exact quantity?",
+    a: "A rough estimate is fine. '5-6 old laptops' or 'a box of cables' is enough to start the feasibility check.",
+  },
+  {
+    q: "Do I need to include model numbers?",
+    a: "Not required for standard pickups. Model details are helpful for devices you want a quote on — they affect condition-based valuation.",
+  },
+  {
+    q: "What if I realise I missed something after sending the message?",
+    a: "Just send a follow-up message. We'll update the booking details.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/blog/pickup-request-what-to-mention/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>What to Mention in a Pickup Request</h1>
+  <p class="lede">
+    A complete first message gets a faster, more accurate response.
+    Here's a clear checklist of what to include when you contact us
+    to book an e-waste pickup in Kochi.
+  </p>
+
+  <CtaBar whatsappMessage="Hi, I'd like to book an e-waste pickup. Here are my details:" />
+
+  <div class="quick-answer">
+    <p class="quick-answer-label">Quick answer</p>
+    <p>
+      A complete pickup request covers five things: item list, location,
+      battery notes, data requirements, and timing preference. Rough
+      estimates are fine — you don't need exact quantities or model
+      numbers unless you want a quote.
+    </p>
+  </div>
+
+  <ul class="key-takeaways">
+    <li>Rough quantities ("a bag of cables") are enough — precision isn't required.</li>
+    <li>A WhatsApp location pin adds precision beyond a text address alone.</li>
+    <li>You can always send a follow-up message if you forgot something.</li>
+  </ul>
+
+  <section>
+    <h2>Item list</h2>
+    <ul class="check-list">
+      <li>Type of items (laptops, phones, monitors, batteries, cables, UPS, etc.)</li>
+      <li>Rough quantity (e.g. "3 old laptops, 2 monitors, a bag of cables")</li>
+      <li>Condition if relevant (working, non-working, damaged, broken)</li>
+      <li>Any items with scrap or resale value you'd like a quote for</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Location</h2>
+    <ul class="check-list">
+      <li>Area name and address or nearby landmark</li>
+      <li>Building name and floor (apartments and offices)</li>
+      <li>Access details — gate, security, lift availability</li>
+      <li>WhatsApp location pin for precision</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Batteries</h2>
+    <ul class="check-list">
+      <li>Mention if you have batteries separately (UPS, inverter, laptop packs)</li>
+      <li>Flag any that are swollen, leaking, or visibly damaged</li>
+      <li>Include photos of damaged batteries</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Data requirements</h2>
+    <ul class="check-list">
+      <li>Mention if data destruction is needed for any device</li>
+      <li>List data-bearing devices that haven't been wiped yet</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Timing preference</h2>
+    <p>
+      Any preference for morning or afternoon, a specific date, or a
+      deadline (e.g. "need pickup before the end of the week"). We'll
+      confirm based on availability.
+    </p>
+  </section>
+
+  <section>
+    <h2>Related services</h2>
+    <div class="link-row">
+      <a href="/pickup/">Book Pickup</a>
+      <a href="/blog/pickup-on-whatsapp-kochi/">Book on WhatsApp</a>
+    </div>
+  </section>
+
+  <p class="mal-support">
+    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
+  </p>
+
+  <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/pickup-request-what-to-mention/" />
+  <section class="final-cta">
+    <h2>Ready to Send Your Pickup Request?</h2>
+    <p>Share your item details and location on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to book an e-waste pickup. Here are my details:" compact />
+  </section>
+
+  <p class="updated">Last updated: {dateModified}</p>
+</Layout>
+
+<style>
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
+  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
+  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
+  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
+  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
+  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+</style>
