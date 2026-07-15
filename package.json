@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",
-    "validate": "astro build && tsx scripts/validate-seo-v2.ts"
+    "validate": "astro build && tsx scripts/validate-seo-v2.ts",
+    "gsc:indexing-readiness": "tsx scripts/gsc-p4-indexing-readiness.ts"
   },
   "dependencies": {
     "astro": "^4.16.0"

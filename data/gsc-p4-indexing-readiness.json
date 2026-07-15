@@ -1,0 +1,388 @@
+{
+  "summary": {
+    "generatedAt": "2026-07-15T13:38:38.709Z",
+    "siteUrl": "https://www.ewastekochi.com",
+    "mode": "readiness_only_no_submission",
+    "discoveryFiles": [
+      {
+        "url": "https://www.ewastekochi.com/robots.txt",
+        "status": 200,
+        "ok": true,
+        "notes": "Pass"
+      },
+      {
+        "url": "https://www.ewastekochi.com/sitemap.xml",
+        "status": 200,
+        "ok": true,
+        "notes": "Pass"
+      },
+      {
+        "url": "https://www.ewastekochi.com/content-index.json",
+        "status": 200,
+        "ok": true,
+        "notes": "Pass"
+      },
+      {
+        "url": "https://www.ewastekochi.com/ai-sitemap.xml",
+        "status": 200,
+        "ok": true,
+        "notes": "Pass"
+      },
+      {
+        "url": "https://www.ewastekochi.com/llms.txt",
+        "status": 200,
+        "ok": true,
+        "notes": "Pass"
+      },
+      {
+        "url": "https://www.ewastekochi.com/feed.xml",
+        "status": 200,
+        "ok": true,
+        "notes": "Pass"
+      }
+    ],
+    "robotsReferencesSitemap": true,
+    "subSitemaps": [
+      "https://www.ewastekochi.com/sitemaps/core.xml",
+      "https://www.ewastekochi.com/sitemaps/services.xml",
+      "https://www.ewastekochi.com/sitemaps/blog.xml",
+      "https://www.ewastekochi.com/sitemaps/legal.xml",
+      "https://www.ewastekochi.com/sitemaps/locations.xml",
+      "https://www.ewastekochi.com/sitemaps/ml.xml"
+    ],
+    "subSitemapCounts": [
+      {
+        "sitemap": "https://www.ewastekochi.com/sitemaps/core.xml",
+        "urls": 14
+      },
+      {
+        "sitemap": "https://www.ewastekochi.com/sitemaps/services.xml",
+        "urls": 21
+      },
+      {
+        "sitemap": "https://www.ewastekochi.com/sitemaps/blog.xml",
+        "urls": 124
+      },
+      {
+        "sitemap": "https://www.ewastekochi.com/sitemaps/legal.xml",
+        "urls": 4
+      },
+      {
+        "sitemap": "https://www.ewastekochi.com/sitemaps/locations.xml",
+        "urls": 184
+      },
+      {
+        "sitemap": "https://www.ewastekochi.com/sitemaps/ml.xml",
+        "urls": 8
+      }
+    ],
+    "uniqueSitemapUrlCount": 355,
+    "badHostUrlCount": 0,
+    "stagingUrlCount": 0,
+    "sitemapFailureCount": 0,
+    "priorityUrlCount": 29,
+    "priorityFailureCount": 0,
+    "googleSubmissionPerformed": false,
+    "indexingApiPerformed": false,
+    "blockedUnsafeAutomation": [
+      "Do not regenerate sitemap from hardcoded URL matrices.",
+      "Do not submit staging URLs.",
+      "Do not use deprecated Google sitemap ping endpoint.",
+      "Do not use Google Indexing API for normal e-waste service/blog pages.",
+      "Do not request indexing for all sitemap URLs."
+    ]
+  },
+  "sitemapFailures": [],
+  "priorityChecks": [
+    {
+      "tier": "P1",
+      "url": "https://www.ewastekochi.com/",
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/",
+      "canonical": "https://www.ewastekochi.com/",
+      "noindex": false,
+      "ok": true,
+      "issue": ""
+    },
+    {
+      "tier": "P1",
+      "url": "https://www.ewastekochi.com/recycling/",
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/recycling/",
+      "canonical": "https://www.ewastekochi.com/recycling/",
+      "noindex": false,
+      "ok": true,
+      "issue": ""
+    },
+    {
+      "tier": "P1",
+      "url": "https://www.ewastekochi.com/services/electronics-recycling-near-me/",
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/services/electronics-recycling-near-me/",
+      "canonical": "https://www.ewastekochi.com/services/electronics-recycling-near-me/",
+      "noindex": false,
+      "ok": true,
+      "issue": ""
+    },
+    {
+      "tier": "P1",
+      "url": "https://www.ewastekochi.com/services/computer-recycling-near-me/",
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/services/computer-recycling-near-me/",
+      "canonical": "https://www.ewastekochi.com/services/computer-recycling-near-me/",
+      "noindex": false,
+      "ok": true,
+      "issue": ""
+    },
+    {
+      "tier": "P1",
+      "url": "https://www.ewastekochi.com/services/air-conditioner-recycling-kochi/",
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/services/air-conditioner-recycling-kochi/",
+      "canonical": "https://www.ewastekochi.com/services/air-conditioner-recycling-kochi/",
+      "noindex": false,
+      "ok": true,
+      "issue": ""
+    },
+    {
+      "tier": "P1",
+      "url": "https://www.ewastekochi.com/marketplace/",
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/marketplace/",
+      "canonical": "https://www.ewastekochi.com/marketplace/",
+      "noindex": false,
+      "ok": true,
+      "issue": ""
+    },
+    {
+      "tier": "P1",
+      "url": "https://www.ewastekochi.com/battery-recycling/",
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/battery-recycling/",
+      "canonical": "https://www.ewastekochi.com/battery-recycling/",
+      "noindex": false,
+      "ok": true,
+      "issue": ""
+    },
+    {
+      "tier": "P1",
+      "url": "https://www.ewastekochi.com/sell-electronics/",
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/sell-electronics/",
+      "canonical": "https://www.ewastekochi.com/sell-electronics/",
+      "noindex": false,
+      "ok": true,
+      "issue": ""
+    },
+    {
+      "tier": "P1",
+      "url": "https://www.ewastekochi.com/pickup/",
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/pickup/",
+      "canonical": "https://www.ewastekochi.com/pickup/",
+      "noindex": false,
+      "ok": true,
+      "issue": ""
+    },
+    {
+      "tier": "P1",
+      "url": "https://www.ewastekochi.com/e-waste/",
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/e-waste/",
+      "canonical": "https://www.ewastekochi.com/e-waste/",
+      "noindex": false,
+      "ok": true,
+      "issue": ""
+    },
+    {
+      "tier": "P1",
+      "url": "https://www.ewastekochi.com/contact/",
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/contact/",
+      "canonical": "https://www.ewastekochi.com/contact/",
+      "noindex": false,
+      "ok": true,
+      "issue": ""
+    },
+    {
+      "tier": "P2",
+      "url": "https://www.ewastekochi.com/locations/kottayam/",
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/locations/kottayam/",
+      "canonical": "https://www.ewastekochi.com/locations/kottayam/",
+      "noindex": false,
+      "ok": true,
+      "issue": ""
+    },
+    {
+      "tier": "P2",
+      "url": "https://www.ewastekochi.com/locations/palakkad/",
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/locations/palakkad/",
+      "canonical": "https://www.ewastekochi.com/locations/palakkad/",
+      "noindex": false,
+      "ok": true,
+      "issue": ""
+    },
+    {
+      "tier": "P2",
+      "url": "https://www.ewastekochi.com/locations/thrissur/",
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/locations/thrissur/",
+      "canonical": "https://www.ewastekochi.com/locations/thrissur/",
+      "noindex": false,
+      "ok": true,
+      "issue": ""
+    },
+    {
+      "tier": "P2",
+      "url": "https://www.ewastekochi.com/locations/kozhikode/",
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/locations/kozhikode/",
+      "canonical": "https://www.ewastekochi.com/locations/kozhikode/",
+      "noindex": false,
+      "ok": true,
+      "issue": ""
+    },
+    {
+      "tier": "P2",
+      "url": "https://www.ewastekochi.com/locations/thiruvananthapuram/",
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/locations/thiruvananthapuram/",
+      "canonical": "https://www.ewastekochi.com/locations/thiruvananthapuram/",
+      "noindex": false,
+      "ok": true,
+      "issue": ""
+    },
+    {
+      "tier": "P2",
+      "url": "https://www.ewastekochi.com/locations/kollam/",
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/locations/kollam/",
+      "canonical": "https://www.ewastekochi.com/locations/kollam/",
+      "noindex": false,
+      "ok": true,
+      "issue": ""
+    },
+    {
+      "tier": "P2",
+      "url": "https://www.ewastekochi.com/locations/kannur/",
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/locations/kannur/",
+      "canonical": "https://www.ewastekochi.com/locations/kannur/",
+      "noindex": false,
+      "ok": true,
+      "issue": ""
+    },
+    {
+      "tier": "P2",
+      "url": "https://www.ewastekochi.com/locations/malappuram/",
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/locations/malappuram/",
+      "canonical": "https://www.ewastekochi.com/locations/malappuram/",
+      "noindex": false,
+      "ok": true,
+      "issue": ""
+    },
+    {
+      "tier": "P2",
+      "url": "https://www.ewastekochi.com/locations/kakkanad/",
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/locations/kakkanad/",
+      "canonical": "https://www.ewastekochi.com/locations/kakkanad/",
+      "noindex": false,
+      "ok": true,
+      "issue": ""
+    },
+    {
+      "tier": "P2",
+      "url": "https://www.ewastekochi.com/locations/aluva/",
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/locations/aluva/",
+      "canonical": "https://www.ewastekochi.com/locations/aluva/",
+      "noindex": false,
+      "ok": true,
+      "issue": ""
+    },
+    {
+      "tier": "P2",
+      "url": "https://www.ewastekochi.com/locations/ernakulam-south/",
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/locations/ernakulam-south/",
+      "canonical": "https://www.ewastekochi.com/locations/ernakulam-south/",
+      "noindex": false,
+      "ok": true,
+      "issue": ""
+    },
+    {
+      "tier": "P2",
+      "url": "https://www.ewastekochi.com/locations/edappally/",
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/locations/edappally/",
+      "canonical": "https://www.ewastekochi.com/locations/edappally/",
+      "noindex": false,
+      "ok": true,
+      "issue": ""
+    },
+    {
+      "tier": "P2",
+      "url": "https://www.ewastekochi.com/locations/kalamassery/",
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/locations/kalamassery/",
+      "canonical": "https://www.ewastekochi.com/locations/kalamassery/",
+      "noindex": false,
+      "ok": true,
+      "issue": ""
+    },
+    {
+      "tier": "P3",
+      "url": "https://www.ewastekochi.com/blog/free-e-waste-pickup-kochi/",
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/blog/free-e-waste-pickup-kochi/",
+      "canonical": "https://www.ewastekochi.com/blog/free-e-waste-pickup-kochi/",
+      "noindex": false,
+      "ok": true,
+      "issue": ""
+    },
+    {
+      "tier": "P3",
+      "url": "https://www.ewastekochi.com/blog/laptop-scrap-price-kochi/",
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/blog/laptop-scrap-price-kochi/",
+      "canonical": "https://www.ewastekochi.com/blog/laptop-scrap-price-kochi/",
+      "noindex": false,
+      "ok": true,
+      "issue": ""
+    },
+    {
+      "tier": "P3",
+      "url": "https://www.ewastekochi.com/blog/electronic-waste-disposal-kerala/",
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/blog/electronic-waste-disposal-kerala/",
+      "canonical": "https://www.ewastekochi.com/blog/electronic-waste-disposal-kerala/",
+      "noindex": false,
+      "ok": true,
+      "issue": ""
+    },
+    {
+      "tier": "P3",
+      "url": "https://www.ewastekochi.com/blog/how-to-choose-itad-provider/",
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/blog/how-to-choose-itad-provider/",
+      "canonical": "https://www.ewastekochi.com/blog/how-to-choose-itad-provider/",
+      "noindex": false,
+      "ok": true,
+      "issue": ""
+    },
+    {
+      "tier": "P3",
+      "url": "https://www.ewastekochi.com/tools/scrap-value-calculator/",
+      "status": 200,
+      "finalUrl": "https://www.ewastekochi.com/tools/scrap-value-calculator/",
+      "canonical": "https://www.ewastekochi.com/tools/scrap-value-calculator/",
+      "noindex": false,
+      "ok": true,
+      "issue": ""
+    }
+  ]
+}
