@@ -3,13 +3,14 @@ import Layout from "../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
 import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
 
 const title = "E-Waste Recycling Myths and Safe Facts | Kochi Guide";
 const description =
   "Common e-waste recycling myths corrected with safe, accurate facts — including data safety, battery disposal, what counts as e-waste, and what recycling actually involves.";
 const datePublished = "2026-07-08";
-const dateModified = "2026-07-08";
+const dateModified = "2026-07-15";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
@@ -39,6 +40,15 @@ const jsonLd = [
   },
 ];
 
+const mythFactRows = [
+  { myth: "Deleting files means my data is gone", fact: "Deleted files are usually still recoverable until overwritten — verified destruction is the reliable option" },
+  { myth: "E-waste only means computers and phones", fact: "Chargers, cables, batteries, printers, TVs, routers all count" },
+  { myth: "I can put old batteries in the bin", fact: "Batteries can cause fires in waste vehicles — they need separate handling" },
+  { myth: "Informal scrap dealers recycle properly", fact: "No documentation, no data-destruction guarantee, unsafe battery handling" },
+  { myth: "Old electronics have no value, recycling costs me", fact: "Standard household pickup is free, and some devices are worth selling instead" },
+  { myth: "I need to find a drop-off point", fact: "Doorstep pickup is available across Kochi and Ernakulam district" },
+];
+
 const faqItems = [
   {
     q: "Is it really unsafe to put electronics in general waste?",
@@ -46,7 +56,39 @@ const faqItems = [
   },
   {
     q: "Can a recycler really guarantee my data is destroyed?",
-    a: "A recycler who offers certified data destruction — with a documented process and certificate available on request — can confirm destruction happened and how. This is different from a vague assurance.",
+    a: "A recycler who offers verified data destruction — with a documented process and documentation available on request — can confirm destruction happened and how. This is different from a vague assurance with nothing behind it.",
+  },
+  {
+    q: "Why do these myths persist if they're not true?",
+    a: "Most come from outdated information or assumptions carried over from how people handled general waste for years — e-waste as a distinct category, with its own risks and rules, is relatively newer territory for a lot of households.",
+  },
+  {
+    q: "Is it true that recycling my old laptop takes a long time to arrange?",
+    a: "Not usually — most residential pickups can be scheduled within a day or two of first contact, sometimes sooner. The 'it's a hassle' assumption is often the biggest reason people delay longer than they need to.",
+  },
+  {
+    q: "Do I need to know exactly what's e-waste and what isn't before contacting you?",
+    a: "No — if you're unsure whether something counts, just describe it and we'll confirm. It's easier to ask than to guess wrong in either direction.",
+  },
+  {
+    q: "Is it a myth that businesses need a different process than households?",
+    a: "No, that part is true — businesses often do need a different approach, particularly for data-bearing devices and any documentation requirements. See our ITAD service for the structured version of this.",
+  },
+  {
+    q: "Is it true that only 'big' e-waste pickups are worth arranging?",
+    a: "No — a single old laptop or a bag of cables is a normal request. There's no minimum that makes a pickup worth arranging.",
+  },
+  {
+    q: "Does recycling actually help the environment, or is that overstated?",
+    a: "Proper recycling does recover real materials — metals, plastics, and components — that would otherwise go to landfill, and it keeps hazardous substances out of the general waste stream. It's not a cure-all, but it's a genuine, measurable benefit over informal disposal.",
+  },
+  {
+    q: "Is it a myth that swollen batteries are dangerous to keep at home?",
+    a: "No, that one's true — a swollen or damaged battery is a real fire risk and should be isolated and flagged for pickup rather than left in normal storage.",
+  },
+  {
+    q: "How can I tell a myth from a fact if I'm not sure?",
+    a: "When in doubt, ask us directly rather than relying on general assumptions — a two-line WhatsApp message gets a specific answer faster than searching around for a general rule that may not apply to your situation.",
   },
 ];
 ---
@@ -67,17 +109,39 @@ const faqItems = [
     <p>
       The most persistent e-waste myths — "deleting means it's gone,"
       "it's only computers and phones," "informal dealers recycle
-      properly" — are all false. Certified data destruction, proper
-      battery handling and authorized doorstep pickup are the safe,
-      accurate alternatives.
+      properly" — are all false. Verified data destruction, proper
+      battery handling and doorstep pickup are the safe, accurate
+      alternatives.
     </p>
   </div>
 
   <ul class="key-takeaways">
-    <li>Deleted files are usually still recoverable — only certified wiping or destruction is reliable.</li>
+    <li>Deleted files are usually still recoverable — only verified wiping or destruction is reliable.</li>
     <li>E-waste includes far more than computers and phones — chargers, cables and appliances count too.</li>
     <li>Informal scrap dealers can't guarantee data destruction or safe battery handling.</li>
   </ul>
+
+  <section>
+    <h2>Myths and facts at a glance</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Myth</th>
+            <th>Fact</th>
+          </tr>
+        </thead>
+        <tbody>
+          {mythFactRows.map((row) => (
+            <tr>
+              <td>{row.myth}</td>
+              <td>{row.fact}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
 
   <section>
     <h2>Myth 1: "Deleting files means my data is gone"</h2>
@@ -85,7 +149,7 @@ const faqItems = [
       <strong>Fact:</strong> Deleting files removes their directory
       entry but usually leaves the underlying data on the drive until it's
       overwritten. Formatted drives often retain recoverable data too.
-      Certified data destruction — wiping to a recognised standard,
+      Verified data destruction — wiping to a recognised standard,
       degaussing, or physical shredding — is the reliable option. See
       <a href="/data-destruction/">data destruction</a>.
     </p>
@@ -107,7 +171,7 @@ const faqItems = [
     <p>
       <strong>Fact:</strong> Batteries — especially lithium — can cause
       fires when crushed in waste collection vehicles and processing
-      facilities. All batteries should go through separate, proper
+      facilities. All batteries should go through separate, dedicated
       collection channels. See <a href="/battery-recycling/">battery
       recycling</a>.
     </p>
@@ -117,7 +181,7 @@ const faqItems = [
     <h2>Myth 4: "Informal scrap dealers recycle properly"</h2>
     <p>
       <strong>Fact:</strong> Informal scrap dealers typically don't
-      follow authorized environmental handling processes, can't guarantee
+      follow documented environmental handling processes, can't guarantee
       data destruction, and don't separate batteries safely. "Recycling"
       through informal channels often means partial stripping and
       uncontrolled disposal of the remainder.
@@ -146,10 +210,46 @@ const faqItems = [
   </section>
 
   <section>
+    <h2>Myth 7: "Business e-waste needs the same process as household"</h2>
+    <p>
+      <strong>Fact:</strong> Business and household pickups often overlap,
+      but structured decommissioning — asset tracking, documentation,
+      recurring hardware refresh cycles — is a different scope of work.
+      See <a href="/itad/">IT asset disposition</a> for when that
+      structured approach applies versus a standard pickup.
+    </p>
+  </section>
+
+  <section>
+    <h2>Myth 8: "Recycling is only worth it for large quantities"</h2>
+    <p>
+      <strong>Fact:</strong> A single old phone or one bag of cables is a
+      normal, valid request — there's no minimum quantity that makes a
+      pickup worth arranging. Waiting to accumulate a "big enough" batch
+      just means the items sit around longer than necessary.
+    </p>
+  </section>
+
+  <section>
+    <h2>Why these myths matter</h2>
+    <p>
+      Most of these beliefs aren't dangerous on their own — they're just
+      outdated defaults carried over from how people have always handled
+      general waste. The problem is what they lead to: data left on a
+      device that gets handed off, a swollen battery kept in a drawer
+      because "it's probably fine," or a genuinely useful pickup delayed
+      because it seemed like too much hassle to arrange. Correcting the
+      belief usually fixes the behavior that follows from it.
+    </p>
+  </section>
+
+  <section>
     <h2>Related services</h2>
     <div class="link-row">
       <a href="/data-destruction/">Data Destruction</a>
       <a href="/battery-recycling/">Battery Recycling</a>
+      <a href="/pickup/">Book Pickup</a>
+      <a href="/recycling/">E-Waste Recycling</a>
     </div>
   </section>
 
@@ -158,6 +258,9 @@ const faqItems = [
   </p>
 
   <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/ewaste-recycling-myths-facts/" />
+
   <section class="final-cta">
     <h2>Ready to Recycle Safely?</h2>
     <p>Share your item details and location on WhatsApp to get started.</p>
@@ -179,4 +282,8 @@ const faqItems = [
   .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
   .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
   .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+  .table-scroll { overflow-x: auto; margin: 1rem 0; }
+  table { width: 100%; border-collapse: collapse; min-width: 560px; }
+  th, td { text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--color-border); font-size: 0.92rem; }
+  th { color: var(--color-muted); font-weight: 700; }
 </style>

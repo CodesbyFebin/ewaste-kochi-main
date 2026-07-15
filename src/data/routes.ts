@@ -861,6 +861,20 @@ export const ROUTES: RouteEntry[] = [
     indexable: true,
   },
   {
+    path: "/blog/ewaste-recycling-myths-facts/",
+    changefreq: "monthly",
+    priority: 0.6,
+    title: "E-Waste Recycling Myths and Safe Facts | Kochi Guide",
+    description:
+      "Common e-waste recycling myths corrected with safe, accurate facts — including data safety, battery disposal, what counts as e-waste, and what recycling actually involves.",
+    type: "blog",
+    sitemapGroup: "blog",
+    lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
+  },
+  {
     path: "/blog/ewaste-pickup-near-me/",
     changefreq: "monthly",
     priority: 0.6,

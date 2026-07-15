@@ -59,6 +59,7 @@ export const BLOG_CLUSTERS: BlogCluster[] = [
       { title: "How Responsible E-Waste Collection Works | Kochi Guide", href: "/blog/how-responsible-ewaste-collection-works/", excerpt: "What makes e-waste collection responsible — authorized handling, data destruction, battery safety, and why the difference between compliant and informal recyclers matters." },
       { title: "Common Mistakes People Make with Old Electronics | Kochi Guide", href: "/blog/common-mistakes-old-electronics/", excerpt: "The most common mistakes Kochi households and offices make with old electronics — from skipping data wipes to using informal scrap dealers, and how to avoid each one." },
       { title: "What Happens to Old Electronics After Collection? | Kochi Guide", href: "/blog/what-happens-after-ewaste-collection/", excerpt: "Where old electronics go after e-waste pickup in Kochi — assessment, data destruction, reuse, material recovery and responsible disposal explained clearly." },
+      { title: "E-Waste Recycling Myths and Safe Facts | Kochi Guide", href: "/blog/ewaste-recycling-myths-facts/", excerpt: "Common e-waste recycling myths corrected with safe, accurate facts — including data safety, battery disposal, what counts as e-waste, and what recycling actually involves." },
     ],
     plannedPosts: [
       "What Is E-Waste Recycling?",
