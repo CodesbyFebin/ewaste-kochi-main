@@ -805,6 +805,20 @@ export const ROUTES: RouteEntry[] = [
     indexable: true,
   },
   {
+    path: "/blog/battery-safety-before-ewaste-pickup/",
+    changefreq: "monthly",
+    priority: 0.6,
+    title: "Battery Safety Before E-Waste Pickup | Kochi Recycling Guide",
+    description:
+      "Battery safety checklist for e-waste pickup in Kochi — swollen batteries, lithium risks, storage tips, and what to flag before collection.",
+    type: "blog",
+    sitemapGroup: "blog",
+    lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
+  },
+  {
     path: "/blog/ewaste-pickup-near-me/",
     changefreq: "monthly",
     priority: 0.6,

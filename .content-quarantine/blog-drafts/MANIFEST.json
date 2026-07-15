@@ -95,11 +95,6 @@
     "status": "draft"
   },
   {
-    "slug": "battery-safety-before-ewaste-pickup",
-    "contentSource": "legacy",
-    "status": "review"
-  },
-  {
     "slug": "battery-safety-for-power-backup-systems",
     "contentSource": "generated",
     "status": "draft"

@@ -261,6 +261,7 @@ export const BLOG_CLUSTERS: BlogCluster[] = [
     ],
     existingPosts: [
       { title: "Battery Recycling Near Me in Kochi | Safe UPS, Inverter & Lithium Battery Guide", href: "/blog/battery-recycling-near-me-kochi/", excerpt: "Battery recycling near me in Kochi — safe handling for UPS, inverter, laptop and lithium batteries, including what to do with swollen or damaged cells." },
+      { title: "Battery Safety Before E-Waste Pickup | Kochi Recycling Guide", href: "/blog/battery-safety-before-ewaste-pickup/", excerpt: "Battery safety checklist for e-waste pickup in Kochi — swollen batteries, lithium risks, storage tips, and what to flag before collection." },
     ],
     plannedPosts: [
       "UPS Battery Recycling",
