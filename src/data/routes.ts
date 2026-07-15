@@ -875,6 +875,20 @@ export const ROUTES: RouteEntry[] = [
     indexable: true,
   },
   {
+    path: "/blog/what-affects-old-laptop-value-kochi/",
+    changefreq: "monthly",
+    priority: 0.6,
+    title: "What Affects Old Laptop Value in Kochi? | Selling Tips",
+    description:
+      "Key factors that determine old laptop value in Kochi — brand, age, working condition, screen quality, and what buyers check before offering a quote.",
+    type: "blog",
+    sitemapGroup: "blog",
+    lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
+  },
+  {
     path: "/blog/ewaste-pickup-near-me/",
     changefreq: "monthly",
     priority: 0.6,

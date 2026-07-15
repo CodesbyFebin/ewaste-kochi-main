@@ -3,13 +3,14 @@ import Layout from "../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
 import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
 
 const title = "What Affects Old Laptop Value in Kochi? | Selling Tips";
 const description =
   "Key factors that determine old laptop value in Kochi — brand, age, working condition, screen quality, and what buyers check before offering a quote.";
 const datePublished = "2026-07-08";
-const dateModified = "2026-07-08";
+const dateModified = "2026-07-15";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
@@ -39,6 +40,17 @@ const jsonLd = [
   },
 ];
 
+const valueFactorRows = [
+  { factor: "Brand and model", impact: "Popular business and premium models retain more value" },
+  { factor: "Age", impact: "Laptops under 5 years old generally have more value" },
+  { factor: "Working condition", impact: "Fully functional laptops are worth significantly more" },
+  { factor: "Screen condition", impact: "Cracks, dead pixels and discoloration reduce value" },
+  { factor: "Battery health", impact: "Good battery life adds value; swollen batteries reduce it" },
+  { factor: "Specifications", impact: "Higher RAM, storage and processor models are worth more" },
+  { factor: "Physical condition", impact: "Dents, scratches and missing keys or parts reduce value" },
+  { factor: "Accessories", impact: "Original charger adds some value" },
+];
+
 const faqItems = [
   {
     q: "What brand of old laptop has the best resale value?",
@@ -59,6 +71,26 @@ const faqItems = [
   {
     q: "Does age affect laptop value significantly?",
     a: "Yes. Newer laptops with better specifications generally have higher value. Older models may have limited resale potential but can still be recycled.",
+  },
+  {
+    q: "Why do two laptops with the same specs sometimes get different quotes?",
+    a: "Condition does most of the work here — a well-maintained unit with a clean screen and healthy battery will out-quote an identical model with cosmetic damage or a degraded battery, even at the same specs.",
+  },
+  {
+    q: "Is it worth repairing a minor issue before selling, like a cracked hinge?",
+    a: "It depends on the repair cost versus the value gain. For small, cheap fixes it can be worth it; for anything expensive, it's usually better to disclose the issue and let the quote reflect it.",
+  },
+  {
+    q: "Does upgraded RAM or storage increase the quote?",
+    a: "Yes, if the upgrade is still installed and functioning — mention any non-original components (upgraded RAM, replaced SSD) when you share details, since it affects the assessment.",
+  },
+  {
+    q: "How is a non-working laptop's scrap value calculated differently?",
+    a: "Instead of assessing the whole unit as functional, the assessment shifts to individual recoverable components and materials — screen, RAM, storage, casing — rather than the laptop as a working device.",
+  },
+  {
+    q: "Can I get an estimate without sending the laptop anywhere first?",
+    a: "Yes — send photos and details on WhatsApp for an initial estimate. A final quote is confirmed once the device is physically inspected at pickup.",
   },
 ];
 ---
@@ -93,44 +125,38 @@ const faqItems = [
 
   <section>
     <h2>Key factors that determine laptop value</h2>
-    <table class="value-table">
-      <tr>
-        <th>Factor</th>
-        <th>Impact on Value</th>
-      </tr>
-      <tr>
-        <td>Brand and model</td>
-        <td>Popular business and premium models retain more value</td>
-      </tr>
-      <tr>
-        <td>Age</td>
-        <td>Laptops under 5 years old generally have more value</td>
-      </tr>
-      <tr>
-        <td>Working condition</td>
-        <td>Fully functional laptops are worth significantly more</td>
-      </tr>
-      <tr>
-        <td>Screen condition</td>
-        <td>Cracks, dead pixels and discoloration reduce value</td>
-      </tr>
-      <tr>
-        <td>Battery health</td>
-        <td>Good battery life adds value; swollen batteries reduce it</td>
-      </tr>
-      <tr>
-        <td>Specifications</td>
-        <td>Higher RAM, storage and processor models are worth more</td>
-      </tr>
-      <tr>
-        <td>Physical condition</td>
-        <td>Dents, scratches and missing keys or parts reduce value</td>
-      </tr>
-      <tr>
-        <td>Accessories</td>
-        <td>Original charger adds some value</td>
-      </tr>
-    </table>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Factor</th>
+            <th>Impact on value</th>
+          </tr>
+        </thead>
+        <tbody>
+          {valueFactorRows.map((row) => (
+            <tr>
+              <td><strong>{row.factor}</strong></td>
+              <td>{row.impact}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>How the assessment actually works</h2>
+    <p>
+      A quote isn't a single number pulled from a brand-and-model lookup
+      — it's a combination of factors checked together. Two identical
+      models can land on different quotes once condition, battery
+      health, and any non-original components are factored in. Sending
+      clear photos and an honest description of any issues up front
+      gets you closer to the final number faster, rather than a quote
+      that changes significantly once the laptop is physically
+      inspected.
+    </p>
   </section>
 
   <section>
@@ -140,6 +166,19 @@ const faqItems = [
       have the best resale value. Non-working laptops may still be valued
       based on their components — hard drives, RAM, screen and casing
       materials all have scrap value.
+    </p>
+  </section>
+
+  <section>
+    <h2>Common overestimations to avoid</h2>
+    <p>
+      A few assumptions come up often and lead to disappointment if not
+      corrected early: assuming original purchase price still matters
+      years later (it doesn't — current market demand does), assuming a
+      "barely used" laptop that's sat unused for years is in the same
+      condition as when it was new (batteries and thermal paste degrade
+      even without active use), and assuming a premium brand alone
+      guarantees a premium quote regardless of condition.
     </p>
   </section>
 
@@ -182,6 +221,7 @@ const faqItems = [
     <div class="link-row">
       <a href="/sell-electronics/">Sell Electronics</a>
       <a href="/computer-scrap-buyers-kochi/">Computer Scrap Buyers</a>
+      <a href="/data-destruction/">Data Destruction</a>
     </div>
   </section>
 
@@ -190,6 +230,9 @@ const faqItems = [
   </p>
 
   <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/what-affects-old-laptop-value-kochi/" />
+
   <section class="final-cta">
     <h2>Want a Quote for Your Old Laptop?</h2>
     <p>Share your item details and location on WhatsApp to get started.</p>
@@ -202,9 +245,6 @@ const faqItems = [
 <style>
   .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
   .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
-  .value-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
-  .value-table th, .value-table td { border: 1px solid var(--color-border); padding: 0.5rem 0.75rem; text-align: left; }
-  .value-table th { background: var(--color-surface); font-weight: 600; }
   .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
   .updated { font-size: 0.8rem; color: var(--color-muted); }
   .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
@@ -215,4 +255,8 @@ const faqItems = [
   .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
   .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
   .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+  .table-scroll { overflow-x: auto; margin: 1rem 0; }
+  table { width: 100%; border-collapse: collapse; min-width: 480px; }
+  th, td { text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--color-border); font-size: 0.92rem; }
+  th { color: var(--color-muted); font-weight: 700; }
 </style>
