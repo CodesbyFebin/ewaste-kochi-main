@@ -3,13 +3,14 @@ import Layout from "../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
 import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
 
 const title = "Inverter Battery Disposal in Kochi | UPS & Power Backup Recycling";
 const description =
   "How to dispose of old inverter and UPS batteries in Kochi. Safety tips, pickup considerations, and what to do with damaged power backup batteries.";
 const datePublished = "2026-07-08";
-const dateModified = "2026-07-08";
+const dateModified = "2026-07-15";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
@@ -39,6 +40,13 @@ const jsonLd = [
   },
 ];
 
+const batteryTypeRows = [
+  { type: "Flat-plate lead-acid", typicalWeight: "15-25 kg", notes: "Most common in home inverters; shorter lifespan than tubular" },
+  { type: "Tubular lead-acid", typicalWeight: "20-30 kg", notes: "Common for larger home/small office backup; heavier, longer-lasting" },
+  { type: "Sealed lead-acid (UPS)", typicalWeight: "5-15 kg", notes: "Found in most desktop and rack UPS units; maintenance-free design" },
+  { type: "Lithium-ion backup", typicalWeight: "3-10 kg", notes: "Newer UPS systems; needs different handling than lead-acid, mention this when booking" },
+];
+
 const faqItems = [
   {
     q: "Can inverter batteries be recycled in Kochi?",
@@ -59,6 +67,26 @@ const faqItems = [
   {
     q: "How should I store used inverter batteries before pickup?",
     a: "Keep batteries upright in a cool, dry area. Do not stack other items on top. If the battery is leaking, place it in a plastic container.",
+  },
+  {
+    q: "How do I know if my inverter battery actually needs replacing?",
+    a: "Common signs are reduced backup time, the battery not holding charge as long as before, visible bulging of the casing, or a burning smell near the terminals. Any of these are worth flagging when you book pickup for the old one.",
+  },
+  {
+    q: "Is it safe to disconnect the battery myself before pickup?",
+    a: "If you're comfortable doing so and it's safe, disconnecting beforehand helps. If not, let us know — do not force a connection that seems stuck or attempt it if the battery shows signs of damage.",
+  },
+  {
+    q: "Do you charge extra for heavy or multiple batteries?",
+    a: "Weight and quantity affect logistics planning, not typically the basic pickup eligibility. Mention approximate weight and count so the visit is planned correctly.",
+  },
+  {
+    q: "What happens to the battery after you collect it?",
+    a: "Lead-acid batteries go through dedicated battery processing separate from general e-waste — see our battery recycling guide for the full breakdown of how different chemistries are handled.",
+  },
+  {
+    q: "Can I get a new inverter battery installed as part of this service?",
+    a: "Our service covers collection and recycling of the old battery, not installation of a replacement. Mention if timing coordination with your electrician or installer would help.",
   },
 ];
 ---
@@ -92,13 +120,62 @@ const faqItems = [
 
   <section>
     <h2>Types of power backup batteries accepted</h2>
+    <p>
+      Not all inverter and backup batteries are built the same way, and
+      the differences matter for both weight and handling. Here's the
+      general breakdown:
+    </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Typical weight</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          {batteryTypeRows.map((row) => (
+            <tr>
+              <td><strong>{row.type}</strong></td>
+              <td>{row.typicalWeight}</td>
+              <td>{row.notes}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why inverter batteries need different handling</h2>
+    <p>
+      A typical laptop or phone battery weighs a few hundred grams. An
+      inverter battery can weigh as much as an adult — 15 to 30
+      kilograms is common for home units, more for larger tubular
+      batteries. That weight changes the practical handling: it's not
+      something to casually move to a curb, and pickup logistics need
+      to account for floor level, stairs, and lift access. On top of
+      the weight, lead-acid batteries contain sulfuric acid, which
+      means a cracked or improperly handled casing is a real chemical
+      hazard, not just an inconvenience.
+    </p>
+  </section>
+
+  <section>
+    <h2>Signs it's time to replace an inverter battery</h2>
     <ul>
-      <li>Lead-acid inverter batteries — flatplate and tubular</li>
-      <li>UPS backup batteries — sealed lead-acid</li>
-      <li>Lithium-ion backup batteries — for modern UPS systems</li>
-      <li>Battery banks — multiple batteries connected together</li>
-      <li>Small UPS units — with built-in batteries</li>
+      <li>Backup time has noticeably dropped compared to when it was new</li>
+      <li>The battery doesn't hold charge as long between power cuts</li>
+      <li>Visible bulging or swelling of the casing</li>
+      <li>A burning or sulfur-like smell near the terminals</li>
+      <li>Corrosion visible at the terminal connections</li>
     </ul>
+    <p>
+      None of these need to be diagnosed precisely by you — just flag
+      what you're seeing when you book pickup for the old battery, so
+      the team knows what to expect.
+    </p>
   </section>
 
   <section>
@@ -142,6 +219,18 @@ const faqItems = [
   </section>
 
   <section>
+    <h2>Office and server room battery pickup</h2>
+    <p>
+      Offices tend to accumulate UPS batteries in batches — a server
+      room refresh, a scheduled maintenance cycle, or several desktop
+      UPS units retired at once. This is usually easier to handle as a
+      single bulk pickup rather than one battery at a time. Send photos
+      of the setup and a rough count, and mention whether it's a
+      one-time clearout or the start of a recurring replacement cycle.
+    </p>
+  </section>
+
+  <section>
     <h2>What to include in your message</h2>
     <ul class="check-list">
       <li>Battery type (inverter, UPS, lithium backup)</li>
@@ -158,6 +247,7 @@ const faqItems = [
     <div class="link-row">
       <a href="/battery-recycling/">Battery Recycling</a>
       <a href="/pickup/">Book Pickup</a>
+      <a href="/recycling/">E-Waste Recycling</a>
     </div>
   </section>
 
@@ -166,6 +256,9 @@ const faqItems = [
   </p>
 
   <Faq items={faqItems} />
+
+  <RelatedContent href="/blog/inverter-battery-disposal-kochi/" />
+
   <section class="final-cta">
     <h2>Have Inverter or UPS Batteries to Dispose Of?</h2>
     <p>Share your item details and location on WhatsApp to get started.</p>
@@ -188,4 +281,8 @@ const faqItems = [
   .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
   .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
   .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+  .table-scroll { overflow-x: auto; margin: 1rem 0; }
+  table { width: 100%; border-collapse: collapse; min-width: 560px; }
+  th, td { text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--color-border); font-size: 0.92rem; }
+  th { color: var(--color-muted); font-weight: 700; }
 </style>

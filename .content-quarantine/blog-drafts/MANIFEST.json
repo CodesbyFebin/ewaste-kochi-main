@@ -1310,11 +1310,6 @@
     "status": "draft"
   },
   {
-    "slug": "inverter-battery-disposal-kochi",
-    "contentSource": "legacy",
-    "status": "review"
-  },
-  {
     "slug": "inverter-battery-pickup-checklist",
     "contentSource": "generated",
     "status": "draft"

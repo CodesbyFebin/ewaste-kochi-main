@@ -847,6 +847,20 @@ export const ROUTES: RouteEntry[] = [
     indexable: true,
   },
   {
+    path: "/blog/inverter-battery-disposal-kochi/",
+    changefreq: "monthly",
+    priority: 0.6,
+    title: "Inverter Battery Disposal in Kochi | UPS & Power Backup Recycling",
+    description:
+      "How to dispose of old inverter and UPS batteries in Kochi. Safety tips, pickup considerations, and what to do with damaged power backup batteries.",
+    type: "blog",
+    sitemapGroup: "blog",
+    lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
+  },
+  {
     path: "/blog/ewaste-pickup-near-me/",
     changefreq: "monthly",
     priority: 0.6,

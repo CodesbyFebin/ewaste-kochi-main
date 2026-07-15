@@ -56,6 +56,7 @@ const POST_META: PostMeta[] = [
   { href: "/blog/battery-safety-before-ewaste-pickup/", datePublished: "2026-07-15", beginner: true, popular: false },
   { href: "/blog/common-mistakes-old-electronics/", datePublished: "2026-07-15", beginner: true, popular: false },
   { href: "/blog/what-happens-after-ewaste-collection/", datePublished: "2026-07-15", beginner: true, popular: false },
+  { href: "/blog/inverter-battery-disposal-kochi/", datePublished: "2026-07-15", beginner: false, popular: false },
 
 ];
 
