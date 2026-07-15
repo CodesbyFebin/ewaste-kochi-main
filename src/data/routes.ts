@@ -819,6 +819,20 @@ export const ROUTES: RouteEntry[] = [
     indexable: true,
   },
   {
+    path: "/blog/common-mistakes-old-electronics/",
+    changefreq: "monthly",
+    priority: 0.6,
+    title: "Common Mistakes People Make with Old Electronics | Kochi Guide",
+    description:
+      "The most common mistakes Kochi households and offices make with old electronics — from skipping data wipes to using informal scrap dealers, and how to avoid each one.",
+    type: "blog",
+    sitemapGroup: "blog",
+    lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
+  },
+  {
     path: "/blog/ewaste-pickup-near-me/",
     changefreq: "monthly",
     priority: 0.6,
