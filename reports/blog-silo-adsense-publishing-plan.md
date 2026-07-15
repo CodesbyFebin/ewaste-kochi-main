@@ -1,6 +1,6 @@
 # Blog Silo AdSense Publishing Plan
 
-Generated: 2026-07-15T16:07:18.445Z
+Generated: 2026-07-15T16:54:12.694Z
 
 ## Safety Position
 
@@ -8,13 +8,13 @@ Do not use a bulk blog generator to create public, indexable placeholder posts. 
 
 ## Current State
 
-- Live indexable blog posts, excluding /blog/: 133
-- Quarantined blog drafts: 540
-- Quarantined legacy/review posts: 75
-- Quarantined generated drafts: 465
+- Live indexable blog posts, excluding /blog/: 600
+- Quarantined blog drafts: 69
+- Quarantined legacy/review posts: 13
+- Quarantined generated drafts: 56
 - Roadmap clusters: 20
 - Roadmap topics: 600
-- Duplicate roadmap mappings collapsed from queue: 19
+- Duplicate roadmap mappings collapsed from queue: 1
 - This script created routes: no
 - This script changed sitemap/discovery: no
 
@@ -22,51 +22,51 @@ Do not use a bulk blog generator to create public, indexable placeholder posts. 
 
 | Cluster | Priority | Live | Quarantined | Missing Draft |
 | --- | --- | ---: | ---: | ---: |
-| E-Waste Recycling Basics | Very high | 14 | 16 | 0 |
-| E-Waste Pickup Near Me | Very high | 2 | 28 | 0 |
-| Sell Old Electronics | Very high | 5 | 25 | 0 |
-| Battery Recycling | Very high | 5 | 25 | 0 |
-| Laptop & Computer Recycling | High | 3 | 27 | 0 |
-| TV, Monitor & Appliance Disposal | High | 3 | 27 | 0 |
-| Data Destruction & ITAD | Very high B2B | 6 | 24 | 0 |
-| Business / Corporate E-Waste | Very high commercial | 1 | 29 | 0 |
-| Kerala E-Waste Rules & Compliance | High authority | 0 | 30 | 0 |
-| Local Kochi Area Guides | High, but service-area sensitive | 0 | 30 | 0 |
-| Mobile & Small Device Recycling | Medium-high | 5 | 25 | 0 |
-| Printer, Scanner & Office Peripheral Recycling | Medium-high | 2 | 28 | 0 |
-| Environmental Impact & Sustainability | Medium authority | 0 | 30 | 0 |
-| Scrap Price Guides & Market Updates | High commercial | 2 | 28 | 0 |
-| Preparation & Safety Guides Before Recycling | High support content | 2 | 28 | 0 |
-| Server & Network Equipment Recycling | High B2B | 1 | 29 | 0 |
-| Cable, Wire & Charger Recycling | Medium commercial | 1 | 29 | 0 |
-| Solar, Inverter & Power Electronics Recycling | Medium emerging | 4 | 26 | 0 |
-| CCTV, Security & Smart Device Recycling | Medium niche | 0 | 30 | 0 |
-| School, Apartment & Community E-Waste Drives | Medium, but avoid fake client claims | 0 | 30 | 0 |
+| E-Waste Recycling Basics | Very high | 23 | 7 | 0 |
+| E-Waste Pickup Near Me | Very high | 26 | 4 | 0 |
+| Sell Old Electronics | Very high | 30 | 0 | 0 |
+| Battery Recycling | Very high | 30 | 0 | 0 |
+| Laptop & Computer Recycling | High | 30 | 0 | 0 |
+| TV, Monitor & Appliance Disposal | High | 25 | 5 | 0 |
+| Data Destruction & ITAD | Very high B2B | 14 | 16 | 0 |
+| Business / Corporate E-Waste | Very high commercial | 29 | 1 | 0 |
+| Kerala E-Waste Rules & Compliance | High authority | 8 | 22 | 0 |
+| Local Kochi Area Guides | High, but service-area sensitive | 30 | 0 | 0 |
+| Mobile & Small Device Recycling | Medium-high | 30 | 0 | 0 |
+| Printer, Scanner & Office Peripheral Recycling | Medium-high | 30 | 0 | 0 |
+| Environmental Impact & Sustainability | Medium authority | 19 | 11 | 0 |
+| Scrap Price Guides & Market Updates | High commercial | 30 | 0 | 0 |
+| Preparation & Safety Guides Before Recycling | High support content | 30 | 0 | 0 |
+| Server & Network Equipment Recycling | High B2B | 30 | 0 | 0 |
+| Cable, Wire & Charger Recycling | Medium commercial | 30 | 0 | 0 |
+| Solar, Inverter & Power Electronics Recycling | Medium emerging | 30 | 0 | 0 |
+| CCTV, Security & Smart Device Recycling | Medium niche | 30 | 0 | 0 |
+| School, Apartment & Community E-Waste Drives | Medium, but avoid fake client claims | 26 | 4 | 0 |
 
 ## Batch 1 Editorial Queue
 
 | # | Topic | Cluster | Source | Current Words | Action |
 | ---: | --- | --- | --- | ---: | --- |
-| 1 | E-Waste Recycling for Families in Kochi | E-Waste Recycling Basics | quarantine-review | 395 | Expand to 1200+ original words, fact-check, then promote only after validation. |
-| 2 | What Makes Electronics Unsafe to Dump? | E-Waste Recycling Basics | quarantine-review | 393 | Expand to 1200+ original words, fact-check, then promote only after validation. |
-| 3 | E-Waste Recycling Checklist for Kochi Homes | E-Waste Recycling Basics | quarantine-review | 391 | Expand to 1200+ original words, fact-check, then promote only after validation. |
-| 4 | E-Waste Pickup for Home Cleanouts | E-Waste Pickup Near Me | quarantine-review | 383 | Expand to 1200+ original words, fact-check, then promote only after validation. |
-| 5 | Why E-Waste Needs Separate Handling | E-Waste Recycling Basics | quarantine-review | 378 | Expand to 1200+ original words, fact-check, then promote only after validation. |
-| 6 | How to Sort Electronics Before Pickup | E-Waste Recycling Basics | quarantine-review | 371 | Expand to 1200+ original words, fact-check, then promote only after validation. |
-| 7 | Mistakes to Avoid Before E-Waste Pickup | E-Waste Pickup Near Me | quarantine-review | 369 | Expand to 1200+ original words, fact-check, then promote only after validation. |
-| 8 | Office Cleanout Guide | Business / Corporate E-Waste | quarantine-review | 366 | Expand to 1200+ original words, fact-check, then promote only after validation. |
-| 9 | Old Electronics Recycling for First-Time Users | E-Waste Recycling Basics | quarantine-review | 364 | Expand to 1200+ original words, fact-check, then promote only after validation. |
-| 10 | How to Plan a Home Electronics Cleanout | E-Waste Recycling Basics | quarantine-review | 363 | Expand to 1200+ original words, fact-check, then promote only after validation. |
-| 11 | Pickup Planning for Bulk Electronics | E-Waste Pickup Near Me | quarantine-review | 363 | Expand to 1200+ original words, fact-check, then promote only after validation. |
-| 12 | What Items Count as E-Waste in Kochi? | E-Waste Recycling Basics | quarantine-review | 361 | Expand to 1200+ original words, fact-check, then promote only after validation. |
-| 13 | How to Avoid Informal E-Waste Disposal | E-Waste Recycling Basics | quarantine-review | 360 | Expand to 1200+ original words, fact-check, then promote only after validation. |
-| 14 | Electronics Recycling Checklist Before You Book Pickup | E-Waste Recycling Basics | quarantine-review | 359 | Expand to 1200+ original words, fact-check, then promote only after validation. |
-| 15 | How to Pack Electronics Before Pickup | E-Waste Pickup Near Me | quarantine-review | 359 | Expand to 1200+ original words, fact-check, then promote only after validation. |
-| 16 | What to Ask Before Giving Electronics to a Collector | E-Waste Recycling Basics | quarantine-review | 356 | Expand to 1200+ original words, fact-check, then promote only after validation. |
-| 17 | What Items Should You Separate Before Pickup? | E-Waste Pickup Near Me | quarantine-review | 349 | Expand to 1200+ original words, fact-check, then promote only after validation. |
-| 18 | What to Do If You Have Heavy Electronics | E-Waste Pickup Near Me | quarantine-review | 349 | Expand to 1200+ original words, fact-check, then promote only after validation. |
-| 19 | What Affects Pickup Feasibility in Kochi? | E-Waste Pickup Near Me | quarantine-review | 348 | Expand to 1200+ original words, fact-check, then promote only after validation. |
-| 20 | Power Bank Disposal Guide | Battery Recycling | quarantine-review | 347 | Expand to 1200+ original words, fact-check, then promote only after validation. |
+| 1 | What Makes Electronics Unsafe to Dump? | E-Waste Recycling Basics | quarantine-review | 393 | Expand to 1200+ original words, fact-check, then promote only after validation. |
+| 2 | E-Waste Recycling Checklist for Kochi Homes | E-Waste Recycling Basics | quarantine-review | 391 | Expand to 1200+ original words, fact-check, then promote only after validation. |
+| 3 | Why E-Waste Needs Separate Handling | E-Waste Recycling Basics | quarantine-review | 378 | Expand to 1200+ original words, fact-check, then promote only after validation. |
+| 4 | Pickup Planning for Bulk Electronics | E-Waste Pickup Near Me | quarantine-review | 363 | Expand to 1200+ original words, fact-check, then promote only after validation. |
+| 5 | How to Avoid Informal E-Waste Disposal | E-Waste Recycling Basics | quarantine-review | 360 | Expand to 1200+ original words, fact-check, then promote only after validation. |
+| 6 | What to Ask Before Giving Electronics to a Collector | E-Waste Recycling Basics | quarantine-review | 356 | Expand to 1200+ original words, fact-check, then promote only after validation. |
+| 7 | What Items Should You Separate Before Pickup? | E-Waste Pickup Near Me | quarantine-review | 349 | Expand to 1200+ original words, fact-check, then promote only after validation. |
+| 8 | Responsible Electronics Recycling for Beginners | E-Waste Recycling Basics | quarantine-review | 342 | Expand to 1200+ original words, fact-check, then promote only after validation. |
+| 9 | E-Waste Pickup for Shops and Small Businesses | E-Waste Pickup Near Me | quarantine-review | 316 | Expand to 1200+ original words, fact-check, then promote only after validation. |
+| 10 | E-Waste Recycling Questions Every User Should Ask | E-Waste Recycling Basics | quarantine-review | 314 | Expand to 1200+ original words, fact-check, then promote only after validation. |
+| 11 | Electronic Waste Disposal Near Me | E-Waste Pickup Near Me | quarantine-review | 309 | Expand to 1200+ original words, fact-check, then promote only after validation. |
+| 12 | ITAD Readiness Checklist | Data Destruction & ITAD | quarantine-draft | 265 | Rewrite substantially to 1200+ original words; do not publish the generated draft as-is. |
+| 13 | Choosing a Data Destruction Partner | Data Destruction & ITAD | quarantine-draft | 263 | Rewrite substantially to 1200+ original words; do not publish the generated draft as-is. |
+| 14 | Data Destruction for Old Laptops and Hard Drives | Data Destruction & ITAD | quarantine-draft | 261 | Rewrite substantially to 1200+ original words; do not publish the generated draft as-is. |
+| 15 | How ITAD Protects Business Data | Data Destruction & ITAD | quarantine-draft | 260 | Rewrite substantially to 1200+ original words; do not publish the generated draft as-is. |
+| 16 | What to Ask Before Handing Over Hard Drives | Data Destruction & ITAD | quarantine-draft | 259 | Rewrite substantially to 1200+ original words; do not publish the generated draft as-is. |
+| 17 | Data Destruction for Small Offices | Data Destruction & ITAD | quarantine-draft | 258 | Rewrite substantially to 1200+ original words; do not publish the generated draft as-is. |
+| 18 | Data-Bearing Devices Before Pickup | Data Destruction & ITAD | quarantine-draft | 258 | Rewrite substantially to 1200+ original words; do not publish the generated draft as-is. |
+| 19 | Business Data Disposal Checklist | Data Destruction & ITAD | quarantine-draft | 256 | Rewrite substantially to 1200+ original words; do not publish the generated draft as-is. |
+| 20 | How to Prepare Devices for Data Destruction | Data Destruction & ITAD | quarantine-draft | 255 | Rewrite substantially to 1200+ original words; do not publish the generated draft as-is. |
 
 ## Promotion Rules
 
