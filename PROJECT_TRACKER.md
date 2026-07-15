@@ -481,6 +481,21 @@ Three things surfaced that need a decision from the user — now tracked as expl
 2. **`blog.ewastekochi.com` subdomain has real content** — different from `blogs.ewastekochi.com` (which 404s and is the one the original brief referenced). User decision 2026-07-07: manual-review, `/blog/{slug}/` stays on main domain.
 3. **The `/blogs/{category}/{slug}/` taxonomy** (96 unique paths) is a second, separate blog system from `/blog/`. User decision 2026-07-07: legacy manual-review, not built in V2, mapped gradually per the roadmap doc.
 
+## Pre-Prod Release Integrity Gate (2026-07-15)
+
+Triggered by a production-launch blocker: `routes.ts` had uncommitted, actively-edited changes, so production could not safely deploy from a clean checkout, CI, or Vercel's Git integration.
+
+Inspecting the working tree first (rather than committing the originally-specified narrow file list as-is) found `routes.ts` now imports `src/data/gscIndexedGeneratedPages.ts`, itself uncommitted — committing `routes.ts` alone would have produced a commit that fails to build on a clean checkout with a missing-module error. Traced and committed the full real dependency chain instead (routes.ts + the legacy indexed-URL page generator + the core pages it references + their supporting changes) — landed as `9b0a376` (the concurrent session committed an identical bundle first; net effect the same).
+
+Added `scripts/pre-prod-route-parity.ts`, cross-checking `routes.ts` metadata against built `dist/` pages, `sitemap.xml`, `content-index.json`, `ai-sitemap.xml`, `llms.txt`, and `vercel.json` redirects across all 363 routes — committed as `51a79f8b`. Result: 0 duplicate slugs, 0 duplicate canonicals by title, 0 redirect-source leaks. Two real issues found and flagged (not fixed, per "do not change content strategy"):
+
+1. **7 buyback laptop pages 404 at their own sitemap-advertised URL** — their slug contains a literal `.html`, and with `trailingSlash: "always"`, the real built page is one segment deeper than every discovery surface (routes.ts, sitemap, content-index, ai-sitemap) advertises. Verified directly against `astro preview`, not inferred. Needs a decision: strip `.html` from the slug, or add a redirect for these 7 specific URLs.
+2. **`/e-waste/` (new) and `/ewaste/` (existing) are both live and both indexable**, targeting the same "what is e-waste" intent — looks like an in-progress migration (redirects already point at `/e-waste/`, but `llms.txt` still lists `/ewaste/`) rather than two intended pages. Needs a canonical decision before production.
+
+Verified reproducibility for real, not just via `git status`: a full `git clone` into a separate scratch directory, fresh `npm install`, and `check`/`build`/`validate-seo-v2.ts` all produced identical results (363 pages, 1,586/1,586 checks, byte-identical `sitemap.xml`). Redeployed `ewastekochi-v2-staging` from that verified-clean state (`dpl_3Ubma6RhsB4SeSMcaDcgWrzt3vhd`, `--archive=tgz` again due to the same free-tier upload cap as before).
+
+**Production: still not deployed.** The original routes.ts blocker is resolved and proven reproducible, but the 2 findings above surfaced mid-gate and weren't part of the original scope — recommending an explicit decision on both before `PROD-PATCH-361` runs rather than calling this fully green. Full detail: `reports/pre-prod-release-integrity-gate-report.md`, `reports/pre-prod-route-parity-report.md`.
+
 ## Known Risks
 
 * **`/recycling/`'s ISO/Pollution Control Board wording — RESOLVED 2026-07-14, pre-Phase 2L.** User chose to soften rather than verify (no certificate in hand). Replaced "Our recycling processes follow ISO 14001:2015-aligned environmental management practices, and we operate under Pollution Control Board authorization for e-waste handling" with "Our recycling process follows documented environmental handling practices, with pickup, sorting and documentation support depending on the service type. If you need compliance documentation for business or ITAD work, contact us before pickup so the required handling process can be confirmed." `npm run check`/`build`/`validate` all clean (60 routes, 526/526), word count unaffected (3,030, still clears the 3,000 pillar target). Commit `a274774`.
