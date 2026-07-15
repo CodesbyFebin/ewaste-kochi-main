@@ -1193,7 +1193,7 @@ export const CONTENT_BANK: ClusterContentBank[] = [
       "What questions should I ask?":
         "Whether the recycler handles batteries separately, how data is managed, and where materials end up.",
       "How do I start responsibly?":
-        "Message your item list and location to book a pickup through an authorized recycler rather than an informal collector.",
+        "Message your item list and location to book a pickup through a documented recycling route rather than an informal collector.",
       "How do I book pickup?":
         "Message your item list, location and photos on WhatsApp.",
     },
@@ -1789,7 +1789,7 @@ export const CONTENT_BANK: ClusterContentBank[] = [
       "Is documentation available?":
         "Documentation may be available for larger organized drives on request.",
       "How do we avoid informal handling?":
-        "Route the collected items through an authorized recycler like Ewaste Kochi rather than an informal collector, even for a one-off community drive.",
+        "Route the collected items through a documented recycling process rather than an informal collector, even for a one-off community drive.",
       "What details should organizers send?":
         "Estimated item count, the collection date and location, and any known battery or bulky items.",
       "How do we book a community pickup?":

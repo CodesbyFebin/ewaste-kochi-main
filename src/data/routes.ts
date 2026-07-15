@@ -130,6 +130,83 @@ export const ROUTES: RouteEntry[] = [
     lang: "en-IN",
   },
   {
+    path: "/locations/angamaly/",
+    changefreq: "monthly",
+    priority: 0.7,
+    title: "E-Waste Collection in Angamaly | Pickup Feasibility Check",
+    description:
+      "E-waste pickup support for Angamaly homes and businesses. Share item details, photos and location to check feasibility for electronics, batteries and IT assets.",
+    type: "location",
+    sitemapGroup: "locations",
+    lang: "en-IN",
+  },
+  {
+    path: "/locations/palarivattom/",
+    changefreq: "monthly",
+    priority: 0.7,
+    title: "E-Waste Collection in Palarivattom | Electronics Pickup Support",
+    description:
+      "Book e-waste pickup support in Palarivattom for old electronics, office IT assets, batteries and data-bearing devices. Feasibility is confirmed after item review.",
+    type: "location",
+    sitemapGroup: "locations",
+    lang: "en-IN",
+  },
+  {
+    path: "/locations/fort-kochi/",
+    changefreq: "monthly",
+    priority: 0.7,
+    title: "E-Waste Recycling in Fort Kochi | Pickup Feasibility Check",
+    description:
+      "E-waste recycling and pickup feasibility checks for Fort Kochi homes, shops and small offices. Send item details to confirm what can be collected.",
+    type: "location",
+    sitemapGroup: "locations",
+    lang: "en-IN",
+  },
+  {
+    path: "/locations/thrikkakara/",
+    changefreq: "monthly",
+    priority: 0.7,
+    title: "E-Waste Pickup in Thrikkakara | IT & Home Electronics",
+    description:
+      "E-waste pickup support in Thrikkakara for homes, offices, batteries, laptops, desktops and IT assets. Pickup is confirmed after feasibility review.",
+    type: "location",
+    sitemapGroup: "locations",
+    lang: "en-IN",
+  },
+  {
+    path: "/locations/thrippunithura/",
+    changefreq: "monthly",
+    priority: 0.7,
+    title: "E-Waste Collection in Thrippunithura | Local Pickup Support",
+    description:
+      "E-waste collection support in Thrippunithura for old electronics, batteries, computers and data-bearing devices. Share details to confirm pickup.",
+    type: "location",
+    sitemapGroup: "locations",
+    lang: "en-IN",
+  },
+  {
+    path: "/locations/kaloor/",
+    changefreq: "monthly",
+    priority: 0.7,
+    title: "E-Waste Pickup in Kaloor | Electronics & Battery Collection",
+    description:
+      "E-waste pickup support in Kaloor for homes, shops and offices. Send photos and item details for electronics, batteries, laptops and IT scrap.",
+    type: "location",
+    sitemapGroup: "locations",
+    lang: "en-IN",
+  },
+  {
+    path: "/locations/smart-city-kochi/",
+    changefreq: "monthly",
+    priority: 0.7,
+    title: "E-Waste Pickup for Smart City Kochi | IT Asset Collection",
+    description:
+      "E-waste pickup support for Smart City Kochi offices and nearby homes, including IT assets, servers, batteries and data-bearing devices.",
+    type: "location",
+    sitemapGroup: "locations",
+    lang: "en-IN",
+  },
+  {
     path: "/locations/kottayam/",
     changefreq: "monthly",
     priority: 0.5,

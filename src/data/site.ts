@@ -16,14 +16,9 @@ export const BUSINESS = {
   },
   hours: "Mo-Sa 09:00-18:00",
   hoursDisplay: "Mon–Sat, 9:00 AM – 6:00 PM",
-  // Carried forward from the live production site's public claims (ISO 14001:2015,
-  // CPCB/KSPCB authorization). Not independently verified by this build — do not
-  // add specific certificate numbers, validity dates, or scope details until the
-  // user supplies the real documents (see PROJECT_TRACKER.md "Known Risks").
-  complianceClaims: {
-    iso14001: true,
-    pollutionControlAuthorized: true,
-  },
+  // Do not encode certification or authorization status as structured data until
+  // real documents are supplied and independently reviewed for exact wording.
+  documentationPolicy: "available-on-request-without-structured-claim",
 } as const;
 
 export function whatsappLink(message: string): string {

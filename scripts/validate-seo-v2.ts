@@ -3,6 +3,7 @@ import { join } from "node:path";
 import * as cheerio from "cheerio";
 import { ROUTES } from "../src/data/routes";
 import { SITE_URL, BUSINESS } from "../src/data/site";
+import { isIndexable } from "../src/lib/indexable";
 
 const DIST = join(process.cwd(), "dist");
 
@@ -27,6 +28,70 @@ interface Failure {
 
 const failures: Failure[] = [];
 const passes: string[] = [];
+
+const ALLOWED_SCHEMA_TYPES = new Set([
+  "Organization",
+  "WebSite",
+  "WebPage",
+  "Service",
+  "BreadcrumbList",
+  "FAQPage",
+  "BlogPosting",
+  "Article",
+  "PostalAddress",
+  "Question",
+  "Answer",
+  "ListItem",
+  "Place",
+]);
+
+const DENIED_SCHEMA_TYPES = new Set([
+  "AggregateRating",
+  "Review",
+  "GeoCoordinates",
+  "QAPage",
+  "LocalBusiness",
+  "HowTo",
+  "HowToStep",
+  "Certification",
+]);
+
+const DENIED_SCHEMA_KEYS = new Set([
+  "aggregateRating",
+  "review",
+  "reviews",
+  "rating",
+  "ratingValue",
+  "reviewCount",
+  "bestRating",
+  "worstRating",
+  "geo",
+  "hasMap",
+  "latitude",
+  "longitude",
+  "award",
+  "awards",
+  "certification",
+  "hasCertification",
+  "hasCredential",
+  "identifier",
+]);
+
+function schemaTypes(value: unknown): string[] {
+  return Array.isArray(value) ? value.filter((v): v is string => typeof v === "string") : typeof value === "string" ? [value] : [];
+}
+
+function walkSchema(value: unknown, visit: (record: Record<string, unknown>) => void) {
+  if (Array.isArray(value)) {
+    for (const item of value) walkSchema(item, visit);
+    return;
+  }
+  if (!value || typeof value !== "object") return;
+
+  const record = value as Record<string, unknown>;
+  visit(record);
+  for (const nested of Object.values(record)) walkSchema(nested, visit);
+}
 
 function fail(path: string, check: string, detail: string) {
   failures.push({ path, check, detail });
@@ -127,6 +192,26 @@ for (const route of ROUTES) {
     fail(route.path, "schema-presence", "No JSON-LD schema blocks found.");
   } else {
     pass(`schema:${route.path}`);
+  }
+
+  for (const data of parsedJsonLd) {
+    const topLevelTypes = schemaTypes((data as Record<string, unknown>)["@type"]);
+    if (topLevelTypes.some((type) => !ALLOWED_SCHEMA_TYPES.has(type))) {
+      fail(route.path, "schema-type-not-allowed", `Top-level schema type is not in the OLD-P0B allowlist: ${topLevelTypes.join(", ")}`);
+    }
+
+    walkSchema(data, (record) => {
+      for (const type of schemaTypes(record["@type"])) {
+        if (DENIED_SCHEMA_TYPES.has(type)) {
+          fail(route.path, "schema-denied-type", `Forbidden schema type emitted: ${type}`);
+        }
+      }
+      for (const key of Object.keys(record)) {
+        if (DENIED_SCHEMA_KEYS.has(key)) {
+          fail(route.path, "schema-denied-property", `Forbidden schema property emitted: ${key}`);
+        }
+      }
+    });
   }
 
   if (route.path !== "/") {
@@ -240,7 +325,8 @@ if (!existsSync(sitemapIndexPath)) {
     fail("/sitemap.xml", "sitemap-not-index", "sitemap.xml root element is not <sitemapindex>.");
   } else {
     const indexedLocs = $index("sitemap > loc").map((_, el) => $index(el).text()).get();
-    const presentGroups = Array.from(new Set(ROUTES.map((r) => r.sitemapGroup)));
+    const indexableRoutes = ROUTES.filter(isIndexable);
+    const presentGroups = Array.from(new Set(indexableRoutes.map((r) => r.sitemapGroup)));
 
     for (const group of presentGroups) {
       const expectedLoc = `${SITE_URL}/sitemaps/${GROUP_FILES[group]}`;
@@ -257,7 +343,7 @@ if (!existsSync(sitemapIndexPath)) {
     // Validate each sub-sitemap file's contents against its group.
     const allSitemapUrls: string[] = allSitemapUrlsGlobal;
     for (const [group, filename] of Object.entries(GROUP_FILES)) {
-      const groupRoutes = ROUTES.filter((r) => r.sitemapGroup === group);
+      const groupRoutes = indexableRoutes.filter((r) => r.sitemapGroup === group);
       if (groupRoutes.length === 0) continue;
 
       const subPath = join(DIST, "sitemaps", filename);
@@ -293,7 +379,7 @@ if (!existsSync(sitemapIndexPath)) {
       }
     }
 
-    if (allSitemapUrls.length === ROUTES.length && failures.filter((f) => f.check.startsWith("sitemap")).length === 0) {
+    if (allSitemapUrls.length === indexableRoutes.length && failures.filter((f) => f.check.startsWith("sitemap")).length === 0) {
       pass("sitemap-matches-routes");
     }
   }

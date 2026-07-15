@@ -1,4 +1,6 @@
 ---
+import { sanitizeJsonLdBlock } from "../lib/schemaSafety";
+
 interface Item {
   q: string;
   a: string;
@@ -23,6 +25,7 @@ const jsonLd = {
     },
   })),
 };
+const safeJsonLd = sanitizeJsonLdBlock(jsonLd);
 ---
 
 <section class="faq" aria-labelledby="faq-heading">
@@ -36,7 +39,7 @@ const jsonLd = {
     ))}
   </div>
 </section>
-<script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)} />
+{safeJsonLd && <script type="application/ld+json" is:inline set:html={JSON.stringify(safeJsonLd)} />}
 
 <style>
   .faq {

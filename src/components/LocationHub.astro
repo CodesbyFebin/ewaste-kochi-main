@@ -1,0 +1,117 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Breadcrumbs from "./Breadcrumbs.astro";
+import CtaBar from "./CtaBar.astro";
+import Faq from "./Faq.astro";
+import { BUSINESS, SITE_URL } from "../data/site";
+
+interface Props {
+  name: string;
+  path: string;
+  title: string;
+  description: string;
+  context: string;
+}
+
+const { name, path, title, description, context } = Astro.props;
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Locations", path: "/locations/" },
+  { name, path },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${SITE_URL}${path}#service`,
+    name: `E-waste pickup and recycling in ${name}`,
+    serviceType: "E-waste recycling, electronics pickup, battery recycling, IT asset disposal",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: { "@type": "Place", name: `${name}, Kochi` },
+    url: `${SITE_URL}${path}`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}`,
+    url: `${SITE_URL}${path}`,
+    name: title,
+    description,
+  },
+];
+
+const faqItems = [
+  {
+    q: `Is e-waste pickup available in ${name}?`,
+    a: `Share your item list and exact address in ${name} on WhatsApp. The team checks feasibility, item type, quantity and scheduling before confirming pickup.`,
+  },
+  {
+    q: "What items can be collected?",
+    a: "Laptops, desktops, monitors, phones, printers, routers, cables, UPS units, inverter batteries, lithium batteries, servers and mixed office IT scrap can be reviewed for pickup.",
+  },
+  {
+    q: "Is pickup always same day?",
+    a: "Same-day pickup is not guaranteed. Timing depends on item details, location, current scheduling and any special handling needs.",
+  },
+  {
+    q: "Can businesses request documentation?",
+    a: "Business, ITAD and data-destruction pickups can include agreed documentation depending on the service type. Ask before pickup so the requirement is planned correctly.",
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>{title}</h1>
+  <p class="lede">{description}</p>
+
+  <CtaBar whatsappMessage={`Hi Ewaste Kochi, I need e-waste pickup support in ${name}. I can share item details and photos.`} />
+
+  <section>
+    <h2>E-waste pickup in {name}</h2>
+    <p>{context}</p>
+    <p>
+      Send photos, quantity, working condition, battery details and your exact
+      location before pickup is confirmed. This helps the team advise on reuse,
+      recycling, battery handling, resale enquiry or data destruction options
+      without overpromising service availability.
+    </p>
+  </section>
+
+  <section>
+    <h2>Common pickup requests</h2>
+    <ul>
+      <li>Home electronics: laptops, phones, tablets, TVs, printers and cables.</li>
+      <li>Office IT assets: desktops, monitors, servers, routers, switches and UPS units.</li>
+      <li>Batteries: inverter batteries, UPS batteries, laptop batteries, mobile batteries and power banks.</li>
+      <li>Data-bearing devices: laptops, hard drives, SSDs, phones and servers that may need data handling.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>How confirmation works</h2>
+    <ol>
+      <li>Message your item list and area in {name}.</li>
+      <li>Send photos, quantity and any battery or data-security concerns.</li>
+      <li>The team checks feasibility, handling needs and quote details where relevant.</li>
+      <li>A pickup slot is confirmed only after those details are reviewed.</li>
+    </ol>
+  </section>
+
+  <Faq items={faqItems} />
+</Layout>
+
+<style>
+  .lede {
+    max-width: 48rem;
+    color: var(--color-muted);
+    font-size: 1.1rem;
+  }
+  section {
+    margin-block: 2.5rem;
+  }
+  li {
+    margin-block: 0.4rem;
+  }
+</style>

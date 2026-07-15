@@ -1,5 +1,6 @@
 ---
 import { SITE_URL } from "../data/site";
+import { sanitizeJsonLdBlocks } from "../lib/schemaSafety";
 
 interface HreflangEntry {
   lang: string;
@@ -17,6 +18,7 @@ interface Props {
 
 const { title, description, path, jsonLd = [], hreflang = [], noindex = false } = Astro.props;
 const canonicalUrl = new URL(path, SITE_URL).toString();
+const safeJsonLd = sanitizeJsonLdBlocks(jsonLd);
 ---
 
 <title>{title}</title>
@@ -41,6 +43,6 @@ const canonicalUrl = new URL(path, SITE_URL).toString();
   <link rel="alternate" hreflang={h.lang} href={h.href} />
 ))}
 
-{jsonLd.map((block) => (
+{safeJsonLd.map((block) => (
   <script type="application/ld+json" is:inline set:html={JSON.stringify(block)} />
 ))}
