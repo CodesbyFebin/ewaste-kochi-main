@@ -79,6 +79,26 @@ const faqItems = [
     q: "Is pickup free everywhere you serve?",
     a: "Doorstep pickup is free for qualifying quantities across our core service areas, whether or not that area has its own page yet. Feasibility still depends on item type, quantity, condition and location.",
   },
+  {
+    q: "What's the difference between a \"dedicated page\" area and a \"feasibility check\" area?",
+    a: "Dedicated-page areas are within our core Kochi-metro coverage, where doorstep pickup is the standard route. Feasibility-check areas are further districts where we don't run scheduled routes — we check each enquiry individually rather than promising pickup upfront.",
+  },
+  {
+    q: "Do you serve IT parks and business campuses?",
+    a: "Yes — Infopark, SmartCity, and similar business hubs are regular pickup locations, both for individual offices and ITAD engagements.",
+  },
+  {
+    q: "How do I know exactly which locality within a large area you cover?",
+    a: "Areas like Kakkanad or Ernakulam South span many localities. Message your specific address or a location pin rather than just the general area name, and we'll confirm precisely.",
+  },
+  {
+    q: "Can I get pickup in a far-city area for a bulk or business job even though it's feasibility-only?",
+    a: "Yes, this is exactly when it's worth asking — bulk and business volumes in feasibility-check districts are more likely to be workable than a single small item, but it's still confirmed case by case rather than assumed.",
+  },
+  {
+    q: "Do apartment complexes and gated communities count as covered if the area is listed?",
+    a: "Yes. Apartment and society pickups work the same way as standalone homes in any covered area — just include the building name, floor and access instructions when you book.",
+  },
 ];
 ---
 
@@ -97,6 +117,20 @@ const faqItems = [
   </p>
 
   <CtaBar whatsappMessage="Hi, I'd like to check if you cover my area for e-waste pickup." />
+
+  <section>
+    <h2>How coverage actually works</h2>
+    <p>
+      "Coverage" isn't a single yes/no line on a map — it's really three
+      overlapping questions: is your area within our core Kochi-metro
+      route, does the item type and quantity make sense for a standard
+      pickup, and is a slot available on your preferred timing. The areas
+      below are grouped by which of those questions we can answer
+      confidently upfront versus which need a quick individual check.
+      Either way, the fastest route to a real answer is the same: message
+      your address, not just a general area name.
+    </p>
+  </section>
 
   <section>
     <h2>Areas with a dedicated page</h2>
@@ -134,7 +168,56 @@ const faqItems = [
     </div>
   </section>
 
+  <section>
+    <h2>Residential neighborhoods vs. business hubs</h2>
+    <p>
+      Coverage spans two different kinds of areas, and each has a slightly
+      different pickup pattern. Residential neighborhoods — most of the
+      list above — tend to bring occasional, mixed household pickups: an
+      old laptop, a few phones, an inverter battery. Business hubs like
+      Infopark and Smart City Kochi more often bring office-scale pickups
+      and recurring <a href="/itad/">ITAD</a> engagements tied to hardware
+      refresh cycles. The booking process is identical either way — the
+      difference is mainly in scheduling and, for business campuses,
+      building access coordination.
+    </p>
+  </section>
+
+  <section>
+    <h2>What "feasibility check" actually means</h2>
+    <p>
+      For the districts listed under "other Kerala districts," we're
+      being specific rather than vague: these are outside the routes we
+      run scheduled doorstep collection on, so we don't promise pickup
+      the way we do for core Kochi-metro areas. What we do instead is
+      check each enquiry — item type, quantity, and exact location — and
+      give a real answer rather than a blanket yes or no. Bulk and
+      business volumes are more often workable than a single small item,
+      but neither is ruled out without actually asking.
+    </p>
+  </section>
+
+  <section>
+    <h2>If your area isn't listed yet</h2>
+    <p>
+      Not seeing your specific neighborhood above doesn't mean we don't
+      cover it — we're continuing to add dedicated pages for areas within
+      our core service zone. The reliable way to confirm is the same
+      regardless of whether a page exists yet: message your address on
+      WhatsApp and we'll tell you directly, rather than you having to
+      guess from a list. See
+      <a href="/services/electronics-recycling-near-me/">electronics
+      recycling near me</a> for more on how local coverage checks work.
+    </p>
+  </section>
+
   <Faq items={faqItems} />
+
+  <section class="final-cta">
+    <h2>Check Coverage for Your Area</h2>
+    <p>Share your address or a location pin on WhatsApp to confirm pickup.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to check if you cover my area for e-waste pickup." compact />
+  </section>
 
   <p class="updated">Last updated: {lastUpdated}</p>
 </Layout>
@@ -184,6 +267,18 @@ const faqItems = [
     font-size: 0.8rem;
     color: var(--color-muted);
     margin-top: 2rem;
+  }
+  .final-cta {
+    padding: 1.75rem 1.25rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--color-surface), var(--color-bg));
+    border: 1px solid var(--color-border);
+    margin: 2.5rem 0;
+  }
+  .final-cta p {
+    margin: 0.5rem 0 0;
+    color: var(--color-muted);
   }
   @media (min-width: 700px) {
     .location-grid {

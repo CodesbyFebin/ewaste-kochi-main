@@ -36,6 +36,18 @@ const jsonLd = [
   },
 ];
 
+const comparisonRows = [
+  { option: "Search \"e-waste near me\"", tellsYou: "A map pin showing roughly where a business is based", doesntTellYou: "Whether they actually cover your exact address, or how they handle data/batteries" },
+  { option: "Generic drop-off point", tellsYou: "A physical location exists somewhere", doesntTellYou: "Whether it's still active, what it accepts, or how far you'd need to travel" },
+  { option: "Message us your location", tellsYou: "A direct, specific answer on coverage, items accepted, and handling", doesntTellYou: "Nothing withheld — this is the fastest route to a real answer" },
+];
+
+const itemCategories = [
+  { title: "Homes", items: ["Old laptops and desktops", "Phones, tablets, chargers", "Batteries and power banks", "Printers", "TVs, including damaged screens"] },
+  { title: "Offices", items: ["Computers and monitors", "Servers and networking gear", "UPS units", "Mixed IT scrap"] },
+  { title: "Special handling", items: ["Swollen or leaking batteries", "Hard drives with sensitive data", "Physically damaged screens"] },
+];
+
 const faqItems = [
   {
     q: "Do I need to find a drop-off location near me?",
@@ -69,6 +81,22 @@ const faqItems = [
     q: "Do you recycle electronics near me the same day I contact you?",
     a: "Sometimes, depending on your area and current scheduling, but it isn't guaranteed. Message early in the day with complete details for the best chance.",
   },
+  {
+    q: "What items count as electronics for this kind of pickup?",
+    a: "Laptops, desktops, monitors, printers, TVs, batteries, routers, and general IT hardware — if you're unsure about something specific, send a photo and we'll confirm.",
+  },
+  {
+    q: "Do you cover IT parks and business campuses, not just residential areas?",
+    a: "Yes — Infopark, SmartCity, and similar business hubs are regular pickup locations, both for individual offices and recurring ITAD engagements.",
+  },
+  {
+    q: "What should I send to get the fastest local pickup confirmation?",
+    a: "Your area or a location pin, an item list, and photos of anything unusual (batteries, damage, bulky equipment) — complete details upfront get you a faster answer than a one-line message.",
+  },
+  {
+    q: "Is electronics recycling near me free?",
+    a: "Standard pickups are free for qualifying quantities. Unusual jobs — very large volumes or special handling — are discussed upfront, not charged as a surprise.",
+  },
 ];
 ---
 
@@ -78,7 +106,9 @@ const faqItems = [
   <p class="lede">
     Instead of searching for a drop-off point, message us your location and
     we'll confirm doorstep pickup — we cover most of Kochi and Ernakulam
-    district directly.
+    district directly. This page covers how local coverage actually works,
+    what counts as "near me" in practice, and what to send for the
+    fastest answer.
   </p>
 
   <DirectAnswer>
@@ -91,6 +121,13 @@ const faqItems = [
 
   <CtaBar whatsappMessage="Hi, I'd like to check if you cover electronics recycling pickup near me." />
 
+  <ul class="key-takeaways">
+    <li>Doorstep pickup means "near me" is answered by messaging your address, not searching a map.</li>
+    <li>Coverage spans both residential neighborhoods and business/IT-park campuses.</li>
+    <li>A single small item is a normal booking, not too minor for pickup.</li>
+    <li>Complete details upfront (location, items, photos) get the fastest confirmation.</li>
+  </ul>
+
   <section>
     <h2>How to find local pickup</h2>
     <ol class="process-list">
@@ -101,28 +138,33 @@ const faqItems = [
   </section>
 
   <section>
-    <h2>Areas we cover</h2>
-    <p>
-      Kakkanad, Edappally, Aluva, Kadavanthra, Infopark Kochi, Vyttila,
-      Palarivattom, Thrippunithura, Kalamassery, and other neighborhoods
-      across Kochi and Ernakulam district. See the full
-      <a href="/locations/">locations directory</a>, or just message us
-      your specific address — we cover more areas than the directory shows
-      dedicated pages for. For other Kerala districts, contact us to check
-      pickup feasibility rather than assuming coverage.
-    </p>
-  </section>
-
-  <section>
-    <h2>Why "near me" pickup beats searching for a drop-off point</h2>
+    <h2>"Near me" pickup vs. searching for a drop-off point</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Option</th>
+            <th scope="col">What it tells you</th>
+            <th scope="col">What it doesn't tell you</th>
+          </tr>
+        </thead>
+        <tbody>
+          {comparisonRows.map((row) => (
+            <tr>
+              <td><strong>{row.option}</strong></td>
+              <td>{row.tellsYou}</td>
+              <td>{row.doesntTellYou}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
     <p>
       A generic "e-waste near me" search usually returns a map pin, not a
       confirmed answer — it doesn't tell you whether that business
       actually services your exact address, what condition of items they
       accept, or how they handle your data and batteries. Messaging us
-      your location directly skips the guesswork: you get a real,
-      specific answer to all three, and the pickup comes to you rather
-      than the other way around.
+      your location directly skips the guesswork.
     </p>
   </section>
 
@@ -136,6 +178,16 @@ const faqItems = [
       specific pickup, see <a href="/battery-recycling/">battery
       recycling</a>.
     </p>
+    <div class="item-grid">
+      {itemCategories.map((cat) => (
+        <div class="item-card">
+          <h3>{cat.title}</h3>
+          <ul class="check-list">
+            {cat.items.map((item) => <li>{item}</li>)}
+          </ul>
+        </div>
+      ))}
+    </div>
   </section>
 
   <section>
@@ -152,6 +204,31 @@ const faqItems = [
   </section>
 
   <section>
+    <h2>Residential neighborhoods vs. business campuses</h2>
+    <p>
+      Coverage isn't identical in every sense — a residential street and a
+      large IT-park campus have different access logistics. Residential
+      pickups usually just need a building name, floor, and access notes;
+      business-campus pickups (Infopark, SmartCity, and similar hubs) may
+      need a bit more coordination around building security and loading
+      access. Either way, the booking process is the same: message your
+      location and item list, and the team confirms what's needed for
+      your specific address.
+    </p>
+  </section>
+
+  <section>
+    <h2>What to send for the fastest confirmation</h2>
+    <ul class="check-list">
+      <li>Your area or a WhatsApp location pin</li>
+      <li>A rough item list</li>
+      <li>Photos, especially of batteries, damage, or bulky items</li>
+      <li>Whether this is a residential or office/business address</li>
+      <li>Your preferred timing, if you have one</li>
+    </ul>
+  </section>
+
+  <section>
     <h2>Schedule now</h2>
     <p>
       Ready to book? Head to our <a href="/pickup/">pickup page</a> for
@@ -164,7 +241,10 @@ const faqItems = [
     <p>
       See our guide: <a href="/blog/e-waste-collection-near-me/">E-Waste
       Collection Near Me — How to Choose a Safe Recycler</a>, covering what
-      to ask before handing over your devices.
+      to ask before handing over your devices, or
+      <a href="/blog/ewaste-pickup-near-me/">E-Waste Pickup Near Me in
+      Kochi</a> for a fuller breakdown of feasibility factors and pickup
+      scenarios.
     </p>
   </section>
 
@@ -174,12 +254,33 @@ const faqItems = [
 
   <Faq items={faqItems} />
 
+  <section class="final-cta">
+    <h2>Check Coverage for Your Address</h2>
+    <p>Share your location and item list on WhatsApp to confirm pickup.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to check if you cover electronics recycling pickup near me." compact />
+  </section>
+
   <p class="updated">Last updated: {lastUpdated}</p>
 </Layout>
 
 <style>
   .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
-  .process-list { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 1.25rem; }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .process-list, .check-list { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 1.25rem; }
+  .table-scroll { overflow-x: auto; margin-top: 1rem; border: 1px solid var(--color-border); border-radius: 0.5rem; }
+  table { border-collapse: collapse; width: 100%; min-width: 600px; font-size: 0.9rem; }
+  th, td { text-align: left; padding: 0.6rem 0.85rem; border-bottom: 1px solid var(--color-border); vertical-align: top; }
+  th { background: var(--color-bg); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--color-muted); font-weight: 800; }
+  tbody tr:last-child td { border-bottom: none; }
+  .item-grid { display: grid; grid-template-columns: 1fr; gap: 0.9rem; margin-top: 1rem; }
+  .item-card { padding: 1rem 1.1rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); }
+  .item-card h3 { margin: 0 0 0.5rem; font-size: 1rem; color: var(--color-primary); }
+  .item-card ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.35rem; font-size: 0.92rem; }
   .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
   .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .final-cta { padding: 1.75rem 1.25rem; border-radius: 0.75rem; text-align: center; background: linear-gradient(135deg, var(--color-surface), var(--color-bg)); border: 1px solid var(--color-border); margin: 2.5rem 0; }
+  .final-cta p { margin: 0.5rem 0 0; color: var(--color-muted); }
+  @media (min-width: 640px) {
+    .item-grid { grid-template-columns: repeat(3, 1fr); }
+  }
 </style>

@@ -4,12 +4,13 @@ import Breadcrumbs from "../../components/Breadcrumbs.astro";
 import CtaBar from "../../components/CtaBar.astro";
 import Faq from "../../components/Faq.astro";
 import LangSwitch from "../../components/LangSwitch.astro";
+import DirectAnswer from "../../components/DirectAnswer.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../data/site";
 import { getHreflang } from "../../data/routes";
 
 const title = "Data Destruction Services in Kochi | Secure Wiping & Certificate";
 const description =
-  "Certified data destruction in Kochi — wiping, degaussing, and hard drive shredding for laptops, servers, and drives. Certificates available on request.";
+  "Data destruction in Kochi — wiping, degaussing, and hard drive shredding for laptops, servers, and drives, aligned with NIST 800-88. Certificates available on request.";
 const lastUpdated = "2026-07-15";
 
 const breadcrumbItems = [
@@ -34,6 +35,20 @@ const jsonLd = [
     description,
     dateModified: lastUpdated,
   },
+];
+
+const methodRows = [
+  { method: "Wiping (software overwrite)", bestFor: "Working drives you want to reuse or resell", outcome: "Drive stays functional, data is unrecoverable by standard tools" },
+  { method: "Degaussing", bestFor: "Magnetic media (HDDs) being retired, not reused", outcome: "Drive is rendered unreadable and unusable — not effective on SSDs" },
+  { method: "Physical shredding", bestFor: "Damaged, failed, or policy-mandated destruction", outcome: "Drive is physically destroyed — the most conclusive method" },
+];
+
+const deviceRows = [
+  { device: "Laptop / desktop hard drives & SSDs", note: "Wiping if being resold; shredding if damaged or policy requires physical destruction." },
+  { device: "Server drives / storage arrays", note: "Usually handled alongside ITAD for larger decommissions — see our ITAD page." },
+  { device: "External hard drives & USB drives", note: "Same wiping/shredding options as internal drives, based on condition and reuse plans." },
+  { device: "Mobile phones & tablets", note: "Internal storage wiped the same way as laptop drives." },
+  { device: "Memory cards", note: "Wiped or physically destroyed depending on size and condition." },
 ];
 
 const faqItems = [
@@ -85,6 +100,22 @@ const faqItems = [
     q: "How is data destruction priced?",
     a: "It depends on device type, quantity, and method — mention what you need when you book and we'll confirm before you commit to anything.",
   },
+  {
+    q: "Can degaussing be used on an SSD?",
+    a: "No — degaussing works by disrupting magnetic storage, and SSDs don't store data magnetically. For SSDs we use wiping or physical shredding instead.",
+  },
+  {
+    q: "Do you destroy data on-site or off-site?",
+    a: "Standard jobs are processed after pickup. For high-security or large corporate jobs, ask about on-site destruction when you scope the engagement.",
+  },
+  {
+    q: "What happens to a drive after it's shredded?",
+    a: "Shredded material is routed into standard e-waste material recovery — see our recycling page for how that process works.",
+  },
+  {
+    q: "Can I request destruction for just some drives in a batch, not all?",
+    a: "Yes — mention which specific devices need destruction versus which are being handled through standard recycling or resale, and we'll process them accordingly.",
+  },
 ];
 ---
 
@@ -94,12 +125,31 @@ const faqItems = [
   <h1>Data Destruction Services in Kochi</h1>
   <p class="lede">
     Before any device with storage is recycled or resold, we make sure the
-    data on it is gone — not just deleted, but destroyed in a way that can't
-    be recovered. Certificates are available for businesses that need to
-    document this.
+    data on it is gone — not just deleted, but destroyed in a way that
+    can't be recovered. This page covers the methods we use, which one
+    fits which device, and what documentation is available for businesses
+    that need to prove it.
   </p>
 
+  <DirectAnswer>
+    <p>
+      Data destruction in Kochi covers wiping, degaussing, and physical
+      shredding for laptops, desktops, servers, and mobile devices,
+      aligned with NIST 800-88 media sanitization guidance. Message your
+      device type and quantity on WhatsApp — the right method depends on
+      whether the drive is working, damaged, and whether it needs to stay
+      reusable.
+    </p>
+  </DirectAnswer>
+
   <CtaBar whatsappMessage="Hi, I need data destruction for a laptop/server before disposal." />
+
+  <ul class="key-takeaways">
+    <li>A factory reset or format is not the same as data destruction — it doesn't reliably prevent recovery.</li>
+    <li>Wiping keeps a drive usable; shredding is for drives that are damaged or where policy requires physical destruction.</li>
+    <li>Certificates and chain-of-custody documentation are available on request for business jobs.</li>
+    <li>A single device is a normal booking — this isn't only for bulk office jobs.</li>
+  </ul>
 
   <section>
     <h2>Methods we use</h2>
@@ -116,6 +166,26 @@ const faqItems = [
       <a href="/hard-drive-shredding/">hard drive shredding</a> page for
       that process specifically.
     </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Method</th>
+            <th scope="col">Best for</th>
+            <th scope="col">Outcome</th>
+          </tr>
+        </thead>
+        <tbody>
+          {methodRows.map((row) => (
+            <tr>
+              <td><strong>{row.method}</strong></td>
+              <td>{row.bestFor}</td>
+              <td>{row.outcome}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   </section>
 
   <section>
@@ -129,6 +199,28 @@ const faqItems = [
       documents, or client data — the kind of information you can't afford
       to assume is "probably gone."
     </p>
+  </section>
+
+  <section>
+    <h2>Which devices need which method</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Device</th>
+            <th scope="col">Typical approach</th>
+          </tr>
+        </thead>
+        <tbody>
+          {deviceRows.map((row) => (
+            <tr>
+              <td><strong>{row.device}</strong></td>
+              <td>{row.note}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   </section>
 
   <section>
@@ -180,6 +272,27 @@ const faqItems = [
   </section>
 
   <section>
+    <h2>What to send on WhatsApp</h2>
+    <ul class="check-list">
+      <li>Device type and rough quantity</li>
+      <li>Whether each drive is working or damaged</li>
+      <li>Whether you want the device to stay usable (wiping) or destroyed (shredding)</li>
+      <li>Whether you need a certificate or chain-of-custody record</li>
+      <li>Your area or location for pickup</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Mistakes to avoid</h2>
+    <ul class="check-list">
+      <li>Assuming a factory reset or format is sufficient before selling or recycling a device</li>
+      <li>Handing over a damaged drive without mentioning it — this changes which method applies</li>
+      <li>Skipping documentation for a business job that later needs to prove compliant disposal</li>
+      <li>Attempting to physically destroy a drive yourself rather than having it shredded properly</li>
+    </ul>
+  </section>
+
+  <section>
     <h2>Compliance</h2>
     <p>
       Our data destruction methods are aligned with NIST 800-88 media
@@ -196,7 +309,10 @@ const faqItems = [
     <p>
       Available across Kochi and Ernakulam district, including pickup from
       Kakkanad, Infopark, Edappally, and other business hubs. See the full
-      <a href="/locations/">locations directory</a>.
+      <a href="/locations/">locations directory</a>. New to the topic? See
+      our guide:
+      <a href="/blog/data-destruction-kochi-guide/">Data Destruction in
+      Kochi — a complete guide</a>.
     </p>
   </section>
 
@@ -206,12 +322,26 @@ const faqItems = [
 
   <Faq items={faqItems} />
 
+  <section class="final-cta">
+    <h2>Need Devices Securely Destroyed?</h2>
+    <p>Share the device type, quantity and condition on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I need data destruction for a laptop/server before disposal." compact />
+  </section>
+
   <p class="updated">Last updated: {lastUpdated}</p>
 </Layout>
 
 <style>
   .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
-  .process-list { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 1.25rem; }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .process-list, .check-list { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 1.25rem; }
+  .table-scroll { overflow-x: auto; margin-top: 1rem; border: 1px solid var(--color-border); border-radius: 0.5rem; }
+  table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 0.9rem; }
+  th, td { text-align: left; padding: 0.6rem 0.85rem; border-bottom: 1px solid var(--color-border); vertical-align: top; }
+  th { background: var(--color-bg); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--color-muted); font-weight: 800; }
+  tbody tr:last-child td { border-bottom: none; }
   .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
   .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .final-cta { padding: 1.75rem 1.25rem; border-radius: 0.75rem; text-align: center; background: linear-gradient(135deg, var(--color-surface), var(--color-bg)); border: 1px solid var(--color-border); margin: 2.5rem 0; }
+  .final-cta p { margin: 0.5rem 0 0; color: var(--color-muted); }
 </style>

@@ -3,16 +3,26 @@ import Layout from "../../layouts/Layout.astro";
 import Breadcrumbs from "../../components/Breadcrumbs.astro";
 import CtaBar from "../../components/CtaBar.astro";
 import Faq from "../../components/Faq.astro";
+import DirectAnswer from "../../components/DirectAnswer.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../data/site";
 
 const title = "ITAD Services in Kochi | Corporate IT Asset Disposal";
 const description =
-  "IT Asset Disposition (ITAD) for offices in Kochi — inventory, secure data destruction, resale, and compliance reporting for corporate IT decommissioning.";
-const lastUpdated = "2026-07-07";
+  "IT Asset Disposition (ITAD) for offices in Kochi — inventory, secure data destruction, resale, and disposal reporting for corporate IT decommissioning.";
+const lastUpdated = "2026-07-15";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
   { name: "ITAD", path: "/itad/" },
+];
+
+const lifecycleSteps = [
+  { name: "Scoping", text: "Tell us roughly what's being decommissioned, where, and on what timeline." },
+  { name: "Asset inventory", text: "An itemized list is built, on-site or remotely for larger jobs." },
+  { name: "Pickup", text: "Collection scheduled around your timeline, with logistics for racks and bulk loads planned in advance." },
+  { name: "Data destruction", text: "Every device with storage is wiped, degaussed, or shredded as appropriate." },
+  { name: "Resale or recycling", text: "Functional hardware is remarketed; end-of-life hardware is recycled." },
+  { name: "Reporting", text: "A disposal report is issued for your records." },
 ];
 
 const jsonLd = [
@@ -26,12 +36,27 @@ const jsonLd = [
   },
   {
     "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How ITAD Engagements Work",
+    description: "The lifecycle of an IT asset disposition engagement, from scoping to reporting.",
+    step: lifecycleSteps.map((s) => ({ "@type": "HowToStep", name: s.name, text: s.text })),
+  },
+  {
+    "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": `${SITE_URL}/itad/`,
     name: title,
     description,
     dateModified: lastUpdated,
   },
+];
+
+const assetRows = [
+  { asset: "Laptops & desktops", note: "Standard for most refresh cycles; data destruction included as part of the engagement." },
+  { asset: "Servers & rack equipment", note: "See our server recycling page for decommission-specific handling." },
+  { asset: "Networking gear", note: "Routers, switches, and access points — often bundled with a broader office move or refresh." },
+  { asset: "Monitors & peripherals", note: "Included in the standard inventory and resale/recycling routing." },
+  { asset: "UPS & backup power", note: "Batteries are processed separately — see battery recycling for the safety reasoning." },
 ];
 
 const faqItems = [
@@ -59,6 +84,30 @@ const faqItems = [
     q: "Is data destruction included or a separate cost?",
     a: "It's included as a standard part of ITAD engagements for any device with storage — ask us for specifics when you scope your project.",
   },
+  {
+    q: "What's the difference between ITAD and a standard pickup?",
+    a: "Standard pickup covers general household and office e-waste with minimal process. ITAD adds structured asset tracking, itemized inventory, and disposal reporting — the right fit once a job needs documentation beyond a simple pickup confirmation.",
+  },
+  {
+    q: "Can ITAD handle a full office relocation or closure?",
+    a: "Yes — office moves and closures are common ITAD engagements, covering everything from workstations to server racks to networking equipment in one coordinated process.",
+  },
+  {
+    q: "How is asset value recovered?",
+    a: "Working equipment is assessed for resale after data destruction; any recovered value is typically factored into the overall engagement rather than treated as a separate transaction — ask when scoping your project.",
+  },
+  {
+    q: "Can you handle a mix of working and non-working assets in one engagement?",
+    a: "Yes — a typical office decommission includes both. Each asset is assessed individually for resale, recycling, or destruction as part of the same inventory process.",
+  },
+  {
+    q: "Do you provide documentation for statutory audits?",
+    a: "Documentation support is available depending on the service type and agreed scope — discuss your specific audit or reporting requirements when scoping the engagement.",
+  },
+  {
+    q: "What's the typical timeline for an ITAD engagement?",
+    a: "It depends on volume and complexity — a small office refresh can be scheduled quickly, while a full data-centre decommission needs more lead time. Share your scope and timeline when you reach out.",
+  },
 ];
 ---
 
@@ -67,12 +116,31 @@ const faqItems = [
   <h1>ITAD Services in Kochi</h1>
   <p class="lede">
     IT Asset Disposition (ITAD) is built for offices, IT parks, and
-    enterprises decommissioning hardware at scale — with inventory tracking,
-    secure data destruction, and compliance reporting built into the process,
-    not bolted on afterward.
+    enterprises decommissioning hardware at scale — with inventory
+    tracking, secure data destruction, and disposal reporting built into
+    the process, not bolted on afterward. This page covers what's
+    included, who it's for, and how to evaluate whether it's the right
+    fit versus a standard pickup.
   </p>
 
+  <DirectAnswer>
+    <p>
+      ITAD in Kochi covers structured retirement of IT hardware for
+      offices — asset inventory, secure data destruction, resale or
+      recycling, and a disposal report. It's the right fit once a job
+      needs documentation and asset tracking beyond a simple pickup, such
+      as an office refresh, relocation, or data-centre decommission.
+    </p>
+  </DirectAnswer>
+
   <CtaBar whatsappMessage="Hi, I'd like to discuss an ITAD engagement for our office." />
+
+  <ul class="key-takeaways">
+    <li>ITAD adds structured inventory and reporting on top of standard recycling — the right fit once documentation matters.</li>
+    <li>Data destruction is included for every device with storage, not billed as an afterthought.</li>
+    <li>Working hardware is assessed for resale before anything is routed to recycling.</li>
+    <li>Scales from a handful of laptops to a full office or data-centre decommission.</li>
+  </ul>
 
   <section>
     <h2>What's included</h2>
@@ -88,17 +156,32 @@ const faqItems = [
       smaller, ad hoc pickup rather than a full engagement, our
       <a href="/pickup/">pickup service</a> may be a simpler fit.
     </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Asset type</th>
+            <th scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          {assetRows.map((row) => (
+            <tr>
+              <td><strong>{row.asset}</strong></td>
+              <td>{row.note}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   </section>
 
   <section>
-    <h2>Process</h2>
+    <h2>The ITAD lifecycle</h2>
     <ol class="process-list">
-      <li><strong>Scoping</strong> — tell us roughly what's being decommissioned and where.</li>
-      <li><strong>Asset inventory</strong> — an itemized list is built, on-site or remotely for larger jobs.</li>
-      <li><strong>Pickup</strong> — collection scheduled around your timeline.</li>
-      <li><strong>Data destruction</strong> — every device with storage is wiped, degaussed, or shredded as appropriate.</li>
-      <li><strong>Resale or recycling</strong> — functional hardware is remarketed; end-of-life hardware is recycled.</li>
-      <li><strong>Reporting</strong> — a disposal report is issued for your records.</li>
+      {lifecycleSteps.map((step) => (
+        <li><strong>{step.name}.</strong> {step.text}</li>
+      ))}
     </ol>
   </section>
 
@@ -114,6 +197,41 @@ const faqItems = [
   </section>
 
   <section>
+    <h2>ITAD vs. a standard pickup</h2>
+    <p>
+      A standard <a href="/pickup/">pickup</a> works well for occasional or
+      moderate-volume e-waste — you send an item list, we collect. ITAD
+      adds a layer on top: an itemized asset inventory, documented data
+      destruction per device, and a disposal report you can keep on file.
+      If you're not sure which applies to your situation, describe what
+      you're decommissioning and we'll point you to the right process
+      rather than making you guess.
+    </p>
+  </section>
+
+  <section>
+    <h2>Common ITAD scenarios</h2>
+    <div class="scenario-grid">
+      <div class="scenario-card">
+        <h3>Annual hardware refresh</h3>
+        <p>A recurring schedule tied to your IT team's replacement cycle, with consistent documentation each time.</p>
+      </div>
+      <div class="scenario-card">
+        <h3>Office relocation or closure</h3>
+        <p>Full decommission of workstations, servers, and networking gear as part of a move or shutdown.</p>
+      </div>
+      <div class="scenario-card">
+        <h3>Data-centre or server-room decommission</h3>
+        <p>Rack-scale asset tracking with data destruction on every drive before resale or recycling.</p>
+      </div>
+      <div class="scenario-card">
+        <h3>Mergers or restructuring</h3>
+        <p>Consolidating or retiring duplicate IT assets as part of an organizational change.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
     <h2>Choosing an ITAD provider — what to check</h2>
     <p>
       Ask any provider for clear data destruction documentation, chain-of-
@@ -122,6 +240,17 @@ const faqItems = [
       laptops to a full office decommission without changing process
       mid-project.
     </p>
+  </section>
+
+  <section>
+    <h2>What to send when scoping an engagement</h2>
+    <ul class="check-list">
+      <li>A rough asset count by type (laptops, servers, monitors, etc.)</li>
+      <li>Location and access details for pickup</li>
+      <li>Timeline — one-time job or recurring schedule</li>
+      <li>Whether an on-site inventory audit is needed before collection</li>
+      <li>Documentation requirements — certificates, chain-of-custody, disposal reports</li>
+    </ul>
   </section>
 
   <section>
@@ -141,12 +270,33 @@ const faqItems = [
 
   <Faq items={faqItems} />
 
+  <section class="final-cta">
+    <h2>Planning an IT Asset Decommission?</h2>
+    <p>Share your asset scope and timeline on WhatsApp to start an ITAD conversation.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to discuss an ITAD engagement for our office." compact />
+  </section>
+
   <p class="updated">Last updated: {lastUpdated}</p>
 </Layout>
 
 <style>
   .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
-  .process-list { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 1.25rem; }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .process-list, .check-list { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 1.25rem; }
+  .table-scroll { overflow-x: auto; margin-top: 1rem; border: 1px solid var(--color-border); border-radius: 0.5rem; }
+  table { border-collapse: collapse; width: 100%; min-width: 520px; font-size: 0.9rem; }
+  th, td { text-align: left; padding: 0.6rem 0.85rem; border-bottom: 1px solid var(--color-border); vertical-align: top; }
+  th { background: var(--color-bg); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--color-muted); font-weight: 800; }
+  tbody tr:last-child td { border-bottom: none; }
+  .scenario-grid { display: grid; grid-template-columns: 1fr; gap: 0.9rem; margin-top: 1rem; }
+  .scenario-card { padding: 1rem 1.1rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); }
+  .scenario-card h3 { margin: 0 0 0.4rem; font-size: 0.98rem; }
+  .scenario-card p { margin: 0; color: var(--color-muted); font-size: 0.9rem; }
   .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
   .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .final-cta { padding: 1.75rem 1.25rem; border-radius: 0.75rem; text-align: center; background: linear-gradient(135deg, var(--color-surface), var(--color-bg)); border: 1px solid var(--color-border); margin: 2.5rem 0; }
+  .final-cta p { margin: 0.5rem 0 0; color: var(--color-muted); }
+  @media (min-width: 640px) {
+    .scenario-grid { grid-template-columns: repeat(2, 1fr); }
+  }
 </style>

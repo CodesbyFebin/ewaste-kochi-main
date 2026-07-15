@@ -4,17 +4,27 @@ import Breadcrumbs from "../../components/Breadcrumbs.astro";
 import CtaBar from "../../components/CtaBar.astro";
 import Faq from "../../components/Faq.astro";
 import LangSwitch from "../../components/LangSwitch.astro";
+import DirectAnswer from "../../components/DirectAnswer.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../data/site";
 import { getHreflang } from "../../data/routes";
 
 const title = "E-Waste Pickup in Kochi | Doorstep Collection for Electronics";
 const description =
-  "Schedule free doorstep e-waste pickup in Kochi for laptops, batteries, and IT hardware. Same-day and next-day slots available across Ernakulam district.";
-const lastUpdated = "2026-07-07";
+  "Schedule doorstep e-waste pickup in Kochi for laptops, batteries, and IT hardware. Timing is confirmed after item, area and route review.";
+const lastUpdated = "2026-07-15";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
   { name: "Pickup", path: "/pickup/" },
+];
+
+const howToSteps = [
+  { name: "Message us your items and location", text: "Type of electronics, rough quantity, and your area — over WhatsApp, phone, or the contact form." },
+  { name: "Send photos", text: "Especially for batteries, damaged items, or anything bulky like a server or old CRT monitor." },
+  { name: "Get feasibility and quote confirmation", text: "We check item type, condition, quantity, and location, then confirm what's next." },
+  { name: "Agree a pickup slot", text: "Timing depends on your area, item details and the current route schedule." },
+  { name: "Doorstep collection", text: "Our team arrives and collects directly from your home or office." },
+  { name: "Follow-up", text: "Recycling confirmation, sale payment, or destruction documentation, depending on what you booked." },
 ];
 
 const jsonLd = [
@@ -28,6 +38,13 @@ const jsonLd = [
   },
   {
     "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to Book an E-Waste Pickup in Kochi",
+    description: "Step-by-step process for scheduling doorstep e-waste pickup in Kochi.",
+    step: howToSteps.map((s) => ({ "@type": "HowToStep", name: s.name, text: s.text })),
+  },
+  {
+    "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": `${SITE_URL}/pickup/`,
     name: title,
@@ -36,10 +53,29 @@ const jsonLd = [
   },
 ];
 
+const feasibilityRows = [
+  { factor: "Item type", why: "Different categories (general electronics, batteries, servers, data-bearing devices) route through different handling.", send: "A plain list — laptop, TV, inverter battery, hard drive, etc." },
+  { factor: "Quantity", why: "A single phone and a 30-laptop office refresh are scheduled differently.", send: "An approximate count, not an exact inventory." },
+  { factor: "Condition", why: "Working, non-working and physically damaged items are all accepted, but noting condition avoids day-of surprises.", send: "Whether it powers on and any visible damage." },
+  { factor: "Pickup location", why: "Coverage and scheduling both depend on exactly where you are.", send: "Area name, building/floor for apartments, or a location pin." },
+  { factor: "Batteries", why: "Swollen, leaking or damaged batteries need advance handling, not a same-day discovery.", send: "Battery type and condition, with a photo if damaged." },
+  { factor: "Data-bearing devices", why: "Laptops, phones, drives and servers may need data destruction planned into the same visit.", send: "Which items hold data, and whether you want destruction handled for you." },
+  { factor: "Bulky or heavy items", why: "Server racks, old CRT monitors and large UPS units need transport planning.", send: "Approximate size/weight and floor or lift access." },
+];
+
+const scenarios = [
+  { title: "One old laptop and its charger", copy: "A completely normal booking — there's no minimum quantity." },
+  { title: "Apartment cleanout", copy: "Include building name, floor and access notes; a combined pickup with neighbours is often more efficient than several visits." },
+  { title: "Office IT refresh", copy: "A batch of laptops or desktops being replaced — mention the rough count so scheduling can plan for it." },
+  { title: "UPS or inverter battery swap", copy: "Flag the old battery's condition specifically, especially if it's swollen or leaking." },
+  { title: "Old TV or monitor removal", copy: "Damaged screens are accepted — a photo helps confirm handling and transport planning for CRT units." },
+  { title: "Server room decommission", copy: "Larger, uniform batches of servers and networking gear usually fit better under our ITAD service, which adds asset tracking." },
+];
+
 const faqItems = [
   {
     q: "How fast can I get a pickup scheduled?",
-    a: "Same-day or next-day pickup is usually available across most of Kochi, depending on your area and current route schedule.",
+    a: "Pickup timing depends on the area, current route schedule, item quantity and handling requirements. Message with complete details so the team can confirm a practical slot.",
   },
   {
     q: "Is there a minimum quantity for pickup?",
@@ -61,6 +97,30 @@ const faqItems = [
     q: "Which areas get free pickup?",
     a: "Free doorstep pickup covers Kochi and most of Ernakulam district for qualifying quantities. Message us your address to confirm for your specific location.",
   },
+  {
+    q: "What counts as a data-bearing device I should flag?",
+    a: "Anything with storage — laptops, desktops, phones, external drives, servers. Flag these when you book so data handling can be planned into the same visit rather than discovered on arrival.",
+  },
+  {
+    q: "Can batteries be picked up on their own, without other electronics?",
+    a: "Yes. A battery-only pickup is a normal booking — mention the type (UPS, inverter, laptop, lithium) and condition when you message us.",
+  },
+  {
+    q: "What happens if an item turns out not to be accepted?",
+    a: "This is rare. If it happens, the team explains why and, where possible, points you to who does handle that specific item. Sending a photo before booking is the best way to avoid this altogether.",
+  },
+  {
+    q: "Can I cancel or reschedule a pickup?",
+    a: "Yes — contact us as early as you can so the slot can be reallocated smoothly and rebooked for a time that works.",
+  },
+  {
+    q: "Do you pick up from apartments and gated communities?",
+    a: "Yes. Include the building name, floor and any access instructions when you message, the same as any other pickup.",
+  },
+  {
+    q: "How is pickup timing confirmed?",
+    a: "Timing is confirmed after the team reviews your area, item list, photos, quantity and any battery or data handling needs.",
+  },
 ];
 ---
 
@@ -71,10 +131,29 @@ const faqItems = [
   <p class="lede">
     Doorstep pickup is how most of our customers get started — no need to
     drop anything off. Tell us what you have, we confirm a slot, and our
-    team collects directly from your home or office.
+    team collects directly from your home or office. This page covers what
+    we collect, how scheduling actually works, what affects feasibility,
+    and what to expect for both household and business pickups.
   </p>
 
+  <DirectAnswer>
+    <p>
+      To book an e-waste pickup in Kochi, message your item list, location
+      and photos on WhatsApp. The team confirms feasibility and any quote
+      details, you agree on a slot based on the current route schedule and
+      the items are collected directly from your door.
+    </p>
+  </DirectAnswer>
+
   <CtaBar whatsappMessage="Hi, I'd like to schedule an e-waste pickup." />
+
+  <ul class="key-takeaways">
+    <li>No minimum quantity — a single old phone is as valid a booking as a full office clearout.</li>
+    <li>Complete details upfront (item list, photos, location) get a faster, more accurate feasibility answer.</li>
+    <li>Batteries and data-bearing devices should be flagged before pickup, not discovered on the day.</li>
+    <li>Pickup timing is confirmed after area, item and route review.</li>
+    <li>Business jobs needing asset tracking usually fit better under ITAD than a standard pickup.</li>
+  </ul>
 
   <section>
     <h2>What we pick up</h2>
@@ -90,35 +169,146 @@ const faqItems = [
       <a href="/services/electronics-recycling-near-me/">electronics
       recycling near me</a>.
     </p>
+    <div class="item-grid">
+      <div class="item-card">
+        <h3>Homes</h3>
+        <ul class="check-list">
+          <li>Old laptops and desktops</li>
+          <li>Phones, tablets, chargers</li>
+          <li>Batteries — phone, laptop, power bank</li>
+          <li>Printers</li>
+          <li>TVs, including damaged screens</li>
+        </ul>
+      </div>
+      <div class="item-card">
+        <h3>Offices</h3>
+        <ul class="check-list">
+          <li>Computers and monitors</li>
+          <li>Servers and racks</li>
+          <li>UPS units</li>
+          <li>Routers and switches</li>
+          <li>Mixed IT scrap</li>
+        </ul>
+      </div>
+      <div class="item-card">
+        <h3>Needs special handling</h3>
+        <ul class="check-list">
+          <li>Swollen or leaking batteries</li>
+          <li>Hard drives with sensitive data</li>
+          <li>Physically damaged screens</li>
+          <li>Heavy equipment needing lift/floor access notes</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <section>
     <h2>How scheduling works</h2>
     <ol class="process-list">
-      <li><strong>Message us</strong> your location and a rough list of items over WhatsApp or phone.</li>
-      <li><strong>We confirm a time slot</strong> — usually same-day or next-day.</li>
-      <li><strong>Our team arrives</strong> and collects directly from your door.</li>
-      <li><strong>Follow-up</strong> — recycling confirmation, sale payment, or destruction documentation depending on what you booked.</li>
+      {howToSteps.map((step) => (
+        <li><strong>{step.name}.</strong> {step.text}</li>
+      ))}
     </ol>
+  </section>
+
+  <section>
+    <h2>What affects pickup feasibility</h2>
+    <p>Feasibility isn't a single yes/no check — it's several factors considered together:</p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Factor</th>
+            <th scope="col">Why it matters</th>
+            <th scope="col">What to send</th>
+          </tr>
+        </thead>
+        <tbody>
+          {feasibilityRows.map((row) => (
+            <tr>
+              <td><strong>{row.factor}</strong></td>
+              <td>{row.why}</td>
+              <td>{row.send}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   </section>
 
   <section>
     <h2>Household pickup</h2>
     <p>
-      No strict minimum quantity for most residential pickups — old laptops,
-      TVs, kitchen electronics, and batteries are all fine to combine in one
-      visit.
+      No strict minimum quantity for most residential pickups — old
+      laptops, TVs, kitchen electronics, and batteries are all fine to
+      combine in one visit. For apartments and flats, include the building
+      name, floor and any access instructions when you message; a
+      combined pickup across a few neighbouring flats is often more
+      efficient than several separate visits. Family cleanouts — clearing
+      a full household's worth of accumulated electronics at once — work
+      the same way, with no need to split it into multiple bookings.
     </p>
   </section>
 
   <section>
     <h2>Business & bulk pickup</h2>
     <p>
-      Offices and IT teams can schedule one-time or recurring bulk pickups.
+      Offices and IT teams can schedule one-time or recurring bulk
+      pickups. For occasional or moderate-volume jobs, standard pickup
+      covers it — send a rough item list the same way a household would.
       For larger asset disposal projects with inventory tracking and
       compliance reporting, see our <a href="/itad/">ITAD page</a> for the
-      fuller process.
+      fuller process; that's typically the better fit than booking
+      standard pickup for a full office decommission.
     </p>
+  </section>
+
+  <section>
+    <h2>What to send on WhatsApp</h2>
+    <ul class="check-list">
+      <li>Item names — what you actually have, in plain terms</li>
+      <li>Approximate quantity</li>
+      <li>Photos, especially of batteries, damage, or bulky items</li>
+      <li>Your area or a location pin</li>
+      <li>Working / non-working status per item</li>
+      <li>Whether any items hold data or need data destruction</li>
+      <li>Your preferred pickup timing, if you have one</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What not to do before pickup</h2>
+    <ul class="check-list">
+      <li>Don't mix a swollen or damaged battery in with general items — keep it separate and mention it specifically.</li>
+      <li>Don't attempt to open or dismantle a battery or device yourself.</li>
+      <li>Don't hand over data-bearing devices without discussing data handling first, if that matters to you.</li>
+      <li>Don't assume an initial quote (for sellable items) is final before inspection.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Pickup vs. drop-off</h2>
+    <p>
+      Doorstep pickup is our standard collection method — most customers
+      never need to travel anywhere. Whether pickup is feasible for you
+      depends on the same factors covered above: item type, quantity,
+      condition and location. If a drop-off arrangement would genuinely
+      suit your situation better, confirm this directly with us first
+      rather than assuming one exists — treat any drop-off point as
+      unconfirmed until we've verified it for your specific case.
+    </p>
+  </section>
+
+  <section>
+    <h2>Common pickup scenarios</h2>
+    <div class="scenario-grid">
+      {scenarios.map((s) => (
+        <div class="scenario-card">
+          <h3>{s.title}</h3>
+          <p>{s.copy}</p>
+        </div>
+      ))}
+    </div>
   </section>
 
   <section>
@@ -132,7 +322,9 @@ const faqItems = [
     <p>
       New to how pickup works? See our guide:
       <a href="/blog/free-e-waste-pickup-kochi/">Free E-Waste Pickup in
-      Kochi — areas, accepted items, and what to prepare</a>.
+      Kochi — areas, accepted items, and what to prepare</a>, or
+      <a href="/blog/how-to-book-ewaste-pickup-kochi/">how to book an
+      e-waste pickup step by step</a>.
     </p>
   </section>
 
@@ -142,12 +334,41 @@ const faqItems = [
 
   <Faq items={faqItems} />
 
+  <section class="final-cta">
+    <h2>Ready to Book a Pickup?</h2>
+    <p>Share your item list, location and photos on WhatsApp to get started.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to schedule an e-waste pickup." compact />
+  </section>
+
   <p class="updated">Last updated: {lastUpdated}</p>
 </Layout>
 
 <style>
   .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
-  .process-list { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 1.25rem; }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .process-list, .check-list { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 1.25rem; }
+  .item-grid { display: grid; grid-template-columns: 1fr; gap: 0.9rem; margin-top: 1rem; }
+  .item-card { padding: 1rem 1.1rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); }
+  .item-card h3 { margin: 0 0 0.5rem; font-size: 1rem; color: var(--color-primary); }
+  .item-card ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.35rem; font-size: 0.92rem; }
+  .table-scroll { overflow-x: auto; margin-top: 1rem; border: 1px solid var(--color-border); border-radius: 0.5rem; }
+  table { border-collapse: collapse; width: 100%; min-width: 640px; font-size: 0.9rem; }
+  th, td { text-align: left; padding: 0.6rem 0.85rem; border-bottom: 1px solid var(--color-border); vertical-align: top; }
+  th { background: var(--color-bg); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--color-muted); font-weight: 800; }
+  tbody tr:last-child td { border-bottom: none; }
+  .scenario-grid { display: grid; grid-template-columns: 1fr; gap: 0.9rem; margin-top: 1rem; }
+  .scenario-card { padding: 1rem 1.1rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); }
+  .scenario-card h3 { margin: 0 0 0.4rem; font-size: 0.98rem; }
+  .scenario-card p { margin: 0; color: var(--color-muted); font-size: 0.9rem; }
   .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
   .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .final-cta { padding: 1.75rem 1.25rem; border-radius: 0.75rem; text-align: center; background: linear-gradient(135deg, var(--color-surface), var(--color-bg)); border: 1px solid var(--color-border); margin: 2.5rem 0; }
+  .final-cta p { margin: 0.5rem 0 0; color: var(--color-muted); }
+  @media (min-width: 640px) {
+    .item-grid { grid-template-columns: repeat(3, 1fr); }
+    .scenario-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 900px) {
+    .scenario-grid { grid-template-columns: repeat(3, 1fr); }
+  }
 </style>

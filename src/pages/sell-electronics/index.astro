@@ -11,7 +11,7 @@ import { getHreflang } from "../../data/routes";
 const title = "Sell Old Electronics in Kochi | Condition-Based Quote & Pickup";
 const description =
   "Sell your old laptop, phone, or computer in Kochi with a condition-based estimate, doorstep inspection and confirmed quote after review.";
-const lastUpdated = "2026-07-07";
+const lastUpdated = "2026-07-15";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
@@ -37,6 +37,25 @@ const jsonLd = [
   },
 ];
 
+const conditionRows = [
+  { tier: "Fully working", detail: "Powers on, functions normally, no major physical damage", value: "Highest quote tier" },
+  { tier: "Partially working", detail: "Functions with an issue — cracked screen, weak battery, missing charger", value: "Still valued, at a reduced quote" },
+  { tier: "Non-working / scrap", detail: "Doesn't power on or has major damage", value: "Valued for parts and material recovery rather than resale" },
+];
+
+const categories = [
+  { title: "Computers", items: ["Laptops — working or non-working", "Desktop towers", "Monitors and peripherals"] },
+  { title: "Mobile devices", items: ["Smartphones", "Tablets", "Smartwatches"] },
+  { title: "Office & bulk", items: ["Multiple laptops from an upgrade", "Desktops and monitors as a batch", "Networking gear alongside a refresh"] },
+];
+
+const scenarios = [
+  { title: "Upgrading to a new laptop", copy: "A strong resale candidate if it's in reasonable shape — worth checking value before defaulting to recycling." },
+  { title: "A phone with a battery issue", copy: "Still worth a quote — mention the battery condition specifically, since it affects the number." },
+  { title: "A dead laptop with its charger", copy: "Non-working devices can still have component or scrap value depending on the model." },
+  { title: "Office device upgrade", copy: "A batch of laptops or desktops replaced at once — mention the count for a combined pickup and quote." },
+];
+
 const faqItems = [
   {
     q: "What determines how much I get for my device?",
@@ -57,6 +76,26 @@ const faqItems = [
   {
     q: "Can businesses sell multiple devices at once?",
     a: "Yes — for bulk device sales as part of an office upgrade, message us with quantities and we'll arrange a single consolidated pickup and quote.",
+  },
+  {
+    q: "Is the quote guaranteed before you see the device?",
+    a: "No. What you get upfront is a preliminary range based on your description and photos — the confirmed quote depends on inspection at pickup.",
+  },
+  {
+    q: "What accessories should I include?",
+    a: "Original charger, box, and any accessories can help the quote, especially for recent laptops and phones. It's not required, but worth including if you still have them.",
+  },
+  {
+    q: "Can I sell a device with a cracked screen?",
+    a: "Yes — physical damage is factored into the quote rather than disqualifying the device. Mention it upfront for a more accurate preliminary estimate.",
+  },
+  {
+    q: "What if I don't like the quote after inspection?",
+    a: "You're not obligated to accept it. You can choose to recycle the item instead — see our recycling page — which is always an option regardless of resale value.",
+  },
+  {
+    q: "How is payment arranged?",
+    a: "Payment is arranged once you accept the confirmed quote at pickup — ask about the specific method (UPI, bank transfer) when you book so there are no surprises on the day.",
   },
 ];
 ---
@@ -85,6 +124,13 @@ const faqItems = [
 
   <CtaBar whatsappMessage="Hi, I'd like to sell an old device — please give me a quote." />
 
+  <ul class="key-takeaways">
+    <li>Quote is condition-based and confirmed after inspection, never guaranteed upfront.</li>
+    <li>Non-working devices can still have scrap or component value — worth asking rather than assuming zero.</li>
+    <li>Photos and complete details get a more accurate preliminary estimate.</li>
+    <li>Data can be wiped before resale on request.</li>
+  </ul>
+
   <section>
     <h2>What affects your quote</h2>
     <ul class="check-list">
@@ -102,15 +148,40 @@ const faqItems = [
 
   <section>
     <h2>Condition guide</h2>
-    <p>
-      <strong>Fully working:</strong> powers on, functions normally, no major
-      physical damage — highest quote tier.<br />
-      <strong>Partially working:</strong> functions with some issue (cracked
-      screen, weak battery, missing charger) — still valued, at a reduced
-      quote.<br />
-      <strong>Non-working / scrap:</strong> doesn't power on or has major
-      damage — valued for parts and material recovery rather than resale.
-    </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Condition</th>
+            <th scope="col">What it means</th>
+            <th scope="col">What to expect</th>
+          </tr>
+        </thead>
+        <tbody>
+          {conditionRows.map((row) => (
+            <tr>
+              <td><strong>{row.tier}</strong></td>
+              <td>{row.detail}</td>
+              <td>{row.value}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>What we buy</h2>
+    <div class="item-grid">
+      {categories.map((cat) => (
+        <div class="item-card">
+          <h3>{cat.title}</h3>
+          <ul class="check-list">
+            {cat.items.map((item) => <li>{item}</li>)}
+          </ul>
+        </div>
+      ))}
+    </div>
   </section>
 
   <section>
@@ -139,6 +210,18 @@ const faqItems = [
   </section>
 
   <section>
+    <h2>Common selling scenarios</h2>
+    <div class="scenario-grid">
+      {scenarios.map((s) => (
+        <div class="scenario-card">
+          <h3>{s.title}</h3>
+          <p>{s.copy}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section>
     <h2>Data safety</h2>
     <p>
       On request, we wipe storage on any device before resale using the same
@@ -149,11 +232,23 @@ const faqItems = [
   </section>
 
   <section>
+    <h2>Mistakes to avoid</h2>
+    <ul class="check-list">
+      <li>Assuming a preliminary quote is final before the device is actually inspected</li>
+      <li>Handing over a device without backing up or wiping personal data first</li>
+      <li>Describing condition vaguely — specific detail gets a more accurate estimate</li>
+      <li>Assuming a non-working device has zero value without asking</li>
+    </ul>
+  </section>
+
+  <section>
     <h2>Selling a laptop specifically?</h2>
     <p>
       See our guide: <a href="/blog/sell-old-laptop-kochi/">Sell Old Laptop
       in Kochi — condition checklist and quote guide</a>, covering what to
-      check before you sell and what actually drives the price.
+      check before you sell and what actually drives the price, or
+      <a href="/blog/how-to-sell-old-electronics-kochi/">how to sell old
+      electronics in Kochi</a> for the full step-by-step process.
     </p>
   </section>
 
@@ -163,13 +258,38 @@ const faqItems = [
 
   <Faq items={faqItems} />
 
+  <section class="final-cta">
+    <h2>Ready to Sell Your Old Electronics?</h2>
+    <p>Share your item photos and details on WhatsApp for a condition-based quote.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to sell an old device — please give me a quote." compact />
+  </section>
+
   <p class="updated">Last updated: {lastUpdated}</p>
 </Layout>
 
 <style>
   .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
-  .process-list { display: flex; flex-direction: column; gap: 0.6rem; padding-left: 1.25rem; }
-  .check-list { display: flex; flex-direction: column; gap: 0.4rem; padding-left: 1.25rem; color: var(--color-muted); }
+  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .process-list, .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; color: var(--color-muted); }
+  .table-scroll { overflow-x: auto; margin-top: 1rem; border: 1px solid var(--color-border); border-radius: 0.5rem; }
+  table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 0.9rem; }
+  th, td { text-align: left; padding: 0.6rem 0.85rem; border-bottom: 1px solid var(--color-border); vertical-align: top; }
+  th { background: var(--color-bg); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--color-muted); font-weight: 800; }
+  tbody tr:last-child td { border-bottom: none; }
+  .item-grid { display: grid; grid-template-columns: 1fr; gap: 0.9rem; margin-top: 1rem; }
+  .item-card { padding: 1rem 1.1rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); }
+  .item-card h3 { margin: 0 0 0.5rem; font-size: 1rem; color: var(--color-primary); }
+  .item-card ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.35rem; font-size: 0.92rem; }
+  .scenario-grid { display: grid; grid-template-columns: 1fr; gap: 0.9rem; margin-top: 1rem; }
+  .scenario-card { padding: 1rem 1.1rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); }
+  .scenario-card h3 { margin: 0 0 0.4rem; font-size: 0.98rem; }
+  .scenario-card p { margin: 0; color: var(--color-muted); font-size: 0.9rem; }
   .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
   .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .final-cta { padding: 1.75rem 1.25rem; border-radius: 0.75rem; text-align: center; background: linear-gradient(135deg, var(--color-surface), var(--color-bg)); border: 1px solid var(--color-border); margin: 2.5rem 0; }
+  .final-cta p { margin: 0.5rem 0 0; color: var(--color-muted); }
+  @media (min-width: 640px) {
+    .item-grid { grid-template-columns: repeat(3, 1fr); }
+    .scenario-grid { grid-template-columns: repeat(2, 1fr); }
+  }
 </style>
