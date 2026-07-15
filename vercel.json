@@ -139,12 +139,22 @@
       "permanent": true
     },
     {
+      "source": "/locations/ernakulam-south/network-equipment-disposal-kochi",
+      "destination": "/locations/ernakulam-south/",
+      "permanent": true
+    },
+    {
       "source": "/locations/ernakulam-south/network-equipment-disposal-kochi/",
       "destination": "/locations/ernakulam-south/",
       "permanent": true
     },
     {
       "source": "/locations/ernakulam-south/printer-recycling-kochi/",
+      "destination": "/locations/ernakulam-south/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ernakulam-south/server-recycling-kochi",
       "destination": "/locations/ernakulam-south/",
       "permanent": true
     },
@@ -184,6 +194,11 @@
       "permanent": true
     },
     {
+      "source": "/locations/kakkanad/dpdp-act-compliance-kochi",
+      "destination": "/locations/kakkanad/",
+      "permanent": true
+    },
+    {
       "source": "/locations/kakkanad/dpdp-act-compliance-kochi/",
       "destination": "/locations/kakkanad/",
       "permanent": true
@@ -209,6 +224,11 @@
       "permanent": true
     },
     {
+      "source": "/locations/kakkanad/hard-drive-shredding-kochi",
+      "destination": "/locations/kakkanad/",
+      "permanent": true
+    },
+    {
       "source": "/locations/kakkanad/hard-drive-shredding-kochi/",
       "destination": "/locations/kakkanad/",
       "permanent": true
@@ -224,7 +244,17 @@
       "permanent": true
     },
     {
+      "source": "/locations/kakkanad/network-equipment-disposal-kochi",
+      "destination": "/locations/kakkanad/",
+      "permanent": true
+    },
+    {
       "source": "/locations/kakkanad/network-equipment-disposal-kochi/",
+      "destination": "/locations/kakkanad/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/kakkanad/printer-recycling-kochi",
       "destination": "/locations/kakkanad/",
       "permanent": true
     },
@@ -254,7 +284,17 @@
       "permanent": true
     },
     {
+      "source": "/locations/kalamassery/certificate-of-destruction-kochi",
+      "destination": "/locations/kalamassery/",
+      "permanent": true
+    },
+    {
       "source": "/locations/kalamassery/certificate-of-destruction-kochi/",
+      "destination": "/locations/kalamassery/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/kalamassery/corporate-ewaste-kochi",
       "destination": "/locations/kalamassery/",
       "permanent": true
     },
@@ -290,6 +330,11 @@
     },
     {
       "source": "/locations/kalamassery/laptop-buyback-kochi/",
+      "destination": "/locations/kalamassery/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/kalamassery/mobile-recycling-kochi",
       "destination": "/locations/kalamassery/",
       "permanent": true
     },
@@ -369,12 +414,22 @@
       "permanent": true
     },
     {
+      "source": "/locations/infopark-kochi/battery-recycling-kochi",
+      "destination": "/battery-recycling/",
+      "permanent": true
+    },
+    {
       "source": "/locations/infopark-kochi/battery-recycling-kochi/",
       "destination": "/battery-recycling/",
       "permanent": true
     },
     {
       "source": "/locations/kadavanthra/battery-recycling-kochi/",
+      "destination": "/battery-recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/kalady/battery-recycling-kochi",
       "destination": "/battery-recycling/",
       "permanent": true
     },
@@ -414,7 +469,17 @@
       "permanent": true
     },
     {
+      "source": "/locations/muvattupuzha/battery-recycling-kochi",
+      "destination": "/battery-recycling/",
+      "permanent": true
+    },
+    {
       "source": "/locations/muvattupuzha/battery-recycling-kochi/",
+      "destination": "/battery-recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/north-paravur/battery-recycling-kochi",
       "destination": "/battery-recycling/",
       "permanent": true
     },
@@ -425,6 +490,11 @@
     },
     {
       "source": "/locations/palakkad/battery-recycling-kochi/",
+      "destination": "/battery-recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/palarivattom/battery-recycling-kochi",
       "destination": "/battery-recycling/",
       "permanent": true
     },
@@ -454,7 +524,17 @@
       "permanent": true
     },
     {
+      "source": "/locations/thrissur/battery-recycling-kochi",
+      "destination": "/battery-recycling/",
+      "permanent": true
+    },
+    {
       "source": "/locations/thrissur/battery-recycling-kochi/",
+      "destination": "/battery-recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/vyttila/battery-recycling-kochi",
       "destination": "/battery-recycling/",
       "permanent": true
     },
@@ -474,6 +554,11 @@
       "permanent": true
     },
     {
+      "source": "/locations/edappally/certificate-of-destruction-kochi",
+      "destination": "/data-destruction-certificate-sample/",
+      "permanent": true
+    },
+    {
       "source": "/locations/edappally/certificate-of-destruction-kochi/",
       "destination": "/data-destruction-certificate-sample/",
       "permanent": true
@@ -485,6 +570,11 @@
     },
     {
       "source": "/locations/kannur/certificate-of-destruction-kochi/",
+      "destination": "/data-destruction-certificate-sample/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/kollam/certificate-of-destruction-kochi",
       "destination": "/data-destruction-certificate-sample/",
       "permanent": true
     },
@@ -514,7 +604,17 @@
       "permanent": true
     },
     {
+      "source": "/locations/thiruvananthapuram/certificate-of-destruction-kochi",
+      "destination": "/data-destruction-certificate-sample/",
+      "permanent": true
+    },
+    {
       "source": "/locations/thiruvananthapuram/certificate-of-destruction-kochi/",
+      "destination": "/data-destruction-certificate-sample/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/thrissur/certificate-of-destruction-kochi",
       "destination": "/data-destruction-certificate-sample/",
       "permanent": true
     },
@@ -574,12 +674,27 @@
       "permanent": true
     },
     {
+      "source": "/locations/malappuram/data-destruction-kochi",
+      "destination": "/data-destruction/",
+      "permanent": true
+    },
+    {
       "source": "/locations/malappuram/data-destruction-kochi/",
       "destination": "/data-destruction/",
       "permanent": true
     },
     {
+      "source": "/locations/maradu/data-destruction-kochi",
+      "destination": "/data-destruction/",
+      "permanent": true
+    },
+    {
       "source": "/locations/maradu/data-destruction-kochi/",
+      "destination": "/data-destruction/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/muvattupuzha/data-destruction-kochi",
       "destination": "/data-destruction/",
       "permanent": true
     },
@@ -600,6 +715,11 @@
     },
     {
       "source": "/locations/thiruvananthapuram/data-destruction-kochi/",
+      "destination": "/data-destruction/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/thrikkakara/data-destruction-kochi",
       "destination": "/data-destruction/",
       "permanent": true
     },
@@ -639,7 +759,17 @@
       "permanent": true
     },
     {
+      "source": "/locations/fort-kochi/e-waste-recycling-kochi",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
       "source": "/locations/fort-kochi/e-waste-recycling-kochi/",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/infopark-kochi/e-waste-recycling-kochi",
       "destination": "/recycling/",
       "permanent": true
     },
@@ -675,6 +805,11 @@
     },
     {
       "source": "/locations/kottayam/e-waste-recycling-kochi/",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/kozhikode/e-waste-recycling-kochi",
       "destination": "/recycling/",
       "permanent": true
     },
@@ -784,6 +919,11 @@
       "permanent": true
     },
     {
+      "source": "/locations/vyttila/electronics-recycling-near-me",
+      "destination": "/services/electronics-recycling-near-me/",
+      "permanent": true
+    },
+    {
       "source": "/locations/vyttila/electronics-recycling-near-me/",
       "destination": "/services/electronics-recycling-near-me/",
       "permanent": true
@@ -859,6 +999,11 @@
       "permanent": true
     },
     {
+      "source": "/locations/palakkad/free-ewaste-pickup-kochi",
+      "destination": "/pickup/",
+      "permanent": true
+    },
+    {
       "source": "/locations/palakkad/free-ewaste-pickup-kochi/",
       "destination": "/pickup/",
       "permanent": true
@@ -889,6 +1034,11 @@
       "permanent": true
     },
     {
+      "source": "/locations/thrippunithura/free-ewaste-pickup-kochi",
+      "destination": "/pickup/",
+      "permanent": true
+    },
+    {
       "source": "/locations/thrippunithura/free-ewaste-pickup-kochi/",
       "destination": "/pickup/",
       "permanent": true
@@ -909,7 +1059,17 @@
       "permanent": true
     },
     {
+      "source": "/locations/kozhikode/hard-drive-degaussing-kochi",
+      "destination": "/services/hard-drive-degaussing-kochi/",
+      "permanent": true
+    },
+    {
       "source": "/locations/kozhikode/hard-drive-degaussing-kochi/",
+      "destination": "/services/hard-drive-degaussing-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/palakkad/hard-drive-degaussing-kochi",
       "destination": "/services/hard-drive-degaussing-kochi/",
       "permanent": true
     },
@@ -924,7 +1084,17 @@
       "permanent": true
     },
     {
+      "source": "/locations/kannur/hard-drive-destruction-kochi",
+      "destination": "/data-destruction/",
+      "permanent": true
+    },
+    {
       "source": "/locations/kannur/hard-drive-destruction-kochi/",
+      "destination": "/data-destruction/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/palakkad/hard-drive-destruction-kochi",
       "destination": "/data-destruction/",
       "permanent": true
     },
@@ -939,12 +1109,22 @@
       "permanent": true
     },
     {
+      "source": "/locations/fort-kochi/hard-drive-shredding-kochi",
+      "destination": "/hard-drive-shredding/",
+      "permanent": true
+    },
+    {
       "source": "/locations/fort-kochi/hard-drive-shredding-kochi/",
       "destination": "/hard-drive-shredding/",
       "permanent": true
     },
     {
       "source": "/locations/infopark-kochi/hard-drive-shredding-kochi/",
+      "destination": "/hard-drive-shredding/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/kannur/hard-drive-shredding-kochi",
       "destination": "/hard-drive-shredding/",
       "permanent": true
     },
@@ -959,12 +1139,27 @@
       "permanent": true
     },
     {
+      "source": "/locations/kottayam/hard-drive-shredding-kochi",
+      "destination": "/hard-drive-shredding/",
+      "permanent": true
+    },
+    {
       "source": "/locations/kottayam/hard-drive-shredding-kochi/",
       "destination": "/hard-drive-shredding/",
       "permanent": true
     },
     {
+      "source": "/locations/kozhikode/hard-drive-shredding-kochi",
+      "destination": "/hard-drive-shredding/",
+      "permanent": true
+    },
+    {
       "source": "/locations/kozhikode/hard-drive-shredding-kochi/",
+      "destination": "/hard-drive-shredding/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/maradu/hard-drive-shredding-kochi",
       "destination": "/hard-drive-shredding/",
       "permanent": true
     },
@@ -989,13 +1184,28 @@
       "permanent": true
     },
     {
+      "source": "/locations/thrikkakara/hard-drive-shredding-kochi",
+      "destination": "/hard-drive-shredding/",
+      "permanent": true
+    },
+    {
       "source": "/locations/thrikkakara/hard-drive-shredding-kochi/",
+      "destination": "/hard-drive-shredding/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/thrissur/hard-drive-shredding-kochi",
       "destination": "/hard-drive-shredding/",
       "permanent": true
     },
     {
       "source": "/locations/thrissur/hard-drive-shredding-kochi/",
       "destination": "/hard-drive-shredding/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/thrissur/it-asset-inventory-audit",
+      "destination": "/services/it-asset-inventory-audit/",
       "permanent": true
     },
     {
@@ -1014,12 +1224,22 @@
       "permanent": true
     },
     {
+      "source": "/locations/edappally/itad-kochi",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
       "source": "/locations/edappally/itad-kochi/",
       "destination": "/itad/",
       "permanent": true
     },
     {
       "source": "/locations/fort-kochi/itad-kochi/",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/infopark-kochi/itad-kochi",
       "destination": "/itad/",
       "permanent": true
     },
@@ -1039,12 +1259,27 @@
       "permanent": true
     },
     {
+      "source": "/locations/kannur/itad-kochi",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
       "source": "/locations/kannur/itad-kochi/",
       "destination": "/itad/",
       "permanent": true
     },
     {
+      "source": "/locations/kothamangalam/itad-kochi",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
       "source": "/locations/kothamangalam/itad-kochi/",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/kottayam/itad-kochi",
       "destination": "/itad/",
       "permanent": true
     },
@@ -1059,6 +1294,11 @@
       "permanent": true
     },
     {
+      "source": "/locations/malappuram/itad-kochi",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
       "source": "/locations/malappuram/itad-kochi/",
       "destination": "/itad/",
       "permanent": true
@@ -1069,12 +1309,27 @@
       "permanent": true
     },
     {
+      "source": "/locations/palakkad/itad-kochi",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
       "source": "/locations/palakkad/itad-kochi/",
       "destination": "/itad/",
       "permanent": true
     },
     {
+      "source": "/locations/palarivattom/itad-kochi",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
       "source": "/locations/palarivattom/itad-kochi/",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/perumbavoor/itad-kochi",
       "destination": "/itad/",
       "permanent": true
     },
@@ -1094,6 +1349,11 @@
       "permanent": true
     },
     {
+      "source": "/locations/thrippunithura/itad-kochi",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
       "source": "/locations/thrippunithura/itad-kochi/",
       "destination": "/itad/",
       "permanent": true
@@ -1109,12 +1369,22 @@
       "permanent": true
     },
     {
+      "source": "/locations/edappally/laptop-buyback-kochi",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
       "source": "/locations/edappally/laptop-buyback-kochi/",
       "destination": "/sell-electronics/",
       "permanent": true
     },
     {
       "source": "/locations/infopark-kochi/laptop-buyback-kochi/",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/kadavanthra/laptop-buyback-kochi",
       "destination": "/sell-electronics/",
       "permanent": true
     },
@@ -1129,7 +1399,17 @@
       "permanent": true
     },
     {
+      "source": "/locations/kottayam/laptop-buyback-kochi",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
       "source": "/locations/kottayam/laptop-buyback-kochi/",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/kozhikode/laptop-buyback-kochi",
       "destination": "/sell-electronics/",
       "permanent": true
     },
@@ -1139,7 +1419,17 @@
       "permanent": true
     },
     {
+      "source": "/locations/muvattupuzha/laptop-buyback-kochi",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
       "source": "/locations/muvattupuzha/laptop-buyback-kochi/",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/north-paravur/laptop-buyback-kochi",
       "destination": "/sell-electronics/",
       "permanent": true
     },
@@ -1169,6 +1459,11 @@
       "permanent": true
     },
     {
+      "source": "/locations/vyttila/laptop-buyback-kochi",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
       "source": "/locations/vyttila/laptop-buyback-kochi/",
       "destination": "/sell-electronics/",
       "permanent": true
@@ -1179,7 +1474,17 @@
       "permanent": true
     },
     {
+      "source": "/locations/kozhikode/laptop-recycling-near-me",
+      "destination": "/services/electronics-recycling-near-me/",
+      "permanent": true
+    },
+    {
       "source": "/locations/kozhikode/laptop-recycling-near-me/",
+      "destination": "/services/electronics-recycling-near-me/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/palakkad/laptop-recycling-near-me",
       "destination": "/services/electronics-recycling-near-me/",
       "permanent": true
     },
@@ -1195,6 +1500,11 @@
     },
     {
       "source": "/locations/kadavanthra/sell-electronics-kochi/",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/north-paravur/sell-electronics-kochi",
       "destination": "/sell-electronics/",
       "permanent": true
     },
@@ -1244,7 +1554,17 @@
       "permanent": true
     },
     {
+      "source": "/locations/kalady/server-recycling-kochi",
+      "destination": "/server-recycling-kochi/",
+      "permanent": true
+    },
+    {
       "source": "/locations/kalady/server-recycling-kochi/",
+      "destination": "/server-recycling-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/kollam/server-recycling-kochi",
       "destination": "/server-recycling-kochi/",
       "permanent": true
     },
@@ -1254,7 +1574,17 @@
       "permanent": true
     },
     {
+      "source": "/locations/kothamangalam/server-recycling-kochi",
+      "destination": "/server-recycling-kochi/",
+      "permanent": true
+    },
+    {
       "source": "/locations/kothamangalam/server-recycling-kochi/",
+      "destination": "/server-recycling-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/kozhikode/server-recycling-kochi",
       "destination": "/server-recycling-kochi/",
       "permanent": true
     },
@@ -1264,12 +1594,27 @@
       "permanent": true
     },
     {
+      "source": "/locations/malappuram/server-recycling-kochi",
+      "destination": "/server-recycling-kochi/",
+      "permanent": true
+    },
+    {
       "source": "/locations/malappuram/server-recycling-kochi/",
       "destination": "/server-recycling-kochi/",
       "permanent": true
     },
     {
+      "source": "/locations/maradu/server-recycling-kochi",
+      "destination": "/server-recycling-kochi/",
+      "permanent": true
+    },
+    {
       "source": "/locations/maradu/server-recycling-kochi/",
+      "destination": "/server-recycling-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/muvattupuzha/server-recycling-kochi",
       "destination": "/server-recycling-kochi/",
       "permanent": true
     },
@@ -1284,6 +1629,11 @@
       "permanent": true
     },
     {
+      "source": "/locations/perumbavoor/server-recycling-kochi",
+      "destination": "/server-recycling-kochi/",
+      "permanent": true
+    },
+    {
       "source": "/locations/perumbavoor/server-recycling-kochi/",
       "destination": "/server-recycling-kochi/",
       "permanent": true
@@ -1294,12 +1644,27 @@
       "permanent": true
     },
     {
+      "source": "/locations/thrikkakara/server-recycling-kochi",
+      "destination": "/server-recycling-kochi/",
+      "permanent": true
+    },
+    {
       "source": "/locations/thrikkakara/server-recycling-kochi/",
       "destination": "/server-recycling-kochi/",
       "permanent": true
     },
     {
+      "source": "/locations/thrippunithura/server-recycling-kochi",
+      "destination": "/server-recycling-kochi/",
+      "permanent": true
+    },
+    {
       "source": "/locations/thrippunithura/server-recycling-kochi/",
+      "destination": "/server-recycling-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/thrissur/server-recycling-kochi",
       "destination": "/server-recycling-kochi/",
       "permanent": true
     },
@@ -1310,6 +1675,11 @@
     },
     {
       "source": "/locations/vyttila/server-recycling-kochi/",
+      "destination": "/server-recycling-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/willingdon-island/server-recycling-kochi",
       "destination": "/server-recycling-kochi/",
       "permanent": true
     },
@@ -1344,6 +1714,11 @@
       "permanent": true
     },
     {
+      "source": "/locations/kollam/tv-monitor-recycling-kochi",
+      "destination": "/tv-recycling-kochi/",
+      "permanent": true
+    },
+    {
       "source": "/locations/kollam/tv-monitor-recycling-kochi/",
       "destination": "/tv-recycling-kochi/",
       "permanent": true
@@ -1364,6 +1739,11 @@
       "permanent": true
     },
     {
+      "source": "/locations/maradu/tv-monitor-recycling-kochi",
+      "destination": "/tv-recycling-kochi/",
+      "permanent": true
+    },
+    {
       "source": "/locations/maradu/tv-monitor-recycling-kochi/",
       "destination": "/tv-recycling-kochi/",
       "permanent": true
@@ -1374,7 +1754,17 @@
       "permanent": true
     },
     {
+      "source": "/locations/palakkad/tv-monitor-recycling-kochi",
+      "destination": "/tv-recycling-kochi/",
+      "permanent": true
+    },
+    {
       "source": "/locations/palakkad/tv-monitor-recycling-kochi/",
+      "destination": "/tv-recycling-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/perumbavoor/tv-monitor-recycling-kochi",
       "destination": "/tv-recycling-kochi/",
       "permanent": true
     },
@@ -1409,6 +1799,11 @@
       "permanent": true
     },
     {
+      "source": "/locations/willingdon-island/tv-monitor-recycling-kochi",
+      "destination": "/tv-recycling-kochi/",
+      "permanent": true
+    },
+    {
       "source": "/locations/willingdon-island/tv-monitor-recycling-kochi/",
       "destination": "/tv-recycling-kochi/",
       "permanent": true
@@ -1425,6 +1820,11 @@
     },
     {
       "source": "/locations/infopark-kochi/ups-inverter-recycling-kochi/",
+      "destination": "/battery-recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/kadavanthra/ups-inverter-recycling-kochi",
       "destination": "/battery-recycling/",
       "permanent": true
     },
@@ -1469,6 +1869,11 @@
       "permanent": true
     },
     {
+      "source": "/locations/perumbavoor/ups-inverter-recycling-kochi",
+      "destination": "/battery-recycling/",
+      "permanent": true
+    },
+    {
       "source": "/locations/perumbavoor/ups-inverter-recycling-kochi/",
       "destination": "/battery-recycling/",
       "permanent": true
@@ -1479,12 +1884,22 @@
       "permanent": true
     },
     {
+      "source": "/locations/thrippunithura/ups-inverter-recycling-kochi",
+      "destination": "/battery-recycling/",
+      "permanent": true
+    },
+    {
       "source": "/locations/thrippunithura/ups-inverter-recycling-kochi/",
       "destination": "/battery-recycling/",
       "permanent": true
     },
     {
       "source": "/locations/vyttila/ups-inverter-recycling-kochi/",
+      "destination": "/battery-recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/willingdon-island/ups-inverter-recycling-kochi",
       "destination": "/battery-recycling/",
       "permanent": true
     },
@@ -1506,6 +1921,11 @@
     {
       "source": "/locations/infopark-kochi/corporate-ewaste-kochi/",
       "destination": "/itad/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/vyttila/printer-recycling-kochi",
+      "destination": "/recycling/",
       "permanent": true
     },
     {
