@@ -27,6 +27,9 @@ interface FlowDef {
 }
 
 const LEAD_STORAGE_KEY = "ewLeadFunnel:lastLead";
+const AUTO_OPEN_STORAGE_KEY = "ewLeadFunnel:autoOpened";
+const AUTO_SUPPRESS_STORAGE_KEY = "ewLeadFunnel:autoSuppressed";
+const AUTO_OPEN_DELAY_MS = 9000;
 
 const FLOWS: Record<Exclude<FlowType, "malayalam">, FlowDef> = {
   pickup: {
@@ -233,6 +236,22 @@ function addUserBubble(container: HTMLElement, text: string) {
 
 function clearActionArea(actionArea: HTMLElement) {
   actionArea.innerHTML = "";
+}
+
+function readSessionFlag(key: string) {
+  try {
+    return window.sessionStorage.getItem(key) === "true";
+  } catch {
+    return false;
+  }
+}
+
+function writeSessionFlag(key: string) {
+  try {
+    window.sessionStorage.setItem(key, "true");
+  } catch {
+    // Chat behavior should still work when sessionStorage is blocked.
+  }
 }
 
 function renderMenu(messages: HTMLElement, actionArea: HTMLElement) {
@@ -447,7 +466,8 @@ function init() {
 
   root.innerHTML = `
     <button type="button" class="ewlf-launcher" aria-haspopup="dialog" aria-expanded="false" aria-controls="ewlf-panel" aria-label="Open chat to book a pickup or get a quote">
-      Chat
+      <span class="ewlf-launcher-main">AI help</span>
+      <span class="ewlf-launcher-sub">Pickup / quote</span>
     </button>
     <div class="ewlf-panel" id="ewlf-panel" role="dialog" aria-modal="false" aria-label="Ewaste Kochi lead chat" aria-hidden="true" tabindex="-1">
       <div class="ewlf-panel-header">
@@ -473,23 +493,24 @@ function init() {
     target?.focus();
   };
 
-  const openLeadFunnel = (flowId?: Exclude<FlowType, "malayalam">) => {
+  const openLeadFunnel = (flowId?: Exclude<FlowType, "malayalam">, shouldFocus = true) => {
     openPanel(root);
     if (flowId) {
       messages.innerHTML = "";
       addBotBubble(messages, `Let's get the right details for ${BUSINESS.name}.`);
       startFlow(messages, actionArea, flowId, false);
-      focusFirstInteractive();
+      if (shouldFocus) focusFirstInteractive();
       return;
     }
     if (messages.children.length === 0) {
       addBotBubble(messages, `Hi, I'm here to help with pickups, quotes, and recycling questions for ${BUSINESS.name}. What do you need?`);
       renderMenu(messages, actionArea);
     }
-    focusFirstInteractive();
+    if (shouldFocus) focusFirstInteractive();
   };
 
   launcher.addEventListener("click", () => {
+    writeSessionFlag(AUTO_SUPPRESS_STORAGE_KEY);
     if (isOpen) {
       closePanel(root);
     } else {
@@ -500,16 +521,31 @@ function init() {
   document.querySelectorAll<HTMLElement>("[data-ewlf-open]").forEach((trigger) => {
     trigger.addEventListener("click", (event) => {
       event.preventDefault();
+      writeSessionFlag(AUTO_SUPPRESS_STORAGE_KEY);
       const requestedFlow = trigger.dataset.ewlfFlow ?? null;
       openLeadFunnel(isFlowId(requestedFlow) ? requestedFlow : undefined);
     });
   });
 
-  closeBtn.addEventListener("click", () => closePanel(root));
+  closeBtn.addEventListener("click", () => {
+    writeSessionFlag(AUTO_SUPPRESS_STORAGE_KEY);
+    closePanel(root);
+  });
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && isOpen) closePanel(root);
+    if (e.key === "Escape" && isOpen) {
+      writeSessionFlag(AUTO_SUPPRESS_STORAGE_KEY);
+      closePanel(root);
+    }
   });
+
+  window.setTimeout(() => {
+    if (isOpen) return;
+    if (readSessionFlag(AUTO_OPEN_STORAGE_KEY)) return;
+    if (readSessionFlag(AUTO_SUPPRESS_STORAGE_KEY)) return;
+    writeSessionFlag(AUTO_OPEN_STORAGE_KEY);
+    openLeadFunnel(undefined, false);
+  }, AUTO_OPEN_DELAY_MS);
 }
 
 if (document.readyState === "loading") {

@@ -48,19 +48,33 @@ import { telLink, whatsappLink } from "../data/site";
     bottom: 20px;
     right: 20px;
     z-index: 9001;
-    padding: 0.85rem 1.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.05rem;
+    padding: 0.65rem 1.05rem;
     border-radius: 999px;
     border: none;
     background: var(--color-primary);
     color: #fff;
     font-weight: 700;
-    font-size: 0.95rem;
     cursor: pointer;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
     min-height: 44px;
+    max-width: calc(100vw - 32px);
   }
   :global(.ewlf-launcher:hover) {
     background: var(--color-primary-dark);
+  }
+  :global(.ewlf-launcher-main) {
+    font-size: 0.92rem;
+    line-height: 1.05;
+  }
+  :global(.ewlf-launcher-sub) {
+    font-size: 0.68rem;
+    line-height: 1;
+    font-weight: 600;
+    opacity: 0.88;
   }
 
   :global(.ewlf-panel) {
