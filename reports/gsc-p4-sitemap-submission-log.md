@@ -1,80 +1,69 @@
 # GSC-P4 Sitemap Submission Log
 
-Phase: GSC-P4 — post-cutover sitemap submission + priority indexing
+Phase: GSC-P4 — sitemap submission + priority indexing
+Generated: 2026-07-18
 
-Production baseline:
+## Production Baseline
 
-- Live site: `https://www.ewastekochi.com`
-- Production deployment: `dpl_HBJxC8ujQcEpNB922Ug5Yv6Sfbbk`
-- Cutover commit: `c5fb23b`
-- Routes validated at cutover: 87
-- Indexed redirects validated at cutover: 90
+- Live: `https://www.ewastekochi.com`
+- Deployment: `dpl_6sP1qDXFwoS5CYbXJTFbPYBSYWbd`
+- Branch: `expanded-indexed-clusters-20260718`
+- Commit: `9b0a376`
+- Production pages: 363
+- Validation baseline: 1,586 checks, 0 failures
 
 ## Submission Status
 
-Sitemap submission was **not completed from this session**.
+Sitemap submission was **not completed from this environment**.
 
-Reason:
+Blocked access paths:
 
-- The in-app browser target required for Google Search Console UI work was unavailable (`agent.browsers.list()` returned `[]`).
-- Local Google credentials exist for `kochiewaste@gmail.com`, but both application-default and user gcloud tokens returned Search Console API `403 ACCESS_TOKEN_SCOPE_INSUFFICIENT`.
-- `gcloud auth print-access-token --scopes=https://www.googleapis.com/auth/webmasters` is not permitted by this gcloud login's available scope set.
+- Search Console API using active gcloud user `kochiewaste@gmail.com`: `403 ACCESS_TOKEN_SCOPE_INSUFFICIENT` for both `SitesService.List` and `SitemapsService.Submit`.
+- Search Console API using application-default credentials: `403 ACCESS_TOKEN_SCOPE_INSUFFICIENT` for both `SitesService.List` and `SitemapsService.Submit`.
+- In-app browser: unavailable; `agent.browsers.list()` returned `[]`, so the Search Console UI could not be opened from this session.
 
-No staging URL was submitted. No URL Inspection indexing requests were performed.
+No staging URL was submitted. No sitemap was submitted. No URL Inspection indexing request was performed.
 
 ## Intended Submission
 
-- Intended GSC property: not confirmed in UI/API from this session
-- Recommended property to use: `https://www.ewastekochi.com/` if URL-prefix property exists, otherwise the verified domain property for `ewastekochi.com`
-- Sitemap URL to submit: `https://www.ewastekochi.com/sitemap.xml`
+- Intended GSC property: not confirmed through UI/API from this session
+- Recommended property: verified domain property for `ewastekochi.com`, or URL-prefix property `https://www.ewastekochi.com/`
+- Sitemap submitted: not submitted
+- Sitemap to submit manually: `https://www.ewastekochi.com/sitemap.xml`
 - Submission time: not submitted
 - Initial sitemap status: not available
 - Discovered URL count shown in GSC: not available
 - Immediate warnings/errors in GSC: not available
+- API warning/error observed locally: `ACCESS_TOKEN_SCOPE_INSUFFICIENT`
 
-## Production Discovery Pre-Submission Check
-
-Automated live checks completed against production:
+## Final Live Discovery Check
 
 | URL | HTTP status | Result |
 | --- | ---: | --- |
 | `https://www.ewastekochi.com/robots.txt` | 200 | Pass |
 | `https://www.ewastekochi.com/sitemap.xml` | 200 | Pass |
 | `https://www.ewastekochi.com/content-index.json` | 200 | Pass |
+| `https://www.ewastekochi.com/ai-sitemap.xml` | 200 | Pass |
 | `https://www.ewastekochi.com/llms.txt` | 200 | Pass |
+| `https://www.ewastekochi.com/feed.xml` | 200 | Pass |
 
-Discovery safety:
+Discovery safety checks:
 
 - `robots.txt` references `https://www.ewastekochi.com/sitemap.xml`.
 - `sitemap.xml` is a sitemap index with 6 production `www` sub-sitemaps.
-- Sub-sitemaps checked: core, services, blog, locations, ml, legal.
-- Unique sitemap page URLs: 87.
-- All 87 sitemap page URLs returned 200.
-- All 87 sitemap page URLs self-canonicalized to `https://www.ewastekochi.com`.
-- Redirect sources in sitemap: 0.
-- Noindex URLs in sitemap: 0.
+- Sub-sitemap counts: core 15, services 24, blog 124, legal 4, locations 184, ml 12.
+- Unique sitemap URLs: 363.
+- Sitemap URLs returning 200: 363/363.
+- Sitemap URLs with redirect final URL mismatch: 0.
+- Sitemap URLs with noindex: 0.
+- Sitemap URLs with non-production hosts: 0.
+- Staging, Vercel preview, localhost, and `127.0.0.1` URLs: 0.
 - 404 URLs in sitemap: 0.
-- Staging, Vercel preview, and localhost URLs in sitemap/content-index: 0.
-- `content-index.json` canonical domain: `https://www.ewastekochi.com`.
-- `content-index.json` pages: 87.
-
-Sub-sitemap counts:
-
-| Sub-sitemap | URLs | Status |
-| --- | ---: | --- |
-| `https://www.ewastekochi.com/sitemaps/core.xml` | 7 | 200 |
-| `https://www.ewastekochi.com/sitemaps/services.xml` | 16 | 200 |
-| `https://www.ewastekochi.com/sitemaps/blog.xml` | 24 | 200 |
-| `https://www.ewastekochi.com/sitemaps/locations.xml` | 31 | 200 |
-| `https://www.ewastekochi.com/sitemaps/ml.xml` | 7 | 200 |
-| `https://www.ewastekochi.com/sitemaps/legal.xml` | 2 | 200 |
+- Redirect sources in sitemap: 0.
+- `content-index.json` is live and production-hosted.
+- `ai-sitemap.xml` is live and production-hosted.
+- `feed.xml` is live and production-hosted.
 
 ## Manual Action Required
 
-In Google Search Console:
-
-1. Open the verified property for `https://www.ewastekochi.com/` or the domain property for `ewastekochi.com`.
-2. Go to Sitemaps.
-3. Submit `https://www.ewastekochi.com/sitemap.xml`.
-4. Record the initial status, discovered URL count, and any warnings/errors.
-5. Continue with priority URL Inspection requests from `reports/gsc-p4-post-cutover-submission-report.md`.
+Open Google Search Console and submit `https://www.ewastekochi.com/sitemap.xml` in the verified production property. Record the property, initial status, discovered URL count, and any warnings/errors after submission.
