@@ -469,6 +469,8 @@ footer { background: #0a110d; color: #fff; padding: 5rem 0 2rem; border-top: 4px
   nav { display: none; }
   nav.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #fff; border-top: 1px solid var(--gray-200); padding: 1rem; box-shadow: var(--shadow-md); }
   .mobile-menu-btn { display: flex; }
+  .btn-book, .btn-wa-header { display: none; }
+  .header-actions { margin-left: auto; gap: 0; }
   .hero-inner, .page-hero-inner, .about-grid, .contact-grid { grid-template-columns: 1fr; }
   .hero img { max-height: 420px; object-position: 70% center; }
   .page-hero-img { display: none; }
