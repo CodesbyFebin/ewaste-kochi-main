@@ -821,6 +821,41 @@
       "source": "/blog/topic-:slug/",
       "destination": "/blog/",
       "permanent": true
+    },
+    {
+      "source": "/hi/services/e-waste-recycling-kochi/",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/hi/services/:rest*",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/hi/:rest*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/recycling/laptop-recycling-in-infopark-kochi-reuse-buyback-or-scrap/",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/recycling/computer-recycling-in-vyttila-kochi-for-homes-and-offices/",
+      "destination": "/locations/vyttila/",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/recycling/:rest*",
+      "destination": "/recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/:rest*",
+      "destination": "/blog/",
+      "permanent": true
     }
   ],
   "headers": [
@@ -1143,58 +1178,6 @@
     {
       "source": "/blog/collection/:cat/:slug/",
       "destination": "https://astro-site-dusky.vercel.app/blog/collection/:cat/:slug/"
-    },
-    {
-      "source": "/sitemap-index.xml",
-      "destination": "https://astro-site-dusky.vercel.app/sitemap-index.xml"
-    },
-    {
-      "source": "/sitemap_index.xml",
-      "destination": "https://astro-site-dusky.vercel.app/sitemap_index.xml"
-    },
-    {
-      "source": "/sitemap-1.xml",
-      "destination": "https://astro-site-dusky.vercel.app/sitemap-1.xml"
-    },
-    {
-      "source": "/sitemap-2.xml",
-      "destination": "https://astro-site-dusky.vercel.app/sitemap-2.xml"
-    },
-    {
-      "source": "/sitemap-3.xml",
-      "destination": "https://astro-site-dusky.vercel.app/sitemap-3.xml"
-    },
-    {
-      "source": "/sitemap-4.xml",
-      "destination": "https://astro-site-dusky.vercel.app/sitemap-4.xml"
-    },
-    {
-      "source": "/sitemap-5.xml",
-      "destination": "https://astro-site-dusky.vercel.app/sitemap-5.xml"
-    },
-    {
-      "source": "/sitemap-6.xml",
-      "destination": "https://astro-site-dusky.vercel.app/sitemap-6.xml"
-    },
-    {
-      "source": "/sitemap-7.xml",
-      "destination": "https://astro-site-dusky.vercel.app/sitemap-7.xml"
-    },
-    {
-      "source": "/sitemap-8.xml",
-      "destination": "https://astro-site-dusky.vercel.app/sitemap-8.xml"
-    },
-    {
-      "source": "/sitemap-9.xml",
-      "destination": "https://astro-site-dusky.vercel.app/sitemap-9.xml"
-    },
-    {
-      "source": "/sitemap-10.xml",
-      "destination": "https://astro-site-dusky.vercel.app/sitemap-10.xml"
-    },
-    {
-      "source": "/sitemap-11.xml",
-      "destination": "https://astro-site-dusky.vercel.app/sitemap-11.xml"
     }
   ]
 }
