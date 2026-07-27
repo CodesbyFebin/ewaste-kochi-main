@@ -157,7 +157,9 @@ FORBIDDEN_PATTERNS: list[tuple[re.Pattern[str], str]] = [
     # Year-founded / years-in-business — narrowly scoped to phrases that ARE
     # business-tenure claims, not neutral time references.
     (re.compile(r"\b(?:since|est\.?|established)\s+(?:19|20)\d{2}\b", re.IGNORECASE), "Year-founded claim needs verified_claims:"),
-    (re.compile(r"\b\d+\+\s*years?\b", re.IGNORECASE), "'X+ years' tenure claim needs verified_claims:"),
+    # "X+ years" is a tenure claim only when NOT followed by "old", "ago",
+    # "from now", or "warranty" (which are product-age / time-reference uses).
+    (re.compile(r"\b\d+\+\s*years?\b(?!\s+(?:old|ago|from\s+now|warranty))", re.IGNORECASE), "'X+ years' tenure claim needs verified_claims:"),
     (re.compile(r"\bover\s+\d+\s+years?\b", re.IGNORECASE), "'Over X years' tenure claim needs verified_claims:"),
     (re.compile(r"\b\d+\s+years?\s+of\s+(?:experience|business|service|operation|expertise)\b", re.IGNORECASE), "'X years of experience' claim needs verified_claims:"),
     (re.compile(r"\b\d+\s+years?\s+in\s+(?:business|the\s+industry|kochi|kerala)\b", re.IGNORECASE), "'X years in business' claim needs verified_claims:"),
