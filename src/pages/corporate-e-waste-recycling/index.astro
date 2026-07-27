@@ -1,0 +1,237 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import Faq from "../../components/Faq.astro";
+import DirectAnswer from "../../components/DirectAnswer.astro";
+import { SITE_URL } from "../../data/site";
+import { getHreflang } from "../../data/routes";
+
+const title = "Corporate E-Waste Recycling in Kochi | Scheduled Pickup + ITAD";
+const description =
+  "Corporate e-waste recycling in Kochi — scheduled pickup for offices, IT refresh cycles, per-device asset tracking, and documented data destruction. WhatsApp for enterprise-scale collection.";
+const lastUpdated = "2026-07-27";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Corporate E-Waste Recycling", path: "/corporate-e-waste-recycling/" },
+];
+
+const howToSteps = [
+  { name: "Share an item summary", text: "Approximate counts by category — laptops, desktops, monitors, servers, phones, UPS batteries, networking gear. A rough count is enough; a full asset list isn't required upfront." },
+  { name: "Flag data-bearing devices and compliance needs", text: "Anything holding business data, and any specific documentation you need (DPDP, ISO audit trails, per-device Certificate of Destruction, insurance disposal records)." },
+  { name: "Confirm office location and access", text: "Building name, floor, lift access, security requirements, preferred day/time. Multi-floor and multi-building pickups can be planned as one job." },
+  { name: "Agree the workflow — standard or ITAD", text: "Standard bulk pickup fits smaller one-off jobs. ITAD adds per-device serial capture, condition logging, and consolidated documentation — used for corporate audit trails and IT refresh decommissioning." },
+  { name: "Scheduled collection and documentation", text: "The team collects on the agreed schedule, produces pickup acknowledgements, and — if data destruction is included — issues serialised Certificates of Destruction after the destruction step is complete." },
+];
+
+const useCases = [
+  { scenario: "IT refresh — laptops replaced with new units", route: "ITAD with per-device asset capture; buyback quote for viable laptops; recycling for the rest", note: "Common every 3–4 years" },
+  { scenario: "Office relocation cleanout", route: "Bulk pickup — mixed categories in one visit", note: "Include heavy items like CRT monitors, UPS, server racks" },
+  { scenario: "Server-room decommission", route: "ITAD + data destruction; often paired with /server-recycling-kochi/", note: "Rack-mount servers, network switches, storage arrays" },
+  { scenario: "End-of-lease device return", route: "Certificate-of-Destruction documentation for lease-return records", note: "Some leases require specific disposal docs" },
+  { scenario: "Point-of-sale terminal retirement (retail chains)", route: "Bulk pickup + data destruction (POS terminals hold card data)", note: "Multi-location scheduling often needed" },
+  { scenario: "Company-issued phone recycling", route: "ITAD + IMEI logging + data destruction", note: "Common at contract renewals" },
+  { scenario: "Data-centre or hospital equipment retirement", route: "High-security ITAD with physical shredding + serialised Certificates", note: "Medical / financial data requires physical destruction" },
+  { scenario: "Startup shutdown / office closure", route: "Full-office bulk pickup + Certificate for closure records", note: "Often needed for tax and dissolution documentation" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Corporate e-waste recycling and ITAD",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: "Kochi, Ernakulam, Kerala",
+    url: `${SITE_URL}/corporate-e-waste-recycling/`,
+    description: "Scheduled bulk pickup, per-device asset tracking, and documented data destruction for corporate IT decommissioning in Kochi.",
+    audience: {
+      "@type": "BusinessAudience",
+      audienceType: "Corporate IT, office managers, facility teams",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to Set Up Corporate E-Waste Pickup in Kochi",
+    description: "Step-by-step process for corporate IT decommissioning, scheduled pickup and documented recycling.",
+    step: howToSteps.map((s) => ({ "@type": "HowToStep", name: s.name, text: s.text })),
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/corporate-e-waste-recycling/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: breadcrumbItems.map((b, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: b.name,
+        item: `${SITE_URL}${b.path}`,
+      })),
+    },
+  },
+];
+
+const faqItems = [
+  {
+    q: "How do corporate pickups differ from standard doorstep pickups?",
+    a: "Corporate pickups add per-device asset tracking, consolidated documentation, scheduled pickup windows and compliance-focused workflows (Certificate of Destruction, per-serial logging, ITAD paperwork). A doorstep pickup for a household is a same-day-review job; a corporate pickup is a scheduled, documented engagement.",
+  },
+  {
+    q: "What's the minimum quantity for a corporate pickup?",
+    a: "There isn't a hard minimum, but the workflow is calibrated for batches of 10+ devices or full-office cleanouts. Below that, a standard doorstep pickup usually fits better.",
+  },
+  {
+    q: "Can you handle multi-location or multi-floor pickups?",
+    a: "Yes. Retail chains, IT companies with multiple offices, or campus environments (education, hospital, government) can be planned as multi-visit or multi-location jobs. Confirm the site list and preferred sequence when booking.",
+  },
+  {
+    q: "What documentation do we get?",
+    a: "Standard: pickup acknowledgement showing the categories and rough counts collected. With ITAD: per-device asset capture (serial, condition, disposition per unit). With data destruction: serialised Certificate of Destruction per drive or bulk certificate for a batch. Additional documentation for specific compliance frameworks can be arranged on request.",
+  },
+  {
+    q: "Is data destruction included, or is it separate?",
+    a: "It's a separate, deliberately-agreed step. The default is that data-bearing devices route through /data-destruction/ before recycling, but the destruction method (software wipe vs physical shred vs degaussing) is confirmed at booking. Physical shredding is the default recommendation for high-security data.",
+  },
+  {
+    q: "Are pickups actually free for corporate customers?",
+    a: "Pickup itself is free for eligible collections. Additional services — certified data destruction with per-device serialised certificates, on-site destruction (mobile shredder at your premises), same-day scheduling — may carry costs depending on scope. These are quoted before the job is confirmed, never after.",
+  },
+  {
+    q: "Which Kochi office locations do you cover?",
+    a: "The IT corridor (Infopark, SmartCity Kochi, Kakkanad), Ernakulam district generally, and multi-office pickups across Kochi. Corporate pickups in further Kerala cities (Kollam, Kottayam, Thrissur, Kozhikode, Palakkad, Kannur, Malappuram, Thiruvananthapuram) are reviewed case-by-case; see /locations/ for the coverage list.",
+  },
+  {
+    q: "How much notice do you need for a scheduled pickup?",
+    a: "Small jobs (10–30 devices) usually need a few working days notice. Larger jobs (100+ devices, server-room decommissioning, multi-office) typically need 1–2 weeks so the route, transport and destruction slots can all be lined up. Emergency pickups (office lease expiry, sudden closure) are checked case-by-case.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/corporate-e-waste-recycling/" jsonLd={jsonLd} hreflang={getHreflang("/corporate-e-waste-recycling/")}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Corporate E-Waste Recycling in Kochi</h1>
+  <p class="lede">
+    Corporate e-waste isn't the same shape as consumer e-waste. An office retiring 40 laptops needs asset tracking. A hospital retiring old imaging workstations needs physical drive destruction. A retail chain retiring 200 point-of-sale terminals across Kerala needs multi-site scheduling. This page covers how corporate pickups are planned differently from a standard doorstep pickup, what documentation is produced, and when to use ITAD vs a simple bulk pickup.
+  </p>
+
+  <DirectAnswer>
+    <p>
+      For corporate e-waste recycling in Kochi: WhatsApp Ewaste Kochi with your office location, an approximate device count by category, and any documentation needs (Certificate of Destruction, ITAD asset tracking, compliance records). The team confirms a scheduled pickup slot, agrees the workflow (standard bulk pickup or ITAD), and produces per-device documentation at collection. Pickup is free for eligible corporate collections; specific compliance services are quoted before the job is confirmed.
+    </p>
+  </DirectAnswer>
+
+  <CtaBar whatsappMessage="Hi, I'd like to arrange corporate e-waste recycling for our office — here's what we have:" />
+
+  <ul class="key-takeaways">
+    <li>Scheduled pickup, not walk-in — plan a few working days ahead for small jobs, 1–2 weeks for large ones.</li>
+    <li>Standard bulk pickup for one-offs; ITAD workflow for IT refresh + per-device asset tracking.</li>
+    <li>Data destruction is a deliberately-agreed step, documented on request.</li>
+    <li>Multi-location and multi-floor pickups supported.</li>
+    <li>Documentation options: pickup acknowledgement, ITAD asset log, serialised Certificate of Destruction, insurance-disposal records.</li>
+  </ul>
+
+  <section>
+    <h2>Common corporate use cases</h2>
+
+    <table class="accepted-items-table">
+      <thead>
+        <tr><th>Scenario</th><th>Workflow</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        {useCases.map((row) => (
+          <tr>
+            <td>{row.scenario}</td>
+            <td>{row.route}</td>
+            <td>{row.note}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>How to set up a corporate pickup</h2>
+    <ol class="how-to-list">
+      {howToSteps.map((s) => (
+        <li><strong>{s.name}.</strong> {s.text}</li>
+      ))}
+    </ol>
+  </section>
+
+  <section>
+    <h2>Standard bulk pickup vs ITAD — which fits?</h2>
+    <p>
+      Two workflows exist for corporate collections. Picking the right one at the start avoids re-scoping mid-job.
+    </p>
+    <h3>Standard bulk pickup fits when:</h3>
+    <ul>
+      <li>The job is a one-off (office cleanout, single relocation, single-project decommissioning).</li>
+      <li>Per-device asset tracking isn't required.</li>
+      <li>Data destruction is either handled by you before pickup, or a bulk-batch certificate is enough (not per-serial).</li>
+      <li>The device count is somewhere between 10 and roughly 50 devices.</li>
+    </ul>
+    <h3>ITAD workflow fits when:</h3>
+    <ul>
+      <li>You're inside a formal IT refresh cycle (annual, biannual).</li>
+      <li>You need per-serial disposition records for finance/audit/insurance.</li>
+      <li>Data destruction needs to be certified per-drive (DPDP compliance, medical data, financial data, government data).</li>
+      <li>The job is large enough (50+ devices, or full-office decommissioning) that the ITAD overhead pays off.</li>
+      <li>You're a listed company or subject to formal compliance frameworks.</li>
+    </ul>
+    <p>
+      For the full ITAD workflow, see <a href="/itad/">ITAD</a> and <a href="/services/itad-for-it-companies/">ITAD for IT companies</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Data destruction — what corporates actually need</h2>
+    <p>
+      Every corporate pickup that includes computers, phones, servers, storage or copiers has a data destruction dimension whether or not it's stated on paper. The three practical options:
+    </p>
+    <ul>
+      <li><strong>Handle it yourself before pickup</strong> — factory reset, drive removal, in-house wiping. Fastest for small jobs, but produces no external certificate.</li>
+      <li><strong>Software-based wiping at the facility</strong> — drives remain intact and reusable. Faster than physical destruction, appropriate for most business data.</li>
+      <li><strong>Physical shredding at the facility</strong> — drives are shredded, can't be reused. Recommended for high-security data (medical records, financial data, legal case files, government-classified). Produces serialised Certificates of Destruction on request.</li>
+    </ul>
+    <p>
+      For on-site destruction (mobile shredder at your premises, so drives never leave the building), enquire specifically — this is a separately-scoped service.
+    </p>
+    <p>
+      For the full data-destruction workflow, standards, and Certificate of Destruction sample, see <a href="/data-destruction/">data destruction</a> and <a href="/data-destruction-certificate-sample/">Certificate of Destruction sample</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Areas commonly served for corporate pickup</h2>
+    <p>
+      Kochi's IT and business corridor — <a href="/locations/infopark-kochi/">Infopark</a>, <a href="/locations/kakkanad/">Kakkanad</a>, <a href="/locations/edappally/">Edappally</a>, <a href="/locations/kalamassery/">Kalamassery</a>, <a href="/locations/aluva/">Aluva</a>, <a href="/locations/kadavanthra/">Kadavanthra</a>, <a href="/locations/ernakulam-south/">Ernakulam South</a>, <a href="/locations/vyttila/">Vyttila</a> — is where most corporate pickups happen. Other Ernakulam-district areas and further Kerala cities (Kollam, Kottayam, Thrissur, Kozhikode, Palakkad, Kannur, Malappuram, Thiruvananthapuram) are reviewed case-by-case; contact us with the location and scope for a feasibility answer.
+    </p>
+  </section>
+
+  <section id="faq">
+    <h2>Frequently asked questions about corporate e-waste recycling</h2>
+    <Faq items={faqItems} />
+  </section>
+
+  <section>
+    <h2>Related pages</h2>
+    <ul>
+      <li><a href="/itad/">ITAD</a> — full IT asset disposition workflow</li>
+      <li><a href="/services/itad-for-it-companies/">ITAD for IT companies</a></li>
+      <li><a href="/office-e-waste-pickup/">Office e-waste pickup</a> — entry-level office collection</li>
+      <li><a href="/data-destruction/">Data destruction</a></li>
+      <li><a href="/hard-drive-shredding/">Hard drive shredding</a></li>
+      <li><a href="/server-recycling-kochi/">Server recycling</a></li>
+      <li><a href="/computer-recycling/">Computer recycling</a></li>
+      <li><a href="/services/it-asset-inventory-audit/">IT asset inventory audit</a></li>
+      <li><a href="/data-destruction-certificate-sample/">Certificate of Destruction sample</a></li>
+    </ul>
+  </section>
+
+  <CtaBar whatsappMessage="Hi, I'd like to arrange corporate e-waste recycling for our office — here's what we have:" />
+</Layout>

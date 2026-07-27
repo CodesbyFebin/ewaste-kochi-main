@@ -1,0 +1,248 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import Faq from "../../components/Faq.astro";
+import DirectAnswer from "../../components/DirectAnswer.astro";
+import { SITE_URL } from "../../data/site";
+import { getHreflang } from "../../data/routes";
+
+const title = "Where to Recycle Laptops in Kochi | Free Pickup + Buyback Quote";
+const description =
+  "Where to recycle old laptops in Kochi — free doorstep pickup, condition-based buyback quote, and certified data destruction. Send photos on WhatsApp for a confirmed slot.";
+const lastUpdated = "2026-07-27";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Laptop Recycling", path: "/laptop-recycling/" },
+];
+
+const howToSteps = [
+  { name: "Message the make, model and condition", text: "Share brand (Dell, HP, Lenovo, Apple, Acer, etc.), rough age, and whether it powers on. Include a photo of the screen and keyboard if possible." },
+  { name: "Flag the storage drive", text: "Note whether the laptop still has its HDD or SSD, and whether you want data wiped, physically destroyed, or handled yourself before pickup." },
+  { name: "Confirm pickup location and quantity", text: "One laptop or a batch of 20 — either is fine, but scheduling depends on your area and how many devices are being collected." },
+  { name: "Agree the route: recycle, resell, or destroy", text: "Working laptops usually go through a resale check first. Non-working or older units route to material recovery. Data-bearing devices route through data destruction before either." },
+  { name: "Doorstep pickup and documentation", text: "The team collects at the confirmed slot. Business pickups get pickup acknowledgement paperwork; certified data destruction is documented separately when booked." },
+];
+
+const acceptedTable = [
+  { category: "Working laptops (any brand, any age)", route: "Resale/buyback check first; recycling if not saleable", note: "Photos of the screen + charger help the quote" },
+  { category: "Non-working laptops (won't power on)", route: "Material recovery + data destruction (if drive present)", note: "Still worth collecting — components are recyclable" },
+  { category: "Physically damaged (cracked screen, spilled)", route: "Data destruction + recycling", note: "Note the damage in your message" },
+  { category: "Water-damaged laptops", route: "Recycling; data destruction essential", note: "Assume drive data may still be recoverable" },
+  { category: "Laptop chargers and adapters", route: "Recycled with the laptop; standalone chargers also accepted", note: "Batch them with other e-waste in one pickup" },
+  { category: "Loose laptop batteries", route: "Battery recycling stream (separate handling)", note: "Flag swelling or leakage in advance" },
+  { category: "Old laptop parts (RAM, drives, screens)", route: "Component recycling", note: "Send photos to route them correctly" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Laptop recycling and buyback",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: "Kochi, Ernakulam, Kerala",
+    url: `${SITE_URL}/laptop-recycling/`,
+    description: "Doorstep pickup, condition-based buyback quote and certified data destruction for laptops in Kochi.",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to Recycle an Old Laptop in Kochi",
+    description: "Step-by-step process for pickup, buyback assessment, data destruction and recycling of a laptop in Kochi.",
+    step: howToSteps.map((s) => ({ "@type": "HowToStep", name: s.name, text: s.text })),
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/laptop-recycling/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: breadcrumbItems.map((b, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: b.name,
+        item: `${SITE_URL}${b.path}`,
+      })),
+    },
+  },
+];
+
+const faqItems = [
+  {
+    q: "Where can I recycle an old laptop in Kochi?",
+    a: "Message Ewaste Kochi with the laptop's brand, model, condition and your location. The team confirms pickup feasibility, checks whether the laptop qualifies for buyback or goes straight to recycling, and books a doorstep slot after review.",
+  },
+  {
+    q: "Do I get money for an old laptop, or is it just recycled?",
+    a: "It depends on condition. Working laptops with resale potential get a condition-based buyback quote, confirmed after physical inspection. Non-working or very old laptops usually go through material recovery without a payment, but pickup is still free.",
+  },
+  {
+    q: "What happens to the data on the hard drive or SSD?",
+    a: "Flag it when you book. Options include software-based data wiping (for reusable drives), physical shredding (for high-security or non-functional drives), or you handling it yourself before pickup. Certified data destruction produces a Certificate of Destruction on request.",
+  },
+  {
+    q: "How much is my laptop worth as scrap?",
+    a: "There isn't a fixed scrap-price-per-kg answer for laptops — buyback value depends on brand, model, generation, condition and whether the drive stays in. Send photos over WhatsApp for a condition-based estimate; the final quote is confirmed at inspection.",
+  },
+  {
+    q: "Can I recycle just one laptop, or is there a minimum?",
+    a: "A single laptop pickup can be requested. Feasibility depends on your area, the current pickup route schedule and whether the laptop can be combined with another nearby pickup for efficiency.",
+  },
+  {
+    q: "What about cracked-screen or spilled-liquid laptops?",
+    a: "Both are accepted. Note the damage in your message so the team knows to plan handling. Damaged laptops usually route through data destruction (if a drive is present) before recycling.",
+  },
+  {
+    q: "Do you collect from apartments and gated societies?",
+    a: "Yes. Include the building name, floor and any access instructions (security gate, lift timing) when you message so the pickup slot can be planned around them.",
+  },
+  {
+    q: "Can offices book bulk laptop recycling — say 30 or 50 units?",
+    a: "Yes. IT refresh cycles are common. Batches of laptops usually fit better under the ITAD workflow, which adds asset tracking, per-device serial capture and consolidated documentation. Share the count and any deadline when booking.",
+  },
+  {
+    q: "Is pickup actually free, or are there charges?",
+    a: "Doorstep pickup is free for eligible collections. Confirmation depends on location, item type and quantity — a very small or very remote pickup may sometimes be combined with a nearby scheduled route rather than being a dedicated visit.",
+  },
+  {
+    q: "How do I know the laptop actually gets recycled and not resold as-is?",
+    a: "You choose the route when booking. If you want the laptop wiped and recycled (not resold in any form), say so — the team documents that decision and routes accordingly. Business pickups routinely include this in the paperwork.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/laptop-recycling/" jsonLd={jsonLd} hreflang={getHreflang("/laptop-recycling/")}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Where to Recycle Laptops in Kochi</h1>
+  <p class="lede">
+    Whether it's one old laptop from a drawer or 30 machines from an office IT refresh, the process starts the same way: message the brand, model and condition, share your location, and the team confirms whether pickup fits your area's current schedule. Working laptops usually get a condition-based buyback quote first. Non-working ones go through material recovery. Data-bearing drives route through data destruction before either.
+  </p>
+
+  <DirectAnswer>
+    <p>
+      To recycle an old laptop in Kochi: WhatsApp the brand, model, condition and your location to Ewaste Kochi. Working laptops receive a condition-based buyback quote, confirmed after inspection. Non-working laptops are collected for material recovery. Drives are wiped or physically destroyed before either route — with a Certificate of Destruction on request. Doorstep pickup is free for eligible collections.
+    </p>
+  </DirectAnswer>
+
+  <CtaBar whatsappMessage="Hi, I'd like to recycle a laptop — here are the details:" />
+
+  <ul class="key-takeaways">
+    <li>Any brand, any age, working or not — laptops are accepted.</li>
+    <li>Working laptops get a condition-based buyback quote first; non-working ones go to material recovery.</li>
+    <li>Data destruction is a separate step, booked with the pickup, documented on request.</li>
+    <li>Single-laptop and bulk-office pickups are both supported; office batches usually route through <a href="/itad/">ITAD</a> for asset tracking.</li>
+    <li>Pickup feasibility and slot timing are confirmed after area, condition and route review.</li>
+  </ul>
+
+  <section>
+    <h2>What laptops we accept</h2>
+    <p>
+      There is no brand or age exclusion — Dell, HP, Lenovo, Apple, Acer, ASUS, MSI, and any other make are all accepted. Working, non-working, damaged, and physically broken laptops are all part of the same pickup process. The difference isn't whether we collect the laptop — it's which downstream route the laptop takes after collection.
+    </p>
+
+    <table class="accepted-items-table">
+      <thead>
+        <tr><th>Laptop type</th><th>Where it goes</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        {acceptedTable.map((row) => (
+          <tr>
+            <td>{row.category}</td>
+            <td>{row.route}</td>
+            <td>{row.note}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+
+    <p>
+      If you're not sure whether something you have counts as "a laptop for recycling" (docked stations, chromebooks, old netbooks, gaming laptops, MacBooks with broken hinges, ex-lease enterprise units), send a photo. The team confirms handling and pickup route from the photo — no need to guess in advance.
+    </p>
+  </section>
+
+  <section>
+    <h2>Should I sell, recycle or destroy it?</h2>
+    <p>
+      For most old laptops, the honest answer depends on three things: whether it powers on, whether the drive holds data you can't afford to lose, and whether the model still has meaningful resale demand. The <a href="/tools/sell-or-recycle-decision-tool/">sell-or-recycle decision tool</a> is built to walk through this without needing to know scrap pricing in advance.
+    </p>
+    <ul>
+      <li><strong>Sell / buyback</strong> — if it works, if the model is post-2019-ish, and if you don't need it wiped in a certified way. Route to <a href="/sell-electronics/">sell-electronics</a> for the buyback quote flow.</li>
+      <li><strong>Recycle</strong> — if it doesn't power on, has physical damage, or is too old to have resale demand. Free pickup, material recovery, no payment received.</li>
+      <li><strong>Destroy (data first, then recycle)</strong> — if the drive holds business, medical, financial or personal data you can't verify was cleared elsewhere. Route through <a href="/data-destruction/">data destruction</a> first, with a Certificate of Destruction on request.</li>
+    </ul>
+    <p>
+      These aren't mutually exclusive — a laptop can be wiped, resold (with the buyback quote adjusted to reflect the missing drive), or wiped and then recycled. The team confirms the route at booking, and it's not committed until you agree.
+    </p>
+  </section>
+
+  <section>
+    <h2>How the pickup and buyback process works</h2>
+    <ol class="how-to-list">
+      {howToSteps.map((s) => (
+        <li>
+          <strong>{s.name}.</strong> {s.text}
+        </li>
+      ))}
+    </ol>
+    <p>
+      The condition-based estimate you get from photos is exactly that — an estimate. The confirmed quote comes after physical inspection. If the laptop turns out to be in worse condition than photos suggested, the quote is revised on the spot and you can decline the pickup without any obligation. If it's in better condition, the quote goes up.
+    </p>
+  </section>
+
+  <section>
+    <h2>Data destruction for laptop drives</h2>
+    <p>
+      Every laptop drive that has ever held personal or business data carries risk after the laptop leaves your hands. Ewaste Kochi's default assumption is that you want the drive dealt with — either by you before pickup, or by us at pickup. Say so when you book.
+    </p>
+    <p>
+      Two common paths:
+    </p>
+    <ul>
+      <li><strong>Software-based wiping</strong> — the drive is wiped using accepted overwrite methods before being either reused (in a resold laptop) or recycled. Faster, keeps the drive intact.</li>
+      <li><strong>Physical destruction (shredding)</strong> — the drive is physically shredded, which makes recovery infeasible. Slower, drive can't be reused after. Recommended for high-security data (medical, financial, legal, government).</li>
+    </ul>
+    <p>
+      Certified data destruction can be documented with a serialised Certificate of Destruction, on request. See <a href="/data-destruction/">data destruction</a> for the full workflow and standards reference.
+    </p>
+  </section>
+
+  <section>
+    <h2>Single laptop vs office bulk</h2>
+    <p>
+      A single-laptop pickup at your home is a valid booking. A 50-unit IT refresh from an office is also a valid booking. The two just get planned differently:
+    </p>
+    <ul>
+      <li><strong>Single laptop</strong> — usually combined with a nearby scheduled pickup route rather than a dedicated visit. Slot timing depends on when a route is passing your area.</li>
+      <li><strong>Small batch (2–10 laptops)</strong> — often bookable as its own doorstep pickup, especially from offices in Kochi's IT corridor (Infopark, SmartCity, Kakkanad).</li>
+      <li><strong>Bulk (10+ laptops)</strong> — typically routed through <a href="/itad/">ITAD</a>, which adds asset tracking, per-serial capture, and consolidated documentation. Recommended for corporate IT decommissioning.</li>
+    </ul>
+    <p>
+      Areas commonly served for laptop pickup include <a href="/locations/kakkanad/">Kakkanad</a>, <a href="/locations/infopark-kochi/">Infopark</a>, <a href="/locations/edappally/">Edappally</a>, <a href="/locations/aluva/">Aluva</a>, <a href="/locations/kadavanthra/">Kadavanthra</a>, <a href="/locations/kalamassery/">Kalamassery</a> and elsewhere in Kochi and Ernakulam. See <a href="/locations/">locations</a> for the full list.
+    </p>
+  </section>
+
+  <section id="faq">
+    <h2>Frequently asked questions about laptop recycling in Kochi</h2>
+    <Faq items={faqItems} />
+  </section>
+
+  <section>
+    <h2>Related pages</h2>
+    <ul>
+      <li><a href="/recycling/">General e-waste recycling</a> — parent pillar for all electronics</li>
+      <li><a href="/sell-electronics/">Sell electronics</a> — the buyback quote flow</li>
+      <li><a href="/data-destruction/">Data destruction</a> — for laptop drives with sensitive data</li>
+      <li><a href="/battery-recycling/">Battery recycling</a> — for standalone laptop batteries</li>
+      <li><a href="/pickup/">Pickup</a> — how the doorstep collection process works</li>
+      <li><a href="/itad/">ITAD</a> — for office bulk laptop decommissioning</li>
+      <li><a href="/tools/scrap-value-calculator/">Scrap value calculator</a></li>
+      <li><a href="/tools/sell-or-recycle-decision-tool/">Sell-or-recycle decision tool</a></li>
+    </ul>
+  </section>
+
+  <CtaBar whatsappMessage="Hi, I'd like to recycle a laptop — here are the details:" />
+</Layout>

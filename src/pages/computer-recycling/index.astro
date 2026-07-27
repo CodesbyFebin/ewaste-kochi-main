@@ -1,0 +1,229 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import Faq from "../../components/Faq.astro";
+import DirectAnswer from "../../components/DirectAnswer.astro";
+import { SITE_URL } from "../../data/site";
+import { getHreflang } from "../../data/routes";
+
+const title = "Where to Recycle Computers in Kochi | Desktop, Laptop & Server Pickup";
+const description =
+  "Where to recycle old computers in Kochi — desktops, laptops, workstations, all-in-ones and servers. Free doorstep pickup, condition-based buyback, and certified data destruction.";
+const lastUpdated = "2026-07-27";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Computer Recycling", path: "/computer-recycling/" },
+];
+
+const howToSteps = [
+  { name: "List what you have", text: "Desktop tower, monitor, laptop, all-in-one, workstation, server — say what and how many. Photos help for older or damaged units." },
+  { name: "Flag storage and power state", text: "Does it power on? Does the drive stay in? Both change the handling route and — for working machines — the buyback quote." },
+  { name: "Confirm your location", text: "Kochi, Ernakulam district, or one of the far-Kerala cities. Coverage and slot timing depend on this." },
+  { name: "Agree route: recycle, resell or destroy", text: "Working computers usually run through a resale check first. Non-working ones go to material recovery. Data-bearing drives route through data destruction." },
+  { name: "Doorstep pickup and paperwork", text: "The team collects at the confirmed slot. Business pickups get pickup acknowledgement paperwork; data destruction is documented on request." },
+];
+
+const computerTypes = [
+  { type: "Desktop towers (any age)", route: "Component recycling; buyback if recent and working", note: "Include monitor if bundled" },
+  { type: "Laptops", route: "See /laptop-recycling/", note: "Dedicated laptop workflow" },
+  { type: "All-in-one PCs (iMac-style)", route: "Recycling; display handling is separate", note: "Note if the screen is damaged" },
+  { type: "Workstations (Dell Precision, HP Z, Lenovo P-series)", route: "Buyback check first (higher resale value); recycling if not viable", note: "Include CPU/GPU specs if known" },
+  { type: "Servers (1U, 2U, tower)", route: "See /server-recycling-kochi/", note: "Bulk data destruction usually paired" },
+  { type: "Old CRT monitors", route: "See /tv-recycling-kochi/", note: "Bulky — needs advance transport planning" },
+  { type: "LCD/LED monitors", route: "Recycling; sometimes resellable", note: "Batch with the desktop" },
+  { type: "Keyboards, mice, cables, docks", route: "Recycling stream", note: "Include with the main pickup" },
+  { type: "Loose components (RAM, HDDs, PSUs)", route: "Component recycling; drives get data destruction", note: "Send photos to route correctly" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Computer recycling and buyback",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: "Kochi, Ernakulam, Kerala",
+    url: `${SITE_URL}/computer-recycling/`,
+    description: "Doorstep pickup, condition-based buyback and certified data destruction for desktops, laptops, workstations and servers in Kochi.",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to Recycle an Old Computer in Kochi",
+    description: "Step-by-step process for pickup, buyback assessment, data destruction and recycling of desktops, laptops, workstations and servers.",
+    step: howToSteps.map((s) => ({ "@type": "HowToStep", name: s.name, text: s.text })),
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/computer-recycling/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: breadcrumbItems.map((b, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: b.name,
+        item: `${SITE_URL}${b.path}`,
+      })),
+    },
+  },
+];
+
+const faqItems = [
+  {
+    q: "Where can I recycle an old computer in Kochi?",
+    a: "Message Ewaste Kochi with the computer type (desktop, laptop, workstation, server), condition, and your location. The team confirms pickup feasibility, checks whether the machine qualifies for buyback or recycling, and books a doorstep slot.",
+  },
+  {
+    q: "Do you recycle desktops as well as laptops?",
+    a: "Yes. Desktop towers, all-in-one PCs, workstations, and servers are all accepted. Laptops have a dedicated workflow at /laptop-recycling/; servers have a dedicated workflow at /server-recycling-kochi/.",
+  },
+  {
+    q: "What about old monitors, keyboards and cables that come with the computer?",
+    a: "All accepted. Include them in your message so the pickup is planned as one collection. Old CRT monitors need advance transport planning because of their size and weight.",
+  },
+  {
+    q: "Is the drive wiped before recycling?",
+    a: "Only if you ask. Options: bring your own wiped drive, hand it over and request software-based wiping, or hand it over and request physical destruction. Certified data destruction produces a documented Certificate on request. See /data-destruction/ for details.",
+  },
+  {
+    q: "How much is an old computer worth?",
+    a: "Depends on type, age, specs and condition. Modern workstations with resale demand receive a condition-based buyback quote. Old desktops usually recycle without a payment — but pickup is still free. Send photos and specs over WhatsApp for a condition-based estimate.",
+  },
+  {
+    q: "Can offices book bulk computer recycling — say 40 workstations?",
+    a: "Yes. Corporate IT decommissioning routes through the ITAD workflow, which adds per-device asset tracking, serial capture and consolidated documentation. See /itad/ for the full workflow.",
+  },
+  {
+    q: "What if the computer is really old — 10+ years?",
+    a: "Still accepted. Older machines usually have no resale value, but material recovery is still worthwhile. Pickup is free.",
+  },
+  {
+    q: "Which areas do you cover for computer pickup?",
+    a: "Kochi and the Ernakulam district have direct doorstep pickup. Other Kerala cities (Kollam, Kottayam, Thrissur, Kozhikode, Palakkad, Kannur, Malappuram, Thiruvananthapuram) are checked case-by-case; see the location pages.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/computer-recycling/" jsonLd={jsonLd} hreflang={getHreflang("/computer-recycling/")}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Where to Recycle Computers in Kochi</h1>
+  <p class="lede">
+    "Computer" covers a lot — desktops, laptops, all-in-ones, workstations, servers, and everything that goes with them. All of it is accepted for pickup. What changes is which downstream route the machine takes after collection, and — for working units — what buyback quote it gets. This page covers the whole computer category; laptops and servers have their own dedicated pages for detail.
+  </p>
+
+  <DirectAnswer>
+    <p>
+      To recycle an old computer in Kochi: WhatsApp the type (desktop, laptop, workstation, server), condition and your location to Ewaste Kochi. Working machines get a condition-based buyback quote. Non-working machines are collected for material recovery. Drives are wiped or physically destroyed before either route, with a Certificate of Destruction on request. Doorstep pickup is free for eligible collections.
+    </p>
+  </DirectAnswer>
+
+  <CtaBar whatsappMessage="Hi, I'd like to recycle an old computer — here are the details:" />
+
+  <ul class="key-takeaways">
+    <li>Desktops, laptops, all-in-ones, workstations, servers — all accepted.</li>
+    <li>Monitors, keyboards, mice, cables can be batched into the same pickup.</li>
+    <li>Data destruction is a separate step, booked with the pickup, documented on request.</li>
+    <li>Single machines and bulk office batches both supported; bulk usually routes through ITAD.</li>
+    <li>Pickup and quote both confirmed after review, not before.</li>
+  </ul>
+
+  <section>
+    <h2>What "computer" covers — full accepted list</h2>
+    <p>
+      There's no exclusion by brand, age or condition. Working, dead, physically damaged, missing keys, cracked screens, spilled coffee — all fine. The question isn't whether the machine is collected. It's which route it takes afterward.
+    </p>
+
+    <table class="accepted-items-table">
+      <thead>
+        <tr><th>Type</th><th>Where it goes</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        {computerTypes.map((row) => (
+          <tr>
+            <td>{row.type}</td>
+            <td>{row.route}</td>
+            <td>{row.note}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>How the process works</h2>
+    <ol class="how-to-list">
+      {howToSteps.map((s) => (
+        <li><strong>{s.name}.</strong> {s.text}</li>
+      ))}
+    </ol>
+  </section>
+
+  <section>
+    <h2>Data destruction before recycling</h2>
+    <p>
+      Any computer with a drive that ever held business or personal data should route through <a href="/data-destruction/">data destruction</a> before recycling — either by you before pickup, or by the team at pickup. Options include software-based wiping (drive stays intact and reusable), physical shredding (drive can't be reused), or degaussing for magnetic media. Certified data destruction is documented with a serialised Certificate of Destruction on request.
+    </p>
+    <p>
+      For very high-value data (medical, financial, legal, government), physical shredding is the default recommendation. For consumer-grade data (personal photos, browser history, saved passwords), software wiping is usually sufficient. Sending a factory-resetted laptop is fine but doesn't count as certified destruction.
+    </p>
+  </section>
+
+  <section>
+    <h2>Buyback vs recycling — how the quote works</h2>
+    <p>
+      For a working computer with resale demand, the buyback flow is:
+    </p>
+    <ol>
+      <li>Send photos and specs (CPU, RAM, storage, GPU if any) over WhatsApp.</li>
+      <li>Receive a condition-based estimate — deliberately labelled "estimate", not final.</li>
+      <li>Team picks up the machine.</li>
+      <li>Physical inspection produces the final confirmed quote. If it's higher than the estimate, quote goes up. If it's lower (visible damage not shown in photos, missing components), you can decline the pickup without obligation.</li>
+      <li>Payment on the spot for accepted quotes, or the machine goes to recycling if declined.</li>
+    </ol>
+    <p>
+      For non-working or older machines, there's no buyback — pickup is still free, and the machine goes directly to material recovery. See <a href="/sell-electronics/">sell electronics</a> for the full buyback flow.
+    </p>
+  </section>
+
+  <section>
+    <h2>Office and business computer recycling</h2>
+    <p>
+      Batches of 10+ machines usually route through <a href="/itad/">ITAD</a> rather than a standard pickup. ITAD adds:
+    </p>
+    <ul>
+      <li>Per-device asset tracking (serial capture, condition log, disposition record)</li>
+      <li>Consolidated data destruction documentation</li>
+      <li>Scheduled pickup windows around IT refresh cycles</li>
+      <li>Compliance-friendly paperwork for corporate audit trails</li>
+    </ul>
+    <p>
+      Common office computer scenarios: end-of-lease Dell/HP fleets, workstation refresh in film-production or engineering offices, decommissioned point-of-sale terminals in retail chains, retired server-room hardware. Send the count, model list (if available), and any deadline when you enquire.
+    </p>
+  </section>
+
+  <section id="faq">
+    <h2>Frequently asked questions about computer recycling in Kochi</h2>
+    <Faq items={faqItems} />
+  </section>
+
+  <section>
+    <h2>Related pages</h2>
+    <ul>
+      <li><a href="/laptop-recycling/">Laptop recycling</a> — dedicated laptop workflow</li>
+      <li><a href="/server-recycling-kochi/">Server recycling</a> — dedicated server workflow</li>
+      <li><a href="/recycling/">General e-waste recycling</a> — parent pillar</li>
+      <li><a href="/sell-electronics/">Sell electronics</a> — buyback flow</li>
+      <li><a href="/data-destruction/">Data destruction</a></li>
+      <li><a href="/itad/">ITAD for offices</a></li>
+      <li><a href="/pickup/">How pickup works</a></li>
+      <li><a href="/tools/scrap-value-calculator/">Scrap value calculator</a></li>
+    </ul>
+  </section>
+
+  <CtaBar whatsappMessage="Hi, I'd like to recycle an old computer — here are the details:" />
+</Layout>

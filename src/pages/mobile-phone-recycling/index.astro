@@ -1,0 +1,226 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import Faq from "../../components/Faq.astro";
+import DirectAnswer from "../../components/DirectAnswer.astro";
+import { SITE_URL } from "../../data/site";
+import { getHreflang } from "../../data/routes";
+
+const title = "Where to Recycle Mobile Phones in Kochi | Buyback + Free Pickup";
+const description =
+  "Where to recycle old mobile phones in Kochi — free doorstep pickup for iPhones, Android phones, damaged screens, water-damaged devices, and battery-swollen units. Condition-based buyback quote.";
+const lastUpdated = "2026-07-27";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Mobile Phone Recycling", path: "/mobile-phone-recycling/" },
+];
+
+const howToSteps = [
+  { name: "Send phone details on WhatsApp", text: "Brand, model, condition (works / cracked screen / dead / water-damaged), and whether the phone still turns on. Photos of the front and back help." },
+  { name: "Flag any battery issues", text: "Swollen batteries, phones that overheat, or units that won't stay charged — mention these first, they change handling." },
+  { name: "Decide on a factory reset", text: "If you can, factory reset the phone and sign out of iCloud/Google before pickup. If you can't, flag it — the team routes the phone through data destruction instead." },
+  { name: "Confirm pickup location", text: "Single-phone pickups usually combine with a nearby scheduled route rather than a dedicated visit." },
+  { name: "Doorstep collection", text: "The team collects, confirms the final quote (if buyback), and pays on the spot for accepted units." },
+];
+
+const phoneScenarios = [
+  { situation: "Working iPhone or high-end Android (last 3 years)", route: "Buyback quote first; recycling if declined", note: "Photos of screen + factory-reset status help" },
+  { situation: "Working mid-range Android (any age)", route: "Buyback check; often modest quote or recycling", note: "Include model and year if known" },
+  { situation: "Cracked screen but works", route: "Reduced buyback quote OR recycling", note: "Photo of the crack informs the estimate" },
+  { situation: "Won't power on", route: "Recycling; data destruction if drive is intact", note: "Sometimes still salvageable for parts" },
+  { situation: "Water-damaged phone", route: "Recycling; data destruction essential", note: "Assume data may still be recoverable off the drive" },
+  { situation: "Phone with swollen or leaking battery", route: "Recycling with separate battery handling", note: "Photo required; store the phone away from heat until pickup" },
+  { situation: "Old feature phones and BlackBerry-era devices", route: "Recycling", note: "Still accepted; no buyback typical" },
+  { situation: "Bulk phone batches (office-issued, ex-lease)", route: "ITAD workflow with per-device tracking", note: "Contact for scheduling" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Mobile phone recycling and buyback",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: "Kochi, Ernakulam, Kerala",
+    url: `${SITE_URL}/mobile-phone-recycling/`,
+    description: "Doorstep pickup, condition-based buyback quote and safe handling for old, damaged and water-affected mobile phones in Kochi.",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to Recycle an Old Mobile Phone in Kochi",
+    description: "Step-by-step process for pickup, buyback assessment and recycling of mobile phones — including damaged and water-affected units.",
+    step: howToSteps.map((s) => ({ "@type": "HowToStep", name: s.name, text: s.text })),
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/mobile-phone-recycling/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: breadcrumbItems.map((b, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: b.name,
+        item: `${SITE_URL}${b.path}`,
+      })),
+    },
+  },
+];
+
+const faqItems = [
+  {
+    q: "Where can I recycle an old mobile phone in Kochi?",
+    a: "Message Ewaste Kochi with the phone brand, model and condition. The team confirms pickup feasibility for your area, checks whether the phone qualifies for buyback, and books a doorstep collection slot.",
+  },
+  {
+    q: "Do you buy old phones, or is it only recycling?",
+    a: "Both. Working phones — especially recent iPhones, high-end Androids and mid-range phones from the last 3–5 years — get a condition-based buyback quote. Very old, dead, or heavily damaged phones go to recycling only. Send photos over WhatsApp for a condition-based estimate.",
+  },
+  {
+    q: "What about phones with cracked screens?",
+    a: "Still accepted. If the phone works despite the crack, a reduced buyback quote is possible. If the crack has made the phone unusable, it goes to recycling. Either way, share a photo of the damage when you message.",
+  },
+  {
+    q: "Can water-damaged phones be recycled?",
+    a: "Yes — they're a standard case. Water-damaged phones almost never qualify for buyback (internal corrosion is unpredictable), but recycling is straightforward. Important: assume the data on the phone's storage may still be technically recoverable, so route the phone through data destruction if it held anything sensitive.",
+  },
+  {
+    q: "What if the battery is swollen or leaking?",
+    a: "Flag this in your message and include a photo. Swollen batteries are collected separately from the rest of the phone and handled through the battery recycling stream. Store the phone somewhere cool, dry and away from other electronics until pickup.",
+  },
+  {
+    q: "How much is my old phone worth?",
+    a: "There's no fixed answer — it depends on brand, model, condition, and current buyback demand. Send photos of the front, back and the About/Settings screen; the team gives a condition-based estimate on WhatsApp. Final quote is confirmed at physical inspection.",
+  },
+  {
+    q: "Do I need to wipe the phone before pickup?",
+    a: "If you can, yes — a factory reset plus signing out of iCloud (iPhone) or removing the Google account (Android) makes the transaction cleaner. If you can't (phone doesn't power on, forgotten passcode), flag it when booking — the team routes the phone through data destruction instead.",
+  },
+  {
+    q: "Can I recycle just one phone, or is there a minimum?",
+    a: "One phone is fine, though single-phone pickups usually combine with a nearby scheduled route rather than a dedicated visit. Bulk phone pickups (10+, common in offices decommissioning issued devices) are also supported.",
+  },
+  {
+    q: "What happens to the phone after pickup?",
+    a: "Working phones with buyback value are checked, refurbished where feasible and sold via the marketplace. Non-working phones are dismantled for material recovery. Data-bearing storage is wiped or physically destroyed before either route.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/mobile-phone-recycling/" jsonLd={jsonLd} hreflang={getHreflang("/mobile-phone-recycling/")}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Where to Recycle Mobile Phones in Kochi</h1>
+  <p class="lede">
+    Old phones pile up faster than any other electronics — a working spare, a cracked-screen ex-daily-driver, a water-damaged Android in a drawer. All of them are collected the same way: photos, model, condition, location. What changes is what happens next — a buyback quote for phones with resale demand, or straight-to-recycling for units that are past that. Damaged batteries and data-bearing storage both get handled separately in the same pickup.
+  </p>
+
+  <DirectAnswer>
+    <p>
+      To recycle an old mobile phone in Kochi: WhatsApp the brand, model, condition and photos to Ewaste Kochi. Working phones with resale value get a condition-based buyback quote, paid on the spot at pickup. Non-working, damaged or water-affected phones are collected free for recycling. Phones with swollen batteries or sensitive data are flagged for separate battery handling and data destruction.
+    </p>
+  </DirectAnswer>
+
+  <CtaBar whatsappMessage="Hi, I'd like to recycle a mobile phone — here are the details:" />
+
+  <ul class="key-takeaways">
+    <li>Any phone accepted — iPhone, Android, feature phones, dead units, water-damaged, cracked screens.</li>
+    <li>Buyback quote for phones with resale demand; recycling only for the rest — pickup is free either way.</li>
+    <li>Swollen or leaking batteries need advance flagging and separate handling.</li>
+    <li>Factory-reset before pickup if you can; if not, data destruction is routed instead.</li>
+    <li>Single-phone and bulk-office pickups both supported.</li>
+  </ul>
+
+  <section>
+    <h2>Which phones get accepted, and what happens to each</h2>
+
+    <table class="accepted-items-table">
+      <thead>
+        <tr><th>Phone condition</th><th>Route</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        {phoneScenarios.map((row) => (
+          <tr>
+            <td>{row.situation}</td>
+            <td>{row.route}</td>
+            <td>{row.note}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>How the process works</h2>
+    <ol class="how-to-list">
+      {howToSteps.map((s) => (
+        <li><strong>{s.name}.</strong> {s.text}</li>
+      ))}
+    </ol>
+  </section>
+
+  <section>
+    <h2>Data on the phone — what to do</h2>
+    <p>
+      Every modern phone holds a surprising amount of recoverable data even after "delete all photos". If the phone works:
+    </p>
+    <ol>
+      <li><strong>Back up what you need</strong> (iCloud, Google, or a local copy).</li>
+      <li><strong>Sign out</strong> of iCloud (iPhone) or remove the Google account (Android).</li>
+      <li><strong>Factory reset</strong> — Settings → General → Reset → Erase all content and settings.</li>
+      <li><strong>Then hand it over</strong>. The phone is now a clean unit; the team doesn't need to handle any residual data.</li>
+    </ol>
+    <p>
+      If the phone doesn't work, is locked with a forgotten passcode, or is water-damaged, that entire process is impossible on your end. Flag it when you book. The phone routes through <a href="/data-destruction/">data destruction</a> at the facility, and — if you request it — a Certificate of Destruction documents that the device's storage was rendered non-recoverable.
+    </p>
+  </section>
+
+  <section>
+    <h2>Swollen or damaged batteries — special handling</h2>
+    <p>
+      Lithium batteries that are swelling, leaking, deformed or unusually hot are a fire risk. They're still accepted for pickup — this is why proper battery recycling exists — but they need to be handled differently from a normal phone in three ways:
+    </p>
+    <ul>
+      <li><strong>Storage before pickup:</strong> keep the phone in a cool, dry place, away from other electronics, sunlight and enclosed metal containers. If possible, place it on a non-flammable surface (tile, ceramic).</li>
+      <li><strong>Advance flag:</strong> tell the team when you book, ideally with a photo of the swelling. This changes how the pickup is packed.</li>
+      <li><strong>Separate route:</strong> the phone body and the battery are handled through different streams — batteries go through <a href="/battery-recycling/">battery recycling</a>, the rest through phone recycling.</li>
+    </ul>
+    <p>
+      Do <em>not</em> puncture, crush or try to remove a swollen battery yourself. Just leave it in the phone and pass it over.
+    </p>
+  </section>
+
+  <section>
+    <h2>Bulk phone recycling — for offices</h2>
+    <p>
+      Offices that issue company phones typically have a batch to recycle every 2–3 years — end-of-contract iPhones, retired Android devices, decommissioned sales-team pool phones. Bulk phone pickups are routed through the <a href="/itad/">ITAD workflow</a>, which adds per-device asset capture (IMEI logs, condition per unit, disposition per unit), consolidated data destruction documentation and scheduled pickup windows.
+    </p>
+    <p>
+      Send the count, an approximate model breakdown, and whether you want any devices returned to specific employees (some offices offer buyback-back-to-employee schemes) when you enquire.
+    </p>
+  </section>
+
+  <section id="faq">
+    <h2>Frequently asked questions about mobile phone recycling in Kochi</h2>
+    <Faq items={faqItems} />
+  </section>
+
+  <section>
+    <h2>Related pages</h2>
+    <ul>
+      <li><a href="/battery-recycling/">Battery recycling</a> — for standalone or swollen phone batteries</li>
+      <li><a href="/data-destruction/">Data destruction</a> — for phones you can't reset yourself</li>
+      <li><a href="/sell-electronics/">Sell electronics</a> — the buyback flow</li>
+      <li><a href="/marketplace/">Marketplace</a> — where refurbished phones may be listed</li>
+      <li><a href="/recycling/">General e-waste recycling</a> — parent pillar</li>
+      <li><a href="/pickup/">Pickup</a> — how doorstep collection works</li>
+      <li><a href="/tools/scrap-value-calculator/">Scrap value calculator</a></li>
+    </ul>
+  </section>
+
+  <CtaBar whatsappMessage="Hi, I'd like to recycle a mobile phone — here are the details:" />
+</Layout>

@@ -1,0 +1,250 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import Faq from "../../components/Faq.astro";
+import DirectAnswer from "../../components/DirectAnswer.astro";
+import { SITE_URL } from "../../data/site";
+import { getHreflang } from "../../data/routes";
+
+const title = "Office E-Waste Pickup in Kochi | Scheduled Doorstep Collection";
+const description =
+  "Office e-waste pickup in Kochi — scheduled doorstep collection for laptops, desktops, monitors, printers, phones, UPS batteries and IT hardware. WhatsApp for a feasibility check and slot.";
+const lastUpdated = "2026-07-27";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Office E-Waste Pickup", path: "/office-e-waste-pickup/" },
+];
+
+const howToSteps = [
+  { name: "Send an item summary and office address", text: "Rough counts by category — laptops, desktops, monitors, printers, phones, UPS/inverter batteries, cables, servers. Include the office address, floor and access notes." },
+  { name: "Flag data-bearing devices", text: "Anything with a hard drive, SSD, or storage — laptops, desktops, servers, phones, copiers with storage. Say whether you want data destruction handled at pickup or done in-house first." },
+  { name: "Confirm slot preferences", text: "Preferred day and time window. Office pickups usually go outside peak hours (early morning, late afternoon, or weekend) to avoid disrupting the workspace." },
+  { name: "Doorstep collection at the agreed slot", text: "The team arrives at the confirmed time, verifies the item list against what was quoted, and collects the batch. Pickup acknowledgement paperwork is signed on the spot." },
+  { name: "Documentation follow-up", text: "For pickups with data destruction, a Certificate of Destruction is issued after the destruction step is complete. For ITAD-tracked pickups, a per-device asset log is issued with disposition details." },
+];
+
+const officeCategories = [
+  { category: "Laptops and desktops (any age)", route: "Buyback check for working units; recycling for the rest", note: "Drives routed through data destruction" },
+  { category: "Monitors — LCD, LED, CRT", route: "Recycling; CRTs need bulk transport planning", note: "CRT flag matters — they're heavy" },
+  { category: "Printers, scanners, copiers", route: "Recycling; copiers with hard drives need data destruction", note: "Photocopiers commonly forgotten as data-bearing" },
+  { category: "Phones (company-issued or old spares)", route: "Buyback for viable units; recycling for rest", note: "IMEI logging available under ITAD" },
+  { category: "UPS units, inverter batteries", route: "Battery recycling (separate handling)", note: "Flag swollen or leaking batteries in advance" },
+  { category: "Cables, keyboards, mice, chargers, docks", route: "Recycling stream", note: "Batch into the main pickup" },
+  { category: "Networking gear — switches, routers, APs", route: "Recycling; buyback for recent enterprise-grade units", note: "Configuration data on switches often overlooked" },
+  { category: "Servers, storage arrays, rack units", route: "See /server-recycling-kochi/", note: "Bulk data destruction usually paired" },
+  { category: "Old office furniture with electronics", route: "Electronics separated for recycling; furniture handled separately", note: "Powered desks, powered chairs" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Office e-waste pickup",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: "Kochi, Ernakulam, Kerala",
+    url: `${SITE_URL}/office-e-waste-pickup/`,
+    description: "Scheduled doorstep collection of office electronics — computers, monitors, printers, phones, UPS batteries and IT hardware — in Kochi and Ernakulam.",
+    audience: {
+      "@type": "BusinessAudience",
+      audienceType: "Office managers, admin teams, small-and-mid-size businesses",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to Book an Office E-Waste Pickup in Kochi",
+    description: "Step-by-step process for scheduling and executing office e-waste collection.",
+    step: howToSteps.map((s) => ({ "@type": "HowToStep", name: s.name, text: s.text })),
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/office-e-waste-pickup/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: breadcrumbItems.map((b, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: b.name,
+        item: `${SITE_URL}${b.path}`,
+      })),
+    },
+  },
+];
+
+const faqItems = [
+  {
+    q: "How is an office pickup different from a home pickup?",
+    a: "Two things: scheduling and documentation. Office pickups run outside peak hours (before opening, after closing, or on weekends), and they produce paperwork — pickup acknowledgement, per-device asset log if requested, Certificate of Destruction for data-bearing devices. Home pickups are lighter on both.",
+  },
+  {
+    q: "Do I need to be there in person?",
+    a: "Someone authorised — you, an admin manager, an IT lead, or a security officer — should be present to verify the item list and sign the pickup acknowledgement. This matters for audit trails and prevents any \"was this device really collected?\" gaps later.",
+  },
+  {
+    q: "How much notice do you need?",
+    a: "For a routine small pickup (10–30 devices), a few working days is typical. For larger jobs (100+ devices, full-office cleanout, server-room decommissioning) or specific slot requirements (before a lease expiry, before an audit deadline), give 1–2 weeks so transport and destruction slots can be planned.",
+  },
+  {
+    q: "What if we want the pickup outside business hours?",
+    a: "Common for offices that can't disrupt working time. Say so when booking — early morning, late evening or weekend slots are all reviewable, though they're not guaranteed and may affect scheduling.",
+  },
+  {
+    q: "Which office locations do you serve?",
+    a: "Kochi's IT and business corridor — Infopark, SmartCity Kochi, Kakkanad, Edappally, Kalamassery, Aluva, Kadavanthra, Ernakulam South, Vyttila — is the core service area. Multi-office pickups across Kochi are supported. Other Kerala cities are reviewed case-by-case; see /locations/ for coverage.",
+  },
+  {
+    q: "Do you invoice, or is the pickup completely off-the-books?",
+    a: "For businesses that want a GST-compliant invoice or a formal disposal record for tax/insurance/audit purposes, that's available — request it when booking. For informal one-off pickups, invoicing isn't automatically issued.",
+  },
+  {
+    q: "What if some devices turn out to have unexpected value?",
+    a: "Working laptops, workstations, phones and enterprise networking gear may qualify for buyback. If the team spots any at pickup, they mention it and — if you agree — quote separately. Buyback payment (for accepted quotes) is on the spot; no auto-buyback happens without your sign-off.",
+  },
+  {
+    q: "Is the pickup actually free?",
+    a: "Doorstep pickup for eligible office collections is free. Additional services — certified data destruction with per-drive serialised certificates, on-site destruction (mobile shredder at your premises), same-day scheduling, multi-location scheduling — may carry costs depending on scope. These are quoted before the job, never after.",
+  },
+  {
+    q: "What about very small offices — 1 or 2 devices?",
+    a: "Still possible, though small pickups usually combine with a nearby scheduled route rather than a dedicated visit. A 1-device pickup from an office in the IT corridor is easier to slot than a 1-device pickup from a remote location.",
+  },
+  {
+    q: "Can we get a Certificate of Destruction for hard drives?",
+    a: "Yes — request it when booking. Certificates are serialised per drive (or per batch, depending on scope) and issued after the destruction step is complete. See /data-destruction-certificate-sample/ for the format.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/office-e-waste-pickup/" jsonLd={jsonLd} hreflang={getHreflang("/office-e-waste-pickup/")}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Office E-Waste Pickup in Kochi</h1>
+  <p class="lede">
+    Office pickups sit between two extremes: a household grabbing an old laptop from a drawer, and a full corporate IT decommissioning with per-serial asset tracking. This page covers that middle ground — the routine SMB office cleanout, the "we're retiring 20 desktops after upgrading", the "our lease is up and we need this stuff gone", the "we've been meaning to clear the store-room for two years". Scheduled, documented, in-and-out. No sales pressure; the enquiry starts on WhatsApp.
+  </p>
+
+  <DirectAnswer>
+    <p>
+      To book an office e-waste pickup in Kochi: WhatsApp Ewaste Kochi with your office address, rough item counts (laptops, monitors, printers, batteries, etc.) and your preferred slot window. The team confirms feasibility and a scheduled slot, arrives at the agreed time with paperwork ready, and collects the batch. Pickup is free for eligible collections; certified data destruction and per-device tracking are optional add-ons quoted before the job.
+    </p>
+  </DirectAnswer>
+
+  <CtaBar whatsappMessage="Hi, I'd like to schedule an office e-waste pickup — here's what we have:" />
+
+  <ul class="key-takeaways">
+    <li>Scheduled, not walk-in — few working days notice for small jobs, 1–2 weeks for large ones.</li>
+    <li>Outside-business-hours slots are reviewable (early morning, evening, weekend).</li>
+    <li>Documentation options: pickup acknowledgement, GST invoice, per-device asset log, Certificate of Destruction.</li>
+    <li>Working devices may qualify for buyback; quoted separately, sign-off required.</li>
+    <li>For larger jobs (50+ devices) or per-serial audit needs, ITAD workflow fits better — see /itad/.</li>
+  </ul>
+
+  <section>
+    <h2>What office items get picked up</h2>
+    <p>
+      There's no category exclusion. If it's electronic and it's on an office floor, it can be part of the pickup. What matters is which downstream route each category takes.
+    </p>
+
+    <table class="accepted-items-table">
+      <thead>
+        <tr><th>Category</th><th>Route</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        {officeCategories.map((row) => (
+          <tr>
+            <td>{row.category}</td>
+            <td>{row.route}</td>
+            <td>{row.note}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+
+    <p>
+      Not sure whether something counts? Send a photo. Common edge cases: server-room UPS towers (yes), old projector units (yes), broken office phones with the base station (yes, both parts), power-conditioning equipment (yes), electronic locks and access-control readers (yes — data-bearing, flag it), digital signage displays (yes).
+    </p>
+  </section>
+
+  <section>
+    <h2>How to book</h2>
+    <ol class="how-to-list">
+      {howToSteps.map((s) => (
+        <li><strong>{s.name}.</strong> {s.text}</li>
+      ))}
+    </ol>
+  </section>
+
+  <section>
+    <h2>Documentation you can request</h2>
+    <p>
+      Office pickups often need more paperwork than home pickups. All of the following are available on request — say what you need when booking, and it's included:
+    </p>
+    <ul>
+      <li><strong>Pickup acknowledgement</strong> — signed at collection, showing categories and rough counts. Standard for every office pickup.</li>
+      <li><strong>GST invoice</strong> — for GST-registered businesses that want the pickup on the books for tax or audit purposes.</li>
+      <li><strong>Per-device asset log</strong> — serial, model, condition and disposition captured per unit. Used for insurance disposal records, corporate audit trails, and end-of-lease records. This is the ITAD workflow — see <a href="/itad/">ITAD</a>.</li>
+      <li><strong>Certificate of Destruction</strong> — issued per drive or per batch after data destruction is complete. Serialised for high-security workflows. See <a href="/data-destruction-certificate-sample/">sample</a>.</li>
+      <li><strong>Environmental disposal record</strong> — for CSR reports, ESG filings, and sustainability audits.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Data destruction — the part most offices under-scope</h2>
+    <p>
+      The most common oversight in office pickups is treating data destruction as optional. It's not, for most business data. A "just erase everything and recycle them" instruction, without a formal destruction step, leaves you exposed if any drive is later recovered from a downstream reseller.
+    </p>
+    <p>
+      Three practical paths, in order of increasing formality:
+    </p>
+    <ol>
+      <li><strong>You handle it before pickup</strong> — factory reset every laptop/phone, remove and destroy or wipe every drive in-house. Fast, no external record, no third-party assurance.</li>
+      <li><strong>Software wiping at the facility, no certificate</strong> — drives are wiped after collection; you get pickup acknowledgement showing categories collected but no per-drive record.</li>
+      <li><strong>Certified data destruction with Certificate</strong> — every drive wiped or physically shredded; a serialised Certificate of Destruction is issued per drive or per batch. Recommended for medical, financial, legal, HR and any data covered by DPDP Act, corporate policy, or client contract.</li>
+    </ol>
+    <p>
+      Photocopiers, multi-function printers, and networking switches often hold data no one thinks about. If yours have been in service for more than 12 months, treat them as data-bearing by default.
+    </p>
+  </section>
+
+  <section>
+    <h2>Office pickup vs corporate ITAD — which fits?</h2>
+    <p>
+      This page covers routine office pickup. If your job is larger or more formal, <a href="/corporate-e-waste-recycling/">corporate e-waste recycling</a> and <a href="/itad/">ITAD</a> fit better. Rough guide:
+    </p>
+    <ul>
+      <li><strong>Office pickup</strong> — one-off cleanout, 5–50 devices, GST invoice optional, Certificate of Destruction on request.</li>
+      <li><strong>Corporate e-waste / ITAD</strong> — recurring IT refresh, 50+ devices per batch, per-serial audit trails required, formal compliance frameworks (DPDP, ISO, insurance) involved.</li>
+    </ul>
+    <p>
+      If in doubt, send the enquiry as an office pickup — the team routes it to ITAD if the scope warrants, and the routing decision doesn't cost anything to change.
+    </p>
+  </section>
+
+  <section id="faq">
+    <h2>Frequently asked questions about office e-waste pickup</h2>
+    <Faq items={faqItems} />
+  </section>
+
+  <section>
+    <h2>Related pages</h2>
+    <ul>
+      <li><a href="/pickup/">General doorstep pickup</a> — parent pillar</li>
+      <li><a href="/corporate-e-waste-recycling/">Corporate e-waste recycling</a></li>
+      <li><a href="/itad/">ITAD</a> — for large-scale IT decommissioning</li>
+      <li><a href="/services/itad-for-it-companies/">ITAD for IT companies</a></li>
+      <li><a href="/data-destruction/">Data destruction</a></li>
+      <li><a href="/hard-drive-shredding/">Hard drive shredding</a></li>
+      <li><a href="/computer-recycling/">Computer recycling</a></li>
+      <li><a href="/server-recycling-kochi/">Server recycling</a></li>
+      <li><a href="/battery-recycling/">Battery recycling</a> — for office UPS/inverter batteries</li>
+      <li><a href="/services/it-asset-inventory-audit/">IT asset inventory audit</a></li>
+    </ul>
+  </section>
+
+  <CtaBar whatsappMessage="Hi, I'd like to schedule an office e-waste pickup — here's what we have:" />
+</Layout>

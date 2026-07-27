@@ -7143,6 +7143,61 @@ const BASE_ROUTES: RouteEntry[] = [
     lang: "en-IN",
   },
   {
+    path: "/laptop-recycling/",
+    changefreq: "monthly",
+    priority: 0.9,
+    title: "Where to Recycle Laptops in Kochi | Free Pickup + Buyback Quote",
+    description:
+      "Where to recycle old laptops in Kochi — free doorstep pickup, condition-based buyback quote, and certified data destruction. Send photos on WhatsApp for a confirmed slot.",
+    type: "service",
+    sitemapGroup: "services",
+    lang: "en-IN",
+  },
+  {
+    path: "/computer-recycling/",
+    changefreq: "monthly",
+    priority: 0.9,
+    title: "Where to Recycle Computers in Kochi | Desktop, Laptop & Server Pickup",
+    description:
+      "Where to recycle old computers in Kochi — desktops, laptops, workstations, all-in-ones and servers. Free doorstep pickup, condition-based buyback, and certified data destruction.",
+    type: "service",
+    sitemapGroup: "services",
+    lang: "en-IN",
+  },
+  {
+    path: "/mobile-phone-recycling/",
+    changefreq: "monthly",
+    priority: 0.9,
+    title: "Where to Recycle Mobile Phones in Kochi | Buyback + Free Pickup",
+    description:
+      "Where to recycle old mobile phones in Kochi — free doorstep pickup for iPhones, Android phones, damaged screens, water-damaged devices, and battery-swollen units. Condition-based buyback quote.",
+    type: "service",
+    sitemapGroup: "services",
+    lang: "en-IN",
+  },
+  {
+    path: "/corporate-e-waste-recycling/",
+    changefreq: "monthly",
+    priority: 0.9,
+    title: "Corporate E-Waste Recycling in Kochi | Scheduled Pickup + ITAD",
+    description:
+      "Corporate e-waste recycling in Kochi — scheduled pickup for offices, IT refresh cycles, per-device asset tracking, and documented data destruction. WhatsApp for enterprise-scale collection.",
+    type: "service",
+    sitemapGroup: "services",
+    lang: "en-IN",
+  },
+  {
+    path: "/office-e-waste-pickup/",
+    changefreq: "monthly",
+    priority: 0.9,
+    title: "Office E-Waste Pickup in Kochi | Scheduled Doorstep Collection",
+    description:
+      "Office e-waste pickup in Kochi — scheduled doorstep collection for laptops, desktops, monitors, printers, phones, UPS batteries and IT hardware. WhatsApp for a feasibility check and slot.",
+    type: "service",
+    sitemapGroup: "services",
+    lang: "en-IN",
+  },
+  {
     path: "/about/",
     changefreq: "yearly",
     priority: 0.5,
