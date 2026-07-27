@@ -1427,17 +1427,1862 @@ def spec_hospital_e_waste_recycling() -> dict:
 # Batch runner
 # ---------------------------------------------------------------------------
 
+# ---------------------------------------------------------------------------
+# Batch 2 — 15 additional pillar cluster children (2026-07-28)
+# ---------------------------------------------------------------------------
+# Compact structure: each spec at ~120-180 lines Python, targeting ~900-1,100
+# rendered words. Follows the same anti-fabrication discipline as Batch 1.
+
+
+def _std_route(sitemap_group: str = "services", freq: str = "monthly", pri: float = 0.9):
+    return {"changefreq": freq, "priority": pri, "type": "service",
+            "sitemap_group": sitemap_group, "lang": "en-IN"}
+
+
+def spec_electronics_recycling() -> dict:
+    return {
+        "path": "/electronics-recycling/",
+        "title": "Electronics Recycling in Kochi | Free Doorstep Pickup",
+        "description": "Electronics recycling in Kochi — free doorstep pickup for consumer, home and office electronics with material recovery and data destruction where needed.",
+        "h1": "Electronics Recycling in Kochi",
+        "breadcrumb_label": "Electronics Recycling",
+        "service_type": "General electronics recycling",
+        "last_updated": LAST_UPDATED,
+        "lede": (
+            "'Electronics recycling' is the broader umbrella for what most people call e-waste — "
+            "the mix of phones, chargers, cables, small home appliances, laptops, computer "
+            "peripherals, remotes, routers and old electronic bits accumulated over years. This "
+            "page explains what the category includes, how it differs from more specialised "
+            "flows (battery, ITAD, large appliances), and how a routine electronics pickup "
+            "actually works from message to collection."
+        ),
+        "direct_answer": (
+            "To recycle electronics in Kochi, WhatsApp Ewaste Kochi with your item list, "
+            "location and photos. The team confirms feasibility, agrees a doorstep slot, and "
+            "collects. Working devices with resale value get a condition-based buyback quote; "
+            "non-working ones go to material recovery. Pickup is free for eligible collections; "
+            "batteries and data-bearing devices are handled separately within the same visit."
+        ),
+        "key_takeaways": [
+            "Phones, chargers, cables, small appliances, laptops, peripherals, routers, remotes — all accepted.",
+            "Broader umbrella than dedicated pillar pages (battery, ITAD, appliances have their own workflow).",
+            "Working items with resale demand get a condition-based buyback quote.",
+            "Batteries and data-bearing devices route through separate handling in the same pickup.",
+            "Pickup is free for eligible collections.",
+        ],
+        "accepted_items": {
+            "columns": ["Category", "Where it goes", "Notes"],
+            "rows": [
+                ["Small electronics (phones, chargers, cables)", "Material recovery + resale check", "Batch in one pickup"],
+                ["Kitchen electronics (mixer, kettle, small appliances)", "Material recovery", "Include broken units"],
+                ["Computer peripherals (keyboards, mice, docks)", "Material recovery", "Batch with parent device"],
+                ["Old routers, modems, set-top boxes", "Material recovery", "Common apartment items"],
+                ["Digital clocks, remotes, calculators", "Material recovery", "Remove batteries first if possible"],
+                ["CFL / LED tube-lights (broken or old)", "Specialised mercury handling", "Ask before booking"],
+                ["Small AV equipment (speakers, headphones, chargers)", "Material recovery + component recovery", "Bluetooth devices carry embedded batteries"],
+            ],
+        },
+        "how_to_steps": [
+            {"name": "Message an item list and location",
+             "text": "One WhatsApp with what you have, area, floor if apartment, and any access notes. Photos help for anything bulky, damaged or unusual."},
+            {"name": "Flag batteries and data-bearing items",
+             "text": "Say if the pickup includes phones with data, laptops with drives, or any battery types. Both route through separate handling in the same pickup."},
+            {"name": "Get slot confirmation",
+             "text": "Small pickups may combine with a nearby scheduled route; larger household batches usually get a dedicated slot."},
+            {"name": "Prepare items",
+             "text": "Group in one accessible location. Factory-reset devices you can. Keep any damaged battery items separately in a cool, dry spot."},
+            {"name": "Doorstep collection",
+             "text": "Team arrives at the confirmed slot, verifies items against what was messaged, and collects. Buyback payment (if any) is on the spot."},
+        ],
+        "sections": [
+            {"h2": "What 'electronics recycling' covers vs specialised flows",
+             "body": (
+                "The broader term covers most consumer and small-office e-waste. But some categories have "
+                "their own dedicated flow because they need specific handling:\n\n"
+                "Batteries — separate transport and chemistry-specific recycling (see /battery-recycling/).\n\n"
+                "Home appliances (fridges, ACs, washing machines) — refrigerant and bulk transport (see "
+                "/appliance-recycling/).\n\n"
+                "Corporate IT batches — per-serial tracking, formal data destruction, audit documentation "
+                "(see /itad/).\n\n"
+                "TVs and large monitors — bulky transport, CRT hazardous-material handling (see "
+                "/tv-recycling-kochi/).\n\n"
+                "'Electronics recycling' is where everything else lives — the mixed household or small-"
+                "office batch that doesn't fit neatly into one specialised category."
+             )},
+            {"h2": "What actually happens after pickup",
+             "body": (
+                "After collection, items are sorted by category at the facility. Working devices with resale "
+                "demand route to inspection and refurbishment. Non-working devices, damaged units, and old "
+                "consumer electronics route to material recovery — metals (steel, aluminium, copper) and "
+                "plastics are separated by type for downstream processing. Data-bearing devices route "
+                "through data destruction before either flow. Batteries route to chemistry-specific "
+                "recycling.\n\n"
+                "None of this involves landfill or dumping. That's the entire point of routing electronics "
+                "through an authorised recycler rather than general waste."
+             )},
+            {"h2": "When to use this page vs a more specific one",
+             "body": (
+                "Use this page as the starting point if your pickup is a mixed batch of small electronics — "
+                "the typical household or office-desk-drawer cleanout. If you're specifically recycling "
+                "laptops, use /laptop-recycling/. Specifically phones — /mobile-phone-recycling/. "
+                "Specifically batteries — /battery-recycling/. Specifically an office IT refresh — /itad/. "
+                "The category-specific pages have more detail on the specific device type."
+             )},
+        ],
+        "faqs": [
+            {"q": "What counts as electronics for recycling?",
+             "a": "Any device that runs on electricity — phones, chargers, cables, laptops, small appliances, remotes, routers, digital clocks, calculators, speakers, headphones, and so on. If it has a plug, battery, or circuit board, it's electronics for recycling purposes."},
+            {"q": "Do I have to sort by category before pickup?",
+             "a": "No. A mixed batch is fine — that's actually the typical pickup. What helps is flagging any batteries (separate handling), any data-bearing devices (routed through data destruction if you request), and anything bulky or damaged."},
+            {"q": "Are old chargers and cables really worth collecting?",
+             "a": "Yes. Cables and chargers contain copper, plastic, and small amounts of other recoverable materials. Batching a drawer full of old chargers into one pickup with other items is much better than throwing them in general waste."},
+            {"q": "What about broken items?",
+             "a": "All accepted. Working, non-working, cracked, damaged — the pickup handles them the same way. Non-working items usually don't qualify for a buyback quote but still route to proper material recovery."},
+            {"q": "Do you accept CFL and LED tube-lights?",
+             "a": "Yes, but ask before booking. CFL and older tube-lights contain small amounts of mercury and need specialised handling. LED tube-lights are easier but still route separately from general electronics."},
+            {"q": "Can I recycle just one item?",
+             "a": "Yes, though single-item pickups usually combine with a nearby scheduled route rather than a dedicated visit. Timing depends on when a route is passing your area."},
+            {"q": "Is there a fee for electronics recycling pickup?",
+             "a": "Doorstep pickup is free for eligible collections. Some scenarios — very remote locations, urgent same-day requests, oversized single items — may need a small transport-cost quote confirmed before the job."},
+        ],
+        "related_pages": rel(
+            CORE_LINKS["recycling"], CORE_LINKS["pickup"], CORE_LINKS["battery"],
+            CORE_LINKS["laptop"], CORE_LINKS["mobile"], CORE_LINKS["locations"],
+        ),
+        "route": _std_route(),
+        "whatsapp_message": "Hi, I'd like to recycle a batch of electronics — here are the details:",
+    }
+
+
+def spec_network_equipment_recycling() -> dict:
+    return {
+        "path": "/network-equipment-recycling/",
+        "title": "Network Equipment Recycling in Kochi | Switches, Routers, WAPs",
+        "description": "Network equipment recycling in Kochi — switches, routers, wireless access points, firewalls, cables. Free pickup with config-data awareness for enterprise gear.",
+        "h1": "Network Equipment Recycling in Kochi",
+        "breadcrumb_label": "Network Equipment",
+        "service_type": "Network equipment recycling",
+        "last_updated": LAST_UPDATED,
+        "lede": (
+            "Old network gear — routers, switches, wireless access points, firewalls, structured "
+            "cabling — accumulates in server rooms, IT store cupboards and network cabinets long "
+            "after it's been replaced. This page covers what's accepted, why enterprise switches "
+            "sometimes carry configuration data that's worth flagging, and how bulk network-"
+            "refresh pickups are planned."
+        ),
+        "direct_answer": (
+            "To recycle network equipment in Kochi, WhatsApp Ewaste Kochi with the equipment "
+            "type (router, switch, WAP, firewall), rough count, and your address. Enterprise-"
+            "grade units may still have configuration data — flag if you want it wiped. "
+            "Pickup is free for eligible collections; bulk network-refresh batches route "
+            "through ITAD workflow for per-device tracking."
+        ),
+        "key_takeaways": [
+            "Routers, switches, WAPs, firewalls, structured cabling — all accepted.",
+            "Enterprise switches and firewalls often hold configuration data worth flagging.",
+            "Working enterprise units may qualify for buyback.",
+            "Bulk network-refresh batches usually route through ITAD.",
+            "Pickup is free for eligible collections.",
+        ],
+        "accepted_items": {
+            "columns": ["Item", "Route", "Notes"],
+            "rows": [
+                ["Home routers, modems, mesh Wi-Fi units", "Material recovery", "Include power adapters"],
+                ["Small-office switches (5-24 port)", "Material recovery; resale for recent models", "Configuration data usually not sensitive"],
+                ["Enterprise switches (Cisco, Juniper, Aruba)", "Data wipe + material recovery; buyback for recent units", "Config on stacked switches worth wiping"],
+                ["Wireless access points (WAPs)", "Material recovery; resale for recent enterprise models", "Include mounting brackets"],
+                ["Firewalls, VPN appliances", "Data wipe + material recovery", "Configuration and rules sensitive"],
+                ["Rack-mount networking (patch panels, PDUs)", "Material recovery", "Bulky — advance transport"],
+                ["Structured cabling (Cat5/Cat6 rolls, patch cables)", "Copper recovery", "Batch by volume"],
+                ["Old ISDN, ATM, legacy telecom gear", "Material recovery", "Rare but accepted"],
+            ],
+        },
+        "how_to_steps": [
+            {"name": "Message the equipment inventory",
+             "text": "Rough count by category (routers, switches, WAPs, firewalls). Model info helps for enterprise units where buyback might apply."},
+            {"name": "Flag any configuration data",
+             "text": "Enterprise switches with saved configs, firewalls with rule sets, VPN appliances with certificates — say if you want these wiped before recycling or if you've done it in-house."},
+            {"name": "Confirm site access",
+             "text": "Server-room and network-cabinet access usually coordinated with IT. Rack-mount units need advance transport planning."},
+            {"name": "Doorstep or on-site collection",
+             "text": "Small batches: doorstep. Rack decommissioning: on-site with proper equipment for rack removal."},
+            {"name": "Downstream: buyback or recovery",
+             "text": "Working enterprise units checked for resale value first. Non-viable units go to material recovery — networking gear has good copper content."},
+        ],
+        "sections": [
+            {"h2": "Why enterprise networking gear needs a data-awareness flag",
+             "body": (
+                "Consumer routers and small-office switches don't hold much data worth worrying about. "
+                "Enterprise gear is different:\n\n"
+                "Managed switches hold running configs, VLAN definitions, port assignments, ACLs, SNMP "
+                "communities. Not usually a compliance-level risk, but worth wiping before disposal.\n\n"
+                "Firewalls hold rule sets, VPN configurations, certificates, sometimes credentials for "
+                "connected services. This is more sensitive — treat as data-bearing.\n\n"
+                "VPN concentrators and remote-access appliances hold user credentials, certificates, and "
+                "sometimes logs.\n\n"
+                "Wireless controllers hold SSID configs, RADIUS credentials, guest-network policies.\n\n"
+                "For any of these, either wipe in-house (usually a factory reset via the console) or flag "
+                "at booking so the team routes them through configuration wipe before material recovery."
+             )},
+            {"h2": "Buyback for enterprise network gear",
+             "body": (
+                "Working enterprise networking equipment from Cisco, Juniper, Aruba, HPE and similar has "
+                "an active second-hand market. Recent switches, WAPs and small firewalls often qualify "
+                "for a condition-based buyback quote. Very old equipment (roughly a decade or more in "
+                "service) usually doesn't — it goes to material recovery, and networking gear has good "
+                "copper density so it's still worth collecting.\n\n"
+                "Send model numbers with your enquiry — buyback for network gear is very model-specific."
+             )},
+            {"h2": "Bulk network refresh — planning",
+             "body": (
+                "Office network refresh, campus Wi-Fi upgrade, data-centre migration — these all produce "
+                "batches of old networking equipment. Bulk batches usually route through ITAD with per-"
+                "device serial capture (useful for IT asset register updates). Rack-mounted equipment "
+                "needs on-site collection because units are bolted into the rack.\n\n"
+                "Give 1-2 weeks notice for full network refresh so transport and configuration-wipe slots "
+                "can be planned."
+             )},
+        ],
+        "faqs": [
+            {"q": "Where can I recycle old office switches and routers?",
+             "a": "Message Ewaste Kochi with rough counts, model info if available, and your office address. Small batches are routine doorstep pickup; bulk batches (network refresh, campus upgrade) route through the ITAD workflow with per-device tracking."},
+            {"q": "Do you accept home routers and modems?",
+             "a": "Yes, all accepted. Batch with other home electronics in one pickup if possible. Include power adapters, and if the router was provided by your ISP that you no longer subscribe to, you can typically dispose of it here rather than returning it — check your ISP terms first."},
+            {"q": "What about firewall appliances with sensitive configuration?",
+             "a": "Flag at booking. Firewalls hold rule sets, VPN configs, sometimes credentials — either wipe in-house first or route through configuration wipe at the facility. Treat as data-bearing for compliance-sensitive environments."},
+            {"q": "Can we get buyback for enterprise switches?",
+             "a": "Working, recent (last 5 years) Cisco/Juniper/Aruba/HPE switches often qualify for a condition-based buyback quote. Older equipment usually doesn't but is still collected for material recovery — networking gear has good copper content."},
+            {"q": "Do you handle rack-mounted equipment removal?",
+             "a": "Yes. Rack-mounted networking gear usually needs on-site collection because units are bolted into the rack. Give 1-2 weeks notice for full rack decommissioning so transport and removal equipment can be arranged."},
+            {"q": "What about old copper cabling?",
+             "a": "Copper structured cabling is accepted for material recovery. Batch by rough volume in your message (a few patch cables vs a full patch cabinet vs a spool of unused cable)."},
+            {"q": "Is there a minimum quantity for network equipment pickup?",
+             "a": "No hard minimum. Single-item pickups combine with nearby scheduled routes. Large batches (10+ enterprise units or full-rack decommissioning) usually route through ITAD."},
+        ],
+        "related_pages": rel(
+            CORE_LINKS["itad"], CORE_LINKS["corporate"], CORE_LINKS["office_pickup"],
+            CORE_LINKS["data"], CORE_LINKS["server"], CORE_LINKS["computer"],
+        ),
+        "route": _std_route(),
+        "whatsapp_message": "Hi, I'd like to recycle network equipment — here are the details:",
+    }
+
+
+def spec_sell_old_laptop() -> dict:
+    return {
+        "path": "/sell-old-laptop/",
+        "title": "Sell Old Laptop in Kochi | Condition-Based Buyback + Free Pickup",
+        "description": "Sell your old laptop in Kochi — condition-based buyback quote for working laptops, free doorstep pickup, and payment on the spot after inspection.",
+        "h1": "Sell Old Laptop in Kochi",
+        "breadcrumb_label": "Sell Old Laptop",
+        "service_type": "Laptop buyback and sale",
+        "last_updated": LAST_UPDATED,
+        "lede": (
+            "Selling an old laptop in Kochi is different from junking one — it's a buyback flow "
+            "with a quote, an inspection, and a payment. This page covers what determines the "
+            "quote you get, how the doorstep inspection actually works, and what happens if the "
+            "confirmed number is lower than the initial estimate."
+        ),
+        "direct_answer": (
+            "To sell an old laptop in Kochi, WhatsApp Ewaste Kochi with the brand, model, "
+            "year, condition and photos. A condition-based buyback estimate is returned; the "
+            "team collects at the confirmed slot, physically inspects the laptop, and pays on "
+            "the spot for accepted quotes. If the confirmed quote is lower than the estimate "
+            "and you decline, no charge — the laptop stays with you."
+        ),
+        "key_takeaways": [
+            "Working laptops from the last 5 years usually qualify for a meaningful buyback quote.",
+            "Photos + specs get an estimate; final quote at physical inspection.",
+            "Payment on the spot for accepted quotes — cash, UPI, or bank transfer.",
+            "Decline the confirmed quote if it's lower than expected — no obligation.",
+            "Non-working or older laptops route to recycling instead — pickup still free.",
+        ],
+        "accepted_items": {
+            "columns": ["Laptop", "Buyback likelihood", "Notes"],
+            "rows": [
+                ["MacBook, last 3-4 years", "High — usually meaningful quote", "Configuration + year specific"],
+                ["Business laptops (Dell Latitude, HP EliteBook, ThinkPad)", "Medium-high — recent models", "Enterprise buyers prefer these"],
+                ["Consumer laptops (Dell Inspiron, HP Pavilion, ASUS)", "Medium — depends on age and specs", "Spec sheet helps"],
+                ["Gaming laptops (recent, working)", "High for recent — GPU model matters", "Include specs of GPU/CPU"],
+                ["Chromebooks", "Low-medium — narrower buyer pool", "Enterprise/education models better"],
+                ["Older laptops (5+ years old)", "Low — often recycling only", "Free pickup, no payment typical"],
+                ["Non-working or damaged", "None — recycling instead", "Free pickup remains"],
+            ],
+        },
+        "how_to_steps": [
+            {"name": "Get the model + specs",
+             "text": "About This Mac (macOS) or Settings → System → About (Windows). Include: model, year, RAM, storage, GPU if any, battery health if you know it."},
+            {"name": "Take clear photos",
+             "text": "Front (screen on if you can), back, sides. Close-ups of any damage. Ideally a photo of the About/Settings screen showing model info."},
+            {"name": "Send WhatsApp with brand + model + specs + condition + photos",
+             "text": "One message with everything. The team returns a condition-based estimate — labelled as 'estimate', not final."},
+            {"name": "Agree pickup slot if the estimate works",
+             "text": "Timing depends on your area and the team's route schedule. Bring the laptop plus charger to the door at the agreed time."},
+            {"name": "Inspection + payment (or decline)",
+             "text": "Team inspects the laptop against the estimate. If it matches or is better, quote confirmed and payment on the spot. If lower, you can decline without obligation — laptop stays with you."},
+        ],
+        "sections": [
+            {"h2": "How the buyback estimate is actually calculated",
+             "body": (
+                "The number is based on second-hand market data for that specific model plus condition "
+                "adjustments. Five variables move it:\n\n"
+                "Brand — Apple retains value best; ThinkPad, Dell business, HP EliteBook next; consumer "
+                "brands lower; no-brand laptops usually recycling only.\n\n"
+                "Model + year — a 2022 XPS 13 is not the same product as a 2015 XPS 13. Year matters "
+                "significantly for the resale market.\n\n"
+                "Condition — powers on cleanly, screen intact, keys working, casing OK, battery holds "
+                "reasonable charge.\n\n"
+                "Drive — laptop with SSD/HDD included is worth more than one without.\n\n"
+                "Cosmetics — dents, scratches, worn keyboard, faded screen all reduce the number."
+             )},
+            {"h2": "Estimate vs confirmed quote — and declining",
+             "body": (
+                "Every quote before physical inspection is an estimate, labelled that way in the "
+                "message. Physical inspection almost always reveals something the photos didn't:\n\n"
+                "Keys that stick, a battery that drains in an hour, a hinge that grinds, a subtle screen "
+                "defect, a fan that never quiets down — small things that materially affect resale value.\n\n"
+                "Sometimes inspection reveals better condition than the photos suggested — the quote "
+                "goes up.\n\n"
+                "If the confirmed quote comes in lower than the estimate and you'd rather not sell at "
+                "that number, you can decline. The team doesn't collect the laptop, no pickup fee, no "
+                "restocking fee, no consequence. The laptop stays with you."
+             )},
+            {"h2": "Data on the laptop",
+             "body": (
+                "For clean buyback, factory-reset the laptop before pickup: back up what you want, sign "
+                "out of iCloud/Apple ID (macOS) or Microsoft account (Windows), then factory reset. "
+                "This makes the transaction cleaner and removes any residual data risk to you.\n\n"
+                "If you can't (forgotten password, laptop won't boot, admin lock), flag it when booking. "
+                "The laptop routes through data destruction — the drive is wiped or physically shredded "
+                "before the laptop enters any resale flow. Certificate of Destruction available on "
+                "request. See /data-destruction/ for the full workflow."
+             )},
+        ],
+        "faqs": [
+            {"q": "How much can I get for an old laptop?",
+             "a": "Depends on brand, model, year, condition, and current second-hand market. Working laptops from the last 3-5 years usually get a meaningful quote. Send brand, model, year, and photos on WhatsApp for a condition-based estimate."},
+            {"q": "Do you buy MacBooks?",
+             "a": "Yes. MacBooks retain resale value well — recent working MacBook Air and Pro models usually get meaningful quotes. Send About This Mac (which shows model, year, configuration) for the specific estimate."},
+            {"q": "What if my laptop screen is cracked?",
+             "a": "Reduced buyback quote if the laptop still works, or recycling only if it doesn't. Photo of the crack helps the team give a fair estimate."},
+            {"q": "Do I need original box, charger, and accessories?",
+             "a": "Charger increases the quote (a laptop without charger is worth less). Original box is a small bonus but not required. Missing accessories are fine."},
+            {"q": "What happens with the data on my hard drive?",
+             "a": "Factory-reset before pickup if you can — cleanest transaction. If you can't, flag it and the laptop routes through data destruction (wipe or shredding) before entering any resale flow. Certificate of Destruction available on request."},
+            {"q": "When do I get paid?",
+             "a": "On the spot at pickup, after the physical inspection confirms the quote. Cash, UPI, or bank transfer — your preference."},
+            {"q": "What if I don't like the confirmed quote?",
+             "a": "Decline without obligation. The laptop stays with you, no pickup fee, no charge. Common reasons for decline: confirmed number came in lower than estimate due to damage the photos didn't show clearly."},
+            {"q": "Can I sell a batch of laptops from an office?",
+             "a": "Yes. Office batches (5+ laptops) usually route through ITAD workflow — buyback for viable units, recycling for the rest, per-device asset tracking, and Certificate of Destruction for the drives."},
+        ],
+        "related_pages": rel(
+            CORE_LINKS["sell"], CORE_LINKS["laptop"], ("/laptop-scrap-price/", "Laptop scrap price — how the number is calculated"),
+            CORE_LINKS["decision"], CORE_LINKS["calc"], CORE_LINKS["data"],
+        ),
+        "route": _std_route("services", "weekly"),
+        "whatsapp_message": "Hi, I'd like to sell an old laptop — here are the details:",
+    }
+
+
+def spec_sell_old_computer() -> dict:
+    return {
+        "path": "/sell-old-computer/",
+        "title": "Sell Old Computer in Kochi | Desktop, Laptop, Workstation Buyback",
+        "description": "Sell your old desktop, laptop, workstation or server in Kochi — condition-based buyback quote, free doorstep pickup, and payment on the spot after inspection.",
+        "h1": "Sell Old Computer in Kochi",
+        "breadcrumb_label": "Sell Old Computer",
+        "service_type": "Computer buyback and sale",
+        "last_updated": LAST_UPDATED,
+        "lede": (
+            "'Computer' covers a lot when it comes to buyback — desktops, laptops, all-in-ones, "
+            "workstations, servers. All can potentially qualify for a quote depending on model, "
+            "age and condition. This page covers what generally qualifies, how the process "
+            "works for each type, and when a computer is worth more sold than recycled."
+        ),
+        "direct_answer": (
+            "To sell an old computer in Kochi, WhatsApp Ewaste Kochi with the type (desktop, "
+            "laptop, workstation, server), brand, model, specs and photos. A condition-based "
+            "estimate is returned; the team picks up at the confirmed slot, inspects, and pays "
+            "on the spot for accepted quotes. Non-viable computers route to free recycling "
+            "instead — no obligation to accept a lower confirmed quote."
+        ),
+        "key_takeaways": [
+            "Desktops, laptops, all-in-ones, workstations, servers — all considered for buyback.",
+            "Working machines from the last 3-5 years most likely to qualify.",
+            "Workstations (Dell Precision, HP Z, ThinkPad P) often retain higher value.",
+            "Payment on the spot for accepted quotes; decline is fine.",
+            "Non-viable machines go to free recycling.",
+        ],
+        "accepted_items": {
+            "columns": ["Type", "Buyback likelihood", "Notes"],
+            "rows": [
+                ["Recent MacBook, MacBook Pro", "High", "Configuration + year specific"],
+                ["Business laptops (Dell Latitude, HP EliteBook, ThinkPad)", "Medium-high", "Enterprise buyer demand"],
+                ["Workstations (Precision, Z, P-series)", "High if recent — GPU/CPU matters", "Include full specs"],
+                ["Gaming laptops with discrete GPU", "High if recent", "GPU model heavily affects quote"],
+                ["Consumer desktops (recent, working)", "Medium — depends on config", "Include specs"],
+                ["Enterprise servers (recent, working)", "Medium — narrower buyer pool", "Model + year matter"],
+                ["All-in-one PCs (iMac and similar)", "Medium — display condition matters", "Photo of screen important"],
+                ["Older / very old / non-working", "Low or none — recycling instead", "Free pickup remains"],
+            ],
+        },
+        "how_to_steps": [
+            {"name": "Send type + brand + model + specs",
+             "text": "Desktop / laptop / workstation / server. Brand and specific model. Specs: CPU, RAM, storage, GPU if any."},
+            {"name": "Photograph the machine",
+             "text": "Front, back, model plate or sticker. Screen on for laptops and all-in-ones. Close-ups of any damage."},
+            {"name": "Receive condition-based estimate",
+             "text": "Team returns an estimate from the specs and photos. Labelled as estimate, not final."},
+            {"name": "Agree pickup slot",
+             "text": "Doorstep pickup for single machines. Multi-machine batches (office) may schedule differently."},
+            {"name": "Inspection + payment",
+             "text": "Physical inspection confirms the quote. Payment on the spot for accepted quotes. Decline without obligation if the confirmed number is lower than expected."},
+        ],
+        "sections": [
+            {"h2": "Which types most often qualify for buyback",
+             "body": (
+                "Not all computers qualify. Rough guide:\n\n"
+                "Almost always qualify: recent MacBooks (last 3-4 years), recent workstations with meaningful "
+                "GPU/CPU specs, recent gaming laptops with discrete graphics, business laptops from the last "
+                "3 years.\n\n"
+                "Sometimes qualify: consumer laptops from the last 3-4 years (depends on brand and specs), "
+                "desktop towers with recent CPU/GPU, all-in-ones from the last 3 years, enterprise servers "
+                "with current-generation CPUs.\n\n"
+                "Rarely qualify: consumer desktops 5 years old or older, business machines 6 years old or "
+                "older, older MacBooks (7 years old or older), machines with heavy visible wear or "
+                "non-working components.\n\n"
+                "Don't qualify: non-working machines, physically broken machines, machines with major "
+                "cosmetic damage, obsolete-generation hardware."
+             )},
+            {"h2": "Workstations, servers, and specialised hardware",
+             "body": (
+                "Workstation-class machines — Dell Precision, HP Z, ThinkPad P — often retain value longer "
+                "than consumer machines because they have a specific enterprise buyer market. Same for "
+                "gaming laptops with discrete GPUs (RTX cards especially) and video-editing workstations "
+                "with high-end CPU/GPU/RAM configurations.\n\n"
+                "Enterprise servers are more niche. Buyback exists but the market is narrower and quotes "
+                "vary widely by generation. Send full model info (Dell PowerEdge Rxxx, HPE ProLiant DLxxx, "
+                "Cisco UCS Cxxx) plus CPU generation and RAM for the specific estimate."
+             )},
+            {"h2": "Deciding: sell or recycle",
+             "body": (
+                "Rough rule of thumb: if the machine is under 5 years old, works, and was reasonably "
+                "specced when new, get a buyback estimate before assuming it's recycling-only. Estimates "
+                "are free and non-committal.\n\n"
+                "If the machine is over 8-10 years old or doesn't work, it's almost certainly recycling. "
+                "That's not a bad outcome — free pickup and proper material recovery is still worth doing.\n\n"
+                "The /tools/sell-or-recycle-decision-tool/ walks through this without needing to know "
+                "current pricing."
+             )},
+        ],
+        "faqs": [
+            {"q": "Do you buy old desktops?",
+             "a": "Yes — recent desktops (last 3-4 years) with reasonable specs may qualify for a buyback quote. Older desktops usually go to recycling only, with free pickup."},
+            {"q": "What about all-in-one PCs like iMac?",
+             "a": "Yes. Screen condition matters — a scratched or dim display reduces the quote. Photo of the screen (on, if possible) helps the estimate."},
+            {"q": "Can I sell a broken computer?",
+             "a": "Almost never for buyback — non-working or physically broken machines don't have meaningful resale demand. Route: free recycling — pickup is still arranged, but no payment. The materials are properly recovered rather than dumped, which is worth doing even without a buyback quote attached."},
+            {"q": "How much is a used server worth?",
+             "a": "Depends heavily on model, generation, and configuration. Recent enterprise servers (Dell PowerEdge, HPE ProLiant last 3-4 years) may qualify. Older or specialised units usually don't. Send full model + specs for the estimate."},
+            {"q": "Do you buy old workstations?",
+             "a": "Yes, and workstations often retain value better than consumer PCs. Dell Precision, HP Z-series, ThinkPad P-series from the last 4-5 years commonly qualify for meaningful quotes. Include full CPU/GPU specs."},
+            {"q": "What's the difference between selling and recycling?",
+             "a": "Selling: buyback quote for working machines with resale demand, payment on the spot. Recycling: free pickup for non-viable machines, no payment, material recovery. Same team, same pickup; the difference is what happens to the specific machine downstream."},
+            {"q": "Do I need to wipe the drive before pickup?",
+             "a": "Recommended: yes. Factory reset before pickup for a clean transaction. If you can't (won't boot, forgotten password, admin lock), flag it — the machine routes through data destruction before entering resale."},
+            {"q": "Can offices sell bulk retired hardware?",
+             "a": "Yes. Office batches (10+ machines) route through ITAD — buyback for viable units, recycling for the rest, per-device asset tracking, consolidated documentation."},
+        ],
+        "related_pages": rel(
+            CORE_LINKS["sell"], CORE_LINKS["computer"], CORE_LINKS["laptop"],
+            CORE_LINKS["decision"], CORE_LINKS["calc"], CORE_LINKS["itad"],
+        ),
+        "route": _std_route("services", "weekly"),
+        "whatsapp_message": "Hi, I'd like to sell an old computer — here are the details:",
+    }
+
+
+def spec_sell_old_mobile() -> dict:
+    return {
+        "path": "/sell-old-mobile/",
+        "title": "Sell Old Mobile Phone in Kochi | Free Pickup + Cash",
+        "description": "Sell your old mobile phone in Kochi — buyback for iPhones and Android phones, free doorstep pickup, and payment on the spot after inspection.",
+        "h1": "Sell Old Mobile Phone in Kochi",
+        "breadcrumb_label": "Sell Old Mobile",
+        "service_type": "Mobile phone buyback and sale",
+        "last_updated": LAST_UPDATED,
+        "lede": (
+            "Selling an old mobile phone in Kochi is often quicker and easier than most people "
+            "expect — the second-hand phone market is active, and even mid-range phones from the "
+            "last 3-4 years usually get a real quote. This page covers what determines the price, "
+            "how the pickup works, and why factory-resetting the phone before handover matters."
+        ),
+        "direct_answer": (
+            "To sell an old mobile phone in Kochi, WhatsApp Ewaste Kochi with the brand, model, "
+            "storage size, condition and photos. A condition-based estimate is returned; the "
+            "team picks up at the confirmed slot, inspects the phone, and pays on the spot for "
+            "accepted quotes. Factory-reset before pickup if you can. Non-viable phones route "
+            "to free recycling."
+        ),
+        "key_takeaways": [
+            "iPhones and mid-to-high Android from the last 3-4 years usually get a meaningful quote.",
+            "Factory-reset before pickup for a clean transaction.",
+            "Photos of front, back, and About screen help the estimate.",
+            "Payment on the spot for accepted quotes.",
+            "Dead or heavily damaged phones route to free recycling.",
+        ],
+        "accepted_items": {
+            "columns": ["Phone", "Buyback likelihood", "Notes"],
+            "rows": [
+                ["iPhone, last 3 years", "High", "Storage + colour + battery health matter"],
+                ["Older iPhone (working)", "Medium — reduced quote", "Battery health important"],
+                ["Flagship Android (Samsung S/Note, Pixel, OnePlus)", "High — recent models", "Include model and year"],
+                ["Mid-range Android (recent, working)", "Medium — reduced quote", "Photos help refine estimate"],
+                ["Older Android (5+ years old)", "Low — often recycling only", "Free pickup, no payment typical"],
+                ["Cracked-screen but working", "Reduced buyback OR recycling", "Photo of damage helps"],
+                ["Water-damaged, dead", "Recycling only — no buyback", "Data destruction essential"],
+                ["Feature phones, BlackBerry", "Recycling only", "Free pickup remains"],
+            ],
+        },
+        "how_to_steps": [
+            {"name": "Get the model + storage details",
+             "text": "iPhone: Settings → General → About shows model, storage, iOS version. Android: Settings → About phone. Include colour and any visible condition notes."},
+            {"name": "Photograph the phone",
+             "text": "Front (screen on, showing home screen or About screen), back, sides. Close-up of any damage. Screenshot of the About screen also works."},
+            {"name": "Send WhatsApp with brand + model + storage + condition + photos",
+             "text": "One message. Team returns a condition-based estimate."},
+            {"name": "Factory-reset before pickup (if you can)",
+             "text": "Back up, sign out of iCloud/Google, factory reset. Makes the transaction clean and removes residual data risk."},
+            {"name": "Pickup + inspection + payment",
+             "text": "Team collects, inspects, and pays on the spot for accepted quotes. Cash, UPI, or bank transfer."},
+        ],
+        "sections": [
+            {"h2": "What drives the mobile buyback quote",
+             "body": (
+                "For iPhones: model + storage + colour + battery health + cosmetic condition. Battery "
+                "health (visible in Settings → Battery → Battery Health) matters more than most sellers "
+                "realise — a phone with 78% battery health quotes lower than the same phone at 92%.\n\n"
+                "For Androids: brand + model + storage + condition. Samsung Galaxy S/Note and Google "
+                "Pixel retain more value than mid-range Androids from generic brands.\n\n"
+                "For both: iCloud sign-out (iPhone) or Google account removal (Android) is required for "
+                "buyback — the team won't proceed with a locked device. Factory-reset before pickup handles "
+                "this cleanly."
+             )},
+            {"h2": "Why factory-reset before pickup matters",
+             "body": (
+                "A reset phone is a clean transaction:\n\n"
+                "Team can confirm the phone boots cleanly to the setup screen. No lingering account. "
+                "No residual data risk to you even in the (very unlikely) case something went sideways "
+                "downstream. The buyback closes on the spot.\n\n"
+                "If you can't reset (phone doesn't power on, forgotten passcode, iCloud/Google account "
+                "locked with an unrecoverable email), flag it when booking. The phone routes through "
+                "data destruction at the facility instead of buyback — no buyback payment, but pickup "
+                "is still free."
+             )},
+            {"h2": "Damaged phones",
+             "body": (
+                "Cracked screens: often still qualify for a reduced quote if the phone works. Some cracks "
+                "are cosmetic (rear glass); others are functional (touch input failing). Flag which type "
+                "in your photo.\n\n"
+                "Water damage: almost never qualifies for buyback — internal corrosion is unpredictable, "
+                "and second-hand buyers can't verify long-term function. Route: recycling. Data destruction "
+                "essential because storage may still be technically recoverable.\n\n"
+                "Swollen battery: separate handling within the same pickup. Photo required at booking. "
+                "Do not attempt to remove the swollen battery yourself — leave it in the phone, keep "
+                "the phone on a non-flammable surface, book pickup with the flag."
+             )},
+        ],
+        "faqs": [
+            {"q": "How do I sell my old iPhone in Kochi?",
+             "a": "WhatsApp brand, model, storage, colour, battery health, and photos. Get an estimate. Factory-reset before pickup. Team collects and pays on the spot for accepted quotes."},
+            {"q": "How much is my old iPhone worth?",
+             "a": "Depends on model, storage size, battery health, and cosmetic condition. Recent iPhones (last 3 years) usually get meaningful quotes. Send model info from Settings → General → About for a specific number."},
+            {"q": "Do you buy old Android phones?",
+             "a": "Yes. Flagship Android (Samsung Galaxy S/Note, Google Pixel, OnePlus flagship) from the last 3 years usually gets a meaningful quote. Mid-range Android may qualify for reduced quote. Older Android usually goes to recycling only."},
+            {"q": "Can I sell a phone with a cracked screen?",
+             "a": "If it still works, often yes — at a reduced quote that accounts for replacement screen cost. If the crack has made the phone unusable, it's recycling only. Photo of the damage helps the estimate."},
+            {"q": "What about a water-damaged phone?",
+             "a": "Buyback is rare — internal corrosion is unpredictable. Recycling is the typical route. Data destruction is essential because storage may still be technically recoverable even if the phone won't boot."},
+            {"q": "Do I need to reset the phone first?",
+             "a": "If you can, yes — cleanest transaction and no residual data risk. If you can't (phone dead, forgotten passcode, account locked), flag it — the phone routes through data destruction instead of buyback."},
+            {"q": "How and when do I get paid?",
+             "a": "On the spot at pickup, right after physical inspection confirms the quote. Payment options are cash, UPI, or bank transfer — your preference. No waiting period, no follow-up transfer, no invoicing delay. If you decline the confirmed quote, there's no payment (and no obligation to accept)."},
+            {"q": "Do I need the original box and charger?",
+             "a": "Not required — missing box and charger is fine. Having them moves the quote up slightly because it improves the second-hand resale story, but the difference is usually modest unless the phone is a high-value recent model. Charger alone (without box) is the most useful accessory to include."},
+        ],
+        "related_pages": rel(
+            CORE_LINKS["mobile"], CORE_LINKS["sell"], ("/phone-buyback/", "Phone buyback — how the number is calculated"),
+            CORE_LINKS["marketplace"], CORE_LINKS["decision"], CORE_LINKS["data"],
+        ),
+        "route": _std_route("services", "weekly"),
+        "whatsapp_message": "Hi, I'd like to sell an old mobile phone — here are the details:",
+    }
+
+
+def spec_sell_office_electronics() -> dict:
+    return {
+        "path": "/sell-office-electronics/",
+        "title": "Sell Office Electronics in Kochi | Bulk Buyback for Retired IT",
+        "description": "Sell office electronics in Kochi — bulk buyback for retired laptops, desktops, phones and networking gear. Per-device tracking, GST invoicing, spot payment.",
+        "h1": "Sell Office Electronics in Kochi",
+        "breadcrumb_label": "Sell Office Electronics",
+        "service_type": "Office electronics bulk buyback",
+        "last_updated": LAST_UPDATED,
+        "lede": (
+            "Offices retiring IT — end-of-lease returns, IT refresh cycles, department "
+            "restructures — often have a batch worth selling rather than dumping. This page "
+            "covers how bulk office buyback works, what documentation is available for finance "
+            "and asset-register purposes, and how the process fits alongside recycling for "
+            "non-viable units in the same batch."
+        ),
+        "direct_answer": (
+            "To sell office electronics in Kochi, WhatsApp Ewaste Kochi with an approximate "
+            "inventory (laptops, desktops, phones, networking), your office location, and any "
+            "documentation needs (GST invoice, per-device asset log, Certificate of "
+            "Destruction). The team returns a per-category estimate, schedules a pickup, and "
+            "pays consolidated for accepted units. Non-viable units in the same batch route "
+            "to free recycling."
+        ),
+        "key_takeaways": [
+            "Bulk buyback for laptops, desktops, phones, workstations, networking gear.",
+            "Per-device inspection at pickup; consolidated payment for accepted units.",
+            "GST invoice, per-device asset log, Certificate of Destruction — available on request.",
+            "Non-viable units in the same batch route to free recycling.",
+            "IT-refresh, end-of-lease, office closure, department retirement — all common scenarios.",
+        ],
+        "accepted_items": {
+            "columns": ["Office IT class", "Buyback flow", "Notes"],
+            "rows": [
+                ["Laptop fleet (Dell, HP, Lenovo, MacBook)", "Per-device buyback quote", "Include lease-return docs if applicable"],
+                ["Desktop PCs and workstations", "Buyback for recent viable units", "Include full specs"],
+                ["Company phones (iPhone, Android)", "Per-device buyback + IMEI logging", "Common at contract renewal"],
+                ["Enterprise servers (recent)", "Case-by-case buyback", "Model + year matter"],
+                ["Networking gear (switches, WAPs, firewalls)", "Buyback for recent enterprise units", "Model-specific"],
+                ["Monitors (LCD, LED — recent, working)", "Reduced buyback", "Screen condition matters"],
+                ["Older / non-working units in the same batch", "Free recycling", "Split within one visit"],
+            ],
+        },
+        "how_to_steps": [
+            {"name": "Message rough inventory + office location",
+             "text": "Approximate counts by category. Full asset list not required upfront — captured at pickup."},
+            {"name": "Flag documentation needs",
+             "text": "GST invoice for the sale, per-device asset log for asset-register update, Certificate of Destruction for drives, insurance disposal records — name what applies."},
+            {"name": "Agree the workflow",
+             "text": "Small batches (10-30 units) fit standard bulk buyback. Larger jobs or per-serial audit needs route through ITAD workflow."},
+            {"name": "Scheduled pickup + on-site inspection",
+             "text": "Team arrives at agreed slot, per-device inspection to confirm quotes, captures serials for ITAD if applicable."},
+            {"name": "Consolidated payment + documentation",
+             "text": "Payment (cash, UPI, bank transfer, or against GST invoice) for accepted quotes on the spot or on invoice terms. Non-viable units in the same batch go to recycling. Documentation issued after collection."},
+        ],
+        "sections": [
+            {"h2": "Common office buyback scenarios",
+             "body": (
+                "IT refresh — laptop fleet replaced with new units. Buyback for viable laptops (typically "
+                "the last 2-3 years of the fleet); recycling for the older units.\n\n"
+                "End-of-lease return prep — devices coming off lease that lease company won't accept (or "
+                "that lease is being bought out). Buyback for viable units, documentation for lease-return "
+                "records.\n\n"
+                "Department restructure — one department shutting down or relocating, IT going with. Bulk "
+                "buyback + recycling in one visit.\n\n"
+                "Office closure or downsizing — full office IT clearance. Split into buyback stream + "
+                "recycling stream. Documentation for tax/dissolution records.\n\n"
+                "Phone contract renewal — company phones from previous contract cycle. IMEI logging plus "
+                "per-device buyback. See /phone-buyback/ for the phone-specific flow."
+             )},
+            {"h2": "Documentation options",
+             "body": (
+                "GST invoice — for the sale (with the buyback payment). Standard for any GST-registered "
+                "organisation.\n\n"
+                "Per-device asset log — serial, model, condition, disposition per unit. Used for updating "
+                "the office asset register, insurance records, and end-of-lease documentation.\n\n"
+                "Certificate of Destruction — for any drives that were routed through data destruction "
+                "before resale. Serialised per drive for high-security data.\n\n"
+                "Environmental disposal record — for the non-viable units in the batch that went to "
+                "recycling. Used in CSR reports and ESG filings."
+             )},
+            {"h2": "Data destruction before resale",
+             "body": (
+                "Every drive from an office machine that's being resold should be wiped or physically "
+                "destroyed first. Two options:\n\n"
+                "Drive stays with the machine, gets wiped at the facility before the machine enters "
+                "resale — quicker, doesn't reduce buyback quote much. Wipe method and Certificate on "
+                "request. Suitable for most business data.\n\n"
+                "Drive removed at pickup, physically shredded, replacement drive supplied for resale "
+                "(or resale value adjusted to reflect missing drive). Slower, drive can't be recovered. "
+                "Recommended for high-security data (medical, financial, legal, government).\n\n"
+                "For the full data-destruction workflow, see /data-destruction/."
+             )},
+        ],
+        "faqs": [
+            {"q": "How does bulk office buyback work?",
+             "a": "Message rough inventory + location + documentation needs. Team returns per-category estimate. Scheduled pickup with per-device inspection to confirm each quote. Consolidated payment for accepted units. Non-viable units in the same batch route to free recycling."},
+            {"q": "Can I get one invoice for the whole batch?",
+             "a": "Yes — GST invoice available on request. Payment can be on the spot (cash/UPI/bank transfer) or on standard invoice terms depending on your office's payment process."},
+            {"q": "What about drives that had company data?",
+             "a": "Every drive from an office machine going through buyback should be wiped or physically shredded first. Two options: wipe at facility (drive stays intact, faster), or removal + physical shredding (higher security, drive can't be recovered). Certificate of Destruction available on request."},
+            {"q": "How is buyback different from ITAD?",
+             "a": "Buyback is the sale side — you get paid for viable units. ITAD is the broader workflow (inventory + data destruction + disposition + documentation) that often includes buyback for viable units and recycling for the rest. Buyback is a component of ITAD for jobs that need the full workflow."},
+            {"q": "Do you handle end-of-lease returns?",
+             "a": "Yes. Buyback for viable end-of-lease units, documentation for lease-return records. Some leases have specific disposal-documentation requirements — mention when booking."},
+            {"q": "Do you buy old office phones?",
+             "a": "Yes. Company phones from contract renewal cycles are a common bulk buyback. Per-device with IMEI logging. See /phone-buyback/ for phone-specific flow."},
+            {"q": "How much notice do you need?",
+             "a": "Small batches (10-30 devices): a few working days. Large batches (50+, full office IT clearance): 1-2 weeks so the team can plan transport, inspection time, and documentation properly."},
+            {"q": "What happens to units that don't qualify for buyback?",
+             "a": "Free recycling in the same visit. Not a separate booking or an extra step — the pickup covers both the buyback units and the recycling units."},
+        ],
+        "related_pages": rel(
+            CORE_LINKS["sell"], CORE_LINKS["itad"], CORE_LINKS["corporate"],
+            CORE_LINKS["office_pickup"], CORE_LINKS["data"], ("/it-asset-disposal/", "IT asset disposal — full end-of-life workflow"),
+        ),
+        "route": _std_route("services", "weekly"),
+        "whatsapp_message": "Hi, I'd like to sell bulk office electronics — here's the inventory:",
+    }
+
+
+def spec_electronics_scrap_value() -> dict:
+    return {
+        "path": "/electronics-scrap-value/",
+        "title": "Electronics Scrap Value in Kochi | How Old Devices Are Priced",
+        "description": "Electronics scrap value in Kochi — how buyback and material recovery pricing actually works, why per-kg rates don't apply, and how to get a real estimate.",
+        "h1": "Electronics Scrap Value in Kochi",
+        "breadcrumb_label": "Electronics Scrap Value",
+        "service_type": "Electronics scrap valuation and pricing",
+        "last_updated": LAST_UPDATED,
+        "lede": (
+            "The most common question when someone thinks about selling old electronics: 'what "
+            "is it worth as scrap?' This page explains why there's no single 'scrap rate per kg' "
+            "for most electronics, what actually drives value for different device categories, "
+            "and how to get an honest estimate before you commit to a pickup."
+        ),
+        "direct_answer": (
+            "Electronics scrap value in Kochi is calculated in two different ways depending on "
+            "the device: (a) resale-based buyback for working devices with second-hand demand, "
+            "estimated from brand + model + condition; (b) material-recovery value for non-"
+            "viable devices, based on recoverable copper/aluminium/plastic. There's no useful "
+            "'per-kg' rate for laptops/phones/computers — value comes from resale, not weight. "
+            "WhatsApp specs + photos for an estimate."
+        ),
+        "key_takeaways": [
+            "Two calculation methods: resale-based buyback (working, has demand) vs material recovery (everything else).",
+            "'Per-kg scrap rate' is not meaningful for most electronics — value is resale-driven, not weight-driven.",
+            "Estimate = photos + specs on WhatsApp. Confirmed quote = physical inspection.",
+            "Different categories work differently — laptops, phones, appliances, cables all priced by different logic.",
+            "Non-viable devices route to free recycling — you don't pay, but you also don't receive payment.",
+        ],
+        "accepted_items": {
+            "columns": ["Device category", "Pricing basis", "Notes"],
+            "rows": [
+                ["Working laptops, computers, phones", "Second-hand resale market", "Brand + model + year + condition"],
+                ["Working enterprise servers, networking gear", "Enterprise resale market", "Model-specific; narrower buyer pool"],
+                ["Non-working laptops, computers, phones", "Material recovery (no buyback typical)", "Free pickup, no payment"],
+                ["Small appliances (mixers, kettles, kitchen electronics)", "Material recovery", "No buyback typical"],
+                ["Large appliances (working fridges, washing machines under 3 years)", "Reduced resale-based quote possible", "Refrigerant handling separate"],
+                ["Cables, chargers, adapters", "Copper recovery (bulk)", "Batch by rough volume"],
+                ["Circuit boards, motherboards (loose)", "Component recovery", "Depends on volume and grade"],
+            ],
+        },
+        "how_to_steps": [
+            {"name": "Identify the device category",
+             "text": "Is it a working device with resale demand? A non-working device for recovery? An appliance with refrigerant? A cable/copper batch? Different categories have different pricing logic."},
+            {"name": "Gather brand + model + specs (for potentially-sellable items)",
+             "text": "Brand, model, year of manufacture (approximate is fine), specs (for computers/laptops), condition (works/doesn't/damage). The more accurate the specs, the more accurate the estimate."},
+            {"name": "Photograph the item",
+             "text": "Front, back, and model plate or About screen. Damage close-ups if any. Photos are what turn a specs list into an accurate estimate."},
+            {"name": "WhatsApp brand + model + specs + condition + photos",
+             "text": "Team returns a condition-based estimate. Range or point number depending on how much information is in the message."},
+            {"name": "Inspection + confirmed quote at pickup",
+             "text": "Physical inspection produces the confirmed quote. Payment on the spot for accepted quotes. Decline without obligation if the confirmed quote is lower than expected."},
+        ],
+        "sections": [
+            {"h2": "Why 'per-kg scrap rate' doesn't work for most electronics",
+             "body": (
+                "You'll see 'laptop scrap price per kg' quoted online. For laptops (and phones and "
+                "computers), weight-based pricing doesn't reflect real value. A brand-new MacBook Pro "
+                "weighs about the same as a 10-year-old plastic Compaq. Their buyback values differ by a "
+                "factor of ~100x because value comes from resale demand for the specific model, not from "
+                "raw kilograms of plastic and metal.\n\n"
+                "For cables, loose motherboards, and pure copper recovery items, weight-based pricing does "
+                "roughly apply — copper has a market rate per kg, and cables are priced against that. "
+                "But this is a small slice of the overall category. For anything with a model number and "
+                "a second-hand market, weight is not the right variable."
+             )},
+            {"h2": "How buyback pricing actually works",
+             "body": (
+                "For working devices with resale demand:\n\n"
+                "The estimate references current second-hand market data for that specific brand, model, "
+                "and year. It adjusts for condition (screen intact / cracked, battery health, cosmetic "
+                "wear), drive/RAM configuration where applicable, and included accessories.\n\n"
+                "The final confirmed quote is at physical inspection — the estimate is deliberately "
+                "labelled 'estimate' because inspection almost always reveals something the photos didn't "
+                "capture. Sometimes better condition than expected (quote goes up); sometimes worse "
+                "(quote goes down, you can decline).\n\n"
+                "This process is the same across devices — laptops, phones, computers, workstations, "
+                "servers, appliances that qualify. What changes is the underlying market data the "
+                "estimate references."
+             )},
+            {"h2": "How material recovery pricing works",
+             "body": (
+                "For non-viable devices (dead, too old for resale, damaged beyond viability):\n\n"
+                "There's no per-device payment. Pickup is free — the team collects, transports and "
+                "material-recovers the device, and the recoverable materials (metals, plastics, small "
+                "amounts of precious metals from circuit boards) are what covers the logistics.\n\n"
+                "For high-volume material streams — a large batch of cables, a bin of loose motherboards, "
+                "a truckload of old CRT monitors — there can be per-batch pricing because the volume "
+                "justifies the transaction. Smaller amounts fall under the free-pickup-recycling model.\n\n"
+                "This is why some scrap dealers who quote 'per kg' rates only accept large volumes — "
+                "they're doing pure material recovery at bulk scale, not the mixed buyback + recycling "
+                "workflow that fits most consumer and small-office collections."
+             )},
+        ],
+        "faqs": [
+            {"q": "What's the scrap rate per kg for laptops?",
+             "a": "There isn't a meaningful one. Laptop value comes from resale demand for the specific model, not from raw weight. A recent working MacBook and a 10-year-old plastic laptop weigh similarly but their values differ by ~100x. Send brand + model + year + photos for a real estimate."},
+            {"q": "How is electronics scrap actually priced?",
+             "a": "Two ways: (a) working devices with resale demand get a buyback estimate based on second-hand market data for that specific model; (b) non-viable devices route to free recycling — no per-device payment, material recovery covers logistics."},
+            {"q": "Do I get paid for non-working electronics?",
+             "a": "Usually not. Non-working devices route to free recycling — no payment, but pickup is free and the materials are properly recovered. For large volumes of specific materials (copper cables, loose motherboards in bulk), per-batch pricing may apply."},
+            {"q": "Why can't you just quote a per-kg rate?",
+             "a": "Because it wouldn't reflect real value for most electronics. A per-kg rate would either massively underprice modern devices (which are worth more than their weight in plastic) or massively overprice old ones. Model-specific estimates are more accurate for everyone."},
+            {"q": "What about a large batch of old cables?",
+             "a": "Copper cables can be priced against the current copper market rate. Mention rough volume in your message — a small drawer of chargers is different from a spool of unused Cat6."},
+            {"q": "Can I get a quote before pickup?",
+             "a": "Yes — that's the estimate step. Send brand + model + specs + photos on WhatsApp; the team returns a condition-based estimate. The confirmed quote comes at physical inspection."},
+            {"q": "What if the confirmed quote is much lower than the estimate?",
+             "a": "You can decline without obligation — the device stays with you, no charge. This is the whole point of the 'estimate vs confirmed quote' distinction. It happens when inspection reveals damage the photos didn't clearly show."},
+        ],
+        "related_pages": rel(
+            CORE_LINKS["scrap_prices"], CORE_LINKS["calc"], ("/laptop-scrap-price/", "Laptop scrap price"),
+            ("/computer-scrap-price/", "Computer scrap price"), CORE_LINKS["sell"], CORE_LINKS["decision"],
+        ),
+        "route": _std_route("services", "monthly", 0.8),
+        "whatsapp_message": "Hi, I'd like an electronics scrap value estimate — here are the details:",
+    }
+
+
+def spec_computer_scrap_price() -> dict:
+    return {
+        "path": "/computer-scrap-price/",
+        "title": "Computer Scrap Price in Kochi | Desktop, Laptop, Workstation, Server",
+        "description": "Computer scrap price in Kochi — condition-based estimate for desktops, laptops, workstations and servers. Send specs and photos for a quote confirmed at inspection.",
+        "h1": "Computer Scrap Price in Kochi",
+        "breadcrumb_label": "Computer Scrap Price",
+        "service_type": "Computer scrap valuation",
+        "last_updated": LAST_UPDATED,
+        "lede": (
+            "Computer scrap price depends on what kind of computer, how old, and what condition. "
+            "Desktops, laptops, workstations, and servers all price differently. This page covers "
+            "the pricing logic for each category, what specs actually move the number, and why "
+            "sending model info on WhatsApp gets you a much more accurate estimate than any "
+            "'per-kg' or online-calculator number."
+        ),
+        "direct_answer": (
+            "Computer scrap price in Kochi is a condition-based estimate — no fixed per-kg rate. "
+            "For working machines from the last 3-5 years, a buyback quote is calculated from "
+            "brand + model + specs + condition. For older or non-working machines, pickup is "
+            "free but no buyback payment applies. WhatsApp brand + model + specs + photos for "
+            "the estimate; confirmed quote at physical inspection."
+        ),
+        "key_takeaways": [
+            "Working desktops, laptops, workstations, servers get condition-based estimates.",
+            "No per-kg rate — value comes from model-specific resale demand.",
+            "Working workstations and servers with recent CPUs retain more value.",
+            "Non-working or older machines route to free recycling.",
+            "Estimate = specs + photos; confirmed quote = physical inspection.",
+        ],
+        "accepted_items": {
+            "columns": ["Computer type", "Pricing basis", "Notes"],
+            "rows": [
+                ["Recent MacBook (last 3-4 years)", "High resale demand", "Configuration + year specific"],
+                ["Business laptop (Dell/HP/Lenovo, last 3 years)", "Medium-high resale", "Enterprise buyer market"],
+                ["Recent workstation (Precision, Z, ThinkPad P)", "Higher retained value", "Include full CPU/GPU"],
+                ["Consumer laptop (last 3 years)", "Medium resale", "Brand + specs matter"],
+                ["Recent desktop tower with viable CPU/GPU", "Medium resale", "Include specs"],
+                ["Enterprise server (last 3-4 years, working)", "Narrower resale market", "Model-specific quote"],
+                ["Old desktop / laptop (5+ years old)", "Recycling — no buyback typical", "Free pickup"],
+                ["Non-working / broken", "Recycling only", "Free pickup remains"],
+            ],
+        },
+        "how_to_steps": [
+            {"name": "Identify the computer type + get model info",
+             "text": "Desktop, laptop, workstation, server. Brand and specific model. For laptops: About This Mac (macOS) or Settings → System → About (Windows). For desktops: model on the tower or in BIOS."},
+            {"name": "Gather the specs",
+             "text": "CPU (generation and clock speed if you know), RAM (size), storage (type and size), GPU if any. Complete specs = more accurate estimate."},
+            {"name": "Take photos",
+             "text": "Front, back, model plate. For laptops: screen on with the About screen visible. Damage close-ups."},
+            {"name": "WhatsApp everything to Ewaste Kochi",
+             "text": "Brand + model + year + specs + condition + photos in one message. Team returns a condition-based estimate."},
+            {"name": "Pickup + inspection + confirmed quote",
+             "text": "Physical inspection at pickup produces the confirmed quote. Payment on the spot for accepted quotes. Decline is fine if the confirmed number is lower than expected."},
+        ],
+        "sections": [
+            {"h2": "Pricing logic by computer type",
+             "body": (
+                "Laptops: brand + model + year + condition drive the number. Business laptops from the "
+                "last 3 years (Dell Latitude, HP EliteBook, ThinkPad) tend to retain more than consumer "
+                "brands. See /laptop-scrap-price/ for the deeper laptop-specific breakdown.\n\n"
+                "Desktops: full specs matter more than for laptops. A well-specced recent desktop with "
+                "current-gen CPU and a viable GPU can qualify for meaningful buyback; a bare-bones office "
+                "desktop from 5 years ago usually doesn't.\n\n"
+                "Workstations: Dell Precision, HP Z-series, ThinkPad P-series retain value longer than "
+                "consumer machines because they have an active enterprise buyer market. Include full CPU "
+                "and GPU specs for the estimate.\n\n"
+                "Servers: narrower buyer market. Recent enterprise servers (Dell PowerEdge Rxxx, HPE "
+                "ProLiant DLxxx, Cisco UCS Cxxx from the last 3-4 years) may qualify. Include full model "
+                "and CPU generation."
+             )},
+            {"h2": "What actually moves the estimate up or down",
+             "body": (
+                "Up: recent generation, complete specs, working condition, drive included, RAM at "
+                "spec-max, original accessories, no cosmetic damage, business/workstation grade over "
+                "consumer.\n\n"
+                "Down: older generation, missing components, non-working state, cracked screen, worn "
+                "keyboard, dead battery, cosmetic damage, water damage, missing charger.\n\n"
+                "Doesn't matter much either way: original box (small bonus), plastic scratches, "
+                "software installed (buyer will reset anyway)."
+             )},
+            {"h2": "Data destruction — how it affects the quote",
+             "body": (
+                "Two options that affect the estimate differently:\n\n"
+                "Drive included, wiped at facility: minimal impact on quote. Drive stays intact and "
+                "reusable in the resold machine. Team wipes before resale. Certificate on request.\n\n"
+                "Drive removed before pickup: modest reduction in quote because the buyer needs to "
+                "source a new drive. Recommended for high-security data where you want the drive "
+                "physically destroyed rather than wiped.\n\n"
+                "Either way, factory-reset the machine before pickup if you can. It doesn't change the "
+                "quote but makes the transaction cleaner."
+             )},
+        ],
+        "faqs": [
+            {"q": "What's the scrap price of a used desktop computer?",
+             "a": "No fixed rate. Depends on brand, specs, generation, and condition. Recent working desktops with viable specs may get a meaningful quote; older or non-viable desktops go to free recycling with no payment."},
+            {"q": "How much for an old office server?",
+             "a": "Depends on model and generation. Recent enterprise servers (Dell PowerEdge, HPE ProLiant last 3-4 years) may qualify. Older or specialised units usually route to recycling. Send full model + CPU generation for the estimate."},
+            {"q": "Is there a per-kg computer scrap rate?",
+             "a": "Not for whole machines. Value comes from model-specific resale demand, not weight. For loose motherboards or high-volume component recovery, some per-batch pricing may apply — depends on volume and grade."},
+            {"q": "Do you buy workstation-class computers?",
+             "a": "Yes, and workstations (Dell Precision, HP Z, ThinkPad P) often retain value better than consumer PCs. Include full CPU/GPU/RAM specs for the estimate."},
+            {"q": "What about used enterprise servers?",
+             "a": "Buyback exists but the market is narrower and quotes vary widely by generation. Send full model info (Dell PowerEdge Rxxx, HPE ProLiant DLxxx, Cisco UCS Cxxx) plus CPU generation and RAM."},
+            {"q": "Should I remove the hard drive before selling?",
+             "a": "Optional. Drive included = higher quote; drive removed = slightly reduced quote (buyer needs to source replacement). Recommended to remove if you want physical destruction rather than software wiping — then hand the drive over separately for shredding with a Certificate."},
+            {"q": "What if the computer doesn't work?",
+             "a": "Free recycling instead — no payment. Pickup is still free, and the materials are properly recovered. Data destruction still applies if the drive is present and you want it certified."},
+        ],
+        "related_pages": rel(
+            CORE_LINKS["computer"], CORE_LINKS["sell"], ("/laptop-scrap-price/", "Laptop scrap price"),
+            ("/electronics-scrap-value/", "Electronics scrap value overview"), CORE_LINKS["calc"], CORE_LINKS["decision"],
+        ),
+        "route": _std_route("services", "weekly"),
+        "whatsapp_message": "Hi, I'd like a computer scrap price estimate — here are the details:",
+    }
+
+
+def spec_scheduled_pickup() -> dict:
+    return {
+        "path": "/scheduled-pickup/",
+        "title": "Scheduled E-Waste Pickup in Kochi | Book a Specific Day and Time",
+        "description": "Scheduled e-waste pickup in Kochi — book a specific day and time window for doorstep collection of laptops, phones, batteries, appliances and office IT.",
+        "h1": "Scheduled E-Waste Pickup in Kochi",
+        "breadcrumb_label": "Scheduled Pickup",
+        "service_type": "Scheduled doorstep e-waste pickup",
+        "last_updated": LAST_UPDATED,
+        "lede": (
+            "Most doorstep pickups are 'route-based' — the team calls when a route is passing your "
+            "area, timing loosely confirmed within a day or two. Scheduled pickup is different: you "
+            "book a specific day and time window, and the team commits to that slot rather than "
+            "combining with a passing route. This page covers when scheduled pickup makes sense, "
+            "how much notice each type of job needs, what constraints affect which slots are "
+            "actually bookable, and how recurring scheduled pickup works for offices that generate "
+            "steady IT turnover."
+        ),
+        "direct_answer": (
+            "To book a scheduled e-waste pickup in Kochi, WhatsApp Ewaste Kochi with your item "
+            "list, address, and preferred day and time window. The team returns a confirmation "
+            "for the closest workable slot. Scheduled pickup usually needs 1-3 working days "
+            "notice; larger jobs or specific slot needs may need 1-2 weeks."
+        ),
+        "key_takeaways": [
+            "Book a specific day and time window rather than open-ended 'whenever' scheduling.",
+            "Small pickups: 1-3 working days notice usually enough.",
+            "Larger jobs (office batches, apartment cleanout): 1-2 weeks notice.",
+            "Preferred slot windows within a day (morning, evening, weekend) reviewable.",
+            "Scheduled pickup fits offices, apartment communities, and time-sensitive collections.",
+        ],
+        "accepted_items": {
+            "columns": ["Scenario", "Typical notice", "Notes"],
+            "rows": [
+                ["Household single-item scheduled pickup", "1-3 working days", "Preferred day + morning/evening"],
+                ["Small office batch (5-15 devices)", "3-5 working days", "Often outside business hours"],
+                ["Large office batch (30+ devices)", "1-2 weeks", "Transport + team scheduling"],
+                ["Apartment building shared pickup (multiple flats)", "1-2 weeks", "Coordinated with building admin"],
+                ["Recurring scheduled pickup (monthly office collection)", "Set up once, recurring", "Contract-style"],
+                ["Time-sensitive (lease expiry, event, audit)", "As much notice as possible", "Slot pressure highest"],
+            ],
+        },
+        "how_to_steps": [
+            {"name": "Message items + preferred slot",
+             "text": "One message: item list, address, preferred day and time window. If flexible, say so — that opens more slot options."},
+            {"name": "Get slot confirmation or alternative",
+             "text": "Team responds with confirmation for the requested slot, or the closest workable alternative if the exact slot isn't available."},
+            {"name": "Prepare for the confirmed slot",
+             "text": "Have items ready, arrange access if apartment, be available at the slot time (or arrange for someone authorised to be)."},
+            {"name": "Doorstep pickup at the confirmed slot",
+             "text": "Team arrives within the confirmed window, collects, and issues pickup acknowledgement."},
+            {"name": "Reschedule if needed",
+             "text": "Life happens. Message as early as possible if you need to move the slot — usually straightforward if given notice."},
+        ],
+        "sections": [
+            {"h2": "When scheduled pickup makes more sense than route-based pickup",
+             "body": (
+                "Routine 'whenever a route is passing' pickup is fine for single small items — it just "
+                "means you don't know exactly which day it'll be, only that it'll be soon.\n\n"
+                "Scheduled pickup fits better when:\n\n"
+                "You need pickup outside business hours (office pickups outside working time).\n\n"
+                "Multiple people need to be available (apartment building coordinated pickup, office "
+                "team member with drive-destruction access).\n\n"
+                "Access is restricted to specific times (some buildings limit commercial vehicles to "
+                "certain hours).\n\n"
+                "There's a deadline (lease expiry, tax year-end, audit date, event date).\n\n"
+                "The batch is large enough that route flexibility doesn't compensate for the "
+                "coordination cost."
+             )},
+            {"h2": "What affects slot availability",
+             "body": (
+                "Your area — some Kochi neighbourhoods have more frequent scheduled routes than others.\n\n"
+                "Job size — a 5-device pickup slots more easily than a 50-device pickup.\n\n"
+                "Notice — 3-day-out requests have more slot options than same-day.\n\n"
+                "Time preference — mid-day weekday slots are usually easier than early morning or "
+                "weekends.\n\n"
+                "Additional services — if the pickup includes on-site data destruction or requires "
+                "specific transport (bulky items, refrigerant handling), fewer slots fit."
+             )},
+            {"h2": "Recurring scheduled pickup for offices",
+             "body": (
+                "Some offices set up recurring scheduled pickup — a monthly slot on a fixed day, so "
+                "retired IT accumulates in a designated spot and gets picked up on a predictable "
+                "schedule. Reduces admin overhead compared to booking each time.\n\n"
+                "Common for offices with steady turnover of laptops (support desks, sales-team fleet "
+                "management, contractor onboarding/offboarding). Contact if you'd like to set up "
+                "recurring scheduling."
+             )},
+        ],
+        "faqs": [
+            {"q": "How much notice do I need for a scheduled pickup?",
+             "a": "Small pickups (1-5 items): 1-3 working days is usually enough. Small office batches (10-30 devices): 3-5 working days. Large jobs (50+ devices, apartment cleanout, full-office): 1-2 weeks."},
+            {"q": "Can I book pickup for a specific time?",
+             "a": "You can request a specific time window (morning, afternoon, evening). The team confirms whether that specific window is available or offers the closest workable alternative. Exact-hour bookings are harder than window-based."},
+            {"q": "Can I book weekend pickup?",
+             "a": "Reviewable case-by-case — say so when booking. Weekend slots exist but are fewer than weekdays, so notice matters more. Sunday slots are the least common; Saturday is somewhat easier. If you specifically need a weekend pickup, message with 2-3 weekend-date preferences to increase feasibility."},
+            {"q": "Is scheduled pickup more expensive?",
+             "a": "Standard scheduled pickup is free for eligible collections, same as routine pickup. Some scenarios — urgent same-day, out-of-hours, on-site destruction — may carry additional costs quoted before the job."},
+            {"q": "What if I need to reschedule?",
+             "a": "Message as early as you can. Rescheduling with 24+ hours notice is usually easy; same-day changes are harder but reviewable."},
+            {"q": "Do you offer recurring scheduled pickup for offices?",
+             "a": "Yes — monthly or quarterly fixed slots so retired IT accumulates in one spot and gets predictable collection. Common for offices with steady laptop turnover."},
+            {"q": "What if I don't have exact item count yet — can I still book a slot?",
+             "a": "Yes. Rough count at booking is fine; exact inventory happens at pickup. If the count changes significantly (10 devices booked, 40 at pickup), flag it so transport can be verified."},
+        ],
+        "related_pages": rel(
+            CORE_LINKS["pickup"], CORE_LINKS["office_pickup"], ("/bulk-e-waste-pickup/", "Bulk pickup"),
+            ("/same-day-pickup/", "Same-day pickup — when feasibility check applies"), CORE_LINKS["locations"], CORE_LINKS["eligibility"],
+        ),
+        "route": _std_route(),
+        "whatsapp_message": "Hi, I'd like to schedule an e-waste pickup — here are the details and preferred slot:",
+    }
+
+
+def spec_same_day_pickup() -> dict:
+    return {
+        "path": "/same-day-pickup/",
+        "title": "Same-Day E-Waste Pickup in Kochi | Feasibility Check",
+        "description": "Same-day e-waste pickup in Kochi — feasibility check for urgent collections. Availability depends on area, route, item type. WhatsApp for a same-day slot check.",
+        "h1": "Same-Day E-Waste Pickup in Kochi",
+        "breadcrumb_label": "Same-Day Pickup",
+        "service_type": "Same-day e-waste pickup (subject to feasibility)",
+        "last_updated": LAST_UPDATED,
+        "lede": (
+            "Sometimes pickup can't wait a few days — a lease expiring today, an office relocating "
+            "this evening, an appliance suddenly failing and needing to go before the replacement "
+            "arrives. Same-day pickup is a feasibility check, not a guaranteed service. This page "
+            "covers when same-day is actually possible, what makes it more or less likely, and "
+            "what to do if same-day isn't feasible for your specific situation."
+        ),
+        "direct_answer": (
+            "Same-day e-waste pickup in Kochi is possible but not guaranteed — it depends on your "
+            "area, current route schedule, item type, and how early in the day you message. "
+            "WhatsApp Ewaste Kochi with your items, address, and 'same-day if possible' as the "
+            "request. The team checks feasibility and confirms either same-day slot or the "
+            "closest workable alternative."
+        ),
+        "key_takeaways": [
+            "Same-day is a feasibility check, not guaranteed availability.",
+            "Message before mid-morning for best same-day chances.",
+            "Areas closer to Kochi metro core have more same-day feasibility than distant areas.",
+            "Small pickups more feasible same-day than large batches.",
+            "If same-day isn't feasible, the alternative confirmed slot is usually next working day.",
+        ],
+        "accepted_items": {
+            "columns": ["Scenario", "Same-day likelihood", "Notes"],
+            "rows": [
+                ["Small pickup (1-3 items), Kochi metro area, early morning message", "Medium-high", "Team route may pass your area"],
+                ["Small pickup, distant area (outside metro), any time", "Low", "Dedicated route not typical"],
+                ["Bulk pickup (10+ items), any area", "Low", "Transport planning usually needs advance"],
+                ["Emergency (lease expiry, office relocation today)", "Case-by-case — WhatsApp with urgency", "Team does what's feasible"],
+                ["Late-day message (after 2pm)", "Low for same-day", "Usually next-day slot"],
+                ["Items needing special handling (refrigerant, swollen battery)", "Low for same-day", "Special transport advance planning"],
+            ],
+        },
+        "how_to_steps": [
+            {"name": "Message early with clear items + address",
+             "text": "Message before mid-morning for best same-day chances. Include item list, address, and 'same-day if feasible' in the request."},
+            {"name": "Get feasibility answer quickly",
+             "text": "Team returns feasibility answer within a short window — either same-day slot confirmation or the closest alternative (usually next working day)."},
+            {"name": "Prepare items immediately if confirmed",
+             "text": "Have items ready and accessible. Same-day slots don't have much cushion for delay."},
+            {"name": "Pickup at the confirmed same-day slot",
+             "text": "Team arrives within the confirmed window. Pickup acknowledgement signed on the spot."},
+            {"name": "If not feasible: agree the closest workable slot",
+             "text": "Next working day is the typical fallback. If it's a true emergency (lease expiry today), say so — some workarounds may be possible."},
+        ],
+        "sections": [
+            {"h2": "What makes same-day feasible or not",
+             "body": (
+                "Feasibility comes down to whether a team is already in your area or can be diverted "
+                "there without breaking other confirmed pickups. Factors:\n\n"
+                "Time of day — messages before 10am have much better same-day chances than after 2pm.\n\n"
+                "Your area — Kochi metro core (Kaloor, Vyttila, Kadavanthra, Palarivattom, Ernakulam, "
+                "Kadavanthra) has more same-day feasibility than distant areas (Aluva, Angamaly, or "
+                "outside Ernakulam district).\n\n"
+                "Batch size — 1-3 items may fit into an existing route; 15+ items usually need "
+                "dedicated transport and can't be same-day.\n\n"
+                "Special requirements — items needing refrigerant handling, swollen-battery containment, "
+                "or on-site destruction all need transport preparation that isn't feasible same-day.\n\n"
+                "Existing schedule — some days the team is fully booked; the honest answer is 'not "
+                "feasible today' rather than promising something that won't happen."
+             )},
+            {"h2": "When same-day matters and when scheduled is fine",
+             "body": (
+                "Genuinely same-day: today-only lease expiry, event ending today, appliance blocking a "
+                "critical use (fridge failed and needs to go before delivery of replacement in 2 hours), "
+                "office relocation completing today.\n\n"
+                "Not actually same-day: 'I want it gone soon' (2-day scheduled fits), 'weekend cleanup' "
+                "(scheduled for tomorrow works), 'we're planning to move next week' (scheduled with "
+                "notice works better).\n\n"
+                "For most requests, scheduled pickup with 1-3 days notice actually works better than "
+                "same-day — better slot options, better transport planning, less pressure."
+             )},
+            {"h2": "If same-day isn't feasible",
+             "body": (
+                "The typical fallback is next working day. Message an honest picture of the urgency — "
+                "'today is genuinely the last day for lease compliance' vs 'today would be convenient' "
+                "changes what workarounds might apply.\n\n"
+                "For lease-expiry emergencies where the schedule is genuinely locked, sometimes "
+                "storage-transfer arrangements can bridge the gap (move items to a shared building "
+                "storage today, actual pickup tomorrow). Not always possible but worth asking about."
+             )},
+        ],
+        "faqs": [
+            {"q": "Can I get same-day e-waste pickup in Kochi?",
+             "a": "Same-day is a feasibility check, not a guaranteed service. WhatsApp before mid-morning for best chances, include items + address + urgency reason. Team confirms same-day slot or the closest alternative (usually next working day)."},
+            {"q": "What makes same-day pickup more likely to work?",
+             "a": "Early message (before 10am), small pickup (1-5 items), Kochi metro core address, no special handling needs, and a real reason for urgency. All those factors together — feasibility is usually high. Any one missing — feasibility drops."},
+            {"q": "Is there an extra charge for same-day pickup?",
+             "a": "Same-day pickup that fits an existing route: no extra charge. Same-day that needs dedicated transport diversion or resource reallocation: may have a small urgency-transport quote confirmed before the job."},
+            {"q": "What if I need pickup today for a lease expiry?",
+             "a": "Message with 'lease expiring today' in the request. Team does what's feasible. If truly not feasible, storage-transfer workarounds may be possible for some scenarios — worth asking."},
+            {"q": "Can bulk pickup be same-day?",
+             "a": "Rarely. Bulk pickup (10+ items or requiring dedicated transport) typically needs advance planning. If your batch is small enough to fit an existing route, maybe — send count and ask."},
+            {"q": "What if same-day isn't possible?",
+             "a": "Next working day is the typical fallback. If it needs to be sooner, say why — genuine emergencies may have workarounds; convenience-requests don't."},
+            {"q": "Does same-day cover appliances like fridges?",
+             "a": "Rarely — refrigerant handling needs advance transport planning that doesn't fit into a same-day slot. For fridge, AC, or other refrigerant-carrying appliance pickup, scheduled pickup with 2-3 working days notice is the typical minimum. Same-day is much more feasible for smaller electronics without special handling requirements."},
+        ],
+        "related_pages": rel(
+            CORE_LINKS["pickup"], ("/scheduled-pickup/", "Scheduled pickup — plan ahead"),
+            CORE_LINKS["eligibility"], CORE_LINKS["locations"], CORE_LINKS["contact"],
+        ),
+        "route": _std_route(),
+        "whatsapp_message": "Hi, I'd like same-day pickup if feasible — here are the details:",
+    }
+
+
+def spec_corporate_pickup() -> dict:
+    return {
+        "path": "/corporate-pickup/",
+        "title": "Corporate E-Waste Pickup in Kochi | Scheduled + Documented Collection",
+        "description": "Corporate e-waste pickup in Kochi — scheduled collection for offices, IT decommissioning, per-device asset tracking, and audit-ready documentation.",
+        "h1": "Corporate E-Waste Pickup in Kochi",
+        "breadcrumb_label": "Corporate Pickup",
+        "service_type": "Corporate e-waste pickup and collection",
+        "last_updated": LAST_UPDATED,
+        "lede": (
+            "Corporate pickup is what happens when a normal doorstep pickup isn't enough — when "
+            "the batch is large, the paperwork matters, and the compliance framework has "
+            "requirements the pickup team needs to satisfy. This page covers the corporate "
+            "pickup workflow, how it fits between routine office pickup and full ITAD, and what "
+            "documentation is standard."
+        ),
+        "direct_answer": (
+            "For corporate e-waste pickup in Kochi, WhatsApp Ewaste Kochi with your office "
+            "location, approximate device inventory, and any compliance requirements (DPDP Act, "
+            "ISO, insurance disposal records). The team confirms a scheduled slot, agrees the "
+            "workflow (standard bulk vs full ITAD), and produces requested documentation. "
+            "Pickup is free for eligible collections; per-device tracking and certified data "
+            "destruction are optional add-ons quoted before the job."
+        ),
+        "key_takeaways": [
+            "Between routine office pickup and full ITAD in scope and formality.",
+            "Scheduled, documented, and often paired with data destruction.",
+            "Documentation options: pickup acknowledgement, GST invoice, per-device asset log, Certificate of Destruction.",
+            "Multi-location coordination for chains, campuses, and multi-office companies.",
+            "Pickup is free for eligible collections; specific services quoted before the job.",
+        ],
+        "accepted_items": {
+            "columns": ["Corporate scenario", "Typical workflow", "Notes"],
+            "rows": [
+                ["Office IT refresh (20-100 devices)", "ITAD with per-serial tracking", "Buyback for viable units"],
+                ["Department restructure / retirement", "Standard bulk pickup", "Documentation on request"],
+                ["End-of-lease device return prep", "Buyback + documentation for lease records", "Some leases have specific requirements"],
+                ["Office closure / relocation", "Full bulk pickup + Certificate for tax/dissolution", "Scheduled around closing date"],
+                ["Recurring corporate pickup (monthly/quarterly)", "Set up once, recurring on fixed schedule", "Contract-style"],
+                ["Multi-site pickup (chains, campuses)", "Coordinated multi-visit engagement", "One point of contact"],
+                ["Emergency pickup (audit deadline, lease expiry)", "Case-by-case; give as much notice as possible", "Slot pressure highest"],
+            ],
+        },
+        "how_to_steps": [
+            {"name": "Send initial scope + compliance requirements",
+             "text": "Office address, approximate device count by category, and any compliance framework requirements (DPDP Act, ISO 27001, internal policy, insurance)."},
+            {"name": "Agree the workflow",
+             "text": "Standard corporate pickup fits smaller jobs. Full ITAD workflow adds per-device asset capture and per-drive Certificate of Destruction — used when audit or per-serial documentation is needed."},
+            {"name": "Confirm scheduling",
+             "text": "Corporate pickups usually schedule outside peak business hours. Multi-location or multi-day pickups planned across the calendar to fit each site."},
+            {"name": "Scheduled pickup with on-site inspection",
+             "text": "Team arrives at the confirmed slot, verifies inventory, captures serials if ITAD workflow, collects. Pickup acknowledgement signed on the spot."},
+            {"name": "Documentation delivery",
+             "text": "Pickup acknowledgement on the spot. GST invoice, per-device asset log, Certificate of Destruction (for drives that went through data destruction) issued after the destruction step is complete."},
+        ],
+        "sections": [
+            {"h2": "Standard corporate pickup vs full ITAD — how to choose",
+             "body": (
+                "Two workflows fit different scopes:\n\n"
+                "Standard corporate pickup fits when: job is a one-off (single office cleanout, single "
+                "project decommissioning), per-device serial tracking isn't required, data destruction "
+                "can be a bulk-batch certificate rather than per-serial, device count is roughly 10-50.\n\n"
+                "Full ITAD workflow fits when: you're inside a formal IT refresh cycle, need per-serial "
+                "disposition records for finance/audit/insurance, need per-drive certified data "
+                "destruction (DPDP compliance, medical data, financial data, government data), the job "
+                "is large enough (50+ devices) that ITAD process overhead pays off, or you're a listed "
+                "company or subject to formal compliance frameworks.\n\n"
+                "The routing decision doesn't cost anything to change if you're not sure — book as "
+                "corporate pickup and the team suggests ITAD if the scope warrants it."
+             )},
+            {"h2": "Documentation typical corporate pickups need",
+             "body": (
+                "Pickup acknowledgement — signed at collection, showing categories and rough counts. "
+                "Standard for every corporate pickup.\n\n"
+                "GST invoice — for the sale side of buyback and/or as an accounting record for the "
+                "pickup itself. Standard for GST-registered organisations.\n\n"
+                "Per-device asset log — serial, model, condition, disposition per unit. Used for asset-"
+                "register updates, insurance disposal records, end-of-lease records, and corporate "
+                "audit trails. This is the ITAD workflow.\n\n"
+                "Certificate of Destruction — issued per drive or per batch after data destruction is "
+                "complete. Serialised for high-security workflows. Required for DPDP compliance and "
+                "most enterprise policy frameworks.\n\n"
+                "Environmental disposal record — for CSR reports, ESG filings, and sustainability "
+                "audits. Categories, counts, and disposition of e-waste retired during the reporting "
+                "period."
+             )},
+            {"h2": "Multi-location corporate pickup",
+             "body": (
+                "Retail chains, campus environments (universities, hospitals with multiple branches), "
+                "multi-office companies — all can plan corporate disposal as one coordinated engagement "
+                "rather than several independent bookings.\n\n"
+                "Benefits: single point of contact (usually a central IT lead or facility manager), "
+                "consolidated documentation across sites, coordinated scheduling around each site's "
+                "constraints, and typically lower coordination overhead per site than one-by-one "
+                "booking.\n\n"
+                "Common for: retail chains retiring POS terminals across branches, banks retiring old "
+                "ATM computers, hospital chains decommissioning medical IT, universities refreshing "
+                "computer labs across departments."
+             )},
+        ],
+        "faqs": [
+            {"q": "What's a corporate pickup vs a normal office pickup?",
+             "a": "Corporate pickup adds scheduled slotting, formal documentation (GST invoice, per-device asset log, Certificate of Destruction), and often per-serial tracking. Normal office pickup is lighter — pickup acknowledgement + basic disposal. Difference is scale and compliance requirements."},
+            {"q": "How does this differ from ITAD?",
+             "a": "Corporate pickup is often the entry point to ITAD but doesn't always need the full ITAD workflow. If per-serial audit trails and per-drive certification aren't required, standard corporate pickup fits. If they are, the workflow escalates to full ITAD."},
+            {"q": "What documentation do you provide?",
+             "a": "Pickup acknowledgement (standard), GST invoice (on request), per-device asset log (with ITAD workflow), Certificate of Destruction (for data-destroyed drives), environmental disposal record (for CSR/ESG). Name what you need at booking."},
+            {"q": "Can you handle multi-location pickup for our chain?",
+             "a": "Yes. Multi-location engagement with one point of contact, consolidated documentation across sites, and coordinated scheduling. Common for retail chains, campus environments, and multi-office companies."},
+            {"q": "Do you offer recurring corporate pickup?",
+             "a": "Yes — monthly or quarterly fixed slots. Common for offices with steady IT turnover (contractor onboarding/offboarding, support-desk fleet management). Set up once, runs on schedule."},
+            {"q": "How much notice do you need?",
+             "a": "Small corporate pickup (10-30 devices): 3-5 working days. Large (50+ devices, full-office decommissioning, server-room retirement): 1-2 weeks so route + transport + destruction slots can be lined up. Emergency (audit, lease): case-by-case."},
+            {"q": "Is corporate pickup free?",
+             "a": "Pickup itself is free for eligible collections. Additional services — certified data destruction with per-drive certificates, on-site destruction, urgent scheduling, multi-location coordination — carry costs quoted before the job."},
+            {"q": "Which locations do you serve for corporate pickup?",
+             "a": "Kochi's IT and business corridor — Infopark, SmartCity, Kakkanad, Edappally, Aluva, Kadavanthra, Kalamassery, Vyttila. Other Ernakulam-district and Kerala cities reviewable case-by-case; see /locations/."},
+        ],
+        "related_pages": rel(
+            CORE_LINKS["corporate"], CORE_LINKS["itad"], CORE_LINKS["office_pickup"],
+            CORE_LINKS["data"], ("/it-asset-disposal/", "IT asset disposal — full workflow"),
+            CORE_LINKS["locations"],
+        ),
+        "route": _std_route(),
+        "whatsapp_message": "Hi, I'd like to arrange corporate e-waste pickup — here's the scope:",
+    }
+
+
+def spec_business_e_waste_recycling() -> dict:
+    return {
+        "path": "/business-e-waste-recycling/",
+        "title": "Business E-Waste Recycling in Kochi | Compliance-Focused Collection",
+        "description": "Business e-waste recycling in Kochi — for offices, retail, hospitality, and small business — with GST invoicing, data destruction and compliance documentation.",
+        "h1": "Business E-Waste Recycling in Kochi",
+        "breadcrumb_label": "Business E-Waste",
+        "service_type": "Small and medium business e-waste recycling",
+        "last_updated": LAST_UPDATED,
+        "lede": (
+            "Business e-waste covers everything between a home pickup and a full corporate ITAD "
+            "engagement — small offices, single-location retail stores, restaurants, hospitality "
+            "operators, clinics, professional practices, workshops, and mid-size services companies. "
+            "This page is the entry point for businesses that need slightly more than a routine "
+            "consumer pickup — GST invoicing, data destruction for computers and phones, formal "
+            "disposal records for accounts — but don't have the compliance overhead of a listed "
+            "enterprise or the scale that justifies a full ITAD engagement. It covers what "
+            "documentation is standard, how business pickup is scheduled around operating hours, "
+            "and where the workflow shades into corporate ITAD when scope grows."
+        ),
+        "direct_answer": (
+            "For business e-waste recycling in Kochi, WhatsApp Ewaste Kochi with your business "
+            "location, approximate item list, and any documentation needs (GST invoice, "
+            "disposal record for accounts, data destruction for computers/phones). Scheduled "
+            "pickup with paperwork on the spot. Pickup is free for eligible collections; data "
+            "destruction and per-device tracking are optional add-ons quoted before the job."
+        ),
+        "key_takeaways": [
+            "Fits small and mid-size business between home pickup and corporate ITAD.",
+            "GST invoice for accounting/audit purposes standard.",
+            "Data destruction for business computers and phones — flag when booking.",
+            "Scheduled pickup outside operating hours where useful.",
+            "Pickup is free for eligible collections.",
+        ],
+        "accepted_items": {
+            "columns": ["Business scenario", "Typical items", "Notes"],
+            "rows": [
+                ["Small office (5-20 person)", "Laptops, desktops, phones, printers, UPS", "GST invoice standard"],
+                ["Retail store", "POS terminals, back-office computers, printers", "Card-data destruction essential for POS"],
+                ["Restaurant / hospitality", "POS, kitchen electronics, back-office", "Include CCTV DVRs if being retired"],
+                ["Clinic / small medical practice", "Reception PCs, printers, imaging devices", "Medical data — physical shredding recommended"],
+                ["Professional practice (law, accounting, consulting)", "Laptops, printers, servers", "Client data — Certificate of Destruction typical"],
+                ["Small manufacturer / workshop", "Office computers + workshop electronics", "Mixed batch"],
+                ["Startup shutdown or closure", "Full office IT clearance", "Documentation for tax/dissolution"],
+            ],
+        },
+        "how_to_steps": [
+            {"name": "Message business type + item list + location",
+             "text": "Business type (office, retail, clinic, etc.), approximate item counts by category, and address. Include operating hours so pickup can be planned around them."},
+            {"name": "Flag data-bearing items + destruction needs",
+             "text": "Any device with client data (laptops, phones, servers, POS terminals with card records, medical devices with patient data). Say if you want Certificate of Destruction and at what level (per-drive or per-batch)."},
+            {"name": "Confirm invoicing and documentation needs",
+             "text": "GST invoice for the pickup and any buyback, disposal record for annual accounts, Certificate of Destruction for compliance. Name what applies."},
+            {"name": "Scheduled pickup outside operating hours (where useful)",
+             "text": "Restaurants, retail, and clinics often prefer pickup before opening or after closing. Say so when booking."},
+            {"name": "Pickup + paperwork + payment (for buyback units)",
+             "text": "Team collects at the agreed slot, verifies items, signs pickup acknowledgement, and pays for accepted buyback units. GST invoice and other documentation issue after collection."},
+        ],
+        "sections": [
+            {"h2": "Business e-waste vs home pickup — what changes",
+             "body": (
+                "Home pickup is designed for individual consumer collections — one household, one "
+                "person coordinating, one pickup slot. Documentation is minimal (pickup "
+                "acknowledgement) because it doesn't usually need to be more.\n\n"
+                "Business e-waste adds: GST invoicing for the pickup and any buyback, disposal records "
+                "for annual accounts, data destruction with formal documentation for compliance, "
+                "scheduling around business hours to avoid disrupting operations, and multi-person "
+                "coordination (business owner, IT contact, office manager).\n\n"
+                "The pickup team's process is similar; the paperwork and scheduling change."
+             )},
+            {"h2": "Business e-waste vs corporate ITAD — what changes",
+             "body": (
+                "Business e-waste fits small and mid-size businesses that need documentation but don't "
+                "have the compliance overhead of a listed company or an enterprise IT department. "
+                "GST invoice, disposal record, Certificate of Destruction for the sensitive items — "
+                "enough for accounts, insurance, and basic compliance.\n\n"
+                "Corporate ITAD is the escalated workflow: per-device serial capture, per-drive "
+                "certification, formal chain of custody records, integration with corporate audit "
+                "processes. Fits when you're subject to formal frameworks (DPDP Act as a data "
+                "processor, ISO 27001, industry regulator requirements).\n\n"
+                "If in doubt, book as business e-waste. The team suggests ITAD if the scope warrants it."
+             )},
+            {"h2": "Common business e-waste scenarios",
+             "body": (
+                "Office IT refresh (small business) — 5-15 laptops or desktops replaced. Buyback for "
+                "viable units + recycling for the rest + Certificate of Destruction for drives.\n\n"
+                "Retail POS retirement — card-data destruction essential. Bulk pickup with per-terminal "
+                "Certificate of Destruction.\n\n"
+                "Clinic decommissioning — medical data on retiring devices requires physical shredding "
+                "of drives with per-drive certificates.\n\n"
+                "Professional practice server retirement — client data on retiring server storage "
+                "requires certified destruction for compliance.\n\n"
+                "Business closure — full IT clearance for dissolution documentation."
+             )},
+        ],
+        "faqs": [
+            {"q": "Do you handle e-waste for small businesses?",
+             "a": "Yes — that's the core of business e-waste. WhatsApp your business type, approximate item list, and location. Scheduled pickup with GST invoice and any needed documentation (data destruction, disposal records)."},
+            {"q": "Can I get a GST invoice for the pickup?",
+             "a": "Yes on request. Standard for GST-registered businesses. The invoice covers the pickup (and any buyback payment) so it goes on the books for accounting/audit."},
+            {"q": "What about data on our office laptops and computers?",
+             "a": "Route through data destruction. Options: software wiping (drives stay intact, faster), physical shredding (drives destroyed, more secure), or handled in-house before pickup. Certificate of Destruction available on request — per-drive or per-batch depending on your needs."},
+            {"q": "We're a retail store retiring POS terminals — anything special?",
+             "a": "Yes. POS terminals hold card-data records; treat as sensitive data. Recommendation: physical shredding of storage with per-terminal Certificate. Common for retail chains, especially with PCI DSS obligations."},
+            {"q": "Can pickup happen outside our business hours?",
+             "a": "Yes — say so when booking. Before opening, after closing, or on the weekly closing day are all reviewable slots. Common for restaurants and retail businesses that can't disrupt operating hours."},
+            {"q": "What about clinics and small medical practices?",
+             "a": "Yes. Medical data on retired devices needs physical shredding — recommended default for any drive that held patient records, imaging, or medical billing. Per-drive Certificate typical for compliance."},
+            {"q": "Do you handle multi-location small businesses (chain of 3-5 stores)?",
+             "a": "Yes. Multi-location coordination with one point of contact, consolidated documentation, scheduled across your locations. Common for small retail chains and hospitality groups."},
+            {"q": "How does this differ from corporate ITAD?",
+             "a": "Business e-waste fits small/mid-size businesses with straightforward documentation needs. Corporate ITAD is the escalated workflow with per-serial capture, per-drive certification, and formal chain-of-custody records — used by listed companies and organisations under specific compliance frameworks."},
+        ],
+        "related_pages": rel(
+            CORE_LINKS["corporate"], CORE_LINKS["office_pickup"], CORE_LINKS["itad"],
+            CORE_LINKS["data"], ("/it-asset-disposal/", "IT asset disposal — full workflow"),
+            CORE_LINKS["locations"],
+        ),
+        "route": _std_route(),
+        "whatsapp_message": "Hi, I'd like business e-waste pickup for our office — here are the details:",
+    }
+
+
+def spec_office_clearance() -> dict:
+    return {
+        "path": "/office-clearance/",
+        "title": "Office Clearance in Kochi | Full IT + E-Waste Removal",
+        "description": "Office clearance in Kochi — full e-waste and IT removal for office closures, relocations, downsizing. Documentation for tax, dissolution, and lease-return records.",
+        "h1": "Office Clearance in Kochi",
+        "breadcrumb_label": "Office Clearance",
+        "service_type": "Office clearance and IT removal",
+        "last_updated": LAST_UPDATED,
+        "lede": (
+            "Office clearance is what happens when an office is closing, moving, or "
+            "significantly downsizing — the whole IT footprint needs to be dealt with in a "
+            "compressed window, often against a lease deadline. This page covers how full "
+            "office clearance is planned, what documentation typical clearances need (tax, "
+            "dissolution, insurance, lease return), and how to compress the workflow when "
+            "deadlines are tight."
+        ),
+        "direct_answer": (
+            "For office clearance in Kochi, WhatsApp Ewaste Kochi with your office address, "
+            "approximate inventory (laptops, desktops, servers, phones, printers, furniture-"
+            "with-electronics, appliances), clearance deadline, and documentation needs. The "
+            "team confirms a multi-day pickup plan, agrees the workflow (standard clearance "
+            "or full ITAD), and executes against the deadline. Documentation for closure, "
+            "dissolution, tax, and lease-return records issues after collection."
+        ),
+        "key_takeaways": [
+            "Full office IT + e-waste + electronics removal in a compressed window.",
+            "Documentation for tax, dissolution, insurance, and lease-return records.",
+            "Multi-day pickup for larger offices; single-visit for smaller ones.",
+            "Data destruction routing for all data-bearing devices.",
+            "Deadline-driven scheduling — as much notice as possible is worth it.",
+        ],
+        "accepted_items": {
+            "columns": ["Office item class", "Route", "Notes"],
+            "rows": [
+                ["Laptops, desktops, workstations", "Buyback for viable + recycling for rest + data destruction", "Standard IT clearance"],
+                ["Servers, storage arrays, networking", "Data destruction + material recovery", "See /server-recycling-kochi/"],
+                ["Phones (company-issued)", "Buyback + IMEI logging + data destruction", "Common bulk phone batch"],
+                ["Printers, scanners, MFPs, copiers", "Material recovery + data destruction for MFP HDDs", "MFPs often overlooked as data-bearing"],
+                ["Point-of-care / point-of-sale devices", "Data destruction + material recovery", "Card-data or patient-data risk"],
+                ["Old CRT monitors, projectors, AV equipment", "Material recovery — bulky", "Advance transport planning"],
+                ["UPS / inverter batteries (server room)", "Battery recycling — separate handling", "Flag battery bank size"],
+                ["Electronic furniture (powered desks, chairs)", "Electronics separated for recycling", "Furniture handled separately"],
+                ["Small appliances (kitchen electronics, water dispensers)", "Material recovery", "Batch with office electronics"],
+            ],
+        },
+        "how_to_steps": [
+            {"name": "Send scope + deadline + inventory",
+             "text": "Office address, clearance deadline, approximate inventory by category. If deadline is under 1 week, mark 'urgent' — feasibility is checked against transport and team availability."},
+            {"name": "Agree the workflow and documentation set",
+             "text": "Standard clearance for smaller offices without per-serial audit; ITAD workflow for larger jobs or per-serial requirements. Documentation set: GST invoice, pickup acknowledgement, per-device asset log, Certificate of Destruction, closure-record documentation."},
+            {"name": "Multi-day pickup plan (for larger clearances)",
+             "text": "Large office clearances typically span 2-5 days: day 1 large-item removal, day 2 IT decommissioning, day 3 data destruction and cleanup. Small clearances fit into single visits."},
+            {"name": "Execute against the deadline",
+             "text": "Team arrives on the agreed schedule, verifies each day's pickup, and signs off. On-site data destruction available if drives cannot leave the premises."},
+            {"name": "Documentation delivery after collection",
+             "text": "Documentation issued after the destruction step is complete. Full set typically delivered within a few working days of the last pickup visit."},
+        ],
+        "sections": [
+            {"h2": "Typical office clearance scenarios",
+             "body": (
+                "Office closure — the business is shutting down or the office is being fully "
+                "shuttered. Full IT + electronics + appliance removal. Documentation for tax, "
+                "dissolution, and insurance records.\n\n"
+                "Office relocation — company is moving, but the new office needs less than the current "
+                "one (or needs to start fresh). Old IT goes; new IT comes. Buyback for viable current-"
+                "office IT, recycling for the rest.\n\n"
+                "Office downsizing — company keeping a smaller footprint. Half the current IT stays; "
+                "the other half is retired. Documentation for asset-register update.\n\n"
+                "Lease expiry / return — landlord requires the office to be cleared of tenant IT before "
+                "return. Deadline-driven, sometimes very short notice.\n\n"
+                "Startup shutdown — early-stage company closing. Full IT clearance + documentation for "
+                "founder tax records and any investor closure requirements."
+             )},
+            {"h2": "Documentation typical clearances need",
+             "body": (
+                "Pickup acknowledgement — signed at each pickup visit, showing categories and rough "
+                "counts collected. Standard for every clearance day.\n\n"
+                "GST invoice — for the total pickup (and buyback payment if any). Standard for "
+                "GST-registered businesses.\n\n"
+                "Per-device asset log — serial, model, condition, disposition per unit. Used for "
+                "final asset-register write-off, insurance records, and end-of-lease documentation.\n\n"
+                "Certificate of Destruction — issued per drive or per batch after data destruction "
+                "is complete. Required for compliance (DPDP Act, ISO 27001, sector regulators) and "
+                "for insurance renewals.\n\n"
+                "Closure-record documentation — for office closures, a consolidated document showing "
+                "'all IT and e-waste from this address collected and disposed on [dates]' — useful for "
+                "dissolution paperwork, tax filings, and any investor/lender closure requirements."
+             )},
+            {"h2": "When the deadline is very short",
+             "body": (
+                "Sometimes office clearance has to happen in 3-7 days rather than 3-4 weeks — "
+                "unexpected lease non-renewal, sudden closure decision, or a landlord requirement "
+                "surfacing late. Feasibility for short-deadline clearance depends on:\n\n"
+                "Team availability during your deadline window.\n\n"
+                "Transport capacity for the volume you have.\n\n"
+                "Data destruction slot availability if per-drive certificates are needed.\n\n"
+                "How compressed the multi-day pickup can be (some clearances can compress to 2 days; "
+                "others really need 5).\n\n"
+                "Message with the actual deadline and 'urgent' flag; the team returns a feasibility "
+                "answer within a short window. Not every deadline is feasible, but many are."
+             )},
+        ],
+        "faqs": [
+            {"q": "How does office clearance work?",
+             "a": "Message scope + deadline + inventory. Team plans a multi-day pickup that fits your deadline, agrees the workflow and documentation set, executes against the schedule. Documentation issues after collection. Fits closures, relocations, downsizing, and lease returns."},
+            {"q": "How much notice do you need?",
+             "a": "Ideally 2-4 weeks for a smooth clearance with time for data destruction and documentation. Short-notice (3-7 days) clearance is feasibility-dependent — worth asking, sometimes possible for smaller jobs."},
+            {"q": "What documentation do you provide for office closure?",
+             "a": "Pickup acknowledgement per visit, consolidated GST invoice for the clearance, per-device asset log, Certificate of Destruction for data-bearing devices, and a closure-record document for dissolution/tax/investor purposes. Name what your accountant or lawyer needs."},
+            {"q": "Do you handle the data destruction as part of clearance?",
+             "a": "Yes — recommended default for any office clearance. Options: software wiping (drives stay intact), physical shredding (drives destroyed), on-site destruction (drives never leave your premises). Per-drive or per-batch Certificate available on request."},
+            {"q": "Can pickup happen after we've moved out of the office?",
+             "a": "Yes, with landlord coordination. Some landlords allow the outgoing tenant a few post-move days for e-waste pickup; others require pickup during the notice period. Confirm with your landlord and factor into scheduling."},
+            {"q": "Do you take office furniture that has electronics built in?",
+             "a": "Yes for the electronics component — powered desks, powered chairs, electronic locks. The furniture itself is a separate flow. Say what furniture is included so we can decide what fits your clearance."},
+            {"q": "What if the office has old UPS batteries?",
+             "a": "Battery recycling — separate handling within the same clearance. Flag battery bank size in your inventory so transport can be planned. See /battery-recycling/."},
+            {"q": "Is office clearance more expensive than routine pickup?",
+             "a": "Pickup itself is free for eligible collections. The additional services typical for clearances — data destruction with per-drive Certificates, on-site destruction, urgent deadline compliance, multi-day scheduling, dissolution-record documentation — carry costs quoted before the job."},
+        ],
+        "related_pages": rel(
+            CORE_LINKS["itad"], CORE_LINKS["corporate"], CORE_LINKS["office_pickup"],
+            CORE_LINKS["data"], ("/bulk-electronics-disposal/", "Bulk electronics disposal"),
+            CORE_LINKS["cert_sample"],
+        ),
+        "route": _std_route(),
+        "whatsapp_message": "Hi, we're clearing our office — here's the scope and deadline:",
+    }
+
+
+def spec_bulk_electronics_disposal() -> dict:
+    return {
+        "path": "/bulk-electronics-disposal/",
+        "title": "Bulk Electronics Disposal in Kochi | Volume Collection + Recovery",
+        "description": "Bulk electronics disposal in Kochi — scheduled collection for large-volume electronics from offices, warehouses, apartment cleanouts and organisational retirement.",
+        "h1": "Bulk Electronics Disposal in Kochi",
+        "breadcrumb_label": "Bulk Disposal",
+        "service_type": "Bulk electronics disposal and recovery",
+        "last_updated": LAST_UPDATED,
+        "lede": (
+            "Bulk electronics disposal covers scenarios where the volume is large enough that "
+            "the usual pickup logistics don't apply — warehouses clearing accumulated stock, "
+            "organisations retiring large batches of electronics, apartment complexes with "
+            "shared cleanout drives. This page covers how bulk disposal is planned, what "
+            "volumes typically qualify, and how it relates to the more familiar bulk pickup "
+            "workflow."
+        ),
+        "direct_answer": (
+            "For bulk electronics disposal in Kochi, WhatsApp Ewaste Kochi with the approximate "
+            "volume (rough count or estimated cubic metres), the item categories, the location, "
+            "and any deadline. The team confirms transport feasibility and schedules pickup. "
+            "Pickup is free for eligible collections; specialised handling (refrigerant, data-"
+            "destruction, on-site sorting) is quoted separately."
+        ),
+        "key_takeaways": [
+            "For volumes beyond routine pickup — full truckloads, warehouse batches, organisational retirement.",
+            "Notice: 1-2 weeks typical; 3+ weeks for very large or specialised volumes.",
+            "Free pickup for eligible collections; special handling quoted separately.",
+            "Rough volume estimate at booking (cubic metres or approximate item count) — exact captured at pickup.",
+            "Fits warehouses, organisational retirement, apartment complex cleanout drives.",
+        ],
+        "accepted_items": {
+            "columns": ["Bulk scenario", "Typical workflow", "Notes"],
+            "rows": [
+                ["Warehouse clearing accumulated electronics stock", "Multi-truck coordinated pickup", "Include category breakdown if possible"],
+                ["Organisation retiring large batch of computers/phones", "ITAD workflow with per-device tracking", "Per-serial capture typical"],
+                ["Apartment complex shared cleanout drive", "Scheduled pickup — multiple flats consolidated", "Building admin coordination"],
+                ["Corporate CSR e-waste collection drive", "Timed pickup at the event location", "Public collection event"],
+                ["Retail chain product return / end-of-life stock", "Bulk pickup per location, consolidated across chain", "Multi-location coordination"],
+                ["Government / institutional bulk retirement", "Documentation-heavy workflow", "Formal disposal records"],
+            ],
+        },
+        "how_to_steps": [
+            {"name": "Message volume + categories + location + deadline",
+             "text": "Rough count or estimated volume (cubic metres approximate), item categories (mixed electronics, laptops, phones, etc.), location, and any deadline."},
+            {"name": "Team confirms transport feasibility",
+             "text": "Very large volumes may need multi-truck coordination or multiple pickup days. Team returns a feasibility answer and slot proposal."},
+            {"name": "Agree the workflow",
+             "text": "For unspecified bulk (mixed materials) — standard bulk disposal. For per-device tracking (organisational retirement of specific IT) — ITAD workflow."},
+            {"name": "Scheduled pickup",
+             "text": "Team arrives at agreed slot(s) with appropriate transport. Multi-day pickups possible for very large volumes. Rough sorting on-site if useful."},
+            {"name": "Documentation + delivery",
+             "text": "Pickup acknowledgement per visit. Consolidated documentation issued after collection is complete. Certificate of Destruction for any data-bearing devices in the batch."},
+        ],
+        "sections": [
+            {"h2": "When bulk disposal fits vs bulk pickup",
+             "body": (
+                "Bulk pickup (see /bulk-e-waste-pickup/) fits scenarios in the 10-50 device range or a "
+                "full-apartment / full-small-office cleanout — meaningful volume, but fits into a "
+                "single-visit or two-visit workflow.\n\n"
+                "Bulk disposal fits scenarios where the volume is genuinely large: multiple truckloads, "
+                "warehouse stock, organisational retirement of hundreds of devices, apartment complex "
+                "coordinated cleanouts, public collection events.\n\n"
+                "The distinction matters for planning: bulk disposal often needs multi-truck "
+                "coordination, multi-day pickup, or event-day timed collection. Bulk pickup usually "
+                "fits within a single team's day with routine transport."
+             )},
+            {"h2": "Volume estimation for booking",
+             "body": (
+                "The most useful volume information for bulk disposal:\n\n"
+                "Cubic metres approximate — even a rough estimate ('about the size of a small car' or "
+                "'2-3 cubic metres') is useful for transport planning.\n\n"
+                "Category breakdown — mixed general electronics vs specifically 200 laptops vs "
+                "specifically retiring 50 UPS batteries all need different transport.\n\n"
+                "Container currently used — 'stored in cardboard boxes in a corner', 'stacked on 3 "
+                "pallets', 'filling half a shipping container' — all give useful shape to the volume.\n\n"
+                "Exact count comes at pickup, not booking. The booking-time estimate is for scheduling "
+                "and transport planning."
+             )},
+            {"h2": "Common bulk disposal scenarios",
+             "body": (
+                "Warehouse accumulated stock — a warehouse or distribution centre has accumulated "
+                "damaged, returned, or end-of-life electronics over months or years. Full clearance "
+                "typically needs multi-truck coordinated pickup.\n\n"
+                "Corporate CSR collection event — company runs an internal e-waste collection week; "
+                "hundreds of employees drop electronics at a designated point. Pickup at the event "
+                "close.\n\n"
+                "Apartment complex shared cleanout — a residential association organises a coordinated "
+                "e-waste drive across dozens of flats. Consolidated pickup on a scheduled day.\n\n"
+                "Organisational IT retirement — large offices, government departments, educational "
+                "institutions, hospitals retiring bulk devices. Per-serial tracking and formal "
+                "documentation typical.\n\n"
+                "Retail chain end-of-life stock — retailer clearing product return stock or end-of-"
+                "life inventory across locations. Multi-location coordinated pickup."
+             )},
+        ],
+        "faqs": [
+            {"q": "What counts as 'bulk' for disposal purposes?",
+             "a": "Anything genuinely large: multiple truckloads, warehouse stock, organisational retirement of hundreds of devices, coordinated apartment complex cleanouts, corporate CSR collection events. Smaller volumes fit under bulk pickup (see /bulk-e-waste-pickup/) rather than bulk disposal."},
+            {"q": "How much notice do you need for bulk disposal?",
+             "a": "1-2 weeks typical for scheduled bulk. 3+ weeks for very large volumes or multi-location coordination. Emergency bulk (deadline-driven closure) reviewable case-by-case."},
+            {"q": "Is bulk disposal free?",
+             "a": "Pickup itself is free for eligible bulk collections. Multi-truck coordination, specialised handling (refrigerant, on-site data destruction), or urgent deadlines carry costs quoted before the job."},
+            {"q": "Do you handle warehouse-scale electronics clearance?",
+             "a": "Yes. Warehouse clearance typically needs multi-truck coordinated pickup or multi-day scheduling. Message with rough volume, category breakdown, and warehouse address — team returns feasibility and scheduling proposal."},
+            {"q": "Can you pick up from a corporate CSR e-waste collection event?",
+             "a": "Yes — event-day timed pickup at the event close. Common for company weeks/months where employees are encouraged to drop electronics at a central point. Coordinate the event date and drop-off close time with the pickup slot."},
+            {"q": "What about apartment complex cleanouts?",
+             "a": "Yes. Residential associations sometimes organise coordinated e-waste drives across dozens of flats. Building admin coordinates the drop-off; team schedules consolidated pickup on the agreed day."},
+            {"q": "Do you handle multi-location bulk disposal for retail chains?",
+             "a": "Yes. Multi-location bulk with one point of contact and consolidated documentation across sites. Common for retail chains and hospitality groups clearing end-of-life stock or IT."},
+            {"q": "What documentation is available?",
+             "a": "Pickup acknowledgement per visit, consolidated GST invoice, per-device asset log (with ITAD workflow), Certificate of Destruction (for data-bearing devices), environmental disposal record (for CSR/ESG). Name what applies at booking."},
+        ],
+        "related_pages": rel(
+            ("/bulk-e-waste-pickup/", "Bulk pickup — smaller-scale bulk"),
+            CORE_LINKS["corporate"], CORE_LINKS["itad"], ("/office-clearance/", "Office clearance"),
+            ("/it-asset-disposal/", "IT asset disposal"),
+            CORE_LINKS["locations"],
+        ),
+        "route": _std_route(),
+        "whatsapp_message": "Hi, we have a bulk electronics disposal scope — here are the details:",
+    }
+
+
+def spec_retail_e_waste_recycling() -> dict:
+    return {
+        "path": "/retail-e-waste-recycling/",
+        "title": "Retail E-Waste Recycling in Kochi | POS + Store IT + Multi-Location",
+        "description": "Retail e-waste recycling in Kochi — POS terminal retirement, store IT clearance, and multi-location chain coordination with card-data destruction and documentation.",
+        "h1": "Retail E-Waste Recycling in Kochi",
+        "breadcrumb_label": "Retail E-Waste",
+        "service_type": "Retail sector e-waste recycling",
+        "last_updated": LAST_UPDATED,
+        "lede": (
+            "Retail e-waste has distinct patterns that don't fit general office pickup — POS "
+            "terminals with card-data records that need certified destruction, back-office "
+            "computers with customer records, CCTV DVRs with video archives, signage electronics, "
+            "chain-wide equipment refresh cycles, and multi-store scheduling around each location's "
+            "operating hours. This page covers how retail e-waste is planned differently, why POS "
+            "data destruction matters specifically (PCI DSS and general customer-data policy), how "
+            "multi-store retail chains coordinate collection across branches, and what "
+            "documentation typical retail compliance workflows need."
+        ),
+        "direct_answer": (
+            "For retail e-waste recycling in Kochi, WhatsApp Ewaste Kochi with store location(s), "
+            "device inventory (POS terminals, back-office PCs, printers, CCTV DVRs), and any "
+            "compliance requirements (PCI DSS card-data destruction, insurance, corporate "
+            "audit). Multi-store chains get one point of contact and consolidated documentation. "
+            "Pickup is free for eligible collections; per-terminal Certificate of Destruction "
+            "and multi-location scheduling are optional add-ons quoted before the job."
+        ),
+        "key_takeaways": [
+            "POS terminals hold card-data records — physical drive destruction recommended.",
+            "Multi-store chains get one point of contact and consolidated documentation.",
+            "Coordinated pickup outside store operating hours where useful.",
+            "Common items: POS, back-office PCs, printers, CCTV DVRs, signage electronics.",
+            "PCI DSS-compliant destruction workflow available.",
+        ],
+        "accepted_items": {
+            "columns": ["Retail item", "Route", "Notes"],
+            "rows": [
+                ["POS terminals (any brand, any age)", "Physical drive shredding + per-terminal Certificate + material recovery", "Card data risk — default recommendation"],
+                ["Back-office computers (management, admin)", "Buyback check + data destruction + recycling", "Customer data typical"],
+                ["Cash-drawer + receipt printers", "Material recovery", "Batch with POS"],
+                ["Retail printers, label printers, thermal printers", "Material recovery", "Included with store IT batch"],
+                ["CCTV DVRs (retiring surveillance systems)", "Physical drive shredding + material recovery", "Video-record data on internal drives"],
+                ["Signage electronics (digital price tags, kiosks)", "Material recovery", "May hold config data"],
+                ["Old iPads/tablets used as POS or inventory devices", "Data destruction + buyback check for hardware", "Factory reset + iCloud sign-out required"],
+                ["Store network gear (switches, WAPs, routers)", "See /network-equipment-recycling/", "Config data worth flagging"],
+            ],
+        },
+        "how_to_steps": [
+            {"name": "Send store location(s) + device inventory",
+             "text": "Single store: one address + inventory. Chain: list of store locations + inventory per location. Include POS terminal count specifically (highest-sensitivity items)."},
+            {"name": "Flag compliance requirements",
+             "text": "PCI DSS card-data destruction, corporate audit trail requirements, insurance disposal records — say what applies. Retail chains often have specific policy requirements around POS device retirement."},
+            {"name": "Agree the workflow — standard or ITAD",
+             "text": "Small single-store clearance fits standard bulk. Multi-store or per-terminal certification needs ITAD workflow with per-device serial capture."},
+            {"name": "Coordinate scheduling around store hours",
+             "text": "Retail pickup usually outside operating hours to avoid customer disruption. Before opening, after closing, or on off-days. Multi-store chains scheduled across days."},
+            {"name": "Pickup + on-site verification + documentation",
+             "text": "Team collects at agreed slot, verifies device list, captures serials if ITAD workflow. Pickup acknowledgement per store. Consolidated documentation and Certificates issued after the destruction step."},
+        ],
+        "sections": [
+            {"h2": "Why POS terminal data destruction matters specifically",
+             "body": (
+                "POS terminals in service more than 6 months have processed thousands of card "
+                "transactions. Even 'tokenised' payment systems often have residual data on the local "
+                "storage — logs, customer identifiers, transaction records, receipt copies. Under PCI "
+                "DSS (payment card industry data security standard) and general customer-data policy, "
+                "this data must be handled with certified destruction when the terminal is retired.\n\n"
+                "The default recommendation for retail POS retirement: physical shredding of the "
+                "internal storage, per-terminal Certificate of Destruction. Software wiping is "
+                "technically an option for lower-risk cases (older cash-only POS without card "
+                "processing), but for anything that touched payment cards, physical is the safer "
+                "default.\n\n"
+                "For chains with formal PCI DSS obligations, per-terminal Certificate is essentially "
+                "required for compliance evidence."
+             )},
+            {"h2": "Multi-store chain coordination",
+             "body": (
+                "Retail chains retiring POS or IT equipment across multiple stores get one coordinated "
+                "engagement rather than individual per-store bookings:\n\n"
+                "One point of contact — usually the chain's IT lead or facility manager. All "
+                "communication routes through them; individual store managers don't each need to book "
+                "their own pickup.\n\n"
+                "Consolidated documentation — one asset log covering all stores, one set of "
+                "Certificates covering all destroyed drives, one final report. Simpler for chain audit "
+                "and finance.\n\n"
+                "Scheduled across days — chains typically don't do all-stores-same-day. Pickup routes "
+                "sequentially across stores over 1-2 weeks, planned around each store's operating "
+                "hours.\n\n"
+                "Common for: retail chains refreshing POS across all branches (payment system "
+                "upgrade), retail chains closing older-format stores, hospitality chains retiring "
+                "kitchen POS or reservation systems, jewellery/pharmacy/specialty retail with formal "
+                "data-handling requirements."
+             )},
+            {"h2": "Store IT beyond POS",
+             "body": (
+                "Retail e-waste includes more than POS:\n\n"
+                "Back-office computers (management, admin, inventory) hold customer data, employee "
+                "records, financial data — treat as data-bearing.\n\n"
+                "CCTV DVRs hold video records — often overlooked but definitely data-bearing. Physical "
+                "drive destruction recommended.\n\n"
+                "Signage electronics (digital price tags, self-service kiosks) hold configuration "
+                "data.\n\n"
+                "iPad-based POS / inventory devices need factory reset + iCloud sign-out. If the iPad "
+                "is retiring rather than being redeployed, buyback check + data destruction routing.\n\n"
+                "Store network gear (managed switches, WAPs, firewalls) may hold configuration data "
+                "worth wiping."
+             )},
+        ],
+        "faqs": [
+            {"q": "How do we handle retiring POS terminals for our retail chain?",
+             "a": "POS terminals need physical drive shredding with per-terminal Certificate of Destruction as the default recommendation — card-data risk. Book bulk pickup with ITAD workflow for chain-wide coordination and consolidated documentation across stores."},
+            {"q": "Are we PCI DSS compliant if we recycle POS terminals normally?",
+             "a": "Depends on your specific PCI DSS scope. Most PCI DSS obligations require certified destruction of card-data-bearing devices with evidence (per-terminal Certificate of Destruction). Software wiping is generally not sufficient; physical shredding with documented Certificate is the safer default. Consult your PCI QSA for your specific chain's requirements."},
+            {"q": "Can you coordinate pickup across our chain of stores?",
+             "a": "Yes. Multi-store engagement with one point of contact, consolidated documentation, and scheduled pickup across days/weeks planned around each store's operating hours."},
+            {"q": "Do you handle old CCTV DVRs when we upgrade surveillance?",
+             "a": "Yes. CCTV DVRs hold video records on internal drives — physical drive destruction recommended as default. Common when chains upgrade to cloud-based surveillance."},
+            {"q": "What about back-office computers in stores?",
+             "a": "Standard IT retirement workflow — buyback check for viable machines, data destruction for the drives (customer/employee data typical), recycling for the rest."},
+            {"q": "Can pickup happen when stores are closed?",
+             "a": "Yes — usually preferred. Before opening, after closing, or on the weekly off-day. Multi-store chains coordinate pickup across each store's operating schedule."},
+            {"q": "What about signage electronics — digital price tags, kiosks?",
+             "a": "Accepted. May hold configuration data worth wiping if the units connect to your inventory or customer systems. Flag when booking."},
+            {"q": "Do you handle iPad-based POS systems?",
+             "a": "Yes. iPads need factory reset + iCloud sign-out for clean buyback. If they can't be reset (locked to a lost management account), data destruction routing instead. Buyback check for the iPad hardware."},
+        ],
+        "related_pages": rel(
+            CORE_LINKS["corporate"], CORE_LINKS["itad"], CORE_LINKS["data"],
+            CORE_LINKS["hdd"], ("/business-e-waste-recycling/", "Business e-waste"),
+            CORE_LINKS["cert_sample"],
+        ),
+        "route": _std_route(),
+        "whatsapp_message": "Hi, we're retiring retail store equipment — here's the scope:",
+    }
+
+
+# ---------------------------------------------------------------------------
+# Update ALL_SPECS with the extended set (Batch 1 + Batch 2 = 25 total)
+# ---------------------------------------------------------------------------
+
 ALL_SPECS = [
-    ("appliance-recycling",       spec_appliance_recycling),
-    ("printer-recycling",         spec_printer_recycling),
-    ("home-e-waste-pickup",       spec_home_e_waste_pickup),
-    ("bulk-e-waste-pickup",       spec_bulk_e_waste_pickup),
-    ("battery-pickup",            spec_battery_pickup),
-    ("laptop-scrap-price",        spec_laptop_scrap_price),
-    ("phone-buyback",             spec_phone_buyback),
-    ("it-asset-disposal",         spec_it_asset_disposal),
-    ("school-e-waste-recycling",  spec_school_e_waste_recycling),
+    # Batch 1 (2026-07-28 initial)
+    ("appliance-recycling",        spec_appliance_recycling),
+    ("printer-recycling",          spec_printer_recycling),
+    ("home-e-waste-pickup",        spec_home_e_waste_pickup),
+    ("bulk-e-waste-pickup",        spec_bulk_e_waste_pickup),
+    ("battery-pickup",             spec_battery_pickup),
+    ("laptop-scrap-price",         spec_laptop_scrap_price),
+    ("phone-buyback",              spec_phone_buyback),
+    ("it-asset-disposal",          spec_it_asset_disposal),
+    ("school-e-waste-recycling",   spec_school_e_waste_recycling),
     ("hospital-e-waste-recycling", spec_hospital_e_waste_recycling),
+    # Batch 2 (2026-07-28 continuation — 15 more pillar children)
+    ("electronics-recycling",         spec_electronics_recycling),
+    ("network-equipment-recycling",   spec_network_equipment_recycling),
+    ("sell-old-laptop",               spec_sell_old_laptop),
+    ("sell-old-computer",             spec_sell_old_computer),
+    ("sell-old-mobile",               spec_sell_old_mobile),
+    ("sell-office-electronics",       spec_sell_office_electronics),
+    ("electronics-scrap-value",       spec_electronics_scrap_value),
+    ("computer-scrap-price",          spec_computer_scrap_price),
+    ("scheduled-pickup",              spec_scheduled_pickup),
+    ("same-day-pickup",               spec_same_day_pickup),
+    ("corporate-pickup",              spec_corporate_pickup),
+    ("business-e-waste-recycling",    spec_business_e_waste_recycling),
+    ("office-clearance",              spec_office_clearance),
+    ("bulk-electronics-disposal",     spec_bulk_electronics_disposal),
+    ("retail-e-waste-recycling",      spec_retail_e_waste_recycling),
 ]
 
 
