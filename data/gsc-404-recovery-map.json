@@ -1,0 +1,314 @@
+[
+  {
+    "source": "/sell-electronics-kochi/",
+    "destination": "/sell-electronics/",
+    "clicks": 3,
+    "imp": 46,
+    "pos": 7.5,
+    "reason": "exact topic match"
+  },
+  {
+    "source": "/blogs/disposal/",
+    "destination": "/recycling/",
+    "clicks": 2,
+    "imp": 42,
+    "pos": 26.19,
+    "reason": "legacy disposal subtree \u2192 recycling pillar"
+  },
+  {
+    "source": "/hi/services/e-waste-recycling-kochi/",
+    "destination": "/recycling/",
+    "clicks": 2,
+    "imp": 38,
+    "pos": 19.39,
+    "reason": "hi/ variant of recycling"
+  },
+  {
+    "source": "/laptop-recycling-near-me/",
+    "destination": "/services/electronics-recycling-near-me/",
+    "clicks": 2,
+    "imp": 12,
+    "pos": 10.83,
+    "reason": "topic match: near-me"
+  },
+  {
+    "source": "/blogs/scrap-electronics/pcb-and-motherboard-scrap-buyers-in-kakkanad-kochi/",
+    "destination": "/e-waste-scrap-prices-kochi/",
+    "clicks": 1,
+    "imp": 48,
+    "pos": 8.81,
+    "reason": "legacy scrap subtree \u2192 scrap-prices page"
+  },
+  {
+    "source": "/blogs/",
+    "destination": "/blog/",
+    "clicks": 1,
+    "imp": 24,
+    "pos": 8.58,
+    "reason": "plural blogs base \u2192 singular blog"
+  },
+  {
+    "source": "/blogs/battery-recycling/office-battery-pickup-in-thiruvananthapuram-how-to-stage-mixed-loads/",
+    "destination": "/battery-recycling/",
+    "clicks": 1,
+    "imp": 11,
+    "pos": 8.36,
+    "reason": "legacy blogs subtree \u2192 live pillar"
+  },
+  {
+    "source": "/blog/best-way-to-e-waste-collection-in-ernakulam-2026-ernakulam/",
+    "destination": "/locations/ernakulam/",
+    "clicks": 1,
+    "imp": 10,
+    "pos": 9.4,
+    "reason": "location-specific \u2192 ernakulam page"
+  },
+  {
+    "source": "/blogs/disposal/how-to-dispose-mixed-household-e-waste-in-kollam/",
+    "destination": "/recycling/",
+    "clicks": 1,
+    "imp": 9,
+    "pos": 7.44,
+    "reason": "legacy disposal subtree \u2192 recycling pillar"
+  },
+  {
+    "source": "/blogs/recycling/laptop-recycling-in-kollam-reuse-buyback-or-scrap/",
+    "destination": "/recycling/",
+    "clicks": 1,
+    "imp": 6,
+    "pos": 7.83,
+    "reason": "legacy blogs/recycling \u2192 recycling pillar"
+  },
+  {
+    "source": "/blogs/laptop-disposal/laptop-resale-value-in-kottayam-what-changes-the-price-fast/",
+    "destination": "/sell-electronics/",
+    "clicks": 1,
+    "imp": 5,
+    "pos": 5.2,
+    "reason": "legacy laptop-disposal \u2192 sell-electronics (has laptop content)"
+  },
+  {
+    "source": "/blog/environmental-impact-of-e-waste-collection-in-thrippunithura-thrippunithura/",
+    "destination": "/locations/thrippunithura/",
+    "clicks": 1,
+    "imp": 3,
+    "pos": 9.33,
+    "reason": "location-specific \u2192 thrippunithura"
+  },
+  {
+    "source": "/blog/phone-buyback-price-guide-for-kochi-kochi-1/",
+    "destination": "/sell-electronics/",
+    "clicks": 1,
+    "imp": 1,
+    "pos": 6.0,
+    "reason": "phone buyback \u2192 sell-electronics"
+  },
+  {
+    "source": "/blog/monitor-recycling-during-monsoon-in-thrippunithura-thrippunithura/",
+    "destination": "/locations/thrippunithura/",
+    "clicks": 1,
+    "imp": 1,
+    "pos": 11.0,
+    "reason": "thrippunithura-specific"
+  },
+  {
+    "source": "/blogs/recycling/how-electronics-recycling-works-in-thiruvananthapuram/",
+    "destination": "/recycling/",
+    "clicks": 0,
+    "imp": 54,
+    "pos": 9.85,
+    "reason": "legacy blogs/recycling \u2192 recycling pillar"
+  },
+  {
+    "source": "/blog/ewaste-laws-kerala.html",
+    "destination": "/e-waste-rules-2022-india/",
+    "clicks": 0,
+    "imp": 46,
+    "pos": 20.02,
+    "reason": "legacy .html \u2192 e-waste-rules page (topic match)"
+  },
+  {
+    "source": "/ewaste/",
+    "destination": "/e-waste/",
+    "clicks": 0,
+    "imp": 39,
+    "pos": 17.36,
+    "reason": "the correct v2 URL"
+  },
+  {
+    "source": "/blogs/battery-recycling/how-to-store-batteries-before-pickup-in-vyttila-kochi/",
+    "destination": "/battery-recycling/",
+    "clicks": 0,
+    "imp": 34,
+    "pos": 7.09,
+    "reason": "legacy blogs subtree \u2192 live pillar"
+  },
+  {
+    "source": "/blog/laptop-scrap-price-kochi-2026/",
+    "destination": "/e-waste-scrap-prices-kochi/",
+    "clicks": 0,
+    "imp": 33,
+    "pos": 10.24,
+    "reason": "topic match: laptop scrap price"
+  },
+  {
+    "source": "/blog/battery-recycling-options-in-kochi-which-to-choose-kochi/",
+    "destination": "/battery-recycling/",
+    "clicks": 0,
+    "imp": 30,
+    "pos": 7.33,
+    "reason": "topic match"
+  },
+  {
+    "source": "/blog/laptop-resale-value-2026/",
+    "destination": "/sell-electronics/",
+    "clicks": 0,
+    "imp": 25,
+    "pos": 7.16,
+    "reason": "topic match: laptop resale value"
+  },
+  {
+    "source": "/blogs/ewaste-laws/kspcb-authorized-recyclers-list-how-thiruvananthapuram-businesses-verify-vendors/",
+    "destination": "/e-waste-rules-2022-india/",
+    "clicks": 0,
+    "imp": 23,
+    "pos": 7.91,
+    "reason": "legacy ewaste-laws subtree \u2192 rules page"
+  },
+  {
+    "source": "/index-old/",
+    "destination": "/",
+    "clicks": 0,
+    "imp": 22,
+    "pos": 5.95,
+    "reason": "legacy /index-old/ \u2192 home"
+  },
+  {
+    "source": "/blogs/recycling/zero-landfill-electronics-recycling-in-thiruvananthapuram-what-it-really-means/",
+    "destination": "/recycling/",
+    "clicks": 0,
+    "imp": 21,
+    "pos": 8.19,
+    "reason": "legacy blogs/recycling \u2192 recycling pillar"
+  },
+  {
+    "source": "/blogs/disposal/where-to-dispose-old-laptops-in-kollam-free-pickup-guide/",
+    "destination": "/recycling/",
+    "clicks": 0,
+    "imp": 20,
+    "pos": 8.95,
+    "reason": "legacy disposal subtree \u2192 recycling pillar"
+  },
+  {
+    "source": "/hi/services/computer-recycling/",
+    "destination": "/recycling/",
+    "clicks": 0,
+    "imp": 19,
+    "pos": 22.79,
+    "reason": "hi/ variant, closest = recycling pillar"
+  },
+  {
+    "source": "/blog/is-formatting-enough-delete-data.html",
+    "destination": "/data-destruction/",
+    "clicks": 0,
+    "imp": 19,
+    "pos": 7.63,
+    "reason": "legacy .html on data topic \u2192 data-destruction pillar"
+  },
+  {
+    "source": "/hi/services/mobile-recycling-kochi/",
+    "destination": "/recycling/",
+    "clicks": 0,
+    "imp": 18,
+    "pos": 12.44,
+    "reason": "hi/ variant, mobile-recycling \u2192 recycling pillar (no mobile-recycling page in v2)"
+  },
+  {
+    "source": "/services/it-asset-inventory-audit.html",
+    "destination": "/services/it-asset-inventory-audit/",
+    "clicks": 0,
+    "imp": 18,
+    "pos": 8.83,
+    "reason": "legacy .html \u2192 v2 directory equivalent"
+  },
+  {
+    "source": "/blog/itad-roi-kochi-enterprise/",
+    "destination": "/itad/",
+    "clicks": 0,
+    "imp": 16,
+    "pos": 20.25,
+    "reason": "itad topic \u2192 itad pillar"
+  },
+  {
+    "source": "/blogs/mobile-recycling/damaged-phone-recycling-in-kozhikode-what-still-counts-as-value/",
+    "destination": "/recycling/",
+    "clicks": 0,
+    "imp": 15,
+    "pos": 9.4,
+    "reason": "legacy mobile-recycling \u2192 recycling pillar"
+  },
+  {
+    "source": "/locations/kottayam/e-waste-recycling-kochi/",
+    "destination": "/locations/kottayam/",
+    "clicks": 0,
+    "imp": 15,
+    "pos": 4.67,
+    "reason": "location + service combo \u2192 location hub"
+  },
+  {
+    "source": "/blogs/environmental-impact/toxic-components-in-electronics-collected-in-kakkanad-kochi/",
+    "destination": "/blog/",
+    "clicks": 0,
+    "imp": 13,
+    "pos": 8.69,
+    "reason": "legacy env-impact subtree \u2192 blog hub"
+  },
+  {
+    "source": "/blogs/recycling/computer-recycling-in-vyttila-kochi-for-homes-and-offices/",
+    "destination": "/recycling/",
+    "clicks": 0,
+    "imp": 11,
+    "pos": 13.55,
+    "reason": "legacy blogs/recycling \u2192 recycling pillar"
+  },
+  {
+    "source": "/blogs/disposal/how-to-dispose-office-computers-in-kakkanad-kochi-safely/",
+    "destination": "/recycling/",
+    "clicks": 0,
+    "imp": 11,
+    "pos": 8.09,
+    "reason": "legacy disposal subtree \u2192 recycling pillar"
+  },
+  {
+    "source": "/blogs/recycling/how-electronics-recycling-works-in-kozhikode/",
+    "destination": "/recycling/",
+    "clicks": 0,
+    "imp": 11,
+    "pos": 21.36,
+    "reason": "legacy blogs/recycling \u2192 recycling pillar"
+  },
+  {
+    "source": "/media-kit/",
+    "destination": "/about/",
+    "clicks": 0,
+    "imp": 11,
+    "pos": 6.64,
+    "reason": "legacy media-kit \u2192 about (no press page in v2)"
+  },
+  {
+    "source": "/locations/ewaste-682239/",
+    "destination": "/locations/",
+    "clicks": 0,
+    "imp": 11,
+    "pos": 61.45,
+    "reason": "legacy pin-code URL \u2014 consolidate to locations hub"
+  },
+  {
+    "source": "/blogs/laptop-disposal/",
+    "destination": "/sell-electronics/",
+    "clicks": 0,
+    "imp": 10,
+    "pos": 24.1,
+    "reason": "legacy laptop-disposal \u2192 sell-electronics (has laptop content)"
+  }
+]
