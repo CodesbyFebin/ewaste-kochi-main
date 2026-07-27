@@ -12,10 +12,19 @@
     "gsc:indexing-readiness": "tsx scripts/gsc-p4-indexing-readiness.ts",
     "content:freshness-indexing": "tsx scripts/content-freshness-indexing-queue.ts",
     "blog:silo-plan": "tsx scripts/plan-blog-silo-publishing.ts",
-    "generate:blog": "tsx scripts/generate-blog-safety-guard.ts"
+    "generate:blog": "tsx scripts/generate-blog-safety-guard.ts",
+    "content:generate": "node scripts/safe-deep.mjs --count=100",
+    "content:validate": "node scripts/validate-content.mjs",
+    "verify:dist": "node scripts/verify-dist.mjs",
+    "safe-deep": "npm run content:generate && npm run content:validate"
   },
   "dependencies": {
-    "astro": "^4.16.0"
+    "@astrojs/mdx": "^4.3.14",
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^5.18.2",
+    "gray-matter": "^4.0.3",
+    "js-yaml": "^5.2.2",
+    "reading-time": "^1.5.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",

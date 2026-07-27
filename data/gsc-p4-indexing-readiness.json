@@ -1,6 +1,6 @@
 {
   "summary": {
-    "generatedAt": "2026-07-15T13:38:38.709Z",
+    "generatedAt": "2026-07-15T22:08:53.966Z",
     "siteUrl": "https://www.ewastekochi.com",
     "mode": "readiness_only_no_submission",
     "discoveryFiles": [
@@ -61,7 +61,7 @@
       },
       {
         "sitemap": "https://www.ewastekochi.com/sitemaps/blog.xml",
-        "urls": 124
+        "urls": 593
       },
       {
         "sitemap": "https://www.ewastekochi.com/sitemaps/legal.xml",
@@ -76,7 +76,7 @@
         "urls": 8
       }
     ],
-    "uniqueSitemapUrlCount": 355,
+    "uniqueSitemapUrlCount": 824,
     "badHostUrlCount": 0,
     "stagingUrlCount": 0,
     "sitemapFailureCount": 0,

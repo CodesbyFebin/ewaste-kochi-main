@@ -37,3 +37,12 @@ ewastekochi.com-*.zip
 # unservable location (project-root images/, not public/) - not tracked, not
 # needed until a future pass moves+wires them correctly.
 .content-quarantine/images-blog-generated/
+
+# Local development state
+.zcode/
+tmp/
+debug-*.js
+*.backup.ts
+
+# Local backup snapshots
+EWaste-Kochi-Astro-Safe-Deep*
