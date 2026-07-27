@@ -46,3 +46,160 @@ debug-*.js
 
 # Local backup snapshots
 EWaste-Kochi-Astro-Safe-Deep*
+
+
+# ==============================================================================
+# Environment files & secrets (CRITICAL — never commit)
+# ==============================================================================
+# Any file matching these patterns is assumed to contain API keys, tokens,
+# database URLs, or other material that would compromise the site if leaked.
+# Add ONLY .env.example / .env.template (documentation of required keys) to
+# version control, never the file with real values.
+.env
+.env.*
+!.env.example
+!.env.template
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+
+
+# ==============================================================================
+# Python tooling — added for scripts/generate-pillar-page.py (2026-07-28)
+# ==============================================================================
+# The pillar-page generator is Python 3.8+ with an optional PyYAML dep.
+# Anyone contributing to scripts/*.py will produce these artifacts locally;
+# none of them belong in the repo.
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.python-version
+# Virtualenvs — the generator works without one, but if a contributor sets
+# up a project-local venv to install PyYAML, keep it out of tracking.
+.venv/
+venv/
+env/
+ENV/
+
+
+# ==============================================================================
+# Editor / IDE state (extending existing .claude/, .kilocode/, .zcode/ rule)
+# ==============================================================================
+# Consistent with the project's existing treatment of local tool state:
+# every editor's per-user config stays local to that user's checkout.
+# If a specific editor config (e.g. .vscode/settings.json for a shared
+# formatter rule) becomes team-wide, add an explicit `!` unignore for it.
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+
+# ==============================================================================
+# Astro / build cache extensions
+# ==============================================================================
+# .astro/ (build cache) is already ignored above. These additions cover other
+# caches the Astro toolchain and its plugins may create.
+.turbo/
+.parcel-cache/
+.next/
+.output/
+.svelte-kit/
+
+
+# ==============================================================================
+# Standard Node / npm / log noise
+# ==============================================================================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.npm/
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+package-lock.json.bak
+
+
+# ==============================================================================
+# OS-generated junk (extending existing .DS_Store rule)
+# ==============================================================================
+Thumbs.db
+Icon
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+desktop.ini
+
+
+# ==============================================================================
+# Scratch / temp / editing artifacts
+# ==============================================================================
+# `sed -i.bak` leaves .bak files; some editors write .orig on merge conflicts;
+# .rej files come from failed patch applies. None belong in the repo.
+*.bak
+*.orig
+*.rej
+*.tmp
+*.temp
+
+# Astro underscore-prefix scratch pages — Astro's own convention for private
+# files that shouldn't become routes. Also useful for one-off compile tests
+# of generated files (as we did during scripts/generate-pillar-page.py
+# development).
+src/pages/_*/
+
+# Debug/scratch scripts across all languages (extends existing debug-*.js).
+debug-*.py
+debug-*.mjs
+debug-*.ts
+scratch-*.js
+scratch-*.py
+scratch-*.mjs
+
+
+# ==============================================================================
+# Testing / coverage (future-proofing)
+# ==============================================================================
+coverage/
+*.lcov
+.nyc_output/
+htmlcov/
+
+
+# ==============================================================================
+# Notes on `.content-quarantine/generated/`
+# ==============================================================================
+# scripts/generate-pillar-page.py writes to .content-quarantine/generated/
+# by default (safe, human-review-before-promotion). That directory is
+# INTENTIONALLY NOT ignored — following the precedent of
+# .content-quarantine/blog-drafts/ (also tracked, so drafts aren't lost to a
+# stash-drop or accidental branch switch). If a specific draft becomes
+# stale/rejected, delete it explicitly rather than silently ignoring the
+# whole folder.
+
+
+# ==============================================================================
+# Session-scoped local audit outputs
+# ==============================================================================
+# The god-level-100-launch-master-prompt convention writes audit artifacts to
+# .audit/. If those get produced locally, they're per-run and shouldn't
+# pollute the repo. Reports that should be preserved live under reports/.
+.audit/
+audit-*.tmp/
