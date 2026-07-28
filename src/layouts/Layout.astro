@@ -69,6 +69,17 @@ const htmlLang = lang === "ml-IN" ? "ml" : "en-IN";
   html, body {
     padding: 0;
     margin: 0;
+    /* IMPORTANT: never set transform/filter/overflow-hidden on <html> or
+       <body> — a transformed ancestor turns Header's position:sticky into
+       an in-scroll-container sticky (breaks it), and creates a new
+       containing block for the mobile-nav's position:fixed overlay
+       (breaks it too). Body-scroll lock uses overflow-hidden ONLY while
+       the menu is open (see .menu-open below). */
+  }
+  body.menu-open {
+    overflow: hidden;
+    /* Prevent iOS momentum scroll from leaking under a fixed overlay. */
+    touch-action: none;
   }
   /* Clear the sticky Header (trust-bar + main wrap) when anchor links or the
      skip-link jump to an in-page target. Without this, hash navigation lands

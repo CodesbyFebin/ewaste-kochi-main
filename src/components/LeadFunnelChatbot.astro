@@ -284,9 +284,9 @@ import { telLink, whatsappLink } from "../data/site";
       display: none;
     }
     /* Also hide it while the mobile hamburger nav is open — otherwise the
-       floating bubble sits over the nav items / page content the nav
-       reveals below itself. */
-    :global(body:has(#mobile-nav:not([hidden])) .ewlf-launcher) {
+       floating bubble sits over the fixed-overlay nav. Header.astro
+       toggles body.menu-open on nav open/close. */
+    :global(body.menu-open .ewlf-launcher) {
       display: none;
     }
     :global(.ewlf-launcher) {

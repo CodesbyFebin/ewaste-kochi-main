@@ -47,12 +47,15 @@ const isCurrent = (href: string) => currentPath === href;
       </svg>
     </button>
   </div>
-  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile" hidden>
-    {navLinks.map((link) => (
-      <a href={link.href} aria-current={isCurrent(link.href) ? "page" : undefined}>{link.label}</a>
-    ))}
-  </nav>
+  <!-- Mobile nav is a SIBLING of the sticky header (not a child) so it can
+       overlay the viewport as position:fixed instead of extending the
+       header's height. Toggled via `hidden` attribute + `body.menu-open`. -->
 </header>
+<nav id="mobile-nav" class="mobile-nav" aria-label="Mobile" hidden>
+  {navLinks.map((link) => (
+    <a href={link.href} aria-current={isCurrent(link.href) ? "page" : undefined}>{link.label}</a>
+  ))}
+</nav>
 
 <script>
   const toggle = document.querySelector<HTMLButtonElement>(".nav-toggle");
@@ -65,6 +68,9 @@ const isCurrent = (href: string) => currentPath === href;
     toggle.setAttribute("aria-expanded", String(open));
     toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     mobileNav.hidden = !open;
+    // Lock body scroll while the overlay is open so hitting the ends of
+    // the menu's internal scroll doesn't scroll the page underneath.
+    document.body.classList.toggle("menu-open", open);
     if (iconOpen) iconOpen.style.display = open ? "none" : "";
     if (iconClose) iconClose.style.display = open ? "" : "none";
   }
@@ -91,18 +97,29 @@ const isCurrent = (href: string) => currentPath === href;
 </script>
 
 <style>
+  /* Layered sticky header architecture — kept as CSS variables so the
+     mobile overlay top offset is always in sync with the actual bar
+     heights (change one number, everything follows). */
+  :root {
+    --topbar-height: 32px;   /* .trust-bar computed height on mobile */
+    --header-height: 60px;   /* .wrap computed height on mobile */
+    --header-total: calc(var(--topbar-height) + var(--header-height));
+  }
+  @media (min-width: 860px) {
+    :root {
+      --topbar-height: 36px;
+      --header-height: 68px;
+    }
+  }
   .site-header {
     border-bottom: 1px solid var(--color-border);
     position: sticky;
     top: 0;
     background: var(--color-bg);
-    z-index: 10;
-  }
-  /* When the mobile nav is open, lift the whole header above the chatbot
-     launcher (z-index 9001) so its last items aren't covered by the
-     bottom-right bubble on short viewports. */
-  .site-header:has(#mobile-nav:not([hidden])) {
-    z-index: 9500;
+    z-index: 1000;
+    /* No transform / filter / overflow here — a transformed or clipping
+       ancestor would break sticky positioning + create a new containing
+       block for the fixed mobile overlay. */
   }
   .trust-bar {
     background: #063d1e;
@@ -185,19 +202,35 @@ const isCurrent = (href: string) => currentPath === href;
     width: 22px;
     height: 22px;
   }
+  /* Fixed overlay under the two sticky bars, own scroll container.
+     Sits BELOW the header stack (z-index 999 < header's 1000) so the
+     header always paints on top — the overlay only claims the space
+     from the header's bottom edge down. */
   .mobile-nav {
+    position: fixed;
+    top: var(--header-total);
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: calc(100dvh - var(--header-total));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    z-index: 999;
+    background: var(--color-bg);
+    padding: 0.5rem 1.25rem 2rem;
     display: flex;
     flex-direction: column;
     gap: 0.1rem;
-    padding: 0.5rem 1.25rem 1rem;
     border-top: 1px solid var(--color-border);
-    background: var(--color-bg);
-    /* Prevent the menu from running longer than the viewport (which would
-       leave the last item hidden under the chatbot launcher on short
-       screens); scroll internally instead. */
-    max-height: calc(100vh - 96px);
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+    /* env() honors notch / dynamic island on iOS. */
+    padding-bottom: max(2rem, env(safe-area-inset-bottom));
+  }
+  /* When hidden by the `hidden` attribute, take no space and don't paint.
+     (The attribute already sets display:none, but be explicit so any UA
+     stylesheet quirk doesn't leave the overlay tangible.) */
+  .mobile-nav[hidden] {
+    display: none;
   }
   .mobile-nav a {
     padding: 0.7rem 0.25rem;
