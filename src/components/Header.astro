@@ -98,6 +98,12 @@ const isCurrent = (href: string) => currentPath === href;
     background: var(--color-bg);
     z-index: 10;
   }
+  /* When the mobile nav is open, lift the whole header above the chatbot
+     launcher (z-index 9001) so its last items aren't covered by the
+     bottom-right bubble on short viewports. */
+  .site-header:has(#mobile-nav:not([hidden])) {
+    z-index: 9500;
+  }
   .trust-bar {
     background: #063d1e;
     color: #fff;
@@ -185,6 +191,13 @@ const isCurrent = (href: string) => currentPath === href;
     gap: 0.1rem;
     padding: 0.5rem 1.25rem 1rem;
     border-top: 1px solid var(--color-border);
+    background: var(--color-bg);
+    /* Prevent the menu from running longer than the viewport (which would
+       leave the last item hidden under the chatbot launcher on short
+       screens); scroll internally instead. */
+    max-height: calc(100vh - 96px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .mobile-nav a {
     padding: 0.7rem 0.25rem;

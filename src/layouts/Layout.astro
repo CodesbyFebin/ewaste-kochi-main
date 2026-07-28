@@ -70,6 +70,28 @@ const htmlLang = lang === "ml-IN" ? "ml" : "en-IN";
     padding: 0;
     margin: 0;
   }
+  /* Clear the sticky Header (trust-bar + main wrap) when anchor links or the
+     skip-link jump to an in-page target. Without this, hash navigation lands
+     the target underneath the header on mobile. Desktop header is a bit
+     taller because the trust-bar text becomes visible. */
+  html {
+    scroll-padding-top: 96px;
+  }
+  @media (min-width: 860px) {
+    html {
+      scroll-padding-top: 128px;
+    }
+  }
+  /* Universal fallback for any heading that becomes an anchor target
+     (Astro's built-in slugger emits ids on h2/h3). */
+  :where(h1, h2, h3, h4, section[id], [id]) {
+    scroll-margin-top: 96px;
+  }
+  @media (min-width: 860px) {
+    :where(h1, h2, h3, h4, section[id], [id]) {
+      scroll-margin-top: 128px;
+    }
+  }
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     background: var(--color-bg);
