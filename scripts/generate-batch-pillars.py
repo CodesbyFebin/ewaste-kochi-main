@@ -3286,6 +3286,629 @@ ALL_SPECS = [
 ]
 
 
+# ---------------------------------------------------------------------------
+# Batch 3 — 5 additional pillar cluster children (2026-07-28)
+# ---------------------------------------------------------------------------
+# Device-specific pages capturing query surface not yet covered:
+# monitors, tablets, CCTV, UPS units, gaming consoles.
+
+def spec_monitor_recycling() -> dict:
+    return {
+        "path": "/monitor-recycling/",
+        "title": "Where to Recycle Old Monitors in Kochi | Free Pickup",
+        "description": "Where to recycle old monitors in Kochi — LCD, LED, CRT and gaming monitors. Free doorstep pickup with material recovery and bulky-item transport planning.",
+        "h1": "Where to Recycle Monitors in Kochi",
+        "breadcrumb_label": "Monitor Recycling",
+        "service_type": "Monitor recycling",
+        "last_updated": LAST_UPDATED,
+        "lede": (
+            "Old monitors accumulate the way old TVs used to — bulky, no resale value once a "
+            "model is a few years old, but too big to sit in a corner forever. This page covers "
+            "what monitor types get accepted, why CRTs need special handling, and how a "
+            "monitor pickup is typically planned differently from smaller electronics."
+        ),
+        "direct_answer": (
+            "To recycle a monitor in Kochi, WhatsApp Ewaste Kochi with the type (LCD/LED/CRT), "
+            "size, condition and your address. Doorstep pickup is scheduled based on area and "
+            "the size of the monitor. CRT monitors are bulky and need advance transport "
+            "planning. Recent working monitors may qualify for a small buyback quote; older "
+            "monitors go to free recycling."
+        ),
+        "key_takeaways": [
+            "LCD, LED, CRT, gaming monitors — all accepted.",
+            "CRT monitors need advance transport planning (bulky, heavy, hazardous materials).",
+            "Recent working monitors may qualify for reduced buyback; older ones recycling only.",
+            "Batch with computers if you're retiring a whole desktop setup.",
+            "Pickup is free for eligible collections.",
+        ],
+        "accepted_items": {
+            "columns": ["Monitor type", "Route", "Notes"],
+            "rows": [
+                ["LCD/LED monitors (any age, working)", "Material recovery; reduced buyback for recent", "Batch with desktop if bundled"],
+                ["LCD/LED monitors (not working)", "Material recovery", "Free pickup, no payment"],
+                ["Gaming monitors (144Hz+, recent)", "Buyback check first for recent working units", "Include model and specs"],
+                ["Ultrawide / curved monitors (recent)", "Buyback check; material recovery otherwise", "Bulky — advance planning"],
+                ["CRT monitors (older tube type)", "Specialised material recovery (hazardous handling)", "Very bulky, very heavy"],
+                ["Portable / travel monitors", "Material recovery + buyback for recent working", "Small enough for routine pickup"],
+                ["Cracked-screen monitors", "Material recovery — no buyback", "Note the damage in your message"],
+            ],
+        },
+        "how_to_steps": [
+            {"name": "Message monitor type, size, condition",
+             "text": "LCD/LED/CRT, screen size (24-inch, 27-inch, 32-inch, etc.), whether it works, and any damage. Photo of the model plate on the back helps."},
+            {"name": "Flag if CRT or very large",
+             "text": "CRT monitors need advance transport planning. Large ultrawides (32-inch+) may also need larger vehicle access."},
+            {"name": "Confirm access details",
+             "text": "Floor, lift access, whether the monitor is already disconnected or still on the desk. Bulky monitors sometimes need two-person transport."},
+            {"name": "Doorstep pickup at confirmed slot",
+             "text": "Team arrives, disconnects if needed, collects. Cables and monitor stand batched with the same pickup."},
+            {"name": "Downstream: recycling or resale check",
+             "text": "Working recent monitors checked for resale value. Older or damaged monitors route to material recovery — LCD panels are separated from the frame and electronics."},
+        ],
+        "sections": [
+            {"h2": "Why CRT monitors need special handling",
+             "body": (
+                "Cathode ray tube (CRT) monitors — the old boxy tube-type monitors from the 1990s "
+                "and early 2000s — contain small amounts of lead in the glass and phosphors in the "
+                "coating that need specialised handling during recycling. They're also physically "
+                "heavy (a 17-inch CRT can weigh 15-20 kg) and awkward to transport.\n\n"
+                "Practical implication: CRT pickup usually needs 2-3 working days notice for "
+                "transport planning, and the pickup team brings appropriate lifting equipment. "
+                "Don't try to disassemble a CRT yourself — the vacuum tube can implode if broken, "
+                "and the internal circuitry can retain charge even when unplugged."
+             )},
+            {"h2": "Buyback for monitors — when it applies",
+             "body": (
+                "Monitor buyback is a smaller market than laptop or phone buyback because monitor "
+                "prices depreciate quickly. Rough guide for what might qualify:\n\n"
+                "Recent (last 2-3 years) working LCD/LED monitors, 27-inch or larger, from known "
+                "brands (Dell, LG, Samsung, ASUS, HP) may qualify for a modest buyback quote.\n\n"
+                "Gaming monitors with high refresh rates (144Hz, 240Hz) or specialty features (G-Sync, "
+                "FreeSync Premium, OLED) retain more value than standard office monitors.\n\n"
+                "Ultrawide and curved monitors from the last 2 years retain some value.\n\n"
+                "Standard office monitors more than 3 years old typically don't qualify — route to "
+                "material recovery, no payment, free pickup."
+             )},
+            {"h2": "Bulk monitor pickup — office IT refresh",
+             "body": (
+                "Offices retiring 10+ monitors at once (IT refresh, department downsizing, monitor "
+                "upgrade across a team) are a common bulk scenario. Bulk monitor pickup usually "
+                "routes through standard bulk workflow — recent working units checked for buyback, "
+                "older units go to recovery, everything picked up in one visit.\n\n"
+                "For monitor-heavy offices (video production, engineering, trading floors) with "
+                "specialty displays (colour-calibrated, 4K/5K, professional-grade), buyback "
+                "likelihood is higher — mention specs when booking."
+             )},
+        ],
+        "faqs": [
+            {"q": "Where can I recycle an old monitor in Kochi?",
+             "a": "Message Ewaste Kochi with the monitor type, size, condition and your location. Pickup is scheduled based on area and size. Recent working monitors may qualify for reduced buyback; older monitors go to free recycling."},
+            {"q": "Do you take old CRT monitors?",
+             "a": "Yes. CRT monitors need advance transport planning because they're heavy, bulky, and contain small amounts of lead requiring specialised material recovery. Give 2-3 working days notice; the team brings appropriate lifting equipment."},
+            {"q": "Can I get money for an old monitor?",
+             "a": "Sometimes — recent (last 2-3 years) large working LCD/LED monitors from known brands may qualify for a modest buyback quote. Gaming monitors with high refresh rates retain more value. Standard office monitors more than three years old typically don't qualify — free pickup, no payment."},
+            {"q": "Should I disconnect the monitor before pickup?",
+             "a": "If you can, yes. If you can't (part of a large desk setup, cables tangled behind equipment), flag it and the team helps with disconnection at pickup."},
+            {"q": "What about bulk monitor pickup for an office IT refresh?",
+             "a": "Yes — 10+ monitors at once is a standard bulk scenario. Batched with desktops if you're retiring whole setups. Buyback for recent working units, recycling for the rest, one visit."},
+            {"q": "Do you accept damaged or cracked-screen monitors?",
+             "a": "Yes. Cracked-screen or damaged monitors don't qualify for buyback but are accepted for free material recovery. Note the damage in your message so the team knows what to expect."},
+            {"q": "What happens to the monitor after pickup?",
+             "a": "Recent working units may go to resale after inspection. Older or damaged units route to material recovery — LCD panel separated from frame, electronics separated for component recovery, plastic housing recycled."},
+        ],
+        "related_pages": rel(
+            CORE_LINKS["recycling"], CORE_LINKS["computer"], CORE_LINKS["tv"],
+            CORE_LINKS["pickup"], CORE_LINKS["sell"], CORE_LINKS["locations"],
+        ),
+        "route": _std_route(),
+        "whatsapp_message": "Hi, I'd like to recycle a monitor — here are the details:",
+    }
+
+
+def spec_tablet_recycling() -> dict:
+    return {
+        "path": "/tablet-recycling/",
+        "title": "Where to Recycle Old Tablets in Kochi | iPad, Android Tablet Buyback",
+        "description": "Where to recycle old tablets in Kochi — iPads and Android tablets, working or damaged. Free doorstep pickup, condition-based buyback quote, data destruction.",
+        "h1": "Where to Recycle Tablets in Kochi",
+        "breadcrumb_label": "Tablet Recycling",
+        "service_type": "Tablet recycling and buyback",
+        "last_updated": LAST_UPDATED,
+        "lede": (
+            "Tablets fall between phones and laptops in the buyback market — iPads retain "
+            "meaningful value longer than most Android tablets, but the second-hand tablet "
+            "market is real. This page covers what tablets qualify for buyback, why "
+            "factory-resetting matters (especially for iPads with Activation Lock), and how "
+            "damaged or dead tablets get handled."
+        ),
+        "direct_answer": (
+            "To recycle a tablet in Kochi, WhatsApp Ewaste Kochi with the brand, model, "
+            "storage size, condition and photos. Working iPads and recent Android tablets "
+            "usually qualify for a condition-based buyback quote. Factory-reset before pickup "
+            "(iPad: sign out of Apple ID; Android: remove Google account). Damaged or dead "
+            "tablets route to free recycling with data destruction."
+        ),
+        "key_takeaways": [
+            "iPad, Android tablets, Samsung Galaxy Tab, Amazon Fire — all accepted.",
+            "iPads retain resale value best; recent Android tablets qualify too.",
+            "Factory-reset + sign out of Apple ID / Google account before pickup.",
+            "Cracked screens, dead tablets, water damage — all still accepted (recycling only).",
+            "Pickup is free for eligible collections.",
+        ],
+        "accepted_items": {
+            "columns": ["Tablet", "Buyback likelihood", "Notes"],
+            "rows": [
+                ["iPad (last 3-4 years, working)", "High — usually meaningful quote", "iCloud sign-out required for buyback"],
+                ["Older iPad (working)", "Medium — reduced quote", "iOS support cutoff affects value"],
+                ["iPad Pro (any recent generation)", "High — enterprise buyer market", "Include storage + cellular/WiFi info"],
+                ["Samsung Galaxy Tab (recent, working)", "Medium — depends on model", "Higher-end S-series retains more"],
+                ["Android tablet (mid-range, working)", "Low-medium", "Depends on brand and specs"],
+                ["Amazon Fire tablet", "Low — narrow resale market", "Free pickup for recycling"],
+                ["Cracked screen but works", "Reduced buyback OR recycling", "Photo of damage helps"],
+                ["Not working / water-damaged", "Recycling only — no buyback", "Data destruction essential"],
+            ],
+        },
+        "how_to_steps": [
+            {"name": "Get the model + storage info",
+             "text": "iPad: Settings → General → About shows model and storage. Android tablet: Settings → About tablet. Include colour and any accessories (keyboard, Apple Pencil, S-Pen)."},
+            {"name": "Photograph front, back, About screen",
+             "text": "Screen on with About page visible is the cleanest identification for buyback estimate."},
+            {"name": "Factory reset before pickup",
+             "text": "iPad: back up, sign out of Apple ID, then Settings → General → Reset → Erase All Content. Android: sign out of Google, then factory reset. This clears Activation Lock (iPad) or FRP (Android) which blocks resale otherwise."},
+            {"name": "Send WhatsApp with details + photos",
+             "text": "Brand + model + storage + condition + factory-reset status. Team returns condition-based estimate."},
+            {"name": "Doorstep pickup + inspection + payment",
+             "text": "Team collects, inspects, and pays on the spot for accepted quotes. Cash, UPI, or bank transfer."},
+        ],
+        "sections": [
+            {"h2": "Why iPad Activation Lock and Android FRP matter for buyback",
+             "body": (
+                "Every iPad from 2013 onward has Activation Lock tied to the original owner's Apple ID. If "
+                "the tablet still has Activation Lock enabled when handed over, no one can set it "
+                "up — the buyer effectively receives a paperweight. Same for Android tablets since "
+                "roughly 2015 with Factory Reset Protection (FRP): removing the Google account after "
+                "reset unlocks the device for the next owner.\n\n"
+                "For buyback to work: factory reset first, sign out of the account, then hand over. "
+                "The team verifies the tablet reaches the setup screen unlocked before confirming "
+                "the buyback quote.\n\n"
+                "If you can't reset (forgotten Apple ID password, locked out of Google account, "
+                "device won't power on), flag it when booking. The tablet routes through data "
+                "destruction instead of buyback — no buyback payment, but pickup is still free and "
+                "the storage is properly destroyed."
+             )},
+            {"h2": "Accessories — Apple Pencil, keyboards, cases",
+             "body": (
+                "iPad accessories often have meaningful independent value. Apple Pencil (both "
+                "generations), Magic Keyboard, Smart Keyboard Folio, first-party Smart Covers all "
+                "retain some resale value.\n\n"
+                "Include accessories in the pickup — either they add to the buyback quote (for "
+                "the working iPad + accessories bundle) or they get their own smaller quote if the "
+                "iPad itself doesn't qualify. Third-party keyboards and cases usually don't have "
+                "meaningful buyback value but are still accepted for recycling."
+             )},
+            {"h2": "Damaged tablets — cracked screens, dead batteries",
+             "body": (
+                "Cracked-screen tablets: often still qualify for reduced buyback if the tablet "
+                "works despite the crack. Touch input failing (partial dead zones, ghost touches) "
+                "reduces the quote significantly.\n\n"
+                "Dead battery: swelling is a real risk with older iPads and Android tablets kept in "
+                "hot conditions. If the battery is swelling (screen popping out of the frame, "
+                "casing curved), flag it and photograph — battery pickup goes through separate "
+                "safe-transport handling.\n\n"
+                "Water-damaged: usually no buyback (internal corrosion unpredictable). Route: "
+                "recycling with data destruction — assume storage may still be technically "
+                "recoverable."
+             )},
+        ],
+        "faqs": [
+            {"q": "How much is my old iPad worth?",
+             "a": "Depends on model, storage size, cellular/WiFi variant, and condition. Recent iPads (last 3-4 years) usually get meaningful quotes; iPad Pro retains more value than base iPad or iPad Mini. Send About screen + photos for a specific number."},
+            {"q": "Do you buy old Android tablets too?",
+             "a": "Yes. Recent Samsung Galaxy Tab (S-series especially) qualifies. Mid-range Android tablets get reduced quotes. Very old or low-end tablets usually go to recycling only."},
+            {"q": "What about my old iPad with a cracked screen?",
+             "a": "If it still works, reduced buyback quote is possible. If touch input is failing or the crack has made the tablet unusable, recycling only. Photo of the damage helps the estimate."},
+            {"q": "Do I need to remove Activation Lock before pickup?",
+             "a": "Yes for buyback — factory reset + sign out of Apple ID clears Activation Lock. If you can't (forgotten Apple ID password, device won't power on), flag it — the tablet routes through data destruction instead of buyback."},
+            {"q": "What about Apple Pencil and iPad keyboard accessories?",
+             "a": "Include them in the pickup. First-party accessories (Apple Pencil, Magic Keyboard, Smart Keyboard) have their own resale value — either bundled into the iPad quote or separately quoted."},
+            {"q": "Do you take Amazon Fire tablets?",
+             "a": "Yes for recycling. Amazon Fire tablets have a much narrower second-hand resale market than iPads or high-end Android tablets, so meaningful buyback quotes are rare — free pickup, material recovery. If you're deregistering the tablet from your Amazon account first (Settings → My Account → Deregister), that's the cleanest handover; if you can't, flag it and the tablet routes through data destruction before recycling."},
+            {"q": "What if the battery is swollen?",
+             "a": "Flag it when booking and include a photo showing the swelling. Swollen batteries need separate safe-transport handling — the team brings appropriate containment. Leave the swollen battery inside the tablet (do not try to remove or puncture it) and keep the tablet on a non-flammable surface until pickup."},
+        ],
+        "related_pages": rel(
+            CORE_LINKS["mobile"], CORE_LINKS["sell"], CORE_LINKS["marketplace"],
+            CORE_LINKS["data"], CORE_LINKS["battery"], CORE_LINKS["pickup"],
+        ),
+        "route": _std_route(),
+        "whatsapp_message": "Hi, I'd like to recycle a tablet — here are the details:",
+    }
+
+
+def spec_cctv_recycling() -> dict:
+    return {
+        "path": "/cctv-recycling/",
+        "title": "CCTV Recycling in Kochi | DVR/NVR Disposal + Video Data Destruction",
+        "description": "CCTV recycling in Kochi — DVR, NVR, cameras and cabling. Video-record data on internal drives requires physical destruction. Free pickup for eligible collections.",
+        "h1": "CCTV Recycling in Kochi",
+        "breadcrumb_label": "CCTV Recycling",
+        "service_type": "CCTV and surveillance equipment recycling",
+        "last_updated": LAST_UPDATED,
+        "lede": (
+            "Old CCTV equipment — cameras, DVRs, NVRs, cabling, monitors, storage drives — is "
+            "one of the most-overlooked data-bearing e-waste categories. A DVR retiring from a "
+            "shop or apartment complex holds months or years of video records on its internal "
+            "drive. This page covers what CCTV equipment gets accepted, why DVR/NVR drives need "
+            "certified destruction, and how large surveillance-system upgrades get scheduled."
+        ),
+        "direct_answer": (
+            "To recycle CCTV equipment in Kochi, WhatsApp Ewaste Kochi with the equipment "
+            "type (DVR/NVR, cameras, monitors), rough count and your location. DVR/NVR "
+            "internal drives hold video records and need physical destruction before recycling. "
+            "Certificate of Destruction available on request. Doorstep pickup is free for "
+            "eligible collections; on-site drive destruction available for high-sensitivity "
+            "surveillance data."
+        ),
+        "key_takeaways": [
+            "DVRs and NVRs hold video records on internal drives — treat as data-bearing.",
+            "Physical drive destruction recommended default for retiring surveillance systems.",
+            "Cameras, cabling, monitors, power supplies — all accepted.",
+            "Common upgrade scenarios: analog to IP, on-site to cloud, standard to AI-enabled.",
+            "Certificate of Destruction available on request for compliance.",
+        ],
+        "accepted_items": {
+            "columns": ["CCTV item", "Route", "Notes"],
+            "rows": [
+                ["DVRs (analog CCTV recorder)", "Physical drive destruction + material recovery", "Video record data on internal drive"],
+                ["NVRs (IP CCTV recorder)", "Physical drive destruction + material recovery", "Larger storage typically"],
+                ["Analog CCTV cameras", "Material recovery", "Include mounting brackets"],
+                ["IP CCTV cameras (bullet, dome, PTZ)", "Material recovery; recent PoE models sometimes buyback", "Include lenses"],
+                ["Structured cabling (coax, Cat5/Cat6 CCTV runs)", "Copper recovery", "Batch by rough volume"],
+                ["CCTV monitors (dedicated surveillance displays)", "Material recovery", "Include stand and cables"],
+                ["Power supplies, PoE switches (CCTV-dedicated)", "Material recovery", "Batch with main equipment"],
+                ["Video analytics servers (AI-enabled CCTV)", "Data destruction + material recovery", "Higher sensitivity"],
+            ],
+        },
+        "how_to_steps": [
+            {"name": "Message equipment list + install location",
+             "text": "Rough count by type (cameras, DVR/NVR, monitors, PoE switches). Location where the system is installed (business, apartment, campus)."},
+            {"name": "Flag video-record sensitivity",
+             "text": "Say if the video records held anything sensitive (medical, financial, security-controlled premises). This determines whether physical shredding with Certificate is needed or software wiping is sufficient."},
+            {"name": "Confirm scheduling",
+             "text": "Multi-camera system removal usually needs an installer + our pickup team coordinated. Scheduling around business hours where relevant."},
+            {"name": "System removal + pickup",
+             "text": "For active systems being decommissioned, cabling and mounting removal typically happens first (often by your CCTV vendor); Ewaste Kochi collects the removed equipment. Sometimes both happen in one coordinated visit."},
+            {"name": "Drive destruction + documentation",
+             "text": "DVR/NVR drives route to physical destruction after pickup. Certificate of Destruction issued for the drive(s) after the destruction step. Cabling and cameras go to material recovery."},
+        ],
+        "sections": [
+            {"h2": "Why DVR and NVR drives specifically need certified destruction",
+             "body": (
+                "A DVR or NVR in service for 1-3 years has recorded thousands of hours of video "
+                "from your premises. Depending on where the cameras are installed, that video may "
+                "include: customers, employees, patients, students, delivery drivers, security "
+                "incidents, or restricted-access areas.\n\n"
+                "When the DVR/NVR is retired, that internal drive goes with it unless someone "
+                "specifically routes it through data destruction. Software wiping is technically "
+                "an option but physical shredding is the safer default for surveillance data "
+                "because the failure modes of software wiping (silent wipe failures, bad sectors, "
+                "already-failed drives) are unacceptable when the data is video of people.\n\n"
+                "For commercial premises with data-protection obligations under DPDP Act 2023 or "
+                "internal policy — retail stores with customer video, offices with employee video, "
+                "medical premises with patient video — physical drive shredding with per-drive "
+                "Certificate of Destruction is the recommended approach."
+             )},
+            {"h2": "Common CCTV recycling scenarios",
+             "body": (
+                "Analog-to-IP upgrade — replacing old analog CCTV with modern IP-based cameras. "
+                "Both the old DVR (with video records) and the old analog cameras retire together. "
+                "New IP system installed separately. DVR routed through certified drive destruction.\n\n"
+                "On-site-to-cloud upgrade — replacing the local DVR/NVR with cloud-based storage. "
+                "Cameras often stay in place; the DVR/NVR retires. Drive destruction essential.\n\n"
+                "Standard-to-AI upgrade — replacing standard CCTV with AI-enabled cameras and "
+                "analytics servers. Bigger project; retiring both the old DVR/NVR and any old "
+                "analytics servers.\n\n"
+                "Business closure / relocation — full CCTV system decommissioning as part of an "
+                "office move or shutdown. Combined with the general office clearance pickup, but "
+                "the DVR/NVR handling is flagged separately for certified destruction."
+             )},
+            {"h2": "Scheduling CCTV system removal",
+             "body": (
+                "Removing an active CCTV system usually involves two parties: your CCTV vendor "
+                "(who removes cameras from walls, uninstalls DVR/NVR from rack, disconnects "
+                "cabling) and Ewaste Kochi (who collects the removed equipment and routes for "
+                "recycling + drive destruction).\n\n"
+                "Coordination options:\n\n"
+                "1. Vendor removes and stages the equipment; Ewaste Kochi pickup scheduled after "
+                "removal is complete.\n\n"
+                "2. Coordinated single-visit — vendor removes while Ewaste Kochi team is on-site, "
+                "equipment transferred directly.\n\n"
+                "For sensitive premises (banks, hospitals, jewellery stores, government), option 2 "
+                "with chain-of-custody documentation is preferred so drives don't sit in interim "
+                "storage."
+             )},
+        ],
+        "faqs": [
+            {"q": "How do I dispose of an old CCTV DVR?",
+             "a": "Message Ewaste Kochi with equipment details and location. The DVR's internal drive is routed through physical destruction (recommended default for video records) before the rest of the DVR enters material recovery. Certificate of Destruction available on request."},
+            {"q": "Is data on a DVR really sensitive?",
+             "a": "Depends on where the cameras are installed. A DVR from an active business, medical facility, school, or apartment complex has video of people — customers, patients, students, residents, staff. Under DPDP Act 2023, this is personal data and should be handled with certified destruction when the DVR is retired."},
+            {"q": "Can you take old CCTV cameras separately from the DVR?",
+             "a": "Yes. Cameras alone (no DVR) don't hold data on their own — they stream to the DVR/NVR. Pickup and material recovery is straightforward, no drive-destruction step needed."},
+            {"q": "What about wireless CCTV cameras with local SD card storage?",
+             "a": "Flag if the camera has an SD card. SD cards from CCTV cameras have the same video-record sensitivity as DVR drives — either remove and destroy separately or hand over with the camera for destruction."},
+            {"q": "Do you handle CCTV removal from the wall / uninstallation?",
+             "a": "That's usually the CCTV vendor's role. Ewaste Kochi collects the equipment after removal. Some coordinated pickups schedule the vendor's removal and our collection together (chain-of-custody control)."},
+            {"q": "What certificate can I get for the DVR drive destruction?",
+             "a": "Per-drive Certificate of Destruction — serialised, showing the drive serial number, destruction method (physical shredding), date, and destruction operator reference. See /data-destruction-certificate-sample/ for the format."},
+            {"q": "How much notice do I need for CCTV pickup?",
+             "a": "For a single DVR pickup: 1-2 working days. For a full CCTV system decommissioning (multiple cameras + DVR + cabling): 3-5 working days, coordinated with your CCTV vendor's removal schedule."},
+        ],
+        "related_pages": rel(
+            CORE_LINKS["data"], CORE_LINKS["hdd"], CORE_LINKS["cert_sample"],
+            CORE_LINKS["corporate"], CORE_LINKS["pickup"], ("/retail-e-waste-recycling/", "Retail e-waste (POS + CCTV context)"),
+        ),
+        "route": _std_route(),
+        "whatsapp_message": "Hi, I'd like to recycle CCTV equipment — here are the details:",
+    }
+
+
+def spec_ups_recycling() -> dict:
+    return {
+        "path": "/ups-recycling/",
+        "title": "UPS Recycling in Kochi | Home + Office UPS Battery Disposal",
+        "description": "UPS recycling in Kochi — home and office UPS units, single and battery-bank installations. Safe battery separation, material recovery for the electronics.",
+        "h1": "UPS Recycling in Kochi",
+        "breadcrumb_label": "UPS Recycling",
+        "service_type": "UPS unit recycling",
+        "last_updated": LAST_UPDATED,
+        "lede": (
+            "UPS units — the battery-backed power supplies protecting computers, servers, "
+            "network cabinets and home electronics from power fluctuations — retire on a "
+            "steady cycle because internal batteries wear out every 3-5 years. This page "
+            "covers what UPS types get accepted, why battery separation matters, and how "
+            "bulk UPS retirement (server rooms, offices with battery banks) is planned."
+        ),
+        "direct_answer": (
+            "To recycle a UPS unit in Kochi, WhatsApp Ewaste Kochi with the type (home / "
+            "office small / rack-mount / battery bank), rough count and your location. "
+            "Batteries are separated at pickup for lead-acid recycling; the electronics of "
+            "the UPS route to material recovery. Doorstep pickup is free for eligible "
+            "collections; large battery banks may need scheduled transport."
+        ),
+        "key_takeaways": [
+            "Home UPS, office UPS, rack-mount UPS, industrial battery banks — all accepted.",
+            "Internal batteries are separated at pickup for lead-acid recycling stream.",
+            "Bulk battery banks (server rooms, telecom) need scheduled dedicated transport.",
+            "Working recent UPS units rarely have buyback demand; usually recycling only.",
+            "Pickup is free for eligible collections.",
+        ],
+        "accepted_items": {
+            "columns": ["UPS type", "Route", "Notes"],
+            "rows": [
+                ["Home UPS (small, 600-1500VA)", "Battery separation + material recovery", "Common: for TV, computer, router"],
+                ["Office small UPS (line-interactive, 1-3 kVA)", "Battery separation + material recovery", "Under-desk or on-shelf typical"],
+                ["Rack-mount UPS (1U, 2U, server-room)", "Battery separation + material recovery", "Coordinate with IT for removal"],
+                ["Large tower UPS (5-10 kVA)", "Battery separation + material recovery", "Bulky — advance transport"],
+                ["Industrial UPS with battery bank (10+ batteries)", "Bank-scale battery pickup + electronics recovery", "Dedicated transport"],
+                ["Old inverter-UPS hybrid units", "Battery + electronics + inverter recovery", "Common in Kerala homes"],
+                ["UPS batteries only (already removed)", "Lead-acid recycling stream", "Confirm quantity and battery specs"],
+            ],
+        },
+        "how_to_steps": [
+            {"name": "Message UPS type + count + location",
+             "text": "Home UPS or office UPS or rack-mount or battery bank. Rough count. Address and floor/access notes if apartment or office."},
+            {"name": "Flag battery condition",
+             "text": "Battery leakage, swelling, or corrosion needs advance flag so the team brings appropriate containment. Photo helps."},
+            {"name": "Confirm removal responsibility",
+             "text": "For rack-mount and connected UPS: usually your IT handles rack removal and disconnection; Ewaste Kochi collects the removed unit. For plug-and-play home/office UPS: just unplug and hand over."},
+            {"name": "Doorstep or on-site collection",
+             "text": "Small UPS: routine doorstep. Rack-mount or large tower: sometimes on-site with removal support. Battery banks: dedicated transport."},
+            {"name": "Downstream — battery + electronics separation",
+             "text": "At the facility, batteries are separated from the UPS chassis. Lead-acid batteries route to established lead-acid recycling; the chassis electronics route to material recovery."},
+        ],
+        "sections": [
+            {"h2": "Why battery separation matters for UPS recycling",
+             "body": (
+                "The UPS chassis (electronics, transformer, chassis metal) and the internal "
+                "batteries (typically sealed lead-acid) route to completely different recycling "
+                "streams. Lead-acid batteries have a well-established recycling infrastructure in "
+                "India — lead is recovered for reuse in new batteries; acid is neutralised. UPS "
+                "electronics route to standard e-waste material recovery.\n\n"
+                "For safe transport, batteries are separated from the UPS chassis at pickup (or "
+                "at the facility, depending on the UPS size). This is why UPS units aren't just "
+                "'thrown in' with general e-waste — the separate-stream handling starts at the "
+                "pickup itself."
+             )},
+            {"h2": "Bulk UPS retirement — server rooms and telecom",
+             "body": (
+                "Offices, telecom sites, apartment building generator-rooms, and small data "
+                "centres retire full battery banks at once — 4, 8, 20, or more heavy lead-acid "
+                "units at a time. Bulk battery pickup is a scheduling and transport problem "
+                "different from single UPS pickup:\n\n"
+                "Weight — a 100Ah SLA battery weighs ~30 kg. A bank of 8 is 240 kg. Bulk "
+                "pickup needs proper vehicle capacity, load securing, and lifting equipment.\n\n"
+                "Chain of custody — some sites have formal documentation requirements for battery "
+                "disposal (particularly telecom, data centre, healthcare). Per-battery serial "
+                "logging available under ITAD workflow.\n\n"
+                "Scheduling — advance planning (3-5 working days minimum) so transport is lined "
+                "up. Very large jobs may need multiple pickup visits."
+             )},
+            {"h2": "When UPS units might qualify for buyback",
+             "body": (
+                "Working, recent (last 2 years) UPS units in good condition may occasionally "
+                "qualify for reduced buyback — the buyback market for UPS is smaller than for "
+                "laptops or phones, but it exists. Enterprise-grade rack-mount UPS (APC, Eaton, "
+                "Emerson) is more likely to have resale value than consumer-grade home UPS.\n\n"
+                "For most UPS retirement scenarios, though, the internal battery has degraded to "
+                "the point where the unit doesn't hold charge — which is why it's being retired "
+                "in the first place. Free pickup + battery separation + material recovery is the "
+                "typical route."
+             )},
+        ],
+        "faqs": [
+            {"q": "How do I recycle an old UPS in Kochi?",
+             "a": "Message Ewaste Kochi with UPS type, count, and your location. Doorstep pickup is arranged based on area. Batteries are separated at pickup for lead-acid recycling; the electronics route to material recovery."},
+            {"q": "Can I just recycle the UPS battery without the chassis?",
+             "a": "Yes. UPS batteries can be recycled separately if you've already removed them from the chassis. Flag battery specs (voltage, capacity, count) in your message. Lead-acid batteries route to established recycling with lead recovery."},
+            {"q": "What about battery leakage or swelling?",
+             "a": "Flag it when booking and include a photo. Leaking or swollen batteries need appropriate containment for safe transport. Do not attempt to puncture, crush, or manually drain a leaking battery yourself."},
+            {"q": "How does UPS pickup work for a server room?",
+             "a": "Rack-mount UPS removal usually coordinated with your IT team (rack removal, disconnection). Ewaste Kochi collects the removed units. Battery banks need dedicated transport — 3-5 working days notice typical."},
+            {"q": "Do you take old inverter batteries too?",
+             "a": "Yes — same lead-acid recycling stream as UPS batteries. Inverter units (the electronics) recycle separately. See also /battery-recycling/ for the broader battery flow."},
+            {"q": "Is there any buyback for working UPS units?",
+             "a": "Rare, but possible for enterprise-grade rack-mount UPS from the last 2 years. Consumer-grade home UPS usually goes to recycling only. Most UPS retirement scenarios involve batteries that no longer hold charge — no buyback in those cases."},
+            {"q": "How much notice for bulk battery bank pickup?",
+             "a": "3-5 working days minimum for standard battery bank pickup (8-20 units). Larger banks (50+ batteries, telecom-scale) may need 1-2 weeks for transport and destination-facility coordination."},
+        ],
+        "related_pages": rel(
+            CORE_LINKS["battery"], ("/battery-pickup/", "Battery pickup"),
+            CORE_LINKS["itad"], CORE_LINKS["corporate"], CORE_LINKS["pickup"],
+            CORE_LINKS["locations"],
+        ),
+        "route": _std_route(),
+        "whatsapp_message": "Hi, I'd like to recycle UPS units — here are the details:",
+    }
+
+
+def spec_gaming_console_recycling() -> dict:
+    return {
+        "path": "/gaming-console-recycling/",
+        "title": "Where to Recycle Gaming Consoles in Kochi | Buyback",
+        "description": "Where to recycle old gaming consoles in Kochi — Xbox, PlayStation, Nintendo Switch, controllers and accessories. Buyback for recent working consoles, free pickup.",
+        "h1": "Where to Recycle Gaming Consoles in Kochi",
+        "breadcrumb_label": "Gaming Console Recycling",
+        "service_type": "Gaming console recycling and buyback",
+        "last_updated": LAST_UPDATED,
+        "lede": (
+            "Old gaming consoles have an active second-hand market — a working PS4 or Xbox One "
+            "from 5-7 years ago still finds buyers, and recent PS5/Xbox Series units retain "
+            "meaningful value. This page covers what consoles qualify for buyback, how to "
+            "handle the account sign-out step before pickup, and what happens to controllers "
+            "and accessories."
+        ),
+        "direct_answer": (
+            "To recycle a gaming console in Kochi, WhatsApp Ewaste Kochi with the console "
+            "type (PlayStation / Xbox / Nintendo Switch / Wii / other), generation, condition "
+            "and photos. Working consoles usually qualify for a condition-based buyback quote. "
+            "Sign out of PlayStation Network / Xbox Live / Nintendo account before pickup. "
+            "Non-working consoles route to free recycling."
+        ),
+        "key_takeaways": [
+            "PlayStation, Xbox, Nintendo Switch, Wii, older consoles — all accepted.",
+            "Working recent consoles (PS5, PS4, Xbox Series, Xbox One, Switch) usually get a buyback quote.",
+            "Sign out of your gaming account (PSN, Xbox Live, Nintendo) before pickup.",
+            "Controllers, cables, games, headsets — batch with the console pickup.",
+            "Pickup is free for eligible collections.",
+        ],
+        "accepted_items": {
+            "columns": ["Console / accessory", "Buyback likelihood", "Notes"],
+            "rows": [
+                ["PlayStation 5 (working)", "High — active resale market", "Include controller + cables"],
+                ["PlayStation 4 (working)", "Medium — reduced quote", "Slim and Pro variants different"],
+                ["Xbox Series X/S (working)", "High — active resale market", "Include controller"],
+                ["Xbox One (working)", "Medium — reduced quote", "S, X variants different"],
+                ["Nintendo Switch (working)", "High — sustained resale market", "Include Joy-Cons + dock"],
+                ["Older consoles (PS3, Xbox 360, Wii, PSP)", "Low — often recycling only", "Some collector demand for specific models"],
+                ["Non-working consoles (any generation)", "Recycling only", "Free pickup, no payment"],
+                ["Controllers (loose or with console)", "Small buyback for recent + working", "Batch with console"],
+                ["Games (physical discs / cartridges)", "Case-by-case", "Include game titles if selling"],
+            ],
+        },
+        "how_to_steps": [
+            {"name": "Get console details",
+             "text": "Console type, generation (PS4 / PS4 Slim / PS4 Pro etc.), storage size if known, condition. Include a photo of the console + controller + About screen (Settings → System)."},
+            {"name": "Sign out of your gaming account",
+             "text": "PlayStation: Settings → Users and Accounts → Sign out. Xbox: Settings → Account → Sign-out. Nintendo Switch: Settings → User → Unlink Nintendo Account. This clears the console for the next owner."},
+            {"name": "Factory reset (recommended for buyback)",
+             "text": "PS: Settings → System → System Software → Reset Options → Restore Default Settings + delete user data. Xbox: Settings → System → Console info → Reset console → Reset and remove everything. Switch: Settings → System → Initialize."},
+            {"name": "Batch controllers and accessories",
+             "text": "Include original controllers, cables, headsets, external drives, and any physical games in the pickup. First-party accessories often add to the buyback quote."},
+            {"name": "Doorstep pickup + inspection + payment",
+             "text": "Team collects, inspects, and pays on the spot for accepted quotes. Payment options: cash, UPI, or bank transfer."},
+        ],
+        "sections": [
+            {"h2": "Why signing out of your gaming account matters",
+             "body": (
+                "A gaming console signed into your account carries your purchase history, "
+                "downloaded games (which are licensed to your account), payment methods, "
+                "friend list, saved games, and — for PSN/Xbox Live — sometimes stored credit "
+                "for future purchases.\n\n"
+                "For buyback to work cleanly: sign out before pickup, factory reset, then hand "
+                "over. The buyer receives a clean console; you don't leave any residual purchase "
+                "authority or payment method risk.\n\n"
+                "If you can't sign out (forgotten password, account issue, console not "
+                "powering on to sign out), flag it when booking. The console routes through "
+                "data destruction (internal storage wipe) instead of buyback — no buyback "
+                "payment, but pickup is still free and no residual data risk to you."
+             )},
+            {"h2": "What consoles actually sell in the second-hand market",
+             "body": (
+                "Current-generation consoles (PS5, Xbox Series X/S) — active resale market. "
+                "Recent working units get meaningful buyback quotes. Digital-only editions "
+                "quote lower than disc editions.\n\n"
+                "Last-generation consoles (PS4, Xbox One, Nintendo Switch) — still active resale "
+                "market. Slim/Pro variants of PS4 and X variants of Xbox One command higher "
+                "quotes than base models. Nintendo Switch has a particularly strong resale market "
+                "because of the portable use case.\n\n"
+                "Older consoles (PS3, Xbox 360, Wii, PSP, DS) — limited but existing resale "
+                "market. Working units may qualify for small buyback; non-working usually "
+                "recycling only. Some specific models have collector demand.\n\n"
+                "Retro consoles (Nintendo 64, Super Nintendo, original PlayStation, Sega Genesis) — "
+                "specialist collector market. Not typical buyback flow. Rare working units may "
+                "have specific value — mention model and specific game/accessory bundles."
+             )},
+            {"h2": "Games, controllers, and accessories",
+             "body": (
+                "Original first-party controllers usually add small buyback value. Third-party "
+                "controllers rarely do. Batch either way — all accepted.\n\n"
+                "Physical games (disc for PS/Xbox, cartridge for Switch, older cartridge for "
+                "retro consoles) can sometimes have their own resale value, especially for "
+                "specific titles. Mention which games you're including if you're selling the "
+                "console.\n\n"
+                "First-party headsets, VR headsets (PSVR, PSVR2, Meta Quest with console pairing), "
+                "and external drives paired with the console usually have some value. Batch with "
+                "the console pickup.\n\n"
+                "Chargers, cables, controller batteries, and generic accessories usually don't "
+                "add buyback value but are still accepted for recycling."
+             )},
+        ],
+        "faqs": [
+            {"q": "How much can I get for an old PlayStation 4?",
+             "a": "Depends on model (base / Slim / Pro), storage size, condition, and included accessories. Working PS4 units typically qualify for a reduced-but-meaningful buyback quote. Send About screen photo + condition + accessories info for a specific estimate."},
+            {"q": "Do you buy old Xbox One consoles?",
+             "a": "Yes. Working Xbox One S and X models have resale demand; base Xbox One quotes lower. Include controllers and any external drives paired with the console."},
+            {"q": "What about my Nintendo Switch?",
+             "a": "Nintendo Switch has particularly strong resale demand. Working Switch (regular, OLED, Lite) all qualify for meaningful buyback quotes. Include Joy-Cons and dock. Mention if it's a special edition (Zelda, Pokemon, etc.) — those retain extra value."},
+            {"q": "Do you take really old consoles like PS2 or Xbox 360?",
+             "a": "Yes for pickup. Working PS3 / Xbox 360 / Wii may qualify for small buyback. PS2 / original Xbox / older usually recycling only, though some specific models have collector demand — worth mentioning the specific model."},
+            {"q": "Should I keep my games and account?",
+             "a": "Digital games are tied to your account — if you sign out and reset, the new owner can't play your digital library (they'd need to buy them again on their own account). Physical games are separately tradeable. For account: back up saves to cloud (PSN/Xbox), then sign out and reset."},
+            {"q": "What about VR headsets?",
+             "a": "PSVR and PSVR2 (paired with PlayStation): accepted, often bundled with the console for buyback. Meta Quest (standalone): factory reset first (removes Facebook/Meta account), then pickup. Recent working headsets qualify for buyback."},
+            {"q": "Can I recycle the games I have but not the console?",
+             "a": "Physical game discs/cartridges: yes, though resale value is very title-specific. Mention which games you have. Damaged discs recycle as plastic."},
+        ],
+        "related_pages": rel(
+            CORE_LINKS["sell"], CORE_LINKS["marketplace"], CORE_LINKS["recycling"],
+            CORE_LINKS["data"], CORE_LINKS["pickup"], CORE_LINKS["decision"],
+        ),
+        "route": _std_route(),
+        "whatsapp_message": "Hi, I'd like to recycle a gaming console — here are the details:",
+    }
+
+
+# Extend ALL_SPECS with Batch 3.
+ALL_SPECS.extend([
+    ("monitor-recycling",         spec_monitor_recycling),
+    ("tablet-recycling",          spec_tablet_recycling),
+    ("cctv-recycling",            spec_cctv_recycling),
+    ("ups-recycling",             spec_ups_recycling),
+    ("gaming-console-recycling",  spec_gaming_console_recycling),
+])
+
+
 def run_one(spec_dict: dict, extra_args: list[str]) -> tuple[int, str, str]:
     """
     Feed the spec through generate-pillar-page.py via a JSON temp file.
