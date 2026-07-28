@@ -283,6 +283,12 @@ import { telLink, whatsappLink } from "../data/site";
     :global(.ewlf-open .ewlf-launcher) {
       display: none;
     }
+    /* Also hide it while the mobile hamburger nav is open — otherwise the
+       floating bubble sits over the nav items / page content the nav
+       reveals below itself. */
+    :global(body:has(#mobile-nav:not([hidden])) .ewlf-launcher) {
+      display: none;
+    }
     :global(.ewlf-launcher) {
       right: 12px;
       bottom: 12px;
