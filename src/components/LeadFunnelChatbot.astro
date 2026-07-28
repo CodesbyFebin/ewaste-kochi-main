@@ -254,17 +254,47 @@ import { telLink, whatsappLink } from "../data/site";
     text-decoration: none;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 600px) {
+    /* Full-viewport panel on mobile so it fully covers the sticky header
+       (which was still visible + interactive above the old anchored panel
+       — the v1 site did this too and v2 lost it). Rounded corners flattened
+       for the edge-to-edge feel. */
     :global(.ewlf-panel) {
-      right: 8px;
-      left: 8px;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
       width: auto;
       max-width: none;
-      bottom: 76px;
+      max-height: none;
+      border-radius: 0;
+      border: none;
+      /* Cover the header (which lifts to z-index 9500 when the mobile nav
+         is open — see Header.astro). Also above the launcher (9001) so the
+         floating bubble doesn't poke through. */
+      z-index: 9600;
+      /* Respect the notch / dynamic island. */
+      padding-top: env(safe-area-inset-top);
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+    /* Hide the launcher while the panel is open — it's redundant and its
+       "AI help / Pickup / quote" bubble was showing through the panel edge
+       in the screenshot the user reported. */
+    :global(.ewlf-open .ewlf-launcher) {
+      display: none;
     }
     :global(.ewlf-launcher) {
       right: 12px;
       bottom: 12px;
+    }
+  }
+  /* Body-scroll lock while the mobile chatbot is open — prevents the page
+     underneath from scrolling when the panel's internal areas hit their
+     ends. Only applied on small viewports where the panel is fullscreen. */
+  @media (max-width: 600px) {
+    :global(body:has(.ewlf-open)) {
+      overflow: hidden;
+      touch-action: none;
     }
   }
 </style>
