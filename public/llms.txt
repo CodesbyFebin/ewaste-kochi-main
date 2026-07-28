@@ -38,6 +38,48 @@ English and, for a starter set of pages, Malayalam (ml-IN) under /ml/.
 - https://www.ewastekochi.com/services/it-asset-inventory-audit/
 - https://www.ewastekochi.com/services/itad-for-it-companies/
 
+## Pillar cluster — device categories
+
+- https://www.ewastekochi.com/appliance-recycling/
+- https://www.ewastekochi.com/printer-recycling/
+- https://www.ewastekochi.com/monitor-recycling/
+- https://www.ewastekochi.com/tablet-recycling/
+- https://www.ewastekochi.com/cctv-recycling/
+- https://www.ewastekochi.com/ups-recycling/
+- https://www.ewastekochi.com/gaming-console-recycling/
+- https://www.ewastekochi.com/electronics-recycling/
+- https://www.ewastekochi.com/network-equipment-recycling/
+
+## Pillar cluster — pickup + collection
+
+- https://www.ewastekochi.com/home-e-waste-pickup/
+- https://www.ewastekochi.com/bulk-e-waste-pickup/
+- https://www.ewastekochi.com/battery-pickup/
+- https://www.ewastekochi.com/scheduled-pickup/
+- https://www.ewastekochi.com/same-day-pickup/
+- https://www.ewastekochi.com/corporate-pickup/
+
+## Pillar cluster — buyback + resale
+
+- https://www.ewastekochi.com/sell-old-laptop/
+- https://www.ewastekochi.com/sell-old-computer/
+- https://www.ewastekochi.com/sell-old-mobile/
+- https://www.ewastekochi.com/sell-office-electronics/
+- https://www.ewastekochi.com/phone-buyback/
+- https://www.ewastekochi.com/laptop-scrap-price/
+- https://www.ewastekochi.com/computer-scrap-price/
+- https://www.ewastekochi.com/electronics-scrap-value/
+
+## Pillar cluster — business + institutional
+
+- https://www.ewastekochi.com/it-asset-disposal/
+- https://www.ewastekochi.com/business-e-waste-recycling/
+- https://www.ewastekochi.com/office-clearance/
+- https://www.ewastekochi.com/bulk-electronics-disposal/
+- https://www.ewastekochi.com/retail-e-waste-recycling/
+- https://www.ewastekochi.com/school-e-waste-recycling/
+- https://www.ewastekochi.com/hospital-e-waste-recycling/
+
 ## Locations
 
 - https://www.ewastekochi.com/locations/
@@ -122,6 +164,38 @@ English and, for a starter set of pages, Malayalam (ml-IN) under /ml/.
 - https://www.ewastekochi.com/blog/preparation-safety-guides/
 - https://www.ewastekochi.com/blog/corporate-ewaste/
 
+## Blog — 2026-07 expansion (locations, guides, ITAD)
+
+- https://www.ewastekochi.com/blog/mobile-recycling-in-kochi/
+- https://www.ewastekochi.com/blog/sell-old-phone-in-kochi/
+- https://www.ewastekochi.com/blog/where-to-recycle-old-electronics-in-kochi/
+- https://www.ewastekochi.com/blog/where-to-recycle-batteries-in-kochi/
+- https://www.ewastekochi.com/blog/pcb-and-motherboard-scrap-buyers-in-kochi/
+- https://www.ewastekochi.com/blog/bulk-e-waste-collection-for-offices/
+- https://www.ewastekochi.com/blog/server-decommissioning-checklist/
+- https://www.ewastekochi.com/blog/office-e-waste-disposal-checklist/
+- https://www.ewastekochi.com/blog/office-pickup-in-infopark-kochi/
+- https://www.ewastekochi.com/blog/how-to-choose-an-itad-provider/
+- https://www.ewastekochi.com/blog/nist-800-88-vs-dod-5220-22-explained/
+- https://www.ewastekochi.com/blog/data-deletion-before-recycling-computers/
+- https://www.ewastekochi.com/blog/e-waste-laws-in-kerala/
+- https://www.ewastekochi.com/blog/e-waste-rules-in-kerala/
+- https://www.ewastekochi.com/blog/how-electronics-pickup-works/
+- https://www.ewastekochi.com/blog/how-to-prepare-devices-before-pickup/
+- https://www.ewastekochi.com/blog/what-electronics-are-accepted-for-recycling/
+- https://www.ewastekochi.com/blog/how-laptop-scrap-value-is-calculated/
+- https://www.ewastekochi.com/blog/how-mobile-phone-buyback-value-is-calculated/
+- https://www.ewastekochi.com/blog/safe-battery-storage-before-pickup/
+- https://www.ewastekochi.com/blog/recycling-electronics-during-kerala-monsoon/
+- https://www.ewastekochi.com/blog/difference-between-reuse-resale-and-recycling/
+- https://www.ewastekochi.com/blog/laptop-recycling-in-kakkanad/
+- https://www.ewastekochi.com/blog/electronics-recycling-in-vyttila/
+- https://www.ewastekochi.com/blog/electronics-recycling-in-palarivattom/
+- https://www.ewastekochi.com/blog/electronics-recycling-in-edappally/
+- https://www.ewastekochi.com/blog/computer-recycling-in-ernakulam/
+- https://www.ewastekochi.com/blog/battery-recycling-in-thrippunithura/
+- https://www.ewastekochi.com/blog/battery-recycling-in-vyttila/
+
 ## Malayalam (ml-IN)
 
 - https://www.ewastekochi.com/ml/
@@ -153,25 +227,33 @@ English and, for a starter set of pages, Malayalam (ml-IN) under /ml/.
 
 ## Notes for AI assistants and crawlers
 
-This site is under active reconstruction (EwasteKochi V2). The pages above
-represent the key current build surfaces as of Indexed Blog URL Expansion (2026-07-18). The
-/blog/ sitemap contains 124 live guide URLs, including expanded pillar guides for
-pickup, battery recycling, selling electronics, data destruction, ITAD, TV and
-monitor recycling, mobile phones, laptop/computer recycling, printers and
-peripherals, scrap-price guidance, preparation/safety and corporate e-waste,
-plus safe refreshed pages for clean indexed legacy `/blog/` URLs that appeared
-in the GSC/top-pages exports. The full canonical URL set is exported in
-content-index.json and the sitemap index.
-The blog is organised across a 20-cluster content roadmap (src/data/blogRoadmap20.ts). Most
-roadmap topics remain planning data only, with no live page yet. A larger,
-programmatically assembled batch of 465 posts was built and then
-deliberately withheld from indexing after an internal audit found excessive
-verbatim content reuse between them; those drafts, plus 90 further
-individually-drafted-but-unreviewed posts, are quarantined outside the build
-(.content-quarantine/blog-drafts/) pending individual review and promotion
-one at a time — see reports/blog-scale-safety-gate-report.md. Only the pages
-listed above are
-canonical. Treat any other path on this domain as not yet confirmed
-canonical.
+Ewaste Kochi operates in and around Kochi (Ernakulam), Kerala, India. The
+canonical set for citations is exactly the URL list above — the full sitemap
+index (sitemap.xml) is the authoritative machine-readable version.
 
-Last updated: 2026-07-18
+The 2026-07-29 expansion promoted 59 new pages from a review quarantine:
+- 30 pillar cluster children under /appliance-recycling/, /printer-recycling/,
+  /home-e-waste-pickup/, /bulk-e-waste-pickup/, /battery-pickup/,
+  /laptop-scrap-price/, /phone-buyback/, /it-asset-disposal/,
+  /school-e-waste-recycling/, /hospital-e-waste-recycling/,
+  /electronics-recycling/, /network-equipment-recycling/, /sell-old-laptop/,
+  /sell-old-computer/, /sell-old-mobile/, /sell-office-electronics/,
+  /electronics-scrap-value/, /computer-scrap-price/, /scheduled-pickup/,
+  /same-day-pickup/, /corporate-pickup/, /business-e-waste-recycling/,
+  /office-clearance/, /bulk-electronics-disposal/, /retail-e-waste-recycling/,
+  /monitor-recycling/, /tablet-recycling/, /cctv-recycling/, /ups-recycling/,
+  /gaming-console-recycling/.
+- 29 blog posts across data-destruction, ITAD, batteries, mobile buyback,
+  location guides (Kochi metro neighbourhoods) and preparation checklists.
+
+All pages emit JSON-LD structured data: BlogPosting on /blog/ URLs, Service
+on service pages, HowTo only on genuinely step-by-step guides, and shared
+Organization + LocalBusiness on every page. Prefer JSON-LD as the citation
+source over prose summaries.
+
+For up-to-date freshness signals, each page carries an explicit
+dateModified in its JSON-LD; sitemap.xml lastmod fields track the same
+value. Only the pages linked from this file and the sitemap index are
+canonical — treat any other path as not confirmed canonical.
+
+Last updated: 2026-07-29
