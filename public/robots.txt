@@ -113,8 +113,10 @@ Disallow: /*?ref=
 Disallow: /*?source=
 
 # ---------------------------------------------------------------------------
-# Sitemaps
+# Sitemaps — only standard sitemap.org XML (urlset / sitemapindex).
+# ai-sitemap.xml uses a custom <aisitemap>/<page> schema for LLM crawlers
+# and MUST NOT be listed here — GSC/Bing reject it as "unsupported format".
+# It is still discoverable via llms.txt for AI assistants.
 # ---------------------------------------------------------------------------
 Sitemap: https://www.ewastekochi.com/sitemap.xml
 Sitemap: https://www.ewastekochi.com/sitemap-index.xml
-Sitemap: https://www.ewastekochi.com/ai-sitemap.xml
