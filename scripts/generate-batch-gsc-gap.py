@@ -621,7 +621,7 @@ def _location_blog_spec(*, slug, city, device, service_h1,
 
 
 def spec_electronics_recycling_edappally():
-    return _location_blog_spec(
+    s = _location_blog_spec(
         slug="electronics-recycling-in-edappally",
         city="Edappally",
         device="electronics batch",
@@ -629,10 +629,56 @@ def spec_electronics_recycling_edappally():
         related_service_link=CORE["recycling"],
         related_location_link=CORE["edappally"],
     )
+    # Diversify against sister pages (electronics-recycling-in-vyttila /
+    # -palarivattom) with Edappally-specific context.
+    s["sections"][0] = {
+        "h2": "Edappally pickup — what the NH-544 / NH-66 junction area is like",
+        "body": (
+            "Edappally sits at the meeting of NH-544 and NH-66 — a dense mix of high-rise "
+            "apartments, retail (the Lulu Mall corridor), and older neighbourhood pockets "
+            "back from the highways. Common practicalities for an e-waste pickup here:\n\n"
+            "The junction traffic is real — same-day slots in Edappally usually land more "
+            "reliably outside the morning and evening peak windows. Mid-morning to early-"
+            "afternoon is the pattern that works.\n\n"
+            "High-rise apartments dominate the newer stock along the Edappally-Kochi bypass "
+            "corridor. Building security coordination + lift booking for bulky items (TV, "
+            "monitor, printer) is worth arranging when you share the pickup slot with the "
+            "watchman.\n\n"
+            "The older neighbourhood pockets (deeper into Edappally, off the highways) are "
+            "typically house or small-plot addresses — straightforward ground-level access "
+            "and quicker pickups than an apartment coordination."
+        ),
+    }
+    s["sections"][2] = {
+        "h2": "Typical Edappally pickup scenarios",
+        "body": (
+            "The pattern of e-waste pickups from Edappally splits along the neighbourhood "
+            "type:\n\n"
+            "Apartment cleanouts along the highway corridor — often mixed batches (a laptop "
+            "or two, a monitor, chargers, sometimes an inverter battery). Weekend slots are "
+            "the common ask because building security is easier to coordinate then.\n\n"
+            "Older-neighbourhood household clearouts back from the highways — long-tenure "
+            "residents shedding years of accumulation, typically bulky items (old TVs, "
+            "microwave ovens, defunct printers). Weekday morning slots work well.\n\n"
+            "Small-office refresh — the Edappally commercial pocket has professional-"
+            "services firms and retail back-offices; typical refresh 5-15 units at a time.\n\n"
+            "For any scenario, the WhatsApp booking flow is the same; the slot planning "
+            "just factors in junction traffic realism and building-access coordination."
+        ),
+    }
+    s["faqs"][0] = {
+        "q": "Do you cover Edappally for e-waste pickup?",
+        "a": "Yes. Edappally is on the standard doorstep pickup route — the apartment corridor along the NH junction, older neighbourhoods off the highways, and small-office pockets are all covered. WhatsApp with building name / landmark and item list for slot confirmation.",
+    }
+    s["faqs"][3] = {
+        "q": "How does pickup work in an Edappally apartment complex?",
+        "a": "Share the building name and gate address when booking so building security can be looped in. Lift access is worth flagging in advance for bulky items (TV, monitor, printer). Pickup itself takes a few minutes once on-site; the coordination usually takes longer than the actual pickup.",
+    }
+    return s
 
 
 def spec_battery_recycling_vyttila():
-    return _location_blog_spec(
+    s = _location_blog_spec(
         slug="battery-recycling-in-vyttila",
         city="Vyttila",
         device="battery",
@@ -640,6 +686,56 @@ def spec_battery_recycling_vyttila():
         related_service_link=CORE["battery"],
         related_location_link=CORE["locations"],
     )
+    # Diversify against battery-recycling-in-thrippunithura with Vyttila-specific
+    # context. Vyttila is the Kochi Mobility Hub area — different from the
+    # residential Thrippunithura profile.
+    s["sections"][0] = {
+        "h2": "Vyttila battery pickup — Mobility Hub, junction, mixed use",
+        "body": (
+            "Vyttila is the Kochi Mobility Hub junction — the intersection where the metro, "
+            "bus terminal, and highway feeder roads meet — surrounded by a mix of apartment "
+            "blocks, commercial premises, and office pockets. For battery pickup "
+            "specifically, this mix matters:\n\n"
+            "Household inverter and UPS batteries — common in Vyttila apartments where power "
+            "backup is standard. Batteries are typically lead-acid, sometimes lithium in "
+            "newer installations. Both are collected; different downstream recycling streams "
+            "apply.\n\n"
+            "Small-office UPS batteries — the commercial pocket around Vyttila has plenty of "
+            "small-office setups with rack-mounted UPS units. Battery refresh cycles produce "
+            "steady end-of-life batteries for pickup.\n\n"
+            "E-vehicle and e-scooter batteries — with the Mobility Hub nearby, some Vyttila "
+            "residents have EV or e-scooter batteries at end of life. These need specialised "
+            "handling (lithium-ion, larger capacity); flag when booking so the right "
+            "equipment is on the pickup vehicle."
+        ),
+    }
+    s["sections"][2] = {
+        "h2": "Battery categories seen in Vyttila pickups",
+        "body": (
+            "The battery mix from Vyttila pickups typically breaks down like this:\n\n"
+            "Lead-acid batteries — inverter batteries, UPS batteries in older setups, and "
+            "any two-wheeler batteries. Well-established recycling stream; the recycled "
+            "lead re-enters new-battery manufacturing.\n\n"
+            "Lithium-ion batteries — laptop battery packs, phone batteries, newer UPS "
+            "installations, e-vehicle / e-scooter batteries. Route through specialised "
+            "lithium-ion recovery.\n\n"
+            "Other small batteries — button cells, watch batteries, remote-control cells, "
+            "smoke-detector batteries. Included in the same pickup; routed by chemistry.\n\n"
+            "Damaged / swollen batteries — flag any swelling, leaking, or physical damage "
+            "when booking. Damaged lithium-ion batteries need controlled handling because of "
+            "thermal runaway risk. Standard containment applies on our side; your side just "
+            "needs to keep the battery in an isolated container until pickup."
+        ),
+    }
+    s["faqs"][0] = {
+        "q": "Do you cover Vyttila for battery pickup?",
+        "a": "Yes. Vyttila is on the standard doorstep pickup route — apartment blocks around the Mobility Hub, the commercial pocket along the arterial roads, and the older residential streets back from the junction are all covered. WhatsApp with battery details and address for slot confirmation.",
+    }
+    s["faqs"][3] = {
+        "q": "Can you pick up an e-scooter or EV battery in Vyttila?",
+        "a": "Yes, but flag it when booking. EV and e-scooter batteries are large-capacity lithium-ion units that need specialised handling and equipment on the pickup vehicle. Include the battery capacity (kWh or Ah), condition (any swelling / damage), and the vehicle brand / model if you know it, so the right pickup can be planned.",
+    }
+    return s
 
 
 # ---------------------------------------------------------------------------

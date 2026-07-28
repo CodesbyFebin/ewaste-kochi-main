@@ -1,0 +1,69 @@
+# The 59 pages just promoted from quarantine — ping IndexNow with this list
+# after the Vercel deploy for the current commit is confirmed live.
+#
+#   python3 scripts/indexnow-ping.py --from-file scripts/indexnow-batch.txt
+
+# 30 pillar cluster children
+https://www.ewastekochi.com/appliance-recycling/
+https://www.ewastekochi.com/printer-recycling/
+https://www.ewastekochi.com/home-e-waste-pickup/
+https://www.ewastekochi.com/bulk-e-waste-pickup/
+https://www.ewastekochi.com/battery-pickup/
+https://www.ewastekochi.com/laptop-scrap-price/
+https://www.ewastekochi.com/phone-buyback/
+https://www.ewastekochi.com/it-asset-disposal/
+https://www.ewastekochi.com/school-e-waste-recycling/
+https://www.ewastekochi.com/hospital-e-waste-recycling/
+https://www.ewastekochi.com/electronics-recycling/
+https://www.ewastekochi.com/network-equipment-recycling/
+https://www.ewastekochi.com/sell-old-laptop/
+https://www.ewastekochi.com/sell-old-computer/
+https://www.ewastekochi.com/sell-old-mobile/
+https://www.ewastekochi.com/sell-office-electronics/
+https://www.ewastekochi.com/electronics-scrap-value/
+https://www.ewastekochi.com/computer-scrap-price/
+https://www.ewastekochi.com/scheduled-pickup/
+https://www.ewastekochi.com/same-day-pickup/
+https://www.ewastekochi.com/corporate-pickup/
+https://www.ewastekochi.com/business-e-waste-recycling/
+https://www.ewastekochi.com/office-clearance/
+https://www.ewastekochi.com/bulk-electronics-disposal/
+https://www.ewastekochi.com/retail-e-waste-recycling/
+https://www.ewastekochi.com/monitor-recycling/
+https://www.ewastekochi.com/tablet-recycling/
+https://www.ewastekochi.com/cctv-recycling/
+https://www.ewastekochi.com/ups-recycling/
+https://www.ewastekochi.com/gaming-console-recycling/
+
+# 20 blog posts (batch 2)
+https://www.ewastekochi.com/blog/where-to-recycle-old-electronics-in-kochi/
+https://www.ewastekochi.com/blog/where-to-recycle-batteries-in-kochi/
+https://www.ewastekochi.com/blog/how-electronics-pickup-works/
+https://www.ewastekochi.com/blog/what-electronics-are-accepted-for-recycling/
+https://www.ewastekochi.com/blog/how-to-prepare-devices-before-pickup/
+https://www.ewastekochi.com/blog/how-laptop-scrap-value-is-calculated/
+https://www.ewastekochi.com/blog/how-mobile-phone-buyback-value-is-calculated/
+https://www.ewastekochi.com/blog/e-waste-rules-in-kerala/
+https://www.ewastekochi.com/blog/safe-battery-storage-before-pickup/
+https://www.ewastekochi.com/blog/office-e-waste-disposal-checklist/
+https://www.ewastekochi.com/blog/data-deletion-before-recycling-computers/
+https://www.ewastekochi.com/blog/recycling-electronics-during-kerala-monsoon/
+https://www.ewastekochi.com/blog/laptop-recycling-in-kakkanad/
+https://www.ewastekochi.com/blog/electronics-recycling-in-vyttila/
+https://www.ewastekochi.com/blog/office-pickup-in-infopark-kochi/
+https://www.ewastekochi.com/blog/computer-recycling-in-ernakulam/
+https://www.ewastekochi.com/blog/battery-recycling-in-thrippunithura/
+https://www.ewastekochi.com/blog/electronics-recycling-in-palarivattom/
+https://www.ewastekochi.com/blog/bulk-e-waste-collection-for-offices/
+https://www.ewastekochi.com/blog/difference-between-reuse-resale-and-recycling/
+
+# 9 GSC-gap blogs (batch 3)
+https://www.ewastekochi.com/blog/pcb-and-motherboard-scrap-buyers-in-kochi/
+https://www.ewastekochi.com/blog/nist-800-88-vs-dod-5220-22-explained/
+https://www.ewastekochi.com/blog/server-decommissioning-checklist/
+https://www.ewastekochi.com/blog/electronics-recycling-in-edappally/
+https://www.ewastekochi.com/blog/how-to-choose-an-itad-provider/
+https://www.ewastekochi.com/blog/e-waste-laws-in-kerala/
+https://www.ewastekochi.com/blog/mobile-recycling-in-kochi/
+https://www.ewastekochi.com/blog/sell-old-phone-in-kochi/
+https://www.ewastekochi.com/blog/battery-recycling-in-vyttila/

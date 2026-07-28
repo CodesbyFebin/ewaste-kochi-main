@@ -834,8 +834,8 @@ def spec_how_laptop_scrap_value_calculated() -> dict:
                 "reflect real value:\n\n"
                 "A 2022 MacBook Pro 14-inch weighs about 1.6 kg. A 2015 Compaq consumer laptop "
                 "also weighs about 1.6 kg. Their second-hand buyback values differ by roughly "
-                "100x — MacBook Pro could be worth around ₹40,000-50,000 in working condition; "
-                "the Compaq is worth essentially nothing.\n\n"
+                "100x or more — the MacBook Pro could support a meaningful condition-based "
+                "buyback quote; the Compaq is worth essentially nothing on the second-hand market.\n\n"
                 "A per-kg rate would either massively underprice the MacBook or massively "
                 "overprice the Compaq. Neither serves the seller or the recycler.\n\n"
                 "For material recovery specifically — a dead, unsellable laptop going straight "
@@ -1886,7 +1886,7 @@ def spec_battery_recycling_thrippunithura():
 
 
 def spec_electronics_recycling_palarivattom():
-    return _location_blog_spec(
+    s = _location_blog_spec(
         slug="electronics-recycling-in-palarivattom",
         city="Palarivattom",
         device="electronics batch",
@@ -1894,6 +1894,54 @@ def spec_electronics_recycling_palarivattom():
         related_service_link=CORE["recycling"],
         related_location_link=CORE["locations"],
     )
+    # Diversify against sister pages (electronics-recycling-in-vyttila /
+    # -edappally) with Palarivattom-specific context.
+    s["sections"][0] = {
+        "h2": "Palarivattom pickup — what to expect on the bypass corridor",
+        "body": (
+            "Palarivattom sits on the Kochi bypass corridor (NH-66) at the junction of the "
+            "old MG Road extension and the Seaport-Airport Road — a mix of long-standing "
+            "residential blocks, newer high-rise apartments, and a growing set of small-"
+            "office premises along the arterial roads. Practical implications for a "
+            "doorstep pickup:\n\n"
+            "Apartment pickups typically need building-security coordination — the "
+            "watchman or gate desk needs to know a pickup is scheduled, and lift access "
+            "may need booking for larger items (TVs, monitors, printers).\n\n"
+            "Along the NH-66 stretch, timing matters — the bypass corridor sees heavy "
+            "traffic through the morning and evening peaks, so mid-morning to early-"
+            "afternoon slots typically land more reliably than a promised 9am arrival.\n\n"
+            "For office pickups in the Palarivattom commercial pocket, the same "
+            "coordination applies as anywhere else in Kochi: address with landmark, "
+            "IT / admin contact, itemised list."
+        ),
+    }
+    s["sections"][2] = {
+        "h2": "Common Palarivattom pickup scenarios",
+        "body": (
+            "The pattern of e-waste pickups from Palarivattom breaks down roughly like "
+            "this:\n\n"
+            "Household clearouts from long-tenure residents — often a mixed batch after "
+            "years of accumulation (old TV, a couple of retired laptops, chargers, an "
+            "inverter battery). Weekend slots are the common ask.\n\n"
+            "New-apartment move-in cleanouts — batch of packaging, damaged-in-transit "
+            "electronics, and old items the household wants to shed before setting up. "
+            "Usually within the first few weeks of moving in.\n\n"
+            "Small-office refresh — the commercial pocket around Palarivattom has "
+            "professional-services firms and retail back-offices; typical refresh is 5-20 "
+            "units at a time.\n\n"
+            "For each scenario the WhatsApp booking flow is the same; the slot planning "
+            "just factors in bypass-corridor traffic realism."
+        ),
+    }
+    s["faqs"][0] = {
+        "q": "Do you cover Palarivattom for e-waste pickup?",
+        "a": "Yes. Palarivattom is on the standard doorstep pickup route — apartment complexes along the bypass, office pockets along the arterial roads, and the older residential blocks are all covered. WhatsApp with your address (building name / landmark) and item list for slot confirmation.",
+    }
+    s["faqs"][3] = {
+        "q": "How does apartment-complex pickup work in Palarivattom?",
+        "a": "For apartment pickups, share the building name and gate address when booking so the team can coordinate with your building security. Lift access is worth flagging in advance if you have bulky items (TV, printer, monitor). Actual pickup takes a few minutes once on-site.",
+    }
+    return s
 
 
 def spec_bulk_office_collection() -> dict:

@@ -699,7 +699,42 @@ def render_astro(spec: PageSpec) -> str:
     site_url_lit = f"`{{SITE_URL}}{spec.path}`"  # we'll interpolate SITE_URL below
 
     # Build JSON-LD as a JS array literal, using ${SITE_URL} template strings.
-    json_ld_service = f"""{{
+    #
+    # Schema type varies by route.type:
+    #   - service pages (pillars) emit Service + HowTo + WebPage
+    #   - blog pages emit BlogPosting + WebPage (no Service; HowTo only if the
+    #     page has an explicit numbered how-to intent — flagged via a step-y
+    #     H1 like "How to ..." or "... checklist")
+    #
+    # This matches Google's guidance: Service belongs on a service offering
+    # page, not on editorial or explainer content; HowTo belongs only where
+    # steps are literally what the page is about.
+    is_blog = spec.route.type == "blog"
+    h1_lower = spec.h1.lower()
+    is_step_by_step = (
+        h1_lower.startswith("how to ")
+        or "checklist" in h1_lower
+        or "step-by-step" in h1_lower
+        or "guide" in h1_lower and "how" in h1_lower
+    )
+
+    json_ld_parts: list[str] = []
+
+    if is_blog:
+        json_ld_blogposting = f"""{{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    url: `${{SITE_URL}}{spec.path}`,
+    dateModified: lastUpdated,
+    author: {{ "@id": `${{SITE_URL}}/#organization` }},
+    publisher: {{ "@id": `${{SITE_URL}}/#organization` }},
+    mainEntityOfPage: `${{SITE_URL}}{spec.path}`,
+  }}"""
+        json_ld_parts.append(json_ld_blogposting)
+    else:
+        json_ld_service = f"""{{
     "@context": "https://schema.org",
     "@type": "Service",
     serviceType: {_js_string(spec.service_type)},
@@ -708,14 +743,17 @@ def render_astro(spec: PageSpec) -> str:
     url: `${{SITE_URL}}{spec.path}`,
     description: {_js_string(spec.description)},
   }}"""
+        json_ld_parts.append(json_ld_service)
 
-    json_ld_howto = f"""{{
+    if is_step_by_step or not is_blog:
+        json_ld_howto = f"""{{
     "@context": "https://schema.org",
     "@type": "HowTo",
     name: {_js_string(f"How to {spec.h1.split(' in ')[0]} in Kochi" if ' in Kochi' in spec.h1 else f"How to {spec.h1}")},
     description: {_js_string(f"Step-by-step process for {spec.service_type.lower()} in Kochi.")},
     step: howToSteps.map((s) => ({{ "@type": "HowToStep", name: s.name, text: s.text }})),
   }}"""
+        json_ld_parts.append(json_ld_howto)
 
     json_ld_webpage = f"""{{
     "@context": "https://schema.org",
@@ -734,8 +772,9 @@ def render_astro(spec: PageSpec) -> str:
       }})),
     }},
   }}"""
+    json_ld_parts.append(json_ld_webpage)
 
-    json_ld_block = ",\n  ".join([json_ld_service, json_ld_howto, json_ld_webpage])
+    json_ld_block = ",\n  ".join(json_ld_parts)
 
     # ---- Related pages HTML ----
     related_html_lines = [
@@ -954,6 +993,11 @@ def register_route(routes_ts_path: Path, spec: PageSpec, dry_run: bool = False) 
     marker_variants = [
         "];\n\nexport const BASE_ROUTES_LOOKUP",
         "];\nexport const BASE_ROUTES_LOOKUP",
+        # Current routes.ts (2026-07) uses a comment + `const seenPaths` +
+        # `export const ROUTES` block right after BASE_ROUTES closes. Match
+        # against the comment header so we insert before BASE_ROUTES `];`,
+        # NOT the `];` that closes getHreflang's return further down the file.
+        "];\n\n// A hand-written route can occasionally share a path",
     ]
     marker = None
     for m in marker_variants:
