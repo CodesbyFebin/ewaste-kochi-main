@@ -1,5 +1,27 @@
 # EwasteKochi V2 Project Tracker
 
+### blog.ewastekochi.com retirement
+
+Status: REDIRECT-PLANNED
+Decision date: 2026-08-04
+Current state: Live HTTP 200; redirect not verified
+Owner project: Unconfirmed — connected Vercel account exposes no projects
+Planned action:
+- Exact redirects for valuable/indexed URLs
+- Remaining URLs → https://www.ewastekochi.com/blog/
+- Permanent 308
+Completion gate:
+- Redirect verified
+- One hop
+- Final 200
+- Relevant destination
+- Correct canonical
+- Old sitemap removed from GSC
+
+Draft redirect map (all 69 subdomain URLs, hand-mapped, every destination verified live on
+www): [reports/blog-subdomain-redirect-map.md](reports/blog-subdomain-redirect-map.md).
+Full vercel.json redirect block ready to paste when the owner project is identified.
+
 ## Current Mission
 
 Reconstruct www.ewastekochi.com into a clean, canonical, bilingual, SEO/AEO/GEO-optimized V2 website while preserving indexed URLs, clicks, impressions, and business value.
