@@ -1,5 +1,63 @@
 # EwasteKochi V2 Project Tracker
 
+### August 2026 GSC action plan (evidence-first sequence)
+
+Status: AWAITING-DATA
+Decision date: 2026-08-04
+Source: July 6 – August 2, 2026 GSC Performance export (validated headline
+numbers: 520 clicks / 21,918 impressions / 2.37% CTR; India 93.85%; mobile
+CTR 6.10% vs desktop 0.70%).
+
+Six queries drive 10,346 zero-click impressions and constitute the primary
+opportunity — but the causal attribution (are these Indian or foreign users?
+which page owns each query? is desktop CTR really SERP-feature suppression?)
+CANNOT be established from the current aggregate export. Everything below
+gates on cross-dimensional data landing first.
+
+Priority sequence (do NOT reorder without new evidence):
+
+1. **Query × page × country × device extraction** — user to run 18 filtered
+   exports in GSC (3 per query × 6 queries). Recipe in chat 2026-08-04.
+2. **Live SERP inspection** for each of the 6 queries from Kerala + one
+   other Indian region. Screenshot desktop and mobile.
+3. **Controlled title experiment** on 1–2 confirmed landing pages only. No
+   simultaneous description/H1/content changes — preserves attribution over
+   the 28-day measurement window.
+4. **Donation page** — user confirmed 2026-08-04 that a documented,
+   operational donation pathway with named partners exists. Page will be
+   built as transactional /donate-electronics/ (not the informational
+   /donate-or-recycle-electronics/ fallback) — BUT ONLY after (a) GSC
+   query-page-country validation shows the impressions are convertible AND
+   (b) user supplies the operational details: named partners, accepted
+   devices + minimum condition, data-erasure responsibility, pickup
+   geography, transfer/receipt process, unsuitable-device handling. Page
+   will NOT be drafted from imagination.
+5. **Pillar discovery** — the 30 new pillars are in the sitemap and
+   IndexNow-pinged. Request-Indexing only the highest-priority ones (need
+   query data first to identify which).
+6. **Blog subdomain redirect verification** — separate track,
+   REDIRECT-PLANNED below.
+7. **Additional location pages** — ONLY where pickup coverage is
+   operationally verified. Not a default expansion.
+
+Zero-click opportunity ceiling (defensible planning range, not a promise):
+
+| Assumption | Incremental clicks / 28 days |
+|---|---:|
+| 3% CTR across the 10,346 zero-click impressions | ~310 |
+| 8% CTR across same | ~828 |
+| 16% CTR (upper theoretical, mobile-only ceiling) | ~1,655 |
+
+Current baseline: 520 clicks. Realistic August target: **+200 to +500
+clicks** contingent on validation + one confirmed title fix + subdomain
+redirect consolidating authority.
+
+Explicitly NOT claimed:
+- "Doubling site clicks" — was overstated in earlier analysis
+- "Users are outside Kochi" — plausible, unverified
+- "AI Overviews explain desktop CTR" — speculative
+- "More location pages are automatically safe" — false without coverage evidence
+
 ### blog.ewastekochi.com retirement
 
 Status: REDIRECT-PLANNED
