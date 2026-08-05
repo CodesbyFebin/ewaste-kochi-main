@@ -1,0 +1,286 @@
+---
+// DRAFT — Quarantined, not yet promoted to src/pages/.
+// Created 2026-08-05 as part of blog.ewastekochi.com migration Step 4
+// (gap page — no existing V2 canonical for donation-specific intent).
+//
+// Target query: "where to donate electronics" (GSC 2026-07: 3,175 impressions,
+// avg position 3.4, 0 clicks). The subdomain page at
+// blog.ewastekochi.com/where-to-donate-electronics currently holds that
+// position; consolidating onto this www page + 308 the subdomain URL after
+// publication (migration step 9).
+//
+// PLACEHOLDERS INVENTORY — every one below is a fact that must be supplied
+// before this page can be promoted to src/pages/ and made indexable:
+//
+//   {{PICKUP_TIMELINE_KOCHI}}         Doorstep-pickup TAT for Kochi metro
+//   {{PICKUP_TIMELINE_PANINDIA}}      Shiprocket pickup TAT nationally
+//   {{PINCODE_EXCLUSIONS_STATEMENT}}  Standard "we don't reach J&K/NE/etc." hedge
+//   {{DATA_ERASURE_STATEMENT}}        Customer pre-wipe vs on-receipt policy
+//   {{COD_POLICY}}                    Certificate-of-Destruction issuance rules
+//   {{DONATION_PARTNERS}}             Named NGOs / schools / community programs
+//   {{ACCEPTED_DEVICE_CRITERIA}}      Minimum condition for donation eligibility
+//   {{UNSUITABLE_DEVICE_HANDLING}}    Policy when a donation isn't usable
+//   {{DONATION_RECEIPT_PROCESS}}      Whether donor receives a receipt / naming
+//
+// Anti-fabrication check: every operational claim below is either (a) already
+// documented in the codebase/tracker, (b) wrapped in a {{PLACEHOLDER}}, or
+// (c) hedged with "for eligible pincodes / eligible categories" language.
+// No "KSPCB authorized", no certification claims, no invented partner names.
+
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import { SITE_URL } from "../../../data/site";
+import { getHreflang } from "../../../data/routes";
+
+const title = "Where to Donate Electronics in India — Free Pickup or Pan-India Ship-in";
+const description = "Donate working laptops, phones, and tablets in India. Free doorstep pickup in Kochi, free pan-India ship-in via Shiprocket for eligible categories. Devices route to school and community partners; unusable devices route to certified recycling.";
+const lastUpdated = "2026-08-05";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Where to Donate Electronics", path: "/blog/where-to-donate-electronics/" }
+];
+
+// Eligible categories for pan-India ship-in — locked to the categories
+// confirmed operational 2026-08-05 (see memory/pan-india-reverse-logistics.md).
+// Do not add to this list without user confirmation.
+const shipInEligibleCategories = [
+  "Mobile phones",
+  "Tablets",
+  "Small handheld electronics",
+  "Laptops",
+  "Small IT peripherals (mice, keyboards, small routers)",
+];
+
+const kochiDoorstepOnlyCategories = [
+  "Desktop computers",
+  "Monitors",
+  "Printers",
+  "UPS units, power banks, loose batteries",
+  "Large appliances (fridges, ACs, washing machines, TVs)",
+];
+
+// Two distinct flows — this is the core structural asset of the page.
+const doorstepFlow = [
+  { name: "Message with device details", text: "WhatsApp Ewaste Kochi the device type, brand, condition (working / cosmetic issues / doesn't power on), and your Kochi neighbourhood. Photos help." },
+  { name: "Receive donation-vs-recycle guidance", text: "We check whether the device is suitable for donation partners or is better routed to certified recycling. You get an honest read — not everything is donatable." },
+  { name: "Book a free doorstep pickup", text: "Pickup scheduled at your address in Kochi ({{PICKUP_TIMELINE_KOCHI}}). No pickup fee." },
+  { name: "Data wipe before handover", text: "{{DATA_ERASURE_STATEMENT}}" },
+  { name: "Devices route to donation or recycling", text: "Working devices in acceptable condition go to {{DONATION_PARTNERS}}. Unusable devices route to certified recycling — {{UNSUITABLE_DEVICE_HANDLING}}." },
+];
+
+const shipInFlow = [
+  { name: "Check pan-India ship-in eligibility", text: `Free ship-in is available for eligible categories only: ${shipInEligibleCategories.join(", ")}. {{PINCODE_EXCLUSIONS_STATEMENT}}` },
+  { name: "Message with device details + address", text: "WhatsApp Ewaste Kochi with device type, brand, condition, photos, your name and pickup address. We confirm eligibility." },
+  { name: "Free Shiprocket pickup arranged", text: "We book Shiprocket and cover 100% of the shipping cost — you pay nothing. Pickup at your address within {{PICKUP_TIMELINE_PANINDIA}}." },
+  { name: "Data wipe BEFORE shipping", text: "{{DATA_ERASURE_STATEMENT}} For ship-in, this is your responsibility before the courier collects." },
+  { name: "Devices received, sorted, routed", text: "On receipt at our Kochi facility, devices are sorted: working units to {{DONATION_PARTNERS}}, unusable units to certified recycling. {{DONATION_RECEIPT_PROCESS}}" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    url: `${SITE_URL}/blog/where-to-donate-electronics/`,
+    dateModified: lastUpdated,
+    author: { "@id": `${SITE_URL}/#organization` },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/where-to-donate-electronics/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/where-to-donate-electronics/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: breadcrumbItems.map((b, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: b.name,
+        item: `${SITE_URL}${b.path}`,
+      })),
+    },
+  },
+];
+
+const faqItems = [
+  {
+    q: "What electronics can I donate through Ewaste Kochi?",
+    a: `Working laptops, phones, tablets, and small handheld electronics in usable condition — {{ACCEPTED_DEVICE_CRITERIA}}. Cosmetically worn but functional is fine. Devices that don't power on or that are heavily damaged are routed to certified recycling instead.`,
+  },
+  {
+    q: "Is there a cost to donate?",
+    a: "No. Doorstep pickup in Kochi is free. Pan-India ship-in via Shiprocket is also free for eligible categories — Ewaste Kochi covers the courier fee, you pay nothing.",
+  },
+  {
+    q: "Can I donate from anywhere in India, or only Kochi?",
+    a: `Both. Kochi: doorstep pickup within {{PICKUP_TIMELINE_KOCHI}}. Rest of India: free pan-India ship-in via Shiprocket for eligible categories only (${shipInEligibleCategories.join(", ")}). {{PINCODE_EXCLUSIONS_STATEMENT}}`,
+  },
+  {
+    q: "Do you accept desktops, printers, or old TVs for donation?",
+    a: `These are not currently eligible for pan-India ship-in (size, weight, or courier restrictions). In Kochi, doorstep pickup is available for these categories, but they are usually routed to certified recycling rather than donation — most donation partners request only the categories we can genuinely re-issue. Kochi-doorstep-only categories: ${kochiDoorstepOnlyCategories.join(", ")}.`,
+  },
+  {
+    q: "How do you wipe my data?",
+    a: "{{DATA_ERASURE_STATEMENT}}",
+  },
+  {
+    q: "Do I get a receipt or certificate?",
+    a: "{{DONATION_RECEIPT_PROCESS}} {{COD_POLICY}}",
+  },
+  {
+    q: "What if my device isn't good enough to donate?",
+    a: "{{UNSUITABLE_DEVICE_HANDLING}} Nothing gets thrown away — donation-unsuitable devices route to certified recycling channels so materials are recovered responsibly.",
+  },
+  {
+    q: "Should I donate or recycle?",
+    a: "Donate if the device still works and someone else could reasonably use it — a school student, a small NGO, someone entering the workforce. Recycle if the device is dead, damaged beyond repair, more than about seven to eight years old for laptops, or missing critical parts. When in doubt, message us with photos and we'll advise honestly.",
+  },
+];
+
+const structuredFaq = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
+const hreflangPairs = getHreflang("/blog/where-to-donate-electronics/");
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonical={`${SITE_URL}/blog/where-to-donate-electronics/`}
+  hreflang={hreflangPairs}
+  jsonLd={[...jsonLd, structuredFaq]}
+>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article>
+    <h1>{title}</h1>
+    <p class="lead">
+      Donating a working laptop, phone, or tablet is often the highest-value
+      thing you can do with it — better than throwing it out, better than
+      selling for a small buyback, and better than sending straight to
+      recycling if the device still has real life left. Ewaste Kochi routes
+      working donated devices to school and community partners, and routes
+      the rest to certified recycling. Doorstep in Kochi. Free pan-India
+      ship-in for eligible categories.
+    </p>
+
+    <DirectAnswer>
+      <p>
+        <strong>In Kochi:</strong> WhatsApp us, we do a free doorstep pickup
+        within {`{{PICKUP_TIMELINE_KOCHI}}`}, and route the device to a school
+        or community partner or (if unsuitable for donation) certified
+        recycling — you decide nothing about routing; we do that honestly on
+        your behalf.
+      </p>
+      <p>
+        <strong>Rest of India:</strong> Free ship-in via Shiprocket for
+        mobile phones, tablets, laptops, and small IT peripherals only.
+        No cost to you. {`{{PINCODE_EXCLUSIONS_STATEMENT}}`}
+      </p>
+    </DirectAnswer>
+
+    <h2>Donation vs recycling vs resale — which one is right?</h2>
+    <p>
+      All three are legitimate. Which one to choose depends on the device's
+      condition and what someone else could realistically do with it:
+    </p>
+    <ul>
+      <li>
+        <strong>Donate</strong> if the device still works, boots, holds
+        reasonable battery life, and a student or a small nonprofit could
+        actually use it for schoolwork, basic office tasks, or community
+        outreach. Laptops less than about seven years old, phones less than
+        about five, tablets under five — these are the usual sweet spot.
+      </li>
+      <li>
+        <strong>Sell (buyback)</strong> if the device has clear resale
+        value — recent iPhones, in-warranty laptops, gaming rigs, current-
+        generation tablets. You keep the money; the device continues its
+        useful life with a paying second owner.
+        See <a href="/marketplace/">marketplace</a> for buyback estimates.
+      </li>
+      <li>
+        <strong>Recycle</strong> if the device is dead, damaged, obsolete,
+        or missing critical parts. Materials are recovered; nothing usable
+        is discarded. See <a href="/recycling/">recycling</a>.
+      </li>
+    </ul>
+
+    <h2>How doorstep donation works in Kochi</h2>
+    <ol>
+      {doorstepFlow.map((s) => (
+        <li>
+          <strong>{s.name}.</strong> {s.text}
+        </li>
+      ))}
+    </ol>
+
+    <h2>How free pan-India ship-in works</h2>
+    <p>
+      Ewaste Kochi covers the Shiprocket courier fee for every eligible
+      donation — you pay nothing. This is why it works only for categories
+      the courier network handles reliably at small parcel sizes:
+    </p>
+    <p><strong>Ship-in eligible categories:</strong></p>
+    <ul>
+      {shipInEligibleCategories.map((c) => <li>{c}</li>)}
+    </ul>
+    <p><strong>Not eligible for ship-in</strong> (Kochi doorstep or drop-off only):</p>
+    <ul>
+      {kochiDoorstepOnlyCategories.map((c) => <li>{c}</li>)}
+    </ul>
+    <ol>
+      {shipInFlow.map((s) => (
+        <li>
+          <strong>{s.name}.</strong> {s.text}
+        </li>
+      ))}
+    </ol>
+
+    <h2>What happens to donated devices</h2>
+    <p>
+      Devices in usable condition are transferred to
+      {` {{DONATION_PARTNERS}}`}. Devices that arrive but don't meet donation
+      criteria (won't power on, physical damage, too old to be reasonably
+      re-issued) are routed to certified recycling —
+      {` {{UNSUITABLE_DEVICE_HANDLING}}`}. Nothing goes to general waste.
+    </p>
+
+    <h2>Data on donated devices — your responsibility, our fallback</h2>
+    <p>{`{{DATA_ERASURE_STATEMENT}}`}</p>
+    <p>
+      For ship-in donations, we cannot verify data has been wiped before the
+      courier collects, so we ask every donor to perform a factory reset
+      and sign out of all cloud accounts (Apple ID, Google account,
+      Microsoft account) before packaging. For Kochi doorstep, the team can
+      guide you through the wipe on-site if needed.
+    </p>
+
+    <h2>Frequently asked questions</h2>
+    <Faq items={faqItems} />
+
+    <CtaBar
+      primaryHref="https://wa.me/917500555454?text=Hi%20Ewaste%20Kochi%2C%20I%27d%20like%20to%20donate%20a%20device."
+      primaryLabel="WhatsApp to donate"
+      secondaryHref="/marketplace/"
+      secondaryLabel="Sell for cash instead"
+    />
+  </article>
+</Layout>
