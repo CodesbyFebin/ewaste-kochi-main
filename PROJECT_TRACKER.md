@@ -1,5 +1,38 @@
 # EwasteKochi V2 Project Tracker
 
+### Pan-India reverse logistics via Shiprocket (2026-08-05 confirmed)
+
+Status: OPERATIONAL — safe to reference in content, within category bounds.
+
+**Confirmed 2026-08-05:**
+- Ship-in via Shiprocket, live and processing orders
+- Customer pays nothing; Ewaste Kochi absorbs Shiprocket fees
+- Eligible categories: mobile phones, tablets, small handhelds, laptops, small IT peripherals
+- NOT eligible via ship-in: desktops, monitors, printers (size/weight), batteries/UPS/power banks (DG), large appliances (fridges, ACs, washing machines, TVs) — these remain Kochi-doorstep-only
+
+**Strategic impact:**
+- Addressable market flips from ~4M Kochi metro to ~1.4B national for shippable categories
+- Directly changes the migration plan below — the /blog/where-to-donate-electronics/
+  and other "where to sell/recycle electronics" pages targeting 10,346 zero-click GSC
+  impressions become genuinely convertible for national users, not just Kochi-local intent
+- Every buyback / sell-old-X page now has a dual-flow story (Kochi doorstep + pan-India ship-in)
+
+**Operational gaps still needed before publishing specifics:**
+1. Pickup timeline (Shiprocket standard is 24-72hr but confirm)
+2. Quote flow — quote-then-ship or ship-then-inspect-then-quote?
+3. Payout method + typical timing (UPI, bank transfer, days)
+4. Coverage exclusions — Shiprocket doesn't cover 100% of pincodes (J&K, NE, remote)
+5. What happens if received device differs materially from description/photos
+6. Data-destruction responsibility statement for ship-in (customer pre-wipe vs on-receipt)
+7. Certificate-of-destruction issuance for ship-in items
+8. Damage-in-transit / lost-in-transit handling and liability
+
+**Content rules until gaps are closed:**
+- Do NOT publish response times, coverage %, pincode reach, or DG capability
+- Say "for eligible pincodes" and link to a Shiprocket-pincode-check flow where relevant
+- Any ship-in page for laptops MUST include the data-erasure responsibility statement
+- Do NOT publish ship-in claims for categories not in the confirmed eligible list
+
 ### August 2026 GSC action plan (evidence-first sequence)
 
 Status: AWAITING-DATA
