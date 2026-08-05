@@ -1,0 +1,124 @@
+---
+// DRAFT — Quarantined. ESG / BRSR reporting template for the e-waste line item.
+// Distinct intent — targets the ESG lead / sustainability officer / CSR head who needs
+// to fill in the e-waste section of the company's annual ESG or BRSR report and doesn't
+// have a template. Provides the fields, common denominators, and evidence sources.
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import { SITE_URL } from "../../../data/site";
+import { getHreflang } from "../../../data/routes";
+
+const title = "ESG / BRSR E-Waste Reporting Template for Indian Companies";
+const description = "Template for the e-waste line item in ESG and BRSR reports — fields, evidence sources, common denominators, and how to source the underlying data from a disposal partner.";
+const lastUpdated = "2026-08-05";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "ESG E-Waste Reporting Template", path: "/blog/esg-ewaste-reporting-template/" }
+];
+
+const requiredFields = [
+  { field: "Total e-waste generated (tonnes)", note: "Aggregate weight across all disposal cycles in the reporting period." },
+  { field: "E-waste recycled through authorised recyclers (tonnes)", note: "Should equal or approach 100% of generated — if not, disclose the gap." },
+  { field: "E-waste disposed via other means (tonnes)", note: "Ideally zero; if non-zero, disclose route and why." },
+  { field: "Category-wise breakdown", note: "IT equipment, telecom equipment, appliances, consumer electronics (per ESG framework categories)." },
+  { field: "Recycler details", note: "Name, State Pollution Control Board authorisation number, dates of engagement." },
+  { field: "EPR-related metrics (for producers)", note: "EPR target vs achieved, certificates purchased." },
+  { field: "Data destruction records", note: "Number of Certificates of Data Destruction issued, retention status." },
+  { field: "Comparison vs prior year", note: "Absolute change and percentage change — narrative required if change > ~20%." },
+];
+
+const evidenceSources = [
+  { source: "Disposal partner manifests", provides: "Weight, category, date, recycler auth number per cycle" },
+  { source: "Certificates of Data Destruction", provides: "Per-drive destruction evidence for data-bearing assets" },
+  { source: "EPR portal filings", provides: "Producer-side EPR target + achieved data" },
+  { source: "Internal asset register", provides: "What was retired, when, by which team" },
+  { source: "Recycler engagement contracts", provides: "Legal proof of the authorised disposal chain" },
+];
+
+const jsonLd = [
+  { "@context": "https://schema.org", "@type": "BlogPosting", headline: title, description, url: `${SITE_URL}/blog/esg-ewaste-reporting-template/`, dateModified: lastUpdated, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, mainEntityOfPage: `${SITE_URL}/blog/esg-ewaste-reporting-template/` },
+  { "@context": "https://schema.org", "@type": "WebPage", "@id": `${SITE_URL}/blog/esg-ewaste-reporting-template/`, name: title, description, dateModified: lastUpdated, breadcrumb: { "@type": "BreadcrumbList", itemListElement: breadcrumbItems.map((b, i) => ({ "@type": "ListItem", position: i + 1, name: b.name, item: `${SITE_URL}${b.path}` })) } },
+];
+
+const faqItems = [
+  { q: "Which ESG framework does this apply to?", a: "The fields above are common across BRSR (Business Responsibility and Sustainability Reporting, SEBI's format for listed Indian companies), GRI 306 (Waste Effluents and Waste), and most internal ESG dashboards. Specific framework wording varies but the underlying data points are stable." },
+  { q: "How do we source the weight data if our disposal partner doesn't provide it?", a: "Ask for it explicitly — a competent disposal partner records weight per cycle. If your partner cannot supply weight, category, and their SPCB authorisation number per disposal, that's a documentation gap the ESG report should flag." },
+  { q: "What if we route some e-waste through informal channels?", a: "It's reportable. ESG frameworks expect honesty about the disposal mix — a lower-than-100% authorised-recycling percentage with a narrative on why and a plan to close the gap is more defensible than an inflated number that doesn't reconcile with underlying documents." },
+  { q: "How does Ewaste Kochi help with the reporting itself?", a: "We supply the underlying data — per-cycle disposal manifests with weight, category, date, and our SPCB authorisation number; Certificates of Data Destruction for data-bearing assets. On engagement we can also provide a year-end consolidated report structured to slot directly into standard ESG / BRSR fields." },
+  { q: "Do we need an assurance / audit on this data?", a: "BRSR reasonable-assurance requirements apply to specific KPIs for specific company categories (SEBI list). Even where not mandated, keeping the underlying manifests + certificates in a retrievable evidence pack means the data can be verified on request without a rush." },
+  { q: "How does this map to Scope 3 emissions?", a: "E-waste doesn't sit cleanly in Scope 3 — it's typically reported as a separate waste-management KPI rather than an emissions line. If your framework requires embedded-carbon accounting for retired IT assets, that's a separate calculation using lifecycle assessment factors — outside the scope of a disposal-partner manifest." },
+];
+
+const structuredFaq = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqItems.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+const hreflangPairs = getHreflang("/blog/esg-ewaste-reporting-template/");
+---
+
+<Layout title={title} description={description} canonical={`${SITE_URL}/blog/esg-ewaste-reporting-template/`} hreflang={hreflangPairs} jsonLd={[...jsonLd, structuredFaq]}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <article>
+    <h1>{title}</h1>
+    <p class="lead">
+      The e-waste line in an ESG or BRSR report usually gets built at the
+      last minute with data scraped from a disposal partner's WhatsApp
+      history. This page gives you the fields, the evidence sources, and
+      the questions to ask your disposal partner up front so the data lands
+      cleanly at year-end.
+    </p>
+    <DirectAnswer>
+      <p>
+        E-waste ESG reporting needs: total generated (tonnes), recycled
+        through authorised recyclers (tonnes), category breakdown, recycler
+        details with SPCB authorisation numbers, EPR metrics (for
+        producers), data-destruction evidence, and year-over-year
+        comparison. Underlying evidence: disposal manifests, Certificates of
+        Data Destruction, EPR filings, internal asset register, recycler
+        contracts.
+      </p>
+    </DirectAnswer>
+
+    <h2>Required fields (BRSR + GRI 306 aligned)</h2>
+    <ul>
+      {requiredFields.map((f) => (
+        <li><strong>{f.field}.</strong> {f.note}</li>
+      ))}
+    </ul>
+
+    <h2>Evidence sources — what to gather</h2>
+    <ul>
+      {evidenceSources.map((e) => (
+        <li><strong>{e.source}</strong> — {e.provides}</li>
+      ))}
+    </ul>
+
+    <h2>Common denominators + calculations</h2>
+    <ul>
+      <li><strong>Authorised recycling rate</strong> = (weight through authorised recyclers) / (total generated). Target 100%.</li>
+      <li><strong>EPR target achievement rate</strong> = (EPR certificates purchased) / (EPR target obligation). Producers only.</li>
+      <li><strong>Data-bearing device coverage</strong> = (Certificates of Data Destruction issued) / (data-bearing devices disposed). Target 100%.</li>
+      <li><strong>Year-over-year change</strong> = (current year - prior year) / (prior year). Narrative required for large swings.</li>
+    </ul>
+
+    <h2>Questions to ask your disposal partner up front</h2>
+    <ol>
+      <li>Will you provide per-cycle disposal manifests with weight and category?</li>
+      <li>Can we get a year-end consolidated report structured for our ESG framework?</li>
+      <li>What is your current SPCB authorisation number and expiry?</li>
+      <li>Do you issue Certificates of Data Destruction, and at what cost?</li>
+      <li>If we're a producer, can you supply EPR certificates matching our target?</li>
+    </ol>
+
+    <h2>Frequently asked questions</h2>
+    <Faq items={faqItems} />
+    <CtaBar
+      primaryHref="https://wa.me/917500555454?text=Hi%20Ewaste%20Kochi%2C%20we%20need%20ESG-ready%20disposal%20reporting."
+      primaryLabel="WhatsApp for ESG-ready disposal"
+      secondaryHref="/business-e-waste-recycling/"
+      secondaryLabel="Business e-waste service"
+    />
+  </article>
+</Layout>

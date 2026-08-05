@@ -1,0 +1,132 @@
+---
+// DRAFT — Quarantined. EPR-specific checklist. Distinct from /blog/what-is-epr-in-e-waste/
+// (which is the "what is EPR" explainer) and from /blog/e-waste-rules-2022-compliance-checklist/
+// (which covers the full rules). This page zeros in on the EPR obligation flow:
+// registration → target calc → certificate purchase → filing → retention.
+// {{REGULATION_CITATION}} placeholders where clause references need legal-team verification.
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import { SITE_URL } from "../../../data/site";
+import { getHreflang } from "../../../data/routes";
+
+const title = "EPR Compliance Checklist for E-Waste in India (2026 Edition)";
+const description = "Extended Producer Responsibility checklist for e-waste in India — portal registration, target calculation, EPR certificate purchase, filings, and retention. Actionable, per obligation.";
+const lastUpdated = "2026-08-05";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "EPR Compliance Checklist for E-Waste", path: "/blog/epr-compliance-checklist-india/" }
+];
+
+const registrationSteps = [
+  "Register your entity on the EPR portal ({{REGULATION_CITATION}} — verify current portal URL with your legal team).",
+  "Upload entity KYC documents — GST, incorporation certificate, PAN, authorised-signatory details.",
+  "Declare product categories placed on market (annexure-defined categories under the rules).",
+  "Receive EPR registration number — this is the identifier used on all future filings.",
+];
+
+const targetCalcSteps = [
+  "Compile quantity placed on market for each product category, current financial year.",
+  "Apply the target ratio defined under {{REGULATION_CITATION}} for each category (varies by product type).",
+  "Sum by category to determine EPR obligation in tonnes / units.",
+  "Verify against previous year's carry-forward or shortfall.",
+];
+
+const certificateFlow = [
+  "Identify registered recyclers issuing EPR certificates on the portal.",
+  "Contract with recycler(s) for certificates matching your obligation by category.",
+  "Verify certificates are issued against actual recycling activity — not paper transactions.",
+  "Retain certificates + underlying recycler engagement paperwork.",
+  "Cross-check certificate authenticity on the portal before payment.",
+];
+
+const filingRetention = [
+  "File quarterly / annual EPR returns as required — timing per {{REGULATION_CITATION}}.",
+  "Retain filed returns, EPR certificates, recycler contracts, invoices for the mandated retention period.",
+  "Prepare audit-friendly evidence pack: filings + certificates + recycler auth numbers + payment records.",
+];
+
+const jsonLd = [
+  { "@context": "https://schema.org", "@type": "BlogPosting", headline: title, description, url: `${SITE_URL}/blog/epr-compliance-checklist-india/`, dateModified: lastUpdated, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, mainEntityOfPage: `${SITE_URL}/blog/epr-compliance-checklist-india/` },
+  { "@context": "https://schema.org", "@type": "WebPage", "@id": `${SITE_URL}/blog/epr-compliance-checklist-india/`, name: title, description, dateModified: lastUpdated, breadcrumb: { "@type": "BreadcrumbList", itemListElement: breadcrumbItems.map((b, i) => ({ "@type": "ListItem", position: i + 1, name: b.name, item: `${SITE_URL}${b.path}` })) } },
+];
+
+const faqItems = [
+  { q: "Who does EPR apply to?", a: "Producers, importers, and manufacturers of electrical and electronic equipment placed on the Indian market. If you brand, manufacture, or import EEE for sale in India — even under white-label — you likely have an EPR obligation. Retailers who don't manufacture / import don't have their own obligation but may be affected by producer requirements passed down." },
+  { q: "Is bulk consumer the same as producer under EPR?", a: "No. Bulk consumers (large offices, IT companies, banks) have record-keeping and authorised-disposal obligations — but they don't have their own EPR certificate obligation. Only producers / importers / manufacturers carry the EPR certificate load. See /blog/e-waste-rules-2022-compliance-checklist/ for the bulk-consumer version." },
+  { q: "Can I buy EPR certificates from anyone?", a: "Only from recyclers registered on the EPR portal, with valid certificate-issuing authorisation. Buying from unregistered sources exposes you to compliance failure — the certificate has to be verifiable on the portal." },
+  { q: "What if we miss our EPR target for a year?", a: "Shortfall usually carries forward with a compounded requirement in the next cycle, plus penalties as specified in {{REGULATION_CITATION}}. Persistent non-compliance can result in loss of import / manufacture authorisation." },
+  { q: "How does Ewaste Kochi fit into an EPR flow?", a: "As a bulk-consumer disposal partner (record-keeping, chain of custody, certificate of data destruction) and — where authorisation status permits — as an EPR-certificate-issuing recycler. Confirm current issuance status at engagement; underlying registrations renew periodically." },
+  { q: "How long do we retain EPR records?", a: "Per {{REGULATION_CITATION}}. Common practice is retention alongside financial records (5-7 years); confirm current requirement with your legal team." },
+];
+
+const structuredFaq = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqItems.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+const hreflangPairs = getHreflang("/blog/epr-compliance-checklist-india/");
+---
+
+<Layout title={title} description={description} canonical={`${SITE_URL}/blog/epr-compliance-checklist-india/`} hreflang={hreflangPairs} jsonLd={[...jsonLd, structuredFaq]}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <article>
+    <h1>{title}</h1>
+    <p class="lead">
+      Extended Producer Responsibility (EPR) for e-waste in India runs on a
+      certificate-based portal system under the 2022 Rules. This checklist
+      breaks the obligation into four flows — register, calculate, purchase,
+      file — with the specific items to keep in an evidence pack.
+    </p>
+    <DirectAnswer>
+      <p>
+        EPR obligation flow: register on the EPR portal → calculate your
+        target based on quantity placed on market → purchase EPR certificates
+        from registered recyclers equal to the target → file periodic
+        returns → retain the whole evidence chain. This page walks each
+        step. Not legal advice — confirm current portal rules with your
+        legal team.
+      </p>
+    </DirectAnswer>
+
+    <h2>Step 1 — Portal registration</h2>
+    <ol>{registrationSteps.map((s) => <li>{s}</li>)}</ol>
+
+    <h2>Step 2 — Target calculation</h2>
+    <ol>{targetCalcSteps.map((s) => <li>{s}</li>)}</ol>
+
+    <h2>Step 3 — EPR certificate purchase</h2>
+    <ol>{certificateFlow.map((s) => <li>{s}</li>)}</ol>
+
+    <h2>Step 4 — Filings + retention</h2>
+    <ol>{filingRetention.map((s) => <li>{s}</li>)}</ol>
+
+    <h2>Evidence pack (what an auditor asks for)</h2>
+    <ul>
+      <li>EPR registration certificate + registration number</li>
+      <li>Placed-on-market quantities per category, with underlying invoice / import records</li>
+      <li>Target calculation working — signed and dated</li>
+      <li>EPR certificates purchased, matched to obligation by category</li>
+      <li>Recycler contracts + payment records + authorisation numbers</li>
+      <li>Filed returns + acknowledgement receipts</li>
+    </ul>
+
+    <h2>Not legal advice</h2>
+    <p>
+      This page is planning support, not legal advice. EPR rules are updated
+      periodically and portal processes change; verify every step against
+      the current portal and rules text before filing. Consult your legal
+      / compliance team on category classifications, target ratios, and
+      retention requirements that apply to your specific product mix.
+    </p>
+
+    <h2>Frequently asked questions</h2>
+    <Faq items={faqItems} />
+    <CtaBar
+      primaryHref="https://wa.me/917500555454?text=Hi%20Ewaste%20Kochi%2C%20I%20need%20EPR-compliant%20recycling."
+      primaryLabel="WhatsApp for EPR-compliant recycling"
+      secondaryHref="/blog/what-is-epr-in-e-waste/"
+      secondaryLabel="What is EPR?"
+    />
+  </article>
+</Layout>

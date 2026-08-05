@@ -1,0 +1,133 @@
+---
+// DRAFT — Quarantined. Actionable checklist for businesses complying with the E-Waste
+// (Management) Rules, 2022. Distinct from /e-waste-rules-2022-india/ (explainer / summary)
+// — this is the DO-THIS-BY-DATE / GATHER-THIS-EVIDENCE / KEEP-THIS-RECORD checklist.
+// Uses {{REGULATION_CITATION}} placeholders for specific clause references that need
+// legal-team verification before publication.
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import { SITE_URL } from "../../../data/site";
+import { getHreflang } from "../../../data/routes";
+
+const title = "E-Waste (Management) Rules 2022 Compliance Checklist for Indian Businesses";
+const description = "Practical compliance checklist for the E-Waste (Management) Rules, 2022 — producer, bulk-consumer, and refurbisher obligations, EPR registration, record-keeping, and audit readiness.";
+const lastUpdated = "2026-08-05";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "E-Waste Rules 2022 Compliance Checklist", path: "/blog/e-waste-rules-2022-compliance-checklist/" }
+];
+
+const bulkConsumerChecklist = [
+  "Confirm your organisation qualifies as a 'bulk consumer' under {{REGULATION_CITATION}} (threshold on device count / turnover; verify with your legal team).",
+  "Nominate a compliance point-of-contact for e-waste — usually within EHS, facilities, or IT asset management.",
+  "Maintain an inventory of electronic assets — brand, model, serial, purchase year, current status (in-use / retired / disposed).",
+  "Route retired assets ONLY through authorised recyclers / registered dismantlers.",
+  "Obtain and retain the recycler's authorisation number for every disposal cycle.",
+  "Collect and retain Certificate of Data Destruction for every data-bearing asset.",
+  "Retain disposal manifest (weight, category, recycler details, date) for the retention period specified in {{REGULATION_CITATION}}.",
+  "File annual returns to the State Pollution Control Board as required — Kerala falls under KSPCB jurisdiction.",
+  "Ensure any employee awareness / training obligation under {{REGULATION_CITATION}} is documented — training register, attendance, materials.",
+];
+
+const producerImporterChecklist = [
+  "Register on the EPR portal ({{REGULATION_CITATION}} — verify the current portal URL and process with your legal team).",
+  "Calculate EPR target based on quantity placed on market — the rules define target ratios by product category.",
+  "Meet target via PROs (Producer Responsibility Organisations) or direct take-back arrangements.",
+  "Purchase EPR certificates from registered recyclers equal to your target obligation.",
+  "File quarterly / annual EPR compliance returns.",
+  "Retain all EPR certificates + supporting recycler records for the mandated retention period.",
+];
+
+const dismantlerRecyclerChecklist = [
+  "Hold current authorisation from the State Pollution Control Board.",
+  "Facility meets standards under {{REGULATION_CITATION}} — segregation area, hazardous storage, PPE for workers.",
+  "Maintain incoming manifest per delivery — source, weight, category.",
+  "Maintain outgoing manifest for material streams sent onward.",
+  "File returns as required by the rules.",
+];
+
+const jsonLd = [
+  { "@context": "https://schema.org", "@type": "BlogPosting", headline: title, description, url: `${SITE_URL}/blog/e-waste-rules-2022-compliance-checklist/`, dateModified: lastUpdated, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, mainEntityOfPage: `${SITE_URL}/blog/e-waste-rules-2022-compliance-checklist/` },
+  { "@context": "https://schema.org", "@type": "WebPage", "@id": `${SITE_URL}/blog/e-waste-rules-2022-compliance-checklist/`, name: title, description, dateModified: lastUpdated, breadcrumb: { "@type": "BreadcrumbList", itemListElement: breadcrumbItems.map((b, i) => ({ "@type": "ListItem", position: i + 1, name: b.name, item: `${SITE_URL}${b.path}` })) } },
+];
+
+const faqItems = [
+  { q: "Do the E-Waste Rules 2022 apply to my company?", a: "If you're a producer / importer / manufacturer of electrical or electronic equipment, or a bulk consumer (typically defined by employee count, device count, or turnover thresholds — {{REGULATION_CITATION}}), yes. Small SMEs and residential users have lighter obligations. Verify your exact category with your legal team." },
+  { q: "What's the difference between the 2016 and 2022 rules?", a: "The 2022 rules moved to a strictly certificate-based EPR system (producers must purchase EPR certificates from registered recyclers equal to their placed-on-market obligation), introduced a centralised EPR portal, and tightened penalties for non-compliance. The 2016 rules relied more on producer-organised collection networks." },
+  { q: "Do I get a Certificate of Data Destruction from Ewaste Kochi?", a: "{{COD_POLICY}} For compliance-driven disposal cycles, one certificate per data-bearing asset is standard." },
+  { q: "How long do I have to keep disposal records?", a: "The retention period is specified in {{REGULATION_CITATION}} — verify current text with your legal team. Common practice for audit-safe retention is 5-7 years alongside your financial records." },
+  { q: "Can Ewaste Kochi provide EPR certificates?", a: "EPR certificates are issued only by registered / authorised recyclers meeting portal-listing requirements. Confirm current authorisation status directly at the point of engagement — we mention our current status on the ITAD engagement form rather than in blog content, since the underlying registration renews periodically." },
+  { q: "What are the penalties for non-compliance?", a: "Penalties are specified in {{REGULATION_CITATION}} and can include fines, cancellation of authorisations, and personal liability for designated compliance officers. The practical business impact — for producers — is loss of ability to import / manufacture until compliance is restored, which is usually more painful than the fine." },
+];
+
+const structuredFaq = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqItems.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+const hreflangPairs = getHreflang("/blog/e-waste-rules-2022-compliance-checklist/");
+---
+
+<Layout title={title} description={description} canonical={`${SITE_URL}/blog/e-waste-rules-2022-compliance-checklist/`} hreflang={hreflangPairs} jsonLd={[...jsonLd, structuredFaq]}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <article>
+    <h1>{title}</h1>
+    <p class="lead">
+      This is a practical, action-oriented checklist — not a reproduction of
+      the rules text. For the rules themselves and the plain-English
+      explainer, see <a href="/e-waste-rules-2022-india/">/e-waste-rules-2022-india/</a>.
+      This page tells you what to do, what to gather, and what to keep, so
+      that when an auditor or a State Pollution Control Board inspector shows
+      up, everything is in order.
+    </p>
+    <DirectAnswer>
+      <p>
+        The 2022 Rules put the compliance load on three groups: producers /
+        importers / manufacturers (EPR obligation, certificate-based),
+        bulk consumers (route disposal through authorised recyclers,
+        maintain records), and dismantlers / recyclers (State authorisation,
+        facility standards, manifests). Everyone retains documentary
+        evidence for the mandated retention period.
+      </p>
+    </DirectAnswer>
+
+    <h2>Bulk consumer checklist (most business readers land here)</h2>
+    <ul>{bulkConsumerChecklist.map((c) => <li>{c}</li>)}</ul>
+
+    <h2>Producer / importer / manufacturer checklist</h2>
+    <ul>{producerImporterChecklist.map((c) => <li>{c}</li>)}</ul>
+
+    <h2>Dismantler / recycler checklist</h2>
+    <ul>{dismantlerRecyclerChecklist.map((c) => <li>{c}</li>)}</ul>
+
+    <h2>Common gaps auditors flag</h2>
+    <ul>
+      <li>Certificate of Data Destruction missing for one or more data-bearing assets in a disposal cycle</li>
+      <li>Disposal records missing the recycler's authorisation number</li>
+      <li>No employee training register on e-waste handling</li>
+      <li>Informal-scrap-collector pickups mixed with authorised disposal — creates chain-of-custody gaps</li>
+      <li>Annual return filed but underlying supporting records not retrievable</li>
+    </ul>
+
+    <h2>Not legal advice</h2>
+    <p>
+      This page is a compliance planning aid, not legal advice. The E-Waste
+      (Management) Rules, 2022 and their subsequent amendments contain
+      thresholds, exemptions, and definitions that apply to your specific
+      operation only in the context of your business structure, turnover,
+      and product categories. Verify every checklist item against the
+      current rules text and consult your legal / compliance team before
+      relying on any specific action here for audit or filing purposes.
+    </p>
+
+    <h2>Frequently asked questions</h2>
+    <Faq items={faqItems} />
+    <CtaBar
+      primaryHref="https://wa.me/917500555454?text=Hi%20Ewaste%20Kochi%2C%20I%20need%20E-Waste%20Rules%20compliant%20disposal."
+      primaryLabel="WhatsApp for compliant disposal"
+      secondaryHref="/it-asset-disposal/"
+      secondaryLabel="ITAD service"
+    />
+  </article>
+</Layout>

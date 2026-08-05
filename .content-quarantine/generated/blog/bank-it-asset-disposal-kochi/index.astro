@@ -1,0 +1,148 @@
+---
+// DRAFT — Quarantined. Vertical-specific ITAD page for banks / NBFCs / financial-services offices in Kochi.
+// Distinct intent from /it-asset-disposal/ (generic B2B ITAD) — this one addresses regulator-facing
+// disposal, audit trails, RBI IS Audit / SOC-relevant chain-of-custody, and financial-vertical
+// device categories (cheque scanners, ATM parts, card printers, teller workstations).
+// Placeholders match the unified vocabulary in PLACEHOLDER_FILL_SHEET.md.
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import { SITE_URL } from "../../../data/site";
+import { getHreflang } from "../../../data/routes";
+
+const title = "Bank IT Asset Disposal in Kochi — Audit-Ready Chain of Custody";
+const description = "Bank and NBFC IT asset disposal in Kochi. Serialised chain of custody, certificate of data destruction, and audit-ready paperwork suitable for IS Audit / SOC evidence packs.";
+const lastUpdated = "2026-08-05";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Bank IT Asset Disposal in Kochi", path: "/blog/bank-it-asset-disposal-kochi/" }
+];
+
+const inScopeAssets = [
+  "Teller workstations, back-office desktops, laptops",
+  "Cheque scanners, MICR readers, barcode scanners",
+  "Passbook printers, card printers, receipt printers",
+  "Servers, network gear, UPS, KVM switches",
+  "Hard drives, SSDs, tape backups, external storage",
+  "Loose peripherals — keyboards, mice, headsets, monitors",
+];
+
+const documentationDeliverables = [
+  "Serialised asset intake list (bank tag / RBI asset ID + our reference)",
+  "Signed chain-of-custody form at each handoff",
+  "Certificate of Data Destruction per data-bearing asset",
+  "Weight-based recycling manifest for non-data assets",
+  "Photographs of destruction (on request, at additional cost)",
+  "Consolidated disposal report in audit-friendly PDF format",
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    url: `${SITE_URL}/blog/bank-it-asset-disposal-kochi/`,
+    dateModified: lastUpdated,
+    author: { "@id": `${SITE_URL}/#organization` },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/blog/bank-it-asset-disposal-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/bank-it-asset-disposal-kochi/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: breadcrumbItems.map((b, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: b.name,
+        item: `${SITE_URL}${b.path}`,
+      })),
+    },
+  },
+];
+
+const faqItems = [
+  { q: "What makes bank IT disposal different from regular office ITAD?", a: "Three things: regulator-facing paperwork (IS Audit, SOC evidence packs, RBI inspection readiness), stricter chain-of-custody expectations (serialised, signed, timestamped at every handoff), and category coverage that includes financial-specific hardware — cheque scanners, MICR readers, passbook printers, card printers — that a generic ITAD flow won't list correctly on a manifest." },
+  { q: "Do you issue a Certificate of Data Destruction?", a: "{{COD_POLICY}} For bank workloads, one certificate per data-bearing asset (drive, SSD, tape) is the norm rather than one consolidated certificate for the batch — matches how IS auditors sample." },
+  { q: "How is the chain of custody documented?", a: "Serialised intake list at pickup, signed handoff form at every physical transfer, timestamped photograph on request. The final disposal report consolidates everything into one PDF suitable for direct evidence-pack attachment." },
+  { q: "What is the pickup timeline for scheduled disposal runs?", a: "{{PICKUP_TIMELINE_KOCHI}} for Kochi metro branches. Multi-branch runs across Kerala are scheduled — WhatsApp with branch list and asset counts for a coordinated slot." },
+  { q: "Do you handle destruction on-site or off-site?", a: "Both models available. On-site (at the branch or data centre) is preferred when the asset volume justifies mobilising equipment, or when the security officer wants direct witness. Off-site is the default for smaller batches — chain of custody is maintained from branch to our facility with signed handoffs." },
+  { q: "Are recovered materials reused or sold?", a: "Data-bearing assets are destroyed, not resold. Non-data assets (monitors, keyboards, chairs-of-metal) enter material-recovery streams via authorised recyclers. If you need explicit no-resale attestation for data-bearing assets, we sign it as part of the disposal report." },
+];
+
+const structuredFaq = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+};
+
+const hreflangPairs = getHreflang("/blog/bank-it-asset-disposal-kochi/");
+---
+
+<Layout title={title} description={description} canonical={`${SITE_URL}/blog/bank-it-asset-disposal-kochi/`} hreflang={hreflangPairs} jsonLd={[...jsonLd, structuredFaq]}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <article>
+    <h1>{title}</h1>
+    <p class="lead">
+      Bank and NBFC IT disposal in Kochi carries paperwork weight that generic
+      ITAD doesn't. Auditors expect serialised chain of custody, per-asset
+      Certificate of Data Destruction, and a disposal report that survives an
+      IS Audit or RBI inspection. This page covers what a bank-grade ITAD run
+      actually delivers, and how to request one.
+    </p>
+    <DirectAnswer>
+      <p>
+        Bank IT disposal in Kochi runs as a scheduled, documented ITAD job —
+        serialised intake, signed chain of custody, per-drive Certificate of
+        Data Destruction, and a consolidated PDF disposal report suitable for
+        audit evidence. WhatsApp with branch list + rough asset counts to
+        book a slot ({`{{PICKUP_TIMELINE_KOCHI}}`} for Kochi metro).
+      </p>
+    </DirectAnswer>
+
+    <h2>In-scope assets for bank IT disposal</h2>
+    <ul>{inScopeAssets.map((a) => <li>{a}</li>)}</ul>
+
+    <h2>What you receive as documentation</h2>
+    <ul>{documentationDeliverables.map((d) => <li>{d}</li>)}</ul>
+
+    <h2>How a bank ITAD run is scheduled</h2>
+    <ol>
+      <li><strong>Send the asset list.</strong> Rough count by category (workstations, drives, printers, etc.), branch locations, any regulator-facing deadlines.</li>
+      <li><strong>Slot confirmation.</strong> We confirm date, on-site vs off-site model, and estimated turnaround.</li>
+      <li><strong>Pre-arrival paperwork.</strong> Draft chain-of-custody form and Certificate template sent for your compliance team's sign-off.</li>
+      <li><strong>Pickup / on-site session.</strong> Serialised intake, signed handoff, timestamped photos where requested.</li>
+      <li><strong>Data destruction + material recovery.</strong> {`{{DATA_ERASURE_STATEMENT}}`}</li>
+      <li><strong>Disposal report.</strong> Consolidated PDF within {`{{PICKUP_TIMELINE_KOCHI}}`} of run completion.</li>
+    </ol>
+
+    <h2>Working with your IS Audit / SOC calendar</h2>
+    <p>
+      Disposal runs are commonly timed against IS Audit cycles or SOC evidence
+      windows. If you have a specific audit date, mention it — we work
+      backwards to make sure the disposal report is in your evidence pack
+      before the auditor arrives, not after. Multi-branch coordination
+      (regional office + upcountry branches) is planned as one job rather than
+      per-branch to keep the paperwork consistent.
+    </p>
+
+    <h2>Frequently asked questions</h2>
+    <Faq items={faqItems} />
+    <CtaBar
+      primaryHref="https://wa.me/917500555454?text=Hi%20Ewaste%20Kochi%2C%20I%27d%20like%20to%20schedule%20bank%20IT%20asset%20disposal."
+      primaryLabel="WhatsApp to schedule"
+      secondaryHref="/it-asset-disposal/"
+      secondaryLabel="General ITAD service"
+    />
+  </article>
+</Layout>

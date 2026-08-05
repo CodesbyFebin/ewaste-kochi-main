@@ -1,0 +1,117 @@
+---
+// DRAFT — Quarantined. Distinct intent from the existing /blog/inverter-battery-*/ near-matches:
+//   - inverter-battery-pickup-checklist → what to prepare for pickup
+//   - how-to-identify-inverter-battery-risk → hazard identification
+//   - damaged-inverter-battery-safety → what to do with a leaking/swollen battery
+// This page is the CANONICAL "how to recycle an inverter battery in Kochi" entry — the top-of-funnel
+// answer for someone whose inverter battery has died and doesn't know what to do next.
+// No pan-India ship-in messaging (batteries are DG-restricted; explicitly Kochi-doorstep-only).
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import { SITE_URL } from "../../../data/site";
+import { getHreflang } from "../../../data/routes";
+
+const title = "Inverter Battery Recycling in Kochi — Free Doorstep Pickup for Dead or Swollen Batteries";
+const description = "Recycle old inverter batteries in Kochi. Free doorstep pickup for tubular, sealed lead-acid, or lithium inverter banks. Safe handling for swollen or leaking units.";
+const lastUpdated = "2026-08-05";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Inverter Battery Recycling in Kochi", path: "/blog/inverter-battery-recycling-kochi/" }
+];
+
+const commonInverterTypes = [
+  { type: "Tubular lead-acid (150Ah, 200Ah — most common in Kerala homes)", note: "Heavy (~50-60 kg). Access-planning matters — narrow stairs, high floors." },
+  { type: "Sealed lead-acid (SMF) — often in smaller inverters", note: "Sealed against spill; still route to lead-acid recycling stream." },
+  { type: "Lithium inverter batteries (newer installations)", note: "Different chemistry — flag as lithium at booking so containment matches." },
+  { type: "Battery banks (2-4 batteries in series)", note: "Confirm count at booking; disconnection sequence matters for safety." },
+];
+
+const conditionSignals = [
+  "Won't hold charge — inverter drops within minutes of grid cut",
+  "Bulging casing / physical deformation → treat as damaged; do NOT continue using",
+  "Corrosion around terminals — white or greenish deposit",
+  "Electrolyte leaking or dry (tubular) — needs immediate replacement",
+  "Age > 4-5 years even if apparently working — capacity likely degraded",
+];
+
+const jsonLd = [
+  { "@context": "https://schema.org", "@type": "BlogPosting", headline: title, description, url: `${SITE_URL}/blog/inverter-battery-recycling-kochi/`, dateModified: lastUpdated, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, mainEntityOfPage: `${SITE_URL}/blog/inverter-battery-recycling-kochi/` },
+  { "@context": "https://schema.org", "@type": "WebPage", "@id": `${SITE_URL}/blog/inverter-battery-recycling-kochi/`, name: title, description, dateModified: lastUpdated, breadcrumb: { "@type": "BreadcrumbList", itemListElement: breadcrumbItems.map((b, i) => ({ "@type": "ListItem", position: i + 1, name: b.name, item: `${SITE_URL}${b.path}` })) } },
+];
+
+const faqItems = [
+  { q: "Is inverter battery recycling free?", a: "Yes — doorstep pickup in Kochi is free for inverter batteries and battery banks. Some scrap value may apply for lead-acid batteries (industry buyback rate); we mention it at booking. Lithium and severely damaged batteries are picked up free for safe recycling with no buyback." },
+  { q: "Can I ship an old inverter battery to you from outside Kochi?", a: "No. Inverter batteries are dangerous goods (lead-acid contains sulfuric acid; lithium has thermal-runaway risk) and courier networks including Shiprocket restrict them. Battery pickup is Kochi-doorstep only. For households outside Kochi, your best option is a local authorised battery recycler or the retailer where you buy the replacement." },
+  { q: "How is a swollen or leaking inverter battery handled?", a: "Photograph the damage first (from a safe distance), then WhatsApp us with the photo. Team arrives with acid-resistant containment and PPE. Do NOT try to lift or move a damaged battery yourself — a swollen sealed battery can vent, a cracked tubular can leak sulfuric acid onto flooring." },
+  { q: "What's the timeline?", a: "{{PICKUP_TIMELINE_KOCHI}} for standard inverter battery pickup in Kochi. Damaged / leaking batteries get expedited — same-day where possible." },
+  { q: "Do you take the old battery when installing a new one?", a: "We only handle recycling — battery replacement / installation is a separate service (usually the battery dealer). Common flow: dealer delivers new battery, we pick up the old one either the same day or on a scheduled slot." },
+  { q: "What happens to the battery after pickup?", a: "Lead-acid: routed to authorised smelter for lead recovery + sulfuric acid neutralisation. Lithium: routed to chemistry-specific processing (Ni/Co/Li recovery). Casings and non-metal parts enter material recovery streams. Nothing goes to general waste." },
+  { q: "Do you take used inverter wiring, cables, or the inverter unit itself?", a: "Yes — batch them with the battery pickup. Copper wiring has scrap value; the inverter unit (electronics) routes to standard e-waste recycling." },
+];
+
+const structuredFaq = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqItems.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+const hreflangPairs = getHreflang("/blog/inverter-battery-recycling-kochi/");
+---
+
+<Layout title={title} description={description} canonical={`${SITE_URL}/blog/inverter-battery-recycling-kochi/`} hreflang={hreflangPairs} jsonLd={[...jsonLd, structuredFaq]}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <article>
+    <h1>{title}</h1>
+    <p class="lead">
+      An inverter battery that's stopped holding charge, is bulging, or is
+      leaking is not something to leave lying around — lead-acid can corrode
+      flooring and burn skin, lithium can vent thermal runaway. This page
+      covers how to recycle inverter batteries safely in Kochi with free
+      doorstep pickup, including battery banks and damaged units.
+    </p>
+    <DirectAnswer>
+      <p>
+        Free doorstep pickup for inverter batteries anywhere in Kochi metro.
+        {` `}<strong>Kochi only</strong> — inverter batteries can't ship via
+        courier (dangerous-goods restriction). WhatsApp us with battery type,
+        count, and condition; pickup arrives within {`{{PICKUP_TIMELINE_KOCHI}}`}.
+      </p>
+    </DirectAnswer>
+
+    <h2>Common inverter battery types we accept</h2>
+    <ul>{commonInverterTypes.map((t) => <li><strong>{t.type}.</strong> {t.note}</li>)}</ul>
+
+    <h2>When to replace — condition signals</h2>
+    <ul>{conditionSignals.map((s) => <li>{s}</li>)}</ul>
+
+    <h2>Booking a pickup</h2>
+    <ol>
+      <li><strong>WhatsApp with basics</strong> — battery type (tubular / sealed / lithium), Ah rating if known, count (single or bank), and condition.</li>
+      <li><strong>Flag any damage</strong> — swelling, leaking, corrosion. Send a photo. Damaged batteries need containment planning.</li>
+      <li><strong>Access notes</strong> — floor, whether stairs or lift, distance to vehicle access. A 60 kg battery from a fourth-floor walk-up needs different logistics than one from a ground-floor garage.</li>
+      <li><strong>Slot confirmed within {`{{PICKUP_TIMELINE_KOCHI}}`}</strong>. Damaged batteries get faster scheduling.</li>
+      <li><strong>Doorstep collection.</strong> Team arrives with the appropriate containment, verifies against the description, signs the pickup acknowledgement, batteries route to chemistry-specific recycling.</li>
+    </ol>
+
+    <h2>Why not general waste, dealer swap, or informal scrap collection</h2>
+    <p>
+      Inverter batteries dumped in general waste crush inside compaction
+      trucks — lead-acid electrolyte contaminates other waste streams and
+      leaks in transit. Informal scrap collectors do accept them but material
+      recovery from unregulated smelters emits lead into air and water;
+      authorised recyclers meet emission and worker-safety standards
+      informal networks don't. Retailer trade-in is a reasonable option if
+      you're buying a replacement from the same dealer; otherwise book us
+      directly.
+    </p>
+
+    <h2>Frequently asked questions</h2>
+    <Faq items={faqItems} />
+    <CtaBar
+      primaryHref="https://wa.me/917500555454?text=Hi%20Ewaste%20Kochi%2C%20I%20need%20inverter%20battery%20pickup."
+      primaryLabel="WhatsApp for battery pickup"
+      secondaryHref="/battery-recycling/"
+      secondaryLabel="All battery recycling"
+    />
+  </article>
+</Layout>

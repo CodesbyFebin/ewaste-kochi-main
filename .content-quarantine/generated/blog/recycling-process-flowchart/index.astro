@@ -1,0 +1,160 @@
+---
+// DRAFT — Quarantined. Process-visualization page. Distinct from /blog/how-ewaste-recycling-works/
+// (which covers the same topic but as prose) — this page structures the process as a walkable
+// flowchart across stages: intake → sort → dismantle → material streams → downstream.
+// Uses semantic sections + ordered lists rather than an inline SVG (accessibility + no external assets).
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import { SITE_URL } from "../../../data/site";
+import { getHreflang } from "../../../data/routes";
+
+const title = "E-Waste Recycling Process Flowchart — From Intake to Material Recovery";
+const description = "Step-by-step flowchart of the e-waste recycling process — intake, sorting, dismantling, data destruction, category separation, and downstream material recovery streams.";
+const lastUpdated = "2026-08-05";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "E-Waste Recycling Process Flowchart", path: "/blog/recycling-process-flowchart/" }
+];
+
+const stages = [
+  {
+    id: "intake",
+    label: "1. Intake",
+    steps: [
+      "Pickup or drop-off — weight recorded, batch photo taken.",
+      "Batch tagged with a unique intake ID for chain-of-custody linkage.",
+      "For ITAD batches: serialised asset list captured; each data-bearing asset flagged.",
+      "Signed handoff acknowledgement returned to the client.",
+    ],
+  },
+  {
+    id: "sort",
+    label: "2. Coarse sorting",
+    steps: [
+      "By category — IT (laptops, desktops, phones), display (monitors, TVs), print (printers, copiers), appliance (small kitchen, large), battery, cable, misc.",
+      "By condition — reusable / repairable / dismantle-only.",
+      "By hazard — batteries, capacitors, mercury-containing lamps get flagged for separate handling.",
+      "Reusable items diverted to refurbishment / donation flow before dismantling.",
+    ],
+  },
+  {
+    id: "data",
+    label: "3. Data destruction (data-bearing devices)",
+    steps: [
+      "Drives and SSDs identified; owner + serial recorded.",
+      "Cryptographic erase for encrypted SSDs; block-level overwrite for HDDs; physical shred for damaged or high-security assets.",
+      "Certificate of Data Destruction generated per drive.",
+      "Wiped drives that pass verification join the resale / refurbishment stream; shredded drives enter material recovery.",
+    ],
+  },
+  {
+    id: "dismantle",
+    label: "4. Dismantling",
+    steps: [
+      "Manual disassembly at fixed stations — separate ferrous, non-ferrous, plastic, glass, PCB, cable, battery.",
+      "Fasteners, brackets, casings → steel / aluminium bins.",
+      "PCBs → PCB bin (highest-value recovery stream per unit weight).",
+      "Cables → copper recovery bin.",
+      "Screens (CRT / LCD) → separate handling due to lead / mercury.",
+      "Batteries → chemistry-specific containment (never mixed with general dismantling waste).",
+    ],
+  },
+  {
+    id: "streams",
+    label: "5. Material streams — segregation for downstream",
+    steps: [
+      "Steel and aluminium: weighed and staged for scrap-metal buyers.",
+      "Copper (from cables + component leads): weighed, often sold to specialised copper smelters.",
+      "PCBs: staged for specialised refiners (gold, silver, palladium recovery).",
+      "Plastic: sorted by resin type where possible; mixed plastic to plastic recyclers.",
+      "Glass (CRT-era displays): specialised handling — leaded and unleaded fractions separate.",
+      "Batteries: routed to chemistry-specific processors (lead-acid smelter, lithium recycler).",
+      "Residual (small quantities of non-recoverable material): authorised hazardous waste disposal.",
+    ],
+  },
+  {
+    id: "downstream",
+    label: "6. Downstream + reporting",
+    steps: [
+      "Each material stream leaves with an outbound manifest — weight, receiving facility, date.",
+      "Client-facing disposal report consolidates intake + destruction + material recovery per batch.",
+      "Records retained for the retention period required under E-Waste (Management) Rules, 2022.",
+      "Aggregate data feeds into monthly / annual reporting for producers meeting EPR obligations.",
+    ],
+  },
+];
+
+const jsonLd = [
+  { "@context": "https://schema.org", "@type": "BlogPosting", headline: title, description, url: `${SITE_URL}/blog/recycling-process-flowchart/`, dateModified: lastUpdated, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, mainEntityOfPage: `${SITE_URL}/blog/recycling-process-flowchart/` },
+  { "@context": "https://schema.org", "@type": "WebPage", "@id": `${SITE_URL}/blog/recycling-process-flowchart/`, name: title, description, dateModified: lastUpdated, breadcrumb: { "@type": "BreadcrumbList", itemListElement: breadcrumbItems.map((b, i) => ({ "@type": "ListItem", position: i + 1, name: b.name, item: `${SITE_URL}${b.path}` })) } },
+];
+
+const faqItems = [
+  { q: "How is the process different for a single household laptop vs a corporate ITAD batch?", a: "The stages are the same — intake, sort, data destruction, dismantle, material streams, downstream. What changes: a corporate batch gets serialised chain-of-custody tracking and per-drive Certificates of Data Destruction from the start; a household laptop is tagged to the pickup batch and gets a certificate on request rather than automatically." },
+  { q: "What happens to data on a laptop I recycle?", a: "{{DATA_ERASURE_STATEMENT}} Drives that pass verification go into the resale stream; drives that fail (physical damage, encryption without keys) get shredded and enter the material stream." },
+  { q: "Is any part of my device reused rather than recycled?", a: "Yes — reusable items are diverted at the coarse sort stage before dismantling. Working laptops and phones may go to refurbishment / donation partners. Working peripherals (mice, keyboards, cables) sometimes get bundled with refurbished units. The rest enters material recovery." },
+  { q: "Where does the recovered material actually go?", a: "Copper to smelters. Steel and aluminium to metal-scrap buyers. PCBs to specialised refiners (usually one of 2-3 India-based operations at commercial scale). Plastic to plastic recyclers where the resin type is identifiable. Batteries to chemistry-specific processors (lead-acid to smelters, lithium to specialised operations)." },
+  { q: "What proof do I get that my device was actually recycled?", a: "For ITAD batches: consolidated disposal report per batch, per-drive Certificate of Data Destruction. For household recycling: pickup acknowledgement at collection; certificate available on request for laptops / tablets ({{COD_POLICY}})." },
+  { q: "How long does the whole process take?", a: "From intake to material streams leaving the facility: typically 5-15 working days for a standard batch. High-priority ITAD jobs can be accelerated. The disposal report is issued within {{PICKUP_TIMELINE_KOCHI}} of the material streams departing." },
+];
+
+const structuredFaq = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqItems.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+const hreflangPairs = getHreflang("/blog/recycling-process-flowchart/");
+---
+
+<Layout title={title} description={description} canonical={`${SITE_URL}/blog/recycling-process-flowchart/`} hreflang={hreflangPairs} jsonLd={[...jsonLd, structuredFaq]}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <article>
+    <h1>{title}</h1>
+    <p class="lead">
+      Every recycled laptop, phone, or battery moves through the same six-
+      stage process — intake, sort, data destruction (where applicable),
+      dismantle, material streams, downstream. This page walks each stage
+      with the actual sub-steps and outputs, so you can trace what happens
+      to your device between drop-off and final material recovery.
+    </p>
+    <DirectAnswer>
+      <p>
+        Six stages: <strong>Intake</strong> (weight, tag, custody) →
+        <strong>Coarse sort</strong> (by category, condition, hazard) →
+        <strong>Data destruction</strong> (drives + certificates) →
+        <strong>Dismantle</strong> (materials into bins) →
+        <strong>Material streams</strong> (copper, steel, PCBs, plastic,
+        glass, batteries) → <strong>Downstream</strong> (specialised
+        recovery + client-facing disposal report).
+      </p>
+    </DirectAnswer>
+
+    {stages.map((stage) => (
+      <section id={stage.id}>
+        <h2>{stage.label}</h2>
+        <ol>{stage.steps.map((s) => <li>{s}</li>)}</ol>
+      </section>
+    ))}
+
+    <h2>Where the process breaks (informal channels)</h2>
+    <p>
+      Informal scrap collection routes skip stages 2, 3, and often 5. Common
+      shortcuts: no data destruction (drives resold intact — a real breach
+      risk), open burning of cables to recover copper (lead-oxide fumes),
+      acid stripping of PCBs in the open (heavy metal water contamination).
+      The authorised process costs more per kilogram and is slower, but
+      it's what makes the difference between "material recovery" and
+      "environmental transfer of the problem."
+    </p>
+
+    <h2>Frequently asked questions</h2>
+    <Faq items={faqItems} />
+    <CtaBar
+      primaryHref="https://wa.me/917500555454?text=Hi%20Ewaste%20Kochi%2C%20I%27d%20like%20to%20schedule%20a%20pickup."
+      primaryLabel="WhatsApp for pickup"
+      secondaryHref="/recycling/"
+      secondaryLabel="Recycling service"
+    />
+  </article>
+</Layout>

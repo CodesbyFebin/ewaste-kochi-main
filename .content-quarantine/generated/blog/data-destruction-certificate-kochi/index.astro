@@ -1,0 +1,116 @@
+---
+// DRAFT — Quarantined. Focused specifically on the Certificate of Data Destruction document
+// itself: what it is, what it contains, when it's issued, its evidentiary weight, how to request one.
+// Distinct from /data-destruction/ (service page) and /blog/data-destruction-kochi-guide/ (broad guide).
+// Complements /data-destruction-certificate-sample/ (which shows a sample) — this page ANSWERS the query.
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import { SITE_URL } from "../../../data/site";
+import { getHreflang } from "../../../data/routes";
+
+const title = "Data Destruction Certificate in Kochi — What It Is, What It Contains, How to Request One";
+const description = "Certificate of Data Destruction for drives, SSDs and mobile devices disposed via Ewaste Kochi. Contents, evidentiary weight, cost and how to request one — free for eligible categories.";
+const lastUpdated = "2026-08-05";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Data Destruction Certificate", path: "/blog/data-destruction-certificate-kochi/" }
+];
+
+const certificateFields = [
+  "Client name + reference / job ID",
+  "Asset identifier — serial number, brand, model, capacity",
+  "Data destruction method used (e.g., NIST 800-88 Purge — cryptographic erase, block-level overwrite, or physical shred depending on media)",
+  "Standard / framework referenced",
+  "Date + time of destruction",
+  "Location — on-site (client premises) or Ewaste Kochi facility",
+  "Operator name + signature",
+  "Countersignature — Ewaste Kochi authorised signatory",
+  "Chain-of-custody references — pickup date, intake ID",
+];
+
+const whenIssued = [
+  "Every data-bearing hard drive processed under an ITAD job",
+  "SSDs and hybrid drives (cryptographic erase or physical shred)",
+  "Tape media in bulk disposal",
+  "Enterprise mobile devices (bulk buyback or corporate disposal)",
+  "On request, for individual laptops and tablets — {{COD_POLICY}}",
+];
+
+const jsonLd = [
+  { "@context": "https://schema.org", "@type": "BlogPosting", headline: title, description, url: `${SITE_URL}/blog/data-destruction-certificate-kochi/`, dateModified: lastUpdated, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, mainEntityOfPage: `${SITE_URL}/blog/data-destruction-certificate-kochi/` },
+  { "@context": "https://schema.org", "@type": "WebPage", "@id": `${SITE_URL}/blog/data-destruction-certificate-kochi/`, name: title, description, dateModified: lastUpdated, breadcrumb: { "@type": "BreadcrumbList", itemListElement: breadcrumbItems.map((b, i) => ({ "@type": "ListItem", position: i + 1, name: b.name, item: `${SITE_URL}${b.path}` })) } },
+];
+
+const faqItems = [
+  { q: "What is a Certificate of Data Destruction?", a: "A signed, dated document confirming that a specific data-bearing device (drive, SSD, tape, phone) was destroyed by a stated method on a stated date at a stated location, with a chain-of-custody reference. It is the standard piece of evidence auditors and compliance officers accept as proof that data was rendered unrecoverable." },
+  { q: "Is it legally binding?", a: "It is evidentiary, not legally binding in the sense of a contract. Courts and auditors treat it as documented proof that a competent operator carried out data destruction on the stated date, under the stated standard. If a data-breach investigation later needs to establish that a specific device was destroyed before the breach window, the certificate is the artefact that establishes it." },
+  { q: "What does the certificate contain?", a: `Standard fields: client + reference, asset serial + model, method used, standard referenced, date/time, location, operator signature, countersignature, and chain-of-custody references linking it to the pickup and intake records. See the sample at /data-destruction-certificate-sample/.` },
+  { q: "When is a certificate issued?", a: "For every data-bearing drive under an ITAD job by default. For individual consumer laptops or tablets: {{COD_POLICY}}" },
+  { q: "Is there a fee?", a: "{{COD_POLICY}}" },
+  { q: "How is it delivered?", a: "PDF, digitally signed, emailed to the compliance contact you designate. Within {{PICKUP_TIMELINE_KOCHI}} of destruction completion for ITAD jobs. Hard copy on request." },
+  { q: "What if I need one for a device I bought back / donated / recycled through ship-in?", a: "For ship-in disposals we can issue certificates for laptops and tablets on request. Mention it when you WhatsApp us — the certificate is produced after the device arrives and destruction is completed." },
+];
+
+const structuredFaq = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqItems.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+const hreflangPairs = getHreflang("/blog/data-destruction-certificate-kochi/");
+---
+
+<Layout title={title} description={description} canonical={`${SITE_URL}/blog/data-destruction-certificate-kochi/`} hreflang={hreflangPairs} jsonLd={[...jsonLd, structuredFaq]}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <article>
+    <h1>{title}</h1>
+    <p class="lead">
+      The Certificate of Data Destruction is the piece of paper an auditor or
+      a compliance officer actually wants to see. This page covers what it
+      contains, when it's issued, when it's free vs paid, and how to request
+      one — for both scheduled ITAD jobs and one-off consumer devices.
+    </p>
+    <DirectAnswer>
+      <p>
+        A Certificate of Data Destruction is a signed, dated document
+        confirming a specific device was destroyed by a stated method on a
+        stated date. Ewaste Kochi issues one for every data-bearing drive in
+        an ITAD job by default. For individual consumer laptops and tablets:
+        {`{{COD_POLICY}}`}
+      </p>
+    </DirectAnswer>
+
+    <h2>What the certificate actually contains</h2>
+    <ul>{certificateFields.map((f) => <li>{f}</li>)}</ul>
+    <p>See a real sample at <a href="/data-destruction-certificate-sample/">/data-destruction-certificate-sample/</a>.</p>
+
+    <h2>When a certificate is issued</h2>
+    <ul>{whenIssued.map((w) => <li>{w}</li>)}</ul>
+
+    <h2>How to request a certificate</h2>
+    <ol>
+      <li><strong>WhatsApp us with the device details</strong> — brand, model, serial if known, whether it's a scheduled ITAD job or a one-off disposal.</li>
+      <li><strong>Confirm the delivery contact.</strong> Certificates are emailed as digitally signed PDFs to whoever you designate — usually the compliance officer or IT head.</li>
+      <li><strong>Destruction happens.</strong> {`{{DATA_ERASURE_STATEMENT}}`}</li>
+      <li><strong>Certificate delivered within {`{{PICKUP_TIMELINE_KOCHI}}`}</strong> of destruction completion.</li>
+    </ol>
+
+    <h2>Common uses</h2>
+    <ul>
+      <li>IS Audit / SOC 2 evidence packs for banks, NBFCs, and IT services companies</li>
+      <li>ISO 27001 information-security compliance evidence</li>
+      <li>GDPR / DPDP Act 2023 data-subject-rights closure records</li>
+      <li>Handover-of-custody paperwork when a leased fleet returns to the lessor</li>
+      <li>Board / auditor documentation for hardware write-off cycles</li>
+    </ul>
+
+    <h2>Frequently asked questions</h2>
+    <Faq items={faqItems} />
+    <CtaBar
+      primaryHref="https://wa.me/917500555454?text=Hi%20Ewaste%20Kochi%2C%20I%20need%20a%20Certificate%20of%20Data%20Destruction."
+      primaryLabel="WhatsApp to request certificate"
+      secondaryHref="/data-destruction/"
+      secondaryLabel="Data destruction service"
+    />
+  </article>
+</Layout>

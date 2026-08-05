@@ -1,0 +1,107 @@
+---
+// DRAFT — Quarantined. B2B buyer guide for small recycling operations acquiring equipment.
+// Off-standard for consumer-facing site, but the subdomain URL exists so we cover the intent.
+// Focus: what equipment categories a small e-waste recycling operation actually needs, what
+// to look for when buying, and where Ewaste Kochi can source refurbished / secondhand equipment.
+// Explicitly does NOT recommend specific brands or models — that would be fabrication risk.
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import { SITE_URL } from "../../../data/site";
+import { getHreflang } from "../../../data/routes";
+
+const title = "Recycling Equipment Buyer Guide — What a Small E-Waste Operation Actually Needs";
+const description = "Buyer guide for e-waste recycling equipment — categories, capacity sizing, refurbished vs new trade-offs, safety and compliance essentials. For small operations starting or expanding.";
+const lastUpdated = "2026-08-05";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Recycling Equipment Buyer Guide", path: "/blog/recycling-equipment-buyer-guide/" }
+];
+
+const equipmentCategories = [
+  { category: "Manual dismantling stations", note: "The first purchase. Sturdy benches, hand tools (torque screwdrivers, pry tools, wire cutters), anti-static mats, containment bins per material stream (steel, aluminium, copper, plastic, PCBs)." },
+  { category: "Weighing scales", note: "Multiple — a large platform scale for bulk, a smaller scale for per-batch category weighing. Essential for manifest accuracy." },
+  { category: "Hard drive shredders", note: "Physical destruction for data-bearing drives. Rated by throughput (drives/hour) and particle size. Even a small shredder is a substantial capex — consider outsourcing HDD destruction until volume justifies it." },
+  { category: "Cable strippers / granulators", note: "For copper recovery from cable. Manual strippers for small volume; motorised granulators (with cyclone separators) for continuous operation." },
+  { category: "Battery containment", note: "Fire-safe containers for lithium, acid-resistant bunds for lead-acid. Non-negotiable safety kit even before volume." },
+  { category: "PCB / board processing", note: "Manual chip / connector removal for high-value component recovery. Downstream refining is a specialised operation typically outsourced." },
+  { category: "PPE + air-handling", note: "Respirators, cut-resistant gloves, eye protection, and — for any thermal or mechanical processing — local exhaust ventilation. Compliance table stakes." },
+  { category: "IT (WMS / manifest software)", note: "Nothing scales without a system to track inbound weight, category, and outbound material streams. Spreadsheet is fine to start; audit-grade WMS becomes mandatory as volume grows." },
+];
+
+const buyingConsiderations = [
+  "Sizing to actual expected throughput — undersized equipment is a bottleneck; oversized ties up capex and floor space with idle capacity.",
+  "Refurbished vs new — dismantling stations and shredders often make sense secondhand from operations upgrading or closing. Cable granulators and safety kit: prefer new for warranty and certification.",
+  "Local vs imported — Indian-made equipment has cheaper spares and faster service; imported (usually from Europe or China) often has higher throughput and specialised features, but longer downtime when it breaks.",
+  "Compliance overlap — every capex decision should factor SPCB authorisation requirements. Facility layout, emission controls, worker safety kit all interact with the authorisation you'll need to operate legally.",
+  "Materials-recovery downstream — before buying processing equipment, confirm the downstream buyer for the material stream (copper smelter, plastic recycler, PCB refiner). Producing a stream nobody wants is a real risk.",
+];
+
+const jsonLd = [
+  { "@context": "https://schema.org", "@type": "BlogPosting", headline: title, description, url: `${SITE_URL}/blog/recycling-equipment-buyer-guide/`, dateModified: lastUpdated, author: { "@id": `${SITE_URL}/#organization` }, publisher: { "@id": `${SITE_URL}/#organization` }, mainEntityOfPage: `${SITE_URL}/blog/recycling-equipment-buyer-guide/` },
+  { "@context": "https://schema.org", "@type": "WebPage", "@id": `${SITE_URL}/blog/recycling-equipment-buyer-guide/`, name: title, description, dateModified: lastUpdated, breadcrumb: { "@type": "BreadcrumbList", itemListElement: breadcrumbItems.map((b, i) => ({ "@type": "ListItem", position: i + 1, name: b.name, item: `${SITE_URL}${b.path}` })) } },
+];
+
+const faqItems = [
+  { q: "What's the minimum equipment to start a small e-waste recycling operation?", a: "Dismantling stations + hand tools + weighing scales + battery containment + PPE + a manifest / tracking system. That's it — everything else is a scale-driven upgrade. HDD shredding, cable granulation, PCB processing can all be outsourced initially to more established operators." },
+  { q: "Should I buy secondhand recycling equipment?", a: "For dismantling stations, tools, and shredders: yes, if in good condition with verifiable history. For safety kit (PPE, containment), fire suppression, and air-handling: buy new. The cost of a compromised safety failure is higher than the equipment savings." },
+  { q: "How much floor space does a small operation need?", a: "Depends entirely on throughput. A ~1-tonne-per-month manual dismantling operation can run in 500-800 sq ft. Serious throughput (5+ tonnes / month with granulation) needs 2,000+ sq ft with proper zoning for hazardous storage, dismantling, output staging." },
+  { q: "Where do I sell processed material streams?", a: "Copper: metal traders / smelters. Aluminium: same. Steel: bulk scrap dealers. Plastic: specialised plastic recyclers (mixed plastic is harder to sell than sorted). PCBs: specialised refineries (usually 2-3 in India that handle e-waste PCBs at commercial scale). Confirm buyers before investing in equipment that produces a stream you can't move." },
+  { q: "Does Ewaste Kochi sell recycling equipment?", a: "We don't manufacture equipment. We occasionally source refurbished dismantling stations, hand tools, and containment from operations upgrading their setup. If you're looking for specific equipment, WhatsApp us with your requirement — we can often connect you to sellers in the network." },
+  { q: "What about SPCB authorisation — does buying equipment help?", a: "Owning equipment doesn't grant authorisation. Authorisation requires meeting facility standards (layout, safety, emission control) plus documentation and inspection. Plan the authorisation path first, then buy equipment matching the specified facility." },
+];
+
+const structuredFaq = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqItems.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+const hreflangPairs = getHreflang("/blog/recycling-equipment-buyer-guide/");
+---
+
+<Layout title={title} description={description} canonical={`${SITE_URL}/blog/recycling-equipment-buyer-guide/`} hreflang={hreflangPairs} jsonLd={[...jsonLd, structuredFaq]}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <article>
+    <h1>{title}</h1>
+    <p class="lead">
+      Starting or expanding a small e-waste recycling operation isn't
+      primarily an equipment problem — it's an authorisation, downstream
+      buyer, and floor-space problem, with equipment as one input. This
+      guide walks through what a small operation actually needs, what to
+      look for when buying, and what to defer.
+    </p>
+    <DirectAnswer>
+      <p>
+        Minimum kit: dismantling stations, hand tools, weighing scales,
+        battery containment, PPE, and a manifest system. Everything else
+        (HDD shredders, cable granulators, PCB processing) is a scale-
+        driven upgrade — outsource initially. Plan authorisation and
+        downstream material buyers <em>before</em> capex.
+      </p>
+    </DirectAnswer>
+
+    <h2>Equipment categories — what does what</h2>
+    <ul>{equipmentCategories.map((e) => <li><strong>{e.category}.</strong> {e.note}</li>)}</ul>
+
+    <h2>Buying considerations</h2>
+    <ul>{buyingConsiderations.map((c) => <li>{c}</li>)}</ul>
+
+    <h2>Common early-stage mistakes</h2>
+    <ul>
+      <li>Buying a hard drive shredder before HDD volume justifies it — a ₹5-10 lakh machine sitting idle is real capital tied up.</li>
+      <li>Skipping the manifest / tracking system because "spreadsheet is enough" — until an audit needs three years of records reconstructed.</li>
+      <li>Under-investing in battery containment on the assumption "we're not doing much battery work" — one thermal event pays for years of proper containment.</li>
+      <li>Buying processing equipment before confirming downstream buyers for the resulting material stream.</li>
+      <li>Treating SPCB authorisation as a paperwork exercise separate from equipment planning — the two decisions constrain each other.</li>
+    </ul>
+
+    <h2>Frequently asked questions</h2>
+    <Faq items={faqItems} />
+    <CtaBar
+      primaryHref="https://wa.me/917500555454?text=Hi%20Ewaste%20Kochi%2C%20I%27m%20setting%20up%20a%20recycling%20operation."
+      primaryLabel="WhatsApp about equipment"
+      secondaryHref="/marketplace/"
+      secondaryLabel="Marketplace"
+    />
+  </article>
+</Layout>
