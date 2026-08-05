@@ -60,25 +60,89 @@ Explicitly NOT claimed:
 
 ### blog.ewastekochi.com retirement
 
-Status: REDIRECT-PLANNED
-Decision date: 2026-08-04
-Current state: Live HTTP 200; redirect not verified
-Owner project: Unconfirmed — connected Vercel account exposes no projects
-Planned action:
-- Exact redirects for valuable/indexed URLs
-- Remaining URLs → https://www.ewastekochi.com/blog/
-- Permanent 308
-Completion gate:
-- Redirect verified
-- One hop
-- Final 200
-- Relevant destination
-- Correct canonical
-- Old sitemap removed from GSC
+Status: MIGRATION-IN-PLANNING (supersedes REDIRECT-PLANNED as of 2026-08-05)
+Decision date: 2026-08-05
+Approved direction:
 
-Draft redirect map (all 69 subdomain URLs, hand-mapped, every destination verified live on
-www): [reports/blog-subdomain-redirect-map.md](reports/blog-subdomain-redirect-map.md).
-Full vercel.json redirect block ready to paste when the owner project is identified.
+> Native /blog/ content migration with intent consolidation — not Path A, B
+> or literal duplicate-heavy Path C. All valuable topics are retained, but
+> only one indexable canonical is allowed per search intent.
+
+Correction: "remove all redirects" was clarified 2026-08-05 to mean no
+INTRA-DOMAIN alias redirects inside the new /blog/ structure. One permanent
+308 host-level redirect per retired blog.ewastekochi.com URL to its final
+www canonical is REQUIRED, otherwise external links and Google-indexed
+URLs hit dead pages.
+
+Inventory (final):
+- 12 subdomain slugs already live on www /blog/ same slug → improve in place
+- 37 subdomain slugs need consolidation decision:
+  - ~11 genuine content gaps → create native evidence-backed pages
+  - ~26 semantic duplicates of existing V2 canonicals → NO new page;
+    subdomain URL 308s to the existing V2 canonical
+- 20 legacy /pillars/* hubs → rebuild as /blog/pillars/{slug}/ ONLY where
+  the topic is a distinct hub not already served by a V2 pillar; otherwise
+  308 to closest V2 pillar page
+
+Mandatory content controls for every migrated or newly-created page:
+- No "KSPCB authorized," certification, partnership or rating claim
+  without direct evidence
+- No invented pickup coverage, pricing or donation partners
+- Passage-level sources for legal, environmental, data-destruction claims
+- Distinct search intent and meaningful unique information
+- Self-referencing canonical
+- Article + BreadcrumbList + evidence-supported FAQ schema
+- Internal links to service conversion page + related location pages
+- Quality score ≥85 plus human editorial approval
+- Similarity gate against every existing page
+- `draft: true` frontmatter until every blocking gate passes
+
+Deployment order:
+1. Export and inventory all 69 legacy URLs (DONE — see draft map in
+   reports/, now retained as inventory only, not as an execution plan).
+2. Build an intent-overlap and final-canonical map.
+3. Update the 12 existing same-slug pages.
+4. Create the genuinely missing pages (candidate list: where-to-donate-
+   electronics, bank-it-asset-disposal-kochi, data-destruction-certificate-
+   kochi, inverter-battery-recycling-kochi, e-waste-rules-2022-compliance-
+   checklist, epr-compliance-checklist-india, esg-ewaste-reporting-template,
+   recycling-equipment-buyer-guide, e-waste-recycling-cost-calculator,
+   recycling-process-flowchart; server-recycling-kochi needs comparison
+   with existing root server page before publication).
+5. Consolidate overlapping content — merge unique legacy material into
+   the V2 canonical, do not publish two indexable pages per intent.
+6. Build only defensible pillar hubs.
+7. Deploy and confirm every final canonical returns 200.
+8. Move blog.ewastekochi.com to the production Vercel project
+   (ewaste-kochi-main).
+9. Activate 69 host-level one-hop 308 redirects (scoped by `has: [{type:
+   "host", value: "blog.ewastekochi.com"}]`).
+10. Verify redirect, canonical, sitemap and indexing behavior against the
+    6-point gate.
+11. Delete ewk-site (and any residual duplicate projects) only after the
+    verification gate passes.
+
+Inventory-only reference (do NOT execute as-is): reports/blog-subdomain-
+redirect-map.md.
+
+### Internal-evidence exposure audit (2026-08-05)
+
+Status: COMPLETE — no public exposure found; defense-in-depth added.
+
+Live probe against https://www.ewastekochi.com/ of every internal
+directory and file (PROJECT_TRACKER.md, reports/*, data/*, .content-
+quarantine/*, scripts/*, .indexnow-key, .vercel/*, .env variants): every
+one returns 404. Sitemap and content-index.json contain zero references
+to internal paths.
+
+Defense-in-depth: added .vercelignore to keep ~29 MB of internal-only
+content (reports 604K, data 8.1M, quarantine 20M, tracker 172K, generator
+scripts ~700K, backups) out of the Vercel build/upload context on every
+deploy. Never served, but no longer shipped either.
+
+Confirmed src/pages routes only import from src/data (safe TS modules);
+no route reads from root /data/, /reports/, or /.content-quarantine/.
+No back-door route directories (internal/admin/debug/preview/draft/sample).
 
 ## Current Mission
 

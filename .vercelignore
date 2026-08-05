@@ -1,0 +1,61 @@
+# .vercelignore — keep internal evidence and audit leftovers out of every
+# Vercel build/upload. These files are already 404 on the live site (Astro
+# only serves public/ and src/pages/), so this is defense-in-depth: shrinks
+# the deploy footprint, eliminates any possibility of a future build-config
+# change accidentally exposing them, and cuts upload/build time.
+#
+# WHAT NOT TO ADD HERE:
+# - src/**            → source code the build actually needs
+# - public/**         → static assets that must be served
+# - package*.json     → build needs deps
+# - astro.config.*, tsconfig.json, vercel.json → config the platform reads
+# - .well-known/**    → if we ever add verification files
+
+# ---------------------------------------------------------------------------
+# Internal evidence / audit reports — never public
+# ---------------------------------------------------------------------------
+PROJECT_TRACKER.md
+reports/
+docs/internal/
+
+# ---------------------------------------------------------------------------
+# Data exports and classification files — GSC dumps, URL protection maps,
+# roadmap CSVs. Consumed by scripts locally, not by the runtime build.
+# ---------------------------------------------------------------------------
+data/
+
+# ---------------------------------------------------------------------------
+# Quarantined content — unreviewed drafts + generated images.
+# .content-quarantine/generated/ is the review staging area for new pages
+# BEFORE they get promoted to src/pages/. Neither Astro nor Vercel should
+# ever see this directory during a production build.
+# ---------------------------------------------------------------------------
+.content-quarantine/
+
+# ---------------------------------------------------------------------------
+# Build/generator scripts — Python tooling for local content generation.
+# Astro build doesn't invoke them; they only run manually.
+# ---------------------------------------------------------------------------
+scripts/
+!scripts/indexnow-ping.py.disabled
+# (leave a hint: if any script ever needs to run during build, whitelist
+#  the specific file here with a leading `!`. Never whitelist the whole
+#  scripts/ directory.)
+
+# ---------------------------------------------------------------------------
+# Secret / key material — the IndexNow key file
+# ---------------------------------------------------------------------------
+.indexnow-key
+
+# ---------------------------------------------------------------------------
+# Local backup snapshots + editor droppings
+# ---------------------------------------------------------------------------
+backups/
+*.backup.ts
+*.backup.md
+.DS_Store
+
+# ---------------------------------------------------------------------------
+# Sitemap-export snapshots I generated for handoff
+# ---------------------------------------------------------------------------
+sitemap-export/
