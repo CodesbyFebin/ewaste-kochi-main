@@ -1,0 +1,203 @@
+---
+// DRAFT — Quarantined. Sample encyclopedia entry proving the content-depth bar.
+// Follows the pattern that all 500 entries will use once approved for batch generation.
+// Category: Battery Chemistries. Slug: lithium-ion-battery.
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import { SITE_URL } from "../../../data/site";
+import { getHreflang } from "../../../data/routes";
+
+const term = "Lithium-Ion Battery";
+const title = `${term} — E-Waste Encyclopedia | Ewaste Kochi`;
+const description = "Lithium-ion battery: chemistry, cathode variants (LCO, NMC, NCA, LFP, LTO), end-of-life hazards, recycling routes, and disposal in India.";
+const lastUpdated = "2026-08-05";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Encyclopedia", path: "/encyclopedia/" },
+  { name: term, path: "/encyclopedia/lithium-ion-battery/" }
+];
+
+const crossReferences = [
+  { slug: "lithium-cobalt-oxide-lco", label: "Lithium Cobalt Oxide (LCO)" },
+  { slug: "lithium-nickel-manganese-cobalt-nmc", label: "Lithium NMC" },
+  { slug: "lithium-iron-phosphate-lfp", label: "Lithium Iron Phosphate (LFP)" },
+  { slug: "thermal-runaway-lithium", label: "Thermal Runaway" },
+  { slug: "cobalt-in-batteries", label: "Cobalt in Batteries" },
+];
+
+const relatedServices = [
+  { path: "/battery-recycling/", label: "Battery Recycling in Kochi" },
+  { path: "/battery-recycling/laptop-battery-disposal-in-kerala-storage-safety-and-recycling/", label: "Laptop Battery Disposal Guide" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "DefinedTerm",
+    "@id": `${SITE_URL}/encyclopedia/lithium-ion-battery/`,
+    name: term,
+    description,
+    inDefinedTermSet: {
+      "@type": "DefinedTermSet",
+      name: "E-Waste Encyclopedia",
+      "@id": `${SITE_URL}/encyclopedia/`,
+    },
+    url: `${SITE_URL}/encyclopedia/lithium-ion-battery/`,
+    termCode: "lithium-ion-battery",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: term,
+    description,
+    url: `${SITE_URL}/encyclopedia/lithium-ion-battery/`,
+    dateModified: lastUpdated,
+    author: { "@id": `${SITE_URL}/#organization` },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}/encyclopedia/lithium-ion-battery/`,
+    about: { "@type": "Thing", name: "Lithium-ion battery" },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: breadcrumbItems.map((b, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: b.name,
+      item: `${SITE_URL}${b.path}`,
+    })),
+  },
+];
+
+const hreflangPairs = getHreflang("/encyclopedia/lithium-ion-battery/");
+---
+
+<Layout title={title} description={description} canonical={`${SITE_URL}/encyclopedia/lithium-ion-battery/`} hreflang={hreflangPairs} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <article class="encyclopedia-entry">
+    <header>
+      <p class="term-category">Battery Chemistries</p>
+      <h1>{term}</h1>
+      <p class="term-summary">
+        <strong>Lithium-ion (Li-ion)</strong> is the dominant rechargeable
+        battery chemistry in modern consumer and industrial electronics.
+        Energy is stored by moving lithium ions between a graphite anode and
+        a metal-oxide cathode through a lithium-salt electrolyte.
+      </p>
+    </header>
+
+    <section>
+      <h2>Chemistry variants</h2>
+      <p>
+        "Lithium-ion" is a family, not a single chemistry — the cathode
+        material defines the sub-type, and each sub-type has distinct energy
+        density, cycle life, thermal stability, and cost:
+      </p>
+      <ul>
+        <li><strong>LCO</strong> (Lithium Cobalt Oxide): highest energy density; laptops, older smartphones. Cobalt-heavy.</li>
+        <li><strong>NMC</strong> (Nickel Manganese Cobalt): balanced; modern laptops, EVs.</li>
+        <li><strong>NCA</strong> (Nickel Cobalt Aluminum): high energy; Tesla and premium EVs.</li>
+        <li><strong>LFP</strong> (Lithium Iron Phosphate): safer, longer cycle life, lower energy density; stationary storage, some EVs, LED torches.</li>
+        <li><strong>LTO</strong> (Lithium Titanate): very long cycle life, fast charge, low energy density; industrial applications.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>End-of-life hazards</h2>
+      <p>
+        Damaged, punctured, or over-heated Li-ion cells can enter{" "}
+        <a href="/encyclopedia/thermal-runaway-lithium/">thermal runaway</a>{" "}
+        — a self-sustaining exothermic reaction that vents flammable
+        electrolyte vapor and can propagate to adjacent cells. Common
+        triggers at end-of-life: physical damage in transport,
+        short-circuit from mixed disposal with other batteries, moisture
+        contact with exposed terminals, and pressure from compaction in
+        general-waste truck compressors.
+      </p>
+      <p>
+        This is the reason Li-ion batteries and Li-ion-containing devices
+        (laptops, phones, power banks, wireless earphones with sealed
+        batteries) must never be placed in general household waste — the
+        compaction cycle alone can trigger fires.
+      </p>
+    </section>
+
+    <section>
+      <h2>Recycling routes</h2>
+      <p>
+        Li-ion recycling separates into three broad technology families:
+      </p>
+      <ol>
+        <li><strong>Pyrometallurgy</strong> — high-temperature smelting recovers cobalt, nickel, copper as an alloy. Lithium is often lost to slag.</li>
+        <li><strong>Hydrometallurgy</strong> — dissolution in acid or alkali, followed by selective precipitation. Better lithium recovery.</li>
+        <li><strong>Direct recycling</strong> — physical separation preserving the cathode structure. Highest theoretical value; less mature at commercial scale.</li>
+      </ol>
+      <p>
+        A given Li-ion battery in India typically routes through mechanical
+        shredding (to expose materials), then to specialised recyclers using
+        pyrometallurgical or hydrometallurgical processes. Recovery
+        percentages vary widely by chemistry and process — cobalt
+        recoveries of 90%+ are commercially routine, lithium recoveries
+        historically much lower but improving.
+      </p>
+    </section>
+
+    <section>
+      <h2>Disposal in India</h2>
+      <p>
+        Li-ion battery disposal in India falls under the{" "}
+        <a href="/encyclopedia/batteries-waste-management-rules-2022/">
+          Batteries (Waste Management) Rules, 2022
+        </a>, which applies EPR obligations to battery producers. For
+        consumers and bulk users, the practical route is authorised
+        recycler pickup — informal-sector routes exist but often end in
+        environmentally destructive processing.
+      </p>
+      <p>
+        In Kochi, Ewaste Kochi provides doorstep pickup for Li-ion
+        batteries and Li-ion-containing devices. See{" "}
+        <a href="/battery-recycling/">battery recycling</a> for the service,
+        or{" "}
+        <a href="/battery-recycling/laptop-battery-disposal-in-kerala-storage-safety-and-recycling/">
+          laptop battery disposal
+        </a>{" "}
+        for the most common Li-ion category. Batteries are Kochi-doorstep
+        only — dangerous-goods courier restrictions prevent pan-India
+        ship-in for battery categories.
+      </p>
+    </section>
+
+    <section>
+      <h2>Related entries</h2>
+      <ul>
+        {crossReferences.map((r) => (
+          <li>
+            <a href={`/encyclopedia/${r.slug}/`}>{r.label}</a>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section>
+      <h2>Related services</h2>
+      <ul>
+        {relatedServices.map((s) => (
+          <li>
+            <a href={s.path}>{s.label}</a>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <p class="last-updated">Last updated: {lastUpdated}</p>
+
+    <CtaBar
+      primaryHref="https://wa.me/917500555454?text=Hi%20Ewaste%20Kochi%2C%20I%20need%20lithium-ion%20battery%20recycling."
+      primaryLabel="WhatsApp for battery pickup"
+      secondaryHref="/battery-recycling/"
+      secondaryLabel="All battery recycling"
+    />
+  </article>
+</Layout>
