@@ -20,20 +20,31 @@ const isCurrent = (href: string) => currentPath === href;
 <header class="site-header">
   <div class="trust-bar" aria-label="Trust and contact highlights">
     <div class="trust-wrap">
-      <span>Secure data handling</span>
-      <span>Responsible recycling support</span>
-      <span>Free pickup assistance in Kochi</span>
+      <div class="trust-points">
+        <span>Secure data handling</span>
+        <span>Responsible recycling support</span>
+        <span>Free pickup assistance in Kochi</span>
+      </div>
       <a href={telLink()}>Have e-waste? {BUSINESS.phoneDisplay}</a>
     </div>
   </div>
   <div class="wrap">
-    <a href="/" class="brand">Ewaste Kochi</a>
+    <a href="/" class="brand" aria-label="Ewaste Kochi home">
+      <span class="brand-mark" aria-hidden="true">E</span>
+      <span>Ewaste <strong>Kochi</strong></span>
+    </a>
+
     <nav class="main-nav" aria-label="Primary">
       {navLinks.map((link) => (
         <a href={link.href} aria-current={isCurrent(link.href) ? "page" : undefined}>{link.label}</a>
       ))}
     </nav>
-    <a class="header-call" href={telLink()}>{BUSINESS.phoneDisplay}</a>
+
+    <a class="header-call" href={telLink()} aria-label={`Call Ewaste Kochi at ${BUSINESS.phoneDisplay}`}>
+      <span class="call-label">Call</span>
+      {BUSINESS.phoneDisplay}
+    </a>
+
     <button
       type="button"
       class="nav-toggle"
@@ -47,14 +58,16 @@ const isCurrent = (href: string) => currentPath === href;
       </svg>
     </button>
   </div>
-  <!-- Mobile nav is a SIBLING of the sticky header (not a child) so it can
-       overlay the viewport as position:fixed instead of extending the
-       header's height. Toggled via `hidden` attribute + `body.menu-open`. -->
 </header>
+
 <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile" hidden>
-  {navLinks.map((link) => (
-    <a href={link.href} aria-current={isCurrent(link.href) ? "page" : undefined}>{link.label}</a>
-  ))}
+  <div class="mobile-nav-inner">
+    <p class="mobile-nav-label">Explore Ewaste Kochi</p>
+    {navLinks.map((link) => (
+      <a href={link.href} aria-current={isCurrent(link.href) ? "page" : undefined}>{link.label}</a>
+    ))}
+    <a class="mobile-call" href={telLink()}>Call {BUSINESS.phoneDisplay}</a>
+  </div>
 </nav>
 
 <script>
@@ -68,8 +81,6 @@ const isCurrent = (href: string) => currentPath === href;
     toggle.setAttribute("aria-expanded", String(open));
     toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     mobileNav.hidden = !open;
-    // Lock body scroll while the overlay is open so hitting the ends of
-    // the menu's internal scroll doesn't scroll the page underneath.
     document.body.classList.toggle("menu-open", open);
     if (iconOpen) iconOpen.style.display = open ? "none" : "";
     if (iconClose) iconClose.style.display = open ? "" : "none";
@@ -97,115 +108,181 @@ const isCurrent = (href: string) => currentPath === href;
 </script>
 
 <style>
-  /* Layered sticky header architecture — kept as CSS variables so the
-     mobile overlay top offset is always in sync with the actual bar
-     heights (change one number, everything follows). */
   :root {
-    --topbar-height: 32px;   /* .trust-bar computed height on mobile */
-    --header-height: 60px;   /* .wrap computed height on mobile */
+    --topbar-height: 34px;
+    --header-height: 70px;
     --header-total: calc(var(--topbar-height) + var(--header-height));
   }
+
   @media (min-width: 860px) {
     :root {
       --topbar-height: 36px;
-      --header-height: 68px;
+      --header-height: 72px;
     }
   }
+
   .site-header {
-    border-bottom: 1px solid var(--color-border);
     position: sticky;
     top: 0;
-    background: var(--color-bg);
     z-index: 1000;
-    /* No transform / filter / overflow here — a transformed or clipping
-       ancestor would break sticky positioning + create a new containing
-       block for the fixed mobile overlay. */
+    background: color-mix(in srgb, var(--color-bg) 94%, transparent);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0 4px 18px rgba(16, 32, 25, 0.04);
+    backdrop-filter: blur(14px);
   }
+
   .trust-bar {
-    background: #063d1e;
+    min-height: var(--topbar-height);
+    background: linear-gradient(90deg, #063d1e, #0b5d34);
     color: #fff;
-    font-size: 0.78rem;
-    font-weight: 700;
+    font-size: 0.74rem;
+    font-weight: 750;
   }
+
   .trust-wrap {
-    max-width: 72rem;
+    width: min(100% - 2rem, 72rem);
+    min-height: var(--topbar-height);
     margin: 0 auto;
-    padding: 0.42rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .trust-points {
+    display: none;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .trust-points span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.38rem;
+    white-space: nowrap;
+  }
+
+  .trust-points span::before {
+    content: "✓";
+    color: #8df0b5;
+    font-weight: 900;
+  }
+
+  .trust-wrap a {
+    margin-left: auto;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .trust-wrap a:hover { text-decoration: underline; }
+
+  .wrap {
+    width: min(100% - 2rem, 72rem);
+    min-height: var(--header-height);
+    margin: 0 auto;
+    padding: 0.7rem 0;
     display: flex;
     align-items: center;
     gap: 1rem;
-    justify-content: space-between;
   }
-  .trust-wrap span {
-    display: none;
-    white-space: nowrap;
-  }
-  .trust-wrap a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: auto;
-  }
-  .wrap {
-    max-width: 72rem;
-    margin: 0 auto;
-    padding: 0.9rem 1.25rem;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-  }
+
   .brand {
-    font-weight: 800;
-    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    min-width: max-content;
     color: var(--color-text);
+    font-size: 1.02rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
     text-decoration: none;
-    white-space: nowrap;
   }
+
+  .brand strong { color: var(--color-primary); }
+
+  .brand-mark {
+    display: grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 9px;
+    background: linear-gradient(145deg, var(--color-primary), var(--color-primary-dark));
+    color: #fff;
+    font-weight: 900;
+    box-shadow: 0 5px 14px rgba(20, 122, 75, 0.22);
+  }
+
   .main-nav {
     display: none;
-    gap: 1.1rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
     flex: 1;
-    font-size: 0.9rem;
+    min-width: 0;
   }
+
   .main-nav a {
-    color: var(--color-text);
-    text-decoration: none;
-  }
-  .main-nav a:hover {
-    color: var(--color-primary);
-  }
-  .main-nav a[aria-current="page"] {
-    color: var(--color-primary);
-    font-weight: 700;
-  }
-  .header-call {
-    margin-left: auto;
-    font-weight: 700;
-    color: var(--color-primary);
+    padding: 0.48rem 0.62rem;
+    border-radius: 8px;
+    color: var(--color-muted);
+    font-size: 0.82rem;
+    font-weight: 650;
     text-decoration: none;
     white-space: nowrap;
   }
+
+  .main-nav a:hover {
+    color: var(--color-text);
+    background: var(--color-surface);
+  }
+
+  .main-nav a[aria-current="page"] {
+    color: var(--color-primary);
+    background: var(--color-accent);
+    font-weight: 800;
+  }
+
+  .header-call {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-left: auto;
+    padding: 0.55rem 0.8rem;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    background: var(--color-surface);
+    color: var(--color-primary);
+    font-size: 0.82rem;
+    font-weight: 800;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .header-call:hover {
+    border-color: var(--color-primary);
+    background: var(--color-accent);
+  }
+
+  .call-label { color: var(--color-muted); font-weight: 650; }
+
   .nav-toggle {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 44px;
     height: 44px;
-    margin-left: 0.5rem;
     padding: 0;
     border: 1px solid var(--color-border);
-    border-radius: 0.4rem;
+    border-radius: 11px;
     background: var(--color-bg);
     color: var(--color-text);
     cursor: pointer;
   }
-  .nav-toggle svg {
-    width: 22px;
-    height: 22px;
-  }
-  /* Fixed overlay under the two sticky bars, own scroll container.
-     Sits BELOW the header stack (z-index 999 < header's 1000) so the
-     header always paints on top — the overlay only claims the space
-     from the header's bottom edge down. */
+
+  .nav-toggle:hover { background: var(--color-surface); }
+  .nav-toggle svg { width: 21px; height: 21px; }
+
   .mobile-nav {
     position: fixed;
     top: var(--header-total);
@@ -215,53 +292,64 @@ const isCurrent = (href: string) => currentPath === href;
     height: calc(100dvh - var(--header-total));
     overflow-y: auto;
     overscroll-behavior: contain;
-    -webkit-overflow-scrolling: touch;
     z-index: 999;
     background: var(--color-bg);
-    padding: 0.5rem 1.25rem 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.1rem;
     border-top: 1px solid var(--color-border);
-    /* env() honors notch / dynamic island on iOS. */
-    padding-bottom: max(2rem, env(safe-area-inset-bottom));
+    box-shadow: 0 20px 45px rgba(16, 32, 25, 0.14);
   }
-  /* When hidden by the `hidden` attribute, take no space and don't paint.
-     (The attribute already sets display:none, but be explicit so any UA
-     stylesheet quirk doesn't leave the overlay tangible.) */
-  .mobile-nav[hidden] {
-    display: none;
+
+  .mobile-nav[hidden] { display: none; }
+
+  .mobile-nav-inner {
+    width: min(100% - 2rem, 34rem);
+    margin: 0 auto;
+    padding: 0.8rem 0 max(2rem, env(safe-area-inset-bottom));
   }
+
+  .mobile-nav-label {
+    margin: 0.5rem 0 0.6rem;
+    color: var(--color-muted);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
   .mobile-nav a {
-    padding: 0.7rem 0.25rem;
-    color: var(--color-text);
-    text-decoration: none;
-    font-size: 0.95rem;
-    border-bottom: 1px solid var(--color-border);
-    min-height: 44px;
     display: flex;
     align-items: center;
+    min-height: 50px;
+    padding: 0.75rem 0.8rem;
+    border-bottom: 1px solid var(--color-border);
+    border-radius: 8px;
+    color: var(--color-text);
+    font-weight: 700;
+    text-decoration: none;
   }
-  .mobile-nav a:last-child {
-    border-bottom: none;
-  }
+
   .mobile-nav a[aria-current="page"] {
     color: var(--color-primary);
-    font-weight: 700;
+    background: var(--color-accent);
   }
+
+  .mobile-nav .mobile-call {
+    justify-content: center;
+    margin-top: 1rem;
+    border: 0;
+    background: var(--color-primary);
+    color: #fff;
+  }
+
   @media (min-width: 860px) {
-    .trust-wrap span {
-      display: inline;
-    }
-    .main-nav {
-      display: flex;
-    }
-    .header-call {
-      margin-left: 0;
-    }
-    .nav-toggle,
-    .mobile-nav {
-      display: none;
-    }
+    .trust-points { display: flex; }
+    .main-nav { display: flex; }
+    .header-call { margin-left: 0; }
+    .nav-toggle, .mobile-nav { display: none; }
+  }
+
+  @media (max-width: 640px) {
+    .trust-wrap, .wrap { width: min(100% - 1.25rem, 72rem); }
+    .header-call { display: none; }
+    .brand { font-size: 0.98rem; }
   }
 </style>
