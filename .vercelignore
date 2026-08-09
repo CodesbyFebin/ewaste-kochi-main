@@ -10,20 +10,20 @@
 # - package*.json     → build needs deps
 # - astro.config.*, tsconfig.json, vercel.json → config the platform reads
 # - .well-known/**    → if we ever add verification files
-
+#
 # ---------------------------------------------------------------------------
 # Internal evidence / audit reports — never public
 # ---------------------------------------------------------------------------
 PROJECT_TRACKER.md
 reports/
 docs/internal/
-
+#
 # ---------------------------------------------------------------------------
 # Data exports and classification files — GSC dumps, URL protection maps,
 # roadmap CSVs. Consumed by scripts locally, not by the runtime build.
 # ---------------------------------------------------------------------------
 data/
-
+#
 # ---------------------------------------------------------------------------
 # Quarantined content — unreviewed drafts + generated images.
 # .content-quarantine/generated/ is the review staging area for new pages
@@ -31,22 +31,22 @@ data/
 # ever see this directory during a production build.
 # ---------------------------------------------------------------------------
 .content-quarantine/
-
+#
 # ---------------------------------------------------------------------------
-# Build/generator scripts — Python tooling for local content generation.
-# Astro build doesn't invoke them; they only run manually.
+# Build and validation scripts
+#
+# Do not ignore scripts/. package.json invokes files from this directory
+# during validation and deployment, so Vercel must receive it.
+# Exclude only generated Python cache artifacts.
 # ---------------------------------------------------------------------------
-scripts/
-!scripts/indexnow-ping.py.disabled
-# (leave a hint: if any script ever needs to run during build, whitelist
-#  the specific file here with a leading `!`. Never whitelist the whole
-#  scripts/ directory.)
-
+scripts/**/__pycache__/
+scripts/**/*.pyc
+#
 # ---------------------------------------------------------------------------
 # Secret / key material — the IndexNow key file
 # ---------------------------------------------------------------------------
 .indexnow-key
-
+#
 # ---------------------------------------------------------------------------
 # Local backup snapshots + editor droppings
 # ---------------------------------------------------------------------------
@@ -54,7 +54,7 @@ backups/
 *.backup.ts
 *.backup.md
 .DS_Store
-
+#
 # ---------------------------------------------------------------------------
 # Sitemap-export snapshots I generated for handoff
 # ---------------------------------------------------------------------------
