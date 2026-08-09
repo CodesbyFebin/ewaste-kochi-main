@@ -21,8 +21,10 @@ docs/internal/
 # ---------------------------------------------------------------------------
 # Data exports and classification files — GSC dumps, URL protection maps,
 # roadmap CSVs. Consumed by scripts locally, not by the runtime build.
+# Only the repository-root data directory is excluded; src/data contains
+# source modules required by the Astro/Vite build and must be uploaded.
 # ---------------------------------------------------------------------------
-data/
+/data/
 #
 # ---------------------------------------------------------------------------
 # Quarantined content — unreviewed drafts + generated images.
