@@ -1,6 +1,7 @@
 # robots.txt for https://www.ewastekochi.com
 # AI/search discovery policy: public canonical content is crawlable.
 # Sensitive, dynamic and non-canonical surfaces remain excluded.
+# Crawlers must independently decide whether and when to crawl or index.
 
 # ---------------------------------------------------------------------------
 # General web crawlers
@@ -21,8 +22,8 @@ Disallow: /*?source=
 # ---------------------------------------------------------------------------
 # Search engines and AI search/citation crawlers
 # ---------------------------------------------------------------------------
-# These agents may crawl the public site so it can be discovered, cited,
-# summarized, and surfaced in search/answer experiences.
+# Public canonical pages are intentionally available for discovery, search,
+# retrieval and citation. Dynamic/internal endpoints remain excluded.
 User-agent: Googlebot
 Allow: /
 Disallow: /api/
@@ -152,7 +153,11 @@ Disallow: /api/
 Disallow: /admin/
 
 # ---------------------------------------------------------------------------
-# Sitemaps
+# Machine-readable discovery resources
 # ---------------------------------------------------------------------------
+# robots.txt cannot force a crawler to index a URL. These sitemaps and the
+# site's /llms.txt provide explicit discovery signals for compliant systems.
 Sitemap: https://www.ewastekochi.com/sitemap.xml
 Sitemap: https://www.ewastekochi.com/sitemap-index.xml
+Sitemap: https://www.ewastekochi.com/ai-sitemap.xml
+Sitemap: https://www.ewastekochi.com/content-index.xml
