@@ -16,17 +16,6 @@ const breadcrumbItems = [
   { name: "FAQ", path: "/faq/" },
 ];
 
-const jsonLd = [
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `${SITE_URL}/faq/`,
-    name: title,
-    description,
-    dateModified: lastUpdated,
-  },
-];
-
 const faqItems = [
   {
     q: "Is pickup really free?",
@@ -59,6 +48,30 @@ const faqItems = [
   {
     q: "How do I contact you?",
     a: "WhatsApp and phone are the fastest ways to reach us — see our Contact page for details and hours.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/faq/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${SITE_URL}/faq/#faq`,
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    })),
   },
 ];
 ---
