@@ -40,6 +40,62 @@ const htmlLang = lang === "ml-IN" ? "ml" : "en-IN";
     </main>
     <Footer />
     <LeadFunnelChatbot />
+    <script>
+      (() => {
+        const path = window.location.pathname.replace(/\/+$/, "") || "/";
+        if (path !== "/blog") return;
+
+        const thumbRules = [
+          { test: /battery/i, src: "/images/blog/thumb-battery.svg", label: "Battery recycling guide" },
+          { test: /data destruction|itad|hard drive/i, src: "/images/blog/thumb-data.svg", label: "Data destruction and ITAD guide" },
+          { test: /laptop|computer/i, src: "/images/blog/thumb-laptop.svg", label: "Laptop and computer recycling guide" },
+          { test: /pickup|collection|near me|book an e-waste/i, src: "/images/blog/thumb-pickup.svg", label: "E-waste pickup guide" },
+          { test: /rules|compliance|epr/i, src: "/images/blog/thumb-compliance.svg", label: "E-waste rules and compliance guide" },
+          { test: /recycl|e-waste|sell|scrap/i, src: "/images/blog/thumb-recycling.svg", label: "E-waste recycling guide" },
+        ];
+
+        const cards = document.querySelectorAll(".post-card");
+        cards.forEach((card) => {
+          if (card.querySelector(".post-thumb")) return;
+          const text = card.textContent || "";
+          const rule = thumbRules.find((item) => item.test.test(text)) || thumbRules[5];
+          const title = card.querySelector(".post-title")?.textContent?.trim() || rule.label;
+          const img = document.createElement("img");
+          img.className = "post-thumb";
+          img.src = rule.src;
+          img.alt = `${title} — ${rule.label}, Ewaste Kochi`;
+          img.width = 1200;
+          img.height = 675;
+          img.loading = "lazy";
+          img.decoding = "async";
+          img.setAttribute("data-ai-context", `${title}; ${rule.label}; Kochi, Kerala; Ewaste Kochi`);
+          card.prepend(img);
+        });
+
+        const imageList = Array.from(document.querySelectorAll(".post-thumb")).map((img) => ({
+          "@type": "ImageObject",
+          contentUrl: new URL(img.getAttribute("src") || "", window.location.origin).href,
+          name: img.getAttribute("alt") || "Ewaste Kochi blog guide",
+          representativeOfPage: false,
+        }));
+
+        if (imageList.length) {
+          const script = document.createElement("script");
+          script.type = "application/ld+json";
+          script.textContent = JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "Ewaste Kochi Blog Guide Images",
+            itemListElement: imageList.map((image, index) => ({
+              "@type": "ListItem",
+              position: index + 1,
+              item: image,
+            })),
+          });
+          document.head.appendChild(script);
+        }
+      })();
+    </script>
   </body>
 </html>
 
@@ -182,6 +238,40 @@ const htmlLang = lang === "ml-IN" ? "ml" : "en-IN";
   :where(main .cluster-card, main .item-card) { box-shadow: var(--shadow-sm); }
   :where(main .final-cta) { box-shadow: var(--shadow-sm); }
 
+  /* Blog hub thumbnails: visual topic/entity cues without keyword stuffing. */
+  .post-grid .post-card {
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .post-grid .post-card > :not(.post-thumb) {
+    margin-inline: 1.15rem;
+  }
+
+  .post-grid .post-card > .post-cluster { margin-top: 1rem; }
+
+  .post-grid .post-thumb {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1200 / 675;
+    object-fit: cover;
+    margin: 0;
+    border: 0;
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-surface);
+  }
+
+  .post-grid .post-card:hover .post-thumb {
+    transform: scale(1.012);
+    transition: transform 180ms ease;
+  }
+
+  .post-grid .post-title { display: block; margin-top: 0.35rem; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .post-grid .post-thumb { transition: none; }
+  }
+
   @media (max-width: 640px) {
     main {
       width: min(100% - 1.25rem, 72rem);
@@ -196,5 +286,8 @@ const htmlLang = lang === "ml-IN" ? "ml" : "en-IN";
     :where(main .table-scroll table) { min-width: 36rem; }
     :where(main .link-row) { gap: 0.5rem; }
     :where(main figure) { margin-inline: 0; }
+
+    .post-grid .post-card > :not(.post-thumb) { margin-inline: 0.9rem; }
+    .post-grid .post-thumb { aspect-ratio: 16 / 9; }
   }
 </style>
