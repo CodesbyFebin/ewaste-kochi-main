@@ -160,24 +160,27 @@ const htmlLang = lang === "ml-IN" ? "ml" : "en-IN";
 
   .skip-link:focus { top: 0; }
 
-  /* Shared page polish. Low-specificity selectors keep bespoke page styles in control. */
   :where(main > section) { scroll-margin-top: 104px; }
-  :where(main > section:not(.hero)) { margin-block: clamp(2.5rem, 5vw, 4.5rem); }
-  :where(main > h1) { margin-top: 0.5rem; font-size: clamp(2rem, 5vw, 3.5rem); }
-  :where(main > .lede) { max-width: 52rem; font-size: clamp(1rem, 2vw, 1.18rem); }
+  :where(main > section:not(.hero)) { margin-block: clamp(2.75rem, 5vw, 4.75rem); }
+  :where(main > h1) { margin-top: 0.5rem; font-size: clamp(2rem, 5vw, 3.5rem); max-width: 18ch; }
+  :where(main > .lede) { max-width: 52rem; font-size: clamp(1rem, 2vw, 1.18rem); color: var(--color-muted); }
   :where(main section, main article) { min-width: 0; }
+  :where(main section > h2) { margin-bottom: 0.8rem; }
+  :where(main section > p) { max-width: 68ch; }
   :where(main table) { border-collapse: collapse; }
-  :where(main .table-scroll) { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; overscroll-behavior-inline: contain; }
+  :where(main .table-scroll) { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; overscroll-behavior-inline: contain; border-radius: var(--radius-sm); }
   :where(main .table-scroll table) { min-width: 40rem; }
-  :where(main input, main textarea, main select) { max-width: 100%; }
-  :where(main input, main textarea, main select) { border-radius: var(--radius-sm); }
+  :where(main input, main textarea, main select) { max-width: 100%; border-radius: var(--radius-sm); }
   :where(main button, main .action, main a[role="button"]) { touch-action: manipulation; }
   :where(main ul, main ol) { padding-inline-start: 1.35rem; }
   :where(main .check-list) { display: grid; gap: 0.65rem; }
   :where(main .link-row) { display: flex; flex-wrap: wrap; gap: 0.65rem; }
   :where(main .link-row a) { min-height: 42px; display: inline-flex; align-items: center; }
   :where(main .hero-image, main figure) { max-width: 100%; }
-  :where(main figure img) { display: block; }
+  :where(main figure img) { display: block; width: 100%; border-radius: var(--radius-md); }
+  :where(main .cluster-grid, main .item-grid) { align-items: stretch; }
+  :where(main .cluster-card, main .item-card) { box-shadow: var(--shadow-sm); }
+  :where(main .final-cta) { box-shadow: var(--shadow-sm); }
 
   @media (max-width: 640px) {
     main {
@@ -186,10 +189,12 @@ const htmlLang = lang === "ml-IN" ? "ml" : "en-IN";
     }
 
     :where(main > section:not(.hero)) { margin-block: 2.5rem; }
-    :where(main > h1) { font-size: clamp(1.9rem, 9vw, 2.7rem); }
+    :where(main > h1) { font-size: clamp(1.9rem, 9vw, 2.7rem); max-width: 100%; line-height: 1.08; }
     :where(main > .lede) { font-size: 1rem; line-height: 1.6; }
-    :where(main .table-scroll) { margin-inline: -0.1rem; }
+    :where(main section > h2) { font-size: clamp(1.45rem, 6vw, 2rem); }
+    :where(main .table-scroll) { margin-inline: -0.1rem; border-radius: var(--radius-sm); }
     :where(main .table-scroll table) { min-width: 36rem; }
     :where(main .link-row) { gap: 0.5rem; }
+    :where(main figure) { margin-inline: 0; }
   }
 </style>
