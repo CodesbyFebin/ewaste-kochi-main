@@ -6,10 +6,10 @@ import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
 
-const title = "E-Waste Recycling in Kottayam, Kerala | Pickup Feasibility Check";
+const title = "E-Waste Recycling in Kottayam, Kerala | Pickup Feasibility";
 const description =
-  "Kottayam isn't a standard doorstep pickup area for Ewaste Kochi, but we check feasibility for Kottayam enquiries — bulk, business, and drop-off options. Contact us to find out what's possible.";
-const lastUpdated = "2026-07-15";
+  "Check e-waste recycling and pickup feasibility in Kottayam, Kerala. Ewaste Kochi reviews bulk, business and institutional enquiries based on item type, quantity and location.";
+const lastUpdated = "2026-08-10";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
@@ -39,109 +39,138 @@ const jsonLd = [
 const faqItems = [
   {
     q: "Do you offer doorstep e-waste pickup in Kottayam?",
-    a: "Not as a standard, scheduled service — Kottayam is outside our core Kochi-metro coverage. We do check feasibility for individual Kottayam enquiries, particularly bulk or business volumes, rather than promising pickup upfront.",
+    a: "Kottayam is outside our core Kochi-metro scheduled coverage, so pickup is not promised as a standard route. We do review Kottayam enquiries case by case, particularly bulk and business requests.",
   },
   {
-    q: "What makes pickup feasible from Kottayam?",
-    a: "Mainly item volume, type, and exact location. A single device is harder to justify a dedicated trip for; office clearances, bulk battery lots, or institutional volumes are more often workable. Message us with details and we'll tell you honestly whether it's practical.",
+    q: "What makes e-waste pickup feasible from Kottayam?",
+    a: "Item volume, type, condition and exact location are the main factors. Office clearances, bulk battery lots and institutional volumes are more practical to review than a single-device dedicated trip.",
   },
   {
-    q: "Can businesses or institutions in Kottayam still get pickup arranged?",
-    a: "Often, yes — bulk volume changes the logistics math. Publishing houses, offices, and institutions in Kottayam with a genuine bulk clearance should contact us directly with an item list; we'll confirm feasibility rather than assume either way.",
+    q: "Can businesses or institutions in Kottayam request pickup?",
+    a: "Yes. Businesses and institutions can send an item list, approximate quantity, location and photos for a feasibility review. Larger asset-tracked decommissioning projects can be routed through ITAD.",
   },
   {
-    q: "Is there an extra cost for pickup this far from Kochi?",
-    a: "If a pickup is arranged, any additional logistics cost for the distance would be discussed and agreed upfront — never assumed or added after the fact.",
+    q: "What electronics can I ask about for Kottayam pickup?",
+    a: "Common enquiries include laptops, desktops, monitors, printers, TVs, phones, networking equipment, UPS or inverter batteries and mixed office IT scrap. Send photos for unusual or bulky items.",
   },
   {
-    q: "What should I do if pickup isn't feasible for my situation?",
-    a: "See our recycling guide for general, responsible disposal guidance that applies wherever you are in Kerala, and check locally for authorized collection points in the meantime.",
+    q: "Is there an extra cost for pickup from Kottayam?",
+    a: "If a Kottayam pickup is arranged, any additional logistics cost would be discussed and agreed before collection. It is not assumed or added after the fact.",
   },
   {
-    q: "If you do collect from Kottayam, are the same safety and data standards used?",
-    a: "Yes — the same handling process, battery safety precautions, and data destruction standards apply regardless of location. Distance changes whether pickup is feasible, not how it's handled once collected.",
+    q: "What should I do if pickup is not feasible?",
+    a: "Use our recycling guide for general responsible-disposal guidance and check locally for an authorized collection option. You can also contact us if your volume or situation changes.",
   },
 ];
 ---
 
 <Layout title={title} description={description} path="/locations/kottayam/" jsonLd={jsonLd}>
   <Breadcrumbs items={breadcrumbItems} />
-  <h1>E-Waste Recycling in Kottayam</h1>
+  <h1>E-Waste Recycling in Kottayam, Kerala</h1>
   <p class="lede">
-    Ewaste Kochi primarily supports Kochi, Ernakulam, Kakkanad, Kalamassery,
-    Ernakulam South, Aluva and nearby Kochi-metro enquiry areas. For other
-    Kerala districts, contact us to check pickup feasibility. Kottayam is roughly 60 km away —
-    outside that core zone, so we don't run scheduled routes here. We do
-    check feasibility for Kottayam enquiries case by case, especially for
-    bulk or business volumes.
+    Kottayam is outside Ewaste Kochi's core Kochi-metro scheduled route, so
+    standard doorstep pickup is not guaranteed. We do review Kottayam
+    enquiries case by case, especially bulk, business and institutional
+    requests. Share your item list, quantity, photos and exact location so
+    the team can give you a practical feasibility answer.
   </p>
 
   <DirectAnswer>
-    <p>{description}</p>
+    <p>
+      For e-waste recycling in Kottayam, send the item type, approximate
+      quantity, condition, photos and location. Ewaste Kochi will check
+      whether pickup is practical and explain the available route before
+      anything is scheduled.
+    </p>
   </DirectAnswer>
 
-  <CtaBar whatsappMessage="Hi, I'm in Kottayam and want to check if e-waste pickup is feasible for my situation." />
+  <CtaBar whatsappMessage="Hi, I'm in Kottayam and want to check e-waste recycling pickup feasibility. I'll share my item list, quantity and location." />
 
   <section>
-    <h2>About Kottayam</h2>
+    <h2>Kottayam E-Waste Pickup: What's Possible</h2>
     <p>
-      Kottayam is known for its publishing and printing industry — it's
-      sometimes called Kerala's "district of letters" — alongside rubber
-      cultivation and the backwater tourism around Kumarakom. It sits
-      inland, connected to Kochi via NH966/MC Road.
+      A single old laptop or phone may not justify a dedicated trip from the
+      Kochi service area. Larger requests can be different: office clearances,
+      publishing or institutional IT decommissioning, school or facility
+      battery lots, and mixed business e-waste are worth reviewing directly.
+      Send enough detail for an honest feasibility decision rather than
+      assuming pickup is available.
     </p>
   </section>
 
   <section>
-    <h2>What's possible from Kottayam</h2>
+    <h2>What Electronics Can Be Collected?</h2>
+    <ul class="check-list">
+      <li>Laptops, desktops and monitors</li>
+      <li>Phones, tablets, chargers and small electronics</li>
+      <li>Printers, scanners and networking equipment</li>
+      <li>TVs and other bulky displays</li>
+      <li>UPS, inverter and other batteries, subject to safe-handling review</li>
+      <li>Servers, office IT equipment and mixed business e-waste</li>
+    </ul>
     <p>
-      A single old laptop or phone usually doesn't justify a dedicated trip
-      over this distance. Office clearances, publishing-house IT
-      decommissioning, school or institutional battery lots, and other bulk
-      volumes are a different calculation — those are worth messaging us
-      about directly with a rough item list and quantity, so we can give an
-      honest answer on feasibility rather than a guess.
+      For data-bearing devices, mention data destruction requirements before
+      collection. For batteries or damaged equipment, send photos so handling
+      requirements can be reviewed in advance.
     </p>
   </section>
 
   <section>
-    <h2>Compliance</h2>
+    <h2>How E-Waste Pickup Works in Kottayam</h2>
+    <ol class="process-list">
+      <li><strong>Share the item list.</strong> Tell us what electronics you have and roughly how many units.</li>
+      <li><strong>Send location and photos.</strong> Include the Kottayam area, access details and photos of bulky, damaged or unusual items.</li>
+      <li><strong>Feasibility is reviewed.</strong> Route distance, quantity, condition, handling requirements and current scheduling are considered together.</li>
+      <li><strong>Agree the collection plan.</strong> If pickup is practical, any logistics cost, timing and service scope are confirmed before collection.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Business and Institutional E-Waste Pickup</h2>
     <p>
-      If a pickup is arranged from Kottayam, it follows the same documented
-      environmental handling practices used across all our service areas.
-      Documentation support may be available depending on the service type
-      and agreed handling process — contact us via our
-      <a href="/contact/">contact page</a> to confirm what's available.
+      Businesses, schools, offices and institutions with a larger equipment
+      batch can request a structured review. If the project needs asset lists,
+      inventory tracking, data destruction or compliance documentation, see
+      <a href="/locations/kottayam/itad/">ITAD for Kottayam</a> rather than
+      treating a full decommission as a normal household pickup.
     </p>
   </section>
 
   <section>
-    <h2>Not feasible right now?</h2>
+    <h2>Data Destruction and Battery Handling</h2>
     <p>
-      If a Kottayam pickup doesn't work out for your specific case, our
-      <a href="/recycling/">recycling guide</a> covers responsible disposal
-      principles that apply anywhere in Kerala, and our
-      <a href="/blog/recycling-basics/">recycling basics</a> guide is a good
-      starting point for finding a locally authorized option in the
-      meantime.
+      Laptops, phones, hard drives and servers may contain personal or business
+      information. Flag these devices before pickup if wiping or destruction
+      support is required. Swollen, leaking or damaged batteries should also
+      be identified in advance and kept separate from ordinary waste.
+    </p>
+    <div class="link-row">
+      <a href="/data-destruction/">Data Destruction</a>
+      <a href="/battery-recycling/">Battery Recycling</a>
+      <a href="/itad/">ITAD</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>If Kottayam Pickup Is Not Feasible</h2>
+    <p>
+      Our <a href="/recycling/">e-waste recycling guide</a> explains the
+      general handling process, and the <a href="/locations/">locations
+      directory</a> shows core Kochi-metro service areas. For a local option
+      in Kottayam, use an authorized collection route appropriate to your
+      item type rather than disposing of electronics with ordinary household
+      waste.
     </p>
   </section>
 
   <section>
-    <h2>Business and institutional pickup</h2>
+    <h2>Compliance and Documentation</h2>
     <p>
-      For publishing houses, offices and institutions with a structured,
-      asset-tracked decommissioning need rather than a one-off pickup, see
-      <a href="/locations/kottayam/itad/">ITAD for Kottayam</a>.
-    </p>
-  </section>
-
-  <section>
-    <h2>Other areas</h2>
-    <p>
-      See the full <a href="/locations/">locations directory</a> for our
-      core Kochi-metro service areas and other Kerala districts we check
-      feasibility for.
+      If a Kottayam pickup is arranged, the agreed handling process and any
+      documentation requirements should be confirmed before collection.
+      Documentation availability depends on the service type and scope. See
+      our <a href="/trust/">trust and compliance information</a> or
+      <a href="/contact/">contact us</a> to confirm what applies to your case.
     </p>
   </section>
 
@@ -149,13 +178,16 @@ const faqItems = [
     മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
   </p>
 
-  <Faq items={faqItems} heading="Kottayam Pickup FAQs" />
+  <Faq items={faqItems} heading="Kottayam E-Waste Pickup FAQs" />
 
   <p class="updated">Last updated: <time datetime={lastUpdated}>{lastUpdated}</time></p>
 </Layout>
 
 <style>
   .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
+  .process-list, .check-list { display: grid; gap: 0.7rem; padding-left: 1.25rem; }
+  .link-row { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 1rem; }
+  .link-row a { min-height: 42px; display: inline-flex; align-items: center; }
   .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
   .updated { font-size: 0.8rem; color: var(--color-muted); }
 </style>
