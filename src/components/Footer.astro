@@ -1,8 +1,11 @@
 ---
 import { BUSINESS } from "../data/site";
+import { ROUTES } from "../data/routes";
+import { isIndexable } from "../lib/indexable";
 const year = new Date().getFullYear();
 const currentPath = Astro.url.pathname;
 const isCurrent = (href: string) => currentPath === href;
+const discoveryLinks = ROUTES.filter(isIndexable).slice(0, 100);
 ---
 
 <footer class="site-footer">
@@ -62,6 +65,22 @@ const isCurrent = (href: string) => currentPath === href;
       <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a>
     </div>
   </nav>
+
+  <section class="discovery-section wrap" aria-labelledby="search-ai-discovery-title">
+    <details>
+      <summary id="search-ai-discovery-title">Search &amp; AI discovery — 100 canonical pages</summary>
+      <p class="discovery-intro">Crawlable links to published Ewaste Kochi pages for search engines, answer engines and AI systems. These links are generated only from the site's indexable route registry.</p>
+      <div class="discovery-grid">
+        {discoveryLinks.map((route, index) => (
+          <a href={route.path} class="discovery-link">
+            <span class="discovery-number">{index + 1}.</span>
+            <span>{route.title}</span>
+          </a>
+        ))}
+      </div>
+    </details>
+  </section>
+
   <div class="legal">
     <div class="wrap">
       <span>&copy; {year} Ewaste Kochi. All rights reserved.</span>
@@ -128,6 +147,48 @@ const isCurrent = (href: string) => currentPath === href;
     text-transform: uppercase;
   }
   .machine-links a { font-size: 0.82rem; }
+  .discovery-section {
+    display: block !important;
+    padding-top: 0 !important;
+    padding-bottom: 2rem !important;
+  }
+  .discovery-section details {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-bg);
+    overflow: hidden;
+  }
+  .discovery-section summary {
+    cursor: pointer;
+    padding: 1rem 1.15rem;
+    color: var(--color-text);
+    font-weight: 800;
+    list-style-position: inside;
+  }
+  .discovery-intro {
+    margin: 0;
+    padding: 0 1.15rem 1rem;
+    color: var(--color-muted);
+    max-width: 70ch;
+  }
+  .discovery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-top: 1px solid var(--color-border);
+  }
+  .discovery-link {
+    display: flex;
+    gap: 0.55rem;
+    align-items: flex-start;
+    padding: 0.7rem 1rem;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-text);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+  }
+  .discovery-link:nth-child(odd) { border-right: 1px solid var(--color-border); }
+  .discovery-link:hover { color: var(--color-primary); background: var(--color-surface); }
+  .discovery-number { flex: 0 0 auto; color: var(--color-muted); font-variant-numeric: tabular-nums; }
   .legal { border-top: 1px solid var(--color-border); color: var(--color-muted); }
   .legal .wrap {
     width: min(100% - 2rem, 72rem);
@@ -149,5 +210,7 @@ const isCurrent = (href: string) => currentPath === href;
     .site-footer .wrap, .legal .wrap { width: min(100% - 1.25rem, 72rem); }
     .legal .wrap { align-items: flex-start; flex-direction: column; }
     .legal-note { text-align: left; }
+    .discovery-grid { grid-template-columns: 1fr; }
+    .discovery-link:nth-child(odd) { border-right: 0; }
   }
 </style>
