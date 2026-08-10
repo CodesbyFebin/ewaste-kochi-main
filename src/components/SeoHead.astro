@@ -1,5 +1,5 @@
 ---
-import { SITE_URL } from "../data/site";
+import { SITE_URL, BUSINESS } from "../data/site";
 import { sanitizeJsonLdBlocks } from "../lib/schemaSafety";
 
 interface HreflangEntry {
@@ -113,6 +113,44 @@ const safeJsonLd = sanitizeJsonLdBlocks(jsonLd).map((block) => {
   }
   return block;
 });
+
+// Verified first-party business identity. Certification/authorization claims are
+// intentionally excluded until documentary evidence is supplied and reviewed.
+const businessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": `${SITE_URL}/#business`,
+  name: BUSINESS.name,
+  description: "E-waste recycling, electronics pickup, battery handling and IT asset services in Kochi and selected Kerala locations.",
+  url: SITE_URL,
+  telephone: BUSINESS.phone,
+  email: BUSINESS.email,
+  priceRange: "$$",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: BUSINESS.address.streetAddress,
+    addressLocality: BUSINESS.address.addressLocality,
+    addressRegion: BUSINESS.address.addressRegion,
+    postalCode: BUSINESS.address.postalCode,
+    addressCountry: BUSINESS.address.addressCountry,
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: BUSINESS.geo.latitude,
+    longitude: BUSINESS.geo.longitude,
+  },
+  openingHoursSpecification: [{
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    opens: "09:00",
+    closes: "18:00",
+  }],
+  areaServed: [
+    { "@type": "City", name: "Kochi" },
+    { "@type": "AdministrativeArea", name: "Ernakulam" },
+    { "@type": "AdministrativeArea", name: "Kerala" },
+  ],
+};
 ---
 
 <title>{title}</title>
@@ -142,6 +180,8 @@ const safeJsonLd = sanitizeJsonLdBlocks(jsonLd).map((block) => {
 {hreflang.map((h) => (
   <link rel="alternate" hreflang={h.lang} href={h.href} />
 ))}
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(businessJsonLd)} />
 
 {safeJsonLd.map((block) => (
   <script type="application/ld+json" is:inline set:html={JSON.stringify(block)} />
