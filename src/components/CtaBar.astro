@@ -32,8 +32,8 @@ const {
 
 <style>
   .cta-bar {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0.75rem;
     margin-block: 1.5rem;
   }
@@ -44,13 +44,17 @@ const {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.75rem 1.25rem;
-    border-radius: 0.5rem;
-    font-weight: 600;
+    padding: 0.8rem 1.1rem;
+    border-radius: var(--radius-sm, 10px);
+    font-weight: 750;
     text-decoration: none;
     font-size: 0.95rem;
-    min-height: 44px;
+    min-height: 48px;
+    text-align: center;
+    box-shadow: var(--shadow-sm, none);
+    transition: transform 140ms ease, filter 140ms ease;
   }
+  .cta-btn:hover { transform: translateY(-1px); }
   .cta-call {
     background: var(--color-primary);
     color: #fff;
@@ -60,11 +64,27 @@ const {
     color: #063d1e;
   }
   .cta-pickup {
-    background: transparent;
+    background: var(--color-surface);
     color: var(--color-primary);
     border: 1.5px solid var(--color-primary);
   }
   .cta-call:hover, .cta-whatsapp:hover, .cta-pickup:hover {
-    filter: brightness(0.95);
+    filter: brightness(0.96);
+  }
+
+  @media (max-width: 640px) {
+    .cta-bar {
+      grid-template-columns: 1fr;
+      gap: 0.6rem;
+      margin-block: 1.25rem;
+    }
+    .cta-bar.compact {
+      margin-block: 0.65rem;
+    }
+    .cta-btn {
+      width: 100%;
+      min-height: 50px;
+      padding-inline: 1rem;
+    }
   }
 </style>
