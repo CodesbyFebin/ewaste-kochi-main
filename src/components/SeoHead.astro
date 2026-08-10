@@ -18,7 +18,18 @@ interface Props {
 
 const { title, description, path, jsonLd = [], hreflang = [], noindex = false } = Astro.props;
 const canonicalUrl = new URL(path, SITE_URL).toString();
-const safeJsonLd = sanitizeJsonLdBlocks(jsonLd);
+const safeJsonLd = sanitizeJsonLdBlocks(jsonLd).map((block) => {
+  if (block["@type"] === "WebPage") {
+    return {
+      ...block,
+      "@id": canonicalUrl,
+      url: canonicalUrl,
+      name: title,
+      description,
+    };
+  }
+  return block;
+});
 ---
 
 <title>{title}</title>
