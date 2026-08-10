@@ -1,103 +1,9 @@
-# robots.txt for www.ewastekochi.com
-# 2026 configuration — split-brain AI-bot policy: allow citation/search bots
-# (so ewastekochi.com surfaces in ChatGPT search, Perplexity, Claude search,
-# Bing/Copilot, Brave) while declining training-only crawlers.
+# robots.txt for https://www.ewastekochi.com
+# AI/search discovery policy: public canonical content is crawlable.
+# Sensitive, dynamic and non-canonical surfaces remain excluded.
 
 # ---------------------------------------------------------------------------
-# Search-engine bots — allow everything
-# ---------------------------------------------------------------------------
-User-agent: Googlebot
-Allow: /
-
-User-agent: Googlebot-Image
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: DuckDuckBot
-Allow: /
-
-User-agent: YandexBot
-Allow: /
-
-User-agent: BraveBot
-Allow: /
-
-# ---------------------------------------------------------------------------
-# AI SEARCH / CITATION bots — allow (these fetch pages to *answer* live user
-# queries; blocking them removes us from ChatGPT search, Perplexity results,
-# Claude answers, Google AI Overviews, etc.)
-# ---------------------------------------------------------------------------
-User-agent: OAI-SearchBot
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Perplexity-User
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: Claude-SearchBot
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: Applebot
-Allow: /
-
-User-agent: Applebot-Extended
-Allow: /
-
-User-agent: cohere-ai
-Allow: /
-
-User-agent: Meta-ExternalAgent
-Allow: /
-
-User-agent: FacebookBot
-Allow: /
-
-# ---------------------------------------------------------------------------
-# AI TRAINING-ONLY bots — decline (they crawl to build training corpora, not
-# to answer live queries; declining costs no search/citation visibility).
-# ---------------------------------------------------------------------------
-User-agent: GPTBot
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
-
-User-agent: anthropic-ai
-Disallow: /
-
-User-agent: Diffbot
-Disallow: /
-
-User-agent: Omgilibot
-Disallow: /
-
-User-agent: FriendlyCrawler
-Disallow: /
-
-User-agent: ImagesiftBot
-Disallow: /
-
-User-agent: cohere-training-data-crawler
-Disallow: /
-
-User-agent: Bytespider
-Disallow: /
-
-# ---------------------------------------------------------------------------
-# Default — everyone else is welcome except sensitive/dynamic surfaces
+# General web crawlers
 # ---------------------------------------------------------------------------
 User-agent: *
 Allow: /
@@ -113,10 +19,140 @@ Disallow: /*?ref=
 Disallow: /*?source=
 
 # ---------------------------------------------------------------------------
-# Sitemaps — only standard sitemap.org XML (urlset / sitemapindex).
-# ai-sitemap.xml uses a custom <aisitemap>/<page> schema for LLM crawlers
-# and MUST NOT be listed here — GSC/Bing reject it as "unsupported format".
-# It is still discoverable via llms.txt for AI assistants.
+# Search engines and AI search/citation crawlers
+# ---------------------------------------------------------------------------
+# These agents may crawl the public site so it can be discovered, cited,
+# summarized, and surfaced in search/answer experiences.
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: BraveBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /api/wiki/search
+Disallow: /admin/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /api/wiki/search
+Disallow: /admin/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /api/wiki/search
+Disallow: /admin/
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /api/wiki/search
+Disallow: /admin/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /api/wiki/search
+Disallow: /admin/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /api/wiki/search
+Disallow: /admin/
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /api/wiki/search
+Disallow: /admin/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /api/wiki/search
+Disallow: /admin/
+
+User-agent: Applebot
+Allow: /
+Disallow: /api/wiki/search
+Disallow: /admin/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /api/wiki/search
+Disallow: /admin/
+
+User-agent: cohere-ai
+Allow: /
+Disallow: /api/wiki/search
+Disallow: /admin/
+
+User-agent: Meta-ExternalAgent
+Allow: /
+Disallow: /api/wiki/search
+Disallow: /admin/
+
+User-agent: FacebookBot
+Allow: /
+Disallow: /api/wiki/search
+Disallow: /admin/
+
+# Additional AI/data crawlers: public pages are intentionally discoverable.
+User-agent: CCBot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+User-agent: Diffbot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+User-agent: Bytespider
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+User-agent: Omgilibot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+User-agent: FriendlyCrawler
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+User-agent: ImagesiftBot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+User-agent: cohere-training-data-crawler
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+# ---------------------------------------------------------------------------
+# Sitemaps
 # ---------------------------------------------------------------------------
 Sitemap: https://www.ewastekochi.com/sitemap.xml
 Sitemap: https://www.ewastekochi.com/sitemap-index.xml
