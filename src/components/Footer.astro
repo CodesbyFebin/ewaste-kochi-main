@@ -6,54 +6,66 @@ const isCurrent = (href: string) => currentPath === href;
 ---
 
 <footer class="site-footer">
-  <nav class="wrap" aria-label="Footer">
+  <nav class="wrap" aria-label="Footer navigation">
     <div class="col">
-      <h3><a href="/services/">Services</a></h3>
+      <h3><a href="/services/">E-Waste Recycling Services</a></h3>
       <a href="/recycling/">E-Waste Recycling</a>
       <a href="/battery-recycling/">Battery Recycling</a>
       <a href="/marketplace/">Marketplace</a>
       <a href="/price-match-policy/">Price Match Policy</a>
       <a href="/sell-electronics/">Sell Electronics</a>
-      <a href="/pickup/">Free Pickup</a>
+      <a href="/pickup/">Free E-Waste Pickup</a>
       <a href="/data-destruction/">Data Destruction</a>
       <a href="/hard-drive-shredding/">Hard Drive Shredding</a>
-      <a href="/itad/">ITAD</a>
-      <a href="/tools/">Tools & Calculators</a>
+      <a href="/itad/">IT Asset Disposition (ITAD)</a>
+      <a href="/tools/">Tools &amp; Calculators</a>
     </div>
+
     <div class="col">
-      <h3>Top Locations</h3>
-      <a href="/locations/kakkanad/" aria-current={isCurrent("/locations/kakkanad/") ? "page" : undefined}>Kakkanad</a>
-      <a href="/locations/kalamassery/" aria-current={isCurrent("/locations/kalamassery/") ? "page" : undefined}>Kalamassery</a>
-      <a href="/locations/ernakulam-south/" aria-current={isCurrent("/locations/ernakulam-south/") ? "page" : undefined}>Ernakulam South</a>
-      <a href="/locations/edappally/" aria-current={isCurrent("/locations/edappally/") ? "page" : undefined}>Edappally</a>
-      <a href="/locations/infopark-kochi/" aria-current={isCurrent("/locations/infopark-kochi/") ? "page" : undefined}>Infopark Kochi</a>
-      <a href="/locations/kadavanthra/" aria-current={isCurrent("/locations/kadavanthra/") ? "page" : undefined}>Kadavanthra</a>
-      <a href="/locations/aluva/" aria-current={isCurrent("/locations/aluva/") ? "page" : undefined}>Aluva</a>
-      <a href="/locations/">All Locations</a>
+      <h3>Local E-Waste Pickup</h3>
+      <a href="/locations/kakkanad/" aria-current={isCurrent("/locations/kakkanad/") ? "page" : undefined}>E-Waste Recycling in Kakkanad</a>
+      <a href="/locations/kalamassery/" aria-current={isCurrent("/locations/kalamassery/") ? "page" : undefined}>E-Waste Recycling in Kalamassery</a>
+      <a href="/locations/ernakulam-south/" aria-current={isCurrent("/locations/ernakulam-south/") ? "page" : undefined}>E-Waste Pickup in Ernakulam South</a>
+      <a href="/locations/edappally/" aria-current={isCurrent("/locations/edappally/") ? "page" : undefined}>E-Waste Recycling in Edappally</a>
+      <a href="/locations/infopark-kochi/" aria-current={isCurrent("/locations/infopark-kochi/") ? "page" : undefined}>E-Waste Pickup near Infopark Kochi</a>
+      <a href="/locations/kadavanthra/" aria-current={isCurrent("/locations/kadavanthra/") ? "page" : undefined}>E-Waste Recycling in Kadavanthra</a>
+      <a href="/locations/aluva/" aria-current={isCurrent("/locations/aluva/") ? "page" : undefined}>E-Waste Pickup in Aluva</a>
+      <a href="/locations/">All Kochi &amp; Kerala Locations</a>
     </div>
+
     <div class="col">
-      <h3>Company</h3>
-      <a href="/about/" aria-current={isCurrent("/about/") ? "page" : undefined}>About</a>
+      <h3>Company &amp; Resources</h3>
+      <a href="/about/" aria-current={isCurrent("/about/") ? "page" : undefined}>About Ewaste Kochi</a>
       <a href="/e-waste/" aria-current={isCurrent("/e-waste/") ? "page" : undefined}>E-Waste Guide</a>
-      <a href="/blog/" aria-current={isCurrent("/blog/") ? "page" : undefined}>Blog</a>
-      <a href="/trust/" aria-current={isCurrent("/trust/") ? "page" : undefined}>Trust & Compliance</a>
-      <a href="/faq/" aria-current={isCurrent("/faq/") ? "page" : undefined}>FAQ</a>
+      <a href="/blog/" aria-current={isCurrent("/blog/") ? "page" : undefined}>E-Waste Recycling Blog</a>
+      <a href="/trust/" aria-current={isCurrent("/trust/") ? "page" : undefined}>Trust &amp; Compliance</a>
+      <a href="/faq/" aria-current={isCurrent("/faq/") ? "page" : undefined}>E-Waste Recycling FAQ</a>
       <a href="/contact/" aria-current={isCurrent("/contact/") ? "page" : undefined}>Contact</a>
       <a href="/privacy/">Privacy Policy</a>
       <a href="/terms/">Terms</a>
       <a href="/ml/">മലയാളം</a>
+      <div class="machine-links" aria-label="Machine-readable discovery resources">
+        <span>Search &amp; AI discovery</span>
+        <a href="/llms.txt">LLM content map</a>
+        <a href="/ai-sitemap.xml">AI sitemap</a>
+        <a href="/sitemap.xml">XML sitemap</a>
+        <a href="/content-index.json">Content index</a>
+      </div>
     </div>
-    <div class="col">
-      <h3>Contact</h3>
+
+    <div class="col contact-col">
+      <h3>Contact Ewaste Kochi</h3>
+      <p class="local-summary">E-waste recycling, electronics pickup, battery recycling and ITAD for Kochi, Ernakulam and selected Kerala locations.</p>
       <p>{BUSINESS.address.streetAddress}<br />{BUSINESS.address.addressLocality}, {BUSINESS.address.addressRegion} {BUSINESS.address.postalCode}</p>
       <p>{BUSINESS.hoursDisplay}</p>
-      <a href={`tel:${BUSINESS.phone}`}>{BUSINESS.phoneDisplay}</a>
+      <a href={`tel:${BUSINESS.phone}`} aria-label={`Call Ewaste Kochi at ${BUSINESS.phoneDisplay}`}>{BUSINESS.phoneDisplay}</a>
       <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a>
     </div>
   </nav>
   <div class="legal">
     <div class="wrap">
       <span>&copy; {year} Ewaste Kochi. All rights reserved.</span>
+      <span class="legal-note">Kochi, Ernakulam, Kerala, India</span>
     </div>
   </div>
 </footer>
@@ -87,10 +99,7 @@ const isCurrent = (href: string) => currentPath === href;
     letter-spacing: 0.08em;
     text-transform: uppercase;
   }
-  .col h3 a {
-    color: inherit;
-    text-decoration: none;
-  }
+  .col h3 a { color: inherit; text-decoration: none; }
   .col h3 a:hover { color: var(--color-primary); }
   .col a {
     width: fit-content;
@@ -102,6 +111,23 @@ const isCurrent = (href: string) => currentPath === href;
   .col a:hover { color: var(--color-primary); }
   .col a[aria-current="page"] { color: var(--color-primary); font-weight: 750; }
   .col p { margin: 0; color: var(--color-muted); overflow-wrap: anywhere; }
+  .local-summary { max-width: 24rem; line-height: 1.55; }
+  .machine-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    margin-top: 0.7rem;
+    padding-top: 0.7rem;
+    border-top: 1px solid var(--color-border);
+  }
+  .machine-links span {
+    color: var(--color-muted);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .machine-links a { font-size: 0.82rem; }
   .legal { border-top: 1px solid var(--color-border); color: var(--color-muted); }
   .legal .wrap {
     width: min(100% - 2rem, 72rem);
@@ -110,7 +136,9 @@ const isCurrent = (href: string) => currentPath === href;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1rem;
   }
+  .legal-note { text-align: right; }
   @media (min-width: 620px) {
     .site-footer .wrap { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
@@ -119,5 +147,7 @@ const isCurrent = (href: string) => currentPath === href;
   }
   @media (max-width: 640px) {
     .site-footer .wrap, .legal .wrap { width: min(100% - 1.25rem, 72rem); }
+    .legal .wrap { align-items: flex-start; flex-direction: column; }
+    .legal-note { text-align: left; }
   }
 </style>
