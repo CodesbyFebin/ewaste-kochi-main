@@ -476,6 +476,17 @@ function buildPage(row: GscIndexedRow): IndexedGeneratedPage | undefined {
 
 const staticHighIntentServiceRows: GscIndexedRow[] = [
   {
+    path: "/ml/services/",
+    clicks: 0,
+    impressions: 9,
+    page_type: "other-legacy-service",
+    location: "",
+    service_intent: "services",
+    traffic_tier: "indexed-with-traffic",
+    upgrade_action: "build_safe_service_alias",
+    current_v2_status: "missing_not_built",
+  },
+  {
     path: "/services/computer-recycling-near-me/",
     clicks: 0,
     impressions: 0,
