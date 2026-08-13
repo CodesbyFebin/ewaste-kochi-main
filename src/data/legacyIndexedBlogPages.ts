@@ -115,17 +115,49 @@ const unsafeClaimWords = new Set([
   "landfill",
 ]);
 
+// Explicit allowlist of acronyms that should be uppercased in slug-derived
+// titles. Previously the code uppercased ANY word ≤3 characters, which turned
+// natural words like "how", "to", "of" into "HOW", "TO", "OF" — producing
+// broken titles like "HOW TO Choose ITAD Provider" that killed CTR. Now every
+// word is Title Cased first, then explicit acronyms are uppercased below.
 function titleCase(value: string): string {
   return value
     .split("-")
     .filter((part) => part && !/^\d+$/.test(part) && !unsafeClaimWords.has(part))
-    .map((part) => (part.length <= 3 ? part.toUpperCase() : part[0].toUpperCase() + part.slice(1)))
+    .map((part) => part[0].toUpperCase() + part.slice(1))
     .join(" ")
-    .replace(/\bItad\b/g, "ITAD")
-    .replace(/\bNist\b/g, "NIST")
+    // Multi-letter acronyms — order matters (longer first to avoid partial matches)
     .replace(/\bKspcb\b/g, "KSPCB")
+    .replace(/\bCpcb\b/g, "CPCB")
+    .replace(/\bDpdp\b/g, "DPDP")
+    .replace(/\bGdpr\b/g, "GDPR")
+    .replace(/\bWeee\b/g, "WEEE")
+    .replace(/\bOled\b/g, "OLED")
+    .replace(/\bNist\b/g, "NIST")
+    .replace(/\bItad\b/g, "ITAD")
+    .replace(/\bRohs\b/g, "RoHS")
+    .replace(/\bIot\b/g, "IoT")
+    .replace(/\bDod\b/g, "DoD")
+    .replace(/\bLcd\b/g, "LCD")
+    .replace(/\bLed\b/g, "LED")
+    .replace(/\bCrt\b/g, "CRT")
+    .replace(/\bUps\b/g, "UPS")
+    .replace(/\bPcb\b/g, "PCB")
+    .replace(/\bPvc\b/g, "PVC")
+    .replace(/\bEpr\b/g, "EPR")
+    .replace(/\bAsm\b/g, "ASM")
+    .replace(/\bMrf\b/g, "MRF")
+    .replace(/\bBfr\b/g, "BFR")
     .replace(/\bHdd\b/g, "HDD")
-    .replace(/\bSsd\b/g, "SSD");
+    .replace(/\bSsd\b/g, "SSD")
+    // 2-letter acronyms — allowlist only; naturally-occurring 2-letter words
+    // like "to", "of", "on", "at", "in" stay Title Case (To, Of, On…)
+    .replace(/\bAc\b/g, "AC")
+    .replace(/\bPc\b/g, "PC")
+    .replace(/\bTv\b/g, "TV")
+    .replace(/\bIt\b/g, "IT")
+    .replace(/\bMl\b/g, "ML")
+    .replace(/\bAi\b/g, "AI");
 }
 
 function categoryFor(path: string): string {
@@ -189,11 +221,15 @@ export const LEGACY_INDEXED_BLOG_PAGES: LegacyIndexedBlogPage[] = paths.map((pat
   const suffix = [yearSuffix, refSuffix ? `Legacy Ref ${refSuffix}` : undefined].filter(Boolean).join(" ");
   const topic = `${titleCase(lastSegment) || "E-Waste Guide"}${suffix ? ` ${suffix}` : ""}`;
   const category = categoryFor(path);
-  const h1 = `${topic} | Safe Kochi Guide`;
+  // Suffixes changed 2026-08-13 — old "| Ewaste Kochi Indexed Guide" and
+  // "| Safe Kochi Guide" read as internal tooling leakage in the SERP and
+  // are a documented CTR killer. Replaced with clean brand suffix on title,
+  // no suffix on H1.
+  const h1 = topic;
   return {
     path,
-    title: `${topic} | Ewaste Kochi Indexed Guide`,
-    description: `Safe current guide for ${topic.toLowerCase()} in Kochi, covering pickup feasibility, recycling, data or battery safety, and related Ewaste Kochi service links.`,
+    title: `${topic} | Ewaste Kochi`,
+    description: `${topic} in Kochi — free doorstep pickup, data-safe handling and current recycling guidance. Ewaste Kochi service across the metro. WhatsApp us.`,
     h1,
     topic,
     category,
