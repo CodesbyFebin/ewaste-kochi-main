@@ -14,9 +14,9 @@
 # ---------------------------------------------------------------------------
 # Internal evidence / audit reports — never public
 # ---------------------------------------------------------------------------
-PROJECT_TRACKER.md
-reports/
-docs/internal/
+/PROJECT_TRACKER.md
+/reports/
+/docs/internal/
 #
 # ---------------------------------------------------------------------------
 # Data exports and classification files — GSC dumps, URL protection maps,
@@ -32,7 +32,7 @@ docs/internal/
 # BEFORE they get promoted to src/pages/. Neither Astro nor Vercel should
 # ever see this directory during a production build.
 # ---------------------------------------------------------------------------
-.content-quarantine/
+/.content-quarantine/
 #
 # ---------------------------------------------------------------------------
 # Build and validation scripts
@@ -41,18 +41,18 @@ docs/internal/
 # during validation and deployment, so Vercel must receive it.
 # Exclude only generated Python cache artifacts.
 # ---------------------------------------------------------------------------
-scripts/**/__pycache__/
-scripts/**/*.pyc
+/scripts/**/__pycache__/
+/scripts/**/*.pyc
 #
 # ---------------------------------------------------------------------------
 # Secret / key material — the IndexNow key file
 # ---------------------------------------------------------------------------
-.indexnow-key
+/.indexnow-key
 #
 # ---------------------------------------------------------------------------
 # Local backup snapshots + editor droppings
 # ---------------------------------------------------------------------------
-backups/
+/backups/
 *.backup.ts
 *.backup.md
 .DS_Store
@@ -60,4 +60,4 @@ backups/
 # ---------------------------------------------------------------------------
 # Sitemap-export snapshots I generated for handoff
 # ---------------------------------------------------------------------------
-sitemap-export/
+/sitemap-export/
