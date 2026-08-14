@@ -1,14 +1,14 @@
 {
-  "approvedAt": "2026-08-14",
-  "approvedFrom": "post-7209f10d pSEO consolidation",
-  "notes": "Baseline reflects the intentionally consolidated index surface. Do not replace with the old ~988 URL surface; the removed location-service matrix URLs were deliberately retired unless separately approved.",
+  "approvedAt": "2026-08-15",
+  "approvedFrom": "full pre-7209f10d indexed URL surface restoration",
+  "notes": "Baseline protects the restored pre-contraction index surface requested after GSC traffic/visibility decline. The location sitemap target is restored from 41 to the prior 184-URL surface; future reductions require an explicit reviewed baseline change rather than an eligibility-gate side effect.",
   "thresholds": {
     "totalDropPercent": 5,
     "groupDropPercent": 20
   },
   "counts": {
-    "total": 843,
-    "locations": 41,
+    "total": 988,
+    "locations": 184,
     "blog": 622
   }
 }
