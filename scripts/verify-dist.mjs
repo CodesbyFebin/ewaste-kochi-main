@@ -5,6 +5,7 @@ const DIST = new URL("../dist/", import.meta.url);
 const distPath = DIST.pathname;
 const baselinePath = new URL("../data/index-surface-baseline.json", import.meta.url);
 const vercelPath = new URL("../vercel.json", import.meta.url);
+const recoveryMapPath = new URL("../data/gsc-404-recovery-map.json", import.meta.url);
 const SITE_ORIGIN = "https://www.ewastekochi.com";
 
 function fail(message) {
@@ -53,18 +54,39 @@ function isNoindex(html) {
     || /<meta\s+[^>]*content=["'][^"']*noindex[^"']*["'][^>]*name=["']robots["']/i.test(html);
 }
 
-function staticRedirectSources() {
-  if (!existsSync(vercelPath)) return new Set();
-  const config = JSON.parse(readFileSync(vercelPath, "utf8"));
-  const sources = new Set();
+function loadVercelConfig() {
+  if (!existsSync(vercelPath)) return { redirects: [] };
+  return JSON.parse(readFileSync(vercelPath, "utf8"));
+}
 
-  for (const rule of config.redirects || []) {
+function staticRedirectSources() {
+  const sources = new Set();
+  for (const rule of loadVercelConfig().redirects || []) {
     const source = String(rule.source || "");
     if (!source.startsWith("/") || /[:*()]/.test(source) || rule.has || rule.missing) continue;
     sources.add(normalizePath(source));
   }
-
   return sources;
+}
+
+function verifyHighValueLegacyRedirects() {
+  if (!existsSync(recoveryMapPath)) {
+    fail("data/gsc-404-recovery-map.json is missing");
+    return;
+  }
+
+  const recoveryRows = JSON.parse(readFileSync(recoveryMapPath, "utf8"));
+  const sources = staticRedirectSources();
+  const missing = recoveryRows
+    .map((row) => normalizePath(String(row.source || "/")))
+    .filter((source) => !sources.has(source));
+
+  if (missing.length) {
+    fail(`high-value GSC 404 redirect sources missing from vercel.json (${missing.length}/${recoveryRows.length}): ${missing.join(", ")}`);
+    return;
+  }
+
+  console.log(`LEGACY REDIRECT HYGIENE: ${recoveryRows.length}/${recoveryRows.length} evidence-backed high-value 404 sources are protected by static redirects.`);
 }
 
 function verifySitemapUrls(allLocs) {
@@ -184,6 +206,7 @@ function verifyIndexSurface() {
   }
 
   verifySitemapUrls(allLocs);
+  verifyHighValueLegacyRedirects();
   console.log(`INDEX SURFACE: ${total} sitemap URLs; groups=${JSON.stringify(groupCounts)}`);
 }
 
@@ -221,6 +244,6 @@ if (!existsSync(distPath)) {
   verifyIndexSurface();
 
   if (!process.exitCode) {
-    console.log(`DIST VERIFY PASS: ${htmlFiles.length} HTML pages; homepage markers, sitemap hygiene, and approved index surface verified.`);
+    console.log(`DIST VERIFY PASS: ${htmlFiles.length} HTML pages; homepage markers, sitemap hygiene, legacy redirect coverage, and approved index surface verified.`);
   }
 }
