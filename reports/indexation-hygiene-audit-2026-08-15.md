@@ -11,7 +11,9 @@ This audit separates current repository fixes from historical Google Search Cons
 - Protected generated sitemap baseline: 885 canonical URLs
 - Bare-domain host normalization: present (`ewastekochi.com` -> `www.ewastekochi.com`)
 - Legacy redirect inventory: present in `vercel.json`
+- Evidence-backed high-value legacy recovery map: 39 URLs in `data/gsc-404-recovery-map.json`
 - Redirect-target validation: covered by the repository validation/build gates
+- Canonical/noindex/sitemap collision validation: covered by `scripts/verify-dist.mjs`
 
 ## Already resolved in code
 
@@ -21,10 +23,23 @@ This audit separates current repository fixes from historical Google Search Cons
 
 This addresses a large class of historical GSC rows where the bare-host URL was labeled `Page with redirect`, `Alternate page with proper canonical tag`, or `Duplicate, Google chose different canonical than user`.
 
-### 2. High-value legacy path redirects
+### 2. Canonical rendering is centralized
+
+`src/components/SeoHead.astro` builds canonical URLs from the fixed production `SITE_URL` plus the explicit page path. It already supports a manual `noindex` flag, so no automatic word-count-based noindex logic was added.
+
+A hidden post-build SEO normalizer in `astro.config.mjs` previously rewrote titles, descriptions, H1s and H2s after Astro had rendered the page. That could make deployed HTML disagree with page metadata and `SeoHead.astro`. The mutator has been removed.
+
+The final metadata path is now:
+
+`page metadata -> src/data/seoOverrides.ts (intentional only) -> SeoHead.astro -> built HTML`
+
+No post-build title/H1 mutation remains.
+
+### 3. High-value legacy path redirects
 
 Exact permanent redirects are already present for legacy paths including, among others:
 
+- `/sell-electronics-kochi/` -> `/sell-electronics/`
 - `/scrap-price/` -> `/e-waste-scrap-prices-kochi/`
 - `/services/itad-kochi/` -> `/itad/`
 - `/services/battery-recycling-kochi/` -> `/battery-recycling/`
@@ -33,13 +48,41 @@ Exact permanent redirects are already present for legacy paths including, among 
 - `/laptop-recycling-near-me/` -> `/services/electronics-recycling-near-me/`
 - selected historical `/blogs/*` and `.html` paths -> current canonical equivalents
 
+`data/gsc-404-recovery-map.json` contains the 39 sampled high-value historical 404s with their traffic evidence. `scripts/verify-dist.mjs` now fails if any of those 39 source paths disappears from the static Vercel redirect inventory.
+
 Redirect sources should not be requested for indexing. Only the final canonical target should be submitted or internally linked.
 
-### 3. Sitemap safety
+### 4. Sitemap safety
 
 The current recovery branch restores the 184-location discovery surface and protects it with a regression guard. Canonical sitemap URLs are generated from the approved route registry rather than legacy redirect sources.
 
-### 4. Priority canonical pages
+The project has an explicit canonical sitemap index at `src/pages/sitemap.xml.ts` plus grouped sitemap endpoints under `src/pages/sitemaps/`. The parallel `@astrojs/sitemap` integration was removed so the build no longer creates a second sitemap index with a different URL surface.
+
+The intended sitemap entry point is:
+
+`https://www.ewastekochi.com/sitemap.xml`
+
+### 5. Sitemap/canonical/noindex regression checks
+
+`scripts/verify-dist.mjs` now validates every URL in the generated grouped sitemaps and fails on:
+
+- non-`www.ewastekochi.com` sitemap hosts
+- query strings or fragments in sitemap URLs
+- duplicate sitemap URLs
+- sitemap URLs that are also static redirect sources
+- sitemap URLs with no generated HTML page
+- missing canonical tags
+- canonicals that do not self-reference the sitemap URL
+- canonical query strings/fragments
+- `noindex` pages included in the sitemap
+- disappearance of any of the 39 evidence-backed high-value legacy redirect sources
+- total/group sitemap contractions beyond the approved regression thresholds
+
+### 6. Malayalam language signal
+
+`Layout.astro` now emits `lang="ml-IN"` for Malayalam pages instead of reducing the document language to `ml`. English remains `en-IN`.
+
+### 7. Priority canonical pages
 
 The repository's prior GSC readiness checks verified representative priority URLs as HTTP 200, self-canonical and indexable. Those checks include core service pages and major location pages.
 
@@ -82,9 +125,14 @@ These rows must first be normalized to the final current canonical URL before de
    - Verify HTTP status, canonical, robots/noindex, sitemap membership, internal links and content uniqueness first.
    - If all pass, treat as an indexing/quality-selection issue rather than a technical error.
 
+6. **Noindex policy**
+   - Use explicit/manual `noindex` only for pages that are intentionally non-search surfaces.
+   - Do not auto-noindex pages solely because a word-count threshold is low.
+   - A short but useful service/location/tool page can still deserve indexing.
+
 ## Evidence still required for the 227 / 223 buckets
 
-The aggregate counts alone are insufficient to make URL-level fixes. Before merging additional indexation changes, obtain the current GSC exports containing the exact URL rows for:
+The aggregate counts alone are insufficient to make URL-level fixes. Before merging additional URL-specific indexation changes, obtain the current GSC exports containing the exact URL rows for:
 
 - `Crawled - currently not indexed` (reported: 227)
 - `Discovered - currently not indexed` (reported: 223)
@@ -115,11 +163,12 @@ Then classify into:
 After PR #12 is merged and production is verified:
 
 1. submit/refresh `https://www.ewastekochi.com/sitemap.xml`
-2. use URL Inspection only on final canonical URLs
-3. prioritize restored/high-impression locations and core services
-4. do not request indexing for redirect sources, retired URLs, noindex URLs or stale subdomain URLs
-5. monitor Page Indexing for 7–14 days before another large content expansion
+2. remove or ignore any obsolete sitemap-index entries left in GSC
+3. use URL Inspection only on final canonical URLs
+4. prioritize restored/high-impression locations and core services
+5. do not request indexing for redirect sources, retired URLs, noindex URLs or stale subdomain URLs
+6. monitor Page Indexing for 7–14 days before another large content expansion
 
 ## Merge recommendation
 
-The two declining blog refreshes and current recovery work are safe to merge once the latest Quality Gate is green. Do not add speculative redirect/canonical changes solely from the 227/223 aggregate counts; apply the next hygiene patch only after the exact current GSC URL exports are available.
+The declining blog refreshes, restored location surface, canonical cleanup, sitemap cleanup and current recovery work are safe to merge once the latest Quality Gate is green. Do not add speculative redirect/canonical changes solely from the 227/223 aggregate counts; apply the next URL-level hygiene patch only after the exact current GSC URL exports are available.
