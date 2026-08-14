@@ -1,0 +1,14 @@
+{
+  "approvedAt": "2026-08-14",
+  "approvedFrom": "post-7209f10d pSEO consolidation",
+  "notes": "Baseline reflects the intentionally consolidated index surface. Do not replace with the old ~988 URL surface; the removed location-service matrix URLs were deliberately retired unless separately approved.",
+  "thresholds": {
+    "totalDropPercent": 5,
+    "groupDropPercent": 20
+  },
+  "counts": {
+    "total": 843,
+    "locations": 41,
+    "blog": 622
+  }
+}
