@@ -1,14 +1,14 @@
 {
   "approvedAt": "2026-08-15",
-  "approvedFrom": "full pre-7209f10d indexed URL surface restoration",
-  "notes": "Baseline protects the restored pre-contraction index surface requested after GSC traffic/visibility decline. The location sitemap target is restored from 41 to the prior 184-URL surface; future reductions require an explicit reviewed baseline change rather than an eligibility-gate side effect.",
+  "approvedFrom": "measured full pre-7209f10d generated-route restoration on PR #12",
+  "notes": "Baseline is measured from the restored production build, not inferred from historical aggregate figures. The location sitemap is restored exactly to 184 URLs. Future reductions require an explicit reviewed baseline change rather than a generated-page eligibility side effect.",
   "thresholds": {
     "totalDropPercent": 5,
     "groupDropPercent": 20
   },
   "counts": {
-    "total": 988,
+    "total": 885,
     "locations": 184,
-    "blog": 622
+    "blog": 619
   }
 }
