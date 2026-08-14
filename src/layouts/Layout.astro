@@ -21,7 +21,7 @@ interface Props {
 }
 
 const { title, description, path, jsonLd = [], hreflang = [], noindex = false, lang = "en-IN" } = Astro.props;
-const htmlLang = lang === "ml-IN" ? "ml" : "en-IN";
+const htmlLang = lang;
 ---
 
 <html lang={htmlLang}>
