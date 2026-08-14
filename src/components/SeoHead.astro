@@ -1,5 +1,6 @@
 ---
 import { SITE_URL, BUSINESS } from "../data/site";
+import { resolveSeoMetadata } from "../data/seoOverrides";
 import { sanitizeJsonLdBlocks } from "../lib/schemaSafety";
 
 interface HreflangEntry {
@@ -19,84 +20,11 @@ interface Props {
 const { title: inputTitle, description: inputDescription, path, jsonLd = [], hreflang = [], noindex = false } = Astro.props;
 const canonicalUrl = new URL(path, SITE_URL).toString();
 
-const seoOverrides: Record<string, { title: string; description: string }> = {
-  "/": {
-    title: "E-Waste Recycling in Kochi | Free Doorstep Pickup",
-    description: "Recycle old electronics in Kochi with doorstep pickup. Laptops, computers, TVs, batteries and IT equipment. Share your location to check pickup feasibility.",
-  },
-  "/services/electronics-recycling-near-me/": {
-    title: "Electronics Recycling Near Me in Kochi | Free Doorstep Pickup",
-    description: "Looking for electronics recycling near you in Kochi? Check doorstep pickup for laptops, computers, TVs, batteries and IT equipment by sharing your location and item list.",
-  },
-  "/recycling/": {
-    title: "Where to Recycle Old Electronics in Kochi | Free Pickup",
-    description: "Find out where to recycle old electronics in Kochi. See accepted items, doorstep pickup, battery handling, data safety and how to check collection feasibility.",
-  },
-  "/marketplace/": {
-    title: "Used Electronics Marketplace in Kochi | Buy & Sell Old Devices",
-    description: "Buy or sell used electronics in Kochi. Browse available devices and learn how condition, testing, data safety and pickup affect used-electronics transactions.",
-  },
-  "/battery-recycling/": {
-    title: "Where to Recycle Batteries in Kochi | UPS, Inverter & Lithium",
-    description: "Learn where to recycle UPS, inverter, laptop and lithium batteries in Kochi. Get safe handling guidance and check pickup feasibility for your batteries.",
-  },
-  "/sell-electronics/": {
-    title: "Sell Old Electronics in Kochi + Free Pan-India Ship-In",
-    description: "Sell laptops, phones, tablets for cash. Kochi doorstep pickup — free. Pan-India ship-in — free, we cover Shiprocket. Photo-based quote, final price on inspection.",
-  },
-  "/locations/kozhikode/": {
-    title: "E-Waste Recycling in Kozhikode, Kerala | Pickup Feasibility",
-    description: "E-waste recycling guidance for Kozhikode, Kerala. Check pickup feasibility for old electronics, batteries and IT equipment before arranging collection.",
-  },
-  "/locations/thiruvananthapuram/": {
-    title: "E-Waste Recycling in Thiruvananthapuram | Pickup Feasibility",
-    description: "E-waste recycling guidance for Thiruvananthapuram, Kerala. Check whether pickup is feasible for electronics, batteries and IT equipment in your area.",
-  },
-  "/blog/ewaste-donation-reuse-guide-kochi/": {
-    title: "Donate Old Electronics in Kochi + Free Pan-India Ship-In",
-    description: "Donate working laptops, phones and tablets. Kochi doorstep pickup — free. Pan-India ship-in — free, we cover Shiprocket for eligible categories. WhatsApp us.",
-  },
-  "/locations/kakkanad/": {
-    title: "E-Waste Collection in Kakkanad | Free Pickup for Homes & Offices",
-    description: "Check e-waste collection in Kakkanad for homes, offices and IT equipment. Learn what can be collected and how to confirm pickup for your address.",
-  },
-  "/locations/thrissur/": {
-    title: "E-Waste Recycling in Thrissur, Kerala | Pickup Feasibility",
-    description: "E-waste recycling guidance for Thrissur, Kerala. Check pickup feasibility for old electronics, batteries and office IT equipment before booking.",
-  },
-  "/locations/kollam/": {
-    title: "E-Waste Recycling in Kollam, Kerala | Pickup Feasibility",
-    description: "E-waste recycling guidance for Kollam, Kerala. Check collection feasibility for old electronics, batteries and IT equipment in your area.",
-  },
-  "/locations/kadavanthra/": {
-    title: "E-Waste Collection in Kadavanthra, Kochi | Free Pickup",
-    description: "Check e-waste collection in Kadavanthra, Kochi for homes and offices. See accepted electronics and how to confirm doorstep pickup.",
-  },
-  "/contact/": {
-    title: "Contact Ewaste Kochi | E-Waste Pickup & Recycling",
-    description: "Contact Ewaste Kochi to ask about e-waste pickup, electronics recycling, battery handling, data destruction and service availability in Kerala.",
-  },
-  "/blog/free-e-waste-pickup-kochi/": {
-    title: "Free E-Waste Pickup in Kochi | How Doorstep Collection Works",
-    description: "Learn how free e-waste pickup works in Kochi, what items are collected, what details to send, and how pickup feasibility is confirmed.",
-  },
-  "/locations/ernakulam-south/": {
-    title: "E-Waste Collection in Ernakulam South | Kochi Pickup",
-    description: "Check e-waste collection in Ernakulam South, Kochi for homes and offices. Share your location and item list to confirm pickup feasibility.",
-  },
-  "/locations/aluva/": {
-    title: "E-Waste Collection in Aluva | Free Pickup Near Kochi",
-    description: "Check e-waste collection in Aluva for old electronics, batteries and IT equipment. Learn what can be collected and how to confirm pickup.",
-  },
-  "/locations/malappuram/": {
-    title: "E-Waste Recycling in Malappuram, Kerala | Pickup Feasibility",
-    description: "E-waste recycling guidance for Malappuram, Kerala. Check collection feasibility for old electronics, batteries and IT equipment before arranging pickup.",
-  },
-};
-
-const override = seoOverrides[path];
-const title = override?.title ?? inputTitle;
-const description = override?.description ?? inputDescription;
+// Page metadata is the default. Only explicitly documented overrides in
+// src/data/seoOverrides.ts may take precedence, so title ownership is visible
+// and reviewable rather than hidden inside this rendering component.
+const resolvedSeo = resolveSeoMetadata(path, inputTitle, inputDescription);
+const { title, description } = resolvedSeo;
 const isArticle = path.startsWith("/blog/") || path.startsWith("/e-waste/");
 
 const safeJsonLd = sanitizeJsonLdBlocks(jsonLd).map((block) => {
