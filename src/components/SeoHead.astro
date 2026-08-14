@@ -43,8 +43,12 @@ const seoOverrides: Record<string, { title: string; description: string }> = {
     description: "Learn where to recycle UPS, inverter, laptop and lithium batteries in Kochi. Get safe handling guidance and check pickup feasibility for your batteries.",
   },
   "/sell-electronics/": {
-    title: "Where to Sell Used Electronics in Kochi | Pickup & Quote",
-    description: "Sell old laptops, phones, computers and other electronics in Kochi. Share item details and photos to check eligibility and receive a condition-based quote.",
+    // Updated 2026-08-14 — adds the pan-India Shiprocket ship-in
+    // differentiator confirmed operational 2026-08-05 (memory:
+    // pan-india-reverse-logistics). Category-bounded: ship-in only for
+    // mobile / tablet / laptop / small IT peripherals.
+    title: "Sell Old Electronics in Kochi + Free Pan-India Ship-In",
+    description: "Sell laptops, phones, tablets for cash. Kochi doorstep pickup — free. Pan-India ship-in — free, we cover Shiprocket. Photo-based quote, final price on inspection.",
   },
   "/locations/kozhikode/": {
     title: "E-Waste Recycling in Kozhikode, Kerala | Pickup Feasibility",
@@ -55,8 +59,14 @@ const seoOverrides: Record<string, { title: string; description: string }> = {
     description: "E-waste recycling guidance for Thiruvananthapuram, Kerala. Check whether pickup is feasible for electronics, batteries and IT equipment in your area.",
   },
   "/blog/ewaste-donation-reuse-guide-kochi/": {
-    title: "Where to Donate Electronics in Kochi | Reuse & Recycling Guide",
-    description: "Where to donate old electronics in Kochi, which devices are suitable for reuse, how to wipe personal data, and when recycling is the better option.",
+    // Updated 2026-08-14 — highest single zero-CTR page in the Aug 13
+    // GSC export (1,750 impressions / 0 clicks / pos 5.47). Adds the
+    // pan-India Shiprocket ship-in differentiator (memory:
+    // pan-india-reverse-logistics) — the only real hook that separates us
+    // from Kochi-only competitors on this national-intent query.
+    // Category-bounded: ship-in only for mobile/tablet/laptop.
+    title: "Donate Old Electronics in Kochi + Free Pan-India Ship-In",
+    description: "Donate working laptops, phones and tablets. Kochi doorstep pickup — free. Pan-India ship-in — free, we cover Shiprocket for eligible categories. WhatsApp us.",
   },
   "/locations/kakkanad/": {
     title: "E-Waste Collection in Kakkanad | Free Pickup for Homes & Offices",
