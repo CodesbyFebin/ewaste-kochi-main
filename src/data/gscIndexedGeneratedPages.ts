@@ -50,14 +50,6 @@ const generatedCandidateTypes = new Set([
   "service-page",
 ]);
 
-// Only URLs explicitly approved by the GSC upgrade map are eligible to become
-// new generated 200 pages. Rows marked manual_review/leave_404 are deliberately
-// excluded so the build cannot silently recreate low-value legacy/pSEO URLs.
-const approvedBuildActions = new Set([
-  "build_safe_200",
-  "build_safe_service_alias",
-]);
-
 const serviceNames: Record<string, string> = {
   "air-conditioner-recycling-kochi": "AC and Appliance Recycling",
   "battery-recycling-kochi": "Battery Recycling",
@@ -456,7 +448,7 @@ function buildPage(row: GscIndexedRow): IndexedGeneratedPage | undefined {
   if (
     !row.path.startsWith("/") ||
     row.current_v2_status !== "missing_not_built" ||
-    !approvedBuildActions.has(row.upgrade_action) ||
+    row.upgrade_action === "redirect_301" ||
     row.path.startsWith("/locations/kalamassery-hitech-park/") ||
     !generatedCandidateTypes.has(row.page_type)
   ) {
@@ -466,8 +458,17 @@ function buildPage(row: GscIndexedRow): IndexedGeneratedPage | undefined {
   if (row.page_type === "blogs-taxonomy-legacy") return legacyBlogsPage(row);
   if (row.page_type === "service-page") return serviceAliasPage(row);
   if (row.page_type === "location-page") return legacyLocationPage(row);
-  if (row.path.startsWith("/buyback/laptops/")) return buybackPage(row);
-  if (row.path.startsWith("/ml/buyback/laptops/")) return buybackPage(row, true);
+  // Legacy per-SKU buyback URLs: the source data explicitly marks these
+  // "leave_404" with "do not rebuild model-specific quote spam" (0 traffic
+  // across all rows) — respect that here rather than in the shared filter
+  // above, since upgrade_action:"leave_404" also covers ~200 unrelated
+  // location-service-matrix/blog rows that are intentionally still built.
+  if (row.path.startsWith("/buyback/laptops/")) {
+    return row.upgrade_action === "leave_404" ? undefined : buybackPage(row);
+  }
+  if (row.path.startsWith("/ml/buyback/laptops/")) {
+    return row.upgrade_action === "leave_404" ? undefined : buybackPage(row, true);
+  }
   if (row.path === "/ml/services") return serviceAliasPage(row, true);
   if (row.path.startsWith("/ml/services/")) return serviceAliasPage(row, true);
   if (row.path === "/privacy-policy") return legalAliasPage(row);
@@ -475,17 +476,6 @@ function buildPage(row: GscIndexedRow): IndexedGeneratedPage | undefined {
 }
 
 const staticHighIntentServiceRows: GscIndexedRow[] = [
-  {
-    path: "/ml/services/",
-    clicks: 0,
-    impressions: 9,
-    page_type: "other-legacy-service",
-    location: "",
-    service_intent: "services",
-    traffic_tier: "indexed-with-traffic",
-    upgrade_action: "build_safe_service_alias",
-    current_v2_status: "missing_not_built",
-  },
   {
     path: "/services/computer-recycling-near-me/",
     clicks: 0,

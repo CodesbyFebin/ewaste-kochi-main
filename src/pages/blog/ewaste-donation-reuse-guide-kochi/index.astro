@@ -6,16 +6,16 @@ import Faq from "../../../components/Faq.astro";
 import RelatedContent from "../../../components/RelatedContent.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
 
-const title = "Donate Old Electronics in Kochi + Free Pan-India Ship-In";
+const title = "Where to Donate Old Electronics in Kochi | Pickup + Ship-In";
 const description =
-  "Donate working laptops, phones and tablets. Kochi doorstep pickup — free. Pan-India ship-in — free, we cover Shiprocket for eligible categories. WhatsApp us.";
+  "Find where to donate working laptops, phones and tablets in Kochi, how to prepare devices safely, and when recycling is the better option. Pickup and eligible ship-in guidance included.";
 const datePublished = "2026-07-08";
-const dateModified = "2026-08-11";
+const dateModified = "2026-08-15";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
   { name: "Blog", path: "/blog/" },
-  { name: "E-Waste Donation and Reuse Guide", path: "/blog/ewaste-donation-reuse-guide-kochi/" },
+  { name: "Where to Donate Old Electronics in Kochi", path: "/blog/ewaste-donation-reuse-guide-kochi/" },
 ];
 
 const jsonLd = [
@@ -24,7 +24,7 @@ const jsonLd = [
 ];
 
 const faqItems = [
-  { q: "Can I donate old electronics in Kochi?", a: "Yes. Working devices that you no longer need can be donated to individuals or organisations. Ensure data is removed before donation." },
+  { q: "Where can I donate old electronics in Kochi?", a: "For working devices, start with schools, colleges, non-profit organisations, community groups, religious institutions, family or neighbours that can genuinely reuse them. Contact the recipient first to confirm the device type and condition they accept." },
   { q: "What devices are suitable for donation?", a: "Functional laptops, phones, tablets and accessories are good candidates. Devices with cracked screens or battery issues may still be useful if the recipient can repair them." },
   { q: "Is donation better than recycling?", a: "For working devices, donation extends device life and is often better than recycling. For damaged or very old devices, recycling is usually the safer option." },
   { q: "Should I remove data before donating a device?", a: "Yes. Always perform a factory reset and remove accounts before donating. For laptops, wipe the drive and remove external disks." },
@@ -34,39 +34,42 @@ const faqItems = [
 
 <Layout title={title} description={description} path="/blog/ewaste-donation-reuse-guide-kochi/" jsonLd={jsonLd}>
   <Breadcrumbs items={breadcrumbItems} />
-  <h1>E-Waste Donation and Reuse Guide in Kochi</h1>
-  <p class="lede">Not every old electronic needs to be recycled. If it still works, donating or reusing it can be better for the environment and helpful to someone else. Here is how to do it safely.</p>
-  <CtaBar whatsappMessage="Hi, I want to donate old electronics." />
+  <h1>Where to Donate Old Electronics in Kochi</h1>
+  <p class="lede">If your old laptop, phone, tablet or accessory still works, reuse or donation can extend its life before recycling becomes necessary. This guide explains where to start in Kochi, how to prepare the device safely, and what to do when the item is no longer suitable for donation.</p>
+  <CtaBar whatsappMessage="Hi, I want help with old electronics that may be suitable for donation or reuse." />
 
   <div class="quick-answer">
     <p class="quick-answer-label">Quick answer</p>
     <p>
-      If a device still powers on and runs basic tasks, donating or
-      reusing it is usually better than recycling — wipe the data first
-      (factory reset, sign out of accounts), then offer it to schools,
-      community groups or family before considering recycling.
-      Damaged or very old devices are safer to recycle.
+      For working electronics in Kochi, first ask schools, colleges, non-profit organisations,
+      community groups, religious institutions, family or neighbours whether they can reuse the device.
+      Confirm acceptance before travelling, wipe all personal data, sign out of accounts and include the
+      charger where possible. If the device is damaged, unsafe or too old to be useful, route it to e-waste
+      recycling instead. For eligible small-device categories such as laptops, phones and tablets, you can
+      also WhatsApp Ewaste Kochi to check the available pickup or pan-India ship-in route.
     </p>
   </div>
 
   <ul class="key-takeaways">
-    <li>Working devices are better donated than recycled — reuse extends their life.</li>
+    <li>Working devices are better donated than recycled when there is a real recipient who can use them.</li>
     <li>Always wipe data and sign out of accounts before handing a device to someone else.</li>
     <li>A complete package (device + charger) is far more useful to a recipient than a bare device.</li>
-    <li>Broken or unrepairable devices should go to recycling, not donation.</li>
+    <li>Confirm the recipient accepts that device type and condition before arranging handover.</li>
+    <li>Broken, unsafe or unrepairable devices should go to recycling, not donation.</li>
   </ul>
 
   <section><h2>Devices that are good for donation</h2><ul><li>Laptops that still power on and run basic tasks</li><li>Smartphones that are functional and unlocked</li><li>Tablets with working screens and batteries</li><li>Working monitors, keyboards and mice</li><li>Functional printers and scanners</li><li>Working routers and modems</li><li>Chargers and cables that match the device</li></ul></section>
   <section><h2>Prepare devices before donating</h2><p>Every device you donate must be safe for the next user. Start by backing up any files you want to keep. Log out of all accounts — email, app stores, social media, cloud services. Perform a factory reset on phones and laptops. Remove SIM cards, memory cards and any external disks. Check that the device powers on and charges properly. Include the charger and essential cables if available. A complete, working package is far more useful than a bare device.</p></section>
-  <section><h2>Where to donate in Kochi</h2><p>Consider local schools, colleges, non-profit organisations, community centres and religious institutions. Some may accept electronics for refurbishing and redistribution. If you are unsure, ask them what condition they need. Family members, friends and neighbours are also good options — a working laptop given to a student can make a real difference. Document the donation with a photo for your records.</p></section>
+  <section><h2>Where to donate electronics in Kochi</h2><p>Start with local schools, colleges, non-profit organisations, community centres and religious institutions that may have a genuine reuse need. Contact them before travelling because acceptance policies and device requirements can change. Family members, friends and neighbours are also practical options — for example, a working laptop may still be useful to a student. Be clear about the device condition and accessories, and keep a simple handover record if you need one for your own records.</p></section>
   <section><h2>When recycling is better than donation</h2><p>Do not donate devices that are broken beyond repair, have swollen or leaking batteries, or are so old that they cannot run basic software. These items are better handled through recycling. A damaged device handed to someone without repair skills can create frustration and eventually end up in the waste stream anyway. Be honest about the condition when offering a donation.</p></section>
-  <section><h2>What to include in your message</h2><ul class="check-list"><li>Device types and quantities</li><li>Working or non-working status</li><li>Whether you have performed a factory reset</li><li>Any damage or missing parts</li><li>Preferred donation arrangement — pickup or drop-off</li><li>Your location in Kochi</li></ul></section>
+  <section><h2>What to include in your message</h2><ul class="check-list"><li>Device types and quantities</li><li>Working or non-working status</li><li>Whether you have performed a factory reset</li><li>Any damage or missing parts</li><li>Preferred route — donation/reuse, sale or recycling</li><li>Your location in Kochi, or ship-in origin for an eligible small device</li></ul></section>
 
   <section>
-    <h2>Related services</h2>
+    <h2>Related services and service areas</h2>
     <div class="link-row">
       <a href="/sell-electronics/">Sell Electronics</a>
       <a href="/recycling/">E-Waste Recycling</a>
+      <a href="/locations/">Service Areas</a>
     </div>
   </section>
 
@@ -75,9 +78,9 @@ const faqItems = [
 
   <RelatedContent href="/blog/ewaste-donation-reuse-guide-kochi/" />
   <section class="final-cta">
-    <h2>Have Questions About Donating or Reusing Electronics?</h2>
-    <p>Share your item details and location on WhatsApp to get started.</p>
-    <CtaBar whatsappMessage="Hi, I want to donate old electronics." compact />
+    <h2>Need Help Choosing Donation, Sale or Recycling?</h2>
+    <p>Share the device type, condition and location on WhatsApp to check the appropriate route.</p>
+    <CtaBar whatsappMessage="Hi, I have old electronics and want to check whether donation, sale or recycling is the best route." compact />
   </section>
   <p class="updated">Last updated: {dateModified}</p>
 </Layout>

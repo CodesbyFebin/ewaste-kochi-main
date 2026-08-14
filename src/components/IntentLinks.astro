@@ -1,0 +1,184 @@
+---
+interface Props {
+  path: string;
+}
+
+const { path } = Astro.props;
+
+type Link = { href: string; label: string };
+type IntentBlock = { heading: string; intro: string; links: Link[] };
+
+const INTENT_LINKS: Record<string, IntentBlock> = {
+  "/services/electronics-recycling-near-me/": {
+    heading: "Find the right recycling route",
+    intro: "Confirm your area first, then use the service page that matches the item or handling need.",
+    links: [
+      { href: "/locations/", label: "Check service areas" },
+      { href: "/recycling/", label: "E-waste recycling service" },
+      { href: "/battery-recycling/", label: "Battery recycling" },
+      { href: "/pickup/", label: "Pickup process" },
+    ],
+  },
+  "/recycling/": {
+    heading: "Plan your e-waste pickup",
+    intro: "Use the item-specific guides below or check whether collection is feasible for your address.",
+    links: [
+      { href: "/services/electronics-recycling-near-me/", label: "Recycling near me" },
+      { href: "/locations/", label: "Service areas" },
+      { href: "/battery-recycling/", label: "Recycle batteries" },
+      { href: "/data-destruction/", label: "Data destruction" },
+    ],
+  },
+  "/battery-recycling/": {
+    heading: "Battery pickup and safety",
+    intro: "Check safe handling guidance first, then confirm pickup for your battery type and location.",
+    links: [
+      { href: "/blog/where-to-recycle-batteries-in-kochi/", label: "Where to recycle batteries" },
+      { href: "/pickup/", label: "Pickup process" },
+      { href: "/locations/", label: "Check service areas" },
+      { href: "/tools/battery-safety-checker/", label: "Battery safety checker" },
+    ],
+  },
+  "/sell-electronics/": {
+    heading: "Sell, reuse or recycle",
+    intro: "Choose the route that matches the device condition instead of treating every old device as scrap.",
+    links: [
+      { href: "/blog/ewaste-donation-reuse-guide-kochi/", label: "Donation and reuse guide" },
+      { href: "/recycling/", label: "Recycle non-working devices" },
+      { href: "/e-waste-scrap-prices-kochi/", label: "Scrap price guide" },
+      { href: "/locations/", label: "Check service areas" },
+    ],
+  },
+  "/blog/ewaste-donation-reuse-guide-kochi/": {
+    heading: "Can’t donate the device?",
+    intro: "If the device is damaged, unsafe or no longer useful, move it to the appropriate recycling or sale route.",
+    links: [
+      { href: "/recycling/", label: "Recycle old electronics" },
+      { href: "/sell-electronics/", label: "Sell working electronics" },
+      { href: "/pickup/", label: "Check pickup" },
+      { href: "/locations/", label: "Service areas" },
+    ],
+  },
+  "/blog/e-waste-examples/": {
+    heading: "Recycle the e-waste items you identified",
+    intro: "Use the relevant service guide after identifying what counts as e-waste.",
+    links: [
+      { href: "/recycling/", label: "E-waste recycling" },
+      { href: "/battery-recycling/", label: "Battery recycling" },
+      { href: "/laptop-recycling/", label: "Laptop recycling" },
+      { href: "/mobile-phone-recycling/", label: "Mobile phone recycling" },
+    ],
+  },
+  "/blog/e-waste-management-rules-2022/": {
+    heading: "Apply the rules to real disposal work",
+    intro: "Move from regulatory guidance to the relevant business, data or recycling workflow.",
+    links: [
+      { href: "/itad/", label: "Business IT asset disposal" },
+      { href: "/data-destruction/", label: "Data destruction" },
+      { href: "/recycling/", label: "E-waste recycling" },
+      { href: "/contact/", label: "Discuss a business requirement" },
+    ],
+  },
+  "/blog/where-to-recycle-old-electronics-kochi/": {
+    heading: "Ready to recycle the items?",
+    intro: "Check the current pickup process and the service area that applies to your address.",
+    links: [
+      { href: "/recycling/", label: "Recycling service" },
+      { href: "/pickup/", label: "Pickup process" },
+      { href: "/locations/", label: "Service areas" },
+      { href: "/data-destruction/", label: "Data-bearing devices" },
+    ],
+  },
+  "/blog/where-to-recycle-old-electronics-in-kochi/": {
+    heading: "Book the correct recycling route",
+    intro: "Use the service and location pages after you have identified the items you want to recycle.",
+    links: [
+      { href: "/recycling/", label: "E-waste recycling service" },
+      { href: "/pickup/", label: "Doorstep pickup process" },
+      { href: "/locations/", label: "Check service areas" },
+      { href: "/battery-recycling/", label: "Battery recycling" },
+    ],
+  },
+  "/blog/where-to-recycle-batteries-in-kochi/": {
+    heading: "Check battery pickup",
+    intro: "After identifying the battery type and condition, confirm the safe pickup route for your address.",
+    links: [
+      { href: "/battery-recycling/", label: "Battery recycling service" },
+      { href: "/pickup/", label: "Pickup process" },
+      { href: "/locations/", label: "Service areas" },
+      { href: "/tools/battery-safety-checker/", label: "Battery safety checker" },
+    ],
+  },
+  "/data-destruction/": {
+    heading: "Data destruction and IT asset disposal",
+    intro: "Choose the workflow that matches the media, documentation and asset-disposition requirement.",
+    links: [
+      { href: "/hard-drive-shredding/", label: "Hard-drive shredding" },
+      { href: "/services/hard-drive-degaussing-kochi/", label: "Hard-drive degaussing" },
+      { href: "/itad/", label: "ITAD for businesses" },
+      { href: "/recycling/", label: "Recycle equipment afterward" },
+    ],
+  },
+};
+
+const LOCATION_NAMES: Record<string, string> = {
+  "/locations/kozhikode/": "Kozhikode",
+  "/locations/thiruvananthapuram/": "Thiruvananthapuram",
+  "/locations/thrissur/": "Thrissur",
+  "/locations/kadavanthra/": "Kadavanthra",
+  "/locations/edappally/": "Edappally",
+};
+
+const locationName = LOCATION_NAMES[path];
+const block = INTENT_LINKS[path] ?? (locationName ? {
+  heading: `E-waste options for ${locationName}`,
+  intro: "Check collection feasibility, accepted-item guidance and the service that matches your requirement.",
+  links: [
+    { href: "/services/electronics-recycling-near-me/", label: "Check local pickup" },
+    { href: "/recycling/", label: "E-waste recycling" },
+    { href: "/battery-recycling/", label: "Battery recycling" },
+    { href: "/locations/", label: "All service areas" },
+  ],
+} satisfies IntentBlock : undefined);
+---
+
+{block && (
+  <aside class="intent-links" aria-labelledby="intent-links-heading">
+    <h2 id="intent-links-heading">{block.heading}</h2>
+    <p>{block.intro}</p>
+    <nav aria-label="Related e-waste services and guides">
+      {block.links.map((link) => <a href={link.href}>{link.label}<span aria-hidden="true"> →</span></a>)}
+    </nav>
+  </aside>
+)}
+
+<style>
+  .intent-links {
+    margin: clamp(2.5rem, 5vw, 4rem) 0 1.5rem;
+    padding: clamp(1.1rem, 3vw, 1.5rem);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-sm);
+  }
+  .intent-links h2 { margin: 0 0 0.5rem; font-size: clamp(1.35rem, 3vw, 1.8rem); }
+  .intent-links p { margin: 0 0 1rem; color: var(--color-muted); max-width: 64ch; }
+  .intent-links nav { display: flex; flex-wrap: wrap; gap: 0.55rem; }
+  .intent-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0.65rem 0.85rem;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    background: var(--color-bg);
+    color: var(--color-primary);
+    font-weight: 750;
+    text-decoration: none;
+  }
+  .intent-links a:hover { border-color: var(--color-primary); }
+  @media (max-width: 520px) {
+    .intent-links nav { display: grid; grid-template-columns: 1fr; }
+    .intent-links a { width: 100%; justify-content: space-between; border-radius: var(--radius-sm); }
+  }
+</style>

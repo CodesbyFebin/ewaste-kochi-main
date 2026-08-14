@@ -4,12 +4,13 @@ import Breadcrumbs from "../../../components/Breadcrumbs.astro";
 import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
 import RelatedContent from "../../../components/RelatedContent.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
 
-const title = "Computer Recycling in Kochi";
-const description = "Computer Recycling in Kochi — practical guidance for Kochi households and businesses, covering laptop recycling Kochi, computer scrap buyers, desktop disposal.";
+const title = "Computer Recycling in Kochi | Desktops, Laptops & Monitors";
+const description = "Computer recycling in Kochi for desktops, laptops, monitors, keyboards, cables and office IT. Check pickup feasibility, data-destruction options and ITAD support for business batches.";
 const datePublished = "2026-07-14";
-const dateModified = "2026-07-14";
+const dateModified = "2026-08-15";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
@@ -40,47 +41,140 @@ const jsonLd = [
 ];
 
 const faqItems = [
-  { q: "Can computer accessories be recycled?", a: "For computer recycling: yes, cables, docking stations and other accessories are accepted." },
-  { q: "How do I prepare a computer for pickup?", a: "Back up your files, sign out of accounts, factory reset or wipe the drive, and remove anything you want to keep like an external drive." },
-  { q: "Is resale better than recycling?", a: "For computer recycling: for a working device, resale is usually worth checking first — non-working or very old devices are typically better suited to recycling." },
-  { q: "Is pickup available in Kochi?", a: "For computer recycling: Ewaste Kochi primarily supports Kochi, Ernakulam, Kakkanad, Kalamassery, Ernakulam South, Aluva and nearby Kochi-metro enquiry areas. For other Kerala districts, contact us to check pickup feasibility." },
+  {
+    q: "What computer equipment can be recycled in Kochi?",
+    a: "Common requests include desktops, laptops, monitors, keyboards, mice, cables, chargers, printers, routers, servers and mixed office IT. Share photos if you're unsure about a specific item.",
+  },
+  {
+    q: "Can broken computers still be collected?",
+    a: "Yes, damaged and non-working computers can still be reviewed for recycling or parts recovery. Mention cracked screens, liquid damage, missing parts or battery issues before pickup is confirmed.",
+  },
+  {
+    q: "How should I handle data before recycling a computer?",
+    a: "Back up anything you need, sign out of accounts and decide whether the drive will stay with the machine. Wiping, degaussing for magnetic media, or physical destruction may be appropriate depending on device type and security requirements.",
+  },
+  {
+    q: "Do businesses get a certificate automatically?",
+    a: "No. Documentation can be discussed for business, ITAD or data-destruction jobs when agreed before service. Availability depends on the scope, device identifiers and handling method.",
+  },
+  {
+    q: "Is computer pickup available outside Kochi?",
+    a: "Kochi and nearby Ernakulam areas are the core service zone. Other Kerala locations are reviewed case by case based on exact location, item type, quantity and current route feasibility.",
+  },
+  {
+    q: "Should a working computer be sold instead of recycled?",
+    a: "Often it's worth checking resale or reuse first. A working or repairable device may have more value through a condition-based quote than immediate material recycling.",
+  }
+];
+
+const acceptedRows = [
+  { type: "Desktop towers", handling: "Working, damaged and non-working units can be reviewed; storage should be flagged for data handling." },
+  { type: "Laptops", handling: "Include battery condition, charger, model details and any damage in the pickup request." },
+  { type: "Monitors", handling: "LCD, LED and older display equipment should be listed separately, especially if bulky or physically damaged." },
+  { type: "Keyboards, mice and cables", handling: "Peripherals and accessories can usually be included in the same electronics pickup." },
+  { type: "Printers and networking gear", handling: "Printers, routers, switches and similar office hardware can be included; mention storage or configuration concerns where relevant." },
+  { type: "Servers and business IT", handling: "Larger batches are usually better handled through ITAD with asset lists and agreed documentation needs." },
 ];
 ---
 
 <Layout title={title} description={description} path="/blog/computer-recycling-in-kochi/" jsonLd={jsonLd}>
   <Breadcrumbs items={breadcrumbItems} />
-  <h1>Computer Recycling in Kochi</h1>
-  <p class="lede">Here's what's actually available and how to check feasibility for your specific area. A cracked screen, dead battery, or a laptop that won't power on doesn't stop it from being collected — it may still have component or scrap value.</p>
+  <h1>Computer Recycling in Kochi — Desktops, Laptops & Monitors</h1>
+  <p class="lede">
+    Old computers create two separate problems: hardware that needs a responsible end-of-life route and storage devices that may still contain personal or business data. This guide explains what can be collected, how to prepare computers safely, when resale makes more sense, and when business IT should move through an ITAD workflow.
+  </p>
 
-  <CtaBar whatsappMessage="Hi, I have a question about computer recycling in kochi." />
+  <DirectAnswer>
+    <p>
+      Computer recycling in Kochi can cover desktops, laptops, monitors, peripherals and office IT. Send your item list, location and photos first so pickup feasibility can be confirmed. For devices with storage, agree the data-handling route—wiping, degaussing where appropriate, or physical destruction—before recycling or resale continues.
+    </p>
+  </DirectAnswer>
+
+  <CtaBar whatsappMessage="Hi, I'd like to check computer recycling pickup for desktops, laptops or monitors in Kochi." />
 
   <ul class="key-takeaways">
-    <li>Working laptops may have resale value — check before recycling.</li>
-    <li>Data should be wiped or destroyed before the device leaves your hands.</li>
-    <li>A broken screen or dead battery doesn't disqualify a device from pickup.</li>
+    <li>Desktops, laptops, monitors and common peripherals can be included in a computer recycling request.</li>
+    <li>Working devices may be better suited to resale or reuse before recycling.</li>
+    <li>Storage devices need an agreed data-handling plan before handover.</li>
+    <li>Business batches may be better suited to ITAD with asset lists and documentation requirements agreed in advance.</li>
   </ul>
 
   <section>
-    <h2>Broken or non-working computers</h2>
-    <p>For computer recycling, a cracked screen, dead battery, or a laptop that won't power on doesn't stop it from being collected — it may still have component or scrap value. Mention the condition honestly when you book.</p>
+    <h2>What computer equipment can be recycled?</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Equipment</th><th>Handling notes</th></tr>
+        </thead>
+        <tbody>
+          {acceptedRows.map((row) => (
+            <tr>
+              <td><strong>{row.type}</strong></td>
+              <td>{row.handling}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   </section>
 
   <section>
-    <h2>Resale or recycling</h2>
-    <p>For computer recycling, if a laptop or desktop still powers on and functions, it's worth checking resale value before assuming recycling is the only option. Non-working or severely outdated devices are the clearer candidates for straightforward recycling.</p>
+    <h2>Broken and non-working computers</h2>
+    <p>
+      A cracked display, dead battery, failed motherboard or machine that no longer powers on does not automatically make a computer unsuitable for collection. The route may shift from resale to parts recovery or recycling, so describe the condition accurately and send photos of visible damage before pickup is confirmed.
+    </p>
   </section>
 
   <section>
-    <h2>Accessories and peripherals</h2>
-    <p>Keyboards, mice, cables and docking stations can be included with a computer pickup or recycled on their own — no need to sort them separately from the main device.</p>
+    <h2>Secure data destruction before recycling</h2>
+    <p>
+      Formatting or deleting files is not the same as agreeing a proper media-sanitization route. Depending on the device and service scope, data handling may involve software wiping, degaussing for magnetic hard drives, or physical destruction. SSDs are not degaussed, so they need a different method. See <a href="/data-destruction/">data destruction services</a> for the available options.
+    </p>
+    <p>
+      If your business needs handover records or destruction documentation, ask for that before the job is confirmed. Documentation is not automatic on every household pickup and should not be assumed unless it is part of the agreed scope.
+    </p>
   </section>
 
   <section>
-    <h2>Related services</h2>
+    <h2>Resale, reuse or recycling?</h2>
+    <p>
+      If a laptop or desktop still powers on and is reasonably current, check its resale value before sending it directly to recycling. Working devices may have a useful second life, while damaged, unsupported or uneconomical machines are clearer recycling candidates. See <a href="/sell-electronics/">Sell Electronics</a> for condition-based quotes and <a href="/computer-scrap-buyers-kochi/">computer scrap buyers</a> for broader valuation guidance.
+    </p>
+  </section>
+
+  <section>
+    <h2>Computer recycling for businesses and IT teams</h2>
+    <p>
+      Offices, schools, clinics and other organisations often have larger batches: desktops, monitors, laptops, servers, UPS units and networking equipment retired at the same time. Those jobs may need asset lists, storage handling, custody records and scheduled collection windows. Use the <a href="/itad/">ITAD service</a> when the disposal needs to be structured rather than handled as a simple household pickup.
+    </p>
+  </section>
+
+  <section>
+    <h2>How computer pickup works in Kochi</h2>
+    <ol class="process-list">
+      <li><strong>Send the item list:</strong> desktops, laptops, monitors, peripherals and any servers or batteries.</li>
+      <li><strong>Share photos and location:</strong> include damage, model labels and access notes for bulky equipment.</li>
+      <li><strong>Flag data needs:</strong> identify drives or devices that need wiping or destruction.</li>
+      <li><strong>Confirm the route:</strong> recycling, resale review, data destruction or ITAD depending on the batch.</li>
+      <li><strong>Confirm pickup feasibility:</strong> timing depends on location, item type, quantity and current scheduling.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Pickup coverage and service areas</h2>
+    <p>
+      Kochi and nearby Ernakulam areas are the core service zone. For locations farther away, including other Kerala districts, pickup is checked case by case rather than promised universally. Use the <a href="/locations/">locations directory</a> to see current area pages and send your exact location for confirmation.
+    </p>
+  </section>
+
+  <section>
+    <h2>Related computer recycling services</h2>
     <div class="link-row">
-      <a href="/computer-scrap-buyers-kochi/">Computer Scrap Buyers</a>
+      <a href="/recycling/">E-Waste Recycling</a>
       <a href="/data-destruction/">Data Destruction</a>
+      <a href="/itad/">Business ITAD</a>
       <a href="/sell-electronics/">Sell Electronics</a>
+      <a href="/locations/">Service Areas</a>
     </div>
   </section>
 
@@ -88,27 +182,32 @@ const faqItems = [
     മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
   </p>
 
-  <Faq items={faqItems} />
+  <Faq items={faqItems} heading="Computer Recycling FAQs" />
 
   <RelatedContent href="/blog/computer-recycling-in-kochi/" />
 
   <section class="final-cta">
-    <h2>Have Questions About Computer Recycling in Kochi?</h2>
-    <p>Share your item details and location on WhatsApp to get started.</p>
-    <CtaBar whatsappMessage="Hi, I have a question about computer recycling in kochi." compact />
+    <h2>Check computer recycling pickup</h2>
+    <p>Send the computer types, quantity, condition and location on WhatsApp. For business batches, mention any data-destruction or documentation requirements too.</p>
+    <CtaBar whatsappMessage="Hi, I'd like to check computer recycling pickup. Here are the items, condition and location." compact />
   </section>
 
-  <p class="updated">Last updated: {dateModified}</p>
+  <p class="updated">Last updated: <time datetime={dateModified}>{dateModified}</time></p>
 </Layout>
 
 <style>
-  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
-  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 52rem; }
+  .key-takeaways { display: grid; gap: 0.55rem; margin: 1.5rem 0; padding-left: 1.25rem; }
+  .process-list { display: grid; gap: 0.7rem; padding-left: 1.25rem; }
   section p { line-height: 1.7; margin-bottom: 1rem; }
+  .table-scroll { overflow-x: auto; border: 1px solid var(--color-border); border-radius: var(--radius-sm); }
+  table { width: 100%; border-collapse: collapse; min-width: 640px; }
+  th, td { text-align: left; padding: 0.75rem; border-bottom: 1px solid var(--color-border); vertical-align: top; }
+  th { background: var(--color-surface); }
   .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
   .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
   .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
   .updated { font-size: 0.8rem; color: var(--color-muted); }
-  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
-  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+  .final-cta { padding: 1.5rem 1.25rem; border-radius: var(--radius-md); background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
+  .final-cta p { color: var(--color-muted); }
 </style>
