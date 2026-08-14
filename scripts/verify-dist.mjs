@@ -7,6 +7,10 @@ const baselinePath = new URL("../data/index-surface-baseline.json", import.meta.
 
 function fail(message) {
   console.error(`DIST VERIFY FAIL: ${message}`);
+  if (process.env.GITHUB_ACTIONS === "true") {
+    const escaped = String(message).replace(/%/g, "%25").replace(/\r/g, "%0D").replace(/\n/g, "%0A");
+    console.error(`::error title=Index surface regression::${escaped}`);
+  }
   process.exitCode = 1;
 }
 
@@ -43,12 +47,14 @@ function verifyIndexSurface() {
     total += count;
   }
 
+  console.log(`INDEX SURFACE OBSERVED: ${total} sitemap URLs; groups=${JSON.stringify(groupCounts)}`);
+
   const totalBaseline = Number(baseline.counts?.total || 0);
   const totalDropLimit = Number(baseline.thresholds?.totalDropPercent ?? 5);
   if (totalBaseline > 0) {
     const minTotal = Math.floor(totalBaseline * (1 - totalDropLimit / 100));
     if (total < minTotal) {
-      fail(`index surface dropped from approved ${totalBaseline} URLs to ${total}; limit is ${totalDropLimit}% (minimum ${minTotal})`);
+      fail(`index surface dropped from approved ${totalBaseline} URLs to ${total}; limit is ${totalDropLimit}% (minimum ${minTotal}); observed groups=${JSON.stringify(groupCounts)}`);
     }
   }
 
@@ -60,7 +66,7 @@ function verifyIndexSurface() {
     const current = Number(groupCounts[group] || 0);
     const minimum = Math.floor(approvedCount * (1 - groupDropLimit / 100));
     if (current < minimum) {
-      fail(`sitemap group ${group} dropped from approved ${approvedCount} URLs to ${current}; limit is ${groupDropLimit}% (minimum ${minimum})`);
+      fail(`sitemap group ${group} dropped from approved ${approvedCount} URLs to ${current}; limit is ${groupDropLimit}% (minimum ${minimum}); observed total=${total}; observed groups=${JSON.stringify(groupCounts)}`);
     }
   }
 
