@@ -79,12 +79,12 @@
     },
     {
       "source": "/blog/best-way-to-e-waste-collection-in-ernakulam-2026-ernakulam/",
-      "destination": "/locations/ernakulam/",
+      "destination": "/locations/",
       "permanent": true
     },
     {
       "source": "/blog/best-way-to-e-waste-collection-in-ernakulam-2026-ernakulam",
-      "destination": "/locations/ernakulam/",
+      "destination": "/locations/",
       "permanent": true
     },
     {

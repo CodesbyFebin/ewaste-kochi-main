@@ -17,10 +17,16 @@ const paths = [
   "/blog/battery-disposal-india/",
   "/blog/battery-disposal-safety-checklist-kochi/",
   "/blog/battery-recycling-during-monsoon-kochi/",
-  "/blog/battery-recycling-options-in-kochi-which-to-choose-kochi/",
+  // Removed 2026-08-14: also declared as vercel.json redirect source
+  // (→ /battery-recycling/). Cannot be both a live route and a legacy
+  // redirect — redirect wins.
+  // "/blog/battery-recycling-options-in-kochi-which-to-choose-kochi/",
   "/blog/best-e-waste-recycling-kochi/",
   "/blog/best-scrap-dealers-kochi-electronics/",
-  "/blog/best-way-to-e-waste-collection-in-ernakulam-2026-ernakulam/",
+  // Removed 2026-08-14: also declared as vercel.json redirect source. Its
+  // target /locations/ernakulam/ was a broken 2-hop chain; the redirect
+  // has been repointed to /locations/ in the same commit.
+  // "/blog/best-way-to-e-waste-collection-in-ernakulam-2026-ernakulam/",
   "/blog/bulk-e-waste-disposal-kochi/",
   "/blog/computer-scrap-dealers-kochi/",
   "/blog/corporate-data-destruction-services/",
@@ -68,7 +74,10 @@ const paths = [
   "/blog/itad/enterprise/verified-itad-enterprise-trivandrum-165/",
   "/blog/kspcb-regulations-for-e-waste-collection-in-kalamassery-kalamassery/",
   "/blog/laptop-data-wipe-checklist/",
-  "/blog/laptop-scrap-price-kochi-2026/",
+  // Removed 2026-08-14: also declared as vercel.json redirect source
+  // (→ /e-waste-scrap-prices-kochi/). The undated sibling slug
+  // "/blog/laptop-scrap-price-kochi/" remains a live legacy page.
+  // "/blog/laptop-scrap-price-kochi-2026/",
   "/blog/laptop-scrap-price-kochi/",
   "/blog/legal-requirements-for-it-asset-disposition-in-ernakulam-ernakulam/",
   "/blog/mobile-scrap-price-kochi/",
