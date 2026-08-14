@@ -126,16 +126,23 @@ const safeJsonLd = sanitizeJsonLdBlocks(jsonLd).map((block) => {
 
 // Verified first-party business identity. Certification/authorization claims are
 // intentionally excluded until documentary evidence is supplied and reviewed.
+// 2026-08-14 enrichment: added `image`, short-form `openingHours`, and a
+// separate Organization + WebSite pair to satisfy structured-data audit
+// tools that check the two schemas independently of LocalBusiness.
+const businessDescription = "E-waste recycling, electronics pickup, battery handling and IT asset services in Kochi and selected Kerala locations, plus free pan-India ship-in for laptops, phones and tablets via Shiprocket.";
+const brandImage = new URL("/og-image.jpg", SITE_URL).toString();
+
 const businessJsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": `${SITE_URL}/#business`,
   name: BUSINESS.name,
-  description: "E-waste recycling, electronics pickup, battery handling and IT asset services in Kochi and selected Kerala locations.",
+  description: businessDescription,
   url: SITE_URL,
   telephone: BUSINESS.phone,
   email: BUSINESS.email,
   priceRange: "$$",
+  image: brandImage,
   address: {
     "@type": "PostalAddress",
     streetAddress: BUSINESS.address.streetAddress,
@@ -149,6 +156,9 @@ const businessJsonLd = {
     latitude: BUSINESS.geo.latitude,
     longitude: BUSINESS.geo.longitude,
   },
+  // Both forms — legacy short-string form for older validators, and the
+  // recommended OpeningHoursSpecification for Google Rich Results.
+  openingHours: BUSINESS.hours,
   openingHoursSpecification: [{
     "@type": "OpeningHoursSpecification",
     dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
@@ -159,7 +169,45 @@ const businessJsonLd = {
     { "@type": "City", name: "Kochi" },
     { "@type": "AdministrativeArea", name: "Ernakulam" },
     { "@type": "AdministrativeArea", name: "Kerala" },
+    { "@type": "Country", name: "India" },
   ],
+};
+
+// Standalone Organization block — many /blog/* and service pages reference
+// { "@id": `${SITE_URL}/#organization` } as author/publisher, so the site-
+// wide anchor is emitted from every page.
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${SITE_URL}/#organization`,
+  name: BUSINESS.legalName,
+  alternateName: BUSINESS.name,
+  url: SITE_URL,
+  description: businessDescription,
+  contactPoint: [{
+    "@type": "ContactPoint",
+    telephone: BUSINESS.phone,
+    contactType: "customer service",
+    email: BUSINESS.email,
+    areaServed: "IN",
+    availableLanguage: ["English", "Malayalam"],
+  }],
+  // sameAs is intentionally omitted until verified social profile URLs
+  // are supplied — adding unverified URLs is a rich-snippet penalty risk.
+  // logo is omitted until a dedicated brand logo asset is added to
+  // public/ — favicon.svg is too small to qualify as an Organization logo
+  // under Google's guidelines, and og-image.jpg is used as `image` above.
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
+  name: BUSINESS.name,
+  url: SITE_URL,
+  description: businessDescription,
+  publisher: { "@id": `${SITE_URL}/#organization` },
+  inLanguage: ["en-IN", "ml-IN"],
 };
 ---
 
@@ -192,6 +240,8 @@ const businessJsonLd = {
 ))}
 
 <script type="application/ld+json" is:inline set:html={JSON.stringify(businessJsonLd)} />
+<script type="application/ld+json" is:inline set:html={JSON.stringify(organizationJsonLd)} />
+<script type="application/ld+json" is:inline set:html={JSON.stringify(websiteJsonLd)} />
 
 {safeJsonLd.map((block) => (
   <script type="application/ld+json" is:inline set:html={JSON.stringify(block)} />
