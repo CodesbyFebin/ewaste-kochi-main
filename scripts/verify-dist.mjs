@@ -3,6 +3,7 @@ import { join } from "node:path";
 
 const DIST = new URL("../dist/", import.meta.url);
 const distPath = DIST.pathname;
+const baselinePath = new URL("../data/index-surface-baseline.json", import.meta.url);
 
 function fail(message) {
   console.error(`DIST VERIFY FAIL: ${message}`);
@@ -14,6 +15,56 @@ function walk(dir) {
     const path = join(dir, name);
     return statSync(path).isDirectory() ? walk(path) : [path];
   });
+}
+
+function countLocs(xml) {
+  return (xml.match(/<loc>/g) || []).length;
+}
+
+function verifyIndexSurface() {
+  if (!existsSync(baselinePath)) {
+    fail("data/index-surface-baseline.json is missing");
+    return;
+  }
+
+  const baseline = JSON.parse(readFileSync(baselinePath, "utf8"));
+  const sitemapDir = join(distPath, "sitemaps");
+  if (!existsSync(sitemapDir)) {
+    fail("dist/sitemaps is missing");
+    return;
+  }
+
+  const groupCounts = {};
+  let total = 0;
+  for (const file of readdirSync(sitemapDir).filter((name) => name.endsWith(".xml"))) {
+    const group = file.replace(/\.xml$/, "");
+    const count = countLocs(readFileSync(join(sitemapDir, file), "utf8"));
+    groupCounts[group] = count;
+    total += count;
+  }
+
+  const totalBaseline = Number(baseline.counts?.total || 0);
+  const totalDropLimit = Number(baseline.thresholds?.totalDropPercent ?? 5);
+  if (totalBaseline > 0) {
+    const minTotal = Math.floor(totalBaseline * (1 - totalDropLimit / 100));
+    if (total < minTotal) {
+      fail(`index surface dropped from approved ${totalBaseline} URLs to ${total}; limit is ${totalDropLimit}% (minimum ${minTotal})`);
+    }
+  }
+
+  const groupDropLimit = Number(baseline.thresholds?.groupDropPercent ?? 20);
+  for (const [group, approvedCountRaw] of Object.entries(baseline.counts || {})) {
+    if (group === "total") continue;
+    const approvedCount = Number(approvedCountRaw);
+    if (!approvedCount) continue;
+    const current = Number(groupCounts[group] || 0);
+    const minimum = Math.floor(approvedCount * (1 - groupDropLimit / 100));
+    if (current < minimum) {
+      fail(`sitemap group ${group} dropped from approved ${approvedCount} URLs to ${current}; limit is ${groupDropLimit}% (minimum ${minimum})`);
+    }
+  }
+
+  console.log(`INDEX SURFACE: ${total} sitemap URLs; groups=${JSON.stringify(groupCounts)}`);
 }
 
 if (!existsSync(distPath)) {
@@ -47,7 +98,9 @@ if (!existsSync(distPath)) {
     }
   }
 
+  verifyIndexSurface();
+
   if (!process.exitCode) {
-    console.log(`DIST VERIFY PASS: ${htmlFiles.length} HTML pages; homepage canonical, AdSense and JSON-LD present.`);
+    console.log(`DIST VERIFY PASS: ${htmlFiles.length} HTML pages; homepage markers and approved index surface verified.`);
   }
 }
