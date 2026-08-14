@@ -19,8 +19,6 @@ interface Props {
 const { title: inputTitle, description: inputDescription, path, jsonLd = [], hreflang = [], noindex = false } = Astro.props;
 const canonicalUrl = new URL(path, SITE_URL).toString();
 
-// P99 CTR pass: highest-impression, low-CTR URLs from the 2026-08-10
-// Search Console export. Phrasing stays natural and avoids unsupported claims.
 const seoOverrides: Record<string, { title: string; description: string }> = {
   "/": {
     title: "E-Waste Recycling in Kochi | Free Doorstep Pickup",
@@ -43,10 +41,6 @@ const seoOverrides: Record<string, { title: string; description: string }> = {
     description: "Learn where to recycle UPS, inverter, laptop and lithium batteries in Kochi. Get safe handling guidance and check pickup feasibility for your batteries.",
   },
   "/sell-electronics/": {
-    // Updated 2026-08-14 — adds the pan-India Shiprocket ship-in
-    // differentiator confirmed operational 2026-08-05 (memory:
-    // pan-india-reverse-logistics). Category-bounded: ship-in only for
-    // mobile / tablet / laptop / small IT peripherals.
     title: "Sell Old Electronics in Kochi + Free Pan-India Ship-In",
     description: "Sell laptops, phones, tablets for cash. Kochi doorstep pickup — free. Pan-India ship-in — free, we cover Shiprocket. Photo-based quote, final price on inspection.",
   },
@@ -59,12 +53,6 @@ const seoOverrides: Record<string, { title: string; description: string }> = {
     description: "E-waste recycling guidance for Thiruvananthapuram, Kerala. Check whether pickup is feasible for electronics, batteries and IT equipment in your area.",
   },
   "/blog/ewaste-donation-reuse-guide-kochi/": {
-    // Updated 2026-08-14 — highest single zero-CTR page in the Aug 13
-    // GSC export (1,750 impressions / 0 clicks / pos 5.47). Adds the
-    // pan-India Shiprocket ship-in differentiator (memory:
-    // pan-india-reverse-logistics) — the only real hook that separates us
-    // from Kochi-only competitors on this national-intent query.
-    // Category-bounded: ship-in only for mobile/tablet/laptop.
     title: "Donate Old Electronics in Kochi + Free Pan-India Ship-In",
     description: "Donate working laptops, phones and tablets. Kochi doorstep pickup — free. Pan-India ship-in — free, we cover Shiprocket for eligible categories. WhatsApp us.",
   },
@@ -124,11 +112,6 @@ const safeJsonLd = sanitizeJsonLdBlocks(jsonLd).map((block) => {
   return block;
 });
 
-// Verified first-party business identity. Certification/authorization claims are
-// intentionally excluded until documentary evidence is supplied and reviewed.
-// 2026-08-14 enrichment: added `image`, short-form `openingHours`, and a
-// separate Organization + WebSite pair to satisfy structured-data audit
-// tools that check the two schemas independently of LocalBusiness.
 const businessDescription = "E-waste recycling, electronics pickup, battery handling and IT asset services in Kochi and selected Kerala locations, plus free pan-India ship-in for laptops, phones and tablets via Shiprocket.";
 const brandImage = new URL("/og-image.jpg", SITE_URL).toString();
 
@@ -143,6 +126,8 @@ const businessJsonLd = {
   email: BUSINESS.email,
   priceRange: "$$",
   image: brandImage,
+  sameAs: [...BUSINESS.sameAs],
+  hasMap: BUSINESS.mapUrl,
   address: {
     "@type": "PostalAddress",
     streetAddress: BUSINESS.address.streetAddress,
@@ -156,8 +141,6 @@ const businessJsonLd = {
     latitude: BUSINESS.geo.latitude,
     longitude: BUSINESS.geo.longitude,
   },
-  // Both forms — legacy short-string form for older validators, and the
-  // recommended OpeningHoursSpecification for Google Rich Results.
   openingHours: BUSINESS.hours,
   openingHoursSpecification: [{
     "@type": "OpeningHoursSpecification",
@@ -173,9 +156,6 @@ const businessJsonLd = {
   ],
 };
 
-// Standalone Organization block — many /blog/* and service pages reference
-// { "@id": `${SITE_URL}/#organization` } as author/publisher, so the site-
-// wide anchor is emitted from every page.
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -184,6 +164,7 @@ const organizationJsonLd = {
   alternateName: BUSINESS.name,
   url: SITE_URL,
   description: businessDescription,
+  sameAs: [...BUSINESS.sameAs],
   contactPoint: [{
     "@type": "ContactPoint",
     telephone: BUSINESS.phone,
@@ -192,11 +173,6 @@ const organizationJsonLd = {
     areaServed: "IN",
     availableLanguage: ["English", "Malayalam"],
   }],
-  // sameAs is intentionally omitted until verified social profile URLs
-  // are supplied — adding unverified URLs is a rich-snippet penalty risk.
-  // logo is omitted until a dedicated brand logo asset is added to
-  // public/ — favicon.svg is too small to qualify as an Organization logo
-  // under Google's guidelines, and og-image.jpg is used as `image` above.
 };
 
 const websiteJsonLd = {
