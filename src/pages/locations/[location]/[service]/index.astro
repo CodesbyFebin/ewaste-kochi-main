@@ -10,6 +10,18 @@ export function getStaticPaths() {
 }
 
 const { page } = Astro.props;
+
+// GSC flagged this legacy generated URL as a Soft 404. The malformed
+// location/service combination has a clear, semantically equivalent
+// canonical location page, so consolidate it with a permanent redirect
+// rather than leaving a thin generated page indexable.
+if (
+  page.locationSlug === "malappuram" &&
+  page.serviceSlug === "network-equipment-disposal-kochi"
+) {
+  return Astro.redirect("/locations/malappuram/", 301);
+}
+
 const breadcrumbs = [
   { name: "Home", path: "/" },
   { name: "Locations", path: "/locations/" },
