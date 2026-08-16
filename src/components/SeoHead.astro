@@ -92,6 +92,8 @@ const organizationJsonLd = {
   alternateName: BUSINESS.name,
   url: SITE_URL,
   description: businessDescription,
+  // Data-driven from src/data/site.ts BUSINESS.sameAs (verified social +
+  // business profile URLs supplied 2026-08-14).
   sameAs: [...BUSINESS.sameAs],
   contactPoint: [{
     "@type": "ContactPoint",
@@ -101,6 +103,11 @@ const organizationJsonLd = {
     areaServed: "IN",
     availableLanguage: ["English", "Malayalam"],
   }],
+  // Logo path reference. Uncomment once /logo.png (400x400+ raster,
+  // ideally the green EWASTEKOCHI brand mark supplied 2026-08-14) is
+  // committed to public/. Left commented until the file lands — emitting
+  // a URL that 404s is worse than omitting the field.
+  // logo: new URL("/logo.png", SITE_URL).toString(),
 };
 
 const websiteJsonLd = {

@@ -30,12 +30,28 @@ const htmlLang = lang;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#0d5a36" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    {/* Google Tag Manager — installed 2026-08-14 per user (container GTM-KLVK4C8P).
+        Placed as high in <head> as possible per Google's guidance, before AdSense
+        so GTM captures pageviews before third-party scripts execute. */}
+    <script is:inline>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-KLVK4C8P');
+    </script>
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin />
     <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossorigin />
     <SeoHead title={title} description={description} path={path} jsonLd={jsonLd} hreflang={hreflang} noindex={noindex} />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3573741815038097" crossorigin="anonymous"></script>
   </head>
   <body>
+    {/* Google Tag Manager (noscript) — must be immediately after opening <body>. */}
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLVK4C8P"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
     <a href="#main-content" class="skip-link">Skip to content</a>
     <Header />
     <main id="main-content">

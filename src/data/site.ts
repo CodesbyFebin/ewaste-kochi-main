@@ -29,6 +29,9 @@ export const BUSINESS = {
     "https://x.com/EwasteKochi",
     "https://in.pinterest.com/EwasteKochi/",
     "https://www.linkedin.com/in/ewaste-kochi-891423419/",
+    // Google Business Profile pin — the verified GBP that matches the
+    // BUSINESS.geo coordinates below. Added 2026-08-14.
+    "https://maps.app.goo.gl/WvVq5q78v8LKrMDH7",
   ],
   hours: "Mo-Sa 09:00-18:00",
   hoursDisplay: "Mon–Sat, 9:00 AM – 6:00 PM",
