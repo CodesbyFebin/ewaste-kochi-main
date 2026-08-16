@@ -86,9 +86,13 @@ export const SEO_OVERRIDES: Record<string, SeoOverride> = {
   },
   "/blog/ewaste-donation-reuse-guide-kochi/": {
     title: "Where to Donate Old Electronics in Kochi | Pickup + Ship-In",
-    description: "Find where to donate working laptops, phones and tablets. Kochi doorstep pickup plus free pan-India ship-in for eligible small-device categories. WhatsApp item details first.",
+    // Meta trimmed 2026-08-17: prior 174 chars was truncated in Google SERP
+    // (~160 char viewport). New 150 chars preserves same claims (Kochi
+    // doorstep + free pan-India ship-in for eligible small-device
+    // categories + WhatsApp CTA) with fewer chars.
+    description: "Donate working laptops, phones and tablets. Kochi doorstep pickup plus free pan-India ship-in for eligible small-device categories. WhatsApp us first.",
     intentional: true,
-    source: "GSC zero-click opportunity analysis 2026-08-15; Shiprocket operation confirmed 2026-08-05",
+    source: "GSC zero-click opportunity analysis 2026-08-15; Shiprocket operation confirmed 2026-08-05; SERP-viewport truncation fix 2026-08-17",
     reason: "Align the existing high-impression donation guide directly to the 'where to donate electronics' query without creating a competing new URL.",
   },
   "/locations/kakkanad/": {
