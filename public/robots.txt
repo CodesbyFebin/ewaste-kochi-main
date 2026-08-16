@@ -155,9 +155,17 @@ Disallow: /admin/
 # ---------------------------------------------------------------------------
 # Machine-readable discovery resources
 # ---------------------------------------------------------------------------
-# robots.txt cannot force a crawler to index a URL. These sitemaps and the
-# site's /llms.txt provide explicit discovery signals for compliant systems.
+# robots.txt cannot force a crawler to index a URL. Only Sitemap: entries
+# below are the standard sitemap.org format that Google/Bing understand.
+#
+# 2026-08-17 sitemap-purity fix: removed 3 entries that were causing
+# GSC "Sitemap could not be read" / "Unsupported file format" errors:
+#   - /sitemap-index.xml → 404 (endpoint retired after segmented sitemap consolidation)
+#   - /ai-sitemap.xml    → custom <aisitemap> XML schema; Google rejects (correct — this
+#                          resource remains linked from /llms.txt for AI crawlers)
+#   - /content-index.xml → custom <content-index> XML schema; Google rejects (correct —
+#                          this remains a discovery signal for LLM ingestion, but is not
+#                          a Google-parseable sitemap)
+#
+# Only ONE authoritative sitemap.org-format sitemap remains declared:
 Sitemap: https://www.ewastekochi.com/sitemap.xml
-Sitemap: https://www.ewastekochi.com/sitemap-index.xml
-Sitemap: https://www.ewastekochi.com/ai-sitemap.xml
-Sitemap: https://www.ewastekochi.com/content-index.xml
