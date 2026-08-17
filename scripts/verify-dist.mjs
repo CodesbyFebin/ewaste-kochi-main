@@ -3,6 +3,7 @@ import { join } from "node:path";
 
 const DIST = new URL("../dist/", import.meta.url);
 const distPath = DIST.pathname;
+const pagesPath = new URL("../src/pages/", import.meta.url).pathname;
 const baselinePath = new URL("../data/index-surface-baseline.json", import.meta.url);
 const vercelPath = new URL("../vercel.json", import.meta.url);
 const recoveryMapPath = new URL("../data/gsc-404-recovery-map.json", import.meta.url);
@@ -209,6 +210,36 @@ function verifyIndexSurface() {
   verifyHighValueLegacyRedirects();
   console.log(`INDEX SURFACE: ${total} sitemap URLs; groups=${JSON.stringify(groupCounts)}`);
 }
+
+// Source-level invariant: forbid the retired orphan-generator pattern from
+// coming back. src/pages/[cluster]/[slug].astro previously scanned
+// src/content/articles/ via fs and emitted 100 public URLs that bypassed
+// src/data/routes.ts (the single source of truth for sitemap/content-index/
+// ai-sitemap). No page under src/pages/ may read from src/content/articles/,
+// and the exact [cluster]/[slug] path is banned so it cannot silently return.
+function verifySourceInvariants() {
+  if (!existsSync(pagesPath)) return;
+  const pageFiles = walk(pagesPath).filter((f) => f.endsWith(".astro") || f.endsWith(".ts"));
+  for (const file of pageFiles) {
+    const rel = file.slice(pagesPath.length);
+    if (/^\[cluster\][\/\\]\[slug\]\.astro$/.test(rel)) {
+      fail(
+        `src/pages/${rel} is the retired orphan generator; do not re-introduce it. ` +
+        `Register any promoted articles in src/data/routes.ts instead.`
+      );
+    }
+    const source = readFileSync(file, "utf8");
+    if (/src\/content\/articles/.test(source) || /['"`][^'"`]*content\/articles/.test(source)) {
+      fail(
+        `src/pages/${rel} references src/content/articles/. Pages under src/pages ` +
+        `must not read from that archived directory — it bypasses the route registry. ` +
+        `Promote the article to src/data/routes.ts and consume via getCollection().`
+      );
+    }
+  }
+}
+
+verifySourceInvariants();
 
 if (!existsSync(distPath)) {
   fail("dist/ does not exist; run the production build first");

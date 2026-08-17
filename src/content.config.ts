@@ -11,14 +11,17 @@
 // Explicit definition of the `articles` collection silences the warning
 // and keeps Astro's behaviour byte-for-byte compatible.
 //
-// The `articles` folder is a legacy content directory consumed directly by
-// src/pages/[cluster]/[slug].astro via fs.readFileSync (grayMatter) — the
-// dynamic route reads the .md files by path rather than via the Astro
-// content-collections query API. This collection therefore exists only to
-// satisfy Astro's registry; nothing queries it via getCollection().
+// The `articles` folder is an archived content directory. It previously fed a
+// filesystem-scanning generator at src/pages/[cluster]/[slug].astro, which
+// emitted 100 public HTML pages that bypassed src/data/routes.ts (the single
+// source of truth for the sitemap, content-index, and ai-sitemap). That
+// generator has been retired; no page under src/pages/ may read these files.
 //
-// If a future refactor moves the [cluster]/[slug] page to the collections
-// API, the schema below can be extended with a Zod schema for frontmatter.
+// The collection remains defined only to (a) silence Astro's auto-discovery
+// warning and (b) preserve the markdown as source material. If any of these
+// articles are later promoted to public URLs, they must be registered in
+// src/data/routes.ts and consumed via getCollection() — never re-introduce a
+// filesystem-scanning route generator.
 import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
 
