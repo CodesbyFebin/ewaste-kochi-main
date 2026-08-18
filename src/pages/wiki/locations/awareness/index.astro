@@ -1,0 +1,121 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "E-Waste Awareness in Kerala: Community Education";
+const description =
+  "Guide for schools, colleges, and community groups on educating about e-waste. Posters, drives, and student engagement activities.";
+const path = "/wiki/locations/awareness";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Locations", path: "/wiki/locations/" },
+  { name: "Awareness", path },
+];
+
+const faqItems = [
+  {
+    q: "How can schools start e-waste awareness?",
+    a: "Begin with a collection drive, classroom sorting activities, and posters explaining what is e-waste. We provide educational materials and free pickup for school drives.",
+  },
+  {
+    q: "Do you support college campaigns?",
+    a: "Yes. Colleges and community groups can organize awareness events with our support, including student engagement activities and recognition certificates.",
+  },
+  {
+    q: "Are materials provided for free?",
+    a: "We provide educational posters, collection guidance, and can arrange student-themed pickup education sessions at no cost for verified institutions.",
+  },
+  {
+    q: "How do we organize a collection drive?",
+    a: "Announce the drive, distribute inventory forms, contact us for scheduled pickup, then display your certificate to recognize participation.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="location-page">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">E-Waste Awareness</p>
+        <h1>E-Waste Awareness in Kerala</h1>
+        <p class="lede">
+          A practical guide for schools, colleges, and community groups to
+          educate about e-waste through posters, collection drives, and
+          student engagement activities.
+        </p>
+      </div>
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        Schools and community groups can launch e-waste awareness with
+        collection drives and classroom activities. We provide free
+        educational materials and scheduled pickup with recognition
+        certificates.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="Our school wants to run an e-waste awareness drive. Can you provide materials and pickup support?" />
+  </article>
+</Layout>
+
+<style>
+  .location-page {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+</style>

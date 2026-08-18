@@ -1,0 +1,120 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "E-Waste Scrap Shops in Kakkanad: Pickup & Pricing";
+const description =
+  "Find e-waste scrap buyers in Kakkanad, Kochi. Compare rates for laptops, phones, and IT equipment with doorstep pickup service.";
+const path = "/wiki/locations/kakkanad-scrap-shops";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Locations", path: "/wiki/locations/" },
+  { name: "Kakkanad Scrap Shops", path },
+];
+
+const faqItems = [
+  {
+    q: "Are there scrap shops in Kakkanad for e-waste?",
+    a: "Yes, Kakkanad has multiple scrap dealers and authorized recyclers. We provide transparent, condition-based quotes and doorstep pickup across Kakkanad near Infopark and SmartCity.",
+  },
+  {
+    q: "How are scrap rates calculated?",
+    a: "Rates depend on device type, brand, working condition, and material recovery value (gold, copper, aluminum). Get a quote with photos for accurate pricing.",
+  },
+  {
+    q: "Do you offer pickup in Kakkanad?",
+    a: "Yes. Free pickup is available for standard household electronics. Offices near Infopark can book priority IT and electronics pickup slots.",
+  },
+  {
+    q: "Is data destroyed before scrap sale?",
+    a: "Data-bearing devices receive certified wiping or shredding before resale or recycling. Request a certificate of destruction when booking.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="location-page">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Kakkanad Scrap Shops</p>
+        <h1>E-Waste Scrap Shops in Kakkanad</h1>
+        <p class="lede">
+          Find trusted e-waste scrap buyers in Kakkanad, Kochi. Compare
+          transparent rates for laptops, phones, and IT equipment with
+          convenient doorstep pickup service.
+        </p>
+      </div>
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        Kakkanad has multiple scrap dealers and authorized recyclers. We
+        provide condition-based quotes and free doorstep pickup for standard
+        electronics, with priority scheduling for IT offices near Infopark.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I have old electronics to sell in Kakkanad. Can you share current scrap rates and pickup slots?" />
+  </article>
+</Layout>
+
+<style>
+  .location-page {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+</style>

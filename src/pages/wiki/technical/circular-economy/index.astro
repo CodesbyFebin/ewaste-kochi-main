@@ -1,0 +1,138 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Circular Economy and Electronics Recycling";
+const description =
+  "How electronics recycling fits into the circular economy. Learn about material recovery, closed-loop systems, and sustainability benefits.";
+const path = "/wiki/technical/circular-economy";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Technical Guides", path: "/wiki/technical/" },
+  { name: "Circular Economy", path },
+];
+
+const faqItems = [
+  {
+    q: "What is a circular economy for electronics?",
+    a: "A system where devices and materials are kept in use through reuse, refurbishment, and recycling, minimizing virgin extraction and waste.",
+  },
+  {
+    q: "How does recycling support circularity?",
+    a: "Recycling recovers metals, plastics, and critical minerals so they re-enter manufacturing instead of being landfilled or informally dumped.",
+  },
+  {
+    q: "What are closed-loop systems?",
+    a: "Closed-loop systems recycle materials back into the same product type, such as recovered plastics and metals used in new electronics casings.",
+  },
+  {
+    q: "Why does this matter for Kerala?",
+    a: "Circular practices reduce import dependency on raw materials, cut pollution, and support local green jobs through authorized recycling.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="circular-guide">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Circular Economy</p>
+        <h1>Circular Economy and Electronics Recycling</h1>
+        <p class="lede">
+          How electronics recycling fits into the circular economy. Explore
+          material recovery, closed-loop systems, and sustainability benefits
+          for Kochi and Kerala.
+        </p>
+      </div>
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        A circular economy keeps electronics and materials in use through
+        reuse, refurbishment, and recycling. Proper e-waste recycling recovers
+        metals and critical minerals so they re-enter manufacturing instead of
+        becoming pollution.
+      </p>
+    </DirectAnswer>
+
+    <section class="principles-section" aria-labelledby="principles-heading">
+      <h2 id="principles-heading">Circular Principles</h2>
+      <ul class="principles-list">
+        <li><strong>Reduce</strong> virgin extraction by recovering materials.</li>
+        <li><strong>Reuse</strong> functional devices through resale and donation.</li>
+        <li><strong>Recycle</strong> end-of-life electronics via authorized channels.</li>
+        <li><strong>Recover</strong> critical minerals for new manufacturing.</li>
+      </ul>
+    </section>
+
+    <CtaBar whatsappMessage="I'd like to learn how my business can adopt circular e-waste practices in Kerala." />
+  </article>
+</Layout>
+
+<style>
+  .circular-guide {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .principles-list {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+  .principles-list li {
+    margin-bottom: 0.5rem;
+  }
+</style>

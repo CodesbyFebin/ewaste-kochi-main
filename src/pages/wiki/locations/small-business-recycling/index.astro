@@ -1,0 +1,120 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "E-Waste Recycling for Small Businesses in Kerala";
+const description =
+  "Affordable e-waste recycling for small businesses across Kerala. Documentation, pickup, and compliance support.";
+const path = "/wiki/locations/small-business-recycling";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Locations", path: "/wiki/locations/" },
+  { name: "Small Business Recycling", path },
+];
+
+const faqItems = [
+  {
+    q: "Do you serve small businesses in Kerala?",
+    a: "Yes. We support small offices, shops, and startups across Kerala with scheduled e-waste pickup, data destruction, and compliance documentation.",
+  },
+  {
+    q: "Is there a minimum quantity for business pickup?",
+    a: "No strict minimum for standard collections. Bulk cleanouts receive better rates. Contact us with your item list for a tailored quote.",
+  },
+  {
+    q: "Will I get compliance documents?",
+    a: "Yes. We provide chain-of-custody records and certificates of recycling and data destruction suitable for audits and tax filings.",
+  },
+  {
+    q: "How is pricing structured for businesses?",
+    a: "Pricing is based on device type, condition, and material recovery value. Working assets may qualify for buyback credit against pickup fees.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="location-page">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Small Business Recycling</p>
+        <h1>E-Waste Recycling for Small Businesses</h1>
+        <p class="lede">
+          Affordable, compliant e-waste recycling for small businesses across
+          Kerala. Get documentation, scheduled pickup, and data destruction
+          support tailored to your size.
+        </p>
+      </div>
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        Small businesses across Kerala can book scheduled e-waste pickup with
+        certified data destruction and compliance documentation. No strict
+        minimum quantity, with better rates for bulk cleanouts.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="We are a small business in Kerala with old electronics to dispose of. Can you share pickup options and compliance docs?" />
+  </article>
+</Layout>
+
+<style>
+  .location-page {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+</style>

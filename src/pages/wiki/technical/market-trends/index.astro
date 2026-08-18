@@ -1,0 +1,146 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "E-Waste Market Trends 2026: What's Changing";
+const description =
+  "Current trends in e-waste recycling markets. Learn about technology shifts, pricing changes, and new recycling capabilities in Kerala.";
+const path = "/wiki/technical/market-trends";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Technical Guides", path: "/wiki/technical/" },
+  { name: "Market Trends", path },
+];
+
+const faqItems = [
+  {
+    q: "What is driving e-waste market changes in 2026?",
+    a: "Faster device refresh cycles, EV battery recycling growth, and tighter EPR compliance are increasing collection volumes and material recovery demand across India.",
+  },
+  {
+    q: "Are scrap prices rising?",
+    a: "Lithium, copper, and precious metal prices remain volatile. Working devices hold steady resale value while scrap rates shift with global commodity prices.",
+  },
+  {
+    q: "How does this affect Kerala businesses?",
+    a: "Kerala businesses benefit from more authorized recyclers and better buyback options, but must maintain EPR and data destruction compliance documentation.",
+  },
+  {
+    q: "What new recycling capabilities exist?",
+    a: "Improved lithium battery reuse, automated shredding, and certified SSD destruction are now widely available through authorized Kerala facilities.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="trends-guide">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Market Trends</p>
+        <h1>E-Waste Market Trends 2026</h1>
+        <p class="lede">
+          Current trends in e-waste recycling markets. Understand technology
+          shifts, pricing changes, and new recycling capabilities shaping
+          Kerala and India in 2026.
+        </p>
+      </div>
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        2026 trends include faster device refresh cycles, growing EV battery
+        recycling, tighter EPR compliance, and improved lithium and SSD
+        destruction capabilities through authorized Kerala recyclers.
+      </p>
+    </DirectAnswer>
+
+    <section class="trends-section" aria-labelledby="trends-heading">
+      <h2 id="trends-heading">Key Market Shifts</h2>
+      <ul class="trends-list">
+        <li><strong>Device refresh cycles</strong> are shortening, raising collection volumes.</li>
+        <li><strong>EV and lithium battery recycling</strong> is scaling with demand for critical minerals.</li>
+        <li><strong>EPR enforcement</strong> is tightening, increasing authorized recycling adoption.</li>
+        <li><strong>Automated processing</strong> improves recovery rates and data security.</li>
+      </ul>
+    </section>
+
+    <section class="pricing-section" aria-labelledby="pricing-heading">
+      <h2 id="pricing-heading">Pricing Outlook</h2>
+      <p>
+        Precious metal and lithium prices remain volatile. Working devices hold
+        steady resale value, while scrap rates shift with global commodity
+        markets. Get condition-based quotes for accurate pricing.
+      </p>
+    </section>
+
+    <CtaBar whatsappMessage="I want to understand current e-waste scrap trends and pricing for my old electronics in 2026." />
+  </article>
+</Layout>
+
+<style>
+  .trends-guide {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .trends-list {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+  .trends-list li {
+    margin-bottom: 0.5rem;
+  }
+</style>
