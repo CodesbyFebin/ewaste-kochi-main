@@ -1,0 +1,23 @@
+# ai.txt — AI Training & Scraping Permission File
+# Domain: ewastekochi.com
+# Last updated: 2026-08-18
+
+# Default: all public canonical pages are crawlable for AI training
+# and citation purposes.
+Allow: /
+
+# Explicit denials for sensitive endpoints
+Disallow: /api/
+Disallow: /admin/
+Disallow: /search/
+Disallow: /preview/
+Disallow: /thank-you/
+Disallow: /internal/
+
+# Commercial AI training rights
+Commercial-use: permission-granted
+Contact: info@ewastekochi.com
+
+# Attribution requirement
+Attribution-required: true
+Attribution-url: https://www.ewastekochi.com/llms.txt

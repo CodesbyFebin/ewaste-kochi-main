@@ -1,4 +1,13 @@
-Contact: mailto:info@ewastekochi.com
-Canonical: https://www.ewastekochi.com/.well-known/security.txt
-Preferred-Languages: en, ml
-Policy: https://www.ewastekochi.com/privacy-policy/
+# security.txt — Ewaste Kochi
+# Canonical: https://www.ewastekochi.com/.well-known/security.txt
+Contact: security@ewastekochi.com
+Contact: info@ewastekochi.com
+Expires: 2027-08-18T00:00:00+00:00
+Preferred-Languages: en
+Cryptography: https://www.ewastekochi.com/.well-known/keys.txt
+Accepts: security-reports
+Acknowledged: https://www.ewastekochi.com/contact/
+
+# Policy
+Ewaste Kochi takes security vulnerabilities seriously. Report via 
+contact form or email. All reports acknowledged within 2 business days.
