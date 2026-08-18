@@ -1,0 +1,21 @@
+{
+  "name": "Ewaste Kochi",
+  "short_name": "Ewaste Kochi",
+  "description": "Kerala's authorized e-waste collection, recycling, and ITAD services. Schedule pickup, data destruction, buyback, and compliant recycling in Kochi.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b3d91",
+  "theme_color": "#0b3d91",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48 64x64 128x128 256x256",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["recycling", "environment", "business"],
+  "lang": "en-IN",
+  "dir": "ltr"
+}
