@@ -169,3 +169,7 @@ Disallow: /admin/
 #
 # Only ONE authoritative sitemap.org-format sitemap remains declared:
 Sitemap: https://www.ewastekochi.com/sitemap.xml
+
+# Machine-readable discovery resources for AI crawlers (must be on separate lines)
+Sitemap: https://www.ewastekochi.com/ai.txt
+Sitemap: https://www.ewastekochi.com/.well-known/security.txt
