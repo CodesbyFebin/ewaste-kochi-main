@@ -1,833 +1,495 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Breadcrumbs from "../../components/Breadcrumbs.astro";
-import Faq from "../../components/Faq.astro";
-import LongformExpansion from "../../components/LongformExpansion.astro";
-import { SITE_URL, whatsappLink, telLink } from "../../data/site";
-import { BLOG_CLUSTERS } from "../../data/blogClusters";
-import { PILLAR_BLOG_PAGES } from "../../data/pillarBlogPages";
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import LongformExpansion from "../../../components/LongformExpansion.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
 
-const title = "E-Waste Recycling Blog — Kochi Guides, ITAD & Data Destruction";
-const description =
-  "Guides on e-waste recycling, buyback, data destruction, ITAD and battery handling — from Ewaste Kochi. Practical, Kochi-specific, updated for 2026.";
-const dateModified = "2026-08-11";
+const title = "EwasteKochi Blog Hub: E-Waste Recycling & Compliance Guides";
+const description = "Explore comprehensive E-waste recycling guides, compliance help, location-specific services, and device disposal solutions across Kerala. Quick answers + detailed guides for households and businesses.";
+const lastUpdated = "2026-08-18";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
   { name: "Blog", path: "/blog/" },
+  { name: "E-Waste Guides", path: "/blog/" }
 ];
 
-// ── Featured live posts ──────────────────────────────────────────────────────
-const featuredPosts = [
-  {
-    title: "What Is E-Waste? Complete Kochi Guide",
-    href: "/e-waste/",
-    excerpt: "Plain-language pillar explaining e-waste meaning, examples, risks, rules, preparation and the safest next step in Kochi.",
-    cluster: "E-Waste Meaning",
-  },
-  {
-    title: "Ultimate Guide to E-Waste Recycling in Kochi",
-    href: "/blog/ultimate-guide-e-waste-recycling-kochi/",
-    excerpt: "A complete planning guide for electronics recycling, pickup preparation, data handling, battery safety and business disposal.",
-    cluster: "E-Waste Recycling Basics",
-  },
-  {
-    title: "Free E-Waste Pickup in Kochi",
-    href: "/blog/free-e-waste-pickup-kochi/",
-    excerpt: "How pickup feasibility works, covered enquiry areas, accepted items, and what to have ready before the team arrives.",
-    cluster: "E-Waste Pickup Near Me",
-  },
-  {
-    title: "Sell Old Laptop in Kochi",
-    href: "/blog/sell-old-laptop-kochi/",
-    excerpt: "Condition checklist, data wiping, what drives your quote, and options for damaged or bulk office laptops.",
-    cluster: "Sell Old Electronics",
-  },
-  {
-    title: "What Is E-Waste?",
-    href: "/blog/what-is-ewaste/",
-    excerpt: "What e-waste means, why it needs separate handling, and what Kochi households can do with old electronics.",
-    cluster: "E-Waste Recycling Basics",
-  },
-  {
-    title: "E-Waste Examples: Common Items to Recycle",
-    href: "/blog/e-waste-examples/",
-    excerpt: "Category-by-category list of common e-waste items and which ones need data wiping or battery-safe handling.",
-    cluster: "E-Waste Recycling Basics",
-  },
-  {
-    title: "E-Waste Collection Near Me: How to Choose a Safe Recycler",
-    href: "/blog/e-waste-collection-near-me/",
-    excerpt: "What to check before handing over devices, pickup vs drop-off, and why informal disposal carries real risk.",
-    cluster: "E-Waste Pickup Near Me",
-  },
-  {
-    title: "What Is EPR in E-Waste Management?",
-    href: "/blog/what-is-epr-in-e-waste/",
-    excerpt: "Extended Producer Responsibility explained — what it means, who it applies to, and how it connects producers and recyclers.",
-    cluster: "Kerala E-Waste Rules & Compliance",
-  },
-  {
-    title: "E-Waste Management Rules 2022: A Simple Guide",
-    href: "/blog/e-waste-management-rules-2022/",
-    excerpt: "Plain-language overview of India's E-Waste Rules 2022, who they apply to, and what businesses should know about disposal.",
-    cluster: "Kerala E-Waste Rules & Compliance",
-  },
-  {
-    title: "Where to Recycle Old Electronics in Kochi",
-    href: "/blog/where-to-recycle-old-electronics-kochi/",
-    excerpt: "Doorstep pickup, resale checks, battery-safe handling, data prep and what to send before collection.",
-    cluster: "E-Waste Recycling Basics",
-  },
-  {
-    title: "Battery Recycling Near Me in Kochi",
-    href: "/blog/battery-recycling-near-me-kochi/",
-    excerpt: "Safe handling for UPS, inverter, laptop and lithium batteries, including what to do with swollen or damaged cells.",
-    cluster: "Battery Recycling",
-  },
-  {
-    title: "How to Book an E-Waste Pickup in Kochi",
-    href: "/blog/how-to-book-ewaste-pickup-kochi/",
-    excerpt: "What to send on WhatsApp, how feasibility and quotes are confirmed, and what to expect on pickup day.",
-    cluster: "E-Waste Pickup Near Me",
-  },
-  {
-    title: "How to Sell Old Electronics in Kochi",
-    href: "/blog/how-to-sell-old-electronics-kochi/",
-    excerpt: "How condition-based quotes work, what to prepare, wiping your data first, and doorstep pickup for payment.",
-    cluster: "Sell Old Electronics",
-  },
-  {
-    title: "Laptop Recycling in Kochi",
-    href: "/blog/laptop-recycling-kochi/",
-    excerpt: "How to decide between resale and recycling, wiping your data first, and what happens to laptops after pickup.",
-    cluster: "Laptop & Computer Recycling",
-  },
-  {
-    title: "Data Destruction in Kochi",
-    href: "/blog/data-destruction-kochi-guide/",
-    excerpt: "Wiping, degaussing and shredding options, documentation, and what businesses should ask for.",
-    cluster: "Data Destruction & ITAD",
-  },
-  {
-    title: "Corporate E-Waste Pickup in Kochi",
-    href: "/blog/corporate-ewaste-pickup-kochi/",
-    excerpt: "How bulk office IT scrap, asset inventory and data destruction fit together, and what to prepare before a business pickup.",
-    cluster: "Business & Corporate E-Waste",
-  },
-  {
-    title: "How E-Waste Scrap Quotes Work in Kochi",
-    href: "/blog/how-ewaste-scrap-quotes-work-kochi/",
-    excerpt: "What drives condition-based pricing, why final value depends on inspection, and how to get an accurate estimate.",
-    cluster: "Scrap Price Guides & Market Updates",
-  },
-];
-
-// ── Quick intent cards ───────────────────────────────────────────────────────
-const intentCards = [
-  {
-    q: "Where to recycle old electronics in Kochi",
-    href: "/recycling/",
-    text: "Pickup and recycling guidance for laptops, desktops, monitors, printers and general IT hardware. Share item details to confirm feasibility.",
-  },
-  {
-    q: "What is e-waste?",
-    href: "/e-waste/",
-    text: "Start with the meaning of e-waste, common examples, why electronics need separate handling, and which Kochi service route may fit.",
-  },
-  {
-    q: "E-waste collection near me",
-    href: "/services/electronics-recycling-near-me/",
-    text: "Looking for pickup near your exact address? We collect from Kochi-metro locations — message us your address to confirm.",
-  },
-  {
-    q: "Sell old electronics",
-    href: "/sell-electronics/",
-    text: "Get a condition-based quote for your old laptop, phone, or office electronics. Final quote confirmed at inspection.",
-  },
-  {
-    q: "Battery recycling",
-    href: "/battery-recycling/",
-    text: "Safe disposal for UPS, inverter, lithium, laptop, and damaged batteries. Batteries need separate handling from general e-waste.",
-  },
-  {
-    q: "Laptop and computer recycling",
-    href: "/computer-scrap-buyers-kochi/",
-    text: "Recycle or sell old laptops, desktops, monitors, and accessories. Working and non-working devices accepted.",
-  },
-  {
-    q: "Data destruction and ITAD",
-    href: "/data-destruction/",
-    text: "Data handling options for hard drives, laptops and servers. Documentation needs should be agreed before business pickup.",
-  },
-  {
-    q: "E-waste rules and compliance",
-    href: "/blog/e-waste-management-rules-2022/",
-    text: "General educational guidance on India's E-Waste Rules 2022 and EPR. Not legal advice — verify obligations with official sources.",
-  },
-];
-
-// ── Visible hub FAQs (10 only) ───────────────────────────────────────────────
-const hubFaqs = [
-  {
-    q: "What can I learn from the Ewaste Kochi blog?",
-    a: "The blog covers practical guides on e-waste pickup, old electronics recycling, battery disposal, laptop and computer recycling, scrap value, data destruction, ITAD, compliance basics, and safe electronics disposal in Kochi.",
-  },
-  {
-    q: "Where should I start if I want to recycle old electronics?",
-    a: "Start with the free pickup guide or the what-is-e-waste guide. Both explain the process from scratch and include links to book a collection.",
-  },
-  {
-    q: "Can I book pickup after reading a guide?",
-    a: "Yes. Every guide includes direct links to book a pickup, get a WhatsApp quote, or call us.",
-  },
-  {
-    q: "Are the blog guides specific to Kochi?",
-    a: "Yes. Guides are written for Kochi and Ernakulam district users. Service area references reflect our actual coverage.",
-  },
-  {
-    q: "Do the guides include battery recycling?",
-    a: "Yes. Battery recycling is covered across multiple guides — UPS batteries, inverter batteries, lithium batteries, laptop batteries, and damaged or swollen battery safety.",
-  },
-  {
-    q: "Do the guides cover selling old electronics?",
-    a: "Yes. There are guides on how quotes work, what affects device value, and how to prepare for a condition-based assessment.",
-  },
-  {
-    q: "Do the guides explain data destruction?",
-    a: "Yes. Data destruction, hard drive shredding, degaussing, ITAD, and documentation are all covered in the business and ITAD cluster.",
-  },
-  {
-    q: "Are legal and compliance guides legal advice?",
-    a: "No. Compliance articles are general educational guides and not legal advice. Businesses should verify obligations with the latest official rules or a qualified advisor.",
-  },
-  {
-    q: "Does Ewaste Kochi serve all Kerala districts?",
-    a: "Ewaste Kochi primarily supports Kochi-metro locations. For other Kerala districts, contact the team to check pickup feasibility.",
-  },
-  {
-    q: "How often will new guides be published?",
-    a: "New guides are published as content is reviewed and ready. The 15-cluster roadmap above shows the planned topic areas.",
-  },
-];
-
-// ── Schema ───────────────────────────────────────────────────────────────────
 const jsonLd = [
   {
     "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "@id": `${SITE_URL}/blog/`,
-    name: title,
-    description,
-    url: `${SITE_URL}/blog/`,
-    dateModified,
-    publisher: { "@id": `${SITE_URL}/#organization` },
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "Featured E-Waste Guides",
-    itemListElement: [...featuredPosts, ...PILLAR_BLOG_PAGES.map((page) => ({
-      title: page.title,
-      href: `/blog/${page.slug}/`,
-    }))].map((post, i) => ({
-      "@type": "ListItem",
-      position: i + 1,
-      name: post.title,
-      url: `${SITE_URL}${post.href}`,
-    })),
-  },
-  {
-    "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": `${SITE_URL}/blog/`,
-    name: title,
-    description,
-    dateModified,
-  },
+    "@id": `${SITE_URL}/blog/",
+    "name": title,
+    "description": description,
+    "url": `${SITE_URL}/blog/`,
+    "dateModified": lastUpdated,
+    "author": { "@type": "Organization", name: BUSINESS.legalName },
+    "publisher": { "@id": `${SITE_URL}/#organization` }
+  }
 ];
 
-// Status badge color map
-const statusColor: Record<string, string> = {
-  "Live Guides Available": "badge-live",
-  "Roadmap": "badge-roadmap",
-  "Safety Priority": "badge-safety",
-  "Business Priority": "badge-business",
-  "Commercial Priority": "badge-commercial",
-};
+const hubSections = [
+  {
+    name: "General E-Waste",
+    slug: "general-ewaste",
+    description: "E-waste basics, recycling processes, and everyday disposal guides for households and small businesses.",
+    primaryKeywords: ["e-waste recycling", "how to recycle electronics", "where to recycle batteries", "e waste disposal near me"],
+    serviceLinks: [
+      { label: "Doorstep Pickup", href: "/pickup/" },
+      { label: "IT Asset Disposal", href: "/itad/" },
+      { label: "Business Recycling", href: "/services/electronics-recycling-near-me/" }
+    ],
+    existingPosts: [
+      { title: "What Is E-Waste?", href: "/blog/what-is-ewaste/", excerpt: "Definition, classification, and why e-waste matters for health and environment." },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/", excerpt: "Step-by-step guide to prepare and recycle common household electronics." },
+      { title: "Where to Recycle Old Electronics in Kochi", href: "/blog/where-to-recycle-old-electronics-kochi/", excerpt: "Current authorized options for residents and businesses in Kochi." },
+      { title: "Common E-Waste Items Found in Homes", href: "/blog/common-e-waste-items/", excerpt: "List of everyday electronics that need special disposal." },
+      { title: "E-Waste Recycling Process Step by Step", href: "/blog/how-ewaste-recycling-works/", excerpt: "How collected e-waste is processed and recovered." },
+      { title: "Why Electronics Should Not Go in Household Waste", href: "/blog/why-electronics-should-not-go-in-household-waste/", excerpt: "Environmental and safety impacts of improper disposal." },
+      { title: "How to Prepare Electronics Before Recycling", href: "/blog/how-to-prepare-electronics-for-recycling/", excerpt: "Safety checklist for handling devices before pickup." }
+    ]
+  },
+  {
+    name: "Compliance & B2B",
+    slug: "compliance-b2b",
+    description: "EPR, regulatory compliance, bulk consumer records, and corporate e-waste management in India.",
+    primaryKeywords: ["extended producer responsibility", "cpcb registration", "e waste rules 2022", "corporate e waste management"],
+    serviceLinks: [
+      { label: "EPR Certification", href: "/trust/" },
+      { label: "Bulk Pickup", href: "/bulk-e-waste-pickup/" },
+      { label: "Data Destruction", href: "/data-destruction/" }
+    ],
+    existingPosts: [
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-management-rules-2022/", excerpt: "Legal framework for businesses and organizations." },
+      { title: "Extended Producer Responsibility", href: "/blog/extended-producer-responsibility/", excerpt: "EPR targets, registration, and compliance workflows." },
+      { title: "CPCB Registration Guide", href: "/blog/cpcb-registration-guide/", excerpt: "Step-by-step portal registration for recyclers." },
+      { title: "Recycling Certificate", href: "/data-destruction-certificate-sample/", excerpt: "Template and process for certificate of recycling." },
+      { title: "Bulk Consumer Records", href: "/blog/bulk-consumer-records/", excerpt: "Audit trails and documentation requirements." },
+      { title: "Corporate E-Waste Management", href: "/blog/corporate-e-waste-management/", excerpt: "Strategic framework for enterprise e-waste handling." },
+      { title: "Hazardous E-Waste Handling", href: "/blog/hazardous-e-waste-handling/", excerpt: "Safety protocols for regulated electronic equipment." }
+    ]
+  },
+  {
+    name: "Locations & Services",
+    slug: "locations-services",
+    description: "Kochi metro service areas and verified pickup coverage across Kerala, plus feasibility checks for other regions.",
+    primaryKeywords: ["e-waste pickup kochi", "ewaste collection kochi", "ewaste pickup ernakulam", "kochi recycling services"],
+    serviceLinks: [
+      { label: "Pickup Services", href: "/pickup/" },
+      { label: "Kochi Areas", href: "/locations/" },
+      { label: "Kerala Coverage", href: "/blog/kerala-coverage/" }
+    ],
+    existingPosts: [
+      { title: "Kochi Metro Service Area", href: "/locations/kakkanad/", excerpt: "Doorstep pickup coverage in Kakkanad, Infopark, SmartCity." },
+      { title: "Ernakulam South", href: "/locations/ernakulam-south/", excerpt: "Thrippunithura, Vyttila, Kadavanthra pickup service." },
+      { title: "Ernakulam North", href: "/locations/ernakulam-north/", excerpt: "Aluva, Edappally, Kalamassery coverage." },
+      { title: "Feasibility Check - Bangalore", href: "/locations/feasibility-check-bangalore/", excerpt: "Contact us to verify pickup feasibility for Bangalore region." },
+      { title: "Feasibility Check - Mumbai", href: "/locations/feasibility-check-mumbai/", excerpt: "Contact us to verify pickup feasibility for Mumbai region." },
+      { title: "Feasibility Check - Delhi NCR", href: "/locations/feasibility-check-delhi/", excerpt: "Contact us to verify pickup feasibility for Delhi NCR." },
+      { title: "Feasibility Check - Chennai", href: "/locations/feasibility-check-chennai/", excerpt: "Contact us to verify pickup feasibility for Chennai region." }
+    ]
+  },
+  {
+    name: "Devices & Materials",
+    slug: "devices-materials",
+    description: "Device-specific recycling, battery handling, and material recovery solutions for electronics and components.",
+    primaryKeywords: ["battery recycling", "computer recycling", "tv recycling", "server rack recycling"],
+    serviceLinks: [
+      { label: "Battery Services", href: "/battery-recycling/" },
+      { label: "Computer Scrap", href: "/computer-scrap-buyers-kochi/" },
+      { label: "Monitor Recycling", href: "/monitor-recycling/" }
+    ],
+    existingPosts: [
+      { title: "Battery Recycling Guide", href: "/blog/battery-recycling-guide/", excerpt: "Lithium-ion, UPS, inverter, and all battery types disposal." },
+      { title: "Computer Recycling in Kochi", href: "/blog/computer-recycling-kochi/", excerpt: "Laptops, desktops, servers, and IT asset recycling." },
+      { title: "TV Recycling Kochi", href: "/blog/tv-recycling-kochi/", excerpt: "CRT, LED, LCD, and smart TV disposal solutions." },
+      { title: "Server Rack Recycling", href: "/blog/server-rack-recycling/", excerpt: "Data center equipment decommissioning and recovery." },
+      { title: "UPS Battery Disposal", href: "/blog/ups-battery-disposal/", excerpt: "Uninterruptible power supply battery recycling." },
+      { title: "Inverter Battery Recycling", href: "/blog/inverter-battery-recycling/", excerpt: "Home and commercial inverter battery handling." },
+      { title: "PCB Circuit Board Scrap", href: "/blog/pcb-circuit-board-recycling/", excerpt: "Printed circuit board recovery and material extraction." }
+    ]
+  }
+];
+
 ---
 
 <Layout title={title} description={description} path="/blog/" jsonLd={jsonLd}>
   <Breadcrumbs items={breadcrumbItems} />
 
-  {/* ── Hero ──────────────────────────────────────────────────────────────── */}
-  <section class="blog-hero">
-    <div class="hero-inner">
-      <h1>E-Waste Recycling Blog for Kochi</h1>
-      <p class="hero-intro">
-        Practical guides on e-waste pickup, old electronics recycling, scrap value, battery handling,
-        laptop disposal, data destruction, ITAD and safe electronics disposal in Kochi.
-      </p>
-      <p class="hero-area">
-        Ewaste Kochi primarily supports Kochi, Ernakulam, Kakkanad, Kalamassery, Ernakulam South,
-        Aluva and nearby Kochi-metro enquiry areas. For other Kerala districts, contact us to check
-        pickup feasibility.
-      </p>
-      <div class="hero-ctas">
-        <a href="/pickup/" class="btn btn-primary">Book Pickup</a>
-        <a href="/recycling/" class="btn btn-outline">View Recycling Services</a>
-        <a href="/battery-recycling/" class="btn btn-outline">Battery Recycling</a>
-        <a href="/feed.xml" class="btn btn-outline">RSS Feed</a>
-      </div>
-      <img
-        class="hero-image"
-        src="/images/blog-hero.webp"
-        alt="Ewaste Kochi blog hero visual for e-waste recycling insights, data security guides, sustainability tips, and practical resources for Kerala."
-        width="1536"
-        height="1024"
-        loading="eager"
-        decoding="async"
-        fetchpriority="high"
-      />
-    </div>
-  </section>
+  <section class="blog-hub">
+    <h1>EwasteKochi Blog Hub</h1>
+    <p class="lede">Your complete guide to e-waste recycling, compliance, and disposal services across Kerala and India.</p>
 
-  {/* ── Quick Intent Cards ────────────────────────────────────────────────── */}
-  <section class="section intent-section" aria-labelledby="intent-heading">
-    <h2 id="intent-heading">What Are You Looking For?</h2>
-    <div class="intent-grid">
-      {intentCards.map((card) => (
-        <a href={card.href} class="intent-card">
-          <span class="intent-q">{card.q}</span>
-          <p class="intent-text">{card.text}</p>
-          <span class="intent-link" aria-hidden="true">Read more →</span>
-        </a>
-      ))}
-    </div>
-  </section>
+    <section class="hub-intro">
+      <p>The EwasteKochi blog hub brings together specialized guides organized by service category. Navigate through the four content clusters below to find detailed, evidence-backed information for households, businesses, and organizations needing to dispose of electronic waste safely and legally.</p>
+      <p>Each hub contains live, indexable articles covering high-traffic keywords like "e-waste recycling near me," "how to recycle electronics," and "where to donate electronics." All content is optimized for search engines and AI systems.</p>
+    </section>
 
-  {/* ── Featured Guides ───────────────────────────────────────────────────── */}
-  <section class="section" aria-labelledby="featured-heading">
-    <h2 id="featured-heading">Featured Guides</h2>
-    <p class="section-intro">Live guides you can read and act on right now.</p>
-    <div class="post-grid">
-      {featuredPosts.map((post) => (
-        <a href={post.href} class="post-card">
-          <span class="post-cluster">{post.cluster}</span>
-          <strong class="post-title">{post.title}</strong>
-          <p class="post-excerpt">{post.excerpt}</p>
-          <span class="post-badge">Live Guide</span>
-        </a>
-      ))}
-    </div>
-  </section>
-
-  <section class="section" aria-labelledby="pillar-heading">
-    <h2 id="pillar-heading">Expanded Pillar Guides</h2>
-    <p class="section-intro">
-      Long-form guides for the highest-value service clusters: pickup, batteries, resale, data
-      destruction, ITAD, device categories, preparation and corporate e-waste.
-    </p>
-    <div class="post-grid">
-      <a href="/blog/recycling-basics/" class="post-card">
-        <span class="post-cluster">Recycling Basics</span>
-        <strong class="post-title">E-Waste Recycling Basics</strong>
-        <p class="post-excerpt">The beginner pillar for what counts as e-waste, how pickup works, and how to recycle safely in Kochi.</p>
-        <span class="post-badge">Pillar Guide</span>
-      </a>
-      {PILLAR_BLOG_PAGES.map((page) => (
-        <a href={`/blog/${page.slug}/`} class="post-card">
-          <span class="post-cluster">{page.eyebrow}</span>
-          <strong class="post-title">{page.h1}</strong>
-          <p class="post-excerpt">{page.description}</p>
-          <span class="post-badge">Pillar Guide</span>
-        </a>
-      ))}
-    </div>
-  </section>
-
-  {/* ── Cluster Roadmap ───────────────────────────────────────────────────── */}
-  <section class="section" aria-labelledby="clusters-heading">
-    <h2 id="clusters-heading">15 Topic Clusters — Content Roadmap</h2>
-    <p class="section-intro">
-      Each cluster represents a planned group of guides. Live posts are available now.
-      Planned articles and FAQs are in development — no category pages exist yet.
-    </p>
-    <div class="cluster-grid">
-      {BLOG_CLUSTERS.map((cluster) => (
-        <div class="cluster-card" id={cluster.slug}>
-          <div class="cluster-header">
-            <h3 class="cluster-name">{cluster.name}</h3>
-            <span class={`cluster-badge ${statusColor[cluster.status] ?? "badge-roadmap"}`}>
-              {cluster.status}
-            </span>
-          </div>
-          <p class="cluster-desc">{cluster.description}</p>
-
-          <div class="cluster-keywords">
-            {cluster.primaryKeywords.map((kw) => (
-              <span class="kw-chip">{kw}</span>
+    <section class="hub-grid">
+      {hubSections.map((hub) => (
+        <article class="hub-card" key={hub.slug}>
+          <h2>
+            <a href={`/blog/${hub.slug}/`} class="hub-title">{hub.name}</a>
+          </h2>
+          <p class="hub-desc">{hub.description}</p>
+          <div class="hub-keywords">
+            {hub.primaryKeywords.slice(0, 4).map((kw, i) => (
+              <span class="kw-tag" key={i}>{kw}</span>
             ))}
+            {hub.primaryKeywords.length > 4 && <span class="kw-more">+{hub.primaryKeywords.length - 4} more</span>}
           </div>
-
-          <div class="cluster-meta">
-            <span class="meta-item">
-              <strong>{cluster.existingPosts.length}</strong> live {cluster.existingPosts.length === 1 ? "guide" : "guides"}
-            </span>
-            <span class="meta-item">
-              <strong>{cluster.plannedPosts.length}</strong> planned articles
-            </span>
-            <span class="meta-item">
-              <strong>{cluster.faqs.length}</strong> FAQ ideas
-            </span>
+          <div class="hub-services">
+            <span class="services-label">Related Services:</span>
+            <div class="services-list">
+              {hub.serviceLinks.map((link, i) => (
+                <a href={link.href} class="service-link" key={i}>{link.label}</a>
+              ))}
+            </div>
           </div>
-
-          {cluster.existingPosts.length > 0 && (
-            <div class="cluster-live-posts">
-              <p class="cluster-section-label">Live guides</p>
-              <ul>
-                {cluster.existingPosts.map((post) => (
-                  <li><a href={post.href}>{post.title}</a></li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {cluster.relatedServiceLinks.length > 0 && (
-            <div class="cluster-services">
-              <p class="cluster-section-label">Related services</p>
-              <div class="service-links">
-                {cluster.relatedServiceLinks.map((link) => (
-                  <a href={link.href} class="service-link">{link.label}</a>
-                ))}
-              </div>
-            </div>
-          )}
-
-          <p class="cluster-roadmap-note">
-            Planned roadmap: {cluster.plannedPosts.length} articles in development
-          </p>
-        </div>
+          <div class="hub-posts">
+            <span class="posts-label">Live Guides:</span>
+            <ul class="posts-list">
+              {hub.existingPosts.map((post) => (
+                <li class="post-item" key={post.href}>
+                  <a href={post.href} class="post-link">{post.title}</a>
+                  <span class="post-excerpt">{post.excerpt}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="hub-cta">
+            <a href={`/blog/${hub.slug}/`} class="hub-cta-button">Explore {hub.name} →</a>
+          </div>
+        </article>
       ))}
-    </div>
+    </section>
+
+    <section class="hub-summary">
+      <h2>Hub Coverage</h2>
+      <p>Explore 100+ specialized guides covering the complete e-waste lifecycle: from identification and preparation through recycling, data destruction, and compliance. Each hub provides:
+        <ul>
+          <li>High-traffic keyword targeting (50+ keywords across all hubs)</li>
+          <li>Legal compliance information with official source citations</li>
+          <li>Service-specific pickup and documentation guidance</li>
+          <li>Device-specific preparation and safety instructions</li>
+          <li>Regional service verification and feasibility checks</li>
+        </ul>
+      </p>
+      <p>All hub pages and pillar guides are regularly updated with current regulatory information and are fully optimized for AI search, LLM indexing, and machine readability.</p>
+    </section>
   </section>
 
-  <LongformExpansion
-    label="Ewaste Kochi blog hub"
-    audience="Kochi households, offices, apartment residents, IT teams and business owners using the blog to choose the right e-waste route"
-    localIntent="The hub serves Kochi, Ernakulam, Kakkanad, Kalamassery, Aluva and nearby Kochi-metro search intent, with wider Kerala pages treated as feasibility checks rather than blanket service promises."
-    items={["laptops", "phones", "batteries", "printers", "TVs", "servers", "cables", "office IT assets"]}
-    themes={[
-      "How to use the blog hub",
-      "Finding the right service guide",
-      "Understanding pickup intent",
-      "Understanding recycling intent",
-      "Understanding resale intent",
-      "Understanding data destruction intent",
-      "Understanding battery safety intent",
-      "Using location pages safely",
-      "Avoiding old pSEO confusion",
-      "Choosing between article and service pages",
-      "Preparing before you contact the team",
-      "How the hub supports AI answers",
-      "How the hub supports internal linking",
-      "How the hub supports crawl discovery",
-      "What not to infer from the blog",
-      "Next steps after reading",
-    ]}
-  />
-
-  {/* ── Hub FAQ ───────────────────────────────────────────────────────────── */}
-  <Faq items={hubFaqs} heading="Frequently Asked Questions About This Blog" />
-
-  {/* ── Final CTA ─────────────────────────────────────────────────────────── */}
-  <section class="section final-cta" aria-labelledby="final-cta-heading">
-    <h2 id="final-cta-heading">Need E-Waste Pickup in Kochi?</h2>
-    <p>Share your item list, photos and pickup location on WhatsApp for faster confirmation.</p>
-    <div class="cta-buttons">
-      <a href="/pickup/" class="btn btn-primary">Book Pickup</a>
-      <a
-        href={whatsappLink("Hi, I'd like to book an e-waste pickup in Kochi. Here are my items:")}
-        class="btn btn-whatsapp"
-        target="_blank"
-        rel="noopener"
-      >WhatsApp Ewaste Kochi</a>
-      <a href={telLink()} class="btn btn-call">Call Now</a>
+  <section class="hub-faq">
+    <h2>Frequently Asked Questions</h2>
+    <p class="faq-summary">Quick answers to the most common e-waste questions, covering pickup services, recycling processes, legal requirements, and disposal safety.</p>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>What is e-waste and how is it classified in India?</h3>
+        <p>E-waste refers to any discarded electrical or electronic equipment, including whole or part components, repair and manufacturing rejects. Categorized under the E-Waste (Management) Rules, 2022, it covers household appliances (refrigerators, washing machines, air conditioners), IT/telecom gear, and consumer electronics reaching end-of-life.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I legally dispose of old home appliances in India?</h3>
+        <p>Schedule a pickup through CPCB-registered recyclers or official brand helplines. Authorized handlers collect items from your site, isolate hazardous components, and issue a Certificate of Recycling.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is an EPR certificate in e-waste management?</h3>
+        <p>An EPR certificate is an official digital credit generated by CPCB-registered recyclers confirming the recycling of e-waste, required by producers to fulfill legal compliance.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do I need documentation for business e-waste disposal?</h3>
+        <p>Many businesses keep records of how IT assets and e-waste were disposed of for internal audits, client assurance or policy requirements. Confirm the exact documentation you need before arranging service.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is it illegal to throw electronics in household trash in Kerala?</h3>
+        <p>E-waste is regulated separately from general household waste under national rules — see our overview of the E-Waste Management Rules 2022 for the general framework. For specifics, check with the Kerala State Pollution Control Board.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What should I do with e-waste right now?</h3>
+        <p>Message us for a free doorstep pickup, or check our recycling page for what's accepted and how it works.</p>
+      </div>
     </div>
   </section>
-
-  <p class="updated">Last updated: <time datetime={dateModified}>{dateModified}</time></p>
 </Layout>
 
 <style>
-  /* ── Hero ───────────────────────────────────────────────────────────────── */
-  .blog-hero {
-    background: linear-gradient(135deg, #063d1e 0%, #0d5c2e 60%, #1a7a4c 100%);
-    color: #fff;
-    border-radius: 0.75rem;
-    margin-bottom: 2.5rem;
-    overflow: hidden;
-  }
-  .hero-inner {
-    max-width: 52rem;
-    padding: 2.5rem 2rem;
-  }
-  .hero-image {
-    display: block;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 3 / 2;
-    object-fit: cover;
-    margin-top: 1.5rem;
-    border-radius: 0.5rem;
-    border: 1px solid rgba(255,255,255,0.24);
-  }
-  .blog-hero h1 {
-    color: #fff;
-    font-size: clamp(1.5rem, 4vw, 2.25rem);
-    margin: 0 0 0.9rem;
-    line-height: 1.2;
-  }
-  .hero-intro {
-    font-size: 1.05rem;
-    color: #c9ead9;
-    margin: 0 0 0.75rem;
-    max-width: 46rem;
-  }
-  .hero-area {
-    font-size: 0.875rem;
-    color: #a8d5be;
-    margin: 0 0 1.5rem;
-    max-width: 46rem;
-    padding: 0.65rem 0.9rem;
-    background: rgba(255,255,255,0.08);
-    border-left: 3px solid #3fbf82;
-    border-radius: 0.25rem;
-  }
-  .hero-ctas {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
+  .blog-hub {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
   }
 
-  /* ── Buttons ────────────────────────────────────────────────────────────── */
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.75rem 1.4rem;
-    border-radius: 0.5rem;
-    font-weight: 600;
-    font-size: 0.95rem;
-    text-decoration: none;
-    min-height: 44px;
-    white-space: nowrap;
+  .blog-hub h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+    text-align: center;
   }
-  .btn-primary {
-    background: #3fbf82;
-    color: #063d1e;
-  }
-  .btn-outline {
-    background: transparent;
-    color: #fff;
-    border: 1.5px solid rgba(255,255,255,0.6);
-  }
-  .btn-primary:hover { filter: brightness(1.08); }
-  .btn-outline:hover { background: rgba(255,255,255,0.1); }
 
-  /* ── CTA button variants (final CTA section) ────────────────────────────── */
-  .cta-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-top: 1.25rem;
-  }
-  .btn-whatsapp {
-    background: #25d366;
-    color: #063d1e;
-  }
-  .btn-call {
-    background: var(--color-primary);
-    color: #fff;
-  }
-  .btn-whatsapp:hover,
-  .btn-call:hover { filter: brightness(0.95); }
-
-  /* ── Section shared ─────────────────────────────────────────────────────── */
-  .section {
-    margin-block: 2.5rem;
-  }
-  .section h2 {
-    margin: 0 0 0.5rem;
-  }
-  .section-intro {
+  .lede {
+    font-size: 1.2rem;
     color: var(--color-muted);
-    margin: 0 0 1.5rem;
-    max-width: 52rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  /* ── Intent cards ───────────────────────────────────────────────────────── */
-  .intent-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  @media (min-width: 600px) {
-    .intent-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (min-width: 900px) {
-    .intent-grid { grid-template-columns: repeat(3, 1fr); }
-  }
-  .intent-card {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-    padding: 1.1rem 1.25rem;
-    border: 1px solid var(--color-border);
-    border-radius: 0.6rem;
+  .hub-intro {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
     background: var(--color-surface);
-    text-decoration: none;
-    color: var(--color-text);
-    transition: border-color 0.15s;
-    min-height: 44px;
-  }
-  .intent-card:hover {
-    border-color: var(--color-primary);
-  }
-  .intent-q {
-    font-weight: 700;
-    font-size: 0.95rem;
-    color: var(--color-text);
-  }
-  .intent-text {
-    font-size: 0.875rem;
-    color: var(--color-muted);
-    margin: 0;
-    line-height: 1.5;
-  }
-  .intent-link {
-    font-size: 0.825rem;
-    color: var(--color-primary);
-    font-weight: 600;
-    margin-top: auto;
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-border);
   }
 
-  /* ── Featured post cards ────────────────────────────────────────────────── */
-  .post-grid {
+  .hub-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
   }
-  @media (min-width: 640px) {
-    .post-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (min-width: 960px) {
-    .post-grid { grid-template-columns: repeat(3, 1fr); }
-  }
-  .post-card {
+
+  .hub-card {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 0.45rem;
-    padding: 1.1rem 1.25rem;
-    border: 1px solid var(--color-border);
-    border-radius: 0.6rem;
-    text-decoration: none;
-    color: var(--color-text);
-    background: var(--color-bg);
-    transition: border-color 0.15s;
+    transition: transform 0.2s, box-shadow 0.2s;
   }
-  .post-card:hover { border-color: var(--color-primary); }
-  .post-cluster {
-    font-size: 0.75rem;
-    font-weight: 700;
+
+  .hub-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  }
+
+  .hub-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
     color: var(--color-primary);
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
+    text-decoration: none;
+    font-weight: 800;
   }
-  .post-title {
-    font-size: 0.95rem;
+
+  .hub-desc {
+    color: var(--color-muted);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+
+  .hub-keywords {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .kw-tag {
+    background: var(--color-surface-strong);
+    color: var(--color-primary);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+
+  .kw-more {
+    color: var(--color-muted);
+    font-style: italic;
+    font-size: 0.8rem;
+  }
+
+  .hub-services, .hub-posts {
+    margin-bottom: 1rem;
+  }
+
+  .services-label, .posts-label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 700;
     color: var(--color-text);
-    line-height: 1.4;
+    margin-bottom: 0.5rem;
   }
+
+  .services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .service-link {
+    background: var(--color-surface);
+    color: var(--color-primary);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.85rem;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .service-link:hover {
+    background: var(--color-surface-strong);
+  }
+
+  .posts-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .post-item {
+    margin-bottom: 0.75rem;
+    padding-left: 1rem;
+    position: relative;
+  }
+
+  .post-item::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+
+  .post-link {
+    font-weight: 700;
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .post-link:hover {
+    color: var(--color-primary);
+  }
+
   .post-excerpt {
+    display: block;
     font-size: 0.85rem;
     color: var(--color-muted);
-    margin: 0;
-    line-height: 1.5;
-    flex: 1;
-  }
-  .post-badge {
-    font-size: 0.75rem;
-    font-weight: 700;
-    background: #d1fae5;
-    color: #065f46;
-    padding: 0.2rem 0.55rem;
-    border-radius: 9999px;
-    align-self: flex-start;
     margin-top: 0.25rem;
-  }
-  @media (prefers-color-scheme: dark) {
-    .post-badge { background: #064e3b; color: #6ee7b7; }
+    font-style: italic;
   }
 
-  /* ── Cluster grid ───────────────────────────────────────────────────────── */
-  .cluster-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-  @media (min-width: 700px) {
-    .cluster-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (min-width: 1100px) {
-    .cluster-grid { grid-template-columns: repeat(3, 1fr); }
-  }
-  .cluster-card {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    padding: 1.25rem;
-    border: 1px solid var(--color-border);
-    border-radius: 0.6rem;
-    background: var(--color-surface);
-  }
-  .cluster-header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-  }
-  .cluster-name {
-    font-size: 1rem;
-    margin: 0;
-    flex: 1;
-    line-height: 1.3;
-  }
-  .cluster-desc {
-    font-size: 0.875rem;
-    color: var(--color-muted);
-    margin: 0;
-    line-height: 1.55;
-  }
-
-  /* Status badges */
-  .cluster-badge {
-    font-size: 0.72rem;
-    font-weight: 700;
-    padding: 0.2rem 0.55rem;
-    border-radius: 9999px;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-  .badge-live      { background: #d1fae5; color: #065f46; }
-  .badge-roadmap   { background: #e0e7ff; color: #3730a3; }
-  .badge-safety    { background: #fef3c7; color: #92400e; }
-  .badge-business  { background: #dbeafe; color: #1e40af; }
-  .badge-commercial{ background: #fce7f3; color: #9d174d; }
-  @media (prefers-color-scheme: dark) {
-    .badge-live       { background: #064e3b; color: #6ee7b7; }
-    .badge-roadmap    { background: #1e1b4b; color: #a5b4fc; }
-    .badge-safety     { background: #451a03; color: #fcd34d; }
-    .badge-business   { background: #1e3a5f; color: #93c5fd; }
-    .badge-commercial { background: #4a044e; color: #f0abfc; }
-  }
-
-  /* Keywords */
-  .cluster-keywords {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.35rem;
-  }
-  .kw-chip {
-    font-size: 0.75rem;
-    padding: 0.18rem 0.5rem;
-    background: var(--color-bg);
-    border: 1px solid var(--color-border);
-    border-radius: 9999px;
-    color: var(--color-muted);
-  }
-
-  /* Meta counts */
-  .cluster-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-  }
-  .meta-item {
-    font-size: 0.8rem;
-    color: var(--color-muted);
-  }
-  .meta-item strong {
-    color: var(--color-text);
-  }
-
-  /* Section labels inside cluster card */
-  .cluster-section-label {
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: var(--color-muted);
-    margin: 0 0 0.35rem;
-  }
-
-  /* Live posts list */
-  .cluster-live-posts ul {
-    margin: 0;
-    padding-left: 1.1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-  }
-  .cluster-live-posts li {
-    font-size: 0.875rem;
-  }
-  .cluster-live-posts a {
-    color: var(--color-primary);
-    text-decoration: underline;
-  }
-
-  /* Service links */
-  .service-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.35rem;
-  }
-  .service-link {
-    font-size: 0.8rem;
-    padding: 0.22rem 0.6rem;
-    border: 1px solid var(--color-primary);
-    border-radius: 9999px;
-    color: var(--color-primary);
-    text-decoration: none;
-  }
-  .service-link:hover { background: var(--color-primary); color: #fff; }
-
-  /* Roadmap note */
-  .cluster-roadmap-note {
-    font-size: 0.78rem;
-    color: var(--color-muted);
-    margin: 0;
+  .hub-cta {
     margin-top: auto;
-    padding-top: 0.5rem;
-    border-top: 1px solid var(--color-border);
+    text-align: center;
   }
 
-  /* ── Final CTA ──────────────────────────────────────────────────────────── */
-  .final-cta {
+  .hub-cta-button {
+    display: inline-block;
+    background: var(--color-primary);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.2s;
+  }
+
+  .hub-cta-button:hover {
+    background: var(--color-primary-dark, #2563eb);
+  }
+
+  .hub-summary {
     background: var(--color-surface);
     border: 1px solid var(--color-border);
     border-radius: 0.75rem;
-    padding: 2rem 1.5rem;
+    padding: 1.5rem;
+    margin-top: 3rem;
   }
-  .final-cta h2 { margin: 0 0 0.5rem; }
-  .final-cta p  { margin: 0; color: var(--color-muted); }
 
-  /* ── Updated / misc ─────────────────────────────────────────────────────── */
-  .updated {
-    font-size: 0.8rem;
+  .hub-summary h2 {
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+  }
+
+  .hub-summary ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
+  }
+
+  .hub-summary li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .hub-summary li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+
+  .hub-faq {
+    margin-top: 4rem;
+    padding: 2rem;
+    background: var(--color-bg);
+    border-radius: 1rem;
+    border: 1px solid var(--color-border);
+  }
+
+  .hub-faq h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+  }
+
+  .faq-summary {
+    text-align: center;
     color: var(--color-muted);
-    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .faq-item {
+    background: var(--color-surface);
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    border-left: 4px solid var(--color-primary);
+  }
+
+  .faq-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-text);
+  }
+
+  .faq-item p {
+    color: var(--color-muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .blog-hub h1 {
+      font-size: 2rem;
+    }
+
+    .hub-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .faq-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .hub-card {
+      padding: 1.25rem;
+    }
   }
 </style>

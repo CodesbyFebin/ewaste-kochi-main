@@ -1,0 +1,287 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import LongformExpansion from "../../../components/LongformExpansion.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Compliance & B2B: EPR, Regulations & Corporate E-Waste Management";
+const description = "EPR compliance, CPCB registration, bulk consumer records, and corporate e-waste management solutions for businesses and organizations. Navigate India's E-Waste Rules 2022 with confidence.";
+const lastUpdated = "2026-07-09";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Compliance & B2B", path: "/blog/compliance-b2b/" }
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": description,
+    "datePublished": "2026-07-09",
+    "dateModified": lastUpdated,
+    "author": { "@type": "Organization", name: BUSINESS.legalName },
+    "publisher": { "@id": `${SITE_URL}/#organization` },
+    "mainEntityOfPage": `${SITE_URL}/blog/compliance-b2b/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/compliance-b2b/`,
+    "name": title,
+    "description": description,
+    "dateModified": lastUpdated,
+  }
+];
+
+const faqItems = [
+  {
+    q: "Who is regulated under India's E-Waste Rules 2022?",
+    a: "The formal compliance obligations (registration, EPR targets, reporting) sit mainly with producers, recyclers, and refurbishers. Households and offices disposing of electronics aren't directly regulated the same way, but choosing a compliant disposal route still matters."
+  },
+  {
+    q: "What's the difference between formal and informal disposal?",
+    a: "Formal disposal goes through registered or authorised channels that follow applicable handling and reporting processes. Informal disposal may not provide the same environmental safeguards or documentation."
+  },
+  {
+    q: "Do I need documentation for business e-waste disposal?",
+    a: "Many businesses keep records of how IT assets and e-waste were disposed of for internal audits, client assurance or policy requirements. Confirm the exact documentation you need before arranging service."
+  },
+  {
+    q: "Where can I read the actual rules?",
+    a: "Use the Ministry of Environment, Forest and Climate Change and Central Pollution Control Board resources for current rule text, amendments and formal guidance."
+  },
+  {
+    q: "What are EPR targets for businesses?",
+    a: "EPR certificates reflect recycling achievement based on sales volume. Targets vary by category, product type, and market share. Producers must fund end-of-life recovery based on their EPR certificates."
+  },
+  {
+    q: "What is Form-6 and how is it used?",
+    a: "Form-6 is the transit manifest required for all physical transfers of e-waste between entities. It documents the chain of custody from generator to authorised recycler."
+  },
+  {
+    q: "What is Form-10 and when is it filed?",
+    a: "Form-10 is the annual return filed by producers and recyclers, reporting on collection, recycling, and disposal activities. Must be submitted by June 30th each year."
+  },
+  {
+    q: "How do I check if a recycler is CPCB authorized?",
+    a: "Look for CPCB/SPCB authorization numbers on contracts and receipts. Verify through the official CPCB portal or KSPCB website. Authorized recyclers issue Certificates of Recycling."
+  }
+];
+
+const sourceItems = [
+  {
+    title: "E-Waste Management Rules and related regulatory resources",
+    href: "https://cpcb.nic.in/rules-6/",
+    publisher: "Central Pollution Control Board",
+    note: "Official CPCB resource page for e-waste rules and updates."
+  },
+  {
+    title: "EPR E-Waste portal",
+    href: "https://eprewastecpcb.in/",
+    publisher: "Central Pollution Control Board",
+    note: "Official portal for producer, recycler and related e-waste EPR workflows."
+  },
+  {
+    title: "Ministry of Environment, Forest and Climate Change",
+    href: "https://moef.gov.in/",
+    publisher: "Government of India",
+    note: "Source of the E-Waste (Management) Rules, 2022 and amendments."
+  }
+];
+
+---
+
+<Layout title={title} description={description} path="/blog/compliance-b2b/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <h1>Compliance & B2B: EPR and Regulatory Framework</h1>
+
+  <DirectAnswer>
+    <p>India's E-Waste Rules 2022 establish Extended Producer Responsibility (EPR) at the center of the system, with mandatory CPCB portal registration for manufacturers, producers, refurbishers, and recyclers. Bulk consumers and businesses must maintain strict audit trails, utilize Form-6 manifests for logistics transit, and submit Form-10 annual returns by June 30th.</p>
+  </DirectAnswer>
+
+  <CtaBar whatsappMessage="Hi, I need EPR compliance guidance for business e-waste." />
+
+  <section id="epr-framework">
+    <h2>Extended Producer Responsibility (EPR) Overview</h2>
+    <p>Extended Producer Responsibility is the cornerstone of India's e-waste management system. EPR creates legal obligations for producers to manage the end-of-life of their electronic products.</p>
+
+    <h3>Key EPR Components</h3>
+    <ul>
+      <li><strong>EPR Registration:</strong> Mandatory CPCB portal onboarding for all producers</li>
+      <li><strong>EPR Targets:</strong> Certificate-based recycling obligations tied to sales volume</li>
+      <li><strong>EPR Funding:</strong> Producers must fund collection, recycling, and disposal systems</li>
+      <li><strong>EPR Reporting:</strong> Annual documentation of collection and recycling activities</li>
+    </ul>
+
+    <p>For most businesses, EPR means ensuring your vendors/recyclers have valid EPR certificates and maintaining documentation of these certificates for internal audits.</p>
+  </section>
+
+  <section id="cpcb-compliance">
+    <h2>CPCB Registration Requirements</h2>
+    <p>All entities involved in e-waste processing must register on the CPCB portal. This includes:</p>
+    <ul>
+      <li>Manufacturers and producers of electronic equipment</li>
+      <li>Refurbishers and repair service providers</li>
+      <li>Recyclers and dismantlers</li>
+      <li>Exporters of electronic waste</li>
+    </ul>
+    <p>Registration requires submission of detailed facility information, waste handling procedures, and compliance plans.</p>
+  </section>
+
+  <section id="form-6-system">
+    <h2>Form-6: Transit Manifest System</h2>
+    <p>Form-6 is the legal document required for all transfers of e-waste between entities. It serves as the chain-of-custody record, ensuring that all movements comply with environmental regulations.</p>
+
+    <h3>Form-6 Requirements</h3>
+    <ul>
+      <li>Detailed description of the e-waste being transferred</li>
+      <li>Names and addresses of sender and receiver</li>
+      <li>Date of transfer and transport method</li>
+      <li>Authorization numbers of both parties</li>
+      <li>Signature of authorized representative</li>
+    </ul>
+    <p>Unauthorized transfers without proper Form-6 documentation can result in penalties under the Environment (Protection) Act.</p>
+  </section>
+
+  <section id="form-10-reporting">
+    <h2>Form-10: Annual Reporting Requirements</h2>
+    <p>Producers and recyclers must submit annual returns through Form-10, detailing their e-waste management activities for the previous financial year.</p>
+
+    <h3>What Form-10 Reports Include</h3>
+    <ul>
+      <li>Annual collection volumes by category</li>
+      <li>Recycling and disposal methods used</li>
+      <li>Disposal site locations and authorization status</li>
+      <li>Funds collected and spent on e-waste management</li>
+      <li>Challenges and compliance issues</li>
+    </ul>
+    <p>Form-10 must be filed by June 30th each year for the previous fiscal year (April 1 - March 31).</p>
+  </section>
+
+  <section id="bulk-consumer-obligations">
+    <h2>Bulk Consumer Record-Keeping</h2>
+    <p>Bulk consumers (large organizations with significant e-waste volumes) face additional compliance obligations beyond those for individual consumers.</p>
+
+    <h3>Bulk Consumer Requirements</h3>
+    <ul>
+      <li>Maintain detailed records of all e-waste purchases and disposal</li>
+      <li>Document authorized recyclers used</li>
+      <li>Keep certificates of recycling/destruction</li>
+      <li>Report significant e-waste transfers to CPCB</li>
+      <li>Ensure downstream recyclers are authorized</li>
+    </ul>
+    <p>The "Polluter Pays" principle applies to bulk consumers who fail to comply with documentation requirements.</p>
+  </section>
+
+  <section id="legal-consequences">
+    <h2>Legal Consequences of Non-Compliance</h2>
+    <p>Failure to comply with the E-Waste Rules can result in significant penalties and legal liability.</p>
+
+    <h3>Potential Penalties</h3>
+    <ul>
+      <li>Financial penalties under the Environment (Protection) Act</li>
+      <li>Criminal liability for willful violations</li>
+      <li>Loss of business licenses for repeated violations</li>
+      <li>Civil lawsuits from affected parties</li>
+    </ul>
+    <p>For businesses, compliance is not just environmental responsibility—it's legal necessity and business continuity requirement.</p>
+  </section>
+
+  <LongformExpansion
+    label="Expanded Compliance Field Guide"
+    audience="business leaders"
+    localIntent="verify compliance for office IT asset disposal"
+    items={["server rooms", "network equipment", "battery backups", "laptops", "desktop computers"]}
+    themes={["Regulatory", "Documentation", "Verification", "Risk Management"]}
+  />
+
+  <section id="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <Faq items={faqItems} heading="E-Waste Compliance FAQs" />
+  </section>
+
+  <Sources items={sourceItems} heading="Official Sources & Regulatory References" />
+</Layout>
+
+<style>
+  .blog-hub {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .blog-hub h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+    text-align: center;
+  }
+
+  .lede {
+    font-size: 1.2rem;
+    color: var(--color-muted);
+    text-align: center;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .blog-hub section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: var(--color-bg);
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-border);
+  }
+
+  .blog-hub h2 {
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+
+  .blog-hub h3 {
+    color: var(--color-primary);
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+  }
+
+  .blog-hub ul {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+  }
+
+  .blog-hub li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .blog-hub h1 {
+      font-size: 2rem;
+    }
+
+    .blog-hub section {
+      padding: 1.5rem;
+    }
+
+    .blog-hub h2 {
+      font-size: 1.5rem;
+    }
+
+    .blog-hub h3 {
+      font-size: 1.2rem;
+    }
+  }
+</style>

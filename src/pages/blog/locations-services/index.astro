@@ -1,0 +1,306 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import LongformExpansion from "../../../components/LongformExpansion.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Locations & Services: Kochi Metro E-Waste Pickup Coverage";
+const description = "Verified doorstep e-waste pickup services across Kochi and Ernakulam district. Free collection for residential and commercial locations. Service coverage map for Aluva, Edappally, Vyttila, Thrippunithura, Fort Kochi, and surrounding areas.";
+const lastUpdated = "2026-07-09";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Locations & Services", path: "/blog/locations-services/" }
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": description,
+    "datePublished": "2026-07-09",
+    "dateModified": lastUpdated,
+    "author": { "@type": "Organization", name: BUSINESS.legalName },
+    "publisher": { "@id": `${SITE_URL}/#organization` },
+    "mainEntityOfPage": `${SITE_URL}/blog/locations-services/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/locations-services/`,
+    "name": title,
+    "description": description,
+    "dateModified": lastUpdated,
+  }
+];
+
+const faqItems = [
+  {
+    q: "Do you provide doorstep pickup in my area of Kochi?",
+    a: "Yes. We service the complete Kochi metro area, including Kakkanad, Kalamassery, Aruvikkara, Aluva, Edappally, Vyttila, Thrippunithura, Fort Kochi, Maradu, and surrounding Ernakulam districts. Use our service area map to confirm pickup eligibility."
+  },
+  {
+    q: "What are the service hours for Kochi doorstep pickup?",
+    a: "Pickup service is available Monday through Saturday, 9:00 AM - 6:00 PM. Emergency pickups may be arranged for business continuity needs with prior authorization."
+  },
+  {
+    q: "How do I book a pickup in Ernakulam South?",
+    a: "Schedule through our online portal, WhatsApp at +917500555454, or call. Provide item photos, working condition, quantity, and location details for instant confirmation."
+  },
+  {
+    q: "Can I combine multiple pickups into one visit?",
+    a: "Absolutely. All e-waste from your premises can be collected in a single pickup. This includes electronics, batteries, IT equipment, and office devices from the same location."
+  },
+  {
+    q: "What information do I need before pickup?",
+    a: "Item types and quantities, working condition, photos of devices, location details, contact information, and preferred pickup date/time. Business pickups also need employee count and data destruction requirements."
+  },
+  {
+    q: "Do you provide pickup for apartments and residential complexes?",
+    a: "Yes. We handle multifamily residences, co-working spaces, and small offices. Need the complex name, unit/apartment numbers, and contact person details for coordination."
+  },
+  {
+    q: "Is pickup free for residential customers?",
+    a: "Yes. Doorstep e-waste pickup is complimentary for residential customers in the Kochi service area. For commercial accounts, pricing is based on volume and service requirements."
+  },
+  {
+    q: "What happens if I miss the pickup appointment?",
+    a: "Reschedule anytime up to 2 hours before the scheduled time with no penalty. For same-day cancellations within 2 hours, standard rescheduling fees apply to cover wasted resources."
+  },
+  {
+    q: "Do you service heritage buildings or restricted access locations?",
+    a: "Yes, with prior notice. Special arrangements can be made for heritage sites, restricted areas, or security-sensitive locations. Additional coordination may be required for access permissions."
+  }
+];
+
+const sourceItems = [
+  {
+    title: "Kerala State Pollution Control Board Authorization",
+    href: "https://kspcb.kerala.gov.in/",
+    publisher: "Kerala State Pollution Control Board",
+    note: "Official authorization for e-waste recyclers operating in Kerala."
+  },
+  {
+    title: "CPCB E-Waste Registration Portal",
+    href: "https://cpcb.nic.in/e-waste/",
+    publisher: "Central Pollution Control Board",
+    note: "National-level authorization requirements for e-waste recyclers."
+  }
+];
+
+---
+
+<Layout title={title} description={description} path="/blog/locations-services/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <h1>Locations & Services: Kochi Metro E-Waste Pickup Coverage</h1>
+
+  <DirectAnswer>
+    <p>Verified doorstep e-waste pickup services across Kochi and Ernakulam district. Free collection for residential and commercial locations. Service coverage map for Aluva, Edappally, Vyttila, Thrippunithura, Fort Kochi, and surrounding areas.</p>
+  </DirectAnswer>
+
+  <CtaBar whatsappMessage="Hi, I need e-waste pickup confirmation for my location in Kochi." />
+
+  <section id="kochi-service-areas">
+    <h2>Kochi Metro Service Areas</h2>
+    <p>Ewaste Kochi provides comprehensive doorstep pickup services across the entire Kochi metropolitan area and Ernakulam district. Our service coverage includes:</p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+      <div style="background: var(--color-surface); padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #3b82f6;">
+        <h3 style="color: #3b82f6; margin-top: 0;">Core Kochi Metro</h3>
+        <ul style="margin: 0; padding-left: 1.5rem;">
+          <li>Kakkanad (Infopark, SmartCity)</li>
+          <li>Kalamassery (IT Park)</li>
+          <li>Aluva (Industrial Area)</li>
+          <li>Edappally (Commercial Hub)</li>
+          <li>Vyttila (IT Corridor)</li>
+          <li>Thrippunithura (Heritage District)</li>
+          <li>Fort Kochi (Historical Area)</li>
+          <li>Maradu (Port Area)</li>
+        </ul>
+      </div>
+      <div style="background: var(--color-surface); padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #10b981;">
+        <h3 style="color: #10b981; margin-top: 0;">Surrounding Ernakulam</h3>
+        <ul style="margin: 0; padding-left: 1.5rem;">
+          <li>Kochi Corporation Limits</li>
+          <li>Ernakulam South Taluk</li>
+          <li>Ernakulam North Taluk</li>
+          <li>Vyloppilly area</li>
+          <li>Kalamassery outskirts</li>
+        </ul>
+      </div>
+    </div>
+
+    <p><strong>Service Coverage:</strong> All residential apartments, independent houses, commercial complexes, IT offices, schools, hospitals, and government establishments within the Kochi metro area are covered for doorstep e-waste pickup.</p>
+  </section>
+
+  <section id="pickup-process">
+    <h2>Doorstep Pickup Process</h2>
+    <p>Our pickup service follows a streamlined process designed for convenience and compliance with E-Waste Rules 2022:</p>
+
+    <h3>1. Request Initiation</h3>
+    <p>Contact us through our online portal, WhatsApp, or phone. Provide essential details: item types, quantities, working condition, and location.</p>
+
+    <h3>2. Confirmation & Scheduling</h3>
+    <p>Our team reviews your request and confirms pickup eligibility. For complex requests, we may require additional information or photos.</p>
+
+    <h3>3. Pickup Execution</h3>
+    <p>Authorized recycler arrives at your location with proper documentation. All items are collected according to safety protocols and Form-6 procedures are completed.</p>
+
+    <h3>4. Documentation & Certification</h3>
+    <p>Pickup acknowledgement, transit manifests, and Certificates of Recycling are provided for your records and compliance documentation.</p>
+  </section>
+
+  <section id="service-areas-detailed">
+    <h2>Detailed Service Coverage</h2>
+
+    <h3>Kakkanad & Infopark Area</h3>
+    <p><strong>Coverage:</strong> All IT parks, tech offices, and residential complexes in Kakkanad. Special emphasis on Infopark Phase I & II, SmartCity, and surrounding industrial areas.</p>
+
+    <h3>Ernakulam South</h3>
+    <p><strong>Coverage:</strong> Thrippunithura, Vyttila, Kadavanthra, Kolenchery, and surrounding residential and commercial areas. Includes major educational institutions and healthcare facilities.</p>
+
+    <h3>Aluva</h3>
+    <p><strong>Coverage:</strong> Aluva Municipal Area, Muttom, and surrounding villages. Service includes both residential and small business accounts.</p>
+
+    <h3>Edappally</h3>
+    <p><strong>Coverage:</strong> Edappally Junction, Panampilly Nagar, and surrounding commercial hubs. Special arrangements for busy business districts.</p>
+
+    <h3>Fort Kochi</h3>
+    <p><strong>Coverage:</strong> Heritage area, coastal regions, and tourist accommodations. Includes both residential and hospitality industry accounts.</p>
+  </section>
+
+  <section id="pickup-preparation">
+    <h2>How to Prepare for Pickup</h2>
+    <p>Simple preparation ensures smooth pickup and proper documentation:</p>
+
+    <h3>Before Pickup</h3>
+    <ul>
+      <li><strong>Clear access:</strong> Ensure elevator access or stairwell availability for bulky items</li>
+      <li><strong>Safety measures:</strong> Isolate batteries from devices, keep glass items in protective packaging</li>
+      <li><strong>Documentation:</strong> Have your contact information and order reference ready</li>
+      <li><strong>Schedule coordination:</strong> Confirm pickup time 24-48 hours in advance</li>
+    </ul>
+
+    <h3>During Pickup</h3>
+    <ul>
+      <li>Verify recycler authorization and credentials</li>
+      <li>Sign completion forms and receive Certificates of Recycling</li>
+      <li>Keep copies of all documentation for your records</li>
+      <li>Report any damaged items immediately</li>
+    </ul>
+  </section>
+
+  <section id="special-arrangements">
+    <h2>Special Arrangements</h2>
+    <p>We accommodate various special requirements to ensure inclusive service coverage:</p>
+
+    <h3>Business Accounts</h3>
+    <p>IT asset disposition, data destruction services, and bulk pickup arrangements for offices, data centers, and enterprise accounts. Requires advance scheduling and additional documentation.</p>
+
+    <h3>Apartment Complexes</h3>
+    <p>Coordinated pickup schedules for multiple units, bulk collection management, and resident communication. We work with property management and housing associations.</p>
+
+    <h3>Educational Institutions</h3>
+    <p>Special rates and scheduling for schools, colleges, and universities. Includes data destruction for student records and compliance documentation.</p>
+
+    <h3>Healthcare Facilities</h3>
+    <p>Confidential handling of medical device e-waste, HIPAA-compliant documentation, and specialized disposal procedures for healthcare equipment.</p>
+  </section>
+
+  <LongformExpansion
+    label="Expanded Location Services Guide"
+    audience="Kochi residents"
+    localIntent="schedule doorstep e-waste pickup in specific Kochi neighborhoods"
+    items={["IT office equipment", "printer & scanner", "server & network gear", "cooling systems", "lighting fixtures"]}
+    themes={["Logistics", "Documentation", "Compliance", "Safety"]}
+  />
+
+  <section id="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <Faq items={faqItems} heading="Kochi E-Waste Pickup FAQs" />
+  </section>
+
+  <Sources items={sourceItems} heading="Official Sources & Regulatory References" />
+</Layout>
+
+<style>
+  .blog-hub {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .blog-hub h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+    text-align: center;
+  }
+
+  .lede {
+    font-size: 1.2rem;
+    color: var(--color-muted);
+    text-align: center;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .blog-hub section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: var(--color-bg);
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-border);
+  }
+
+  .blog-hub h2 {
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+
+  .blog-hub h3 {
+    color: var(--color-primary);
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+  }
+
+  .blog-hub ul {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+  }
+
+  .blog-hub li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .blog-hub h1 {
+      font-size: 2rem;
+    }
+
+    .blog-hub section {
+      padding: 1.5rem;
+    }
+
+    .blog-hub h2 {
+      font-size: 1.5rem;
+    }
+
+    .blog-hub h3 {
+      font-size: 1.2rem;
+    }
+  }
+</style>
