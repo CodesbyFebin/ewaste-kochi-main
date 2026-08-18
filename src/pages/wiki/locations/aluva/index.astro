@@ -1,0 +1,120 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Aluva E-Waste Recycling | Near Kochi Metro Terminus";
+const description =
+  "E-waste pickup services in Aluva, Kerala near Kochi Metro. Electronics recycling for homes, offices, and businesses along the airport corridor.",
+const path = "/wiki/locations/aluva";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Locations", path: "/wiki/locations/" },
+  { name: "Aluva", path },
+];
+
+const faqItems = [
+  {
+    q: "Is Aluva covered under free pickup?",
+    a: "Yes, Aluva is a verified pickup area. Free pickup is available for standard electronics. Bulk quantities may require scheduling coordination.",
+  },
+  {
+    q: "What items are collected?",
+    a: "Laptops, phones, tablets, monitors, TVs, printers, chargers, batteries - all standard e-waste items. Specialized items require advance notice.",
+  },
+  {
+    q: "Can I book pickup online?",
+    a: "Pickup booking in Aluva is coordinated via WhatsApp. Share item details and your exact gate/entry point for smooth scheduling.",
+  },
+  {
+    q: "Any restrictions on Aluva collections?",
+    a: "Swollen batteries require advance notification. Large items like CRT TVs need confirmation 24 hours in advance for proper vehicle allocation.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="location-page">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Aluva Collection</p>
+        <h1>E-Waste Recycling in Aluva</h1>
+        <p class="lede">
+          E-waste pickup services in Aluva near Kochi Metro 
+          terminus. Comprehensive electronics recycling for residential, 
+          commercial, and educational institutions.
+        </p>
+      </div>
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        Aluva is a standard pickup area with same-day feasibility 
+        checks. Service includes all standard e-waste with special 
+        protocols for swollen batteries and bulky items.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I'm in Aluva and need to schedule e-waste pickup. Can you check available slots?" />
+  </article>
+</Layout>
+
+<style>
+  .location-page {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+</style>

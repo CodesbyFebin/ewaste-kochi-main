@@ -1,0 +1,348 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "How to Dispose of TVs: CRT, LCD, LED, Plasma Guide";
+const description =
+  "Complete guide to disposing of old TVs of all types - CRT, LCD, LED, and Plasma. Learn safe handling, pickup options, recycling process, and what items can/cannot be recycled.";
+const path = "/wiki/disposal/how-to-dispose-of-tvs";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Disposal Methods", path: "/wiki/disposal/" },
+  { name: "How to Dispose TVs", path },
+];
+
+const faqItems = [
+  {
+    q: "Can I put an old TV in regular household trash?",
+    a: "No. Old TVs contain hazardous materials (lead, mercury, brominated flame retardants) and must be recycled through authorized channels. Regular waste disposal is illegal under E-Waste Rules.",
+  },
+  {
+    q: "Are CRT TVs harder to recycle than flat-screen TVs?",
+    a: "CRT TVs require more specialized recycling due to higher lead content in glass. They're accepted but need special handling. Flat-screen LCD/LED TVs have lower hazardous content but still need proper recycling.",
+  },
+  {
+    q: "What should I do with a broken TV screen?",
+    a: "Do not break or shatter the screen. Wrap the TV in protective material and mark as 'fragile' during pickup request. Our team handles broken screens safely at specialized facilities.",
+  },
+  {
+    q: "Can I sell my old TV instead of recycling?",
+    a: "Only working TVs with market value can be sold. Broken or non-functional TVs should be recycled. We offer buyback for working CRT and flat-screen TVs through our platform.",
+  },
+  {
+    q: "How much TV scrap value is there in Kerala?",
+    a: "TV scrap value varies by size and type. CRT TVs: ₹500-₹1500. Flat screens: ₹1000-₹3000. Value includes copper, aluminum, and rare earth metals recovered during proper recycling.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="tv-disposal">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">TV Disposal Guide</p>
+        <h1>How to Dispose of TVs: CRT, LCD, LED, Plasma Guide</h1>
+        <p class="lede">
+          Complete guide to properly disposing of all types of televisions in Kochi. 
+          Learn safe handling methods, pickup options, recycling processes, and 
+          scrap values for CRT, LCD, LED, and Plasma screens.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/tv-monitor-recycling.webp"
+        alt="Various TV types - CRT, LCD, LED - being prepared for recycling"
+        width="1200"
+        height="675"
+        loading="lazy"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        Old TVs must be recycled through authorized channels - never regular trash. 
+        Book pickup through Ewaste Kochi for safe collection of CRT, LCD, LED, 
+        or Plasma TVs. Wrap screens in protective material. You may be eligible 
+        for scrap value depending on TV type, size, and working condition.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I have a CRT TV and an LCD TV to dispose of. How should I prepare them for pickup?" />
+
+    <section class="tv-types" aria-labelledby="types-heading">
+      <h2 id="types-heading">Types of TVs and Recycling Considerations</h2>
+      
+      <div class="tv-type-grid">
+        <div class="tv-card">
+          <h3>CRT (Cathode Ray Tube)</h3>
+          <p><strong>Years:</strong> 1970s-2000s</p>
+          <p><strong>Weight:</strong> Heavy (30-80 lbs)</p>
+          <p><strong>Hazards:</strong> High lead in glass, possible vacuum tube</p>
+          <p><strong>Recycling:</strong> Specialized facilities required. Separate glass from metal components.</p>
+        </div>
+
+        <div class="tv-card">
+          <h3>LCD (Liquid Crystal Display)</h3>
+          <p><strong>Years:</strong> 2000s-2010s</p>
+          <p><strong>Weight:</strong> Moderate (15-35 lbs)</p>
+          <p><strong>Hazards:</strong> Mercury in backlight, liquid crystals</p>
+          <p><strong>Recycling:</strong> Standard e-waste processing. Easier than CRT.</p>
+        </div>
+
+        <div class="tv-card">
+          <h3>LED (Light Emitting Diode)</h3>
+          <p><strong>Years:</strong> 2010s-present</p>
+          <p><strong>Weight:</strong> Light (5-20 lbs)</p>
+          <p><strong>Hazards:</strong> Minimal. Rare earth elements in panels</p>
+          <p><strong>Recycling:</strong> Efficient process. High material recovery rate.</p>
+        </div>
+
+        <div class="tv-card">
+          <h3>Plasma</h3>
+          <p><strong>Years:</strong> 2000s-early 2010s</p>
+          <p><strong>Weight:</strong> Heavy (40-70 lbs)</p>
+          <p><strong>Hazards:</strong> Mercury in some panels, heavy construction</p>
+          <p><strong>Recycling:</strong> Similar to LCD. Older models may have higher scrap value.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="preparation" aria-labelledby="prep-heading">
+      <h2 id="prep-heading">How to Prepare TVs for Collection</h2>
+      
+      <div class="prep-steps">
+        <div class="prep-step">
+          <h4>Safety First</h4>
+          <p>Turn off and unplug TV 24 hours before collection to fully discharge capacitors. 
+          Handle with care - screens can crack easily. Wear gloves if cleaning.</p>
+        </div>
+
+        <div class="prep-step">
+          <h4>Dismantle Accessories</h4>
+          <p>Remove all cables (HDMI, power, antenna), stands, wall mounts, and remote controls. 
+          Keep accessories with the TV or donate separately if still functional.</p>
+        </div>
+
+        <div class="prep-step">
+          <h4>Protect the Screen</h4>
+          <p>Wrap screen in bubble wrap, moving blankets, or thick cloth. Secure with tape. 
+          For CRT TVs, use cardboard to protect the glass face. Mark as FRAGILE.</p>
+        </div>
+
+        <div class="prep-step">
+          <h4>Measure Size</h4>
+          <p>Note diagonal screen size for accurate pickup logistics. Larger TVs (above 32") 
+          may require special vehicle booking. Include measurement in your pickup request.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="scrap-values" aria-labelledby="value-heading">
+      <h2 id="value-heading">TV Scrap Values in Kochi</h2>
+      
+      <table class="value-table">
+        <thead>
+          <tr>
+            <th>TV Type</th>
+            <th>Size Range</th>
+            <th>Estimated Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>CRT TV</td>
+            <td>19-29</td>
+            <td>₹500 - ₹1,200</td>
+          </tr>
+          <tr>
+            <td>CRT TV</td>
+            <td>30-32</td>
+            <td>₹800 - ₹1,500</td>
+          </tr>
+          <tr>
+            <td>LCD TV</td>
+            <td>19-32</td>
+            <td>₹800 - ₹2,000</td>
+          </tr>
+          <tr>
+            <td>LED TV</td>
+            <td>19-32</td>
+            <td>₹1,000 - ₹2,500</td>
+          </tr>
+          <tr>
+            <td>LED TV</td>
+            <td>40-55</td>
+            <td>₹1,500 - ₹3,500</td>
+          </tr>
+          <tr>
+            <td>Plasma</td>
+            <td>42-50</td>
+            <td>₹1,200 - ₹3,000</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p class="note">Values depend on condition, working status, and market demand. 
+      Request a detailed quote with photos for accurate pricing.</p>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Wiki Guides</h2>
+      <a href="/wiki/disposal/how-to-recycle-electronics-at-home">Recycling Electronics at Home</a>
+      <a href="/wiki/technical/environmental-impact-e-waste">Environmental Impact of E-Waste</a>
+      <a href="/wiki/disposal/local-recycling-centers">Find Local Centers</a>
+      <a href="/wiki/sales/sell-old-crt-tvs">Selling Old CRT TVs</a>
+      <a href="/wiki/disposal/e-waste-pickup-services">Pickup Services</a>
+    </section>
+
+    <Sources items={[
+      { title: "TV Glass Recycling Guide", href: "https://www.epa.gov", publisher: "EPA" },
+      { title: "LCD/LED Display Recycling", href: "https://www.toeurope.com", publisher: "European Display Association" },
+    ]} />
+
+    <Faq items={faqItems} heading="TV Disposal FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .tv-disposal {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .tv-type-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .tv-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .tv-card p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+  }
+  .prep-steps {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .prep-step {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .value-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+  .value-table th,
+  .value-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border: 1px solid var(--color-border);
+  }
+  .value-table th {
+    background: var(--color-surface-strong);
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .tv-type-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .value-table {
+      font-size: 0.9rem;
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

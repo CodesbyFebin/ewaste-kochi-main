@@ -1,0 +1,222 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Environmental Impact of E-Waste Recycling";
+const description =
+  "Understanding the environmental impact of e-waste. Learn about toxic materials, resource recovery, pollution prevention, and the circular economy benefits of proper recycling.",
+const path = "/wiki/technical/environmental-impact";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Technical Guides", path: "/wiki/technical/" },
+  { name: "Environmental Impact", path },
+];
+
+const harmfulMaterials = [
+  { name: "Lead", "found_in": "CRT monitors, batteries", "risk": "Neurological damage" },
+  { name: "Mercury", "found_in": "Fluorescent lamps, switches", "risk": "Vapor inhalation" },
+  { name: "Cadmium", "found_in": "Batteries, semiconductors", "risk": "Kidney damage" },
+  { name: "Arsenic", "found_in": "Semiconductors, circuits", "risk": "Cancer" },
+  { name: "Hexavalent Chromium", "found_in": "Plating, coatings", "risk": "Respiratory cancer" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="impact-guide">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Environmental Health</p>
+        <h1>Environmental Impact of E-Waste Recycling</h1>
+        <p class="lede">
+          Understanding the environmental consequences of electronic waste 
+          and how proper recycling prevents pollution, recovers resources, 
+          and supports sustainable technology economies.
+        </p>
+      </div>
+    </section>
+
+    <DirectAnswer heading="Key Fact">
+      <p>
+        Only 20% of global e-waste is properly recycled. The remaining 
+        80% creates environmental hazards through improper disposal, 
+        leading to soil, water, and air pollution in developing regions.
+      </p>
+    </DirectAnswer>
+
+    <section class="hazardous-materials" aria-labelledby="hazards-heading">
+      <h2 id="hazards-heading">Hazardous Materials in E-Waste</h2>
+      
+      <p>Electronic devices contain valuable materials and hazardous 
+      substances that require special handling:</p>
+      
+      <table class="material-table">
+        <thead>
+          <tr>
+            <th>Material</th>
+            <th>Found In</th>
+            <th>Risk if Released</th>
+          </tr>
+        </thead>
+        <tbody>
+          {harmfulMaterials.map((m) => (
+            <tr>
+              <td>{m.name}</td>
+              <td>{m.found_in}</td>
+              <td>{m.risk}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+
+    <section class="resource-recovery" aria-labelledby="recovery-heading">
+      <h2 id="recovery-heading">Valuable Materials Recovered</h2>
+      
+      <div class="recovery-grid">
+        <div class="recovery-item">
+          <h3>Gold & Silver</h3>
+          <p>Found in circuit boards, connectors, and chips. Recovery rates 
+          through proper recycling are 95%+ of extractive mining value.</p>
+        </div>
+        <div class="recovery-item">
+          <h3>Copper</h3>
+          <p>Abundant in wiring, PCBs, and components. Recycling uses 85% 
+          less energy than primary extraction from ores.</p>
+        </div>
+        <div class="recovery-item">
+          <h3>Rare Earth Elements</h3>
+          <p>Neodymium, dysprosium in magnets and motors. Critical for 
+          renewable energy technologies and EV batteries.</p>
+        </div>
+        <div class="recovery-item">
+          <h3>Lithium</h3>
+          <p>From batteries, power tools. Essential for energy storage 
+          systems. Proper recycling enables battery reuse.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="circular-economy" aria-labelledby="circular-heading">
+      <h2 id="circular-heading">Circular Economy Benefits</h2>
+      
+      <p>
+        Proper e-waste recycling enables circular economy principles:
+      </p>
+      
+      <ul class="circular-list">
+        <li><strong>Resource Conservation:</strong> Recovering metals reduces 
+        mining, habitat destruction, and energy consumption</li>
+        <li><strong>Emissions Reduction:</strong> Recycling metals uses 50-95% 
+        less energy than virgin extraction</li>
+        <li><strong>Pollution Prevention:</strong> Keeping hazardous materials 
+          from landfills and informal recycling</li>
+        <li><strong>Economic Value:</strong> Supporting secondary markets 
+          for rare materials and components</li>
+      </ul>
+    </section>
+
+    <section class="pollution-prevention" aria-labelledby="pollution-heading">
+      <h2 id="pollution Prevention</h2>
+      
+      <p>
+        Informal e-waste dumping causes:
+      </p>
+      
+      <ul class="pollution-list">
+        <li><strong>Air Pollution:</strong> Open burning releases dioxins, 
+          furans, and heavy metal vapors</li>
+        <li><strong>Soil Contamination:</strong> Leachate from landfills 
+          introduces heavy metals into groundwater</li>
+        <li><strong>Worker Exposure:</strong> Informal recycling exposes 
+          workers to toxic materials without protection</li>
+        <li><strong>Community Health:</strong> Children and families 
+          near dumping sites face elevated cancer and neurological risks</li>
+      </ul>
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .impact-guide {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .material-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+  .material-table th, .material-table td {
+    padding: 0.75rem;
+    border: 1px solid var(--color-border);
+    text-align: left;
+  }
+  .recovery-grid {
+    display: grid;
+    gap: 1rem;
+  }
+  .circular-list, .pollution-list {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .recovery-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

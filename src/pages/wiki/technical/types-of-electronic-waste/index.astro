@@ -1,0 +1,326 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Types of Electronic Waste: Complete Category List";
+const description =
+  "Complete classification of electronic waste categories. Learn about consumer electronics, IT equipment, batteries, lighting, and specialized devices that count as e-waste in India.";
+const path = "/wiki/technical/types-of-electronic-waste";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Technical Guides", path: "/wiki/technical/" },
+  { name: "Types of E-Waste", path },
+];
+
+const faqItems = [
+  {
+    q: "Are kitchen appliances e-waste?",
+    a: "Only appliances with electronic components like digital clocks, timers, processors, or circuit boards. Basic mechanical microwaves without electronics are not e-waste.",
+  },
+  {
+    q: "Is furniture considered e-waste?",
+    a: "Furniture fitted with electronic components (adjustable seats with controls, smart furniture, entertainment centers with built-in displays) may be e-waste. Unmodified furniture is regular waste.",
+  },
+  {
+    q: "What about LED light bulbs?",
+    a: "Standard LED bulbs without electronic drivers are typically treated as regular waste. LED bulbs with electronic drivers (common in commercial settings) qualify as e-waste.",
+  },
+  {
+    q: "Are car electronics e-waste?",
+    a: "Vehicle electronic modules, infotainment systems, and ECUs are considered. However, they require specialized handling through authorized automotive recyclers, not general e-waste channels.",
+  },
+  {
+    q: "Do I need to recycle empty battery cases?",
+    a: "Empty battery cases without internal cells are typically recyclable as plastic/metal. If unsure, include them with your e-waste pickup request for proper sorting.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="definition">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">E-Waste Categories</p>
+        <h1>Types of Electronic Waste</h1>
+        <p class="lede">
+          Complete classification of electronic waste categories for Kochi 
+          and Kerala. Understand what electronics qualify as e-waste, special 
+          handling requirements, and proper disposal methods.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/recycling-basics.webp"
+        alt="Various electronic devices categorized by type"
+        width="1200"
+        height="675"
+        loading="lazy"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        E-waste categories include: Consumer electronics (phones, tablets), 
+        IT equipment (computers, servers, monitors), Televisions and 
+        displays, Lighting equipment, Batteries, and Electrical tools. 
+        Items without circuit boards and power sources are not classified 
+        as e-waste under Indian regulations.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I'm not sure which category my device falls into. Can you help me classify it?" />
+
+    <section class="categories-section" aria-labelledby="categories-heading">
+      <h2 id="categories-heading">Major E-Waste Categories</h2>
+      
+      <div class="category-grid">
+        <div class="category-card">
+          <h3>Consumer Electronics</h3>
+          <p>Digital phones, tablets, smartwatches, portable speakers, 
+          gaming consoles, and accessories with circuit boards and power 
+          sources.</p>
+          <ul class="examples">
+            <li>Mobiles and smartphones</li>
+            <li>Tablets and e-readers</li>
+            <li>Laptops and notebooks</li>
+            <li>Digital cameras</li>
+            <li>Audio/video players</li>
+            <li>Chargers, cables, adapters</li>
+          </ul>
+        </div>
+
+        <div class="category-card">
+          <h3>Information Technology</h3>
+          <p>Business and home computing equipment including servers, 
+          storage arrays, networking gear, and office IT hardware.</p>
+          <ul class="examples">
+            <li>Desktop computers</li>
+            <li>Servers and mainframes</li>
+            <li>Storage devices</li>
+            <li>Monitors and displays</li>
+            <li>Printers and scanners</li>
+            <li>Networking equipment</li>
+            <li>Peripherals</li>
+          </ul>
+        </div>
+
+        <div class="category-card">
+          <h3>Display Equipment</h3>
+          <p>Visual output devices including CRT, LCD, LED, and plasma 
+          displays of all sizes and technologies.</p>
+          <ul class="examples">
+            <li>CRT televisions</li>
+            <li>LCD/LED TVs</li>
+            <li>Computer monitors</li>
+            <li>Projectors</li>
+            <li>Digital signage displays</li>
+          </ul>
+        </div>
+
+        <div class="category-card">
+          <h3>Batteries & Power</h3>
+          <p>Electrochemical energy storage devices including rechargeable 
+          cells, battery packs, and power backup systems.</p>
+          <ul class="examples">
+            <li>Lithium-ion batteries</li>
+            <li>Lead-acid batteries</li>
+            <li>UPS batteries</li>
+            <li>Inverter batteries</li>
+            <li>Power banks</li>
+            <li>Battery packs</li>
+          </ul>
+        </div>
+
+        <div class="category-card">
+          <h3>Small Appliances</h3>
+          <p>Kitchen and household appliances with electronic controls, 
+          timers, or digital displays.</p>
+          <ul class="examples">
+            <li>Kettles with digital timers</li>
+            <li>Toasters with electronic controls</li>
+            <li>Microwave ovens</li>
+            <li>Kettles, coffee makers</li>
+            <li>Electric toothbrushes</li>
+            <li>Shavers and trimmers</li>
+          </ul>
+        </div>
+
+        <div class="category-card">
+          <h3>Equipment & Tools</h3>
+          <p>Professional and consumer tools incorporating electronic 
+          components, sensors, or control systems.</p>
+          <ul class="examples">
+            <li>Drills with electronic speed control</li>
+            <li>Soldering irons</li>
+            <li>Test equipment</li>
+            <li>Security systems</li>
+            <li>Measuring instruments</li>
+            <li>Power tools</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="special-handling" aria-labelledby="special-heading">
+      <h2 id="special-heading">Special Handling Categories</h2>
+      
+      <div class="special-grid">
+        <div class="special-item">
+          <h3>Swollen/Lit Hot Batteries</h3>
+          <p>Require immediate isolation and special collection protocols. 
+          Contact us immediately if you have damaged battery units.</p>
+        </div>
+        <div class="special-item">
+          <h3>CRT Displays</h3>
+          <p>Contain hazardous materials (lead, mercury). Require 
+          specialized handling and transportation under e-waste regulations.</p>
+        </div>
+        <div class="special-item">
+          <h3>Medical Devices</h3>
+          <p>E-waste from clinics/hospitals requires additional compliance 
+          with healthcare waste handling and data security protocols.</p>
+        </div>
+        <div class="special-item">
+          <h3>Server Room Equipment</h3>
+          <p>Enterprise hardware may require ITAD services with 
+          documentation, secure data destruction, and asset tracking.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Wiki Guides</h2>
+      <a href="/wiki/technical/what-is-e-waste">What is E-Waste</a>
+      <a href="/wiki/technical/environmental-impact-e-waste">Environmental Impact</a>
+      <a href="/wiki/disposal/local-recycling-centers">Find Centers</a>
+      <a href="/wiki/disposal/how-to-dispose-of-tvs">TV Disposal Guide</a>
+    </section>
+
+    <Faq items={faqItems} heading="E-Waste Types FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .definition {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .category-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .category-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .category-card h3 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+  }
+  .examples {
+    margin: 0.5rem 0 0;
+    padding-left: 1rem;
+  }
+  .special-grid {
+    display: grid;
+    gap: 1rem;
+  }
+  .special-item {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .special-item h3 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+    font-size: 0.95rem;
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .category-grid, .special-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

@@ -1,0 +1,393 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Office Equipment Buyback & Disposal: ITAD Services";
+const description =
+  "Complete guide to office equipment buyback in Kochi. Learn about ITAD services, bulk disposal, asset inventory, data destruction, and compliance for office electronics including servers, workstations, and peripherals.";
+const path = "/wiki/sales/office-equipment-buyback";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Sales & Buyback", path: "/wiki/sales/" },
+  { name: "Office Equipment Buyback", path },
+];
+
+const faqItems = [
+  {
+    q: "How does bulk office equipment disposal work?",
+    a: "Our ITAD process: schedule pickup, inventory assets, handle data destruction, separate items by value, provide detailed report, and arrange payments or documentation as required.",
+  },
+  {
+    q: "Do you handle inventory tracking?",
+    a: "Yes. We provide pre-collection asset inventory service. List devices with serial numbers, condition, and location. Post-collection report includes disposed items and residual value.",
+  },
+  {
+    q: "What about server rack equipment?",
+    a: "Server racks, UPS systems, and enterprise equipment require special handling. We coordinate with technical teams for safe removal and provide proper decommissioning documentation.",
+  },
+  {
+    q: "Is data destruction included?",
+    a: "Data handling varies by service. Basic disposal includes physical destruction. Certified ITAD includes verified data wiping with certificates. Select level based on compliance requirements.",
+  },
+  {
+    q: "What types of office equipment do you accept?",
+    a: "Laptops, desktops, servers, monitors, printers, phones, networking gear, UPS systems, storage arrays, and peripherals. Contact us with specific inventory for valuation.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="office-buyback">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">ITAD & Buyback</p>
+        <h1>Office Equipment Buyback & Disposal</h1>
+        <p class="lede">
+          Complete guide to bulk office equipment disposal in Kochi. Learn about ITAD 
+          services, asset inventory tracking, data destruction protocols, and compliance 
+          handling for corporate electronics and IT infrastructure.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/corporate-ewaste.webp"
+        alt="Corporate office electronics being collected for ITAD service"
+        width="1200"
+        height="675"
+        loading="lazy"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        Office equipment buyback in Kochi: schedule bulk pickup, conduct asset inventory, 
+        handle data destruction (basic or certified), separate items by value, provide 
+        detailed disposal report. Services include servers, workstations, monitors, 
+        printers, and IT peripherals. Compliance documentation available.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="We have 50+ laptops and monitors to dispose of. What's the process for bulk office equipment buyback?" />
+
+    <section class="process-overview" aria-labelledby="process-heading">
+      <h2 id="process-heading">Bulk Office Equipment Disposal Process</h2>
+      
+      <ol class="process-steps">
+        <li>
+          <h4>Initial Consultation</h4>
+          <p>Share asset inventory, location, data sensitivity requirements, and timeline. 
+          We assess feasibility and provide service options.</p>
+        </li>
+        <li>
+          <h4>Asset Inventory Creation</h4>
+          <p>Detailed list with serial numbers, models, conditions, and locations. 
+          Can be digital (spreadsheet) or physical tag verification.</p>
+        </li>
+        <li>
+          <h4>Data Destruction Planning</h4>
+          <p>Select level: basic wiping, certified destruction, or physical shredding. 
+          Schedule on-site or off-site processing based on requirements.</p>
+        </li>
+        <li>
+          <h4>Pickup & Transport</h4>
+          <p>Professional collection with proper handling, labeling, and chain of custody 
+          documentation. Coordinated with your facility management.</p>
+        </li>
+        <li>
+          <h4>Processing & Reporting</h4>
+          <p>Items processed at certified facility. Detailed report provided including 
+          items processed, value recovered, and compliance documentation.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="equipment-types" aria-labelledby="types-heading">
+      <h2 id="types-heading">Accepted Office Equipment Types</h2>
+      
+      <div class="equipment-grid">
+        <div class="equipment-card">
+          <h3>Computing Devices</h3>
+          <ul>
+            <li>Laptops, Desktops, All-in-Ones</li>
+            <li>Workstations, Thin Clients</li>
+            <li>Tablets for business use</li>
+            <li>Chromebooks, Surface Devices</li>
+          </ul>
+        </div>
+
+        <div class="equipment-card">
+          <h3>Peripherals</h3>
+          <ul>
+            <li>Monitors, LCD/LED Displays</li>
+            <li>Printers (laser, inkjet, plotter)</li>
+            <li>Scanners, Copiers, Multifunction</li>
+            <li>Projectors, Whiteboards</li>
+          </ul>
+        </div>
+
+        <div class="equipment-card">
+          <h3>Communication Equipment</h3>
+          <ul>
+            <li>Desk Phones, VoIP Phones</li>
+            <li>Video Conferencing Kits</li>
+            <li>Wired/Wireless Headsets</li>
+            <li>Intercom Systems</li>
+          </ul>
+        </div>
+
+        <div class="equipment-card">
+          <h3>Infrastructure & Servers</h3>
+          <ul>
+            <li>Servers, Storage Arrays</li>
+            <li>Rack Equipment, UPS</li>
+            <li>Network Switches, Routers</li>
+            <li>Cable Management Systems</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="data-handling" aria-labelledby="data-heading">
+      <h2 id="data-heading">Data Destruction Options</h2>
+      
+      <div class="data-options">
+        <div class="data-option">
+          <h3>Basic Wiping</h3>
+          <p>Standard factory reset with account removal. Suitable for personal devices or 
+          when data recovery risk is low. No certificate provided.</p>
+        </div>
+
+        <div class="data-option">
+          <h3>Certified Wiping</h3>
+          <p>NATO-Standard or DoD-compliant wiping with certificate. For business devices with 
+          proprietary data. Certificate includes device ID and wipe method.</p>
+        </div>
+
+        <div class="data-option">
+          <h3>Physical Destruction</h3>
+          <p>Hard drive shredding, degaussing, or physical destruction. Certificate of destruction 
+          provided. Required for high-security environments (healthcare, finance, defense).</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="compliance" aria-labelledby="compliance-heading">
+      <h2 id="compliance-heading">Compliance Documentation</h2>
+      
+      <p>Request the following documents for corporate compliance requirements:</p>
+      
+      <ul class="compliance-list">
+        <li><strong>Chain of Custody Report:</strong> Documentation of item handling from pickup to final disposition</li>
+        <li><strong>Data Destruction Certificate:</strong> Proof of secure data handling (when applicable)</li>
+        <li><strong>Recycling Certificate:</strong> Verification of environmentally compliant disposal</li>
+        <li><strong>Value Recovery Statement:</strong> Financial breakdown of recovered vs recovered items</li>
+      </ul>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Wiki Guides</h2>
+      <a href="/wiki/sales/choose-secure-itad-vendor">Choosing ITAD Vendor</a>
+      <a href="/wiki/technical/data-center-decommissioning-checklist">Data Center Decommissioning</a>
+      <a href="/itad/">Our ITAD Services</a>
+      <a href="/wiki/technical/hard-drive-data-destruction">Hard Drive Destruction</a>
+      <a href="/corporate-e-waste-recycling/">Corporate Services</a>
+    </section>
+
+    <Sources items={[
+      { title: "DoD 5220.22-M Data Sanitization", href: "https://csrc.nist.gov", publisher: "NIST" },
+      { title: "HIPAA Compliance for E-Waste", href: "https://www.hhs.gov", publisher: "HHS" },
+    ]} />
+
+    <Faq items={faqItems} heading="Office Equipment Buyback FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .office-buyback {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .process-steps ol {
+    counter-reset: process-counter;
+    list-style: none;
+    padding: 0;
+  }
+  .process-steps li {
+    counter-increment: process-counter;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .process-steps li h4 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+  }
+  .process-steps li p {
+    margin: 0.25rem 0 0;
+    font-size: 0.85rem;
+  }
+  .equipment-grid {
+    display: grid;
+    gap: 1rem;
+  }
+  .equipment-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .equipment-card h3 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+  }
+  .equipment-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+    font-size: 0.85rem;
+  }
+  .equipment-card li {
+    padding: 0.15rem 0;
+    position: relative;
+    padding-left: 1.25rem;
+  }
+  .equipment-card li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+  }
+  .data-options {
+    display: grid;
+    gap: 1rem;
+  }
+  .data-option {
+    padding: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .data-option h3 {
+    margin: 0 0 0.25rem;
+    font-size: 1rem;
+  }
+  .compliance-list {
+    list-style: none;
+    padding: 0;
+  }
+  .compliance-list li {
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .compliance-list li strong {
+    display: block;
+    color: var(--color-primary);
+    margin-bottom: 0.25rem;
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .process-steps li {
+      grid-template-columns: 1fr;
+    }
+    .equipment-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .data-options {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

@@ -1,0 +1,195 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Reuse vs Recycle Electronics: Which is Better?";
+const description =
+  "Complete guide comparing electronics reuse, resale, and recycling. Learn when each option is better, valuation factors, and environmental impact in Kochi and Kerala.",
+const path = "/wiki/technical/reuse-vs-recycle";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Technical Guides", path: "/wiki/technical/" },
+  { name: "Reuse vs Recycle", path },
+];
+
+const faqItems = [
+  {
+    q: "When should I recycle instead of sell?",
+    a: "Recycle when devices are beyond economic repair, have security-sensitive data, or have very low resale value. Environmental benefit outweighs scrap value.",
+  },
+  {
+    q: "How do I know if my device still has value?",
+    a: "Check current resale market rates online. Value is driven by brand, model, generation, storage capacity, and working condition. Free evaluation available.",
+  },
+  {
+    q: "Can I donate devices instead?",
+    a: "Yes, working devices can be donated to charities or educational institutions. Donation may provide tax benefits under applicable provisions.",
+  },
+  {
+    q: "What about broken devices?",
+    a: "Broken devices can be recycled or sold for parts. Battery disposal and screen replacement costs affect overall value. Free recycling is available.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="comparison-guide">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Decision Guide</p>
+        <h1>Reuse vs Recycle Electronics</h1>
+        <p class="lede">
+          Decision framework for electronics disposal. Complete comparison 
+          of reusing, reselling, and recycling options with value and 
+          environmental impact analysis.
+        </p>
+      </div>
+    </section>
+
+    <section class="decision-matrix" aria-labelledby="decision-heading">
+      <h2 id="decision-heading">When to Reuse, Resell, or Recycle</h2>
+      
+      <div class="matrix-grid">
+        <div class="matrix-item">
+          <h3>Choose Reuse</h3>
+          <p>Use daily for yourself, gift to family, or extend operational life. 
+          Best when device still meets your or someone's needs effectively.</p>
+        </div>
+        <div class="matrix-item">
+          <h3>Choose Resale</h3>
+          <p>Sell working devices for cash. Maximize value before major 
+          repairs or upgrades. Get condition-based quote before selling.</p>
+        </div>
+        <div class="matrix-item">
+          <h3>Choose Recycle</h3>
+          <p>Dispose through certified channels when device is beyond repair, 
+          has no resale value, or contains security-sensitive data.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="value-factors" aria-labelledby="value-heading">
+      <h2 id="value-heading">Factors Affecting Device Value</h2>
+      
+      <div class="factors-grid">
+        <div class="factor-item">
+          <h4>Brand & Model</h4>
+          <p>Apple, Samsung, Dell typically command higher resale values than 
+          generic or lesser-known brands.</p>
+        </div>
+        <div class="factor-item">
+          <h4>Age & Generation</h4>
+          <p>Within 1-2 years of release: 70-80% value. 3-4 years: 40-60%. 
+          5+ years: <30% or recycling value only.</p>
+        </div>
+        <div class="factor-item">
+          <h4>Condition</h4>
+          <p>Working: full value. Cosmetic damage: 5-15% reduction. 
+          Non-working: parts/recycling value only.</p>
+        </div>
+        <div class="factor-item">
+          <h4>Storage & Drive</h4>
+          <p>SSD storage adds value. Data-containing drives reduce value 
+          (data wiping required before sale).</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="environmental-impact" aria-labelledby="env-heading">
+      <h2 id="env-heading">Environmental Impact Comparison</h2>
+      
+      <p>Impact ranking from lowest to highest environmental cost:</p>
+      
+      <ol class="impact-list">
+        <li><strong>Reuse</strong> - Extends product life, minimal new resources</li>
+        <li><strong>Resale</strong> - Secondary market use, delayed recycling</li>
+        <li><strong>Recycling</strong> - Resource recovery, energy for processing</li>
+      </ol>
+    </section>
+
+    <Faq items={faqItems} heading="Reuse vs Recycle FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .comparison-guide {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .matrix-grid {
+    display: grid;
+    gap: 1rem;
+  }
+  .matrix-item {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .factors-grid {
+    display: grid;
+    gap: 1rem;
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .matrix-grid, .factors-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

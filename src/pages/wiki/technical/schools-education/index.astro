@@ -1,0 +1,193 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "E-Waste Awareness for Schools: Student Education Guide";
+const description =
+  "Guide for schools and educational institutions on e-waste awareness. Activities, posters, and student engagement for teaching proper electronics disposal to students.",
+const path = "/wiki/technical/schools-education";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Technical Guides", path: "/wiki/technical/" },
+  { name: "Schools Education", path },
+];
+
+const faqItems = [
+  {
+    q: "Can students bring old devices for collection?",
+    a: "Yes. Organize e-waste collection drives during exams or holidays. Provide collection sheets for inventory tracking.",
+  },
+  {
+    q: "Are there free resources for schools?",
+    a: "Yes. We provide educational posters, collection guidance, and can arrange free student-themed pickup education sessions.",
+  },
+  {
+    q: "How do we organize a school e-waste drive?",
+    a: "Step 1: Announce drive & set collection date. Step 2: Give students inventory forms. Step 3: Contact us for scheduled pickup. Step 4: Distribute certificates.",
+  },
+  {
+    q: "What about student laptops and tablets?",
+    a: "Students leaving school can exchange devices for certificate. Working devices go to student reuse program. Damaged devices recycled responsibly.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="education-guide">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Student Education</p>
+        <h1>E-Waste Awareness for Schools</h1>
+        <p class="lede">
+          Comprehensive guide for schools to teach students about e-waste, 
+          organize collection drives, and promote responsible electronics 
+          disposal among students and staff.
+        </p>
+      </div>
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        Schools can organize e-waste collection drives with our support. 
+        We provide educational materials, help students understand 
+        electronic waste, and arrange free pickup with certificates for 
+        school recognition programs.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="We're a school wanting to organize an e-waste collection drive. Can you provide educational materials and coordinate pickup?" />
+
+    <section class="activities-section" aria-labelledby="activities-heading">
+      <h2 id="activities-heading">Classroom Activities</h2>
+      
+      <div class="activity-grid">
+        <div class="activity-item">
+          <h3>E-Waste Sorting Game</h3>
+          <p>Create station with various items. Students sort into 'E-Waste', 
+          'Recyclable', 'General Waste' categories. Discuss why each 
+          belongs where.</p>
+        </div>
+        <div class="activity-item">
+          <h3>Device Lifecycle Project</h3>
+          <p>Research the lifecycle of a smartphone or laptop. Cover 
+          mining, manufacturing, use, and disposal. Present via posters 
+          or digital presentations.</p>
+        </div>
+        <div class="activity-item">
+          <h3>Data Wiping Demonstration</h3>
+          <p>Show old device before/after factory reset. Teach students 
+          why data removal is important. Practice with donated old phones.</p>
+        </div>
+        <div class="activity-item">
+          <h3>Recycling Value Math</h3>
+          <p>Calculate scrap value vs new purchase cost. Discuss resource 
+          recovery economics. Compare with conservation message.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="collection-drive" aria-labelledby="drive-heading">
+      <h2 id="drive-heading">Organizing a Collection Drive</h2>
+      
+      <p>Process for schools to run successful e-waste collection:</p>
+      
+      <ul class="drive-steps">
+        <li><strong>Announcement:</strong> Announce 1-2 weeks before with 
+          collection date, item types, and inventory sheet</li>
+        <li><strong>Collection Points:</strong> Set up tables in school 
+          foyer, library, or assembly area during lunch/recess</li>
+        <li><strong>Inventory:</strong> Students fill form with item type, 
+          condition, and student name. Track items by class</li>
+        <li><strong>Pickup Coordination:</strong> Share inventory list with 
+          us 24 hours before pickup. Our team collects after school hours</li>
+        <li><strong>Recognition:</strong> Display certificate in school. 
+          Share photos on social media with #EwasteSchoolDrive</li>
+      </ul>
+    </section>
+
+    <Faq items={faqItems} heading="School E-Waste FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .education-guide {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .activity-grid {
+    display: grid;
+    gap: 1rem;
+  }
+  .activity-item {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .drive-steps {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .activity-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

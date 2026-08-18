@@ -1,0 +1,249 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "How to Choose a Secure ITAD Vendor | Vendor Selection Checklist";
+const description =
+  "Complete checklist for selecting an ITAD (IT Asset Disposition) vendor. Evaluate certifications, data destruction methods, documentation, and compliance requirements.",
+const path = "/wiki/technical/choose-recycler";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Technical Guides", path: "/wiki/technical/" },
+  { name: "Choose Recycler", path },
+];
+
+const criteria = [
+  {
+    category: "Certifications",
+    items: [
+      "ISO 27001 (Information Security)",
+      "ISO 14001 (Environmental Management)",
+      "R2 (Responsible Recycling) Certification",
+      "NAID AAA (Data Destruction) Certification",
+      "e-Stewards Certification"
+    ]
+  },
+  {
+    category: "Data Destruction",
+    items: [
+      "Multiple destruction methods available",
+      "Verification/certification process",
+      "Chain of custody documentation",
+      "DAW (Data Assurance Witnessing) option",
+      "NIST 800-88 compliance"
+    ]
+  },
+  {
+    category: "Services",
+    items: [
+      "Free pickup or competitive pricing",
+      "Buyback/resale options",
+      "On-site data wiping possible",
+      "Hard drive shredding available",
+      "Certificate of destruction"
+    ]
+  },
+  {
+    category: "Compliance",
+    items: [
+      "KSPCB/Local CPCB approved",
+      "EPR compliance support",
+      "Hazardous waste handling",
+      "Proper material recovery",
+      "Transparent reporting"
+    ]
+  }
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="checklist-guide">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Vendor Selection Guide</p>
+        <h1>How to Choose a Secure ITAD Vendor</h1>
+        <p class="lede">
+          Checklists and evaluation criteria for selecting a secure 
+          IT Asset Disposition vendor for your business. Understand 
+          certifications, data security, and compliance requirements.
+        </p>
+      </div>
+    </section>
+
+    <section class="introduction" aria-labelledby="intro-heading">
+      <h2 id="intro-heading">Why ITAD Vendor Selection Matters</h2>
+      
+      <p>
+        Your ITAD vendor handles sensitive data and expensive hardware. 
+        The right vendor ensures data security, regulatory compliance, 
+        and maximum value recovery from retired IT assets. Wrong 
+        vendor choice can lead to data breaches, financial losses, or 
+        compliance penalties.
+      </p>
+    </section>
+
+    <section class="selection-criteria" aria-labelledby="criteria-heading">
+      <h2 id="criteria-heading">Selection Checklist</h2>
+      
+      <div class="criteria-grid">
+        {criteria.map((cat) => (
+          <div class="criteria-card">
+            <h3>{cat.category}</h3>
+            <ul class="criteria-items">
+              {cat.items.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="questions-section" aria-labelledby="questions-heading">
+      <h2 id="questions-heading">Key Questions to Ask</h2>
+      
+      <div class="questions-grid">
+        <div class="question-item">
+          <h4>Process Inquiry</h4>
+          <p>How does data destruction work in your facility? Can I 
+          attend the destruction event? What documentation is provided?</p>
+        </div>
+        <div class="question-item">
+          <h4>Pricing Transparency</h4>
+          <p>What's your pricing structure? Is there a minimum quantity? 
+          How do you handle non-resalable items?</p>
+        </div>
+        <div class="question-item">
+          <h4>Compliance Verification</h4>
+          <p>Can you share recent audit reports? How do you demonstrate 
+          regulatory compliance to customers?</p>
+        </div>
+        <div class="question-item">
+          <h4>Insurance & Liability</h4>
+          <p>What insurance coverage do you carry? What's your liability 
+          in case of data breach or equipment damage?</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="red-flags" aria-labelledby="flags-heading">
+      <h2 id="flags-heading">Warning Signs to Avoid</h2>
+      
+      <ul class="red-flag-list">
+        <li>Refuses to provide certifications or insurance documents</li>
+        <li>Offers "too good to be true" prices without explanation</li>
+        <li>Can't explain data destruction methodology clearly</li>
+        <li>Requires cash payment without proper documentation</li>
+        <li>Has unclear or missing client references</li>
+      </ul>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Resources</h2>
+      <a href="/wiki/technical/data-destruction/">Data Destruction Guide</a>
+      <a href="/wiki/sales/office-equipment-buyback/">Buyback Services</a>
+      <a href="/wiki/locations/defense-gov-disposal/">Government ITAD</a>
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .checklist-guide {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .criteria-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .criteria-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .criteria-card h3 {
+    margin: 0 0 0.75rem;
+    color: var(--color-primary);
+  }
+  .red-flag-list {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .criteria-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

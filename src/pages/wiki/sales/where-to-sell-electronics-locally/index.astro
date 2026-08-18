@@ -1,0 +1,364 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Where to Sell Electronics Locally: Best Buyers in Kochi";
+const description =
+  "Find the best local buyers and platforms in Kochi for selling electronics. Learn about resale prices, process, and how to get maximum value from laptops, phones, computers, and other devices.";
+const path = "/wiki/sales/where-to-sell-electronics-locally";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Sales & Buyback", path: "/wiki/sales/" },
+  { name: "Where to Sell Electronics", path },
+];
+
+const faqItems = [
+  {
+    q: "Is online selling better than local buyers in Kochi?",
+    a: "Online platforms typically offer lower prices but wider reach. Local buyers may offer better rates for bulk items and save time on shipping. Get quotes from multiple sources before choosing.",
+  },
+  {
+    q: "What's the best platform to sell laptops in Kerala?",
+    a: "For individual laptops: OLX, Facebook Marketplace, and local buyback stores. For bulk office equipment: certified e-waste recyclers with buyback programs offer better rates and proper documentation.",
+  },
+  {
+    q: "Do buyers test devices before purchase?",
+    a: "Most reputable buyers test basic functionality. Detailed testing (screen, keyboard, battery) depends on the buyer. Always request condition verification before finalizing sale.",
+  },
+  {
+    q: "What accessories increase resale value?",
+    a: "Original box, charger, accessories, and documentation (warranty, purchase receipt) increase value by 10-20%. Missing accessories lower value significantly.",
+  },
+  {
+    q: "How long does it take to get paid?",
+    a: "Payment varies: cash on spot for local buyers, bank transfer within 3-5 days for online platforms, cheque may take 7-10 days. Confirm payment terms before sale.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="sell-guide">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Resale Guide</p>
+        <h1>Where to Sell Electronics Locally in Kochi</h1>
+        <p class="lede">
+          Complete guide to finding the best local buyers in Kochi for your electronics. 
+          Learn about resale platforms, pricing factors, condition assessment, and how 
+          to maximize value from laptops, mobiles, and other devices.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/sell-electronics.webp"
+        alt="Person selling electronics to local buyer in Kochi"
+        width="1200"
+        height="675"
+        loading="lazy"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        Best options to sell electronics in Kochi: Ewaste Kochi buyback program for 
+        bulk items, OLX/Facebook for individual devices, local resale shops for 
+        quick cash, and certified electronics buyers for business equipment. 
+        Value depends on brand, condition, accessories, and market demand.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I want to sell my laptop and phone. What's the best way to get maximum value in Kochi?" />
+
+    <section class="buyer-options" aria-labelledby="buyers-heading">
+      <h2 id="buyers-heading">Best Places to Sell in Kochi</h2>
+      
+      <div class="buyer-grid">
+        <div class="buyer-card">
+          <h3>Certified E-Waste Buyback</h3>
+          <p><strong>Best for:</strong> Bulk items, business equipment, laptops, phones</p>
+          <p><strong>Advantages:</strong> Transparent pricing, data destruction included, 
+          proper documentation, free pickup service</p>
+          <p><strong>Typical Value:</strong> Market-based quotes within 24 hours</p>
+        </div>
+
+        <div class="buyer-card">
+          <h3>Online Marketplaces</h3>
+          <p><strong>Best for:</strong> Individual items, newer models, remote sellers</p>
+          <p><strong>Platforms:</strong> OLX, Facebook Marketplace, Quikr, eBay India</p>
+          <p><strong>Advantages:</strong> Wide reach, comparison shopping, cash on delivery</p>
+        </div>
+
+        <div class="buyer-card">
+          <h3>Local Resale Shops</h3>
+          <p><strong>Best for:</strong> Quick sale, immediate cash, small items</p>
+          <p><strong>Locations:</strong> Jew Town, Indira Nagar, Kakkanad electronics market</p>
+          <p><strong>Advantages:</strong> Immediate payment, instant evaluation, 
+          no shipping required</p>
+        </div>
+
+        <div class="buyer-card">
+          <h3>Retail Store Trade-Ins</h3>
+          <p><strong>Best for:</strong> Upgrading to new devices, brand loyalty</p>
+          <p><strong>Partners:</strong> Apple, Samsung, Dell, HP stores in Kochi</p>
+          <p><strong>Advantages:</strong> Incentives for new purchase, guaranteed 
+          acceptance, data wiping services</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="condition-assessment" aria-labelledby="condition-heading">
+      <h2 id="condition-heading">How Condition Affects Value</h2>
+      
+      <div class="condition-grid">
+        <div class="condition-card">
+          <h3>Excellent Condition</h3>
+          <p><strong>80-100% Value</strong></p>
+          <ul>
+            <li>Working, no visible wear</li>
+            <li>All accessories included</li>
+            <li>Original box/paperwork</li>
+            <li>Less than 2 years old</li>
+          </ul>
+        </div>
+
+        <div class="condition-card">
+          <h3>Good Condition</h3>
+          <p><strong>50-79% Value</strong></p>
+          <ul>
+            <li>Minor cosmetic wear</li>
+            <li>Working but slower battery</li>
+            <li>Some accessories missing</li>
+            <li>2-4 years old</li>
+          </ul>
+        </div>
+
+        <div class="condition-card">
+          <h3>Fair Condition</h3>
+          <p><strong>20-49% Value</strong></p>
+          <ul>
+            <li>Visible scratches/dents</li>
+            <li>Screen or keyboard issues</li>
+            <li>Limited accessories</li>
+            <li>4+ years old</li>
+          </ul>
+        </div>
+
+        <div class="condition-card">
+          <h3>For Parts/Scrap</h3>
+          <p><strong>Below 20% Value</strong></p>
+          <ul>
+            <li>Non-working device</li>
+            <li>Screen cracked beyond repair</li>
+            <li>Extensive damage</li>
+            <li>Salvage value for components</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="preparation-tips" aria-labelledby="prep-heading">
+      <h2 id="prep-heading">Before Selling</h2>
+      
+      <ol class="prep-list">
+        <li>
+          <strong>Back up and Wipe Data</strong>
+          <p>Transfer important files, then perform factory reset. For sensitive data, 
+          use professional data wiping tools or request certified destruction.</p>
+        </li>
+        <li>
+          <strong>Gather Accessories</strong>
+          <p>Collect original charger, cables, box, documentation. These add 10-20% 
+          to resale value.</p>
+        </li>
+        <li>
+          <strong>Take Clear Photos</strong>
+          <p>Front, back, screen (on), any damage. Photos speed up evaluation and 
+          help avoid disputes about condition.</p>
+        </li>
+        <li>
+          <strong>Research Market Value</strong>
+          <p>Check recent sales on OLX, price comparison sites, and buyer quotes to 
+          know fair market value.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Wiki Guides</h2>
+      <a href="/wiki/sales/e-waste-scrap-prices">E-Waste Scrap Prices</a>
+      <a href="/wiki/sales/sell-broken-electronics">Selling Broken Devices</a>
+      <a href="/wiki/technical/reuse-vs-recycle">Reuse vs Recycle</a>
+      <a href="/wiki/disposal/how-to-recycle-electronics-at-home">Recycling at Home</a>
+      <a href="/sell-old-laptop/">Sell Laptop Service</a>
+    </section>
+
+    <Sources items={[
+      { title: "OLX Kerala Electronics", href: "https://olx.in", publisher: "OLX" },
+      { title: "Kochi Resale Shop Directory", href: "https://maps.google.com", publisher: "Google Maps" },
+    ]} />
+
+    <Faq items={faqItems} heading="Selling Electronics FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .sell-guide {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .buyer-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .buyer-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .buyer-card p {
+    margin: 0.25rem 0;
+    font-size: 0.85rem;
+  }
+  .buyer-card h3 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+  }
+  .condition-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .condition-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .condition-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+    font-size: 0.85rem;
+  }
+  .condition-card li {
+    padding: 0.25rem 0;
+    position: relative;
+    padding-left: 1.25rem;
+  }
+  .condition-card li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+  }
+  .prep-list {
+    counter-reset: prep-counter;
+    list-style: none;
+    padding: 0;
+  }
+  .prep-list li {
+    counter-increment: prep-counter;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .prep-list li strong {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  .prep-list li p {
+    margin: 0.25rem 0 0;
+    font-size: 0.85rem;
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .buyer-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .condition-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

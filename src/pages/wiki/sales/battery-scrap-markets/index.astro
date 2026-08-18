@@ -1,0 +1,411 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Battery Scrap & Recycling Markets: Lithium & Lead Prices";
+const description =
+  "Complete guide to battery scrap markets in Kerala. Find current prices for lithium, lead-acid, UPS and inverter batteries. Learn where to sell battery scrap for maximum value in Kochi and across India.";
+const path = "/wiki/sales/battery-scrap-markets";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Sales & Buyback", path: "/wiki/sales/" },
+  { name: "Battery Scrap Markets", path },
+];
+
+const faqItems = [
+  {
+    q: "Are swollen batteries worth anything?",
+    a: "Swollen batteries have lower value due to safety concerns and reduced metal content. Handle carefully and sell to specialized battery recyclers who can safely process damaged cells.",
+  },
+  {
+    q: "How do lithium battery prices compare to lead-acid?",
+    a: "Lithium batteries have 3-5x higher scrap value. Lithium-ions: ₹400-900/kg. Lead-acid: ₹60-120/kg. However, lithium requires specialized handling and processing facilities.",
+  },
+  {
+    q: "Do battery brands affect scrap value?",
+    a: "Yes. Premium brands (Panasonic, LG, Samsung, Sony, CATL) typically have higher lithium content and command better prices. Chinese generic cells may have lower purity and value.",
+  },
+  {
+    q: "What about electric vehicle batteries?",
+    a: "EV batteries have high lithium, cobalt, nickel content. Specialized processors handle EV battery packs. Value based on chemistry, capacity, and remaining life.",
+  },
+  {
+    q: "Can I sell batteries separately from devices?",
+    a: "Yes. Separating batteries from devices before recycling often increases overall value. Batteries go to specialized recyclers while electronics go to e-waste recyclers.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="battery-markets">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Battery Scrap Market</p>
+        <h1>Battery Scrap & Recycling Markets</h1>
+        <p class="lede">
+          Complete guide to battery scrap markets in Kerala. Find current prices for 
+          lithium, lead-acid, UPS and inverter batteries. Learn where to sell battery 
+          scrap for maximum value in Kochi and across India.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/battery-recycling.webp"
+        alt="Various battery types being assessed for scrap value"
+        width="1200"
+        height="675"
+        loading="lazy"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        Battery scrap prices: Lithium-ion ₹400-900/kg, Lead-acid ₹60-120/kg. 
+        Find buyers at authorized battery recyclers, industrial scrap dealers, 
+        and specialized e-waste processors. Separate different battery types for 
+        optimal pricing. Request quotes with battery specifications for accurate valuation.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I have old UPS and laptop batteries to sell. What's the current market price?" />
+
+    <section class="price-overview" aria-labelledby="price-heading">
+      <h2 id="price-heading">Current Battery Scrap Prices 2026</h2>
+      
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>Battery Type</th>
+            <th>Typical Price</th>
+            <th>Common Sources</th>
+            <th>Note</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Lithium-ion (Phone/Laptop)</td>
+            <td>₹400-900/kg</td>
+            <td>Mobile phones, laptops, power banks</td>
+            <td>Full cells > empty shells</td>
+          </tr>
+          <tr>
+            <td>Lithium Iron Phosphate (LiFePO4)</td>
+            <td>₹500-1000/kg</td>
+            <td>E-bikes, solar storage, UPS</td>
+            <td>Higher lithium content</td>
+          </tr>
+          <tr>
+            <td>Lead-Acid (Inverter/UPS)</td>
+            <td>₹60-120/kg</td>
+            <td>Home inverters, automotive</td>
+            <td>Per kg, bulk discounts</td>
+          </tr>
+          <tr>
+            <td>Sealed Lead Acid (SLA)</td>
+            <td>₹70-130/kg</td>
+            <td>Backup UPS, emergency lighting</td>
+            <td>Higher than flooded batteries</td>
+          </tr>
+          <tr>
+            <td>Nickel-Metal Hydride (NiMH)</td>
+            <td>₹80-150/kg</td>
+            <td>Cameras, older electronics</td>
+            <td>Rare, specialized processing</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p class="note">Prices vary by condition, charge level, and market demand. 
+      Request detailed quotes with battery specifications for accurate pricing.</p>
+    </section>
+
+    <section class="buyer-directory" aria-labelledby="buyers-heading">
+      <h2 id="buyers-heading">Where to Sell Battery Scrap</h2>
+      
+      <div class="buyer-grid">
+        <div class="buyer-card">
+          <h3>Battery Recycling Centers</h3>
+          <p>Specialized facilities for battery processing. Accept all battery types with 
+          proper documentation. Pay per kg based on chemistry and condition.</p>
+        </div>
+
+        <div class="buyer-card">
+          <h3>Industrial Scrap Dealers</h3>
+          <p>Established dealers with battery processing partners. Often pay top rates for 
+          bulk quantities. Verify their recycling authorization before transaction.</p>
+        </div>
+
+        <div class="buyer-card">
+          <h3>E-Waste Processors</h3>
+          <p>Certified e-waste recyclers with battery processing lines. Combined service 
+          for devices + batteries. Usually offer better rates for separate battery submission.</p>
+        </div>
+
+        <div class="buyer-card">
+          <h3>UPS/Inverter Dealers</h3>
+          <p>Distributors often buy old batteries for parts or recycling. Convenient for 
+          local pickup. May offer credit toward new battery purchase.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="battery-types" aria-labelledby="types-heading">
+      <h2 id="types-heading">Battery Types & Identification</h2>
+      
+      <div class="battery-type-grid">
+        <div class="battery-card">
+          <h3>Lithium-ion Batteries</h3>
+          <p><strong>Look for:</strong> Light weight, no liquid, flat rectangular or 
+          cylindrical cells</p>
+          <p><strong>Voltage:</strong> 3.7V nominal, 11.1V-16.5V for packs</p>
+          <p><strong>Markings:</strong> mAh capacity, brand logo, safety certifications</p>
+        </div>
+
+        <div class="battery-card">
+          <h3>Lead-Acid Batteries</h3>
+          <p><strong>Look for:</strong> Heavy weight, dark color, liquid electrolyte</p>
+          <p><strong>Voltage:</strong> 2V per cell, 12V for automotive, 6V-12V for UPS</p>
+          <p><strong>Markings:</strong> AH rating, brand, manufacturing date</p>
+        </div>
+
+        <div class="battery-card">
+          <h3>NiMH/NiCd Batteries</h3>
+          <p><strong>Look for:</strong> Older format, often in AA, AAA, camera packs</p>
+          <p><strong>Voltage:</strong> 1.2V nominal for individual cells</p>
+          <p><strong>Markings:</strong> mAh, brand, chemistry type (NiMH/NiCd)</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="preparation" aria-labelledby="prep-heading">
+      <h2 id="prep-heading">Preparing Batteries for Sale</h2>
+      
+      <ol class="prep-steps">
+        <li>
+          <h4>Safely Remove</h4>
+          <p>Disconnect devices before removing batteries. Use gloves. For laptops/phones, 
+          use plastic prying tools to separate battery connector.</p>
+        </li>
+        <li>
+          <h4>Clean & Document</h4>
+          <p>Clean corrosion with baking soda paste. Document voltage reading, capacity if 
+          known. Take photos showing terminals and any damage.</p>
+        </li>
+        <li>
+          <h4>Separate by Type</h4>
+          <p>Keep lithium, lead-acid, and NiMH batteries in separate containers. Label 
+          clearly to ensure correct processing and pricing.</p>
+        </li>
+        <li>
+          <h4>Bulk Packaging</h4>
+          <p>For large quantities, use sturdy boxes with dividers. Include inventory list 
+          with quantity and type of each battery category.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="safety-alert" aria-labelledby="safety-heading">
+      <h2 id="safety-heading">Battery Safety Reminders</h2>
+      
+      <ul class="safety-list">
+        <li><strong>Swollen Batteries:</strong> Do not handle roughly. Store in non-conductive 
+        container. Contact specialized recyclers immediately.</li>
+        <li><strong>Damaged Terminals:</strong> Tape over exposed terminals. Handle with 
+        insulated gloves. Avoid short circuits.</li>
+        <li><strong>Temperature:</strong> Store in cool, dry place away from heat sources. 
+        Lithium batteries have fire risk when damaged.</li>
+        <li><strong>Transport:</strong> Secure in boxes, separate from metal objects. 
+          Inform buyers that batteries may be damaged if found during transport.</li>
+      </ul>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Wiki Guides</h2>
+      <a href="/wiki/disposal/where-to-recycle-batteries">Recycling Batteries</a>
+      <a href="/wiki/sales/e-waste-scrap-prices">E-Waste Scrap Prices</a>
+      <a href="/wiki/disposal/how-to-recycle-electronics-at-home">Recycling at Home</a>
+      <a href="/wiki/technical/store-swell-batteries-safely">Storing Swollen Batteries</a>
+    </section>
+
+    <Faq items={faqItems} heading="Battery Scrap Market FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .battery-markets {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.8rem;
+  }
+  .price-table th,
+  .price-table td {
+    padding: 0.5rem;
+    border: 1px solid var(--color-border);
+    text-align: left;
+  }
+  .price-table th {
+    background: var(--color-surface-strong);
+  }
+  .buyer-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .buyer-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .buyer-card h3 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+  }
+  .battery-type-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .battery-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .battery-card p {
+    margin: 0.15rem 0;
+    font-size: 0.8rem;
+  }
+  .prep-steps ol {
+    counter-reset: prep-counter;
+    list-style: none;
+    padding: 0;
+  }
+  .prep-steps li {
+    counter-increment: prep-counter;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .prep-steps li h4 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+  }
+  .safety-list {
+    list-style: none;
+    padding: 0;
+  }
+  .safety-list li {
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .buyer-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .battery-type-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .prep-steps li {
+      grid-template-columns: 1fr;
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

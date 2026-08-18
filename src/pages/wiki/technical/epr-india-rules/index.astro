@@ -1,0 +1,241 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Extended Producer Responsibility in India | E-Waste Rules";
+const description =
+  "Complete guide to Extended Producer Responsibility (EPR) under India's e-waste rules 2022. Understand producer obligations, authorized dismantler requirements, and compliance for electronics businesses.";
+const path = "/wiki/technical/epr-india-rules";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Technical Guides", path: "/wiki/technical/" },
+  { name: "EPR Rules", path },
+];
+
+const faqItems = [
+  {
+    q: "Who must comply with EPR?",
+    a: "Any person importing or placing electronic equipment for sale in India must comply. This includes manufacturers, dealers, and importers. Threshold limit: 10+ units per year.",
+  },
+  {
+    q: "What is the EPR compliance fee?",
+    a: "Fee varies by state and device category. In Kerala, producers pay fees to KSPCB-approved dismantlers for collection, recycling, and certification services.",
+  },
+  {
+    q: "How does EPR work for small businesses?",
+    a: "Small businesses can meet EPR obligations by using authorized e-waste collection services. The collector acts as EPR manager or enters into EPR agreement.",
+  },
+  {
+    q: "Are there penalties for non-compliance?",
+    a: "Yes. Non-compliance attracts fines up to ₹1 lakh for first offense and ₹5 lakh for repeat offenses. Manufacturing without authorization can result in product seizure.",
+  },
+  {
+    q: "How long is EPR authorization valid?",
+    a: "EPR authorization is typically granted for 3 years with annual compliance reporting requirements and compliance score tracking.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="technical-guide">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">EPR Compliance Guide</p>
+        <h1>Extended Producer Responsibility (EPR) in India</h1>
+        <p class="lede">
+          Understanding India's EPR requirements under the E-Waste (Management) 
+          Rules, 2022. Compliance pathway for electronics manufacturers, 
+          importers, and dealers in Kerala and across India.
+        </p>
+      </div>
+    </section>
+
+    <DirectAnswer heading="Key Facts">
+      <ul>
+        <li><strong>Who's covered:</strong> Any entity placing 10+ electronic 
+        units for sale annually</li>
+        <li><strong>Compliance path:</strong> Meet collection targets 
+        (85% of placed units) through authorized dismantlers</li>
+        <li><strong>Kerala specifics:</strong> KSPCB-approved EPR registrations 
+        required with annual compliance reports</li>
+      </ul>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I'm a small electronics business owner. How do I meet EPR compliance requirements for my sales?" />
+
+    <section class="epr-overview" aria-labelledby="overview-heading">
+      <h2 id="overview-heading">What is EPR?</h2>
+      
+      <p>
+        Extended Producer Responsibility is a policy mechanism requiring 
+        producers to manage the end-of-life treatment of their electronic 
+        products. Under India's e-waste rules, producers must ensure proper 
+        collection, recycling, and compliance documentation.
+      </p>
+      
+      <p>
+        EPR shifts the cost of e-waste management from municipalities to 
+        producers, creating incentive for product design optimization and 
+        circular economy development.
+      </p>
+    </section>
+
+    <section class="requirements-section" aria-labelledby="req-heading">
+      <h2 id="req-heading">Key Requirements</h2>
+      
+      <div class="req-grid">
+        <div class="req-item">
+          <h3>Registration</h3>
+          <p>Must register with State Pollution Control Board as EPR 
+          manager or enter into EPR agreement with authorized dismantler.</p>
+        </div>
+        <div class="req-item">
+          <h3>Collection Targets</h3>
+          <p>Minimum 85% collection rate of placed units in previous year. 
+          Target increases with consecutive years of compliance.</p>
+        </div>
+        <div class="req-item">
+          <h3>Documentation</h3>
+          <p>Maintain records of collection, recycling, data destruction, 
+          and material recovery. Submit annual compliance reports.</p>
+        </div>
+        <div class="req-item">
+          <h3>Fee Payment</h3>
+          <p>Pay EPR compliance fee to authorized dismantlers. Fee structure 
+          varies by device category and state regulations.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="kerala-specific" aria-labelledby="kerala-heading">
+      <h2 id="kerala-Specific">Kerala EPR Framework</h2>
+      
+      <p>KSPCB issues EPR registrations for electronics and processes 
+      annual compliance reports. Key features:</p>
+      
+      <ul class="kerala-list">
+        <li>Annual collection target: 35% of placed units (cumulative 85% 
+        over 3 years)</li>
+        <li>Fee structure: ₹X per device category (subject to periodic 
+        revision)</li>
+        <li>Authorized Dismantlers: Only KSPCB-approved units can 
+        provide EPR services</li>
+        <li>Reporting: Digital compliance portal with QR-coded collection 
+        documentation</li>
+      </ul>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Technical Guides</h2>
+      <a href="/wiki/technical/indian-laws/">E-Waste Laws 2022</a>
+      <a href="/wiki/technical/choose-recycler/">Choosing a Recycler</a>
+      <a href="/wiki/disposal/e-waste-collection-rules/">Collection Rules</a>
+      <a href="/wiki/sites/legal/terms/">Terms of Service</a>
+    </section>
+
+    <Faq items={faqItems} heading="EPR Compliance FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .technical-guide {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .req-grid {
+    display: grid;
+    gap: 1rem;
+  }
+  .req-item {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .req-item h3 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+  }
+  .kerala-list {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .req-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

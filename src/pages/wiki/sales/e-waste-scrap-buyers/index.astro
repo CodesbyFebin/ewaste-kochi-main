@@ -1,0 +1,321 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "E-Waste Scrap Buyers: Who Buys Old Electronics?";
+const description =
+  "Directory and guide to finding e-waste scrap buyers in Kochi. Learn about certified recyclers, what they accept, how to verify legitimacy, and how to get fair scrap prices for electronics.";
+const path = "/wiki/sales/e-waste-scrap-buyers";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Sales & Buyback", path: "/wiki/sales/" },
+  { name: "E-Waste Scrap Buyers", path },
+];
+
+const faqItems = [
+  {
+    q: "How do I verify a scrap buyer is legitimate?",
+    a: "Check for GST registration, pollution control board clearance, ask for their previous customer references, and ensure they provide proper documentation after collection.",
+  },
+  {
+    q: "What's the difference between recycler and scrap buyer?",
+    a: "Recyclers process materials professionally with proper equipment and documentation. Scrap buyers may be informal dealers. For valuable business equipment, use certified recyclers.",
+  },
+  {
+    q: "Do scrap buyers pay on the spot?",
+    a: "Payment timing varies: immediate cash for small quantities, bank transfer or cheque for larger amounts after verification. Always confirm payment terms before item handover.",
+  },
+  {
+    q: "Can I sell entire office IT equipment?",
+    a: "Yes, certified recyclers and ITAD providers handle bulk office equipment. Request asset inventory service and data destruction protocols for business compliance.",
+  },
+  {
+    q: "What about battery recycling buyers?",
+    a: "Specialized battery recyclers handle lithium, lead-acid, and other battery types. They offer higher prices for properly sorted, intact batteries with known chemistry.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="scrap-buyers">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Buyer Directory</p>
+        <h1>E-Waste Scrap Buyers</h1>
+        <p class="lede">
+          Complete guide to finding legitimate e-waste scrap buyers in Kochi and Kerala. 
+          Learn how to identify certified recyclers, what they accept, payment methods, 
+          and how to get the best price for your electronics.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/scrap-price-guide.webp"
+        alt="Electronic scrap materials being weighed and valued"
+        width="1200"
+        height="675"
+        loading="lazy"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        Find e-waste scrap buyers through certified recyclers like Ewaste Kochi, 
+        authorized collection centers, and verified dealers with GST registration. 
+        Payment methods include immediate cash, bank transfer, or cheque. 
+        Business volumes typically receive detailed quotes with documentation.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I need to sell electronics scrap. How do I find legitimate buyers with proper documentation?" />
+
+    <section class="buyer-types" aria-labelledby="types-heading">
+      <h2 id="types-heading">Types of E-Waste Buyers</h2>
+      
+      <div class="buyer-type-grid">
+        <div class="buyer-type-card">
+          <h3>Certified E-Waste Recyclers</h3>
+          <p><strong>Who they are:</strong> Authorized by CPCB/KSPCB with proper environmental clearance</p>
+          <p><strong>Accepts:</strong> All e-waste items, batteries, data-bearing devices</p>
+          <p><strong>Value:</strong> Market-based quotes with documentation</p>
+          <p><strong>Compliance:</strong> Provide certificates for businesses</p>
+        </div>
+
+        <div class="buyer-type-card">
+          <h3>Authorized Collection Centers</h3>
+          <p><strong>Who they are:</strong> Government-approved drop-off points</p>
+          <p><strong>Accepts:</strong> Standard e-waste, some batteries separately</p>
+          <p><strong>Value:</strong> Fixed rates based on rules, less negotiation</p>
+          <p><strong>Location:</strong> Multiple centers across Kochi and Kerala</p>
+        </div>
+
+        <div class="buyer-type-card">
+          <h3>Specialist Battery Recyclers</h3>
+          <p><strong>Who they are:</strong> Focus on battery recovery and processing</p>
+          <p><strong>Accepts:</strong> UPS, inverter, laptop, phone batteries</p>
+          <p><strong>Value:</strong> Higher rates for intact, known chemistry batteries</p>
+          <p><strong>Certification:</strong> Battery handling expertise, safety compliance</p>
+        </div>
+
+        <div class="buyer-type-card">
+          <h3>ITAD Service Providers</h3>
+          <p><strong>Who they are:</strong> Corporate-focused with data destruction</p>
+          <p><strong>Accepts:</strong> Business IT assets, servers, storage devices</p>
+          <p><strong>Value:</strong> Includes data destruction, documentation, chain of custody</p>
+          <p><strong>Compliance:</strong> Certified for enterprise-level requirements</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="verification" aria-labelledby="verify-heading">
+      <h2 id="verify-heading">How to Verify Buyer Legitimacy</h2>
+      
+      <div class="verification-steps">
+        <div class="verify-card">
+          <h3>Document Verification</h3>
+          <p>Request and review: GST certificate, CPCB/KSPCB authorization, insurance documents, previous customer references, and proper identification.</p>
+        </div>
+
+        <div class="verify-card">
+          <h3>Site Visit (if possible)</h3>
+          <p>For business purchases, visit their facility to verify: proper e-waste processing equipment, separation areas, documentation practices, and environmental handling.</p>
+        </div>
+
+        <div class="verify-card">
+          <h3>Better Business Bureau Check</h3>
+          <p>Verify against KSPCB database, check BBB rating if available, review online testimonials, and consult with local business associations.</p>
+        </div>
+
+        <div class="verify-card">
+          <h3>Payment Terms Clarity</h3>
+          <p>Establish clear terms: payment method, timeline, documentation provided, warranty on valuation, and dispute resolution process.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-process" aria-labelledby="quote-heading">
+      <h2 id="quote-heading">Getting a Quote</h2>
+      
+      <ol class="quote-steps">
+        <li>
+          <h4>Inventory Your Items</h4>
+          <p>List all devices: brand, model, condition, accessories, and any damage. Include photos.</p>
+        </li>
+        <li>
+          <h4>Contact Multiple Buyers</h4>
+          <p>Reach out to 3-5 verified buyers for comparison. Provide the same detailed inventory to each.</p>
+        </li>
+        <li>
+          <h4>Evaluate Offers</h4>
+          <p>Consider total value including payment terms, documentation, and collection convenience. Higher price isn't always best value.</p>
+        </li>
+        <li>
+          <h4>Confirm Terms</h4>
+          <p>Verify pickup date/time, required preparation, payment method, and what documentation you'll receive.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Wiki Guides</h2>
+      <a href="/wiki/sales/e-waste-scrap-prices">E-Waste Scrap Prices</a>
+      <a href="/wiki/sales/where-to-sell-electronics-locally">Local Selling Options</a>
+      <a href="/wiki/technical/choose-right-e-waste-recycler">Choose the Right Recycler</a>
+      <a href="/wiki/disposal/e-waste-pickup-services">Pickup Services</a>
+    </section>
+
+    <Faq items={faqItems} heading="Scrap Buyer FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .scrap-buyers {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .buyer-type-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .buyer-type-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .buyer-type-card p {
+    margin: 0.15rem 0;
+    font-size: 0.85rem;
+  }
+  .buyer-type-card h3 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+  }
+  .verification-steps {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .verify-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .verify-card h3 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+  }
+  .quote-steps ol {
+    counter-reset: quote-counter;
+    list-style: none;
+    padding: 0;
+  }
+  .quote-steps li {
+    counter-increment: quote-counter;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .quote-steps li h4 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+  }
+  .quote-steps li p {
+    margin: 0.25rem 0 0;
+    font-size: 0.85rem;
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .buyer-type-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .verification-steps {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .quote-steps li {
+      grid-template-columns: 1fr;
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

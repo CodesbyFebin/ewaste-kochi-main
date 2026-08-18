@@ -1,0 +1,223 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Hard Drive Destruction: Physical Shredding & Data Security";
+const description =
+  "Complete guide to hard drive destruction using physical shredding. Learn about degaussing vs shredding, certification, and secure data destruction for businesses.";
+const path = "/wiki/technical/hard-drive-destruction";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Technical Guides", path: "/wiki/technical/" },
+  { name: "Hard Drive Destruction", path },
+];
+
+const faqItems = [
+  {
+    q: "Is shredding better than wiping for security?",
+    a: "Shredding provides verifiable physical destruction with certificates. Wiping works if done correctly with multiple passes. Shredding is preferred for high-security environments.",
+  },
+  {
+    q: "How small are the drive fragments?",
+    a: "Industrial shredders produce particles of 2-10mm. Circuit boards remain intact for component recovery. No data can be reconstructed from shredded media.",
+  },
+  {
+    q: "Do you provide certificates?",
+    a: "Yes. Each shredded drive receives a certificate with serial number, destruction method, date, time, and technician signature. Digital backup available on request.",
+  },
+  {
+    q: "What about SSDs?",
+    a: "SSDs are ideally destroyed via physical shredding due to wear leveling challenges with wiping. We recommend shredding for optimal security on solid-state storage.",
+  },
+  {
+    q: "Can I witness the destruction?",
+    a: "Upon prior arrangement, we can arrange facility tours for bulk destruction events. For residential pickups, destruction occurs at our certified facility.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="drive-guide">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Data Destruction</p>
+        <h1>Hard Drive Destruction</h1>
+        <p class="lede">
+          Physical hard drive shredding for secure data destruction. 
+          NAID AAA certified destruction with certificate of destruction 
+          for compliance requirements in Kochi and Kerala.
+        </p>
+      </div>
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        We provide industrial-grade hard drive shredding producing 2-10mm 
+        particles. Each drive receives a certificate of destruction. 
+        Preferred method for SSDs and high-security data environments.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I have 20 hard drives that need secure destruction with certificate. Can you arrange that?" />
+
+    <section class="methods-section" aria-labelledby="methods-heading">
+      <h2 id="methods-heading">Destruction Methods</h2>
+      
+      <div class="method-comparison">
+        <div class="method-card">
+          <h3>Physical Shredding</h3>
+          <p class="icon">🔪</p>
+          <ul>
+            <li>Irreversible data destruction</li>
+            <li>Produces 2-10mm particles</li>
+            <li>Certificate of destruction</li>
+            <li>NAID AAA certified</li>
+            <li>Best for SSDs</li>
+          </ul>
+        </div>
+        <div class="method-card">
+          <h3>Data Wiping</h3>
+          <p class="icon">💻</p>
+          <ul>
+            <li>Software-based overwrite</li>
+            <li>For magnetic HDDs</li>
+            <li>Multiple pass verification</li>
+            <li>Certificate provided</li>
+            <li>Cost-effective</li>
+          </ul>
+        </div>
+        <div class="method-card">
+          <h3>Degaussing</h3>
+          <p class="icon">🧲</p>
+          <ul>
+            <li>Magnetic field destruction</li>
+            <li>For traditional HDDs</li>
+            <li>Pre-shredding option</li>
+            <li>Verification logging</li>
+            <li>Regulatory accepted</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="certification-section" aria-labelledby="cert-heading">
+      <h2 id="cert-heading">Certificate of Destruction</h2>
+      
+      <p>
+        Our certificates include:
+      </p>
+      <ul class="cert-list">
+        <li>Individual drive serial numbers</li>
+        <li>Destruction method used</li>
+        <li>Date and time of destruction</li>
+        <li>Technician name and signature</li>
+        <li>Lot/batch number for accountability</li>
+        <li>Digital backup available</li>
+      </ul>
+    </section>
+
+    <section class="bulk-section" aria-labelledby="bulk-heading">
+      <h2 id="bulk-heading">Bulk Drive Destruction</h2>
+      
+      <p>
+        For organizations with 10+ drives, we offer scheduled destruction 
+        events at our facility. This provides cost savings and the opportunity 
+        for witness verification if required.
+      </p>
+    </section>
+
+    <Faq items={faqItems} heading="Hard Drive Destruction FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .drive-guide {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .method-comparison {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .method-card {
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-align: center;
+  }
+  .method-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .method-card ul {
+    margin: 0;
+    padding-left: 1rem;
+  }
+  .cert-list {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .method-comparison {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

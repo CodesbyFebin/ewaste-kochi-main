@@ -1,0 +1,188 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Defense & Government Office E-Waste Disposal";
+const description =
+  "Specialized e-waste disposal for defense, police, and government offices. Security clearance, data destruction, and compliance documentation for sensitive equipment.",
+const path = "/wiki/locations/defense-gov-disposal";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Locations", path: "/wiki/locations/" },
+  { name: "Defense/Gov", path },
+];
+
+const faqItems = [
+  {
+    q: "Do you handle classified equipment?",
+    a: "For classified IT assets, we coordinate with security departments. All personnel have appropriate clearances. Schedule through official channels.",
+  },
+  {
+    q: "What documentation is provided?",
+    a: "Full audit trail documentation. Chain of custody forms signed at each stage. Certificate of destruction with device identification and security clearance status.",
+  },
+  {
+    q: "How is security compliance handled?",
+    a: "All handlers sign non-disclosure agreements. Security protocols followed at every stage. Vehicle tracking and GPS monitoring during transport.",
+  },
+  {
+    q: "Do you serve military installations?",
+    a: "Yes. We have experience with defense establishments and understand security requirements. Schedule through proper defense channels.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="gov-guide">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Security-Compliant Disposal</p>
+        <h1>Defense & Government E-Waste Disposal</h1>
+        <p class="lede">
+          Specialized e-waste disposal services for defense, police, and 
+          government offices with security clearance, certified data 
+          destruction, and compliance documentation.
+        </p>
+      </div>
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        We provide security-compliant e-waste disposal for sensitive 
+        government equipment. All handlers have appropriate clearances, 
+        and full audit documentation is provided at every stage.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="We're a government office needing secure disposal of IT equipment. Can you coordinate through official channels?" />
+
+    <section class="services-section" aria-labelledby="services-heading">
+      <h2 id="services-heading">Government Services</h2>
+      
+      <div class="services-grid">
+        <div class="service-item">
+          <h3>Security-Clearance Handling</h3>
+          <p>All personnel have appropriate security clearances. Protocols 
+          followed for sensitive equipment handling and transport.</p>
+        </div>
+        <div class="service-item">
+          <h3>Certified Data Destruction</h3>
+          <p>NAID AAA certified destruction methods. Certificate of destruction 
+          for all data-bearing devices with serial number tracking.</p>
+        </div>
+        <div class="service-item">
+          <h3>Audit Trail Documentation</h3>
+          <p>Chain of custody forms, handling logs, and destruction 
+          certificates. Complies with government procurement records.</p>
+        </div>
+        <div class="service-item">
+          <h3>Vehicle Security</h3>
+          <p>Tracked vehicles with GPS monitoring. Secure compartment 
+          for sensitive items during transport.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="processing-section" aria-labelledby="processing-heading">
+      <h2 id="processing-heading">Secure Processing</h2>
+      
+      <p>Our government-compliant workflow:</p>
+      
+      <ol class="gov-steps">
+        <li><strong>Pre-Arrival Preparation</strong> - Coordination with security, 
+          vehicle clearance, schedule locking</li>
+        <li><strong>Secure Collection</strong> - Escorted by cleared personnel, 
+          immediate chain of custody logging</li>
+        <li><strong>Controlled Processing</strong> - Dedicated secure facility, 
+          access logs, continuous monitoring</li>
+        <li><strong>Verified Destruction</strong> - Third-party witness available, 
+          real-time documentation</li>
+        </ol>
+    </section>
+
+    <Faq items={faqItems} heading="Government E-Waste FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .gov-guide {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .services-grid {
+    display: grid;
+    gap: 1rem;
+  }
+  .service-item {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .gov-steps {
+    display: grid;
+    gap: 0.75rem;
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

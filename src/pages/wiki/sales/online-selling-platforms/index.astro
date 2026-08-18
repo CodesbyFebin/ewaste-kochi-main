@@ -1,0 +1,323 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Online Selling Platforms for Used Electronics: India Guide";
+const description =
+  "Complete guide to selling used electronics online in India. Compare platforms like OLX, Facebook Marketplace, Quikr, and more for maximum reach and fair pricing in Kochi and across India.";
+const path = "/wiki/sales/online-selling-platforms";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Sales & Buyback", path: "/wiki/sales/" },
+  { name: "Online Selling Platforms", path },
+];
+
+const faqItems = [
+  {
+    q: "Which platform gives highest price in Kerala?",
+    a: "Facebook Marketplace and OLX typically offer better prices due to local traffic. For high-value items, consider both platforms and accept the best reasonable offer within 48 hours.",
+  },
+  {
+    q: "How safe is online selling for electronics?",
+    a: "Use secure payment methods (UPI, bank transfer, Paytm) and arrange safe pickup/drop-off. Meet in public places. Request photos of payment confirmation before handing over devices.",
+  },
+  {
+    q: "What details increase online listing effectiveness?",
+    a: "Include clear photos from multiple angles, battery cycle count (for phones/laptops), accessories included, any issues, and local location for easy pickup. Mention 'Kochi' or specific area for local buyers.",
+  },
+  {
+    q: "Are there fees for online selling platforms?",
+    a: "OLX Premium: ₹199-499 per listing. Facebook Marketplace: Free. Quikr Pro: ₹299 per ad. Most allow free basic listings with limited visibility.",
+  },
+  {
+    q: "Can foreigners sell electronics online in India?",
+    a: "Yes, but may need to show ID proof matching PAN card or bank account. Some platforms require Indian phone number. Consider local buyers with cash transactions for expedited sale.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="online-sell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Marketplace Guide</p>
+        <h1>Online Selling Platforms for Used Electronics</h1>
+        <p class="lede">
+          Complete comparison of online platforms for selling electronics across India. 
+          Learn about fees, safety, best practices, and platform-specific tips for 
+          maximizing your sale in Kochi and beyond.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/sell-electronics.webp"
+        alt="Smartphone listing on online marketplace for resale"
+        width="1200"
+        height="675"
+        loading="lazy"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        Best platforms to sell electronics in India: Facebook Marketplace (free, local), 
+        OLX (established, wide reach), Quikr (classified ads), and eBay India (for 
+        collectors). Use multiple platforms for best results, secure payment methods, 
+        and clearly mention condition, extras, and pickup location.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="What details should I include in my online listing for a laptop to get the best price?" />
+
+    <section class="platform-comparison" aria-labelledby="platforms-heading">
+      <h2 id="platforms-heading">Top Platforms by Category</h2>
+      
+      <div class="platform-grid">
+        <div class="platform-card">
+          <h3>Facebook Marketplace</h3>
+          <p><strong>Reach:</strong> 500M+ users in India</p>
+          <p><strong>Fees:</strong> Free</p>
+          <p><strong>Sale Time:</strong> 1-7 days typically</p>
+          <p><strong>Best For:</strong> Local buyers, quick sales, good photos</p>
+          <p><strong>Tips:</strong> Use local groups, be responsive, clear product videos help</p>
+        </div>
+
+        <div class="platform-card">
+          <h3>OLX</h3>
+          <p><strong>Reach:</strong> Pan-India traffic, Kerala strong</p>
+          <p><strong>Fees:</strong> Free basic / ₹199-499 premium</p>
+          <p><strong>Sale Time:</strong> 2-14 days</p>
+          <p><strong>Best For:</strong> Higher-value items, verified buyers</p>
+          <p><strong>Tips:</strong> OLX Assist shows similar listings, enable chat protection</p>
+        </div>
+
+        <div class="platform-card">
+          <h3>Quikr</h3>
+          <p><strong>Reach:</strong> Established classifieds in India</p>
+          <p><strong>Fees:</strong> Free basic / ₹299 Pro</p>
+          <p><strong>Sale Time:</strong> 3-14 days</p>
+          <p><strong>Best For:</strong> Appliances, furniture alongside electronics</p>
+          <p><strong>Tips:</strong> Verify buyer before sharing contact, use escrow options</p>
+        </div>
+
+        <div class="platform-card">
+          <h3>eBay India</h3>
+          <p><strong>Reach:</strong> Collector market, older model enthusiasts</p>
+          <p><strong>Fees:</strong> 8-12% final value fee</p>
+          <p><strong>Sale Time:</strong> 5-21 days</p>
+          <p><strong>Best For:</strong> Rare/vintage electronics, global reach</p>
+          <p><strong>Tips:</strong> Detailed condition list, original accessories boost value</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="listing-tips" aria-labelledby="tips-heading">
+      <h2 id="tips-heading">Creating Effective Listings</h2>
+      
+      <div class="tips-grid">
+        <div class="tip-card">
+          <h3>Photos That Sell</h3>
+          <ul>
+            <li>Front, back, sides at 45-degree angles</li>
+            <li>Screen on showing model/settings (phone/laptop)</li>
+            <li>Damage/marks highlighted clearly</li>
+            <li>In use shots - person holding device</li>
+          </ul>
+        </div>
+
+        <div class="tip-card">
+          <h3>Description Must-Haves</h3>
+          <ul>
+            <li>Brand, model, storage capacity, RAM</li>
+            <li>Operating system version</li>
+            <li>Accessories included (charger, box)</li>
+            <li>Any issues (battery life, cracks)</li>
+            <li>Local pickup location (Kochi, area)</li>
+          </ul>
+        </div>
+
+        <div class="tip-card">
+          <h3>Pricing Strategy</h3>
+          <ul>
+            <li>Research 3 comparable listings</li>
+            <li>Price 10-15% below highest for quick sale</li>
+            <li>Highlight "best price in Kochi" if competitive</li>
+            <li>Accept reasonable offers within 24-48 hours</li>
+          </ul>
+        </div>
+
+        <div class="tip-card">
+          <h3>Safety Protocols</h3>
+          <ul>
+            <li>Meet in public place (malls, railway stations)</li>
+            <li>Use UPI/bank transfer - never cash for high value</li>
+            <li>Verify buyer identity before device handover</li>
+            <li>Document transaction (photos of payment)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="regional-notes" aria-labelledby="regional-heading">
+      <h2 id="regional-heading">Kochi & Kerala Specific Notes</h2>
+      
+      <ul class="regional-list">
+        <li><strong>Popular Areas:</strong> Indira Nagar, Kalamassery, Kakkanad, Edappally, Jew Town, Infopark - buyers common in all</li>
+        <li><strong>Local Groups:</strong> "Kochi Buy Sell Trade" Facebook group, OLX Kochi category very active</li>
+        <li><strong>GST Considerations:</strong> For business sellers: mention "GST eligible" to attract commercial buyers</li>
+        <li><strong>Language:</strong> Listings in English with Malayalam keywords ("പരമാവധി", "പ്രവര്‍ത്തനം", "ബാട്ടരി സ്ഥിതി") increase reach</li>
+      </ul>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Wiki Guides</h2>
+      <a href="/wiki/sales/e-waste-scrap-prices">E-Waste Scrap Prices</a>
+      <a href="/wiki/sales/where-to-sell-electronics-locally">Local Selling Options</a>
+      <a href="/wiki/technical/reuse-vs-recycle">Reuse vs Recycle</a>
+    </section>
+
+    <Faq items={faqItems} heading="Online Selling FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .online-sell {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .platform-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .platform-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .platform-card p {
+    margin: 0.15rem 0;
+    font-size: 0.85rem;
+  }
+  .tips-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .tip-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+    font-size: 0.85rem;
+  }
+  .tip-card li {
+    padding: 0.15rem 0;
+    position: relative;
+    padding-left: 1.25rem;
+  }
+  .tip-card li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+  }
+  .regional-list {
+    list-style: none;
+    padding: 0;
+  }
+  .regional-list li {
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .platform-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .tips-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

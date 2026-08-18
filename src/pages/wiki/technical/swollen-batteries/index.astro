@@ -1,0 +1,218 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Swollen Battery Storage & Safe Disposal Guide";
+const description =
+  "Complete guide to safely storing and disposing of swollen lithium batteries. Learn handling protocols, fire prevention, and emergency procedures for damaged batteries.",
+const path = "/wiki/technical/swollen-batteries";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Technical Guides", path: "/wiki/technical/" },
+  { name: "Swollen Batteries", path },
+];
+
+const faqItems = [
+  {
+    q: "Can swollen batteries be stored at home safely?",
+    a: "Yes, with proper precautions: in a metal container away from flammable materials, in a cool dry place. Never store in direct sunlight or near heat sources.",
+  },
+  {
+    q: "What if a battery starts heating up?",
+    a: "Immediately place in sand or ceramic container. Do NOT use water. Contact us immediately for collection. Call emergency services if fire begins.",
+  },
+  {
+    q: "Can I tape over a swollen battery?",
+    a: "Never tape swollen batteries. The swelling indicates gas buildup and potential rupture. Handle with insulated gloves and place in non-flammable container.",
+  },
+  {
+    q: "How long can they be stored before collection?",
+    a: "Maximum 7 days for swollen batteries. For safe handling, contact us for emergency pickup within 24 hours. Notify us in advance if storage is needed.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="battery-guide">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Safety First</p>
+        <h1>Swollen Battery Storage & Safe Disposal</h1>
+        <p class="lede">
+          Critical safety guide for handling swollen lithium batteries. 
+          Learn proper storage, fire prevention protocols, and emergency 
+          disposal procedures in Kochi and Kerala.
+        </p>
+      </div>
+    </section>
+
+    <DirectAnswer heading="Important Notice">
+      <p>
+        <strong>SWOLLEN BATTERIES ARE FIRE HAZARDS.</strong> Store in 
+        sand-filled metal container away from flammable materials. 
+        Schedule pickup within 24 hours maximum.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I have swollen battery that needs immediate safe disposal. Can you arrange emergency pickup?" />
+
+    <section class="storage-section" aria-labelledby="storage-heading">
+      <h2 id="storage-heading">Safe Storage Procedure</h2>
+      
+      <div class="storage-steps">
+        <div class="storage-item">
+          <h3>Initial Isolation</h3>
+          <p>Put on insulated gloves. Place battery in non-conductive 
+          (plastic, ceramic, or fiberglass) container. Do not touch 
+          terminals or apply pressure.</p>
+        </div>
+        <div class="storage-item">
+          <h3>Sand Container Method</h3>
+          <p>Place battery in metal or ceramic container filled with sand. 
+          This absorbs heat and prevents ignition spread.</p>
+        </div>
+        <div class="storage-item">
+          <h3>Cool, Dry Location</h3>
+          <p>Store away from heat sources, direct sunlight, and other 
+          electronics. Temperature between 15-25°C is ideal.</p>
+        </div>
+        <div class="storage-item">
+          <h3>Fire Safety</h3>
+          <p>Keep Class D fire extinguisher or sand bucket nearby. 
+          Evacuate area if smoke or odor develops.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="warning-signs" aria-labelledby="warning-heading">
+      <h2 id="warning-heading">Signs of Battery Swelling</h2>
+      
+      <div class="signs-grid">
+        <div class="sign-item">
+          <span class="icon">⚠️</span>
+          <p><strong>Visible Bumping</strong> - Case bulging at top or sides</p>
+        </div>
+        <div class="sign-item">
+          <span class="icon">🔥</span>
+          <p><strong>Heat Generation</strong> - Warm to hot to touch</p>
+        </div>
+        <div class="sign-item">
+          <span class="icon">💨</span>
+          <p><strong>Gas Vents</strong> - Hissing or soft sounds</p>
+        </div>
+        <div class="sign-item">
+          <span class="icon">🧨</span>
+          <p><strong>Rupture Risk</strong> - Cracked or deformed case</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="emergency-section" aria-labelledby="emergency-heading">
+      <h2 id="emergency-heading">If Battery Shows Emergency Signs</h2>
+      
+      <ol class="emergency-steps">
+        <li><strong>Evacuate</strong> - Leave area immediately, distance of 10+ meters</li>
+        <li><strong>Isolate</strong> - Close doors, cut power if safe to do so</li>
+        <li><strong>Call</strong> - Emergency: 101, Battery Collection: WhatsApp number</li>
+        <li><strong>NEVER</strong> - Don't use water, don't spread to container, don't attempt to puncture</li>
+      </ol>
+    </section>
+
+    <Faq items={faqItems} heading="Swollen Battery FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .battery-guide {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .storage-steps {
+    display: grid;
+    gap: 1rem;
+  }
+  .storage-item {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .signs-grid {
+    display: grid;
+    gap: 1rem;
+  }
+  .sign-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .sign-item .icon {
+    font-size: 1.5rem;
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .storage-steps, .signs-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

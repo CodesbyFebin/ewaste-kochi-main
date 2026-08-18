@@ -1,0 +1,222 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "E-Waste Collection in Thrissur | Free Pickup Feasibility Check";
+const description =
+  "Complete guide to e-waste collection services in Thrissur, Kerala. Free pickup feasibility check, drop-off options, and local recycling partner information.";
+const path = "/wiki/locations/thrissur";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Locations", path: "/wiki/locations/" },
+  { name: "Thrissur", path },
+];
+
+const faqItems = [
+  {
+    q: "Is pickup free in Thrissur?",
+    a: "Pickup availability in Thrissur depends on item type and quantity. Free pickup is available for standard household electronics. Contact us to check feasibility based on your items.",
+  },
+  {
+    q: "What items are collected in Thrissur?",
+    a: "Standard e-waste: laptops, phones, tablets, monitors, TVs, printers, chargers, batteries. Large appliances and scrap may require alternative handling.",
+  },
+  {
+    q: "How do I schedule pickup in Thrissur?",
+    a: "Share item details, photos, and location via WhatsApp. We'll confirm pickup feasibility and provide available time slots within 24-48 hours.",
+  },
+  {
+    q: "Do you serve Thrissur business districts?",
+    a: "Yes, we support businesses in Thrissur including the industrial area, commercial complexes, and offices. Schedule a feasibility check with your item list.",
+  },
+  {
+    q: "What about damaged electronics in Thrissur?",
+    a: "Damaged items are accepted. Flag swollen batteries or physically damaged units in advance so our team can prepare proper handling equipment.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="location-page">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Thrissur Location Guide</p>
+        <h1>E-Waste Collection in Thrissur</h1>
+        <p class="lede">
+          E-Waste Kochi extends pickup feasibility checks to Thrissur. 
+          Learn about collection options, scheduling process, and 
+          what to prepare for electronics, battery, and IT asset disposal.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/location-hub.webp"
+        alt="Thrissur city skyline with e-waste recycling reference"
+        width="1200"
+        height="675"
+        loading="lazy"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        Thrissur pickup is checked on a case-by-case basis. While not a 
+        standard doorstep area, we verify feasibility for specific item 
+        quantities and locations. Contact us with your electronics list 
+        for a same-day feasibility check.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I'm in Thrissur and need to dispose of electronics. Can you check pickup feasibility?" />
+
+    <section class="fees-section" aria-labelledby="fees-heading">
+      <h2 id="fees-heading">Pickup Feasibility & Options</h2>
+      
+      <p>
+        Thrissur residents and businesses can request a feasibility check 
+        for their e-waste. Our team reviews item count, type, and location 
+        to determine collection availability within 24-48 hours.
+      </p>
+      
+      <div class="options-grid">
+        <div class="option-card">
+          <h3>Standard Electronics</h3>
+          <p>Laptops, phones, tablets, monitors, printers, and accessories. 
+          Feasibility-based pickup scheduling within 1-2 business days.</p>
+        </div>
+        <div class="option-card">
+          <h3>Battery Collections</h3>
+          <p>UPS, inverter, laptop, and phone batteries. Swollen battery 
+          units require advance notification for safe handling.</p>
+        </div>
+        <div class="option-card">
+          <h3>Business IT Assets</h3>
+          <p>Corporate electronics and server equipment. Bulk pickup 
+          coordination with documentation support available.</p>
+        </div>
+        <div class="option-card">
+          <h3>Drop-Off Alternative</h3>
+          <p>Same-day drop-off at authorized Kerala recycling centers. 
+          Contact for nearest facility and scheduling.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="schedule-section" aria-labelledby="schedule-heading">
+      <h2 id="schedule-heading">How to Schedule</h2>
+      
+      <ol class="schedule-steps">
+        <li>
+          <strong>Send Item Details</strong>
+          <p>Via WhatsApp, share: device types, quantities, battery units, 
+          and any special conditions (swollen batteries, damaged screens).</p>
+        </li>
+        <li>
+          <strong>Feasibility Confirmation</strong>
+          <p>Within 24 hours, we confirm pickup availability and available 
+          time slots based on our route optimization for your area.</p>
+        </li>
+        <li>
+          <strong>Pre-Pickup Preparation</strong>
+          <p>Receive guidance on data wiping, battery separation, and item 
+          organization for efficient collection.</p>
+        </li>
+        <li>
+          <strong>Confirmed Collection</strong>
+          <p>On scheduled day, our certified team collects items with chain 
+          of custody documentation upon request.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Wiki Guides</h2>
+      <a href="/wiki/locations/kochi">Kochi Collection Guide</a>
+      <a href="/wiki/disposal/local-recycling-centers">Find Centers</a>
+      <a href="/wiki/technical/what-is-e-waste">What is E-Waste</a>
+      <a href="/wiki/disposal/e-waste-collection-rules">Rules & Regulations</a>
+    </section>
+
+    <Faq items={faqItems} heading="Thrissur E-Waste FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .location-page {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .options-grid {
+    display: grid;
+    gap: 1rem;
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .options-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

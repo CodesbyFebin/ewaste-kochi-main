@@ -1,0 +1,256 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Data Security When Recycling Electronics: Best Practices";
+const description =
+  "Complete guide to ensuring data security during electronics recycling. Learn about remote wiping, encryption keys, physical destruction, and verification methods.",
+const path = "/wiki/technical/data-security-recycling";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Technical Guides", path: "/wiki/technical/" },
+  { name: "Data Security", path },
+];
+
+const faqItems = [
+  {
+    q: "Should I wipe data before sending devices for recycling?",
+    a: "Yes. Use factory reset or secure wiping software before collection. For business data, request certified data destruction at pickup with certificate.",
+  },
+  {
+    q: "What about encryption keys on laptops?",
+    a: "Remove or reset encryption keys before recycling. Full disk encryption with key reset is sufficient for most cases. For maximum security, use destruction services.",
+  },
+  {
+    q: "How do I verify data was wiped?",
+    a: "Request certificate of destruction. For software wiping, verify with checksum reports. Physical destruction provides absolute verification through certificate.",
+  },
+  {
+    q: "Can recycling affect my data security?",
+    a: "Using unauthorized recyclers poses data risk. Always use certified, KSPCB-registered services with documented data destruction processes.",
+  },
+  {
+    q: "What about SIM cards and memory cards?",
+    a: "Remove all removable media. SD cards, SIM cards, and memory cards should be wiped or destroyed separately if they contain personal/business data.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="security-guide">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Data Security Guide</p>
+        <h1>Data Security When Recycling Electronics</h1>
+        <p class="lede">
+          Complete guide to ensuring your personal and business data 
+          remains secure during electronics recycling in Kochi and 
+          across Kerala.
+        </p>
+      </div>
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        Always remove data before recycling. Use factory reset, secure 
+        wiping tools, or request certified data destruction with 
+        certificate. Never hand over devices with active accounts or 
+        unencrypted sensitive data.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I want to ensure my business data is properly handled during device recycling. Can you explain your data security process?" />
+
+    <section class="preparation-section" aria-labelledby="prep-heading">
+      <h2 id="prep-heading">Before Recycling</h2>
+      
+      <div class="prep-steps">
+        <div class="prep-item">
+          <h3>Backup Your Data</h3>
+          <p>Transfer important files to new devices or cloud storage. 
+          Create external backups of irreplaceable data before any 
+          destruction process.</p>
+        </div>
+        <div class="prep-item">
+          <h3>Factory Reset</h3>
+          <p>Use device manufacturer's official factory reset procedure. 
+          For Windows: use recovery tools. For macOS: use built-in 
+          erasure utilities.</p>
+        </div>
+        <div class="prep-item">
+          <h3>Remove Media</h3>
+          <p>Extract all SD cards, SIM cards, USB drives, CDs/DVDs, 
+          and other removable storage before recycling.</p>
+        </div>
+        <div class="prep-item">
+          <h3>De-authorize Services</h3>
+          <p>Remove device from account lists (iTunes, Google Play, 
+          Microsoft Store, Adobe ID, etc.) to prevent lockout issues.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="destruction-options" aria-labelledby="destruction-heading">
+      <h2 id="destruction-heading">Data Destruction Options</h2>
+      
+      <div class="option-table">
+        <div class="option-header">
+          <span>Method</span>
+          <span>Best For</span>
+          <span>Security Level</span>
+          <span>Certificate</span>
+        </div>
+        <div class="option-row">
+          <span>Factory Reset</span>
+          <span>Personal devices</span>
+          <span>Medium</span>
+          <span>No</span>
+        </div>
+        <div class="option-row">
+          <span>Software Wiping</span>
+          <span>HDDs, standard requests</span>
+          <strong>High</strong>
+          <span>Yes</span>
+        </div>
+        <div class="option-row">
+          <span>Degaussing</span>
+          <span>Traditional HDDs</span>
+          <strong>High</strong>
+          <span>Yes</span>
+        </div>
+        <div class="option-row">
+          <span>Physical Shredding</span>
+          <span>SSDs, high-security</span>
+          <strong>Maximum</strong>
+          <span>Yes</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="verification-section" aria-labelledby="verify-heading">
+      <h2 id="verify-heading">Verification & Documentation</h2>
+      
+      <p>
+        When you request data destruction services, ensure you receive:
+      </p>
+      
+      <ul class="verification-list">
+        <li>Certificate of Data Destruction with unique ID</li>
+        <li>Chain of custody documentation</li>
+        <li>Device serial numbers on certificate</li>
+        <li>Date and method of destruction recorded</li>
+        <li>Technician signature or digital verification</li>
+      </ul>
+    </section>
+
+    <Faq items={faqItems} heading="Data Security FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .security-guide {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .prep-steps {
+    display: grid;
+    gap: 1rem;
+  }
+  .option-table {
+    display: grid;
+    gap: 0.5rem;
+    font-family: monospace;
+  }
+  .option-header, .option-row {
+    display: grid;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+  }
+  .option-header {
+    background: var(--color-primary);
+    color: white;
+    font-weight: 600;
+  }
+  .verification-list {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .prep-steps {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .option-table {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .option-header, .option-row {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+  @media (max-width: 779px) {
+    .option-table {
+      grid-template-columns: 1fr;
+    }
+    .option-header, .option-row {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

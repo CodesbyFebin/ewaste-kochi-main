@@ -1,0 +1,218 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Kottayam E-Waste Recycling Guide";
+const description =
+  "Complete guide to e-waste recycling in Kottayam, Kerala. Free pickup feasibility check, local drop-off centers, and proper disposal methods for electronics and batteries.";
+const path = "/wiki/locations/kottayam";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Locations", path: "/wiki/locations/" },
+  { name: "Kottayam", path },
+];
+
+const faqItems = [
+  {
+    q: "Is doorstep pickup available in Kottayam?",
+    a: "Kottayam is outside our standard pickup zone. We provide feasibility checks for bulk collections and scheduled visits based on item volume and route efficiency.",
+  },
+  {
+    q: "How can I recycle electronics in Kottayam?",
+    a: "Contact us with your item list. We'll check feasibility for centralized pickup at a convenient location (hotel, office, or community center) in Kottayam town.",
+  },
+  {
+    q: "What about drop-off options in Kottayam?",
+    a: "We can arrange temporary drop-off points at Kottayam town or at participating schools/offices for residential collections.",
+  },
+  {
+    q: "Do you handle battery recycling in Kottayam?",
+    a: "Yes, UPS, inverter, laptop, and phone batteries in Kottayam are collected with advance scheduling. Swollen batteries require special handling protocols.",
+  },
+  {
+    q: "What if I have many items from Kottayam?",
+    a: "Bulk electronics from Kottayam can be scheduled for consolidated pickup. Provide complete inventory for route optimization and minimum quantity requirements.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="location-page">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Outside Standard Service Area</p>
+        <h1>E-Waste Recycling in Kottayam</h1>
+        <p class="lede">
+          Kottayam requires special coordination for e-waste collection. 
+          We check pickup feasibility and arrange consolidated collection 
+          from participating locations in and around Kottayam town.
+        </p>
+      </div>
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        Kottayam services require advance coordination. Contact us with 
+        your item list, quantity, and preferred pick-up location. We'll 
+        respond within 24 hours with feasibility confirmation and options 
+        for bulk collection in the Kottayam area.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I'm in Kottayam with electronics to recycle. Can you check pickup feasibility?" />
+
+    <section class="fees-section" aria-labelledby="fees-heading">
+      <h2 id="fees-heading">Location & Service Information</h2>
+      
+      <p>
+        <strong>E-waste Kochi serves Kottayam through coordinated collection.</strong> 
+        This involves case-by-case feasibility checks for:
+      </p>
+      
+      <ul class="service-list">
+        <li>Residential apartment complexes in Kottayam town</li>
+        <li>Educational institutions and schools</li>
+        <li>Small office collections</li>
+        <li>Bulk residential cleanouts</li>
+      </ul>
+      
+      <p>
+        Collections are scheduled when multiple units can be served 
+        efficiently, typically once every 1-2 weeks in areas where we 
+        have other ongoing work.
+      </p>
+    </section>
+
+    <section class="schedule-section" aria-labelledby="schedule-heading">
+      <h2 id="schedule-heading">Request Process</h2>
+      
+      <ol class="schedule-steps">
+        <li>
+          <strong>Provide Complete Details</strong>
+          <p>Send item types, quantities, and preferred collection location 
+          (apartment gate, office lobby, school campus). Include battery 
+          counts and any special items.</p>
+        </li>
+        <li>
+          <strong>Feasibility Check</strong>
+          <p>Our team reviews route optimization and confirms availability. 
+          You'll receive response within 24 hours with multiple date options.</p>
+        </li>
+        <li>
+          <strong>Consolidated Collection</strong>
+          <p>On collection day, our team picks up from your location and 
+          any neighboring units that have requested same-day service.</p>
+        </li>
+        <li>
+          <strong>Documentation</strong>
+          <p>Chain of custody records provided upon request for businesses 
+          and institutions requiring compliance documentation.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Nearby Service Areas</h2>
+      <a href="/wiki/locations/kochi">Kochi Collection Guide</a>
+      <a href="/wiki/locations/trivandrum">Thiruvananthapuram Guide</a>
+      <a href="/wiki/technical/choose-secure-itad-vendor">Choose ITAD Vendor</a>
+      <a href="/wiki/disposal/local-recycling-centers">Find Centers</a>
+    </section>
+
+    <Faq items={faqItems} heading="Kottayam E-Waste FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .location-page {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .fees-section ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+  .fees-section li {
+    margin-bottom: 0.5rem;
+  }
+  .service-list {
+    background: var(--color-surface-strong);
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

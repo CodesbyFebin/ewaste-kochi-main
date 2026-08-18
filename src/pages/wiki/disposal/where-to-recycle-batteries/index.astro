@@ -1,0 +1,380 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Where to Recycle Batteries: Safe Disposal & Locations";
+const description =
+  "Complete guide to recycling batteries in Kochi. Find safe disposal locations for all battery types including lithium, lead-acid, UPS, inverter, and laptop batteries. Learn proper handling and scrap pricing.";
+const path = "/wiki/disposal/where-to-recycle-batteries";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Disposal Methods", path: "/wiki/disposal/" },
+  { name: "Where to Recycle Batteries", path },
+];
+
+const faqItems = [
+  {
+    q: "Are swollen batteries safe to handle?",
+    a: "Swollen batteries are hazardous and should not be handled without protection. Store them in a plastic container away from heat, metal, and other substances. Contact Ewaste Kochi immediately for safe collection.",
+  },
+  {
+    q: "Can lithium batteries be recycled at home?",
+    a: "Lithium batteries require special handling and should be taken to certified collection points. Do not throw in regular waste. Book pickup through Ewaste Kochi for safe recycling.",
+  },
+  {
+    q: "What's the difference between battery types?",
+    a: "Lead-acid (car/inverter): heavy, needs special collection. Lithium (phone, laptop, power banks): lighter but more reactive. Li-ion: similar to lithium but newer chemistry. Each requires specific recycling processes.",
+  },
+  {
+    q: "Do different batteries have different scrap values?",
+    a: "Yes. Lithium batteries have higher scrap value than lead-acid. The value depends on battery type, voltage, and condition. Request a bulk quote through our platform for accurate pricing.",
+  },
+  {
+    q: "How should I safely store batteries before disposal?",
+    a: "Store in a cool, dry place in plastic containers away from metal objects. Tape battery terminals to prevent short circuits. Separate different types to avoid chemical reactions.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="battery-guide">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Battery Recycling Guide</p>
+        <h1>Where to Recycle Batteries Safely</h1>
+        <p class="lede">
+          Complete guide to recycling all battery types in Kochi and Kerala. 
+          Learn safe handling for lithium, lead-acid, UPS, and inverter batteries, 
+          find certified collection points, and understand proper storage methods 
+          before disposal.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/battery-recycling.webp"
+        alt="Various battery types - lithium, lead-acid, and UPS batteries ready for recycling"
+        width="1200"
+        height="675"
+        loading="lazy"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        Batteries can be recycled in Kochi through certified pickup services like Ewaste Kochi 
+        or at designated collection centers. Store batteries safely in plastic containers away 
+        from heat and metal. Different battery types have different scrap values, with lithium 
+        batteries typically having the highest value per kg.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I have several batteries to recycle including lithium and lead-acid. How should I proceed?" />
+
+    <section class="battery-types" aria-labelledby="types-heading">
+      <h2 id="types-heading">Battery Types & Recycling Options</h2>
+      
+      <div class="type-grid">
+        <div class="type-card">
+          <h3>Lithium Batteries</h3>
+          <p><strong>Used in:</strong> Laptops, phones, power banks, tablets</p>
+          <p><strong>Recycling:</strong> Requires specialized recovery. Contact certified e-waste recyclers.</p>
+          <p><strong>Safety:</strong> Store in cool, dry place. Handle with gloves if damaged.</p>
+        </div>
+
+        <div class="type-card">
+          <h3>Lead-Acid Batteries</h3>
+          <p><strong>Used in:</strong> Inverters, UPS, cars, emergency lighting</p>
+          <p><strong>Recycling:</strong> Most common type. Available at battery dealers and scrap centers.</p>
+          <p><strong>Safety:</strong> Wear gloves. Battery acid requires neutralization before handling.</p>
+        </div>
+
+        <div class="type-card">
+          <h3>Li-ion Batteries</h3>
+          <p><strong>Used in:</strong> Modern laptops, electric vehicles, storage systems</p>
+          <p><strong>Recycling:</strong> Advanced recovery technology. Limited collection points.</p>
+          <p><strong>Safety:</strong> Never puncture. Fire risk if damaged. Store upright.</p>
+        </div>
+
+        <div class="type-card">
+          <h3>Button & Coin Cells</h3>
+          <p><strong>Used in:</strong> Watches, remote controls, toys, calculators</p>
+          <p><strong>Recycling:</strong> Collect separately. Available at electronics retailers.</p>
+          <p><strong>Safety:</strong> Small size makes them choking hazard. Prevent ingestion.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="collection-points" aria-labelledby="points-heading">
+      <h2 id="points-heading">Where to Recycle Batteries in Kochi</h2>
+      
+      <p>Contact us to schedule battery pickup at your location. We handle all battery types 
+      and provide proper documentation for business requirements.</p>
+      
+      <ul class="point-list">
+        <li>
+          <strong>Ewaste Kochi Pickup Service</strong>
+          <p>Book doorstep collection for all battery types. We handle transportation and 
+          provide certified recycling with documentation.</p>
+        </li>
+        <li>
+          <strong>Certified Battery Recycling Centers</strong>
+          <p>Authorized facilities for lead-acid and lithium battery recycling. Locations 
+          available upon request for your area.</p>
+        </li>
+        <li>
+          <strong>Authorized Dealer Networks</strong>
+          <p>Many electronics retailers and service centers accept used batteries. 
+          Check with local stores before visiting.</p>
+        </li>
+        <li>
+          <strong>Community Collection Drives</strong>
+          <p>Organized by housing societies and local businesses. Contact Ewaste Kochi 
+          to coordinate bulk collection events.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="scrap-pricing" aria-labelledby="price-heading">
+      <h2 id="price-heading">Battery Scrap Pricing 2026</h2>
+      
+      <div class="pricing-note">
+        <p>Prices are approximate and based on current market rates in Kerala. Actual prices 
+        depend on battery brand, voltage, charge level, and condition.</p>
+      </div>
+      
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>Battery Type</th>
+            <th>Typical Price (per kg)</th>
+            <th>Common Sources</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Lithium (Laptop/Power Bank)</td>
+            <td>₹400 - ₹800</td>
+            <td>Phone, laptop, tablet</td>
+          </tr>
+          <tr>
+            <td>Lead-Acid (Inverter/UPS)</td>
+            <td>₹60 - ₹120</td>
+            <td>Home inverters, office UPS</td>
+          </tr>
+          <tr>
+            <td>Li-ion (EV/Storage)</td>
+            <td>₹500 - ₹900</td>
+            <td>Battery packs, power stations</td>
+          </tr>
+          <tr>
+            <td>Button Cells</td>
+            <td>₹5 - ₹20</td>
+            <td>Watches, remotes, toys</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p class="note">For bulk quantity pricing, request a detailed quote with photos and battery specifications.</p>
+    </section>
+
+    <section class="safety-guide" aria-labelledby="safety-heading">
+      <h2 id="safety-heading">Battery Safety Storage Guide</h2>
+      
+      <div class="safety-grid">
+        <div class="safety-item">
+          <h3>Before Recycling</h3>
+          <ul>
+            <li>Turn off devices completely</li>
+            <li>Remove batteries carefully</li>
+            <li>Empty any remaining charge</li>
+            <li>Label and separate different types</li>
+          </ul>
+        </div>
+        <div class="safety-item">
+          <h3>Storage Guidelines</h3>
+          <ul>
+            <li>Use non-conductive plastic containers</li>
+            <li>Maintain cool, dry environment</li>
+            <li>Tape battery terminals</li>
+            <li>Keep away from sparks or flames</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Wiki Guides</h2>
+      <a href="/wiki/disposal/how-to-recycle-electronics-at-home">Recycling Electronics at Home</a>
+      <a href="/wiki/technical/store-swell-batteries-safely">Storing Swollen Batteries Safely</a>
+      <a href="/wiki/sales/battery-scrap-markets">Battery Scrap Markets</a>
+      <a href="/wiki/disposal/e-waste-pickup-services">E-Waste Pickup Services</a>
+      <a href="/battery-recycling/">Our Battery Recycling Service</a>
+      <a href="/wiki/locations/e-waste-collection-kochi">E-Waste Collection in Kochi</a>
+    </section>
+
+    <Sources items={[
+      { title: "Battery Waste Management Guidelines", href: "https://bcmaindia.com", publisher: "Battery Collector's Association of India" },
+      { title: "CPCB E-Waste Guidelines", href: "https://cpcb.nic.in", publisher: "Central Pollution Control Board" },
+    ]} />
+
+    <Faq items={faqItems} heading="Battery Recycling FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .battery-guide {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .type-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .type-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .type-card h3 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+    font-size: 1.1rem;
+  }
+  .point-list {
+    list-style: none;
+    padding: 0;
+  }
+  .point-list li {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .point-list li:first-child {
+    margin-top: 0;
+  }
+  .point-list strong {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  .price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+  .price-table th,
+  .price-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border: 1px solid var(--color-border);
+  }
+  .price-table th {
+    background: var(--color-surface-strong);
+  }
+  .safety-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .safety-item ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin: 0.5rem 0 0;
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .type-grid, .safety-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

@@ -1,0 +1,374 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Monitor & Printer Disposal: Toner & Hazardous Waste";
+const description =
+  "Guide to disposing of monitors and printers in Kochi. Learn about CRT/LCD monitor recycling, toner cartridge disposal, inkjet printer recycling, and hazardous materials handling.";
+const path = "/wiki/disposal/monitor-and-printer-disposal";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Disposal Methods", path: "/wiki/disposal/" },
+  { name: "Monitor & Printer Disposal", path },
+];
+
+const faqItems = [
+  {
+    q: "Are toner cartridges recyclable?",
+    a: "Yes, toner cartridges are widely recyclable. Many manufacturers offer return programs. Empty cartridges can be refilled or recycled for plastic and metal recovery. Never throw toner in regular waste.",
+  },
+  {
+    q: "Is printer paper considered e-waste?",
+    a: "Printer paper is regular waste, not e-waste. However, toner cartridges, ink cartridges, and the printers themselves are electronic devices requiring proper recycling.",
+  },
+  {
+    q: "What's special about CRT monitor disposal?",
+    a: "CRT monitors contain high-voltage components and leaded glass. They require specialized recycling facilities. Flat-screen LCD/LED monitors have lower hazardous content but still need proper e-waste recycling.",
+  },
+  {
+    q: "Do monitors contain hazardous materials?",
+    a: "CRT monitors: lead in glass, cadmium in phosphors. LCD/LED: mercury in backlights (especially LED-backlit LCD). All contain valuable rare earth elements and circuit boards requiring controlled recycling.",
+  },
+  {
+    q: "Can I refurbish and sell old printers?",
+    a: "Working, clean printers can be sold through local buyers or donation programs. Non-functional printers should be recycled. Contact Ewaste Kochi for bulk printer disposal options.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="monitor-printer-disposal">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Office Equipment Recycling</p>
+        <h1>Monitor & Printer Disposal</h1>
+        <p class="lede">
+          Complete guide to safely disposing of monitors and printers in Kochi. 
+          Learn about toner cartridge recycling, CRT disposal requirements, 
+          inkjet printer recycling, and proper handling of hazardous components.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/printer-peripheral-recycling.webp"
+        alt="Monitors and printers being prepared for proper disposal and recycling"
+        width="1200"
+        height="675"
+        loading="lazy"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        Monitors and printers should be recycled through authorized e-waste channels. 
+        Separate toner cartridges for separate recycling. CRT monitors need special 
+        handling due to lead content. Toner and ink cartridges can be returned to 
+        manufacturers or recycled independently.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I have several old monitors and printers to dispose of. How should I handle the toner cartridges?" />
+
+    <section class="device-types" aria-labelledby="types-heading">
+      <h2 id="types-heading">Types of Devices & Proper Handling</h2>
+      
+      <div class="device-grid">
+        <div class="device-card">
+          <h3>CRT Monitors</h3>
+          <p><strong>Contained:</strong> Leaded glass, mercury vapor tubes, high voltage components</p>
+          <p><strong>Disposal:</strong> Requires specialized recycling. NOT accepted at general centers.</p>
+          <p><strong>Preparation:</strong> Wrap screen, label as CRT. Handle with care due to weight and glass.</p>
+        </div>
+
+        <div class="device-card">
+          <h3>LCD Monitors</h3>
+          <p><strong>Contained:</strong> Liquid crystals, backlight lamps (some with mercury)</p>
+          <p><strong>Disposal:</strong> Standard e-waste recycling. Lighter than CRT.</p>
+          <p><strong>Preparation:</strong> Separate stand/base. Remove cables. Note size for logistics.</p>
+        </div>
+
+        <div class="device-card">
+          <h3>Laser Printers</h3>
+          <p><strong>Contained:</strong> Toner cartridges, fuser units (containing metals), circuit boards</p>
+          <p><strong>Disposal:</strong> Toner and printer both recycled. Empty cartridges collected separately.</p>
+          <p><strong>Preparation:</strong> Remove toner cartridges. Secure any remaining toner.</p>
+        </div>
+
+        <div class="device-card">
+          <h3>Inkjet Printers</h4>
+          <p><strong>Contained:</strong> Ink cartridges, electronic components, plastic housing</p>
+          <p><strong>Disposal:</strong> Ink cartridges often returnable to manufacturers. Printer recycled.</p>
+          <p><strong>Preparation:</strong> Remove ink cartridges. Clean any ink residue.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="toner-recycling" aria-labelledby="toner-heading">
+      <h2 id="toner-heading">Toner & Ink Cartridge Recycling</h2>
+      
+      <div class="toner-content">
+        <p><strong>Manufacturer Programs:</strong> Most brands (HP, Canon, Epson, Brother) offer free cartridge return programs. Order online or drop at collection points.</p>
+        
+        <p><strong>Local Return Options:</strong> Print shops, office supply stores, and authorized service centers often accept empty cartridges.</p>
+        
+        <p><strong>Recycling Value:</strong> Toner cartridges typically have 10-30% plastic metal content. Value varies by brand and fill level. Some offer monetary credits.</p>
+      </div>
+      
+      <div class="return-steps">
+        <div class="return-step">
+          <h4>How to Return Cartridges</h4>
+          <ol>
+            <li>Shake cartridge to empty remaining toner/ink</li>
+            <li>Tape opening to prevent spills</li>
+            <li>Air-dry for 2 hours before handling</li>
+            <li>Include in pickup request or mail to return address</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="hazardous-waste" aria-labelledby="hazardous-heading">
+      <h2 id="hazardous-heading">Hazardous Components Handling</h2>
+      
+      <table class="hazard-table">
+        <thead>
+          <tr>
+            <th>Component</th>
+            <th>Hazard Type</th>
+            <th>Proper Handling</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>CRT Glass</td>
+            <td>Lead, cadmium</td>
+            <td>Specialist recycling required</td>
+          </tr>
+          <tr>
+            <td>LCD Backlight</td>
+            <td>Mercury (edge-lit)</td>
+            <td>Separate collection, hazardous waste channel</td>
+          </tr>
+          <tr>
+            <td>Toner Powder</td>
+            <td>Fine particulates</td>
+            <td>Store in sealed container, don't breathe</td>
+          </tr>
+          <tr>
+            <td>Ink Cartridges</td>
+            <td>Organic solvents</td>
+            <td>Seal, label, don't mix with other waste</td>
+          </tr>
+          <tr>
+            <td>Thermal Fusers</td>
+            <td>Fluoropolymers</td>
+            <td>Keep intact, recycle with device</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="value-options" aria-labelledby="value-heading">
+      <h2 id="value-heading">Value Recovery Options</h2>
+      
+      <ul class="value-list">
+        <li><strong>Sell Working Devices:</strong> Functional printers and monitors have resale value. Contact Ewaste Kochi for valuation.</li>
+        <li><strong>Donate:</strong> Schools and NGOs often need working printers and monitors for digital literacy programs.</li>
+        <li><strong>Recycling Value:</strong> Non-working devices have scrap value for metals, plastics, and precious components.</li>
+        <li><strong>Trade-In Programs:</strong> Some retailers offer credit toward new purchases when recycling old equipment.</li>
+      </ul>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Wiki Guides</h2>
+      <a href="/wiki/disposal/e-waste-pickup-services">Pickup Services</a>
+      <a href="/wiki/technical/hard-drive-data-destruction">Data Destruction</a>
+      <a href="/wiki/sales/office-equipment-buyback">Office Equipment Buyback</a>
+      <a href="/wiki/disposal/how-to-recycle-electronics-at-home">Home Recycling Guide</a>
+      <a href="/blog/copier-disposal-guide-for-kochi-users/">Blog: Copier Disposal</a>
+    </section>
+
+    <Sources items={[
+      { title: "Printer Cartridge Recycling Guide", href: "https://www.hp.com/recycle", publisher: "HP" },
+      { title: "LCD Monitor Recycling Guidelines", href: "https://www.toclite.com", publisher: "LCD recycling experts" },
+    ]} />
+
+    <Faq items={faqItems} heading="Monitor & Printer Disposal FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .monitor-printer-disposal {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .device-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .device-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .device-card p {
+    margin: 0.25rem 0;
+    font-size: 0.85rem;
+  }
+  .toner-content {
+    margin-bottom: 1rem;
+  }
+  .return-steps {
+    background: var(--color-surface-strong);
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  .return-steps ol {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+    font-size: 0.9rem;
+  }
+  .return-steps ol li {
+    padding: 0.25rem 0;
+    position: relative;
+    padding-left: 1.25rem;
+  }
+  .return-steps ol li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+  }
+  .hazard-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+  .hazard-table th,
+  .hazard-table td {
+    padding: 0.5rem;
+    text-align: left;
+    border: 1px solid var(--color-border);
+    font-size: 0.85rem;
+  }
+  .hazard-table th {
+    background: var(--color-surface-strong);
+  }
+  .value-list {
+    list-style: none;
+    padding: 0;
+  }
+  .value-list li {
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .value-list li strong {
+    display: block;
+    color: var(--color-primary);
+    margin-bottom: 0.25rem;
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .device-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .value-list li {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

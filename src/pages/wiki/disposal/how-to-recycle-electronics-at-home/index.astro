@@ -1,0 +1,351 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import Sources from "../../../components/Sources.astro";
+import LongformExpansion from "../../../components/LongformExpansion.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "How to Recycle Electronics at Home: Step-by-Step Guide";
+const description =
+  "Complete step-by-step guide to recycling electronics at home in Kochi. Learn how to prepare devices, book pickup, safely separate batteries, and ensure proper data destruction before recycling.";
+const path = "/wiki/disposal/how-to-recycle-electronics-at-home";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Disposal Methods", path: "/wiki/disposal/" },
+  { name: "How to Recycle Electronics", path },
+];
+
+const faqItems = [
+  {
+    q: "Do I need to disassemble my devices before pickup?",
+    a: "No, leave devices assembled for pickup. Our team separates components at the facility. You may want to separate batteries beforehand for safety, especially swollen or damaged ones.",
+  },
+  {
+    q: "What electronics can I recycle at home?",
+    a: "Almost all electronics: computers, laptops, phones, tablets, printers, monitors, TVs, routers, chargers, and cables. Batteries (UPS, inverter, laptop, phone) should be separated.",
+  },
+  {
+    q: "How do I prepare devices for pickup?",
+    a: "List all items, separate batteries, back up any data you need, remove personal accounts from phones and computers, and prepare photos of items and your address for verification.",
+  },
+  {
+    q: "What if I have data-sensitive devices?",
+    a: "Our standard service includes basic data handling. For certified data destruction with documentation, request ITAD services specifically. Hard drives and servers require pre-agreed data destruction protocols.",
+  },
+  {
+    q: "Can I recycle electronics with my apartment society?",
+    a: "Yes. Coordinate with housing society management, ask other residents to contribute items, and request bulk pickup services. We handle apartment and community collections regularly.",
+  },
+  {
+    q: "What documentation do I receive after recycling?",
+    a: "You receive a pickup confirmation and collection report. For businesses requiring compliance documentation, request it during booking and additional records can be provided for a fee.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: title,
+    description,
+    totalTime: "PT30M",
+    tool: ["Smartphone for photos", "List of electronics", "Clean area for sorting"],
+    step: [
+      {
+        "@type": "HowToStep",
+        "@id": "step-1",
+        name: "Create an inventory list",
+        text: "List all electronics you want to recycle, noting brand, model, condition, and whether devices are working.",
+      },
+      {
+        "@type": "HowToStep",
+        "@id": "step-2",
+        name: "Separate batteries and accessories",
+        text: "Remove and separate all batteries (UPS, inverter, laptop, phone) and cables. Store batteries in a safe, non-conductive container.",
+      },
+      {
+        "@type": "HowToStep",
+        "@id": "step-3",
+        name: "Handle data-sensitive devices",
+        text: "Back up needed data, remove personal accounts, and consider factory reset or professional data destruction for smartphones, laptops, and storage devices.",
+      },
+      {
+        "@type": "HowToStep",
+        "@id": "step-4",
+        name: "Arrange pickup",
+        text: "Share your item list, photos, and location with Ewaste Kochi via WhatsApp or website form to schedule pickup.",
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "Do I need to disassemble my devices before pickup?", acceptedAnswer: { "@type": "Answer", text: faqItems[0].a } },
+      { "@type": "Question", name: "What electronics can I recycle at home?", acceptedAnswer: { "@type": "Answer", text: faqItems[1].a } },
+      { "@type": "Question", name: "How do I prepare devices for pickup?", acceptedAnswer: { "@type": "Answer", text: faqItems[2].a } },
+      { "@type": "Question", name: "What if I have data-sensitive devices?", acceptedAnswer: { "@type": "Answer", text: faqItems[3].a } },
+      { "@type": "Question", name: "Can I recycle electronics with my apartment society?", acceptedAnswer: { "@type": "Answer", text: faqItems[4].a } },
+    ],
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="howto-guide">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Step-by-Step Guide</p>
+        <h1>How to Recycle Electronics at Home</h1>
+        <p class="lede">
+          A practical, step-by-step guide to safely recycle your electronic devices at home 
+          in Kochi. Learn what to prepare, how to handle data security, and the right way 
+          to separate items for optimal pickup and recycling.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/recycling-basics.webp"
+        alt="Electronic devices being prepared for recycling - laptops, phones, tablets"
+        width="1200"
+        height="675"
+        loading="lazy"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        To recycle electronics at home: create an inventory list of all devices, separate 
+        batteries and accessories, handle data-sensitive items appropriately, and arrange 
+        pickup through Ewaste Kochi by sharing photos and location details. The process 
+        typically takes 30 minutes to prepare and 2-3 days for pickup confirmation.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="Hi, I want to book electronics recycling at my home in Kochi. How should I prepare?" />
+
+    <section class="process-steps" aria-labelledby="steps-heading">
+      <h2 id="steps-heading">Step-by-Step Recycling Process</h2>
+      
+      <ol>
+        <li>
+          <h3>Create Your Electronics Inventory</h3>
+          <p>List all devices you want to recycle - laptops, desktops, phones, tablets, 
+          monitors, printers, TVs, routers, and accessories. Include condition and 
+          working status if known.</p>
+        </li>
+        <li>
+          <h3>Separate Batteries and Accessories</h3>
+          <p>Remove all batteries (UPS, inverter, laptop, phone) and cables. Store 
+          batteries separately in a safe, non-conductive container. Batteries require 
+          different handling and have different scrap values.</p>
+        </li>
+        <li>
+          <h3>Handle Data Security</h3>
+          <p>For smartphones, laptops, computers, and storage devices: back up needed data, 
+          remove from your account, and consider factory reset. For business devices with 
+          sensitive data, request certified data destruction services.</p>
+        </li>
+        <li>
+          <h3>Photograph and Document</h4>
+          <p>Take clear photos of each device showing identification (serial numbers), 
+          condition, and any damage. Include photos of batteries and accessories 
+          separately. Share these with your pickup request for faster confirmation.</p>
+        </li>
+        <li>
+          <h3>Share Location and Arrange Pickup</h3>
+          <p>Use WhatsApp or our website form to share your item list, photos, and 
+          detailed address. Our team confirms pickup feasibility within 24 hours.</p>
+        </li>
+        <li>
+          <h3>Pickup Day Preparation</h3>
+          <p>On pickup day, have devices easily accessible near your entrance. Inform 
+          the pickup team about any fragile items or special handling requirements 
+          like swollen batteries.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="tips-section" aria-labelledby="tips-heading">
+      <h2 id="tips-heading">Additional Preparation Tips</h2>
+      
+      <div class="tip-grid">
+        <div class="tip-card">
+          <h3>Battery Safety</h3>
+          <p>Swollen or damaged batteries require special handling. Store them in a 
+          plastic container away from flammable materials. Do not attempt to puncture 
+          or crush them. Contact us immediately if you have damaged batteries.</p>
+        </div>
+        <div class="tip-card">
+          <h3>Data Backup</h3>
+          <p>Always back up important files before recycling. For businesses, ensure 
+          all devices are removed from MDM/MAM solutions and corporate accounts.</p>
+        </div>
+        <div class="tip-card">
+          <h3>Apartment Collections</h3>
+          <p>For housing societies, coordinate with the association manager. We offer 
+          bulk pickup services and can handle collection from multiple apartments 
+          at once on a scheduled day.</p>
+        </div>
+        <div class="tip-card">
+          <h3>Item Documentation</h3>
+          <p>Knowing serial numbers and purchase dates helps with accurate valuation 
+          and documentation. Take photos of labels before disposal.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Wiki Guides</h2>
+      <a href="/wiki/disposal/where-to-recycle-batteries">Where to Recycle Batteries</a>
+      <a href="/wiki/technical/hard-drive-data-destruction">Hard Drive Data Destruction</a>
+      <a href="/wiki/technical/store-swell-batteries-safely">Storing Swollen Batteries Safely</a>
+      <a href="/wiki/locations/e-waste-collection-kochi">E-Waste Collection in Kochi</a>
+      <a href="/blog/how-to-prepare-electronics-for-recycling/">Blog: Preparation Checklist</a>
+      <a href="/wiki/disposal/mobile-phone-and-tablet-recycling">Mobile Phone Recycling Guide</a>
+    </section>
+
+    <LongformExpansion
+      label="Home electronics recycling preparation"
+      audience="Kochi residents, apartment societies, small businesses, and individual users"
+      localIntent="Home users in Kochi need practical, low-effort instructions that account for apartment restrictions, data privacy concerns, and battery safety requirements."
+      items={["laptops", "desktops", "phones", "tablets", "printers", "monitors", "batteries", "TVs", "cables"]}
+      themes={[
+        "How to inventory household electronics efficiently",
+        "Best practices for separating and safely storing batteries",
+        "Data wiping vs. professional destruction for personal devices",
+        "What to do for apartment dwellers without easy access",
+        "Photos and documentation that speed up pickup confirmation"
+      ]}
+    />
+
+    <Sources items={[
+      { title: "E-Waste (Management) Rules 2022", href: "https://cpcb.nic.in/rules-6/", publisher: "CPCB" },
+      { title: "Battery Handling Guidelines", href: "https://www.mospi.gov.in", publisher: "Government of India" },
+    ]} />
+
+    <Faq items={faqItems} heading="Home Recycling FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .howto-guide {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .process-steps ol {
+    padding: 1rem 1rem 1rem 2rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .process-steps li {
+    margin-bottom: 1.5rem;
+  }
+  .process-steps li:last-child {
+    margin-bottom: 0;
+  }
+  .process-steps h3 {
+    margin: 0 0 0.25rem;
+    font-size: 1.15rem;
+  }
+  .process-steps p {
+    margin: 0;
+    max-width: 60ch;
+  }
+  .tip-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .tip-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .tip-card h3 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+    font-size: 1rem;
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .process-steps ol {
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .process-steps li {
+      margin-bottom: 0.5rem;
+    }
+    .process-steps li h3 {
+      font-size: 1.05rem;
+    }
+    .tip-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

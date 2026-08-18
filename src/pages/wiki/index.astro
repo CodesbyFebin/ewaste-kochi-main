@@ -1,0 +1,369 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../components/DirectAnswer.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import Faq from "../../components/Faq.astro";
+import Sources from "../../components/Sources.astro";
+import LongformExpansion from "../../components/LongformExpansion.astro";
+import { BUSINESS, SITE_URL } from "../../data/site";
+
+const title = "The E-Waste Recycling Encyclopedia: The Ultimate Guide";
+const description =
+  "Complete encyclopedia of e-waste recycling in Kochi and Kerala. Learn what is e-waste, how to recycle electronics, disposal methods, scrap values, and location-specific services.";
+const path = "/wiki/";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path },
+];
+
+const faqItems = [
+  {
+    q: "What is e-waste?",
+    a: "E-waste (electronic waste) is any discarded electronic device or component, including computers, phones, TVs, batteries, printers, and accessories. In Kerala, proper e-waste disposal is required by the E-Waste (Management) Rules, 2022.",
+  },
+  {
+    q: "How do I recycle electronics at home?",
+    a: "You can recycle electronics in Kochi by booking a pickup through Ewaste Kochi, visiting local recycling centers, or dropping off at authorized collection points. Start by listing your items and separating batteries for safer handling.",
+  },
+  {
+    q: "Where can I sell my old electronics in Kochi?",
+    a: "Old electronics in Kochi can be sold through local buyers, online platforms like OLX or Facebook Marketplace, or certified e-waste recyclers who offer buyback programs with transparent pricing based on condition and quantity.",
+  },
+  {
+    q: "What are the E-Waste Management Rules 2022?",
+    a: "India's E-Waste (Management) Rules, 2022 require proper handling, documentation, and authorized recycling of electronic waste. Businesses must maintain records, and producers are responsible for Extended Producer Responsibility (EPR) under the rules.",
+  },
+  {
+    q: "Can I dispose of batteries with regular trash?",
+    a: "No. Batteries contain hazardous materials and must be recycled through proper channels. UPS, inverter, lithium, and other batteries have specific disposal requirements and separate handling procedures.",
+  },
+  {
+    q: "Is data destruction guaranteed when recycling my laptop?",
+    a: "Ewaste Kochi offers certified data destruction services including hard drive wiping, degaussing, and physical shredding with documentation. Ask for specific data destruction protocols before disposal.",
+  },
+  {
+    q: "How much is my old laptop worth in Kochi?",
+    a: "Scrap value varies by brand, age, and condition. Typically, laptops range from ₹500-₹5000 depending on specifications. Request a condition-based quote with photos for accurate pricing.",
+  },
+  {
+    q: "Where to recycle batteries in Kochi?",
+    a: "Batteries can be recycled through Ewaste Kochi's pickup service or at designated collection centers. UPS and inverter batteries require separate handling due to their weight and chemistry.",
+  },
+  {
+    q: "What items count as e-waste in India?",
+    a: "E-waste includes all electronic devices with a circuit board: computers, phones, TVs, monitors, printers, batteries, chargers, cables, and accessories. Any device with electronics and a power source typically qualifies.",
+  },
+  {
+    q: "How does e-waste recycling work?",
+    a: "The recycling process involves collection, data destruction (for storage devices), disassembly, material recovery, and proper disposal of hazardous components. Non-functional items may be shredded while functional items can be refurbished.",
+  },
+];
+
+const sourceItems = [
+  {
+    title: "E-Waste Management Rules 2022 - Central Pollution Control Board",
+    href: "https://cpcb.nic.in/rules-6/",
+    publisher: "Central Pollution Control Board",
+    note: "Official CPCB resource page for e-waste rules and updates.",
+  },
+  {
+    title: "EPR E-Waste portal",
+    href: "https://eprewastecpcb.in/",
+    publisher: "Central Pollution Control Board",
+    note: "Official e-waste EPR portal for producer and recycler workflows.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+    image: `${SITE_URL}/images/blog-pillars/recycling-basics.webp`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="wiki-encyclopedia">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">E-Waste Knowledge Hub</p>
+        <h1>The E-Waste Recycling Encyclopedia</h1>
+        <p class="lede">
+          Your comprehensive guide to understanding e-waste, safe disposal methods, 
+          recycling processes, and location-specific services in Kochi and Kerala. 
+          From "what is e-waste" to detailed how-to guides for pickup, data destruction, 
+          and scrap valuation.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/recycling-basics.webp"
+        alt="E-waste recycling encyclopedia - covers disposal methods, pickup services, and recycling processes"
+        width="1200"
+        height="675"
+        loading="eager"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        This encyclopedia covers everything about e-waste recycling in Kochi: what 
+        constitutes e-waste, how to dispose of electronics safely, where to recycle 
+        batteries, how scrap prices work, and location-specific pickup services 
+        across Kerala. Each topic is explained with practical steps and direct links 
+        to relevant services.
+      </p>
+    </DirectAnswer>
+
+    <DirectAnswer heading="Definitive answer">
+      <p>
+        E-waste is any electronic device or component that has been discarded. Proper 
+        recycling in Kochi involves booking a pickup through certified services like 
+        Ewaste Kochi, which handles collection, data destruction (for storage media), 
+        and responsible material recovery. Batteries require separate handling due to 
+        their hazardous nature, and businesses must follow EPR (Extended Producer 
+        Responsibility) guidelines under the 2022 Rules.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="Hi, I need information from the E-Waste Encyclopedia - please advise." />
+
+    <section class="topic-grid" aria-labelledby="topics-heading">
+      <h2 id="topics-heading">Explore Topics by Category</h2>
+      
+      <div class="topic-cluster">
+        <h3>Disposal & Collection Methods (10 guides)</h3>
+        <ul class="topic-list">
+          <li><a href="/wiki/disposal/how-to-recycle-electronics-at-home">How to Recycle Electronics at Home</a></li>
+          <li><a href="/wiki/disposal/where-to-donate-electronics">Where to Donate Electronics</a></li>
+          <li><a href="/wiki/disposal/where-to-recycle-batteries">Where to Recycle Batteries</a></li>
+          <li><a href="/wiki/disposal/e-waste-pickup-services">E-Waste Pickup Services</a></li>
+          <li><a href="/wiki/disposal/local-recycling-centers">Local Recycling Centers</a></li>
+          <li><a href="/wiki/disposal/e-waste-collection-rules">E-Waste Collection Rules & Regulations (India 2026)</a></li>
+          <li><a href="/wiki/disposal/how-to-dispose-of-tvs">How to Dispose of TVs</a></li>
+          <li><a href="/wiki/disposal/laptop-and-computer-disposal">Laptop & Computer Disposal</a></li>
+          <li><a href="/wiki/disposal/monitor-and-printer-disposal">Monitor & Printer Disposal</a></li>
+          <li><a href="/wiki/disposal/mobile-phone-and-tablet-recycling">Mobile Phone & Tablet Recycling</a></li>
+        </ul>
+      </div>
+
+      <div class="topic-cluster">
+        <h3>Sales, Buyback & Value (10 guides)</h3>
+        <ul class="topic-list">
+          <li><a href="/wiki/sales/where-to-sell-electronics-locally">Where to Sell Electronics Locally</a></li>
+          <li><a href="/wiki/sales/online-selling-platforms">Online Selling Platforms for Used Electronics</a></li>
+          <li><a href="/wiki/sales/e-waste-scrap-buyers">E-Waste Scrap Buyers</a></li>
+          <li><a href="/wiki/sales/e-waste-scrap-prices">E-Waste Scrap Prices</a></li>
+          <li><a href="/wiki/sales/sell-broken-electronics">Selling Broken or Damaged Electronics</a></li>
+          <li><a href="/wiki/sales/office-equipment-buyback">Office Equipment Buyback</a></li>
+          <li><a href="/wiki/sales/business-electronics-recycling">Business Electronics Recycling</a></li>
+          <li><a href="/wiki/sales/choose-secure-itad-vendor">How to Choose a Secure ITAD Vendor</a></li>
+          <li><a href="/wiki/sales/sell-old-crt-tvs">Selling Old CRT TVs</a></li>
+          <li><a href="/wiki/sales/battery-scrap-markets">Battery Scrap Markets</a></li>
+        </ul>
+      </div>
+
+      <div class="topic-cluster">
+        <h3>Location-Specific Services (15 guides)</h3>
+        <ul class="topic-list">
+          <li><a href="/wiki/locations/e-waste-collection-kochi">E-Waste Collection in Kochi</a></li>
+          <li><a href="/wiki/locations/e-waste-trivandrum">E-Waste Services in Trivandrum</a></li>
+          <li><a href="/wiki/locations/e-waste-kottayam-ernakulam">E-Waste Disposal in Kottayam & Ernakulam</a></li>
+          <li><a href="/wiki/locations/e-waste-thrissur-palakkad">E-Waste Services in Thrissur & Palakkad</a></li>
+          <li><a href="/wiki/locations/scrap-shops-kakkanad-edappally">Scrap Shops in Kakkanad & Edappally</a></li>
+          <li><a href="/wiki/locations/e-waste-kerala-licensing">E-Waste in Kerala: Licensing & Authorized Entities</a></li>
+          <li><a href="/wiki/locations/e-waste-collection-near-me-list">E-Waste Collection Near Me: Directory</a></li>
+          <li><a href="/wiki/locations/waste-disposal-kakkanad">Waste Disposal Services in Kakkanad</a></li>
+          <li><a href="/wiki/locations/e-waste-aluva-thrissur">E-Waste Management in Aluva & Thrissur</a></li>
+          <li><a href="/wiki/locations/data-recovery-disposal-kochi">Data Recovery & Disposal in Kochi</a></li>
+          <li><a href="/wiki/locations/secure-server-room-disposal">Secure Server Room Disposal</a></li>
+          <li><a href="/wiki/locations/e-waste-hospitals-healthcare">E-Waste Services for Hospitals</a></li>
+          <li><a href="/wiki/locations/itad-defense-government">ITAD for Defense & Government</a></li>
+          <li><a href="/wiki/locations/e-waste-small-business">E-Waste Management for Small Businesses</a></li>
+          <li><a href="/wiki/locations/e-waste-awareness-kerala">E-Waste Awareness in Kerala</a></li>
+        </ul>
+      </div>
+
+      <div class="topic-cluster">
+        <h3>Technical & Process Guides (15 guides)</h3>
+        <ul class="topic-list">
+          <li><a href="/wiki/technical/what-is-e-waste">What is E-Waste?</a></li>
+          <li><a href="/wiki/technical/types-of-electronic-waste">Types of Electronic Waste</a></li>
+          <li><a href="/wiki/technical/e-waste-recycling-process">E-Waste Recycling Process</a></li>
+          <li><a href="/wiki/technical/hard-drive-data-destruction">Hard Drive Data Destruction</a></li>
+          <li><a href="/wiki/technical/e-waste-security">E-Waste Security</a></li>
+          <li><a href="/wiki/technical/epr-e-waste-explained">Extended Producer Responsibility (EPR)</a></li>
+          <li><a href="/wiki/technical/choose-right-e-waste-recycler">How to Choose the Right E-Waste Recycler</a></li>
+          <li><a href="/wiki/technical/e-waste-laws-india-global">E-Waste Recycling Laws in India</a></li>
+          <li><a href="/wiki/technical/data-center-decommissioning-checklist">Data Center Decommissioning Checklist</a></li>
+          <li><a href="/wiki/technical/store-swell-batteries-safely">How to Store Swollen Batteries Safely</a></li>
+          <li><a href="/wiki/technical/e-waste-market-trends">E-Waste Market Trends & Price Analysis 2026</a></li>
+          <li><a href="/wiki/technical/environmental-impact-e-waste">Environmental Impact of E-Waste</a></li>
+          <li><a href="/wiki/technical/reuse-vs-recycle">Reuse vs. Recycle</a></li>
+          <li><a href="/wiki/technical/e-waste-circular-economy">E-Waste & Circular Economy</a></li>
+          <li><a href="/wiki/technical/e-waste-schools-education">E-Waste for Schools & Educational Institutions</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="related-links" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Resources</h2>
+      <div class="link-grid">
+        <a href="/blog/ultimate-guide-e-waste-recycling-kochi/">Blog: Ultimate Guide to E-Waste Recycling in Kochi</a>
+        <a href="/recycling/">Our Recycling Services</a>
+        <a href="/itad/">IT Asset Disposition Services</a>
+        <a href="/data-destruction/">Data Destruction Services</a>
+        <a href="/battery-recycling/">Battery Recycling</a>
+        <a href="/contact/">Contact Us for Questions</a>
+      </div>
+    </section>
+
+    <LongformExpansion
+      label="E-waste encyclopedia and knowledge hub"
+      audience="Kochi residents, businesses, students, and anyone seeking reliable e-waste information"
+      localIntent="Kochi and Kerala users specifically need guidance for local recycling options, government rules compliance, and location-based pickup services."
+      items={["laptops", "desktops", "phones", "batteries", "printers", "monitors", "TVs", "servers", "accessories", "cables"]}
+      themes={[
+        "Understanding e-waste definitions and what qualifies as electronic waste",
+        "The environmental and data security risks of improper disposal",
+        "Step-by-step processes for safe home and business recycling",
+        "Location-based collection options across Kochi and Kerala",
+        "The difference between reuse, resale, and recycling pathways",
+        "Current regulations including E-Waste Rules 2022 and EPR requirements",
+        "Data destruction methods and documentation for compliance",
+        "Battery-specific handling and scrap value considerations",
+        ]
+      />
+    />
+
+    <Sources items={sourceItems} />
+
+    <Faq items={faqItems} heading="E-Waste Encyclopedia FAQ" />
+  </article>
+</Layout>
+
+<style>
+  .wiki-encyclopedia {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3.25rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .topic-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .topic-cluster h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    color: var(--color-text);
+  }
+  .topic-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+  }
+  .topic-list li {
+    padding-left: 1.25rem;
+    position: relative;
+  }
+  .topic-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: 800;
+  }
+  .topic-list a {
+    text-decoration: none;
+    color: var(--color-text);
+    transition: color 0.15s ease;
+  }
+  .topic-list a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+  .related-links {
+    margin-top: 2rem;
+  }
+  .related-links h2 {
+    margin-bottom: 1rem;
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid a {
+    display: block;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .topic-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .topic-cluster h3 {
+      grid-column: 1 / -1;
+    }
+  }
+</style>

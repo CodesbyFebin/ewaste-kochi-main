@@ -1,0 +1,204 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Data Center Decommissioning: IT Asset Disposal Guide";
+const description =
+  "Complete guide to data center decommissioning. Learn about bulk IT asset disposal, data destruction, chain of custody, and compliance for enterprise infrastructure retirement.",
+const path = "/wiki/technical/data-center-decommissioning";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Technical Guides", path: "/wiki/technical/" },
+  { name: "Data Center Decommissioning", path },
+];
+
+const faqItems = [
+  {
+    q: "How many servers can be collected in one pickup?",
+    a: "We accommodate batches of 20+ servers with advance scheduling. Larger data centers may require multiple visits or facility-based collection with proper logistics.",
+  },
+  {
+    q: "What about racked equipment?",
+    a: "Racks are collected separately. We coordinate with your facilities team for safe unracking and cable management before collection.",
+  },
+  {
+    q: "Do you provide asset tracking?",
+    a: "Yes, we offer per-device asset inventory and chain of custody documentation. Serial numbers are logged at pickup and each processing stage.",
+  },
+  {
+    q: "How is data handled on server drives?",
+    a: "Enterprise-grade data destruction with device-level wiping, degaussing, or physical shredding. Certificates provided for regulatory compliance.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="guide">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Enterprise ITAD</p>
+        <h1>Data Center Decommissioning</h1>
+        <p class="lede">
+          Comprehensive guide to decommissioning data center equipment 
+          with certified data destruction, asset tracking, and compliance 
+          documentation for enterprise infrastructure retirement.
+        </p>
+      </div>
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        Data center decommissioning requires planning for inventory, 
+        data sanitization, physical handling, and compliance reporting. 
+        Our ITAD services provide end-to-end management with chain of 
+        custody documentation and certificate of destruction.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="We're planning to decommission our data center. Can you coordinate bulk server pickup with documentation?" />
+
+    <section class="planning-section" aria-labelledby="planning-heading">
+      <h2 id="planning-heading">Pre-Decommission Planning</h2>
+      
+      <div class="planning-grid">
+        <div class="planning-item">
+          <h3>Asset Inventory</h3>
+          <p>Complete catalog of servers, storage, networking, and 
+          peripherals. Include serial numbers, specifications, and 
+          assignment details for tracking.</p>
+        </div>
+        <div class="planning-item">
+          <h3>Data Sanitization Plan</h3>
+          <p>Determine destruction method (wiping, degaussing, shredding) 
+          for each storage device type. Create wipe list and verification 
+          procedures.</p>
+        </div>
+        <div class="planning-item">
+          <h3>Logistics Coordination</h3>
+          <p>Plan equipment removal sequence. Schedule power-down, cable 
+          management, and transport vehicles. Coordinate with facilities 
+          team for access and security clearance.</p>
+        </div>
+        <div class="planning-item">
+          <h3>Removal Scheduling</h3>
+          <p>Book multiple pickups if needed. Coordinate with IT team for 
+          staging area preparation and equipment labeling for pickup.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="process-section" aria-labelledby="process-heading">
+      <h2 id="process-heading">Decommissioning Process</h2>
+      
+      <ol class="decom-steps">
+        <li>
+          <strong>Pre-Pickup Audit</strong>
+          <p>Verify item counts against inventory list. Confirm device 
+          types and serial numbers. Tag items for chain of custody tracking.</p>
+        </li>
+        <li>
+          <strong>Secure Data Sanitization</strong>
+          <p>Execute data destruction methods. Generate verification 
+          records. Certify completion with documentation.</p>
+        </li>
+        <li>
+          <li>Physical Collection & Transport</strong>
+          <p>Load equipment using certified procedures. Transport in 
+          secure vehicles to authorized processing facility with 
+          documented chain of custody.</p>
+        </li>
+        <li>
+          <strong>Processing & Material Recovery</strong>
+          <p>Dismantle equipment, recover materials, and extract 
+          precious metals. Generate recycling certificates and 
+          compliance reports.</p>
+        </li>
+      </ol>
+    </section>
+
+    <Faq items={faqItems} heading="Data Center Decommissioning FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .guide {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .planning-grid {
+    display: grid;
+    gap: 1rem;
+  }
+  .decom-steps {
+    display: grid;
+    gap: 1rem;
+  }
+  .decom-steps li {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .planning-grid, .decom-steps li {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>

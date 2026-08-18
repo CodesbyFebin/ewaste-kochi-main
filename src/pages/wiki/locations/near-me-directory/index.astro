@@ -1,0 +1,167 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "E-Waste Pickup Near Me: Kerala Location Directory";
+const description =
+  "Find e-waste pickup locations across Kerala. Directory for Kochi, Ernakulam, Thrissur, Trivandrum, Kottayam and other cities with collection availability and booking info.",
+const path = "/wiki/locations/near-me-directory";
+const lastUpdated = "2026-08-18";
+
+const cookieCutterLocations = [
+  { name: "Kochi", areas: "Ernakulam, Kakkanad, Aluva, Trivandrum" },
+  { name: "Thrissur", areas: "City center, Siva Temple area, Kunnamkulam" },
+  { name: "Trivandrum", areas: "Airport Road, Vaiyavilakku, Neyambattam" },
+  { name: "Kottayam", areas: "Town center, Kankakee, Palai" },
+  { name: "Aluva", areas: "Near metro, Champakulam Road, Pookkattukkad" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="directory-guide">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Location Directory</p>
+        <h1>E-Waste Pickup Near Me: Kerala</h1>
+        <p class="lede">
+          Complete directory of e-waste pickup locations across Kerala. 
+          Find collection availability, service types, and booking 
+          information for your area.
+        </p>
+      </div>
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        Use our Kerala location directory to find certified e-waste 
+        pickup services in your city. Each location page provides 
+        contact options, item acceptance list, and booking process.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I'm in [YOUR CITY] and need to book e-waste pickup. Can you check availability?" />
+
+    <section class="directory-section" aria-labelledby="dir-heading">
+      <h2 id="dir-heading">Major Cities with Service</h2>
+      
+      <div class="location-grid">
+        {cookieCutterLocations.map((loc) => (
+          <div class="location-card">
+            <h3>{loc.name}</h3>
+            <p class="areas">{loc.areas}</p>
+            <a href={`/wiki/locations/${loc.name === 'Trivandrum' ? 'e-waste-trivandrum' : loc.name === 'Kochi' ? 'e-waste-collection-kochi' : loc.name === 'Thrissur' ? 'thrissur' : loc.name === 'Kottayam' ? 'kottayam' : 'aluva'}/`}>Book Pickup</a>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="how-to-use" aria-labelledby="use-heading">
+      <h2 id="use-heading">How to Use the Directory</h2>
+      
+      <ol class="use-steps">
+        <li>
+          <strong>Find Your City</strong>
+          <p>Select your location from the directory or use the location 
+          link in the top navigation.</p>
+        </li>
+        <li>
+          <strong>Check Coverage</strong>
+          <p>Verify if your specific area is within our pickup zone. Some 
+          locations operate by feasibility check.</p>
+        </li>
+        <li>
+          <strong>Share Details</strong>
+          <p>Contact via WhatsApp with item count, types, and exact 
+          location details (building name, gate number, floor).</p>
+        </li>
+        <li>
+          <strong>Get Confirmation</strong>
+          <p>Receive feasibility check and available time slots within 
+          24 hours.</p>
+        </li>
+      </ol>
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .directory-guide {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .location-grid {
+    display: grid;
+    gap: 1rem;
+  }
+  .location-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .location-card a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .location-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

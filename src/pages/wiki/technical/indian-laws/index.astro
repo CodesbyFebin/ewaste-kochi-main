@@ -1,0 +1,237 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "E-Waste Laws in India: E-Waste (Management) Rules 2022";
+const description =
+  "Complete guide to India's E-Waste (Management) Rules, 2022. Understanding collection, storage, treatment, and trading requirements for electronic waste.";
+const path = "/wiki/technical/indian-laws";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Technical Guides", path: "/wiki/technical/" },
+  { name: "Indian E-Waste Laws", path },
+];
+
+const faqItems = [
+  {
+    q: "Who is responsible for compliance?",
+    a: "Both producers (10+ units/year) and consumers are responsible. Consumers should use authorized collection, storage, and recycling channels.",
+  },
+  {
+    q: "What are the penalties?",
+    a: "First offense: fine up to ₹1 lakh. Repeat offenses: fine up to ₹5 lakh. Repeated violations can lead to production license cancellation.",
+  },
+  {
+    q: "Do I need a license for collection?",
+    a: "Yes. Collection, storage, and treatment require authorization from State Pollution Control Board. Only authorized entities can provide services.",
+  },
+  {
+    q: "How do I know if a recycler is authorized?",
+    a: "Check KSPCB website or request authorization certificate. Authorized recyclers display their license number and KSPCB registration.",
+  },
+  {
+    q: "What items are covered?",
+    a: "All electronic devices with circuit boards and power sources. Includes IT hardware, communication devices, appliances, lighting, and batteries.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="laws-guide">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">E-Waste Management Rules</p>
+        <h1>E-Waste Laws in India</h1>
+        <p class="lede">
+          Complete guide to India's E-Waste (Management) Rules, 2022. 
+          Understanding your obligations and the legal framework for 
+          proper electronic waste handling in Kochi and across India.
+        </p>
+      </div>
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        The E-Waste Rules 2022 mandate extended producer responsibility, 
+        authorized treatment facilities, and proper documentation. Both 
+        businesses and consumers must use KSPCB-registered recyclers.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I'm setting up a new electronics business. Which licenses do I need under E-Waste Rules 2022?" />
+
+    <section class="rules-overview" aria-labelledby="rules-heading">
+      <h2 id="rules-heading">Key Provisions</h2>
+      
+      <div class="provision-grid">
+        <div class="provision-item">
+          <h3>Extended Producer Responsibility</h3>
+          <p>Producers of 10+ electronic units annually must ensure 
+          collection, treatment, and documentation of placed units.</p>
+        </div>
+        <div class="provision-item">
+          <h3>Authorized Dismantlers/Recyclers</h3>
+          <p>Only KSPCB-approved entities can perform collection, 
+          storage, treatment, and trading of e-waste.</p>
+        </div>
+        <div class="provision-item">
+          <h3>Collection Targets</h3>
+          <p>Minimum 85% collection of placed units over 3-year cycle. 
+          Annual targets increase with consecutive compliance years.</p>
+        </div>
+        <div class="provision-item">
+          <h3>Data Destruction</h3>
+          <p>Secure data destruction required before device processing. 
+          Certificate of destruction mandatory for data-bearing devices.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="consumer-rights" aria-labelledby="consumer-heading">
+      <h2 id="consumer-heading">What Consumers Must Do</h2>
+      
+      <ol class="consumer-steps">
+        <li>
+          <strong>Use Authorized Recyclers</strong>
+          <p>Only entrust electronics to KSPCB-registered collection 
+          and recycling services.</p>
+        </li>
+        <li>
+          <strong>Maintain Records</strong>
+          <p>Keep certificates of collection, data destruction, and 
+          material recovery for at least 5 years.</p>
+        </li>
+        <li>
+          <strong>Separate Components</strong>
+          <p>Batteries should be separated where possible. Remove 
+          personal data before collection.</p>
+        </li>
+        <li>
+          <strong>Report Violations</strong>
+          <p>Report unauthorized recycling activities to KSPCB or local 
+          pollution control authorities.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Resources</h2>
+      <a href="/wiki/technical/epr-india-rules/">EPR Compliance Guide</a>
+      <a href="/wiki/disposal/e-waste-collection-rules/">Collection Rules</a>
+      <a href="/wiki/technical/choose-recycler/">Find Recyclers</a>
+      <a href="/wiki/locations/kerala-licensing-ewaste/">Kerala Licensing</a>
+    </section>
+
+    <Faq items={faqItems} heading="E-Waste Laws FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .laws-guide {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .provision-grid {
+    display: grid;
+    gap: 1rem;
+  }
+  .provision-item {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .provision-item h3 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+  }
+  .consumer-steps {
+    display: grid;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  .consumer-steps li {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .provision-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

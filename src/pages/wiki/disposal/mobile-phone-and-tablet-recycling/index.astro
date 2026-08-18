@@ -1,0 +1,396 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Mobile Phone & Tablet Recycling: Data Wiping & Trade-Ins";
+const description =
+  "Complete guide to mobile phone and tablet recycling in Kochi. Learn about data wiping methods, trade-in programs, resale options, and proper handling for all smartphone and tablet types.";
+const path = "/wiki/disposal/mobile-phone-and-tablet-recycling";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Disposal Methods", path: "/wiki/disposal/" },
+  { name: "Mobile Phone & Tablet Recycling", path },
+];
+
+const faqItems = [
+  {
+    q: "Is factory reset enough for phone data wiping?",
+    a: "Factory reset alone is not secure enough. Use 'Encrypt device' then reset, or use dedicated wiping apps. For maximum security, physically remove storage chip or request certified data destruction service.",
+  },
+  {
+    q: "Can I trade in phones for cash?",
+    a: "Yes, many platforms offer trade-in values. Ewaste Kochi provides market-based quotes. For highest value, provide original box, accessories, and device condition details. Trade-ins faster than recycling for working phones.",
+  },
+  {
+    q: "Are 5G phones harder to recycle?",
+    a: "5G phone recycling is similar, but they contain more rare earth elements in antennas and require specialized processing for battery and circuit board separation. No significant difference in pickup process.",
+  },
+  {
+    q: "What about tablet recycling?",
+    a: "Tablets follow similar process to phones. iPads, Android tablets - wipe data, remove cases, include accessories (charger, stylus). Larger screens require extra protective wrapping for pickup.",
+  },
+  {
+    q: "Do tablets have different recycling value than phones?",
+    a: "Yes. Larger tablets (iPad Pro, Surface) often have higher scrap value due to larger screens, more battery capacity, and more circuit components. Working devices have high resale/trade-in value.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="mobile-recycling">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Mobile & Tablet Recycling</p>
+        <h1>Mobile Phone & Tablet Recycling</h1>
+        <p class="lede">
+          Complete guide to safely recycling smartphones and tablets in Kochi. 
+          Learn secure data wiping methods, trade-in programs, resale options, 
+          and proper handling for all device types from phones to tablets.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/mobile-phone-recycling.webp"
+        alt="Smartphones and tablets being prepared for data wiping and recycling"
+        width="1200"
+        height="675"
+        loading="lazy"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        For mobile phone recycling: enable encryption, perform proper data wipe 
+        (not just factory reset), remove SIM and SD cards, and include accessories 
+        if working for higher value. Tablets follow similar process. Request 
+        trade-in quote or certified data destruction through Ewaste Kochi.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I have several phones and tablets to recycle. How do I properly wipe data before disposal?" />
+
+    <section class="device-types" aria-labelledby="types-heading">
+      <h2 id="types-heading">Device Types & Value Factors</h2>
+      
+      <div class="device-grid">
+        <div class="device-card">
+          <h3>Smartphones</h3>
+          <p><strong>Battery:</strong> Lithium-ion, removable or built-in</p>
+          <p><strong>Components:</strong> SoC, camera modules, display, battery</p>
+          <p><strong>Value Drivers:</strong> Brand, storage, screen condition, battery health</p>
+        </div>
+
+        <div class="device-card">
+          <h3>Tablets</h3>
+          <p><strong>Battery:</strong> Larger capacity, often removable in older models</p>
+          <p><strong>Components:</strong> Larger screen, denser circuit boards</p>
+          <p><strong>Value Drivers:</strong> Screen size/quality, accessories included, working condition</p>
+        </div>
+
+        <div class="device-card">
+          <h3>iPhones</h3>
+          <p><strong>Battery:</strong> Sealed, high-density lithium</p>
+          <p><strong>Components:</strong> Proprietary designs, rare earth magnets</p>
+          <p><strong>Value Drivers:</strong> Model year, storage, cosmetic condition, battery cycle count</p>
+        </div>
+
+        <div class="device-card">
+          <h3>Android Phones</h3>
+          <p><strong>Battery:</strong> Standard lithium, sometimes removable</p>
+          <p><strong>Components:</strong> Qualcomm/Exynos SoCs, varied designs</p>
+          <p><strong>Value Drivers:</strong> Brand reputation, specs, regional demand</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="data-wiping" aria-labelledby="wipe-heading">
+      <h2 id="wipe-heading">Secure Data Wiping Methods</h2>
+      
+      <div class="wipe-steps">
+        <div class="wipe-card">
+          <h3>Android Data Wipe</h3>
+          <ol>
+            <li>Backup important data to cloud or computer</li>
+            <li>Sign out of Google account ( FRP bypass prevention )</li>
+            <li>Settings → System → Reset options → Erase all data</li>
+            <li>Enable "Encrypt device" before wiping for extra security</li>
+            <li>Remove SD card and SIM card before collection</li>
+          </ol>
+        </div>
+
+        <div class="wipe-card">
+          <h3>iPhone Data Wipe</h3>
+          <ol>
+            <li>Backup via iCloud or iTunes</li>
+            <li>Sign out of iCloud, iTunes & App Store accounts</li>
+            <li>Settings → General → Transfer or Reset iPhone → Erase All Content</li>
+            <li>Enter Apple ID password if prompted</li>
+            <li>Disable Find My iPhone before erasing</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="trade-in" aria-labelledby="trade-heading">
+      <h2 id="trade-heading">Trade-In vs Recycle Decision</h2>
+      
+      <div class="trade-grid">
+        <div class="trade-option">
+          <h3>Choose Trade-In When</h3>
+          <ul>
+            <li>Device is less than 3 years old</li>
+            <li>Screen and body in good condition</li>
+            <li>All accessories available (box, charger, original)</li>
+            <li>You want faster cash value than recycling</li>
+          </ul>
+        </div>
+
+        <div class="trade-option">
+          <h3>Choose Recycle When</h3>
+          <ul>
+            <li>Device is older than 3-4 years</li>
+            <li>Screen cracked, not working, or heavily damaged</li>
+            <li>Device has battery swelling or other safety concerns</li>
+            <li>Your priority is environmental responsibility over value</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="accessories" aria-labelledby="accessories-heading">
+      <h2 id="accessories-heading">What to Include with Devices</h2>
+      
+      <table class="accessory-table">
+        <thead>
+          <tr>
+            <th>Accessory Type</th>
+            <th>Included With Trade-In</th>
+            <th>Recycling Impact</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Original Box</td>
+            <td>Yes, increases value 10-15%</td>
+            <td>Minimal</td>
+          </tr>
+          <tr>
+            <td>Charger</td>
+            <td>Yes, preferred for trade-in</td>
+            <td>Some copper value</td>
+          </tr>
+          <tr>
+            <td>Stylus/Pen</td>
+            <td>Yes for iPads/Surface</td>
+            <td>NiTB, platinum value</td>
+          </tr>
+          <tr>
+            <td>Cases/Covers</td>
+            <td>Accept, no value impact</td>
+            <td>Plastic recycling</td>
+          </tr>
+          <tr>
+            <td>SIM/Memory Card</td>
+            <td>Remove and keep</td>
+            <td>Keep for own use</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Wiki Guides</h2>
+      <a href="/wiki/disposal/how-to-recycle-electronics-at-home">Recycling at Home</a>
+      <a href="/wiki/technical/hard-drive-data-destruction">Data Destruction</a>
+      <a href="/wiki/sales/where-to-sell-electronics-locally">Sell vs Trade-In</a>
+      <a href="/wiki/disposal/e-waste-pickup-services">Pickup Services</a>
+      <a href="/sell-old-mobile/">Sell Old Phone in Kochi</a>
+    </section>
+
+    <Sources items={[
+      { title: "Google Datawipe Guide", href: "https://support.google.com", publisher: "Google" },
+      { title: "Apple Reset & Erase Guide", href: "https://support.apple.com", publisher: "Apple" },
+    ]} />
+
+    <Faq items={faqItems} heading="Mobile & Tablet Recycling FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .mobile-recycling {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .device-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .device-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .device-card p {
+    margin: 0.25rem 0;
+    font-size: 0.85rem;
+  }
+  .wipe-steps {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .wipe-card ol {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+    font-size: 0.85rem;
+  }
+  .wipe-card ol li {
+    padding: 0.25rem 0;
+    position: relative;
+    padding-left: 1.25rem;
+  }
+  .wipe-card ol li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+  }
+  .trade-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .trade-option ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+    font-size: 0.9rem;
+  }
+  .trade-option ul li {
+    padding: 0.25rem 0;
+    position: relative;
+    padding-left: 1.25rem;
+  }
+  .trade-option ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+  }
+  .accessory-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+  .accessory-table th,
+  .accessory-table td {
+    padding: 0.5rem;
+    text-align: left;
+    border: 1px solid var(--color-border);
+    font-size: 0.8rem;
+  }
+  .accessory-table th {
+    background: var(--color-surface-strong);
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .device-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .wipe-steps {
+      grid-template-columns: 1fr 1fr;
+    }
+    .trade-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

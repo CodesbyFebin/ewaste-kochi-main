@@ -1,0 +1,329 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "How E-Waste Recycling Process Works: Step-by-Step";
+const description =
+  "Complete guide to the e-waste recycling process. Learn about collection, sorting, dismantling, material recovery, and final disposal steps used in Kerala.";
+const path = "/wiki/technical/recycling-process";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Technical Guides", path: "/wiki/technical/" },
+  { name: "Recycling Process", path },
+];
+
+const faqItems = [
+  {
+    q: "Can I see where my electronics go after pickup?",
+    a: "Yes. We provide chain of custody documentation and can share information about the licensed facility handling your items for compliant recycling.",
+  },
+  {
+    q: "What happens to the plastic parts?",
+    a: "Non-hazardous plastics are shredded, sorted by polymer type, and processed for reuse in new products or sent to plastic recycling facilities.",
+  },
+  {
+    q: "Is rare earth metal recovery done in India?",
+    a: "Advanced rare earth metal recovery requires specialized facilities. The majority of e-waste from Kerala goes through authorized recyclers for component recovery and material extraction.",
+  },
+  {
+    q: "What about the data on old devices?",
+    a: "Standard collection includes visual data wiping where feasible. For sensitive data, request certified data destruction as part of your pickup request.",
+  },
+  {
+    q: "Are chemicals extracted during recycling?",
+    a: "Yes. Mercury switches, flame retardants, and other chemical components are extracted and handled by licensed facilities for safe disposal or recovery.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="process-guide">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Recycling Process Guide</p>
+        <h1>How E-Waste Recycling Process Works</h1>
+        <p class="lede">
+          Understanding the complete journey of your electronics from 
+          pickup to final recycling. Learn each step of the authorized 
+          e-waste processing chain in Kochi and Kerala.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/recycling-process.webp"
+        alt="Infographic showing e-waste recycling process steps"
+        width="1200"
+        height="675"
+        loading="lazy"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        The e-waste recycling process has 6 main stages: 1) Pre-collection 
+        (booking, preparation), 2) Transportation to authorized facility, 
+        3) Sorting by material type, 4) Dismantling and component recovery, 
+        5) Material extraction and processing, 6) Final output: recycled 
+        materials for new products.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I'd like to see the recycling process for my devices. Can you explain what happens step by step?" />
+
+    <section class="process-steps" aria-labelledby="process-heading">
+      <h2 id="process-heading">Step-by-Step Recycling Process</h2>
+      
+      <div class="step-container">
+        <div class="step-item">
+          <span class="step-number">1</span>
+          <h3>Pre-Collection & Preparation</h3>
+          <p>
+            <strong>Booking:</strong> You request pickup via WhatsApp with 
+            item details. Our team reviews feasibility based on location 
+            and item volume.
+          </p>
+          <p>
+            <strong>Preparation:</strong> Receive guidance on data wiping, 
+            battery separation, and item organization. Prepare a list 
+            of items with serial numbers if needed for documentation.
+          </p>
+        </div>
+
+        <div class="step-item">
+          <span class="step-number">2</span>
+          <h3>Authorized Transportation</h3>
+          <p>
+            <strong>Secure Transport:</strong> Items are collected by 
+            certified personnel in marked vehicles following KSPCB guidelines. 
+            Chain of custody documentation begins at pickup.
+          </p>
+          <p>
+            <strong>Facility Transfer:</strong> Items reach a licensed 
+            e-waste recycling facility within 24-48 hours of collection 
+            in climate-controlled transport where required.
+          </p>
+        </div>
+
+        <div class="step-item">
+          <span class="step-number">3</span>
+          <h3>Sorting & Categorization</h3>
+          <p>
+            <strong>Initial Sorting:</strong> Items are categorized by 
+            type: computers, mobile devices, displays, batteries, accessories. 
+            Circuit boards are separated from chassis and cables.
+          </p>
+          <p>
+            <strong>Condition Assessment:</strong> Each item is tested 
+            for working condition. Functional items may qualify for 
+            buyback options before entering recycling stream.
+          </p>
+        </div>
+
+        <div class="step-item">
+          <span class="step-number">4</span>
+          <h3>Dismantling & Component Recovery</h3>
+          <p>
+            <strong>Manual Dismantling:</strong> Skilled technicians 
+            disassemble devices to separate valuable components: 
+            circuit boards, screens, motors, and batteries.
+          </p>
+          <p>
+            <strong>Material Separation:</strong> Precious metals are 
+            mechanically separated from plastic casings, metal frames, 
+            and wiring for individual processing streams.
+          </p>
+        </div>
+
+        <div class="step-item">
+          <span="step-number">5</span>
+          <h3>Material Processing & Recovery</h3>
+          <p>
+            <strong>Mechanical Processing:</strong> Plastics are shredded 
+            and washed. Metals are smelted or refined. Circuit boards 
+            undergo shredding and eddy current separation.
+          </p>
+          <p>
+            <strong>Recovery Streams:</strong> Recovery of copper, 
+            aluminum, gold, silver, palladium, and rare earth elements 
+            for use in new manufacturing.
+          </p>
+        </div>
+
+        <div class="step-item">
+          <span class="step-number">6</span>
+          <h3>Final Output & Verification</h3>
+          <p>
+            <strong>Material Certificates:</strong> Processed materials 
+            are certified for purity and traceability. Battery materials 
+            are recycled through specialized extraction partners.
+          </p>
+          <p>
+            <strong>Documentation:</strong> Final documentation including 
+            weight tickets, material recovery reports, and certificates 
+            provided upon request for compliance records.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="materials-output" aria-labelledby="output-heading">
+      <h2 id="output-heading">What Gets Recovered</h2>
+      
+      <p>From your electronics, we recover and process:</p>
+      
+      <div class="output-grid">
+        <div class="output-item">
+          <h4>Metals</h4>
+          <p>Copper, aluminum, steel, gold, silver, palladium - used in 
+          electrical wiring, connectors, and circuit boards.</p>
+        </div>
+        <div class="output-item">
+          <h4>Plastics</h4>
+          <p>ABS, polycarbonate, PVC - processed for new electronics 
+          casings, automotive parts, and construction materials.</p>
+        </div>
+        <div class="output-item">
+          <h4>Critical Materials</h4>
+          <p>Rare earth elements, lithium, cobalt - essential for 
+          renewable energy technology and next-gen electronics.</p>
+        </div>
+        <div class="output-item">
+          <h4>Component Parts</h4>
+          <p>Hard drives, memory, keyboards - refurbished for secondary 
+          market or recycled for material recovery.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Guides</h2>
+      <a href="/wiki/technical/data-destruction/">Data Destruction Guide</a>
+      <a href="/wiki/technical/hard-drive-destruction/">Hard Drive Destruction</a>
+      <a href="/wiki/disposal/local-recycling-centers/">Find Centers</a>
+      <a href="/wiki/technical/types-of-electronic-waste/">Types of E-Waste</a>
+    </section>
+
+    <Faq items={faqItems} heading="Recycling Process FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .process-guide {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .process-steps {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .step-container {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .step-item {
+    padding: 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .step-number {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .step-item h3 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+  }
+  .materials-output {
+    padding: 1.5rem;
+    background: var(--color-surface-strong);
+    border-radius: 0.5rem;
+  }
+  .output-grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .step-container, .output-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (max-width: 779px) {
+    .step-container, .output-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

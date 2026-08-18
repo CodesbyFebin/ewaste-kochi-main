@@ -1,0 +1,390 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "E-Waste Collection Rules - India 2022 (Kerala Implementation)";
+const description =
+  "Detailed guide to India's E-Waste (Management) Rules 2022 as implemented in Kerala and Kochi. Understand collection requirements, producer responsibility, and what's legally required for proper e-waste disposal.";
+const path = "/wiki/disposal/e-waste-collection-rules";
+const lastUpdated = "2026-08-18";
+
+const breadItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Disposal Methods", path: "/wiki/disposal/" },
+  { name: "E-Waste Collection Rules", path },
+];
+
+const faqItems = [
+  {
+    q: "Who is responsible for e-waste under the rules?",
+    a: "Both consumers and producers are responsible. Consumers must use authorized disposal channels, while producers (manufacturers/importers) must manage end-of-life products through Extended Producer Responsibility (EPR).",
+  },
+  {
+    q: "What are the penalties for improper disposal?",
+    a: "Penalties include fines up to ₹1 lakh and/or imprisonment up to 2 years for improper disposal. Operating without registration carries daily fines up to ₹50,000.",
+  },
+  {
+    q: "How does EPR work in Kerala?",
+    a: "Producers must register with CPCB/KSPCB, create collection networks, provide proper treatment, and maintain records. Kerala has state-level EPR facilitators for small producers.",
+  },
+  {
+    q: "Do businesses need special documentation?",
+    a: "Yes. Businesses must maintain: asset disposal records, data destruction certificates, collection receipts, and compliance reports. Request documentation for each disposal through certified partners.",
+  },
+  {
+    q: "What items are covered under the rules?",
+    a: "All electronics with circuits and power sources: computers, phones, TVs, monitors, printers, batteries, UPS, small appliances with electronic controls, and accessories with circuit boards.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: "E-Waste Collection Rules 2026",
+    description: "Guide to India's E-Waste (Management) Rules 2022 as implemented in Kerala. Legal requirements for e-waste collection, disposal, and producer responsibility.",
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "E-Waste Collection Rules in India 2026",
+    description: "Complete guide to E-Waste Management Rules 2022 - legal requirements, EPR obligations, collection standards, and compliance for households and businesses in Kerala.",
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  },
+];
+---
+
+<Layout title="E-Waste Collection Rules & Regulations (India 2026)" description="Legal guide to E-Waste Management Rules 2022 - collection requirements, EPR obligations, and compliance for proper e-waste disposal in Kerala and India." path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="rules-article">
+    <section class="hero-section">
+      <div>
+        <p class="eyebrow">Regulatory Guide</p>
+        <h1>E-Waste Collection Rules & Regulations</h1>
+        <p class="lede">
+          Complete legal guide to India's E-Waste (Management) Rules 2022 and subsequent 
+          notifications. Understand your obligations for proper e-waste collection, disposal, 
+          and compliance in Kerala.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/compliance.webp"
+        alt="E-waste compliance documentation and regulatory guidelines"
+        width="1200"
+        height="675"
+        loading="lazy"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        Under India's E-Waste Rules 2022, proper collection through authorized channels is 
+        mandatory. Extended Producer Responsibility (EPR) applies to manufacturers and importers. 
+        Both consumers and businesses must follow collection guidelines. Penalties include fines 
+        up to ₹1 lakh for improper disposal.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I need to understand the e-waste rules for my business. What documentation is required for compliance?" />
+
+    <section class="key-provisions" aria-labelledby="provisions-heading">
+      <h2 id="provisions-heading">Key Provisions of the Rules</h2>
+      
+      <div class="provision-grid">
+        <div class="provision-card">
+          <h3>Registration & Authorization</h3>
+          <p>Any entity handling e-waste must register with CPCB or State PCB. This includes 
+          manufacturers, producers, aggregators, and recyclers. Registration provides legal 
+          authorization and access to the EPR portal.</p>
+        </div>
+
+        <div class="provision-card">
+          <h3>Collection Standards</h3>
+          <p>All e-waste collection must happen at Authorized Collection Facilities (ACF) or 
+          registered collection centers. Doorstep collection is permitted with prior approval 
+          from the competent authority.</p>
+        </div>
+
+        <div class="provision-card">
+          <h3>Extended Producer Responsibility</h3>
+          <p>Producers must ensure proper collection and treatment of their products. This includes 
+          setting up collection networks, providing financing for treatment, and maintaining 
+          records for 5 years.</p>
+        </div>
+
+        <div class="provision-card">
+          <h3>Labeling Requirements</h3>
+          <p>All new electronic products must have an orange colored T-shape symbol indicating 
+          the month of collection facility availability and manufacturer details. Mandatory for 
+          all electronic items manufactured or imported after April 1, 2023.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="compliance-section" aria-labelledby="compliance-heading">
+      <h2 id="compliance-heading">Business Compliance Checklist</h2>
+      
+      <div class="checklist-table">
+        <div class="check-item checked">
+          <span class="checkmark">✓</span>
+          <span>Maintain comprehensive disposal records for all e-waste items</span>
+        </div>
+        <div class="check-item checked">
+          <span class="checkmark">✓</span>
+          <span>Ensure data destruction with certified documentation before disposal</span>
+        </div>
+        <div class="check-item checked">
+          <span class="checkmark">✓</span>
+          <span>Separate and handle batteries according to hazardous waste guidelines</span>
+        </div>
+        <div class="check-item checked">
+          <span class="checkmark">✓</span>
+          <span>Use only authorized recyclers with proper environmental clearance</span>
+        </div>
+        <div class="check-item checked">
+          <span class="checkmark">✓</span>
+          <span>Request and retain collection certificates for compliance verification</span>
+        </div>
+        <div class="check-item checked">
+          <span class="checkmark">✓</span>
+          <span>Maintain disposal records for minimum 3 years as per regulations</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="kerala-section" aria-labelledby="kerala-heading">
+      <h2 id="kerala-Specific Implementation</h2>
+      
+      <p>Kerala State Pollution Control Board implements national rules with state-level mechanisms:</p>
+      
+      <ul class="kerala-points">
+        <li><strong>State EPR Portal:</strong> Kerala's portal facilitates registration and reporting for local producers and recyclers</li>
+        <li><strong>Collection Coordination:</strong> KSPCB coordinates collection drives in municipalities across Kerala</li>
+        <li><strong>Testing Labs:</strong> Accredited labs for e-waste analysis and quality control in Kochi and Thiruvananthapuram</li>
+        <li><strong>Public Awareness:</strong> State-level campaigns for proper e-waste handling in local languages</li>
+      </ul>
+    </section>
+
+    <section class="penalties-section" aria-labelledby="penalties-heading">
+      <h2 id="penalties-heading">Penalties for Non-Compliance</h2>
+      
+      <table class="penalty-table">
+        <thead>
+          <tr>
+            <th>Offense</th>
+            <th>Fine Amount</th>
+            <th>Imprisonment</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Improper disposal of e-waste</td>
+            <td>Up to ₹1,00,000</td>
+            <td>Up to 2 years</td>
+          </tr>
+          <tr>
+            <td>Operating without registration</td>
+            <td>Up to ₹50,000 per day</td>
+            <td>Up to 6 months</td>
+          </tr>
+          <tr>
+            <td>Failure to maintain records</td>
+            <td>Up to ₹25,000</td>
+            <td>Up to 1 year</td>
+          </tr>
+          <tr>
+            <td>Violation of labeling requirements</td>
+            <td>₹10,000 per unit</td>
+            <td>Not applicable</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="legal-resources" aria-labelledby="resources-heading">
+      <h2 id="resources-heading">Legal Resources</h2>
+      
+      <ul class="resource-list">
+        <li><a href="https://cpcb.nic.in/rules-6/">E-Waste (Management) Rules 2022 - CPCB Official</a></li>
+        <li><a href="https://eprewastecpcb.in/">EPR Portal - Central Pollution Control Board</a></li>
+        <li><a href="https://kspcb.gov.in/">Kerala State Pollution Control Board</a></li>
+        <li><a href="https://centralboardofindirecttaxes.gov.in/">CBIC Guidelines on E-Waste</a></li>
+      </ul>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Wiki Guides</h2>
+      <a href="/wiki/technical/epr-e-waste-explained">Understanding EPR</a>
+      <a href="/wiki/disposal/how-to-recycle-electronics-at-home">Recycling at Home</a>
+      <a href="/wiki/disposal/local-recycling-centers">Find Centers</a>
+      <a href="/wiki/disposal/e-waste-pickup-services">Pickup Services</a>
+      <a href="/contact/">Contact for Compliance Questions</a>
+    </section>
+
+    <Sources items={[
+      { title: "E-Waste Management Rules 2022", href: "https://cpcb.nic.in/rules-6/", publisher: "CPCB" },
+      { title: "EPR E-Waste Portal", href: "https://eprewastecpcb.in/", publisher: "CPCB" },
+      { title: "KSPCB Website", href: "https://kspcb.gov.in", publisher: "KSPCB" },
+    ]} />
+
+    <Faq items={faqItems} heading="Rules FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .rules-article {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero-section {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero-section img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .provision-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .provision-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .provision-card h3 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+  }
+  .checklist-table {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .check-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .checkmark {
+    color: var(--color-primary);
+    font-size: 1.25rem;
+    font-weight: 800;
+  }
+  .kerala-points {
+    list-style: none;
+    padding: 0;
+  }
+  .kerala-points li {
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .penalty-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+  .penalty-table th,
+  .penalty-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border: 1px solid var(--color-border);
+  }
+  .penalty-table th {
+    background: var(--color-surface-strong);
+  }
+  .resource-list {
+    list-style: none;
+    padding: 0;
+  }
+  .resource-list li {
+    margin-bottom: 0.5rem;
+  }
+  .resource-list a {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  @media (min-width: 780px) {
+    .hero-section {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .provision-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .checklist-table {
+      grid-template-columns: 1fr 1fr;
+    }
+    .resource-list {
+      grid-template-columns: 1fr;
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

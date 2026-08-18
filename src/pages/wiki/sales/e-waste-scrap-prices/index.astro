@@ -1,0 +1,372 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "How to Determine E-Waste Scrap Prices: Market Rates 2026";
+const description =
+  "Complete guide to e-waste scrap pricing in 2026. Learn how scrap prices are calculated, current market rates per kg, factors affecting valuation, and how to get accurate quotes for electronics.";
+const path = "/wiki/sales/e-waste-scrap-prices";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Sales & Buyback", path: "/wiki/sales/" },
+  { name: "E-Waste Scrap Prices", path },
+];
+
+const faqItems = [
+  {
+    q: "Why do prices change so much?",
+    a: "Market factors: global copper/gold prices, Chinese import quotas, new model releases, seasonal demand. Check with multiple buyers for current rates - prices update weekly.",
+  },
+  {
+    q: "Is working condition important for scrap value?",
+    a: "For recycling: no, working condition doesn't affect scrap value. For resale: yes, working devices have 3-5x higher value. Different valuation paths yield different results.",
+  },
+  {
+    q: "Do battery prices differ from electronics?",
+    a: "Yes. Lithium batteries have premium value due to rare earth metals. Lead-acid batteries have steady demand. Lithium-ion cells command highest prices per kg when fully functional.",
+  },
+  {
+    q: "How accurate are online price calculators?",
+    a: "They provide ballpark figures. Actual quotes require physical inspection for precise scrap metal content assessment. Battery health, screen condition, and component damage affect final value.",
+  },
+  {
+    q: "Can I get accurate quotes from photos?",
+    a: "Photos help estimate value but on-site inspection provides definitive quotes. Include brand, model, condition details, and accessories for more accurate photo-based estimates.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="scrap-prices">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Pricing Guide</p>
+        <h1>How to Determine E-Waste Scrap Prices</h1>
+        <p class="lede">
+          Complete 2026 guide to e-waste scrap pricing in Kerala. Learn current market 
+          rates, factors affecting valuation, and how to get accurate quotes for 
+          different types of electronics and batteries.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/scrap-price-guide.webp"
+        alt="Electronic devices being weighed for scrap value calculation"
+        width="1200"
+        height="675"
+        loading="lazy"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        Scrap prices vary by device type, condition, and market demand. Current 2026 
+        rates: laptops ₹300-800/kg, phones ₹400-900/kg, monitors ₹200-500/kg, batteries 
+        ₹60-400/kg. Get quotes from multiple verified buyers, check current global metal 
+        prices, and request detailed breakdowns for transparent valuation.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="My laptop and phones are worth how much per kg? What's the current market rate?" />
+
+    <section class="pricing-table" aria-labelledby="table-heading">
+      <h2 id="table-heading">Current Scrap Prices by Device Type</h2>
+      
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>Device Category</th>
+            <th>Price Range (₹/kg)</th>
+            <th>Main Components</th>
+            <th>Location Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Laptops & Desktops</td>
+            <td>₹300 - ₹800</td>
+            <td>Cu, Al, steel, rare earth magnets</td>
+            <td>Higher for MacBooks with M-series chips</td>
+          </tr>
+          <tr>
+            <td>Smartphones</td>
+            <td>₹400 - ₹900</td>
+            <td>Gold traces, copper, lithium in battery</td>
+            <td>iPhones typically 15-20% higher</td>
+          </tr>
+          <tr>
+            <td>Tablets</td>
+            <td>₹350 - ₹750</td>
+            <td>Cu, Al, lithium, screen components</td>
+            <td> iPads have premium rare earth content</td>
+          </tr>
+          <tr>
+            <td>Monitors (LCD/LED)</td>
+            <td>₹200 - ₹500</td>
+            <td>Aluminum backing, copper wiring</td>
+            <td>CRT has higher lead value but less demand</td>
+          </tr>
+          <tr>
+            <td>Printers & Peripherals</td>
+            <td>₹150 - ₹400</td>
+            <td>Steel, copper, plastic casings</td>
+            <td>HP/Canon have more recoverable metals</td>
+          </tr>
+          <tr>
+            <td>UPS & Power Supplies</td>
+            <td>₹250 - ₹600</td>
+            <td>Large transformers, copper coils</td>
+            <td>Higher for units with intact batteries</td>
+          </tr>
+          <tr>
+            <td>Batteries (Lithium)</td>
+            <td>₹400 - ₹900</td>
+            <td>Lithium, cobalt, nickel</td>
+            <td>Full cells worth more than drained</td>
+          </tr>
+          <tr>
+            <td>Batteries (Lead-Acid)</td>
+            <td>₹60 - ₹120</td>
+            <td>Lead, plastic casing</td>
+            <td>Per kg, not per battery</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="price-factors" aria-labelledby="factors-heading">
+      <h2 id="factors-heading">Factors Affecting Scrap Pricing</h2>
+      
+      <div class="factor-grid">
+        <div class="factor-card">
+          <h3>Device Age</h3>
+          <p>Newer devices (under 2 years) have higher scrap value due to component miniaturization 
+          and more rare earth metals. Older devices may lose 20-40% value per year of age.</p>
+        </div>
+
+        <div class="factor-card">
+          <h3>Brand Reputation</h3>
+          <p>Apple, Samsung, Sony devices typically command 15-25% premium due to build quality, 
+          component density, and recognized metal recovery value.</p>
+        </div>
+
+        <div class="factor-card">
+          <h3>Physical Condition</h3>
+          <p>Cracked screens, battery swelling, or water damage reduce value by 20-60%. 
+          Complete, undamaged units fetch full scrap value.</p>
+        </div>
+
+        <div class="factor-card">
+          <h3>Market Demand</h3>
+          <p>Popular models (iPhone 14, MacBook M2) have stable prices. Discontinued models 
+          or older generations see price drops. Check current market trends.</p>
+        </div>
+
+        <div class="factor-card">
+          <h3>Battery Status</h3>
+          <p>Phones/laptops with good battery health add 10-20% value. Swollen/drained batteries 
+          are separated for safer, lower-value processing.</p>
+        </div>
+
+        <div class="factor-card">
+          <h3>Accessories</h3>
+          <p>Original charger, box, documentation add 5-10% to resale. For pure scrap, 
+          accessories are separated and have minimal impact on overall value.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-process" aria-labelledby="quote-process-heading">
+      <h2 id="quote-process-heading">Getting the Best Quote</h2>
+      
+      <ol class="process-steps">
+        <li>
+          <h3>Create Detailed Inventory</h3>
+          <p>List each device with brand, model, storage, RAM, color, and condition notes. 
+          Include accessories count.</p>
+        </li>
+        <li>
+          <h3>Take Clear Photos</h3>
+          <p>Front, back, screen (on), ports visible. Show any damage clearly. Include 
+          accessories laid out.</p>
+        </li>
+        <li>
+          <h3>Contact Multiple Buyers</h3>
+          <p>Reach out to 3-4 verified scrap buyers or recyclers. Send identical 
+          inventory and photos to each.</p>
+        </li>
+        <li>
+          <h3>Compare Total Package</h3>
+          <p>Consider: price per kg, payment method/timing, pickup logistics, 
+          documentation provided, and buyer reputation.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="market-update" aria-labelledby="update-heading">
+      <h2 id="update-heading">2026 Market Update</h2>
+      
+      <p><strong>Copper prices:</strong> ₹450-550/kg (affects wiring, transformers)</p>
+      <p><strong>Gold content:</strong> Slight decline due to reduced gold plating</p>
+      <p><strong>Lithium demand:</strong> Rising due to EV market growth - premium rates</p>
+      <p><strong>Rare earth metals:</strong> Stable with periodic spikes for neodymium magnets</p>
+      
+      <p class="note">Prices update weekly. Check with buyers before major disposal plans.</p>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Wiki Guides</h2>
+      <a href="/wiki/sales/e-waste-scrap-buyers">Find Scrap Buyers</a>
+      <a href="/wiki/technical/e-waste-market-trends">Market Trends Analysis</a>
+      <a href="/wiki/sales/where-to-sell-electronics-locally">Selling vs Scraping</a>
+    </section>
+
+    <Sources items={[
+      { title: "Indian Metal Scrap Rates", href: "https://metalscrapped.com", publisher: "Metal Scrap Directory" },
+      { title: "LME Copper Prices", href: "https://lme.com", publisher: "London Metal Exchange" },
+    ]} />
+
+    <Faq items={faqItems} heading="Scrap Price FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .scrap-prices {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+  }
+  .price-table th,
+  .price-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border: 1px solid var(--color-border);
+  }
+  .price-table th {
+    background: var(--color-surface-strong);
+  }
+  .factor-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .factor-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .process-steps ol {
+    counter-reset: process-counter;
+    list-style: none;
+    padding: 0;
+  }
+  .process-steps li {
+    counter-increment: process-counter;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .process-steps li h3 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .price-table {
+      font-size: 0.85rem;
+    }
+    .factor-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .process-steps li {
+      grid-template-columns: 1fr;
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

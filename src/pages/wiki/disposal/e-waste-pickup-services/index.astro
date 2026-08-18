@@ -1,0 +1,391 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "E-Waste Pickup Services: Same-Day & Scheduled Collection";
+const description =
+  "Book e-waste pickup services in Kochi with same-day or scheduled collection. Learn how to book pickup, what items are collected, preparation tips, and pricing for residential and business pickup.";
+const path = "/wiki/disposal/e-waste-pickup-services";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Disposal Methods", path: "/wiki/disposal/" },
+  { name: "E-Waste Pickup Services", path },
+];
+
+const faqItems = [
+  {
+    q: "Is same-day pickup available?",
+    a: "Same-day pickup is available for select areas in Kochi with advance booking by 11 AM. Availability depends on vehicle capacity and current pickup schedule. Book early in the day for best chances.",
+  },
+  {
+    q: "What's the cost for e-waste pickup?",
+    a: "Basic residential pickup for small quantities is free. Business and bulk pickup may have standardized pricing. Request a quote with item list for accurate pricing.",
+  },
+  {
+    q: "How much notice is needed for scheduled pickup?",
+    a: "Standard scheduled pickup requires 24-48 hours notice. Bulk commercial collections may need 3-5 days advance scheduling for proper logistics planning.",
+  },
+  {
+    q: "What if I'm not home during pickup?",
+    a: "Inform us in advance and provide access instructions. We can arrange pickup with security or a responsible resident. Avoid after-hours visits unless pre-arranged.",
+  },
+  {
+    q: "Are there weight or volume limits for pickup?",
+    a: "No fixed weight limit for residential pickup. Beyond a certain volume (typical: 15+ items), bulk pickup pricing applies. Large items like CRT TVs require special handling arrangements.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="pickup-services">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Pickup Services</p>
+        <h1>E-Waste Pickup Services</h1>
+        <p class="lede">
+          Book flexible e-waste pickup services in Kochi for residential and business 
+          locations. Same-day pickup available in select areas, plus scheduled collection 
+          with transparent pricing and documentation.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/pickup-service.webp"
+        alt="E-waste pickup vehicle collecting electronics from a Kochi location"
+        width="1200"
+        height="675"
+        loading="lazy"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        Ewaste Kochi offers same-day pickup for select areas in Kochi when booked before 
+        11 AM, plus scheduled collection for any location. Basic residential pickup is free, 
+        while business and bulk quantities have transparent pricing. Book via WhatsApp 
+        with your item list and photos for faster confirmation.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I need to book e-waste pickup in Kochi. What's the process for same-day or scheduled collection?" />
+
+    <section class="booking-process" aria-labelledby="process-heading">
+      <h2 id="process-heading">How to Book Pickup</h2>
+      
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Share Item Details</h3>
+          <p>Send a list of electronics with photos (brand, model, condition) via WhatsApp. 
+          Include battery status and any data-sensitive devices requiring special handling.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Confirm Location & Access</h3>
+          <p>Provide detailed address and access instructions. For apartments, include 
+          building entry procedures and contact person availability.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Choose Pickup Type</h3>
+          <p>Select same-day (if available) or scheduled pickup. Same-day requires early 
+          booking by 11 AM; scheduled pickup offers 24-48 hour notice.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <h3>Receive Confirmation</h3>
+          <p>Get pickup confirmation with date/time window and collection guidelines. 
+          For businesses, receive documentation requirements and compliance notes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="areas-section" aria-labelledby="areas-heading">
+      <h2 id="areas-heading">Service Coverage Areas</h2>
+      
+      <p>Usual pickup coverage includes all areas within Kochi city and immediate suburbs. 
+      Outstation locations may require coordination with our Kerala-wide partners.</p>
+      
+      <table class="coverage-table">
+        <thead>
+          <tr>
+            <th>Primary Coverage</th>
+            <th>Secondary Coverage</th>
+            <th>Check Feasibility</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Kakkanad, Edappally, Kalamassery</td>
+            <td>Aluva, Thrissur, Kottayam</td>
+            <td>Malappuram, Palakkad, Kollam, Trivandrum</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p class="note">Check availability for your specific location during booking. Some areas 
+      require advance notice for feasibility verification.</p>
+    </section>
+
+    <section class="pricing-section" aria-labelledby="pricing-heading">
+      <h2 id="pricing-heading">Pickup Pricing Overview</h2>
+      
+      <div class="pricing-grid">
+        <div class="price-card">
+          <h3>Residential (Free)</h3>
+          <p class="price-highlight">₹0</p>
+          <ul>
+            <li>Up to 10 items</li>
+            <li>Standard business hours pickup</li>
+            <li>Basic documentation</li>
+          </ul>
+        </div>
+
+        <div class="price-card">
+          <h3>Residential (Bulk)</h3>
+          <p class="price-highlight">Starting ₹299</p>
+          <ul>
+            <li>11+ items</li>
+            <li>Extended pickup window</li>
+            <li>Detailed collection report</li>
+          </ul>
+        </div>
+
+        <div class="price-card">
+          <h3>Business Pickup</h3>
+          <p class="price-highlight">From ₹499</p>
+          <ul>
+            <li>Any quantity</li>
+            <li>Same-day option available</li>
+            <li>Compliance documentation</li>
+            <li>Asset tracking support</li>
+          </ul>
+        </div>
+
+        <div class="price-card">
+          <h3>Heavy/Bulky Items</h3>
+          <p class="price-highlight">Contact for Quote</p>
+          <ul>
+            <li>CRT TVs, large servers</li>
+            <li>Special handling required</li>
+            <li>Advance scheduling needed</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="preparation" aria-labelledby="prep-heading">
+      <h2 id="prep-heading">Before Pickup Day</h2>
+      p>
+      <ul>
+        <li><strong>Bag/Box Items</strong>: Group similar items together for easier sorting at facility</li>
+        <li><strong>Separate Batteries</strong>: Store in non-conductive containers away from electronics</li>
+        <li><strong>Label Data Devices</strong>: Note which devices contain sensitive data requiring special handling</li>
+        <li><strong>Clear Access Path</strong>: Ensure items are reachable from entrance/doorstep</li>
+        <li><strong>Have ID Ready</strong>: Driver may request identification for security verification</li>
+      </ul>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Wiki Guides</h2>
+      <a href="/wiki/disposal/how-to-recycle-electronics-at-home">Preparing Electronics for Pickup</a>
+      <a href="/wiki/sales/office-equipment-buyback">Office Equipment Services</a>
+      <a href="/wiki/locations/e-waste-collection-kochi">Kochi Collection Locations</a>
+      <a href="/wiki/technical/data-center-decommissioning-checklist">Data Center Decommissioning</a>
+      <a href="/pickup/">Book Pickup Now</a>
+    </section>
+
+    <Sources items={[
+      { title: "Service Terms & Policies", href: "/terms/", publisher: "Ewaste Kochi" },
+    ]} />
+
+    <Faq items={faqItems} heading="Pickup Service FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .pickup-services {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .steps-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .step-card {
+    display: grid;
+    gap: 0.75rem;
+    padding: 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .step-number {
+    width: 2rem;
+    height: 2rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1rem;
+  }
+  .coverage-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+  .coverage-table th,
+  .coverage-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border: 1px solid var(--color-border);
+  }
+  .coverage-table th {
+    background: var(--color-surface-strong);
+  }
+  .pricing-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .price-card {
+    padding: 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-align: center;
+  }
+  .price-highlight {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin: 0.5rem 0;
+  }
+  .price-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.75rem 0 0;
+    font-size: 0.9rem;
+  }
+  .preparation ul {
+    list-style: none;
+    padding: 0;
+  }
+  .preparation li {
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  .preparation li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .steps-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .price-card {
+      text-align: left;
+    }
+    .pricing-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

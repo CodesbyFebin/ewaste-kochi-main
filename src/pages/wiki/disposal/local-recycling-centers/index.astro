@@ -1,0 +1,350 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Local Recycling Centers: Find Your Nearest Drop-Off";
+const description =
+  "Find local recycling centers in Kochi and Kerala for e-waste drop-off. Directory of authorized centers, collection hours, accepted items, and what to expect during drop-off visit.";
+const path = "/wiki/disposal/local-recycling-centers";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Disposal Methods", path: "/wiki/disposal/" },
+  { name: "Local Recycling Centers", path },
+];
+
+const faqItems = [
+  {
+    q: "Do local recycling centers charge for drop-off?",
+    a: "Most authorized recycling centers in Kochi accept drop-offs free of charge. Some private centers may charge nominal fees. Always confirm before visiting.",
+  },
+  {
+    q: "Are all centers open to the public?",
+    a: "Authorized e-waste collection centers are open to the public. Some industrial facility drop-off points may require appointment or have limited hours for public visitors.",
+  },
+  {
+    q: "What hours are centers open?",
+    a: "Most centers operate Monday to Saturday, 9 AM to 5 PM. Some have different schedules. Always check current hours before visiting as they may change due to local regulations.",
+  },
+  {
+    q: "Can I drop off single items or do I need bulk?",
+    a: "Most centers accept individual items. No minimum quantity required. For businesses with large volumes, consider bulk pickup service for faster processing.",
+  },
+  {
+    q: "Is identification required for drop-off?",
+    a: "Identification is typically not required for individual drop-offs. Some centers may ask for contact information for tracking purposes, especially for business accounts.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="centers-guide">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Drop-Off Locations</p>
+        <h1>Local Recycling Centers Directory</h1>
+        <p class="lede">
+          Find authorized e-waste drop-off centers across Kochi and Kerala. Access 
+          current locations, operating hours, accepted item types, and drop-off 
+          procedures without appointment required.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/location-map.webp"
+        alt="Map showing locations of e-waste recycling centers in Kochi"
+        width="1200"
+        height="675"
+        loading="lazy"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        Authorized e-waste drop-off centers in Kochi are open to the public, primarily 
+        operating Monday to Saturday, 9 AM to 5 PM. Most accept individual items without 
+        appointment. Find the nearest center using the directory below or contact Ewaste 
+        Kochi for same-day pickup convenience.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I need to find a nearby e-waste drop-off center in Kochi. Can you help me locate the closest one?" />
+
+    <section class="finding-centers" aria-labelledby="find-heading">
+      <h2 id="find-heading">How to Find Your Nearest Center</h2>
+      
+      <div class="find-methods">
+        <div class="method-card">
+          <h3>Online Directory</h3>
+          <p>Visit the Kerala Pollution Control Board's official e-waste center locator 
+          or call our helpline for the most current authorized center list in your area.</p>
+        </div>
+        <div class="method-card">
+          <h3>Local Government</h3>
+          <p>Corporation offices and municipal centers often maintain lists of approved 
+          drop-off points. Contact your local ward office for nearest locations.</p>
+        </div>
+        <div class="method-card">
+          <h3>Quick Pickup</h3>
+          <p>For convenience, request doorstep pickup instead of visiting a center. 
+          We cover more locations and handle transportation and documentation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="center-locations" aria-labelledby="locations-heading">
+      <h2 id="locations-heading">Recommended Drop-Off Centers in Kochi</h2>
+      
+      <p>Contact centers directly to confirm current hours and accepted items. Some 
+      centers may have updated schedules due to regulatory changes.</p>
+      
+      <div class="location-grid">
+        <div class="location-card">
+          <h3>E-waste Collection Center - Kakkanad</h3>
+          <p><strong>Area:</strong> Kakkanad, Ernakulam</p>
+          <p><strong>Hours:</strong> Mon-Sat, 9 AM - 5 PM</p>
+          <p><strong>Items:</strong> All e-waste types including batteries</p>
+          <p><strong>Notes:</strong> Near Infopark - easy access from business districts</p>
+        </div>
+
+        <div class="location-card">
+          <h3>E-waste Collection Center - Edappally</h3>
+          <p><strong>Area:</strong> Edappally, Ernakulam</p>
+          <p><strong>Hours:</strong> Mon-Sat, 9 AM - 5 PM</p>
+          <p><strong>Items:</strong> Electronics, small appliances, accessories</p>
+          <p><strong>Notes:</strong> Close to Lulu Mall - accessible parking</p>
+        </div>
+
+        <div class="location-card">
+          <h3>E-waste Collection Center - Thiruvananthapuram</h3>
+          <p><strong>Area:</strong> Kazhakuttam, Thiruvananthapuram</p>
+          <p><strong>Hours:</strong> Mon-Sat, 9 AM - 5 PM</p>
+          <p><strong>Items:</strong> All e-waste types</p>
+          <p><strong>Notes:</strong> Regional center for South Kerala</p>
+        </div>
+
+        <div class="location-card">
+          <h3>Industrial Recycling Facility - Perumbavoor</h3>
+          <p><strong>Area:</strong> Perumbavoor, Ernakulam</p>
+          <p><strong>Hours:</strong> By appointment only</p>
+          <p><strong>Items:</strong> Bulk business waste, servers</p>
+          <p><strong>Notes:</strong> For commercial quantities only</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="drop-off-procedure" aria-labelledby="procedure-heading">
+      <h2 id="procedure-heading">Drop-Off Procedure</h2>
+      
+      <div class="procedure-steps">
+        <div class="step">
+          <span class="step-number">1</span>
+          <div>
+            <h4>Preparation</h4>
+            <p>Bag or box items, separate batteries, and complete any necessary data wiping. 
+            Have item list ready if requested.</p>
+          </div>
+        </div>
+        
+        <div class="step">
+          <span class="step-number">2</span>
+          <div>
+            <h4>Visit Center</h4>
+            <p>Arrive during operating hours. Staff will inspect items and provide receipt. 
+            Some centers require registration for first-time visitors.</p>
+          </div>
+        </div>
+        
+        <div class="step">
+          <span class="step-number">3</span>
+          <div>
+            <h4>Documentation</h4>
+            <p>Receive collection receipt for your records. For business accounts, additional 
+            documentation (EPR certificates, compliance reports) is available on request.</p>
+          </div>
+        </div>
+        
+        <div class="step">
+          <span class="step-number">4</span>
+          <div>
+            <h4>Follow-Up</h4>
+            <p>Keep receipt for 3 years. For data destruction confirmation, request additional 
+            certificates before leaving the center.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Wiki Guides</h2>
+      <a href="/wiki/disposal/e-waste-pickup-services">Pickup Services</a>
+      <a href="/wiki/technical/e-waste-recycling-process">Recycling Process</a>
+      <a href="/wiki/locations/e-waste-collection-near-me-list">Collection Near Me Directory</a>
+      <a href="/wiki/disposal/how-to-recycle-electronics-at-home">Recycling at Home</a>
+      <a href="/pickup/">Book Pickup Instead</a>
+    </section>
+
+    <Sources items={[
+      { title: "Kerala State Pollution Control Board", href: "https://kspcb.gov.in", publisher: "KSPCB" },
+      { title: "Central Pollution Control Board E-Waste Centers", href: "https://cpcb.nic.in", publisher: "CPCB" },
+    ]} />
+
+    <Faq items={faqItems} heading="Drop-Off Center FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .centers-guide {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .find-methods {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .method-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .method-card h3 {
+    margin: 0 0 0.25rem;
+    color: var(--color-primary);
+  }
+  .location-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .location-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .location-card p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+  }
+  .procedure-steps {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .step {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .step-number {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .find-methods {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .location-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .procedure-steps {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

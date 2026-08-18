@@ -1,0 +1,366 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Where to Donate Electronics: Charities & Tax Deductions";
+const description =
+  "Find where to donate electronics in Kochi for tax benefits and charitable impact. Learn about local charities, resale options, donation requirements, and how Ewaste Kochi supports community donation programs.";
+const path = "/wiki/disposal/where-to-donate-electronics";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Disposal Methods", path: "/wiki/disposal/" },
+  { name: "Where to Donate Electronics", path },
+];
+
+const faqItems = [
+  {
+    q: "Are tax deductions available for electronics donation in Kerala?",
+    a: "Yes, donations to registered charitable organizations qualify for tax deductions under Section 80G of the Income Tax Act. Proper documentation and receipts are required for claiming deductions.",
+  },
+  {
+    q: "What electronics can be donated vs. recycled?",
+    a: "Working devices: laptops, desktops, phones, tablets, monitors. Partially working items may be accepted for repair. Broken items with reusable parts (screens, keyboards, drives) should be recycled. Batteries and CRT TVs generally don't qualify for donation.",
+  },
+  {
+    q: "How does Ewaste Kochi help with electronics donation?",
+    a: "We partner with local charities and schools to facilitate donation programs. We handle data wiping, basic repair assessment, and coordinate bulk pickups for community donation drives.",
+  },
+  {
+    q: "Must devices be in working condition to donate?",
+    a: "Most donation centers prefer working devices but may accept partially functional items for parts or repair. Always check with the specific organization about their requirements and acceptance criteria.",
+  },
+  {
+    q: "Can businesses donate electronics for CSR?",
+    a: "Yes, businesses can donate used electronics for Corporate Social Responsibility (CSR) initiatives. This provides tax benefits and community impact while ensuring proper data handling.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="donate-guide">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Donation Options</p>
+        <h1>Where to Donate Electronics</h1>
+        <p class="lede">
+          Discover the best charities and organizations in Kochi that accept electronics 
+          donations. Learn about tax deduction eligibility, donation requirements, and 
+          how community programs support education and social causes.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/recycling-basics.webp"
+        alt="Donated electronics supporting education and community initiatives"
+        width="1200"
+        height="675"
+        loading="lazy"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        Electronics in Kochi can be donated to registered NGOs, schools, and community organizations 
+        for tax benefits under Section 80G. Working laptops, desktops, phones, and monitors are most 
+        accepted. Contact Ewaste Kochi to coordinate bulk donations and receive proper documentation 
+        for tax purposes.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I want to donate electronics for tax benefits. Which organizations should I contact?" />
+
+    <section class="donation-options" aria-labelledby="options-heading">
+      <h2 id="options-heading">Recommended Donation Partners in Kochi</h2>
+      
+      <div class="partner-grid">
+        <div class="partner-card">
+          <h3>Educational Institutions</h3>
+          <p>Computer labs, computer science departments, and student technology clubs at 
+          colleges and schools often welcome working computers, laptops, and networking equipment 
+          for educational purposes.</p>
+          <ul>
+            <li>M.T. University campuses</li>
+            <li>Local engineering colleges</li>
+            <li>Public schools and community colleges</li>
+          </ul>
+        </div>
+
+        <div class="partner-card">
+          <h3>Registered NGOs</h3>
+          <p>Charitable organizations that provide technology access to underserved communities, 
+          women's empowerment groups, and skill development centers.</p>
+          <ul>
+            <li>Rural development NGOs</li>
+            <li>Girls' education organizations</li>
+            <li>Digital literacy programs</li>
+          </ul>
+        </div>
+
+        <div class="partner-card">
+          <h3>Technical Training Centers</h3>
+          <p>IT training institutes and vocational schools that teach computer skills, web 
+          development, and digital marketing using donated or low-cost equipment.</p>
+          <ul>
+            <li>Digital literacy academies</li>
+            <li>Skill development centers</li>
+            <li>Community tech labs</li>
+          </ul>
+        </div>
+
+        <div class="partner-card">
+          <h3>Wi Care and Relief Organizations</h3>
+          <p>Disaster relief and community health organizations that use technology for 
+          communication, patient records, and community coordination.</p>
+          <ul>
+            <li>Health camps technology support</li>
+            <li>Disaster response coordination</li>
+            <li>Community radio stations</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="tax-benefits" aria-labelledby="tax-heading">
+      <h2 id="tax-heading">Tax Benefits for Electronics Donation</h2>
+      
+      <div class="benefit-list">
+        <div class="benefit-item">
+          <h3>Section 80G Deductions</h3>
+          <p>Donations to registered charitable organizations qualify for tax deductions under 
+          Section 80G of the Income Tax Act. Deduction limits range from 50% to 100% of 
+          eligible income depending on the NGO's registration.</p>
+        </div>
+        
+        <div class="benefit-item">
+          <h3>Proper Documentation</h3>
+          <p>Required documents: receipt from the charitable organization, acknowledgment letter, 
+          and records of device valuation. For high-value donations, a formal valuation report 
+          may be required.</p>
+        </div>
+        
+        <div class="benefit-item">
+          <h3>Valuation Guidelines</h3>
+          <p>Determining donation value: consider the device's age, condition, and market value at 
+          time of donation. The Income Tax Department provides simplified valuation formulas for 
+          used electronic equipment.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-to-donate" aria-labelledby="process-heading">
+      <h2 id="process-heading">How to Donate Electronics in Kochi</h2>
+      
+      <ol class="donation-process">
+        <li>
+          <h3>Inventory and Assess Devices</h3>
+          <p>List all working electronics you wish to donate. Note brand, model, age, and 
+          condition. Non-working items may be redirected to recycling partners.</p>
+        </li>
+        <li>
+          <h3>Choose a Donation Partner</h3>
+          <p>Select an appropriate organization based on your interests and the type of 
+          equipment. We recommend starting with educational institutions or local NGOs.</p>
+        </li>
+        <li>
+          <h3>Handle Data Securely</h3>
+          <p>Complete factory reset or professional data wiping is required before donation. 
+          For assistance, coordinate with Ewaste Kochi's data destruction services.</p>
+        </li>
+        <li>
+          <h3>Request Pickup or Drop-off</h3>
+          <p>Schedule pickup through Ewaste Kochi or arrange direct delivery to the partner 
+          organization. We handle transportation and documentation.</p>
+        </li>
+        <li>
+          <h3>Obtain Documentation</h3>
+          <p>Receipt from the donation center and pickup confirmation from Ewaste Kochi are 
+          needed for tax benefits. Keep all documents for at least 5 years.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Resources</h2>
+      <a href="/wiki/sales/where-to-sell-electronics-locally">Where to Sell Electronics</a>
+      <a href="/wiki/technical/hard-drive-data-destruction">Data Destruction Before Donation</a>
+      <a href="/wiki/locations/e-waste-awareness-kerala">E-Waste Awareness in Kerala</a>
+      <a href="/wiki/disposal/how-to-recycle-electronics-at-home">Recycling Preparation Guide</a>
+      <a href="/blog/e-waste-donation-reuse-guide-kochi/">Blog: Donation vs Reuse</a>
+    </section>
+
+    <Sources items={[
+      { title: "Section 80G Income Tax Act", href: "https://www.incometaxindia.gov.in", publisher: "Income Tax Department" },
+      { title: "Charity Registration Portal", href: "https://mca.gov.in", publisher: "Ministry of Corporate Affairs" },
+    ]} />
+
+    <Faq items={faqItems} heading="Donation FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .donate-guide {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .partner-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .partner-card {
+    padding: 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .partner-card h3 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+  }
+  .partner-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+  }
+  .partner-card ul li {
+    padding-left: 1rem;
+    position: relative;
+  }
+  .partner-card ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+  }
+  .benefit-list {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .benefit-item h3 {
+    margin: 0 0 0.25rem;
+    color: var(--color-primary);
+  }
+  .donation-process ol {
+    counter-reset: step-counter;
+    list-style: none;
+    padding: 0;
+  }
+  .donation-process li {
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 3rem;
+  }
+  .donation-process li::before {
+    counter-increment: step-counter;
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2rem;
+    height: 2rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.9rem;
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .partner-grid, .benefit-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .donation-process li {
+      padding-left: 3.5rem;
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

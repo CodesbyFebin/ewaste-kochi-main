@@ -1,0 +1,246 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "E-Waste Services in Trivandrum: Authorized Recyclers";
+const description =
+  "Complete guide to e-waste services in Thiruvananthapuram. Find authorized recyclers, collection centers, pickup services, and proper disposal options for electronics in Trivandrum city and district.";
+const path = "/wiki/locations/e-waste-trivandrum";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Location Services", path: "/wiki/locations/" },
+  { name: "E-Waste in Trivandrum", path },
+];
+
+const faqItems = [
+  {
+    q: "Are there authorized e-waste collection centers in Trivandrum?",
+    a: "Yes. Authorized centers operate in major hubs including Kazhakuttam, Thiruvananthapuram city, Neyyar, and Vellanikkara. All operate under KSPCB guidelines.",
+  },
+  {
+    q: "What areas of Trivandrum have pickup service?",
+    a: "Pickup available in Thiruvananthapuram metropolitan area including Kazhakuttam, Vettinarangini, Mangalampilly, Neyyar, Kattakada, and surrounding areas. Contact for rural area feasibility.",
+  },
+  {
+    q: "Do you offer pickup in other Kerala cities?",
+    a: "Yes, we service major cities including Kochi, Kozhikode, Thrissur, Kottayam, Malappuram, and Kannur with centralized processing at KSPCB-authorized facilities.",
+  },
+  {
+    q: "Is Trivandrum different from other cities for e-waste handling?",
+    a: "Trivandrum has the highest concentration of authorized testing labs and R&D facilities in Kerala. Processing may take slightly longer due to verification requirements.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Ewaste Kochi - Thiruvananthapuram Services",
+    description: "E-waste collection and recycling services in Thiruvananthapuram, Kerala",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Thiruvananthapuram",
+      addressRegion: "Kerala",
+      addressCountry: "IN"
+    },
+    "serviceArea": ["Thiruvananthapuram", "Kazhakuttam", "Vettinarangini", "Neyyar"]
+  }
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="location-profile">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Trivandrum Services</p>
+        <h1>E-Waste Services in Trivandrum</h1>
+        <p class="lede">
+          Complete guide to authorized e-waste recycling in Thiruvananthapuram. 
+          Find collection centers, schedule pickup, and understand disposal 
+          options for electronics across Trivandrum district.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/pickup-service.webp"
+        alt="E-waste collection vehicle operating in Trivandrum area"
+        width="1200"
+        height="675"
+        loading="lazy"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        E-waste services in Trivandrum include authorized collection centers in 
+        Kazhakuttam and major hubs, plus doorstep pickup across the metropolitan 
+        area. All operations follow KSPCB guidelines with proper documentation. 
+        Book via WhatsApp with item list and photos for pickup confirmation.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I need e-waste pickup in Thiruvananthapuram. What's the process for Kazhakuttam area?" />
+
+    <section class="key-info" aria-labelledby="info-heading">
+      <h2 id="info-heading">Key Information for Trivandrum</h2>
+      
+      <div class="info-grid">
+        <div class="info-item">
+          <h3>Authorized Centers</h3>
+          <p>Primary locations: Kazhakuttam Industrial Area, Vettinarangini Garden, 
+          Mangalampilly, Neyyar Dam area. All centers open Mon-Sat, 9 AM-5 PM.</p>
+        </div>
+        <div class="info-item">
+          <h3>Pickup Coverage</h3>
+          <p>Thiruvananthapuram Corp, Kazhakuttam, Vettinarangini, Neyyar, Kattakada, 
+          and surrounding panchayats. Rural areas require advance check for feasibility.</p>
+        </div>
+        <div class="info-item">
+          <h3>Processing Facility</h3>
+          <p>All collected items processed at KSPCB-authorized facility in Thiruvananthapuram. 
+          Chain of custody maintained through documentation.</p>
+        </div>
+        <div class="info-item">
+          <h3>Compliance Standards</h3>
+          <p>KSPCB regulations mandatory. EPR compliance for business collections. 
+          All centers maintain proper hazardous material handling protocols.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-info" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact for Trivandrum Services</h2>
+      
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Helpline Number</h3>
+          <p>{BUSINESS.phoneDisplay}</p>
+          <p>Available Mon-Sat, 9 AM-6 PM for pickup scheduling and inquiries</p>
+        </div>
+        <div class="contact-card">
+          <h3>WhatsApp Contact</h3>
+          <p>+91 {BUSINESS.whatsapp}</p>
+          <p>Send item list with photos for fastest pickup confirmation</p>
+        </div>
+        <div class="contact-card">
+          <h3>Drop-off Location</h3>
+          <p>Kazhakuttam Authorized Collection Center</p>
+          <p>Near Kazhakuttam metro station, Industrial Estate area</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Pages</h2>
+      <a href="/wiki/locations/e-waste-collection-kochi">E-Waste in Kochi</a>
+      <a href="/wiki/locations/e-waste-collection-near-me-list">Near Me Directory</a>
+      <a href="/wiki/disposal/local-recycling-centers">Find Centers</a>
+      <a href="/pickup/">Book Pickup</a>
+    </section>
+
+    <Faq items={faqItems} heading="Trivandrum Services FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .location-profile {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .info-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .info-item h3 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+  }
+  .contact-grid {
+    display: grid;
+    gap: 1rem;
+  }
+  .contact-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .contact-card h3 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .info-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .contact-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

@@ -1,0 +1,358 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Selling Old CRT TVs & Monitors: Niche Market Guide";
+const description =
+  "Guide to selling old CRT TVs and monitors in Kochi. Learn about niche market value, repair potential, and proper recycling options for these legacy electronics with higher metal content.";
+const path = "/wiki/sales/sell-old-crt-tvs";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Sales & Buyback", path: "/wiki/sales/" },
+  { name: "Sell Old CRT TVs", path },
+];
+
+const faqItems = [
+  {
+    q: "Are CRT TVs worth more than LCD TVs?",
+    a: "In scrap value, CRT TVs have higher copper and lead content. In resale, working modern TVs have more value. CRT value is mostly for metal recovery - limited demand from consumers.",
+  },
+  {
+    q: "Can I still get money for old CRT monitors?",
+    a: "Yes. Specialized buyers pay for CRT glass (high lead content) and metal components. Value ranges ₹500-1500 depending on size and condition. Contact recyclers for current rates.",
+  },
+  {
+    q: "What's the best way to sell a working CRT TV?",
+    a: "Target retro gaming enthusiasts, educational institutions, small businesses needing reliable displays. Use specialized forums, local repair shops, or electronic education programs.",
+  },
+  {
+    q: "Do CRT TVs have any resale market?",
+    a: "Limited but existent. Gaming enthusiasts, small businesses, developing regions, and educational settings. Higher value for larger screens (21"+) in working condition.",
+  },
+  {
+    q: "How heavy are CRT TVs for pickup?",
+    a: "Heavy - 30-80 lbs depending on size. CRT 29" = ~40 lbs, 32" = ~50 lbs, 36" = ~65 lbs. May require multiple people for lift. Flat-screen pickup is easier.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="crt-guide">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Legacy Electronics Guide</p>
+        <h1>Selling Old CRT TVs & Monitors</h1>
+        <p class="lede">
+          Complete guide to monetizing and responsibly disposing of old CRT televisions 
+          and monitors. Learn about niche market value, repair potential, and proper 
+          recycling options for these legacy electronics with high metal content.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/tv-monitor-recycling.webp"
+        alt="CRT TV and monitors being assessed for resale or recycling value"
+        width="1200"
+        height="675"
+        loading="lazy"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        CRT TVs and monitors have value through metal recovery (copper, lead, aluminum) 
+        and limited resale to retro enthusiasts. Scrap value: ₹500-1500 depending on size. 
+        Working units may sell to niche buyers. Large, heavy items need special pickup 
+        arrangements and careful handling during transport.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I have several 27\" CRT TVs to dispose of. What's the best way to get value from these?" />
+
+    <section class="crt-value" aria-labelledby="value-heading">
+      <h2 id="value-heading">CRT Electronics Value Breakdown</h2>
+      
+      <table class="value-table">
+        <thead>
+          <tr>
+            <th>Size</th>
+            <th>Weight</th>
+            <th>Scrap Value</th>
+            <th>Resale Potential</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>19-21"</td>
+            <td>25-35 lbs</td>
+            <td>₹500-800</td>
+            <td>Low - limited buyer interest</td>
+          </tr>
+          <tr>
+            <td>24-27"</td>
+            <td>35-50 lbs</td>
+            <td>₹800-1200</td>
+            <td>Medium - retro gaming, schools</td>
+          </tr>
+          <tr>
+            <td>29-32"</td>
+            <td>50-65 lbs</td>
+            <td>₹1000-1500</td>
+            <td>Higher - commercial, hobbyist</td>
+          </tr>
+          <tr>
+            <td>36"+</td>
+            <td>65+ lbs</td>
+            <td>₹1200-2000</td>
+            <td>Commercial restoration, collectors</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="components" aria-labelledby="components-heading">
+      <h2 id="components-heading">What's Inside CRT Electronics</h2>
+      
+      <div class="component-grid">
+        <div class="component-card">
+          <h3>CRT Glass</h3>
+          <p><strong>Content:</strong> 70-80% of unit weight</p>
+          <p><strong>Value:</strong> High lead content makes it valuable for proper recycling</p>
+          <p><strong>Processing:</strong> Requires specialized crushing and leaching</p>
+        </div>
+
+        <div class="component-card">
+          <h3>Metal Components</h3>
+          <p><strong>Content:</strong> Steel frame, copper wiring, aluminum PCB</p>
+          <p><strong>Value:</strong> Standard scrap metal rates</p>
+          <p><strong>Processing:</strong> Conventional metal recycling streams</p>
+        </div>
+
+        <div class="component-card">
+          <h3>Electronic Parts</h3>
+          <p><strong>Content:</strong> Circuit boards, transformers, capacitors</strong></p>
+          <p><strong>Value:</strong> Gold, silver, palladium in traces and components</p>
+          <p><strong>Processing:</strong> Requires proper e-waste recycling, not demolition</p>
+        </div>
+
+        <div class="component-card">
+          <h3>Phosphors</h3>
+          <p><strong>Content:</strong> Phosphorus-based screen coating</p>
+          <p><strong>Value:</strong> Contains rare earth elements, limited market</p>
+          <p><strong>Processing:</strong> Specialized recovery from glass particles</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sale-options" aria-labelledby="options-heading">
+      <h2 id="options-heading">Where to Sell CRT Electronics</h2>
+      
+      <div class="option-grid">
+        <div class="option-card">
+          <h3>For Niche Buyers</h3>
+          <p>Retro gaming enthusiasts, electronics collectors, and restoration shops. 
+          Use specialized forums, Facebook groups, or local hobbyist networks. Working 
+          units with original remote fetch higher prices.</p>
+        </div>
+
+        <div class="option-card">
+          <h3>for Schools/Educational Use</h3>
+          <p>Technical schools with electronics programs use CRTs for training. 
+          Often accept for free or nominal donation value. Good for tax deduction 
+          if donating to registered NGOs.</p>
+        </div>
+
+        <div class="option-card">
+          <h3>Certified Recyclers</h3>
+          <p>Best option for safety and compliance. We handle CRT disposal properly 
+          with documentation. Value based on weight, paid after safe processing.</p>
+        </div>
+
+        <div class="option-card">
+          <h3>Local Electronics Dealers</h3>
+          <p>Some repair shops buy CRTs for parts. Phone ahead to confirm interest. 
+          Limited market due to scarcity of parts buyers.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="safety" aria-labelledby="safety-heading">
+      <h2 id="safety-heading">CRT Safety Handling</h2>
+      
+      <div class="safety-notes">
+        <div class="safety-item">
+          <h3>Vacuum Tube Risk</h3>
+          <p>CRT tubes contain vacuum - never apply pressure or puncture. 
+          Handle only vertically. Transport in flat position with protection.</p>
+        </div>
+        <div class="safety-item">
+          <h3>Heavy Equipment</h3>
+          <p>Use proper lifting technique or get help moving. Consider delivery 
+          assistance for large CRTs. Transport on flat surface, secure with straps.</p>
+        </div>
+        <div class="safety-item">
+          <h3>Hazardous Materials</h3>
+          <p>Contains lead, barium, phosphorus. Always recycle through certified 
+          channels. Never dispose in regular waste or landfill.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Wiki Guides</h2>
+      <a href="/wiki/sales/sell-broken-electronics">Selling Broken Electronics</a>
+      <a href="/wiki/technical/environmental-impact-e-waste">Environmental Impact</a>
+      <a href="/wiki/disposal/how-to-dispose-of-tvs">TV Disposal Guide</a>
+      <a href="/wiki/technical/types-of-electronic-waste">Types of E-Waste</a>
+    </section>
+
+    <Faq items={faqItems} heading="CRT Disposal FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .crt-guide {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .value-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.75rem;
+  }
+  .value-table th,
+  .value-table td {
+    padding: 0.5rem;
+    border: 1px solid var(--color-border);
+    text-align: left;
+  }
+  .value-table th {
+    background: var(--color-surface-strong);
+  }
+  .component-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .component-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .component-card p {
+    margin: 0.15rem 0;
+    font-size: 0.8rem;
+  }
+  .option-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .option-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .option-card h3 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+  }
+  .safety-notes {
+    display: grid;
+    gap: 1rem;
+  }
+  .safety-item h3 {
+    margin: 0 0 0.25rem;
+    color: var(--color-primary);
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .component-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .option-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

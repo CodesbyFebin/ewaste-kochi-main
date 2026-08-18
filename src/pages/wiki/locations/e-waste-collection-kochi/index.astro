@@ -1,0 +1,266 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "E-Waste Collection in Kochi: Full Service Guide";
+const description =
+  "Complete guide to e-waste collection services in Kochi. Find pickup locations, schedule collection, learn what items are accepted, and understand the process for home and business pickup in Kochi city and suburbs.";
+const path = "/wiki/locations/e-waste-collection-kochi";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Location Services", path: "/wiki/locations/" },
+  { name: "E-Waste Collection in Kochi", path },
+];
+
+const faqItems = [
+  {
+    q: "Which areas of Kochi have doorstep pickup?",
+    a: "Doorstep pickup available across Kochi metro area including Kakkanad, Edappally, Kalamassery, Perumbavoor, Aluva, and surrounding suburbs. Check service availability for your specific location.",
+  },
+  {
+    q: "Is there a minimum quantity for pickup?",
+    a: "Residential pickup accepts individual items. Bulk business pickup has flexible scheduling. For very small quantities, consider drop-off centers or combining with neighbors.",
+  },
+  {
+    q: "What time of day is pickup available?",
+    a: "Standard pickup hours: 9 AM to 5 PM, Monday to Saturday. Emergency or after-hours pickup available for businesses with advance request and additional fees.",
+  },
+  {
+    q: "Do I need an appointment?",
+    a: "Yes, all pickups require advance booking. Same-day pickup available in select areas if booked before 11 AM. Scheduled pickup requires 24-48 hours notice.",
+  },
+  {
+    q: "What if I'm not home during pickup?",
+    a: "Inform us in advance and provide access instructions. Pickup can be arranged with security guard or nearby resident. Avoid after-hours visits unless pre-arranged.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="location-guide">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Kochi Collection Guide</p>
+        <h1>E-Waste Collection in Kochi</h1>
+        <p class="lede">
+          Complete guide to e-waste collection services across Kochi. Find pickup 
+          locations, schedule collection, and understand the process for home and 
+          business pickup in all Kochi neighborhoods.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/pickup-service.webp"
+        alt="E-waste pickup vehicle collecting electronics from Kochi location"
+        width="1200"
+        height="675"
+        loading="lazy"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        E-waste pickup is available throughout Kochi metro area. Book via WhatsApp 
+        with item list and photos. Standard hours: 9 AM to 5 PM. Residential pickup 
+        accepts individual items. Business and bulk collections require advance 
+        scheduling with detailed inventory.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I'm in Edappally and need to schedule e-waste pickup. How do I book?" />
+
+    <section class="coverage-map" aria-labelledby="coverage-heading">
+      <h2 id="coverage-heading">Service Areas in Kochi</h2>
+      
+      <div class="area-grid">
+        <div class="area-card">
+          <h3>Core Kochi</h3>
+          <p>Fort Kochi, Mattancherry, Kaloor, Edappally, Kakkanad, Palarivattom, 
+          Vytilla, Thiruvananthapuram</p>
+        </div>
+        <div class="area-card">
+          <h3>Suburban Areas</h3>
+          <p>Kalamassery, Aluva, Perumbavoor, Muvattupuzha, Kothamangalam, 
+          Kakkanad Industrial Area</p>
+        </div>
+        <div class="area-card">
+          <h3>Infopark & Tech Areas</h3>
+          <p>Infopark, SmartCity, Technology Hub, Kelaniya, Kakkanad Business 
+          District, NEDUMS Campus</p>
+        </div>
+        <div class="area-card">
+          <h3>Residential Localities</h3>
+          <p>Kadavanthra, Kaloor, Thrissur Road, Kottayam Road, Marine Drive 
+          area, Rajaji Circle vicinity</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking-process" aria-labelledby="booking-heading">
+      <h2 id="booking-heading">How to Book Pickup</h2>
+      
+      <ol class="booking-steps">
+        <li>
+          <h3>Create Item List</h3>
+          <p>Count electronics, note brands/models, condition, and separate 
+          batteries for safety.</p>
+        </li>
+        <li>
+          <h3>Take Photos</h3>
+          <p>Clear images of each device showing identification and condition. 
+          Include close-up if damaged.</p>
+        </li>
+        <li>
+          <h3>Share Details</h3>
+          <p>Send via WhatsApp: item list, photos, complete address, access notes, 
+          preferred pickup day/time window.</p>
+        </li>
+        <li>
+          <h3>Receive Confirmation</h3>
+          <p>Get pickup confirmation within 24 hours. Cancellation/modification 
+          notice required 2 hours before scheduled time.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="faq-section" aria-labelledby="faq-heading">
+      <h2 id="faq-heading">Frequently Asked Questions</h2>
+      <Faq items={faqItems} />
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Resources</h2>
+      <a href="/wiki/locations/e-waste-collection-near-me-list">Collection Near Me Directory</a>
+      <a href="/wiki/disposal/e-waste-pickup-services">Pickup Service Details</a>
+      <a href="/wiki/disposal/how-to-recycle-electronics-at-home">Preparation Guide</a>
+      <a href="/pickup/">Book Pickup</a>
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .location-guide {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .area-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .area-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .area-card h3 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+    font-size: 1.1rem;
+  }
+  .booking-steps ol {
+    counter-reset: booking-counter;
+    list-style: none;
+    padding: 0;
+  }
+  .booking-steps li {
+    counter-increment: booking-counter;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .booking-steps li h3 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .area-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .booking-steps li {
+      grid-template-columns: 1fr;
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

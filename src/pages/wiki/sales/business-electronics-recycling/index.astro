@@ -1,0 +1,344 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "E-Waste Recycling for Businesses: IT Asset Disposition";
+const description =
+  "Comprehensive guide to e-waste recycling for businesses in Kochi. Learn about ITAD services, bulk disposal, compliance, and professional handling of corporate electronics including servers, workstations, and networking equipment.";
+const path = "/wiki/sales/business-electronics-recycling";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Sales & Buyback", path: "/wiki/sales/" },
+  { name: "Business Electronics Recycling", path },
+];
+
+const faqItems = [
+  {
+    q: "What's the difference between business and residential recycling?",
+    a: "Business recycling includes compliance documentation, asset inventory, chain of custody, and enterprise data destruction. Residential is for individual household items without these requirements.",
+  },
+  {
+    q: "How do we handle bulk IT equipment disposal?",
+    a: "Schedule bulk pickup, provide asset list, handle data destruction with certificates, receive detailed disposal report, and get optional residual value payment. Bulk = 10+ items or any quantity for businesses.",
+  },
+  {
+    q: "Are there special handling for server equipment?",
+    a: "Yes. Servers require pre-scheduled pickup, technical assistance for component removal, specialized transport, and documented chain of custody. Contact us for large-scale server room decommissioning.",
+  },
+  {
+    q: "What compliance standards are supported?",
+    a: "We support: ISO 27001, HIPAA (healthcare), SOX (financial), GDPR (data privacy), and EPR compliance. Custom documentation available for industry-specific requirements.",
+  },
+  {
+    q: "Can we get resale value for working business equipment?",
+    a: "Yes. Working laptops, desktops, monitors, and peripherals have resale value. We provide bulk device valuation and can coordinate sale or donation programs based on business objectives.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="business-recycling">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">IT Asset Disposition</p>
+        <h1>E-Waste Recycling for Businesses</h1>
+        <p class="lede">
+          Complete guide to professional e-waste recycling for businesses in Kochi and 
+          Kerala. Learn about ITAD services, bulk disposal, compliance requirements, 
+          and secure handling of corporate electronics.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/corporate-ewaste.webp"
+        alt="Corporate IT equipment recycling with proper documentation and data destruction"
+        width="1200"
+        height="675"
+        loading="lazy"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        Corporate e-waste recycling includes asset inventory, secure data destruction, 
+        chain of custody documentation, and compliance reporting. We handle bulk 
+        equipment from offices, data centers, and business locations across Kochi 
+        with ISO-certified processes and regulatory compliance.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="We need to dispose of 200+ IT assets across our offices. What's the process for corporate e-waste recycling?" />
+
+    <section class="service-benefits" aria-labelledby="benefits-heading">
+      <h2 id="benefits-heading">Business Recycling Benefits</h2>
+      
+      <div class="benefit-grid">
+        <div class="benefit-card">
+          <h3>Compliance Assurance</h3>
+          <p>Full documentation for EPR, data protection regulations, and internal audits. 
+          Receive certificates for data destruction and proper recycling.</p>
+        </div>
+
+        <div class="benefit-card">
+          <h3>Data Security</h3>
+          <p>Certified data wiping, degaussing, or physical destruction. Chain of custody 
+          documentation for high-security environments. HIPAA/GDPR compliant processes.</p>
+        </div>
+
+        <div class="benefit-card">
+          <h3>Cost Efficiency</h3>
+          <p>Bulk pickup reduces per-unit costs. Value recovery options for working assets. 
+          Tax-deductible donations for eligible organizations.</p>
+        </div>
+
+        <div class="benefit-card">
+          <h3>Seamless Integration</h3>
+          <p>Coordinates with facility management, office moves, equipment refresh cycles. 
+          Flexible scheduling for after-hours or weekend collections.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="equipment-handling" aria-labelledby="handling-heading">
+      <h2 id="handling-heading">Equipment Handling Protocols</h2>
+      
+      <div class="handling-grid">
+        <div class="handling-card">
+          <h3>Pre-Collection Planning</h3>
+          <ul>
+            <li>Asset inventory with serial numbers</li>
+            <li>Facility access coordination</li>
+            <li>Data destruction method selection</li>
+            <li>Special handling requirements</li>
+          </ul>
+        </div>
+
+        <div class="handling-card">
+          <h3>During Collection</h3>
+          <ul>
+            <li>Verified technician identification</li>
+            <li>Chain of custody documentation</li>
+            <li>Gentle handling of sensitive equipment</li>
+            <li>Security seal verification if required</li>
+          </ul>
+        </div>
+
+        <div class="handling-card">
+          <h3>Post-Collection</h3>
+          <ul>
+            <li>Processing confirmation</li>
+            <li>Report generation</li>
+            <li>Certificate issuance</li>
+            <li>Follow-up documentation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="compliance-standards" aria-labelledby="compliance-heading">
+      <h2 id="compliance-heading">Supported Compliance Frameworks</h2>
+      
+      <table class="compliance-table">
+        <thead>
+          <tr>
+            <th>Standard</th>
+            <th>Applicable To</th>
+            <th>Documentation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ISO 27001</td>
+            <td>Information Security Management</td>
+            <td>ISMS compliance report</td>
+          </tr>
+          <tr>
+            <td>HIPAA</td>
+            <td>Healthcare Organizations</td>
+            <td>HIPAA-compliant disposal certificate</td>
+          </tr>
+          <tr>
+            <td>SOX</td>
+            <td>Financial Institutions</td>
+            <td>SOX-compliant asset disposition</td>
+          </tr>
+          <tr>
+            <td>EPR</td>
+            <td>Manufacturers/Producers</td>
+            <td>EPR compliance documentation</td>
+          </tr>
+          <tr>
+            <td>GDPR</td>
+            <td>Data Privacy Compliance</td>
+            <td>Data protection impact assessment</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Services</h2>
+      <a href="/wiki/sales/choose-secure-itad-vendor">Choose ITAD Vendor</a>
+      <a href="/itad/">Our ITAD Services</a>
+      <a href="/corporate-e-waste-recycling/">Corporate Services Overview</a>
+      <a href="/wiki/technical/data-center-decommissioning-checklist">Data Center Checklist</a>
+    </section>
+
+    <Faq items={faqItems} heading="Business Recycling FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .business-recycling {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .benefit-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .benefit-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .benefit-card h3 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+  }
+  .handling-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .handling-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+    font-size: 0.85rem;
+  }
+  .handling-card li {
+    padding: 0.25rem 0;
+    position: relative;
+    padding-left: 1.25rem;
+  }
+  .handling-card li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+  }
+  .compliance-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.85rem;
+  }
+  .compliance-table th,
+  .compliance-table td {
+    padding: 0.5rem;
+    text-align: left;
+    border: 1px solid var(--color-border);
+  }
+  .compliance-table th {
+    background: var(--color-surface-strong);
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .benefit-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .handling-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

@@ -1,0 +1,350 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Laptop & Computer Disposal: Data Destruction & Recycling";
+const description =
+  "Complete guide to laptop and computer disposal in Kochi. Learn about data destruction methods, secure wiping, ITAD services, and proper recycling of desktop computers, laptops, and accessories.";
+const path = "/wiki/disposal/laptop-and-computer-disposal";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Disposal Methods", path: "/wiki/disposal/" },
+  { name: "Laptop & Computer Disposal", path },
+];
+
+const faqItems = [
+  {
+    q: "Is factory reset enough for data destruction?",
+    a: "Factory reset alone is not secure. Anyone can recover data using specialized tools. Use certified data destruction with certificate, or do multiple overwrites with random data before factory reset.",
+  },
+  {
+    q: "How do I wipe a laptop before recycling?",
+    a: "Backup data first. Then use built-in reset (Windows Reset, macOS Erase), or create a bootable USB with DBAN or similar wiping software. For businesses, request certified data destruction with documentation.",
+  },
+  {
+    q: "Can old business laptops be recycled for scrap value?",
+    a: "Yes. Functional laptops have value through sell-back or donation programs. Non-functional laptops are recycled for precious metals. Book pickup and we'll assess value on-site or after collection.",
+  },
+  {
+    q: "What about external hard drives and storage?",
+    a: "Storage devices require extra care for data destruction. Options include: degaussing, physical shredding, or software overwriting. Request hard drive destruction service for certified destruction with certificate.",
+  },
+  {
+    q: "How is computer recycling different from disposal?",
+    a: "Recycling breaks down devices into recoverable materials (metals, plastics, rare earth elements). Proper recycling recovers valuable components while safely disposing of hazardous materials. Never dispose of computers with regular waste.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="computer-disposal">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Computer Recycling Guide</p>
+        <h1>Laptop & Computer Disposal</h1>
+        <p class="lede">
+          Complete guide to safely disposing of laptops and computers in Kochi. 
+          Learn secure data destruction methods, ITAD services, recycling processes, 
+          and how to maximize value from old computing equipment.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/laptop-computer-recycling.webp"
+        alt="Laptops and computers being prepared for secure data destruction and recycling"
+        width="1200"
+        height="675"
+        loading="lazy"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        For laptop disposal: backup data, perform secure data wiping (not just factory reset), 
+        remove personal accounts, and book certified recycling through Ewaste Kochi. We offer 
+        ITAD services with documentation for businesses requiring compliance with data protection laws.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I need to dispose of several laptops and desktops. I have sensitive data - what's the best approach for data destruction?" />
+
+    <section class="data-safety" aria-labelledby="data-heading">
+      <h2 id="data-heading">Data Destruction Before Disposal</h2>
+      
+      <div class="safety-steps">
+        <div class="safety-card">
+          <h3>Personal Devices</h3>
+          <ol>
+            <li><strong>Backup important files</strong> to cloud storage or external drive</li>
+            <li><strong>Remove from accounts</strong> - sign out of Apple ID, Google account, Microsoft account</li>
+            <li><strong>Factory reset</strong> - use built-in reset tool, not just delete files</li>
+            <li><strong>Encrypt first</strong> - encrypt drive before resetting for extra security</li>
+          </ol>
+        </div>
+
+        <div class="safety-card">
+          <h3>Business Devices</h3>
+          <ol>
+            <li><strong>Use company-approved method</strong> - follow your MDM/MAM erasure policy</li>
+            <li><strong>Request certified destruction</strong> - we provide DIN-certified certificates</li>
+            <li><strong>Document chain of custody</strong> - for compliance with data protection laws</li>
+            <li><strong>Asset inventory update</strong> - update register before collection</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="destruction-methods" aria-labelledby="methods-heading">
+      <h2 id="methods-heading">Data Destruction Methods</h2>
+      
+      <div class="method-grid">
+        <div class="method-card">
+          <h3>Software Wiping</h3>
+          <p><strong>Process:</strong> Overwriting data with random patterns multiple times</p>
+          <p><strong>Tools:</strong> DBAN, Blancco, built-in OS utilities</p>
+          <p><strong>Verdict:</strong> Good for personal use. Not recommended for sensitive business data.</p>
+        </div>
+
+        <div class="method-card">
+          <h3>Degaussing</h3>
+          <p><strong>Process:</strong> Using strong magnetic field to erase data on magnetic media</p>
+          <p><strong>Applicable:</strong> Hard drives, floppy disks, some tapes</p>
+          <p><strong>Verdict:</strong> Effective for HDD data destruction. Not applicable to SSDs.</p>
+        </div>
+
+        <div class="method-card">
+          <h3>Physical Destruction</h3>
+          <p><strong>Process:</strong> Shredding, crushing, or disintegrating storage devices</p>
+          <p><strong>Result:</strong> Physical damage makes data unrecoverable</p>
+          <p><strong>Verdict:</strong> Most secure method. Requires certified service for documentation.</p>
+        </div>
+
+        <div class="method-card">
+          <h3>Encryption + Destruction</h3>
+          <p><strong>Process:</strong> Encrypt drive, then perform standard destruction</p>
+          <p><strong>Result:</strong> Data remains encrypted even after physical damage</p>
+          <p><strong>Verdict:</strong> Recommended approach for combined security and efficiency.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="recycling-process" aria-labelledby="process-heading">
+      <h2 id="process-heading">Computer Recycling Process</h2>
+      
+      <ol class="recycling-steps">
+        <li>
+          <span class="step-number">1</span>
+          <div>
+            <h4>Collection</h4>
+            <p>Materials collected through pickup or drop-off. Inventory recorded with photos and serial numbers.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-number">2</span>
+          <div>
+            <h4>Pre-processing</h4>
+            <p>Batteries removed, components sorted by type. Data-bearing devices processed separately for destruction.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-number">3</span>
+          <div>
+            <h4>Component Recovery</h4>
+            <p>Mechanical separation of metals, plastics, and circuit boards. Precious metals extracted through smelting.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-number">4</span>
+          <div>
+            <h4>Material Re-use</h4>
+            <p>Cu, Al, Au, Ag, Fe, Pb, and rare earth elements sold to verified smelters for manufacturing new products.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Wiki Guides</h2>
+      <a href="/wiki/technical/hard-drive-data-destruction">Hard Drive Data Destruction</a>
+      <a href="/wiki/sales/where-to-sell-electronics-locally">Sell vs Recycle Decision</a>
+      <a href="/wiki/disposal/how-to-recycle-electronics-at-home">Home Recycling Guide</a>
+      <a href="/itad/">Our ITAD Services</a>
+      <a href="/data-destruction/">Data Destruction Services</a>
+    </section>
+
+    <Sources items={[
+      { title: "NIST Guidelines for Media Sanitization", href: "https://csrc.nist.gov", publisher: "NIST" },
+      { title: "HIPAA Compliance for E-Waste", href: "https://www.hhs.gov", publisher: "HHS" },
+    ]} />
+
+    <Faq items={faqItems} heading="Computer Disposal FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .computer-disposal {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .safety-steps {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .safety-card ol {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+    font-size: 0.9rem;
+  }
+  .safety-card ol li {
+    padding: 0.25rem 0;
+    position: relative;
+    padding-left: 1.25rem;
+  }
+  .safety-card ol li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+  }
+  .method-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .method-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .method-card p {
+    margin: 0.25rem 0;
+    font-size: 0.85rem;
+  }
+  .recycling-steps ol {
+    counter-reset: recycle-counter;
+    list-style: none;
+    padding: 0;
+  }
+  .recycling-steps li {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+  .recycling-steps li::before {
+    counter-increment: recycle-counter;
+    content: counter(recycle-counter);
+    width: 2rem;
+    height: 2rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .safety-steps {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .method-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .recycling-steps li {
+      grid-template-columns: 1fr;
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

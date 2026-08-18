@@ -1,0 +1,400 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "How to Choose a Secure ITAD Vendor: Checklist 2026";
+const description =
+  "Complete checklist for choosing a secure ITAD vendor in Kochi. Evaluate certifications, data destruction methods, compliance documentation, pricing, and service capabilities for corporate e-waste disposal.";
+const path = "/wiki/sales/choose-secure-itad-vendor";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Sales & Buyback", path: "/wiki/sales/" },
+  { name: "Choose ITAD Vendor", path },
+];
+
+const faqItems = [
+  {
+    q: "What certifications matter most for ITAD vendors?",
+    a: "Look for: e-Stewards (global e-waste standard), R2 (responsible recycling), ISO 27001 (information security), and state pollution control board authorization.",
+  },
+  {
+    q: "How is pricing calculated for ITAD services?",
+    a: "Prices based on: device type, quantity, condition, data destruction level required, and mileage from processing facility. Ask for per-asset breakdown including labor and transportation.",
+  },
+  {
+    q: "What's included in chain of custody documentation?",
+    a: "Full tracking: asset IDs, serial numbers, timestamps at each handling point, responsible personnel signatures, and final disposition record. Required for audits and compliance.",
+  },
+  {
+    q: "Can small businesses get compliant ITAD services?",
+    a: "Yes. Vendors often have minimum quantities but many offer scaled-down services for 10+ devices. Volume-based pricing benefits multiple small clients combining orders.",
+  },
+  {
+    q: "What happens to data during destruction?",
+    a: "For wiping: data overwritten per NIST 800-88. For shredding: drives physically destroyed into unreadable fragments. Both methods provide certification of completion.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="itad-checklist">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Vendor Selection Guide</p>
+        <h1>How to Choose a Secure ITAD Vendor</h1>
+        <p class="lede">
+          Complete 2026 checklist for selecting a secure ITAD vendor in Kochi and Kerala. 
+          Evaluate certifications, data destruction methods, compliance documentation, 
+          pricing models, and service capabilities for corporate e-waste disposal.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/corporate-ewaste.webp"
+        alt="ITAD vendor evaluation checklist and certification documents"
+        width="1200"
+        height="675"
+        loading="lazy"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        Choose ITAD vendor by verifying e-Stewards/R2 certifications, ISO 27001, chain 
+        of custody documentation, data destruction methods (wiping vs shredding), pricing 
+        transparency, and references from similar businesses. Request site visit for 
+        larger commitments.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="We need to select an ITAD vendor for monthly asset disposal. What questions should we ask?" />
+
+    <section class="evaluation-checklist" aria-labelledby="checklist-heading">
+      <h2 id="checklist-heading">ITAD Vendor Evaluation Checklist</h2>
+      
+      <div class="checklist-table">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Requirement</th>
+              <th>Verification Method</th>
+              <th>Critical?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Certified Recycler (e-Stewards/R2)</td>
+              <td>Verify certificate on website, check expiration</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>GST Registration</td>
+              <td>Check GSTIN number on GST portal</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Pollution Control Authorization</td>
+              <td>KSPCB/CPCB certificate valid</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>ISO 27001 Certification</td>
+              <td>Verify through ISO website, scope includes ITAD</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Insurance Coverage</td>
+              <td>Ask for policy details and coverage limits</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Chain of Custody Process</td>
+              <td>Request sample certificate, process documentation</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Data Destruction Methods</td>
+              <td>Verify wiping standards, shredding capabilities</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Pricing Transparency</td>
+              <td>Get detailed quote with per-item breakdown</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Reference Clients</td>
+              <td>Request 2-3 references in same industry</td>
+              <td>Mandatory</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>Facility Safety Standards</td>
+              <td>Request facility photos, safety certifications</td>
+              <td>Mandatory</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="certification-details" aria-labelledby="cert-heading">
+      <h2 id="cert-heading">Key Certification Details</h2>
+      
+      <div class="cert-grid">
+        <div class="cert-card">
+          <h3>e-Stewards Certification</h3>
+          <p><strong>Scope:</strong> Global standard for responsible e-waste recycling</p>
+          <p><strong>Ensures:</strong> No export to developing countries, proper worker safety, 
+          full documentation, and verified data destruction. Requires third-party auditing.</p>
+        </div>
+
+        <div class="cert-card">
+          <h3>R2 Certification</h3>
+          <p><strong>Scope:</strong> North American standard adopted globally</p>
+          <p><strong>Ensures:</strong> Environmental protection, worker safety, data security, 
+          and downstream partner vetting. Requires life-cycle management of materials.</p>
+        </div>
+
+        <div class="cert-card">
+          <h3>ISO 27001</h3>
+          <p><strong>Scope:</strong> Information security management</p>
+          <p><strong>Ensures:</strong> Data protection controls, risk assessment, incident 
+          response, and continuous improvement in security practices.</p>
+        </div>
+
+        <div class="cert-card">
+          <h3>EPR Compliance</h3>
+          <p><strong>Scope:</strong> Extended Producer Responsibility</p>
+          <p><strong>Ensures:</strong> Proper handling of producer-registered items, 
+          tracking and reporting mechanisms, and financing of end-of-life management.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="questions-to-ask" aria-labelledby="questions-heading">
+      <h2 id="questions-heading">Key Questions for Vendor Interviews</h2>
+      
+      <div class="questions-grid">
+        <div class="questions-card">
+          <h3>Data Security Questions</h3>
+          <ul>
+            <li>What methods do you use for data destruction?</li>
+            <li>Can you provide HIPAA/GDPR compliance documentation?</li>
+            <li>Do you offer on-site data wiping options?</li>
+            <li>How do you handle chain of custody for data devices?</li>
+          </ul>
+        </div>
+
+        <div class="questions-card">
+          <h3>Operational Questions</h3>
+          <ul>
+            <li>What's your minimum quantity for pickup service?</li>
+            <li>Do you provide after-hours service?</li>
+            <li>How far in advance should I schedule pickup?</li>
+            <li>What's your policy for damaged items?</li>
+          </ul>
+        </div>
+
+        <div class="questions-card">
+          <h3>Pricing Questions</h3>
+          <ul>
+            <li>Do you charge per item or by weight?</li>
+            <li>What's included in your quoted price?</li>
+            <li>Do you offer volume discounts?</li>
+            <li>How and when is payment processed?</li>
+          </ul>
+        </div>
+
+        <div class="questions-card">
+          <h3>Documentation Questions</h3>
+          <ul>
+            <li>What certificates do you provide after service?</li>
+            <li>How long do you retain records?</li>
+            <<li>Can documents be delivered electronically?</li>
+            <li>Do you provide export certificates if needed?</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Wiki Guides</h2>
+      <a href="/wiki/sales/business-electronics-recycling">Business Electronics Recycling</a>
+      <a href="/itad/">Our ITAD Services</a>
+      <a href="/wiki/technical/hard-drive-data-destruction">Data Destruction Methods</a>
+      <a href="/wiki/disposal/e-waste-pickup-services">Pickup Services</a>
+    </section>
+
+    <Sources items={[
+      { title: "e-Stewards Certification Standards", href: "https://e-stewards.org", publisher: "e-Stewards" },
+      { title: "R2 Certification Requirements", href: "https://sustainableelectronics.org", publisher: "SCS Global" },
+    ]} />
+
+    <Faq items={faqItems} heading="ITAD Vendor Selection FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .itad-checklist {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .checklist-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+  .checklist-table th,
+  .checklist-table td {
+    padding: 0.5rem;
+    border: 1px solid var(--color-border);
+    text-align: left;
+  }
+  .checklist-table th {
+    background: var(--color-surface-strong);
+  }
+  .cert-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .cert-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .cert-card p {
+    margin: 0.15rem 0;
+    font-size: 0.85rem;
+  }
+  .questions-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .questions-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+    font-size: 0.8rem;
+  }
+  .questions-card li {
+    padding: 0.2rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  .questions-card li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .cert-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .questions-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

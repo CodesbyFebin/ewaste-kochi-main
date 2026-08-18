@@ -1,0 +1,211 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Kakkanad Waste Disposal: Electronics Collection in Infopark Area";
+const description =
+  "Complete guide to e-waste collection in Kakkanad, Kochi. Electronic waste pickup for IT offices, residential complexes near Infopark and SmartCity with certified recycling.";
+const path = "/wiki/locations/kakkanad-waste-disposal";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Locations", path: "/wiki/locations/" },
+  { name: "Kakkanad Waste Disposal", path },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="location-page">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Kakkanad Collection Guide</p>
+        <h1>Kakkanad Waste Disposal: Electronics Collection</h1>
+        <p class="lede">
+          Complete e-waste collection service for Kakkanad, Kochi. 
+          Specialized pickup for IT offices near Infopark, SmartCity, and 
+          residential complexes in this technology hub area.
+        </p>
+      </div>
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        Kakkanad receives priority scheduling for IT and electronics 
+        pickup. Offices in Infopark and SmartCity can book same-day 
+        feasibility checks. Residential units can consolidate with 
+        neighborhood collection slots.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I'm in Kakkanad near Infopark and need to schedule e-waste pickup for office electronics." />
+
+    <section class="services-section" aria-labelledby="services-heading">
+      <h2 id="services-heading">Kakkanad Service Areas</h2>
+      
+      <div class="service-grid">
+        <div class="service-item">
+          <h3>Infopark Offices</h3>
+          <p>Primary pickup zone for IT companies, startups, and 
+          technology firms. Data destruction and ITAD services available.</p>
+        </div>
+        <div class="service-item">
+          <h3>SmartCity Complexes</h3>
+          <p>Multi-story office buildings with centralized pickup 
+          coordination. Bulk electronics and server equipment supported.</p>
+        </div>
+        <div class="service-item">
+          <h3>Residential Complexes</h3>
+          <p>Apartment associations and housing societies in Kakkanad 
+          can book consolidated pickup for resident electronics.</p>
+        </div>
+        <div class="service-item">
+          <h3>Retail & Shops</h3>
+          <p>Small businesses and retail outlets near NH66 and Lulu 
+          Mall can schedule regular e-waste pickup.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking-section" aria-labelledby="booking-heading">
+      <h2 id="booking-heading">How to Book Pickup in Kakkanad</h2>
+      
+      <ol class="steps">
+        <li>
+          <strong>Share Details</strong>
+          <p>Send item count, types, and location (building name, floor, 
+          gate number) via WhatsApp.</p>
+        </li>
+        <li>
+          <strong>Receive Quote</strong>
+          <p>For offices: get buyback quote for resale items. For residents: 
+          confirm free pickup eligibility.</p>
+        </li>
+        <li>
+          <strong>Schedule Pickup</strong>
+          <p>Select from available time slots. Most Kakkanad pickups 
+          scheduled within 48 hours.</p>
+        </li>
+        <li>
+          <strong>Collection Day</strong>
+          <p>Team arrives with documentation. Batteries collected 
+          separately. Items weighed and itemized.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Pages</h2>
+      <a href="/wiki/locations/e-waste-collection-kochi/">Kochi Overview</a>
+      <a href="/wiki/locations/near-me-directory/">Find Other Locations</a>
+      <a href="/wiki/sales/choose-secure-itad-vendor/">ITAD Services</a>
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .location-page {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .service-grid {
+    display: grid;
+    gap: 1rem;
+  }
+  .service-item {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .service-item h3 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+  }
+  .steps {
+    display: grid;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  .steps li {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .service-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

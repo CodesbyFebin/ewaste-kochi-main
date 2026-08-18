@@ -1,0 +1,356 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Selling Broken or Damaged Electronics: Parts & Scrap";
+const description =
+  "Guide to selling broken electronics in Kochi. Learn how to handle cracked screens, non-working devices, damaged items, and determine salvage value for parts and component recovery.";
+const path = "/wiki/sales/sell-broken-electronics";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Sales & Buyback", path: "/wiki/sales/" },
+  { name: "Broken Electronics", path },
+];
+
+const faqItems = [
+  {
+    q: "Is a cracked screen worth anything?",
+    a: "Yes. Cracked phone screens have value for repair parts. iPads and iPhones fetch highest value for screen replacement. Laptops with intact keyboards still have good parts value.",
+  },
+  {
+    q: "What about water damaged devices?",
+    a: "Water damage significantly reduces value. If logically repairable, some value remains. Most water-damaged devices go directly to scrapyards for component recovery at lower rates.",
+  },
+  {
+    q: "Can I repair before selling?",
+    a: "Minor repairs (screen replacement, battery) may increase value more than cost. Major repairs usually don't recoup costs. Get quotes from repair shops to compare with scrap value.",
+  },
+  {
+    q: "Do batteries affect value of damaged devices?",
+    a: "Swollen or damaged batteries reduce overall value due to safety concerns. Separate and recycle batteries independently for safer handling and accurate device valuation.",
+  },
+  {
+    q: "What's the best way to sell non-working phones?",
+    a: "Use dedicated broken phone platforms like iFixit Marketplace, local repair shops, or scrap buyers. Be honest about issues for fair pricing. Bulk broken devices have different valuation process.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="broken-electronics">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Broken Device Guide</p>
+        <h1>Selling Broken or Damaged Electronics</h1>
+        <p class="lede">
+          Complete guide to extracting value from damaged electronics. Learn how to assess 
+          parts value, identify repairable items, and find the right buyers for cracked, 
+          broken, or non-working devices.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/broken-electronics-value-recycling-kochi.webp"
+        alt="Damaged electronics being assessed for parts and repair value"
+        width="1200"
+        height="675"
+        loading="lazy"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        Broken electronics still have value: cracked phone screens for repair parts, 
+        non-working laptops for components, broken tablets for rare earth metals. 
+        Separate batteries, document issues clearly, and use specialized buyers for 
+        damaged devices to maximize salvage value.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I have several broken phones and a cracked laptop screen. What's the best way to monetize these?" />
+
+    <section class="damage-types" aria-labelledby="damage-heading">
+      <h2 id="damage-heading">Types of Damage & Value Retention</h2>
+      
+      <div class="damage-grid">
+        <div class="damage-card">
+          <h3>Screen Damage</h3>
+          <p><strong>Phone:</strong> 60-80% of parts value retained. High demand for screen replacement.</p>
+          <p><strong>Tablet:</strong> 50-70% value. Larger screens = higher repair parts value.</p>
+          <p><strong>Laptop:</strong> 40-60%. Consider if hinge or keyboard also damaged.</p>
+        </div>
+
+        <div class="damage-card">
+          <h3>Motherboard Issues</h3>
+          <p><strong>Value:</strong> 20-50% of device value. RAM, storage still recoverable.</p>
+          <p><strong>Best Approach:</strong> Sell for component harvesting, not repair.</p>
+          <p><strong>Check:</strong> Battery health, screen condition, ports functionality.</p>
+        </div>
+
+        <div class="damage-card">
+          <h3>Battery Swelling</h3>
+          <p><strong>Impact:</strong> 40-70% reduction. Safety hazard - handle carefully.</p>
+          <p><strong>Solution:</strong> Replace battery first (₹1000-3000) if budget allows. 
+          Otherwise, sell to specialized battery recyclers separately.</p>
+        </div>
+
+        <div class="damage-card">
+          <h3>Water/liquid Damage</h3>
+          <p><strong>Value:</strong> 10-30% of original. Corrosion affects many components.</p>
+          <p><strong>Assessment:</strong> Corrosion visible on board? Battery swollen? 
+          Multiple components? Water damage often means total scrap value.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="valuation-methods" aria-labelledby="valuation-heading">
+      <h2 id="valuation-heading">How to Determine Value of Damaged Devices</h2>
+      
+      <div class="valuation-steps">
+        <div class="val-step">
+          <h3>Assess Repair Costs</h3>
+          <p>Get quotes from local repair shops. Compare repair cost to potential resale value 
+          after repair. If repair cost > 60% of working value, likely better to scrap.</p>
+        </div>
+
+        <div class="val-step">
+          <h3>Identify Salvageable Parts</h3>
+          <p>List components with remaining value: screens, cameras, batteries, RAM, storage, 
+          casing, buttons, ports. High-value parts for popular models.</p>
+        </div>
+
+        <div class="val-step">
+          <h3>Get Multiple Quotes</h3>
+          <p>Contact: repair shops (for parts), certified recyclers (for scrap), local buyers 
+          (for quick sale). Use photos and damage description for accurate estimates.</p>
+        </div>
+
+        <div class="val-step">
+          <h3>Consider Disassembly</h3>
+          <p>For multiple damaged devices, professional disassembly may yield higher value from 
+          individual components than selling as whole units.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="buyer-types" aria-labelledby="buyer-types-heading">
+      <h2 id="buyer-types-heading">Who Buys Broken Electronics?</h2>
+      
+      <div class="buyer-type-grid">
+        <div class="buyer-type">
+          <h3>Repair Shops</h3>
+          <p>Buy broken phones, laptops, tablets for parts and repair. Offer cash on spot. 
+          Best for items with intact screens or common issues like battery or screen replacement.</p>
+        </div>
+
+        <div class="buyer-type">
+          <h3>Certification Centers</h3>
+          <p>Certified recyclers accept broken devices, provide proper documentation. 
+          Pay based on component value and recycling costs. Ideal for business compliance.</p>
+        </div>
+
+        <div class="buyer-type">
+          <h3>Component Harvesters</h3>
+          <p>Specialists in extracting valuable parts. Higher value for devices with rare or 
+          expensive components (iPhone screens, MacBook keyboards).</p>
+        </div>
+
+        <div class="buyer-type">
+          <h3>Scrapping Facilities</h3>
+          <p>Traditional scrap processors, pay for total weight. Lower value than specialized 
+          buyers but convenient for bulk broken electronics.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="safety-first" aria-labelledby="safety-heading">
+      <h2 id="safety-heading">Safety When Handling Damaged Devices</h2>
+      
+      <ul class="safety-list">
+        <li><strong>Swollen Batteries:</strong> Store in plastic container, away from flammable materials. Do not puncture.</li>
+        <li><strong>Cracked Screens:</strong> Wear gloves. Sharp glass edges can cause cuts.</li>
+        <li><strong>Water Damage:</strong> Ensure fully dry before handling. Check for corrosion.</li>
+        <li><strong>Professional Help:</strong> For significant damage or safety concerns, contact certified recyclers.</li>
+      </ul>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Wiki Guides</h2>
+      <a href="/wiki/sales/where-to-sell-electronics-locally">Selling Working Devices</a>
+      <a href="/wiki/technical/environmental-impact-e-waste">Environmental Impact</a>
+      <a href="/wiki/disposal/how-to-recycle-electronics-at-home">Recycling Basics</a>
+    </section>
+
+    <Faq items={faqItems} heading="Broken Electronics FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .broken-electronics {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .damage-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .damage-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .damage-card p {
+    margin: 0.15rem 0;
+    font-size: 0.85rem;
+  }
+  .valuation-steps {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .val-step {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .val-step h3 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+  }
+  .val-step p {
+    margin: 0.25rem 0 0;
+    font-size: 0.85rem;
+  }
+  .buyer-type-grid {
+    display: grid;
+    gap: 1rem;
+  }
+  .buyer-type {
+    padding: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .buyer-type h3 {
+    margin: 0 0 0.25rem;
+    color: var(--color-primary);
+    font-size: 1rem;
+  }
+  .buyer-type p {
+    margin: 0;
+    font-size: 0.8rem;
+  }
+  .safety-list {
+    list-style: none;
+    padding: 0;
+  }
+  .safety-list li {
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .damage-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .valuation-steps {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .buyer-type-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

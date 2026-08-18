@@ -1,0 +1,266 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Data Destruction Methods: Wiping, Degaussing & Shredding";
+const description =
+  "Complete guide to data destruction methods. Learn about software wiping, hardware degaussing, physical shredding, and certification for secure electronics recycling.";
+const path = "/wiki/technical/data-destruction";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Technical Guides", path: "/wiki/technical/" },
+  { name: "Data Destruction", path },
+];
+
+const faqItems = [
+  {
+    q: "Which method is best for SSDs?",
+    a: "SSDs require cryptographic erase or physical destruction. Software wiping is ineffective for SSDs due to wear leveling. Physical shredding provides the highest security.",
+  },
+  {
+    q: "Can I wipe data myself before recycling?",
+    a: "Yes, you can factory reset devices. For sensitive business data, we recommend certified data destruction at collection with documentation provided.",
+  },
+  {
+    q: "Do HDDs require degaussing?",
+    a: "Degaussing uses magnetic fields to erase HDD data. It's effective for traditional magnetic drives but not for SSDs. Physical destruction is an alternative.",
+  },
+  {
+    q: "What's the difference between wiping and shredding?",
+    a: "Wiping overwrites data with random patterns (software method). Shredding physically destroys storage media (hardware method). Shredding provides verifiable data destruction.",
+  },
+  {
+    q: "Is data destruction covered by standard pickup?",
+    a: "Standard pickup includes visual inspection and basic data assessment. Certified data destruction with certificates requires explicit request and additional documentation.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="data-guide">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Secure Data Destruction</p>
+        <h1>Data Destruction Methods</h1>
+        <p class="lede">
+          Three certified methods to ensure your data is irretrievably 
+          destroyed when recycling electronics. Learn about wiping, 
+          degaussing, and physical shredding options.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/data-destruction.webp"
+        alt="Data destruction methods: wiping, degaussing, shredding"
+        width="1200"
+        height="675"
+        loading="lazy"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        We offer three certified data destruction methods: Software wiping 
+        for HDDs/SSDs, magnetic degaussing for traditional drives, and 
+        physical shredding for maximum security. Certificates provided 
+        upon request for compliance needs.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I need certified data destruction for my business devices. Can you arrange that?" />
+
+    <section class="methods-section" aria-labelledby="methods-heading">
+      <h2 id="methods-heading">Available Data Destruction Methods</h2>
+      
+      <div class="method-grid">
+        <div class="method-card">
+          <span class="method-icon">💻</span>
+          <h3>Software Wiping</h3>
+          <p><strong>Best for:</strong> Hard disk drives, SSDs (with crypto-erase)</p>
+          <p><strong>Process:</strong> Overwrite data with random patterns using certified software (DBAN, Blancco, or built-in manufacturer tools).</p>
+          <p><strong>Verification:</strong> Multiple passes with checksum validation. Certificate provided.</p>
+          <p class="good-for">✅ Good for: Standard business devices, customer data</p>
+        </div>
+
+        <div class="method-card">
+          <span class="method-icon">🧲</span>
+          <h3>Degaussing</h3>
+          <p><strong>Best for:</strong> Traditional magnetic HDDs, magnetic tapes</p>
+          <p><strong>Process:</strong> High-strength magnetic field demagnetizes storage media, destroying data in magnetic domains.</p>
+          <p><strong>Verification:</strong> Field strength measurement and post-process verification. Certificate included.</p>
+          <p class="good-for">✅ Good for: Large HDDs, tape drives, maximum overwrite</p>
+        </div>
+
+        <div class="method-card">
+          <span class="method-icon">🔪</span>
+          <h3>Physical Shredding</h3>
+          <p><strong>Best for:</strong> SSDs, damaged drives, highest security needs</p>
+          <p><strong>Process:</strong> Industrial shredders reduce drives to 2-10mm particles. Circuit boards remain intact for component recovery.</p>
+          <p><strong>Verification:</strong> Particle size verification report. NAID AAA certified. Certificate with barcode tracking.</p>
+          <p class="good-for">✅ Good for: SSDs, encrypted drives, legal/compliance</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="drive-types" aria-labelledby="drive-heading">
+      <h2 id="drive-heading">Method Selection by Device Type</h2>
+      
+      <div class="type-grid">
+        <div class="type-item">
+          <h4>Traditional HDD</h4>
+          <p>Wiping, Degaussing, or Shredding all effective. Wiping is most common. Degaussing provides additional verification.</p>
+        </div>
+        <div class="type-item">
+          <h4>SSD/NVMe</h4>
+          <p>Cryptographic erase (built-in) or Physical Shredding recommended. Software wiping ineffective due to wear leveling.</p>
+        </div>
+        <div class="type-item">
+          <h4>Encrypted Drives</h4>
+          <p>Cryptographic erase (key destruction) is sufficient. Physical destruction provides additional peace of mind.</p>
+        </div>
+        <div class="type-item">
+          <h4>Server Storage</h4>
+          <p>Enterprise-grade wiping or shredding. RAID arrays require specific handling. Documentation for compliance.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="process-section" aria-labelledby="process-heading">
+      <h2 id="process-heading">Our Data Destruction Process</h2>
+      
+      <ol class="process-steps">
+        <li>
+          <strong>Request at Pickup</strong>
+          <p>Specify data destruction requirements when booking. List device types, storage media, and security requirements.</p>
+        </li>
+        <li>
+          <strong>Method Assignment</strong>
+          <p>Our team selects optimal method based on device type, data sensitivity, and your compliance needs.</p>
+        </li>
+        <li>
+          <strong>Sequential Execution</strong>
+          <p>At collection point or our facility: data destruction follows industry best practices with chain of custody documentation.</p>
+        </li>
+        <li>
+          <strong>Verification & Certificate</strong>
+          <p>Post-destruction verification complete. Certificate of Destruction issued with device IDs, method, date, and technician signature.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Resources</h2>
+      <a href="/wiki/technical/choose-secure-itad-vendor/">Choosing an ITAD Vendor</a>
+      <a href="/wiki/technical/ssd-vs-hdd-data-destruction/">SSD vs HDD Methods</a>
+      <a href="/wiki/sales/office-equipment-buyback/">Office Equipment Services</a>
+      <a href="/wiki/disposal/local-recycling-centers/">Find Centers</a>
+    </section>
+
+    <Faq items={faqItems} heading="Data Destruction FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .data-guide {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .method-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .method-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .method-icon {
+    font-size: 2rem;
+    display: block;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  .method-card h3 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+  }
+  .good-for {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--color-muted);
+  }
+  .type-grid {
+    display: grid;
+    gap: 1rem;
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .method-grid, .type-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

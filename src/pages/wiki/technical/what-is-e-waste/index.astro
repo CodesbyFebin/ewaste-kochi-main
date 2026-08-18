@@ -1,0 +1,294 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "What is E-Waste? Complete Definition & Examples";
+const description =
+  "Complete definition of e-waste with examples. Understand what qualifies as electronic waste, common items, environmental impact, and proper disposal methods in Kochi and Kerala.";
+const path = "/wiki/technical/what-is-e-waste";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "E-Waste Encyclopedia", path: "/wiki/" },
+  { name: "Technical Guides", path: "/wiki/technical/" },
+  { name: "What is E-Waste", path },
+];
+
+const faqItems = [
+  {
+    q: "Is plastic counted as e-waste?",
+    a: "No. Regular plastic is not e-waste. Plastic casings from electronic devices are recycled as e-waste components, but loose plastic items go to plastic recycling streams.",
+  },
+  {
+    q: "What about old cables and chargers?",
+    a: "Yes, cables, chargers, power adapters, and accessories with circuit boards are e-waste. Contains copper, plastic, and electronic components requiring proper recycling.",
+  },
+  {
+    q: "Is a toaster or kettle e-waste?",
+    a: "Yes, small appliances with electronic controls (digital displays, timers, circuits) are e-waste. Basic mechanical devices without electronics are regular waste.",
+  },
+  {
+    q: "What items are NOT e-waste?",
+    a: "Regular household items: paper, books, furniture, basic kitchen utensils, clothing, plain plastic containers, and non-electronic appliances without digital controls.",
+  },
+  {
+    q: "Can I compost old smart devices?",
+    a: "No. Electronics require specialized processing for component recovery and safe material handling. Never dispose of electronics in compost or regular trash.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}${path}/`,
+    name: title,
+    description,
+    dateModified: lastUpdated,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: lastUpdated,
+    dateModified: lastUpdated,
+    author: { "@type": "Organization", name: BUSINESS.legalName },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  },
+];
+---
+
+<Layout title={title} description={description} path={path} jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="definition">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Definition Guide</p>
+        <h1>What is E-Waste?</h1>
+        <p class="lede">
+          Complete definition and classification of electronic waste. Understand 
+          what qualifies as e-waste, common examples, environmental impact, and 
+          proper disposal methods across Kochi and Kerala.
+        </p>
+      </div>
+      <img
+        src="/images/blog-pillars/recycling-basics.webp"
+        alt="Various electronic devices being categorized as e-waste"
+        width="1200"
+        height="675"
+        loading="lazy"
+        decoding="async"
+      />
+    </section>
+
+    <DirectAnswer heading="Quick answer">
+      <p>
+        E-waste (electronic waste) is any discarded electronic device or component 
+        with a circuit board and power source. Includes computers, phones, TVs, 
+        monitors, printers, batteries, and accessories. In India, proper disposal 
+        is required under E-Waste Rules 2022 - never throw in regular trash.
+      </p>
+    </DirectAnswer>
+
+    <CtaBar whatsappMessage="I'm not sure if my item counts as e-waste. Can you help me identify it?" />
+
+    <section class="definition-section" aria-labelledby="definition-heading">
+      <h2 id="definition-heading">Official Definition</h2>
+      
+      <p>
+        <strong>E-waste</strong> (electronic waste), also called <em>electronic scrap</em> 
+        or <em>scrap electronics</em>, is a type of waste consisting of electronic 
+        devices that are nearing the end of their useful life, or are no longer wanted. 
+        This includes both general consumer electronics and items used in industry.
+      </p>
+      
+      <blockquote class="definition-quote">
+        "E-waste includes all items having electronic components and a circuit board, 
+        wherever placed. This includes small small items, large appliances, and 
+        lighting equipment." - CPCB Guidelines
+      </blockquote>
+    </section>
+
+    <section class="examples-section" aria-labelledby="examples-heading">
+      <h2 id="examples-heading">Common E-Waste Examples</h2>
+      
+      <div class="examples-grid">
+        <div class="example-card">
+          <h3>Computers & Computing</h3>
+          <p>Laptops, desktops, all-in-ones, tablets, servers, workstations, 
+          monitors, printers, scanners, networking equipment.</p>
+        </div>
+
+        <div class="example-card">
+          <h3>Communication Devices</h3>
+          <p>Mobiles, smartphones, tablets, routers, modems, VoIP phones, 
+          security equipment, CCTV cameras, intercoms.</p>
+        </div>
+
+        <div class="example-card">
+          <h3>Entertainment & Display</h3>
+          <p>TVs (CRT, LCD, LED), monitors, DVD/Blu-ray players, gaming 
+          consoles, speakers, home theater systems.</p>
+        </div>
+
+        <div class="example-card">
+          <h3>Kitchen & Small Appliances</h3>
+          <p>Kettle, toaster, microwave, coffee maker, blender, food processor, 
+          fridge, freezer with electronic controls.</p>
+        </div>
+
+        <div class="example-card">
+          <h3>Battery Items</h3>
+          <p>UPS batteries, inverter batteries, laptop/phone batteries, 
+          power bank batteries, electric vehicle batteries, button cells.</p>
+        </div>
+
+        <div class="example-card">
+          <h3>Miscellaneous Electronics</h3>
+          <p>Chargers, cables, adapters, keyboards, mice, webcams, 
+          external drives, memory cards, electronic accessories.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="not-e-waste" aria-labelledby="not-e-waste-heading">
+      <h2 id="not-e-waste-heading">NOT E-Waste - Items to Dispose Differently</h2>
+      
+      <div class="non-e-grid">
+        <div class="non-item">
+          <h3>Regular Electronics</h3>
+          <p>Iron, steel, basic appliances without circuits: traditional kettles, 
+          kettles without digital controls, basic fans, plain irons.</p>
+        </div>
+        <div class="non-item">
+          <h3>General Waste</h3>
+          <p>Paper, cardboard, textiles, glass, non-electronic plastics, 
+          food containers, general household items.</p>
+        </div>
+        <div class="non-item">
+          <h3>Hazardous (Non-Electronic)</h3>
+          <p> paints, chemicals, gasoline, propane tanks, fireworks, used 
+          motor oil (without electronic components).</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="link-grid" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Wiki Guides</h2>
+      <a href="/wiki/technical/types-of-electronic-waste">Types of E-Waste</a>
+      <a href="/wiki/technical/environmental-impact-e-waste">Environmental Impact</a>
+      <a href="/wiki/disposal/local-recycling-centers">Find Centers</a>
+      <a href="/wiki/disposal/e-waste-collection-rules">E-Waste Rules</a>
+    </section>
+
+    <Faq items={faqItems} heading="E-Waste Definition FAQs" />
+  </article>
+</Layout>
+
+<style>
+  .definition {
+    display: grid;
+    gap: 2rem;
+  }
+  .hero {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .lede {
+    color: var(--color-muted);
+    font-size: 1.08rem;
+    max-width: 50rem;
+  }
+  .hero img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+  .definition-quote {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    border-left: 4px solid var(--color-primary);
+    background: var(--color-surface-strong);
+    font-style: italic;
+  }
+  .examples-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .example-card {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .example-card h3 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+  }
+  .non-e-grid {
+    display: grid;
+    gap: 1rem;
+  }
+  .non-item {
+    padding: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+  }
+  .non-item h3 {
+    margin: 0 0 0.25rem;
+    color: var(--color-muted);
+    font-size: 0.95rem;
+  }
+  .link-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .link-grid a {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  @media (min-width: 780px) {
+    .hero {
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    }
+    .examples-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .non-e-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .link-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
