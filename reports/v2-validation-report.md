@@ -911,3 +911,11 @@ All checks passed.
 | --- | --- | --- |
 | /blog/compliance-b2b/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /CPCB Authorized/i. |
 | /blog/locations-services/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /Pollution Control Board authorization/i. |
+
+## Validation run 2026-08-19T21:25:22.660Z
+
+- Routes checked: 956
+- Checks passed: 3448
+- Failures: 0
+
+All checks passed.
