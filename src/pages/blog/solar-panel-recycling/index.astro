@@ -1,0 +1,156 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import LongformExpansion from "../../../components/LongformExpansion.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Solar Panel & Inverter Recycling in Kochi";
+const description = "How to recycle solar panels, charge controllers and inverters in Kochi.";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Devices & Materials", path: "/blog/devices-materials/" },
+  { name: "Solar Panel Recycling", path: "/blog/solar-panel-recycling/" }
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": description,
+    "datePublished": "2026-08-18",
+    "dateModified": lastUpdated,
+    "author": { "@type": "Organization", name: BUSINESS.legalName },
+    "publisher": { "@id": `${SITE_URL}/#organization` },
+    "mainEntityOfPage": `${SITE_URL}/blog/solar-panel-recycling/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/solar-panel-recycling/`,
+    "name": title,
+    "description": description,
+    "dateModified": lastUpdated,
+  }
+];
+
+const faqItems = [
+  {
+    q: "Are solar panels e-waste?",
+    a: "Yes, with glass, frames and electronics."
+  },
+  {
+    q: "How should I store them?",
+    a: "Flat, protected, glass uncracked."
+  },
+  {
+    q: "Include batteries?",
+    a: "Yes, mention linked batteries."
+  },
+  {
+    q: "How is pickup confirmed?",
+    a: "After photos and quantities are shared."
+  }
+];
+
+const sourceItems = [
+  {
+    title: "E-Waste Management Rules and related regulatory resources",
+    href: "https://cpcb.nic.in/rules-6/",
+    publisher: "Central Pollution Control Board",
+    note: "Official CPCB resource page for e-waste rules and updates."
+  },
+  {
+    title: "EPR E-Waste portal",
+    href: "https://eprewastecpcb.in/",
+    publisher: "Central Pollution Control Board",
+    note: "Official portal for e-waste EPR registration and compliance workflows."
+  },
+  {
+    title: "Kerala State Pollution Control Board",
+    href: "https://kspcb.kerala.gov.in/",
+    publisher: "Kerala State Pollution Control Board",
+    note: "Regional enforcement and authorization for e-waste recyclers in Kerala."
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/solar-panel-recycling/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <h1>Solar Panel Recycling</h1>
+
+  <DirectAnswer>
+    <p>Solar panels, inverters and charge controllers are e-waste accepted in Kochi pickups. Arrange authorised collection with photos and quantities; panels need careful handling due to glass and framing.</p>
+  </DirectAnswer>
+
+  <CtaBar whatsappMessage="Hi, I have solar panels and inverters to recycle in Kochi." />
+
+  <section id="section-1">
+    <h2>What qualifies</h2>
+    <p>Panels, inverters and charge controllers are electronic waste.</p>
+    <p>They combine glass, aluminium frames and circuit boards.</p>
+  </section>
+  <section id="section-2">
+    <h2>Handle with care</h2>
+    <p>Panels are fragile and framed; avoid cracking the glass.</p>
+    <p>Keep them flat and protected before pickup.</p>
+  </section>
+  <section id="section-3">
+    <h2>Inverters and batteries</h2>
+    <p>Pair inverter recycling with any linked battery handling.</p>
+    <p>Mention batteries so the route covers them.</p>
+  </section>
+  <section id="section-4">
+    <h2>Pickup preparation</h2>
+    <p>Send photos and quantities for a feasibility check.</p>
+    <p>Bulk installs need access and loading planned.</p>
+  </section>
+
+  <RelatedContent>
+    <h2>Explore more guides</h2>
+    <ul>
+      <li><a href="/blog/devices-materials/">Devices & Materials hub</a></li>
+      <li><a href="/blog/general-ewaste/">General e-waste basics</a></li>
+      <li><a href="/recycling/">Recycling service</a></li>
+      <li><a href="/pickup/">Book a pickup</a></li>
+    </ul>
+  </RelatedContent>
+
+  <LongformExpansion
+    label="Expanded field guide"
+    audience="households and businesses in Kochi"
+    localIntent="solar panel recycling with authorised pickup"
+    items={["old electronics", "batteries", "cables", "data devices"]}
+    themes={["Preparation", "Safety", "Compliance", "Recovery"]}
+  />
+
+  <section id="faq-section">
+    <h2>Frequently asked questions</h2>
+    <Faq items={faqItems} heading="Solar Panel Recycling FAQs" />
+  </section>
+
+  <Sources items={sourceItems} heading="Official sources & regulatory references" />
+</Layout>
+
+<style>
+  .blog-hub { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+  .blog-hub h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-primary); text-align: center; }
+  .blog-hub section { margin-bottom: 3rem; padding: 2rem; background: var(--color-bg); border-radius: 0.75rem; border: 1px solid var(--color-border); }
+  .blog-hub h2 { color: var(--color-primary); margin-bottom: 1.5rem; font-size: 1.8rem; }
+  .blog-hub ul { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .blog-hub li { margin-bottom: 0.5rem; line-height: 1.6; }
+  @media (max-width: 768px) {
+    .blog-hub h1 { font-size: 2rem; }
+    .blog-hub section { padding: 1.5rem; }
+    .blog-hub h2 { font-size: 1.5rem; }
+  }
+</style>

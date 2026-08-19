@@ -1,12 +1,12 @@
 ---
-import Layout from "../../../layouts/Layout.astro";
-import Breadcrumbs from "../../../components/Breadcrumbs.astro";
-import DirectAnswer from "../../../components/DirectAnswer.astro";
-import CtaBar from "../../../components/CtaBar.astro";
-import Faq from "../../../components/Faq.astro";
-import RelatedContent from "../../../components/RelatedContent.astro";
-import LongformExpansion from "../../../components/LongformExpansion.astro";
-import { BUSINESS, SITE_URL } from "../../../data/site";
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../components/DirectAnswer.astro";
+import CtaBar from "../../components/CtaBar.astro";
+import Faq from "../../components/Faq.astro";
+import RelatedContent from "../../components/RelatedContent.astro";
+import LongformExpansion from "../../components/LongformExpansion.astro";
+import { BUSINESS, SITE_URL } from "../../data/site";
 
 const title = "EwasteKochi Blog Hub: E-Waste Recycling & Compliance Guides";
 const description = "Explore comprehensive E-waste recycling guides, compliance help, location-specific services, and device disposal solutions across Kerala. Quick answers + detailed guides for households and businesses.";
@@ -22,7 +22,7 @@ const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": `${SITE_URL}/blog/",
+    "@id": `${SITE_URL}/blog/`,
     "name": title,
     "description": description,
     "url": `${SITE_URL}/blog/`,

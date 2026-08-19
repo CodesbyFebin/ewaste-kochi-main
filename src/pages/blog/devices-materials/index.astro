@@ -1,0 +1,279 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import LongformExpansion from "../../../components/LongformExpansion.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Devices & Materials: Component-Level E-Waste Recycling Guides";
+const description = "Component-level recycling guides for laptops, phones, batteries, hard drives, cables and displays in Kochi. Safe handling steps and material-value recovery.";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Devices & Materials", path: "/blog/devices-materials/" }
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": description,
+    "datePublished": "2026-08-18",
+    "dateModified": lastUpdated,
+    "author": { "@type": "Organization", name: BUSINESS.legalName },
+    "publisher": { "@id": `${SITE_URL}/#organization` },
+    "mainEntityOfPage": `${SITE_URL}/blog/devices-materials/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/devices-materials/`,
+    "name": title,
+    "description": description,
+    "dateModified": lastUpdated,
+  }
+];
+
+const faqItems = [
+  {
+    q: "Which devices contain the most hazardous materials?",
+    a: "Older CRT monitors and TVs carry leaded glass and mercury. Lithium-ion batteries in laptops, phones and power banks are a fire and chemical risk. Circuit boards contain lead, cadmium and beryllium that need controlled processing."
+  },
+  {
+    q: "Which components have the highest resale value?",
+    a: "Functional smartphones, laptops and tablets keep the most value. Gold-bearing motherboard contact points, copper wiring and rare-earth magnets in hard-drive motors also have material value when handled by certified recyclers."
+  },
+  {
+    q: "How should I prepare different device types for pickup?",
+    a: "Remove user-replaceable batteries, back up and wipe storage devices, detach cables and peripherals, and send clear photos showing condition and any damage before the team confirms a slot."
+  },
+  {
+    q: "Can I recycle devices with batteries still installed?",
+    a: "Yes, but remove user-replaceable batteries first. Swollen or damaged batteries should sit in a fire-safe container and be flagged to the pickup team immediately for separate handling."
+  },
+  {
+    q: "What happens to data-bearing devices?",
+    a: "All storage devices go through certified data destruction before material processing. A Certificate of Destruction is issued so your data is irrecoverable and your compliance record is complete."
+  },
+  {
+    q: "Where can I recycle old cables and chargers?",
+    a: "Cables, chargers and small accessories are accepted in any pickup batch. Copper and aluminium wiring carry recovery value, while plastic casings are separated and reprocessed."
+  },
+  {
+    q: "Do rare-earth materials get recovered from small electronics?",
+    a: "Yes. Speakers, hard drives and some circuit boards contain neodymium and other rare-earth elements that certified recyclers extract for reuse in new manufacturing, closing the resource loop."
+  },
+  {
+    q: "Are there fee-based services for specialized device recycling?",
+    a: "Most common devices qualify for free pickup. Premium steps such as hard-drive shredding, certified data destruction or CRT handling may carry a small processing fee confirmed upfront."
+  }
+];
+
+const sourceItems = [
+  {
+    title: "E-Waste Management Rules and related regulatory resources",
+    href: "https://cpcb.nic.in/rules-6/",
+    publisher: "Central Pollution Control Board",
+    note: "Official CPCB resource page for e-waste rules and updates."
+  },
+  {
+    title: "EPR E-Waste portal",
+    href: "https://eprewastecpcb.in/",
+    publisher: "Central Pollution Control Board",
+    note: "Official portal for e-waste EPR registration and compliance workflows."
+  },
+  {
+    title: "Kerala State Pollution Control Board",
+    href: "https://kspcb.kerala.gov.in/",
+    publisher: "Kerala State Pollution Control Board",
+    note: "Regional enforcement and authorization for e-waste recyclers in Kerala."
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/devices-materials/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <h1>Devices & Materials: Component-Level Recycling Guides</h1>
+
+  <DirectAnswer>
+    <p>Different electronic devices need different preparation and handling for safe recycling. This hub covers component-level guidance for laptops, phones, hard drives, batteries, cables and other specific materials. Separating items correctly at pickup improves both safety and material recovery.</p>
+  </DirectAnswer>
+
+  <CtaBar whatsappMessage="Hi, I need to recycle specific devices and want to know how to prepare them." />
+
+  <section id="device-categories">
+    <h2>Device categories and handling</h2>
+    <p>Each device type has specific risks, preparation steps and value characteristics. Use this categorized guide to prepare items before the team arrives:</p>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-white p-6 rounded-lg border border-gray-200">
+        <h3 class="text-xl font-bold mb-3">Computing devices</h3>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>Laptops and tablets</li>
+          <li>Desktop computers and towers</li>
+          <li>Monitors (LCD, LED)</li>
+          <li>Servers and networking equipment</li>
+        </ul>
+        <p class="text-sm text-gray-600 mt-3">All may contain data-bearing drives requiring certified destruction before recycling.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg border border-gray-200">
+        <h3 class="text-xl font-bold mb-3">Mobile & consumer electronics</h3>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>Smartphones and feature phones</li>
+          <li>Tablets and e-readers</li>
+          <li>Smart speakers and wearables</li>
+          <li>Gaming consoles and accessories</li>
+        </ul>
+        <p class="text-sm text-gray-600 mt-3">Lithium-ion batteries pose a fire risk during transport if swollen or damaged.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg border border-gray-200">
+        <h3 class="text-xl font-bold mb-3">Power components</h3>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>UPS batteries and inverter batteries</li>
+          <li>Power banks and chargers</li>
+          <li>Solar panels and charge controllers</li>
+          <li>Extension cords and power strips</li>
+        </ul>
+        <p class="text-sm text-gray-600 mt-3">Lead-acid and lithium batteries need separate handling from general e-waste.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg border border-gray-200">
+        <h3 class="text-xl font-bold mb-3">Cables & accessories</h3>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>HDMI, USB and power cables</li>
+          <li>Network and ethernet cables</li>
+          <li>Keyboards, mice and webcams</li>
+          <li>Printers, scanners and copiers</li>
+        </ul>
+        <p class="text-sm text-gray-600 mt-3">Copper and aluminium in cables carry real recovery value when processed.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="material-recovery">
+    <h2>Material recovery from electronic components</h2>
+    <p>Understanding recoverable materials helps you see the real value in your e-waste:</p>
+
+    <h3>Precious metals</h3>
+    <ul>
+      <li><strong>Gold:</strong> circuit-board connectors, SIM readers and RAM modules</li>
+      <li><strong>Silver:</strong> circuit-board solder, connectors and camera sensors</li>
+      <li><strong>Palladium:</strong> capacitors and multilayer ceramic components</li>
+    </ul>
+
+    <h3>Base and rare-earth metals</h3>
+    <ul>
+      <li><strong>Copper:</strong> wiring, motor windings and transformer cores</li>
+      <li><strong>Aluminium:</strong> casing panels, heat sinks and some boards</li>
+      <li><strong>Rare earth:</strong> neodymium in hard-drive motors and speakers</li>
+      <li><strong>Steel/Iron:</strong> frames, shielding and chassis</li>
+    </ul>
+
+    <h3>Plastics and glass</h3>
+    <ul>
+      <li><strong>Engineering plastics:</strong> ABS and polycarbonate from casings, reprocessed</li>
+      <li><strong>Brominated plastics:</strong> need specialist handling due to flame retardants</li>
+      <li><strong>CRT glass:</strong> contains lead, handled only by certified CRT processors</li>
+    </ul>
+  </section>
+
+  <section id="preparation-by-device">
+    <h2>Preparation checklist by device type</h2>
+
+    <h3>Laptop and tablet batteries</h3>
+    <ul>
+      <li>Remove the battery if it is user-replaceable</li>
+      <li>If non-removable, do not force it out — inform the pickup team</li>
+      <li>Store in a non-conductive container away from metal objects</li>
+      <li>Place swollen batteries in sand or a fireproof container</li>
+    </ul>
+
+    <h3>Hard drives and storage</h3>
+    <ul>
+      <li>Back up data before recycling</li>
+      <li>All drives undergo certified data destruction (NAID AAA or equivalent)</li>
+      <li>SSD drives may carry higher material value than HDDs due to rare-earth magnets</li>
+      <li>Optical drives contain small amounts of rare-earth elements</li>
+    </ul>
+
+    <h3>Mobile phones</h3>
+    <ul>
+      <li>Factory reset and remove SIM and SD cards</li>
+      <li>Keep lithium batteries at 40–60% charge for safe transport</li>
+      <li>Vibrator motors contain small rare-earth magnets</li>
+      <li>Camera modules may contain rare-earth elements in lenses</li>
+    </ul>
+
+    <h3>Display devices</h3>
+    <ul>
+      <li>CRT monitors: lead glass needs specialist handling</li>
+      <li>LCD/LED screens: backlights contain mercury, need certified processing</li>
+      <li>Remove stands and cables before pickup</li>
+    </ul>
+  </section>
+
+  <section id="value-recovery">
+    <h2>Maximising value recovery</h2>
+    <p>The value you receive from e-waste depends on several factors:</p>
+    <ul>
+      <li><strong>Condition:</strong> working devices keep 3–5x the value of broken ones</li>
+      <li><strong>Brand and model:</strong> enterprise-grade equipment depreciates slower</li>
+      <li><strong>Age:</strong> devices under five years old usually have resale value</li>
+      <li><strong>Data security:</strong> certified destruction adds compliance value for businesses</li>
+      <li><strong>Volume:</strong> bulk pickups qualify for volume-based pricing</li>
+    </ul>
+    <p>Devices that cannot be resold go through material recovery, where copper, aluminium, gold and rare-earth elements are extracted for reuse in new manufacturing.</p>
+  </section>
+
+  <RelatedContent>
+    <h2>Related device guides</h2>
+    <ul>
+      <li><a href="/blog/laptop-battery-recycling/">Laptop battery recycling safety</a></li>
+      <li><a href="/blog/hard-drive-destruction/">Hard drive data destruction guide</a></li>
+      <li><a href="/blog/electronics-accessories-recycling/">Cables and accessories recycling</a></li>
+      <li><a href="/blog/lithium-battery-disposal/">Lithium battery safety handling</a></li>
+      <li><a href="/blog/resource-recovery-from-old-electronics/">Material recovery from electronics</a></li>
+    </ul>
+  </RelatedContent>
+
+  <LongformExpansion
+    label="Expanded device handling field guide"
+    audience="households, businesses, IT teams"
+    localIntent="recycle specific devices with proper preparation in Kochi"
+    items={["laptop batteries", "hard drives", "mobile phones", "cables and chargers", "CRT monitors", "UPS batteries"]}
+    themes={["Preparation", "Safety", "Data Security", "Value Recovery", "Material Recycling"]}
+  />
+
+  <section id="faq-section">
+    <h2>Frequently asked questions</h2>
+    <Faq items={faqItems} heading="Devices & materials recycling FAQs" />
+  </section>
+
+  <Sources items={sourceItems} heading="Official sources & regulatory references" />
+</Layout>
+
+<style>
+  .blog-hub { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+  .blog-hub h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-primary); text-align: center; }
+  .blog-hub section { margin-bottom: 3rem; padding: 2rem; background: var(--color-bg); border-radius: 0.75rem; border: 1px solid var(--color-border); }
+  .blog-hub h2 { color: var(--color-primary); margin-bottom: 1.5rem; font-size: 1.8rem; }
+  .blog-hub h3 { color: var(--color-primary); margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.3rem; }
+  .blog-hub ul { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .blog-hub li { margin-bottom: 0.5rem; line-height: 1.6; }
+  @media (max-width: 768px) {
+    .blog-hub h1 { font-size: 2rem; }
+    .blog-hub section { padding: 1.5rem; }
+    .blog-hub h2 { font-size: 1.5rem; }
+    .blog-hub h3 { font-size: 1.2rem; }
+  }
+</style>

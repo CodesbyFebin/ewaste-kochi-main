@@ -1,0 +1,156 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import LongformExpansion from "../../../components/LongformExpansion.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Bulk Consumer E-Waste Records & Documentation";
+const description = "The records bulk consumers in Kochi should keep for e-waste handover: manifests, certificates and audit trails.";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Compliance & B2B", path: "/blog/compliance-b2b/" },
+  { name: "Bulk Consumer Records", path: "/blog/bulk-consumer-records/" }
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": description,
+    "datePublished": "2026-08-18",
+    "dateModified": lastUpdated,
+    "author": { "@type": "Organization", name: BUSINESS.legalName },
+    "publisher": { "@id": `${SITE_URL}/#organization` },
+    "mainEntityOfPage": `${SITE_URL}/blog/bulk-consumer-records/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/bulk-consumer-records/`,
+    "name": title,
+    "description": description,
+    "dateModified": lastUpdated,
+  }
+];
+
+const faqItems = [
+  {
+    q: "What records must bulk consumers keep?",
+    a: "Itemised lists, collection manifests and recycling or destruction certificates."
+  },
+  {
+    q: "How long retain?",
+    a: "Long enough for audits and tender cycles; your policy should set the period."
+  },
+  {
+    q: "Do data devices need extra proof?",
+    a: "Yes — certified destruction attached to the batch record."
+  },
+  {
+    q: "Who provides the certificates?",
+    a: "Authorised recyclers issue them as part of compliant handling."
+  }
+];
+
+const sourceItems = [
+  {
+    title: "E-Waste Management Rules and related regulatory resources",
+    href: "https://cpcb.nic.in/rules-6/",
+    publisher: "Central Pollution Control Board",
+    note: "Official CPCB resource page for e-waste rules and updates."
+  },
+  {
+    title: "EPR E-Waste portal",
+    href: "https://eprewastecpcb.in/",
+    publisher: "Central Pollution Control Board",
+    note: "Official portal for e-waste EPR registration and compliance workflows."
+  },
+  {
+    title: "Kerala State Pollution Control Board",
+    href: "https://kspcb.kerala.gov.in/",
+    publisher: "Kerala State Pollution Control Board",
+    note: "Regional enforcement and authorization for e-waste recyclers in Kerala."
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/bulk-consumer-records/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <h1>Bulk Consumer Records</h1>
+
+  <DirectAnswer>
+    <p>Bulk consumers should keep itemised handover records, collection manifests and recycling or destruction certificates. In Kochi, authorised recyclers provide these documents to satisfy compliance and audit needs.</p>
+  </DirectAnswer>
+
+  <CtaBar whatsappMessage="Hi, we need proper documentation for a bulk e-waste handover." />
+
+  <section id="section-1">
+    <h2>What a bulk handover needs</h2>
+    <p>An itemised list with quantities, condition and asset tags where relevant.</p>
+    <p>This becomes the baseline for the certificates you later receive.</p>
+  </section>
+  <section id="section-2">
+    <h2>Manifests and certificates</h2>
+    <p>Collection manifests track items from your site to the facility.</p>
+    <p>Recycling or destruction certificates close the loop for audits.</p>
+  </section>
+  <section id="section-3">
+    <h2>Retention and access</h2>
+    <p>Store records where auditors and procurement can find them quickly.</p>
+    <p>Consistent filing avoids scrambling during inspections or tenders.</p>
+  </section>
+  <section id="section-4">
+    <h2>Linking data to documents</h2>
+    <p>For IT assets, attach data-destruction proof to the same batch record.</p>
+    <p>That connects compliance and data-security obligations in one trail.</p>
+  </section>
+
+  <RelatedContent>
+    <h2>Explore more guides</h2>
+    <ul>
+      <li><a href="/blog/compliance-b2b/">Compliance & B2B hub</a></li>
+      <li><a href="/blog/general-ewaste/">General e-waste basics</a></li>
+      <li><a href="/recycling/">Recycling service</a></li>
+      <li><a href="/pickup/">Book a pickup</a></li>
+    </ul>
+  </RelatedContent>
+
+  <LongformExpansion
+    label="Expanded field guide"
+    audience="households and businesses in Kochi"
+    localIntent="bulk consumer records with authorised pickup"
+    items={["old electronics", "batteries", "cables", "data devices"]}
+    themes={["Preparation", "Safety", "Compliance", "Recovery"]}
+  />
+
+  <section id="faq-section">
+    <h2>Frequently asked questions</h2>
+    <Faq items={faqItems} heading="Bulk Consumer Records FAQs" />
+  </section>
+
+  <Sources items={sourceItems} heading="Official sources & regulatory references" />
+</Layout>
+
+<style>
+  .blog-hub { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+  .blog-hub h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-primary); text-align: center; }
+  .blog-hub section { margin-bottom: 3rem; padding: 2rem; background: var(--color-bg); border-radius: 0.75rem; border: 1px solid var(--color-border); }
+  .blog-hub h2 { color: var(--color-primary); margin-bottom: 1.5rem; font-size: 1.8rem; }
+  .blog-hub ul { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .blog-hub li { margin-bottom: 0.5rem; line-height: 1.6; }
+  @media (max-width: 768px) {
+    .blog-hub h1 { font-size: 2rem; }
+    .blog-hub section { padding: 1.5rem; }
+    .blog-hub h2 { font-size: 1.5rem; }
+  }
+</style>

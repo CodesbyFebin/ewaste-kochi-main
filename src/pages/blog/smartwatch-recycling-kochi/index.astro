@@ -1,0 +1,156 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import LongformExpansion from "../../../components/LongformExpansion.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Smartwatch & Wearable Recycling in Kochi";
+const description = "How to recycle smartwatches and wearables in Kochi, including batteries.";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Devices & Materials", path: "/blog/devices-materials/" },
+  { name: "Smartwatch & Wearable Recycling", path: "/blog/smartwatch-recycling-kochi/" }
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": description,
+    "datePublished": "2026-08-18",
+    "dateModified": lastUpdated,
+    "author": { "@type": "Organization", name: BUSINESS.legalName },
+    "publisher": { "@id": `${SITE_URL}/#organization` },
+    "mainEntityOfPage": `${SITE_URL}/blog/smartwatch-recycling-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/smartwatch-recycling-kochi/`,
+    "name": title,
+    "description": description,
+    "dateModified": lastUpdated,
+  }
+];
+
+const faqItems = [
+  {
+    q: "Reset first?",
+    a: "Yes, unpair and reset."
+  },
+  {
+    q: "Battery risk?",
+    a: "Lithium; swollen kept separate."
+  },
+  {
+    q: "Include in batch?",
+    a: "Yes, with phones and cables."
+  },
+  {
+    q: "Confirm how?",
+    a: "After photos shared."
+  }
+];
+
+const sourceItems = [
+  {
+    title: "E-Waste Management Rules and related regulatory resources",
+    href: "https://cpcb.nic.in/rules-6/",
+    publisher: "Central Pollution Control Board",
+    note: "Official CPCB resource page for e-waste rules and updates."
+  },
+  {
+    title: "EPR E-Waste portal",
+    href: "https://eprewastecpcb.in/",
+    publisher: "Central Pollution Control Board",
+    note: "Official portal for e-waste EPR registration and compliance workflows."
+  },
+  {
+    title: "Kerala State Pollution Control Board",
+    href: "https://kspcb.kerala.gov.in/",
+    publisher: "Kerala State Pollution Control Board",
+    note: "Regional enforcement and authorization for e-waste recyclers in Kerala."
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/smartwatch-recycling-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <h1>Smartwatch & Wearable Recycling</h1>
+
+  <DirectAnswer>
+    <p>Smartwatches and wearables are e-waste with lithium batteries. In Kochi, factory reset them, keep the battery safe, and include them in an authorised pickup with photos.</p>
+  </DirectAnswer>
+
+  <CtaBar whatsappMessage="Hi, I have smartwatches and wearables to recycle in Kochi." />
+
+  <section id="section-1">
+    <h2>Prepare the device</h2>
+    <p>Unpair and reset the wearable before handover.</p>
+    <p>This clears accounts and personal data.</p>
+  </section>
+  <section id="section-2">
+    <h2>Battery safety</h2>
+    <p>Lithium cells are small but still a transport risk.</p>
+    <p>Swollen units are flagged and isolated.</p>
+  </section>
+  <section id="section-3">
+    <h2>Included in batches</h2>
+    <p>Wearables go in any e-waste pickup batch.</p>
+    <p>Group with phones and cables for efficiency.</p>
+  </section>
+  <section id="section-4">
+    <h2>Confirmation</h2>
+    <p>Send photos so the team matches handling.</p>
+    <p>Small items are easy to overlook without a list.</p>
+  </section>
+
+  <RelatedContent>
+    <h2>Explore more guides</h2>
+    <ul>
+      <li><a href="/blog/devices-materials/">Devices & Materials hub</a></li>
+      <li><a href="/blog/general-ewaste/">General e-waste basics</a></li>
+      <li><a href="/recycling/">Recycling service</a></li>
+      <li><a href="/pickup/">Book a pickup</a></li>
+    </ul>
+  </RelatedContent>
+
+  <LongformExpansion
+    label="Expanded field guide"
+    audience="households and businesses in Kochi"
+    localIntent="smartwatch & wearable recycling with authorised pickup"
+    items={["old electronics", "batteries", "cables", "data devices"]}
+    themes={["Preparation", "Safety", "Compliance", "Recovery"]}
+  />
+
+  <section id="faq-section">
+    <h2>Frequently asked questions</h2>
+    <Faq items={faqItems} heading="Smartwatch & Wearable Recycling FAQs" />
+  </section>
+
+  <Sources items={sourceItems} heading="Official sources & regulatory references" />
+</Layout>
+
+<style>
+  .blog-hub { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+  .blog-hub h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-primary); text-align: center; }
+  .blog-hub section { margin-bottom: 3rem; padding: 2rem; background: var(--color-bg); border-radius: 0.75rem; border: 1px solid var(--color-border); }
+  .blog-hub h2 { color: var(--color-primary); margin-bottom: 1.5rem; font-size: 1.8rem; }
+  .blog-hub ul { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .blog-hub li { margin-bottom: 0.5rem; line-height: 1.6; }
+  @media (max-width: 768px) {
+    .blog-hub h1 { font-size: 2rem; }
+    .blog-hub section { padding: 1.5rem; }
+    .blog-hub h2 { font-size: 1.5rem; }
+  }
+</style>

@@ -1,0 +1,156 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import LongformExpansion from "../../../components/LongformExpansion.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Types of E-Waste: A Complete Category List";
+const description = "How e-waste is categorised — appliances, IT gear, consumer electronics, batteries and lighting — and what each category needs at pickup.";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "General E-Waste", path: "/blog/general-ewaste/" },
+  { name: "Types of E-Waste", path: "/blog/types-of-e-waste/" }
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": description,
+    "datePublished": "2026-08-18",
+    "dateModified": lastUpdated,
+    "author": { "@type": "Organization", name: BUSINESS.legalName },
+    "publisher": { "@id": `${SITE_URL}/#organization` },
+    "mainEntityOfPage": `${SITE_URL}/blog/types-of-e-waste/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/types-of-e-waste/`,
+    "name": title,
+    "description": description,
+    "dateModified": lastUpdated,
+  }
+];
+
+const faqItems = [
+  {
+    q: "Are appliances e-waste?",
+    a: "Yes. Fridges, microwaves, irons and similar items are e-waste and are accepted once listed with photos."
+  },
+  {
+    q: "Do I separate batteries from everything?",
+    a: "Where user-replaceable, yes. Batteries travel separately and damaged cells are flagged to the team."
+  },
+  {
+    q: "Are light bulbs e-waste?",
+    a: "CFL and some LED tubes are, because of mercury or electronics. Handle them carefully and don't crush."
+  },
+  {
+    q: "What about loose cables?",
+    a: "Cables and chargers are accepted and valued for their copper content."
+  }
+];
+
+const sourceItems = [
+  {
+    title: "E-Waste Management Rules and related regulatory resources",
+    href: "https://cpcb.nic.in/rules-6/",
+    publisher: "Central Pollution Control Board",
+    note: "Official CPCB resource page for e-waste rules and updates."
+  },
+  {
+    title: "EPR E-Waste portal",
+    href: "https://eprewastecpcb.in/",
+    publisher: "Central Pollution Control Board",
+    note: "Official portal for e-waste EPR registration and compliance workflows."
+  },
+  {
+    title: "Kerala State Pollution Control Board",
+    href: "https://kspcb.kerala.gov.in/",
+    publisher: "Kerala State Pollution Control Board",
+    note: "Regional enforcement and authorization for e-waste recyclers in Kerala."
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/types-of-e-waste/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <h1>Types of E-Waste</h1>
+
+  <DirectAnswer>
+    <p>E-waste splits into appliances, IT and telecom gear, consumer electronics, batteries and lighting. Knowing the category helps you list items correctly and separate batteries before pickup in Kochi.</p>
+  </DirectAnswer>
+
+  <CtaBar whatsappMessage="Hi, I have a mix of appliance, IT and battery items to recycle." />
+
+  <section id="section-1">
+    <h2>Large and small appliances</h2>
+    <p>Refrigerators, washing machines, microwaves and irons fall here, along with fans and kettles.</p>
+    <p>These are bulky but mostly safe; the main watch-out is keeping any built-in batteries or refrigerant units intact.</p>
+  </section>
+  <section id="section-2">
+    <h2>IT and telecom equipment</h2>
+    <p>Computers, laptops, servers, routers, printers and phones make up the largest household category.</p>
+    <p>Most carry data-bearing drives, so certified wiping or destruction should happen before material recovery.</p>
+  </section>
+  <section id="section-3">
+    <h2>Consumer electronics and batteries</h2>
+    <p>TVs, monitors, speakers, game consoles, power banks and all battery types are common e-waste.</p>
+    <p>Batteries must be separated and flagged, because damaged lithium cells are a fire risk in transit.</p>
+  </section>
+  <section id="section-4">
+    <h2>Lighting and accessories</h2>
+    <p>CFL and LED tubes contain mercury or electronics and need separate handling.</p>
+    <p>Cables, chargers and adapters are accepted in any batch and add copper recovery value.</p>
+  </section>
+
+  <RelatedContent>
+    <h2>Explore more guides</h2>
+    <ul>
+      <li><a href="/blog/general-ewaste/">General E-Waste hub</a></li>
+      <li><a href="/blog/general-ewaste/">General e-waste basics</a></li>
+      <li><a href="/recycling/">Recycling service</a></li>
+      <li><a href="/pickup/">Book a pickup</a></li>
+    </ul>
+  </RelatedContent>
+
+  <LongformExpansion
+    label="Expanded field guide"
+    audience="households and businesses in Kochi"
+    localIntent="types of e-waste with authorised pickup"
+    items={["old electronics", "batteries", "cables", "data devices"]}
+    themes={["Preparation", "Safety", "Compliance", "Recovery"]}
+  />
+
+  <section id="faq-section">
+    <h2>Frequently asked questions</h2>
+    <Faq items={faqItems} heading="Types of E-Waste FAQs" />
+  </section>
+
+  <Sources items={sourceItems} heading="Official sources & regulatory references" />
+</Layout>
+
+<style>
+  .blog-hub { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+  .blog-hub h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-primary); text-align: center; }
+  .blog-hub section { margin-bottom: 3rem; padding: 2rem; background: var(--color-bg); border-radius: 0.75rem; border: 1px solid var(--color-border); }
+  .blog-hub h2 { color: var(--color-primary); margin-bottom: 1.5rem; font-size: 1.8rem; }
+  .blog-hub ul { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .blog-hub li { margin-bottom: 0.5rem; line-height: 1.6; }
+  @media (max-width: 768px) {
+    .blog-hub h1 { font-size: 2rem; }
+    .blog-hub section { padding: 1.5rem; }
+    .blog-hub h2 { font-size: 1.5rem; }
+  }
+</style>

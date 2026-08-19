@@ -9,6 +9,7 @@ import { PILLAR_BLOG_ROUTES } from "./pillarBlogPages";
 import { LEGACY_INDEXED_BLOG_ROUTES } from "./legacyIndexedBlogPages";
 import { TOOL_ROUTES } from "./toolPages";
 import { INDEXED_GENERATED_ROUTES } from "./gscIndexedGeneratedPages";
+import { GENERATED_PILLAR_ROUTES } from "./generatedPillarRoutes";
 
 export interface RouteEntry {
   path: string;
@@ -503,6 +504,62 @@ const BASE_ROUTES: RouteEntry[] = [
     title: "E-Waste Recycling Blog Kochi | Pickup, Scrap Price, Battery & ITAD Guides",
     description:
       "Read Ewaste Kochi guides on e-waste meaning, recycling, pickup near me, battery disposal, laptop recycling, scrap value, data destruction, ITAD and safe electronics disposal in Kochi.",
+    type: "blog",
+    sitemapGroup: "blog",
+    lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
+  },
+  {
+    path: "/blog/general-ewaste/",
+    changefreq: "monthly",
+    priority: 0.7,
+    title: "General E-Waste: Recycling Basics, Preparation & Everyday Disposal",
+    description:
+      "Essential e-waste recycling guidance for households and small businesses. Find out what can be recycled, how to prepare items, where to find authorized services, and why proper disposal matters.",
+    type: "blog",
+    sitemapGroup: "blog",
+    lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
+  },
+  {
+    path: "/blog/compliance-b2b/",
+    changefreq: "monthly",
+    priority: 0.7,
+    title: "Compliance & B2B: EPR, Regulations & Corporate E-Waste Management",
+    description:
+      "EPR compliance, CPCB registration, bulk consumer records, and corporate e-waste management solutions for businesses and organizations. Navigate India's E-Waste Rules 2022 with confidence.",
+    type: "blog",
+    sitemapGroup: "blog",
+    lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
+  },
+  {
+    path: "/blog/locations-services/",
+    changefreq: "monthly",
+    priority: 0.7,
+    title: "Locations & Services: Kochi Metro E-Waste Pickup Coverage",
+    description:
+      "Verified doorstep e-waste pickup services across Kochi and Ernakulam district. Free collection for residential and commercial locations. Service coverage for Aluva, Edappally, Vyttila, Thrippunithura, Fort Kochi and surrounding areas.",
+    type: "blog",
+    sitemapGroup: "blog",
+    lang: "en-IN",
+    status: "published",
+    contentSource: "manual",
+    indexable: true,
+  },
+  {
+    path: "/blog/devices-materials/",
+    changefreq: "monthly",
+    priority: 0.7,
+    title: "Devices & Materials: Component-Level E-Waste Recycling Guides",
+    description:
+      "Component-level recycling guides for laptops, phones, batteries, hard drives, cables and displays in Kochi. Safe handling steps and material-value recovery.",
     type: "blog",
     sitemapGroup: "blog",
     lang: "en-IN",
@@ -8115,7 +8172,7 @@ const BASE_ROUTES: RouteEntry[] = [
 // shipping two ROUTES entries -- and two rendered copies during any
 // path-keyed processing -- for the same URL.
 const seenPaths = new Set<string>();
-export const ROUTES: RouteEntry[] = [...BASE_ROUTES, ...INDEXED_GENERATED_ROUTES].filter((r) => {
+export const ROUTES: RouteEntry[] = [...BASE_ROUTES, ...GENERATED_PILLAR_ROUTES, ...INDEXED_GENERATED_ROUTES].filter((r) => {
   if (seenPaths.has(r.path)) return false;
   seenPaths.add(r.path);
   return true;

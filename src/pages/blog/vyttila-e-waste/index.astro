@@ -1,0 +1,156 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import LongformExpansion from "../../../components/LongformExpansion.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "E-Waste Pickup in Vyttila";
+const description = "Vyttila e-waste collection for the hub area, apartments and nearby commercial zones.";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Locations & Services", path: "/blog/locations-services/" },
+  { name: "E-Waste Pickup in Vyttila", path: "/blog/vyttila-e-waste/" }
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": description,
+    "datePublished": "2026-08-18",
+    "dateModified": lastUpdated,
+    "author": { "@type": "Organization", name: BUSINESS.legalName },
+    "publisher": { "@id": `${SITE_URL}/#organization` },
+    "mainEntityOfPage": `${SITE_URL}/blog/vyttila-e-waste/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/vyttila-e-waste/`,
+    "name": title,
+    "description": description,
+    "dateModified": lastUpdated,
+  }
+];
+
+const faqItems = [
+  {
+    q: "Is Vyttila covered?",
+    a: "Yes, generally; confirm with your locality and items."
+  },
+  {
+    q: "Can apartments batch?",
+    a: "Yes, society batches are straightforward."
+  },
+  {
+    q: "Do shops qualify?",
+    a: "Yes, with a clear item list and photos."
+  },
+  {
+    q: "How is the slot confirmed?",
+    a: "After feasibility review of your list and photos."
+  }
+];
+
+const sourceItems = [
+  {
+    title: "E-Waste Management Rules and related regulatory resources",
+    href: "https://cpcb.nic.in/rules-6/",
+    publisher: "Central Pollution Control Board",
+    note: "Official CPCB resource page for e-waste rules and updates."
+  },
+  {
+    title: "EPR E-Waste portal",
+    href: "https://eprewastecpcb.in/",
+    publisher: "Central Pollution Control Board",
+    note: "Official portal for e-waste EPR registration and compliance workflows."
+  },
+  {
+    title: "Kerala State Pollution Control Board",
+    href: "https://kspcb.kerala.gov.in/",
+    publisher: "Kerala State Pollution Control Board",
+    note: "Regional enforcement and authorization for e-waste recyclers in Kerala."
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/vyttila-e-waste/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <h1>E-Waste Pickup in Vyttila</h1>
+
+  <DirectAnswer>
+    <p>Vyttila's hub area and surrounding apartments are serviceable for e-waste pickup. Share your locality, item list and photos so the team can confirm a feasible slot.</p>
+  </DirectAnswer>
+
+  <CtaBar whatsappMessage="Hi, I'm in Vyttila and want to arrange e-waste pickup." />
+
+  <section id="section-1">
+    <h2>Vyttila coverage</h2>
+    <p>The transit hub and nearby residential zones are commonly serviceable.</p>
+    <p>Pinpoint your pocket for an accurate route match.</p>
+  </section>
+  <section id="section-2">
+    <h2>Apartments and homes</h2>
+    <p>Residences use the standard flow with photos and battery separation.</p>
+    <p>Societies can combine collections.</p>
+  </section>
+  <section id="section-3">
+    <h2>Commercial zones</h2>
+    <p>Small offices and shops can book with an item list.</p>
+    <p>Bulk lots need inventory and access details.</p>
+  </section>
+  <section id="section-4">
+    <h2>Feasibility first</h2>
+    <p>The team reviews before promising a slot, keeping expectations honest.</p>
+    <p>Functional items may be reviewed for resale.</p>
+  </section>
+
+  <RelatedContent>
+    <h2>Explore more guides</h2>
+    <ul>
+      <li><a href="/blog/locations-services/">Locations & Services hub</a></li>
+      <li><a href="/blog/general-ewaste/">General e-waste basics</a></li>
+      <li><a href="/recycling/">Recycling service</a></li>
+      <li><a href="/pickup/">Book a pickup</a></li>
+    </ul>
+  </RelatedContent>
+
+  <LongformExpansion
+    label="Expanded field guide"
+    audience="households and businesses in Kochi"
+    localIntent="e-waste pickup in vyttila with authorised pickup"
+    items={["old electronics", "batteries", "cables", "data devices"]}
+    themes={["Preparation", "Safety", "Compliance", "Recovery"]}
+  />
+
+  <section id="faq-section">
+    <h2>Frequently asked questions</h2>
+    <Faq items={faqItems} heading="E-Waste Pickup in Vyttila FAQs" />
+  </section>
+
+  <Sources items={sourceItems} heading="Official sources & regulatory references" />
+</Layout>
+
+<style>
+  .blog-hub { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+  .blog-hub h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-primary); text-align: center; }
+  .blog-hub section { margin-bottom: 3rem; padding: 2rem; background: var(--color-bg); border-radius: 0.75rem; border: 1px solid var(--color-border); }
+  .blog-hub h2 { color: var(--color-primary); margin-bottom: 1.5rem; font-size: 1.8rem; }
+  .blog-hub ul { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .blog-hub li { margin-bottom: 0.5rem; line-height: 1.6; }
+  @media (max-width: 768px) {
+    .blog-hub h1 { font-size: 2rem; }
+    .blog-hub section { padding: 1.5rem; }
+    .blog-hub h2 { font-size: 1.5rem; }
+  }
+</style>

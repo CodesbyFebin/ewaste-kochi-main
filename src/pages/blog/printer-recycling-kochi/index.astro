@@ -1,179 +1,156 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
 import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
 import RelatedContent from "../../../components/RelatedContent.astro";
-import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+import LongformExpansion from "../../../components/LongformExpansion.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
 
-const title = "Printer Recycling in Kochi | Office Peripheral Disposal";
-const description =
-  "How to recycle old printers, scanners, copiers and office peripherals in Kochi. Preparation tips, pickup options, and what to separate before collection.";
-const datePublished = "2026-07-08";
-const dateModified = "2026-07-08";
+const title = "Printer & Peripheral Recycling in Kochi";
+const description = "How to recycle printers, scanners and peripherals in Kochi, including cartridges and cables.";
+const lastUpdated = "2026-08-18";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
   { name: "Blog", path: "/blog/" },
-  { name: "Printer Recycling in Kochi", path: "/blog/printer-recycling-kochi/" },
+  { name: "Devices & Materials", path: "/blog/devices-materials/" },
+  { name: "Printer & Peripheral Recycling", path: "/blog/printer-recycling-kochi/" }
 ];
 
 const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    headline: title,
-    description,
-    datePublished,
-    dateModified,
-    author: { "@type": "Organization", name: BUSINESS.legalName },
-    publisher: { "@id": `${SITE_URL}/#organization` },
-    mainEntityOfPage: `${SITE_URL}/blog/printer-recycling-kochi/`,
+    "headline": title,
+    "description": description,
+    "datePublished": "2026-08-18",
+    "dateModified": lastUpdated,
+    "author": { "@type": "Organization", name: BUSINESS.legalName },
+    "publisher": { "@id": `${SITE_URL}/#organization` },
+    "mainEntityOfPage": `${SITE_URL}/blog/printer-recycling-kochi/`,
   },
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": `${SITE_URL}/blog/printer-recycling-kochi/`,
-    name: title,
-    description,
-    dateModified,
-  },
+    "name": title,
+    "description": description,
+    "dateModified": lastUpdated,
+  }
 ];
 
 const faqItems = [
   {
-    q: "Can old printers be recycled in Kochi?",
-    a: "Yes. Printers, scanners, copiers and multifunction devices are accepted for recycling. Contact us with the model and quantity to confirm.",
+    q: "Are printers e-waste?",
+    a: "Yes, including scanners and copiers."
   },
   {
-    q: "Should I remove ink or toner cartridges before recycling?",
-    a: "It helps to separate cartridges if possible. If the printer still has them installed, let us know and we can handle them appropriately.",
+    q: "Remove cartridges?",
+    a: "Yes, and keep cables separate."
   },
   {
-    q: "Can offices request bulk printer pickup?",
-    a: "Yes. We handle office clear-outs with multiple printers and peripherals. Send a list with quantities and we can plan the pickup.",
+    q: "Do printers store data?",
+    a: "Some MFPs do; mention it for data handling."
   },
   {
-    q: "Are network devices like routers accepted along with printers?",
-    a: "Yes. Routers, switches, keyboards, mice and cables can be included in the same pickup. Mention them when you contact us.",
+    q: "How is pickup confirmed?",
+    a: "After photos and model details are shared."
+  }
+];
+
+const sourceItems = [
+  {
+    title: "E-Waste Management Rules and related regulatory resources",
+    href: "https://cpcb.nic.in/rules-6/",
+    publisher: "Central Pollution Control Board",
+    note: "Official CPCB resource page for e-waste rules and updates."
   },
   {
-    q: "Do printers have scrap value?",
-    a: "Some printers and copiers may have residual scrap value depending on model, age and condition. Send details and photos for a quote.",
+    title: "EPR E-Waste portal",
+    href: "https://eprewastecpcb.in/",
+    publisher: "Central Pollution Control Board",
+    note: "Official portal for e-waste EPR registration and compliance workflows."
   },
+  {
+    title: "Kerala State Pollution Control Board",
+    href: "https://kspcb.kerala.gov.in/",
+    publisher: "Kerala State Pollution Control Board",
+    note: "Regional enforcement and authorization for e-waste recyclers in Kerala."
+  }
 ];
 ---
 
 <Layout title={title} description={description} path="/blog/printer-recycling-kochi/" jsonLd={jsonLd}>
   <Breadcrumbs items={breadcrumbItems} />
-  <h1>Printer Recycling in Kochi</h1>
-  <p class="lede">
-    Old printers, scanners and copiers take up desk and storage space.
-    Here is how to recycle them safely in Kochi, whether you have one
-    device at home or a full office clear-out.
-  </p>
 
-  <CtaBar whatsappMessage="Hi, I have printers and office peripherals for recycling." />
+  <h1>Printer & Peripheral Recycling</h1>
 
-  <div class="quick-answer">
-    <p class="quick-answer-label">Quick answer</p>
-    <p>
-      Printers, scanners, copiers, routers, and other office
-      peripherals are all accepted for recycling in Kochi — one device
-      at home or a full office clear-out. Separate cartridges if easily
-      removable, gather cables, and send photos with model labels.
-    </p>
-  </div>
+  <DirectAnswer>
+    <p>Printers, scanners and peripherals are e-waste accepted in Kochi pickups. Remove cartridges, separate cables, and send photos so the team can confirm handling and any data-bearing modules.</p>
+  </DirectAnswer>
 
-  <ul class="key-takeaways">
-    <li>Both single-device and full office clear-outs are handled the same way.</li>
-    <li>Ink and toner cartridges can stay installed if not easily removable.</li>
-    <li>Printers with hard drives or network devices with saved configuration should be flagged as data-bearing.</li>
-  </ul>
+  <CtaBar whatsappMessage="Hi, I have printers and peripherals to recycle in Kochi." />
 
-  <section>
-    <h2>What office peripherals are accepted?</h2>
+  <section id="section-1">
+    <h2>What counts here</h2>
+    <p>Printers, scanners, copiers, keyboards and mice are all accepted.</p>
+    <p>They combine plastics, metals and sometimes small boards.</p>
+  </section>
+  <section id="section-2">
+    <h2>Cartridges and cables</h2>
+    <p>Remove ink and toner cartridges and keep cables separate.</p>
+    <p>Cartridges may need their own handling route.</p>
+  </section>
+  <section id="section-3">
+    <h2>Data-bearing modules</h2>
+    <p>Some multifunction devices store scans on internal memory.</p>
+    <p>Mention this so data handling is included.</p>
+  </section>
+  <section id="section-4">
+    <h2>Pickup preparation</h2>
+    <p>Send photos and model details for a quick feasibility check.</p>
+    <p>Group peripherals to speed loading.</p>
+  </section>
+
+  <RelatedContent>
+    <h2>Explore more guides</h2>
     <ul>
-      <li>Printers — inkjet, laser, multifunction</li>
-      <li>Scanners and copiers</li>
-      <li>Routers and network switches</li>
-      <li>Keyboards, mice and other input devices</li>
-      <li>Cables, adapters and power supplies</li>
-      <li>Old UPS units and power backup accessories</li>
+      <li><a href="/blog/devices-materials/">Devices & Materials hub</a></li>
+      <li><a href="/blog/general-ewaste/">General e-waste basics</a></li>
+      <li><a href="/recycling/">Recycling service</a></li>
+      <li><a href="/pickup/">Book a pickup</a></li>
     </ul>
+  </RelatedContent>
+
+  <LongformExpansion
+    label="Expanded field guide"
+    audience="households and businesses in Kochi"
+    localIntent="printer & peripheral recycling with authorised pickup"
+    items={["old electronics", "batteries", "cables", "data devices"]}
+    themes={["Preparation", "Safety", "Compliance", "Recovery"]}
+  />
+
+  <section id="faq-section">
+    <h2>Frequently asked questions</h2>
+    <Faq items={faqItems} heading="Printer & Peripheral Recycling FAQs" />
   </section>
 
-  <section>
-    <h2>How to prepare printers for pickup</h2>
-    <ul class="check-list">
-      <li>Remove any sensitive documents from the printer memory if possible</li>
-      <li>Separate ink and toner cartridges if easily removable</li>
-      <li>Gather cables and power adapters that go with the devices</li>
-      <li>Take photos showing the front, back and model label</li>
-      <li>For offices — create a simple list with quantities of each type</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Office peripheral sorting tips</h2>
-    <p>
-      If you are clearing out an office or IT storage room, sorting items
-      beforehand helps the pickup go smoothly:
-    </p>
-    <ul>
-      <li>Keep printers and scanners together</li>
-      <li>Separate cables and accessories in a bag or box</li>
-      <li>Place batteries (from UPS units or backup devices) separately</li>
-      <li>Flag any devices that may contain data (printers with hard drives, network devices with configuration)</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>What to include in your message</h2>
-    <ul class="check-list">
-      <li>Type and quantity of each device</li>
-      <li>Photos of the items (especially for large quantities)</li>
-      <li>Your pickup location in Kochi</li>
-      <li>Whether cartridges are still installed</li>
-      <li>Any other e-waste you want to include</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Related services</h2>
-    <div class="link-row">
-      <a href="/itad/">ITAD for Business</a>
-      <a href="/pickup/">Book Pickup</a>
-    </div>
-  </section>
-
-  <p class="mal-support">
-    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
-  </p>
-
-  <Faq items={faqItems} />
-
-  <RelatedContent href="/blog/printer-recycling-kochi/" />
-  <section class="final-cta">
-    <h2>Have Printers or Peripherals to Recycle?</h2>
-    <p>For printer recycling, share your item details and location on WhatsApp to get started.</p>
-    <CtaBar whatsappMessage="Hi, I have printers and office peripherals for recycling." compact />
-  </section>
-
-  <p class="updated">Last updated: {dateModified}</p>
+  <Sources items={sourceItems} heading="Official sources & regulatory references" />
 </Layout>
 
 <style>
-  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
-  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
-  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
-  .updated { font-size: 0.8rem; color: var(--color-muted); }
-  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
-  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
-  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
-  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
-  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
-  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
-  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
-  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+  .blog-hub { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+  .blog-hub h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-primary); text-align: center; }
+  .blog-hub section { margin-bottom: 3rem; padding: 2rem; background: var(--color-bg); border-radius: 0.75rem; border: 1px solid var(--color-border); }
+  .blog-hub h2 { color: var(--color-primary); margin-bottom: 1.5rem; font-size: 1.8rem; }
+  .blog-hub ul { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .blog-hub li { margin-bottom: 0.5rem; line-height: 1.6; }
+  @media (max-width: 768px) {
+    .blog-hub h1 { font-size: 2rem; }
+    .blog-hub section { padding: 1.5rem; }
+    .blog-hub h2 { font-size: 1.5rem; }
+  }
 </style>

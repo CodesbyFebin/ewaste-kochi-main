@@ -1,0 +1,156 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import LongformExpansion from "../../../components/LongformExpansion.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Environmental Impact of E-Waste in Kerala";
+const description = "How improper e-waste disposal affects Kerala's soil, water and health, and how authorised recycling reduces the harm.";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "General E-Waste", path: "/blog/general-ewaste/" },
+  { name: "Environmental Impact of E-Waste", path: "/blog/e-waste-environment-impact/" }
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": description,
+    "datePublished": "2026-08-18",
+    "dateModified": lastUpdated,
+    "author": { "@type": "Organization", name: BUSINESS.legalName },
+    "publisher": { "@id": `${SITE_URL}/#organization` },
+    "mainEntityOfPage": `${SITE_URL}/blog/e-waste-environment-impact/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/e-waste-environment-impact/`,
+    "name": title,
+    "description": description,
+    "dateModified": lastUpdated,
+  }
+];
+
+const faqItems = [
+  {
+    q: "Why is Kerala especially sensitive?",
+    a: "High population density and water systems mean contaminants travel fast through communities."
+  },
+  {
+    q: "Which metals are the main threat?",
+    a: "Lead, mercury and lithium are the primary hazards released by poor handling."
+  },
+  {
+    q: "Does recycling really reduce harm?",
+    a: "Yes, by capturing hazardous fractions and recovering materials instead of burying them."
+  },
+  {
+    q: "How can my society help?",
+    a: "Batch collections and a shared e-waste box make authorised recycling the easy default."
+  }
+];
+
+const sourceItems = [
+  {
+    title: "E-Waste Management Rules and related regulatory resources",
+    href: "https://cpcb.nic.in/rules-6/",
+    publisher: "Central Pollution Control Board",
+    note: "Official CPCB resource page for e-waste rules and updates."
+  },
+  {
+    title: "EPR E-Waste portal",
+    href: "https://eprewastecpcb.in/",
+    publisher: "Central Pollution Control Board",
+    note: "Official portal for e-waste EPR registration and compliance workflows."
+  },
+  {
+    title: "Kerala State Pollution Control Board",
+    href: "https://kspcb.kerala.gov.in/",
+    publisher: "Kerala State Pollution Control Board",
+    note: "Regional enforcement and authorization for e-waste recyclers in Kerala."
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/e-waste-environment-impact/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <h1>Environmental Impact of E-Waste</h1>
+
+  <DirectAnswer>
+    <p>Improper e-waste disposal threatens Kerala's soil and waterways through lead, mercury and lithium leakage. Authorised recycling in Kochi recovers materials and prevents that contamination.</p>
+  </DirectAnswer>
+
+  <CtaBar whatsappMessage="Hi, our society wants to reduce e-waste harm locally." />
+
+  <section id="section-1">
+    <h2>Local stakes in Kerala</h2>
+    <p>Kerala's dense population and water systems mean contamination spreads quickly through communities.</p>
+    <p>Backwaters and paddy fields are especially sensitive to leached heavy metals.</p>
+  </section>
+  <section id="section-2">
+    <h2>What leaks and why</h2>
+    <p>Lead from solder, mercury from lamps and lithium from batteries are the main concerns.</p>
+    <p>Once in soil or water they persist and enter the food chain over time.</p>
+  </section>
+  <section id="section-3">
+    <h2>How authorised recycling helps</h2>
+    <p>Controlled processing captures hazardous fractions and recovers useful metals.</p>
+    <p>That reduces both pollution and the need for new raw-material extraction.</p>
+  </section>
+  <section id="section-4">
+    <h2>A community habit</h2>
+    <p>When neighbourhoods separate e-waste, collection volumes rise and dumping falls.</p>
+    <p>Societies in Kochi can run batched pickups to make the habit effortless.</p>
+  </section>
+
+  <RelatedContent>
+    <h2>Explore more guides</h2>
+    <ul>
+      <li><a href="/blog/general-ewaste/">General E-Waste hub</a></li>
+      <li><a href="/blog/general-ewaste/">General e-waste basics</a></li>
+      <li><a href="/recycling/">Recycling service</a></li>
+      <li><a href="/pickup/">Book a pickup</a></li>
+    </ul>
+  </RelatedContent>
+
+  <LongformExpansion
+    label="Expanded field guide"
+    audience="households and businesses in Kochi"
+    localIntent="environmental impact of e-waste with authorised pickup"
+    items={["old electronics", "batteries", "cables", "data devices"]}
+    themes={["Preparation", "Safety", "Compliance", "Recovery"]}
+  />
+
+  <section id="faq-section">
+    <h2>Frequently asked questions</h2>
+    <Faq items={faqItems} heading="Environmental Impact of E-Waste FAQs" />
+  </section>
+
+  <Sources items={sourceItems} heading="Official sources & regulatory references" />
+</Layout>
+
+<style>
+  .blog-hub { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+  .blog-hub h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-primary); text-align: center; }
+  .blog-hub section { margin-bottom: 3rem; padding: 2rem; background: var(--color-bg); border-radius: 0.75rem; border: 1px solid var(--color-border); }
+  .blog-hub h2 { color: var(--color-primary); margin-bottom: 1.5rem; font-size: 1.8rem; }
+  .blog-hub ul { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .blog-hub li { margin-bottom: 0.5rem; line-height: 1.6; }
+  @media (max-width: 768px) {
+    .blog-hub h1 { font-size: 2rem; }
+    .blog-hub section { padding: 1.5rem; }
+    .blog-hub h2 { font-size: 1.5rem; }
+  }
+</style>

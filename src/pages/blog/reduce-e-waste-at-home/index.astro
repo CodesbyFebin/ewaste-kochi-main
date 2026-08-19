@@ -1,0 +1,156 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import LongformExpansion from "../../../components/LongformExpansion.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "How to Reduce E-Waste at Home in Kochi";
+const description = "Practical ways Kochi households can buy less, repair more and extend device life to cut e-waste before it starts.";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "General E-Waste", path: "/blog/general-ewaste/" },
+  { name: "Reduce E-Waste at Home", path: "/blog/reduce-e-waste-at-home/" }
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": description,
+    "datePublished": "2026-08-18",
+    "dateModified": lastUpdated,
+    "author": { "@type": "Organization", name: BUSINESS.legalName },
+    "publisher": { "@id": `${SITE_URL}/#organization` },
+    "mainEntityOfPage": `${SITE_URL}/blog/reduce-e-waste-at-home/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/reduce-e-waste-at-home/`,
+    "name": title,
+    "description": description,
+    "dateModified": lastUpdated,
+  }
+];
+
+const faqItems = [
+  {
+    q: "Is repair worth it?",
+    a: "Often yes — a repair can cost far less than replacement and delays disposal for years."
+  },
+  {
+    q: "Where can working devices go?",
+    a: "Resale review or reuse programmes keep functional electronics in service."
+  },
+  {
+    q: "Does buying less really help?",
+    a: "Yes; fewer duplicate gadgets means less eventual e-waste to manage."
+  },
+  {
+    q: "What about stored old phones?",
+    a: "Assess them: reuse, resell, or recycle through authorised pickup if truly dead."
+  }
+];
+
+const sourceItems = [
+  {
+    title: "E-Waste Management Rules and related regulatory resources",
+    href: "https://cpcb.nic.in/rules-6/",
+    publisher: "Central Pollution Control Board",
+    note: "Official CPCB resource page for e-waste rules and updates."
+  },
+  {
+    title: "EPR E-Waste portal",
+    href: "https://eprewastecpcb.in/",
+    publisher: "Central Pollution Control Board",
+    note: "Official portal for e-waste EPR registration and compliance workflows."
+  },
+  {
+    title: "Kerala State Pollution Control Board",
+    href: "https://kspcb.kerala.gov.in/",
+    publisher: "Kerala State Pollution Control Board",
+    note: "Regional enforcement and authorization for e-waste recyclers in Kerala."
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/reduce-e-waste-at-home/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <h1>Reduce E-Waste at Home</h1>
+
+  <DirectAnswer>
+    <p>Reduce e-waste by buying only what you need, repairing before replacing, and passing on working devices. In Kochi, reuse and resale routes keep functional electronics in service longer.</p>
+  </DirectAnswer>
+
+  <CtaBar whatsappMessage="Hi, I want to cut down the e-waste my home generates." />
+
+  <section id="section-1">
+    <h2>Buy with the end in mind</h2>
+    <p>Choose durable devices and avoid duplicate gadgets that sit unused in drawers.</p>
+    <p>Fewer, longer-lived items mean less e-waste reaching the bin later.</p>
+  </section>
+  <section id="section-2">
+    <h2>Repair before you replace</h2>
+    <p>A cracked screen or weak battery is often fixable for less than a new device.</p>
+    <p>Local repair keeps the device working and delays disposal by years.</p>
+  </section>
+  <section id="section-3">
+    <h2>Pass on working gear</h2>
+    <p>Functioning phones, laptops and appliances can be reused by others through resale or donation.</p>
+    <p>That extends life and avoids the energy of building a replacement.</p>
+  </section>
+  <section id="section-4">
+    <h2>Recycle only the rest</h2>
+    <p>When a device is truly end-of-life, send it through authorised pickup rather than storage.</p>
+    <p>A small, regular habit prevents the dreaded cupboard of forgotten electronics.</p>
+  </section>
+
+  <RelatedContent>
+    <h2>Explore more guides</h2>
+    <ul>
+      <li><a href="/blog/general-ewaste/">General E-Waste hub</a></li>
+      <li><a href="/blog/general-ewaste/">General e-waste basics</a></li>
+      <li><a href="/recycling/">Recycling service</a></li>
+      <li><a href="/pickup/">Book a pickup</a></li>
+    </ul>
+  </RelatedContent>
+
+  <LongformExpansion
+    label="Expanded field guide"
+    audience="households and businesses in Kochi"
+    localIntent="reduce e-waste at home with authorised pickup"
+    items={["old electronics", "batteries", "cables", "data devices"]}
+    themes={["Preparation", "Safety", "Compliance", "Recovery"]}
+  />
+
+  <section id="faq-section">
+    <h2>Frequently asked questions</h2>
+    <Faq items={faqItems} heading="Reduce E-Waste at Home FAQs" />
+  </section>
+
+  <Sources items={sourceItems} heading="Official sources & regulatory references" />
+</Layout>
+
+<style>
+  .blog-hub { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+  .blog-hub h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-primary); text-align: center; }
+  .blog-hub section { margin-bottom: 3rem; padding: 2rem; background: var(--color-bg); border-radius: 0.75rem; border: 1px solid var(--color-border); }
+  .blog-hub h2 { color: var(--color-primary); margin-bottom: 1.5rem; font-size: 1.8rem; }
+  .blog-hub ul { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .blog-hub li { margin-bottom: 0.5rem; line-height: 1.6; }
+  @media (max-width: 768px) {
+    .blog-hub h1 { font-size: 2rem; }
+    .blog-hub section { padding: 1.5rem; }
+    .blog-hub h2 { font-size: 1.5rem; }
+  }
+</style>
