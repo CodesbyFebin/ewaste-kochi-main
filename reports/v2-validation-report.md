@@ -892,3 +892,170 @@ All checks passed.
 - Failures: 0
 
 All checks passed.
+
+## Validation run 2026-08-19T13:59:25.098Z
+
+- Routes checked: 933
+- Checks passed: 3330
+- Failures: 145
+
+| Path | Check | Detail |
+| --- | --- | --- |
+| /wiki/disposal/how-to-recycle-electronics-at-home/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/disposal/how-to-recycle-electronics-at-home", expected "https://www.ewastekochi.com/wiki/disposal/how-to-recycle-electronics-at-home/". |
+| /wiki/disposal/how-to-recycle-electronics-at-home/ | og-url | og:url is "https://www.ewastekochi.com/wiki/disposal/how-to-recycle-electronics-at-home", expected "https://www.ewastekochi.com/wiki/disposal/how-to-recycle-electronics-at-home/". |
+| /wiki/disposal/where-to-donate-electronics/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/disposal/where-to-donate-electronics", expected "https://www.ewastekochi.com/wiki/disposal/where-to-donate-electronics/". |
+| /wiki/disposal/where-to-donate-electronics/ | og-url | og:url is "https://www.ewastekochi.com/wiki/disposal/where-to-donate-electronics", expected "https://www.ewastekochi.com/wiki/disposal/where-to-donate-electronics/". |
+| /wiki/disposal/where-to-recycle-batteries/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/disposal/where-to-recycle-batteries", expected "https://www.ewastekochi.com/wiki/disposal/where-to-recycle-batteries/". |
+| /wiki/disposal/where-to-recycle-batteries/ | og-url | og:url is "https://www.ewastekochi.com/wiki/disposal/where-to-recycle-batteries", expected "https://www.ewastekochi.com/wiki/disposal/where-to-recycle-batteries/". |
+| /wiki/disposal/e-waste-pickup-services/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/disposal/e-waste-pickup-services", expected "https://www.ewastekochi.com/wiki/disposal/e-waste-pickup-services/". |
+| /wiki/disposal/e-waste-pickup-services/ | og-url | og:url is "https://www.ewastekochi.com/wiki/disposal/e-waste-pickup-services", expected "https://www.ewastekochi.com/wiki/disposal/e-waste-pickup-services/". |
+| /wiki/disposal/local-recycling-centers/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/disposal/local-recycling-centers", expected "https://www.ewastekochi.com/wiki/disposal/local-recycling-centers/". |
+| /wiki/disposal/local-recycling-centers/ | og-url | og:url is "https://www.ewastekochi.com/wiki/disposal/local-recycling-centers", expected "https://www.ewastekochi.com/wiki/disposal/local-recycling-centers/". |
+| /wiki/disposal/e-waste-collection-rules/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/disposal/e-waste-collection-rules", expected "https://www.ewastekochi.com/wiki/disposal/e-waste-collection-rules/". |
+| /wiki/disposal/e-waste-collection-rules/ | og-url | og:url is "https://www.ewastekochi.com/wiki/disposal/e-waste-collection-rules", expected "https://www.ewastekochi.com/wiki/disposal/e-waste-collection-rules/". |
+| /wiki/disposal/how-to-dispose-of-tvs/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/disposal/how-to-dispose-of-tvs", expected "https://www.ewastekochi.com/wiki/disposal/how-to-dispose-of-tvs/". |
+| /wiki/disposal/how-to-dispose-of-tvs/ | og-url | og:url is "https://www.ewastekochi.com/wiki/disposal/how-to-dispose-of-tvs", expected "https://www.ewastekochi.com/wiki/disposal/how-to-dispose-of-tvs/". |
+| /wiki/disposal/laptop-and-computer-disposal/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/disposal/laptop-and-computer-disposal", expected "https://www.ewastekochi.com/wiki/disposal/laptop-and-computer-disposal/". |
+| /wiki/disposal/laptop-and-computer-disposal/ | og-url | og:url is "https://www.ewastekochi.com/wiki/disposal/laptop-and-computer-disposal", expected "https://www.ewastekochi.com/wiki/disposal/laptop-and-computer-disposal/". |
+| /wiki/disposal/monitor-and-printer-disposal/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/disposal/monitor-and-printer-disposal", expected "https://www.ewastekochi.com/wiki/disposal/monitor-and-printer-disposal/". |
+| /wiki/disposal/monitor-and-printer-disposal/ | og-url | og:url is "https://www.ewastekochi.com/wiki/disposal/monitor-and-printer-disposal", expected "https://www.ewastekochi.com/wiki/disposal/monitor-and-printer-disposal/". |
+| /wiki/disposal/mobile-phone-and-tablet-recycling/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/disposal/mobile-phone-and-tablet-recycling", expected "https://www.ewastekochi.com/wiki/disposal/mobile-phone-and-tablet-recycling/". |
+| /wiki/disposal/mobile-phone-and-tablet-recycling/ | og-url | og:url is "https://www.ewastekochi.com/wiki/disposal/mobile-phone-and-tablet-recycling", expected "https://www.ewastekochi.com/wiki/disposal/mobile-phone-and-tablet-recycling/". |
+| /wiki/sales/where-to-sell-electronics-locally/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/sales/where-to-sell-electronics-locally", expected "https://www.ewastekochi.com/wiki/sales/where-to-sell-electronics-locally/". |
+| /wiki/sales/where-to-sell-electronics-locally/ | og-url | og:url is "https://www.ewastekochi.com/wiki/sales/where-to-sell-electronics-locally", expected "https://www.ewastekochi.com/wiki/sales/where-to-sell-electronics-locally/". |
+| /wiki/sales/online-selling-platforms/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/sales/online-selling-platforms", expected "https://www.ewastekochi.com/wiki/sales/online-selling-platforms/". |
+| /wiki/sales/online-selling-platforms/ | og-url | og:url is "https://www.ewastekochi.com/wiki/sales/online-selling-platforms", expected "https://www.ewastekochi.com/wiki/sales/online-selling-platforms/". |
+| /wiki/sales/e-waste-scrap-buyers/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/sales/e-waste-scrap-buyers", expected "https://www.ewastekochi.com/wiki/sales/e-waste-scrap-buyers/". |
+| /wiki/sales/e-waste-scrap-buyers/ | og-url | og:url is "https://www.ewastekochi.com/wiki/sales/e-waste-scrap-buyers", expected "https://www.ewastekochi.com/wiki/sales/e-waste-scrap-buyers/". |
+| /wiki/sales/e-waste-scrap-prices/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/sales/e-waste-scrap-prices", expected "https://www.ewastekochi.com/wiki/sales/e-waste-scrap-prices/". |
+| /wiki/sales/e-waste-scrap-prices/ | og-url | og:url is "https://www.ewastekochi.com/wiki/sales/e-waste-scrap-prices", expected "https://www.ewastekochi.com/wiki/sales/e-waste-scrap-prices/". |
+| /wiki/sales/sell-broken-electronics/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/sales/sell-broken-electronics", expected "https://www.ewastekochi.com/wiki/sales/sell-broken-electronics/". |
+| /wiki/sales/sell-broken-electronics/ | og-url | og:url is "https://www.ewastekochi.com/wiki/sales/sell-broken-electronics", expected "https://www.ewastekochi.com/wiki/sales/sell-broken-electronics/". |
+| /wiki/sales/office-equipment-buyback/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/sales/office-equipment-buyback", expected "https://www.ewastekochi.com/wiki/sales/office-equipment-buyback/". |
+| /wiki/sales/office-equipment-buyback/ | og-url | og:url is "https://www.ewastekochi.com/wiki/sales/office-equipment-buyback", expected "https://www.ewastekochi.com/wiki/sales/office-equipment-buyback/". |
+| /wiki/sales/business-electronics-recycling/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/sales/business-electronics-recycling", expected "https://www.ewastekochi.com/wiki/sales/business-electronics-recycling/". |
+| /wiki/sales/business-electronics-recycling/ | og-url | og:url is "https://www.ewastekochi.com/wiki/sales/business-electronics-recycling", expected "https://www.ewastekochi.com/wiki/sales/business-electronics-recycling/". |
+| /wiki/sales/choose-secure-itad-vendor/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/sales/choose-secure-itad-vendor", expected "https://www.ewastekochi.com/wiki/sales/choose-secure-itad-vendor/". |
+| /wiki/sales/choose-secure-itad-vendor/ | og-url | og:url is "https://www.ewastekochi.com/wiki/sales/choose-secure-itad-vendor", expected "https://www.ewastekochi.com/wiki/sales/choose-secure-itad-vendor/". |
+| /wiki/sales/sell-old-crt-tvs/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/sales/sell-old-crt-tvs", expected "https://www.ewastekochi.com/wiki/sales/sell-old-crt-tvs/". |
+| /wiki/sales/sell-old-crt-tvs/ | og-url | og:url is "https://www.ewastekochi.com/wiki/sales/sell-old-crt-tvs", expected "https://www.ewastekochi.com/wiki/sales/sell-old-crt-tvs/". |
+| /wiki/sales/battery-scrap-markets/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/sales/battery-scrap-markets", expected "https://www.ewastekochi.com/wiki/sales/battery-scrap-markets/". |
+| /wiki/sales/battery-scrap-markets/ | og-url | og:url is "https://www.ewastekochi.com/wiki/sales/battery-scrap-markets", expected "https://www.ewastekochi.com/wiki/sales/battery-scrap-markets/". |
+| /wiki/locations/e-waste-collection-kochi/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/locations/e-waste-collection-kochi", expected "https://www.ewastekochi.com/wiki/locations/e-waste-collection-kochi/". |
+| /wiki/locations/e-waste-collection-kochi/ | og-url | og:url is "https://www.ewastekochi.com/wiki/locations/e-waste-collection-kochi", expected "https://www.ewastekochi.com/wiki/locations/e-waste-collection-kochi/". |
+| /wiki/locations/e-waste-trivandrum/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/locations/e-waste-trivandrum", expected "https://www.ewastekochi.com/wiki/locations/e-waste-trivandrum/". |
+| /wiki/locations/e-waste-trivandrum/ | og-url | og:url is "https://www.ewastekochi.com/wiki/locations/e-waste-trivandrum", expected "https://www.ewastekochi.com/wiki/locations/e-waste-trivandrum/". |
+| /wiki/locations/thrissur/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/locations/thrissur", expected "https://www.ewastekochi.com/wiki/locations/thrissur/". |
+| /wiki/locations/thrissur/ | og-url | og:url is "https://www.ewastekochi.com/wiki/locations/thrissur", expected "https://www.ewastekochi.com/wiki/locations/thrissur/". |
+| /wiki/locations/kottayam/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/locations/kottayam", expected "https://www.ewastekochi.com/wiki/locations/kottayam/". |
+| /wiki/locations/kottayam/ | og-url | og:url is "https://www.ewastekochi.com/wiki/locations/kottayam", expected "https://www.ewastekochi.com/wiki/locations/kottayam/". |
+| /wiki/locations/kakkanad-scrap-shops/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/locations/kakkanad-scrap-shops", expected "https://www.ewastekochi.com/wiki/locations/kakkanad-scrap-shops/". |
+| /wiki/locations/kakkanad-scrap-shops/ | og-url | og:url is "https://www.ewastekochi.com/wiki/locations/kakkanad-scrap-shops", expected "https://www.ewastekochi.com/wiki/locations/kakkanad-scrap-shops/". |
+| /wiki/locations/kakkanad-waste-disposal/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/locations/kakkanad-waste-disposal", expected "https://www.ewastekochi.com/wiki/locations/kakkanad-waste-disposal/". |
+| /wiki/locations/kakkanad-waste-disposal/ | og-url | og:url is "https://www.ewastekochi.com/wiki/locations/kakkanad-waste-disposal", expected "https://www.ewastekochi.com/wiki/locations/kakkanad-waste-disposal/". |
+| /wiki/locations/aluva/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/locations/aluva", expected "https://www.ewastekochi.com/wiki/locations/aluva/". |
+| /wiki/locations/aluva/ | og-url | og:url is "https://www.ewastekochi.com/wiki/locations/aluva", expected "https://www.ewastekochi.com/wiki/locations/aluva/". |
+| /wiki/locations/kerala-licensing-ewaste/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/locations/kerala-licensing-ewaste", expected "https://www.ewastekochi.com/wiki/locations/kerala-licensing-ewaste/". |
+| /wiki/locations/kerala-licensing-ewaste/ | og-url | og:url is "https://www.ewastekochi.com/wiki/locations/kerala-licensing-ewaste", expected "https://www.ewastekochi.com/wiki/locations/kerala-licensing-ewaste/". |
+| /wiki/locations/near-me-directory/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/locations/near-me-directory", expected "https://www.ewastekochi.com/wiki/locations/near-me-directory/". |
+| /wiki/locations/near-me-directory/ | og-url | og:url is "https://www.ewastekochi.com/wiki/locations/near-me-directory", expected "https://www.ewastekochi.com/wiki/locations/near-me-directory/". |
+| /wiki/locations/defense-gov-disposal/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/locations/defense-gov-disposal", expected "https://www.ewastekochi.com/wiki/locations/defense-gov-disposal/". |
+| /wiki/locations/defense-gov-disposal/ | og-url | og:url is "https://www.ewastekochi.com/wiki/locations/defense-gov-disposal", expected "https://www.ewastekochi.com/wiki/locations/defense-gov-disposal/". |
+| /wiki/locations/small-business-recycling/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/locations/small-business-recycling", expected "https://www.ewastekochi.com/wiki/locations/small-business-recycling/". |
+| /wiki/locations/small-business-recycling/ | og-url | og:url is "https://www.ewastekochi.com/wiki/locations/small-business-recycling", expected "https://www.ewastekochi.com/wiki/locations/small-business-recycling/". |
+| /wiki/locations/awareness/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/locations/awareness", expected "https://www.ewastekochi.com/wiki/locations/awareness/". |
+| /wiki/locations/awareness/ | og-url | og:url is "https://www.ewastekochi.com/wiki/locations/awareness", expected "https://www.ewastekochi.com/wiki/locations/awareness/". |
+| /wiki/technical/what-is-e-waste/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/technical/what-is-e-waste", expected "https://www.ewastekochi.com/wiki/technical/what-is-e-waste/". |
+| /wiki/technical/what-is-e-waste/ | og-url | og:url is "https://www.ewastekochi.com/wiki/technical/what-is-e-waste", expected "https://www.ewastekochi.com/wiki/technical/what-is-e-waste/". |
+| /wiki/technical/types-of-electronic-waste/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/technical/types-of-electronic-waste", expected "https://www.ewastekochi.com/wiki/technical/types-of-electronic-waste/". |
+| /wiki/technical/types-of-electronic-waste/ | og-url | og:url is "https://www.ewastekochi.com/wiki/technical/types-of-electronic-waste", expected "https://www.ewastekochi.com/wiki/technical/types-of-electronic-waste/". |
+| /wiki/technical/recycling-process/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/technical/recycling-process", expected "https://www.ewastekochi.com/wiki/technical/recycling-process/". |
+| /wiki/technical/recycling-process/ | og-url | og:url is "https://www.ewastekochi.com/wiki/technical/recycling-process", expected "https://www.ewastekochi.com/wiki/technical/recycling-process/". |
+| /wiki/technical/hard-drive-destruction/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/technical/hard-drive-destruction", expected "https://www.ewastekochi.com/wiki/technical/hard-drive-destruction/". |
+| /wiki/technical/hard-drive-destruction/ | og-url | og:url is "https://www.ewastekochi.com/wiki/technical/hard-drive-destruction", expected "https://www.ewastekochi.com/wiki/technical/hard-drive-destruction/". |
+| /wiki/technical/data-security-recycling/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/technical/data-security-recycling", expected "https://www.ewastekochi.com/wiki/technical/data-security-recycling/". |
+| /wiki/technical/data-security-recycling/ | og-url | og:url is "https://www.ewastekochi.com/wiki/technical/data-security-recycling", expected "https://www.ewastekochi.com/wiki/technical/data-security-recycling/". |
+| /wiki/technical/epr-india-rules/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/technical/epr-india-rules", expected "https://www.ewastekochi.com/wiki/technical/epr-india-rules/". |
+| /wiki/technical/epr-india-rules/ | og-url | og:url is "https://www.ewastekochi.com/wiki/technical/epr-india-rules", expected "https://www.ewastekochi.com/wiki/technical/epr-india-rules/". |
+| /wiki/technical/choose-recycler/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/technical/choose-recycler", expected "https://www.ewastekochi.com/wiki/technical/choose-recycler/". |
+| /wiki/technical/choose-recycler/ | og-url | og:url is "https://www.ewastekochi.com/wiki/technical/choose-recycler", expected "https://www.ewastekochi.com/wiki/technical/choose-recycler/". |
+| /wiki/technical/indian-laws/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/technical/indian-laws", expected "https://www.ewastekochi.com/wiki/technical/indian-laws/". |
+| /wiki/technical/indian-laws/ | og-url | og:url is "https://www.ewastekochi.com/wiki/technical/indian-laws", expected "https://www.ewastekochi.com/wiki/technical/indian-laws/". |
+| /wiki/technical/data-center-decommissioning/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/technical/data-center-decommissioning", expected "https://www.ewastekochi.com/wiki/technical/data-center-decommissioning/". |
+| /wiki/technical/data-center-decommissioning/ | og-url | og:url is "https://www.ewastekochi.com/wiki/technical/data-center-decommissioning", expected "https://www.ewastekochi.com/wiki/technical/data-center-decommissioning/". |
+| /wiki/technical/swollen-batteries/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/technical/swollen-batteries", expected "https://www.ewastekochi.com/wiki/technical/swollen-batteries/". |
+| /wiki/technical/swollen-batteries/ | og-url | og:url is "https://www.ewastekochi.com/wiki/technical/swollen-batteries", expected "https://www.ewastekochi.com/wiki/technical/swollen-batteries/". |
+| /wiki/technical/market-trends/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/technical/market-trends", expected "https://www.ewastekochi.com/wiki/technical/market-trends/". |
+| /wiki/technical/market-trends/ | og-url | og:url is "https://www.ewastekochi.com/wiki/technical/market-trends", expected "https://www.ewastekochi.com/wiki/technical/market-trends/". |
+| /wiki/technical/environmental-impact/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/technical/environmental-impact", expected "https://www.ewastekochi.com/wiki/technical/environmental-impact/". |
+| /wiki/technical/environmental-impact/ | og-url | og:url is "https://www.ewastekochi.com/wiki/technical/environmental-impact", expected "https://www.ewastekochi.com/wiki/technical/environmental-impact/". |
+| /wiki/technical/reuse-vs-recycle/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/technical/reuse-vs-recycle", expected "https://www.ewastekochi.com/wiki/technical/reuse-vs-recycle/". |
+| /wiki/technical/reuse-vs-recycle/ | og-url | og:url is "https://www.ewastekochi.com/wiki/technical/reuse-vs-recycle", expected "https://www.ewastekochi.com/wiki/technical/reuse-vs-recycle/". |
+| /wiki/technical/circular-economy/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/technical/circular-economy", expected "https://www.ewastekochi.com/wiki/technical/circular-economy/". |
+| /wiki/technical/circular-economy/ | og-url | og:url is "https://www.ewastekochi.com/wiki/technical/circular-economy", expected "https://www.ewastekochi.com/wiki/technical/circular-economy/". |
+| /wiki/technical/schools-education/ | canonical | Canonical is "https://www.ewastekochi.com/wiki/technical/schools-education", expected "https://www.ewastekochi.com/wiki/technical/schools-education/". |
+| /wiki/technical/schools-education/ | og-url | og:url is "https://www.ewastekochi.com/wiki/technical/schools-education", expected "https://www.ewastekochi.com/wiki/technical/schools-education/". |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/disposal/e-waste-collection-rules/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/disposal/e-waste-pickup-services/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/disposal/how-to-dispose-of-tvs/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/disposal/how-to-recycle-electronics-at-home/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/disposal/laptop-and-computer-disposal/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/disposal/local-recycling-centers/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/disposal/mobile-phone-and-tablet-recycling/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/disposal/monitor-and-printer-disposal/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/disposal/where-to-donate-electronics/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/disposal/where-to-recycle-batteries/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/locations/aluva/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/locations/awareness/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/locations/defense-gov-disposal/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/locations/e-waste-collection-kochi/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/locations/e-waste-trivandrum/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/locations/kakkanad-scrap-shops/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/locations/kakkanad-waste-disposal/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/locations/kerala-licensing-ewaste/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/locations/kottayam/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/locations/near-me-directory/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/locations/small-business-recycling/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/locations/thrissur/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/sales/battery-scrap-markets/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/sales/business-electronics-recycling/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/sales/choose-secure-itad-vendor/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/sales/e-waste-scrap-buyers/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/sales/e-waste-scrap-prices/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/sales/office-equipment-buyback/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/sales/online-selling-platforms/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/sales/sell-broken-electronics/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/sales/sell-old-crt-tvs/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/sales/where-to-sell-electronics-locally/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/technical/choose-recycler/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/technical/circular-economy/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/technical/data-center-decommissioning/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/technical/data-security-recycling/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/technical/environmental-impact/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/technical/epr-india-rules/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/technical/hard-drive-destruction/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/technical/indian-laws/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/technical/market-trends/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/technical/recycling-process/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/technical/reuse-vs-recycle/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/technical/schools-education/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/technical/swollen-batteries/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/technical/types-of-electronic-waste/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/blog.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/wiki/technical/what-is-e-waste/" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /wiki/sales/online-selling-platforms/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /Best Price/i. |
+| /wiki/sales/e-waste-scrap-buyers/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /Best Price/i. |
+| /wiki/sales/choose-secure-itad-vendor/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /Pollution Control Board authorization/i. |
+| /wiki/technical/choose-recycler/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /ISO 14001/i. |
+
+## Validation run 2026-08-19T14:01:25.277Z
+
+- Routes checked: 933
+- Checks passed: 3378
+- Failures: 4
+
+| Path | Check | Detail |
+| --- | --- | --- |
+| /wiki/sales/online-selling-platforms/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /Best Price/i. |
+| /wiki/sales/e-waste-scrap-buyers/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /Best Price/i. |
+| /wiki/sales/choose-secure-itad-vendor/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /Pollution Control Board authorization/i. |
+| /wiki/technical/choose-recycler/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /ISO 14001/i. |
