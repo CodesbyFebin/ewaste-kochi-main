@@ -900,3 +900,14 @@ All checks passed.
 - Failures: 0
 
 All checks passed.
+
+## Validation run 2026-08-19T16:19:23.573Z
+
+- Routes checked: 956
+- Checks passed: 3447
+- Failures: 2
+
+| Path | Check | Detail |
+| --- | --- | --- |
+| /blog/compliance-b2b/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /CPCB Authorized/i. |
+| /blog/locations-services/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /Pollution Control Board authorization/i. |

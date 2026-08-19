@@ -7998,6 +7998,7 @@ const BASE_ROUTES: RouteEntry[] = [
     type: "blog",
     sitemapGroup: "blog",
     lang: "en-IN",
+    indexable: false,
   },
   {
     path: "/blog/office-pickup-in-infopark-kochi/",
@@ -8031,6 +8032,7 @@ const BASE_ROUTES: RouteEntry[] = [
     type: "blog",
     sitemapGroup: "blog",
     lang: "en-IN",
+    indexable: false,
   },
   {
     path: "/blog/electronics-recycling-in-palarivattom/",

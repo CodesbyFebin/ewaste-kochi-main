@@ -787,7 +787,7 @@ export const GENERATED_PILLAR_ROUTES: RouteEntry[] = [
     path: "/blog/kundannoor-e-waste/",
     changefreq: "monthly",
     priority: 0.6,
-    title: "E-Waste Pickup in Kundannoor",
+    title: "E-Waste Theft Prevention — E-Waste Pickup in Kundannoor",
     description: "Kundannoor e-waste collection near the junction and southern corridor.",
     type: "blog" as const,
     sitemapGroup: "blog" as const,
