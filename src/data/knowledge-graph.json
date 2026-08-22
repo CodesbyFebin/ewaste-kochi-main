@@ -1,0 +1,65 @@
+{
+  "entities": {
+    "Ewaste Kochi": {
+      "type": "Organization",
+      "url": "https://www.ewastekochi.com",
+      "sameAs": ["https://www.ewastekochi.com"],
+      "description": "E-waste recycling and ITAD services in Kochi, Kerala"
+    },
+    "CPCB": {
+      "type": "GovernmentOrganization",
+      "url": "https://cpcb.nic.in/",
+      "relatedTo": ["Ewaste Kochi", "KSPCB"]
+    },
+    "KSPCB": {
+      "type": "GovernmentOrganization",
+      "url": "https://kspcb.kerala.gov.in/",
+      "relatedTo": ["Ewaste Kochi", "CPCB"]
+    },
+    "E-Waste Rules 2022": {
+      "type": "Legislation",
+      "url": "https://cpcb.nic.in/rules-6/",
+      "relatedTo": ["CPCB", "KSPCB", "Ewaste Kochi"]
+    },
+    "ITAD": {
+      "type": "Service",
+      "url": "/itad/",
+      "relatedTo": ["Ewaste Kochi"]
+    },
+    "Data Destruction": {
+      "type": "Service",
+      "url": "/data-destruction/",
+      "relatedTo": ["Ewaste Kochi"]
+    },
+    "Battery Recycling": {
+      "type": "Service",
+      "url": "/battery-recycling/",
+      "relatedTo": ["Ewaste Kochi"]
+    },
+    "Kochi": {
+      "type": "City",
+      "url": "/locations/kochi/",
+      "relatedTo": ["Ernakulam", "Kerala"]
+    },
+    "Ernakulam": {
+      "type": "District",
+      "relatedTo": ["Kochi", "Kerala"]
+    },
+    "Kerala": {
+      "type": "State",
+      "country": "IN",
+      "relatedTo": ["Kochi", "Ernakulam"]
+    }
+  },
+  "relationships": [
+    { "subject": "Ewaste Kochi", "predicate": "provides", "object": "ITAD" },
+    { "subject": "Ewaste Kochi", "predicate": "provides", "object": "Data Destruction" },
+    { "subject": "Ewaste Kochi", "predicate": "provides", "object": "Battery Recycling" },
+    { "subject": "Ewaste Kochi", "predicate": "locatedIn", "object": "Kochi" },
+    { "subject": "Kochi", "predicate": "in", "object": "Ernakulam" },
+    { "subject": "Ernakulam", "predicate": "in", "object": "Kerala" },
+    { "subject": "Ewaste Kochi", "predicate": "compliesWith", "object": "E-Waste Rules 2022" },
+    { "subject": "Ewaste Kochi", "predicate": "authorizedBy", "object": "CPCB" },
+    { "subject": "Ewaste Kochi", "predicate": "authorizedBy", "object": "KSPCB" }
+  ]
+}

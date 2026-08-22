@@ -919,3 +919,42 @@ All checks passed.
 - Failures: 0
 
 All checks passed.
+
+## Validation run 2026-08-22T23:48:19.117Z
+
+- Routes checked: 962
+- Checks passed: 3447
+- Failures: 12
+
+| Path | Check | Detail |
+| --- | --- | --- |
+| /entities.json | build-output | Expected build output at /workspace/63b72ac8-352e-4e5b-b366-7b9bdabc09e7/sessions/agent_c5256832-70d8-4966-9d36-2a7850dbf6f5/dist/entities.json/index.html but it does not exist. |
+| /knowledge-graph.json | build-output | Expected build output at /workspace/63b72ac8-352e-4e5b-b366-7b9bdabc09e7/sessions/agent_c5256832-70d8-4966-9d36-2a7850dbf6f5/dist/knowledge-graph.json/index.html but it does not exist. |
+| /evidence.json | build-output | Expected build output at /workspace/63b72ac8-352e-4e5b-b366-7b9bdabc09e7/sessions/agent_c5256832-70d8-4966-9d36-2a7850dbf6f5/dist/evidence.json/index.html but it does not exist. |
+| /models.json | build-output | Expected build output at /workspace/63b72ac8-352e-4e5b-b366-7b9bdabc09e7/sessions/agent_c5256832-70d8-4966-9d36-2a7850dbf6f5/dist/models.json/index.html but it does not exist. |
+| /language.json | build-output | Expected build output at /workspace/63b72ac8-352e-4e5b-b366-7b9bdabc09e7/sessions/agent_c5256832-70d8-4966-9d36-2a7850dbf6f5/dist/language.json/index.html but it does not exist. |
+| /health.json | build-output | Expected build output at /workspace/63b72ac8-352e-4e5b-b366-7b9bdabc09e7/sessions/agent_c5256832-70d8-4966-9d36-2a7850dbf6f5/dist/health.json/index.html but it does not exist. |
+| /sitemaps/core.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/entities.json" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/core.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/evidence.json" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/core.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/health.json" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/core.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/knowledge-graph.json" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/core.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/language.json" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+| /sitemaps/core.xml | sitemap-not-self-canonical | URL "https://www.ewastekochi.com/models.json" is not any built page's self-canonical — cannot confirm it isn't a redirect target. |
+
+## Validation run 2026-08-22T23:52:40.212Z
+
+- Routes checked: 962
+- Checks passed: 3453
+- Failures: 1
+
+| Path | Check | Detail |
+| --- | --- | --- |
+| /entities.json | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /ISO 14001/i. |
+
+## Validation run 2026-08-22T23:54:45.208Z
+
+- Routes checked: 962
+- Checks passed: 3454
+- Failures: 0
+
+All checks passed.

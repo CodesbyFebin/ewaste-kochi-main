@@ -1,0 +1,18 @@
+{
+  "languages": [
+    {
+      "code": "en-IN",
+      "name": "English (India)",
+      "dir": "ltr",
+      "url": "/",
+      "alternate": "/ml/"
+    },
+    {
+      "code": "ml-IN",
+      "name": "Malayalam (India)",
+      "dir": "ltr",
+      "url": "/ml/",
+      "alternate": "/"
+    }
+  ]
+}

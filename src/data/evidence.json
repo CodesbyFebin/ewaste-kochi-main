@@ -1,0 +1,32 @@
+{
+  "claims": [
+    {
+      "id": "cpcb-authorization",
+      "claim": "Ewaste Kochi operates under CPCB authorization for e-waste handling",
+      "sources": [
+        { "url": "https://cpcb.nic.in/rules-6/", "publisher": "Central Pollution Control Board", "note": "E-Waste Management Rules framework" },
+        { "url": "https://kspcb.kerala.gov.in/", "publisher": "Kerala State Pollution Control Board", "note": "State-level authorization and enforcement" }
+      ],
+      "verified": "partial",
+      "lastChecked": "2026-08-18"
+    },
+    {
+      "id": "e-waste-rules-2022",
+      "claim": "E-Waste (Management) Rules 2022 governs e-waste handling in India",
+      "sources": [
+        { "url": "https://cpcb.nic.in/rules-6/", "publisher": "Central Pollution Control Board", "note": "Official rules resource" }
+      ],
+      "verified": true,
+      "lastChecked": "2026-08-18"
+    },
+    {
+      "id": "free-pickup-households",
+      "claim": "Authorized recyclers typically offer free doorstep collection for household e-waste",
+      "sources": [
+        { "url": "https://kspcb.kerala.gov.in/", "publisher": "Kerala State Pollution Control Board", "note": "General household collection guidance" }
+      ],
+      "verified": "partial",
+      "lastChecked": "2026-08-18"
+    }
+  ]
+}
