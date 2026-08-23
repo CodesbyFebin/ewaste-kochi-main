@@ -25,6 +25,7 @@
   "dependencies": {
     "@astrojs/mdx": "^4.3.14",
     "@astrojs/sitemap": "^3.7.3",
+    "@vercel/functions": "^3.9.3",
     "astro": "^5.18.2",
     "gray-matter": "^4.0.3",
     "js-yaml": "^5.2.2",

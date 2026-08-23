@@ -1394,7 +1394,7 @@ const BASE_ROUTES: RouteEntry[] = [
     indexable: true,
   },
   {
-    path: "/blog/where-to-recycle-old-electronics-kochi/",
+    path: "/blog/where-to-recycle-old-electronics-in-kochi/",
     changefreq: "monthly",
     priority: 0.6,
     title: "Where to Recycle Old Electronics in Kochi | Complete Pickup, Reuse & Scrap Guide",

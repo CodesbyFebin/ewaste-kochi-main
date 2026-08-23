@@ -38,6 +38,16 @@
   ],
   "redirects": [
     {
+      "source": "/blog/where-to-recycle-old-electronics-kochi/",
+      "destination": "/blog/where-to-recycle-old-electronics-in-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/where-to-recycle-old-electronics-kochi",
+      "destination": "/blog/where-to-recycle-old-electronics-in-kochi/",
+      "permanent": true
+    },
+    {
       "source": "/hi/services/e-waste-recycling-kochi/",
       "destination": "/recycling/",
       "permanent": true
@@ -365,39 +375,6 @@
     {
       "source": "/index.html",
       "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "ewastekochi.com"
-        }
-      ],
-      "destination": "https://www.ewastekochi.com/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "blog.ewastekochi.com"
-        }
-      ],
-      "destination": "https://www.ewastekochi.com/blog/",
-      "permanent": true
-    },
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "wiki.ewastekochi.com"
-        }
-      ],
-      "destination": "https://www.ewastekochi.com/blog/",
       "permanent": true
     },
     {

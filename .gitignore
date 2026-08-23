@@ -203,3 +203,4 @@ htmlcov/
 # pollute the repo. Reports that should be preserved live under reports/.
 .audit/
 audit-*.tmp/
+sitemap-export/
