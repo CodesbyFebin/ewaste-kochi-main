@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "How to Get Certificate of Recycling | CPCB-Compliant Certificate | Ewaste Kochi";
+const description = "Learn how to obtain a Certificate of Recycling for your e-waste pickup. CPCB-compliant certificates are issued after processing at authorized facilities.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "How to Get Certificate of Recycling", path: "/blog/how-to-get-certificate-of-recycling/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Get Certificate of Recycling | CPCB-Compliant Certificate | Ewaste Kochi",
+    "description": "Learn how to obtain a Certificate of Recycling for your e-waste pickup. CPCB-compliant certificates are issued after processing at authorized facilities.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/how-to-get-certificate-of-recycling/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Do I get a certificate for household quantities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, households receive a Certificate of Recycling for any quantity processed through authorized channels."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the certificate legally valid?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, certificates issued by CPCB-authorized recyclers are valid documentation of compliance under E-Waste Rules 2022."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I get a certificate for a previous pickup?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Certificates can be reissued for recent pickups. Contact our support team with your pickup reference number."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/how-to-get-certificate-of-recycling/",
+    "name": "How to Get Certificate of Recycling | CPCB-Compliant Certificate | Ewaste Kochi",
+    "description": "Learn how to obtain a Certificate of Recycling for your e-waste pickup. CPCB-compliant certificates are issued after processing at authorized facilities.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/how-to-get-certificate-of-recycling/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>How to Get Certificate of Recycling</h1>
+  <p class="lede">A Certificate of Recycling is issued after your e-waste has been processed at an authorized CPCB-registered facility. To obtain one, schedule a pickup with an authorized recycler, hand over your items, and receive the digital certificate within 5-7 business days of processing.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about How to Get Certificate of Recycling." />
+
+  <ul class="key-takeaways">
+    <li>The Certificate of Recycling confirms that specific quantities and types of e-waste were collected, transported, and processed in compliance with E-Waste Rules 2022.</li>
+    <li>When booking a pickup, mention that you require a Certificate of Recycling.</li>
+    <li>Certificates are delivered digitally via email or WhatsApp in PDF format.</li>
+  </ul>
+
+  <section>
+    <h2>What the Certificate Confirms</h2>
+    <p>The Certificate of Recycling confirms that specific quantities and types of e-waste were collected, transported, and processed in compliance with E-Waste Rules 2022. It serves as your documentation for environmental compliance and corporate sustainability reporting.</p>
+  </section>
+  <section>
+    <h2>How to Request</h2>
+    <p>When booking a pickup, mention that you require a Certificate of Recycling. Provide the correct name and GSTIN (for business clients). The certificate will reference the date, item types, quantity, and the recycler's CPCB authorization number.</p>
+  </section>
+  <section>
+    <h2>Digital Delivery</h2>
+    <p>Certificates are delivered digitally via email or WhatsApp in PDF format. Business clients can request additional copies for their records. Retain certificates for at least three years for audit and compliance purposes.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Do I get a certificate for household quantities?</summary>
+  <p>Yes, households receive a Certificate of Recycling for any quantity processed through authorized channels.</p>
+</details>
+  <details>
+  <summary>Is the certificate legally valid?</summary>
+  <p>Yes, certificates issued by CPCB-authorized recyclers are valid documentation of compliance under E-Waste Rules 2022.</p>
+</details>
+  <details>
+  <summary>Can I get a certificate for a previous pickup?</summary>
+  <p>Certificates can be reissued for recent pickups. Contact our support team with your pickup reference number.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/blog/corporate-e-waste-management/">Corporate E-Waste Management</a></li>
+      <li><a href="/blog/e-waste-rules-2022-india/">E-Waste Rules 2022</a></li>
+      <li><a href="/blog/how-to-comply-with-e-waste-rules/">How to Comply with E-Waste Rules</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

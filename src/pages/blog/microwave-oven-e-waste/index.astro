@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Microwave Oven E-Waste | Appliance Disposal Guide | Ewaste Kochi";
+const description = "Microwave oven e-waste includes capacitors, circuit boards, and metal components. Learn safe disposal, hazards, and authorized recycling for end-of-life microwaves.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Microwave Oven E-Waste", path: "/blog/microwave-oven-e-waste/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Microwave Oven E-Waste | Appliance Disposal Guide | Ewaste Kochi",
+    "description": "Microwave oven e-waste includes capacitors, circuit boards, and metal components. Learn safe disposal, hazards, and authorized recycling for end-of-life microwaves.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/microwave-oven-e-waste/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Can I throw away a microwave in regular trash?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Microwaves contain hazardous electrical components and must be recycled through authorized facilities."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is a microwave dangerous before recycling?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, the internal capacitor can retain a dangerous charge. Do not dismantle a microwave yourself — leave it intact for transport."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you accept microwaves for recycling?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, microwave ovens are accepted for recycling through our household and commercial pickup programs."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/microwave-oven-e-waste/",
+    "name": "Microwave Oven E-Waste | Appliance Disposal Guide | Ewaste Kochi",
+    "description": "Microwave oven e-waste includes capacitors, circuit boards, and metal components. Learn safe disposal, hazards, and authorized recycling for end-of-life microwaves.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/microwave-oven-e-waste/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Microwave Oven E-Waste</h1>
+  <p class="lede">Microwave ovens contain capacitors that can retain dangerous electrical charge even when unplugged, magnetrons with residual metals, and circuit boards with electronic components. End-of-life microwaves must be recycled through authorized facilities — never disposed of in regular household waste.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about Microwave Oven E-Waste." />
+
+  <ul class="key-takeaways">
+    <li>High-voltage capacitors can retain charge long after unplugging and may cause electric shock if handled improperly.</li>
+    <li>Do not attempt to open or dismantle a microwave oven yourself.</li>
+    <li>Microwaves are processed at authorized facilities where capacitors are safely discharged, the magnetron is removed for metal recovery, and the metal cabinet, glass turntable, and plastic components are sorted and recycled separately.</li>
+  </ul>
+
+  <section>
+    <h2>Hazards in Microwave Disposal</h2>
+    <p>High-voltage capacitors can retain charge long after unplugging and may cause electric shock if handled improperly. Magnetrons contain small amounts of beryllium oxide in some older models, requiring specialized handling. Circuit boards contain lead solder and brominated flame retardants.</p>
+  </section>
+  <section>
+    <h2>Safe Handling Before Recycling</h2>
+    <p>Do not attempt to open or dismantle a microwave oven yourself. Leave it intact for transport. If the unit is damaged or the casing is broken, flag this when booking so our team can handle it with appropriate precautions.</p>
+  </section>
+  <section>
+    <h2>Recycling Process</h2>
+    <p>Microwaves are processed at authorized facilities where capacitors are safely discharged, the magnetron is removed for metal recovery, and the metal cabinet, glass turntable, and plastic components are sorted and recycled separately.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Can I throw away a microwave in regular trash?</summary>
+  <p>No. Microwaves contain hazardous electrical components and must be recycled through authorized facilities.</p>
+</details>
+  <details>
+  <summary>Is a microwave dangerous before recycling?</summary>
+  <p>Yes, the internal capacitor can retain a dangerous charge. Do not dismantle a microwave yourself — leave it intact for transport.</p>
+</details>
+  <details>
+  <summary>Do you accept microwaves for recycling?</summary>
+  <p>Yes, microwave ovens are accepted for recycling through our household and commercial pickup programs.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/appliance-recycling/">Appliance Recycling</a></li>
+      <li><a href="/blog/how-to-sell-old-fridge/">How to Sell Old Fridge</a></li>
+      <li><a href="/pickup/">E-Waste Pickup Service</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

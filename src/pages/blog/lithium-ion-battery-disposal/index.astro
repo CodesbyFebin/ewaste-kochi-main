@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Lithium-Ion Battery Disposal | Safe Recycling India | Ewaste Kochi";
+const description = "Lithium-ion battery disposal requires specialized handling due to reactive chemistry. Learn safe storage, transport, and recycling methods for phones, laptops, and EVs.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Lithium-Ion Battery Disposal", path: "/blog/lithium-ion-battery-disposal/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Lithium-Ion Battery Disposal | Safe Recycling India | Ewaste Kochi",
+    "description": "Lithium-ion battery disposal requires specialized handling due to reactive chemistry. Learn safe storage, transport, and recycling methods for phones, laptops, and EVs.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/lithium-ion-battery-disposal/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Can I throw lithium batteries in regular waste?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Lithium-ion batteries must be recycled through authorized facilities. Dumping them in regular waste is both unsafe and illegal."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I do with a swollen battery?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Immediately place it in a fireproof container and contact an authorized recycler for pickup. Do not puncture, charge, or store near flammable materials."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are EV batteries accepted?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, EV battery packs are accepted through specialized recycling programs. Contact us for packaging and transport requirements for large-format packs."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/lithium-ion-battery-disposal/",
+    "name": "Lithium-Ion Battery Disposal | Safe Recycling India | Ewaste Kochi",
+    "description": "Lithium-ion battery disposal requires specialized handling due to reactive chemistry. Learn safe storage, transport, and recycling methods for phones, laptops, and EVs.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/lithium-ion-battery-disposal/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Lithium-Ion Battery Disposal</h1>
+  <p class="lede">Lithium-ion battery disposal must be handled through authorized recyclers due to the reactive nature of lithium chemistry. Improper handling — including puncture, crushing, or exposure to heat — can cause thermal runaway, fire, or toxic release. Safe disposal involves proper storage, flagged transport, and specialized recycling.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about Lithium-Ion Battery Disposal." />
+
+  <ul class="key-takeaways">
+    <li>Damaged or improperly disposed lithium-ion batteries can short-circuit, overheat, and ignite.</li>
+    <li>Store lithium batteries in a cool, dry place away from flammable materials.</li>
+    <li>At the recycling facility, batteries are sorted by chemistry and condition.</li>
+  </ul>
+
+  <section>
+    <h2>Hazards of Improper Disposal</h2>
+    <p>Damaged or improperly disposed lithium-ion batteries can short-circuit, overheat, and ignite. The electrolyte fluid is toxic and corrosive. In landfills, leaking batteries contaminate soil and water. Authorized recycling safely manages these risks through trained personnel and controlled processing.</p>
+  </section>
+  <section>
+    <h2>Safe Storage and Transport</h2>
+    <p>Store lithium batteries in a cool, dry place away from flammable materials. Tape terminals to prevent short circuits. Transport in non-conductive containers — never in a vehicle's passenger compartment. Flag swollen or damaged batteries separately when booking.</p>
+  </section>
+  <section>
+    <h2>Recycling Process</h2>
+    <p>At the recycling facility, batteries are sorted by chemistry and condition. Functional batteries may be tested for secondary use. End-of-life batteries are discharged, shredded in an inert atmosphere, and processed to recover lithium, cobalt, nickel, and copper.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Can I throw lithium batteries in regular waste?</summary>
+  <p>No. Lithium-ion batteries must be recycled through authorized facilities. Dumping them in regular waste is both unsafe and illegal.</p>
+</details>
+  <details>
+  <summary>What should I do with a swollen battery?</summary>
+  <p>Immediately place it in a fireproof container and contact an authorized recycler for pickup. Do not puncture, charge, or store near flammable materials.</p>
+</details>
+  <details>
+  <summary>Are EV batteries accepted?</summary>
+  <p>Yes, EV battery packs are accepted through specialized recycling programs. Contact us for packaging and transport requirements for large-format packs.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/battery-recycling/">Battery Recycling Services</a></li>
+      <li><a href="/blog/how-to-recycle-batteries-safely/">How to Recycle Batteries Safely</a></li>
+      <li><a href="/blog/what-is-lithium-battery-recycling/">What Is Lithium Battery Recycling?</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

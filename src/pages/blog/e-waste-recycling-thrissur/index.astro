@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "E-Waste Recycling Thrissur | District Collection Service | Ewaste Kochi";
+const description = "E-waste recycling and scheduled pickup across Thrissur district. Authorized recycler serving Thrissur city, Chalakudy, and surrounding areas.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "E-Waste Recycling Thrissur", path: "/blog/e-waste-recycling-thrissur/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "headline": "E-Waste Recycling Thrissur | District Collection Service | Ewaste Kochi",
+    "description": "E-waste recycling and scheduled pickup across Thrissur district. Authorized recycler serving Thrissur city, Chalakudy, and surrounding areas.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/e-waste-recycling-thrissur/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Do you cover Thrissur city?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Thrissur city is within our scheduled service area. Contact us to confirm your specific location."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a minimum quantity?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No minimum for household bookings. Commercial pickups have quantity thresholds to optimize logistics."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I get a certificate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Certificates are issued digitally after processing. Request one at the time of booking."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/e-waste-recycling-thrissur/",
+    "name": "E-Waste Recycling Thrissur | District Collection Service | Ewaste Kochi",
+    "description": "E-waste recycling and scheduled pickup across Thrissur district. Authorized recycler serving Thrissur city, Chalakudy, and surrounding areas.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/e-waste-recycling-thrissur/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Recycling Thrissur</h1>
+  <p class="lede">Ewaste Kochi offers scheduled e-waste collection and CPCB-compliant recycling for Thrissur district. Residents and businesses in Thrissur city, Chalakudy, and surrounding areas can book pickup for all categories of electronic waste.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about E-Waste Recycling Thrissur." />
+
+  <ul class="key-takeaways">
+    <li>We serve Thrissur city and key surrounding locations including Chalakudy, Irinjalakuda, and Kunnamkulam.</li>
+    <li>Thrissur pickups run on a scheduled basis.</li>
+    <li>All collected e-waste is transported to a CPCB-authorized facility.</li>
+  </ul>
+
+  <section>
+    <h2>Coverage Areas</h2>
+    <p>We serve Thrissur city and key surrounding locations including Chalakudy, Irinjalakuda, and Kunnamkulam. Check current coverage by contacting our team with your specific address.</p>
+  </section>
+  <section>
+    <h2>Pickup Scheduling</h2>
+    <p>Thrissur pickups run on a scheduled basis. Book at least 3-5 days in advance for reliable scheduling. We offer both household and commercial pickup slots.</p>
+  </section>
+  <section>
+    <h2>Recycling Process</h2>
+    <p>All collected e-waste is transported to a CPCB-authorized facility. Items are sorted, dismantled, and processed according to material type. Hazardous fractions are treated separately; metals and plastics are recovered for reuse.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Do you cover Thrissur city?</summary>
+  <p>Yes, Thrissur city is within our scheduled service area. Contact us to confirm your specific location.</p>
+</details>
+  <details>
+  <summary>Is there a minimum quantity?</summary>
+  <p>No minimum for household bookings. Commercial pickups have quantity thresholds to optimize logistics.</p>
+</details>
+  <details>
+  <summary>How do I get a certificate?</summary>
+  <p>Certificates are issued digitally after processing. Request one at the time of booking.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/blog/e-waste-center-in-kerala/">E-Waste Center in Kerala</a></li>
+      <li><a href="/pickup/">E-Waste Pickup Service</a></li>
+      <li><a href="/blog/how-to-schedule-e-waste-pickup/">How to Schedule E-Waste Pickup</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

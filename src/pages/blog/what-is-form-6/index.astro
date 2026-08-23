@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "What Is Form 6? | E-Waste CPCB Form Explained | Ewaste Kochi";
+const description = "Form 6 is the CPCB return that recyclers and producers must file annually. Learn what it contains, filing deadlines, and how it tracks recycling performance.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "What Is Form 6?", path: "/blog/what-is-form-6/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What Is Form 6? | E-Waste CPCB Form Explained | Ewaste Kochi",
+    "description": "Form 6 is the CPCB return that recyclers and producers must file annually. Learn what it contains, filing deadlines, and how it tracks recycling performance.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/what-is-form-6/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Is Form 6 mandatory?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Form 6 is mandatory for all registered producers and authorized recyclers under E-Waste Rules 2022."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where do I file Form 6?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Form 6 is filed through the CPCB's online E-waste Management System portal."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if I miss the deadline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Late filing may attract penalties and could impact authorization renewal under the Rules."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/what-is-form-6/",
+    "name": "What Is Form 6? | E-Waste CPCB Form Explained | Ewaste Kochi",
+    "description": "Form 6 is the CPCB return that recyclers and producers must file annually. Learn what it contains, filing deadlines, and how it tracks recycling performance.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/what-is-form-6/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>What Is Form 6?</h1>
+  <p class="lede">Form 6 is the standardized annual return that producers, recyclers, and dismantlers must file with the Central Pollution Control Board under E-Waste Rules 2022. It captures the quantity of e-waste collected, processed, recycled, and disposed of during the financial year.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about What Is Form 6?." />
+
+  <ul class="key-takeaways">
+    <li>Both producers (brands placing EEE on the market) and authorized recyclers/dismantlers must file Form 6.</li>
+    <li>Form 6 captures product category, quantity (in tonnes), collection channel, mode of processing (recycling, refurbishment, incineration, landfilling), and destination.</li>
+    <li>Form 6 must be filed annually through the CPCB's online portal.</li>
+  </ul>
+
+  <section>
+    <h2>Who Files Form 6</h2>
+    <p>Both producers (brands placing EEE on the market) and authorized recyclers/dismantlers must file Form 6. Producers report quantities placed on market and collected; recyclers report quantities received and processed.</p>
+  </section>
+  <section>
+    <h2>Key Data Points</h2>
+    <p>Form 6 captures product category, quantity (in tonnes), collection channel, mode of processing (recycling, refurbishment, incineration, landfilling), and destination. Accuracy is critical because it feeds into EPR target tracking.</p>
+  </section>
+  <section>
+    <h2>Filing Deadlines</h2>
+    <p>Form 6 must be filed annually through the CPCB's online portal. Late or inaccurate filings can result in penalties and affect a producer's or recycler's authorization status. Check CPCB notifications for the exact deadline each year.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Is Form 6 mandatory?</summary>
+  <p>Yes, Form 6 is mandatory for all registered producers and authorized recyclers under E-Waste Rules 2022.</p>
+</details>
+  <details>
+  <summary>Where do I file Form 6?</summary>
+  <p>Form 6 is filed through the CPCB's online E-waste Management System portal.</p>
+</details>
+  <details>
+  <summary>What happens if I miss the deadline?</summary>
+  <p>Late filing may attract penalties and could impact authorization renewal under the Rules.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/blog/e-waste-rules-2022-india/">E-Waste Rules 2022</a></li>
+      <li><a href="/blog/epr-registration-for-businesses/">EPR Registration for Businesses</a></li>
+      <li><a href="/blog/corporate-e-waste-management/">Corporate E-Waste Management</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

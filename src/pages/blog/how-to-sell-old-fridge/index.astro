@@ -1,0 +1,154 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "How to Sell Old Fridge | Refrigerator Disposal Guide | Ewaste Kochi";
+const description = "Sell or recycle an old refrigerator safely: defrost, clean, disconnect, and use authorized channels to recover value or ensure responsible disposal.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "How to Sell Old Fridge", path: "/blog/how-to-sell-old-fridge/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "headline": "How to Sell Old Fridge | Refrigerator Disposal Guide | Ewaste Kochi",
+    "description": "Sell or recycle an old refrigerator safely: defrost, clean, disconnect, and use authorized channels to recover value or ensure responsible disposal.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/how-to-sell-old-fridge/",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Defrost and Clean",
+        "text": "Unplug the refrigerator at least 24 hours before moving. Allow all ice to melt, clean the interior with mild detergent, and dry completely. Remove all shelves, drawers, and door compartments for thorough cleaning."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Secure the Compressor",
+        "text": "The compressor contains refrigerant gases that must not be released into the atmosphere. If the fridge still contains refrigerant, notify the recycler — trained technicians will recover it using specialized equipment before dismantling."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Book Collection",
+        "text": "Contact an authorized appliance recycler for pickup. Provide the fridge type, age, and working condition. Working units may qualify for buyback; non-functional units proceed to material recycling."
+      }
+    ],
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Can I sell a working old fridge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, working refrigerators can be resold through authorized channels. Non-working units should be recycled rather than abandoned."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What about the gas inside?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Refrigerant gases must be recovered by trained technicians. Never attempt to release or handle them yourself."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is old fridge recycling free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Many authorized recyclers collect old refrigerators free of charge as part of their compliance obligations. Confirm at the time of booking."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/how-to-sell-old-fridge/",
+    "name": "How to Sell Old Fridge | Refrigerator Disposal Guide | Ewaste Kochi",
+    "description": "Sell or recycle an old refrigerator safely: defrost, clean, disconnect, and use authorized channels to recover value or ensure responsible disposal.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/how-to-sell-old-fridge/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>How to Sell Old Fridge</h1>
+  <p class="lede">To sell an old refrigerator, first defrost and clean it thoroughly, disconnect and secure the compressor, assess its working condition, and contact authorized recyclers or appliance buyback platforms. Non-functional fridges should be recycled to recover steel, copper, and refrigerant gases safely.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about How to Sell Old Fridge." />
+
+  <ul class="key-takeaways">
+    <li>Unplug the refrigerator at least 24 hours before moving.</li>
+    <li>The compressor contains refrigerant gases that must not be released into the atmosphere.</li>
+    <li>Contact an authorized appliance recycler for pickup.</li>
+  </ul>
+
+  <section>
+    <h2>Defrost and Clean</h2>
+    <p>Unplug the refrigerator at least 24 hours before moving. Allow all ice to melt, clean the interior with mild detergent, and dry completely. Remove all shelves, drawers, and door compartments for thorough cleaning.</p>
+  </section>
+  <section>
+    <h2>Secure the Compressor</h2>
+    <p>The compressor contains refrigerant gases that must not be released into the atmosphere. If the fridge still contains refrigerant, notify the recycler — trained technicians will recover it using specialized equipment before dismantling.</p>
+  </section>
+  <section>
+    <h2>Book Collection</h2>
+    <p>Contact an authorized appliance recycler for pickup. Provide the fridge type, age, and working condition. Working units may qualify for buyback; non-functional units proceed to material recycling.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Can I sell a working old fridge?</summary>
+  <p>Yes, working refrigerators can be resold through authorized channels. Non-working units should be recycled rather than abandoned.</p>
+</details>
+  <details>
+  <summary>What about the gas inside?</summary>
+  <p>Refrigerant gases must be recovered by trained technicians. Never attempt to release or handle them yourself.</p>
+</details>
+  <details>
+  <summary>Is old fridge recycling free?</summary>
+  <p>Many authorized recyclers collect old refrigerators free of charge as part of their compliance obligations. Confirm at the time of booking.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/tv-recycling-kochi/">TV Recycling Kochi</a></li>
+      <li><a href="/appliance-recycling/">Appliance Recycling</a></li>
+      <li><a href="/pickup/">E-Waste Pickup Service</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

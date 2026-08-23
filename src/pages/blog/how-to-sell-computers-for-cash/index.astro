@@ -1,0 +1,154 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "How to Sell Computers for Cash | Desktop & Server Disposal | Ewaste Kochi";
+const description = "Sell desktop computers and servers for cash: assess hardware, erase data, and use authorized buyback or recycling channels in Kerala.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "How to Sell Computers for Cash", path: "/blog/how-to-sell-computers-for-cash/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "headline": "How to Sell Computers for Cash | Desktop & Server Disposal | Ewaste Kochi",
+    "description": "Sell desktop computers and servers for cash: assess hardware, erase data, and use authorized buyback or recycling channels in Kerala.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/how-to-sell-computers-for-cash/",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Hardware Assessment",
+        "text": "Document processor, RAM, storage type and capacity, graphics card, and overall condition. Functional workstations and servers have resale value; older or damaged systems are better routed to material recycling."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Data Sanitization",
+        "text": "All drives must be sanitized before sale. Use NIST 800-88-compliant methods: overwrite for reusable HDDs, crypto-erase for SSDs, or physical destruction for sensitive or non-functional drives."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Get Quotes",
+        "text": "Contact authorized ITAD providers or recyclers for buyback quotes. Provide accurate inventory details for fair valuation. Working devices typically earn higher prices than component-only recycling."
+      }
+    ],
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Do all computers have resale value?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Functional systems with marketable specifications have resale value. Obsolete or damaged systems should be recycled for material recovery."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is cash paid?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Authorized recyclers typically pay via bank transfer or UPI after inspection and data destruction verification."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are old servers accepted?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, servers are accepted through ITAD programs including data destruction, asset tracking, and certificate issuance."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/how-to-sell-computers-for-cash/",
+    "name": "How to Sell Computers for Cash | Desktop & Server Disposal | Ewaste Kochi",
+    "description": "Sell desktop computers and servers for cash: assess hardware, erase data, and use authorized buyback or recycling channels in Kerala.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/how-to-sell-computers-for-cash/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>How to Sell Computers for Cash</h1>
+  <p class="lede">To sell a desktop computer or server for cash, assess the hardware specifications and condition, perform certified data destruction on all storage media, and obtain quotes from authorized recyclers or ITAD providers. Non-functional systems should be recycled rather than discarded.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about How to Sell Computers for Cash." />
+
+  <ul class="key-takeaways">
+    <li>Document processor, RAM, storage type and capacity, graphics card, and overall condition.</li>
+    <li>All drives must be sanitized before sale.</li>
+    <li>Contact authorized ITAD providers or recyclers for buyback quotes.</li>
+  </ul>
+
+  <section>
+    <h2>Hardware Assessment</h2>
+    <p>Document processor, RAM, storage type and capacity, graphics card, and overall condition. Functional workstations and servers have resale value; older or damaged systems are better routed to material recycling.</p>
+  </section>
+  <section>
+    <h2>Data Sanitization</h2>
+    <p>All drives must be sanitized before sale. Use NIST 800-88-compliant methods: overwrite for reusable HDDs, crypto-erase for SSDs, or physical destruction for sensitive or non-functional drives.</p>
+  </section>
+  <section>
+    <h2>Get Quotes</h2>
+    <p>Contact authorized ITAD providers or recyclers for buyback quotes. Provide accurate inventory details for fair valuation. Working devices typically earn higher prices than component-only recycling.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Do all computers have resale value?</summary>
+  <p>Functional systems with marketable specifications have resale value. Obsolete or damaged systems should be recycled for material recovery.</p>
+</details>
+  <details>
+  <summary>How is cash paid?</summary>
+  <p>Authorized recyclers typically pay via bank transfer or UPI after inspection and data destruction verification.</p>
+</details>
+  <details>
+  <summary>Are old servers accepted?</summary>
+  <p>Yes, servers are accepted through ITAD programs including data destruction, asset tracking, and certificate issuance.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/itad/">ITAD Services</a></li>
+      <li><a href="/computer-scrap-buyers-kochi/">Computer Scrap Buyers</a></li>
+      <li><a href="/blog/how-to-sell-used-laptops/">How to Sell Used Laptops</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

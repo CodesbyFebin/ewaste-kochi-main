@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Why Is EPR Mandatory? | Extended Producer Responsibility Explained | Ewaste Kochi";
+const description = "EPR is mandatory because informal e-waste recycling causes severe environmental and health damage. Learn how EPR shifts responsibility to producers.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Why Is EPR Mandatory?", path: "/blog/why-epr-is-mandatory/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Why Is EPR Mandatory? | Extended Producer Responsibility Explained | Ewaste Kochi",
+    "description": "EPR is mandatory because informal e-waste recycling causes severe environmental and health damage. Learn how EPR shifts responsibility to producers.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/why-epr-is-mandatory/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Who bears the cost of EPR?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The producer (brand or importer) bears the cost by building EPR compliance into product pricing and funding authorized collection and recycling."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does EPR increase product prices?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EPR may result in a marginal price increase as producers internalize recycling costs, but it is typically offset by scale efficiencies in collection and processing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if a producer fails EPR targets?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CPCB may impose financial penalties, restrict new product placements, or suspend the producer's authorization."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/why-epr-is-mandatory/",
+    "name": "Why Is EPR Mandatory? | Extended Producer Responsibility Explained | Ewaste Kochi",
+    "description": "EPR is mandatory because informal e-waste recycling causes severe environmental and health damage. Learn how EPR shifts responsibility to producers.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/why-epr-is-mandatory/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Why Is EPR Mandatory?</h1>
+  <p class="lede">EPR is mandatory in India because unregulated informal recycling causes widespread environmental contamination, worker exposure to toxic substances, and resource loss. Making producers responsible for end-of-life management shifts the cost and accountability from consumers and municipalities to the entities that placed the products on the market.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about Why Is EPR Mandatory?." />
+
+  <ul class="key-takeaways">
+    <li>India's informal e-waste recycling sector operates without environmental safeguards.</li>
+    <li>By legally binding producers to finance and manage end-of-life collection and recycling, EPR creates a formal, traceable, and environmentally compliant reverse supply chain that channels e-waste away from informal handlers.</li>
+    <li>CPCB monitors producer compliance through EPR plans, annual Form 6 returns, and authorized recycler records.</li>
+  </ul>
+
+  <section>
+    <h2>The Informal Sector Problem</h2>
+    <p>India's informal e-waste recycling sector operates without environmental safeguards. Workers — often children — manually extract metals using acid baths and open burning, releasing dioxins and heavy metals into the environment with no accountability.</p>
+  </section>
+  <section>
+    <h2>How EPR Addresses the Gap</h2>
+    <p>By legally binding producers to finance and manage end-of-life collection and recycling, EPR creates a formal, traceable, and environmentally compliant reverse supply chain that channels e-waste away from informal handlers.</p>
+  </section>
+  <section>
+    <h2>Enforcement Mechanism</h2>
+    <p>CPCB monitors producer compliance through EPR plans, annual Form 6 returns, and authorized recycler records. Non-compliance can result in fines, authorization suspension, and prosecution under the Environment Protection Act.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Who bears the cost of EPR?</summary>
+  <p>The producer (brand or importer) bears the cost by building EPR compliance into product pricing and funding authorized collection and recycling.</p>
+</details>
+  <details>
+  <summary>Does EPR increase product prices?</summary>
+  <p>EPR may result in a marginal price increase as producers internalize recycling costs, but it is typically offset by scale efficiencies in collection and processing.</p>
+</details>
+  <details>
+  <summary>What happens if a producer fails EPR targets?</summary>
+  <p>CPCB may impose financial penalties, restrict new product placements, or suspend the producer's authorization.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/blog/what-is-epr/">What Is EPR?</a></li>
+      <li><a href="/blog/e-waste-rules-2022-india/">E-Waste Rules 2022</a></li>
+      <li><a href="/blog/epr-registration-for-businesses/">EPR Registration for Businesses</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

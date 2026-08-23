@@ -1,156 +1,134 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
-import DirectAnswer from "../../../components/DirectAnswer.astro";
 import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
 import RelatedContent from "../../../components/RelatedContent.astro";
-import LongformExpansion from "../../../components/LongformExpansion.astro";
-import Sources from "../../../components/Sources.astro";
 import { BUSINESS, SITE_URL } from "../../../data/site";
 
-const title = "E-Waste Recycling in Kochi: Process & Benefits";
-const description = "How e-waste recycling works in Kochi and why authorised recycling benefits homes and the environment.";
-const lastUpdated = "2026-08-18";
+const title = "E-Waste Recycling Kochi | Authorized Recycler in Ernakulam | Ewaste Kochi";
+const description = "Ewaste Kochi provides authorized e-waste recycling and free doorstep pickup across Kochi, Ernakulam. CPCB-registered, NIST 800-88 data destruction available.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
   { name: "Blog", path: "/blog/" },
-  { name: "General E-Waste", path: "/blog/general-ewaste/" },
-  { name: "E-Waste Recycling in Kochi", path: "/blog/e-waste-recycling-kochi/" }
+  { name: "E-Waste Recycling Kochi", path: "/blog/e-waste-recycling-kochi/" },
 ];
 
 const jsonLd = [
   {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": title,
-    "description": description,
+    "@type": "WebPage",
+    "headline": "E-Waste Recycling Kochi | Authorized Recycler in Ernakulam | Ewaste Kochi",
+    "description": "Ewaste Kochi provides authorized e-waste recycling and free doorstep pickup across Kochi, Ernakulam. CPCB-registered, NIST 800-88 data destruction available.",
     "datePublished": "2026-08-18",
-    "dateModified": lastUpdated,
-    "author": { "@type": "Organization", name: BUSINESS.legalName },
-    "publisher": { "@id": `${SITE_URL}/#organization` },
-    "mainEntityOfPage": `${SITE_URL}/blog/e-waste-recycling-kochi/`,
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/e-waste-recycling-kochi/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Is e-waste pickup free in Kochi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, free doorstep pickup is available for standard household quantities across Kochi and Ernakulam district."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the pickup timeline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Household pickups are typically scheduled within 24-48 hours of booking. Commercial bulk pickups require advance scheduling."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are you a registered e-waste recycler?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Ewaste Kochi operates under CPCB authorization for e-waste collection, transportation, and processing."
+        }
+      }
+    ]
   },
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": `${SITE_URL}/blog/e-waste-recycling-kochi/`,
-    "name": title,
-    "description": description,
-    "dateModified": lastUpdated,
-  }
-];
-
-const faqItems = [
-  {
-    q: "What is the flow?",
-    a: "Collect, sort, destroy data, separate hazards, recover."
-  },
-  {
-    q: "What is recovered?",
-    a: "Copper, aluminium, gold, rare earths, plastics."
-  },
-  {
-    q: "Why authorised?",
-    a: "Safety, data and certificates."
-  },
-  {
-    q: "Local benefit?",
-    a: "Protects water/soil and cuts mining."
-  }
-];
-
-const sourceItems = [
-  {
-    title: "E-Waste Management Rules and related regulatory resources",
-    href: "https://cpcb.nic.in/rules-6/",
-    publisher: "Central Pollution Control Board",
-    note: "Official CPCB resource page for e-waste rules and updates."
-  },
-  {
-    title: "EPR E-Waste portal",
-    href: "https://eprewastecpcb.in/",
-    publisher: "Central Pollution Control Board",
-    note: "Official portal for e-waste EPR registration and compliance workflows."
-  },
-  {
-    title: "Kerala State Pollution Control Board",
-    href: "https://kspcb.kerala.gov.in/",
-    publisher: "Kerala State Pollution Control Board",
-    note: "Regional enforcement and authorization for e-waste recyclers in Kerala."
+    "@id": "https://www.ewastekochi.com/blog/e-waste-recycling-kochi/",
+    "name": "E-Waste Recycling Kochi | Authorized Recycler in Ernakulam | Ewaste Kochi",
+    "description": "Ewaste Kochi provides authorized e-waste recycling and free doorstep pickup across Kochi, Ernakulam. CPCB-registered, NIST 800-88 data destruction available.",
+    "dateModified": "2026-08-18"
   }
 ];
 ---
 
 <Layout title={title} description={description} path="/blog/e-waste-recycling-kochi/" jsonLd={jsonLd}>
   <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Recycling Kochi</h1>
+  <p class="lede">Ewaste Kochi is a CPCB-authorized e-waste recycler operating across Kochi and Ernakulam district. We provide free doorstep pickup for household quantities and certified ITAD and data destruction services for businesses, backed by digital Certificate of Recycling documentation.</p>
 
-  <h1>E-Waste Recycling in Kochi</h1>
+  <CtaBar whatsappMessage="Hi, I have a question about E-Waste Recycling Kochi." />
 
-  <DirectAnswer>
-    <p>E-waste recycling in Kochi collects items, separates hazardous parts, destroys data, and recovers materials. Using authorised recyclers keeps toxic metals out of the environment and recovers copper and rare earths.</p>
-  </DirectAnswer>
+  <ul class="key-takeaways">
+    <li>Our service area spans Kochi city and Ernakulam district including Kakkanad, Kalamassery, Edappally, Vyttila, Aluva, Thrippunithura, Palarivattom, Kadavanthra, Maradu, Kundannoor, Infopark, and Fort Kochi.</li>
+    <li>We accept all categories of e-waste: IT equipment, consumer electronics, home appliances, batteries, telecom equipment, and medical devices.</li>
+    <li>For corporate and institutional clients, we offer scheduled bulk pickups, IT asset disposition, hard drive shredding, and compliance documentation.</li>
+  </ul>
 
-  <CtaBar whatsappMessage="Hi, I want to recycle e-waste the right way in Kochi." />
-
-  <section id="section-1">
-    <h2>The recycling flow</h2>
-    <p>Collection, sorting, data destruction, hazardous separation, recovery.</p>
-    <p>Each step is documented for compliance.</p>
+  <section>
+    <h2>Service Coverage</h2>
+    <p>Our service area spans Kochi city and Ernakulam district including Kakkanad, Kalamassery, Edappally, Vyttila, Aluva, Thrippunithura, Palarivattom, Kadavanthra, Maradu, Kundannoor, Infopark, and Fort Kochi. Free pickup is available for standard household quantities.</p>
   </section>
-  <section id="section-2">
-    <h2>What gets recovered</h2>
-    <p>Copper, aluminium, gold and rare-earth magnets are extracted.</p>
-    <p>Plastics are separated and reprocessed.</p>
+  <section>
+    <h2>What We Accept</h2>
+    <p>We accept all categories of e-waste: IT equipment, consumer electronics, home appliances, batteries, telecom equipment, and medical devices. Data-bearing devices receive NIST 800-88-compliant sanitization or physical destruction on request.</p>
   </section>
-  <section id="section-3">
-    <h2>Why authorised matters</h2>
-    <p>Unauthorised handling skips safety and data controls.</p>
-    <p>Authorised routes give you certificates and peace of mind.</p>
-  </section>
-  <section id="section-4">
-    <h2>Local benefit</h2>
-    <p>Kochi's water and soil are protected from leached metals.</p>
-    <p>Recovered materials reduce new mining.</p>
+  <section>
+    <h2>Business Services</h2>
+    <p>For corporate and institutional clients, we offer scheduled bulk pickups, IT asset disposition, hard drive shredding, and compliance documentation. Our team works with IT managers, facility teams, and compliance officers to meet EPR and data protection obligations.</p>
   </section>
 
-  <RelatedContent>
-    <h2>Explore more guides</h2>
-    <ul>
-      <li><a href="/blog/general-ewaste/">General E-Waste hub</a></li>
-      <li><a href="/blog/general-ewaste/">General e-waste basics</a></li>
-      <li><a href="/recycling/">Recycling service</a></li>
-      <li><a href="/pickup/">Book a pickup</a></li>
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Is e-waste pickup free in Kochi?</summary>
+  <p>Yes, free doorstep pickup is available for standard household quantities across Kochi and Ernakulam district.</p>
+</details>
+  <details>
+  <summary>What is the pickup timeline?</summary>
+  <p>Household pickups are typically scheduled within 24-48 hours of booking. Commercial bulk pickups require advance scheduling.</p>
+</details>
+  <details>
+  <summary>Are you a registered e-waste recycler?</summary>
+  <p>Yes, Ewaste Kochi operates under CPCB authorization for e-waste collection, transportation, and processing.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/pickup/">E-Waste Pickup Service</a></li>
+      <li><a href="/battery-recycling/">Battery Recycling Kochi</a></li>
+      <li><a href="/blog/e-waste-drop-off-kochi/">E-Waste Drop Off Kochi</a></li>
     </ul>
-  </RelatedContent>
-
-  <LongformExpansion
-    label="Expanded field guide"
-    audience="households and businesses in Kochi"
-    localIntent="e-waste recycling in kochi with authorised pickup"
-    items={["old electronics", "batteries", "cables", "data devices"]}
-    themes={["Preparation", "Safety", "Compliance", "Recovery"]}
-  />
-
-  <section id="faq-section">
-    <h2>Frequently asked questions</h2>
-    <Faq items={faqItems} heading="E-Waste Recycling in Kochi FAQs" />
   </section>
 
-  <Sources items={sourceItems} heading="Official sources & regulatory references" />
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
 </Layout>
-
-<style>
-  .blog-hub { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
-  .blog-hub h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-primary); text-align: center; }
-  .blog-hub section { margin-bottom: 3rem; padding: 2rem; background: var(--color-bg); border-radius: 0.75rem; border: 1px solid var(--color-border); }
-  .blog-hub h2 { color: var(--color-primary); margin-bottom: 1.5rem; font-size: 1.8rem; }
-  .blog-hub ul { margin-bottom: 1rem; padding-left: 1.5rem; }
-  .blog-hub li { margin-bottom: 0.5rem; line-height: 1.6; }
-  @media (max-width: 768px) {
-    .blog-hub h1 { font-size: 2rem; }
-    .blog-hub section { padding: 1.5rem; }
-    .blog-hub h2 { font-size: 1.5rem; }
-  }
-</style>

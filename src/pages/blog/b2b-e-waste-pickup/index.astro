@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "B2B E-Waste Pickup | Business Recycling Services | Ewaste Kochi";
+const description = "B2B e-waste pickup for offices, schools, hospitals, and factories. Scheduled bulk collection with chain-of-custody documentation and Certificates of Recycling.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "B2B E-Waste Pickup", path: "/blog/b2b-e-waste-pickup/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "B2B E-Waste Pickup | Business Recycling Services | Ewaste Kochi",
+    "description": "B2B e-waste pickup for offices, schools, hospitals, and factories. Scheduled bulk collection with chain-of-custody documentation and Certificates of Recycling.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/b2b-e-waste-pickup/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "What types of businesses do you serve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We serve all business types including IT companies, schools, hospitals, hotels, retail chains, and manufacturing facilities."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I get started?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Contact our team for an initial consultation. We'll assess your e-waste profile and propose a customized pickup schedule."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide compliance documentation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, B2B clients receive Certificates of Recycling, transport documentation, and optional annual compliance summaries."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/b2b-e-waste-pickup/",
+    "name": "B2B E-Waste Pickup | Business Recycling Services | Ewaste Kochi",
+    "description": "B2B e-waste pickup for offices, schools, hospitals, and factories. Scheduled bulk collection with chain-of-custody documentation and Certificates of Recycling.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/b2b-e-waste-pickup/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>B2B E-Waste Pickup</h1>
+  <p class="lede">Our B2B e-waste pickup service provides scheduled bulk collection for offices, educational institutions, healthcare facilities, and manufacturing units. Each pickup is documented with item-level inventory, transport records, and Certificates of Recycling for EPR and audit compliance.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about B2B E-Waste Pickup." />
+
+  <ul class="key-takeaways">
+    <li>Our B2B clients include IT companies, co-working spaces, schools, colleges, hospitals, clinics, hotels, retail chains, and manufacturing facilities.</li>
+    <li>The B2B workflow begins with an inventory consultation, followed by a scheduled pickup at a convenient time.</li>
+    <li>We provide annual compliance summaries, EPR reporting support, and sustainability documentation for B2B clients.</li>
+  </ul>
+
+  <section>
+    <h2>Who We Serve</h2>
+    <p>Our B2B clients include IT companies, co-working spaces, schools, colleges, hospitals, clinics, hotels, retail chains, and manufacturing facilities. Each client receives a dedicated scheduling contact and customized pickup plan.</p>
+  </section>
+  <section>
+    <h2>Service Workflow</h2>
+    <p>The B2B workflow begins with an inventory consultation, followed by a scheduled pickup at a convenient time. Our team collects, documents, and transports items. After processing, Certificates of Recycling are issued for each batch.</p>
+  </section>
+  <section>
+    <h2>Compliance Support</h2>
+    <p>We provide annual compliance summaries, EPR reporting support, and sustainability documentation for B2B clients. Our records support ISO, ESG, and CSR reporting requirements for environmentally responsible organizations.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>What types of businesses do you serve?</summary>
+  <p>We serve all business types including IT companies, schools, hospitals, hotels, retail chains, and manufacturing facilities.</p>
+</details>
+  <details>
+  <summary>How do I get started?</summary>
+  <p>Contact our team for an initial consultation. We'll assess your e-waste profile and propose a customized pickup schedule.</p>
+</details>
+  <details>
+  <summary>Do you provide compliance documentation?</summary>
+  <p>Yes, B2B clients receive Certificates of Recycling, transport documentation, and optional annual compliance summaries.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/blog/corporate-e-waste-management/">Corporate E-Waste Management</a></li>
+      <li><a href="/blog/bulk-e-waste-recycling/">Bulk E-Waste Recycling</a></li>
+      <li><a href="/itad/">ITAD Services</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

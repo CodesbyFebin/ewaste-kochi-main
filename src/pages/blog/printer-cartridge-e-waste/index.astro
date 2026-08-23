@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Printer Cartridge E-Waste | Toner & Ink Disposal Guide | Ewaste Kochi";
+const description = "Printer cartridges and toner contain residual chemicals and plastic. Learn how to dispose of printer cartridges, toner bottles, and drum units responsibly.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Printer Cartridge E-Waste", path: "/blog/printer-cartridge-e-waste/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Printer Cartridge E-Waste | Toner & Ink Disposal Guide | Ewaste Kochi",
+    "description": "Printer cartridges and toner contain residual chemicals and plastic. Learn how to dispose of printer cartridges, toner bottles, and drum units responsibly.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/printer-cartridge-e-waste/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Can printer cartridges go in regular trash?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Cartridges contain residual chemicals and plastic that should be recycled through manufacturer programs or authorized e-waste channels."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do manufacturers accept cartridges back?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Many printer brands operate cartridge take-back and refill programs. Check your manufacturer's website for collection points or mail-in programs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are empty toner bottles hazardous?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Residual toner powder is not classified as highly hazardous but should still be handled carefully. Recycle through authorized channels rather than landfill disposal."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/printer-cartridge-e-waste/",
+    "name": "Printer Cartridge E-Waste | Toner & Ink Disposal Guide | Ewaste Kochi",
+    "description": "Printer cartridges and toner contain residual chemicals and plastic. Learn how to dispose of printer cartridges, toner bottles, and drum units responsibly.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/printer-cartridge-e-waste/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Printer Cartridge E-Waste</h1>
+  <p class="lede">Printer cartridges and toner bottles contain residual chemicals, plastic housings, and metal components that require specialized disposal. Empty or expired cartridges should be returned through manufacturer take-back programs or recycled through authorized e-waste channels — not discarded in regular waste.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about Printer Cartridge E-Waste." />
+
+  <ul class="key-takeaways">
+    <li>Toner cartridges contain residual carbon toner powder, a plastic housing, and a metal drum unit.</li>
+    <li>Many printer manufacturers operate cartridge take-back and refill programs.</li>
+    <li>When manufacturer programs are unavailable, cartridges can be recycled through authorized e-waste channels.</li>
+  </ul>
+
+  <section>
+    <h2>What Cartridges Contain</h2>
+    <p>Toner cartridges contain residual carbon toner powder, a plastic housing, and a metal drum unit. Inkjet cartridges contain residual liquid ink, a plastic body, and a print head with electronic contacts. Both types require controlled disposal to prevent chemical and plastic waste leakage.</p>
+  </section>
+  <section>
+    <h2>Manufacturer Take-Back Programs</h2>
+    <p>Many printer manufacturers operate cartridge take-back and refill programs. These are the preferred disposal route when available, as manufacturers have established recycling streams optimized for their specific cartridge designs.</p>
+  </section>
+  <section>
+    <h2>E-Waste Channel Disposal</h2>
+    <p>When manufacturer programs are unavailable, cartridges can be recycled through authorized e-waste channels. Plastic housings are granulated and reformed; metal drums are processed for metal recovery; residual chemicals are treated per hazardous waste protocols.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Can printer cartridges go in regular trash?</summary>
+  <p>No. Cartridges contain residual chemicals and plastic that should be recycled through manufacturer programs or authorized e-waste channels.</p>
+</details>
+  <details>
+  <summary>Do manufacturers accept cartridges back?</summary>
+  <p>Many printer brands operate cartridge take-back and refill programs. Check your manufacturer's website for collection points or mail-in programs.</p>
+</details>
+  <details>
+  <summary>Are empty toner bottles hazardous?</summary>
+  <p>Residual toner powder is not classified as highly hazardous but should still be handled carefully. Recycle through authorized channels rather than landfill disposal.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/office-clearance/">Office Clearance</a></li>
+      <li><a href="/blog/bulk-e-waste-recycling/">Bulk E-Waste Recycling</a></li>
+      <li><a href="/pickup/">E-Waste Pickup Service</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

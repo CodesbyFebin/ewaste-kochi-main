@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "What Is NIST 800-88? | Data Sanitization Standard | Ewaste Kochi";
+const description = "NIST 800-88 is the global standard for media sanitization. Learn how it guides data destruction, what it covers, and how businesses use it for compliance.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "What Is NIST 800-88?", path: "/blog/what-is-nist-800-88/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What Is NIST 800-88? | Data Sanitization Standard | Ewaste Kochi",
+    "description": "NIST 800-88 is the global standard for media sanitization. Learn how it guides data destruction, what it covers, and how businesses use it for compliance.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/what-is-nist-800-88/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Is NIST 800-88 legally required in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It is not a legal requirement under Indian law, but it is the internationally accepted standard for data sanitization and is commonly specified in B2B contracts."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does NIST 800-88 cover physical shredding?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. 'Destroy' under NIST 800-88 includes physical destruction methods such as shredding, crushing, and incineration."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can a recycler provide NIST 800-88 certification?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, authorized ITAD and data destruction providers issue certificates referencing NIST 800-88-compliant sanitization."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/what-is-nist-800-88/",
+    "name": "What Is NIST 800-88? | Data Sanitization Standard | Ewaste Kochi",
+    "description": "NIST 800-88 is the global standard for media sanitization. Learn how it guides data destruction, what it covers, and how businesses use it for compliance.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/what-is-nist-800-88/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>What Is NIST 800-88?</h1>
+  <p class="lede">NIST 800-88 (Guidelines for Media Sanitization) is a US National Institute of Standards and Technology publication that defines the accepted methods for permanently erasing data from storage media. It is the benchmark standard used by enterprises, government agencies, and certified recyclers worldwide.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about What Is NIST 800-88?." />
+
+  <ul class="key-takeaways">
+    <li>NIST 800-88 defines Clear (logical overwrite for reusable media), Purge (physical or electromagnetic methods for sensitive data), and Destroy (physical rendering of media unrecoverable).</li>
+    <li>The standard addresses hard disk drives, solid state drives, optical media, magnetic tapes, USB drives, and mobile devices.</li>
+    <li>Following NIST 800-88 provides defensible documentation for auditors, insurers, and regulators.</li>
+  </ul>
+
+  <section>
+    <h2>Three Sanitization Methods</h2>
+    <p>NIST 800-88 defines Clear (logical overwrite for reusable media), Purge (physical or electromagnetic methods for sensitive data), and Destroy (physical rendering of media unrecoverable). The method selected depends on data classification and media type.</p>
+  </section>
+  <section>
+    <h2>Media Types Covered</h2>
+    <p>The standard addresses hard disk drives, solid state drives, optical media, magnetic tapes, USB drives, and mobile devices. Each media type has specific recommendations — for example, SSDs require crypto-erase rather than simple overwrite.</p>
+  </section>
+  <section>
+    <h2>Compliance and Audit Value</h2>
+    <p>Following NIST 800-88 provides defensible documentation for auditors, insurers, and regulators. Certified destruction reports referencing NIST 800-88 are widely accepted as evidence of due diligence in data breach scenarios.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Is NIST 800-88 legally required in India?</summary>
+  <p>It is not a legal requirement under Indian law, but it is the internationally accepted standard for data sanitization and is commonly specified in B2B contracts.</p>
+</details>
+  <details>
+  <summary>Does NIST 800-88 cover physical shredding?</summary>
+  <p>Yes. 'Destroy' under NIST 800-88 includes physical destruction methods such as shredding, crushing, and incineration.</p>
+</details>
+  <details>
+  <summary>Can a recycler provide NIST 800-88 certification?</summary>
+  <p>Yes, authorized ITAD and data destruction providers issue certificates referencing NIST 800-88-compliant sanitization.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/data-destruction/">Data Destruction Services</a></li>
+      <li><a href="/hard-drive-shredding/">Hard Drive Shredding</a></li>
+      <li><a href="/blog/what-is-data-destruction/">What Is Data Destruction?</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

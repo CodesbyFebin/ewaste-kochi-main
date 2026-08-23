@@ -1,0 +1,154 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "How to Recycle Mobile Phone | Safe Disposal Steps | Ewaste Kochi";
+const description = "Learn how to recycle your mobile phone safely: back up data, factory reset, remove accessories, and book with an authorized recycler.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "How to Recycle Mobile Phone", path: "/blog/how-to-recycle-mobile-phone/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "headline": "How to Recycle Mobile Phone | Safe Disposal Steps | Ewaste Kochi",
+    "description": "Learn how to recycle your mobile phone safely: back up data, factory reset, remove accessories, and book with an authorized recycler.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/how-to-recycle-mobile-phone/",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Step 1: Back Up Data",
+        "text": "Sync your photos, contacts, and app data to cloud storage or a local backup. Sign out of all accounts including Google, iCloud, and Samsung accounts to prevent remote access after handover."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Step 2: Factory Reset",
+        "text": "Perform a full factory reset through your phone's settings. For iOS, use Settings > General > Transfer or Reset. For Android, use Settings > System > Reset. Remove the SIM card and any microSD card."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Step 3: Book Recycling",
+        "text": "Contact an authorized recycler such as Ewaste Kochi. Provide the device type, quantity, and condition. Our team will schedule a convenient pickup time and provide a tracking reference."
+      }
+    ],
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Are broken phones accepted?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, cracked or water-damaged phones are accepted for recycling. Flag any physical damage or swollen batteries when booking."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What about old SIM cards?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Remove SIM cards before recycling. Destroy or cut up old SIMs separately to protect personal data."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I recycle a phone with a dead battery?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, but swollen or leaking batteries should be flagged separately. Lithium batteries require special handling during transport."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/how-to-recycle-mobile-phone/",
+    "name": "How to Recycle Mobile Phone | Safe Disposal Steps | Ewaste Kochi",
+    "description": "Learn how to recycle your mobile phone safely: back up data, factory reset, remove accessories, and book with an authorized recycler.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/how-to-recycle-mobile-phone/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>How to Recycle Mobile Phone</h1>
+  <p class="lede">Recycling a mobile phone safely involves backing up and wiping your data, removing SIM and memory cards, and handing the device to an authorized recycler. Mobile phones contain lithium-ion batteries and small amounts of precious metals that require specialized processing.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about How to Recycle Mobile Phone." />
+
+  <ul class="key-takeaways">
+    <li>Sync your photos, contacts, and app data to cloud storage or a local backup.</li>
+    <li>Perform a full factory reset through your phone's settings.</li>
+    <li>Contact an authorized recycler such as Ewaste Kochi.</li>
+  </ul>
+
+  <section>
+    <h2>Step 1: Back Up Data</h2>
+    <p>Sync your photos, contacts, and app data to cloud storage or a local backup. Sign out of all accounts including Google, iCloud, and Samsung accounts to prevent remote access after handover.</p>
+  </section>
+  <section>
+    <h2>Step 2: Factory Reset</h2>
+    <p>Perform a full factory reset through your phone's settings. For iOS, use Settings > General > Transfer or Reset. For Android, use Settings > System > Reset. Remove the SIM card and any microSD card.</p>
+  </section>
+  <section>
+    <h2>Step 3: Book Recycling</h2>
+    <p>Contact an authorized recycler such as Ewaste Kochi. Provide the device type, quantity, and condition. Our team will schedule a convenient pickup time and provide a tracking reference.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Are broken phones accepted?</summary>
+  <p>Yes, cracked or water-damaged phones are accepted for recycling. Flag any physical damage or swollen batteries when booking.</p>
+</details>
+  <details>
+  <summary>What about old SIM cards?</summary>
+  <p>Remove SIM cards before recycling. Destroy or cut up old SIMs separately to protect personal data.</p>
+</details>
+  <details>
+  <summary>Can I recycle a phone with a dead battery?</summary>
+  <p>Yes, but swollen or leaking batteries should be flagged separately. Lithium batteries require special handling during transport.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/battery-recycling/">Battery Recycling Services</a></li>
+      <li><a href="/sell-electronics/">Sell Old Electronics</a></li>
+      <li><a href="/blog/why-recycle-electronics/">Why Recycle Electronics?</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

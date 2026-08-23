@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Server Room UPS Disposal | Battery & Electronics Recycling | Ewaste Kochi";
+const description = "Server room UPS disposal covers lead-acid batteries, capacitors, and power electronics. Learn safe decommissioning and CPCB-compliant recycling for data center UPS systems.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Server Room UPS Disposal", path: "/blog/server-room-ups-disposal/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Server Room UPS Disposal | Battery & Electronics Recycling | Ewaste Kochi",
+    "description": "Server room UPS disposal covers lead-acid batteries, capacitors, and power electronics. Learn safe decommissioning and CPCB-compliant recycling for data center UPS systems.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/server-room-ups-disposal/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Are UPS batteries recycled?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, lead-acid and lithium UPS batteries are recycled through authorized facilities. Lead-acid batteries have a near-complete material recovery rate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I safely disconnect a UPS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Follow manufacturer shutdown procedures. For large UPS systems, coordinate with facility management and a qualified technician before decommissioning."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can UPS electronics be remarketed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, after certified data sanitization, functional UPS units may enter remarketing channels with full documentation."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/server-room-ups-disposal/",
+    "name": "Server Room UPS Disposal | Battery & Electronics Recycling | Ewaste Kochi",
+    "description": "Server room UPS disposal covers lead-acid batteries, capacitors, and power electronics. Learn safe decommissioning and CPCB-compliant recycling for data center UPS systems.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/server-room-ups-disposal/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Server Room UPS Disposal</h1>
+  <p class="lede">Server room UPS disposal involves the safe decommissioning of uninterruptible power supply systems, including lead-acid or lithium battery banks, capacitors, and power electronics. Because UPS systems support critical infrastructure, disposal must be coordinated with facility management to avoid operational disruption.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about Server Room UPS Disposal." />
+
+  <ul class="key-takeaways">
+    <li>UPS systems contain battery banks (lead-acid or lithium), capacitors that may hold residual charge, power electronics modules, and control boards.</li>
+    <li>Schedule UPS decommissioning during a planned maintenance window.</li>
+    <li>Document battery chemistry, quantity, serial numbers, and disposal certificates.</li>
+  </ul>
+
+  <section>
+    <h2>UPS Components Requiring Disposal</h2>
+    <p>UPS systems contain battery banks (lead-acid or lithium), capacitors that may hold residual charge, power electronics modules, and control boards. Each component has different disposal requirements — batteries require hazardous-waste handling while electronics proceed through standard e-waste channels.</p>
+  </section>
+  <section>
+    <h2>Decommissioning Steps</h2>
+    <p>Schedule UPS decommissioning during a planned maintenance window. Isolate the UPS from the power supply, discharge capacitors safely, and remove battery banks under controlled conditions. Transport batteries in non-spill containers and electronics in secure packaging.</p>
+  </section>
+  <section>
+    <h2>Compliance Documentation</h2>
+    <p>Document battery chemistry, quantity, serial numbers, and disposal certificates. For data center environments, maintain records for infrastructure audits and EPR reporting. Battery recycling certificates confirm CPCB-compliant processing.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Are UPS batteries recycled?</summary>
+  <p>Yes, lead-acid and lithium UPS batteries are recycled through authorized facilities. Lead-acid batteries have a near-complete material recovery rate.</p>
+</details>
+  <details>
+  <summary>How do I safely disconnect a UPS?</summary>
+  <p>Follow manufacturer shutdown procedures. For large UPS systems, coordinate with facility management and a qualified technician before decommissioning.</p>
+</details>
+  <details>
+  <summary>Can UPS electronics be remarketed?</summary>
+  <p>Yes, after certified data sanitization, functional UPS units may enter remarketing channels with full documentation.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/ups-recycling/">UPS Recycling</a></li>
+      <li><a href="/blog/inverter-battery-recycling/">Inverter Battery Recycling</a></li>
+      <li><a href="/blog/server-decommissioning/">Server Decommissioning</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

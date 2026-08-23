@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "EPR Registration for Businesses | CPCB EPR Guide | Ewaste Kochi";
+const description = "Learn how businesses can complete EPR registration with CPCB, meet annual recycling targets, and maintain compliance under E-Waste Rules 2022.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "EPR Registration for Businesses", path: "/blog/epr-registration-for-businesses/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "EPR Registration for Businesses | CPCB EPR Guide | Ewaste Kochi",
+    "description": "Learn how businesses can complete EPR registration with CPCB, meet annual recycling targets, and maintain compliance under E-Waste Rules 2022.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/epr-registration-for-businesses/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Is EPR registration mandatory for all businesses?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Businesses that place electrical and electronic products on the Indian market must register for EPR with CPCB."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the registration fee?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CPCB charges a fee based on the scale of operations. Check the latest CPCB notification for current fee structures."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can a PRO help with EPR?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Producer Responsibility Organizations can manage collection and recycling on behalf of producers to help meet EPR targets."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/epr-registration-for-businesses/",
+    "name": "EPR Registration for Businesses | CPCB EPR Guide | Ewaste Kochi",
+    "description": "Learn how businesses can complete EPR registration with CPCB, meet annual recycling targets, and maintain compliance under E-Waste Rules 2022.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/epr-registration-for-businesses/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>EPR Registration for Businesses</h1>
+  <p class="lede">Businesses placing electrical and electronic equipment on the Indian market must register for EPR with CPCB and meet annual collection and recycling targets. EPR registration involves documenting product categories, volumes, and collection channels through the CPCB portal.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about EPR Registration for Businesses." />
+
+  <ul class="key-takeaways">
+    <li>Register on the CPCB E-waste Management System portal.</li>
+    <li>Producers must collect and channel e-waste through authorized recyclers to meet annual targets.</li>
+    <li>Maintain detailed records of e-waste collected, recycled, and processed.</li>
+  </ul>
+
+  <section>
+    <h2>Registration Steps</h2>
+    <p>Register on the CPCB E-waste Management System portal. Submit product categories, estimated quantities, collection mechanisms, and details of authorized recyclers. CPCB reviews and issues an EPR authorization with target quantities for the compliance year.</p>
+  </section>
+  <section>
+    <h2>Target Achievement</h2>
+    <p>Producers must collect and channel e-waste through authorized recyclers to meet annual targets. Targets are calculated based on market placement quantities and EPR credit mechanisms. PROs can assist in target achievement.</p>
+  </section>
+  <section>
+    <h2>Record Keeping</h2>
+    <p>Maintain detailed records of e-waste collected, recycled, and processed. File annual Form 6 returns through the CPCB portal. Retain invoices, certificates, and transport records for at least three years for audit.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Is EPR registration mandatory for all businesses?</summary>
+  <p>Businesses that place electrical and electronic products on the Indian market must register for EPR with CPCB.</p>
+</details>
+  <details>
+  <summary>What is the registration fee?</summary>
+  <p>CPCB charges a fee based on the scale of operations. Check the latest CPCB notification for current fee structures.</p>
+</details>
+  <details>
+  <summary>Can a PRO help with EPR?</summary>
+  <p>Yes, Producer Responsibility Organizations can manage collection and recycling on behalf of producers to help meet EPR targets.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/blog/what-is-epr/">What Is EPR?</a></li>
+      <li><a href="/blog/why-epr-is-mandatory/">Why EPR Is Mandatory</a></li>
+      <li><a href="/blog/corporate-e-waste-management/">Corporate E-Waste Management</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

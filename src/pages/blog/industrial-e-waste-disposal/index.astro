@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Industrial E-Waste Disposal | Manufacturing & Heavy Equipment | Ewaste Kochi";
+const description = "Industrial e-waste disposal covers manufacturing equipment, heavy machinery controllers, and mixed industrial electronics. Learn compliance requirements and scheduling.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Industrial E-Waste Disposal", path: "/blog/industrial-e-waste-disposal/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Industrial E-Waste Disposal | Manufacturing & Heavy Equipment | Ewaste Kochi",
+    "description": "Industrial e-waste disposal covers manufacturing equipment, heavy machinery controllers, and mixed industrial electronics. Learn compliance requirements and scheduling.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/industrial-e-waste-disposal/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "What industrial equipment is accepted?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We accept PLCs, control panels, sensors, power electronics, telecom gear, and associated batteries. Confirm specific items when booking."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are hazardous industrial components accepted?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Capacitors, transformers, and other hazardous components require special handling. Flag these when booking so our team can prepare appropriate PPE and transport."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far in advance should I book?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Industrial pickups should be scheduled at least two weeks in advance for safety planning and logistics coordination."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/industrial-e-waste-disposal/",
+    "name": "Industrial E-Waste Disposal | Manufacturing & Heavy Equipment | Ewaste Kochi",
+    "description": "Industrial e-waste disposal covers manufacturing equipment, heavy machinery controllers, and mixed industrial electronics. Learn compliance requirements and scheduling.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/industrial-e-waste-disposal/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Industrial E-Waste Disposal</h1>
+  <p class="lede">Industrial e-waste disposal addresses the specialized requirements of manufacturing facilities, power plants, and industrial operations — including programmable logic controllers, heavy equipment electronics, sensors, control systems, and mixed industrial waste streams. These items require compliant transport and processing under E-Waste Rules 2022.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about Industrial E-Waste Disposal." />
+
+  <ul class="key-takeaways">
+    <li>Industrial sites generate PLCs, VFDs, SCADA components, control panels, sensors, power electronics, and telecommunications gear.</li>
+    <li>Industrial e-waste must be handled by trained personnel with appropriate PPE.</li>
+    <li>Industrial pickups require advance coordination for safety briefings, access permissions, and equipment availability.</li>
+  </ul>
+
+  <section>
+    <h2>Industrial E-Waste Types</h2>
+    <p>Industrial sites generate PLCs, VFDs, SCADA components, control panels, sensors, power electronics, and telecommunications gear. Some components contain hazardous materials such as capacitors with PCBs or batteries requiring specialized handling.</p>
+  </section>
+  <section>
+    <h2>Safety and Compliance</h2>
+    <p>Industrial e-waste must be handled by trained personnel with appropriate PPE. Transport requires compliant vehicles and documentation. Processing must follow CPCB guidelines for hazardous and non-hazardous fractions.</p>
+  </section>
+  <section>
+    <h2>Scheduling Industrial Pickups</h2>
+    <p>Industrial pickups require advance coordination for safety briefings, access permissions, and equipment availability. Our team works with site managers to schedule pickups during planned maintenance windows or low-production periods.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>What industrial equipment is accepted?</summary>
+  <p>We accept PLCs, control panels, sensors, power electronics, telecom gear, and associated batteries. Confirm specific items when booking.</p>
+</details>
+  <details>
+  <summary>Are hazardous industrial components accepted?</summary>
+  <p>Capacitors, transformers, and other hazardous components require special handling. Flag these when booking so our team can prepare appropriate PPE and transport.</p>
+</details>
+  <details>
+  <summary>How far in advance should I book?</summary>
+  <p>Industrial pickups should be scheduled at least two weeks in advance for safety planning and logistics coordination.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/blog/bulk-e-waste-recycling/">Bulk E-Waste Recycling</a></li>
+      <li><a href="/blog/warehouse-e-waste-disposal/">Warehouse E-Waste Disposal</a></li>
+      <li><a href="/blog/corporate-e-waste-management/">Corporate E-Waste Management</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

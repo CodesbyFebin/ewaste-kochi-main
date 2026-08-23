@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "E-Waste Drop Off Kochi | Free Drop-Off Points | Ewaste Kochi";
+const description = "Find authorized e-waste drop-off points in Kochi. Drop off old electronics, batteries, and appliances at our Cheranalloor facility during business hours.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "E-Waste Drop Off Kochi", path: "/blog/e-waste-drop-off-kochi/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "headline": "E-Waste Drop Off Kochi | Free Drop-Off Points | Ewaste Kochi",
+    "description": "Find authorized e-waste drop-off points in Kochi. Drop off old electronics, batteries, and appliances at our Cheranalloor facility during business hours.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/e-waste-drop-off-kochi/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Where is the drop-off location?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our facility is at Door No. II, 287 A & B, Chakkiath Estate, Cheranalloor P.O., Kochi – 682034. Contact us for exact navigation details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need an appointment to drop off?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No appointment is required for standard household quantities during business hours. Large commercial drops should be scheduled in advance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are your drop-off hours?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Monday through Saturday, 9 AM to 6 PM. Confirm current hours by calling before visiting."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/e-waste-drop-off-kochi/",
+    "name": "E-Waste Drop Off Kochi | Free Drop-Off Points | Ewaste Kochi",
+    "description": "Find authorized e-waste drop-off points in Kochi. Drop off old electronics, batteries, and appliances at our Cheranalloor facility during business hours.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/e-waste-drop-off-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Drop Off Kochi</h1>
+  <p class="lede">Ewaste Kochi maintains an authorized e-waste drop-off facility in Cheranalloor, Kochi. Residents and small businesses can drop off old electronics, batteries, and appliances during business hours — no appointment required for standard household quantities.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about E-Waste Drop Off Kochi." />
+
+  <ul class="key-takeaways">
+    <li>Our Cheranalloor facility accepts all standard e-waste categories during business hours, Monday through Saturday.</li>
+    <li>Acceptable items include phones, laptops, desktops, monitors, TVs, refrigerators, washing machines, batteries (including lithium-ion and lead-acid), and other household electronics.</li>
+    <li>Drop-off is ideal for individuals with small quantities.</li>
+  </ul>
+
+  <section>
+    <h2>Drop-Off Facility</h2>
+    <p>Our Cheranalloor facility accepts all standard e-waste categories during business hours, Monday through Saturday. Bring your items, and our team will weigh and document them. You'll receive a handover receipt and a Certificate of Recycling after processing.</p>
+  </section>
+  <section>
+    <h2>What to Bring</h2>
+    <p>Acceptable items include phones, laptops, desktops, monitors, TVs, refrigerators, washing machines, batteries (including lithium-ion and lead-acid), and other household electronics. Remove personal data from devices before drop-off.</p>
+  </section>
+  <section>
+    <h2>Drop-Off vs Pickup</h2>
+    <p>Drop-off is ideal for individuals with small quantities. For larger items or bulky appliances, or if you cannot transport them yourself, our free doorstep pickup service is the more convenient option.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Where is the drop-off location?</summary>
+  <p>Our facility is at Door No. II, 287 A & B, Chakkiath Estate, Cheranalloor P.O., Kochi – 682034. Contact us for exact navigation details.</p>
+</details>
+  <details>
+  <summary>Do I need an appointment to drop off?</summary>
+  <p>No appointment is required for standard household quantities during business hours. Large commercial drops should be scheduled in advance.</p>
+</details>
+  <details>
+  <summary>What are your drop-off hours?</summary>
+  <p>Monday through Saturday, 9 AM to 6 PM. Confirm current hours by calling before visiting.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/blog/e-waste-recycling-kochi/">E-Waste Recycling in Kochi</a></li>
+      <li><a href="/pickup/">E-Waste Pickup Service</a></li>
+      <li><a href="/blog/how-to-schedule-e-waste-pickup/">How to Schedule E-Waste Pickup</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

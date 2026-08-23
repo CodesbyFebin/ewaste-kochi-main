@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "LED TV Recycling | Flat Panel Display Disposal | Ewaste Kochi";
+const description = "LED TV recycling covers flat panel displays, circuit boards, and backlight components. Learn safe disposal and material recovery for modern televisions.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "LED TV Recycling", path: "/blog/led-tv-recycling/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "LED TV Recycling | Flat Panel Display Disposal | Ewaste Kochi",
+    "description": "LED TV recycling covers flat panel displays, circuit boards, and backlight components. Learn safe disposal and material recovery for modern televisions.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/led-tv-recycling/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Are LED TVs hazardous?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "LED TVs are less hazardous than CRT monitors but still require authorized recycling. They contain electronic components and small amounts of lead solder."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I throw away an old LED TV?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. E-Waste Rules 2022 classify all end-of-life televisions as e-waste. They must be channeled through authorized recyclers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a fee for LED TV recycling?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Standard LED TVs are typically collected free of charge through household pickup programs. Larger or commercial quantities may incur handling fees."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/led-tv-recycling/",
+    "name": "LED TV Recycling | Flat Panel Display Disposal | Ewaste Kochi",
+    "description": "LED TV recycling covers flat panel displays, circuit boards, and backlight components. Learn safe disposal and material recovery for modern televisions.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/led-tv-recycling/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>LED TV Recycling</h1>
+  <p class="lede">LED TV recycling involves the safe dismantling of flat panel displays to recover aluminum, copper, circuit boards, and backlight components. Modern LED TVs contain fewer hazardous materials than older CRT models, but still require authorized processing to prevent electronic waste from entering landfills.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about LED TV Recycling." />
+
+  <ul class="key-takeaways">
+    <li>LED TVs contain aluminum frames, LCD or LED panels with backlight units, printed circuit boards with small amounts of lead solder, copper wiring, and plastic casings.</li>
+    <li>LED TVs are manually or mechanically dismantled.</li>
+    <li>LED TVs are simpler to recycle than CRTs because they lack leaded glass.</li>
+  </ul>
+
+  <section>
+    <h2>What LED TVs Contain</h2>
+    <p>LED TVs contain aluminum frames, LCD or LED panels with backlight units, printed circuit boards with small amounts of lead solder, copper wiring, and plastic casings. While not classified as highly hazardous, these materials require controlled processing for safe material recovery.</p>
+  </section>
+  <section>
+    <h2>Recycling Process</h2>
+    <p>LED TVs are manually or mechanically dismantled. The aluminum frame is separated and recycled. Circuit boards are processed for copper and trace metals. LCD panels are handled separately to recover glass and polarizing film. Plastics are sorted by type for material recycling.</p>
+  </section>
+  <section>
+    <h2>Comparison with CRT Disposal</h2>
+    <p>LED TVs are simpler to recycle than CRTs because they lack leaded glass. However, the LCD or OLED panels still require careful handling to prevent glass breakage and ensure safe separation of display layers.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Are LED TVs hazardous?</summary>
+  <p>LED TVs are less hazardous than CRT monitors but still require authorized recycling. They contain electronic components and small amounts of lead solder.</p>
+</details>
+  <details>
+  <summary>Can I throw away an old LED TV?</summary>
+  <p>No. E-Waste Rules 2022 classify all end-of-life televisions as e-waste. They must be channeled through authorized recyclers.</p>
+</details>
+  <details>
+  <summary>Is there a fee for LED TV recycling?</summary>
+  <p>Standard LED TVs are typically collected free of charge through household pickup programs. Larger or commercial quantities may incur handling fees.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/tv-recycling-kochi/">TV Recycling Kochi</a></li>
+      <li><a href="/blog/old-tv-recycling/">Old TV Recycling</a></li>
+      <li><a href="/blog/crt-monitor-recycling/">CRT Monitor Recycling</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

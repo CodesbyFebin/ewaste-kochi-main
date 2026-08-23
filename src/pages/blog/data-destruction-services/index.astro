@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Data Destruction Services | NIST 800-88 Certified | Ewaste Kochi";
+const description = "Professional data destruction services for businesses: hard drive shredding, degaussing, and overwriting with NIST 800-88 certification and audit documentation.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Data Destruction Services", path: "/blog/data-destruction-services/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Data Destruction Services | NIST 800-88 Certified | Ewaste Kochi",
+    "description": "Professional data destruction services for businesses: hard drive shredding, degaussing, and overwriting with NIST 800-88 certification and audit documentation.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/data-destruction-services/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "What data destruction methods do you use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We use overwriting, degaussing, and physical shredding — all NIST 800-88-compliant — selected based on media type and data sensitivity."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does the process take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "On-site shredding is completed in hours. Off-site processing typically takes 1-3 business days after transport."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the certificate legally valid?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our Certificates of Destruction referencing NIST 800-88 are accepted as evidence of due diligence by auditors, insurers, and regulators."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/data-destruction-services/",
+    "name": "Data Destruction Services | NIST 800-88 Certified | Ewaste Kochi",
+    "description": "Professional data destruction services for businesses: hard drive shredding, degaussing, and overwriting with NIST 800-88 certification and audit documentation.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/data-destruction-services/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Data Destruction Services</h1>
+  <p class="lede">Ewaste Kochi provides professional data destruction services for businesses requiring NIST 800-88-compliant sanitization or physical destruction of storage media. Our documented workflow generates Certificates of Destruction suitable for audit, regulatory compliance, and legal defensibility.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about Data Destruction Services." />
+
+  <ul class="key-takeaways">
+    <li>We offer overwriting for reusable drives, degaussing for magnetic media, and physical shredding for complete destruction.</li>
+    <li>For high-security environments, on-site shredding can be arranged where our team brings industrial equipment to your facility.</li>
+    <li>Our Certificates of Destruction reference NIST 800-88 methodology and include drive serial numbers, sanitization method, date, and operator verification.</li>
+  </ul>
+
+  <section>
+    <h2>Service Methods</h2>
+    <p>We offer overwriting for reusable drives, degaussing for magnetic media, and physical shredding for complete destruction. The method is selected based on media type, data sensitivity, and whether the asset will be remarketed or fully retired.</p>
+  </section>
+  <section>
+    <h2>On-Site vs Off-Site</h2>
+    <p>For high-security environments, on-site shredding can be arranged where our team brings industrial equipment to your facility. Standard workflows use secure transport to our processing location with full chain-of-custody documentation.</p>
+  </section>
+  <section>
+    <h2>Compliance Value</h2>
+    <p>Our Certificates of Destruction reference NIST 800-88 methodology and include drive serial numbers, sanitization method, date, and operator verification. These documents satisfy auditor, insurer, and regulatory requirements for data breach prevention evidence.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>What data destruction methods do you use?</summary>
+  <p>We use overwriting, degaussing, and physical shredding — all NIST 800-88-compliant — selected based on media type and data sensitivity.</p>
+</details>
+  <details>
+  <summary>How long does the process take?</summary>
+  <p>On-site shredding is completed in hours. Off-site processing typically takes 1-3 business days after transport.</p>
+</details>
+  <details>
+  <summary>Is the certificate legally valid?</summary>
+  <p>Yes, our Certificates of Destruction referencing NIST 800-88 are accepted as evidence of due diligence by auditors, insurers, and regulators.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/data-destruction/">Data Destruction</a></li>
+      <li><a href="/hard-drive-shredding/">Hard Drive Shredding</a></li>
+      <li><a href="/blog/how-to-destroy-hard-drive-data/">How to Destroy Hard Drive Data</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

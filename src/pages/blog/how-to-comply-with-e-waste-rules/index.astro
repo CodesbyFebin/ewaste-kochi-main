@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "How to Comply with E-Waste Rules | CPCB Compliance Guide | Ewaste Kochi";
+const description = "A practical compliance guide for households and businesses: understand E-Waste Rules 2022, channel e-waste through authorized recyclers, and maintain records.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "How to Comply with E-Waste Rules", path: "/blog/how-to-comply-with-e-waste-rules/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Comply with E-Waste Rules | CPCB Compliance Guide | Ewaste Kochi",
+    "description": "A practical compliance guide for households and businesses: understand E-Waste Rules 2022, channel e-waste through authorized recyclers, and maintain records.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/how-to-comply-with-e-waste-rules/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "What are the penalties for non-compliance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Penalties under E-Waste Rules 2022 include fines up to several lakh rupees and potential imprisonment for repeat violations under the Environment Protection Act."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do small businesses need to comply?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, all businesses that generate e-waste are obligated to channel it through authorized recyclers regardless of size or quantity."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long must I keep records?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Records of e-waste collection, processing, and certificates should be retained for a minimum of three years for audit purposes."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/how-to-comply-with-e-waste-rules/",
+    "name": "How to Comply with E-Waste Rules | CPCB Compliance Guide | Ewaste Kochi",
+    "description": "A practical compliance guide for households and businesses: understand E-Waste Rules 2022, channel e-waste through authorized recyclers, and maintain records.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/how-to-comply-with-e-waste-rules/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>How to Comply with E-Waste Rules</h1>
+  <p class="lede">Complying with E-Waste Rules 2022 involves channeling all e-waste through CPCB-authorized recyclers, maintaining records of collection and disposal, and ensuring producers meet their Extended Producer Responsibility targets. Both households and businesses have clear obligations under the Rules.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about How to Comply with E-Waste Rules." />
+
+  <ul class="key-takeaways">
+    <li>Households must not dispose of e-waste in regular waste.</li>
+    <li>Businesses must maintain an inventory of IT assets, channel e-waste through authorized recyclers, and retain certificates and invoices.</li>
+    <li>Producers must register with CPCB, file annual Form 6 returns, achieve EPR collection and recycling targets, and ensure their products carry visible e-waste awareness labels.</li>
+  </ul>
+
+  <section>
+    <h2>For Households</h2>
+    <p>Households must not dispose of e-waste in regular waste. Instead, use authorized drop-off points, doorstep pickup services, or brand take-back programs. Keep the Certificate of Recycling for your records as proof of responsible disposal.</p>
+  </section>
+  <section>
+    <h2>For Businesses</h2>
+    <p>Businesses must maintain an inventory of IT assets, channel e-waste through authorized recyclers, and retain certificates and invoices. Large quantities require advance scheduling and documented chain-of-custody. Annual reporting may be required under EPR obligations.</p>
+  </section>
+  <section>
+    <h2>For Producers and Brands</h2>
+    <p>Producers must register with CPCB, file annual Form 6 returns, achieve EPR collection and recycling targets, and ensure their products carry visible e-waste awareness labels. Non-compliance attracts financial penalties and potential authorization suspension.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>What are the penalties for non-compliance?</summary>
+  <p>Penalties under E-Waste Rules 2022 include fines up to several lakh rupees and potential imprisonment for repeat violations under the Environment Protection Act.</p>
+</details>
+  <details>
+  <summary>Do small businesses need to comply?</summary>
+  <p>Yes, all businesses that generate e-waste are obligated to channel it through authorized recyclers regardless of size or quantity.</p>
+</details>
+  <details>
+  <summary>How long must I keep records?</summary>
+  <p>Records of e-waste collection, processing, and certificates should be retained for a minimum of three years for audit purposes.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/blog/e-waste-rules-2022-india/">E-Waste Rules 2022</a></li>
+      <li><a href="/blog/why-epr-is-mandatory/">Why EPR Is Mandatory</a></li>
+      <li><a href="/blog/corporate-e-waste-management/">Corporate E-Waste Management</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Inverter Battery Recycling | Lead-Acid Battery Disposal | Ewaste Kochi";
+const description = "Inverter batteries are lead-acid and must be recycled safely. Learn how inverter battery recycling recovers lead and plastic while preventing acid contamination.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Inverter Battery Recycling", path: "/blog/inverter-battery-recycling/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Inverter Battery Recycling | Lead-Acid Battery Disposal | Ewaste Kochi",
+    "description": "Inverter batteries are lead-acid and must be recycled safely. Learn how inverter battery recycling recovers lead and plastic while preventing acid contamination.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/inverter-battery-recycling/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Are inverter batteries accepted for recycling?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, inverter and UPS batteries are accepted at authorized recyclers. They are among the most efficiently recycled e-waste items."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if my inverter battery is leaking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Leaking batteries should be flagged separately when booking. Transport in a sealed, acid-resistant container — do not place in regular trash."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will I get paid for recycling inverter batteries?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Lead-acid batteries have material value. Check with your recycler about current buyback rates for functional or intact batteries."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/inverter-battery-recycling/",
+    "name": "Inverter Battery Recycling | Lead-Acid Battery Disposal | Ewaste Kochi",
+    "description": "Inverter batteries are lead-acid and must be recycled safely. Learn how inverter battery recycling recovers lead and plastic while preventing acid contamination.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/inverter-battery-recycling/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Inverter Battery Recycling</h1>
+  <p class="lede">Inverter battery recycling processes lead-acid batteries from UPS and inverter systems through a closed-loop recovery of lead, plastic, and sulfuric acid. Because lead-acid batteries are among the most efficiently recycled battery types, proper channeling ensures near-complete material recovery.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about Inverter Battery Recycling." />
+
+  <ul class="key-takeaways">
+    <li>Inverter batteries contain sulfuric acid and lead plates.</li>
+    <li>At the recycling facility, batteries are broken open in a controlled environment.</li>
+    <li>Modern lead-acid battery recycling achieves over 99% material recovery — one of the highest rates for any consumer product.</li>
+  </ul>
+
+  <section>
+    <h2>Why Inverter Batteries Need Special Handling</h2>
+    <p>Inverter batteries contain sulfuric acid and lead plates. Acid leakage causes soil and water contamination; lead exposure causes neurological damage. Transport requires sealed, non-spill containers and trained handlers to prevent acid exposure during movement.</p>
+  </section>
+  <section>
+    <h2>Recycling Process</h2>
+    <p>At the recycling facility, batteries are broken open in a controlled environment. Lead is separated from plastic and acid. Lead is smelted and refined into ingots for new batteries. Plastic is chipped and reformed into new battery casings. Acid is neutralized or converted to gypsum.</p>
+  </section>
+  <section>
+    <h2>Environmental Recovery Rate</h2>
+    <p>Modern lead-acid battery recycling achieves over 99% material recovery — one of the highest rates for any consumer product. Using recycled lead instead of mined lead significantly reduces the carbon footprint of new battery production.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Are inverter batteries accepted for recycling?</summary>
+  <p>Yes, inverter and UPS batteries are accepted at authorized recyclers. They are among the most efficiently recycled e-waste items.</p>
+</details>
+  <details>
+  <summary>What if my inverter battery is leaking?</summary>
+  <p>Leaking batteries should be flagged separately when booking. Transport in a sealed, acid-resistant container — do not place in regular trash.</p>
+</details>
+  <details>
+  <summary>Will I get paid for recycling inverter batteries?</summary>
+  <p>Lead-acid batteries have material value. Check with your recycler about current buyback rates for functional or intact batteries.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/battery-recycling/">Battery Recycling Services</a></li>
+      <li><a href="/blog/lithium-ion-battery-disposal/">Lithium Ion Battery Disposal</a></li>
+      <li><a href="/ups-recycling/">UPS Recycling</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

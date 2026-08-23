@@ -1,0 +1,154 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "How to Schedule E-Waste Pickup | Free Doorstep Collection | Ewaste Kochi";
+const description = "Schedule e-waste pickup in 3 steps: list items, share your address, and confirm timing. Free pickup for household quantities in Kochi and Ernakulam.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "How to Schedule E-Waste Pickup", path: "/blog/how-to-schedule-e-waste-pickup/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "headline": "How to Schedule E-Waste Pickup | Free Doorstep Collection | Ewaste Kochi",
+    "description": "Schedule e-waste pickup in 3 steps: list items, share your address, and confirm timing. Free pickup for household quantities in Kochi and Ernakulam.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/how-to-schedule-e-waste-pickup/",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Step 1: List Your Items",
+        "text": "Make a quick inventory of the devices you want to dispose of — laptops, phones, TVs, batteries, appliances. Note quantities and any special conditions such as broken screens, swollen batteries, or server equipment."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Step 2: Book Online or by Phone",
+        "text": "Send your list and address via WhatsApp to our team or call our toll-free number. Our scheduling team will confirm availability and propose a pickup window — typically within 24-48 hours for Kochi-area addresses."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Step 3: Confirm and Track",
+        "text": "Once confirmed, you'll receive a reference number. On pickup day, our logistics team will arrive at the scheduled time, verify items, and issue a handover receipt. You'll receive your Certificate of Recycling digitally after processing."
+      }
+    ],
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "How far in advance should I book?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For standard household pickups, 24-48 hours advance notice is usually sufficient. Commercial bulk pickups should be scheduled at least one week in advance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is pickup free for all items?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Household quantities of standard e-waste are collected free of charge. Large appliances or commercial quantities may involve nominal handling fees."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What areas do you cover?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We cover Kochi, Ernakulam, Kakkanad, Aluva, Edappally, Vyttila, Thrippunithura, and surrounding areas in Ernakulam district."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/how-to-schedule-e-waste-pickup/",
+    "name": "How to Schedule E-Waste Pickup | Free Doorstep Collection | Ewaste Kochi",
+    "description": "Schedule e-waste pickup in 3 steps: list items, share your address, and confirm timing. Free pickup for household quantities in Kochi and Ernakulam.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/how-to-schedule-e-waste-pickup/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>How to Schedule E-Waste Pickup</h1>
+  <p class="lede">Scheduling e-waste pickup takes three steps: list the items you want to dispose of, share your address and preferred timing via WhatsApp or phone, and confirm the pickup slot. Free pickup is available for household quantities across Kochi and Ernakulam district.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about How to Schedule E-Waste Pickup." />
+
+  <ul class="key-takeaways">
+    <li>Make a quick inventory of the devices you want to dispose of — laptops, phones, TVs, batteries, appliances.</li>
+    <li>Send your list and address via WhatsApp to our team or call our toll-free number.</li>
+    <li>Once confirmed, you'll receive a reference number.</li>
+  </ul>
+
+  <section>
+    <h2>Step 1: List Your Items</h2>
+    <p>Make a quick inventory of the devices you want to dispose of — laptops, phones, TVs, batteries, appliances. Note quantities and any special conditions such as broken screens, swollen batteries, or server equipment.</p>
+  </section>
+  <section>
+    <h2>Step 2: Book Online or by Phone</h2>
+    <p>Send your list and address via WhatsApp to our team or call our toll-free number. Our scheduling team will confirm availability and propose a pickup window — typically within 24-48 hours for Kochi-area addresses.</p>
+  </section>
+  <section>
+    <h2>Step 3: Confirm and Track</h2>
+    <p>Once confirmed, you'll receive a reference number. On pickup day, our logistics team will arrive at the scheduled time, verify items, and issue a handover receipt. You'll receive your Certificate of Recycling digitally after processing.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>How far in advance should I book?</summary>
+  <p>For standard household pickups, 24-48 hours advance notice is usually sufficient. Commercial bulk pickups should be scheduled at least one week in advance.</p>
+</details>
+  <details>
+  <summary>Is pickup free for all items?</summary>
+  <p>Household quantities of standard e-waste are collected free of charge. Large appliances or commercial quantities may involve nominal handling fees.</p>
+</details>
+  <details>
+  <summary>What areas do you cover?</summary>
+  <p>We cover Kochi, Ernakulam, Kakkanad, Aluva, Edappally, Vyttila, Thrippunithura, and surrounding areas in Ernakulam district.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/pickup/">E-Waste Pickup Service</a></li>
+      <li><a href="/blog/e-waste-recycling-kochi/">E-Waste Recycling in Kochi</a></li>
+      <li><a href="/pickup/">Doorstep Pickup</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

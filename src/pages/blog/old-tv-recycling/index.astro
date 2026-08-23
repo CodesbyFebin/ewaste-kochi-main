@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Old TV Recycling | CRT & Flat Panel Disposal | Ewaste Kochi";
+const description = "Old TV recycling covers both CRT and modern flat-panel displays. Learn safe disposal methods, hazards, and authorized recycling for televisions in India.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Old TV Recycling", path: "/blog/old-tv-recycling/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Old TV Recycling | CRT & Flat Panel Disposal | Ewaste Kochi",
+    "description": "Old TV recycling covers both CRT and modern flat-panel displays. Learn safe disposal methods, hazards, and authorized recycling for televisions in India.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/old-tv-recycling/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Can I throw an old TV in the trash?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Both CRT and flat-panel TVs are e-waste under E-Waste Rules 2022 and must be recycled through authorized channels."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is CRT TV recycling more expensive?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CRT recycling involves additional lead-safe processing but is typically included in standard household pickup programs at no charge."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you accept old TVs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, both CRT and flat-panel televisions are accepted through our pickup and drop-off programs."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/old-tv-recycling/",
+    "name": "Old TV Recycling | CRT & Flat Panel Disposal | Ewaste Kochi",
+    "description": "Old TV recycling covers both CRT and modern flat-panel displays. Learn safe disposal methods, hazards, and authorized recycling for televisions in India.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/old-tv-recycling/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Old TV Recycling</h1>
+  <p class="lede">Old TV recycling applies to both CRT televisions — which contain leaded glass — and modern flat-panel models with LCD, LED, or OLED screens. Both types must be recycled through authorized facilities under E-Waste Rules 2022 to prevent hazardous material release and recover valuable components.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about Old TV Recycling." />
+
+  <ul class="key-takeaways">
+    <li>CRT TVs contain leaded glass in the funnel and neck, making them highly hazardous if broken or incinerated.</li>
+    <li>Informal TV recycling — including open burning and acid stripping — releases lead, brominated flame retardants, and other toxins into air, soil, and water.</li>
+    <li>Authorized recyclers dismantle TVs in controlled environments.</li>
+  </ul>
+
+  <section>
+    <h2>CRT vs Flat Panel Differences</h2>
+    <p>CRT TVs contain leaded glass in the funnel and neck, making them highly hazardous if broken or incinerated. Flat-panel TVs are less hazardous but still contain circuit boards with lead solder, backlight components, and aluminum frames that require controlled recycling.</p>
+  </section>
+  <section>
+    <h2>Hazards of Informal Disposal</h2>
+    <p>Informal TV recycling — including open burning and acid stripping — releases lead, brominated flame retardants, and other toxins into air, soil, and water. Communities near informal recycling sites show elevated blood lead levels and respiratory issues.</p>
+  </section>
+  <section>
+    <h2>Authorized Recycling Pathway</h2>
+    <p>Authorized recyclers dismantle TVs in controlled environments. CRT glass is processed in lead-safe furnaces. Flat-panel glass, aluminum, copper, and circuit boards are separated and recovered. Plastics are sorted for material recycling.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Can I throw an old TV in the trash?</summary>
+  <p>No. Both CRT and flat-panel TVs are e-waste under E-Waste Rules 2022 and must be recycled through authorized channels.</p>
+</details>
+  <details>
+  <summary>Is CRT TV recycling more expensive?</summary>
+  <p>CRT recycling involves additional lead-safe processing but is typically included in standard household pickup programs at no charge.</p>
+</details>
+  <details>
+  <summary>Do you accept old TVs?</summary>
+  <p>Yes, both CRT and flat-panel televisions are accepted through our pickup and drop-off programs.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/tv-recycling-kochi/">TV Recycling Kochi</a></li>
+      <li><a href="/blog/led-tv-recycling/">LED TV Recycling</a></li>
+      <li><a href="/blog/crt-monitor-recycling/">CRT Monitor Recycling</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

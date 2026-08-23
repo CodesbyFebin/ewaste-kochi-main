@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Corporate E-Waste Management | B2B Recycling & ITAD | Ewaste Kochi";
+const description = "Corporate e-waste management covers ITAD, bulk pickup, data destruction, and EPR compliance for businesses. Learn how to build a compliant program.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Corporate E-Waste Management", path: "/blog/corporate-e-waste-management/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Corporate E-Waste Management | B2B Recycling & ITAD | Ewaste Kochi",
+    "description": "Corporate e-waste management covers ITAD, bulk pickup, data destruction, and EPR compliance for businesses. Learn how to build a compliant program.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/corporate-e-waste-management/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "What does corporate e-waste management include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It includes asset inventory, bulk pickup scheduling, data destruction, chain-of-custody tracking, and Certificate of Recycling issuance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I start a corporate e-waste program?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Contact an authorized ITAD provider for an initial assessment. We will inventory your assets, propose a pickup schedule, and document the full workflow for compliance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it legally required?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "E-Waste Rules 2022 require that all e-waste be channeled through authorized recyclers. Corporate clients have additional documentation and reporting obligations."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/corporate-e-waste-management/",
+    "name": "Corporate E-Waste Management | B2B Recycling & ITAD | Ewaste Kochi",
+    "description": "Corporate e-waste management covers ITAD, bulk pickup, data destruction, and EPR compliance for businesses. Learn how to build a compliant program.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/corporate-e-waste-management/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Corporate E-Waste Management</h1>
+  <p class="lede">Corporate e-waste management is a structured program that ensures businesses retire IT assets securely, meet EPR obligations, maintain compliance with E-Waste Rules 2022, and demonstrate sustainability commitments through documented recycling and data destruction.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about Corporate E-Waste Management." />
+
+  <ul class="key-takeaways">
+    <li>A corporate program includes asset inventory, scheduled bulk pickup, certified data destruction, chain-of-custody documentation, and Certificate of Recycling issuance.</li>
+    <li>IT Asset Disposition (ITAD) is the technical backbone of corporate e-waste management.</li>
+    <li>Businesses must retain e-waste collection records, Certificates of Recycling, and transport documentation for at least three years.</li>
+  </ul>
+
+  <section>
+    <h2>Program Components</h2>
+    <p>A corporate program includes asset inventory, scheduled bulk pickup, certified data destruction, chain-of-custody documentation, and Certificate of Recycling issuance. Annual summaries support EPR reporting, sustainability disclosures, and audit requirements.</p>
+  </section>
+  <section>
+    <h2>ITAD Integration</h2>
+    <p>IT Asset Disposition (ITAD) is the technical backbone of corporate e-waste management. It covers asset tracking, data sanitization (NIST 800-88), secure transport, and end-of-life processing — all documented for compliance.</p>
+  </section>
+  <section>
+    <h2>Compliance and Reporting</h2>
+    <p>Businesses must retain e-waste collection records, Certificates of Recycling, and transport documentation for at least three years. Annual Form 6 filings and EPR target tracking are the responsibility of the producer or brand.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>What does corporate e-waste management include?</summary>
+  <p>It includes asset inventory, bulk pickup scheduling, data destruction, chain-of-custody tracking, and Certificate of Recycling issuance.</p>
+</details>
+  <details>
+  <summary>How do I start a corporate e-waste program?</summary>
+  <p>Contact an authorized ITAD provider for an initial assessment. We will inventory your assets, propose a pickup schedule, and document the full workflow for compliance.</p>
+</details>
+  <details>
+  <summary>Is it legally required?</summary>
+  <p>E-Waste Rules 2022 require that all e-waste be channeled through authorized recyclers. Corporate clients have additional documentation and reporting obligations.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/itad/">ITAD Services</a></li>
+      <li><a href="/blog/epr-registration-for-businesses/">EPR Registration for Businesses</a></li>
+      <li><a href="/blog/bulk-e-waste-recycling/">Bulk E-Waste Recycling</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "E-Waste Pickup Service | Free Doorstep Collection | Ewaste Kochi";
+const description = "Ewaste Kochi provides free e-waste pickup service across Kochi and Ernakulam. Schedule doorstep collection for household and business e-waste.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "E-Waste Pickup Service", path: "/blog/e-waste-pickup-service/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "headline": "E-Waste Pickup Service | Free Doorstep Collection | Ewaste Kochi",
+    "description": "Ewaste Kochi provides free e-waste pickup service across Kochi and Ernakulam. Schedule doorstep collection for household and business e-waste.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/e-waste-pickup-service/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "How do I book a pickup?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Book via WhatsApp or by calling our toll-free number. Provide your address, item list, and preferred timing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the pickup free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, standard household pickups are free. Commercial bulk pickups may involve nominal handling fees depending on volume."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What areas do you cover?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We cover Kochi and Ernakulam district including Kakkanad, Aluva, Edappally, Vyttila, Thrippunithura, and surrounding areas."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/e-waste-pickup-service/",
+    "name": "E-Waste Pickup Service | Free Doorstep Collection | Ewaste Kochi",
+    "description": "Ewaste Kochi provides free e-waste pickup service across Kochi and Ernakulam. Schedule doorstep collection for household and business e-waste.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/e-waste-pickup-service/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Pickup Service</h1>
+  <p class="lede">Ewaste Kochi's free e-waste pickup service collects household and business electronic waste directly from your doorstep across Kochi and Ernakulam district. Book via WhatsApp or phone, and our logistics team will confirm a convenient pickup window.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about E-Waste Pickup Service." />
+
+  <ul class="key-takeaways">
+    <li>Standard household e-waste — phones, laptops, TVs, small appliances, and batteries — is collected free of charge.</li>
+    <li>Offices, schools, hospitals, and factories can schedule bulk pickups with advance notice.</li>
+    <li>Every pickup includes a handover receipt on collection and a digital Certificate of Recycling after processing.</li>
+  </ul>
+
+  <section>
+    <h2>Household Pickup</h2>
+    <p>Standard household e-waste — phones, laptops, TVs, small appliances, and batteries — is collected free of charge. Book with a simple item list and address, and we'll schedule pickup within 24-48 hours.</p>
+  </section>
+  <section>
+    <h2>Commercial Pickup</h2>
+    <p>Offices, schools, hospitals, and factories can schedule bulk pickups with advance notice. Our team provides item-level documentation, chain-of-custody tracking, and digital Certificates of Recycling for each pickup.</p>
+  </section>
+  <section>
+    <h2>Service Guarantees</h2>
+    <p>Every pickup includes a handover receipt on collection and a digital Certificate of Recycling after processing. All processing takes place at CPCB-authorized facilities, ensuring environmentally compliant disposal.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>How do I book a pickup?</summary>
+  <p>Book via WhatsApp or by calling our toll-free number. Provide your address, item list, and preferred timing.</p>
+</details>
+  <details>
+  <summary>Is the pickup free?</summary>
+  <p>Yes, standard household pickups are free. Commercial bulk pickups may involve nominal handling fees depending on volume.</p>
+</details>
+  <details>
+  <summary>What areas do you cover?</summary>
+  <p>We cover Kochi and Ernakulam district including Kakkanad, Aluva, Edappally, Vyttila, Thrippunithura, and surrounding areas.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/blog/how-to-schedule-e-waste-pickup/">How to Schedule E-Waste Pickup</a></li>
+      <li><a href="/blog/e-waste-recycling-kochi/">E-Waste Recycling in Kochi</a></li>
+      <li><a href="/blog/e-waste-drop-off-kochi/">E-Waste Drop Off Kochi</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

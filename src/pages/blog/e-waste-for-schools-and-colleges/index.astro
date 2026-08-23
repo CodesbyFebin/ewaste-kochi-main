@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "E-Waste for Schools and Colleges | Educational Institution Recycling | Ewaste Kochi";
+const description = "Schools and colleges generate e-waste from computer labs, science equipment, and administration. Learn how to set up an institutional recycling program.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "E-Waste for Schools and Colleges", path: "/blog/e-waste-for-schools-and-colleges/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "E-Waste for Schools and Colleges | Educational Institution Recycling | Ewaste Kochi",
+    "description": "Schools and colleges generate e-waste from computer labs, science equipment, and administration. Learn how to set up an institutional recycling program.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/e-waste-for-schools-and-colleges/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Do schools have specific e-waste obligations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, educational institutions are classified as bulk consumers under E-Waste Rules 2022 and must channel e-waste through authorized recyclers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can we get a group discount for school pickup?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Contact us with your institution's e-waste profile. We offer customized scheduling and competitive pricing for educational institutions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do we involve students?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use the e-waste collection drive as a student engagement activity. Involve eco-clubs, science departments, and student councils in planning and execution."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/e-waste-for-schools-and-colleges/",
+    "name": "E-Waste for Schools and Colleges | Educational Institution Recycling | Ewaste Kochi",
+    "description": "Schools and colleges generate e-waste from computer labs, science equipment, and administration. Learn how to set up an institutional recycling program.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/e-waste-for-schools-and-colleges/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste for Schools and Colleges</h1>
+  <p class="lede">Schools and colleges generate e-waste from computer labs, science equipment, administrative electronics, and student devices. An institutional e-waste program ensures safe disposal, regulatory compliance, and educational value — turning disposal into a sustainability learning opportunity.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about E-Waste for Schools and Colleges." />
+
+  <ul class="key-takeaways">
+    <li>Typical items include desktop and laptop computers, monitors, printers, projectors, interactive whiteboards, science lab electronics, CCTV systems, and staff mobile phones.</li>
+    <li>Assign a staff member as e-waste coordinator.</li>
+    <li>E-waste disposal programs offer practical lessons in circular economy, environmental science, and responsible citizenship.</li>
+  </ul>
+
+  <section>
+    <h2>Common School E-Waste</h2>
+    <p>Typical items include desktop and laptop computers, monitors, printers, projectors, interactive whiteboards, science lab electronics, CCTV systems, and staff mobile phones. Periodic lab upgrades and infrastructure refreshes generate concentrated e-waste volumes.</p>
+  </section>
+  <section>
+    <h2>Setting Up a Program</h2>
+    <p>Assign a staff member as e-waste coordinator. Establish a collection schedule — term-end or annual refreshes are common. Document all items collected, schedule pickup with an authorized recycler, and retain Certificates of Recycling for institutional records.</p>
+  </section>
+  <section>
+    <h2>Educational Value</h2>
+    <p>E-waste disposal programs offer practical lessons in circular economy, environmental science, and responsible citizenship. Display Certificates of Recycling and share recycling statistics with students and parents to reinforce sustainability messaging.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Do schools have specific e-waste obligations?</summary>
+  <p>Yes, educational institutions are classified as bulk consumers under E-Waste Rules 2022 and must channel e-waste through authorized recyclers.</p>
+</details>
+  <details>
+  <summary>Can we get a group discount for school pickup?</summary>
+  <p>Contact us with your institution's e-waste profile. We offer customized scheduling and competitive pricing for educational institutions.</p>
+</details>
+  <details>
+  <summary>How do we involve students?</summary>
+  <p>Use the e-waste collection drive as a student engagement activity. Involve eco-clubs, science departments, and student councils in planning and execution.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/school-e-waste-recycling/">School E-Waste Recycling</a></li>
+      <li><a href="/blog/how-to-schedule-e-waste-pickup/">How to Schedule E-Waste Pickup</a></li>
+      <li><a href="/blog/how-to-get-certificate-of-recycling/">How to Get Certificate of Recycling</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

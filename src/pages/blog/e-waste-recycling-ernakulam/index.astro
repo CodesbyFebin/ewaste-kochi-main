@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "E-Waste Recycling Ernakulam | District-Wide Collection | Ewaste Kochi";
+const description = "Ewaste Kochi offers e-waste recycling and free pickup across Ernakulam district including Kakkanad, Aluva, Edappally, and Infopark.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "E-Waste Recycling Ernakulam", path: "/blog/e-waste-recycling-ernakulam/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "headline": "E-Waste Recycling Ernakulam | District-Wide Collection | Ewaste Kochi",
+    "description": "Ewaste Kochi offers e-waste recycling and free pickup across Ernakulam district including Kakkanad, Aluva, Edappally, and Infopark.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/e-waste-recycling-ernakulam/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Do you cover all of Ernakulam district?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We cover all major towns and suburbs in Ernakulam district. Remote locations can be accommodated with advance scheduling."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I drop off instead of pickup?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, drop-off is available at our Cheranalloor facility during business hours. Call ahead to confirm current drop-off availability and any quantity limits."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What documents do I get?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You receive a handover receipt on pickup and a digital Certificate of Recycling after processing."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/e-waste-recycling-ernakulam/",
+    "name": "E-Waste Recycling Ernakulam | District-Wide Collection | Ewaste Kochi",
+    "description": "Ewaste Kochi offers e-waste recycling and free pickup across Ernakulam district including Kakkanad, Aluva, Edappally, and Infopark.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/e-waste-recycling-ernakulam/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Recycling Ernakulam</h1>
+  <p class="lede">Ernakulam district households and businesses can access authorized e-waste recycling through Ewaste Kochi's district-wide pickup network. From Kakkanad's tech parks to Aluva's residential communities, we cover all major suburbs with free or scheduled collection.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about E-Waste Recycling Ernakulam." />
+
+  <ul class="key-takeaways">
+    <li>Key service locations include Kakkanad, Kalamassery, Edappally, Vyttila, Aluva, Thrippunithura, Palarivattom, Kadavanthra, Maradu, Kundannoor, Infopark, and Fort Kochi.</li>
+    <li>We offer regular household pickups, same-day emergency collection for urgent disposal needs, and scheduled bulk commercial pickups for offices, schools, hospitals, and factories.</li>
+    <li>All collected e-waste is transported to our CPCB-authorized processing facility.</li>
+  </ul>
+
+  <section>
+    <h2>Coverage in Ernakulam</h2>
+    <p>Key service locations include Kakkanad, Kalamassery, Edappally, Vyttila, Aluva, Thrippunithura, Palarivattom, Kadavanthra, Maradu, Kundannoor, Infopark, and Fort Kochi. If your area is not listed, contact us — we regularly expand coverage based on demand.</p>
+  </section>
+  <section>
+    <h2>Pickup Types</h2>
+    <p>We offer regular household pickups, same-day emergency collection for urgent disposal needs, and scheduled bulk commercial pickups for offices, schools, hospitals, and factories. Each pickup type has appropriate documentation and tracking.</p>
+  </section>
+  <section>
+    <h2>Processing and Certification</h2>
+    <p>All collected e-waste is transported to our CPCB-authorized processing facility. After processing, clients receive a digital Certificate of Recycling with item details, quantity, processing date, and our authorization reference.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Do you cover all of Ernakulam district?</summary>
+  <p>We cover all major towns and suburbs in Ernakulam district. Remote locations can be accommodated with advance scheduling.</p>
+</details>
+  <details>
+  <summary>Can I drop off instead of pickup?</summary>
+  <p>Yes, drop-off is available at our Cheranalloor facility during business hours. Call ahead to confirm current drop-off availability and any quantity limits.</p>
+</details>
+  <details>
+  <summary>What documents do I get?</summary>
+  <p>You receive a handover receipt on pickup and a digital Certificate of Recycling after processing.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/blog/e-waste-recycling-kochi/">E-Waste Recycling in Kochi</a></li>
+      <li><a href="/pickup/">E-Waste Pickup Service</a></li>
+      <li><a href="/blog/how-to-schedule-e-waste-pickup/">How to Schedule E-Waste Pickup</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>
