@@ -1,0 +1,12 @@
+/* TEAM */
+E-Waste Kochi
+Website: https://www.ewastekochi.com
+Contact: info@ewastekochi.com
+Location: Kochi, Ernakulam, Kerala, India
+
+/* SITE */
+Last update: 2026-08-19
+Language: English
+Standards: HTML5, CSS3, Astro 5.x
+Components: Astro, TypeScript
+Software: Astro, Vercel

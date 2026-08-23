@@ -1,0 +1,26 @@
+{
+  "last_updated": "2026-08-19",
+  "evidence_policy": "All factual claims on this site must be supported by primary sources. Statistical claims require citations. Claims about certifications, partnerships, or affiliations require documentation.",
+  "sources": [
+    {
+      "id": "ewaste-rules-2022",
+      "title": "E-Waste (Management) Rules, 2022",
+      "publisher": "Central Pollution Control Board (CPCB)",
+      "url": "https://cpcb.nic.in/rules-6/",
+      "type": "government_regulation"
+    },
+    {
+      "id": "cpcb-epr-portal",
+      "title": "EPR E-Waste Portal",
+      "publisher": "Central Pollution Control Board",
+      "url": "https://eprewastecpcb.in/",
+      "type": "government_portal"
+    }
+  ],
+  "claim_verification": {
+    "certifications": "No certifications claimed without documentation",
+    "partnerships": "No partnerships claimed without documentation",
+    "ratings": "No fabricated ratings or reviews",
+    "affiliations": "No government affiliations claimed without evidence"
+  }
+}

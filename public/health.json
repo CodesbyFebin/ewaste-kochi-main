@@ -1,0 +1,14 @@
+{
+  "status": "operational",
+  "version": "0.1.0",
+  "last_build": "2026-08-19T00:00:00Z",
+  "total_live_pages": 936,
+  "total_wiki_pages": 48,
+  "total_planned_topics": 200,
+  "uptime": "100% (Static CDN)",
+  "endpoints": {
+    "sitemap": "https://www.ewastekochi.com/sitemap.xml",
+    "llms": "https://www.ewastekochi.com/llms.txt",
+    "github": "https://github.com/CodesbyFebin/ewaste-kochi-main"
+  }
+}
