@@ -32,6 +32,7 @@ import json
 import pathlib
 import re
 import sys
+import time
 import urllib.request
 
 HOST = "www.ewastekochi.com"
@@ -108,17 +109,34 @@ def submit(key: str, urls: list[str], dry_run: bool = False) -> None:
             headers={"Content-Type": "application/json; charset=utf-8"},
             method="POST",
         )
-        try:
-            with urllib.request.urlopen(req, timeout=30) as r:
-                print(f"  chunk {i//BATCH_SIZE + 1}: HTTP {r.status} ({len(chunk)} URLs)")
-        except urllib.error.HTTPError as e:
-            print(f"  chunk {i//BATCH_SIZE + 1}: HTTP {e.code} — {e.reason}")
-            if e.code == 403:
-                print("    (403 = key file not found at keyLocation — deploy first)")
-            elif e.code == 422:
-                print("    (422 = URL rejected; check host matches)")
-        except Exception as e:
-            print(f"  chunk {i//BATCH_SIZE + 1}: ERROR {e}")
+        # Retry with exponential backoff for rate limits / transient errors
+        max_retries = 5
+        base_delay = 10
+        for attempt in range(1, max_retries + 1):
+            try:
+                with urllib.request.urlopen(req, timeout=30) as r:
+                    print(f"  chunk {i//BATCH_SIZE + 1}: HTTP {r.status} ({len(chunk)} URLs)")
+                    break
+            except urllib.error.HTTPError as e:
+                if e.code == 429 and attempt < max_retries:
+                    delay = base_delay * (2 ** (attempt - 1))
+                    print(f"  chunk {i//BATCH_SIZE + 1}: HTTP 429 — retrying in {delay}s (attempt {attempt}/{max_retries})")
+                    time.sleep(delay)
+                    continue
+                print(f"  chunk {i//BATCH_SIZE + 1}: HTTP {e.code} — {e.reason}")
+                if e.code == 403:
+                    print("    (403 = key file not found at keyLocation — deploy first)")
+                elif e.code == 422:
+                    print("    (422 = URL rejected; check host matches)")
+                break
+            except Exception as e:
+                if attempt < max_retries:
+                    delay = base_delay * (2 ** (attempt - 1))
+                    print(f"  chunk {i//BATCH_SIZE + 1}: ERROR {e} — retrying in {delay}s (attempt {attempt}/{max_retries})")
+                    time.sleep(delay)
+                    continue
+                print(f"  chunk {i//BATCH_SIZE + 1}: ERROR {e}")
+                break
 
 
 def main():

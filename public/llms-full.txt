@@ -1,7 +1,7 @@
 # https://www.ewastekochi.com
 # Full content dump for LLM/RAG ingestion
-# Generated: 2026-08-22T23:38:13.908Z
-# Total routes: 956
+# Generated: 2026-08-23T03:24:38.119Z
+# Total routes: 1010
 
 ## /
 Title: E-Waste Recycling Kochi | Free Pickup for Electronics, Batteries & IT Scrap
@@ -338,6 +338,454 @@ Type: location
 Language: en-IN
 Indexable: true
 URL: https://www.ewastekochi.com/locations/malappuram/
+
+## /entities.json
+Title: Ewaste Kochi Entity Mapping
+Description: Machine-readable entity mapping for Ewaste Kochi services, locations, and regulatory bodies.
+Type: core
+Language: en-IN
+Indexable: false
+URL: https://www.ewastekochi.com/entities.json
+
+## /knowledge-graph.json
+Title: Ewaste Kochi Knowledge Graph
+Description: Entity relationship graph for Ewaste Kochi services, locations, and compliance bodies.
+Type: core
+Language: en-IN
+Indexable: false
+URL: https://www.ewastekochi.com/knowledge-graph.json
+
+## /evidence.json
+Title: Ewaste Kochi Evidence and Sources
+Description: Claims and source citations for Ewaste Kochi content.
+Type: core
+Language: en-IN
+Indexable: false
+URL: https://www.ewastekochi.com/evidence.json
+
+## /models.json
+Title: Ewaste Kochi Model Metadata
+Description: AI/LLM model metadata and knowledge base configuration for Ewaste Kochi.
+Type: core
+Language: en-IN
+Indexable: false
+URL: https://www.ewastekochi.com/models.json
+
+## /language.json
+Title: Ewaste Kochi Language Mapping
+Description: Language and regional targeting configuration for Ewaste Kochi.
+Type: core
+Language: en-IN
+Indexable: false
+URL: https://www.ewastekochi.com/language.json
+
+## /health.json
+Title: Ewaste Kochi Health Status
+Description: Operational status and build health for Ewaste Kochi.
+Type: core
+Language: en-IN
+Indexable: false
+URL: https://www.ewastekochi.com/health.json
+
+## /openapi.json
+Title: Ewaste Kochi OpenAPI Specification
+Description: Machine-readable API specification for Ewaste Kochi pickup, quote, and WhatsApp routing flows.
+Type: core
+Language: en-IN
+Indexable: false
+URL: https://www.ewastekochi.com/openapi.json
+
+## /blog/what-is-e-waste/
+Title: What Is E-Waste? | Definition, Types & Impact | Ewaste Kochi
+Description: Learn what e-waste is, common categories (IT, consumer electronics, medical), and why proper disposal matters for health and environment in India.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/what-is-e-waste/
+
+## /blog/what-is-lithium-battery-recycling/
+Title: What Is Lithium Battery Recycling? | Process & Hazards | Ewaste Kochi
+Description: Understand lithium battery recycling, why it is classified as hazardous, and how authorized recyclers recover lithium, cobalt, and nickel safely.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/what-is-lithium-battery-recycling/
+
+## /blog/what-is-itad/
+Title: What Is ITAD? | IT Asset Disposition Explained | Ewaste Kochi
+Description: ITAD (IT Asset Disposition) covers secure retirement of computers, servers, and storage devices with data destruction and environmental compliance.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/what-is-itad/
+
+## /blog/what-is-cpcb-registration/
+Title: What Is CPCB Registration? | Authorization & Compliance | Ewaste Kochi
+Description: CPCB registration is mandatory for e-waste recyclers and producers in India. Learn what it covers, how to verify it, and why it protects you.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/what-is-cpcb-registration/
+
+## /blog/what-is-epr/
+Title: What Is EPR? | Extended Producer Responsibility Guide | Ewaste Kochi
+Description: EPR (Extended Producer Responsibility) makes manufacturers accountable for end-of-life electronics. Learn how it works and what it means for consumers.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/what-is-epr/
+
+## /blog/what-is-data-destruction/
+Title: What Is Data Destruction? | Standards & Methods | Ewaste Kochi
+Description: Data destruction is the process of permanently erasing or physically destroying digital information on storage media. Learn standards, methods, and why it matters.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/what-is-data-destruction/
+
+## /blog/what-is-form-6/
+Title: What Is Form 6? | E-Waste CPCB Form Explained | Ewaste Kochi
+Description: Form 6 is the CPCB return that recyclers and producers must file annually. Learn what it contains, filing deadlines, and how it tracks recycling performance.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/what-is-form-6/
+
+## /blog/what-is-nist-800-88/
+Title: What Is NIST 800-88? | Data Sanitization Standard | Ewaste Kochi
+Description: NIST 800-88 is the global standard for media sanitization. Learn how it guides data destruction, what it covers, and how businesses use it for compliance.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/what-is-nist-800-88/
+
+## /blog/why-recycle-electronics/
+Title: Why Recycle Electronics? | Environmental & Security Reasons | Ewaste Kochi
+Description: Recycling electronics protects health, recovers valuable metals, prevents data breaches, and ensures legal compliance under E-Waste Rules 2022.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/why-recycle-electronics/
+
+## /blog/why-epr-is-mandatory/
+Title: Why Is EPR Mandatory? | Extended Producer Responsibility Explained | Ewaste Kochi
+Description: EPR is mandatory because informal e-waste recycling causes severe environmental and health damage. Learn how EPR shifts responsibility to producers.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/why-epr-is-mandatory/
+
+## /blog/how-to-recycle-laptop-in-india/
+Title: How to Recycle Laptop in India | Step-by-Step Guide | Ewaste Kochi
+Description: Step-by-step guide to recycling laptops in India: collect, contact an authorized recycler, schedule pickup, and get your Certificate of Recycling.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/how-to-recycle-laptop-in-india/
+
+## /blog/how-to-recycle-mobile-phone/
+Title: How to Recycle Mobile Phone | Safe Disposal Steps | Ewaste Kochi
+Description: Learn how to recycle your mobile phone safely: back up data, factory reset, remove accessories, and book with an authorized recycler.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/how-to-recycle-mobile-phone/
+
+## /blog/how-to-recycle-batteries-safely/
+Title: How to Recycle Batteries Safely | Lithium, Lead-Acid & More | Ewaste Kochi
+Description: Battery recycling requires special handling. Learn how to safely transport, store, and recycle lithium-ion, lead-acid, and alkaline batteries.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/how-to-recycle-batteries-safely/
+
+## /blog/how-to-sell-used-laptops/
+Title: How to Sell Used Laptops | Get Best Value Securely | Ewaste Kochi
+Description: Sell used laptops safely: back up data, assess condition, choose between resale or recycling, and get paid securely through authorized channels.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/how-to-sell-used-laptops/
+
+## /blog/how-to-sell-computers-for-cash/
+Title: How to Sell Computers for Cash | Desktop & Server Disposal | Ewaste Kochi
+Description: Sell desktop computers and servers for cash: assess hardware, erase data, and use authorized buyback or recycling channels in Kerala.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/how-to-sell-computers-for-cash/
+
+## /blog/how-to-sell-old-fridge/
+Title: How to Sell Old Fridge | Refrigerator Disposal Guide | Ewaste Kochi
+Description: Sell or recycle an old refrigerator safely: defrost, clean, disconnect, and use authorized channels to recover value or ensure responsible disposal.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/how-to-sell-old-fridge/
+
+## /blog/how-to-schedule-e-waste-pickup/
+Title: How to Schedule E-Waste Pickup | Free Doorstep Collection | Ewaste Kochi
+Description: Schedule e-waste pickup in 3 steps: list items, share your address, and confirm timing. Free pickup for household quantities in Kochi and Ernakulam.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/how-to-schedule-e-waste-pickup/
+
+## /blog/how-to-get-certificate-of-recycling/
+Title: How to Get Certificate of Recycling | CPCB-Compliant Certificate | Ewaste Kochi
+Description: Learn how to obtain a Certificate of Recycling for your e-waste pickup. CPCB-compliant certificates are issued after processing at authorized facilities.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/how-to-get-certificate-of-recycling/
+
+## /blog/how-to-comply-with-e-waste-rules/
+Title: How to Comply with E-Waste Rules | CPCB Compliance Guide | Ewaste Kochi
+Description: A practical compliance guide for households and businesses: understand E-Waste Rules 2022, channel e-waste through authorized recyclers, and maintain records.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/how-to-comply-with-e-waste-rules/
+
+## /blog/how-to-destroy-hard-drive-data/
+Title: How to Destroy Hard Drive Data | NIST 800-88 Compliant Methods | Ewaste Kochi
+Description: Learn how to destroy hard drive data using NIST 800-88 methods: overwrite, degauss, or physical destruction. Protect sensitive data before recycling.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/how-to-destroy-hard-drive-data/
+
+## /blog/e-waste-recycling-kochi/
+Title: E-Waste Recycling Kochi | Authorized Recycler in Ernakulam | Ewaste Kochi
+Description: Ewaste Kochi provides authorized e-waste recycling and free doorstep pickup across Kochi, Ernakulam. CPCB-registered, NIST 800-88 data destruction available.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/e-waste-recycling-kochi/
+
+## /blog/e-waste-recycling-ernakulam/
+Title: E-Waste Recycling Ernakulam | District-Wide Collection | Ewaste Kochi
+Description: Ewaste Kochi offers e-waste recycling and free pickup across Ernakulam district including Kakkanad, Aluva, Edappally, and Infopark.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/e-waste-recycling-ernakulam/
+
+## /blog/e-waste-recycling-aluva/
+Title: E-Waste Recycling Aluva | Household & Business Pickup | Ewaste Kochi
+Description: E-waste recycling and free pickup in Aluva. Household electronics, appliances, and batteries collected by authorized recyclers across Aluva and Perumbavoor.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/e-waste-recycling-aluva/
+
+## /blog/e-waste-recycling-trivandrum/
+Title: E-Waste Recycling Trivandrum | Authorized Collection in Thiruvananthapuram | Ewaste Kochi
+Description: E-waste recycling and pickup services for Trivandrum (Thiruvananthapuram) households and businesses. Scheduled collection across Thiruvananthapuram district.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/e-waste-recycling-trivandrum/
+
+## /blog/e-waste-recycling-thrissur/
+Title: E-Waste Recycling Thrissur | District Collection Service | Ewaste Kochi
+Description: E-waste recycling and scheduled pickup across Thrissur district. Authorized recycler serving Thrissur city, Chalakudy, and surrounding areas.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/e-waste-recycling-thrissur/
+
+## /blog/e-waste-recycling-kollam/
+Title: E-Waste Recycling Kollam | Authorized Collection Kollam | Ewaste Kochi
+Description: E-waste recycling and scheduled pickup for Kollam district. Authorized e-waste recycler serving Kollam, Kottarakkara, and surrounding areas.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/e-waste-recycling-kollam/
+
+## /blog/e-waste-drop-off-kochi/
+Title: E-Waste Drop Off Kochi | Free Drop-Off Points | Ewaste Kochi
+Description: Find authorized e-waste drop-off points in Kochi. Drop off old electronics, batteries, and appliances at our Cheranalloor facility during business hours.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/e-waste-drop-off-kochi/
+
+## /blog/e-waste-pickup-service/
+Title: E-Waste Pickup Service | Free Doorstep Collection | Ewaste Kochi
+Description: Ewaste Kochi provides free e-waste pickup service across Kochi and Ernakulam. Schedule doorstep collection for household and business e-waste.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/e-waste-pickup-service/
+
+## /blog/e-waste-center-in-kerala/
+Title: E-Waste Center in Kerala | Statewide Authorized Recycling | Ewaste Kochi
+Description: Find an authorized e-waste center in Kerala. Ewaste Kochi provides scheduled pickup and recycling across Kochi, Trivandrum, Thrissur, and Kollam.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/e-waste-center-in-kerala/
+
+## /blog/epr-registration-for-businesses/
+Title: EPR Registration for Businesses | CPCB EPR Guide | Ewaste Kochi
+Description: Learn how businesses can complete EPR registration with CPCB, meet annual recycling targets, and maintain compliance under E-Waste Rules 2022.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/epr-registration-for-businesses/
+
+## /blog/corporate-e-waste-management/
+Title: Corporate E-Waste Management | B2B Recycling & ITAD | Ewaste Kochi
+Description: Corporate e-waste management covers ITAD, bulk pickup, data destruction, and EPR compliance for businesses. Learn how to build a compliant program.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/corporate-e-waste-management/
+
+## /blog/warehouse-e-waste-disposal/
+Title: Warehouse E-Waste Disposal | Bulk Logistics & Recycling | Ewaste Kochi
+Description: Warehouse e-waste disposal covers bulk electronics, packaging waste, and decommissioned equipment. Learn how to schedule large-volume collections safely.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/warehouse-e-waste-disposal/
+
+## /blog/bulk-e-waste-recycling/
+Title: Bulk E-Waste Recycling | Commercial Volume Processing | Ewaste Kochi
+Description: Bulk e-waste recycling for offices, schools, and factories. Schedule large-volume collection, processing, and certification with authorized recyclers.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/bulk-e-waste-recycling/
+
+## /blog/hard-drive-shredding-service/
+Title: Hard Drive Shredding Service | Secure Data Destruction | Ewaste Kochi
+Description: Professional hard drive shredding service renders storage media unrecoverable. NIST 800-88 compliant, with Certificate of Destruction for audit purposes.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/hard-drive-shredding-service/
+
+## /blog/server-decommissioning/
+Title: Server Decommissioning | ITAD for Data Centers & Servers | Ewaste Kochi
+Description: Server decommissioning covers data sanitization, asset tracking, secure transport, and CPCB-compliant recycling for data center and enterprise server hardware.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/server-decommissioning/
+
+## /blog/it-asset-disposition-india/
+Title: IT Asset Disposition India | ITAD Services & Compliance | Ewaste Kochi
+Description: IT asset disposition (ITAD) in India covers secure retirement of IT hardware, data destruction, and CPCB-compliant recycling. Learn the ITAD framework and provider selection.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/it-asset-disposition-india/
+
+## /blog/data-destruction-services/
+Title: Data Destruction Services | NIST 800-88 Certified | Ewaste Kochi
+Description: Professional data destruction services for businesses: hard drive shredding, degaussing, and overwriting with NIST 800-88 certification and audit documentation.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/data-destruction-services/
+
+## /blog/industrial-e-waste-disposal/
+Title: Industrial E-Waste Disposal | Manufacturing & Heavy Equipment | Ewaste Kochi
+Description: Industrial e-waste disposal covers manufacturing equipment, heavy machinery controllers, and mixed industrial electronics. Learn compliance requirements and scheduling.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/industrial-e-waste-disposal/
+
+## /blog/b2b-e-waste-pickup/
+Title: B2B E-Waste Pickup | Business Recycling Services | Ewaste Kochi
+Description: B2B e-waste pickup for offices, schools, hospitals, and factories. Scheduled bulk collection with chain-of-custody documentation and Certificates of Recycling.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/b2b-e-waste-pickup/
+
+## /blog/lithium-ion-battery-disposal/
+Title: Lithium-Ion Battery Disposal | Safe Recycling India | Ewaste Kochi
+Description: Lithium-ion battery disposal requires specialized handling due to reactive chemistry. Learn safe storage, transport, and recycling methods for phones, laptops, and EVs.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/lithium-ion-battery-disposal/
+
+## /blog/crt-monitor-recycling/
+Title: CRT Monitor Recycling | Leaded Glass & Hazardous Disposal | Ewaste Kochi
+Description: CRT monitors contain leaded glass and must be recycled through authorized facilities. Learn safe disposal methods, hazards, and the recycling process.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/crt-monitor-recycling/
+
+## /blog/inverter-battery-recycling/
+Title: Inverter Battery Recycling | Lead-Acid Battery Disposal | Ewaste Kochi
+Description: Inverter batteries are lead-acid and must be recycled safely. Learn how inverter battery recycling recovers lead and plastic while preventing acid contamination.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/inverter-battery-recycling/
+
+## /blog/server-room-ups-disposal/
+Title: Server Room UPS Disposal | Battery & Electronics Recycling | Ewaste Kochi
+Description: Server room UPS disposal covers lead-acid batteries, capacitors, and power electronics. Learn safe decommissioning and CPCB-compliant recycling for data center UPS systems.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/server-room-ups-disposal/
+
+## /blog/led-tv-recycling/
+Title: LED TV Recycling | Flat Panel Display Disposal | Ewaste Kochi
+Description: LED TV recycling covers flat panel displays, circuit boards, and backlight components. Learn safe disposal and material recovery for modern televisions.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/led-tv-recycling/
+
+## /blog/microwave-oven-e-waste/
+Title: Microwave Oven E-Waste | Appliance Disposal Guide | Ewaste Kochi
+Description: Microwave oven e-waste includes capacitors, circuit boards, and metal components. Learn safe disposal, hazards, and authorized recycling for end-of-life microwaves.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/microwave-oven-e-waste/
+
+## /blog/printer-cartridge-e-waste/
+Title: Printer Cartridge E-Waste | Toner & Ink Disposal Guide | Ewaste Kochi
+Description: Printer cartridges and toner contain residual chemicals and plastic. Learn how to dispose of printer cartridges, toner bottles, and drum units responsibly.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/printer-cartridge-e-waste/
+
+## /blog/old-tv-recycling/
+Title: Old TV Recycling | CRT & Flat Panel Disposal | Ewaste Kochi
+Description: Old TV recycling covers both CRT and modern flat-panel displays. Learn safe disposal methods, hazards, and authorized recycling for televisions in India.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/old-tv-recycling/
+
+## /blog/solar-panel-e-waste/
+Title: Solar Panel E-Waste | End-of-Life Panel Recycling | Ewaste Kochi
+Description: Solar panel e-waste is an emerging category. Learn about silicon, glass, and metal recovery from end-of-life photovoltaic panels and recycling pathways.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/solar-panel-e-waste/
+
+## /blog/e-waste-for-schools-and-colleges/
+Title: E-Waste for Schools and Colleges | Educational Institution Recycling | Ewaste Kochi
+Description: Schools and colleges generate e-waste from computer labs, science equipment, and administration. Learn how to set up an institutional recycling program.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/e-waste-for-schools-and-colleges/
 
 ## /blog/
 Title: E-Waste Recycling Blog Kochi | Pickup, Scrap Price, Battery & ITAD Guides
@@ -5939,14 +6387,6 @@ Language: en-IN
 Indexable: true
 URL: https://www.ewastekochi.com/blog/what-is-e-waste-kochi/
 
-## /blog/why-recycle-electronics/
-Title: Why Recycling Electronics Matters in Kochi
-Description: The environmental, legal and data-security reasons to recycle old electronics through authorised channels in Kochi and Ernakulam.
-Type: blog
-Language: en-IN
-Indexable: true
-URL: https://www.ewastekochi.com/blog/why-recycle-electronics/
-
 ## /blog/types-of-e-waste/
 Title: Types of E-Waste: A Complete Category List
 Description: How e-waste is categorised — appliances, IT gear, consumer electronics, batteries and lighting — and what each category needs at pickup.
@@ -6250,14 +6690,6 @@ Type: blog
 Language: en-IN
 Indexable: true
 URL: https://www.ewastekochi.com/blog/ewaste-pickup-kochi/
-
-## /blog/e-waste-recycling-kochi/
-Title: E-Waste Recycling in Kochi: Process & Benefits
-Description: How e-waste recycling works in Kochi and why authorised recycling benefits homes and the environment.
-Type: blog
-Language: en-IN
-Indexable: true
-URL: https://www.ewastekochi.com/blog/e-waste-recycling-kochi/
 
 ## /blog/electronic-scrap-buyers-kochi/
 Title: Electronic Scrap Buyers in Kochi

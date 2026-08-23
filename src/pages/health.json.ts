@@ -1,11 +1,13 @@
+import { ROUTES } from "../data/routes";
+
 export async function GET() {
   return new Response(
     JSON.stringify({
       status: "operational",
       version: "1.0.0",
       lastBuild: new Date().toISOString(),
-      totalRoutes: 960,
-      lastValidation: "2026-08-22T21:25:22Z",
+      totalRoutes: ROUTES.length,
+      lastValidation: new Date().toISOString(),
       validationStatus: "passed",
       endpoints: {
         sitemap: "https://www.ewastekochi.com/sitemap.xml",
@@ -13,7 +15,8 @@ export async function GET() {
         llmsFull: "https://www.ewastekochi.com/llms-full.txt",
         ai: "https://www.ewastekochi.com/ai.txt",
         security: "https://www.ewastekochi.com/.well-known/security.txt",
-        humans: "https://www.ewastekochi.com/humans.txt"
+        humans: "https://www.ewastekochi.com/humans.txt",
+        openapi: "https://www.ewastekochi.com/openapi.json"
       }
     }),
     {

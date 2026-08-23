@@ -1,0 +1,24 @@
+name: Feature request
+description: Request a new SEO page, schema type, or AI indexing file
+body:
+  - type: textarea
+    attributes:
+      label: Describe the feature
+      description: What should we add or change?
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Target keyword or route
+      description: What is the target URL or search intent?
+    validations:
+      required: false
+  - type: dropdown
+    attributes:
+      label: Category
+      options:
+        - new-seo-page
+        - schema-change
+        - ai-indexing-file
+        - build-script
+        - other
