@@ -9,8 +9,15 @@ import mdx from "@astrojs/mdx";
 // src/pages/sitemap.xml.ts and src/pages/sitemaps/*.xml.ts. Do not enable
 // @astrojs/sitemap in parallel, because that creates a second sitemap index
 // with a different URL surface.
+// GH_PAGES_BASE is only ever set by .github/workflows/gh-pages-preview.yml,
+// a manually-triggered, non-production preview deploy used while the
+// Vercel account's daily deploy quota resets. It must never be set for the
+// real Vercel build — leaving it unset here keeps that build unaffected.
+const ghPagesBase = process.env.GH_PAGES_BASE;
+
 export default defineConfig({
   site: "https://www.ewastekochi.com",
+  ...(ghPagesBase ? { base: ghPagesBase } : {}),
   trailingSlash: "always",
   integrations: [mdx()],
   build: {
