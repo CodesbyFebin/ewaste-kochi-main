@@ -41,3 +41,9 @@ jobs:
 
       - name: Verify generated distribution
         run: npm run verify:dist
+
+      - name: GSC indexing readiness
+        run: npm run gsc:indexing-readiness
+
+      - name: Content freshness indexing queue
+        run: npm run content:freshness-indexing
