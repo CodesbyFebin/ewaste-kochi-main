@@ -134,7 +134,7 @@ English and, for a starter set of pages, Malayalam (ml-IN) under /ml/.
 - https://www.ewastekochi.com/blog/e-waste-collection-near-me/
 - https://www.ewastekochi.com/blog/what-is-epr-in-e-waste/
 - https://www.ewastekochi.com/blog/e-waste-management-rules-2022/
-- https://www.ewastekochi.com/blog/where-to-recycle-old-electronics-kochi/
+- https://www.ewastekochi.com/blog/where-to-recycle-old-electronics-in-kochi/
 - https://www.ewastekochi.com/blog/battery-recycling-near-me-kochi/
 - https://www.ewastekochi.com/blog/how-to-book-ewaste-pickup-kochi/
 - https://www.ewastekochi.com/blog/how-to-sell-old-electronics-kochi/
@@ -195,6 +195,69 @@ English and, for a starter set of pages, Malayalam (ml-IN) under /ml/.
 - https://www.ewastekochi.com/blog/computer-recycling-in-ernakulam/
 - https://www.ewastekochi.com/blog/battery-recycling-in-thrippunithura/
 - https://www.ewastekochi.com/blog/battery-recycling-in-vyttila/
+
+## E-Waste Encyclopedia (/wiki/)
+
+- https://www.ewastekochi.com/wiki/
+
+### Disposal & Collection Methods
+
+- https://www.ewastekochi.com/wiki/disposal/e-waste-collection-rules/
+- https://www.ewastekochi.com/wiki/disposal/e-waste-pickup-services/
+- https://www.ewastekochi.com/wiki/disposal/how-to-dispose-of-tvs/
+- https://www.ewastekochi.com/wiki/disposal/how-to-recycle-electronics-at-home/
+- https://www.ewastekochi.com/wiki/disposal/laptop-and-computer-disposal/
+- https://www.ewastekochi.com/wiki/disposal/local-recycling-centers/
+- https://www.ewastekochi.com/wiki/disposal/mobile-phone-and-tablet-recycling/
+- https://www.ewastekochi.com/wiki/disposal/monitor-and-printer-disposal/
+- https://www.ewastekochi.com/wiki/disposal/where-to-donate-electronics/
+- https://www.ewastekochi.com/wiki/disposal/where-to-recycle-batteries/
+
+### Sales, Buyback & ITAD
+
+- https://www.ewastekochi.com/wiki/sales/battery-scrap-markets/
+- https://www.ewastekochi.com/wiki/sales/business-electronics-recycling/
+- https://www.ewastekochi.com/wiki/sales/choose-secure-itad-vendor/
+- https://www.ewastekochi.com/wiki/sales/e-waste-scrap-buyers/
+- https://www.ewastekochi.com/wiki/sales/e-waste-scrap-prices/
+- https://www.ewastekochi.com/wiki/sales/office-equipment-buyback/
+- https://www.ewastekochi.com/wiki/sales/online-selling-platforms/
+- https://www.ewastekochi.com/wiki/sales/sell-broken-electronics/
+- https://www.ewastekochi.com/wiki/sales/sell-old-crt-tvs/
+- https://www.ewastekochi.com/wiki/sales/where-to-sell-electronics-locally/
+
+### Locations & Coverage
+
+- https://www.ewastekochi.com/wiki/locations/aluva/
+- https://www.ewastekochi.com/wiki/locations/awareness/
+- https://www.ewastekochi.com/wiki/locations/defense-gov-disposal/
+- https://www.ewastekochi.com/wiki/locations/e-waste-collection-kochi/
+- https://www.ewastekochi.com/wiki/locations/e-waste-trivandrum/
+- https://www.ewastekochi.com/wiki/locations/kakkanad-scrap-shops/
+- https://www.ewastekochi.com/wiki/locations/kakkanad-waste-disposal/
+- https://www.ewastekochi.com/wiki/locations/kerala-licensing-ewaste/
+- https://www.ewastekochi.com/wiki/locations/kottayam/
+- https://www.ewastekochi.com/wiki/locations/near-me-directory/
+- https://www.ewastekochi.com/wiki/locations/small-business-recycling/
+- https://www.ewastekochi.com/wiki/locations/thrissur/
+
+### Technical & Compliance Reference
+
+- https://www.ewastekochi.com/wiki/technical/choose-recycler/
+- https://www.ewastekochi.com/wiki/technical/circular-economy/
+- https://www.ewastekochi.com/wiki/technical/data-center-decommissioning/
+- https://www.ewastekochi.com/wiki/technical/data-security-recycling/
+- https://www.ewastekochi.com/wiki/technical/environmental-impact/
+- https://www.ewastekochi.com/wiki/technical/epr-india-rules/
+- https://www.ewastekochi.com/wiki/technical/hard-drive-destruction/
+- https://www.ewastekochi.com/wiki/technical/indian-laws/
+- https://www.ewastekochi.com/wiki/technical/market-trends/
+- https://www.ewastekochi.com/wiki/technical/recycling-process/
+- https://www.ewastekochi.com/wiki/technical/reuse-vs-recycle/
+- https://www.ewastekochi.com/wiki/technical/schools-education/
+- https://www.ewastekochi.com/wiki/technical/swollen-batteries/
+- https://www.ewastekochi.com/wiki/technical/types-of-electronic-waste/
+- https://www.ewastekochi.com/wiki/technical/what-is-e-waste/
 
 ## Malayalam (ml-IN)
 
@@ -265,4 +328,4 @@ Machine-readable knowledge base files for AI/RAG ingestion:
 - Language mapping: https://www.ewastekochi.com/language.json
 - PWA manifest: https://www.ewastekochi.com/manifest.json
 
-Last updated: 2026-08-22
+Last updated: 2026-08-23

@@ -1,7 +1,7 @@
 # https://www.ewastekochi.com
 # Full content dump for LLM/RAG ingestion
-# Generated: 2026-08-23T13:44:08.931Z
-# Total routes: 1009
+# Generated: 2026-08-23T14:09:33.308Z
+# Total routes: 1054
 
 ## /
 Title: E-Waste Recycling Kochi | Free Pickup for Electronics, Batteries & IT Scrap
@@ -5499,14 +5499,6 @@ Language: en-IN
 Indexable: true
 URL: https://www.ewastekochi.com/blog/ups-battery-recycling-kochi/
 
-## /blog/where-to-recycle-batteries-kochi/
-Title: Where To Recycle Batteries Kochi | Ewaste Kochi
-Description: Where To Recycle Batteries Kochi in Kochi — free doorstep pickup, data-safe handling and current recycling guidance. Ewaste Kochi service across the metro. WhatsApp us.
-Type: blog
-Language: en-IN
-Indexable: true
-URL: https://www.ewastekochi.com/blog/where-to-recycle-batteries-kochi/
-
 ## /blog/where-sell-ewaste-near-me/
 Title: Where Sell Ewaste Near Me | Ewaste Kochi
 Description: Where Sell Ewaste Near Me in Kochi — free doorstep pickup, data-safe handling and current recycling guidance. Ewaste Kochi service across the metro. WhatsApp us.
@@ -6658,22 +6650,6 @@ Type: blog
 Language: en-IN
 Indexable: true
 URL: https://www.ewastekochi.com/blog/sell-used-electronics-kochi/
-
-## /blog/donate-electronics-kochi/
-Title: Where to Donate Electronics in Kochi
-Description: How to donate working electronics in Kochi to reuse programmes and community groups.
-Type: blog
-Language: en-IN
-Indexable: true
-URL: https://www.ewastekochi.com/blog/donate-electronics-kochi/
-
-## /blog/recycle-old-electronics-kochi/
-Title: Where to Recycle Old Electronics in Kochi
-Description: How and where to recycle old electronics in Kochi through authorised pickup and drop-off.
-Type: blog
-Language: en-IN
-Indexable: true
-URL: https://www.ewastekochi.com/blog/recycle-old-electronics-kochi/
 
 ## /blog/ewaste-pickup-kochi/
 Title: E-Waste Pickup in Kochi: Booking Guide
@@ -8074,3 +8050,387 @@ Type: service
 Language: en-IN
 Indexable: true
 URL: https://www.ewastekochi.com/services/air-conditioner-recycling-kochi/
+
+## /wiki/
+Title: The E-Waste Recycling Encyclopedia: The Ultimate Guide
+Description: Complete encyclopedia of e-waste recycling in Kochi and Kerala. Learn what is e-waste, how to recycle, disposal methods, and location-specific services.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/
+
+## /wiki/disposal/how-to-recycle-electronics-at-home/
+Title: How to Recycle Electronics at Home: Step-by-Step Guide
+Description: Step-by-step guide to recycling electronics at home in Kochi. Learn preparation, battery separation, and pickup booking process.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/disposal/how-to-recycle-electronics-at-home/
+
+## /wiki/disposal/where-to-donate-electronics/
+Title: Where to Donate Electronics: Charities & Tax Deductions
+Description: Find charities in Kochi for electronics donation. Learn about tax deductions, donation requirements, and environmental impact.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/disposal/where-to-donate-electronics/
+
+## /wiki/disposal/where-to-recycle-batteries/
+Title: Where to Recycle Batteries: Safe Disposal & Locations
+Description: Complete guide to battery recycling in Kochi. Find safe disposal locations for lithium, lead-acid, UPS, and other batteries.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/disposal/where-to-recycle-batteries/
+
+## /wiki/disposal/e-waste-pickup-services/
+Title: E-Waste Pickup Services: Same-Day & Scheduled Collection
+Description: Book e-waste pickup services in Kochi. Same-day and scheduled collection options with transparent pricing and documentation.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/disposal/e-waste-pickup-services/
+
+## /wiki/disposal/local-recycling-centers/
+Title: Local Recycling Centers: Find Your Nearest Drop-Off
+Description: Directory of local recycling centers in Kochi and Kerala. Find drop-off locations for e-waste with operating hours and accepted items.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/disposal/local-recycling-centers/
+
+## /wiki/disposal/e-waste-collection-rules/
+Title: E-Waste Collection Rules & Regulations (India 2026)
+Description: Guide to India's E-Waste Management Rules 2022. Understand collection requirements, penalties, and compliance obligations.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/disposal/e-waste-collection-rules/
+
+## /wiki/disposal/how-to-dispose-of-tvs/
+Title: How to Dispose of TVs: CRT, LCD, LED, Plasma Guide
+Description: Complete guide to disposing of all TV types. Learn safe handling, pickup options, recycling process, and scrap values.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/disposal/how-to-dispose-of-tvs/
+
+## /wiki/disposal/laptop-and-computer-disposal/
+Title: Laptop & Computer Disposal: Data Destruction & Recycling
+Description: Guide to laptop and computer disposal. Learn about data wiping, ITAD services, recycling process, and maximizing value.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/disposal/laptop-and-computer-disposal/
+
+## /wiki/disposal/monitor-and-printer-disposal/
+Title: Monitor & Printer Disposal: Toner & Hazardous Waste
+Description: Guide to disposing of monitors and printers. Learn about toner cartridge recycling, CRT disposal, and hazardous components.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/disposal/monitor-and-printer-disposal/
+
+## /wiki/disposal/mobile-phone-and-tablet-recycling/
+Title: Mobile Phone & Tablet Recycling: Data Wiping & Trade-Ins
+Description: Complete guide to smartphone and tablet recycling. Learn secure data wiping methods, trade-in options, and proper disposal.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/disposal/mobile-phone-and-tablet-recycling/
+
+## /wiki/sales/where-to-sell-electronics-locally/
+Title: Where to Sell Electronics Locally: Best Buyers in Kochi
+Description: Find the best local buyers in Kochi for selling electronics. Learn about resale platforms, pricing factors, and how to get maximum value.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/sales/where-to-sell-electronics-locally/
+
+## /wiki/sales/online-selling-platforms/
+Title: Online Selling Platforms for Used Electronics: India Guide
+Description: Comparison of online platforms for selling electronics in India. Learn about OLX, Facebook Marketplace, fees, and safety tips.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/sales/online-selling-platforms/
+
+## /wiki/sales/e-waste-scrap-buyers/
+Title: E-Waste Scrap Buyers: Who Buys Old Electronics?
+Description: Directory and guide to finding e-waste scrap buyers in Kochi. Learn how to verify legitimacy and get fair pricing.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/sales/e-waste-scrap-buyers/
+
+## /wiki/sales/e-waste-scrap-prices/
+Title: How to Determine E-Waste Scrap Prices: Market Rates 2026
+Description: Complete guide to e-waste scrap pricing. Learn how prices are calculated, current market rates, and factors affecting valuation.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/sales/e-waste-scrap-prices/
+
+## /wiki/sales/sell-broken-electronics/
+Title: Selling Broken or Damaged Electronics: Parts & Scrap
+Description: Guide to selling broken electronics. Learn how to assess parts value, identify repairable items, and find the right buyers.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/sales/sell-broken-electronics/
+
+## /wiki/sales/office-equipment-buyback/
+Title: Office Equipment Buyback & Disposal: ITAD Services
+Description: Complete guide to office equipment buyback. Learn about ITAD services, bulk disposal, asset inventory, and business compliance.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/sales/office-equipment-buyback/
+
+## /wiki/sales/business-electronics-recycling/
+Title: E-Waste Recycling for Businesses: IT Asset Disposition
+Description: Guide to corporate e-waste recycling. Learn about ITAD services, bulk disposal, compliance, and secure handling of business electronics.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/sales/business-electronics-recycling/
+
+## /wiki/sales/choose-secure-itad-vendor/
+Title: How to Choose a Secure ITAD Vendor: Checklist 2026
+Description: Checklist for selecting an ITAD vendor. Evaluate certifications, data destruction methods, compliance documentation, and pricing.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/sales/choose-secure-itad-vendor/
+
+## /wiki/sales/sell-old-crt-tvs/
+Title: Selling Old CRT TVs & Monitors: Niche Market Guide
+Description: Guide to selling CRT electronics. Learn about scrap value, resale market, proper handling, and disposal options.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/sales/sell-old-crt-tvs/
+
+## /wiki/sales/battery-scrap-markets/
+Title: Battery Scrap & Recycling Markets: Lithium & Lead Prices
+Description: Complete guide to battery scrap markets. Find current prices for lithium, lead-acid batteries and where to sell battery scrap in Kerala.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/sales/battery-scrap-markets/
+
+## /wiki/locations/e-waste-collection-kochi/
+Title: E-Waste Collection in Kochi: Full Service Guide
+Description: Complete guide to e-waste collection services in Kochi. Find pickup locations, schedule collection, and understand the process.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/locations/e-waste-collection-kochi/
+
+## /wiki/locations/e-waste-trivandrum/
+Title: E-Waste Services in Trivandrum: Authorized Recyclers
+Description: Complete guide to e-waste services in Thiruvananthapuram. Find authorized recyclers, collection centers, and pickup services.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/locations/e-waste-trivandrum/
+
+## /wiki/locations/thrissur/
+Title: E-Waste Collection in Thrissur: Feasibility Check
+Description: E-waste collection options in Thrissur, Kerala. Free pickup feasibility check and coordinated collection scheduling.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/locations/thrissur/
+
+## /wiki/locations/kottayam/
+Title: Kottayam E-Waste Recycling Guide
+Description: E-waste recycling coordination for Kottayam. Feasibility checks for residents and businesses with pickup and drop-off options.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/locations/kottayam/
+
+## /wiki/locations/kakkanad-scrap-shops/
+Title: E-Waste Scrap Shops in Kakkanad: Pickup & Pricing
+Description: Find e-waste scrap buyers in Kakkanad, Kochi. Compare rates for laptops, phones, and IT equipment with doorstep pickup service.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/locations/kakkanad-scrap-shops/
+
+## /wiki/locations/kakkanad-waste-disposal/
+Title: Waste Disposal Services in Kakkanad: Electronics Collection
+Description: E-waste collection in Kakkanad, Kochi. Comprehensive pickup for IT offices, residential complexes near Infopark and SmartCity.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/locations/kakkanad-waste-disposal/
+
+## /wiki/locations/aluva/
+Title: E-Waste Collection in Aluva: Airport & Metro Corridor
+Description: E-waste pickup in Aluva, Kochi near the airport and metro. Coordination for homes, offices, and small businesses.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/locations/aluva/
+
+## /wiki/locations/kerala-licensing-ewaste/
+Title: E-Waste Licensing in Kerala: KSPCB Authorization Guide
+Description: Understanding KSPCB licensing requirements for e-waste collection, recycling, and ITAD services in Kerala.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/locations/kerala-licensing-ewaste/
+
+## /wiki/locations/near-me-directory/
+Title: E-Waste Pickup Near Me: Kerala Location Directory
+Description: Find e-waste pickup locations across Kerala. Directory for Kochi, Thrissur, Trivandrum, Kottayam and other cities.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/locations/near-me-directory/
+
+## /wiki/locations/defense-gov-disposal/
+Title: E-Waste Disposal for Defense & Government Offices
+Description: Specialized e-waste handling for defense, police, and government offices. Security clearance, data destruction, and documentation.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/locations/defense-gov-disposal/
+
+## /wiki/locations/small-business-recycling/
+Title: E-Waste Recycling for Small Businesses in Kerala
+Description: Affordable e-waste recycling for small businesses across Kerala. Documentation, pickup, and compliance support.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/locations/small-business-recycling/
+
+## /wiki/locations/awareness/
+Title: E-Waste Awareness in Kerala: Community Education
+Description: Guide for schools, colleges, and community groups on educating about e-waste. Posters, drives, and student engagement activities.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/locations/awareness/
+
+## /wiki/technical/what-is-e-waste/
+Title: What is E-Waste? Complete Definition & Examples
+Description: Complete definition of e-waste with examples. Understand what qualifies as electronic waste, common items, and proper disposal methods.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/technical/what-is-e-waste/
+
+## /wiki/technical/types-of-electronic-waste/
+Title: Types of Electronic Waste: Complete Category List
+Description: Complete classification of electronic waste categories. Learn about consumer electronics, IT equipment, batteries, and specialized devices.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/technical/types-of-electronic-waste/
+
+## /wiki/technical/recycling-process/
+Title: How E-Waste Recycling Process Works: Step-by-Step
+Description: Complete guide to the e-waste recycling process. Learn about collection, sorting, dismantling, material recovery, and final disposal.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/technical/recycling-process/
+
+## /wiki/technical/hard-drive-destruction/
+Title: Hard Drive Destruction: Methods & Security
+Description: Complete guide to hard drive destruction. Learn about wiping, degaussing, shredding, and certification for data security.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/technical/hard-drive-destruction/
+
+## /wiki/technical/data-security-recycling/
+Title: Data Security When Recycling Electronics
+Description: How to ensure data security when recycling electronics. Learn about secure wiping, encryption keys, and verification methods.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/technical/data-security-recycling/
+
+## /wiki/technical/epr-india-rules/
+Title: Extended Producer Responsibility (EPR) in India
+Description: Understanding EPR under India's e-waste rules. How manufacturers and producers handle end-of-life electronics.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/technical/epr-india-rules/
+
+## /wiki/technical/choose-recycler/
+Title: How to Choose a Reliable E-Waste Recycler
+Description: Checklist for selecting an e-waste recycler. Evaluate certifications, processes, and documentation for proper recycling.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/technical/choose-recycler/
+
+## /wiki/technical/indian-laws/
+Title: E-Waste Laws in India: E-Waste (Management) Rules 2022
+Description: Complete guide to India's e-waste management rules. Understanding compliance requirements for households and businesses.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/technical/indian-laws/
+
+## /wiki/technical/data-center-decommissioning/
+Title: Data Center Decommissioning: IT Asset Disposal
+Description: Guide to data center decommissioning. Learn about large-scale IT asset disposal, data destruction, and compliance.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/technical/data-center-decommissioning/
+
+## /wiki/technical/swollen-batteries/
+Title: Swollen Battery Storage & Safe Disposal
+Description: How to safely store and dispose of swollen lithium batteries. Learn about fire prevention and emergency handling.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/technical/swollen-batteries/
+
+## /wiki/technical/market-trends/
+Title: E-Waste Market Trends 2026: What's Changing
+Description: Current trends in e-waste recycling markets. Learn about technology shifts, pricing changes, and new recycling capabilities.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/technical/market-trends/
+
+## /wiki/technical/environmental-impact/
+Title: Environmental Impact of E-Waste Recycling
+Description: Understanding the environmental impact of e-waste. Learn about resource recovery, pollution prevention, and circular economy benefits.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/technical/environmental-impact/
+
+## /wiki/technical/reuse-vs-recycle/
+Title: Reuse vs Recycle Electronics: Which is Better?
+Description: Comparing reuse and recycling for electronics. Learn when to donate, resell, or recycle based on device condition and value.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/technical/reuse-vs-recycle/
+
+## /wiki/technical/circular-economy/
+Title: Circular Economy and Electronics Recycling
+Description: How electronics recycling fits into the circular economy. Learn about material recovery, closed-loop systems, and sustainability benefits.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/technical/circular-economy/
+
+## /wiki/technical/schools-education/
+Title: E-Waste Education for Schools: Student Guides
+Description: Educational resources for schools. Learn how to set up e-waste collection drives and teach students about responsible electronics disposal.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/wiki/technical/schools-education/

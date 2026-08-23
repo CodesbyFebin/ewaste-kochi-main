@@ -548,7 +548,21 @@ export const GENERATED_PILLAR_ROUTES: RouteEntry[] = [
     status: "published" as const,
     contentSource: "manual" as const,
     indexable: true,
-  },  {
+  },
+  {
+    path: "/blog/ewaste-pickup-kochi/",
+    changefreq: "monthly",
+    priority: 0.6,
+    title: "E-Waste Pickup in Kochi: Booking Guide",
+    description: "How to book e-waste pickup in Kochi: what to send, how feasibility is confirmed, and what to expect.",
+    type: "blog" as const,
+    sitemapGroup: "blog" as const,
+    lang: "en-IN" as const,
+    status: "published" as const,
+    contentSource: "manual" as const,
+    indexable: true,
+  },
+  {
     path: "/blog/e-waste-recycling-kochi/",
     changefreq: "monthly",
     priority: 0.6,
