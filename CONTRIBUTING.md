@@ -1,46 +1,34 @@
-# Contributing to E-Waste Kochi
+# Contributing to Ewaste Kochi
 
-Thank you for your interest in contributing! This document outlines how to contribute to the E-Waste Kochi website project.
+## Workflow
 
-## How to Contribute
+1. Create a branch from `main`.
+2. Run `npm run validate` before opening a PR.
+3. Do not commit secrets or keys.
+4. Keep the SEO validation gate green (`npm run validate` must pass).
 
-### Reporting Issues
+## Adding a new SEO page
 
-- Use the [issue tracker](https://github.com/CodesbyFebin/ewaste-kochi-main/issues) to report bugs or suggest features
-- Check existing issues before creating a new one
-- Provide clear reproduction steps for bugs
+1. Add the route entry in `src/data/routes.ts`.
+2. Create the Astro page under `src/pages/blog/<slug>/index.astro`.
+3. Include JSON-LD schema (`Article`, `HowTo`, or `WebPage` depending on type).
+4. Run `npm run build` to regenerate `public/llms-full.txt`.
 
-### Pull Requests
+## Adding machine-readable files
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/your-feature`)
-3. Make your changes
-4. Run validation: `npm run validate`
-5. Commit with clear commit messages
-6. Push to your fork
-7. Open a Pull Request against `main`
+- `entities.json` — brand entity identity
+- `knowledge-graph.json` — semantic relationships
+- `evidence.json` — claims with sources
+- `models.json` — AI model metadata
+- `language.json` — language mapping
 
-### Code Standards
+Update `public/llms.txt` to reference new files.
 
-- Follow existing code patterns and conventions
-- Run `npm run check` for type checking
-- Run `npm run validate` for SEO validation
-- Ensure builds pass: `npm run build`
+## Validation commands
 
-### Content Guidelines
-
-- All content must be factually accurate
-- Do not fabricate certifications, partnerships, or affiliations
-- Cite sources for statistical claims
-- Follow the existing content structure and tone
-
-## Development Setup
-
-```bash
-npm install
-npm run dev
-```
-
-## License
-
-By contributing, you agree that your contributions will be licensed under the MIT License.
+| Command | Purpose |
+|---|---|
+| `npm run validate` | Build + SEO validation |
+| `npm run gsc:indexing-readiness` | GSC indexing report |
+| `npm run verify:dist` | Distribution parity check |
+| `npm run content:validate` | Content quality gate |

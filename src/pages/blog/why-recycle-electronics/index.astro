@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Why Recycle Electronics? | Environmental & Security Reasons | Ewaste Kochi";
+const description = "Recycling electronics protects health, recovers valuable metals, prevents data breaches, and ensures legal compliance under E-Waste Rules 2022.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Why Recycle Electronics?", path: "/blog/why-recycle-electronics/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Why Recycle Electronics? | Environmental & Security Reasons | Ewaste Kochi",
+    "description": "Recycling electronics protects health, recovers valuable metals, prevents data breaches, and ensures legal compliance under E-Waste Rules 2022.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/why-recycle-electronics/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Does recycling actually recover valuable materials?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Authorized recyclers recover ferrous and non-ferrous metals, plastics, and glass using mechanical and manual sorting under controlled conditions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will I get paid for recycling old electronics?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Some functional or high-value devices may qualify for resale or buyback. Non-functional or obsolete devices are typically recycled free of charge or at a nominal handling fee."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is recycling required by law?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. E-Waste Rules 2022 mandate that e-waste be channeled through authorized recyclers. Dumping e-waste in household waste is prohibited."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/why-recycle-electronics/",
+    "name": "Why Recycle Electronics? | Environmental & Security Reasons | Ewaste Kochi",
+    "description": "Recycling electronics protects health, recovers valuable metals, prevents data breaches, and ensures legal compliance under E-Waste Rules 2022.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/why-recycle-electronics/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Why Recycle Electronics?</h1>
+  <p class="lede">Recycling electronics protects human health by preventing toxic substances from entering soil and water, recovers valuable metals including gold, silver, copper, and rare earth elements, and ensures compliance with E-Waste Rules 2022. It also eliminates data breach risks from abandoned storage devices.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about Why Recycle Electronics?." />
+
+  <ul class="key-takeaways">
+    <li>Electronic devices contain lead, mercury, cadmium, and brominated flame retardants.</li>
+    <li>One tonne of printed circuit boards can contain more gold than one tonne of mined ore.</li>
+    <li>Abandoned smartphones, laptops, and hard drives in household waste are a leading source of identity theft.</li>
+  </ul>
+
+  <section>
+    <h2>Environmental Protection</h2>
+    <p>Electronic devices contain lead, mercury, cadmium, and brominated flame retardants. When dumped in landfills, these substances leach into groundwater and soil, causing long-term ecological damage. Recycling safely neutralizes or recovers these materials.</p>
+  </section>
+  <section>
+    <h2>Resource Recovery</h2>
+    <p>One tonne of printed circuit boards can contain more gold than one tonne of mined ore. Recycling recovers these metals for reuse, reducing the need for environmentally destructive mining and lowering the carbon footprint of new electronics.</p>
+  </section>
+  <section>
+    <h2>Data Security</h2>
+    <p>Abandoned smartphones, laptops, and hard drives in household waste are a leading source of identity theft. Authorized recycling includes certified data destruction, ensuring personal and corporate data is unrecoverable before physical processing.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Does recycling actually recover valuable materials?</summary>
+  <p>Yes. Authorized recyclers recover ferrous and non-ferrous metals, plastics, and glass using mechanical and manual sorting under controlled conditions.</p>
+</details>
+  <details>
+  <summary>Will I get paid for recycling old electronics?</summary>
+  <p>Some functional or high-value devices may qualify for resale or buyback. Non-functional or obsolete devices are typically recycled free of charge or at a nominal handling fee.</p>
+</details>
+  <details>
+  <summary>Is recycling required by law?</summary>
+  <p>Yes. E-Waste Rules 2022 mandate that e-waste be channeled through authorized recyclers. Dumping e-waste in household waste is prohibited.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/blog/how-to-recycle-electronics/">How to Recycle Electronics</a></li>
+      <li><a href="/blog/what-is-e-waste/">What Is E-Waste?</a></li>
+      <li><a href="/blog/e-waste-recycling-kochi/">E-Waste Recycling in Kochi</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

@@ -1,0 +1,154 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "How to Recycle Batteries Safely | Lithium, Lead-Acid & More | Ewaste Kochi";
+const description = "Battery recycling requires special handling. Learn how to safely transport, store, and recycle lithium-ion, lead-acid, and alkaline batteries.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "How to Recycle Batteries Safely", path: "/blog/how-to-recycle-batteries-safely/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "headline": "How to Recycle Batteries Safely | Lithium, Lead-Acid & More | Ewaste Kochi",
+    "description": "Battery recycling requires special handling. Learn how to safely transport, store, and recycle lithium-ion, lead-acid, and alkaline batteries.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/how-to-recycle-batteries-safely/",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Identify Battery Chemistry",
+        "text": "Common chemistries include lithium-ion (phones, laptops, EVs), lead-acid (cars, inverters), nickel-cadmium (power tools), and alkaline (household devices). Each chemistry requires different handling during transport and processing — lithium batteries are particularly sensitive to heat and puncture."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Safe Storage Before Recycling",
+        "text": "Store batteries in a non-conductive container, keeping terminals from touching metal. Tape lithium battery terminals to prevent short circuits. Keep batteries in a cool, dry place away from direct sunlight and flammable materials."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Transport and Pickup",
+        "text": "Book a pickup with an authorized recycler for quantities above a few batteries. For small quantities, drop off at a designated CPCB-authorised collection point. Never transport damaged or swollen batteries in your vehicle's passenger compartment."
+      }
+    ],
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Can I put batteries in regular trash?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Batteries are classified as hazardous waste under E-Waste Rules 2022 and must be recycled through authorized channels."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if my battery is swollen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Swollen or leaking batteries should be flagged separately when booking. Transport them in a fireproof container and avoid puncturing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are car batteries accepted?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, lead-acid car batteries are accepted at authorized recyclers. They are among the most efficiently recycled battery types."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/how-to-recycle-batteries-safely/",
+    "name": "How to Recycle Batteries Safely | Lithium, Lead-Acid & More | Ewaste Kochi",
+    "description": "Battery recycling requires special handling. Learn how to safely transport, store, and recycle lithium-ion, lead-acid, and alkaline batteries.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/how-to-recycle-batteries-safely/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>How to Recycle Batteries Safely</h1>
+  <p class="lede">Batteries must never be discarded in regular household waste. Safe battery recycling starts with identifying the chemistry, storing batteries in a cool, dry place away from flammable materials, and delivering them to an authorized recycler through a scheduled pickup or drop-off.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about How to Recycle Batteries Safely." />
+
+  <ul class="key-takeaways">
+    <li>Common chemistries include lithium-ion (phones, laptops, EVs), lead-acid (cars, inverters), nickel-cadmium (power tools), and alkaline (household devices).</li>
+    <li>Store batteries in a non-conductive container, keeping terminals from touching metal.</li>
+    <li>Book a pickup with an authorized recycler for quantities above a few batteries.</li>
+  </ul>
+
+  <section>
+    <h2>Identify Battery Chemistry</h2>
+    <p>Common chemistries include lithium-ion (phones, laptops, EVs), lead-acid (cars, inverters), nickel-cadmium (power tools), and alkaline (household devices). Each chemistry requires different handling during transport and processing — lithium batteries are particularly sensitive to heat and puncture.</p>
+  </section>
+  <section>
+    <h2>Safe Storage Before Recycling</h2>
+    <p>Store batteries in a non-conductive container, keeping terminals from touching metal. Tape lithium battery terminals to prevent short circuits. Keep batteries in a cool, dry place away from direct sunlight and flammable materials.</p>
+  </section>
+  <section>
+    <h2>Transport and Pickup</h2>
+    <p>Book a pickup with an authorized recycler for quantities above a few batteries. For small quantities, drop off at a designated CPCB-authorised collection point. Never transport damaged or swollen batteries in your vehicle's passenger compartment.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Can I put batteries in regular trash?</summary>
+  <p>No. Batteries are classified as hazardous waste under E-Waste Rules 2022 and must be recycled through authorized channels.</p>
+</details>
+  <details>
+  <summary>What if my battery is swollen?</summary>
+  <p>Swollen or leaking batteries should be flagged separately when booking. Transport them in a fireproof container and avoid puncturing.</p>
+</details>
+  <details>
+  <summary>Are car batteries accepted?</summary>
+  <p>Yes, lead-acid car batteries are accepted at authorized recyclers. They are among the most efficiently recycled battery types.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/battery-recycling/">Battery Recycling Services</a></li>
+      <li><a href="/blog/lithium-ion-battery-disposal/">Lithium Ion Battery Disposal</a></li>
+      <li><a href="/blog/what-is-lithium-battery-recycling/">What Is Lithium Battery Recycling?</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

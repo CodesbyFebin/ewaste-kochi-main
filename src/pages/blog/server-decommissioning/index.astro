@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Server Decommissioning | ITAD for Data Centers & Servers | Ewaste Kochi";
+const description = "Server decommissioning covers data sanitization, asset tracking, secure transport, and CPCB-compliant recycling for data center and enterprise server hardware.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Server Decommissioning", path: "/blog/server-decommissioning/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Server Decommissioning | ITAD for Data Centers & Servers | Ewaste Kochi",
+    "description": "Server decommissioning covers data sanitization, asset tracking, secure transport, and CPCB-compliant recycling for data center and enterprise server hardware.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/server-decommissioning/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Do you handle blade servers and racks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we handle standalone servers, blade systems, rack-mounted equipment, and associated networking hardware."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is data handled during decommissioning?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "All drives are sanitized or destroyed before physical processing. NIST 800-88-compliant certificates are issued for each drive."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can functional servers be resold?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, after certified data sanitization, functional servers may enter remarketing channels with full documentation."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/server-decommissioning/",
+    "name": "Server Decommissioning | ITAD for Data Centers & Servers | Ewaste Kochi",
+    "description": "Server decommissioning covers data sanitization, asset tracking, secure transport, and CPCB-compliant recycling for data center and enterprise server hardware.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/server-decommissioning/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Server Decommissioning</h1>
+  <p class="lede">Server decommissioning is the structured retirement of data center and enterprise server hardware that includes NIST 800-88 data sanitization, asset-level tracking, secure transport, and CPCB-compliant material recycling. Each server receives documented chain-of-custody throughout the process.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about Server Decommissioning." />
+
+  <ul class="key-takeaways">
+    <li>The workflow begins with asset inventory and data classification.</li>
+    <li>Server drives contain the most sensitive enterprise data.</li>
+    <li>Each decommissioned server is documented with asset tags, drive serial numbers, sanitization method, transport records, and final processing status.</li>
+  </ul>
+
+  <section>
+    <h2>Decommissioning Workflow</h2>
+    <p>The workflow begins with asset inventory and data classification. Drives are sanitized or destroyed per NIST 800-88. Servers are tagged, tracked, and transported securely. Functional components may enter remarketing; non-functional parts proceed to material recycling.</p>
+  </section>
+  <section>
+    <h2>Data Security Priority</h2>
+    <p>Server drives contain the most sensitive enterprise data. Our decommissioning process enforces the highest sanitization level — typically physical destruction for production servers and certified overwrite for development or test systems.</p>
+  </section>
+  <section>
+    <h2>Documentation</h2>
+    <p>Each decommissioned server is documented with asset tags, drive serial numbers, sanitization method, transport records, and final processing status. Business clients receive a comprehensive ITAD report for audit and compliance purposes.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Do you handle blade servers and racks?</summary>
+  <p>Yes, we handle standalone servers, blade systems, rack-mounted equipment, and associated networking hardware.</p>
+</details>
+  <details>
+  <summary>How is data handled during decommissioning?</summary>
+  <p>All drives are sanitized or destroyed before physical processing. NIST 800-88-compliant certificates are issued for each drive.</p>
+</details>
+  <details>
+  <summary>Can functional servers be resold?</summary>
+  <p>Yes, after certified data sanitization, functional servers may enter remarketing channels with full documentation.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/itad/">ITAD Services</a></li>
+      <li><a href="/hard-drive-shredding/">Hard Drive Shredding</a></li>
+      <li><a href="/blog/hard-drive-shredding-service/">Hard Drive Shredding Service</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

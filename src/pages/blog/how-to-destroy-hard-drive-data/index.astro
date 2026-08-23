@@ -1,0 +1,154 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "How to Destroy Hard Drive Data | NIST 800-88 Compliant Methods | Ewaste Kochi";
+const description = "Learn how to destroy hard drive data using NIST 800-88 methods: overwrite, degauss, or physical destruction. Protect sensitive data before recycling.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "How to Destroy Hard Drive Data", path: "/blog/how-to-destroy-hard-drive-data/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "headline": "How to Destroy Hard Drive Data | NIST 800-88 Compliant Methods | Ewaste Kochi",
+    "description": "Learn how to destroy hard drive data using NIST 800-88 methods: overwrite, degauss, or physical destruction. Protect sensitive data before recycling.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/how-to-destroy-hard-drive-data/",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Clear: Overwriting",
+        "text": "Overwriting writes new data patterns across every addressable location on the drive. For HDDs, a single-pass or multi-pass overwrite is sufficient for most data classifications. This method is suitable for drives that will be reused or resold."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Purge: Degaussing",
+        "text": "Degaussing uses a strong magnetic field to scramble the magnetic domains on an HDD, rendering data unrecoverable. This method works only on magnetic media and is not effective for SSDs or flash storage."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Destroy: Physical Shredding",
+        "text": "Physical destruction via industrial shredding reduces drives to particles too small for data recovery. This is the most secure method for highly sensitive data and for drives that will not be reused. Shredding produces a Certificate of Destruction."
+      }
+    ],
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Does formatting a drive destroy data?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Standard formatting only removes the file system index. Data remains recoverable with forensic tools until overwritten or the drive is physically destroyed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is one overwrite pass enough?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For most modern HDDs, a single-pass overwrite is sufficient per NIST 800-88. Multi-pass overwrite is an additional precaution for highly sensitive data."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can SSDs be degaussed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. SSDs store data in flash memory cells, not magnetic domains. Use crypto-erase or physical destruction for SSD sanitization."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/how-to-destroy-hard-drive-data/",
+    "name": "How to Destroy Hard Drive Data | NIST 800-88 Compliant Methods | Ewaste Kochi",
+    "description": "Learn how to destroy hard drive data using NIST 800-88 methods: overwrite, degauss, or physical destruction. Protect sensitive data before recycling.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/how-to-destroy-hard-drive-data/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>How to Destroy Hard Drive Data</h1>
+  <p class="lede">Hard drive data destruction requires certified methods that render data unrecoverable. The three main approaches are software overwriting (Clear), electromagnetic erasure (Purge), and physical shredding (Destroy) — all documented under NIST 800-88 guidelines.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about How to Destroy Hard Drive Data." />
+
+  <ul class="key-takeaways">
+    <li>Overwriting writes new data patterns across every addressable location on the drive.</li>
+    <li>Degaussing uses a strong magnetic field to scramble the magnetic domains on an HDD, rendering data unrecoverable.</li>
+    <li>Physical destruction via industrial shredding reduces drives to particles too small for data recovery.</li>
+  </ul>
+
+  <section>
+    <h2>Clear: Overwriting</h2>
+    <p>Overwriting writes new data patterns across every addressable location on the drive. For HDDs, a single-pass or multi-pass overwrite is sufficient for most data classifications. This method is suitable for drives that will be reused or resold.</p>
+  </section>
+  <section>
+    <h2>Purge: Degaussing</h2>
+    <p>Degaussing uses a strong magnetic field to scramble the magnetic domains on an HDD, rendering data unrecoverable. This method works only on magnetic media and is not effective for SSDs or flash storage.</p>
+  </section>
+  <section>
+    <h2>Destroy: Physical Shredding</h2>
+    <p>Physical destruction via industrial shredding reduces drives to particles too small for data recovery. This is the most secure method for highly sensitive data and for drives that will not be reused. Shredding produces a Certificate of Destruction.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Does formatting a drive destroy data?</summary>
+  <p>No. Standard formatting only removes the file system index. Data remains recoverable with forensic tools until overwritten or the drive is physically destroyed.</p>
+</details>
+  <details>
+  <summary>Is one overwrite pass enough?</summary>
+  <p>For most modern HDDs, a single-pass overwrite is sufficient per NIST 800-88. Multi-pass overwrite is an additional precaution for highly sensitive data.</p>
+</details>
+  <details>
+  <summary>Can SSDs be degaussed?</summary>
+  <p>No. SSDs store data in flash memory cells, not magnetic domains. Use crypto-erase or physical destruction for SSD sanitization.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/hard-drive-shredding/">Hard Drive Shredding</a></li>
+      <li><a href="/data-destruction/">Data Destruction Services</a></li>
+      <li><a href="/blog/what-is-data-destruction/">What Is Data Destruction?</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

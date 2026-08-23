@@ -5,152 +5,152 @@ import DirectAnswer from "../../../components/DirectAnswer.astro";
 import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
 import RelatedContent from "../../../components/RelatedContent.astro";
-import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+import LongformExpansion from "../../../components/LongformExpansion.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
 
-const title = "E-Waste Collection Near Me: How to Choose a Safe Recycler";
-const description =
-  "How to find safe, legitimate e-waste collection near you — what to ask before handing over devices, pickup vs. drop-off, and why informal disposal carries real risk.";
-const datePublished = "2026-07-07";
-const dateModified = "2026-07-07";
+const title = "E-Waste Collection Near Me in Kochi";
+const description = "How to find authorised e-waste collection and pickup near your Kochi neighbourhood, and what to check before booking.";
+const lastUpdated = "2026-08-18";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
   { name: "Blog", path: "/blog/" },
-  { name: "E-Waste Collection Near Me", path: "/blog/e-waste-collection-near-me/" },
+  { name: "General E-Waste", path: "/blog/general-ewaste/" },
+  { name: "E-Waste Collection Near Me", path: "/blog/e-waste-collection-near-me/" }
 ];
 
 const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    headline: title,
-    description,
-    datePublished,
-    dateModified,
-    author: { "@type": "Organization", name: BUSINESS.legalName },
-    publisher: { "@id": `${SITE_URL}/#organization` },
-    mainEntityOfPage: `${SITE_URL}/blog/e-waste-collection-near-me/`,
+    "headline": title,
+    "description": description,
+    "datePublished": "2026-08-18",
+    "dateModified": lastUpdated,
+    "author": { "@type": "Organization", name: BUSINESS.legalName },
+    "publisher": { "@id": `${SITE_URL}/#organization` },
+    "mainEntityOfPage": `${SITE_URL}/blog/e-waste-collection-near-me/`,
   },
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": `${SITE_URL}/blog/e-waste-collection-near-me/`,
-    name: title,
-    description,
-    dateModified,
-  },
+    "name": title,
+    "description": description,
+    "dateModified": lastUpdated,
+  }
 ];
 
 const faqItems = [
   {
-    q: "What's the risk of using an informal scrap dealer instead of a proper recycler?",
-    a: "Informal dealers often lack proper environmental handling for hazardous materials, and typically can't guarantee your data was actually destroyed rather than just deleted or ignored.",
+    q: "How do I know if my area is covered?",
+    a: "Send your locality and item list; the team confirms feasibility before booking."
   },
   {
-    q: "Is pickup better than drop-off?",
-    a: "Pickup is usually more convenient and avoids the hassle of transporting bulky items yourself. Some people prefer drop-off for small quantities if a nearby, verified location exists — both can work, it depends on your situation.",
+    q: "What if I'm outside the metro area?",
+    a: "Feasibility depends on items and quantity; the team will tell you the realistic option."
   },
   {
-    q: "How do I check if a recycler near me is legitimate?",
-    a: "Ask directly about their authorization status, whether they provide documentation for the pickup, and how they handle data destruction. A legitimate operator should answer these clearly without hesitation.",
+    q: "Do apartments get picked up?",
+    a: "Yes, with building, floor and lift details shared in advance."
   },
   {
-    q: "Do you cover my area in Kochi?",
-    a: "Very likely — see our locations directory or message us your address directly to confirm.",
+    q: "Is drop-off an option?",
+    a: "Where doorstep isn't feasible, the team suggests the next best handled route."
+  }
+];
+
+const sourceItems = [
+  {
+    title: "E-Waste Management Rules and related regulatory resources",
+    href: "https://cpcb.nic.in/rules-6/",
+    publisher: "Central Pollution Control Board",
+    note: "Official CPCB resource page for e-waste rules and updates."
   },
+  {
+    title: "EPR E-Waste portal",
+    href: "https://eprewastecpcb.in/",
+    publisher: "Central Pollution Control Board",
+    note: "Official portal for e-waste EPR registration and compliance workflows."
+  },
+  {
+    title: "Kerala State Pollution Control Board",
+    href: "https://kspcb.kerala.gov.in/",
+    publisher: "Kerala State Pollution Control Board",
+    note: "Regional enforcement and authorization for e-waste recyclers in Kerala."
+  }
 ];
 ---
 
 <Layout title={title} description={description} path="/blog/e-waste-collection-near-me/" jsonLd={jsonLd}>
   <Breadcrumbs items={breadcrumbItems} />
-  <h1>E-Waste Collection Near Me: How to Choose a Safe Recycler</h1>
-  <p class="lede">
-    Searching for "e-waste collection near me" usually turns up a mix of
-    formal recyclers and informal scrap dealers. The difference matters —
-    here's what to check before you hand over your old electronics.
-  </p>
+
+  <h1>E-Waste Collection Near Me</h1>
 
   <DirectAnswer>
-    <p>{description}</p>
+    <p>To find e-waste collection near you in Kochi, send your area, item list and photos to the pickup team. They confirm feasibility for your locality — including apartments, offices and bulk lots — before scheduling.</p>
   </DirectAnswer>
 
-  <CtaBar whatsappMessage="Hi, I'd like to check if you collect e-waste near me." />
+  <CtaBar whatsappMessage="Hi, I'm in [area] and want to check if e-waste pickup is available." />
 
-  <section>
-    <h2>Questions to ask before handing over devices</h2>
-    <ul class="check-list">
-      <li>Can you explain your documentation and handling process clearly?</li>
-      <li>Can you provide a pickup or recycling record if I need one?</li>
-      <li>How is data on my devices handled before recycling?</li>
-      <li>What happens to items you can't recycle yourself — do you pass them to a compliant partner, or somewhere unclear?</li>
+  <section id="section-1">
+    <h2>Start with your locality</h2>
+    <p>Coverage depends on area, item type and quantity, so share your neighbourhood first.</p>
+    <p>Kochi metro areas, apartments and office parks are commonly serviceable with the right details.</p>
+  </section>
+  <section id="section-2">
+    <h2>What to send for a quick answer</h2>
+    <p>Area or landmark, item names, quantities, working condition and photos.</p>
+    <p>Mention batteries or data devices so the route is matched correctly.</p>
+  </section>
+  <section id="section-3">
+    <h2>Checking feasibility honestly</h2>
+    <p>Not every request fits a doorstep route; some need drop-off or special handling.</p>
+    <p>The team's confirmation-first approach avoids false promises about coverage.</p>
+  </section>
+  <section id="section-4">
+    <h2>Red flags to avoid</h2>
+    <p>Be wary of buyers offering cash with no questions about data or batteries.</p>
+    <p>Authorised collection is transparent about handling, documentation and safety.</p>
+  </section>
+
+  <RelatedContent>
+    <h2>Explore more guides</h2>
+    <ul>
+      <li><a href="/blog/general-ewaste/">General E-Waste hub</a></li>
+      <li><a href="/blog/general-ewaste/">General e-waste basics</a></li>
+      <li><a href="/recycling/">Recycling service</a></li>
+      <li><a href="/pickup/">Book a pickup</a></li>
     </ul>
-    <p>
-      A legitimate recycler should answer these directly, without vague or
-      evasive responses.
-    </p>
+  </RelatedContent>
+
+  <LongformExpansion
+    label="Expanded field guide"
+    audience="households and businesses in Kochi"
+    localIntent="e-waste collection near me with authorised pickup"
+    items={["old electronics", "batteries", "cables", "data devices"]}
+    themes={["Preparation", "Safety", "Compliance", "Recovery"]}
+  />
+
+  <section id="faq-section">
+    <h2>Frequently asked questions</h2>
+    <Faq items={faqItems} heading="E-Waste Collection Near Me FAQs" />
   </section>
 
-  <section>
-    <h2>Pickup vs. drop-off</h2>
-    <p>
-      Doorstep pickup means you don't have to transport anything yourself
-      — useful for bulky items like monitors, printers, or multiple
-      devices at once. Drop-off can work for a single small item if a
-      verified location is genuinely nearby, but for most people, pickup
-      is simply more convenient. See our <a href="/pickup/">pickup
-      page</a> for how doorstep collection works.
-    </p>
-  </section>
-
-  <section>
-    <h2>Why informal disposal carries real risk</h2>
-    <p>
-      Informal scrap collection often lacks proper handling for hazardous
-      materials inside electronics, and there's usually no way to confirm
-      your personal data was actually destroyed rather than left on a
-      drive that gets resold or discarded. A recycler that operates under
-      environmental authorization and offers documented data destruction
-      closes both of those gaps.
-    </p>
-  </section>
-
-  <section>
-    <h2>How to check data safety specifically</h2>
-    <p>
-      Ask whether the recycler wipes, degausses, or physically destroys
-      storage before recycling or reselling a device, and whether they can
-      provide a certificate confirming it. See our
-      <a href="/data-destruction/">data destruction</a> page for how this
-      works with us specifically.
-    </p>
-  </section>
-
-  <section>
-    <h2>How Kochi residents can schedule collection</h2>
-    <p>
-      Message us your location and a rough list of items — we cover
-      Kochi and most of Ernakulam district, with wider coverage across
-      Kerala. See <a href="/services/electronics-recycling-near-me/">
-      electronics recycling near me</a> to check coverage quickly, or the
-      full <a href="/locations/">locations directory</a>. For anything
-      else, <a href="/contact/">contact us</a> directly.
-    </p>
-  </section>
-
-  <p class="mal-support">
-    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
-  </p>
-
-  <Faq items={faqItems} />
-
-  <RelatedContent href="/blog/e-waste-collection-near-me/" />
-
-  <p class="updated">Last updated: <time datetime={dateModified}>{dateModified}</time></p>
+  <Sources items={sourceItems} heading="Official sources & regulatory references" />
 </Layout>
 
 <style>
-  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
-  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
-  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
-  .updated { font-size: 0.8rem; color: var(--color-muted); }
+  .blog-hub { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+  .blog-hub h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-primary); text-align: center; }
+  .blog-hub section { margin-bottom: 3rem; padding: 2rem; background: var(--color-bg); border-radius: 0.75rem; border: 1px solid var(--color-border); }
+  .blog-hub h2 { color: var(--color-primary); margin-bottom: 1.5rem; font-size: 1.8rem; }
+  .blog-hub ul { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .blog-hub li { margin-bottom: 0.5rem; line-height: 1.6; }
+  @media (max-width: 768px) {
+    .blog-hub h1 { font-size: 2rem; }
+    .blog-hub section { padding: 1.5rem; }
+    .blog-hub h2 { font-size: 1.5rem; }
+  }
 </style>

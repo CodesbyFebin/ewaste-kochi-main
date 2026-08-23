@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Hard Drive Shredding Service | Secure Data Destruction | Ewaste Kochi";
+const description = "Professional hard drive shredding service renders storage media unrecoverable. NIST 800-88 compliant, with Certificate of Destruction for audit purposes.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Hard Drive Shredding Service", path: "/blog/hard-drive-shredding-service/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Hard Drive Shredding Service | Secure Data Destruction | Ewaste Kochi",
+    "description": "Professional hard drive shredding service renders storage media unrecoverable. NIST 800-88 compliant, with Certificate of Destruction for audit purposes.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/hard-drive-shredding-service/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Is shredding more secure than overwriting?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, physical shredding eliminates any possibility of data recovery, making it the most secure option for highly sensitive data."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What media types can be shredded?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We shred HDDs, SSDs, tapes, USB drives, mobile devices, and any other data-bearing storage media."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I get a certificate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, each shredding job generates a Certificate of Destruction with date, media type, quantity, and NIST 800-88 Destroy methodology reference."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/hard-drive-shredding-service/",
+    "name": "Hard Drive Shredding Service | Secure Data Destruction | Ewaste Kochi",
+    "description": "Professional hard drive shredding service renders storage media unrecoverable. NIST 800-88 compliant, with Certificate of Destruction for audit purposes.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/hard-drive-shredding-service/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Hard Drive Shredding Service</h1>
+  <p class="lede">Our hard drive shredding service physically destroys HDDs, SSDs, and other storage media using industrial-grade equipment, rendering data permanently unrecoverable. Each service is documented with a Certificate of Destruction referencing NIST 800-88 Destroy methodology.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about Hard Drive Shredding Service." />
+
+  <ul class="key-takeaways">
+    <li>Drives are collected in tamper-evident containers and transported to a secure processing location.</li>
+    <li>Our shredding service follows NIST 800-88 'Destroy' methodology.</li>
+    <li>Common clients include IT departments decommissioning servers, financial institutions disposing of client data drives, healthcare providers handling patient records, and government agencies managing classified information.</li>
+  </ul>
+
+  <section>
+    <h2>Shredding Process</h2>
+    <p>Drives are collected in tamper-evident containers and transported to a secure processing location. Industrial shredders reduce drives to particles too small for any data recovery attempt. The entire process is witnessed or verified, and a Certificate of Destruction is issued.</p>
+  </section>
+  <section>
+    <h2>Security Standards</h2>
+    <p>Our shredding service follows NIST 800-88 'Destroy' methodology. This is the highest assurance level for data sanitization and is appropriate for highly sensitive data, regulatory compliance, and legal defensibility in breach scenarios.</p>
+  </section>
+  <section>
+    <h2>B2B Use Cases</h2>
+    <p>Common clients include IT departments decommissioning servers, financial institutions disposing of client data drives, healthcare providers handling patient records, and government agencies managing classified information.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Is shredding more secure than overwriting?</summary>
+  <p>Yes, physical shredding eliminates any possibility of data recovery, making it the most secure option for highly sensitive data.</p>
+</details>
+  <details>
+  <summary>What media types can be shredded?</summary>
+  <p>We shred HDDs, SSDs, tapes, USB drives, mobile devices, and any other data-bearing storage media.</p>
+</details>
+  <details>
+  <summary>Do I get a certificate?</summary>
+  <p>Yes, each shredding job generates a Certificate of Destruction with date, media type, quantity, and NIST 800-88 Destroy methodology reference.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/data-destruction/">Data Destruction Services</a></li>
+      <li><a href="/blog/how-to-destroy-hard-drive-data/">How to Destroy Hard Drive Data</a></li>
+      <li><a href="/blog/server-decommissioning/">Server Decommissioning</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

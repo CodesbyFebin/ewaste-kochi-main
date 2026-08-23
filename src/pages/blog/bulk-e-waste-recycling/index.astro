@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Bulk E-Waste Recycling | Commercial Volume Processing | Ewaste Kochi";
+const description = "Bulk e-waste recycling for offices, schools, and factories. Schedule large-volume collection, processing, and certification with authorized recyclers.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Bulk E-Waste Recycling", path: "/blog/bulk-e-waste-recycling/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Bulk E-Waste Recycling | Commercial Volume Processing | Ewaste Kochi",
+    "description": "Bulk e-waste recycling for offices, schools, and factories. Schedule large-volume collection, processing, and certification with authorized recyclers.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/bulk-e-waste-recycling/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "What is the minimum bulk quantity?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bulk pricing and scheduling typically apply at 50kg or above. Smaller business volumes can still be collected with advance notice."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you handle mixed e-waste?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we accept mixed streams including IT equipment, appliances, batteries, and office electronics in a single pickup."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How soon can you pick up?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bulk pickups require at least one week advance scheduling. Rush pickups may be available depending on logistics capacity."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/bulk-e-waste-recycling/",
+    "name": "Bulk E-Waste Recycling | Commercial Volume Processing | Ewaste Kochi",
+    "description": "Bulk e-waste recycling for offices, schools, and factories. Schedule large-volume collection, processing, and certification with authorized recyclers.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/bulk-e-waste-recycling/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Bulk E-Waste Recycling</h1>
+  <p class="lede">Bulk e-waste recycling handles large volumes of electronic waste from corporate offices, educational institutions, healthcare facilities, and manufacturing units. Authorized recyclers process mixed e-waste streams through documented workflows that recover materials and ensure regulatory compliance.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about Bulk E-Waste Recycling." />
+
+  <ul class="key-takeaways">
+    <li>Bulk pickups typically start at 50kg or more.</li>
+    <li>Bulk e-waste is collected by trained logistics teams, transported in compliant vehicles, and delivered to a CPCB-authorized facility.</li>
+    <li>Each bulk pickup generates a detailed inventory manifest, transport record, and Certificate of Recycling.</li>
+  </ul>
+
+  <section>
+    <h2>Volume Requirements</h2>
+    <p>Bulk pickups typically start at 50kg or more. However, we accept any volume for business clients with advance scheduling. Mixed e-waste streams — including IT, appliances, and batteries — can be collected in a single scheduled pickup.</p>
+  </section>
+  <section>
+    <h2>Processing Workflow</h2>
+    <p>Bulk e-waste is collected by trained logistics teams, transported in compliant vehicles, and delivered to a CPCB-authorized facility. Items are sorted by category, hazardous fractions are treated separately, and recoverable materials are extracted for reuse.</p>
+  </section>
+  <section>
+    <h2>Documentation and Reporting</h2>
+    <p>Each bulk pickup generates a detailed inventory manifest, transport record, and Certificate of Recycling. Annual summaries can be provided for EPR reporting, sustainability disclosures, and internal audit trails.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>What is the minimum bulk quantity?</summary>
+  <p>Bulk pricing and scheduling typically apply at 50kg or above. Smaller business volumes can still be collected with advance notice.</p>
+</details>
+  <details>
+  <summary>Can you handle mixed e-waste?</summary>
+  <p>Yes, we accept mixed streams including IT equipment, appliances, batteries, and office electronics in a single pickup.</p>
+</details>
+  <details>
+  <summary>How soon can you pick up?</summary>
+  <p>Bulk pickups require at least one week advance scheduling. Rush pickups may be available depending on logistics capacity.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/blog/corporate-e-waste-management/">Corporate E-Waste Management</a></li>
+      <li><a href="/blog/warehouse-e-waste-disposal/">Warehouse E-Waste Disposal</a></li>
+      <li><a href="/blog/industrial-e-waste-disposal/">Industrial E-Waste Disposal</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

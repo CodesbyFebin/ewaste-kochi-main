@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Solar Panel E-Waste | End-of-Life Panel Recycling | Ewaste Kochi";
+const description = "Solar panel e-waste is an emerging category. Learn about silicon, glass, and metal recovery from end-of-life photovoltaic panels and recycling pathways.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Solar Panel E-Waste", path: "/blog/solar-panel-e-waste/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Solar Panel E-Waste | End-of-Life Panel Recycling | Ewaste Kochi",
+    "description": "Solar panel e-waste is an emerging category. Learn about silicon, glass, and metal recovery from end-of-life photovoltaic panels and recycling pathways.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/solar-panel-e-waste/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Are solar panels classified as e-waste?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, end-of-life solar panels are classified as e-waste under E-Waste Rules 2022 and must be recycled through authorized channels."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What materials can be recovered?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Aluminum frames, glass, silicon wafers, copper, and small amounts of silver and other metals can be recovered from crystalline silicon panels."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you accept solar panels?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Contact our team to confirm current solar panel recycling availability and specific requirements for your panel type."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/solar-panel-e-waste/",
+    "name": "Solar Panel E-Waste | End-of-Life Panel Recycling | Ewaste Kochi",
+    "description": "Solar panel e-waste is an emerging category. Learn about silicon, glass, and metal recovery from end-of-life photovoltaic panels and recycling pathways.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/solar-panel-e-waste/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Solar Panel E-Waste</h1>
+  <p class="lede">Solar panel e-waste refers to end-of-life photovoltaic panels that contain silicon wafers, aluminum frames, glass, copper, and small amounts of silver and lead solder. As India's solar capacity grows, end-of-life panel recycling is becoming an important environmental and resource-recovery challenge.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about Solar Panel E-Waste." />
+
+  <ul class="key-takeaways">
+    <li>Typical crystalline silicon panels contain aluminum frames, low-iron glass, EVA encapsulant, silicon cells, copper backsheets, and junction boxes.</li>
+    <li>Solar panel recycling requires specialized processes to separate glass, aluminum, silicon, and metals without cross-contamination.</li>
+    <li>As solar panel volumes increase, E-Waste Rules may be updated to specifically address photovoltaic waste.</li>
+  </ul>
+
+  <section>
+    <h2>Components and Materials</h2>
+    <p>Typical crystalline silicon panels contain aluminum frames, low-iron glass, EVA encapsulant, silicon cells, copper backsheets, and junction boxes. Thin-film panels may contain cadmium telluride or CIGS — these require specialized recycling due to toxic compound content.</p>
+  </section>
+  <section>
+    <h2>Recycling Challenges</h2>
+    <p>Solar panel recycling requires specialized processes to separate glass, aluminum, silicon, and metals without cross-contamination. Current Indian recycling infrastructure for solar panels is developing; check with recyclers for current acceptance and processing capabilities.</p>
+  </section>
+  <section>
+    <h2>Regulatory Outlook</h2>
+    <p>As solar panel volumes increase, E-Waste Rules may be updated to specifically address photovoltaic waste. Until then, channel end-of-life panels through recyclers with demonstrated PV processing capability or manufacturer take-back programs.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Are solar panels classified as e-waste?</summary>
+  <p>Yes, end-of-life solar panels are classified as e-waste under E-Waste Rules 2022 and must be recycled through authorized channels.</p>
+</details>
+  <details>
+  <summary>What materials can be recovered?</summary>
+  <p>Aluminum frames, glass, silicon wafers, copper, and small amounts of silver and other metals can be recovered from crystalline silicon panels.</p>
+</details>
+  <details>
+  <summary>Do you accept solar panels?</summary>
+  <p>Contact our team to confirm current solar panel recycling availability and specific requirements for your panel type.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/blog/e-waste-center-in-kerala/">E-Waste Center in Kerala</a></li>
+      <li><a href="/blog/how-to-comply-with-e-waste-rules/">How to Comply with E-Waste Rules</a></li>
+      <li><a href="/blog/e-waste-rules-2022-india/">E-Waste Rules 2022</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

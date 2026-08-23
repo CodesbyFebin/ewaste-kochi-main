@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "What Is E-Waste? | Definition, Types & Impact | Ewaste Kochi";
+const description = "Learn what e-waste is, common categories (IT, consumer electronics, medical), and why proper disposal matters for health and environment in India.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "What Is E-Waste?", path: "/blog/what-is-e-waste/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What Is E-Waste? | Definition, Types & Impact | Ewaste Kochi",
+    "description": "Learn what e-waste is, common categories (IT, consumer electronics, medical), and why proper disposal matters for health and environment in India.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/what-is-e-waste/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Is old mobile phone e-waste?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, end-of-life smartphones and tablets are classified as e-waste under Indian regulations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I throw e-waste in regular trash?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Regular trash disposal of e-waste is prohibited under E-Waste Rules 2022 and can result in penalties."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens to recycled e-waste?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Authorized recyclers dismantle devices, recover metals, and safely treat hazardous fractions — issuing a Certificate of Recycling."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/what-is-e-waste/",
+    "name": "What Is E-Waste? | Definition, Types & Impact | Ewaste Kochi",
+    "description": "Learn what e-waste is, common categories (IT, consumer electronics, medical), and why proper disposal matters for health and environment in India.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/what-is-e-waste/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>What Is E-Waste?</h1>
+  <p class="lede">E-waste (electronic waste) refers to any discarded electrical or electronic equipment that is no longer useful, including computers, mobile phones, home appliances, and medical devices. In India, e-waste is regulated under the E-Waste (Management) Rules 2022, and unauthorized disposal carries environmental and legal risks.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about What Is E-Waste?." />
+
+  <ul class="key-takeaways">
+    <li>E-waste covers any end-of-life electrical or electronic device that relies on a battery or power source.</li>
+    <li>Household e-waste includes laptops, smartphones, televisions, refrigerators, and washing machines.</li>
+    <li>Improper disposal releases toxic substances into soil and water, posing risks to human health and the environment.</li>
+  </ul>
+
+  <section>
+    <h2>Definition</h2>
+    <p>E-waste covers any end-of-life electrical or electronic device that relies on a battery or power source. It spans consumer electronics, IT equipment, medical devices, and automatic dispensers — all of which may contain hazardous substances like lead, mercury, cadmium, and brominated flame retardants.</p>
+  </section>
+  <section>
+    <h2>Common Categories</h2>
+    <p>Household e-waste includes laptops, smartphones, televisions, refrigerators, and washing machines. Commercial e-waste includes servers, networking gear, printers, and office phones. Medical and industrial e-waste covers diagnostic equipment, lab instruments, and manufacturing controllers.</p>
+  </section>
+  <section>
+    <h2>Why Proper Disposal Matters</h2>
+    <p>Improper disposal releases toxic substances into soil and water, posing risks to human health and the environment. Authorized recyclers like Ewaste Kochi process e-waste through scientifically designed facilities, recovering metals and neutralizing hazardous fractions under CPCB supervision.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Is old mobile phone e-waste?</summary>
+  <p>Yes, end-of-life smartphones and tablets are classified as e-waste under Indian regulations.</p>
+</details>
+  <details>
+  <summary>Can I throw e-waste in regular trash?</summary>
+  <p>No. Regular trash disposal of e-waste is prohibited under E-Waste Rules 2022 and can result in penalties.</p>
+</details>
+  <details>
+  <summary>What happens to recycled e-waste?</summary>
+  <p>Authorized recyclers dismantle devices, recover metals, and safely treat hazardous fractions — issuing a Certificate of Recycling.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/blog/why-recycle-electronics/">Why Recycle Electronics?</a></li>
+      <li><a href="/blog/how-to-recycle-electronics/">How to Recycle Electronics</a></li>
+      <li><a href="/blog/e-waste-rules-2022-india/">E-Waste Rules 2022</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

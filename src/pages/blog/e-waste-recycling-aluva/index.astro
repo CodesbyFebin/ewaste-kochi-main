@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "E-Waste Recycling Aluva | Household & Business Pickup | Ewaste Kochi";
+const description = "E-waste recycling and free pickup in Aluva. Household electronics, appliances, and batteries collected by authorized recyclers across Aluva and Perumbavoor.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "E-Waste Recycling Aluva", path: "/blog/e-waste-recycling-aluva/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "headline": "E-Waste Recycling Aluva | Household & Business Pickup | Ewaste Kochi",
+    "description": "E-waste recycling and free pickup in Aluva. Household electronics, appliances, and batteries collected by authorized recyclers across Aluva and Perumbavoor.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/e-waste-recycling-aluva/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Is pickup free in Aluva?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, standard household quantities are collected free of charge. Commercial quantities may involve nominal handling fees."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you cover Perumbavoor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Perumbavoor is covered by our Ernakulam district service area. Contact us to confirm scheduling for your address."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I drop off at a facility?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, drop-off is available at our Cheranalloor processing facility during business hours."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/e-waste-recycling-aluva/",
+    "name": "E-Waste Recycling Aluva | Household & Business Pickup | Ewaste Kochi",
+    "description": "E-waste recycling and free pickup in Aluva. Household electronics, appliances, and batteries collected by authorized recyclers across Aluva and Perumbavoor.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/e-waste-recycling-aluva/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Recycling Aluva</h1>
+  <p class="lede">Ewaste Kochi serves Aluva residents and businesses with authorized e-waste recycling and free doorstep pickup. From household electronics to commercial equipment, our team collects and processes items through CPCB-registered channels across Aluva and Perumbavoor.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about E-Waste Recycling Aluva." />
+
+  <ul class="key-takeaways">
+    <li>Standard household e-waste — phones, laptops, TVs, small appliances, and batteries — is collected free of charge.</li>
+    <li>Shops, clinics, schools, and small offices in Aluva can schedule bulk pickups for IT equipment, appliances, and mixed e-waste.</li>
+    <li>If pickup is not convenient, drop off is available at our Cheranalloor facility during business hours.</li>
+  </ul>
+
+  <section>
+    <h2>Household Collection</h2>
+    <p>Standard household e-waste — phones, laptops, TVs, small appliances, and batteries — is collected free of charge. Book via WhatsApp or phone, and our team will confirm a pickup time that suits your schedule.</p>
+  </section>
+  <section>
+    <h2>Business and Shop Pickups</h2>
+    <p>Shops, clinics, schools, and small offices in Aluva can schedule bulk pickups for IT equipment, appliances, and mixed e-waste. We provide item-level documentation and digital certificates for business records.</p>
+  </section>
+  <section>
+    <h2>Drop-Off Option</h2>
+    <p>If pickup is not convenient, drop off is available at our Cheranalloor facility during business hours. Call ahead to confirm current drop-off availability and any quantity limits.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Is pickup free in Aluva?</summary>
+  <p>Yes, standard household quantities are collected free of charge. Commercial quantities may involve nominal handling fees.</p>
+</details>
+  <details>
+  <summary>Do you cover Perumbavoor?</summary>
+  <p>Perumbavoor is covered by our Ernakulam district service area. Contact us to confirm scheduling for your address.</p>
+</details>
+  <details>
+  <summary>Can I drop off at a facility?</summary>
+  <p>Yes, drop-off is available at our Cheranalloor processing facility during business hours.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/blog/e-waste-recycling-ernakulam/">E-Waste Recycling in Ernakulam</a></li>
+      <li><a href="/blog/how-to-schedule-e-waste-pickup/">How to Schedule E-Waste Pickup</a></li>
+      <li><a href="/battery-recycling/">Battery Recycling</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

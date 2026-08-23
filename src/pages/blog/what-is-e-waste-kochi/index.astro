@@ -1,0 +1,156 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import LongformExpansion from "../../../components/LongformExpansion.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "What Is E-Waste? Simple Definition for Kochi Households";
+const description = "A plain-language definition of e-waste, what counts as electronic waste in Kochi, and why separate handling matters for homes and small offices.";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "General E-Waste", path: "/blog/general-ewaste/" },
+  { name: "What Is E-Waste? A Plain Definition", path: "/blog/what-is-e-waste-kochi/" }
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": description,
+    "datePublished": "2026-08-18",
+    "dateModified": lastUpdated,
+    "author": { "@type": "Organization", name: BUSINESS.legalName },
+    "publisher": { "@id": `${SITE_URL}/#organization` },
+    "mainEntityOfPage": `${SITE_URL}/blog/what-is-e-waste-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/what-is-e-waste-kochi/`,
+    "name": title,
+    "description": description,
+    "dateModified": lastUpdated,
+  }
+];
+
+const faqItems = [
+  {
+    q: "Is a broken phone still e-waste?",
+    a: "Yes. A cracked or dead phone is exactly the kind of item e-waste handling exists for, because the battery and board still need controlled processing."
+  },
+  {
+    q: "Do chargers and cables count?",
+    a: "They do. Cables and chargers are accepted in any pickup batch and the copper inside has real recovery value."
+  },
+  {
+    q: "Can I put e-waste in the regular bin?",
+    a: "No. National rules separate e-waste from household waste, and mixing it creates safety and contamination risks during collection."
+  },
+  {
+    q: "Where do I start in Kochi?",
+    a: "Collect items dry, separate batteries, then send a photo list on WhatsApp so the team can confirm the pickup route."
+  }
+];
+
+const sourceItems = [
+  {
+    title: "E-Waste Management Rules and related regulatory resources",
+    href: "https://cpcb.nic.in/rules-6/",
+    publisher: "Central Pollution Control Board",
+    note: "Official CPCB resource page for e-waste rules and updates."
+  },
+  {
+    title: "EPR E-Waste portal",
+    href: "https://eprewastecpcb.in/",
+    publisher: "Central Pollution Control Board",
+    note: "Official portal for e-waste EPR registration and compliance workflows."
+  },
+  {
+    title: "Kerala State Pollution Control Board",
+    href: "https://kspcb.kerala.gov.in/",
+    publisher: "Kerala State Pollution Control Board",
+    note: "Regional enforcement and authorization for e-waste recyclers in Kerala."
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/what-is-e-waste-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <h1>What Is E-Waste? A Plain Definition</h1>
+
+  <DirectAnswer>
+    <p>E-waste is any electrical or electronic item you no longer use or that has stopped working — phones, laptops, TVs, cables, batteries and appliances. In Kochi it must be handed to an authorised recycler, not mixed with household garbage.</p>
+  </DirectAnswer>
+
+  <CtaBar whatsappMessage="Hi, I want to understand what e-waste I have and how to recycle it safely." />
+
+  <section id="section-1">
+    <h2>A definition you can actually use</h2>
+    <p>E-waste, short for electronic waste, covers anything with a plug, battery or circuit board that has reached end of life. That includes the obvious laptops and phones and the easy-to-forget chargers, remote controls and power banks.</p>
+    <p>The rule of thumb is simple: if it ran on electricity at some point and you are done with it, treat it as e-waste rather than general trash. This keeps hazardous parts out of Kerala's landfills and waterways.</p>
+  </section>
+  <section id="section-2">
+    <h2>What counts in a Kochi home</h2>
+    <p>Most households in Kochi accumulate far more e-waste than they expect: old mobiles in drawers, broken irons, dead routers, kettle chargers and tangled cable boxes.</p>
+    <p>Small offices add printers, scanners, UPS units and spare monitors. All of it is accepted by authorised pickup services once listed clearly with photos.</p>
+  </section>
+  <section id="section-3">
+    <h2>Why separate handling matters</h2>
+    <p>Electronics contain lead, mercury, cadmium and lithium that are harmless while sealed but dangerous once crushed in a garbage truck.</p>
+    <p>Separate collection lets recyclers recover copper, aluminium and rare-earth metals safely while protecting waste workers and the environment.</p>
+  </section>
+  <section id="section-4">
+    <h2>First step for any household</h2>
+    <p>Start by gathering items in a dry box, keeping batteries separate from devices where possible.</p>
+    <p>Then message the pickup team with a list and photos so they can confirm acceptance and the right service route before a slot is booked.</p>
+  </section>
+
+  <RelatedContent>
+    <h2>Explore more guides</h2>
+    <ul>
+      <li><a href="/blog/general-ewaste/">General E-Waste hub</a></li>
+      <li><a href="/blog/general-ewaste/">General e-waste basics</a></li>
+      <li><a href="/recycling/">Recycling service</a></li>
+      <li><a href="/pickup/">Book a pickup</a></li>
+    </ul>
+  </RelatedContent>
+
+  <LongformExpansion
+    label="Expanded field guide"
+    audience="households and businesses in Kochi"
+    localIntent="what is e-waste? a plain definition with authorised pickup"
+    items={["old electronics", "batteries", "cables", "data devices"]}
+    themes={["Preparation", "Safety", "Compliance", "Recovery"]}
+  />
+
+  <section id="faq-section">
+    <h2>Frequently asked questions</h2>
+    <Faq items={faqItems} heading="What Is E-Waste? A Plain Definition FAQs" />
+  </section>
+
+  <Sources items={sourceItems} heading="Official sources & regulatory references" />
+</Layout>
+
+<style>
+  .blog-hub { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+  .blog-hub h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-primary); text-align: center; }
+  .blog-hub section { margin-bottom: 3rem; padding: 2rem; background: var(--color-bg); border-radius: 0.75rem; border: 1px solid var(--color-border); }
+  .blog-hub h2 { color: var(--color-primary); margin-bottom: 1.5rem; font-size: 1.8rem; }
+  .blog-hub ul { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .blog-hub li { margin-bottom: 0.5rem; line-height: 1.6; }
+  @media (max-width: 768px) {
+    .blog-hub h1 { font-size: 2rem; }
+    .blog-hub section { padding: 1.5rem; }
+    .blog-hub h2 { font-size: 1.5rem; }
+  }
+</style>

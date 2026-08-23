@@ -1,38 +1,57 @@
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://www.ewastekochi.com/#organization",
-      "name": "Ewaste Kochi",
-      "legalName": "Ewaste Kochi Pvt Ltd",
-      "url": "https://www.ewastekochi.com",
-      "sameAs": [
-        "https://www.facebook.com/ewastekochi",
-        "https://www.instagram.com/ewastekochi",
-        "https://www.linkedin.com/company/ewastekochi"
-      ],
-      "founder": { "@type": "Person", "name": "Ewaste Kochi Founder" },
-      "foundingDate": "2020",
-      "location": {
-        "@type": "PostalAddress",
-        "addressLocality": "Kochi",
-        "addressRegion": "Kerala",
-        "addressCountry": "IN"
-      }
-    },
-    {
-      "@type": "Product",
-      "@id": "https://www.ewastekochi.com/services/",
-      "name": "E-Waste Recycling Service",
-      "manufacturer": { "@id": "https://www.ewastekochi.com/#organization" },
-      "category": "Environmental Service"
-    },
-    {
-      "@type": "Service",
-      "@id": "https://www.ewastekochi.com/data-destruction/",
-      "name": "Data Destruction Service",
-      "provider": { "@id": "https://www.ewastekochi.com/#organization" }
+  "site": {
+    "name": "Ewaste Kochi",
+    "legalName": "Ewaste Kochi",
+    "url": "https://www.ewastekochi.com",
+    "description": "E-waste recycling, electronics pickup, battery recycling, ITAD, data destruction, and sell-old-electronics services for Kochi and Kerala, India.",
+    "languages": ["en-IN", "ml-IN"],
+    "primaryLanguage": "en-IN",
+    "contact": "info@ewastekochi.com",
+    "phone": "+91-1800-267-1683",
+    "address": {
+      "street": "Kochi, Kerala",
+      "city": "Kochi",
+      "state": "Kerala",
+      "country": "IN",
+      "postalCode": "682001"
     }
+  },
+  "services": [
+    { "id": "recycling", "name": "E-Waste Recycling", "url": "/recycling/" },
+    { "id": "battery-recycling", "name": "Battery Recycling", "url": "/battery-recycling/" },
+    { "id": "pickup", "name": "Doorstep Pickup", "url": "/pickup/" },
+    { "id": "sell-electronics", "name": "Sell Electronics", "url": "/sell-electronics/" },
+    { "id": "data-destruction", "name": "Data Destruction", "url": "/data-destruction/" },
+    { "id": "itad", "name": "IT Asset Disposition", "url": "/itad/" },
+    { "id": "hard-drive-shredding", "name": "Hard Drive Shredding", "url": "/hard-drive-shredding/" },
+    { "id": "marketplace", "name": "Marketplace", "url": "/marketplace/" }
+  ],
+  "locations": [
+    { "slug": "kochi", "name": "Kochi", "type": "city" },
+    { "slug": "ernakulam", "name": "Ernakulam", "type": "district" },
+    { "slug": "kakkanad", "name": "Kakkanad", "type": "suburb" },
+    { "slug": "kalamassery", "name": "Kalamassery", "type": "suburb" },
+    { "slug": "edappally", "name": "Edappally", "type": "suburb" },
+    { "slug": "vyttila", "name": "Vyttila", "type": "suburb" },
+    { "slug": "thrippunithura", "name": "Thrippunithura", "type": "suburb" },
+    { "slug": "aluva", "name": "Aluva", "type": "suburb" },
+    { "slug": "fort-kochi", "name": "Fort Kochi", "type": "suburb" },
+    { "slug": "palarivattom", "name": "Palarivattom", "type": "suburb" },
+    { "slug": "kadavanthra", "name": "Kadavanthra", "type": "suburb" },
+    { "slug": "maradu", "name": "Maradu", "type": "suburb" },
+    { "slug": "kundannoor", "name": "Kundannoor", "type": "suburb" },
+    { "slug": "infopark", "name": "Infopark", "type": "tech-park" }
+  ],
+  "regulatoryBodies": [
+    { "name": "CPCB", "fullName": "Central Pollution Control Board", "url": "https://cpcb.nic.in/" },
+    { "name": "KSPCB", "fullName": "Kerala State Pollution Control Board", "url": "https://kspcb.kerala.gov.in/" }
+  ],
+  "certifications": [
+    { "name": "ISO 14001", "note": "Environmental management practices" },
+    { "name": "CPCB Authorization", "note": "E-waste handling authorization" }
+  ],
+  "sameAs": [
+    "https://www.ewastekochi.com",
+    "https://github.com/ewastekochi"
   ]
 }

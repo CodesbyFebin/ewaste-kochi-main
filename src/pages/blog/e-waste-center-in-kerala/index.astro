@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "E-Waste Center in Kerala | Statewide Authorized Recycling | Ewaste Kochi";
+const description = "Find an authorized e-waste center in Kerala. Ewaste Kochi provides scheduled pickup and recycling across Kochi, Trivandrum, Thrissur, and Kollam.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "E-Waste Center in Kerala", path: "/blog/e-waste-center-in-kerala/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "headline": "E-Waste Center in Kerala | Statewide Authorized Recycling | Ewaste Kochi",
+    "description": "Find an authorized e-waste center in Kerala. Ewaste Kochi provides scheduled pickup and recycling across Kochi, Trivandrum, Thrissur, and Kollam.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/e-waste-center-in-kerala/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Do you serve all of Kerala?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We provide scheduled pickup across major districts including Kochi, Trivandrum, Thrissur, and Kollam. Remote areas may require special coordination."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is e-waste recycled in Kerala?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "E-waste is transported to CPCB-authorized facilities where it is dismantled, sorted, and processed. Hazardous fractions are treated safely; metals and plastics are recovered for reuse."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is KSPCB's role?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "KSPCB enforces E-Waste Rules 2022 at the state level, monitoring recyclers and ensuring environmental compliance within Kerala."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/e-waste-center-in-kerala/",
+    "name": "E-Waste Center in Kerala | Statewide Authorized Recycling | Ewaste Kochi",
+    "description": "Find an authorized e-waste center in Kerala. Ewaste Kochi provides scheduled pickup and recycling across Kochi, Trivandrum, Thrissur, and Kollam.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/e-waste-center-in-kerala/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Center in Kerala</h1>
+  <p class="lede">Ewaste Kochi operates as an authorized e-waste center serving Kerala with scheduled pickup and CPCB-compliant recycling across Kochi, Trivandrum, Thrissur, and Kollam. Whether you need household collection or commercial ITAD, our network provides formal recycling channels statewide.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about E-Waste Center in Kerala." />
+
+  <ul class="key-takeaways">
+    <li>Our primary processing hub is in Kochi, with scheduled collection services extending to Trivandrum, Thrissur, and Kollam districts.</li>
+    <li>Kerala State Pollution Control Board (KSPCB) enforces E-Waste Rules 2022 within the state.</li>
+    <li>Book a pickup through our website, WhatsApp, or phone.</li>
+  </ul>
+
+  <section>
+    <h2>Statewide Service Network</h2>
+    <p>Our primary processing hub is in Kochi, with scheduled collection services extending to Trivandrum, Thrissur, and Kollam districts. Each service area operates on a scheduled booking basis with advance notice for logistics planning.</p>
+  </section>
+  <section>
+    <h2>Kerala E-Waste Compliance</h2>
+    <p>Kerala State Pollution Control Board (KSPCB) enforces E-Waste Rules 2022 within the state. Using an authorized recycler like Ewaste Kochi ensures your e-waste is handled in compliance with both CPCB and KSPCB requirements.</p>
+  </section>
+  <section>
+    <h2>How to Access</h2>
+    <p>Book a pickup through our website, WhatsApp, or phone. Provide your location, item list, and preferred timing. For statewide coverage, contact our team to confirm availability for your district.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Do you serve all of Kerala?</summary>
+  <p>We provide scheduled pickup across major districts including Kochi, Trivandrum, Thrissur, and Kollam. Remote areas may require special coordination.</p>
+</details>
+  <details>
+  <summary>How is e-waste recycled in Kerala?</summary>
+  <p>E-waste is transported to CPCB-authorized facilities where it is dismantled, sorted, and processed. Hazardous fractions are treated safely; metals and plastics are recovered for reuse.</p>
+</details>
+  <details>
+  <summary>What is KSPCB's role?</summary>
+  <p>KSPCB enforces E-Waste Rules 2022 at the state level, monitoring recyclers and ensuring environmental compliance within Kerala.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/blog/e-waste-recycling-kochi/">E-Waste Recycling in Kochi</a></li>
+      <li><a href="/blog/e-waste-recycling-trivandrum/">E-Waste Recycling in Trivandrum</a></li>
+      <li><a href="/blog/how-to-comply-with-e-waste-rules/">How to Comply with E-Waste Rules</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

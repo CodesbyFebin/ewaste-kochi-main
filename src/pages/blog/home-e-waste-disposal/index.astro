@@ -1,0 +1,156 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import LongformExpansion from "../../../components/LongformExpansion.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Home E-Waste Disposal: Safe Steps for Households";
+const description = "How Kochi households can dispose of old electronics safely, what to avoid, and how free pickup works for homes.";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "General E-Waste", path: "/blog/general-ewaste/" },
+  { name: "Home E-Waste Disposal", path: "/blog/home-e-waste-disposal/" }
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": description,
+    "datePublished": "2026-08-18",
+    "dateModified": lastUpdated,
+    "author": { "@type": "Organization", name: BUSINESS.legalName },
+    "publisher": { "@id": `${SITE_URL}/#organization` },
+    "mainEntityOfPage": `${SITE_URL}/blog/home-e-waste-disposal/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/home-e-waste-disposal/`,
+    "name": title,
+    "description": description,
+    "dateModified": lastUpdated,
+  }
+];
+
+const faqItems = [
+  {
+    q: "Is home pickup really free?",
+    a: "For ordinary household items, authorised doorstep collection is typically free; premium steps may carry a fee."
+  },
+  {
+    q: "Can I leave e-waste with the regular garbage?",
+    a: "No. It must go through authorised channels, not the municipal household stream."
+  },
+  {
+    q: "What if I live in an apartment?",
+    a: "Share building, floor and lift details so the team can plan the slot; societies can batch collections."
+  },
+  {
+    q: "Do I get proof of disposal?",
+    a: "Yes, on request. A pickup acknowledgement or Certificate of Recycling covers most needs."
+  }
+];
+
+const sourceItems = [
+  {
+    title: "E-Waste Management Rules and related regulatory resources",
+    href: "https://cpcb.nic.in/rules-6/",
+    publisher: "Central Pollution Control Board",
+    note: "Official CPCB resource page for e-waste rules and updates."
+  },
+  {
+    title: "EPR E-Waste portal",
+    href: "https://eprewastecpcb.in/",
+    publisher: "Central Pollution Control Board",
+    note: "Official portal for e-waste EPR registration and compliance workflows."
+  },
+  {
+    title: "Kerala State Pollution Control Board",
+    href: "https://kspcb.kerala.gov.in/",
+    publisher: "Kerala State Pollution Control Board",
+    note: "Regional enforcement and authorization for e-waste recyclers in Kerala."
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/home-e-waste-disposal/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <h1>Home E-Waste Disposal</h1>
+
+  <DirectAnswer>
+    <p>For home disposal in Kochi, keep e-waste dry and separate from garbage, list items with photos, and book an authorised doorstep pickup. Never burn, crush or dump electronics.</p>
+  </DirectAnswer>
+
+  <CtaBar whatsappMessage="Hi, I'm a household wanting to dispose of old electronics safely." />
+
+  <section id="section-1">
+    <h2>What households should do</h2>
+    <p>Most homes can use free authorised pickup for ordinary items once listed clearly.</p>
+    <p>The key is preparation: dry storage, battery separation and a photo list sent in advance.</p>
+  </section>
+  <section id="section-2">
+    <h2>What households must avoid</h2>
+    <p>Do not throw electronics in the bin, hand them to informal scrap buyers, or try to dismantle them yourself.</p>
+    <p>Burning or crushing releases toxins and informal handling skips data and safety controls.</p>
+  </section>
+  <section id="section-3">
+    <h2>How free pickup works</h2>
+    <p>Send your list and photos; the team confirms feasibility and a slot.</p>
+    <p>Functional items may be reviewed for resale while broken ones go to material recovery.</p>
+  </section>
+  <section id="section-4">
+    <h2>Keeping records at home</h2>
+    <p>A simple pickup acknowledgement is enough for most homes.</p>
+    <p>Request a Certificate of Recycling if you need proof for housing society or insurance purposes.</p>
+  </section>
+
+  <RelatedContent>
+    <h2>Explore more guides</h2>
+    <ul>
+      <li><a href="/blog/general-ewaste/">General E-Waste hub</a></li>
+      <li><a href="/blog/general-ewaste/">General e-waste basics</a></li>
+      <li><a href="/recycling/">Recycling service</a></li>
+      <li><a href="/pickup/">Book a pickup</a></li>
+    </ul>
+  </RelatedContent>
+
+  <LongformExpansion
+    label="Expanded field guide"
+    audience="households and businesses in Kochi"
+    localIntent="home e-waste disposal with authorised pickup"
+    items={["old electronics", "batteries", "cables", "data devices"]}
+    themes={["Preparation", "Safety", "Compliance", "Recovery"]}
+  />
+
+  <section id="faq-section">
+    <h2>Frequently asked questions</h2>
+    <Faq items={faqItems} heading="Home E-Waste Disposal FAQs" />
+  </section>
+
+  <Sources items={sourceItems} heading="Official sources & regulatory references" />
+</Layout>
+
+<style>
+  .blog-hub { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+  .blog-hub h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-primary); text-align: center; }
+  .blog-hub section { margin-bottom: 3rem; padding: 2rem; background: var(--color-bg); border-radius: 0.75rem; border: 1px solid var(--color-border); }
+  .blog-hub h2 { color: var(--color-primary); margin-bottom: 1.5rem; font-size: 1.8rem; }
+  .blog-hub ul { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .blog-hub li { margin-bottom: 0.5rem; line-height: 1.6; }
+  @media (max-width: 768px) {
+    .blog-hub h1 { font-size: 2rem; }
+    .blog-hub section { padding: 1.5rem; }
+    .blog-hub h2 { font-size: 1.5rem; }
+  }
+</style>

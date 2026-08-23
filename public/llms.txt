@@ -256,4 +256,13 @@ dateModified in its JSON-LD; sitemap.xml lastmod fields track the same
 value. Only the pages linked from this file and the sitemap index are
 canonical — treat any other path as not confirmed canonical.
 
-Last updated: 2026-07-29
+Machine-readable knowledge base files for AI/RAG ingestion:
+- Full text dump: https://www.ewastekochi.com/llms-full.txt
+- Entity mapping: https://www.ewastekochi.com/entities.json
+- Knowledge graph: https://www.ewastekochi.com/knowledge-graph.json
+- Evidence/sources: https://www.ewastekochi.com/evidence.json
+- Model metadata: https://www.ewastekochi.com/models.json
+- Language mapping: https://www.ewastekochi.com/language.json
+- PWA manifest: https://www.ewastekochi.com/manifest.json
+
+Last updated: 2026-08-22

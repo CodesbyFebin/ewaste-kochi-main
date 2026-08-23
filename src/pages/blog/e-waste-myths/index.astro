@@ -1,0 +1,156 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import LongformExpansion from "../../../components/LongformExpansion.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Common E-Waste Myths Debunked";
+const description = "Clearing up frequent misunderstandings: 'it's just one device', 'scrap buyers are fine', and 'recycling is expensive'.";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "General E-Waste", path: "/blog/general-ewaste/" },
+  { name: "Common E-Waste Myths", path: "/blog/e-waste-myths/" }
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": description,
+    "datePublished": "2026-08-18",
+    "dateModified": lastUpdated,
+    "author": { "@type": "Organization", name: BUSINESS.legalName },
+    "publisher": { "@id": `${SITE_URL}/#organization` },
+    "mainEntityOfPage": `${SITE_URL}/blog/e-waste-myths/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/e-waste-myths/`,
+    "name": title,
+    "description": description,
+    "dateModified": lastUpdated,
+  }
+];
+
+const faqItems = [
+  {
+    q: "Does one device really matter?",
+    a: "Yes — batteries and metals add up across a city and deserve proper handling."
+  },
+  {
+    q: "Are scrap buyers safe?",
+    a: "Not always; they may skip data and battery safety that authorised recyclers follow."
+  },
+  {
+    q: "Is recycling costly?",
+    a: "Home pickup is usually free; only premium services like shredding may carry a fee."
+  },
+  {
+    q: "Is storing old devices okay?",
+    a: "It risks swelling batteries; authorised pickup on a schedule is safer."
+  }
+];
+
+const sourceItems = [
+  {
+    title: "E-Waste Management Rules and related regulatory resources",
+    href: "https://cpcb.nic.in/rules-6/",
+    publisher: "Central Pollution Control Board",
+    note: "Official CPCB resource page for e-waste rules and updates."
+  },
+  {
+    title: "EPR E-Waste portal",
+    href: "https://eprewastecpcb.in/",
+    publisher: "Central Pollution Control Board",
+    note: "Official portal for e-waste EPR registration and compliance workflows."
+  },
+  {
+    title: "Kerala State Pollution Control Board",
+    href: "https://kspcb.kerala.gov.in/",
+    publisher: "Kerala State Pollution Control Board",
+    note: "Regional enforcement and authorization for e-waste recyclers in Kerala."
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/e-waste-myths/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <h1>Common E-Waste Myths</h1>
+
+  <DirectAnswer>
+    <p>Myths like 'one device doesn't matter' or 'any scrap buyer is fine' lead to unsafe disposal. In Kochi, authorised pickup is free for homes and handles data and batteries properly.</p>
+  </DirectAnswer>
+
+  <CtaBar whatsappMessage="Hi, I want to recycle properly and avoid the common mistakes." />
+
+  <section id="section-1">
+    <h2>Myth: one device doesn't matter</h2>
+    <p>A single phone still holds a lithium battery and recoverable metals.</p>
+    <p>Multiplied across a city, those 'ones' become a serious stream worth handling right.</p>
+  </section>
+  <section id="section-2">
+    <h2>Myth: scrap buyers are just as good</h2>
+    <p>Informal buyers often skip data wiping and safe battery handling.</p>
+    <p>Authorised recyclers document the chain and issue certificates where needed.</p>
+  </section>
+  <section id="section-3">
+    <h2>Myth: recycling is expensive</h2>
+    <p>Household pickup is typically free; you pay mainly for premium steps like shredding.</p>
+    <p>The cost of ignoring it — contamination and data risk — is higher.</p>
+  </section>
+  <section id="section-4">
+    <h2>Myth: storage is harmless</h2>
+    <p>Hoarded devices leak or swell over time, especially batteries.</p>
+    <p>Regular, authorised pickup is safer than a forgotten drawer of electronics.</p>
+  </section>
+
+  <RelatedContent>
+    <h2>Explore more guides</h2>
+    <ul>
+      <li><a href="/blog/general-ewaste/">General E-Waste hub</a></li>
+      <li><a href="/blog/general-ewaste/">General e-waste basics</a></li>
+      <li><a href="/recycling/">Recycling service</a></li>
+      <li><a href="/pickup/">Book a pickup</a></li>
+    </ul>
+  </RelatedContent>
+
+  <LongformExpansion
+    label="Expanded field guide"
+    audience="households and businesses in Kochi"
+    localIntent="common e-waste myths with authorised pickup"
+    items={["old electronics", "batteries", "cables", "data devices"]}
+    themes={["Preparation", "Safety", "Compliance", "Recovery"]}
+  />
+
+  <section id="faq-section">
+    <h2>Frequently asked questions</h2>
+    <Faq items={faqItems} heading="Common E-Waste Myths FAQs" />
+  </section>
+
+  <Sources items={sourceItems} heading="Official sources & regulatory references" />
+</Layout>
+
+<style>
+  .blog-hub { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+  .blog-hub h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-primary); text-align: center; }
+  .blog-hub section { margin-bottom: 3rem; padding: 2rem; background: var(--color-bg); border-radius: 0.75rem; border: 1px solid var(--color-border); }
+  .blog-hub h2 { color: var(--color-primary); margin-bottom: 1.5rem; font-size: 1.8rem; }
+  .blog-hub ul { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .blog-hub li { margin-bottom: 0.5rem; line-height: 1.6; }
+  @media (max-width: 768px) {
+    .blog-hub h1 { font-size: 2rem; }
+    .blog-hub section { padding: 1.5rem; }
+    .blog-hub h2 { font-size: 1.5rem; }
+  }
+</style>

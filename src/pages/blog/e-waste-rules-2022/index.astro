@@ -1,0 +1,156 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import LongformExpansion from "../../../components/LongformExpansion.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "E-Waste Management Rules 2022: What Changed";
+const description = "A plain summary of India's E-Waste (Management) Rules 2022, obligations for businesses, and implications for Kochi.";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Compliance & B2B", path: "/blog/compliance-b2b/" },
+  { name: "E-Waste Management Rules 2022", path: "/blog/e-waste-rules-2022/" }
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": description,
+    "datePublished": "2026-08-18",
+    "dateModified": lastUpdated,
+    "author": { "@type": "Organization", name: BUSINESS.legalName },
+    "publisher": { "@id": `${SITE_URL}/#organization` },
+    "mainEntityOfPage": `${SITE_URL}/blog/e-waste-rules-2022/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/e-waste-rules-2022/`,
+    "name": title,
+    "description": description,
+    "dateModified": lastUpdated,
+  }
+];
+
+const faqItems = [
+  {
+    q: "Are the rules national or state?",
+    a: "National framework, enforced locally by Kerala SPCB for Kochi."
+  },
+  {
+    q: "What must businesses keep?",
+    a: "Collection records, recycling proofs and certificates from authorised recyclers."
+  },
+  {
+    q: "Do the rules cover data devices?",
+    a: "Data security is handled alongside through certified destruction."
+  },
+  {
+    q: "Where can I read the official text?",
+    a: "CPCB's rules resource page and Kerala SPCB provide the authoritative versions."
+  }
+];
+
+const sourceItems = [
+  {
+    title: "E-Waste Management Rules and related regulatory resources",
+    href: "https://cpcb.nic.in/rules-6/",
+    publisher: "Central Pollution Control Board",
+    note: "Official CPCB resource page for e-waste rules and updates."
+  },
+  {
+    title: "EPR E-Waste portal",
+    href: "https://eprewastecpcb.in/",
+    publisher: "Central Pollution Control Board",
+    note: "Official portal for e-waste EPR registration and compliance workflows."
+  },
+  {
+    title: "Kerala State Pollution Control Board",
+    href: "https://kspcb.kerala.gov.in/",
+    publisher: "Kerala State Pollution Control Board",
+    note: "Regional enforcement and authorization for e-waste recyclers in Kerala."
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/e-waste-rules-2022/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <h1>E-Waste Management Rules 2022</h1>
+
+  <DirectAnswer>
+    <p>The E-Waste (Management) Rules 2022 strengthened producer responsibility, documentation and targets for end-of-life electronics. Kochi businesses should use authorised recyclers who can issue the required records.</p>
+  </DirectAnswer>
+
+  <CtaBar whatsappMessage="Hi, I want to understand the 2022 rules and how they affect my business." />
+
+  <section id="section-1">
+    <h2>The framework in plain terms</h2>
+    <p>The rules separate e-waste from municipal waste and assign responsibility for its lifecycle.</p>
+    <p>They apply nationally, including Kerala, with state boards enforcing locally.</p>
+  </section>
+  <section id="section-2">
+    <h2>Key obligations</h2>
+    <p>Producers and bulk consumers must meet collection and recycling obligations with documentation.</p>
+    <p>Record-keeping and authorised channels are central to compliance.</p>
+  </section>
+  <section id="section-3">
+    <h2>What changed toward 2022</h2>
+    <p>Later amendments pushed clearer targets, traceability and stricter handling expectations.</p>
+    <p>Businesses feel it through the need for verifiable collection and recycling proof.</p>
+  </section>
+  <section id="section-4">
+    <h2>Practical takeaway for Kochi</h2>
+    <p>Work with authorised recyclers and keep certificates for audits and tenders.</p>
+    <p>Treat data-bearing devices with certified destruction as part of the same flow.</p>
+  </section>
+
+  <RelatedContent>
+    <h2>Explore more guides</h2>
+    <ul>
+      <li><a href="/blog/compliance-b2b/">Compliance & B2B hub</a></li>
+      <li><a href="/blog/general-ewaste/">General e-waste basics</a></li>
+      <li><a href="/recycling/">Recycling service</a></li>
+      <li><a href="/pickup/">Book a pickup</a></li>
+    </ul>
+  </RelatedContent>
+
+  <LongformExpansion
+    label="Expanded field guide"
+    audience="households and businesses in Kochi"
+    localIntent="e-waste management rules 2022 with authorised pickup"
+    items={["old electronics", "batteries", "cables", "data devices"]}
+    themes={["Preparation", "Safety", "Compliance", "Recovery"]}
+  />
+
+  <section id="faq-section">
+    <h2>Frequently asked questions</h2>
+    <Faq items={faqItems} heading="E-Waste Management Rules 2022 FAQs" />
+  </section>
+
+  <Sources items={sourceItems} heading="Official sources & regulatory references" />
+</Layout>
+
+<style>
+  .blog-hub { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+  .blog-hub h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-primary); text-align: center; }
+  .blog-hub section { margin-bottom: 3rem; padding: 2rem; background: var(--color-bg); border-radius: 0.75rem; border: 1px solid var(--color-border); }
+  .blog-hub h2 { color: var(--color-primary); margin-bottom: 1.5rem; font-size: 1.8rem; }
+  .blog-hub ul { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .blog-hub li { margin-bottom: 0.5rem; line-height: 1.6; }
+  @media (max-width: 768px) {
+    .blog-hub h1 { font-size: 2rem; }
+    .blog-hub section { padding: 1.5rem; }
+    .blog-hub h2 { font-size: 1.5rem; }
+  }
+</style>

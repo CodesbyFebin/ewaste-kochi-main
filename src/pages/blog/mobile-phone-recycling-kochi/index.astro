@@ -1,199 +1,156 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
 import CtaBar from "../../../components/CtaBar.astro";
 import Faq from "../../../components/Faq.astro";
 import RelatedContent from "../../../components/RelatedContent.astro";
-import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
+import LongformExpansion from "../../../components/LongformExpansion.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
 
-const title = "Mobile Phone Recycling in Kochi | Old Phone Disposal";
-const description =
-  "How to recycle or sell old mobile phones in Kochi. Data removal, battery safety, phone value factors, and what happens after collection.";
-const datePublished = "2026-07-08";
-const dateModified = "2026-07-08";
+const title = "Mobile Phone Recycling in Kochi";
+const description = "How to recycle or resell old phones in Kochi safely, including battery and data steps.";
+const lastUpdated = "2026-08-18";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
   { name: "Blog", path: "/blog/" },
-  { name: "Mobile Phone Recycling in Kochi", path: "/blog/mobile-phone-recycling-kochi/" },
+  { name: "Devices & Materials", path: "/blog/devices-materials/" },
+  { name: "Mobile Phone Recycling in Kochi", path: "/blog/mobile-phone-recycling-kochi/" }
 ];
 
 const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    headline: title,
-    description,
-    datePublished,
-    dateModified,
-    author: { "@type": "Organization", name: BUSINESS.legalName },
-    publisher: { "@id": `${SITE_URL}/#organization` },
-    mainEntityOfPage: `${SITE_URL}/blog/mobile-phone-recycling-kochi/`,
+    "headline": title,
+    "description": description,
+    "datePublished": "2026-08-18",
+    "dateModified": lastUpdated,
+    "author": { "@type": "Organization", name: BUSINESS.legalName },
+    "publisher": { "@id": `${SITE_URL}/#organization` },
+    "mainEntityOfPage": `${SITE_URL}/blog/mobile-phone-recycling-kochi/`,
   },
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": `${SITE_URL}/blog/mobile-phone-recycling-kochi/`,
-    name: title,
-    description,
-    dateModified,
-  },
+    "name": title,
+    "description": description,
+    "dateModified": lastUpdated,
+  }
 ];
 
 const faqItems = [
   {
-    q: "Can old mobile phones be recycled in Kochi?",
-    a: "Yes. Mobile phones, tablets, smartwatches and feature phones are accepted for recycling or resale depending on condition.",
+    q: "Do I reset first?",
+    a: "Yes — sign out, factory reset, remove SIM and SD."
   },
   {
-    q: "Should I remove data before recycling my phone?",
-    a: "Yes. Factory reset your phone and remove the SIM and memory card before handing it over. This protects your personal data.",
+    q: "Can I get value?",
+    a: "Working phones may be reviewed for resale."
   },
   {
-    q: "Can broken or damaged phones be recycled?",
-    a: "Yes. Cracked screens, non-functional devices and water-damaged phones are accepted. Mention the damage when contacting us.",
+    q: "Is the battery risky?",
+    a: "Lithium cells are; keep swollen ones separate and flagged."
   },
   {
-    q: "Do old phones have resale value?",
-    a: "Some phones may have resale value depending on brand, model, age and working condition. Send photos and details for a quote.",
+    q: "Is my data safe?",
+    a: "Certified handling makes it irrecoverable."
+  }
+];
+
+const sourceItems = [
+  {
+    title: "E-Waste Management Rules and related regulatory resources",
+    href: "https://cpcb.nic.in/rules-6/",
+    publisher: "Central Pollution Control Board",
+    note: "Official CPCB resource page for e-waste rules and updates."
   },
   {
-    q: "Can I include chargers and accessories with my phone?",
-    a: "Yes. Chargers, cables, earphones and cases can be included in the same pickup. Keep them together for convenience.",
+    title: "EPR E-Waste portal",
+    href: "https://eprewastecpcb.in/",
+    publisher: "Central Pollution Control Board",
+    note: "Official portal for e-waste EPR registration and compliance workflows."
   },
+  {
+    title: "Kerala State Pollution Control Board",
+    href: "https://kspcb.kerala.gov.in/",
+    publisher: "Kerala State Pollution Control Board",
+    note: "Regional enforcement and authorization for e-waste recyclers in Kerala."
+  }
 ];
 ---
 
 <Layout title={title} description={description} path="/blog/mobile-phone-recycling-kochi/" jsonLd={jsonLd}>
   <Breadcrumbs items={breadcrumbItems} />
+
   <h1>Mobile Phone Recycling in Kochi</h1>
-  <p class="lede">
-    Old phones, tablets and gadgets pile up in drawers over time.
-    Here is how to recycle or sell them safely in Kochi, with proper
-    data removal and battery handling.
-  </p>
 
-  <CtaBar whatsappMessage="Hi, I have old mobile phones and gadgets for recycling." />
+  <DirectAnswer>
+    <p>To recycle a phone in Kochi, factory reset it, remove the SIM and SD cards, and send photos. Working phones may be reviewed for resale; all go through certified data handling before recycling.</p>
+  </DirectAnswer>
 
-  <div class="quick-answer">
-    <p class="quick-answer-label">Quick answer</p>
-    <p>
-      Old phones, tablets, smartwatches and accessories are accepted
-      for recycling or resale in Kochi. Back up your data, sign out of
-      accounts, factory reset, remove the SIM and memory card, then
-      send photos and condition details on WhatsApp for a quote or
-      pickup.
-    </p>
-  </div>
+  <CtaBar whatsappMessage="Hi, I want to recycle or resell an old phone in Kochi." />
 
-  <ul class="key-takeaways">
-    <li>A factory reset and account sign-out are essential before handing over any phone.</li>
-    <li>Swollen batteries should never be removed yourself — flag with a photo instead.</li>
-    <li>Brand, age and condition determine resale value — send details for an accurate quote.</li>
-  </ul>
+  <section id="section-1">
+    <h2>Prepare the phone</h2>
+    <p>Sign out of accounts, factory reset, and remove SIM and SD cards.</p>
+    <p>This prevents lock issues and data left on the device.</p>
+  </section>
+  <section id="section-2">
+    <h2>Battery care</h2>
+    <p>Keep lithium batteries around 40–60% charge for safe transport.</p>
+    <p>Swollen batteries are flagged and handled separately.</p>
+  </section>
+  <section id="section-3">
+    <h2>Resale or recycle</h2>
+    <p>Working phones may be reviewed for resale and recover value.</p>
+    <p>Broken ones go to material recovery with proper handling.</p>
+  </section>
+  <section id="section-4">
+    <h2>Data assurance</h2>
+    <p>Certified handling ensures your information is not recoverable.</p>
+    <p>A certificate is available where compliance requires it.</p>
+  </section>
 
-  <section>
-    <h2>What small devices are accepted?</h2>
+  <RelatedContent>
+    <h2>Explore more guides</h2>
     <ul>
-      <li>Mobile phones — feature phones and smartphones</li>
-      <li>Tablets and iPads</li>
-      <li>Smartwatches and fitness bands</li>
-      <li>Earbuds and headphones</li>
-      <li>Power banks</li>
-      <li>Chargers, cables and adapters</li>
+      <li><a href="/blog/devices-materials/">Devices & Materials hub</a></li>
+      <li><a href="/blog/general-ewaste/">General e-waste basics</a></li>
+      <li><a href="/recycling/">Recycling service</a></li>
+      <li><a href="/pickup/">Book a pickup</a></li>
     </ul>
+  </RelatedContent>
+
+  <LongformExpansion
+    label="Expanded field guide"
+    audience="households and businesses in Kochi"
+    localIntent="mobile phone recycling in kochi with authorised pickup"
+    items={["old electronics", "batteries", "cables", "data devices"]}
+    themes={["Preparation", "Safety", "Compliance", "Recovery"]}
+  />
+
+  <section id="faq-section">
+    <h2>Frequently asked questions</h2>
+    <Faq items={faqItems} heading="Mobile Phone Recycling in Kochi FAQs" />
   </section>
 
-  <section>
-    <h2>Data safety before recycling a phone</h2>
-    <p>
-      Mobile phones store personal data — contacts, photos, messages,
-      banking apps and passwords. Before handing over your device:
-    </p>
-    <ul class="check-list">
-      <li>Back up photos, documents and contacts you want to keep</li>
-      <li>Sign out of all accounts (Google, Apple ID, social media)</li>
-      <li>Perform a factory reset from the settings menu</li>
-      <li>Remove the SIM card and any memory or SD card</li>
-      <li>If the phone is broken and you cannot reset it, mention this to us</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Mobile battery safety</h2>
-    <p>
-      Phones contain lithium-ion batteries that can swell, leak or become
-      hazardous if damaged. Before pickup:
-    </p>
-    <ul>
-      <li>If the battery is swollen or the phone casing is bulging, flag it when you contact us</li>
-      <li>Do not attempt to remove a swollen battery yourself</li>
-      <li>Keep phones with damaged batteries separate from other e-waste</li>
-      <li>Send a photo so we can plan safe handling</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>What affects phone value?</h2>
-    <p>
-      If you are interested in selling rather than recycling, the value
-      depends on several factors:
-    </p>
-    <ul>
-      <li>Brand and model — popular brands tend to have better resale value</li>
-      <li>Age — newer models generally have higher value</li>
-      <li>Working condition — functional phones with no major damage are worth more</li>
-      <li>Screen and body condition — cracks and wear reduce value</li>
-      <li>Accessories — charger and box may add marginal value</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>What to include in your message</h2>
-    <ul class="check-list">
-      <li>Phone model and approximate age</li>
-      <li>Condition — working, cracked screen, battery issue, etc.</li>
-      <li>Photos of the front and back</li>
-      <li>Whether you have the charger and accessories</li>
-      <li>Any other small gadgets you want to include</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Related services</h2>
-    <div class="link-row">
-      <a href="/sell-electronics/">Sell Electronics</a>
-      <a href="/battery-recycling/">Battery Recycling</a>
-    </div>
-  </section>
-
-  <p class="mal-support">
-    മലയാളത്തിൽ സഹായം വേണോ? ഞങ്ങളെ <a href={telLink()}>{BUSINESS.phoneDisplay}</a> എന്ന നമ്പറിൽ വിളിക്കുകയോ വാട്സ്ആപ്പ് ചെയ്യുകയോ ചെയ്യാം.
-  </p>
-
-  <Faq items={faqItems} />
-
-  <RelatedContent href="/blog/mobile-phone-recycling-kochi/" />
-  <section class="final-cta">
-    <h2>Have Old Phones to Recycle?</h2>
-    <p>Share your item details and location on WhatsApp to get started.</p>
-    <CtaBar whatsappMessage="Hi, I have old mobile phones and gadgets for recycling." compact />
-  </section>
-
-  <p class="updated">Last updated: {dateModified}</p>
+  <Sources items={sourceItems} heading="Official sources & regulatory references" />
 </Layout>
 
 <style>
-  .lede { font-size: 1.1rem; color: var(--color-muted); max-width: 46rem; }
-  .check-list { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.25rem; }
-  .mal-support { font-size: 0.9rem; color: var(--color-muted); padding: 0.9rem 1.1rem; background: var(--color-surface); border-radius: 0.5rem; margin: 2rem 0; }
-  .updated { font-size: 0.8rem; color: var(--color-muted); }
-  .quick-answer { padding: 1.1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-surface); margin: 1.5rem 0; }
-  .quick-answer-label { margin: 0 0 0.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); }
-  .quick-answer p:last-child { margin: 0; color: var(--color-text); }
-  .key-takeaways { display: grid; gap: 0.5rem; margin: 1.5rem 0; padding-left: 1.25rem; }
-  .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; margin-top: 0.75rem; }
-  .link-row a { color: var(--color-primary); font-weight: 800; text-decoration: none; }
-  .final-cta { padding: 1.5rem 1.25rem; border-radius: 0.75rem; background: var(--color-surface); border: 1px solid var(--color-border); text-align: center; margin: 2.5rem 0; }
-  .final-cta p { color: var(--color-muted); margin: 0.4rem 0 0; }
+  .blog-hub { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+  .blog-hub h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-primary); text-align: center; }
+  .blog-hub section { margin-bottom: 3rem; padding: 2rem; background: var(--color-bg); border-radius: 0.75rem; border: 1px solid var(--color-border); }
+  .blog-hub h2 { color: var(--color-primary); margin-bottom: 1.5rem; font-size: 1.8rem; }
+  .blog-hub ul { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .blog-hub li { margin-bottom: 0.5rem; line-height: 1.6; }
+  @media (max-width: 768px) {
+    .blog-hub h1 { font-size: 2rem; }
+    .blog-hub section { padding: 1.5rem; }
+    .blog-hub h2 { font-size: 1.5rem; }
+  }
 </style>

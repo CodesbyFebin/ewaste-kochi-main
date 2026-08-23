@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Warehouse E-Waste Disposal | Bulk Logistics & Recycling | Ewaste Kochi";
+const description = "Warehouse e-waste disposal covers bulk electronics, packaging waste, and decommissioned equipment. Learn how to schedule large-volume collections safely.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Warehouse E-Waste Disposal", path: "/blog/warehouse-e-waste-disposal/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Warehouse E-Waste Disposal | Bulk Logistics & Recycling | Ewaste Kochi",
+    "description": "Warehouse e-waste disposal covers bulk electronics, packaging waste, and decommissioned equipment. Learn how to schedule large-volume collections safely.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/warehouse-e-waste-disposal/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "What warehouse equipment is accepted?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We accept scanners, printers, labelers, security systems, networking gear, and employee electronics. Confirm specific items when booking."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much notice is needed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bulk warehouse pickups require at least one week advance notice for logistics coordination."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide pallet jack or loading support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our team can assist with loading. For very large or heavy items, please ensure forklift or pallet jack access is available at the pickup location."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/warehouse-e-waste-disposal/",
+    "name": "Warehouse E-Waste Disposal | Bulk Logistics & Recycling | Ewaste Kochi",
+    "description": "Warehouse e-waste disposal covers bulk electronics, packaging waste, and decommissioned equipment. Learn how to schedule large-volume collections safely.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/warehouse-e-waste-disposal/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>Warehouse E-Waste Disposal</h1>
+  <p class="lede">Warehouse e-waste disposal involves the safe collection, documentation, and recycling of bulk electronic equipment accumulated in storage, distribution, and fulfillment facilities. Large-volume collections require advance logistics planning, item-level inventory, and compliant transport.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about Warehouse E-Waste Disposal." />
+
+  <ul class="key-takeaways">
+    <li>Warehouses accumulate e-waste from decommissioned scanning and labeling systems, barcode printers, conveyor-control electronics, security cameras, and employee electronics.</li>
+    <li>Bulk warehouse pickups require advance scheduling with a detailed item inventory.</li>
+    <li>Every warehouse pickup is documented with item-level inventory, transport records, and Certificate of Recycling.</li>
+  </ul>
+
+  <section>
+    <h2>Common Warehouse E-Waste</h2>
+    <p>Warehouses accumulate e-waste from decommissioned scanning and labeling systems, barcode printers, conveyor-control electronics, security cameras, and employee electronics. Packaging materials containing electronics — such as padded battery shipments — also require proper disposal.</p>
+  </section>
+  <section>
+    <h2>Logistics Planning</h2>
+    <p>Bulk warehouse pickups require advance scheduling with a detailed item inventory. Our team coordinates with facility managers to select optimal pickup windows, assign transport resources, and complete documentation before arrival.</p>
+  </section>
+  <section>
+    <h2>Compliance Documentation</h2>
+    <p>Every warehouse pickup is documented with item-level inventory, transport records, and Certificate of Recycling. Business clients use these records for internal audits, EPR reporting, and sustainability disclosures.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>What warehouse equipment is accepted?</summary>
+  <p>We accept scanners, printers, labelers, security systems, networking gear, and employee electronics. Confirm specific items when booking.</p>
+</details>
+  <details>
+  <summary>How much notice is needed?</summary>
+  <p>Bulk warehouse pickups require at least one week advance notice for logistics coordination.</p>
+</details>
+  <details>
+  <summary>Do you provide pallet jack or loading support?</summary>
+  <p>Our team can assist with loading. For very large or heavy items, please ensure forklift or pallet jack access is available at the pickup location.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/blog/corporate-e-waste-management/">Corporate E-Waste Management</a></li>
+      <li><a href="/blog/bulk-e-waste-recycling/">Bulk E-Waste Recycling</a></li>
+      <li><a href="/blog/industrial-e-waste-disposal/">Industrial E-Waste Disposal</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

@@ -1,0 +1,156 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import LongformExpansion from "../../../components/LongformExpansion.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "E-Waste Pickup in Kalamassery";
+const description = "Kalamassery e-waste collection guidance for homes, the Hitech Park area and nearby industrial belts.";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Locations & Services", path: "/blog/locations-services/" },
+  { name: "E-Waste Pickup in Kalamassery", path: "/blog/kalamassery-e-waste/" }
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": description,
+    "datePublished": "2026-08-18",
+    "dateModified": lastUpdated,
+    "author": { "@type": "Organization", name: BUSINESS.legalName },
+    "publisher": { "@id": `${SITE_URL}/#organization` },
+    "mainEntityOfPage": `${SITE_URL}/blog/kalamassery-e-waste/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/kalamassery-e-waste/`,
+    "name": title,
+    "description": description,
+    "dateModified": lastUpdated,
+  }
+];
+
+const faqItems = [
+  {
+    q: "Do you cover Kalamassery Hitech Park?",
+    a: "Yes, that Kalamassery belt is commonly serviceable; confirm with details."
+  },
+  {
+    q: "Can Kalamassery offices do bulk pickup?",
+    a: "Yes, with an inventory and access window shared early."
+  },
+  {
+    q: "What should Kalamassery residents send?",
+    a: "Locality, item list, condition and photos."
+  },
+  {
+    q: "How is the Kalamassery slot confirmed?",
+    a: "After feasibility review of your Kalamassery list and photos."
+  }
+];
+
+const sourceItems = [
+  {
+    title: "E-Waste Management Rules and related regulatory resources",
+    href: "https://cpcb.nic.in/rules-6/",
+    publisher: "Central Pollution Control Board",
+    note: "Official CPCB resource page for e-waste rules and updates."
+  },
+  {
+    title: "EPR E-Waste portal",
+    href: "https://eprewastecpcb.in/",
+    publisher: "Central Pollution Control Board",
+    note: "Official portal for e-waste EPR registration and compliance workflows."
+  },
+  {
+    title: "Kerala State Pollution Control Board",
+    href: "https://kspcb.kerala.gov.in/",
+    publisher: "Kerala State Pollution Control Board",
+    note: "Regional enforcement and authorization for e-waste recyclers in Kerala."
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/kalamassery-e-waste/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <h1>E-Waste Pickup in Kalamassery</h1>
+
+  <DirectAnswer>
+    <p>Kalamassery, including the Hitech Park belt, is serviceable for e-waste pickup when you share locality, items and photos. The team confirms feasibility and schedules a slot accordingly.</p>
+  </DirectAnswer>
+
+  <CtaBar whatsappMessage="Hi, I'm in Kalamassery and want to arrange e-waste pickup." />
+
+  <section id="section-1">
+    <h2>Kalamassery coverage</h2>
+    <p>The Kalamassery Hitech Park area and surrounding localities see regular pickups.</p>
+    <p>Share your exact Kalamassery pocket so the route matches.</p>
+  </section>
+  <section id="section-2">
+    <h2>Industrial and office mix</h2>
+    <p>Kalamassery's nearby industrial units and offices can arrange bulk collections.</p>
+    <p>Inventories and access windows make Kalamassery bulk lots smoother.</p>
+  </section>
+  <section id="section-3">
+    <h2>Residential requests</h2>
+    <p>Kalamassery homes and apartments follow the same confirmation-first flow.</p>
+    <p>Battery separation and photos speed up the Kalamassery review.</p>
+  </section>
+  <section id="section-4">
+    <h2>What to expect</h2>
+    <p>Kalamassery pickups are review, clarify, then schedule — no assumed coverage.</p>
+    <p>Functional items may be reviewed for resale.</p>
+  </section>
+
+  <RelatedContent>
+    <h2>Explore more guides</h2>
+    <ul>
+      <li><a href="/blog/locations-services/">Locations & Services hub</a></li>
+      <li><a href="/blog/general-ewaste/">General e-waste basics</a></li>
+      <li><a href="/recycling/">Recycling service</a></li>
+      <li><a href="/pickup/">Book a pickup</a></li>
+    </ul>
+  </RelatedContent>
+
+  <LongformExpansion
+    label="Expanded field guide"
+    audience="households and businesses in Kochi"
+    localIntent="e-waste pickup in kalamassery with authorised pickup"
+    items={["old electronics", "batteries", "cables", "data devices"]}
+    themes={["Preparation", "Safety", "Compliance", "Recovery"]}
+  />
+
+  <section id="faq-section">
+    <h2>Frequently asked questions</h2>
+    <Faq items={faqItems} heading="E-Waste Pickup in Kalamassery FAQs" />
+  </section>
+
+  <Sources items={sourceItems} heading="Official sources & regulatory references" />
+</Layout>
+
+<style>
+  .blog-hub { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+  .blog-hub h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-primary); text-align: center; }
+  .blog-hub section { margin-bottom: 3rem; padding: 2rem; background: var(--color-bg); border-radius: 0.75rem; border: 1px solid var(--color-border); }
+  .blog-hub h2 { color: var(--color-primary); margin-bottom: 1.5rem; font-size: 1.8rem; }
+  .blog-hub ul { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .blog-hub li { margin-bottom: 0.5rem; line-height: 1.6; }
+  @media (max-width: 768px) {
+    .blog-hub h1 { font-size: 2rem; }
+    .blog-hub section { padding: 1.5rem; }
+    .blog-hub h2 { font-size: 1.5rem; }
+  }
+</style>

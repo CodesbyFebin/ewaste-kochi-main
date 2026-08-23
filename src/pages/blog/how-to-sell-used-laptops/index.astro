@@ -1,0 +1,154 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "How to Sell Used Laptops | Get Best Value Securely | Ewaste Kochi";
+const description = "Sell used laptops safely: back up data, assess condition, choose between resale or recycling, and get paid securely through authorized channels.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "How to Sell Used Laptops", path: "/blog/how-to-sell-used-laptops/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "headline": "How to Sell Used Laptops | Get Best Value Securely | Ewaste Kochi",
+    "description": "Sell used laptops safely: back up data, assess condition, choose between resale or recycling, and get paid securely through authorized channels.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/how-to-sell-used-laptops/",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Assess Condition",
+        "text": "Evaluate the laptop's working condition, age, specifications, and cosmetic state. Functional devices with intact screens, batteries, and processors command better resale values. Note any defects accurately to avoid disputes during sale."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Secure Your Data",
+        "text": "Back up all personal data to external storage or cloud. Perform multiple passes of data erasure or a factory reset. For high-value devices, consider a certified data destruction report for your records."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Choose Your Channel",
+        "text": "Sell functional devices through authorized buyback platforms, local marketplaces, or directly to recyclers offering competitive pricing. For devices beyond economical repair, recycling through an authorized recycler is the responsible choice."
+      }
+    ],
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Do broken laptops have any value?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Even non-functional laptops contain recoverable metals and components. Recycling ensures material recovery rather than landfill disposal."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I ensure the buyer can't access my data?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Perform multiple overwrite passes or physical destruction of the storage drive. For SSDs, use the manufacturer's secure erase tool."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What payment methods are available?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Authorized recyclers typically offer bank transfer, UPI, or cheque for verified buyback transactions."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/how-to-sell-used-laptops/",
+    "name": "How to Sell Used Laptops | Get Best Value Securely | Ewaste Kochi",
+    "description": "Sell used laptops safely: back up data, assess condition, choose between resale or recycling, and get paid securely through authorized channels.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/how-to-sell-used-laptops/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>How to Sell Used Laptops</h1>
+  <p class="lede">Selling used laptops involves backing up data, assessing device condition, choosing the right channel (resale, buyback, or recycling), and completing the transaction through a secure, authorized platform. Working devices can generate value; non-functional devices should be recycled to recover metals.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about How to Sell Used Laptops." />
+
+  <ul class="key-takeaways">
+    <li>Evaluate the laptop's working condition, age, specifications, and cosmetic state.</li>
+    <li>Back up all personal data to external storage or cloud.</li>
+    <li>Sell functional devices through authorized buyback platforms, local marketplaces, or directly to recyclers offering competitive pricing.</li>
+  </ul>
+
+  <section>
+    <h2>Assess Condition</h2>
+    <p>Evaluate the laptop's working condition, age, specifications, and cosmetic state. Functional devices with intact screens, batteries, and processors command better resale values. Note any defects accurately to avoid disputes during sale.</p>
+  </section>
+  <section>
+    <h2>Secure Your Data</h2>
+    <p>Back up all personal data to external storage or cloud. Perform multiple passes of data erasure or a factory reset. For high-value devices, consider a certified data destruction report for your records.</p>
+  </section>
+  <section>
+    <h2>Choose Your Channel</h2>
+    <p>Sell functional devices through authorized buyback platforms, local marketplaces, or directly to recyclers offering competitive pricing. For devices beyond economical repair, recycling through an authorized recycler is the responsible choice.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Do broken laptops have any value?</summary>
+  <p>Even non-functional laptops contain recoverable metals and components. Recycling ensures material recovery rather than landfill disposal.</p>
+</details>
+  <details>
+  <summary>How do I ensure the buyer can't access my data?</summary>
+  <p>Perform multiple overwrite passes or physical destruction of the storage drive. For SSDs, use the manufacturer's secure erase tool.</p>
+</details>
+  <details>
+  <summary>What payment methods are available?</summary>
+  <p>Authorized recyclers typically offer bank transfer, UPI, or cheque for verified buyback transactions.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/sell-electronics/">Sell Old Electronics</a></li>
+      <li><a href="/laptop-scrap-price/">Laptop Scrap Price</a></li>
+      <li><a href="/data-destruction/">Data Destruction Services</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

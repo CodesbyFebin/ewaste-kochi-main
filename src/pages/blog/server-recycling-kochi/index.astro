@@ -1,0 +1,156 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import LongformExpansion from "../../../components/LongformExpansion.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Server & Rack Equipment Recycling in Kochi";
+const description = "How businesses recycle servers, racks and networking gear in Kochi with data destruction.";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Devices & Materials", path: "/blog/devices-materials/" },
+  { name: "Server & Rack Recycling", path: "/blog/server-recycling-kochi/" }
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": description,
+    "datePublished": "2026-08-18",
+    "dateModified": lastUpdated,
+    "author": { "@type": "Organization", name: BUSINESS.legalName },
+    "publisher": { "@id": `${SITE_URL}/#organization` },
+    "mainEntityOfPage": `${SITE_URL}/blog/server-recycling-kochi/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/server-recycling-kochi/`,
+    "name": title,
+    "description": description,
+    "dateModified": lastUpdated,
+  }
+];
+
+const faqItems = [
+  {
+    q: "How are servers recycled?",
+    a: "Through ITAD: inventory, destroy data, then reuse or recycle."
+  },
+  {
+    q: "Is data destroyed?",
+    a: "Yes, certified, before the hardware leaves."
+  },
+  {
+    q: "Can racks be picked up?",
+    a: "Yes, with access and loading planned."
+  },
+  {
+    q: "Is there value?",
+    a: "Usable servers may be refurbished; others yield metals."
+  }
+];
+
+const sourceItems = [
+  {
+    title: "E-Waste Management Rules and related regulatory resources",
+    href: "https://cpcb.nic.in/rules-6/",
+    publisher: "Central Pollution Control Board",
+    note: "Official CPCB resource page for e-waste rules and updates."
+  },
+  {
+    title: "EPR E-Waste portal",
+    href: "https://eprewastecpcb.in/",
+    publisher: "Central Pollution Control Board",
+    note: "Official portal for e-waste EPR registration and compliance workflows."
+  },
+  {
+    title: "Kerala State Pollution Control Board",
+    href: "https://kspcb.kerala.gov.in/",
+    publisher: "Kerala State Pollution Control Board",
+    note: "Regional enforcement and authorization for e-waste recyclers in Kerala."
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/server-recycling-kochi/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <h1>Server & Rack Recycling</h1>
+
+  <DirectAnswer>
+    <p>Servers and rack equipment are recycled through ITAD: inventory, certified data destruction, then reuse or material recovery. Kochi businesses share an asset list and access details to schedule a bulk pickup.</p>
+  </DirectAnswer>
+
+  <CtaBar whatsappMessage="Hi, we need to recycle servers and rack gear in Kochi." />
+
+  <section id="section-1">
+    <h2>The ITAD approach</h2>
+    <p>Servers are inventoried, data is destroyed, then reused or recycled.</p>
+    <p>This protects both compliance and asset value.</p>
+  </section>
+  <section id="section-2">
+    <h2>Data comes first</h2>
+    <p>Drives are wiped or physically destroyed before anything leaves.</p>
+    <p>Certificates tie the process to the batch.</p>
+  </section>
+  <section id="section-3">
+    <h2>Bulk logistics</h2>
+    <p>Racks need access, lifting and loading planning.</p>
+    <p>An asset list makes the pickup efficient.</p>
+  </section>
+  <section id="section-4">
+    <h2>Value recovery</h2>
+    <p>Usable servers may be refurbished; the rest yield metals.</p>
+    <p>Rare-earth magnets in drives are recovered too.</p>
+  </section>
+
+  <RelatedContent>
+    <h2>Explore more guides</h2>
+    <ul>
+      <li><a href="/blog/devices-materials/">Devices & Materials hub</a></li>
+      <li><a href="/blog/general-ewaste/">General e-waste basics</a></li>
+      <li><a href="/recycling/">Recycling service</a></li>
+      <li><a href="/pickup/">Book a pickup</a></li>
+    </ul>
+  </RelatedContent>
+
+  <LongformExpansion
+    label="Expanded field guide"
+    audience="households and businesses in Kochi"
+    localIntent="server & rack recycling with authorised pickup"
+    items={["old electronics", "batteries", "cables", "data devices"]}
+    themes={["Preparation", "Safety", "Compliance", "Recovery"]}
+  />
+
+  <section id="faq-section">
+    <h2>Frequently asked questions</h2>
+    <Faq items={faqItems} heading="Server & Rack Recycling FAQs" />
+  </section>
+
+  <Sources items={sourceItems} heading="Official sources & regulatory references" />
+</Layout>
+
+<style>
+  .blog-hub { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+  .blog-hub h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-primary); text-align: center; }
+  .blog-hub section { margin-bottom: 3rem; padding: 2rem; background: var(--color-bg); border-radius: 0.75rem; border: 1px solid var(--color-border); }
+  .blog-hub h2 { color: var(--color-primary); margin-bottom: 1.5rem; font-size: 1.8rem; }
+  .blog-hub ul { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .blog-hub li { margin-bottom: 0.5rem; line-height: 1.6; }
+  @media (max-width: 768px) {
+    .blog-hub h1 { font-size: 2rem; }
+    .blog-hub section { padding: 1.5rem; }
+    .blog-hub h2 { font-size: 1.5rem; }
+  }
+</style>

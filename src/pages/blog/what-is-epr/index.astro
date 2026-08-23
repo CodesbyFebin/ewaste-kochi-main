@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "What Is EPR? | Extended Producer Responsibility Guide | Ewaste Kochi";
+const description = "EPR (Extended Producer Responsibility) makes manufacturers accountable for end-of-life electronics. Learn how it works and what it means for consumers.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "What Is EPR?", path: "/blog/what-is-epr/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What Is EPR? | Extended Producer Responsibility Guide | Ewaste Kochi",
+    "description": "EPR (Extended Producer Responsibility) makes manufacturers accountable for end-of-life electronics. Learn how it works and what it means for consumers.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/what-is-epr/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Does EPR mean free pickup for consumers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EPR obliges producers to fund collection infrastructure. Many authorized recyclers offer free doorstep pickup as part of fulfilling producer obligations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who enforces EPR?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CPCB and State PCBs enforce EPR obligations under E-Waste Rules 2022."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a PRO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A Producer Responsibility Organization is an authorized entity that helps producers meet their EPR targets on their behalf."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/what-is-epr/",
+    "name": "What Is EPR? | Extended Producer Responsibility Guide | Ewaste Kochi",
+    "description": "EPR (Extended Producer Responsibility) makes manufacturers accountable for end-of-life electronics. Learn how it works and what it means for consumers.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/what-is-epr/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>What Is EPR?</h1>
+  <p class="lede">EPR (Extended Producer Responsibility) is a regulatory principle requiring manufacturers of electrical and electronic equipment to take responsibility for the collection, recycling, and environmentally sound disposal of their products at end-of-life. In India, EPR is embedded in the E-Waste (Management) Rules 2022.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about What Is EPR?." />
+
+  <ul class="key-takeaways">
+    <li>Under EPR, producers must establish collection systems, achieve annual recycling targets, and fund the end-to-end management of their sold products.</li>
+    <li>EPR ensures that brands finance the reverse logistics and recycling of the products they sell.</li>
+    <li>Producers register with CPCB, file annual returns, and maintain records of collection, dismantling, and recycling.</li>
+  </ul>
+
+  <section>
+    <h2>How EPR Works</h2>
+    <p>Under EPR, producers must establish collection systems, achieve annual recycling targets, and fund the end-to-end management of their sold products. They may fulfill these obligations directly or through authorized Producer Responsibility Organizations (PROs).</p>
+  </section>
+  <section>
+    <h2>Impact on Consumers</h2>
+    <p>EPR ensures that brands finance the reverse logistics and recycling of the products they sell. Consumers benefit through free or low-cost collection channels, formal recycling channels, and reduced environmental harm from unregulated disposal.</p>
+  </section>
+  <section>
+    <h2>Compliance Pathway</h2>
+    <p>Producers register with CPCB, file annual returns, and maintain records of collection, dismantling, and recycling. Non-compliance attracts penalties and potential suspension of authorization under the Rules.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Does EPR mean free pickup for consumers?</summary>
+  <p>EPR obliges producers to fund collection infrastructure. Many authorized recyclers offer free doorstep pickup as part of fulfilling producer obligations.</p>
+</details>
+  <details>
+  <summary>Who enforces EPR?</summary>
+  <p>CPCB and State PCBs enforce EPR obligations under E-Waste Rules 2022.</p>
+</details>
+  <details>
+  <summary>What is a PRO?</summary>
+  <p>A Producer Responsibility Organization is an authorized entity that helps producers meet their EPR targets on their behalf.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/blog/why-epr-is-mandatory/">Why EPR Is Mandatory</a></li>
+      <li><a href="/blog/e-waste-rules-2022-india/">E-Waste Rules 2022</a></li>
+      <li><a href="/blog/epr-registration-for-businesses/">EPR Registration for Businesses</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

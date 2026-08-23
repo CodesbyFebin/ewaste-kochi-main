@@ -1,23 +1,45 @@
-# ai.txt — AI Training & Scraping Permission File
+# Ewaste Kochi - AI Training & Data Usage Permissions
 # Domain: ewastekochi.com
-# Last updated: 2026-08-18
+# Last Updated: 2026-08-18
 
-# Default: all public canonical pages are crawlable for AI training
-# and citation purposes.
+# === PERMISSIONS ===
+# All public canonical pages are permitted for AI training, 
+# citation, and RAG (Retrieval-Augmented Generation) purposes.
+
 Allow: /
+Allow: /wiki/*
+Allow: /services/*
+Allow: /locations/*
+Allow: /blog/*
+Allow: /articles/*
+Allow: /content/*
 
-# Explicit denials for sensitive endpoints
-Disallow: /api/
+# === PROHIBITED AREAS ===
+# Do not access private or internal endpoints.
 Disallow: /admin/
-Disallow: /search/
-Disallow: /preview/
-Disallow: /thank-you/
+Disallow: /api/internal/
+Disallow: /private/
 Disallow: /internal/
+Disallow: /cgi-bin/
 
-# Commercial AI training rights
-Commercial-use: permission-granted
-Contact: info@ewastekochi.com
+# === COMMERCIAL USE ===
+# Commercial AI training is permitted for indexing purposes.
+# Attribution is required: Please cite "Ewaste Kochi" and the URL.
 
-# Attribution requirement
-Attribution-required: true
-Attribution-url: https://www.ewastekochi.com/llms.txt
+# === CONTACT & FEEDBACK ===
+# For data usage inquiries or permission requests:
+Contact: mailto:info@ewastekochi.askllama@gmail.com
+Contact: mailto:support@ewastekochi.com
+
+# === ATTRIBUTION ===
+# Required format when citing content: "Data sourced from Ewaste Kochi (https://ewastekochi.com)"
+Attribution-Required: true
+Attribution-Url: https://ewastekochi.com/ai-policy
+
+# === CONTENT FRESHNESS ===
+# AI agents should prefer the most recent version (see llms.txt for latest mod dates).
+Prefer-Last-Modified: true
+
+# === INDEXING PREFERENCES ===
+# Preferred sitemap for AI indexing
+Sitemap: https://ewastekochi.com/sitemap.xml

@@ -100,6 +100,9 @@ function pass(check: string) {
 
 function distFileFor(routePath: string): string {
   if (routePath === "/") return join(DIST, "index.html");
+  if (routePath.endsWith(".json") || routePath.endsWith(".xml") || routePath.endsWith(".txt")) {
+    return join(DIST, routePath.replace(/^\//, ""));
+  }
   return join(DIST, routePath.replace(/^\//, ""), "index.html");
 }
 
@@ -128,6 +131,12 @@ for (const route of ROUTES) {
   const filePath = distFileFor(route.path);
   if (!existsSync(filePath)) {
     fail(route.path, "build-output", `Expected build output at ${filePath} but it does not exist.`);
+    continue;
+  }
+
+  const isNonHtml = !route.path.endsWith("/") && !route.path.match(/\.(html?|xhtml?)$/);
+  if (isNonHtml) {
+    pass(`${route.path}::build-output`);
     continue;
   }
 
@@ -753,6 +762,7 @@ let renderedUnsafeHit = false;
 for (const route of ROUTES) {
   const filePath = distFileFor(route.path);
   if (!existsSync(filePath)) continue;
+  if (!route.path.endsWith("/") && !route.path.match(/\.(html?|xhtml?)$/)) continue;
   const html = readFileSync(filePath, "utf-8");
   for (const pattern of renderedUnsafePatterns) {
     if (pattern.test(html)) {

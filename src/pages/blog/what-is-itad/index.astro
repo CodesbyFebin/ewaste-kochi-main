@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "What Is ITAD? | IT Asset Disposition Explained | Ewaste Kochi";
+const description = "ITAD (IT Asset Disposition) covers secure retirement of computers, servers, and storage devices with data destruction and environmental compliance.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "What Is ITAD?", path: "/blog/what-is-itad/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What Is ITAD? | IT Asset Disposition Explained | Ewaste Kochi",
+    "description": "ITAD (IT Asset Disposition) covers secure retirement of computers, servers, and storage devices with data destruction and environmental compliance.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/what-is-itad/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Does ITAD include data destruction?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Certified ITAD programs include NIST 800-88-compliant data sanitization or physical destruction as part of the standard workflow."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can ITAD assets be resold?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Functional assets can enter remarketing channels after certified data erasure. Non-functional assets proceed to material recycling."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is ITAD required by law in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "While not a standalone mandate, ITAD practices are required to comply with E-Waste Rules 2022 and data protection obligations."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/what-is-itad/",
+    "name": "What Is ITAD? | IT Asset Disposition Explained | Ewaste Kochi",
+    "description": "ITAD (IT Asset Disposition) covers secure retirement of computers, servers, and storage devices with data destruction and environmental compliance.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/what-is-itad/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>What Is ITAD?</h1>
+  <p class="lede">ITAD (IT Asset Disposition) is the formal process of securely retiring IT hardware — including laptops, desktops, servers, storage arrays, and networking equipment — while ensuring data is irrecoverably destroyed, assets are valued appropriately, and disposal complies with environmental regulations.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about What Is ITAD?." />
+
+  <ul class="key-takeaways">
+    <li>ITAD balances three goals: data security through certified destruction, value recovery through resale or material reclamation, and regulatory compliance under E-Waste Rules 2022 and applicable data privacy laws.</li>
+    <li>A typical ITAD workflow includes asset inventory, data sanitization (NIST 800-88), secure transport, asset remarketing or recycling, and certificate issuance.</li>
+    <li>Unmanaged IT asset retirement exposes organizations to data breach liability, non-compliance penalties, and reputational risk.</li>
+  </ul>
+
+  <section>
+    <h2>Core Objectives</h2>
+    <p>ITAD balances three goals: data security through certified destruction, value recovery through resale or material reclamation, and regulatory compliance under E-Waste Rules 2022 and applicable data privacy laws.</p>
+  </section>
+  <section>
+    <h2>Key Stages</h2>
+    <p>A typical ITAD workflow includes asset inventory, data sanitization (NIST 800-88), secure transport, asset remarketing or recycling, and certificate issuance. Each stage is documented for audit and chain-of-custody purposes.</p>
+  </section>
+  <section>
+    <h2>Why ITAD Matters for Businesses</h2>
+    <p>Unmanaged IT asset retirement exposes organizations to data breach liability, non-compliance penalties, and reputational risk. A documented ITAD program protects both data and brand while supporting sustainability commitments.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Does ITAD include data destruction?</summary>
+  <p>Yes. Certified ITAD programs include NIST 800-88-compliant data sanitization or physical destruction as part of the standard workflow.</p>
+</details>
+  <details>
+  <summary>Can ITAD assets be resold?</summary>
+  <p>Functional assets can enter remarketing channels after certified data erasure. Non-functional assets proceed to material recycling.</p>
+</details>
+  <details>
+  <summary>Is ITAD required by law in India?</summary>
+  <p>While not a standalone mandate, ITAD practices are required to comply with E-Waste Rules 2022 and data protection obligations.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/itad/">ITAD Services</a></li>
+      <li><a href="/data-destruction/">Data Destruction Services</a></li>
+      <li><a href="/hard-drive-shredding/">Hard Drive Shredding</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

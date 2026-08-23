@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "E-Waste Recycling Trivandrum | Authorized Collection in Thiruvananthapuram | Ewaste Kochi";
+const description = "E-waste recycling and pickup services for Trivandrum (Thiruvananthapuram) households and businesses. Scheduled collection across Thiruvananthapuram district.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "E-Waste Recycling Trivandrum", path: "/blog/e-waste-recycling-trivandrum/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "headline": "E-Waste Recycling Trivandrum | Authorized Collection in Thiruvananthapuram | Ewaste Kochi",
+    "description": "E-waste recycling and pickup services for Trivandrum (Thiruvananthapuram) households and businesses. Scheduled collection across Thiruvananthapuram district.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/e-waste-recycling-trivandrum/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Is Trivandrum within your service area?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we provide scheduled e-waste collection for Trivandrum and Thiruvananthapuram district. Advance booking is required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far in advance should I book?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Trivandrum pickups should be scheduled at least 3-5 days in advance to coordinate logistics."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer free pickup?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Free pickup is available for standard household quantities. Commercial quantities are quoted based on volume and location."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/e-waste-recycling-trivandrum/",
+    "name": "E-Waste Recycling Trivandrum | Authorized Collection in Thiruvananthapuram | Ewaste Kochi",
+    "description": "E-waste recycling and pickup services for Trivandrum (Thiruvananthapuram) households and businesses. Scheduled collection across Thiruvananthapuram district.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/e-waste-recycling-trivandrum/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Recycling Trivandrum</h1>
+  <p class="lede">Ewaste Kochi provides scheduled e-waste collection and recycling for Trivandrum and Thiruvananthapuram district. Households and businesses can book pickup for IT equipment, home appliances, batteries, and office electronics through our authorized network.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about E-Waste Recycling Trivandrum." />
+
+  <ul class="key-takeaways">
+    <li>Trivandrum service operates on a scheduled basis with advance booking required.</li>
+    <li>We accept all standard e-waste categories: IT equipment, consumer electronics, home appliances, batteries, telecom gear, and medical devices.</li>
+    <li>All pickups are documented with handover receipts.</li>
+  </ul>
+
+  <section>
+    <h2>Service Availability</h2>
+    <p>Trivandrum service operates on a scheduled basis with advance booking required. We cover Thiruvananthapuram city and surrounding areas in the district. Contact us to confirm availability for your specific location and preferred timing.</p>
+  </section>
+  <section>
+    <h2>Accepted Items</h2>
+    <p>We accept all standard e-waste categories: IT equipment, consumer electronics, home appliances, batteries, telecom gear, and medical devices. Data-bearing devices receive certified sanitization before processing.</p>
+  </section>
+  <section>
+    <h2>Documentation</h2>
+    <p>All pickups are documented with handover receipts. After processing, clients receive a digital Certificate of Recycling confirming CPCB-compliant disposal of the collected items.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Is Trivandrum within your service area?</summary>
+  <p>Yes, we provide scheduled e-waste collection for Trivandrum and Thiruvananthapuram district. Advance booking is required.</p>
+</details>
+  <details>
+  <summary>How far in advance should I book?</summary>
+  <p>Trivandrum pickups should be scheduled at least 3-5 days in advance to coordinate logistics.</p>
+</details>
+  <details>
+  <summary>Do you offer free pickup?</summary>
+  <p>Free pickup is available for standard household quantities. Commercial quantities are quoted based on volume and location.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/pickup/">E-Waste Pickup Service</a></li>
+      <li><a href="/blog/e-waste-center-in-kerala/">E-Waste Center in Kerala</a></li>
+      <li><a href="/blog/how-to-schedule-e-waste-pickup/">How to Schedule E-Waste Pickup</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

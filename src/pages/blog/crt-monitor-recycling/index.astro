@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "CRT Monitor Recycling | Leaded Glass & Hazardous Disposal | Ewaste Kochi";
+const description = "CRT monitors contain leaded glass and must be recycled through authorized facilities. Learn safe disposal methods, hazards, and the recycling process.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "CRT Monitor Recycling", path: "/blog/crt-monitor-recycling/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "CRT Monitor Recycling | Leaded Glass & Hazardous Disposal | Ewaste Kochi",
+    "description": "CRT monitors contain leaded glass and must be recycled through authorized facilities. Learn safe disposal methods, hazards, and the recycling process.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/crt-monitor-recycling/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Can I throw away a CRT monitor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. CRTs contain leaded glass and are classified as hazardous waste. They must be recycled through authorized facilities only."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the lead in CRTs dangerous?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, lead in CRT glass can cause serious health effects if released. Proper recycling prevents lead exposure during processing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you accept CRT monitors?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, CRT monitors and televisions are accepted for recycling through our authorized network. Contact us for packaging guidance."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/crt-monitor-recycling/",
+    "name": "CRT Monitor Recycling | Leaded Glass & Hazardous Disposal | Ewaste Kochi",
+    "description": "CRT monitors contain leaded glass and must be recycled through authorized facilities. Learn safe disposal methods, hazards, and the recycling process.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/crt-monitor-recycling/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>CRT Monitor Recycling</h1>
+  <p class="lede">CRT (Cathode Ray Tube) monitors contain leaded glass that makes them hazardous waste. Safe CRT recycling requires specialized dismantling, glass separation, and lead-safe processing at CPCB-authorized facilities. Never dispose of CRTs in regular waste or informal recycling channels.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about CRT Monitor Recycling." />
+
+  <ul class="key-takeaways">
+    <li>CRT glass can contain up to 25% lead by weight in the funnel and neck areas.</li>
+    <li>Handle CRTs carefully to avoid breakage.</li>
+    <li>At the recycling facility, CRTs are drained of any residual charge, dismantled, and the leaded glass is separated from the funnel and screen.</li>
+  </ul>
+
+  <section>
+    <h2>Why CRTs Are Hazardous</h2>
+    <p>CRT glass can contain up to 25% lead by weight in the funnel and neck areas. When broken or incinerated, lead particles are released into the environment. Lead exposure causes neurological damage, especially in children. This makes formal recycling the only safe disposal route.</p>
+  </section>
+  <section>
+    <h2>Safe Handling</h2>
+    <p>Handle CRTs carefully to avoid breakage. Transport upright in protective packaging. Do not attempt to dismantle CRTs yourself — the glass is thick but shatters into sharp, lead-contaminated fragments that require specialized cleanup.</p>
+  </section>
+  <section>
+    <h2>Recycling Process</h2>
+    <p>At the recycling facility, CRTs are drained of any residual charge, dismantled, and the leaded glass is separated from the funnel and screen. The glass is processed in lead-safe furnaces. Remaining plastics, copper, and steel are recovered separately.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Can I throw away a CRT monitor?</summary>
+  <p>No. CRTs contain leaded glass and are classified as hazardous waste. They must be recycled through authorized facilities only.</p>
+</details>
+  <details>
+  <summary>Is the lead in CRTs dangerous?</summary>
+  <p>Yes, lead in CRT glass can cause serious health effects if released. Proper recycling prevents lead exposure during processing.</p>
+</details>
+  <details>
+  <summary>Do you accept CRT monitors?</summary>
+  <p>Yes, CRT monitors and televisions are accepted for recycling through our authorized network. Contact us for packaging guidance.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/blog/old-tv-recycling/">Old TV Recycling</a></li>
+      <li><a href="/blog/led-tv-recycling/">LED TV Recycling</a></li>
+      <li><a href="/tv-recycling-kochi/">TV Recycling Kochi</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

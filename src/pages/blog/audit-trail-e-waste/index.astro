@@ -1,0 +1,156 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import LongformExpansion from "../../../components/LongformExpansion.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "Building an E-Waste Audit Trail";
+const description = "How Kochi organisations create a defensible audit trail from pickup request to certificate.";
+const lastUpdated = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "Compliance & B2B", path: "/blog/compliance-b2b/" },
+  { name: "E-Waste Audit Trail", path: "/blog/audit-trail-e-waste/" }
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": description,
+    "datePublished": "2026-08-18",
+    "dateModified": lastUpdated,
+    "author": { "@type": "Organization", name: BUSINESS.legalName },
+    "publisher": { "@id": `${SITE_URL}/#organization` },
+    "mainEntityOfPage": `${SITE_URL}/blog/audit-trail-e-waste/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/audit-trail-e-waste/`,
+    "name": title,
+    "description": description,
+    "dateModified": lastUpdated,
+  }
+];
+
+const faqItems = [
+  {
+    q: "What is the minimum trail?",
+    a: "Request, item list, manifest and final certificate."
+  },
+  {
+    q: "How should I store it?",
+    a: "One batch folder with consistent naming for quick retrieval."
+  },
+  {
+    q: "Do photos count?",
+    a: "They support the item list and help confirm condition at pickup."
+  },
+  {
+    q: "Who needs to see it?",
+    a: "Auditors, procurement and compliance reviewers."
+  }
+];
+
+const sourceItems = [
+  {
+    title: "E-Waste Management Rules and related regulatory resources",
+    href: "https://cpcb.nic.in/rules-6/",
+    publisher: "Central Pollution Control Board",
+    note: "Official CPCB resource page for e-waste rules and updates."
+  },
+  {
+    title: "EPR E-Waste portal",
+    href: "https://eprewastecpcb.in/",
+    publisher: "Central Pollution Control Board",
+    note: "Official portal for e-waste EPR registration and compliance workflows."
+  },
+  {
+    title: "Kerala State Pollution Control Board",
+    href: "https://kspcb.kerala.gov.in/",
+    publisher: "Kerala State Pollution Control Board",
+    note: "Regional enforcement and authorization for e-waste recyclers in Kerala."
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/audit-trail-e-waste/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <h1>E-Waste Audit Trail</h1>
+
+  <DirectAnswer>
+    <p>An e-waste audit trail links your pickup request, itemised list, collection manifest and final certificate into one record. Kochi organisations use it to prove compliant, documented disposal.</p>
+  </DirectAnswer>
+
+  <CtaBar whatsappMessage="Hi, we want an audit-ready trail for our e-waste disposal." />
+
+  <section id="section-1">
+    <h2>The chain of evidence</h2>
+    <p>Start with the request and item list, then the manifest, then the certificate.</p>
+    <p>Each step references the others so the story is continuous.</p>
+  </section>
+  <section id="section-2">
+    <h2>Capturing the request</h2>
+    <p>Keep the original message with area, items, quantities and photos.</p>
+    <p>This anchors what was actually collected.</p>
+  </section>
+  <section id="section-3">
+    <h2>Closing with certificates</h2>
+    <p>The recycling or destruction certificate is the final, auditable proof.</p>
+    <p>Store it with the manifest and asset tags where relevant.</p>
+  </section>
+  <section id="section-4">
+    <h2>Making it audit-ready</h2>
+    <p>Use one folder per batch with a consistent naming convention.</p>
+    <p>Auditors value consistency over volume.</p>
+  </section>
+
+  <RelatedContent>
+    <h2>Explore more guides</h2>
+    <ul>
+      <li><a href="/blog/compliance-b2b/">Compliance & B2B hub</a></li>
+      <li><a href="/blog/general-ewaste/">General e-waste basics</a></li>
+      <li><a href="/recycling/">Recycling service</a></li>
+      <li><a href="/pickup/">Book a pickup</a></li>
+    </ul>
+  </RelatedContent>
+
+  <LongformExpansion
+    label="Expanded field guide"
+    audience="households and businesses in Kochi"
+    localIntent="e-waste audit trail with authorised pickup"
+    items={["old electronics", "batteries", "cables", "data devices"]}
+    themes={["Preparation", "Safety", "Compliance", "Recovery"]}
+  />
+
+  <section id="faq-section">
+    <h2>Frequently asked questions</h2>
+    <Faq items={faqItems} heading="E-Waste Audit Trail FAQs" />
+  </section>
+
+  <Sources items={sourceItems} heading="Official sources & regulatory references" />
+</Layout>
+
+<style>
+  .blog-hub { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+  .blog-hub h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-primary); text-align: center; }
+  .blog-hub section { margin-bottom: 3rem; padding: 2rem; background: var(--color-bg); border-radius: 0.75rem; border: 1px solid var(--color-border); }
+  .blog-hub h2 { color: var(--color-primary); margin-bottom: 1.5rem; font-size: 1.8rem; }
+  .blog-hub ul { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .blog-hub li { margin-bottom: 0.5rem; line-height: 1.6; }
+  @media (max-width: 768px) {
+    .blog-hub h1 { font-size: 2rem; }
+    .blog-hub section { padding: 1.5rem; }
+    .blog-hub h2 { font-size: 1.5rem; }
+  }
+</style>

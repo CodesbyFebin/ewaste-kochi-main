@@ -1,0 +1,154 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "How to Recycle Laptop in India | Step-by-Step Guide | Ewaste Kochi";
+const description = "Step-by-step guide to recycling laptops in India: collect, contact an authorized recycler, schedule pickup, and get your Certificate of Recycling.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "How to Recycle Laptop in India", path: "/blog/how-to-recycle-laptop-in-india/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "headline": "How to Recycle Laptop in India | Step-by-Step Guide | Ewaste Kochi",
+    "description": "Step-by-step guide to recycling laptops in India: collect, contact an authorized recycler, schedule pickup, and get your Certificate of Recycling.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/how-to-recycle-laptop-in-india/",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Step 1: Gather and Sort",
+        "text": "Collect all non-functional laptops, chargers, and accessories in one place. Remove any removable storage (SD cards, external drives) and note any physical damage or battery swelling — flag this when booking."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Step 2: Back Up and Sign Out",
+        "text": "Before handover, back up any remaining data and perform a factory reset. For business laptops, coordinate with your IT team to ensure no residual corporate data remains on the device."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Step 3: Book a Pickup",
+        "text": "Contact Ewaste Kochi via WhatsApp or phone. Provide the number of devices, approximate types, and your address. Our team will confirm pickup timing and provide a reference number for tracking."
+      }
+    ],
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "How long does laptop recycling take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pickup is typically scheduled within 24-48 hours. Processing and certification take 3-5 business days after collection."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to remove the hard drive?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not required. Our team performs certified data destruction during processing. However, you may remove drives if you prefer personal handling."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a charge for laptop recycling?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Household quantities are typically collected free of charge. Bulk commercial pickups may involve handling fees depending on volume."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/how-to-recycle-laptop-in-india/",
+    "name": "How to Recycle Laptop in India | Step-by-Step Guide | Ewaste Kochi",
+    "description": "Step-by-step guide to recycling laptops in India: collect, contact an authorized recycler, schedule pickup, and get your Certificate of Recycling.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/how-to-recycle-laptop-in-india/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>How to Recycle Laptop in India</h1>
+  <p class="lede">To recycle a laptop in India, gather all non-functional devices, contact an authorized recycler such as Ewaste Kochi, schedule a free or low-cost doorstep pickup, and receive a digital Certificate of Recycling after processing. The entire process typically completes within 5-7 business days.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about How to Recycle Laptop in India." />
+
+  <ul class="key-takeaways">
+    <li>Collect all non-functional laptops, chargers, and accessories in one place.</li>
+    <li>Before handover, back up any remaining data and perform a factory reset.</li>
+    <li>Contact Ewaste Kochi via WhatsApp or phone.</li>
+  </ul>
+
+  <section>
+    <h2>Step 1: Gather and Sort</h2>
+    <p>Collect all non-functional laptops, chargers, and accessories in one place. Remove any removable storage (SD cards, external drives) and note any physical damage or battery swelling — flag this when booking.</p>
+  </section>
+  <section>
+    <h2>Step 2: Back Up and Sign Out</h2>
+    <p>Before handover, back up any remaining data and perform a factory reset. For business laptops, coordinate with your IT team to ensure no residual corporate data remains on the device.</p>
+  </section>
+  <section>
+    <h2>Step 3: Book a Pickup</h2>
+    <p>Contact Ewaste Kochi via WhatsApp or phone. Provide the number of devices, approximate types, and your address. Our team will confirm pickup timing and provide a reference number for tracking.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>How long does laptop recycling take?</summary>
+  <p>Pickup is typically scheduled within 24-48 hours. Processing and certification take 3-5 business days after collection.</p>
+</details>
+  <details>
+  <summary>Do I need to remove the hard drive?</summary>
+  <p>Not required. Our team performs certified data destruction during processing. However, you may remove drives if you prefer personal handling.</p>
+</details>
+  <details>
+  <summary>Is there a charge for laptop recycling?</summary>
+  <p>Household quantities are typically collected free of charge. Bulk commercial pickups may involve handling fees depending on volume.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/itad/">ITAD Services</a></li>
+      <li><a href="/data-destruction/">Data Destruction Services</a></li>
+      <li><a href="/blog/e-waste-recycling-kochi/">E-Waste Recycling in Kochi</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

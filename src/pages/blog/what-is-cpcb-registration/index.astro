@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "What Is CPCB Registration? | Authorization & Compliance | Ewaste Kochi";
+const description = "CPCB registration is mandatory for e-waste recyclers and producers in India. Learn what it covers, how to verify it, and why it protects you.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "What Is CPCB Registration?", path: "/blog/what-is-cpcb-registration/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What Is CPCB Registration? | Authorization & Compliance | Ewaste Kochi",
+    "description": "CPCB registration is mandatory for e-waste recyclers and producers in India. Learn what it covers, how to verify it, and why it protects you.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/what-is-cpcb-registration/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Is CPCB registration mandatory?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, for any entity handling e-waste at scale in India, CPCB authorization is mandatory under E-Waste Rules 2022."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does CPCB cover data destruction?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CPCB covers the environmental handling of e-waste. Data destruction standards are governed separately by NIST and applicable privacy laws."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I verify a recycler's CPCB status?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Check the CPCB website's authorized recycler list or request the authorization document directly from the recycler."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/what-is-cpcb-registration/",
+    "name": "What Is CPCB Registration? | Authorization & Compliance | Ewaste Kochi",
+    "description": "CPCB registration is mandatory for e-waste recyclers and producers in India. Learn what it covers, how to verify it, and why it protects you.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/what-is-cpcb-registration/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>What Is CPCB Registration?</h1>
+  <p class="lede">CPCB registration is the mandatory authorization issued by India's Central Pollution Control Board for entities involved in e-waste collection, transportation, dismantling, or recycling. It confirms that the facility meets the minimum environmental and operational standards set under E-Waste Rules 2022.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about What Is CPCB Registration?." />
+
+  <ul class="key-takeaways">
+    <li>Producers, recyclers, dismantlers, and collection agents operating in India must obtain CPCB authorization.</li>
+    <li>CPCB authorization confirms that a facility has adequate infrastructure, trained personnel, waste tracking mechanisms, and pollution control systems.</li>
+    <li>You can verify a recycler's CPCB authorization by checking the CPCB website's authorized recycler list or requesting a copy of the authorization certificate.</li>
+  </ul>
+
+  <section>
+    <h2>Who Needs It</h2>
+    <p>Producers, recyclers, dismantlers, and collection agents operating in India must obtain CPCB authorization. State-level PCB consent is also required for physical operations within each state.</p>
+  </section>
+  <section>
+    <h2>What It Verifies</h2>
+    <p>CPCB authorization confirms that a facility has adequate infrastructure, trained personnel, waste tracking mechanisms, and pollution control systems. It is a minimum trust signal for consumers choosing an e-waste handler.</p>
+  </section>
+  <section>
+    <h2>How to Verify</h2>
+    <p>You can verify a recycler's CPCB authorization by checking the CPCB website's authorized recycler list or requesting a copy of the authorization certificate. Avoid any operator that cannot produce valid documentation.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Is CPCB registration mandatory?</summary>
+  <p>Yes, for any entity handling e-waste at scale in India, CPCB authorization is mandatory under E-Waste Rules 2022.</p>
+</details>
+  <details>
+  <summary>Does CPCB cover data destruction?</summary>
+  <p>CPCB covers the environmental handling of e-waste. Data destruction standards are governed separately by NIST and applicable privacy laws.</p>
+</details>
+  <details>
+  <summary>How do I verify a recycler's CPCB status?</summary>
+  <p>Check the CPCB website's authorized recycler list or request the authorization document directly from the recycler.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/blog/e-waste-rules-2022-india/">E-Waste Rules 2022</a></li>
+      <li><a href="/blog/corporate-e-waste-management/">Corporate E-Waste Management</a></li>
+      <li><a href="/blog/e-waste-recycling-kochi/">E-Waste Recycling in Kochi</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

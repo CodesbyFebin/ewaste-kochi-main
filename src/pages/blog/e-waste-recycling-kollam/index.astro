@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "E-Waste Recycling Kollam | Authorized Collection Kollam | Ewaste Kochi";
+const description = "E-waste recycling and scheduled pickup for Kollam district. Authorized e-waste recycler serving Kollam, Kottarakkara, and surrounding areas.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "E-Waste Recycling Kollam", path: "/blog/e-waste-recycling-kollam/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "headline": "E-Waste Recycling Kollam | Authorized Collection Kollam | Ewaste Kochi",
+    "description": "E-waste recycling and scheduled pickup for Kollam district. Authorized e-waste recycler serving Kollam, Kottarakkara, and surrounding areas.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/e-waste-recycling-kollam/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Do you serve Kottarakkara?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Kottarakkara is within our extended Kollam district service area. Contact us to confirm scheduling."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a fee for pickup?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Household quantities are collected free of charge. Commercial volumes are quoted based on location and quantity."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does scheduling take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kollam pickups require 3-5 days advance booking. We confirm scheduling within one business day of your request."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/e-waste-recycling-kollam/",
+    "name": "E-Waste Recycling Kollam | Authorized Collection Kollam | Ewaste Kochi",
+    "description": "E-waste recycling and scheduled pickup for Kollam district. Authorized e-waste recycler serving Kollam, Kottarakkara, and surrounding areas.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/e-waste-recycling-kollam/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>E-Waste Recycling Kollam</h1>
+  <p class="lede">Ewaste Kochi provides scheduled e-waste collection and recycling for Kollam district including Kollam city and Kottarakkara. Household and business e-waste is processed through CPCB-authorized facilities with full documentation.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about E-Waste Recycling Kollam." />
+
+  <ul class="key-takeaways">
+    <li>Our Kollam service covers e-waste collection from households, shops, offices, and institutions.</li>
+    <li>Standard e-waste categories are accepted: IT equipment, consumer electronics, home appliances, batteries, and office equipment.</li>
+    <li>Contact us via WhatsApp or phone with your address, item list, and preferred timing.</li>
+  </ul>
+
+  <section>
+    <h2>Service Scope</h2>
+    <p>Our Kollam service covers e-waste collection from households, shops, offices, and institutions. All items are transported to authorized processing facilities and documented with Certificates of Recycling.</p>
+  </section>
+  <section>
+    <h2>Accepted Categories</h2>
+    <p>Standard e-waste categories are accepted: IT equipment, consumer electronics, home appliances, batteries, and office equipment. Large appliances may require advance notice for logistics planning.</p>
+  </section>
+  <section>
+    <h2>Booking Process</h2>
+    <p>Contact us via WhatsApp or phone with your address, item list, and preferred timing. Our team will confirm scheduling and provide a pickup reference number for tracking.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Do you serve Kottarakkara?</summary>
+  <p>Yes, Kottarakkara is within our extended Kollam district service area. Contact us to confirm scheduling.</p>
+</details>
+  <details>
+  <summary>Is there a fee for pickup?</summary>
+  <p>Household quantities are collected free of charge. Commercial volumes are quoted based on location and quantity.</p>
+</details>
+  <details>
+  <summary>How long does scheduling take?</summary>
+  <p>Kollam pickups require 3-5 days advance booking. We confirm scheduling within one business day of your request.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/blog/e-waste-center-in-kerala/">E-Waste Center in Kerala</a></li>
+      <li><a href="/pickup/">E-Waste Pickup Service</a></li>
+      <li><a href="/blog/how-to-schedule-e-waste-pickup/">How to Schedule E-Waste Pickup</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>

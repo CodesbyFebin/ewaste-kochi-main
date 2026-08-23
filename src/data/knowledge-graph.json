@@ -1,62 +1,65 @@
 {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://www.ewastekochi.com/#organization",
-  "name": "E-Waste Kochi",
-  "alternateName": ["Ewaste Kochi", "E Waste Kochi"],
-  "url": "https://www.ewastekochi.com",
-  "description": "E-waste recycling, electronics pickup, battery recycling, IT asset disposition (ITAD), and data destruction services in Kochi, Ernakulam, and Kerala, India.",
-  "sameAs": [],
-  "knowsAbout": [
-    "E-waste recycling",
-    "Electronics pickup",
-    "Battery recycling",
-    "IT asset disposition",
-    "Data destruction",
-    "Hard drive shredding",
-    "Computer recycling",
-    "Electronics disposal",
-    "Environmental compliance",
-    "KSPCB regulations"
-  ],
-  "makesOffer": [
-    {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "E-Waste Collection",
-        "description": "Residential and commercial e-waste pickup in Kochi"
-      }
+  "entities": {
+    "Ewaste Kochi": {
+      "type": "Organization",
+      "url": "https://www.ewastekochi.com",
+      "sameAs": ["https://www.ewastekochi.com"],
+      "description": "E-waste recycling and ITAD services in Kochi, Kerala"
     },
-    {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "IT Asset Disposition",
-        "description": "Secure IT asset disposal for businesses"
-      }
+    "CPCB": {
+      "type": "GovernmentOrganization",
+      "url": "https://cpcb.nic.in/",
+      "relatedTo": ["Ewaste Kochi", "KSPCB"]
     },
-    {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "Data Destruction",
-        "description": "Certified data destruction and hard drive shredding"
-      }
+    "KSPCB": {
+      "type": "GovernmentOrganization",
+      "url": "https://kspcb.kerala.gov.in/",
+      "relatedTo": ["Ewaste Kochi", "CPCB"]
+    },
+    "E-Waste Rules 2022": {
+      "type": "Legislation",
+      "url": "https://cpcb.nic.in/rules-6/",
+      "relatedTo": ["CPCB", "KSPCB", "Ewaste Kochi"]
+    },
+    "ITAD": {
+      "type": "Service",
+      "url": "/itad/",
+      "relatedTo": ["Ewaste Kochi"]
+    },
+    "Data Destruction": {
+      "type": "Service",
+      "url": "/data-destruction/",
+      "relatedTo": ["Ewaste Kochi"]
+    },
+    "Battery Recycling": {
+      "type": "Service",
+      "url": "/battery-recycling/",
+      "relatedTo": ["Ewaste Kochi"]
+    },
+    "Kochi": {
+      "type": "City",
+      "url": "/locations/kochi/",
+      "relatedTo": ["Ernakulam", "Kerala"]
+    },
+    "Ernakulam": {
+      "type": "District",
+      "relatedTo": ["Kochi", "Kerala"]
+    },
+    "Kerala": {
+      "type": "State",
+      "country": "IN",
+      "relatedTo": ["Kochi", "Ernakulam"]
     }
-  ],
-  "areaServed": [
-    {
-      "@type": "City",
-      "name": "Kochi"
-    },
-    {
-      "@type": "City",
-      "name": "Ernakulam"
-    },
-    {
-      "@type": "State",
-      "name": "Kerala"
-    }
+  },
+  "relationships": [
+    { "subject": "Ewaste Kochi", "predicate": "provides", "object": "ITAD" },
+    { "subject": "Ewaste Kochi", "predicate": "provides", "object": "Data Destruction" },
+    { "subject": "Ewaste Kochi", "predicate": "provides", "object": "Battery Recycling" },
+    { "subject": "Ewaste Kochi", "predicate": "locatedIn", "object": "Kochi" },
+    { "subject": "Kochi", "predicate": "in", "object": "Ernakulam" },
+    { "subject": "Ernakulam", "predicate": "in", "object": "Kerala" },
+    { "subject": "Ewaste Kochi", "predicate": "compliesWith", "object": "E-Waste Rules 2022" },
+    { "subject": "Ewaste Kochi", "predicate": "authorizedBy", "object": "CPCB" },
+    { "subject": "Ewaste Kochi", "predicate": "authorizedBy", "object": "KSPCB" }
   ]
 }

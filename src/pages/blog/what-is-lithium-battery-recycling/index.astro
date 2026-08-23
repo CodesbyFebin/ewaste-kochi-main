@@ -1,0 +1,134 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "What Is Lithium Battery Recycling? | Process & Hazards | Ewaste Kochi";
+const description = "Understand lithium battery recycling, why it is classified as hazardous, and how authorized recyclers recover lithium, cobalt, and nickel safely.";
+const datePublished = "2026-08-18";
+const dateModified = "2026-08-18";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "What Is Lithium Battery Recycling?", path: "/blog/what-is-lithium-battery-recycling/" },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What Is Lithium Battery Recycling? | Process & Hazards | Ewaste Kochi",
+    "description": "Understand lithium battery recycling, why it is classified as hazardous, and how authorized recyclers recover lithium, cobalt, and nickel safely.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+      "@type": "Organization",
+      "name": "E-Waste Kochi"
+    },
+    "publisher": {
+      "@id": "https://www.ewastekochi.com/#organization"
+    },
+    "mainEntityOfPage": "https://www.ewastekochi.com/blog/what-is-lithium-battery-recycling/",
+    "faq": [
+      {
+        "@type": "Question",
+        "name": "Can lithium batteries go in regular waste?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Lithium batteries must be delivered to an authorized recycler. Never dispose of them in regular household trash."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens to the recovered lithium?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Recovered lithium is processed into usable cathode material for new batteries or stored for future recovery streams."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are power bank batteries accepted?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, power banks and smartphone batteries are accepted at authorized drop-off points and through scheduled pickups."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ewastekochi.com/blog/what-is-lithium-battery-recycling/",
+    "name": "What Is Lithium Battery Recycling? | Process & Hazards | Ewaste Kochi",
+    "description": "Understand lithium battery recycling, why it is classified as hazardous, and how authorized recyclers recover lithium, cobalt, and nickel safely.",
+    "dateModified": "2026-08-18"
+  }
+];
+---
+
+<Layout title={title} description={description} path="/blog/what-is-lithium-battery-recycling/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+  <h1>What Is Lithium Battery Recycling?</h1>
+  <p class="lede">Lithium battery recycling is the process of recovering valuable materials such as lithium, cobalt, nickel, and manganese from spent lithium-ion batteries. Because these batteries contain reactive chemistries, improper handling can cause thermal runaway or toxic release — making authorized recycling the only safe option.</p>
+
+  <CtaBar whatsappMessage="Hi, I have a question about What Is Lithium Battery Recycling?." />
+
+  <ul class="key-takeaways">
+    <li>Lithium-ion cells store high energy in a compact form.</li>
+    <li>Batteries are first inspected and sorted by chemistry.</li>
+    <li>Battery waste in India is governed by E-Waste Rules 2022 and emerging battery-specific regulations.</li>
+  </ul>
+
+  <section>
+    <h2>Why Lithium Batteries Are Hazardous</h2>
+    <p>Lithium-ion cells store high energy in a compact form. When damaged, punctured, or exposed to heat, they can ignite or release electrolyte fluid. This makes drop-off at authorized facilities the safe disposal route, especially for EV packs, power banks, and smartphone batteries.</p>
+  </section>
+  <section>
+    <h2>Recycling Process Overview</h2>
+    <p>Batteries are first inspected and sorted by chemistry. They are then discharged, shredded in an inert atmosphere, and processed to recover cathode materials, copper, and aluminum. The remaining electrolyte is neutralized under controlled conditions.</p>
+  </section>
+  <section>
+    <h2>Regulatory Context</h2>
+    <p>Battery waste in India is governed by E-Waste Rules 2022 and emerging battery-specific regulations. Recyclers must follow CPCB guidelines for storage, transport, and processing to ensure worker safety and environmental compliance.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+  <summary>Can lithium batteries go in regular waste?</summary>
+  <p>No. Lithium batteries must be delivered to an authorized recycler. Never dispose of them in regular household trash.</p>
+</details>
+  <details>
+  <summary>What happens to the recovered lithium?</summary>
+  <p>Recovered lithium is processed into usable cathode material for new batteries or stored for future recovery streams.</p>
+</details>
+  <details>
+  <summary>Are power bank batteries accepted?</summary>
+  <p>Yes, power banks and smartphone batteries are accepted at authorized drop-off points and through scheduled pickups.</p>
+</details>
+  </section>
+
+  <section>
+    <h2>Related Resources</h2>
+    <ul class="related-links">
+      <li><a href="/battery-recycling/">Battery Recycling Services</a></li>
+      <li><a href="/blog/how-to-recycle-batteries-safely/">How to Recycle Batteries Safely</a></li>
+      <li><a href="/blog/e-waste-rules-2022-india/">E-Waste Rules 2022</a></li>
+    </ul>
+  </section>
+
+  <RelatedContent
+    title="More E-Waste Guides"
+    items={[
+      { title: "What Is E-Waste?", href: "/blog/what-is-e-waste/" },
+      { title: "How to Recycle Electronics", href: "/blog/how-to-recycle-electronics/" },
+      { title: "E-Waste Rules 2022", href: "/blog/e-waste-rules-2022-india/" },
+      { title: "E-Waste Recycling in Kochi", href: "/blog/e-waste-recycling-kochi/" },
+    ]}
+  />
+</Layout>
