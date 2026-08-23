@@ -38,6 +38,26 @@
   ],
   "redirects": [
     {
+      "source": "/blog/how-to-choose-itad-provider.html",
+      "destination": "/blog/how-to-choose-itad-provider/",
+      "permanent": true
+    },
+    {
+      "source": "/services/mobile-recycling-kochi",
+      "destination": "/mobile-phone-recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/mobile-recycling-kochi/",
+      "destination": "/mobile-phone-recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/sell-old-phone-kochi.html",
+      "destination": "/sell-old-mobile/",
+      "permanent": true
+    },
+    {
       "source": "/blog/where-to-recycle-old-electronics-kochi/",
       "destination": "/blog/where-to-recycle-old-electronics-in-kochi/",
       "permanent": true
