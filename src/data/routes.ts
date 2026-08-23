@@ -10,6 +10,7 @@ import { LEGACY_INDEXED_BLOG_ROUTES } from "./legacyIndexedBlogPages";
 import { TOOL_ROUTES } from "./toolPages";
 import { INDEXED_GENERATED_ROUTES } from "./gscIndexedGeneratedPages";
 import { GENERATED_PILLAR_ROUTES } from "./generatedPillarRoutes";
+import { WIKI_ROUTES } from "./wikiRoutes";
 
 export interface RouteEntry {
   path: string;
@@ -8902,7 +8903,7 @@ const BASE_ROUTES: RouteEntry[] = [
 // shipping two ROUTES entries -- and two rendered copies during any
 // path-keyed processing -- for the same URL.
 const seenPaths = new Set<string>();
-export const ROUTES: RouteEntry[] = [...BASE_ROUTES, ...GENERATED_PILLAR_ROUTES, ...INDEXED_GENERATED_ROUTES].filter((r) => {
+export const ROUTES: RouteEntry[] = [...BASE_ROUTES, ...GENERATED_PILLAR_ROUTES, ...INDEXED_GENERATED_ROUTES, ...WIKI_ROUTES].filter((r) => {
   if (seenPaths.has(r.path)) return false;
   seenPaths.add(r.path);
   return true;

@@ -170,6 +170,10 @@ Disallow: /admin/
 # Only ONE authoritative sitemap.org-format sitemap remains declared:
 Sitemap: https://www.ewastekochi.com/sitemap.xml
 
-# Machine-readable discovery resources for AI crawlers (must be on separate lines)
-Sitemap: https://www.ewastekochi.com/ai.txt
-Sitemap: https://www.ewastekochi.com/.well-known/security.txt
+# ai.txt and security.txt are NOT sitemap-format files — the `Sitemap:`
+# directive only accepts sitemap.org XML/text sitemaps. Declaring them
+# this way causes the same GSC "Sitemap could not be read" error the
+# 2026-08-17 fix above removed for 3 other entries. They stay discoverable
+# via /llms.txt and their standard well-known paths instead:
+#   https://www.ewastekochi.com/ai.txt
+#   https://www.ewastekochi.com/.well-known/security.txt

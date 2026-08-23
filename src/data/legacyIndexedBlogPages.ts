@@ -103,7 +103,11 @@ const paths = [
   "/blog/troubleshooting-server-recycling-in-kalamassery-kalamassery/",
   "/blog/tv-recycling-kochi/",
   "/blog/ups-battery-recycling-kochi/",
-  "/blog/where-to-recycle-batteries-kochi/",
+  // Removed 2026-08-23: also declared as vercel.json redirect source
+  // (→ /blog/where-to-recycle-batteries-in-kochi/, the canonical guide
+  // built for the "where to recycle batteries" GSC zero-click query).
+  // Cannot be both a live route and a legacy redirect — redirect wins.
+  // "/blog/where-to-recycle-batteries-kochi/",
   "/blog/where-sell-ewaste-near-me/",
   "/blog/why-companies-destroy-data/",
   "/blog/why-data-destruction-important-businesses/",

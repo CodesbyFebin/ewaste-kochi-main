@@ -1,7 +1,7 @@
 # https://www.ewastekochi.com
 # Full content dump for LLM/RAG ingestion
-# Generated: 2026-08-23T03:24:38.119Z
-# Total routes: 1010
+# Generated: 2026-08-23T13:44:08.931Z
+# Total routes: 1009
 
 ## /
 Title: E-Waste Recycling Kochi | Free Pickup for Electronics, Batteries & IT Scrap
@@ -883,13 +883,13 @@ Language: en-IN
 Indexable: true
 URL: https://www.ewastekochi.com/blog/e-waste-management-rules-2022/
 
-## /blog/where-to-recycle-old-electronics-kochi/
+## /blog/where-to-recycle-old-electronics-in-kochi/
 Title: Where to Recycle Old Electronics in Kochi | Complete Pickup, Reuse & Scrap Guide
 Description: Complete guide to where to recycle old electronics in Kochi — doorstep pickup, resale checks, battery-safe handling, data prep and what to send before collection.
 Type: blog
 Language: en-IN
 Indexable: true
-URL: https://www.ewastekochi.com/blog/where-to-recycle-old-electronics-kochi/
+URL: https://www.ewastekochi.com/blog/where-to-recycle-old-electronics-in-kochi/
 
 ## /blog/battery-recycling-near-me-kochi/
 Title: Battery Recycling Near Me in Kochi | Safe UPS, Inverter & Lithium Battery Guide
@@ -6146,14 +6146,6 @@ Type: service
 Language: en-IN
 Indexable: true
 URL: https://www.ewastekochi.com/gaming-console-recycling/
-
-## /blog/where-to-recycle-old-electronics-in-kochi/
-Title: Where to Recycle Old Electronics in Kochi (Practical Guide)
-Description: Where to actually recycle old electronics in Kochi — what qualifies, how doorstep pickup works, what you can and can't expect from a free collection service.
-Type: blog
-Language: en-IN
-Indexable: true
-URL: https://www.ewastekochi.com/blog/where-to-recycle-old-electronics-in-kochi/
 
 ## /blog/where-to-recycle-batteries-in-kochi/
 Title: Where to Recycle Batteries in Kochi (UPS, Laptop, Inverter, Lithium)

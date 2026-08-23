@@ -2074,3 +2074,36 @@ All checks passed.
 - Failures: 0
 
 All checks passed.
+
+## Validation run 2026-08-23T13:43:07.843Z
+
+- Routes checked: 1009
+- Checks passed: 3593
+- Failures: 0
+
+All checks passed.
+
+## Validation run 2026-08-23T13:50:17.820Z
+
+- Routes checked: 1053
+- Checks passed: 3728
+- Failures: 8
+
+| Path | Check | Detail |
+| --- | --- | --- |
+| /blog/where-to-recycle-batteries | redirect-target-missing | vercel.json redirects "/blog/where-to-recycle-batteries" to "/blog/where-to-recycle-batteries-kochi/", which is not a built route. |
+| /blog/where-to-recycle-batteries | redirect-chain | vercel.json redirects "/blog/where-to-recycle-batteries" to "/blog/where-to-recycle-batteries-kochi/", but that destination is itself the source of another redirect — this creates a 2-hop chain. |
+| /blog/where-to-recycle-batteries/ | redirect-target-missing | vercel.json redirects "/blog/where-to-recycle-batteries/" to "/blog/where-to-recycle-batteries-kochi/", which is not a built route. |
+| /blog/where-to-recycle-batteries/ | redirect-chain | vercel.json redirects "/blog/where-to-recycle-batteries/" to "/blog/where-to-recycle-batteries-kochi/", but that destination is itself the source of another redirect — this creates a 2-hop chain. |
+| /wiki/sales/online-selling-platforms/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /Best Price/i. |
+| /wiki/sales/e-waste-scrap-buyers/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /Best Price/i. |
+| /wiki/sales/choose-secure-itad-vendor/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /Pollution Control Board authorization/i. |
+| /wiki/technical/choose-recycler/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /ISO 14001/i. |
+
+## Validation run 2026-08-23T13:52:23.198Z
+
+- Routes checked: 1053
+- Checks passed: 3731
+- Failures: 0
+
+All checks passed.
