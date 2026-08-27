@@ -1,6 +1,6 @@
 # GSC-P4 Indexing Readiness Report
 
-Generated: 2026-07-15T22:08:53.966Z
+Generated: 2026-08-27T15:42:31.613Z
 
 ## Verdict
 
@@ -22,8 +22,8 @@ This script deliberately does **not** submit URLs, ping search engines, rewrite 
 ## Sitemap Safety
 
 - Sitemap index sub-sitemaps: 6
-- Unique sitemap URLs: 824
-- Full sitemap URL checks passing: 824/824
+- Unique sitemap URLs: 1045
+- Full sitemap URL checks passing: 1045/1045
 - Non-production hosts in sitemap: 0
 - Staging/localhost URLs in sitemap: 0
 - Sitemap URL failures: 0
@@ -32,8 +32,8 @@ This script deliberately does **not** submit URLs, ping search engines, rewrite 
 | Sub-sitemap | URLs |
 | --- | ---: |
 | `https://www.ewastekochi.com/sitemaps/core.xml` | 14 |
-| `https://www.ewastekochi.com/sitemaps/services.xml` | 21 |
-| `https://www.ewastekochi.com/sitemaps/blog.xml` | 593 |
+| `https://www.ewastekochi.com/sitemaps/services.xml` | 56 |
+| `https://www.ewastekochi.com/sitemaps/blog.xml` | 779 |
 | `https://www.ewastekochi.com/sitemaps/legal.xml` | 4 |
 | `https://www.ewastekochi.com/sitemaps/locations.xml` | 184 |
 | `https://www.ewastekochi.com/sitemaps/ml.xml` | 8 |
