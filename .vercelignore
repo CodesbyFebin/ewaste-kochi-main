@@ -7,6 +7,7 @@
 # WHAT NOT TO ADD HERE:
 # - src/**            → source code the build actually needs
 # - public/**         → static assets that must be served
+# - data/**           → some source files are consumed by the build
 # - package*.json     → build needs deps
 # - astro.config.*, tsconfig.json, vercel.json → config the platform reads
 # - .well-known/**    → if we ever add verification files
@@ -17,14 +18,6 @@
 /PROJECT_TRACKER.md
 /reports/
 /docs/internal/
-#
-# ---------------------------------------------------------------------------
-# Data exports and classification files — GSC dumps, URL protection maps,
-# roadmap CSVs. Consumed by scripts locally, not by the runtime build.
-# The generated-page registry is a build-time exception and must be uploaded.
-# ---------------------------------------------------------------------------
-/data/*
-!/data/gsc-indexed-url-upgrade-map.json
 #
 # ---------------------------------------------------------------------------
 # Quarantined content — unreviewed drafts + generated images.

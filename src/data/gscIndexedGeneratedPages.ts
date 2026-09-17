@@ -454,10 +454,14 @@ function buildPage(row: GscIndexedRow): IndexedGeneratedPage | undefined {
   ) {
     return undefined;
   }
+  if (row.path === "/ml/services") return serviceAliasPage(row, true);
+  if (row.path.startsWith("/ml/services/")) return serviceAliasPage(row, true);
   if (row.page_type === "location-service-matrix") return locationServicePage(row);
   if (row.page_type === "blogs-taxonomy-legacy") return legacyBlogsPage(row);
   if (row.page_type === "service-page") return serviceAliasPage(row);
   if (row.page_type === "location-page") return legacyLocationPage(row);
+  if (row.path.startsWith("/buyback/laptops/")) return buybackPage(row);
+  if (row.path.startsWith("/ml/buyback/laptops/")) return buybackPage(row, true);
   // Legacy per-SKU buyback URLs: the source data explicitly marks these
   // "leave_404" with "do not rebuild model-specific quote spam" (0 traffic
   // across all rows) — respect that here rather than in the shared filter
@@ -495,6 +499,17 @@ const staticHighIntentServiceRows: GscIndexedRow[] = [
     location: "",
     service_intent: "air-conditioner-recycling-kochi",
     traffic_tier: "manual-high-intent",
+    upgrade_action: "build_safe_service_alias",
+    current_v2_status: "missing_not_built",
+  },
+  {
+    path: "/ml/services/",
+    clicks: 0,
+    impressions: 9,
+    page_type: "service-page",
+    location: "",
+    service_intent: "services",
+    traffic_tier: "manual-indexed-service",
     upgrade_action: "build_safe_service_alias",
     current_v2_status: "missing_not_built",
   },
