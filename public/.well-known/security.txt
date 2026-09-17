@@ -4,10 +4,12 @@ Contact: security@ewastekochi.com
 Contact: info@ewastekochi.com
 Expires: 2027-08-18T00:00:00+00:00
 Preferred-Languages: en
-Cryptography: https://www.ewastekochi.com/.well-known/keys.txt
 Accepts: security-reports
 Acknowledged: https://www.ewastekochi.com/contact/
 
 # Policy
 Ewaste Kochi takes security vulnerabilities seriously. Report via 
 contact form or email. All reports acknowledged within 2 business days.
+
+# No PGP key is published yet; .well-known/keys.txt records this explicitly.
+Cryptography: https://www.ewastekochi.com/.well-known/keys.txt
