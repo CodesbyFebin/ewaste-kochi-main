@@ -1,0 +1,133 @@
+openapi: 3.0.3
+info:
+  title: Ewaste Kochi API
+  description: OpenAPI spec for Ewaste Kochi pickup eligibility, quote request, and WhatsApp routing flows.
+  version: 1.0.0
+  contact:
+    email: info@ewastekochi.com
+servers:
+  - url: https://www.ewastekochi.com
+paths:
+  /tools/pickup-eligibility-checker/:
+    get:
+      tags:
+        - Tools
+      summary: Pickup eligibility checker
+      description: Returns eligibility guidance for doorstep e-waste pickup based on item type, quantity, and location.
+      parameters:
+        - name: items
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: city
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: quantity
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Eligibility result
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  eligible:
+                    type: boolean
+                  estimatedPickupWindowHours:
+                    type: integer
+                  notes:
+                    type: string
+  /tools/sell-or-recycle-decision-tool/:
+    get:
+      tags:
+        - Tools
+      summary: Sell or recycle decision tool
+      description: Helps users decide whether to sell, donate, or recycle an item based on condition and market value signals.
+      parameters:
+        - name: deviceType
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: condition
+          in: query
+          required: true
+          schema:
+            type: string
+            enum: [working, repairable, parts-only, damaged]
+      responses:
+        "200":
+          description: Decision guidance
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  recommendation:
+                    type: string
+                    enum: [sell, recycle, donate, dispose]
+                  reasoning:
+                    type: string
+                  nextStep:
+                    type: string
+  /pickup/:
+    post:
+      tags:
+        - Pickup
+      summary: Request pickup
+      description: Creates a pickup request and returns a WhatsApp deep link for confirmation.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - name
+                - phone
+                - address
+                - items
+              properties:
+                name:
+                  type: string
+                phone:
+                  type: string
+                address:
+                  type: string
+                items:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      category:
+                        type: string
+                      quantity:
+                        type: string
+                      condition:
+                        type: string
+                preferredDate:
+                  type: string
+                  format: date
+                notes:
+                  type: string
+      responses:
+        "200":
+          description: Pickup request created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  reference:
+                    type: string
+                  whatsappUrl:
+                    type: string
+                  message:
+                    type: string

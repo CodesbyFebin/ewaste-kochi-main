@@ -1,0 +1,14 @@
+{
+  "approvedAt": "2026-08-15",
+  "approvedFrom": "measured full pre-7209f10d generated-route restoration on PR #12",
+  "notes": "Baseline is measured from the restored production build, not inferred from historical aggregate figures. The location sitemap is restored exactly to 184 URLs. Future reductions require an explicit reviewed baseline change rather than a generated-page eligibility side effect.",
+  "thresholds": {
+    "totalDropPercent": 5,
+    "groupDropPercent": 20
+  },
+  "counts": {
+    "total": 885,
+    "locations": 184,
+    "blog": 619
+  }
+}

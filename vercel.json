@@ -38,6 +38,66 @@
   ],
   "redirects": [
     {
+      "source": "/blog/how-to-choose-itad-provider.html",
+      "destination": "/blog/how-to-choose-itad-provider/",
+      "permanent": true
+    },
+    {
+      "source": "/services/mobile-recycling-kochi",
+      "destination": "/mobile-phone-recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/services/mobile-recycling-kochi/",
+      "destination": "/mobile-phone-recycling/",
+      "permanent": true
+    },
+    {
+      "source": "/sell-old-phone-kochi.html",
+      "destination": "/sell-old-mobile/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/where-to-recycle-old-electronics-kochi/",
+      "destination": "/blog/where-to-recycle-old-electronics-in-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/where-to-recycle-old-electronics-kochi",
+      "destination": "/blog/where-to-recycle-old-electronics-in-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/recycle-old-electronics-kochi/",
+      "destination": "/blog/where-to-recycle-old-electronics-in-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/recycle-old-electronics-kochi",
+      "destination": "/blog/where-to-recycle-old-electronics-in-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/where-to-recycle-batteries-kochi/",
+      "destination": "/blog/where-to-recycle-batteries-in-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/where-to-recycle-batteries-kochi",
+      "destination": "/blog/where-to-recycle-batteries-in-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/donate-electronics-kochi/",
+      "destination": "/blog/ewaste-donation-reuse-guide-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/donate-electronics-kochi",
+      "destination": "/blog/ewaste-donation-reuse-guide-kochi/",
+      "permanent": true
+    },
+    {
       "source": "/hi/services/e-waste-recycling-kochi/",
       "destination": "/recycling/",
       "permanent": true
@@ -79,12 +139,12 @@
     },
     {
       "source": "/blog/best-way-to-e-waste-collection-in-ernakulam-2026-ernakulam/",
-      "destination": "/locations/ernakulam/",
+      "destination": "/locations/",
       "permanent": true
     },
     {
       "source": "/blog/best-way-to-e-waste-collection-in-ernakulam-2026-ernakulam",
-      "destination": "/locations/ernakulam/",
+      "destination": "/locations/",
       "permanent": true
     },
     {
@@ -368,39 +428,6 @@
       "permanent": true
     },
     {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "ewastekochi.com"
-        }
-      ],
-      "destination": "https://www.ewastekochi.com/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "blog.ewastekochi.com"
-        }
-      ],
-      "destination": "https://www.ewastekochi.com/blog/",
-      "permanent": true
-    },
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "wiki.ewastekochi.com"
-        }
-      ],
-      "destination": "https://www.ewastekochi.com/blog/",
-      "permanent": true
-    },
-    {
       "source": "/services/battery-recycling-kochi",
       "destination": "/battery-recycling/",
       "permanent": true
@@ -512,12 +539,12 @@
     },
     {
       "source": "/blog/where-to-recycle-batteries",
-      "destination": "/blog/where-to-recycle-batteries-kochi/",
+      "destination": "/blog/where-to-recycle-batteries-in-kochi/",
       "permanent": true
     },
     {
       "source": "/blog/where-to-recycle-batteries/",
-      "destination": "/blog/where-to-recycle-batteries-kochi/",
+      "destination": "/blog/where-to-recycle-batteries-in-kochi/",
       "permanent": true
     },
     {

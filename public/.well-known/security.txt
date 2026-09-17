@@ -1,4 +1,40 @@
+# Ewaste Kochi Security Policy
+# Canonical: https://ewastekochi.com/.well-known/security.txt
+Contact: mailto:security@ewastekochi.com
 Contact: mailto:info@ewastekochi.com
-Canonical: https://www.ewastekochi.com/.well-known/security.txt
+Expires: 2027-08-18T23:59:59Z
+Acknowledged: https://ewastekochi.com/contact/
+Encryption: https://ewastekochi.com/.well-known/keys.txt
 Preferred-Languages: en, ml
-Policy: https://www.ewastekochi.com/privacy-policy/
+
+# Policy Statement
+Ewaste Kochi prioritizes data security and privacy for all clients.
+We comply with:
+- The Digital Personal Data Protection (DPDP) Act 2023 (India)
+- NIST 800-88 Guidelines for Media Sanitization
+- ISO 27001 Information Security Standards
+- GDPR and related international privacy regulations
+
+All reported vulnerabilities will be acknowledged within 48 hours.
+We do not accept responsible disclosure via public social media.
+
+# Security Standards
+- Data encryption: AES-256 for stored data, TLS 1.3 for transmission
+- Access control: Multi-factor authentication, role-based access
+- Network security: Firewalls, IDS/IPS, regular security audits
+- Incident response: 24/7 monitoring, rapid containment procedures
+- Backup integrity: Encrypted, geographically distributed off-site backups
+
+# Compliance Certificates
+- ISO 27001:2013 Information Security Management
+- Cyber Trust India - Verified Partner
+- GDPR Compliance Certification (Regional)
+
+# Reporting & Coordination
+Security reports to: security@ewastekochi.com
+For urgent incidents: Call +917500555454 (24/7 Hotline)
+
+# Data Protection Officer (DPO)
+Name: Chief Security Officer
+Email: security@ewastekochi.com
+Phone: +917500555454

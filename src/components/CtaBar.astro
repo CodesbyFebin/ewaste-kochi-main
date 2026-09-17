@@ -22,12 +22,12 @@ const {
 } = Astro.props;
 ---
 
-<div class:list={["cta-bar", { compact }]}>
-  <a class="cta-btn cta-call" href={telLink()}>{labels.call}</a>
-  <a class="cta-btn cta-whatsapp" href={whatsappLink(whatsappMessage)} target="_blank" rel="noopener">
+<div class:list={["cta-bar", { compact }]} aria-label="Contact and pickup actions">
+  <a class="cta-btn cta-call" href={telLink()} aria-label={`${labels.call} — Ewaste Kochi`}>{labels.call}</a>
+  <a class="cta-btn cta-whatsapp" href={whatsappLink(whatsappMessage)} target="_blank" rel="noopener" aria-label={`${labels.whatsapp} — Ewaste Kochi`}>
     {labels.whatsapp}
   </a>
-  <a class="cta-btn cta-pickup" href={pickupHref}>{labels.pickup}</a>
+  <a class="cta-btn cta-pickup" href={pickupHref} aria-label={`${labels.pickup} — Ewaste Kochi`}>{labels.pickup}</a>
 </div>
 
 <style>
@@ -53,6 +53,8 @@ const {
     text-align: center;
     box-shadow: var(--shadow-sm, none);
     transition: transform 140ms ease, filter 140ms ease;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
   }
   .cta-btn:hover { transform: translateY(-1px); }
   .cta-call {
@@ -74,17 +76,39 @@ const {
 
   @media (max-width: 640px) {
     .cta-bar {
-      grid-template-columns: 1fr;
-      gap: 0.6rem;
-      margin-block: 1.25rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-areas:
+        "whatsapp whatsapp"
+        "call pickup";
+      gap: 0.55rem;
+      margin-block: 1.15rem;
     }
     .cta-bar.compact {
       margin-block: 0.65rem;
     }
+    .cta-call { grid-area: call; }
+    .cta-whatsapp { grid-area: whatsapp; }
+    .cta-pickup { grid-area: pickup; }
     .cta-btn {
       width: 100%;
-      min-height: 50px;
-      padding-inline: 1rem;
+      min-height: 52px;
+      padding: 0.85rem 0.75rem;
+      font-size: 0.92rem;
+    }
+    .cta-whatsapp {
+      min-height: 56px;
+      font-size: 1rem;
+      font-weight: 800;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .cta-bar {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "whatsapp"
+        "call"
+        "pickup";
     }
   }
 </style>

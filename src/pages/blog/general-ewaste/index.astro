@@ -1,0 +1,319 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import DirectAnswer from "../../../components/DirectAnswer.astro";
+import CtaBar from "../../../components/CtaBar.astro";
+import Faq from "../../../components/Faq.astro";
+import RelatedContent from "../../../components/RelatedContent.astro";
+import LongformExpansion from "../../../components/LongformExpansion.astro";
+import Sources from "../../../components/Sources.astro";
+import { BUSINESS, SITE_URL } from "../../../data/site";
+
+const title = "General E-Waste: Recycling Basics, Preparation & Everyday Disposal";
+const description = "Essential e-waste recycling guidance for households and small businesses. Find out what can be recycled, how to prepare items, where to find authorized services, and why proper disposal matters.";
+const lastUpdated = "2026-07-09";
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: "General E-Waste", path: "/blog/general-ewaste/" }
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": description,
+    "datePublished": "2026-07-09",
+    "dateModified": lastUpdated,
+    "author": { "@type": "Organization", name: BUSINESS.legalName },
+    "publisher": { "@id": `${SITE_URL}/#organization` },
+    "mainEntityOfPage": `${SITE_URL}/blog/general-ewaste/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/blog/general-ewaste/`,
+    "name": title,
+    "description": description,
+    "dateModified": lastUpdated,
+  }
+];
+
+const faqItems = [
+  {
+    q: "What is e-waste and how is it classified in India?",
+    a: "E-waste refers to any electrical or electronic equipment—whole or in part—that is non-functional, obsolete, or intended for disposal, as well as repair or manufacturing rejects. Regulated under the E-Waste (Management) Rules, it covers household appliances (refrigerators, washing machines, air conditioners), IT/telecom gear, and consumer electronics reaching end-of-life."
+  },
+  {
+    q: "Can e-waste just go in the recycling bin with paper and plastic?",
+    a: "No. E-waste needs separate handling because of the metals, chemicals, and batteries it can contain — mixing it with general recycling can contaminate that stream and create safety hazards. See our e-waste examples guide for a fuller list."
+  },
+  {
+    q: "Is it illegal to throw electronics in household trash in Kerala?",
+    a: "E-waste is regulated separately from general household waste under national rules — see our overview of the E-Waste Management Rules 2022 for the general framework. For specifics, check with the Kerala State Pollution Control Board."
+  },
+  {
+    q: "What should I do with e-waste right now?",
+    a: "Message us for a free doorstep pickup, or check our recycling page for what's accepted and how it works."
+  },
+  {
+    q: "Do I need documentation for home e-waste disposal?",
+    a: "For small household disposals, a pickup acknowledgement is usually sufficient documentation. If you need formal proof for insurance or record-keeping, request a Certificate of Recycling from your authorized recycler."
+  },
+  {
+    q: "Can I sell old electronics to scrap dealers instead of recycling?",
+    a: "Informal sales to scrap dealers (kabariwalas) are discouraged by the rules because many scrap dealers don't follow safe recycling practices. Selling to authorized recyclers ensures proper handling of hazardous components and provides documentation."
+  },
+  {
+    q: "How much does e-waste recycling cost for households?",
+    a: "Most authorized recyclers in Kerala offer free doorstep collection for household items. Some premium services (like data destruction for sensitive devices) may have a small fee, but basic recycling is typically free."
+  },
+  {
+    q: "Where can I find a list of authorized e-waste recyclers in Kochi?",
+    a: "Check the Kerala State Pollution Control Board (KSPCB) authorized recycler list, or use our recycling service directory which links to verified providers with valid authorizations."
+  }
+];
+
+const sourceItems = [
+  {
+    title: "E-Waste Management Rules and related regulatory resources",
+    href: "https://cpcb.nic.in/rules-6/",
+    publisher: "Central Pollution Control Board",
+    note: "Official CPCB resource page for e-waste rules and updates."
+  },
+  {
+    title: "EPR E-Waste portal",
+    href: "https://eprewastecpcb.in/",
+    publisher: "Central Pollution Control Board",
+    note: "Official portal for e-waste EPR registration and compliance workflows."
+  },
+  {
+    title: "Kerala State Pollution Control Board",
+    href: "https://kspcb.kerala.gov.in/",
+    publisher: "Kerala State Pollution Control Board",
+    note: "Regional enforcement and authorization for e-waste recyclers in Kerala."
+  }
+];
+
+---
+
+<Layout title={title} description={description} path="/blog/general-ewaste/" jsonLd={jsonLd}>
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <h1>General E-Waste: Recycling Basics & Preparation Guide</h1>
+
+  <DirectAnswer>
+    <p>E-waste refers to any non-functional, obsolete, or discarded electrical and electronic equipment—whole or in part—including repair and manufacturing rejects. It covers household appliances, IT/telecom gear, and consumer electronics reaching end-of-life. Proper disposal prevents legal penalties under the Environment (Protection) Act.</p>
+  </DirectAnswer>
+
+  <CtaBar whatsappMessage="Hi, I have e-waste I'd like to recycle." />
+
+  <section id="what-counts">
+    <h2>What Counts as E-Waste</h2>
+    <p>Anything with a plug, battery, circuit board, or display that you no longer want or that’s broken. This includes:</p>
+    <ul>
+      <li><strong>Household appliances:</strong> refrigerators, freezers, washing machines, dryers, air conditioners, microwaves, ovens, vacuum cleaners</li>
+      <li><strong>Consumer electronics:</strong> TVs, monitors, phones, tablets, computers, laptops, printers, routers, smart speakers, game consoles</li>
+      <li><strong>Batteries and power sources:</strong> AA/AAA batteries, lithium-ion phone batteries, UPS batteries, car batteries, solar battery packs</li>
+      <li><strong>IT and office equipment:</strong> desktop computers, servers, printers, scanners, projectors, keyboards, mice, docking stations</li>
+      <li><strong>Lighting:</strong> LED bulbs, CFLs, tube lights (contains mercury)</li>
+      <li><strong>Accessories and cables:</strong> chargers, power cords, extension cords, HDMI cables, computer cables</li>
+    </ul>
+    <p><strong>Tip:</strong> If it ran on electricity or stored a charge at any point, it probably counts as e-waste once you're done with it.</p>
+  </section>
+
+  <section id="why-matters">
+    <h2>Why E-Waste Matters</h2>
+    <p>E-waste contains toxic components that can seriously harm human health and the environment when improperly handled:</p>
+    <ul>
+      <li><strong>Heavy metals:</strong> Lead, mercury, cadmium, beryllium can contaminate soil and water supplies</li>
+      <li><strong>Hazardous chemicals:</strong> Brominated flame retardants (BFRs), PCBs, lead solder</li>
+      <li><strong>Dangerous gases:</strong> Refrigerant gases (CFCs/HFCs) from air conditioners and refrigerators accelerate ozone depletion</li>
+      <li><strong>Data security risks:</strong> Forgotten personal and business data on discarded devices</li>
+    </ul>
+    <p>Scientific recycling recovers valuable metals (gold, copper, palladium) and reduces the need for new raw material extraction, conserving natural resources.</p>
+  </section>
+
+  <section id="recycling-process">
+    <h2>How E-Waste Recycling Actually Works</h2>
+    <p>Professional e-waste recycling follows strict procedures under the E-Waste Rules 2022:</p>
+
+    <h3>1. Collection & Logistics</h3>
+    <p>Authorized recyclers collect items through doorstep pickup or drop-off centers. All collection must be documented with Form-6 transit manifests under the rules.</p>
+
+    <h3>2. Sorting & Inventory</h3>
+    <p>Items are sorted by type, condition, and hazard level. Functional devices may be refurbished or sent to resale channels, while broken items go to material recovery.</p>
+
+    <h3>3. Data Security</h3>
+    <p>Data-bearing devices (laptops, phones, servers, storage media) undergo certified data destruction before further processing. A Certificate of Destruction is issued for compliance.</p>
+
+    <h3>2. Hazardous Component Handling</h3>
+    <p>Batteries, mercury lamps, and other hazardous components are removed and handled separately by licensed specialists.</p>
+
+    <h3>5. Material Recovery</h3>
+    <p>Mechanical shredding, thermal processing, and chemical separation recover metals, plastics, glass, and other materials for reuse.</p>
+
+    <h3>6. Documentation & Certification</h3>
+    <p>All steps are documented and a Certificate of Recycling is issued, which may be required for legal compliance and audit trails.</p>
+  </section>
+
+  <section id="how-to-prepare">
+    <h2>How to Prepare E-Waste for Recycling</h2>
+    <p>Proper preparation makes recycling safer and more efficient:</p>
+
+    <h3>Before Pickup</h3>
+    <ul>
+      <li><strong>Keep items dry and secure:</strong> Store e-waste in a dry area to prevent water damage and short circuits.</li>
+      <li><strong>Separate batteries:</strong> Remove all batteries from devices, especially lithium batteries which can catch fire if damaged.</li>
+      <li><strong>Document data destruction:</strong> For business equipment, ensure data has been professionally wiped before recycling.</li>
+      <li><strong>Provide clear photos:</strong> Show the items you want recycled so the recycler can confirm acceptance and quote accurately.</li>
+    </ul>
+
+    <h3>Do's and Don'ts</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+      <div style="background: var(--color-surface); padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #10b981;">
+        <h4 style="color: #10b981; margin-top: 0;">Do's</h4>
+        <ul style="margin: 0; padding-left: 1.5rem;">
+          <li>Isolate non-functional electronics in a safe, dry area</li>
+          <li>Hand over all obsolete equipment exclusively to authorized recyclers</li>
+          <li>Keep fluid-containing components (refrigerator compressors, CRT tubes) intact</li>
+          <li>Separate batteries from devices before collection</li>
+          <li>Document data destruction before device disposal</li>
+        </ul>
+      </div>
+      <div style="background: var(--color-surface); padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #ef4444;">
+        <h4 style="color: #ef4444; margin-top: 0;">Don'ts</h4>
+        <ul style="margin: 0; padding-left: 1.5rem;">
+          <li>Sell or give e-waste to unauthorized scrap dealers or street collectors</li>
+          <li>Dismantle, break, or incinerate electronic products or spare parts</li>
+          <li>Throw electronics into regular municipal household garbage streams</li>
+          <li>Mix electronic waste with organic or recyclable materials</li>
+          <li>Open devices to access internal components</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="finding-services">
+    <h2>Finding Authorized Recycling Services</h2>
+    <p>Not everyone can recycle all types of e-waste. Use these criteria to find legitimate services:</p>
+
+    <h3>Check Authorization</h3>
+    <ul>
+      <li>Look for CPCB/SPCB authorization certificates</li>
+      <li>Verify business registration and tax compliance</li>
+      <li>Check for insurance coverage</li>
+      <li>Confirm service area and coverage</li>
+    </ul>
+
+    <h3>Questions to Ask</h3>
+    <ul>
+      <li>Do you provide Certificates of Recycling/Destruction?</li>
+      <li>What types of e-waste do you accept?</li>
+      <li>How do you handle data security?</li>
+      <li>What's your service area and pickup schedule?</li>
+      <li>Are there any fees beyond the pickup service?</li>
+    </ul>
+
+    <h3>Where to Start</h3>
+    <p>Our directory links to verified authorized recyclers with current authorizations. All listed services:
+      <ul>
+        <li>Hold valid CPCB/SPCB registrations</li>
+        <li>Provide transparent service terms</li>
+        <li>Issue proper documentation for compliance</li>
+        <li>Maintain insurance and liability coverage</li>
+      </ul>
+    </p>
+  </section>
+
+  <LongformExpansion
+    label="Expanded Field Guide"
+    audience="households"
+    localIntent="book a pickup in Kochi or surrounding areas"
+    items={["old phones", "unused chargers", "dead routers", "broken laptops", "power banks", "TV remotes"]}
+    themes={["Preparation", "Safety", "Convenience", "Compliance"]}
+  />
+
+  <section id="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <Faq items={faqItems} heading="E-Waste Disposal FAQs" />
+  </section>
+
+  <Sources items={sourceItems} heading="Official Sources & Regulatory References" />
+</Layout>
+
+<style>
+  .blog-hub {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .blog-hub h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+    text-align: center;
+  }
+
+  .lede {
+    font-size: 1.2rem;
+    color: var(--color-muted);
+    text-align: center;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .blog-hub section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: var(--color-bg);
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-border);
+  }
+
+  .blog-hub h2 {
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+
+  .blog-hub h3 {
+    color: var(--color-primary);
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+  }
+
+  .blog-hub ul {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+  }
+
+  .blog-hub li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .blog-hub h1 {
+      font-size: 2rem;
+    }
+
+    .blog-hub section {
+      padding: 1.5rem;
+    }
+
+    .blog-hub h2 {
+      font-size: 1.5rem;
+    }
+
+    .blog-hub h3 {
+      font-size: 1.2rem;
+    }
+  }
+</style>

@@ -1,0 +1,25 @@
+name: Bug report
+description: Create a bug report for broken links, validation failures, or indexing issues
+body:
+  - type: textarea
+    attributes:
+      label: Describe the bug
+      description: A clear description of what the bug is.
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Affected URL(s)
+      description: Which page(s) or sitemap URL(s) are affected?
+    validations:
+      required: false
+  - type: dropdown
+    attributes:
+      label: Category
+      options:
+        - broken-link
+        - validation-failure
+        - indexing-issue
+        - security-header
+        - schema-error
+        - other

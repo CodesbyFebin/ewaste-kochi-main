@@ -37,7 +37,7 @@ const POST_META: PostMeta[] = [
   { href: "/blog/e-waste-collection-near-me/", datePublished: "2026-07-07", beginner: true, popular: false },
   { href: "/blog/what-is-epr-in-e-waste/", datePublished: "2026-07-07", beginner: false, popular: false },
   { href: "/blog/e-waste-management-rules-2022/", datePublished: "2026-07-07", beginner: false, popular: false },
-  { href: "/blog/where-to-recycle-old-electronics-kochi/", datePublished: "2026-07-18", beginner: true, popular: false },
+  { href: "/blog/where-to-recycle-old-electronics-in-kochi/", datePublished: "2026-07-18", beginner: true, popular: false },
   { href: "/blog/battery-recycling-near-me-kochi/", datePublished: "2026-07-08", beginner: false, popular: true },
   { href: "/blog/how-to-book-ewaste-pickup-kochi/", datePublished: "2026-07-08", beginner: true, popular: false },
   { href: "/blog/how-to-sell-old-electronics-kochi/", datePublished: "2026-07-08", beginner: false, popular: false },

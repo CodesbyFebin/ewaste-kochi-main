@@ -1,0 +1,9 @@
+# Ewaste Kochi — Public Keys
+# Canonical: https://www.ewastekochi.com/.well-known/keys.txt
+# Last updated: 2026-08-18
+
+# PGP key for security correspondence
+# Key fingerprint: [to be added when key is generated]
+
+# SSH host keys
+# ssh-ed255519 AAAA... [to be added]

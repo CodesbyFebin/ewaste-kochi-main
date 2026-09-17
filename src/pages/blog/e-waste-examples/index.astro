@@ -7,11 +7,11 @@ import Faq from "../../../components/Faq.astro";
 import RelatedContent from "../../../components/RelatedContent.astro";
 import { BUSINESS, SITE_URL, telLink } from "../../../data/site";
 
-const title = "E-Waste Examples: Common Electronic Items You Should Recycle";
+const title = "E-Waste Examples: Common Electronic Items to Recycle in Kerala";
 const description =
-  "A practical list of common e-waste items — computers, phones, batteries, office electronics, cables, and more — and which ones need extra care before recycling.";
+  "See common e-waste examples in Kerala — computers, phones, batteries, office electronics, cables and more — plus which items need data or battery safety before recycling.";
 const datePublished = "2026-07-07";
-const dateModified = "2026-07-07";
+const dateModified = "2026-08-15";
 
 const breadcrumbItems = [
   { name: "Home", path: "/" },
@@ -59,24 +59,35 @@ const faqItems = [
 
 <Layout title={title} description={description} path="/blog/e-waste-examples/" jsonLd={jsonLd}>
   <Breadcrumbs items={breadcrumbItems} />
-  <h1>E-Waste Examples: What Actually Counts</h1>
+  <h1>E-Waste Examples: Common Items You Should Recycle in Kerala</h1>
   <p class="lede">
-    E-waste covers more than just old computers. Here's a practical
-    category-by-category list of common items, plus which ones need extra
-    care — data wiping, battery safety — before they're recycled.
+    E-waste covers more than just old computers. This practical list shows
+    common household and office electronics that count as e-waste, plus the
+    items that need data wiping or battery-safety handling before recycling.
   </p>
 
   <DirectAnswer>
     <p>{description}</p>
   </DirectAnswer>
 
-  <CtaBar whatsappMessage="Hi, I'd like to check what items you can collect." />
+  <CtaBar whatsappMessage="Hi, I'd like to check what e-waste items you can collect." />
+
+  <section>
+    <h2>What counts as e-waste?</h2>
+    <p>
+      A practical rule of thumb is that discarded equipment with electronics,
+      a circuit board, a plug or a battery should be treated as e-waste rather
+      than ordinary household rubbish. Common examples include computers,
+      phones, chargers, batteries, printers, routers, TVs and office IT gear.
+      If you are unsure about a specific item, send a photo before pickup.
+    </p>
+  </section>
 
   <section>
     <h2>Computers and laptops</h2>
     <p>
       Desktops, laptops, monitors, keyboards, mice, and docking stations.
-      These almost always have storage, so <a href="/data-destruction/">data
+      These often include data-bearing storage, so <a href="/data-destruction/">data
       wiping</a> matters before they're recycled or resold. If you're
       selling rather than recycling, see
       <a href="/computer-scrap-buyers-kochi/">computer scrap buyers</a>.
@@ -149,6 +160,17 @@ const faqItems = [
       <a href="/battery-recycling/">battery recycling</a> for safe interim
       storage guidance.
     </p>
+  </section>
+
+  <section>
+    <h2>How to recycle these items with Ewaste Kochi</h2>
+    <p>
+      Share the item list, photos and your location first. We can then confirm
+      the appropriate route for general electronics, batteries, data-bearing
+      devices or business IT assets. Pickup feasibility depends on item type,
+      quantity, condition, location and current scheduling.
+    </p>
+    <CtaBar whatsappMessage="Hi, I have e-waste items to recycle. Here are the item details and my location:" compact />
   </section>
 
   <p class="mal-support">

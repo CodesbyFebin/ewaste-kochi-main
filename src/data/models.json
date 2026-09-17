@@ -1,0 +1,20 @@
+{
+  "models": [
+    {
+      "id": "ewaste-kochi-llm",
+      "name": "Ewaste Kochi LLM Knowledge Base",
+      "version": "1.0.0",
+      "description": "Machine-readable knowledge base for Ewaste Kochi e-waste recycling services in Kochi, Kerala",
+      "languages": ["en-IN", "ml-IN"],
+      "sources": [
+        "https://www.ewastekochi.com/llms.txt",
+        "https://www.ewastekochi.com/llms-full.txt",
+        "https://www.ewastekochi.com/sitemap.xml",
+        "https://www.ewastekochi.com/content-index.json"
+      ],
+      "entities": "https://www.ewastekochi.com/entities.json",
+      "knowledgeGraph": "https://www.ewastekochi.com/knowledge-graph.json",
+      "updated": "2026-08-22"
+    }
+  ]
+}

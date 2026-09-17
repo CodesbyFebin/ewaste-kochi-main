@@ -1,5 +1,63 @@
 # EwasteKochi V2 Project Tracker
 
+### Locked execution plan (2026-08-13) — "Host & Indexation Consolidation"
+
+Status: **PHASE 1 COMPLETE. PHASE 2 BLOCKED PENDING DASHBOARD DATA.**
+
+Priority principle (do not violate):
+> Don't add more URLs until we understand the URLs Google already has.
+
+Broad SEO content work is FROZEN. The next 3 phases are investigation and
+domain control, not content generation.
+
+**PHASE 1 — DONE**
+- ✓ 25-page Tier A snippet sweep (commit 884b96)
+- ✓ ce368c4 legacy-title algorithm fix (~220 pages, root cause)
+
+**PHASE 2 — DOMAIN CONTROL (blocked pending user dashboard work)**
+Cannot proceed from repo. All items require Vercel dashboard, DNS zone
+editor, or Blogger dashboard access.
+- [ ] Map every Vercel project and its attached domains
+- [ ] Identify Vercel project that owns bare `ewastekochi.com` (why current vercel.json rules don't apply)
+- [ ] Identify Vercel project owning `wiki.ewastekochi.com` (Next.js "E-Waste Intelligence Platform")
+- [ ] Inventory wiki's indexed URLs, unique content, backlinks BEFORE any takedown
+- [ ] Confirm `recycling.ewastekochi.com` is Blogger-owned + inventory URLs/backlinks
+- [ ] Check `blogs.` / `location.` / `marketplace.` DNS records + any historical URLs before removal
+- [ ] Fix bare → www at the ACTUAL owning Vercel project (not by adding another rule to this repo's vercel.json)
+
+**PHASE 3 — LEGACY URL CONTROL (blocked pending Phase 2 completion)**
+- [ ] For each of the 5 indexed URLs not in this repo: identify semantic destination
+- [ ] 301 when destination genuinely satisfies old intent
+- [ ] 410 when no relevant replacement exists (better than dumping to homepage)
+- [ ] Remove obsolete URLs from sitemap + internal links
+
+**PHASE 4 — INDEXATION HYGIENE (blocked pending Phase 3)**
+- [ ] Classify 227 "Crawled - currently not indexed" URLs (need GSC UI export)
+- [ ] Classify 223 "Discovered - currently not indexed" URLs (need GSC UI export)
+- [ ] Fix 3 5xx server errors (need GSC UI to see specific URLs)
+- [ ] Fix 1 soft 404 (need GSC UI)
+- [ ] Fix 1 canonical conflict (need GSC UI)
+
+**PHASE 5 — MEASURE (2-4 week wait window)**
+- [ ] Compare CTR / rankings pre vs post Phase 1 rewrites
+- [ ] Segment: mobile vs desktop, query mix, position bucket
+- [ ] Do NOT attribute short-term changes; wait full 28-day window
+
+**PHASE 6 — TIER B CONTENT REBUILDS (only after Phase 5)**
+- [ ] /e-waste/ full content rebuild (currently pos 27.9)
+- [ ] /hard-drive-shredding/ full content rebuild (currently pos 34.7)
+
+**PHASE 7 — REVENUE SILO EXPANSION (only after Phase 6)**
+- [ ] Pickup / recycling / computer-laptop / sell-electronics
+- [ ] ITAD / data destruction / corporate — enterprise cluster prioritized per audit synthesis
+
+Explicit exclusions from the plan:
+- Do NOT rely on IndexNow for Google — sitemap + canonical + internal links + natural recrawl is the robust path. IndexNow → Bing/Yandex only.
+- Do NOT rewrite the 220 legacy-indexed titles again — the algorithm fix (ce368c4) is complete; let Google recrawl.
+- Do NOT add more content batches (encyclopedia, blog gap pages, etc.) until Phase 4 completes.
+- Do NOT delete any subdomain / DNS record before Phase 2 inventory confirms no valuable URLs are being carried by it.
+- Do NOT touch vercel.json to add bare→www or wiki→blog rules — they're already there; the fix is at Vercel project-ownership level.
+
 ### Pan-India reverse logistics via Shiprocket (2026-08-05 confirmed)
 
 Status: OPERATIONAL — safe to reference in content, within category bounds.
