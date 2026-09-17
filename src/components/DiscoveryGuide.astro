@@ -101,6 +101,21 @@ const siblings = DISCOVERY_GUIDES.filter((item) => item.category === category.id
           </section>
         )}
         <Faq items={guide.faq} />
+        {guide.readerQuestions?.length > 0 && (
+          <section aria-labelledby="reader-questions-heading">
+            <h2 id="reader-questions-heading">Questions readers ask next</h2>
+            <p class="reader-note">
+              Common follow-up situations from people arranging collections, rewritten as
+              general guidance rather than quotes from identifiable customers.
+            </p>
+            {guide.readerQuestions.map((entry) => (
+              <div class="reader-question">
+                <h3>{entry.role} asks: {entry.q}</h3>
+                <p>{entry.a}</p>
+              </div>
+            ))}
+          </section>
+        )}
         <Sources items={guide.sources} />
         <section aria-labelledby="related-heading">
           <h2 id="related-heading">Related guides and services</h2>
@@ -125,6 +140,10 @@ const siblings = DISCOVERY_GUIDES.filter((item) => item.category === category.id
   section, nav { margin-block: 2rem; }
   li { margin-block: 0.65rem; }
   address { font-style: normal; }
+  .reader-note { color: var(--color-muted); font-size: 0.9rem; }
+  .reader-question { border-left: 3px solid var(--color-border); margin-block: 1.25rem; padding-left: 1rem; }
+  .reader-question h3 { font-size: 1rem; margin: 0 0 0.35rem; }
+  .reader-question p { margin: 0; }
   .guide-grid { display: grid; gap: 1rem; padding: 0; list-style: none; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); }
   .guide-grid li { border: 1px solid var(--color-border); border-radius: 0.5rem; padding: 1rem; margin: 0; }
   .guide-grid a { font-weight: 700; }

@@ -46,6 +46,18 @@ for (const route of DISCOVERY_ROUTES) {
   const guide = DISCOVERY_GUIDES.find((item) => `/${item.slug}/` === route.path);
   if (!guide) continue;
   assert.ok(guide.sections.length >= 2 && guide.faq.length >= 2 && guide.sources.length > 0, `Substantive content: ${route.path}`);
+  assert.ok(guide.readerQuestions.length >= 3, `Reader questions present: ${route.path}`);
+  const articleText = $("article.discovery-guide").text();
+  const words = [guide.title, guide.description, guide.answer, ...(guide.tools ?? []), ...(guide.timeline ? [guide.timeline] : []),
+    ...guide.faq.flatMap((f) => [f.q, f.a]),
+    ...guide.readerQuestions.flatMap((entry) => [entry.role, entry.q, entry.a]),
+    ...guide.sections.flatMap((s) => [s.heading, ...s.paragraphs, ...(s.bullets ?? [])]),
+    ...(guide.steps ?? []).flatMap((step) => [step.name, step.text]),
+  ].join(" ").split(/\s+/).filter(Boolean).length;
+  assert.ok(words >= 1500, `Long-form 1500+ words (has ${words}): ${route.path}`);
+  for (const entry of guide.readerQuestions) {
+    assert.ok(articleText.includes(entry.q) && articleText.includes(entry.a), `Visible reader question: ${route.path}`);
+  }
   const faqs = blocks.filter((block) => block["@type"] === "FAQPage");
   assert.equal(faqs.length, 1, `One FAQ block: ${route.path}`);
   assert.equal(faqs[0].mainEntity.length, guide.faq.length, `FAQ count: ${route.path}`);
