@@ -1059,3 +1059,48 @@ All checks passed.
 | /wiki/sales/e-waste-scrap-buyers/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /Best Price/i. |
 | /wiki/sales/choose-secure-itad-vendor/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /Pollution Control Board authorization/i. |
 | /wiki/technical/choose-recycler/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /ISO 14001/i. |
+
+## Validation run 2026-09-17T22:14:56.640Z
+
+- Routes checked: 968
+- Checks passed: 3483
+- Failures: 5
+
+| Path | Check | Detail |
+| --- | --- | --- |
+| /wiki/sales/online-selling-platforms/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /Best Price/i. |
+| /wiki/sales/e-waste-scrap-buyers/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /Best Price/i. |
+| /wiki/sales/choose-secure-itad-vendor/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /Pollution Control Board authorization/i. |
+| /wiki/technical/choose-recycler/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /ISO 14001/i. |
+| /e-waste-pickup-service/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /same-day pickup guaranteed/i. |
+
+## Validation run 2026-09-17T22:17:00.739Z
+
+- Routes checked: 988
+- Checks passed: 3543
+- Failures: 4
+
+| Path | Check | Detail |
+| --- | --- | --- |
+| /wiki/sales/online-selling-platforms/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /Best Price/i. |
+| /wiki/sales/e-waste-scrap-buyers/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /Best Price/i. |
+| /wiki/sales/choose-secure-itad-vendor/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /Pollution Control Board authorization/i. |
+| /wiki/technical/choose-recycler/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /ISO 14001/i. |
+
+## Validation run 2026-09-17T22:18:04.406Z
+
+- Routes checked: 988
+- Checks passed: 3543
+- Failures: 1
+
+| Path | Check | Detail |
+| --- | --- | --- |
+| /wiki/sales/choose-secure-itad-vendor/ | rendered-unsafe-claim | Rendered HTML matched unsafe pattern /Pollution Control Board authorization/i. |
+
+## Validation run 2026-09-17T22:18:59.568Z
+
+- Routes checked: 988
+- Checks passed: 3544
+- Failures: 0
+
+All checks passed.

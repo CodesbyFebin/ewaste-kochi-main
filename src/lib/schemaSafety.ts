@@ -8,6 +8,7 @@ const ALLOWED_TOP_LEVEL_TYPES = new Set([
   "FAQPage",
   "BlogPosting",
   "Article",
+  "HowTo",
 ]);
 
 // GeoCoordinates/geo/latitude/longitude were denied until a verified pin
@@ -17,8 +18,6 @@ const DENIED_TYPES = new Set([
   "AggregateRating",
   "Review",
   "QAPage",
-  "HowTo",
-  "HowToStep",
   "Certification",
 ]);
 
