@@ -1,6 +1,9 @@
 import type { DiscoveryGuide } from "./discoveryGuideTypes";
 import { SITE_URL } from "./site";
 
+
+
+
 export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
   {
     slug: "e-waste-recycling-palakkad",
@@ -37,6 +40,46 @@ export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
           "Batteries follow separate handling rules from general electronics. List UPS, inverter, lithium and phone batteries separately in your submission so the team can confirm their handling route. Damaged devices with cracked screens, water exposure or corrosion need an honest description so the team can plan appropriate handling rather than assuming they match a standard batch.",
         ],
       },
+      {
+        heading: "What to expect during the collection process",
+        paragraphs: [
+          "When a collection is confirmed, the team will contact you to agree on a specific time window. On the scheduled day, the team arrives with protective equipment, sealed transport containers and documentation forms. They will inspect the items, verify the inventory and note any condition changes before loading.",
+          "For households and businesses outside the core Kochi service area, the collection may be coordinated as part of a route that serves multiple enquirers on the same day. This means the confirmed window can be broader, so flexibility is helpful when planning.",
+          "During the handover, the team should provide a receipt that lists each item by description and serial number where visible. This receipt is your evidence that the items were collected through a verified channel and can be supplied to auditors or insurance providers on request.",
+          "After collection, the equipment moves to a registered processing facility. You will receive a recycling certificate and, where applicable, a material recovery report. Keep these with your inventory records for audit purposes.",
+        ],
+      },
+      {
+        heading: "Seasonal considerations and planning tips",
+        paragraphs: [
+          "Kerala's monsoon season, from June to October, affects collection scheduling and equipment storage. Heavy rain can delay access to loading areas, and humidity can accelerate corrosion in electronics that have been exposed. Plan collections during dry windows when possible.",
+          "Peak tourist seasons in December and January, and festival periods, can limit available collection slots as demand for services increases. Submitting your item list early allows the team to plan routes more efficiently and confirm a date sooner.",
+          "For households in hill areas or remote locations, the monsoon can make access roads difficult. If you are planning a collection in these areas, factor in extra time for route assessment and weather contingency.",
+          "Businesses with large volumes should avoid scheduling during school vacation periods when staffing may be limited. Confirming collection dates well in advance ensures smoother coordination and reduces the risk of last-minute changes.",
+        ],
+      },
+      {
+        heading: "What to expect during the collection process",
+        paragraphs: [
+          "When a collection is confirmed, the team will contact you to agree on a specific time window. On the scheduled day, the team arrives with protective equipment, sealed transport containers and documentation forms. They will inspect the items, verify the inventory and note any condition changes before loading.",
+          "For households and businesses outside the core Kochi service area, the collection may be coordinated as part of a route that serves multiple enquirers on the same day. This means the confirmed window can be broader, so flexibility is helpful when planning.",
+          "During the handover, the team should provide a receipt that lists each item by description and serial number where visible. This receipt is your evidence that the items were collected through a verified channel and can be supplied to auditors or insurance providers on request.",
+          "After collection, the equipment moves to a registered processing facility. You will receive a recycling certificate and, where applicable, a material recovery report. Keep these with your inventory records for audit purposes.",
+          "If any items are rejected at collection due to condition, battery issues or data concerns, the team will explain the reason and suggest alternative handling. Rejected items do not count toward the accepted batch and may require separate arrangements.",
+          "For large quantities, the team may use multiple vehicles or make multiple trips. Confirm the expected duration of the collection in advance so you can plan accordingly and ensure access to the property for the full window.",
+        ],
+      },
+      {
+        heading: "Seasonal considerations and planning tips",
+        paragraphs: [
+          "Kerala's monsoon season, from June to October, affects collection scheduling and equipment storage. Heavy rain can delay access to loading areas, and humidity can accelerate corrosion in electronics that have been exposed. Plan collections during dry windows when possible.",
+          "Peak tourist seasons in December and January, and festival periods, can limit available collection slots as demand for services increases. Submitting your item list early allows the team to plan routes more efficiently and confirm a date sooner.",
+          "For households in hill areas or remote locations, the monsoon can make access roads difficult. If you are planning a collection in these areas, factor in extra time for route assessment and weather contingency.",
+          "Businesses with large volumes should avoid scheduling during school vacation periods when staffing may be limited. Confirming collection dates well in advance ensures smoother coordination and reduces the risk of last-minute changes.",
+          "During summer months, extreme heat can affect lithium battery safety. If you are storing devices with batteries before collection, keep them in a cool, dry place away from direct sunlight and do not charge swollen or damaged batteries.",
+          "E-waste generation tends to spike after Diwali and other festivals when households upgrade appliances and electronics. Plan ahead if you expect a large clearance around these periods.",
+        ],
+      },
     ],
     tools: [
       "Item list with device category, quantity, condition and exact location",
@@ -63,8 +106,8 @@ export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
     ],
     sources: [
-      { title: "Pickup planning and feasibility", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
-      { title: "Published Kochi office details", href: `${SITE_URL}/contact/`, publisher: "Ewaste Kochi" },
+      { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
+      { title: "Published Kochi office details", href: "https://www.ewastekochi.com/contact/", publisher: "Ewaste Kochi" },
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
     ],
   },
@@ -103,6 +146,46 @@ export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
           "Batteries from offices, including UPS units and laptop batteries, follow separate battery waste rules. Ask for their handling route before combining them with general electronics. A collection that mixes batteries with ordinary e-waste without separating them may be rejected at the receiving facility.",
         ],
       },
+      {
+        heading: "What to expect during the collection process",
+        paragraphs: [
+          "When a collection is confirmed, the team will contact you to agree on a specific time window. On the scheduled day, the team arrives with protective equipment, sealed transport containers and documentation forms. They will inspect the items, verify the inventory and note any condition changes before loading.",
+          "For households and businesses outside the core Kochi service area, the collection may be coordinated as part of a route that serves multiple enquirers on the same day. This means the confirmed window can be broader, so flexibility is helpful when planning.",
+          "During the handover, the team should provide a receipt that lists each item by description and serial number where visible. This receipt is your evidence that the items were collected through a verified channel and can be supplied to auditors or insurance providers on request.",
+          "After collection, the equipment moves to a registered processing facility. You will receive a recycling certificate and, where applicable, a material recovery report. Keep these with your inventory records for audit purposes.",
+        ],
+      },
+      {
+        heading: "Seasonal considerations and planning tips",
+        paragraphs: [
+          "Kerala's monsoon season, from June to October, affects collection scheduling and equipment storage. Heavy rain can delay access to loading areas, and humidity can accelerate corrosion in electronics that have been exposed. Plan collections during dry windows when possible.",
+          "Peak tourist seasons in December and January, and festival periods, can limit available collection slots as demand for services increases. Submitting your item list early allows the team to plan routes more efficiently and confirm a date sooner.",
+          "For households in hill areas or remote locations, the monsoon can make access roads difficult. If you are planning a collection in these areas, factor in extra time for route assessment and weather contingency.",
+          "Businesses with large volumes should avoid scheduling during school vacation periods when staffing may be limited. Confirming collection dates well in advance ensures smoother coordination and reduces the risk of last-minute changes.",
+        ],
+      },
+      {
+        heading: "What to expect during the collection process",
+        paragraphs: [
+          "When a collection is confirmed, the team will contact you to agree on a specific time window. On the scheduled day, the team arrives with protective equipment, sealed transport containers and documentation forms. They will inspect the items, verify the inventory and note any condition changes before loading.",
+          "For households and businesses outside the core Kochi service area, the collection may be coordinated as part of a route that serves multiple enquirers on the same day. This means the confirmed window can be broader, so flexibility is helpful when planning.",
+          "During the handover, the team should provide a receipt that lists each item by description and serial number where visible. This receipt is your evidence that the items were collected through a verified channel and can be supplied to auditors or insurance providers on request.",
+          "After collection, the equipment moves to a registered processing facility. You will receive a recycling certificate and, where applicable, a material recovery report. Keep these with your inventory records for audit purposes.",
+          "If any items are rejected at collection due to condition, battery issues or data concerns, the team will explain the reason and suggest alternative handling. Rejected items do not count toward the accepted batch and may require separate arrangements.",
+          "For large quantities, the team may use multiple vehicles or make multiple trips. Confirm the expected duration of the collection in advance so you can plan accordingly and ensure access to the property for the full window.",
+        ],
+      },
+      {
+        heading: "Seasonal considerations and planning tips",
+        paragraphs: [
+          "Kerala's monsoon season, from June to October, affects collection scheduling and equipment storage. Heavy rain can delay access to loading areas, and humidity can accelerate corrosion in electronics that have been exposed. Plan collections during dry windows when possible.",
+          "Peak tourist seasons in December and January, and festival periods, can limit available collection slots as demand for services increases. Submitting your item list early allows the team to plan routes more efficiently and confirm a date sooner.",
+          "For households in hill areas or remote locations, the monsoon can make access roads difficult. If you are planning a collection in these areas, factor in extra time for route assessment and weather contingency.",
+          "Businesses with large volumes should avoid scheduling during school vacation periods when staffing may be limited. Confirming collection dates well in advance ensures smoother coordination and reduces the risk of last-minute changes.",
+          "During summer months, extreme heat can affect lithium battery safety. If you are storing devices with batteries before collection, keep them in a cool, dry place away from direct sunlight and do not charge swollen or damaged batteries.",
+          "E-waste generation tends to spike after Diwali and other festivals when households upgrade appliances and electronics. Plan ahead if you expect a large clearance around these periods.",
+        ],
+      },
     ],
     tools: [
       "Item list with device category, quantity, condition and exact locality",
@@ -129,8 +212,8 @@ export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
       { label: "Recycling service", path: "/recycling/" },
     ],
     sources: [
-      { title: "Pickup planning and feasibility", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
-      { title: "Published Kochi office details", href: `${SITE_URL}/contact/`, publisher: "Ewaste Kochi" },
+      { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
+      { title: "Published Kochi office details", href: "https://www.ewastekochi.com/contact/", publisher: "Ewaste Kochi" },
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
     ],
   },
@@ -169,6 +252,46 @@ export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
           "Batteries follow separate handling rules from general electronics. List UPS, inverter, lithium and phone batteries separately in your submission so the team can confirm their handling route. Damaged devices with cracked screens, water exposure or corrosion need an honest description so the team can plan appropriate handling rather than assuming they match a standard batch.",
         ],
       },
+      {
+        heading: "What to expect during the collection process",
+        paragraphs: [
+          "When a collection is confirmed, the team will contact you to agree on a specific time window. On the scheduled day, the team arrives with protective equipment, sealed transport containers and documentation forms. They will inspect the items, verify the inventory and note any condition changes before loading.",
+          "For households and businesses outside the core Kochi service area, the collection may be coordinated as part of a route that serves multiple enquirers on the same day. This means the confirmed window can be broader, so flexibility is helpful when planning.",
+          "During the handover, the team should provide a receipt that lists each item by description and serial number where visible. This receipt is your evidence that the items were collected through a verified channel and can be supplied to auditors or insurance providers on request.",
+          "After collection, the equipment moves to a registered processing facility. You will receive a recycling certificate and, where applicable, a material recovery report. Keep these with your inventory records for audit purposes.",
+        ],
+      },
+      {
+        heading: "Seasonal considerations and planning tips",
+        paragraphs: [
+          "Kerala's monsoon season, from June to October, affects collection scheduling and equipment storage. Heavy rain can delay access to loading areas, and humidity can accelerate corrosion in electronics that have been exposed. Plan collections during dry windows when possible.",
+          "Peak tourist seasons in December and January, and festival periods, can limit available collection slots as demand for services increases. Submitting your item list early allows the team to plan routes more efficiently and confirm a date sooner.",
+          "For households in hill areas or remote locations, the monsoon can make access roads difficult. If you are planning a collection in these areas, factor in extra time for route assessment and weather contingency.",
+          "Businesses with large volumes should avoid scheduling during school vacation periods when staffing may be limited. Confirming collection dates well in advance ensures smoother coordination and reduces the risk of last-minute changes.",
+        ],
+      },
+      {
+        heading: "What to expect during the collection process",
+        paragraphs: [
+          "When a collection is confirmed, the team will contact you to agree on a specific time window. On the scheduled day, the team arrives with protective equipment, sealed transport containers and documentation forms. They will inspect the items, verify the inventory and note any condition changes before loading.",
+          "For households and businesses outside the core Kochi service area, the collection may be coordinated as part of a route that serves multiple enquirers on the same day. This means the confirmed window can be broader, so flexibility is helpful when planning.",
+          "During the handover, the team should provide a receipt that lists each item by description and serial number where visible. This receipt is your evidence that the items were collected through a verified channel and can be supplied to auditors or insurance providers on request.",
+          "After collection, the equipment moves to a registered processing facility. You will receive a recycling certificate and, where applicable, a material recovery report. Keep these with your inventory records for audit purposes.",
+          "If any items are rejected at collection due to condition, battery issues or data concerns, the team will explain the reason and suggest alternative handling. Rejected items do not count toward the accepted batch and may require separate arrangements.",
+          "For large quantities, the team may use multiple vehicles or make multiple trips. Confirm the expected duration of the collection in advance so you can plan accordingly and ensure access to the property for the full window.",
+        ],
+      },
+      {
+        heading: "Seasonal considerations and planning tips",
+        paragraphs: [
+          "Kerala's monsoon season, from June to October, affects collection scheduling and equipment storage. Heavy rain can delay access to loading areas, and humidity can accelerate corrosion in electronics that have been exposed. Plan collections during dry windows when possible.",
+          "Peak tourist seasons in December and January, and festival periods, can limit available collection slots as demand for services increases. Submitting your item list early allows the team to plan routes more efficiently and confirm a date sooner.",
+          "For households in hill areas or remote locations, the monsoon can make access roads difficult. If you are planning a collection in these areas, factor in extra time for route assessment and weather contingency.",
+          "Businesses with large volumes should avoid scheduling during school vacation periods when staffing may be limited. Confirming collection dates well in advance ensures smoother coordination and reduces the risk of last-minute changes.",
+          "During summer months, extreme heat can affect lithium battery safety. If you are storing devices with batteries before collection, keep them in a cool, dry place away from direct sunlight and do not charge swollen or damaged batteries.",
+          "E-waste generation tends to spike after Diwali and other festivals when households upgrade appliances and electronics. Plan ahead if you expect a large clearance around these periods.",
+        ],
+      },
     ],
     tools: [
       "Item list with device category, quantity, condition and exact location",
@@ -195,8 +318,8 @@ export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
     ],
     sources: [
-      { title: "Pickup planning and feasibility", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
-      { title: "Published Kochi office details", href: `${SITE_URL}/contact/`, publisher: "Ewaste Kochi" },
+      { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
+      { title: "Published Kochi office details", href: "https://www.ewastekochi.com/contact/", publisher: "Ewaste Kochi" },
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
     ],
   },
@@ -235,6 +358,46 @@ export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
           "Batteries follow separate handling rules from general electronics. List UPS, inverter, lithium and phone batteries separately in your submission so the team can confirm their handling route. Damaged devices with cracked screens, water exposure or corrosion need an honest description so the team can plan appropriate handling rather than assuming they match a standard batch.",
         ],
       },
+      {
+        heading: "What to expect during the collection process",
+        paragraphs: [
+          "When a collection is confirmed, the team will contact you to agree on a specific time window. On the scheduled day, the team arrives with protective equipment, sealed transport containers and documentation forms. They will inspect the items, verify the inventory and note any condition changes before loading.",
+          "For households and businesses outside the core Kochi service area, the collection may be coordinated as part of a route that serves multiple enquirers on the same day. This means the confirmed window can be broader, so flexibility is helpful when planning.",
+          "During the handover, the team should provide a receipt that lists each item by description and serial number where visible. This receipt is your evidence that the items were collected through a verified channel and can be supplied to auditors or insurance providers on request.",
+          "After collection, the equipment moves to a registered processing facility. You will receive a recycling certificate and, where applicable, a material recovery report. Keep these with your inventory records for audit purposes.",
+        ],
+      },
+      {
+        heading: "Seasonal considerations and planning tips",
+        paragraphs: [
+          "Kerala's monsoon season, from June to October, affects collection scheduling and equipment storage. Heavy rain can delay access to loading areas, and humidity can accelerate corrosion in electronics that have been exposed. Plan collections during dry windows when possible.",
+          "Peak tourist seasons in December and January, and festival periods, can limit available collection slots as demand for services increases. Submitting your item list early allows the team to plan routes more efficiently and confirm a date sooner.",
+          "For households in hill areas or remote locations, the monsoon can make access roads difficult. If you are planning a collection in these areas, factor in extra time for route assessment and weather contingency.",
+          "Businesses with large volumes should avoid scheduling during school vacation periods when staffing may be limited. Confirming collection dates well in advance ensures smoother coordination and reduces the risk of last-minute changes.",
+        ],
+      },
+      {
+        heading: "What to expect during the collection process",
+        paragraphs: [
+          "When a collection is confirmed, the team will contact you to agree on a specific time window. On the scheduled day, the team arrives with protective equipment, sealed transport containers and documentation forms. They will inspect the items, verify the inventory and note any condition changes before loading.",
+          "For households and businesses outside the core Kochi service area, the collection may be coordinated as part of a route that serves multiple enquirers on the same day. This means the confirmed window can be broader, so flexibility is helpful when planning.",
+          "During the handover, the team should provide a receipt that lists each item by description and serial number where visible. This receipt is your evidence that the items were collected through a verified channel and can be supplied to auditors or insurance providers on request.",
+          "After collection, the equipment moves to a registered processing facility. You will receive a recycling certificate and, where applicable, a material recovery report. Keep these with your inventory records for audit purposes.",
+          "If any items are rejected at collection due to condition, battery issues or data concerns, the team will explain the reason and suggest alternative handling. Rejected items do not count toward the accepted batch and may require separate arrangements.",
+          "For large quantities, the team may use multiple vehicles or make multiple trips. Confirm the expected duration of the collection in advance so you can plan accordingly and ensure access to the property for the full window.",
+        ],
+      },
+      {
+        heading: "Seasonal considerations and planning tips",
+        paragraphs: [
+          "Kerala's monsoon season, from June to October, affects collection scheduling and equipment storage. Heavy rain can delay access to loading areas, and humidity can accelerate corrosion in electronics that have been exposed. Plan collections during dry windows when possible.",
+          "Peak tourist seasons in December and January, and festival periods, can limit available collection slots as demand for services increases. Submitting your item list early allows the team to plan routes more efficiently and confirm a date sooner.",
+          "For households in hill areas or remote locations, the monsoon can make access roads difficult. If you are planning a collection in these areas, factor in extra time for route assessment and weather contingency.",
+          "Businesses with large volumes should avoid scheduling during school vacation periods when staffing may be limited. Confirming collection dates well in advance ensures smoother coordination and reduces the risk of last-minute changes.",
+          "During summer months, extreme heat can affect lithium battery safety. If you are storing devices with batteries before collection, keep them in a cool, dry place away from direct sunlight and do not charge swollen or damaged batteries.",
+          "E-waste generation tends to spike after Diwali and other festivals when households upgrade appliances and electronics. Plan ahead if you expect a large clearance around these periods.",
+        ],
+      },
     ],
     tools: [
       "Item list with device category, quantity, condition and exact locality",
@@ -261,8 +424,8 @@ export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
       { label: "Recycling service", path: "/recycling/" },
     ],
     sources: [
-      { title: "Pickup planning and feasibility", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
-      { title: "Published Kochi office details", href: `${SITE_URL}/contact/`, publisher: "Ewaste Kochi" },
+      { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
+      { title: "Published Kochi office details", href: "https://www.ewastekochi.com/contact/", publisher: "Ewaste Kochi" },
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
     ],
   },
@@ -301,6 +464,46 @@ export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
           "Batteries follow separate handling rules from general electronics. List UPS, inverter, lithium and phone batteries separately in your submission so the team can confirm their handling route. Damaged devices with cracked screens, water exposure or corrosion need an honest description so the team can plan appropriate handling rather than assuming they match a standard batch.",
         ],
       },
+      {
+        heading: "What to expect during the collection process",
+        paragraphs: [
+          "When a collection is confirmed, the team will contact you to agree on a specific time window. On the scheduled day, the team arrives with protective equipment, sealed transport containers and documentation forms. They will inspect the items, verify the inventory and note any condition changes before loading.",
+          "For households and businesses outside the core Kochi service area, the collection may be coordinated as part of a route that serves multiple enquirers on the same day. This means the confirmed window can be broader, so flexibility is helpful when planning.",
+          "During the handover, the team should provide a receipt that lists each item by description and serial number where visible. This receipt is your evidence that the items were collected through a verified channel and can be supplied to auditors or insurance providers on request.",
+          "After collection, the equipment moves to a registered processing facility. You will receive a recycling certificate and, where applicable, a material recovery report. Keep these with your inventory records for audit purposes.",
+        ],
+      },
+      {
+        heading: "Seasonal considerations and planning tips",
+        paragraphs: [
+          "Kerala's monsoon season, from June to October, affects collection scheduling and equipment storage. Heavy rain can delay access to loading areas, and humidity can accelerate corrosion in electronics that have been exposed. Plan collections during dry windows when possible.",
+          "Peak tourist seasons in December and January, and festival periods, can limit available collection slots as demand for services increases. Submitting your item list early allows the team to plan routes more efficiently and confirm a date sooner.",
+          "For households in hill areas or remote locations, the monsoon can make access roads difficult. If you are planning a collection in these areas, factor in extra time for route assessment and weather contingency.",
+          "Businesses with large volumes should avoid scheduling during school vacation periods when staffing may be limited. Confirming collection dates well in advance ensures smoother coordination and reduces the risk of last-minute changes.",
+        ],
+      },
+      {
+        heading: "What to expect during the collection process",
+        paragraphs: [
+          "When a collection is confirmed, the team will contact you to agree on a specific time window. On the scheduled day, the team arrives with protective equipment, sealed transport containers and documentation forms. They will inspect the items, verify the inventory and note any condition changes before loading.",
+          "For households and businesses outside the core Kochi service area, the collection may be coordinated as part of a route that serves multiple enquirers on the same day. This means the confirmed window can be broader, so flexibility is helpful when planning.",
+          "During the handover, the team should provide a receipt that lists each item by description and serial number where visible. This receipt is your evidence that the items were collected through a verified channel and can be supplied to auditors or insurance providers on request.",
+          "After collection, the equipment moves to a registered processing facility. You will receive a recycling certificate and, where applicable, a material recovery report. Keep these with your inventory records for audit purposes.",
+          "If any items are rejected at collection due to condition, battery issues or data concerns, the team will explain the reason and suggest alternative handling. Rejected items do not count toward the accepted batch and may require separate arrangements.",
+          "For large quantities, the team may use multiple vehicles or make multiple trips. Confirm the expected duration of the collection in advance so you can plan accordingly and ensure access to the property for the full window.",
+        ],
+      },
+      {
+        heading: "Seasonal considerations and planning tips",
+        paragraphs: [
+          "Kerala's monsoon season, from June to October, affects collection scheduling and equipment storage. Heavy rain can delay access to loading areas, and humidity can accelerate corrosion in electronics that have been exposed. Plan collections during dry windows when possible.",
+          "Peak tourist seasons in December and January, and festival periods, can limit available collection slots as demand for services increases. Submitting your item list early allows the team to plan routes more efficiently and confirm a date sooner.",
+          "For households in hill areas or remote locations, the monsoon can make access roads difficult. If you are planning a collection in these areas, factor in extra time for route assessment and weather contingency.",
+          "Businesses with large volumes should avoid scheduling during school vacation periods when staffing may be limited. Confirming collection dates well in advance ensures smoother coordination and reduces the risk of last-minute changes.",
+          "During summer months, extreme heat can affect lithium battery safety. If you are storing devices with batteries before collection, keep them in a cool, dry place away from direct sunlight and do not charge swollen or damaged batteries.",
+          "E-waste generation tends to spike after Diwali and other festivals when households upgrade appliances and electronics. Plan ahead if you expect a large clearance around these periods.",
+        ],
+      },
     ],
     tools: [
       "Item list with device category, quantity, condition and exact locality",
@@ -327,8 +530,8 @@ export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
     ],
     sources: [
-      { title: "Pickup planning and feasibility", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
-      { title: "Published Kochi office details", href: `${SITE_URL}/contact/`, publisher: "Ewaste Kochi" },
+      { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
+      { title: "Published Kochi office details", href: "https://www.ewastekochi.com/contact/", publisher: "Ewaste Kochi" },
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
     ],
   },
@@ -367,6 +570,46 @@ export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
           "Batteries follow separate handling rules from general electronics. List UPS, inverter, lithium and phone batteries separately in your submission so the team can confirm their handling route. Damaged devices with cracked screens, water exposure or corrosion need an honest description so the team can plan appropriate handling.",
         ],
       },
+      {
+        heading: "What to expect during the collection process",
+        paragraphs: [
+          "When a collection is confirmed, the team will contact you to agree on a specific time window. On the scheduled day, the team arrives with protective equipment, sealed transport containers and documentation forms. They will inspect the items, verify the inventory and note any condition changes before loading.",
+          "For households and businesses outside the core Kochi service area, the collection may be coordinated as part of a route that serves multiple enquirers on the same day. This means the confirmed window can be broader, so flexibility is helpful when planning.",
+          "During the handover, the team should provide a receipt that lists each item by description and serial number where visible. This receipt is your evidence that the items were collected through a verified channel and can be supplied to auditors or insurance providers on request.",
+          "After collection, the equipment moves to a registered processing facility. You will receive a recycling certificate and, where applicable, a material recovery report. Keep these with your inventory records for audit purposes.",
+        ],
+      },
+      {
+        heading: "Seasonal considerations and planning tips",
+        paragraphs: [
+          "Kerala's monsoon season, from June to October, affects collection scheduling and equipment storage. Heavy rain can delay access to loading areas, and humidity can accelerate corrosion in electronics that have been exposed. Plan collections during dry windows when possible.",
+          "Peak tourist seasons in December and January, and festival periods, can limit available collection slots as demand for services increases. Submitting your item list early allows the team to plan routes more efficiently and confirm a date sooner.",
+          "For households in hill areas or remote locations, the monsoon can make access roads difficult. If you are planning a collection in these areas, factor in extra time for route assessment and weather contingency.",
+          "Businesses with large volumes should avoid scheduling during school vacation periods when staffing may be limited. Confirming collection dates well in advance ensures smoother coordination and reduces the risk of last-minute changes.",
+        ],
+      },
+      {
+        heading: "What to expect during the collection process",
+        paragraphs: [
+          "When a collection is confirmed, the team will contact you to agree on a specific time window. On the scheduled day, the team arrives with protective equipment, sealed transport containers and documentation forms. They will inspect the items, verify the inventory and note any condition changes before loading.",
+          "For households and businesses outside the core Kochi service area, the collection may be coordinated as part of a route that serves multiple enquirers on the same day. This means the confirmed window can be broader, so flexibility is helpful when planning.",
+          "During the handover, the team should provide a receipt that lists each item by description and serial number where visible. This receipt is your evidence that the items were collected through a verified channel and can be supplied to auditors or insurance providers on request.",
+          "After collection, the equipment moves to a registered processing facility. You will receive a recycling certificate and, where applicable, a material recovery report. Keep these with your inventory records for audit purposes.",
+          "If any items are rejected at collection due to condition, battery issues or data concerns, the team will explain the reason and suggest alternative handling. Rejected items do not count toward the accepted batch and may require separate arrangements.",
+          "For large quantities, the team may use multiple vehicles or make multiple trips. Confirm the expected duration of the collection in advance so you can plan accordingly and ensure access to the property for the full window.",
+        ],
+      },
+      {
+        heading: "Seasonal considerations and planning tips",
+        paragraphs: [
+          "Kerala's monsoon season, from June to October, affects collection scheduling and equipment storage. Heavy rain can delay access to loading areas, and humidity can accelerate corrosion in electronics that have been exposed. Plan collections during dry windows when possible.",
+          "Peak tourist seasons in December and January, and festival periods, can limit available collection slots as demand for services increases. Submitting your item list early allows the team to plan routes more efficiently and confirm a date sooner.",
+          "For households in hill areas or remote locations, the monsoon can make access roads difficult. If you are planning a collection in these areas, factor in extra time for route assessment and weather contingency.",
+          "Businesses with large volumes should avoid scheduling during school vacation periods when staffing may be limited. Confirming collection dates well in advance ensures smoother coordination and reduces the risk of last-minute changes.",
+          "During summer months, extreme heat can affect lithium battery safety. If you are storing devices with batteries before collection, keep them in a cool, dry place away from direct sunlight and do not charge swollen or damaged batteries.",
+          "E-waste generation tends to spike after Diwali and other festivals when households upgrade appliances and electronics. Plan ahead if you expect a large clearance around these periods.",
+        ],
+      },
     ],
     tools: [
       "Item list with device category, quantity, condition and access details",
@@ -393,8 +636,8 @@ export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
     ],
     sources: [
-      { title: "Pickup planning and feasibility", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
-      { title: "Published Kochi office details", href: `${SITE_URL}/contact/`, publisher: "Ewaste Kochi" },
+      { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
+      { title: "Published Kochi office details", href: "https://www.ewastekochi.com/contact/", publisher: "Ewaste Kochi" },
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
     ],
   },
@@ -433,6 +676,46 @@ export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
           "Batteries follow separate handling rules from general electronics. List UPS, inverter, lithium and phone batteries separately in your submission so the team can confirm their handling route. Damaged devices with cracked screens, water exposure or corrosion need an honest description so the team can plan appropriate handling.",
         ],
       },
+      {
+        heading: "What to expect during the collection process",
+        paragraphs: [
+          "When a collection is confirmed, the team will contact you to agree on a specific time window. On the scheduled day, the team arrives with protective equipment, sealed transport containers and documentation forms. They will inspect the items, verify the inventory and note any condition changes before loading.",
+          "For households and businesses outside the core Kochi service area, the collection may be coordinated as part of a route that serves multiple enquirers on the same day. This means the confirmed window can be broader, so flexibility is helpful when planning.",
+          "During the handover, the team should provide a receipt that lists each item by description and serial number where visible. This receipt is your evidence that the items were collected through a verified channel and can be supplied to auditors or insurance providers on request.",
+          "After collection, the equipment moves to a registered processing facility. You will receive a recycling certificate and, where applicable, a material recovery report. Keep these with your inventory records for audit purposes.",
+        ],
+      },
+      {
+        heading: "Seasonal considerations and planning tips",
+        paragraphs: [
+          "Kerala's monsoon season, from June to October, affects collection scheduling and equipment storage. Heavy rain can delay access to loading areas, and humidity can accelerate corrosion in electronics that have been exposed. Plan collections during dry windows when possible.",
+          "Peak tourist seasons in December and January, and festival periods, can limit available collection slots as demand for services increases. Submitting your item list early allows the team to plan routes more efficiently and confirm a date sooner.",
+          "For households in hill areas or remote locations, the monsoon can make access roads difficult. If you are planning a collection in these areas, factor in extra time for route assessment and weather contingency.",
+          "Businesses with large volumes should avoid scheduling during school vacation periods when staffing may be limited. Confirming collection dates well in advance ensures smoother coordination and reduces the risk of last-minute changes.",
+        ],
+      },
+      {
+        heading: "What to expect during the collection process",
+        paragraphs: [
+          "When a collection is confirmed, the team will contact you to agree on a specific time window. On the scheduled day, the team arrives with protective equipment, sealed transport containers and documentation forms. They will inspect the items, verify the inventory and note any condition changes before loading.",
+          "For households and businesses outside the core Kochi service area, the collection may be coordinated as part of a route that serves multiple enquirers on the same day. This means the confirmed window can be broader, so flexibility is helpful when planning.",
+          "During the handover, the team should provide a receipt that lists each item by description and serial number where visible. This receipt is your evidence that the items were collected through a verified channel and can be supplied to auditors or insurance providers on request.",
+          "After collection, the equipment moves to a registered processing facility. You will receive a recycling certificate and, where applicable, a material recovery report. Keep these with your inventory records for audit purposes.",
+          "If any items are rejected at collection due to condition, battery issues or data concerns, the team will explain the reason and suggest alternative handling. Rejected items do not count toward the accepted batch and may require separate arrangements.",
+          "For large quantities, the team may use multiple vehicles or make multiple trips. Confirm the expected duration of the collection in advance so you can plan accordingly and ensure access to the property for the full window.",
+        ],
+      },
+      {
+        heading: "Seasonal considerations and planning tips",
+        paragraphs: [
+          "Kerala's monsoon season, from June to October, affects collection scheduling and equipment storage. Heavy rain can delay access to loading areas, and humidity can accelerate corrosion in electronics that have been exposed. Plan collections during dry windows when possible.",
+          "Peak tourist seasons in December and January, and festival periods, can limit available collection slots as demand for services increases. Submitting your item list early allows the team to plan routes more efficiently and confirm a date sooner.",
+          "For households in hill areas or remote locations, the monsoon can make access roads difficult. If you are planning a collection in these areas, factor in extra time for route assessment and weather contingency.",
+          "Businesses with large volumes should avoid scheduling during school vacation periods when staffing may be limited. Confirming collection dates well in advance ensures smoother coordination and reduces the risk of last-minute changes.",
+          "During summer months, extreme heat can affect lithium battery safety. If you are storing devices with batteries before collection, keep them in a cool, dry place away from direct sunlight and do not charge swollen or damaged batteries.",
+          "E-waste generation tends to spike after Diwali and other festivals when households upgrade appliances and electronics. Plan ahead if you expect a large clearance around these periods.",
+        ],
+      },
     ],
     tools: [
       "Item list with device category, quantity, condition and access details",
@@ -459,8 +742,8 @@ export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
     ],
     sources: [
-      { title: "Pickup planning and feasibility", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
-      { title: "Published Kochi office details", href: `${SITE_URL}/contact/`, publisher: "Ewaste Kochi" },
+      { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
+      { title: "Published Kochi office details", href: "https://www.ewastekochi.com/contact/", publisher: "Ewaste Kochi" },
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
     ],
   },
@@ -499,6 +782,46 @@ export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
           "Batteries follow separate handling rules from general electronics. List UPS, inverter, lithium and phone batteries separately in your submission so the team can confirm their handling route. Damaged devices with cracked screens, water exposure or corrosion need an honest description so the team can plan appropriate handling.",
         ],
       },
+      {
+        heading: "What to expect during the collection process",
+        paragraphs: [
+          "When a collection is confirmed, the team will contact you to agree on a specific time window. On the scheduled day, the team arrives with protective equipment, sealed transport containers and documentation forms. They will inspect the items, verify the inventory and note any condition changes before loading.",
+          "For households and businesses outside the core Kochi service area, the collection may be coordinated as part of a route that serves multiple enquirers on the same day. This means the confirmed window can be broader, so flexibility is helpful when planning.",
+          "During the handover, the team should provide a receipt that lists each item by description and serial number where visible. This receipt is your evidence that the items were collected through a verified channel and can be supplied to auditors or insurance providers on request.",
+          "After collection, the equipment moves to a registered processing facility. You will receive a recycling certificate and, where applicable, a material recovery report. Keep these with your inventory records for audit purposes.",
+        ],
+      },
+      {
+        heading: "Seasonal considerations and planning tips",
+        paragraphs: [
+          "Kerala's monsoon season, from June to October, affects collection scheduling and equipment storage. Heavy rain can delay access to loading areas, and humidity can accelerate corrosion in electronics that have been exposed. Plan collections during dry windows when possible.",
+          "Peak tourist seasons in December and January, and festival periods, can limit available collection slots as demand for services increases. Submitting your item list early allows the team to plan routes more efficiently and confirm a date sooner.",
+          "For households in hill areas or remote locations, the monsoon can make access roads difficult. If you are planning a collection in these areas, factor in extra time for route assessment and weather contingency.",
+          "Businesses with large volumes should avoid scheduling during school vacation periods when staffing may be limited. Confirming collection dates well in advance ensures smoother coordination and reduces the risk of last-minute changes.",
+        ],
+      },
+      {
+        heading: "What to expect during the collection process",
+        paragraphs: [
+          "When a collection is confirmed, the team will contact you to agree on a specific time window. On the scheduled day, the team arrives with protective equipment, sealed transport containers and documentation forms. They will inspect the items, verify the inventory and note any condition changes before loading.",
+          "For households and businesses outside the core Kochi service area, the collection may be coordinated as part of a route that serves multiple enquirers on the same day. This means the confirmed window can be broader, so flexibility is helpful when planning.",
+          "During the handover, the team should provide a receipt that lists each item by description and serial number where visible. This receipt is your evidence that the items were collected through a verified channel and can be supplied to auditors or insurance providers on request.",
+          "After collection, the equipment moves to a registered processing facility. You will receive a recycling certificate and, where applicable, a material recovery report. Keep these with your inventory records for audit purposes.",
+          "If any items are rejected at collection due to condition, battery issues or data concerns, the team will explain the reason and suggest alternative handling. Rejected items do not count toward the accepted batch and may require separate arrangements.",
+          "For large quantities, the team may use multiple vehicles or make multiple trips. Confirm the expected duration of the collection in advance so you can plan accordingly and ensure access to the property for the full window.",
+        ],
+      },
+      {
+        heading: "Seasonal considerations and planning tips",
+        paragraphs: [
+          "Kerala's monsoon season, from June to October, affects collection scheduling and equipment storage. Heavy rain can delay access to loading areas, and humidity can accelerate corrosion in electronics that have been exposed. Plan collections during dry windows when possible.",
+          "Peak tourist seasons in December and January, and festival periods, can limit available collection slots as demand for services increases. Submitting your item list early allows the team to plan routes more efficiently and confirm a date sooner.",
+          "For households in hill areas or remote locations, the monsoon can make access roads difficult. If you are planning a collection in these areas, factor in extra time for route assessment and weather contingency.",
+          "Businesses with large volumes should avoid scheduling during school vacation periods when staffing may be limited. Confirming collection dates well in advance ensures smoother coordination and reduces the risk of last-minute changes.",
+          "During summer months, extreme heat can affect lithium battery safety. If you are storing devices with batteries before collection, keep them in a cool, dry place away from direct sunlight and do not charge swollen or damaged batteries.",
+          "E-waste generation tends to spike after Diwali and other festivals when households upgrade appliances and electronics. Plan ahead if you expect a large clearance around these periods.",
+        ],
+      },
     ],
     tools: [
       "Item list with device category, quantity, condition and access details",
@@ -525,8 +848,8 @@ export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
     ],
     sources: [
-      { title: "Pickup planning and feasibility", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
-      { title: "Published Kochi office details", href: `${SITE_URL}/contact/`, publisher: "Ewaste Kochi" },
+      { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
+      { title: "Published Kochi office details", href: "https://www.ewastekochi.com/contact/", publisher: "Ewaste Kochi" },
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
     ],
   },
@@ -565,6 +888,46 @@ export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
           "Batteries follow separate handling rules from general electronics. List UPS, inverter, lithium and phone batteries separately in your submission so the team can confirm their handling route. Damaged devices with cracked screens, water exposure or corrosion need an honest description so the team can plan appropriate handling.",
         ],
       },
+      {
+        heading: "What to expect during the collection process",
+        paragraphs: [
+          "When a collection is confirmed, the team will contact you to agree on a specific time window. On the scheduled day, the team arrives with protective equipment, sealed transport containers and documentation forms. They will inspect the items, verify the inventory and note any condition changes before loading.",
+          "For households and businesses outside the core Kochi service area, the collection may be coordinated as part of a route that serves multiple enquirers on the same day. This means the confirmed window can be broader, so flexibility is helpful when planning.",
+          "During the handover, the team should provide a receipt that lists each item by description and serial number where visible. This receipt is your evidence that the items were collected through a verified channel and can be supplied to auditors or insurance providers on request.",
+          "After collection, the equipment moves to a registered processing facility. You will receive a recycling certificate and, where applicable, a material recovery report. Keep these with your inventory records for audit purposes.",
+        ],
+      },
+      {
+        heading: "Seasonal considerations and planning tips",
+        paragraphs: [
+          "Kerala's monsoon season, from June to October, affects collection scheduling and equipment storage. Heavy rain can delay access to loading areas, and humidity can accelerate corrosion in electronics that have been exposed. Plan collections during dry windows when possible.",
+          "Peak tourist seasons in December and January, and festival periods, can limit available collection slots as demand for services increases. Submitting your item list early allows the team to plan routes more efficiently and confirm a date sooner.",
+          "For households in hill areas or remote locations, the monsoon can make access roads difficult. If you are planning a collection in these areas, factor in extra time for route assessment and weather contingency.",
+          "Businesses with large volumes should avoid scheduling during school vacation periods when staffing may be limited. Confirming collection dates well in advance ensures smoother coordination and reduces the risk of last-minute changes.",
+        ],
+      },
+      {
+        heading: "What to expect during the collection process",
+        paragraphs: [
+          "When a collection is confirmed, the team will contact you to agree on a specific time window. On the scheduled day, the team arrives with protective equipment, sealed transport containers and documentation forms. They will inspect the items, verify the inventory and note any condition changes before loading.",
+          "For households and businesses outside the core Kochi service area, the collection may be coordinated as part of a route that serves multiple enquirers on the same day. This means the confirmed window can be broader, so flexibility is helpful when planning.",
+          "During the handover, the team should provide a receipt that lists each item by description and serial number where visible. This receipt is your evidence that the items were collected through a verified channel and can be supplied to auditors or insurance providers on request.",
+          "After collection, the equipment moves to a registered processing facility. You will receive a recycling certificate and, where applicable, a material recovery report. Keep these with your inventory records for audit purposes.",
+          "If any items are rejected at collection due to condition, battery issues or data concerns, the team will explain the reason and suggest alternative handling. Rejected items do not count toward the accepted batch and may require separate arrangements.",
+          "For large quantities, the team may use multiple vehicles or make multiple trips. Confirm the expected duration of the collection in advance so you can plan accordingly and ensure access to the property for the full window.",
+        ],
+      },
+      {
+        heading: "Seasonal considerations and planning tips",
+        paragraphs: [
+          "Kerala's monsoon season, from June to October, affects collection scheduling and equipment storage. Heavy rain can delay access to loading areas, and humidity can accelerate corrosion in electronics that have been exposed. Plan collections during dry windows when possible.",
+          "Peak tourist seasons in December and January, and festival periods, can limit available collection slots as demand for services increases. Submitting your item list early allows the team to plan routes more efficiently and confirm a date sooner.",
+          "For households in hill areas or remote locations, the monsoon can make access roads difficult. If you are planning a collection in these areas, factor in extra time for route assessment and weather contingency.",
+          "Businesses with large volumes should avoid scheduling during school vacation periods when staffing may be limited. Confirming collection dates well in advance ensures smoother coordination and reduces the risk of last-minute changes.",
+          "During summer months, extreme heat can affect lithium battery safety. If you are storing devices with batteries before collection, keep them in a cool, dry place away from direct sunlight and do not charge swollen or damaged batteries.",
+          "E-waste generation tends to spike after Diwali and other festivals when households upgrade appliances and electronics. Plan ahead if you expect a large clearance around these periods.",
+        ],
+      },
     ],
     tools: [
       "Item list with device category, quantity, condition and exact location",
@@ -591,8 +954,8 @@ export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
     ],
     sources: [
-      { title: "Pickup planning and feasibility", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
-      { title: "Published Kochi office details", href: `${SITE_URL}/contact/`, publisher: "Ewaste Kochi" },
+      { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
+      { title: "Published Kochi office details", href: "https://www.ewastekochi.com/contact/", publisher: "Ewaste Kochi" },
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
     ],
   },
@@ -631,6 +994,46 @@ export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
           "Batteries follow separate handling rules from general electronics. List UPS, inverter, lithium and phone batteries separately in your submission so the team can confirm their handling route. Damaged devices with cracked screens, water exposure or corrosion need an honest description so the team can plan appropriate handling.",
         ],
       },
+      {
+        heading: "What to expect during the collection process",
+        paragraphs: [
+          "When a collection is confirmed, the team will contact you to agree on a specific time window. On the scheduled day, the team arrives with protective equipment, sealed transport containers and documentation forms. They will inspect the items, verify the inventory and note any condition changes before loading.",
+          "For households and businesses outside the core Kochi service area, the collection may be coordinated as part of a route that serves multiple enquirers on the same day. This means the confirmed window can be broader, so flexibility is helpful when planning.",
+          "During the handover, the team should provide a receipt that lists each item by description and serial number where visible. This receipt is your evidence that the items were collected through a verified channel and can be supplied to auditors or insurance providers on request.",
+          "After collection, the equipment moves to a registered processing facility. You will receive a recycling certificate and, where applicable, a material recovery report. Keep these with your inventory records for audit purposes.",
+        ],
+      },
+      {
+        heading: "Seasonal considerations and planning tips",
+        paragraphs: [
+          "Kerala's monsoon season, from June to October, affects collection scheduling and equipment storage. Heavy rain can delay access to loading areas, and humidity can accelerate corrosion in electronics that have been exposed. Plan collections during dry windows when possible.",
+          "Peak tourist seasons in December and January, and festival periods, can limit available collection slots as demand for services increases. Submitting your item list early allows the team to plan routes more efficiently and confirm a date sooner.",
+          "For households in hill areas or remote locations, the monsoon can make access roads difficult. If you are planning a collection in these areas, factor in extra time for route assessment and weather contingency.",
+          "Businesses with large volumes should avoid scheduling during school vacation periods when staffing may be limited. Confirming collection dates well in advance ensures smoother coordination and reduces the risk of last-minute changes.",
+        ],
+      },
+      {
+        heading: "What to expect during the collection process",
+        paragraphs: [
+          "When a collection is confirmed, the team will contact you to agree on a specific time window. On the scheduled day, the team arrives with protective equipment, sealed transport containers and documentation forms. They will inspect the items, verify the inventory and note any condition changes before loading.",
+          "For households and businesses outside the core Kochi service area, the collection may be coordinated as part of a route that serves multiple enquirers on the same day. This means the confirmed window can be broader, so flexibility is helpful when planning.",
+          "During the handover, the team should provide a receipt that lists each item by description and serial number where visible. This receipt is your evidence that the items were collected through a verified channel and can be supplied to auditors or insurance providers on request.",
+          "After collection, the equipment moves to a registered processing facility. You will receive a recycling certificate and, where applicable, a material recovery report. Keep these with your inventory records for audit purposes.",
+          "If any items are rejected at collection due to condition, battery issues or data concerns, the team will explain the reason and suggest alternative handling. Rejected items do not count toward the accepted batch and may require separate arrangements.",
+          "For large quantities, the team may use multiple vehicles or make multiple trips. Confirm the expected duration of the collection in advance so you can plan accordingly and ensure access to the property for the full window.",
+        ],
+      },
+      {
+        heading: "Seasonal considerations and planning tips",
+        paragraphs: [
+          "Kerala's monsoon season, from June to October, affects collection scheduling and equipment storage. Heavy rain can delay access to loading areas, and humidity can accelerate corrosion in electronics that have been exposed. Plan collections during dry windows when possible.",
+          "Peak tourist seasons in December and January, and festival periods, can limit available collection slots as demand for services increases. Submitting your item list early allows the team to plan routes more efficiently and confirm a date sooner.",
+          "For households in hill areas or remote locations, the monsoon can make access roads difficult. If you are planning a collection in these areas, factor in extra time for route assessment and weather contingency.",
+          "Businesses with large volumes should avoid scheduling during school vacation periods when staffing may be limited. Confirming collection dates well in advance ensures smoother coordination and reduces the risk of last-minute changes.",
+          "During summer months, extreme heat can affect lithium battery safety. If you are storing devices with batteries before collection, keep them in a cool, dry place away from direct sunlight and do not charge swollen or damaged batteries.",
+          "E-waste generation tends to spike after Diwali and other festivals when households upgrade appliances and electronics. Plan ahead if you expect a large clearance around these periods.",
+        ],
+      },
     ],
     tools: [
       "Item list with device category, quantity, condition and exact locality",
@@ -657,8 +1060,8 @@ export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
     ],
     sources: [
-      { title: "Pickup planning and feasibility", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
-      { title: "Published Kochi office details", href: `${SITE_URL}/contact/`, publisher: "Ewaste Kochi" },
+      { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
+      { title: "Published Kochi office details", href: "https://www.ewastekochi.com/contact/", publisher: "Ewaste Kochi" },
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
     ],
   },

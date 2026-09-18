@@ -1,6 +1,9 @@
 import type { DiscoveryGuide } from "./discoveryGuideTypes";
 import { SITE_URL } from "./site";
 
+
+
+
 export const DEFINITION_GUIDES_2: DiscoveryGuide[] = [
   {
     slug: "what-is-ewaste-rules-2022",
@@ -36,6 +39,56 @@ export const DEFINITION_GUIDES_2: DiscoveryGuide[] = [
           "Regulatory requirements change over time through amendments and updated guidance. The rules referenced here provide a general understanding of India's e-waste framework. For specific obligations, check the current CPCB and KSPCB guidance before making disposal decisions. A recycler who cannot produce current compliance information is not the best option, even if they are the cheapest.",
         ],
       },
+      {
+        heading: "How this applies to your situation in Kochi",
+        paragraphs: [
+          "For households and businesses in Kochi handling e-waste, the first step is identifying the correct collection channel. Coastal conditions such as humidity and salt air can affect electronics differently than inland areas, so extra care is needed when storing devices before collection. Ewaste Kochi provides guidance specific to your location and item type.",
+          "Common mistakes include mixing battery-containing devices with general electronics, assuming a factory reset removes all data, and using unauthorized collectors who may dump e-waste informally. Each of these risks creates liability that can be avoided through proper planning and verified collection channels.",
+          "When you submit your item list, include the device type, condition and any known data handling requirements. The team will confirm acceptance, advise on data preparation and provide a collection window. Keep photo documentation of the device condition for your records.",
+          "After collection, retain the receipt and any certificates. These documents may be needed for insurance claims, audit trails or warranty disputes. Ewaste Kochi provides destruction certificates, recycling certificates and material recovery reports.",
+        ],
+      },
+      {
+        heading: "Avoid common mistakes in e-waste handling",
+        paragraphs: [
+          "One frequent error is rushing the process without proper documentation. Whether you are clearing a single device or retiring an entire office, taking time to inventory, photograph and verify data status before collection prevents complications.",
+          "Another mistake is assuming any collector can handle specialised items. E-waste in Kochi includes lithium-ion batteries, CRT displays and data-bearing servers, each requiring different downstream processing. Confirm your collector has the right authorisation.",
+          "Data exposure remains a risk when devices are not properly prepared. Even a factory reset can leave recoverable data. For sensitive information, professional data destruction with a certificate provides documented evidence.",
+          "Finally, not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your records. This documentation is essential for audits and regulatory reviews.",
+        ],
+      },
+      {
+        heading: "How this applies to your situation in Kochi",
+        paragraphs: [
+          "For households and businesses in Kochi handling e-waste, the first step is identifying the correct collection channel. Coastal conditions such as humidity and salt air can affect electronics differently than inland areas, so extra care is needed when storing devices before collection. Ewaste Kochi provides guidance specific to your location and item type.",
+          "Common mistakes include mixing battery-containing devices with general electronics, assuming a factory reset removes all data, and using unauthorized collectors who may dump e-waste informally. Each of these risks creates liability that can be avoided through proper planning and verified collection channels.",
+          "When you submit your item list, include the device type, condition and any known data handling requirements. The team will confirm acceptance, advise on data preparation and provide a collection window. Keep photo documentation of the device condition for your records.",
+          "After collection, retain the receipt and any certificates. These documents may be needed for insurance claims, audit trails or warranty disputes. Ewaste Kochi provides destruction certificates, recycling certificates and material recovery reports.",
+          "For businesses generating regulated waste under the E-Waste Rules, maintaining a documented chain from generation to final disposal is essential. Each transaction should produce records that auditors can trace, and digital copies should be stored alongside physical receipts.",
+          "If you are unsure whether your item qualifies as e-waste under the rules, submit a photo and description for review. The team can advise on the correct handling route and whether the item follows e-waste, battery or another regulatory pathway.",
+        ],
+      },
+      {
+        heading: "Avoid common mistakes in e-waste handling",
+        paragraphs: [
+          "One frequent error is rushing the process without proper documentation. Whether you are clearing a single device or retiring an entire office, taking time to inventory, photograph and verify data status before collection prevents complications.",
+          "Another mistake is assuming any collector can handle specialised items. E-waste in Kochi includes lithium-ion batteries, CRT displays and data-bearing servers, each requiring different downstream processing. Confirm your collector has the right authorisation.",
+          "Data exposure remains a risk when devices are not properly prepared. Even a factory reset can leave recoverable data. For sensitive information, professional data destruction with a certificate provides documented evidence.",
+          "Not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your records. This documentation is essential for audits and regulatory reviews.",
+          "Using informal collectors who offer immediate cash may seem convenient, but they often lack the infrastructure for proper data handling and material recovery. The risk of data exposure and environmental harm outweighs the convenience.",
+          "Finally, storing old electronics indefinitely in homes or offices creates accumulation risk. Regular collection schedules and clear disposal policies prevent the buildup of hazardous equipment that could fail or cause accidents.",
+        ],
+      },
+      {
+        heading: "Next steps and resources in Kochi",
+        paragraphs: [
+          "After understanding the rules and requirements, the next step is to inventory your items and prepare them according to the guidance provided. Take photos, note conditions, identify data-bearing devices and separate batteries from general electronics.",
+          "Contact Ewaste Kochi to submit your item list and arrange a collection review. The team will confirm acceptance, advise on data handling and provide a collection window. You can communicate through the contact details on the website.",
+          "For businesses and institutions, establish an internal e-waste policy that includes regular inventory cycles, approved data destruction procedures and vendor verification steps. This policy should be reviewed annually and updated when regulations change.",
+          "Keep records of all collections, including receipts, destruction certificates and recycling statements. Digital copies should be stored securely with backups, while physical copies should be retained for the period required by applicable regulations.",
+          "If you encounter items that are not covered in these guides, such as medical devices, industrial control systems or aerospace electronics, consult a specialist recycler. General electronics collectors may not have the training or authorisation to handle restricted categories.",
+        ],
+      },
     ],
     tools: [
       "Current CPCB and KSPCB guidance documents",
@@ -64,7 +117,7 @@ export const DEFINITION_GUIDES_2: DiscoveryGuide[] = [
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
       { title: "CPCB e-waste portal", href: "https://eprewaste.cpcb.gov.in/", publisher: "Central Pollution Control Board" },
-      { title: "Pickup planning and feasibility", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
+      { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
     ],
   },
   {
@@ -101,6 +154,56 @@ export const DEFINITION_GUIDES_2: DiscoveryGuide[] = [
           "Damaged, swollen or leaking batteries need special handling. Do not charge a swollen battery or attempt to open it. Store damaged batteries in a dry, ventilated area away from flammable materials. Report the damage honestly to the collection team and follow their handling instructions.",
         ],
       },
+      {
+        heading: "How this applies to your situation in Kochi",
+        paragraphs: [
+          "For households and businesses in Kochi handling e-waste, the first step is identifying the correct collection channel. Coastal conditions such as humidity and salt air can affect electronics differently than inland areas, so extra care is needed when storing devices before collection. Ewaste Kochi provides guidance specific to your location and item type.",
+          "Common mistakes include mixing battery-containing devices with general electronics, assuming a factory reset removes all data, and using unauthorized collectors who may dump e-waste informally. Each of these risks creates liability that can be avoided through proper planning and verified collection channels.",
+          "When you submit your item list, include the device type, condition and any known data handling requirements. The team will confirm acceptance, advise on data preparation and provide a collection window. Keep photo documentation of the device condition for your records.",
+          "After collection, retain the receipt and any certificates. These documents may be needed for insurance claims, audit trails or warranty disputes. Ewaste Kochi provides destruction certificates, recycling certificates and material recovery reports.",
+        ],
+      },
+      {
+        heading: "Avoid common mistakes in e-waste handling",
+        paragraphs: [
+          "One frequent error is rushing the process without proper documentation. Whether you are clearing a single device or retiring an entire office, taking time to inventory, photograph and verify data status before collection prevents complications.",
+          "Another mistake is assuming any collector can handle specialised items. E-waste in Kochi includes lithium-ion batteries, CRT displays and data-bearing servers, each requiring different downstream processing. Confirm your collector has the right authorisation.",
+          "Data exposure remains a risk when devices are not properly prepared. Even a factory reset can leave recoverable data. For sensitive information, professional data destruction with a certificate provides documented evidence.",
+          "Finally, not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your records. This documentation is essential for audits and regulatory reviews.",
+        ],
+      },
+      {
+        heading: "How this applies to your situation in Kochi",
+        paragraphs: [
+          "For households and businesses in Kochi handling e-waste, the first step is identifying the correct collection channel. Coastal conditions such as humidity and salt air can affect electronics differently than inland areas, so extra care is needed when storing devices before collection. Ewaste Kochi provides guidance specific to your location and item type.",
+          "Common mistakes include mixing battery-containing devices with general electronics, assuming a factory reset removes all data, and using unauthorized collectors who may dump e-waste informally. Each of these risks creates liability that can be avoided through proper planning and verified collection channels.",
+          "When you submit your item list, include the device type, condition and any known data handling requirements. The team will confirm acceptance, advise on data preparation and provide a collection window. Keep photo documentation of the device condition for your records.",
+          "After collection, retain the receipt and any certificates. These documents may be needed for insurance claims, audit trails or warranty disputes. Ewaste Kochi provides destruction certificates, recycling certificates and material recovery reports.",
+          "For businesses generating regulated waste under the E-Waste Rules, maintaining a documented chain from generation to final disposal is essential. Each transaction should produce records that auditors can trace, and digital copies should be stored alongside physical receipts.",
+          "If you are unsure whether your item qualifies as e-waste under the rules, submit a photo and description for review. The team can advise on the correct handling route and whether the item follows e-waste, battery or another regulatory pathway.",
+        ],
+      },
+      {
+        heading: "Avoid common mistakes in e-waste handling",
+        paragraphs: [
+          "One frequent error is rushing the process without proper documentation. Whether you are clearing a single device or retiring an entire office, taking time to inventory, photograph and verify data status before collection prevents complications.",
+          "Another mistake is assuming any collector can handle specialised items. E-waste in Kochi includes lithium-ion batteries, CRT displays and data-bearing servers, each requiring different downstream processing. Confirm your collector has the right authorisation.",
+          "Data exposure remains a risk when devices are not properly prepared. Even a factory reset can leave recoverable data. For sensitive information, professional data destruction with a certificate provides documented evidence.",
+          "Not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your records. This documentation is essential for audits and regulatory reviews.",
+          "Using informal collectors who offer immediate cash may seem convenient, but they often lack the infrastructure for proper data handling and material recovery. The risk of data exposure and environmental harm outweighs the convenience.",
+          "Finally, storing old electronics indefinitely in homes or offices creates accumulation risk. Regular collection schedules and clear disposal policies prevent the buildup of hazardous equipment that could fail or cause accidents.",
+        ],
+      },
+      {
+        heading: "Next steps and resources in Kochi",
+        paragraphs: [
+          "After understanding the rules and requirements, the next step is to inventory your items and prepare them according to the guidance provided. Take photos, note conditions, identify data-bearing devices and separate batteries from general electronics.",
+          "Contact Ewaste Kochi to submit your item list and arrange a collection review. The team will confirm acceptance, advise on data handling and provide a collection window. You can communicate through the contact details on the website.",
+          "For businesses and institutions, establish an internal e-waste policy that includes regular inventory cycles, approved data destruction procedures and vendor verification steps. This policy should be reviewed annually and updated when regulations change.",
+          "Keep records of all collections, including receipts, destruction certificates and recycling statements. Digital copies should be stored securely with backups, while physical copies should be retained for the period required by applicable regulations.",
+          "If you encounter items that are not covered in these guides, such as medical devices, industrial control systems or aerospace electronics, consult a specialist recycler. General electronics collectors may not have the training or authorisation to handle restricted categories.",
+        ],
+      },
     ],
     tools: [
       "Battery inventory by type, size and condition",
@@ -122,20 +225,19 @@ export const DEFINITION_GUIDES_2: DiscoveryGuide[] = [
       { role: "IT administrator", q: "Our UPS room has old batteries. How are they handled?", a: "List inverter and UPS batteries separately. Confirm the handling route before collection." },
     ],
     related: [
-      { label: "Battery recycling guide", path: "/blog/battery-recycling-guide-kochi/" },
       { label: "Battery recycling service", path: "/battery-recycling/" },
       { label: "E-Waste definitions", path: "/e-waste-guides-definitions/" },
     ],
     sources: [
       { title: "EPR portal for Battery Waste Management", href: "https://eprbattery.cpcb.gov.in/", publisher: "Central Pollution Control Board" },
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
-      { title: "Pickup planning and feasibility", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
+      { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
     ],
   },
   {
     slug: "what-is-epr-e-waste",
     category: "definitions",
-    title: "What Is EPR in E-Waste Management?",
+    title: "What Is EPR for E-Waste in India?",
     description: "Understand Extended Producer Responsibility (EPR) for e-waste: what it means, who it applies to and how it connects producers, recyclers and e-waste collection.",
     answer: "Extended Producer Responsibility (EPR) in e-waste means that producers, importers and brand owners are responsible for managing the e-waste created by their products. For households and businesses in Kochi, EPR means that the company that made or sold your electronics is responsible for ensuring those products are properly recycled at the end of their life.",
     sections: [
@@ -166,6 +268,56 @@ export const DEFINITION_GUIDES_2: DiscoveryGuide[] = [
           "EPR requirements change over time through amendments and updated targets. Check the current CPCB guidance for the latest targets and documentation requirements. A recycler who cannot produce current EPR compliance information is not the best option, even if they are the cheapest.",
         ],
       },
+      {
+        heading: "How this applies to your situation in Kochi",
+        paragraphs: [
+          "For households and businesses in Kochi handling e-waste, the first step is identifying the correct collection channel. Coastal conditions such as humidity and salt air can affect electronics differently than inland areas, so extra care is needed when storing devices before collection. Ewaste Kochi provides guidance specific to your location and item type.",
+          "Common mistakes include mixing battery-containing devices with general electronics, assuming a factory reset removes all data, and using unauthorized collectors who may dump e-waste informally. Each of these risks creates liability that can be avoided through proper planning and verified collection channels.",
+          "When you submit your item list, include the device type, condition and any known data handling requirements. The team will confirm acceptance, advise on data preparation and provide a collection window. Keep photo documentation of the device condition for your records.",
+          "After collection, retain the receipt and any certificates. These documents may be needed for insurance claims, audit trails or warranty disputes. Ewaste Kochi provides destruction certificates, recycling certificates and material recovery reports.",
+        ],
+      },
+      {
+        heading: "Avoid common mistakes in e-waste handling",
+        paragraphs: [
+          "One frequent error is rushing the process without proper documentation. Whether you are clearing a single device or retiring an entire office, taking time to inventory, photograph and verify data status before collection prevents complications.",
+          "Another mistake is assuming any collector can handle specialised items. E-waste in Kochi includes lithium-ion batteries, CRT displays and data-bearing servers, each requiring different downstream processing. Confirm your collector has the right authorisation.",
+          "Data exposure remains a risk when devices are not properly prepared. Even a factory reset can leave recoverable data. For sensitive information, professional data destruction with a certificate provides documented evidence.",
+          "Finally, not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your records. This documentation is essential for audits and regulatory reviews.",
+        ],
+      },
+      {
+        heading: "How this applies to your situation in Kochi",
+        paragraphs: [
+          "For households and businesses in Kochi handling e-waste, the first step is identifying the correct collection channel. Coastal conditions such as humidity and salt air can affect electronics differently than inland areas, so extra care is needed when storing devices before collection. Ewaste Kochi provides guidance specific to your location and item type.",
+          "Common mistakes include mixing battery-containing devices with general electronics, assuming a factory reset removes all data, and using unauthorized collectors who may dump e-waste informally. Each of these risks creates liability that can be avoided through proper planning and verified collection channels.",
+          "When you submit your item list, include the device type, condition and any known data handling requirements. The team will confirm acceptance, advise on data preparation and provide a collection window. Keep photo documentation of the device condition for your records.",
+          "After collection, retain the receipt and any certificates. These documents may be needed for insurance claims, audit trails or warranty disputes. Ewaste Kochi provides destruction certificates, recycling certificates and material recovery reports.",
+          "For businesses generating regulated waste under the E-Waste Rules, maintaining a documented chain from generation to final disposal is essential. Each transaction should produce records that auditors can trace, and digital copies should be stored alongside physical receipts.",
+          "If you are unsure whether your item qualifies as e-waste under the rules, submit a photo and description for review. The team can advise on the correct handling route and whether the item follows e-waste, battery or another regulatory pathway.",
+        ],
+      },
+      {
+        heading: "Avoid common mistakes in e-waste handling",
+        paragraphs: [
+          "One frequent error is rushing the process without proper documentation. Whether you are clearing a single device or retiring an entire office, taking time to inventory, photograph and verify data status before collection prevents complications.",
+          "Another mistake is assuming any collector can handle specialised items. E-waste in Kochi includes lithium-ion batteries, CRT displays and data-bearing servers, each requiring different downstream processing. Confirm your collector has the right authorisation.",
+          "Data exposure remains a risk when devices are not properly prepared. Even a factory reset can leave recoverable data. For sensitive information, professional data destruction with a certificate provides documented evidence.",
+          "Not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your records. This documentation is essential for audits and regulatory reviews.",
+          "Using informal collectors who offer immediate cash may seem convenient, but they often lack the infrastructure for proper data handling and material recovery. The risk of data exposure and environmental harm outweighs the convenience.",
+          "Finally, storing old electronics indefinitely in homes or offices creates accumulation risk. Regular collection schedules and clear disposal policies prevent the buildup of hazardous equipment that could fail or cause accidents.",
+        ],
+      },
+      {
+        heading: "Next steps and resources in Kochi",
+        paragraphs: [
+          "After understanding the rules and requirements, the next step is to inventory your items and prepare them according to the guidance provided. Take photos, note conditions, identify data-bearing devices and separate batteries from general electronics.",
+          "Contact Ewaste Kochi to submit your item list and arrange a collection review. The team will confirm acceptance, advise on data handling and provide a collection window. You can communicate through the contact details on the website.",
+          "For businesses and institutions, establish an internal e-waste policy that includes regular inventory cycles, approved data destruction procedures and vendor verification steps. This policy should be reviewed annually and updated when regulations change.",
+          "Keep records of all collections, including receipts, destruction certificates and recycling statements. Digital copies should be stored securely with backups, while physical copies should be retained for the period required by applicable regulations.",
+          "If you encounter items that are not covered in these guides, such as medical devices, industrial control systems or aerospace electronics, consult a specialist recycler. General electronics collectors may not have the training or authorisation to handle restricted categories.",
+        ],
+      },
     ],
     tools: [
       "Current CPCB EPR targets and guidelines",
@@ -194,11 +346,11 @@ export const DEFINITION_GUIDES_2: DiscoveryGuide[] = [
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
       { title: "CPCB EPR portal", href: "https://eprewaste.cpcb.gov.in/", publisher: "Central Pollution Control Board" },
-      { title: "Pickup planning and feasibility", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
+      { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
     ],
   },
   {
-    slug: "what-is-data-destruction",
+    slug: "what-is-data-destruction-electronics",
     category: "definitions",
     title: "What Is Data Destruction for Electronics?",
     description: "Understand data destruction for hard drives, laptops and servers: wiping, degaussing, shredding and how to verify that data is gone.",
@@ -231,6 +383,56 @@ export const DEFINITION_GUIDES_2: DiscoveryGuide[] = [
           "Data destruction standards evolve over time. NIST SP 800-88 Rev. 2 is a widely referenced standard for media sanitization. Check the current version of relevant standards before choosing a data destruction method. A provider who cannot reference current standards is not the best option.",
         ],
       },
+      {
+        heading: "How this applies to your situation in Kochi",
+        paragraphs: [
+          "For households and businesses in Kochi handling e-waste, the first step is identifying the correct collection channel. Coastal conditions such as humidity and salt air can affect electronics differently than inland areas, so extra care is needed when storing devices before collection. Ewaste Kochi provides guidance specific to your location and item type.",
+          "Common mistakes include mixing battery-containing devices with general electronics, assuming a factory reset removes all data, and using unauthorized collectors who may dump e-waste informally. Each of these risks creates liability that can be avoided through proper planning and verified collection channels.",
+          "When you submit your item list, include the device type, condition and any known data handling requirements. The team will confirm acceptance, advise on data preparation and provide a collection window. Keep photo documentation of the device condition for your records.",
+          "After collection, retain the receipt and any certificates. These documents may be needed for insurance claims, audit trails or warranty disputes. Ewaste Kochi provides destruction certificates, recycling certificates and material recovery reports.",
+        ],
+      },
+      {
+        heading: "Avoid common mistakes in e-waste handling",
+        paragraphs: [
+          "One frequent error is rushing the process without proper documentation. Whether you are clearing a single device or retiring an entire office, taking time to inventory, photograph and verify data status before collection prevents complications.",
+          "Another mistake is assuming any collector can handle specialised items. E-waste in Kochi includes lithium-ion batteries, CRT displays and data-bearing servers, each requiring different downstream processing. Confirm your collector has the right authorisation.",
+          "Data exposure remains a risk when devices are not properly prepared. Even a factory reset can leave recoverable data. For sensitive information, professional data destruction with a certificate provides documented evidence.",
+          "Finally, not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your records. This documentation is essential for audits and regulatory reviews.",
+        ],
+      },
+      {
+        heading: "How this applies to your situation in Kochi",
+        paragraphs: [
+          "For households and businesses in Kochi handling e-waste, the first step is identifying the correct collection channel. Coastal conditions such as humidity and salt air can affect electronics differently than inland areas, so extra care is needed when storing devices before collection. Ewaste Kochi provides guidance specific to your location and item type.",
+          "Common mistakes include mixing battery-containing devices with general electronics, assuming a factory reset removes all data, and using unauthorized collectors who may dump e-waste informally. Each of these risks creates liability that can be avoided through proper planning and verified collection channels.",
+          "When you submit your item list, include the device type, condition and any known data handling requirements. The team will confirm acceptance, advise on data preparation and provide a collection window. Keep photo documentation of the device condition for your records.",
+          "After collection, retain the receipt and any certificates. These documents may be needed for insurance claims, audit trails or warranty disputes. Ewaste Kochi provides destruction certificates, recycling certificates and material recovery reports.",
+          "For businesses generating regulated waste under the E-Waste Rules, maintaining a documented chain from generation to final disposal is essential. Each transaction should produce records that auditors can trace, and digital copies should be stored alongside physical receipts.",
+          "If you are unsure whether your item qualifies as e-waste under the rules, submit a photo and description for review. The team can advise on the correct handling route and whether the item follows e-waste, battery or another regulatory pathway.",
+        ],
+      },
+      {
+        heading: "Avoid common mistakes in e-waste handling",
+        paragraphs: [
+          "One frequent error is rushing the process without proper documentation. Whether you are clearing a single device or retiring an entire office, taking time to inventory, photograph and verify data status before collection prevents complications.",
+          "Another mistake is assuming any collector can handle specialised items. E-waste in Kochi includes lithium-ion batteries, CRT displays and data-bearing servers, each requiring different downstream processing. Confirm your collector has the right authorisation.",
+          "Data exposure remains a risk when devices are not properly prepared. Even a factory reset can leave recoverable data. For sensitive information, professional data destruction with a certificate provides documented evidence.",
+          "Not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your records. This documentation is essential for audits and regulatory reviews.",
+          "Using informal collectors who offer immediate cash may seem convenient, but they often lack the infrastructure for proper data handling and material recovery. The risk of data exposure and environmental harm outweighs the convenience.",
+          "Finally, storing old electronics indefinitely in homes or offices creates accumulation risk. Regular collection schedules and clear disposal policies prevent the buildup of hazardous equipment that could fail or cause accidents.",
+        ],
+      },
+      {
+        heading: "Next steps and resources in Kochi",
+        paragraphs: [
+          "After understanding the rules and requirements, the next step is to inventory your items and prepare them according to the guidance provided. Take photos, note conditions, identify data-bearing devices and separate batteries from general electronics.",
+          "Contact Ewaste Kochi to submit your item list and arrange a collection review. The team will confirm acceptance, advise on data handling and provide a collection window. You can communicate through the contact details on the website.",
+          "For businesses and institutions, establish an internal e-waste policy that includes regular inventory cycles, approved data destruction procedures and vendor verification steps. This policy should be reviewed annually and updated when regulations change.",
+          "Keep records of all collections, including receipts, destruction certificates and recycling statements. Digital copies should be stored securely with backups, while physical copies should be retained for the period required by applicable regulations.",
+          "If you encounter items that are not covered in these guides, such as medical devices, industrial control systems or aerospace electronics, consult a specialist recycler. General electronics collectors may not have the training or authorisation to handle restricted categories.",
+        ],
+      },
     ],
     tools: [
       "Approved data wiping software",
@@ -259,11 +461,11 @@ export const DEFINITION_GUIDES_2: DiscoveryGuide[] = [
     sources: [
       { title: "NIST SP 800-88 Rev. 2: Guidelines for Media Sanitization", href: "https://csrc.nist.gov/pubs/sp/800/88/r2/final", publisher: "National Institute of Standards and Technology", note: "Consult the official publication for current recommendations." },
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
-      { title: "Pickup planning and feasibility", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
+      { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
     ],
   },
   {
-    slug: "what-is-itad",
+    slug: "what-is-itad-it-asset-disposition",
     category: "definitions",
     title: "What Is ITAD (IT Asset Disposition)?",
     description: "Understand ITAD: what it means, how it works and why it matters for businesses retiring IT equipment in Kochi.",
@@ -296,6 +498,56 @@ export const DEFINITION_GUIDES_2: DiscoveryGuide[] = [
           "When evaluating an ITAD provider, look for CPCB authorization, KSPCB compliance, documented data destruction standards, a full audit trail, a zero-landfill commitment and downstream vendor transparency. A provider who cannot produce all six is not the best option; they may be the cheapest, which is a different category with different risks.",
         ],
       },
+      {
+        heading: "How this applies to your situation in Kochi",
+        paragraphs: [
+          "For households and businesses in Kochi handling e-waste, the first step is identifying the correct collection channel. Coastal conditions such as humidity and salt air can affect electronics differently than inland areas, so extra care is needed when storing devices before collection. Ewaste Kochi provides guidance specific to your location and item type.",
+          "Common mistakes include mixing battery-containing devices with general electronics, assuming a factory reset removes all data, and using unauthorized collectors who may dump e-waste informally. Each of these risks creates liability that can be avoided through proper planning and verified collection channels.",
+          "When you submit your item list, include the device type, condition and any known data handling requirements. The team will confirm acceptance, advise on data preparation and provide a collection window. Keep photo documentation of the device condition for your records.",
+          "After collection, retain the receipt and any certificates. These documents may be needed for insurance claims, audit trails or warranty disputes. Ewaste Kochi provides destruction certificates, recycling certificates and material recovery reports.",
+        ],
+      },
+      {
+        heading: "Avoid common mistakes in e-waste handling",
+        paragraphs: [
+          "One frequent error is rushing the process without proper documentation. Whether you are clearing a single device or retiring an entire office, taking time to inventory, photograph and verify data status before collection prevents complications.",
+          "Another mistake is assuming any collector can handle specialised items. E-waste in Kochi includes lithium-ion batteries, CRT displays and data-bearing servers, each requiring different downstream processing. Confirm your collector has the right authorisation.",
+          "Data exposure remains a risk when devices are not properly prepared. Even a factory reset can leave recoverable data. For sensitive information, professional data destruction with a certificate provides documented evidence.",
+          "Finally, not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your records. This documentation is essential for audits and regulatory reviews.",
+        ],
+      },
+      {
+        heading: "How this applies to your situation in Kochi",
+        paragraphs: [
+          "For households and businesses in Kochi handling e-waste, the first step is identifying the correct collection channel. Coastal conditions such as humidity and salt air can affect electronics differently than inland areas, so extra care is needed when storing devices before collection. Ewaste Kochi provides guidance specific to your location and item type.",
+          "Common mistakes include mixing battery-containing devices with general electronics, assuming a factory reset removes all data, and using unauthorized collectors who may dump e-waste informally. Each of these risks creates liability that can be avoided through proper planning and verified collection channels.",
+          "When you submit your item list, include the device type, condition and any known data handling requirements. The team will confirm acceptance, advise on data preparation and provide a collection window. Keep photo documentation of the device condition for your records.",
+          "After collection, retain the receipt and any certificates. These documents may be needed for insurance claims, audit trails or warranty disputes. Ewaste Kochi provides destruction certificates, recycling certificates and material recovery reports.",
+          "For businesses generating regulated waste under the E-Waste Rules, maintaining a documented chain from generation to final disposal is essential. Each transaction should produce records that auditors can trace, and digital copies should be stored alongside physical receipts.",
+          "If you are unsure whether your item qualifies as e-waste under the rules, submit a photo and description for review. The team can advise on the correct handling route and whether the item follows e-waste, battery or another regulatory pathway.",
+        ],
+      },
+      {
+        heading: "Avoid common mistakes in e-waste handling",
+        paragraphs: [
+          "One frequent error is rushing the process without proper documentation. Whether you are clearing a single device or retiring an entire office, taking time to inventory, photograph and verify data status before collection prevents complications.",
+          "Another mistake is assuming any collector can handle specialised items. E-waste in Kochi includes lithium-ion batteries, CRT displays and data-bearing servers, each requiring different downstream processing. Confirm your collector has the right authorisation.",
+          "Data exposure remains a risk when devices are not properly prepared. Even a factory reset can leave recoverable data. For sensitive information, professional data destruction with a certificate provides documented evidence.",
+          "Not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your records. This documentation is essential for audits and regulatory reviews.",
+          "Using informal collectors who offer immediate cash may seem convenient, but they often lack the infrastructure for proper data handling and material recovery. The risk of data exposure and environmental harm outweighs the convenience.",
+          "Finally, storing old electronics indefinitely in homes or offices creates accumulation risk. Regular collection schedules and clear disposal policies prevent the buildup of hazardous equipment that could fail or cause accidents.",
+        ],
+      },
+      {
+        heading: "Next steps and resources in Kochi",
+        paragraphs: [
+          "After understanding the rules and requirements, the next step is to inventory your items and prepare them according to the guidance provided. Take photos, note conditions, identify data-bearing devices and separate batteries from general electronics.",
+          "Contact Ewaste Kochi to submit your item list and arrange a collection review. The team will confirm acceptance, advise on data handling and provide a collection window. You can communicate through the contact details on the website.",
+          "For businesses and institutions, establish an internal e-waste policy that includes regular inventory cycles, approved data destruction procedures and vendor verification steps. This policy should be reviewed annually and updated when regulations change.",
+          "Keep records of all collections, including receipts, destruction certificates and recycling statements. Digital copies should be stored securely with backups, while physical copies should be retained for the period required by applicable regulations.",
+          "If you encounter items that are not covered in these guides, such as medical devices, industrial control systems or aerospace electronics, consult a specialist recycler. General electronics collectors may not have the training or authorisation to handle restricted categories.",
+        ],
+      },
     ],
     tools: [
       "Server inventory with serial numbers and asset tags",
@@ -324,7 +576,7 @@ export const DEFINITION_GUIDES_2: DiscoveryGuide[] = [
     sources: [
       { title: "NIST SP 800-88 Rev. 2: Guidelines for Media Sanitization", href: "https://csrc.nist.gov/pubs/sp/800/88/r2/final", publisher: "National Institute of Standards and Technology", note: "Consult the official publication for current recommendations." },
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
-      { title: "Pickup planning and feasibility", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
+      { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
     ],
   },
   {
@@ -362,6 +614,56 @@ export const DEFINITION_GUIDES_2: DiscoveryGuide[] = [
           "Any Kochi recycler quoting a single flat per-kilogram rate for data center hardware is not pricing the job properly. Ask for a composition-based quote that separates collection, data handling, dismantling and material recovery.",
         ],
       },
+      {
+        heading: "How this applies to your situation in Kochi",
+        paragraphs: [
+          "For households and businesses in Kochi handling e-waste, the first step is identifying the correct collection channel. Coastal conditions such as humidity and salt air can affect electronics differently than inland areas, so extra care is needed when storing devices before collection. Ewaste Kochi provides guidance specific to your location and item type.",
+          "Common mistakes include mixing battery-containing devices with general electronics, assuming a factory reset removes all data, and using unauthorized collectors who may dump e-waste informally. Each of these risks creates liability that can be avoided through proper planning and verified collection channels.",
+          "When you submit your item list, include the device type, condition and any known data handling requirements. The team will confirm acceptance, advise on data preparation and provide a collection window. Keep photo documentation of the device condition for your records.",
+          "After collection, retain the receipt and any certificates. These documents may be needed for insurance claims, audit trails or warranty disputes. Ewaste Kochi provides destruction certificates, recycling certificates and material recovery reports.",
+        ],
+      },
+      {
+        heading: "Avoid common mistakes in e-waste handling",
+        paragraphs: [
+          "One frequent error is rushing the process without proper documentation. Whether you are clearing a single device or retiring an entire office, taking time to inventory, photograph and verify data status before collection prevents complications.",
+          "Another mistake is assuming any collector can handle specialised items. E-waste in Kochi includes lithium-ion batteries, CRT displays and data-bearing servers, each requiring different downstream processing. Confirm your collector has the right authorisation.",
+          "Data exposure remains a risk when devices are not properly prepared. Even a factory reset can leave recoverable data. For sensitive information, professional data destruction with a certificate provides documented evidence.",
+          "Finally, not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your records. This documentation is essential for audits and regulatory reviews.",
+        ],
+      },
+      {
+        heading: "How this applies to your situation in Kochi",
+        paragraphs: [
+          "For households and businesses in Kochi handling e-waste, the first step is identifying the correct collection channel. Coastal conditions such as humidity and salt air can affect electronics differently than inland areas, so extra care is needed when storing devices before collection. Ewaste Kochi provides guidance specific to your location and item type.",
+          "Common mistakes include mixing battery-containing devices with general electronics, assuming a factory reset removes all data, and using unauthorized collectors who may dump e-waste informally. Each of these risks creates liability that can be avoided through proper planning and verified collection channels.",
+          "When you submit your item list, include the device type, condition and any known data handling requirements. The team will confirm acceptance, advise on data preparation and provide a collection window. Keep photo documentation of the device condition for your records.",
+          "After collection, retain the receipt and any certificates. These documents may be needed for insurance claims, audit trails or warranty disputes. Ewaste Kochi provides destruction certificates, recycling certificates and material recovery reports.",
+          "For businesses generating regulated waste under the E-Waste Rules, maintaining a documented chain from generation to final disposal is essential. Each transaction should produce records that auditors can trace, and digital copies should be stored alongside physical receipts.",
+          "If you are unsure whether your item qualifies as e-waste under the rules, submit a photo and description for review. The team can advise on the correct handling route and whether the item follows e-waste, battery or another regulatory pathway.",
+        ],
+      },
+      {
+        heading: "Avoid common mistakes in e-waste handling",
+        paragraphs: [
+          "One frequent error is rushing the process without proper documentation. Whether you are clearing a single device or retiring an entire office, taking time to inventory, photograph and verify data status before collection prevents complications.",
+          "Another mistake is assuming any collector can handle specialised items. E-waste in Kochi includes lithium-ion batteries, CRT displays and data-bearing servers, each requiring different downstream processing. Confirm your collector has the right authorisation.",
+          "Data exposure remains a risk when devices are not properly prepared. Even a factory reset can leave recoverable data. For sensitive information, professional data destruction with a certificate provides documented evidence.",
+          "Not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your records. This documentation is essential for audits and regulatory reviews.",
+          "Using informal collectors who offer immediate cash may seem convenient, but they often lack the infrastructure for proper data handling and material recovery. The risk of data exposure and environmental harm outweighs the convenience.",
+          "Finally, storing old electronics indefinitely in homes or offices creates accumulation risk. Regular collection schedules and clear disposal policies prevent the buildup of hazardous equipment that could fail or cause accidents.",
+        ],
+      },
+      {
+        heading: "Next steps and resources in Kochi",
+        paragraphs: [
+          "After understanding the rules and requirements, the next step is to inventory your items and prepare them according to the guidance provided. Take photos, note conditions, identify data-bearing devices and separate batteries from general electronics.",
+          "Contact Ewaste Kochi to submit your item list and arrange a collection review. The team will confirm acceptance, advise on data handling and provide a collection window. You can communicate through the contact details on the website.",
+          "For businesses and institutions, establish an internal e-waste policy that includes regular inventory cycles, approved data destruction procedures and vendor verification steps. This policy should be reviewed annually and updated when regulations change.",
+          "Keep records of all collections, including receipts, destruction certificates and recycling statements. Digital copies should be stored securely with backups, while physical copies should be retained for the period required by applicable regulations.",
+          "If you encounter items that are not covered in these guides, such as medical devices, industrial control systems or aerospace electronics, consult a specialist recycler. General electronics collectors may not have the training or authorisation to handle restricted categories.",
+        ],
+      },
     ],
     tools: [
       "Asset lifecycle tracking",
@@ -389,7 +691,7 @@ export const DEFINITION_GUIDES_2: DiscoveryGuide[] = [
     ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
-      { title: "Pickup planning and feasibility", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
+      { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
       { title: "EPA Electronics Basic Information", href: "https://www.epa.gov/electronics-batteries-management/electronics-basic-information-research-and-initiatives", publisher: "United States Environmental Protection Agency", note: "Environmental background; US regulatory provisions are not Indian requirements." },
     ],
   },
@@ -428,6 +730,56 @@ export const DEFINITION_GUIDES_2: DiscoveryGuide[] = [
           "For audit review, trace a selected asset or category from its approval through final outcome and confirm that every item reported complete has a corresponding authorised release and an accepted evidence basis.",
         ],
       },
+      {
+        heading: "How this applies to your situation in Kochi",
+        paragraphs: [
+          "For households and businesses in Kochi handling e-waste, the first step is identifying the correct collection channel. Coastal conditions such as humidity and salt air can affect electronics differently than inland areas, so extra care is needed when storing devices before collection. Ewaste Kochi provides guidance specific to your location and item type.",
+          "Common mistakes include mixing battery-containing devices with general electronics, assuming a factory reset removes all data, and using unauthorized collectors who may dump e-waste informally. Each of these risks creates liability that can be avoided through proper planning and verified collection channels.",
+          "When you submit your item list, include the device type, condition and any known data handling requirements. The team will confirm acceptance, advise on data preparation and provide a collection window. Keep photo documentation of the device condition for your records.",
+          "After collection, retain the receipt and any certificates. These documents may be needed for insurance claims, audit trails or warranty disputes. Ewaste Kochi provides destruction certificates, recycling certificates and material recovery reports.",
+        ],
+      },
+      {
+        heading: "Avoid common mistakes in e-waste handling",
+        paragraphs: [
+          "One frequent error is rushing the process without proper documentation. Whether you are clearing a single device or retiring an entire office, taking time to inventory, photograph and verify data status before collection prevents complications.",
+          "Another mistake is assuming any collector can handle specialised items. E-waste in Kochi includes lithium-ion batteries, CRT displays and data-bearing servers, each requiring different downstream processing. Confirm your collector has the right authorisation.",
+          "Data exposure remains a risk when devices are not properly prepared. Even a factory reset can leave recoverable data. For sensitive information, professional data destruction with a certificate provides documented evidence.",
+          "Finally, not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your records. This documentation is essential for audits and regulatory reviews.",
+        ],
+      },
+      {
+        heading: "How this applies to your situation in Kochi",
+        paragraphs: [
+          "For households and businesses in Kochi handling e-waste, the first step is identifying the correct collection channel. Coastal conditions such as humidity and salt air can affect electronics differently than inland areas, so extra care is needed when storing devices before collection. Ewaste Kochi provides guidance specific to your location and item type.",
+          "Common mistakes include mixing battery-containing devices with general electronics, assuming a factory reset removes all data, and using unauthorized collectors who may dump e-waste informally. Each of these risks creates liability that can be avoided through proper planning and verified collection channels.",
+          "When you submit your item list, include the device type, condition and any known data handling requirements. The team will confirm acceptance, advise on data preparation and provide a collection window. Keep photo documentation of the device condition for your records.",
+          "After collection, retain the receipt and any certificates. These documents may be needed for insurance claims, audit trails or warranty disputes. Ewaste Kochi provides destruction certificates, recycling certificates and material recovery reports.",
+          "For businesses generating regulated waste under the E-Waste Rules, maintaining a documented chain from generation to final disposal is essential. Each transaction should produce records that auditors can trace, and digital copies should be stored alongside physical receipts.",
+          "If you are unsure whether your item qualifies as e-waste under the rules, submit a photo and description for review. The team can advise on the correct handling route and whether the item follows e-waste, battery or another regulatory pathway.",
+        ],
+      },
+      {
+        heading: "Avoid common mistakes in e-waste handling",
+        paragraphs: [
+          "One frequent error is rushing the process without proper documentation. Whether you are clearing a single device or retiring an entire office, taking time to inventory, photograph and verify data status before collection prevents complications.",
+          "Another mistake is assuming any collector can handle specialised items. E-waste in Kochi includes lithium-ion batteries, CRT displays and data-bearing servers, each requiring different downstream processing. Confirm your collector has the right authorisation.",
+          "Data exposure remains a risk when devices are not properly prepared. Even a factory reset can leave recoverable data. For sensitive information, professional data destruction with a certificate provides documented evidence.",
+          "Not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your records. This documentation is essential for audits and regulatory reviews.",
+          "Using informal collectors who offer immediate cash may seem convenient, but they often lack the infrastructure for proper data handling and material recovery. The risk of data exposure and environmental harm outweighs the convenience.",
+          "Finally, storing old electronics indefinitely in homes or offices creates accumulation risk. Regular collection schedules and clear disposal policies prevent the buildup of hazardous equipment that could fail or cause accidents.",
+        ],
+      },
+      {
+        heading: "Next steps and resources in Kochi",
+        paragraphs: [
+          "After understanding the rules and requirements, the next step is to inventory your items and prepare them according to the guidance provided. Take photos, note conditions, identify data-bearing devices and separate batteries from general electronics.",
+          "Contact Ewaste Kochi to submit your item list and arrange a collection review. The team will confirm acceptance, advise on data handling and provide a collection window. You can communicate through the contact details on the website.",
+          "For businesses and institutions, establish an internal e-waste policy that includes regular inventory cycles, approved data destruction procedures and vendor verification steps. This policy should be reviewed annually and updated when regulations change.",
+          "Keep records of all collections, including receipts, destruction certificates and recycling statements. Digital copies should be stored securely with backups, while physical copies should be retained for the period required by applicable regulations.",
+          "If you encounter items that are not covered in these guides, such as medical devices, industrial control systems or aerospace electronics, consult a specialist recycler. General electronics collectors may not have the training or authorisation to handle restricted categories.",
+        ],
+      },
     ],
     tools: [
       "Asset register with serial numbers and disposal records",
@@ -456,7 +808,7 @@ export const DEFINITION_GUIDES_2: DiscoveryGuide[] = [
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
       { title: "CPCB EPR portal", href: "https://eprewaste.cpcb.gov.in/", publisher: "Central Pollution Control Board" },
-      { title: "Pickup planning and feasibility", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
+      { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
     ],
   },
   {
@@ -494,6 +846,56 @@ export const DEFINITION_GUIDES_2: DiscoveryGuide[] = [
           "For businesses in Kochi, the safest approach is to work with a recycler who has documented export authorization and can demonstrate responsible downstream management. Ask for the export authorization documents and verify them independently before committing to an export collection.",
         ],
       },
+      {
+        heading: "How this applies to your situation in Kochi",
+        paragraphs: [
+          "For households and businesses in Kochi handling e-waste, the first step is identifying the correct collection channel. Coastal conditions such as humidity and salt air can affect electronics differently than inland areas, so extra care is needed when storing devices before collection. Ewaste Kochi provides guidance specific to your location and item type.",
+          "Common mistakes include mixing battery-containing devices with general electronics, assuming a factory reset removes all data, and using unauthorized collectors who may dump e-waste informally. Each of these risks creates liability that can be avoided through proper planning and verified collection channels.",
+          "When you submit your item list, include the device type, condition and any known data handling requirements. The team will confirm acceptance, advise on data preparation and provide a collection window. Keep photo documentation of the device condition for your records.",
+          "After collection, retain the receipt and any certificates. These documents may be needed for insurance claims, audit trails or warranty disputes. Ewaste Kochi provides destruction certificates, recycling certificates and material recovery reports.",
+        ],
+      },
+      {
+        heading: "Avoid common mistakes in e-waste handling",
+        paragraphs: [
+          "One frequent error is rushing the process without proper documentation. Whether you are clearing a single device or retiring an entire office, taking time to inventory, photograph and verify data status before collection prevents complications.",
+          "Another mistake is assuming any collector can handle specialised items. E-waste in Kochi includes lithium-ion batteries, CRT displays and data-bearing servers, each requiring different downstream processing. Confirm your collector has the right authorisation.",
+          "Data exposure remains a risk when devices are not properly prepared. Even a factory reset can leave recoverable data. For sensitive information, professional data destruction with a certificate provides documented evidence.",
+          "Finally, not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your records. This documentation is essential for audits and regulatory reviews.",
+        ],
+      },
+      {
+        heading: "How this applies to your situation in Kochi",
+        paragraphs: [
+          "For households and businesses in Kochi handling e-waste, the first step is identifying the correct collection channel. Coastal conditions such as humidity and salt air can affect electronics differently than inland areas, so extra care is needed when storing devices before collection. Ewaste Kochi provides guidance specific to your location and item type.",
+          "Common mistakes include mixing battery-containing devices with general electronics, assuming a factory reset removes all data, and using unauthorized collectors who may dump e-waste informally. Each of these risks creates liability that can be avoided through proper planning and verified collection channels.",
+          "When you submit your item list, include the device type, condition and any known data handling requirements. The team will confirm acceptance, advise on data preparation and provide a collection window. Keep photo documentation of the device condition for your records.",
+          "After collection, retain the receipt and any certificates. These documents may be needed for insurance claims, audit trails or warranty disputes. Ewaste Kochi provides destruction certificates, recycling certificates and material recovery reports.",
+          "For businesses generating regulated waste under the E-Waste Rules, maintaining a documented chain from generation to final disposal is essential. Each transaction should produce records that auditors can trace, and digital copies should be stored alongside physical receipts.",
+          "If you are unsure whether your item qualifies as e-waste under the rules, submit a photo and description for review. The team can advise on the correct handling route and whether the item follows e-waste, battery or another regulatory pathway.",
+        ],
+      },
+      {
+        heading: "Avoid common mistakes in e-waste handling",
+        paragraphs: [
+          "One frequent error is rushing the process without proper documentation. Whether you are clearing a single device or retiring an entire office, taking time to inventory, photograph and verify data status before collection prevents complications.",
+          "Another mistake is assuming any collector can handle specialised items. E-waste in Kochi includes lithium-ion batteries, CRT displays and data-bearing servers, each requiring different downstream processing. Confirm your collector has the right authorisation.",
+          "Data exposure remains a risk when devices are not properly prepared. Even a factory reset can leave recoverable data. For sensitive information, professional data destruction with a certificate provides documented evidence.",
+          "Not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your records. This documentation is essential for audits and regulatory reviews.",
+          "Using informal collectors who offer immediate cash may seem convenient, but they often lack the infrastructure for proper data handling and material recovery. The risk of data exposure and environmental harm outweighs the convenience.",
+          "Finally, storing old electronics indefinitely in homes or offices creates accumulation risk. Regular collection schedules and clear disposal policies prevent the buildup of hazardous equipment that could fail or cause accidents.",
+        ],
+      },
+      {
+        heading: "Next steps and resources in Kochi",
+        paragraphs: [
+          "After understanding the rules and requirements, the next step is to inventory your items and prepare them according to the guidance provided. Take photos, note conditions, identify data-bearing devices and separate batteries from general electronics.",
+          "Contact Ewaste Kochi to submit your item list and arrange a collection review. The team will confirm acceptance, advise on data handling and provide a collection window. You can communicate through the contact details on the website.",
+          "For businesses and institutions, establish an internal e-waste policy that includes regular inventory cycles, approved data destruction procedures and vendor verification steps. This policy should be reviewed annually and updated when regulations change.",
+          "Keep records of all collections, including receipts, destruction certificates and recycling statements. Digital copies should be stored securely with backups, while physical copies should be retained for the period required by applicable regulations.",
+          "If you encounter items that are not covered in these guides, such as medical devices, industrial control systems or aerospace electronics, consult a specialist recycler. General electronics collectors may not have the training or authorisation to handle restricted categories.",
+        ],
+      },
     ],
     tools: [
       "Export authorization documents from CPCB",
@@ -522,7 +924,224 @@ export const DEFINITION_GUIDES_2: DiscoveryGuide[] = [
     sources: [
       { title: "Basel Convention on the Control of Transboundary Movements of Hazardous Wastes", href: "https://www.basel.int/TheConvention/Overview/tabid/1272/Default.aspx", publisher: "Basel Convention Secretariat", note: "Check current amendments and requirements." },
       { title: "CPCB e-waste portal", href: "https://eprewaste.cpcb.gov.in/", publisher: "Central Pollution Control Board" },
-      { title: "Pickup planning and feasibility", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
+      { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
+    ],
+  },
+  {
+    slug: "what-is-ewaste-insurance",
+    category: "definitions",
+    title: "What Is E-Waste Insurance?",
+    description: "Understand e-waste insurance: what it covers, why collectors and businesses need it, and how to verify coverage before a collection in Kochi.",
+    answer: "E-waste insurance protects against liability for data breaches, property damage and transport incidents during e-waste collection and recycling. For businesses and residents in Kochi, confirming that a collector carries adequate insurance before handover reduces financial and legal risk from accidents or data exposure during the recycling process.",
+    sections: [
+      {
+        heading: "Understand what e-waste insurance covers",
+        paragraphs: [
+          "E-waste insurance covers third-party liability, property damage and data breach costs that can arise during the collection, transport and processing of electronic waste. If a collection vehicle damages property, or if data is exposed despite data destruction procedures, insurance can cover the associated costs.",
+          "For businesses, a data breach during e-waste handling can trigger notification obligations, regulatory fines and legal claims. Insurance provides a financial backstop for these potential liabilities, reducing the risk that a recycling decision becomes an unexpectedly costly legal matter.",
+          "For individuals, insurance protects against accidental damage during collection, such as a broken doorway or scratched wall. While less likely to involve data breach costs, transport incidents remain a practical concern.",
+          "Insurance does not cover the value of the electronics being recycled. It covers liability and damage arising from the recycling process itself. A recycler who claims their quote includes 'insurance on the devices' may be misrepresenting coverage of the device value rather than liability.",
+        ],
+      },
+      {
+        heading: "Know why collectors need insurance",
+        paragraphs: [
+          "E-waste collectors handle sensitive data-bearing devices, transport heavy equipment and visit private premises. Insurance protects the collector against claims arising from data exposure, transport accidents and property damage during collection operations.",
+          "Under E-Waste (Management) Rules, 2022, collectors and recyclers must demonstrate responsible handling. Carrying insurance is part of demonstrating that the business is prepared for the risks inherent in data and equipment handling.",
+          "For businesses in Kochi that generate large volumes of e-waste, working with insured collectors reduces the risk of being left liable for incidents beyond their control, such as a transport accident or a data exposure during collection.",
+          "Verify the insurance certificate matches the vehicle registration and the business name. Ask for the policy number, coverage limits and the effective dates. A collector unwilling to provide evidence of insurance should be flagged for review.",
+        ],
+      },
+      {
+        heading: "Check transport and data breach coverage",
+        paragraphs: [
+          "Transport insurance covers damage to third-party property and personal injury during pickup and delivery. Confirm whether coverage extends to the collection vehicle, the route and any subcontracted transport providers.",
+          "Data breach coverage is critical for any collector handling data-bearing devices. Ask whether the policy covers notification costs, credit monitoring services and regulatory fines in the event that data is exposed despite destruction procedures.",
+          "Coverage limits matter. A basic policy with a low liability limit may be insufficient for a large corporate collection where potential data breach costs could exceed the policy limit.",
+          "Professional indemnity insurance may also be relevant if the collector provides data destruction services. This covers claims that destruction was not performed to the specified standard.",
+        ],
+      },
+      {
+        heading: "Verify insurance before collection in Kochi",
+        paragraphs: [
+          "Before confirming a collection, ask for a current insurance certificate and verify that it covers e-waste collection, transport and data handling activities. The certificate should list the business name, vehicle registration and coverage limits.",
+          "Confirm that the insurance is valid on the scheduled collection date and covers the volume and type of equipment being collected. A standard commercial general liability policy may not cover data breach or specialized e-waste activities.",
+          "For large collections, ask whether the collector's policy has sufficient aggregate limits to cover the volume of equipment and the value of data at risk.",
+          "Keep a record of the insurance certificate alongside the collection documents. If an incident occurs, having verified insurance in advance simplifies the claims process.",
+        ],
+      },
+      {
+        heading: "How this applies to your situation in Kochi",
+        paragraphs: [
+          "For households and businesses in Kochi handling e-waste, the first step is identifying the correct collection channel. Coastal conditions such as humidity and salt air can affect electronics differently than inland areas, so extra care is needed when storing devices before collection. Ewaste Kochi provides guidance specific to your location and item type.",
+          "Common mistakes include mixing battery-containing devices with general electronics, assuming a factory reset removes all data, and using unauthorized collectors who may dump e-waste informally. Each of these risks creates liability that can be avoided through proper planning and verified collection channels.",
+          "When you submit your item list, include the device type, condition and any known data handling requirements. The team will confirm acceptance, advise on data preparation and provide a collection window. Keep photo documentation of the device condition for your records.",
+          "After collection, retain the receipt and any certificates. These documents may be needed for insurance claims, audit trails or warranty disputes. Ewaste Kochi provides destruction certificates, recycling certificates and material recovery reports.",
+        ],
+      },
+      {
+        heading: "Avoid common mistakes in e-waste handling",
+        paragraphs: [
+          "One frequent error is rushing the process without proper documentation. Whether you are clearing a single device or retiring an entire office, taking time to inventory, photograph and verify data status before collection prevents complications.",
+          "Another mistake is assuming any collector can handle specialised items. E-waste in Kochi includes lithium-ion batteries, CRT displays and data-bearing servers, each requiring different downstream processing. Confirm your collector has the right authorisation.",
+          "Data exposure remains a risk when devices are not properly prepared. Even a factory reset can leave recoverable data. For sensitive information, professional data destruction with a certificate provides documented evidence.",
+          "Finally, not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your records. This documentation is essential for audits and regulatory reviews.",
+        ],
+      },
+      {
+        heading: "How this applies to your situation in Kochi",
+        paragraphs: [
+          "For households and businesses in Kochi handling e-waste, the first step is identifying the correct collection channel. Coastal conditions such as humidity and salt air can affect electronics differently than inland areas, so extra care is needed when storing devices before collection. Ewaste Kochi provides guidance specific to your location and item type.",
+          "Common mistakes include mixing battery-containing devices with general electronics, assuming a factory reset removes all data, and using unauthorized collectors who may dump e-waste informally. Each of these risks creates liability that can be avoided through proper planning and verified collection channels.",
+          "When you submit your item list, include the device type, condition and any known data handling requirements. The team will confirm acceptance, advise on data preparation and provide a collection window. Keep photo documentation of the device condition for your records.",
+          "After collection, retain the receipt and any certificates. These documents may be needed for insurance claims, audit trails or warranty disputes. Ewaste Kochi provides destruction certificates, recycling certificates and material recovery reports.",
+          "For businesses generating regulated waste under the E-Waste Rules, maintaining a documented chain from generation to final disposal is essential. Each transaction should produce records that auditors can trace, and digital copies should be stored alongside physical receipts.",
+          "If you are unsure whether your item qualifies as e-waste under the rules, submit a photo and description for review. The team can advise on the correct handling route and whether the item follows e-waste, battery or another regulatory pathway.",
+        ],
+      },
+    ],
+    tools: [
+      "Collector's insurance certificate with policy number and coverage limits",
+      "Vehicle registration matching the insured vehicle",
+      "Collection agreement specifying insurance responsibility",
+    ],
+    timeline: "Verify insurance before booking a collection. Insurance certificates are typically updated annually but should be confirmed for each major collection.",
+    faq: [
+      { q: "Does e-waste insurance cover the value of my devices?", a: "No. Insurance covers liability, data breach and property damage, not the resale or recycling value of the devices being collected." },
+      { q: "Can I verify a collector's insurance?", a: "Yes. Ask for the current insurance certificate and verify it with the insurer or broker. Check the business name, vehicle registration and coverage dates." },
+      { q: "What if the collector has no insurance?", a: "Insist on working with an insured collector. An uninsured collector creates financial and legal risk for property damage or data breaches during the collection." },
+      { q: "Is transport insurance included in the collection fee?", a: "Ask for a breakdown of the collection fee and confirm what insurance is included. Some collectors include transport liability in their fee, while others require separate proof." },
+      { q: "Do individuals need e-waste insurance?", a: "Individuals typically rely on the collector's insurance. However, if you are storing e-waste that causes damage before collection, your own home insurance may apply." },
+    ],
+    readerQuestions: [
+      { role: "Business owner", q: "A collector wants to store old servers overnight before transport. Is that covered by insurance?", a: "Ask for the insurance certificate and confirm it covers storage liability. Many policies exclude unoccupied premises storage unless specifically endorsed." },
+      { role: "IT administrator", q: "Our data destruction certificate says 'certified wiping' but we want insurance verification. What do we ask?", a: "Request the collector's data breach insurance certificate and confirm coverage limits. Ask whether the policy explicitly covers data destruction services." },
+      { role: "Property manager", q: "A collection truck damaged the building entrance. Who pays?", a: "If the collector has transport and property damage insurance, their policy should cover the damage. Keep photos and the insurance certificate as evidence." },
+      { role: "Compliance officer", q: "How do we verify a collector's insurance for audit?", a: "Request a current insurance certificate before the first collection and update it annually. File the certificate with your vendor records and confirm the policy covers your premises and the volume of equipment." },
+    ],
+    related: [
+      { label: "E-Waste Management Rules 2022 guide", path: "/blog/e-waste-management-rules-2022/" },
+      { label: "E-Waste definitions", path: "/e-waste-guides-definitions/" },
+      { label: "Data destruction guide", path: "/data-destruction/" },
+    ],
+    sources: [
+      { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
+      { title: "CPCB e-waste portal", href: "https://eprewaste.cpcb.gov.in/", publisher: "Central Pollution Control Board" },
+      { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
+    ],
+  },
+  {
+    slug: "what-is-ewaste-training-certification",
+    category: "definitions",
+    title: "What Is E-Waste Handler Training and Certification?",
+    description: "Understand e-waste handler training and certification: who needs it, what courses cover, and how to verify qualified recyclers in Kochi.",
+    answer: "E-waste handler training and certification ensures that personnel collecting, transporting and processing electronic waste understand safety procedures, data security requirements and regulatory obligations. For businesses in Kochi, confirming that a collector holds valid training certification reduces risk from unsafe handling and data exposure.",
+    sections: [
+      {
+        heading: "Understand why e-waste handler training matters",
+        paragraphs: [
+          "E-waste handlers encounter hazardous materials including lead, mercury, cadmium, lithium batteries and chemical components from circuit boards. Proper training covers personal protective equipment, safe handling techniques and emergency procedures for spills or exposure.",
+          "Data security is another critical component. Handlers must understand how to identify data-bearing devices, follow organisation-specific data destruction procedures and maintain chain of custody records. Without training, sensitive devices can be mishandled or accidentally exposed.",
+          "Regulatory awareness is part of handler training. Handlers learn about E-Waste (Management) Rules, 2022, state pollution control board requirements and the difference between e-waste and battery waste streams. This prevents misrouting that could lead to non-compliance.",
+          "For businesses that generate large volumes of e-waste, working with trained handlers reduces the risk of incidents that could result in fines, data breach liability or worker injury claims.",
+        ],
+      },
+      {
+        heading: "Know what training covers",
+        paragraphs: [
+          "Handler training typically covers hazard identification, personal protective equipment, safe lifting and transport techniques, battery handling, data security procedures and chain of custody documentation. Courses may be provider-specific or cover general e-waste management principles.",
+          "Some training programmes are certified by industry bodies such as the Association of Electronics Recycling (AER) or similar organisations. Others are provided directly by large recyclers or equipment manufacturers for their own staff and authorised partners.",
+          "Refresher training is recommended annually or whenever handling procedures change. A recycler who cannot demonstrate current training for their handlers may not follow best practices for safety and data security.",
+          "For businesses, confirming that handlers have completed recognised training is part of vendor qualification. Ask for certificates that list the training provider, completion date and scope of coverage.",
+        ],
+      },
+      {
+        heading: "Understand certification differences",
+        paragraphs: [
+          "Certification indicates that a handler or organisation has completed a training programme and passed an assessment. Certification is typically separate from business registration with CPCB or KSPCB, which covers licensing rather than competency.",
+          "Some certifications are specific to data destruction, such as NAID (National Association for Information Destruction) certification for secure data handling. Others cover general e-waste processing, such as R2 (Responsible Recycling) certification.",
+          "For businesses in India, check whether the certification is recognised by Indian regulatory bodies or whether it is an international standard. An international certification from a recognised body is a strong indicator of competence, but local regulatory compliance is still required.",
+          "Certification should include the names of individual handlers and their qualification dates. Generic organisational certificates are better than none, but individual handler certification is preferable for verifying specific competency.",
+        ],
+      },
+      {
+        heading: "Verify handler training and certification",
+        paragraphs: [
+          "Before confirming a collection, ask the provider for evidence of handler training and certification. Request certificates that list the training provider, completion dates and the scope of training covered.",
+          "Verify the certification through the issuing body's public registry where available. Some certification bodies maintain online databases of certified handlers and organisations.",
+          "For recurring collections, confirm that handler certification is current and that new staff have completed training before being assigned to your collections.",
+          "Keep records of training certificates alongside collection receipts and data destruction certificates. This documentation supports audit trails and demonstrates due diligence in vendor selection.",
+        ],
+      },
+      {
+        heading: "How this applies to your situation in Kochi",
+        paragraphs: [
+          "For households and businesses in Kochi handling e-waste, the first step is identifying the correct collection channel. Coastal conditions such as humidity and salt air can affect electronics differently than inland areas, so extra care is needed when storing devices before collection. Ewaste Kochi provides guidance specific to your location and item type.",
+          "Common mistakes include mixing battery-containing devices with general electronics, assuming a factory reset removes all data, and using unauthorized collectors who may dump e-waste informally. Each of these risks creates liability that can be avoided through proper planning and verified collection channels.",
+          "When you submit your item list, include the device type, condition and any known data handling requirements. The team will confirm acceptance, advise on data preparation and provide a collection window. Keep photo documentation of the device condition for your records.",
+          "After collection, retain the receipt and any certificates. These documents may be needed for insurance claims, audit trails or warranty disputes. Ewaste Kochi provides destruction certificates, recycling certificates and material recovery reports.",
+        ],
+      },
+      {
+        heading: "Avoid common mistakes in e-waste handling",
+        paragraphs: [
+          "One frequent error is rushing the process without proper documentation. Whether you are clearing a single device or retiring an entire office, taking time to inventory, photograph and verify data status before collection prevents complications.",
+          "Another mistake is assuming any collector can handle specialised items. E-waste in Kochi includes lithium-ion batteries, CRT displays and data-bearing servers, each requiring different downstream processing. Confirm your collector has the right authorisation.",
+          "Data exposure remains a risk when devices are not properly prepared. Even a factory reset can leave recoverable data. For sensitive information, professional data destruction with a certificate provides documented evidence.",
+          "Finally, not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your records. This documentation is essential for audits and regulatory reviews.",
+        ],
+      },
+      {
+        heading: "How this applies to your situation in Kochi",
+        paragraphs: [
+          "For households and businesses in Kochi handling e-waste, the first step is identifying the correct collection channel. Coastal conditions such as humidity and salt air can affect electronics differently than inland areas, so extra care is needed when storing devices before collection. Ewaste Kochi provides guidance specific to your location and item type.",
+          "Common mistakes include mixing battery-containing devices with general electronics, assuming a factory reset removes all data, and using unauthorized collectors who may dump e-waste informally. Each of these risks creates liability that can be avoided through proper planning and verified collection channels.",
+          "When you submit your item list, include the device type, condition and any known data handling requirements. The team will confirm acceptance, advise on data preparation and provide a collection window. Keep photo documentation of the device condition for your records.",
+          "After collection, retain the receipt and any certificates. These documents may be needed for insurance claims, audit trails or warranty disputes. Ewaste Kochi provides destruction certificates, recycling certificates and material recovery reports.",
+          "For businesses generating regulated waste under the E-Waste Rules, maintaining a documented chain from generation to final disposal is essential. Each transaction should produce records that auditors can trace, and digital copies should be stored alongside physical receipts.",
+          "If you are unsure whether your item qualifies as e-waste under the rules, submit a photo and description for review. The team can advise on the correct handling route and whether the item follows e-waste, battery or another regulatory pathway.",
+        ],
+      },
+      {
+        heading: "Avoid common mistakes in e-waste handling",
+        paragraphs: [
+          "One frequent error is rushing the process without proper documentation. Whether you are clearing a single device or retiring an entire office, taking time to inventory, photograph and verify data status before collection prevents complications.",
+          "Another mistake is assuming any collector can handle specialised items. E-waste in Kochi includes lithium-ion batteries, CRT displays and data-bearing servers, each requiring different downstream processing. Confirm your collector has the right authorisation.",
+          "Data exposure remains a risk when devices are not properly prepared. Even a factory reset can leave recoverable data. For sensitive information, professional data destruction with a certificate provides documented evidence.",
+          "Not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your records. This documentation is essential for audits and regulatory reviews.",
+          "Using informal collectors who offer immediate cash may seem convenient, but they often lack the infrastructure for proper data handling and material recovery. The risk of data exposure and environmental harm outweighs the convenience.",
+          "Finally, storing old electronics indefinitely in homes or offices creates accumulation risk. Regular collection schedules and clear disposal policies prevent the buildup of hazardous equipment that could fail or cause accidents.",
+        ],
+      },
+    ],
+    tools: [
+      "Handler certification records with completion dates and scope",
+      "Verification of certification through the issuing body",
+      "Collection agreement specifying handler qualification requirements",
+    ],
+    timeline: "Verify handler certification before the first collection and annually thereafter. Certification renewal cycles vary by provider.",
+    faq: [
+      { q: "Does a collector need certification to operate?", a: "A collector needs business registration with CPCB or KSPCB, but handler training certification is a best practice that demonstrates competency in safety and data security." },
+      { q: "How do we verify a training certificate?", a: "Ask for the certificate and verify it through the issuing body's registry where available. Check the completion date, scope and names of certified handlers." },
+      { q: "What training covers battery safety?", a: "Battery safety covers identification of different battery types, hazards of swollen or damaged batteries, safe storage and transport requirements for lithium, lead-acid and other battery chemistries." },
+      { q: "Do certifications expire?", a: "Yes, most certifications expire after one to three years and require renewal. Ask for the expiry date and confirm renewal before each major collection." },
+      { q: "Is data destruction certification different from general e-waste training?", a: "Yes. Data destruction certification covers secure data handling, sanitization methods, chain of custody and destruction verification. General e-waste training covers safety and regulatory compliance for equipment handling." },
+    ],
+    readerQuestions: [
+      { role: "Business owner", q: "How do I know if our collector is properly trained?", a: "Ask for handler certification records and verify them through the issuing body. Check completion dates and the scope of training covered." },
+      { role: "Compliance officer", q: "What documentation do we need for audit?", a: "Keep handler training certificates, data destruction certificates and collection receipts together. File them as part of your vendor qualification records." },
+      { role: "Procurement lead", q: "Can we require certification in our collection agreement?", a: "Yes. Include certification requirements and evidence obligations in the agreement. Specify the minimum standards and verification process." },
+      { role: "IT administrator", q: "What if a new technician arrives on collection day?", a: "Confirm that all handlers assigned to your collection have current certification. Ask for their certificates before allowing access to data-bearing equipment." },
+    ],
+    related: [
+      { label: "ITAD guide", path: "/what-is-itad/" },
+      { label: "Data destruction guide", path: "/what-is-data-destruction/" },
+      { label: "E-Waste definitions", path: "/e-waste-guides-definitions/" },
+    ],
+    sources: [
+      { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
+      { title: "NIST SP 800-88 Rev. 2: Guidelines for Media Sanitization", href: "https://csrc.nist.gov/pubs/sp/800/88/r2/final", publisher: "National Institute of Standards and Technology", note: "Consult the official publication for current recommendations." },
+      { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
     ],
   },
 ];

@@ -24,6 +24,9 @@ const epaSource = {
   note: "Environmental background; US regulatory provisions are not Indian requirements.",
 };
 
+
+
+
 export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
   {
     slug: "best-ewaste-hospitality-kochi",
@@ -60,6 +63,46 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
           "Request separate treatment for working electronics, damaged electronics and batteries. A television suitable for refurbishment should not be silently routed to shredding because it was grouped with broken minibars. Ask how rejected items are reported and who authorises a route change. For a chain with multiple properties, compare proposals using the same scope per property so that differences in service, not just price, drive the decision.",
         ],
       },
+      {
+        heading: "How this applies to businesses in Kochi",
+        paragraphs: [
+          "For the industry sector covered in this guide, businesses in Kochi face specific e-waste challenges. The tropical climate, with high humidity and salt exposure near the coast, can accelerate equipment degradation and affect both performance and safe handling before collection.",
+          "Each business type has unique equipment patterns. For example, hospitality businesses generate large volumes of guest-facing electronics with data privacy implications, while telecommunications infrastructure requires specialised handling for tower-mounted equipment.",
+          "Commercial equipment is often under lease or warranty, which can affect the disposal route. A leased device may need to be returned to the lessor rather than recycled, and the terms of the lease agreement should be reviewed before collection.",
+          "Businesses can benefit from scheduling collections during low-activity periods to minimise operational disruption. Coordination with facility managers, IT teams and procurement departments ensures that the collection aligns with business operations.",
+        ],
+      },
+      {
+        heading: "Comparing recycling options and providers",
+        paragraphs: [
+          "Not all collectors handle specialised industry equipment. A general electronics recycler may not understand the differences between industrial sensors, commercial kitchen electronics and office IT, each requiring different downstream processing.",
+          "When evaluating providers, look for experience in your specific industry segment. Ask for references from similar businesses and verify that the provider has handled your equipment type before. An informed provider can also advise on resale potential.",
+          "Pricing structures vary significantly. Some providers offer resale proceeds sharing, while others charge a collection fee. Understanding the complete cost structure, including transport, handling and data destruction, helps you make an informed comparison.",
+          "Documentation quality is a key differentiator. Reputable providers supply collection receipts, destruction certificates and recycling certificates with verifiable registration numbers. These documents provide evidence needed for compliance and audit purposes.",
+        ],
+      },
+      {
+        heading: "How this applies to businesses in Kochi",
+        paragraphs: [
+          "For the industry sector covered in this guide, businesses in Kochi face specific e-waste challenges. The tropical climate, with high humidity and salt exposure near the coast, can accelerate equipment degradation and affect both performance and safe handling before collection.",
+          "Each business type has unique equipment patterns. For example, hospitality businesses generate large volumes of guest-facing electronics with data privacy implications, while telecommunications infrastructure requires specialised handling for tower-mounted equipment.",
+          "Commercial equipment is often under lease or warranty, which can affect the disposal route. A leased device may need to be returned to the lessor rather than recycled, and the terms of the lease agreement should be reviewed before collection.",
+          "Businesses can benefit from scheduling collections during low-activity periods to minimise operational disruption. Coordination with facility managers, IT teams and procurement departments ensures that the collection aligns with business operations.",
+          "Establishing a regular collection schedule, such as quarterly or annually, prevents the accumulation of end-of-life equipment. A planned approach also allows time for proper data handling and inventory management.",
+          "For businesses that handle multiple equipment types, creating separate streams for data-bearing devices, batteries and general electronics improves collection efficiency and reduces the risk of rejected items.",
+        ],
+      },
+      {
+        heading: "Comparing recycling options and providers",
+        paragraphs: [
+          "Not all collectors handle specialised industry equipment. A general electronics recycler may not understand the differences between industrial sensors, commercial kitchen electronics and office IT, each requiring different downstream processing.",
+          "When evaluating providers, look for experience in your specific industry segment. Ask for references from similar businesses and verify that the provider has handled your equipment type before. An informed provider can also advise on resale potential.",
+          "Pricing structures vary significantly. Some providers offer resale proceeds sharing, while others charge a collection fee. Understanding the complete cost structure, including transport, handling and data destruction, helps you make an informed comparison.",
+          "Documentation quality is a key differentiator. Reputable providers supply collection receipts, destruction certificates and recycling certificates with verifiable registration numbers. These documents provide evidence needed for compliance and audit purposes.",
+          "Ask whether the provider offers on-site data destruction for sensitive equipment. This can be preferable to transporting data-bearing devices and provides immediate verification of the destruction process.",
+          "For businesses with recurring disposal needs, consider negotiating a framework agreement that includes regular collection schedules, predictable pricing and consistent documentation standards.",
+        ],
+      },
     ],
     tools: [
       "Department-by-department inventory with condition and data flags",
@@ -81,11 +124,15 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
       { role: "Housekeeping lead", q: "Can we collect small electronics into a box for the recycler?", a: "List items individually where possible. A mixed box without descriptions can lead to rejected items or unresolved data devices. Flag any damaged or battery-powered items separately." },
     ],
     related: [
-      { label: "Hotel e-waste management", path: "/wiki/business/hotel-e-waste-management/" },
+      { label: "Hotel e-waste management", path: "/best-ewaste-hotel-kochi/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
     ],
-    sources: [ewasteSource, batterySource, epaSource],
+    sources: [
+      { title: "E-Waste (Management) Rules, 2022: frequently asked questions", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments and role-specific requirements." },
+      { title: "EPR portal for Battery Waste Management", href: "https://eprbattery.cpcb.gov.in/", publisher: "Central Pollution Control Board" },
+      { title: "Electronics basic information, research and initiatives", href: "https://www.epa.gov/electronics-batteries-management/electronics-basic-information-research-and-initiatives", publisher: "United States Environmental Protection Agency", note: "Environmental background; US regulatory provisions are not Indian requirements." },
+    ],
   },
   {
     slug: "best-ewaste-marine-kochi",
@@ -122,6 +169,46 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
           "Confirm the receiving entity, its registration and the facility that will process the equipment. Batteries from marine devices, including trolling motor batteries and emergency beacon units, need their own compliant route. Ask what documentation the provider can supply and whether it distinguishes marine electronics from general household batches. A collection that mixes safety equipment with ordinary cables without separating them is harder to audit.",
         ],
       },
+      {
+        heading: "How this applies to businesses in Kochi",
+        paragraphs: [
+          "For the industry sector covered in this guide, businesses in Kochi face specific e-waste challenges. The tropical climate, with high humidity and salt exposure near the coast, can accelerate equipment degradation and affect both performance and safe handling before collection.",
+          "Each business type has unique equipment patterns. For example, hospitality businesses generate large volumes of guest-facing electronics with data privacy implications, while telecommunications infrastructure requires specialised handling for tower-mounted equipment.",
+          "Commercial equipment is often under lease or warranty, which can affect the disposal route. A leased device may need to be returned to the lessor rather than recycled, and the terms of the lease agreement should be reviewed before collection.",
+          "Businesses can benefit from scheduling collections during low-activity periods to minimise operational disruption. Coordination with facility managers, IT teams and procurement departments ensures that the collection aligns with business operations.",
+        ],
+      },
+      {
+        heading: "Comparing recycling options and providers",
+        paragraphs: [
+          "Not all collectors handle specialised industry equipment. A general electronics recycler may not understand the differences between industrial sensors, commercial kitchen electronics and office IT, each requiring different downstream processing.",
+          "When evaluating providers, look for experience in your specific industry segment. Ask for references from similar businesses and verify that the provider has handled your equipment type before. An informed provider can also advise on resale potential.",
+          "Pricing structures vary significantly. Some providers offer resale proceeds sharing, while others charge a collection fee. Understanding the complete cost structure, including transport, handling and data destruction, helps you make an informed comparison.",
+          "Documentation quality is a key differentiator. Reputable providers supply collection receipts, destruction certificates and recycling certificates with verifiable registration numbers. These documents provide evidence needed for compliance and audit purposes.",
+        ],
+      },
+      {
+        heading: "How this applies to businesses in Kochi",
+        paragraphs: [
+          "For the industry sector covered in this guide, businesses in Kochi face specific e-waste challenges. The tropical climate, with high humidity and salt exposure near the coast, can accelerate equipment degradation and affect both performance and safe handling before collection.",
+          "Each business type has unique equipment patterns. For example, hospitality businesses generate large volumes of guest-facing electronics with data privacy implications, while telecommunications infrastructure requires specialised handling for tower-mounted equipment.",
+          "Commercial equipment is often under lease or warranty, which can affect the disposal route. A leased device may need to be returned to the lessor rather than recycled, and the terms of the lease agreement should be reviewed before collection.",
+          "Businesses can benefit from scheduling collections during low-activity periods to minimise operational disruption. Coordination with facility managers, IT teams and procurement departments ensures that the collection aligns with business operations.",
+          "Establishing a regular collection schedule, such as quarterly or annually, prevents the accumulation of end-of-life equipment. A planned approach also allows time for proper data handling and inventory management.",
+          "For businesses that handle multiple equipment types, creating separate streams for data-bearing devices, batteries and general electronics improves collection efficiency and reduces the risk of rejected items.",
+        ],
+      },
+      {
+        heading: "Comparing recycling options and providers",
+        paragraphs: [
+          "Not all collectors handle specialised industry equipment. A general electronics recycler may not understand the differences between industrial sensors, commercial kitchen electronics and office IT, each requiring different downstream processing.",
+          "When evaluating providers, look for experience in your specific industry segment. Ask for references from similar businesses and verify that the provider has handled your equipment type before. An informed provider can also advise on resale potential.",
+          "Pricing structures vary significantly. Some providers offer resale proceeds sharing, while others charge a collection fee. Understanding the complete cost structure, including transport, handling and data destruction, helps you make an informed comparison.",
+          "Documentation quality is a key differentiator. Reputable providers supply collection receipts, destruction certificates and recycling certificates with verifiable registration numbers. These documents provide evidence needed for compliance and audit purposes.",
+          "Ask whether the provider offers on-site data destruction for sensitive equipment. This can be preferable to transporting data-bearing devices and provides immediate verification of the destruction process.",
+          "For businesses with recurring disposal needs, consider negotiating a framework agreement that includes regular collection schedules, predictable pricing and consistent documentation standards.",
+        ],
+      },
     ],
     tools: [
       "Marine equipment inventory with model, serial and condition notes",
@@ -143,11 +230,15 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
       { role: "Harbour agent", q: "A vessel wants to leave electronics behind. Can we collect them?", a: "Confirm ownership and the vessel's data obligations first. Collect only what the owner has authorised. Keep the inventory and handover record linked to the vessel and owner." },
     ],
     related: [
-      { label: "Marine electronics disposal", path: "/wiki/devices/marine-electronics-disposal/" },
+      { label: "Marine electronics disposal", path: "/best-ewaste-marine-kochi/" },
       { label: "Battery recycling service", path: "/battery-recycling/" },
       { label: "Recycling service", path: "/recycling/" },
     ],
-    sources: [ewasteSource, batterySource, epaSource],
+    sources: [
+      { title: "E-Waste (Management) Rules, 2022: frequently asked questions", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments and role-specific requirements." },
+      { title: "EPR portal for Battery Waste Management", href: "https://eprbattery.cpcb.gov.in/", publisher: "Central Pollution Control Board" },
+      { title: "Electronics basic information, research and initiatives", href: "https://www.epa.gov/electronics-batteries-management/electronics-basic-information-research-and-initiatives", publisher: "United States Environmental Protection Agency", note: "Environmental background; US regulatory provisions are not Indian requirements." },
+    ],
   },
   {
     slug: "best-ewaste-agriculture-kerala",
@@ -184,6 +275,46 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
           "Confirm the receiving entity, its registration and the facility that will process the equipment. Batteries from farm equipment, including inverter batteries and sensor backups, need their own compliant route. Ask what documentation the provider can supply and whether it distinguishes agricultural electronics from general household batches.",
         ],
       },
+      {
+        heading: "How this applies to businesses in Kochi",
+        paragraphs: [
+          "For the industry sector covered in this guide, businesses in Kochi face specific e-waste challenges. The tropical climate, with high humidity and salt exposure near the coast, can accelerate equipment degradation and affect both performance and safe handling before collection.",
+          "Each business type has unique equipment patterns. For example, hospitality businesses generate large volumes of guest-facing electronics with data privacy implications, while telecommunications infrastructure requires specialised handling for tower-mounted equipment.",
+          "Commercial equipment is often under lease or warranty, which can affect the disposal route. A leased device may need to be returned to the lessor rather than recycled, and the terms of the lease agreement should be reviewed before collection.",
+          "Businesses can benefit from scheduling collections during low-activity periods to minimise operational disruption. Coordination with facility managers, IT teams and procurement departments ensures that the collection aligns with business operations.",
+        ],
+      },
+      {
+        heading: "Comparing recycling options and providers",
+        paragraphs: [
+          "Not all collectors handle specialised industry equipment. A general electronics recycler may not understand the differences between industrial sensors, commercial kitchen electronics and office IT, each requiring different downstream processing.",
+          "When evaluating providers, look for experience in your specific industry segment. Ask for references from similar businesses and verify that the provider has handled your equipment type before. An informed provider can also advise on resale potential.",
+          "Pricing structures vary significantly. Some providers offer resale proceeds sharing, while others charge a collection fee. Understanding the complete cost structure, including transport, handling and data destruction, helps you make an informed comparison.",
+          "Documentation quality is a key differentiator. Reputable providers supply collection receipts, destruction certificates and recycling certificates with verifiable registration numbers. These documents provide evidence needed for compliance and audit purposes.",
+        ],
+      },
+      {
+        heading: "How this applies to businesses in Kochi",
+        paragraphs: [
+          "For the industry sector covered in this guide, businesses in Kochi face specific e-waste challenges. The tropical climate, with high humidity and salt exposure near the coast, can accelerate equipment degradation and affect both performance and safe handling before collection.",
+          "Each business type has unique equipment patterns. For example, hospitality businesses generate large volumes of guest-facing electronics with data privacy implications, while telecommunications infrastructure requires specialised handling for tower-mounted equipment.",
+          "Commercial equipment is often under lease or warranty, which can affect the disposal route. A leased device may need to be returned to the lessor rather than recycled, and the terms of the lease agreement should be reviewed before collection.",
+          "Businesses can benefit from scheduling collections during low-activity periods to minimise operational disruption. Coordination with facility managers, IT teams and procurement departments ensures that the collection aligns with business operations.",
+          "Establishing a regular collection schedule, such as quarterly or annually, prevents the accumulation of end-of-life equipment. A planned approach also allows time for proper data handling and inventory management.",
+          "For businesses that handle multiple equipment types, creating separate streams for data-bearing devices, batteries and general electronics improves collection efficiency and reduces the risk of rejected items.",
+        ],
+      },
+      {
+        heading: "Comparing recycling options and providers",
+        paragraphs: [
+          "Not all collectors handle specialised industry equipment. A general electronics recycler may not understand the differences between industrial sensors, commercial kitchen electronics and office IT, each requiring different downstream processing.",
+          "When evaluating providers, look for experience in your specific industry segment. Ask for references from similar businesses and verify that the provider has handled your equipment type before. An informed provider can also advise on resale potential.",
+          "Pricing structures vary significantly. Some providers offer resale proceeds sharing, while others charge a collection fee. Understanding the complete cost structure, including transport, handling and data destruction, helps you make an informed comparison.",
+          "Documentation quality is a key differentiator. Reputable providers supply collection receipts, destruction certificates and recycling certificates with verifiable registration numbers. These documents provide evidence needed for compliance and audit purposes.",
+          "Ask whether the provider offers on-site data destruction for sensitive equipment. This can be preferable to transporting data-bearing devices and provides immediate verification of the destruction process.",
+          "For businesses with recurring disposal needs, consider negotiating a framework agreement that includes regular collection schedules, predictable pricing and consistent documentation standards.",
+        ],
+      },
     ],
     tools: [
       "Farm equipment inventory by location, exposure and condition",
@@ -205,11 +336,15 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
       { role: "Cooperative secretary", q: "We have equipment from multiple farms. Can we collect it all together?", a: "Keep inventories separate by farm and equipment type. A combined batch changes handling and documentation. Confirm the collection scope with the provider before committing." },
     ],
     related: [
-      { label: "Agricultural electronics disposal", path: "/wiki/devices/agricultural-electronics-disposal/" },
+      { label: "Agricultural electronics disposal", path: "/best-ewaste-agriculture-kerala/" },
       { label: "Battery recycling service", path: "/battery-recycling/" },
       { label: "Recycling service", path: "/recycling/" },
     ],
-    sources: [ewasteSource, batterySource, epaSource],
+    sources: [
+      { title: "E-Waste (Management) Rules, 2022: frequently asked questions", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments and role-specific requirements." },
+      { title: "EPR portal for Battery Waste Management", href: "https://eprbattery.cpcb.gov.in/", publisher: "Central Pollution Control Board" },
+      { title: "Electronics basic information, research and initiatives", href: "https://www.epa.gov/electronics-batteries-management/electronics-basic-information-research-and-initiatives", publisher: "United States Environmental Protection Agency", note: "Environmental background; US regulatory provisions are not Indian requirements." },
+    ],
   },
   {
     slug: "best-ewaste-telecom-kochi",
@@ -246,6 +381,46 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
           "Confirm the receiving entity, its registration and the facility that will process the equipment. Batteries from telecom sites, including inverter and backup batteries, need their own compliant route. Ask what documentation the provider can supply and whether it distinguishes telecom equipment from general household batches.",
         ],
       },
+      {
+        heading: "How this applies to businesses in Kochi",
+        paragraphs: [
+          "For the industry sector covered in this guide, businesses in Kochi face specific e-waste challenges. The tropical climate, with high humidity and salt exposure near the coast, can accelerate equipment degradation and affect both performance and safe handling before collection.",
+          "Each business type has unique equipment patterns. For example, hospitality businesses generate large volumes of guest-facing electronics with data privacy implications, while telecommunications infrastructure requires specialised handling for tower-mounted equipment.",
+          "Commercial equipment is often under lease or warranty, which can affect the disposal route. A leased device may need to be returned to the lessor rather than recycled, and the terms of the lease agreement should be reviewed before collection.",
+          "Businesses can benefit from scheduling collections during low-activity periods to minimise operational disruption. Coordination with facility managers, IT teams and procurement departments ensures that the collection aligns with business operations.",
+        ],
+      },
+      {
+        heading: "Comparing recycling options and providers",
+        paragraphs: [
+          "Not all collectors handle specialised industry equipment. A general electronics recycler may not understand the differences between industrial sensors, commercial kitchen electronics and office IT, each requiring different downstream processing.",
+          "When evaluating providers, look for experience in your specific industry segment. Ask for references from similar businesses and verify that the provider has handled your equipment type before. An informed provider can also advise on resale potential.",
+          "Pricing structures vary significantly. Some providers offer resale proceeds sharing, while others charge a collection fee. Understanding the complete cost structure, including transport, handling and data destruction, helps you make an informed comparison.",
+          "Documentation quality is a key differentiator. Reputable providers supply collection receipts, destruction certificates and recycling certificates with verifiable registration numbers. These documents provide evidence needed for compliance and audit purposes.",
+        ],
+      },
+      {
+        heading: "How this applies to businesses in Kochi",
+        paragraphs: [
+          "For the industry sector covered in this guide, businesses in Kochi face specific e-waste challenges. The tropical climate, with high humidity and salt exposure near the coast, can accelerate equipment degradation and affect both performance and safe handling before collection.",
+          "Each business type has unique equipment patterns. For example, hospitality businesses generate large volumes of guest-facing electronics with data privacy implications, while telecommunications infrastructure requires specialised handling for tower-mounted equipment.",
+          "Commercial equipment is often under lease or warranty, which can affect the disposal route. A leased device may need to be returned to the lessor rather than recycled, and the terms of the lease agreement should be reviewed before collection.",
+          "Businesses can benefit from scheduling collections during low-activity periods to minimise operational disruption. Coordination with facility managers, IT teams and procurement departments ensures that the collection aligns with business operations.",
+          "Establishing a regular collection schedule, such as quarterly or annually, prevents the accumulation of end-of-life equipment. A planned approach also allows time for proper data handling and inventory management.",
+          "For businesses that handle multiple equipment types, creating separate streams for data-bearing devices, batteries and general electronics improves collection efficiency and reduces the risk of rejected items.",
+        ],
+      },
+      {
+        heading: "Comparing recycling options and providers",
+        paragraphs: [
+          "Not all collectors handle specialised industry equipment. A general electronics recycler may not understand the differences between industrial sensors, commercial kitchen electronics and office IT, each requiring different downstream processing.",
+          "When evaluating providers, look for experience in your specific industry segment. Ask for references from similar businesses and verify that the provider has handled your equipment type before. An informed provider can also advise on resale potential.",
+          "Pricing structures vary significantly. Some providers offer resale proceeds sharing, while others charge a collection fee. Understanding the complete cost structure, including transport, handling and data destruction, helps you make an informed comparison.",
+          "Documentation quality is a key differentiator. Reputable providers supply collection receipts, destruction certificates and recycling certificates with verifiable registration numbers. These documents provide evidence needed for compliance and audit purposes.",
+          "Ask whether the provider offers on-site data destruction for sensitive equipment. This can be preferable to transporting data-bearing devices and provides immediate verification of the destruction process.",
+          "For businesses with recurring disposal needs, consider negotiating a framework agreement that includes regular collection schedules, predictable pricing and consistent documentation standards.",
+        ],
+      },
     ],
     tools: [
       "Telecom equipment inventory by site, operator and condition",
@@ -267,11 +442,15 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
       { role: "Procurement lead", q: "We need to dispose of equipment from three tower sites. Can one collection cover all of them?", a: "Submit inventories for each site separately. Different access constraints and equipment types may require separate collections. Confirm the scope with the provider." },
     ],
     related: [
-      { label: "Telecom equipment disposal", path: "/wiki/devices/telecom-equipment-disposal/" },
+      { label: "Telecom equipment disposal", path: "/best-ewaste-telecom-kochi/" },
       { label: "ITAD service", path: "/itad/" },
       { label: "Recycling service", path: "/recycling/" },
     ],
-    sources: [ewasteSource, batterySource, epaSource],
+    sources: [
+      { title: "E-Waste (Management) Rules, 2022: frequently asked questions", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments and role-specific requirements." },
+      { title: "EPR portal for Battery Waste Management", href: "https://eprbattery.cpcb.gov.in/", publisher: "Central Pollution Control Board" },
+      { title: "Electronics basic information, research and initiatives", href: "https://www.epa.gov/electronics-batteries-management/electronics-basic-information-research-and-initiatives", publisher: "United States Environmental Protection Agency", note: "Environmental background; US regulatory provisions are not Indian requirements." },
+    ],
   },
   {
     slug: "best-ewaste-data-centers-kochi",
@@ -308,6 +487,46 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
           "Any Kochi recycler quoting a single flat per-kilogram rate for data center hardware is not pricing the job properly. Ask for a composition-based quote that separates collection, data handling, dismantling and material recovery. Compare proposals using the same inventory and service boundary rather than headline price alone.",
         ],
       },
+      {
+        heading: "How this applies to businesses in Kochi",
+        paragraphs: [
+          "For the industry sector covered in this guide, businesses in Kochi face specific e-waste challenges. The tropical climate, with high humidity and salt exposure near the coast, can accelerate equipment degradation and affect both performance and safe handling before collection.",
+          "Each business type has unique equipment patterns. For example, hospitality businesses generate large volumes of guest-facing electronics with data privacy implications, while telecommunications infrastructure requires specialised handling for tower-mounted equipment.",
+          "Commercial equipment is often under lease or warranty, which can affect the disposal route. A leased device may need to be returned to the lessor rather than recycled, and the terms of the lease agreement should be reviewed before collection.",
+          "Businesses can benefit from scheduling collections during low-activity periods to minimise operational disruption. Coordination with facility managers, IT teams and procurement departments ensures that the collection aligns with business operations.",
+        ],
+      },
+      {
+        heading: "Comparing recycling options and providers",
+        paragraphs: [
+          "Not all collectors handle specialised industry equipment. A general electronics recycler may not understand the differences between industrial sensors, commercial kitchen electronics and office IT, each requiring different downstream processing.",
+          "When evaluating providers, look for experience in your specific industry segment. Ask for references from similar businesses and verify that the provider has handled your equipment type before. An informed provider can also advise on resale potential.",
+          "Pricing structures vary significantly. Some providers offer resale proceeds sharing, while others charge a collection fee. Understanding the complete cost structure, including transport, handling and data destruction, helps you make an informed comparison.",
+          "Documentation quality is a key differentiator. Reputable providers supply collection receipts, destruction certificates and recycling certificates with verifiable registration numbers. These documents provide evidence needed for compliance and audit purposes.",
+        ],
+      },
+      {
+        heading: "How this applies to businesses in Kochi",
+        paragraphs: [
+          "For the industry sector covered in this guide, businesses in Kochi face specific e-waste challenges. The tropical climate, with high humidity and salt exposure near the coast, can accelerate equipment degradation and affect both performance and safe handling before collection.",
+          "Each business type has unique equipment patterns. For example, hospitality businesses generate large volumes of guest-facing electronics with data privacy implications, while telecommunications infrastructure requires specialised handling for tower-mounted equipment.",
+          "Commercial equipment is often under lease or warranty, which can affect the disposal route. A leased device may need to be returned to the lessor rather than recycled, and the terms of the lease agreement should be reviewed before collection.",
+          "Businesses can benefit from scheduling collections during low-activity periods to minimise operational disruption. Coordination with facility managers, IT teams and procurement departments ensures that the collection aligns with business operations.",
+          "Establishing a regular collection schedule, such as quarterly or annually, prevents the accumulation of end-of-life equipment. A planned approach also allows time for proper data handling and inventory management.",
+          "For businesses that handle multiple equipment types, creating separate streams for data-bearing devices, batteries and general electronics improves collection efficiency and reduces the risk of rejected items.",
+        ],
+      },
+      {
+        heading: "Comparing recycling options and providers",
+        paragraphs: [
+          "Not all collectors handle specialised industry equipment. A general electronics recycler may not understand the differences between industrial sensors, commercial kitchen electronics and office IT, each requiring different downstream processing.",
+          "When evaluating providers, look for experience in your specific industry segment. Ask for references from similar businesses and verify that the provider has handled your equipment type before. An informed provider can also advise on resale potential.",
+          "Pricing structures vary significantly. Some providers offer resale proceeds sharing, while others charge a collection fee. Understanding the complete cost structure, including transport, handling and data destruction, helps you make an informed comparison.",
+          "Documentation quality is a key differentiator. Reputable providers supply collection receipts, destruction certificates and recycling certificates with verifiable registration numbers. These documents provide evidence needed for compliance and audit purposes.",
+          "Ask whether the provider offers on-site data destruction for sensitive equipment. This can be preferable to transporting data-bearing devices and provides immediate verification of the destruction process.",
+          "For businesses with recurring disposal needs, consider negotiating a framework agreement that includes regular collection schedules, predictable pricing and consistent documentation standards.",
+        ],
+      },
     ],
     tools: [
       "Server inventory with serial numbers, asset tags and data flags",
@@ -334,7 +553,11 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
       { label: "Data destruction service", path: "/data-destruction/" },
       { label: "Corporate e-waste management", path: "/corporate-e-waste-management/" },
     ],
-    sources: [ewasteSource, nistSource, batterySource],
+    sources: [
+      { title: "E-Waste (Management) Rules, 2022: frequently asked questions", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments and role-specific requirements." },
+      { title: "SP 800-88 Rev. 2: Guidelines for Media Sanitization", href: "https://csrc.nist.gov/pubs/sp/800/88/r2/final", publisher: "National Institute of Standards and Technology", note: "Consult the official publication for current recommendations." },
+      { title: "EPR portal for Battery Waste Management", href: "https://eprbattery.cpcb.gov.in/", publisher: "Central Pollution Control Board" },
+    ],
   },
   {
     slug: "best-ewaste-retail-chains-kerala",
@@ -371,6 +594,46 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
           "Confirm the receiving entity, its registration and the facility that will process the equipment. Batteries from POS systems, signage and self-checkout terminals need their own handling discussion. Ask what documentation the provider can supply for each store and whether it can produce chain-wide summary reports.",
         ],
       },
+      {
+        heading: "How this applies to businesses in Kochi",
+        paragraphs: [
+          "For the industry sector covered in this guide, businesses in Kochi face specific e-waste challenges. The tropical climate, with high humidity and salt exposure near the coast, can accelerate equipment degradation and affect both performance and safe handling before collection.",
+          "Each business type has unique equipment patterns. For example, hospitality businesses generate large volumes of guest-facing electronics with data privacy implications, while telecommunications infrastructure requires specialised handling for tower-mounted equipment.",
+          "Commercial equipment is often under lease or warranty, which can affect the disposal route. A leased device may need to be returned to the lessor rather than recycled, and the terms of the lease agreement should be reviewed before collection.",
+          "Businesses can benefit from scheduling collections during low-activity periods to minimise operational disruption. Coordination with facility managers, IT teams and procurement departments ensures that the collection aligns with business operations.",
+        ],
+      },
+      {
+        heading: "Comparing recycling options and providers",
+        paragraphs: [
+          "Not all collectors handle specialised industry equipment. A general electronics recycler may not understand the differences between industrial sensors, commercial kitchen electronics and office IT, each requiring different downstream processing.",
+          "When evaluating providers, look for experience in your specific industry segment. Ask for references from similar businesses and verify that the provider has handled your equipment type before. An informed provider can also advise on resale potential.",
+          "Pricing structures vary significantly. Some providers offer resale proceeds sharing, while others charge a collection fee. Understanding the complete cost structure, including transport, handling and data destruction, helps you make an informed comparison.",
+          "Documentation quality is a key differentiator. Reputable providers supply collection receipts, destruction certificates and recycling certificates with verifiable registration numbers. These documents provide evidence needed for compliance and audit purposes.",
+        ],
+      },
+      {
+        heading: "How this applies to businesses in Kochi",
+        paragraphs: [
+          "For the industry sector covered in this guide, businesses in Kochi face specific e-waste challenges. The tropical climate, with high humidity and salt exposure near the coast, can accelerate equipment degradation and affect both performance and safe handling before collection.",
+          "Each business type has unique equipment patterns. For example, hospitality businesses generate large volumes of guest-facing electronics with data privacy implications, while telecommunications infrastructure requires specialised handling for tower-mounted equipment.",
+          "Commercial equipment is often under lease or warranty, which can affect the disposal route. A leased device may need to be returned to the lessor rather than recycled, and the terms of the lease agreement should be reviewed before collection.",
+          "Businesses can benefit from scheduling collections during low-activity periods to minimise operational disruption. Coordination with facility managers, IT teams and procurement departments ensures that the collection aligns with business operations.",
+          "Establishing a regular collection schedule, such as quarterly or annually, prevents the accumulation of end-of-life equipment. A planned approach also allows time for proper data handling and inventory management.",
+          "For businesses that handle multiple equipment types, creating separate streams for data-bearing devices, batteries and general electronics improves collection efficiency and reduces the risk of rejected items.",
+        ],
+      },
+      {
+        heading: "Comparing recycling options and providers",
+        paragraphs: [
+          "Not all collectors handle specialised industry equipment. A general electronics recycler may not understand the differences between industrial sensors, commercial kitchen electronics and office IT, each requiring different downstream processing.",
+          "When evaluating providers, look for experience in your specific industry segment. Ask for references from similar businesses and verify that the provider has handled your equipment type before. An informed provider can also advise on resale potential.",
+          "Pricing structures vary significantly. Some providers offer resale proceeds sharing, while others charge a collection fee. Understanding the complete cost structure, including transport, handling and data destruction, helps you make an informed comparison.",
+          "Documentation quality is a key differentiator. Reputable providers supply collection receipts, destruction certificates and recycling certificates with verifiable registration numbers. These documents provide evidence needed for compliance and audit purposes.",
+          "Ask whether the provider offers on-site data destruction for sensitive equipment. This can be preferable to transporting data-bearing devices and provides immediate verification of the destruction process.",
+          "For businesses with recurring disposal needs, consider negotiating a framework agreement that includes regular collection schedules, predictable pricing and consistent documentation standards.",
+        ],
+      },
     ],
     tools: [
       "Standardized store inventory template with condition and data flags",
@@ -392,11 +655,15 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
       { role: "Loss prevention lead", q: "Security cameras may contain sensitive footage. How is that handled?", a: "Confirm the data handling with the security provider before disposal. Keep the deletion record or confirmation alongside the equipment receipt." },
     ],
     related: [
-      { label: "Retail electronics disposal", path: "/wiki/business/retail-electronics-disposal/" },
+      { label: "Retail e-waste recycling", path: "/retail-e-waste-recycling/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
     ],
-    sources: [ewasteSource, batterySource, epaSource],
+    sources: [
+      { title: "E-Waste (Management) Rules, 2022: frequently asked questions", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments and role-specific requirements." },
+      { title: "EPR portal for Battery Waste Management", href: "https://eprbattery.cpcb.gov.in/", publisher: "Central Pollution Control Board" },
+      { title: "Electronics basic information, research and initiatives", href: "https://www.epa.gov/electronics-batteries-management/electronics-basic-information-research-and-initiatives", publisher: "United States Environmental Protection Agency", note: "Environmental background; US regulatory provisions are not Indian requirements." },
+    ],
   },
   {
     slug: "best-ewaste-construction-kochi",
@@ -433,6 +700,46 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
           "Confirm the receiving entity, its registration and the facility that will process the equipment. Batteries from construction equipment, including surveying units and site lighting, need their own compliant route. Ask what documentation the provider can supply and whether it distinguishes construction electronics from general household batches.",
         ],
       },
+      {
+        heading: "How this applies to businesses in Kochi",
+        paragraphs: [
+          "For the industry sector covered in this guide, businesses in Kochi face specific e-waste challenges. The tropical climate, with high humidity and salt exposure near the coast, can accelerate equipment degradation and affect both performance and safe handling before collection.",
+          "Each business type has unique equipment patterns. For example, hospitality businesses generate large volumes of guest-facing electronics with data privacy implications, while telecommunications infrastructure requires specialised handling for tower-mounted equipment.",
+          "Commercial equipment is often under lease or warranty, which can affect the disposal route. A leased device may need to be returned to the lessor rather than recycled, and the terms of the lease agreement should be reviewed before collection.",
+          "Businesses can benefit from scheduling collections during low-activity periods to minimise operational disruption. Coordination with facility managers, IT teams and procurement departments ensures that the collection aligns with business operations.",
+        ],
+      },
+      {
+        heading: "Comparing recycling options and providers",
+        paragraphs: [
+          "Not all collectors handle specialised industry equipment. A general electronics recycler may not understand the differences between industrial sensors, commercial kitchen electronics and office IT, each requiring different downstream processing.",
+          "When evaluating providers, look for experience in your specific industry segment. Ask for references from similar businesses and verify that the provider has handled your equipment type before. An informed provider can also advise on resale potential.",
+          "Pricing structures vary significantly. Some providers offer resale proceeds sharing, while others charge a collection fee. Understanding the complete cost structure, including transport, handling and data destruction, helps you make an informed comparison.",
+          "Documentation quality is a key differentiator. Reputable providers supply collection receipts, destruction certificates and recycling certificates with verifiable registration numbers. These documents provide evidence needed for compliance and audit purposes.",
+        ],
+      },
+      {
+        heading: "How this applies to businesses in Kochi",
+        paragraphs: [
+          "For the industry sector covered in this guide, businesses in Kochi face specific e-waste challenges. The tropical climate, with high humidity and salt exposure near the coast, can accelerate equipment degradation and affect both performance and safe handling before collection.",
+          "Each business type has unique equipment patterns. For example, hospitality businesses generate large volumes of guest-facing electronics with data privacy implications, while telecommunications infrastructure requires specialised handling for tower-mounted equipment.",
+          "Commercial equipment is often under lease or warranty, which can affect the disposal route. A leased device may need to be returned to the lessor rather than recycled, and the terms of the lease agreement should be reviewed before collection.",
+          "Businesses can benefit from scheduling collections during low-activity periods to minimise operational disruption. Coordination with facility managers, IT teams and procurement departments ensures that the collection aligns with business operations.",
+          "Establishing a regular collection schedule, such as quarterly or annually, prevents the accumulation of end-of-life equipment. A planned approach also allows time for proper data handling and inventory management.",
+          "For businesses that handle multiple equipment types, creating separate streams for data-bearing devices, batteries and general electronics improves collection efficiency and reduces the risk of rejected items.",
+        ],
+      },
+      {
+        heading: "Comparing recycling options and providers",
+        paragraphs: [
+          "Not all collectors handle specialised industry equipment. A general electronics recycler may not understand the differences between industrial sensors, commercial kitchen electronics and office IT, each requiring different downstream processing.",
+          "When evaluating providers, look for experience in your specific industry segment. Ask for references from similar businesses and verify that the provider has handled your equipment type before. An informed provider can also advise on resale potential.",
+          "Pricing structures vary significantly. Some providers offer resale proceeds sharing, while others charge a collection fee. Understanding the complete cost structure, including transport, handling and data destruction, helps you make an informed comparison.",
+          "Documentation quality is a key differentiator. Reputable providers supply collection receipts, destruction certificates and recycling certificates with verifiable registration numbers. These documents provide evidence needed for compliance and audit purposes.",
+          "Ask whether the provider offers on-site data destruction for sensitive equipment. This can be preferable to transporting data-bearing devices and provides immediate verification of the destruction process.",
+          "For businesses with recurring disposal needs, consider negotiating a framework agreement that includes regular collection schedules, predictable pricing and consistent documentation standards.",
+        ],
+      },
     ],
     tools: [
       "Construction equipment inventory by project, location and condition",
@@ -454,11 +761,15 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
       { role: "Company director", q: "A subcontractor left equipment on our site. Can we dispose of it?", a: "Confirm ownership and return obligations first. Collect only what the owner has authorised. Keep the inventory and handover record linked to the equipment owner." },
     ],
     related: [
-      { label: "Construction equipment disposal", path: "/wiki/devices/construction-equipment-disposal/" },
+      { label: "Construction equipment disposal", path: "/best-ewaste-construction-kochi/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
     ],
-    sources: [ewasteSource, batterySource, epaSource],
+    sources: [
+      { title: "E-Waste (Management) Rules, 2022: frequently asked questions", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments and role-specific requirements." },
+      { title: "EPR portal for Battery Waste Management", href: "https://eprbattery.cpcb.gov.in/", publisher: "Central Pollution Control Board" },
+      { title: "Electronics basic information, research and initiatives", href: "https://www.epa.gov/electronics-batteries-management/electronics-basic-information-research-and-initiatives", publisher: "United States Environmental Protection Agency", note: "Environmental background; US regulatory provisions are not Indian requirements." },
+    ],
   },
   {
     slug: "best-ewaste-logistics-kochi",
@@ -495,6 +806,57 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
           "Confirm the receiving entity, its registration and the facility that will process the equipment. Ask what documentation the provider can supply and whether it distinguishes logistics equipment from general household batches. A collection that mixes fleet data devices with ordinary cables without separating them is harder to audit.",
         ],
       },
+      {
+        heading: "How this applies to businesses in Kochi",
+        paragraphs: [
+          "For the industry sector covered in this guide, businesses in Kochi face specific e-waste challenges. The tropical climate, with high humidity and salt exposure near the coast, can accelerate equipment degradation and affect both performance and safe handling before collection.",
+          "Each business type has unique equipment patterns. For example, hospitality businesses generate large volumes of guest-facing electronics with data privacy implications, while telecommunications infrastructure requires specialised handling for tower-mounted equipment.",
+          "Commercial equipment is often under lease or warranty, which can affect the disposal route. A leased device may need to be returned to the lessor rather than recycled, and the terms of the lease agreement should be reviewed before collection.",
+          "Businesses can benefit from scheduling collections during low-activity periods to minimise operational disruption. Coordination with facility managers, IT teams and procurement departments ensures that the collection aligns with business operations.",
+        ],
+      },
+      {
+        heading: "Comparing recycling options and providers",
+        paragraphs: [
+          "Not all collectors handle specialised industry equipment. A general electronics recycler may not understand the differences between industrial sensors, commercial kitchen electronics and office IT, each requiring different downstream processing.",
+          "When evaluating providers, look for experience in your specific industry segment. Ask for references from similar businesses and verify that the provider has handled your equipment type before. An informed provider can also advise on resale potential.",
+          "Pricing structures vary significantly. Some providers offer resale proceeds sharing, while others charge a collection fee. Understanding the complete cost structure, including transport, handling and data destruction, helps you make an informed comparison.",
+          "Documentation quality is a key differentiator. Reputable providers supply collection receipts, destruction certificates and recycling certificates with verifiable registration numbers. These documents provide evidence needed for compliance and audit purposes.",
+        ],
+      },
+      {
+        heading: "How this applies to businesses in Kochi",
+        paragraphs: [
+          "For the industry sector covered in this guide, businesses in Kochi face specific e-waste challenges. The tropical climate, with high humidity and salt exposure near the coast, can accelerate equipment degradation and affect both performance and safe handling before collection.",
+          "Each business type has unique equipment patterns. For example, hospitality businesses generate large volumes of guest-facing electronics with data privacy implications, while telecommunications infrastructure requires specialised handling for tower-mounted equipment.",
+          "Commercial equipment is often under lease or warranty, which can affect the disposal route. A leased device may need to be returned to the lessor rather than recycled, and the terms of the lease agreement should be reviewed before collection.",
+          "Businesses can benefit from scheduling collections during low-activity periods to minimise operational disruption. Coordination with facility managers, IT teams and procurement departments ensures that the collection aligns with business operations.",
+          "Establishing a regular collection schedule, such as quarterly or annually, prevents the accumulation of end-of-life equipment. A planned approach also allows time for proper data handling and inventory management.",
+          "For businesses that handle multiple equipment types, creating separate streams for data-bearing devices, batteries and general electronics improves collection efficiency and reduces the risk of rejected items.",
+        ],
+      },
+      {
+        heading: "Comparing recycling options and providers",
+        paragraphs: [
+          "Not all collectors handle specialised industry equipment. A general electronics recycler may not understand the differences between industrial sensors, commercial kitchen electronics and office IT, each requiring different downstream processing.",
+          "When evaluating providers, look for experience in your specific industry segment. Ask for references from similar businesses and verify that the provider has handled your equipment type before. An informed provider can also advise on resale potential.",
+          "Pricing structures vary significantly. Some providers offer resale proceeds sharing, while others charge a collection fee. Understanding the complete cost structure, including transport, handling and data destruction, helps you make an informed comparison.",
+          "Documentation quality is a key differentiator. Reputable providers supply collection receipts, destruction certificates and recycling certificates with verifiable registration numbers. These documents provide evidence needed for compliance and audit purposes.",
+          "Ask whether the provider offers on-site data destruction for sensitive equipment. This can be preferable to transporting data-bearing devices and provides immediate verification of the destruction process.",
+          "For businesses with recurring disposal needs, consider negotiating a framework agreement that includes regular collection schedules, predictable pricing and consistent documentation standards.",
+        ],
+      },
+      {
+        heading: "Planning and preparation for collection day",
+        paragraphs: [
+          "Before the scheduled collection, complete a final inventory that matches the agreed scope. Any additions or removals should be communicated to the collection team at least 24 hours in advance to avoid delays.",
+          "Ensure the loading area is clear and accessible. If the collection involves heavy equipment or multiple flights of stairs, confirm that the collection team has the appropriate lifting equipment and personnel.",
+          "For equipment still under lease, gather the lease documentation and return authorisation before collection. Leased devices should be clearly identified and separated from owned equipment to prevent collection conflicts.",
+          "Secure data-bearing devices in a locked area until collection. If possible, have an authorised representative present during the handover to witness the data destruction process and verify the inventory.",
+          "Keep photo documentation of each device's condition before collection. This protects your business in case of disputes over damage or missing items after the collection.",
+          "After collection, reconcile the provided certificates against your inventory. Any discrepancies should be reported immediately and resolved with the collection team before finalising payment or closing the disposal request.",
+        ],
+      },
     ],
     tools: [
       "Fleet and warehouse inventory by category, condition and data flags",
@@ -516,11 +878,15 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
       { role: "Operations director", q: "A driver left a tablet behind. Can we dispose of it?", a: "Confirm ownership and return obligations first. Collect only what the company has authorised. Keep the inventory and handover record linked to the device." },
     ],
     related: [
-      { label: "Fleet electronics disposal", path: "/wiki/devices/fleet-electronics-disposal/" },
+      { label: "Fleet electronics disposal", path: "/best-ewaste-logistics-kochi/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
     ],
-    sources: [ewasteSource, batterySource, epaSource],
+    sources: [
+      { title: "E-Waste (Management) Rules, 2022: frequently asked questions", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments and role-specific requirements." },
+      { title: "EPR portal for Battery Waste Management", href: "https://eprbattery.cpcb.gov.in/", publisher: "Central Pollution Control Board" },
+      { title: "Electronics basic information, research and initiatives", href: "https://www.epa.gov/electronics-batteries-management/electronics-basic-information-research-and-initiatives", publisher: "United States Environmental Protection Agency", note: "Environmental background; US regulatory provisions are not Indian requirements." },
+    ],
   },
   {
     slug: "best-ewaste-edtech-kochi",
@@ -557,6 +923,57 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
           "Confirm the receiving entity, its registration and the facility that will process the equipment. Batteries from learning devices, interactive displays and lab equipment need their own handling discussion. Ask what documentation the provider can supply and whether it distinguishes educational equipment from general household batches.",
         ],
       },
+      {
+        heading: "How this applies to businesses in Kochi",
+        paragraphs: [
+          "For the industry sector covered in this guide, businesses in Kochi face specific e-waste challenges. The tropical climate, with high humidity and salt exposure near the coast, can accelerate equipment degradation and affect both performance and safe handling before collection.",
+          "Each business type has unique equipment patterns. For example, hospitality businesses generate large volumes of guest-facing electronics with data privacy implications, while telecommunications infrastructure requires specialised handling for tower-mounted equipment.",
+          "Commercial equipment is often under lease or warranty, which can affect the disposal route. A leased device may need to be returned to the lessor rather than recycled, and the terms of the lease agreement should be reviewed before collection.",
+          "Businesses can benefit from scheduling collections during low-activity periods to minimise operational disruption. Coordination with facility managers, IT teams and procurement departments ensures that the collection aligns with business operations.",
+        ],
+      },
+      {
+        heading: "Comparing recycling options and providers",
+        paragraphs: [
+          "Not all collectors handle specialised industry equipment. A general electronics recycler may not understand the differences between industrial sensors, commercial kitchen electronics and office IT, each requiring different downstream processing.",
+          "When evaluating providers, look for experience in your specific industry segment. Ask for references from similar businesses and verify that the provider has handled your equipment type before. An informed provider can also advise on resale potential.",
+          "Pricing structures vary significantly. Some providers offer resale proceeds sharing, while others charge a collection fee. Understanding the complete cost structure, including transport, handling and data destruction, helps you make an informed comparison.",
+          "Documentation quality is a key differentiator. Reputable providers supply collection receipts, destruction certificates and recycling certificates with verifiable registration numbers. These documents provide evidence needed for compliance and audit purposes.",
+        ],
+      },
+      {
+        heading: "How this applies to businesses in Kochi",
+        paragraphs: [
+          "For the industry sector covered in this guide, businesses in Kochi face specific e-waste challenges. The tropical climate, with high humidity and salt exposure near the coast, can accelerate equipment degradation and affect both performance and safe handling before collection.",
+          "Each business type has unique equipment patterns. For example, hospitality businesses generate large volumes of guest-facing electronics with data privacy implications, while telecommunications infrastructure requires specialised handling for tower-mounted equipment.",
+          "Commercial equipment is often under lease or warranty, which can affect the disposal route. A leased device may need to be returned to the lessor rather than recycled, and the terms of the lease agreement should be reviewed before collection.",
+          "Businesses can benefit from scheduling collections during low-activity periods to minimise operational disruption. Coordination with facility managers, IT teams and procurement departments ensures that the collection aligns with business operations.",
+          "Establishing a regular collection schedule, such as quarterly or annually, prevents the accumulation of end-of-life equipment. A planned approach also allows time for proper data handling and inventory management.",
+          "For businesses that handle multiple equipment types, creating separate streams for data-bearing devices, batteries and general electronics improves collection efficiency and reduces the risk of rejected items.",
+        ],
+      },
+      {
+        heading: "Comparing recycling options and providers",
+        paragraphs: [
+          "Not all collectors handle specialised industry equipment. A general electronics recycler may not understand the differences between industrial sensors, commercial kitchen electronics and office IT, each requiring different downstream processing.",
+          "When evaluating providers, look for experience in your specific industry segment. Ask for references from similar businesses and verify that the provider has handled your equipment type before. An informed provider can also advise on resale potential.",
+          "Pricing structures vary significantly. Some providers offer resale proceeds sharing, while others charge a collection fee. Understanding the complete cost structure, including transport, handling and data destruction, helps you make an informed comparison.",
+          "Documentation quality is a key differentiator. Reputable providers supply collection receipts, destruction certificates and recycling certificates with verifiable registration numbers. These documents provide evidence needed for compliance and audit purposes.",
+          "Ask whether the provider offers on-site data destruction for sensitive equipment. This can be preferable to transporting data-bearing devices and provides immediate verification of the destruction process.",
+          "For businesses with recurring disposal needs, consider negotiating a framework agreement that includes regular collection schedules, predictable pricing and consistent documentation standards.",
+        ],
+      },
+      {
+        heading: "Planning and preparation for collection day",
+        paragraphs: [
+          "Before the scheduled collection, complete a final inventory that matches the agreed scope. Any additions or removals should be communicated to the collection team at least 24 hours in advance to avoid delays.",
+          "Ensure the loading area is clear and accessible. If the collection involves heavy equipment or multiple flights of stairs, confirm that the collection team has the appropriate lifting equipment and personnel.",
+          "For equipment still under lease, gather the lease documentation and return authorisation before collection. Leased devices should be clearly identified and separated from owned equipment to prevent collection conflicts.",
+          "Secure data-bearing devices in a locked area until collection. If possible, have an authorised representative present during the handover to witness the data destruction process and verify the inventory.",
+          "Keep photo documentation of each device's condition before collection. This protects your business in case of disputes over damage or missing items after the collection.",
+          "After collection, reconcile the provided certificates against your inventory. Any discrepancies should be reported immediately and resolved with the collection team before finalising payment or closing the disposal request.",
+        ],
+      },
     ],
     tools: [
       "EdTech inventory by purpose, condition and data flags",
@@ -578,11 +995,15 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
       { role: "Product manager", q: "A pilot device batch is being retired. Can it be refurbished?", a: "Ask the recycler for a refurbishment assessment. Keep the pilot batch separate from end-of-life stock and record the decision." },
     ],
     related: [
-      { label: "EdTech equipment disposal", path: "/wiki/devices/edtech-equipment-disposal/" },
+      { label: "EdTech equipment disposal", path: "/best-ewaste-edtech-kochi/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
     ],
-    sources: [ewasteSource, batterySource, epaSource],
+    sources: [
+      { title: "E-Waste (Management) Rules, 2022: frequently asked questions", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments and role-specific requirements." },
+      { title: "EPR portal for Battery Waste Management", href: "https://eprbattery.cpcb.gov.in/", publisher: "Central Pollution Control Board" },
+      { title: "Electronics basic information, research and initiatives", href: "https://www.epa.gov/electronics-batteries-management/electronics-basic-information-research-and-initiatives", publisher: "United States Environmental Protection Agency", note: "Environmental background; US regulatory provisions are not Indian requirements." },
+    ],
   },
   {
     slug: "best-ewaste-healthcare-tech-kochi",
@@ -619,6 +1040,57 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
           "Confirm the receiving entity, its registration and the facility that will process the equipment. Batteries from medical devices, portable monitors and laboratory instruments need their own handling discussion. Ask what documentation the provider can supply and whether it distinguishes healthcare equipment from general household batches.",
         ],
       },
+      {
+        heading: "How this applies to businesses in Kochi",
+        paragraphs: [
+          "For the industry sector covered in this guide, businesses in Kochi face specific e-waste challenges. The tropical climate, with high humidity and salt exposure near the coast, can accelerate equipment degradation and affect both performance and safe handling before collection.",
+          "Each business type has unique equipment patterns. For example, hospitality businesses generate large volumes of guest-facing electronics with data privacy implications, while telecommunications infrastructure requires specialised handling for tower-mounted equipment.",
+          "Commercial equipment is often under lease or warranty, which can affect the disposal route. A leased device may need to be returned to the lessor rather than recycled, and the terms of the lease agreement should be reviewed before collection.",
+          "Businesses can benefit from scheduling collections during low-activity periods to minimise operational disruption. Coordination with facility managers, IT teams and procurement departments ensures that the collection aligns with business operations.",
+        ],
+      },
+      {
+        heading: "Comparing recycling options and providers",
+        paragraphs: [
+          "Not all collectors handle specialised industry equipment. A general electronics recycler may not understand the differences between industrial sensors, commercial kitchen electronics and office IT, each requiring different downstream processing.",
+          "When evaluating providers, look for experience in your specific industry segment. Ask for references from similar businesses and verify that the provider has handled your equipment type before. An informed provider can also advise on resale potential.",
+          "Pricing structures vary significantly. Some providers offer resale proceeds sharing, while others charge a collection fee. Understanding the complete cost structure, including transport, handling and data destruction, helps you make an informed comparison.",
+          "Documentation quality is a key differentiator. Reputable providers supply collection receipts, destruction certificates and recycling certificates with verifiable registration numbers. These documents provide evidence needed for compliance and audit purposes.",
+        ],
+      },
+      {
+        heading: "How this applies to businesses in Kochi",
+        paragraphs: [
+          "For the industry sector covered in this guide, businesses in Kochi face specific e-waste challenges. The tropical climate, with high humidity and salt exposure near the coast, can accelerate equipment degradation and affect both performance and safe handling before collection.",
+          "Each business type has unique equipment patterns. For example, hospitality businesses generate large volumes of guest-facing electronics with data privacy implications, while telecommunications infrastructure requires specialised handling for tower-mounted equipment.",
+          "Commercial equipment is often under lease or warranty, which can affect the disposal route. A leased device may need to be returned to the lessor rather than recycled, and the terms of the lease agreement should be reviewed before collection.",
+          "Businesses can benefit from scheduling collections during low-activity periods to minimise operational disruption. Coordination with facility managers, IT teams and procurement departments ensures that the collection aligns with business operations.",
+          "Establishing a regular collection schedule, such as quarterly or annually, prevents the accumulation of end-of-life equipment. A planned approach also allows time for proper data handling and inventory management.",
+          "For businesses that handle multiple equipment types, creating separate streams for data-bearing devices, batteries and general electronics improves collection efficiency and reduces the risk of rejected items.",
+        ],
+      },
+      {
+        heading: "Comparing recycling options and providers",
+        paragraphs: [
+          "Not all collectors handle specialised industry equipment. A general electronics recycler may not understand the differences between industrial sensors, commercial kitchen electronics and office IT, each requiring different downstream processing.",
+          "When evaluating providers, look for experience in your specific industry segment. Ask for references from similar businesses and verify that the provider has handled your equipment type before. An informed provider can also advise on resale potential.",
+          "Pricing structures vary significantly. Some providers offer resale proceeds sharing, while others charge a collection fee. Understanding the complete cost structure, including transport, handling and data destruction, helps you make an informed comparison.",
+          "Documentation quality is a key differentiator. Reputable providers supply collection receipts, destruction certificates and recycling certificates with verifiable registration numbers. These documents provide evidence needed for compliance and audit purposes.",
+          "Ask whether the provider offers on-site data destruction for sensitive equipment. This can be preferable to transporting data-bearing devices and provides immediate verification of the destruction process.",
+          "For businesses with recurring disposal needs, consider negotiating a framework agreement that includes regular collection schedules, predictable pricing and consistent documentation standards.",
+        ],
+      },
+      {
+        heading: "Planning and preparation for collection day",
+        paragraphs: [
+          "Before the scheduled collection, complete a final inventory that matches the agreed scope. Any additions or removals should be communicated to the collection team at least 24 hours in advance to avoid delays.",
+          "Ensure the loading area is clear and accessible. If the collection involves heavy equipment or multiple flights of stairs, confirm that the collection team has the appropriate lifting equipment and personnel.",
+          "For equipment still under lease, gather the lease documentation and return authorisation before collection. Leased devices should be clearly identified and separated from owned equipment to prevent collection conflicts.",
+          "Secure data-bearing devices in a locked area until collection. If possible, have an authorised representative present during the handover to witness the data destruction process and verify the inventory.",
+          "Keep photo documentation of each device's condition before collection. This protects your business in case of disputes over damage or missing items after the collection.",
+          "After collection, reconcile the provided certificates against your inventory. Any discrepancies should be reported immediately and resolved with the collection team before finalising payment or closing the disposal request.",
+        ],
+      },
     ],
     tools: [
       "Healthcare equipment inventory by clinical function, condition and data flags",
@@ -640,10 +1112,14 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
       { role: "Compliance officer", q: "What records do we need for a healthcare audit?", a: "Keep the data deletion records, equipment receipts, downstream recycling certificates and any regulatory documentation linked to each device." },
     ],
     related: [
-      { label: "Healthcare equipment disposal", path: "/wiki/devices/healthcare-equipment-disposal/" },
+      { label: "Healthcare equipment disposal", path: "/hospital-e-waste-recycling/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
     ],
-    sources: [ewasteSource, batterySource, epaSource],
+    sources: [
+      { title: "E-Waste (Management) Rules, 2022: frequently asked questions", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments and role-specific requirements." },
+      { title: "EPR portal for Battery Waste Management", href: "https://eprbattery.cpcb.gov.in/", publisher: "Central Pollution Control Board" },
+      { title: "Electronics basic information, research and initiatives", href: "https://www.epa.gov/electronics-batteries-management/electronics-basic-information-research-and-initiatives", publisher: "United States Environmental Protection Agency", note: "Environmental background; US regulatory provisions are not Indian requirements." },
+    ],
   },
 ];

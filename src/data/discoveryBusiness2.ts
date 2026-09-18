@@ -1,6 +1,9 @@
 import type { DiscoveryGuide } from "./discoveryGuideTypes";
 import { SITE_URL } from "./site";
 
+
+
+
 export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
   {
     slug: "best-ewaste-office-clearance-kochi",
@@ -37,6 +40,57 @@ export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
           "Request separate treatment for working electronics, damaged electronics and batteries. A workstation suitable for refurbishment should not be silently routed to shredding because it was grouped with broken printers. Ask how rejected items are reported and who authorises a route change.",
         ],
       },
+      {
+        heading: "How this applies to your business in Kochi",
+        paragraphs: [
+          "For businesses in Kochi, responsible e-waste disposal starts with an accurate inventory. Each department should contribute to a central list that includes equipment type, model, condition and data-bearing status. This inventory becomes the basis for collection planning and downstream reporting.",
+          "Business e-waste often includes a mix of high-value working equipment and end-of-life devices. A single per-kilogram quote rarely reflects this difference. Ask for a composition-based quote that separates collection, data handling and material recovery.",
+          "Many businesses in Kochi are subject to data protection laws that require documented data destruction before equipment leaves the premises. Confirm the data handling process with your IT team and verify that the collector can supply destruction certificates.",
+          "After collection, businesses should reconcile the final certificates against their asset register. Any gaps between the inventory and the destruction certificate should be investigated and resolved promptly to maintain audit readiness.",
+        ],
+      },
+      {
+        heading: "Common mistakes and how to avoid them",
+        paragraphs: [
+          "A frequent mistake is assuming that the cheapest quote is the best value. A low per-kilogram rate may exclude data destruction, transportation insurance or downstream reporting, leaving the business exposed to data breach liability.",
+          "Another error is mixing working equipment with damaged devices in the same batch. Working equipment may have resale value that is lost if it is routed to shredding alongside broken items. List working and damaged equipment separately.",
+          "Failing to separate battery-containing devices from general electronics is another common issue. Batteries follow separate waste rules and need their own handling route. List them separately in your inventory and confirm their handling.",
+          "Not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your asset register. This documentation is essential for internal audits and regulatory reviews.",
+        ],
+      },
+      {
+        heading: "How this applies to your business in Kochi",
+        paragraphs: [
+          "For businesses in Kochi, responsible e-waste disposal starts with an accurate inventory. Each department should contribute to a central list that includes equipment type, model, condition and data-bearing status. This inventory becomes the basis for collection planning and downstream reporting.",
+          "Business e-waste often includes a mix of high-value working equipment and end-of-life devices. A single per-kilogram quote rarely reflects this difference. Ask for a composition-based quote that separates collection, data handling and material recovery.",
+          "Many businesses in Kochi are subject to data protection laws that require documented data destruction before equipment leaves the premises. Confirm the data handling process with your IT team and verify that the collector can supply destruction certificates.",
+          "After collection, businesses should reconcile the final certificates against their asset register. Any gaps between the inventory and the destruction certificate should be investigated and resolved promptly to maintain audit readiness.",
+          "Establishing an annual e-waste policy that includes regular inventory cycles, approved vendor lists and documented data destruction procedures helps businesses maintain compliance and reduce risk over time.",
+          "For businesses that generate large volumes of e-waste, consider negotiating a framework agreement with a preferred recycler. This can provide predictable pricing, guaranteed collection windows and consistent documentation standards.",
+        ],
+      },
+      {
+        heading: "Common mistakes and how to avoid them",
+        paragraphs: [
+          "A frequent mistake is assuming that the cheapest quote is the best value. A low per-kilogram rate may exclude data destruction, transportation insurance or downstream reporting, leaving the business exposed to data breach liability.",
+          "Another error is mixing working equipment with damaged devices in the same batch. Working equipment may have resale value that is lost if it is routed to shredding alongside broken items. List working and damaged equipment separately.",
+          "Failing to separate battery-containing devices from general electronics is another common issue. Batteries follow separate waste rules and need their own handling route. List them separately in your inventory and confirm their handling.",
+          "Not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your asset register. This documentation is essential for internal audits and regulatory reviews.",
+          "Using an unregistered collector may seem cost-effective in the short term but exposes the business to significant risks. An unauthorized collector may dump e-waste or sell it to informal processors who expose workers and the environment to toxic materials.",
+          "Storing old electronics indefinitely in office spaces or storage rooms creates safety and security risks. Regular clear-out schedules and clear disposal policies prevent the accumulation of devices with sensitive data.",
+        ],
+      },
+      {
+        heading: "Documentation and vendor qualification",
+        paragraphs: [
+          "When qualifying a recycler, verify their CPCB authorisation number on the official portal and confirm their KSPCB compliance for Kerala operations. A reputable recycler should provide these details without hesitation.",
+          "Request samples of their standard documentation: collection receipts, destruction certificates, recycling certificates and material recovery reports. Review these templates before committing to ensure they meet your audit requirements.",
+          "For data-bearing equipment, confirm the data destruction method and ensure it aligns with your security policy. Ask for documented evidence of destruction with serial number tracking where possible.",
+          "Establish clear terms in the service agreement covering collection windows, accepted items, data handling responsibility, insurance coverage and liability limits. Ambiguities in these areas often lead to disputes after collection.",
+          "Maintain a vendor file that includes registration details, insurance certificates, service agreements and past performance records. Update this file annually and review before each major disposal event.",
+          "For multinational corporations, ensure the recycler can provide documentation in the required format for global audit standards. Local recyclers may need additional coordination to meet corporate compliance requirements.",
+        ],
+      },
     ],
     tools: [
       "Department-by-department inventory with condition and data flags",
@@ -64,7 +118,7 @@ export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
     ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
-      { title: "Pickup planning and feasibility", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
+      { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
       { title: "NIST SP 800-88 Rev. 2", href: "https://csrc.nist.gov/pubs/sp/800/88/r2/final", publisher: "National Institute of Standards and Technology", note: "Consult the official publication for current recommendations." },
     ],
   },
@@ -103,6 +157,57 @@ export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
           "Confirm the receiving entity, its registration and the facility that will process the equipment. Batteries from POS systems, signage and self-checkout terminals need their own handling discussion. Ask what documentation the provider can supply for each store and whether it can produce chain-wide summary reports.",
         ],
       },
+      {
+        heading: "How this applies to your business in Kochi",
+        paragraphs: [
+          "For businesses in Kochi, responsible e-waste disposal starts with an accurate inventory. Each department should contribute to a central list that includes equipment type, model, condition and data-bearing status. This inventory becomes the basis for collection planning and downstream reporting.",
+          "Business e-waste often includes a mix of high-value working equipment and end-of-life devices. A single per-kilogram quote rarely reflects this difference. Ask for a composition-based quote that separates collection, data handling and material recovery.",
+          "Many businesses in Kochi are subject to data protection laws that require documented data destruction before equipment leaves the premises. Confirm the data handling process with your IT team and verify that the collector can supply destruction certificates.",
+          "After collection, businesses should reconcile the final certificates against their asset register. Any gaps between the inventory and the destruction certificate should be investigated and resolved promptly to maintain audit readiness.",
+        ],
+      },
+      {
+        heading: "Common mistakes and how to avoid them",
+        paragraphs: [
+          "A frequent mistake is assuming that the cheapest quote is the best value. A low per-kilogram rate may exclude data destruction, transportation insurance or downstream reporting, leaving the business exposed to data breach liability.",
+          "Another error is mixing working equipment with damaged devices in the same batch. Working equipment may have resale value that is lost if it is routed to shredding alongside broken items. List working and damaged equipment separately.",
+          "Failing to separate battery-containing devices from general electronics is another common issue. Batteries follow separate waste rules and need their own handling route. List them separately in your inventory and confirm their handling.",
+          "Not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your asset register. This documentation is essential for internal audits and regulatory reviews.",
+        ],
+      },
+      {
+        heading: "How this applies to your business in Kochi",
+        paragraphs: [
+          "For businesses in Kochi, responsible e-waste disposal starts with an accurate inventory. Each department should contribute to a central list that includes equipment type, model, condition and data-bearing status. This inventory becomes the basis for collection planning and downstream reporting.",
+          "Business e-waste often includes a mix of high-value working equipment and end-of-life devices. A single per-kilogram quote rarely reflects this difference. Ask for a composition-based quote that separates collection, data handling and material recovery.",
+          "Many businesses in Kochi are subject to data protection laws that require documented data destruction before equipment leaves the premises. Confirm the data handling process with your IT team and verify that the collector can supply destruction certificates.",
+          "After collection, businesses should reconcile the final certificates against their asset register. Any gaps between the inventory and the destruction certificate should be investigated and resolved promptly to maintain audit readiness.",
+          "Establishing an annual e-waste policy that includes regular inventory cycles, approved vendor lists and documented data destruction procedures helps businesses maintain compliance and reduce risk over time.",
+          "For businesses that generate large volumes of e-waste, consider negotiating a framework agreement with a preferred recycler. This can provide predictable pricing, guaranteed collection windows and consistent documentation standards.",
+        ],
+      },
+      {
+        heading: "Common mistakes and how to avoid them",
+        paragraphs: [
+          "A frequent mistake is assuming that the cheapest quote is the best value. A low per-kilogram rate may exclude data destruction, transportation insurance or downstream reporting, leaving the business exposed to data breach liability.",
+          "Another error is mixing working equipment with damaged devices in the same batch. Working equipment may have resale value that is lost if it is routed to shredding alongside broken items. List working and damaged equipment separately.",
+          "Failing to separate battery-containing devices from general electronics is another common issue. Batteries follow separate waste rules and need their own handling route. List them separately in your inventory and confirm their handling.",
+          "Not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your asset register. This documentation is essential for internal audits and regulatory reviews.",
+          "Using an unregistered collector may seem cost-effective in the short term but exposes the business to significant risks. An unauthorized collector may dump e-waste or sell it to informal processors who expose workers and the environment to toxic materials.",
+          "Storing old electronics indefinitely in office spaces or storage rooms creates safety and security risks. Regular clear-out schedules and clear disposal policies prevent the accumulation of devices with sensitive data.",
+        ],
+      },
+      {
+        heading: "Documentation and vendor qualification",
+        paragraphs: [
+          "When qualifying a recycler, verify their CPCB authorisation number on the official portal and confirm their KSPCB compliance for Kerala operations. A reputable recycler should provide these details without hesitation.",
+          "Request samples of their standard documentation: collection receipts, destruction certificates, recycling certificates and material recovery reports. Review these templates before committing to ensure they meet your audit requirements.",
+          "For data-bearing equipment, confirm the data destruction method and ensure it aligns with your security policy. Ask for documented evidence of destruction with serial number tracking where possible.",
+          "Establish clear terms in the service agreement covering collection windows, accepted items, data handling responsibility, insurance coverage and liability limits. Ambiguities in these areas often lead to disputes after collection.",
+          "Maintain a vendor file that includes registration details, insurance certificates, service agreements and past performance records. Update this file annually and review before each major disposal event.",
+          "For multinational corporations, ensure the recycler can provide documentation in the required format for global audit standards. Local recyclers may need additional coordination to meet corporate compliance requirements.",
+        ],
+      },
     ],
     tools: [
       "Standardized store inventory template with condition and data flags",
@@ -124,13 +229,13 @@ export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
       { role: "Loss prevention lead", q: "Security cameras may contain sensitive footage. How is that handled?", a: "Confirm the data handling with the security provider before disposal." },
     ],
     related: [
-      { label: "Retail electronics disposal", path: "/wiki/business/retail-electronics-disposal/" },
+      { label: "Retail electronics disposal", path: "/retail-e-waste-recycling/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
     ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
-      { title: "Pickup planning and feasibility", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
+      { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
       { title: "NIST SP 800-88 Rev. 2", href: "https://csrc.nist.gov/pubs/sp/800/88/r2/final", publisher: "National Institute of Standards and Technology", note: "Consult the official publication for current recommendations." },
     ],
   },
@@ -138,7 +243,7 @@ export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
     slug: "best-ewaste-hotel-kochi",
     category: "business",
     title: "Best E-Waste Disposal for Hotels and Resorts in Kochi",
-    description: "Plan hotel and resort electronics disposal with room-by-room inventory, data controls and confirmed collection for TVs, minibars and guest devices.",
+    description: "Plan business hotel and resort electronics disposal in Kochi with room-by-room inventory, data controls and confirmed collection for TVs, minibars and guest devices.",
     answer: "Hospitality e-waste in Kochi spans guest room electronics, back-office IT, kitchen appliances and conference equipment. The best recycling plan separates these streams, protects guest data and confirms a registered destination before any collection is scheduled.",
     sections: [
       {
@@ -169,6 +274,57 @@ export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
           "Request separate treatment for working electronics, damaged electronics and batteries. A television suitable for refurbishment should not be silently routed to shredding because it was grouped with broken minibars.",
         ],
       },
+      {
+        heading: "How this applies to your business in Kochi",
+        paragraphs: [
+          "For businesses in Kochi, responsible e-waste disposal starts with an accurate inventory. Each department should contribute to a central list that includes equipment type, model, condition and data-bearing status. This inventory becomes the basis for collection planning and downstream reporting.",
+          "Business e-waste often includes a mix of high-value working equipment and end-of-life devices. A single per-kilogram quote rarely reflects this difference. Ask for a composition-based quote that separates collection, data handling and material recovery.",
+          "Many businesses in Kochi are subject to data protection laws that require documented data destruction before equipment leaves the premises. Confirm the data handling process with your IT team and verify that the collector can supply destruction certificates.",
+          "After collection, businesses should reconcile the final certificates against their asset register. Any gaps between the inventory and the destruction certificate should be investigated and resolved promptly to maintain audit readiness.",
+        ],
+      },
+      {
+        heading: "Common mistakes and how to avoid them",
+        paragraphs: [
+          "A frequent mistake is assuming that the cheapest quote is the best value. A low per-kilogram rate may exclude data destruction, transportation insurance or downstream reporting, leaving the business exposed to data breach liability.",
+          "Another error is mixing working equipment with damaged devices in the same batch. Working equipment may have resale value that is lost if it is routed to shredding alongside broken items. List working and damaged equipment separately.",
+          "Failing to separate battery-containing devices from general electronics is another common issue. Batteries follow separate waste rules and need their own handling route. List them separately in your inventory and confirm their handling.",
+          "Not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your asset register. This documentation is essential for internal audits and regulatory reviews.",
+        ],
+      },
+      {
+        heading: "How this applies to your business in Kochi",
+        paragraphs: [
+          "For businesses in Kochi, responsible e-waste disposal starts with an accurate inventory. Each department should contribute to a central list that includes equipment type, model, condition and data-bearing status. This inventory becomes the basis for collection planning and downstream reporting.",
+          "Business e-waste often includes a mix of high-value working equipment and end-of-life devices. A single per-kilogram quote rarely reflects this difference. Ask for a composition-based quote that separates collection, data handling and material recovery.",
+          "Many businesses in Kochi are subject to data protection laws that require documented data destruction before equipment leaves the premises. Confirm the data handling process with your IT team and verify that the collector can supply destruction certificates.",
+          "After collection, businesses should reconcile the final certificates against their asset register. Any gaps between the inventory and the destruction certificate should be investigated and resolved promptly to maintain audit readiness.",
+          "Establishing an annual e-waste policy that includes regular inventory cycles, approved vendor lists and documented data destruction procedures helps businesses maintain compliance and reduce risk over time.",
+          "For businesses that generate large volumes of e-waste, consider negotiating a framework agreement with a preferred recycler. This can provide predictable pricing, guaranteed collection windows and consistent documentation standards.",
+        ],
+      },
+      {
+        heading: "Common mistakes and how to avoid them",
+        paragraphs: [
+          "A frequent mistake is assuming that the cheapest quote is the best value. A low per-kilogram rate may exclude data destruction, transportation insurance or downstream reporting, leaving the business exposed to data breach liability.",
+          "Another error is mixing working equipment with damaged devices in the same batch. Working equipment may have resale value that is lost if it is routed to shredding alongside broken items. List working and damaged equipment separately.",
+          "Failing to separate battery-containing devices from general electronics is another common issue. Batteries follow separate waste rules and need their own handling route. List them separately in your inventory and confirm their handling.",
+          "Not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your asset register. This documentation is essential for internal audits and regulatory reviews.",
+          "Using an unregistered collector may seem cost-effective in the short term but exposes the business to significant risks. An unauthorized collector may dump e-waste or sell it to informal processors who expose workers and the environment to toxic materials.",
+          "Storing old electronics indefinitely in office spaces or storage rooms creates safety and security risks. Regular clear-out schedules and clear disposal policies prevent the accumulation of devices with sensitive data.",
+        ],
+      },
+      {
+        heading: "Documentation and vendor qualification",
+        paragraphs: [
+          "When qualifying a recycler, verify their CPCB authorisation number on the official portal and confirm their KSPCB compliance for Kerala operations. A reputable recycler should provide these details without hesitation.",
+          "Request samples of their standard documentation: collection receipts, destruction certificates, recycling certificates and material recovery reports. Review these templates before committing to ensure they meet your audit requirements.",
+          "For data-bearing equipment, confirm the data destruction method and ensure it aligns with your security policy. Ask for documented evidence of destruction with serial number tracking where possible.",
+          "Establish clear terms in the service agreement covering collection windows, accepted items, data handling responsibility, insurance coverage and liability limits. Ambiguities in these areas often lead to disputes after collection.",
+          "Maintain a vendor file that includes registration details, insurance certificates, service agreements and past performance records. Update this file annually and review before each major disposal event.",
+          "For multinational corporations, ensure the recycler can provide documentation in the required format for global audit standards. Local recyclers may need additional coordination to meet corporate compliance requirements.",
+        ],
+      },
     ],
     tools: [
       "Department-by-department inventory with condition and data flags",
@@ -190,13 +346,13 @@ export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
       { role: "Housekeeping lead", q: "Can we collect small electronics into a box for the recycler?", a: "List items individually where possible. A mixed box without descriptions can lead to rejected items." },
     ],
     related: [
-      { label: "Hotel e-waste management", path: "/wiki/business/hotel-e-waste-management/" },
+      { label: "Hotel e-waste management", path: "/best-ewaste-hotel-kochi/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
     ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
-      { title: "Pickup planning and feasibility", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
+      { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
       { title: "NIST SP 800-88 Rev. 2", href: "https://csrc.nist.gov/pubs/sp/800/88/r2/final", publisher: "National Institute of Standards and Technology", note: "Consult the official publication for current recommendations." },
     ],
   },
@@ -235,6 +391,57 @@ export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
           "Confirm the receiving entity, its registration and the facility that will process the equipment. Batteries from lab equipment, printers and UPS units need their own handling discussion. Ask what documentation the provider can supply for institutional audit requirements.",
         ],
       },
+      {
+        heading: "How this applies to your business in Kochi",
+        paragraphs: [
+          "For businesses in Kochi, responsible e-waste disposal starts with an accurate inventory. Each department should contribute to a central list that includes equipment type, model, condition and data-bearing status. This inventory becomes the basis for collection planning and downstream reporting.",
+          "Business e-waste often includes a mix of high-value working equipment and end-of-life devices. A single per-kilogram quote rarely reflects this difference. Ask for a composition-based quote that separates collection, data handling and material recovery.",
+          "Many businesses in Kochi are subject to data protection laws that require documented data destruction before equipment leaves the premises. Confirm the data handling process with your IT team and verify that the collector can supply destruction certificates.",
+          "After collection, businesses should reconcile the final certificates against their asset register. Any gaps between the inventory and the destruction certificate should be investigated and resolved promptly to maintain audit readiness.",
+        ],
+      },
+      {
+        heading: "Common mistakes and how to avoid them",
+        paragraphs: [
+          "A frequent mistake is assuming that the cheapest quote is the best value. A low per-kilogram rate may exclude data destruction, transportation insurance or downstream reporting, leaving the business exposed to data breach liability.",
+          "Another error is mixing working equipment with damaged devices in the same batch. Working equipment may have resale value that is lost if it is routed to shredding alongside broken items. List working and damaged equipment separately.",
+          "Failing to separate battery-containing devices from general electronics is another common issue. Batteries follow separate waste rules and need their own handling route. List them separately in your inventory and confirm their handling.",
+          "Not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your asset register. This documentation is essential for internal audits and regulatory reviews.",
+        ],
+      },
+      {
+        heading: "How this applies to your business in Kochi",
+        paragraphs: [
+          "For businesses in Kochi, responsible e-waste disposal starts with an accurate inventory. Each department should contribute to a central list that includes equipment type, model, condition and data-bearing status. This inventory becomes the basis for collection planning and downstream reporting.",
+          "Business e-waste often includes a mix of high-value working equipment and end-of-life devices. A single per-kilogram quote rarely reflects this difference. Ask for a composition-based quote that separates collection, data handling and material recovery.",
+          "Many businesses in Kochi are subject to data protection laws that require documented data destruction before equipment leaves the premises. Confirm the data handling process with your IT team and verify that the collector can supply destruction certificates.",
+          "After collection, businesses should reconcile the final certificates against their asset register. Any gaps between the inventory and the destruction certificate should be investigated and resolved promptly to maintain audit readiness.",
+          "Establishing an annual e-waste policy that includes regular inventory cycles, approved vendor lists and documented data destruction procedures helps businesses maintain compliance and reduce risk over time.",
+          "For businesses that generate large volumes of e-waste, consider negotiating a framework agreement with a preferred recycler. This can provide predictable pricing, guaranteed collection windows and consistent documentation standards.",
+        ],
+      },
+      {
+        heading: "Common mistakes and how to avoid them",
+        paragraphs: [
+          "A frequent mistake is assuming that the cheapest quote is the best value. A low per-kilogram rate may exclude data destruction, transportation insurance or downstream reporting, leaving the business exposed to data breach liability.",
+          "Another error is mixing working equipment with damaged devices in the same batch. Working equipment may have resale value that is lost if it is routed to shredding alongside broken items. List working and damaged equipment separately.",
+          "Failing to separate battery-containing devices from general electronics is another common issue. Batteries follow separate waste rules and need their own handling route. List them separately in your inventory and confirm their handling.",
+          "Not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your asset register. This documentation is essential for internal audits and regulatory reviews.",
+          "Using an unregistered collector may seem cost-effective in the short term but exposes the business to significant risks. An unauthorized collector may dump e-waste or sell it to informal processors who expose workers and the environment to toxic materials.",
+          "Storing old electronics indefinitely in office spaces or storage rooms creates safety and security risks. Regular clear-out schedules and clear disposal policies prevent the accumulation of devices with sensitive data.",
+        ],
+      },
+      {
+        heading: "Documentation and vendor qualification",
+        paragraphs: [
+          "When qualifying a recycler, verify their CPCB authorisation number on the official portal and confirm their KSPCB compliance for Kerala operations. A reputable recycler should provide these details without hesitation.",
+          "Request samples of their standard documentation: collection receipts, destruction certificates, recycling certificates and material recovery reports. Review these templates before committing to ensure they meet your audit requirements.",
+          "For data-bearing equipment, confirm the data destruction method and ensure it aligns with your security policy. Ask for documented evidence of destruction with serial number tracking where possible.",
+          "Establish clear terms in the service agreement covering collection windows, accepted items, data handling responsibility, insurance coverage and liability limits. Ambiguities in these areas often lead to disputes after collection.",
+          "Maintain a vendor file that includes registration details, insurance certificates, service agreements and past performance records. Update this file annually and review before each major disposal event.",
+          "For multinational corporations, ensure the recycler can provide documentation in the required format for global audit standards. Local recyclers may need additional coordination to meet corporate compliance requirements.",
+        ],
+      },
     ],
     tools: [
       "Institution-wide inventory by location, function and condition",
@@ -256,13 +463,13 @@ export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
       { role: "Administrative officer", q: "We have old printers and projectors from classrooms. Can they be collected?", a: "Submit a batch inventory. Separate batteries from the equipment list." },
     ],
     related: [
-      { label: "School e-waste drives", path: "/blog/school-ewaste-drive/" },
+      { label: "School e-waste drives", path: "/school-e-waste-recycling/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
     ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
-      { title: "Pickup planning and feasibility", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
+      { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
       { title: "NIST SP 800-88 Rev. 2", href: "https://csrc.nist.gov/pubs/sp/800/88/r2/final", publisher: "National Institute of Standards and Technology", note: "Consult the official publication for current recommendations." },
     ],
   },
@@ -301,6 +508,57 @@ export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
           "Confirm the receiving entity, its registration and the facility that will process the equipment. Batteries from medical devices, including portable monitors and infusion pumps, need their own compliant route. Ask what documentation the provider can supply for institutional and compliance audit requirements.",
         ],
       },
+      {
+        heading: "How this applies to your business in Kochi",
+        paragraphs: [
+          "For businesses in Kochi, responsible e-waste disposal starts with an accurate inventory. Each department should contribute to a central list that includes equipment type, model, condition and data-bearing status. This inventory becomes the basis for collection planning and downstream reporting.",
+          "Business e-waste often includes a mix of high-value working equipment and end-of-life devices. A single per-kilogram quote rarely reflects this difference. Ask for a composition-based quote that separates collection, data handling and material recovery.",
+          "Many businesses in Kochi are subject to data protection laws that require documented data destruction before equipment leaves the premises. Confirm the data handling process with your IT team and verify that the collector can supply destruction certificates.",
+          "After collection, businesses should reconcile the final certificates against their asset register. Any gaps between the inventory and the destruction certificate should be investigated and resolved promptly to maintain audit readiness.",
+        ],
+      },
+      {
+        heading: "Common mistakes and how to avoid them",
+        paragraphs: [
+          "A frequent mistake is assuming that the cheapest quote is the best value. A low per-kilogram rate may exclude data destruction, transportation insurance or downstream reporting, leaving the business exposed to data breach liability.",
+          "Another error is mixing working equipment with damaged devices in the same batch. Working equipment may have resale value that is lost if it is routed to shredding alongside broken items. List working and damaged equipment separately.",
+          "Failing to separate battery-containing devices from general electronics is another common issue. Batteries follow separate waste rules and need their own handling route. List them separately in your inventory and confirm their handling.",
+          "Not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your asset register. This documentation is essential for internal audits and regulatory reviews.",
+        ],
+      },
+      {
+        heading: "How this applies to your business in Kochi",
+        paragraphs: [
+          "For businesses in Kochi, responsible e-waste disposal starts with an accurate inventory. Each department should contribute to a central list that includes equipment type, model, condition and data-bearing status. This inventory becomes the basis for collection planning and downstream reporting.",
+          "Business e-waste often includes a mix of high-value working equipment and end-of-life devices. A single per-kilogram quote rarely reflects this difference. Ask for a composition-based quote that separates collection, data handling and material recovery.",
+          "Many businesses in Kochi are subject to data protection laws that require documented data destruction before equipment leaves the premises. Confirm the data handling process with your IT team and verify that the collector can supply destruction certificates.",
+          "After collection, businesses should reconcile the final certificates against their asset register. Any gaps between the inventory and the destruction certificate should be investigated and resolved promptly to maintain audit readiness.",
+          "Establishing an annual e-waste policy that includes regular inventory cycles, approved vendor lists and documented data destruction procedures helps businesses maintain compliance and reduce risk over time.",
+          "For businesses that generate large volumes of e-waste, consider negotiating a framework agreement with a preferred recycler. This can provide predictable pricing, guaranteed collection windows and consistent documentation standards.",
+        ],
+      },
+      {
+        heading: "Common mistakes and how to avoid them",
+        paragraphs: [
+          "A frequent mistake is assuming that the cheapest quote is the best value. A low per-kilogram rate may exclude data destruction, transportation insurance or downstream reporting, leaving the business exposed to data breach liability.",
+          "Another error is mixing working equipment with damaged devices in the same batch. Working equipment may have resale value that is lost if it is routed to shredding alongside broken items. List working and damaged equipment separately.",
+          "Failing to separate battery-containing devices from general electronics is another common issue. Batteries follow separate waste rules and need their own handling route. List them separately in your inventory and confirm their handling.",
+          "Not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your asset register. This documentation is essential for internal audits and regulatory reviews.",
+          "Using an unregistered collector may seem cost-effective in the short term but exposes the business to significant risks. An unauthorized collector may dump e-waste or sell it to informal processors who expose workers and the environment to toxic materials.",
+          "Storing old electronics indefinitely in office spaces or storage rooms creates safety and security risks. Regular clear-out schedules and clear disposal policies prevent the accumulation of devices with sensitive data.",
+        ],
+      },
+      {
+        heading: "Documentation and vendor qualification",
+        paragraphs: [
+          "When qualifying a recycler, verify their CPCB authorisation number on the official portal and confirm their KSPCB compliance for Kerala operations. A reputable recycler should provide these details without hesitation.",
+          "Request samples of their standard documentation: collection receipts, destruction certificates, recycling certificates and material recovery reports. Review these templates before committing to ensure they meet your audit requirements.",
+          "For data-bearing equipment, confirm the data destruction method and ensure it aligns with your security policy. Ask for documented evidence of destruction with serial number tracking where possible.",
+          "Establish clear terms in the service agreement covering collection windows, accepted items, data handling responsibility, insurance coverage and liability limits. Ambiguities in these areas often lead to disputes after collection.",
+          "Maintain a vendor file that includes registration details, insurance certificates, service agreements and past performance records. Update this file annually and review before each major disposal event.",
+          "For multinational corporations, ensure the recycler can provide documentation in the required format for global audit standards. Local recyclers may need additional coordination to meet corporate compliance requirements.",
+        ],
+      },
     ],
     tools: [
       "Hospital-wide inventory by department, condition and data flags",
@@ -322,13 +580,13 @@ export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
       { role: "Compliance officer", q: "What records do we need for audit?", a: "Keep the data handling confirmation, destruction certificates and recycling certificates linked to your asset register." },
     ],
     related: [
-      { label: "Healthcare electronics disposal", path: "/wiki/business/healthcare-electronics-disposal/" },
+      { label: "Healthcare electronics disposal", path: "/hospital-e-waste-recycling/" },
       { label: "Data destruction service", path: "/data-destruction/" },
       { label: "Recycling service", path: "/recycling/" },
     ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
-      { title: "Pickup planning and feasibility", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
+      { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
       { title: "NIST SP 800-88 Rev. 2", href: "https://csrc.nist.gov/pubs/sp/800/88/r2/final", publisher: "National Institute of Standards and Technology", note: "Consult the official publication for current recommendations." },
     ],
   },
@@ -367,6 +625,68 @@ export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
           "Confirm the receiving entity, its registration and the facility that will process the equipment. Batteries from government offices, including UPS units and printer batteries, need their own compliant route. Ask what documentation the provider can supply for audit requirements.",
         ],
       },
+      {
+        heading: "How this applies to your business in Kochi",
+        paragraphs: [
+          "For businesses in Kochi, responsible e-waste disposal starts with an accurate inventory. Each department should contribute to a central list that includes equipment type, model, condition and data-bearing status. This inventory becomes the basis for collection planning and downstream reporting.",
+          "Business e-waste often includes a mix of high-value working equipment and end-of-life devices. A single per-kilogram quote rarely reflects this difference. Ask for a composition-based quote that separates collection, data handling and material recovery.",
+          "Many businesses in Kochi are subject to data protection laws that require documented data destruction before equipment leaves the premises. Confirm the data handling process with your IT team and verify that the collector can supply destruction certificates.",
+          "After collection, businesses should reconcile the final certificates against their asset register. Any gaps between the inventory and the destruction certificate should be investigated and resolved promptly to maintain audit readiness.",
+        ],
+      },
+      {
+        heading: "Common mistakes and how to avoid them",
+        paragraphs: [
+          "A frequent mistake is assuming that the cheapest quote is the best value. A low per-kilogram rate may exclude data destruction, transportation insurance or downstream reporting, leaving the business exposed to data breach liability.",
+          "Another error is mixing working equipment with damaged devices in the same batch. Working equipment may have resale value that is lost if it is routed to shredding alongside broken items. List working and damaged equipment separately.",
+          "Failing to separate battery-containing devices from general electronics is another common issue. Batteries follow separate waste rules and need their own handling route. List them separately in your inventory and confirm their handling.",
+          "Not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your asset register. This documentation is essential for internal audits and regulatory reviews.",
+        ],
+      },
+      {
+        heading: "How this applies to your business in Kochi",
+        paragraphs: [
+          "For businesses in Kochi, responsible e-waste disposal starts with an accurate inventory. Each department should contribute to a central list that includes equipment type, model, condition and data-bearing status. This inventory becomes the basis for collection planning and downstream reporting.",
+          "Business e-waste often includes a mix of high-value working equipment and end-of-life devices. A single per-kilogram quote rarely reflects this difference. Ask for a composition-based quote that separates collection, data handling and material recovery.",
+          "Many businesses in Kochi are subject to data protection laws that require documented data destruction before equipment leaves the premises. Confirm the data handling process with your IT team and verify that the collector can supply destruction certificates.",
+          "After collection, businesses should reconcile the final certificates against their asset register. Any gaps between the inventory and the destruction certificate should be investigated and resolved promptly to maintain audit readiness.",
+          "Establishing an annual e-waste policy that includes regular inventory cycles, approved vendor lists and documented data destruction procedures helps businesses maintain compliance and reduce risk over time.",
+          "For businesses that generate large volumes of e-waste, consider negotiating a framework agreement with a preferred recycler. This can provide predictable pricing, guaranteed collection windows and consistent documentation standards.",
+        ],
+      },
+      {
+        heading: "Common mistakes and how to avoid them",
+        paragraphs: [
+          "A frequent mistake is assuming that the cheapest quote is the best value. A low per-kilogram rate may exclude data destruction, transportation insurance or downstream reporting, leaving the business exposed to data breach liability.",
+          "Another error is mixing working equipment with damaged devices in the same batch. Working equipment may have resale value that is lost if it is routed to shredding alongside broken items. List working and damaged equipment separately.",
+          "Failing to separate battery-containing devices from general electronics is another common issue. Batteries follow separate waste rules and need their own handling route. List them separately in your inventory and confirm their handling.",
+          "Not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your asset register. This documentation is essential for internal audits and regulatory reviews.",
+          "Using an unregistered collector may seem cost-effective in the short term but exposes the business to significant risks. An unauthorized collector may dump e-waste or sell it to informal processors who expose workers and the environment to toxic materials.",
+          "Storing old electronics indefinitely in office spaces or storage rooms creates safety and security risks. Regular clear-out schedules and clear disposal policies prevent the accumulation of devices with sensitive data.",
+        ],
+      },
+      {
+        heading: "Documentation and vendor qualification",
+        paragraphs: [
+          "When qualifying a recycler, verify their CPCB authorisation number on the official portal and confirm their KSPCB compliance for Kerala operations. A reputable recycler should provide these details without hesitation.",
+          "Request samples of their standard documentation: collection receipts, destruction certificates, recycling certificates and material recovery reports. Review these templates before committing to ensure they meet your audit requirements.",
+          "For data-bearing equipment, confirm the data destruction method and ensure it aligns with your security policy. Ask for documented evidence of destruction with serial number tracking where possible.",
+          "Establish clear terms in the service agreement covering collection windows, accepted items, data handling responsibility, insurance coverage and liability limits. Ambiguities in these areas often lead to disputes after collection.",
+          "Maintain a vendor file that includes registration details, insurance certificates, service agreements and past performance records. Update this file annually and review before each major disposal event.",
+          "For multinational corporations, ensure the recycler can provide documentation in the required format for global audit standards. Local recyclers may need additional coordination to meet corporate compliance requirements.",
+        ],
+      },
+      {
+        heading: "How this applies to your business in Kochi",
+        paragraphs: [
+          "For businesses in Kochi, responsible e-waste disposal starts with an accurate inventory. Each department should contribute to a central list that includes equipment type, model, condition and data-bearing status. This inventory becomes the basis for collection planning and downstream reporting.",
+          "Business e-waste often includes a mix of high-value working equipment and end-of-life devices. A single per-kilogram quote rarely reflects this difference. Ask for a composition-based quote that separates collection, data handling and material recovery.",
+          "Many businesses in Kochi are subject to data protection laws that require documented data destruction before equipment leaves the premises. Confirm the data handling process with your IT team and verify that the collector can supply destruction certificates.",
+          "After collection, businesses should reconcile the final certificates against their asset register. Any gaps between the inventory and the destruction certificate should be investigated and resolved promptly to maintain audit readiness.",
+          "Establishing an annual e-waste policy that includes regular inventory cycles, approved vendor lists and documented data destruction procedures helps businesses maintain compliance and reduce risk over time.",
+          "For businesses that generate large volumes of e-waste, consider negotiating a framework agreement with a preferred recycler. This can provide predictable pricing, guaranteed collection windows and consistent documentation standards.",
+        ],
+      },
     ],
     tools: [
       "Government office inventory with serial numbers, asset tags and data flags",
@@ -394,7 +714,7 @@ export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
     ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
-      { title: "Pickup planning and feasibility", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
+      { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
       { title: "NIST SP 800-88 Rev. 2", href: "https://csrc.nist.gov/pubs/sp/800/88/r2/final", publisher: "National Institute of Standards and Technology", note: "Consult the official publication for current recommendations." },
     ],
   },
@@ -433,6 +753,57 @@ export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
           "Confirm the receiving entity, its registration and the facility that will process the equipment. Batteries from startup equipment, including laptop batteries and UPS units, need their own handling discussion.",
         ],
       },
+      {
+        heading: "How this applies to your business in Kochi",
+        paragraphs: [
+          "For businesses in Kochi, responsible e-waste disposal starts with an accurate inventory. Each department should contribute to a central list that includes equipment type, model, condition and data-bearing status. This inventory becomes the basis for collection planning and downstream reporting.",
+          "Business e-waste often includes a mix of high-value working equipment and end-of-life devices. A single per-kilogram quote rarely reflects this difference. Ask for a composition-based quote that separates collection, data handling and material recovery.",
+          "Many businesses in Kochi are subject to data protection laws that require documented data destruction before equipment leaves the premises. Confirm the data handling process with your IT team and verify that the collector can supply destruction certificates.",
+          "After collection, businesses should reconcile the final certificates against their asset register. Any gaps between the inventory and the destruction certificate should be investigated and resolved promptly to maintain audit readiness.",
+        ],
+      },
+      {
+        heading: "Common mistakes and how to avoid them",
+        paragraphs: [
+          "A frequent mistake is assuming that the cheapest quote is the best value. A low per-kilogram rate may exclude data destruction, transportation insurance or downstream reporting, leaving the business exposed to data breach liability.",
+          "Another error is mixing working equipment with damaged devices in the same batch. Working equipment may have resale value that is lost if it is routed to shredding alongside broken items. List working and damaged equipment separately.",
+          "Failing to separate battery-containing devices from general electronics is another common issue. Batteries follow separate waste rules and need their own handling route. List them separately in your inventory and confirm their handling.",
+          "Not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your asset register. This documentation is essential for internal audits and regulatory reviews.",
+        ],
+      },
+      {
+        heading: "How this applies to your business in Kochi",
+        paragraphs: [
+          "For businesses in Kochi, responsible e-waste disposal starts with an accurate inventory. Each department should contribute to a central list that includes equipment type, model, condition and data-bearing status. This inventory becomes the basis for collection planning and downstream reporting.",
+          "Business e-waste often includes a mix of high-value working equipment and end-of-life devices. A single per-kilogram quote rarely reflects this difference. Ask for a composition-based quote that separates collection, data handling and material recovery.",
+          "Many businesses in Kochi are subject to data protection laws that require documented data destruction before equipment leaves the premises. Confirm the data handling process with your IT team and verify that the collector can supply destruction certificates.",
+          "After collection, businesses should reconcile the final certificates against their asset register. Any gaps between the inventory and the destruction certificate should be investigated and resolved promptly to maintain audit readiness.",
+          "Establishing an annual e-waste policy that includes regular inventory cycles, approved vendor lists and documented data destruction procedures helps businesses maintain compliance and reduce risk over time.",
+          "For businesses that generate large volumes of e-waste, consider negotiating a framework agreement with a preferred recycler. This can provide predictable pricing, guaranteed collection windows and consistent documentation standards.",
+        ],
+      },
+      {
+        heading: "Common mistakes and how to avoid them",
+        paragraphs: [
+          "A frequent mistake is assuming that the cheapest quote is the best value. A low per-kilogram rate may exclude data destruction, transportation insurance or downstream reporting, leaving the business exposed to data breach liability.",
+          "Another error is mixing working equipment with damaged devices in the same batch. Working equipment may have resale value that is lost if it is routed to shredding alongside broken items. List working and damaged equipment separately.",
+          "Failing to separate battery-containing devices from general electronics is another common issue. Batteries follow separate waste rules and need their own handling route. List them separately in your inventory and confirm their handling.",
+          "Not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your asset register. This documentation is essential for internal audits and regulatory reviews.",
+          "Using an unregistered collector may seem cost-effective in the short term but exposes the business to significant risks. An unauthorized collector may dump e-waste or sell it to informal processors who expose workers and the environment to toxic materials.",
+          "Storing old electronics indefinitely in office spaces or storage rooms creates safety and security risks. Regular clear-out schedules and clear disposal policies prevent the accumulation of devices with sensitive data.",
+        ],
+      },
+      {
+        heading: "Documentation and vendor qualification",
+        paragraphs: [
+          "When qualifying a recycler, verify their CPCB authorisation number on the official portal and confirm their KSPCB compliance for Kerala operations. A reputable recycler should provide these details without hesitation.",
+          "Request samples of their standard documentation: collection receipts, destruction certificates, recycling certificates and material recovery reports. Review these templates before committing to ensure they meet your audit requirements.",
+          "For data-bearing equipment, confirm the data destruction method and ensure it aligns with your security policy. Ask for documented evidence of destruction with serial number tracking where possible.",
+          "Establish clear terms in the service agreement covering collection windows, accepted items, data handling responsibility, insurance coverage and liability limits. Ambiguities in these areas often lead to disputes after collection.",
+          "Maintain a vendor file that includes registration details, insurance certificates, service agreements and past performance records. Update this file annually and review before each major disposal event.",
+          "For multinational corporations, ensure the recycler can provide documentation in the required format for global audit standards. Local recyclers may need additional coordination to meet corporate compliance requirements.",
+        ],
+      },
     ],
     tools: [
       "Startup inventory by function, condition and data flags",
@@ -460,7 +831,7 @@ export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
     ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
-      { title: "Pickup planning and feasibility", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
+      { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
       { title: "NIST SP 800-88 Rev. 2", href: "https://csrc.nist.gov/pubs/sp/800/88/r2/final", publisher: "National Institute of Standards and Technology", note: "Consult the official publication for current recommendations." },
     ],
   },
@@ -468,7 +839,7 @@ export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
     slug: "best-ewaste-construction-business-kochi",
     category: "business",
     title: "Best E-Waste Disposal for Construction Businesses in Kochi",
-    description: "Plan disposal of construction site electronics, surveying equipment, cameras and office IT with site-access and data controls.",
+    description: "Plan business construction project electronics disposal in Kochi with site-access planning, surveying equipment handling and data controls.",
     answer: "Construction businesses in Kochi generate e-waste from site offices, surveying instruments, security cameras, project management computers and temporary infrastructure. Responsible disposal requires separating site electronics from office equipment, confirming data handling for project records and choosing a recycler who understands construction site conditions.",
     sections: [
       {
@@ -499,6 +870,68 @@ export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
           "Confirm the receiving entity, its registration and the facility that will process the equipment. Batteries from construction equipment, including inverter batteries and sensor backups, need their own compliant route.",
         ],
       },
+      {
+        heading: "How this applies to your business in Kochi",
+        paragraphs: [
+          "For businesses in Kochi, responsible e-waste disposal starts with an accurate inventory. Each department should contribute to a central list that includes equipment type, model, condition and data-bearing status. This inventory becomes the basis for collection planning and downstream reporting.",
+          "Business e-waste often includes a mix of high-value working equipment and end-of-life devices. A single per-kilogram quote rarely reflects this difference. Ask for a composition-based quote that separates collection, data handling and material recovery.",
+          "Many businesses in Kochi are subject to data protection laws that require documented data destruction before equipment leaves the premises. Confirm the data handling process with your IT team and verify that the collector can supply destruction certificates.",
+          "After collection, businesses should reconcile the final certificates against their asset register. Any gaps between the inventory and the destruction certificate should be investigated and resolved promptly to maintain audit readiness.",
+        ],
+      },
+      {
+        heading: "Common mistakes and how to avoid them",
+        paragraphs: [
+          "A frequent mistake is assuming that the cheapest quote is the best value. A low per-kilogram rate may exclude data destruction, transportation insurance or downstream reporting, leaving the business exposed to data breach liability.",
+          "Another error is mixing working equipment with damaged devices in the same batch. Working equipment may have resale value that is lost if it is routed to shredding alongside broken items. List working and damaged equipment separately.",
+          "Failing to separate battery-containing devices from general electronics is another common issue. Batteries follow separate waste rules and need their own handling route. List them separately in your inventory and confirm their handling.",
+          "Not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your asset register. This documentation is essential for internal audits and regulatory reviews.",
+        ],
+      },
+      {
+        heading: "How this applies to your business in Kochi",
+        paragraphs: [
+          "For businesses in Kochi, responsible e-waste disposal starts with an accurate inventory. Each department should contribute to a central list that includes equipment type, model, condition and data-bearing status. This inventory becomes the basis for collection planning and downstream reporting.",
+          "Business e-waste often includes a mix of high-value working equipment and end-of-life devices. A single per-kilogram quote rarely reflects this difference. Ask for a composition-based quote that separates collection, data handling and material recovery.",
+          "Many businesses in Kochi are subject to data protection laws that require documented data destruction before equipment leaves the premises. Confirm the data handling process with your IT team and verify that the collector can supply destruction certificates.",
+          "After collection, businesses should reconcile the final certificates against their asset register. Any gaps between the inventory and the destruction certificate should be investigated and resolved promptly to maintain audit readiness.",
+          "Establishing an annual e-waste policy that includes regular inventory cycles, approved vendor lists and documented data destruction procedures helps businesses maintain compliance and reduce risk over time.",
+          "For businesses that generate large volumes of e-waste, consider negotiating a framework agreement with a preferred recycler. This can provide predictable pricing, guaranteed collection windows and consistent documentation standards.",
+        ],
+      },
+      {
+        heading: "Common mistakes and how to avoid them",
+        paragraphs: [
+          "A frequent mistake is assuming that the cheapest quote is the best value. A low per-kilogram rate may exclude data destruction, transportation insurance or downstream reporting, leaving the business exposed to data breach liability.",
+          "Another error is mixing working equipment with damaged devices in the same batch. Working equipment may have resale value that is lost if it is routed to shredding alongside broken items. List working and damaged equipment separately.",
+          "Failing to separate battery-containing devices from general electronics is another common issue. Batteries follow separate waste rules and need their own handling route. List them separately in your inventory and confirm their handling.",
+          "Not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your asset register. This documentation is essential for internal audits and regulatory reviews.",
+          "Using an unregistered collector may seem cost-effective in the short term but exposes the business to significant risks. An unauthorized collector may dump e-waste or sell it to informal processors who expose workers and the environment to toxic materials.",
+          "Storing old electronics indefinitely in office spaces or storage rooms creates safety and security risks. Regular clear-out schedules and clear disposal policies prevent the accumulation of devices with sensitive data.",
+        ],
+      },
+      {
+        heading: "Documentation and vendor qualification",
+        paragraphs: [
+          "When qualifying a recycler, verify their CPCB authorisation number on the official portal and confirm their KSPCB compliance for Kerala operations. A reputable recycler should provide these details without hesitation.",
+          "Request samples of their standard documentation: collection receipts, destruction certificates, recycling certificates and material recovery reports. Review these templates before committing to ensure they meet your audit requirements.",
+          "For data-bearing equipment, confirm the data destruction method and ensure it aligns with your security policy. Ask for documented evidence of destruction with serial number tracking where possible.",
+          "Establish clear terms in the service agreement covering collection windows, accepted items, data handling responsibility, insurance coverage and liability limits. Ambiguities in these areas often lead to disputes after collection.",
+          "Maintain a vendor file that includes registration details, insurance certificates, service agreements and past performance records. Update this file annually and review before each major disposal event.",
+          "For multinational corporations, ensure the recycler can provide documentation in the required format for global audit standards. Local recyclers may need additional coordination to meet corporate compliance requirements.",
+        ],
+      },
+      {
+        heading: "How this applies to your business in Kochi",
+        paragraphs: [
+          "For businesses in Kochi, responsible e-waste disposal starts with an accurate inventory. Each department should contribute to a central list that includes equipment type, model, condition and data-bearing status. This inventory becomes the basis for collection planning and downstream reporting.",
+          "Business e-waste often includes a mix of high-value working equipment and end-of-life devices. A single per-kilogram quote rarely reflects this difference. Ask for a composition-based quote that separates collection, data handling and material recovery.",
+          "Many businesses in Kochi are subject to data protection laws that require documented data destruction before equipment leaves the premises. Confirm the data handling process with your IT team and verify that the collector can supply destruction certificates.",
+          "After collection, businesses should reconcile the final certificates against their asset register. Any gaps between the inventory and the destruction certificate should be investigated and resolved promptly to maintain audit readiness.",
+          "Establishing an annual e-waste policy that includes regular inventory cycles, approved vendor lists and documented data destruction procedures helps businesses maintain compliance and reduce risk over time.",
+          "For businesses that generate large volumes of e-waste, consider negotiating a framework agreement with a preferred recycler. This can provide predictable pricing, guaranteed collection windows and consistent documentation standards.",
+        ],
+      },
     ],
     tools: [
       "Construction equipment inventory by site, location and condition",
@@ -520,13 +953,13 @@ export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
       { role: "Construction head", q: "We have equipment from 3 projects. Can we collect it all together?", a: "Keep inventories separate by project. A combined batch changes handling and documentation." },
     ],
     related: [
-      { label: "Construction electronics disposal", path: "/wiki/devices/construction-electronics-disposal/" },
+      { label: "Construction electronics disposal", path: "/best-ewaste-construction-kochi/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
     ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
-      { title: "Pickup planning and feasibility", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
+      { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
       { title: "NIST SP 800-88 Rev. 2", href: "https://csrc.nist.gov/pubs/sp/800/88/r2/final", publisher: "National Institute of Standards and Technology", note: "Consult the official publication for current recommendations." },
     ],
   },
@@ -565,6 +998,68 @@ export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
           "Confirm the receiving entity, its registration and the facility that will process the equipment. Batteries from warehouse devices, including scanner batteries and UPS units, need their own handling discussion.",
         ],
       },
+      {
+        heading: "How this applies to your business in Kochi",
+        paragraphs: [
+          "For businesses in Kochi, responsible e-waste disposal starts with an accurate inventory. Each department should contribute to a central list that includes equipment type, model, condition and data-bearing status. This inventory becomes the basis for collection planning and downstream reporting.",
+          "Business e-waste often includes a mix of high-value working equipment and end-of-life devices. A single per-kilogram quote rarely reflects this difference. Ask for a composition-based quote that separates collection, data handling and material recovery.",
+          "Many businesses in Kochi are subject to data protection laws that require documented data destruction before equipment leaves the premises. Confirm the data handling process with your IT team and verify that the collector can supply destruction certificates.",
+          "After collection, businesses should reconcile the final certificates against their asset register. Any gaps between the inventory and the destruction certificate should be investigated and resolved promptly to maintain audit readiness.",
+        ],
+      },
+      {
+        heading: "Common mistakes and how to avoid them",
+        paragraphs: [
+          "A frequent mistake is assuming that the cheapest quote is the best value. A low per-kilogram rate may exclude data destruction, transportation insurance or downstream reporting, leaving the business exposed to data breach liability.",
+          "Another error is mixing working equipment with damaged devices in the same batch. Working equipment may have resale value that is lost if it is routed to shredding alongside broken items. List working and damaged equipment separately.",
+          "Failing to separate battery-containing devices from general electronics is another common issue. Batteries follow separate waste rules and need their own handling route. List them separately in your inventory and confirm their handling.",
+          "Not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your asset register. This documentation is essential for internal audits and regulatory reviews.",
+        ],
+      },
+      {
+        heading: "How this applies to your business in Kochi",
+        paragraphs: [
+          "For businesses in Kochi, responsible e-waste disposal starts with an accurate inventory. Each department should contribute to a central list that includes equipment type, model, condition and data-bearing status. This inventory becomes the basis for collection planning and downstream reporting.",
+          "Business e-waste often includes a mix of high-value working equipment and end-of-life devices. A single per-kilogram quote rarely reflects this difference. Ask for a composition-based quote that separates collection, data handling and material recovery.",
+          "Many businesses in Kochi are subject to data protection laws that require documented data destruction before equipment leaves the premises. Confirm the data handling process with your IT team and verify that the collector can supply destruction certificates.",
+          "After collection, businesses should reconcile the final certificates against their asset register. Any gaps between the inventory and the destruction certificate should be investigated and resolved promptly to maintain audit readiness.",
+          "Establishing an annual e-waste policy that includes regular inventory cycles, approved vendor lists and documented data destruction procedures helps businesses maintain compliance and reduce risk over time.",
+          "For businesses that generate large volumes of e-waste, consider negotiating a framework agreement with a preferred recycler. This can provide predictable pricing, guaranteed collection windows and consistent documentation standards.",
+        ],
+      },
+      {
+        heading: "Common mistakes and how to avoid them",
+        paragraphs: [
+          "A frequent mistake is assuming that the cheapest quote is the best value. A low per-kilogram rate may exclude data destruction, transportation insurance or downstream reporting, leaving the business exposed to data breach liability.",
+          "Another error is mixing working equipment with damaged devices in the same batch. Working equipment may have resale value that is lost if it is routed to shredding alongside broken items. List working and damaged equipment separately.",
+          "Failing to separate battery-containing devices from general electronics is another common issue. Batteries follow separate waste rules and need their own handling route. List them separately in your inventory and confirm their handling.",
+          "Not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your asset register. This documentation is essential for internal audits and regulatory reviews.",
+          "Using an unregistered collector may seem cost-effective in the short term but exposes the business to significant risks. An unauthorized collector may dump e-waste or sell it to informal processors who expose workers and the environment to toxic materials.",
+          "Storing old electronics indefinitely in office spaces or storage rooms creates safety and security risks. Regular clear-out schedules and clear disposal policies prevent the accumulation of devices with sensitive data.",
+        ],
+      },
+      {
+        heading: "Documentation and vendor qualification",
+        paragraphs: [
+          "When qualifying a recycler, verify their CPCB authorisation number on the official portal and confirm their KSPCB compliance for Kerala operations. A reputable recycler should provide these details without hesitation.",
+          "Request samples of their standard documentation: collection receipts, destruction certificates, recycling certificates and material recovery reports. Review these templates before committing to ensure they meet your audit requirements.",
+          "For data-bearing equipment, confirm the data destruction method and ensure it aligns with your security policy. Ask for documented evidence of destruction with serial number tracking where possible.",
+          "Establish clear terms in the service agreement covering collection windows, accepted items, data handling responsibility, insurance coverage and liability limits. Ambiguities in these areas often lead to disputes after collection.",
+          "Maintain a vendor file that includes registration details, insurance certificates, service agreements and past performance records. Update this file annually and review before each major disposal event.",
+          "For multinational corporations, ensure the recycler can provide documentation in the required format for global audit standards. Local recyclers may need additional coordination to meet corporate compliance requirements.",
+        ],
+      },
+      {
+        heading: "How this applies to your business in Kochi",
+        paragraphs: [
+          "For businesses in Kochi, responsible e-waste disposal starts with an accurate inventory. Each department should contribute to a central list that includes equipment type, model, condition and data-bearing status. This inventory becomes the basis for collection planning and downstream reporting.",
+          "Business e-waste often includes a mix of high-value working equipment and end-of-life devices. A single per-kilogram quote rarely reflects this difference. Ask for a composition-based quote that separates collection, data handling and material recovery.",
+          "Many businesses in Kochi are subject to data protection laws that require documented data destruction before equipment leaves the premises. Confirm the data handling process with your IT team and verify that the collector can supply destruction certificates.",
+          "After collection, businesses should reconcile the final certificates against their asset register. Any gaps between the inventory and the destruction certificate should be investigated and resolved promptly to maintain audit readiness.",
+          "Establishing an annual e-waste policy that includes regular inventory cycles, approved vendor lists and documented data destruction procedures helps businesses maintain compliance and reduce risk over time.",
+          "For businesses that generate large volumes of e-waste, consider negotiating a framework agreement with a preferred recycler. This can provide predictable pricing, guaranteed collection windows and consistent documentation standards.",
+        ],
+      },
     ],
     tools: [
       "E-commerce inventory by location, function and condition",
@@ -592,7 +1087,120 @@ export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
     ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
-      { title: "Pickup planning and feasibility", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
+      { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
+      { title: "NIST SP 800-88 Rev. 2", href: "https://csrc.nist.gov/pubs/sp/800/88/r2/final", publisher: "National Institute of Standards and Technology", note: "Consult the official publication for current recommendations." },
+    ],
+  },
+  {
+    slug: "best-ewaste-coworking-kochi",
+    category: "business",
+    title: "Best E-Waste Disposal for Co-Working Spaces in Kochi",
+    description: "Plan electronics disposal for co-working spaces and shared offices in Kochi with multi-tenant inventory, flexible scheduling, data controls and cost-effective collection options.",
+    answer: "Co-working spaces in Kochi generate e-waste from shared workstations, meeting-room equipment, networking infrastructure and member devices left behind. Responsible disposal requires separating each member's equipment, confirming data handling for shared systems, and choosing a recycler who understands flexible co-working schedules and multi-tenant dynamics.",
+    sections: [
+      {
+        heading: "Map equipment by member, shared area and infrastructure",
+        paragraphs: [
+          "A co-working space in Kochi hosts dozens or hundreds of members, each with their own devices, plus shared meeting room equipment, kitchen appliances, networking infrastructure and administrative IT. Each member's device is their own responsibility, while shared equipment belongs to the co-working operator.",
+          "Start by creating a shared-area inventory that lists meeting room displays, projectors, video conferencing systems, kitchen appliances, network equipment and administrative computers. Member devices left behind need a separate process involving the member or the space's abandoned-property policy.",
+          "Mark shared infrastructure that is still under lease or warranty separately. Flag any device that stores member data or access logs, including network access controllers, booking systems and security recorders. These need a data decision before collection.",
+        ],
+      },
+      {
+        heading: "Manage member abandoned devices and data",
+        paragraphs: [
+          "When a member leaves and abandons a laptop, phone or tablet, the co-working operator must follow an abandoned-property process. This typically involves a notice period, inventory documentation and confirmation that the member has been contacted.",
+          "Member devices may contain personal data, business files and account credentials. Even if the member has left without collecting the device, the operator should attempt data handling in consultation with the member or their organisation before disposal.",
+          "For devices that cannot be returned, a factory reset or professional data destruction is required before recycling. Keep a record of the data handling process alongside the abandoned-property documentation.",
+          "Some co-working spaces partner with refurbishment organisations that can assess abandoned devices for resale or donation. This can generate income for the space while extending device lifecycles.",
+        ],
+      },
+      {
+        heading: "Coordinate collection around flexible schedules",
+        paragraphs: [
+          "Co-working spaces operate on flexible schedules with members working at all hours, meetings in shared rooms and events in common areas. Collection must avoid disrupting active members and visitors.",
+          "Agree on a collection window that minimises disruption, such as early morning before members arrive or late evening after events conclude. Confirm which areas the collection team can access and where equipment should be staged.",
+          "For large clearances involving multiple floors or buildings, coordinate with the building management for lift access and loading dock availability. A single collection may need to be split across multiple visits.",
+          "Confirm the pricing model, which may be per-item, per-visit or monthly for ongoing co-working waste management. Some recyclers offer dedicated co-working packages that include regular collection slots.",
+        ],
+      },
+      {
+        heading: "Compare co-working recyclers on flexibility and documentation",
+        paragraphs: [
+          "A general electronics recycler may not understand the multi-tenant dynamics of co-working spaces, where each member's equipment is separate from shared infrastructure. Ask whether the provider can handle member abandoned devices, shared equipment and infrastructure as separate streams.",
+          "Confirm the receiving entity, its registration and the facility that will process the equipment. Batteries from member devices, shared UPS systems and kitchen appliances need their own handling discussion.",
+          "Ask what documentation the provider can supply for each stream: member device receipts, shared equipment recycling certificates and infrastructure disposal records. A co-working operator may need separate documentation for different liability categories.",
+          "Compare proposals using the same scope: shared equipment inventory, member abandoned devices and infrastructure handling. A provider that understands co-working dynamics can prevent complications during member transitions.",
+        ],
+      },
+      {
+        heading: "How this applies to your business in Kochi",
+        paragraphs: [
+          "For businesses in Kochi, responsible e-waste disposal starts with an accurate inventory. Each department should contribute to a central list that includes equipment type, model, condition and data-bearing status. This inventory becomes the basis for collection planning and downstream reporting.",
+          "Business e-waste often includes a mix of high-value working equipment and end-of-life devices. A single per-kilogram quote rarely reflects this difference. Ask for a composition-based quote that separates collection, data handling and material recovery.",
+          "Many businesses in Kochi are subject to data protection laws that require documented data destruction before equipment leaves the premises. Confirm the data handling process with your IT team and verify that the collector can supply destruction certificates.",
+          "After collection, businesses should reconcile the final certificates against their asset register. Any gaps between the inventory and the destruction certificate should be investigated and resolved promptly to maintain audit readiness.",
+        ],
+      },
+      {
+        heading: "Common mistakes and how to avoid them",
+        paragraphs: [
+          "A frequent mistake is assuming that the cheapest quote is the best value. A low per-kilogram rate may exclude data destruction, transportation insurance or downstream reporting, leaving the business exposed to data breach liability.",
+          "Another error is mixing working equipment with damaged devices in the same batch. Working equipment may have resale value that is lost if it is routed to shredding alongside broken items. List working and damaged equipment separately.",
+          "Failing to separate battery-containing devices from general electronics is another common issue. Batteries follow separate waste rules and need their own handling route. List them separately in your inventory and confirm their handling.",
+          "Not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your asset register. This documentation is essential for internal audits and regulatory reviews.",
+        ],
+      },
+      {
+        heading: "How this applies to your business in Kochi",
+        paragraphs: [
+          "For businesses in Kochi, responsible e-waste disposal starts with an accurate inventory. Each department should contribute to a central list that includes equipment type, model, condition and data-bearing status. This inventory becomes the basis for collection planning and downstream reporting.",
+          "Business e-waste often includes a mix of high-value working equipment and end-of-life devices. A single per-kilogram quote rarely reflects this difference. Ask for a composition-based quote that separates collection, data handling and material recovery.",
+          "Many businesses in Kochi are subject to data protection laws that require documented data destruction before equipment leaves the premises. Confirm the data handling process with your IT team and verify that the collector can supply destruction certificates.",
+          "After collection, businesses should reconcile the final certificates against their asset register. Any gaps between the inventory and the destruction certificate should be investigated and resolved promptly to maintain audit readiness.",
+          "Establishing an annual e-waste policy that includes regular inventory cycles, approved vendor lists and documented data destruction procedures helps businesses maintain compliance and reduce risk over time.",
+          "For businesses that generate large volumes of e-waste, consider negotiating a framework agreement with a preferred recycler. This can provide predictable pricing, guaranteed collection windows and consistent documentation standards.",
+        ],
+      },
+      {
+        heading: "Common mistakes and how to avoid them",
+        paragraphs: [
+          "A frequent mistake is assuming that the cheapest quote is the best value. A low per-kilogram rate may exclude data destruction, transportation insurance or downstream reporting, leaving the business exposed to data breach liability.",
+          "Another error is mixing working equipment with damaged devices in the same batch. Working equipment may have resale value that is lost if it is routed to shredding alongside broken items. List working and damaged equipment separately.",
+          "Failing to separate battery-containing devices from general electronics is another common issue. Batteries follow separate waste rules and need their own handling route. List them separately in your inventory and confirm their handling.",
+          "Not retaining proper documentation creates compliance gaps. Keep collection receipts, destruction certificates and recycling certificates linked to your asset register. This documentation is essential for internal audits and regulatory reviews.",
+          "Using an unregistered collector may seem cost-effective in the short term but exposes the business to significant risks. An unauthorized collector may dump e-waste or sell it to informal processors who expose workers and the environment to toxic materials.",
+          "Storing old electronics indefinitely in office spaces or storage rooms creates safety and security risks. Regular clear-out schedules and clear disposal policies prevent the accumulation of devices with sensitive data.",
+        ],
+      },
+    ],
+    tools: [
+      "Shared-area inventory with item types, quantities and condition",
+      "Member abandoned-device log and contact records",
+      "Written collection scope, schedule flexibility and reporting commitment",
+    ],
+    timeline: "Allow time for member notification, inventory preparation and a feasibility review before confirming a collection date. Member transitions and move-outs can create urgency.",
+    faq: [
+      { q: "Can co-working spaces collect member abandoned devices?", a: "Yes, but confirm the abandoned-property process with each member first. Document data handling decisions and obtain written confirmation from the member or their organisation." },
+      { q: "What happens to data on member devices?", a: "Member devices need data handling before disposal. Confirm whether the member can perform a factory reset, or request professional data destruction with a certificate." },
+      { q: "Can shared meeting room equipment be collected separately?", a: "Yes. List shared equipment separately from member devices. Shared equipment belongs to the operator and follows different handling than member-owned items." },
+      { q: "Do we need documentation for different member streams?", a: "Yes. Request separate receipts for member devices, shared equipment and infrastructure. This helps with accounting and liability separation." },
+      { q: "Are kitchen appliances accepted in co-working collections?", a: "Yes. List kitchen appliances separately because they may contain refrigerant or food residue that requires special handling." },
+    ],
+    readerQuestions: [
+      { role: "Co-working manager", q: "A member moved out and left a laptop and phone. How quickly can we dispose of them?", a: "Follow the abandoned-property process first. Then submit the item list for review. A small batch over distance may be offered as a scheduled pickup or drop-off confirmation." },
+      { role: "Operations lead", q: "We are upgrading our meeting room displays. Can they be collected during business hours?", a: "Schedule collection during low-traffic periods, such as early morning or late evening. Confirm access to meeting rooms and the staging area in advance." },
+      { role: "Community manager", q: "Members frequently leave chargers and cables behind. How should we handle them?", a: "Maintain a lost-and-found log for member items. Unclaimed accessories after the notice period can be submitted with the regular collection, listed separately." },
+      { role: "Business owner", q: "We have old networking equipment from our co-working setup. Can it be collected?", a: "Submit an inventory with item types, quantities and condition. Flag any data-bearing network equipment for separate data handling confirmation." },
+    ],
+    related: [
+      { label: "Corporate e-waste management", path: "/corporate-e-waste-management/" },
+      { label: "ITAD service", path: "/itad/" },
+      { label: "Recycling service", path: "/recycling/" },
+    ],
+    sources: [
+      { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
+      { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
       { title: "NIST SP 800-88 Rev. 2", href: "https://csrc.nist.gov/pubs/sp/800/88/r2/final", publisher: "National Institute of Standards and Technology", note: "Consult the official publication for current recommendations." },
     ],
   },
