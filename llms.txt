@@ -1,0 +1,11 @@
+# Ewaste Kochi — llms.txt
+
+This is a pointer, not the served file. The real, live `llms.txt` is generated
+from `src/data/routes.ts` at build time (see `scripts/gen-llms-full.ts`) and
+served from `public/llms.txt` at:
+
+https://www.ewastekochi.com/llms.txt
+
+Edit `public/llms.txt` (or the route registry that generates it), never this
+file directly — this copy exists only so the file is visible from the GitHub
+repo browser and is not kept in sync automatically.
