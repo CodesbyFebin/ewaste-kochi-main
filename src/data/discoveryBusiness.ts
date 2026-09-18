@@ -66,7 +66,10 @@ export const BUSINESS_GUIDES: DiscoveryGuide[] = [
       { label: "Indian e-waste rules", path: "/e-waste-rules-2022-india/" },
       { label: "ITAD services for companies", path: "/services/itad-for-it-companies/" },
       { label: "Corporate e-waste management", path: "/corporate-e-waste-management/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },
+      { label: "E-waste center in Kerala", path: "/e-waste-center-in-kerala/" },    ],
     sources: [
       { title: "FAQs under E-Waste (Management) Rules, 2022", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Role definitions, registration and bulk-consumer responsibilities; check subsequent amendments." },
       { title: "Battery EPR portal", href: "https://eprbattery.cpcb.gov.in/", publisher: "Central Pollution Control Board", note: "Separate battery registration and EPR framework." },
@@ -137,7 +140,10 @@ export const BUSINESS_GUIDES: DiscoveryGuide[] = [
       { label: "IT asset inventory service", path: "/services/it-asset-inventory-audit/" },
       { label: "Data security encyclopedia", path: "/wiki/technical/data-security-recycling/" },
       { label: "Business EPR roles", path: "/epr-registration-for-businesses/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste pickup service", path: "/pickup/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },    ],
     sources: [
       { title: "FAQs under E-Waste (Management) Rules, 2022", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board" },
       { title: "Guidelines for Media Sanitization, SP 800-88 Rev. 2", href: "https://csrc.nist.gov/pubs/sp/800/88/r2/final", publisher: "National Institute of Standards and Technology", note: "Technical programme guidance, not an Indian statutory registration or service endorsement." },
@@ -208,7 +214,9 @@ export const BUSINESS_GUIDES: DiscoveryGuide[] = [
       { label: "Pickup service", path: "/pickup/" },
       { label: "Bulk recycling planning", path: "/bulk-e-waste-recycling/" },
       { label: "Lithium battery disposal", path: "/lithium-ion-battery-disposal/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste center in Kerala", path: "/e-waste-center-in-kerala/" },    ],
     sources: [
       { title: "FAQs under E-Waste (Management) Rules, 2022", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board" },
       { title: "Lithium-Ion Battery Recycling Frequently Asked Questions", href: "https://www.epa.gov/hw/lithium-ion-battery-recycling-frequently-asked-questions", publisher: "United States Environmental Protection Agency", note: "Battery hazard background only; US regulatory provisions do not determine Indian obligations." },
@@ -280,7 +288,9 @@ export const BUSINESS_GUIDES: DiscoveryGuide[] = [
       { label: "Collection service", path: "/pickup/" },
       { label: "Warehouse disposal", path: "/warehouse-e-waste-disposal/" },
       { label: "B2B pickup planning", path: "/b2b-e-waste-pickup/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },    ],
     sources: [
       { title: "FAQs under E-Waste (Management) Rules, 2022", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board" },
       { title: "Battery EPR portal", href: "https://eprbattery.cpcb.gov.in/", publisher: "Central Pollution Control Board" },
@@ -351,7 +361,10 @@ export const BUSINESS_GUIDES: DiscoveryGuide[] = [
       { label: "Hard drive destruction encyclopedia", path: "/wiki/technical/hard-drive-destruction/" },
       { label: "ITAD service", path: "/services/itad-for-it-companies/" },
       { label: "Data destruction planning", path: "/data-destruction-services/" },
-    ],
+    
+      { label: "Hard drive shredding service", path: "/hard-drive-shredding-service/" },
+      { label: "Data destruction service", path: "/data-destruction/" },
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },    ],
     sources: [
       { title: "Guidelines for Media Sanitization, SP 800-88 Rev. 2", href: "https://csrc.nist.gov/pubs/sp/800/88/r2/final", publisher: "National Institute of Standards and Technology" },
       { title: "FAQs under E-Waste (Management) Rules, 2022", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board" },
@@ -422,7 +435,10 @@ export const BUSINESS_GUIDES: DiscoveryGuide[] = [
       { label: "Data-centre decommissioning encyclopedia", path: "/wiki/technical/data-center-decommissioning/" },
       { label: "ITAD service", path: "/services/itad-for-it-companies/" },
       { label: "Server-room UPS disposal", path: "/server-room-ups-disposal/" },
-    ],
+    
+      { label: "Server recycling Kochi", path: "/server-recycling-kochi/" },
+      { label: "Data destruction service", path: "/data-destruction/" },
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },    ],
     sources: [
       { title: "Guidelines for Media Sanitization, SP 800-88 Rev. 2", href: "https://csrc.nist.gov/pubs/sp/800/88/r2/final", publisher: "National Institute of Standards and Technology" },
       { title: "FAQs under E-Waste (Management) Rules, 2022", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board" },
@@ -494,7 +510,10 @@ export const BUSINESS_GUIDES: DiscoveryGuide[] = [
       { label: "ITAD service for companies", path: "/services/itad-for-it-companies/" },
       { label: "Data security encyclopedia", path: "/wiki/technical/data-security-recycling/" },
       { label: "Business EPR registration guide", path: "/epr-registration-for-businesses/" },
-    ],
+    
+      { label: "Data destruction service", path: "/data-destruction/" },
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "Sell used electronics", path: "/sell-electronics/" },    ],
     sources: [
       { title: "FAQs under E-Waste (Management) Rules, 2022", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board" },
       { title: "Guidelines for Media Sanitization, SP 800-88 Rev. 2", href: "https://csrc.nist.gov/pubs/sp/800/88/r2/final", publisher: "National Institute of Standards and Technology" },
@@ -566,7 +585,9 @@ export const BUSINESS_GUIDES: DiscoveryGuide[] = [
       { label: "Data security encyclopedia", path: "/wiki/technical/data-security-recycling/" },
       { label: "ITAD service", path: "/services/itad-for-it-companies/" },
       { label: "Hard drive shredding planning", path: "/hard-drive-shredding-service/" },
-    ],
+    
+      { label: "Data destruction service", path: "/data-destruction/" },
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },    ],
     sources: [
       { title: "Guidelines for Media Sanitization, SP 800-88 Rev. 2", href: "https://csrc.nist.gov/pubs/sp/800/88/r2/final", publisher: "National Institute of Standards and Technology", note: "Technical guidance for programme design; no supplier certification is implied." },
       { title: "FAQs under E-Waste (Management) Rules, 2022", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board" },
@@ -637,7 +658,10 @@ export const BUSINESS_GUIDES: DiscoveryGuide[] = [
       { label: "Electronics recycling service", path: "/services/electronics-recycling-near-me/" },
       { label: "Business compliance roles", path: "/epr-registration-for-businesses/" },
       { label: "Inverter battery recycling", path: "/inverter-battery-recycling/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste pickup service", path: "/pickup/" },
+      { label: "E-waste center in Kerala", path: "/e-waste-center-in-kerala/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022", href: "https://www.mppcb.mp.gov.in/proc/E-Waste-Management-Rules-2022-English.pdf", publisher: "Ministry of Environment, Forest and Climate Change; hosted by Madhya Pradesh Pollution Control Board", note: "Base rules and equipment schedule; consult applicable amendments and site-specific requirements." },
       { title: "Battery EPR portal", href: "https://eprbattery.cpcb.gov.in/", publisher: "Central Pollution Control Board" },
@@ -708,7 +732,9 @@ export const BUSINESS_GUIDES: DiscoveryGuide[] = [
       { label: "Pickup service", path: "/pickup/" },
       { label: "Corporate management plan", path: "/corporate-e-waste-management/" },
       { label: "Bulk recycling guide", path: "/bulk-e-waste-recycling/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },    ],
     sources: [
       { title: "FAQs under E-Waste (Management) Rules, 2022", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board" },
       { title: "Battery EPR portal", href: "https://eprbattery.cpcb.gov.in/", publisher: "Central Pollution Control Board" },

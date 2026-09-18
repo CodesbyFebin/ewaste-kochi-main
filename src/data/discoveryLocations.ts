@@ -79,7 +79,10 @@ export const LOCATION_GUIDES: DiscoveryGuide[] = [
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
       { label: "Household pickup service", path: "/home-e-waste-pickup/" },
       { label: "Electronics recycling", path: "/recycling/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [
       { title: "Pickup planning and feasibility", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
       { title: "Published Kochi office details", href: `${SITE_URL}/contact/`, publisher: "Ewaste Kochi" },
@@ -162,7 +165,10 @@ export const LOCATION_GUIDES: DiscoveryGuide[] = [
       { label: "How to get a recycling certificate", path: "/how-to-get-certificate-of-recycling/" },
       { label: "Office pickup service", path: "/office-e-waste-pickup/" },
       { label: "IT asset disposition", path: "/itad/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [
       { title: "Ernakulam South collection context", href: `${SITE_URL}/locations/ernakulam-south/`, publisher: "Ewaste Kochi", note: "Local premises context, not a scheduling guarantee." },
       { title: "Location coverage and feasibility", href: `${SITE_URL}/locations/`, publisher: "Ewaste Kochi" },
@@ -246,7 +252,10 @@ export const LOCATION_GUIDES: DiscoveryGuide[] = [
       { label: "How to destroy hard-drive data", path: "/how-to-destroy-hard-drive-data/" },
       { label: "IT asset disposition", path: "/itad/" },
       { label: "Corporate pickup", path: "/corporate-pickup/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [
       { title: "Kakkanad homes and IT-office context", href: `${SITE_URL}/locations/kakkanad/`, publisher: "Ewaste Kochi", note: "Used for area and equipment context, not automatic data-handling or timing claims." },
       { title: "Pickup requirements", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
@@ -329,7 +338,10 @@ export const LOCATION_GUIDES: DiscoveryGuide[] = [
       { label: "How to recycle batteries safely", path: "/how-to-recycle-batteries-safely/" },
       { label: "Battery recycling", path: "/battery-recycling/" },
       { label: "Pickup service", path: "/pickup/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },
+      { label: "E-waste center in Kerala", path: "/e-waste-center-in-kerala/" },    ],
     sources: [
       { title: "Aluva household and business collection context", href: `${SITE_URL}/locations/aluva/`, publisher: "Ewaste Kochi", note: "No free collection or fixed timing inferred." },
       { title: "Condition and access information for pickup", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
@@ -412,7 +424,10 @@ export const LOCATION_GUIDES: DiscoveryGuide[] = [
       { label: "How to comply with e-waste rules", path: "/how-to-comply-with-e-waste-rules/" },
       { label: "Bulk e-waste pickup", path: "/bulk-e-waste-pickup/" },
       { label: "IT asset disposition", path: "/itad/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },
+      { label: "E-waste center in Kerala", path: "/e-waste-center-in-kerala/" },    ],
     sources: [
       { title: "Thiruvananthapuram collection feasibility", href: `${SITE_URL}/locations/thiruvananthapuram/`, publisher: "Ewaste Kochi", note: "Regional scope and institutional context; no route-distance estimate reused." },
       { title: "Published office and documentation enquiries", href: `${SITE_URL}/contact/`, publisher: "Ewaste Kochi" },
@@ -495,7 +510,10 @@ export const LOCATION_GUIDES: DiscoveryGuide[] = [
       { label: "How to destroy hard-drive data", path: "/how-to-destroy-hard-drive-data/" },
       { label: "Data destruction service", path: "/data-destruction/" },
       { label: "Business e-waste recycling", path: "/business-e-waste-recycling/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },
+      { label: "E-waste center in Kerala", path: "/e-waste-center-in-kerala/" },    ],
     sources: [
       { title: "Thrissur feasibility and trade-office equipment", href: `${SITE_URL}/locations/thrissur/`, publisher: "Ewaste Kochi", note: "Used for regional scope and POS/DVR context, not mileage or guaranteed service." },
       { title: "Documentation requests", href: `${SITE_URL}/contact/`, publisher: "Ewaste Kochi" },
@@ -578,7 +596,10 @@ export const LOCATION_GUIDES: DiscoveryGuide[] = [
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
       { label: "Bulk electronics disposal", path: "/bulk-electronics-disposal/" },
       { label: "Electronics recycling", path: "/recycling/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },
+      { label: "E-waste center in Kerala", path: "/e-waste-center-in-kerala/" },    ],
     sources: [
       { title: "Kollam collection feasibility and business context", href: `${SITE_URL}/locations/kollam/`, publisher: "Ewaste Kochi", note: "Only regional feasibility and business context used; distance and comparative proximity claims are not relied on." },
       { title: "Item, condition and loading review", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
@@ -662,7 +683,9 @@ export const LOCATION_GUIDES: DiscoveryGuide[] = [
       { label: "Electronics recycling", path: "/recycling/" },
       { label: "Arrange pickup instead", path: "/pickup/" },
       { label: "Kochi office contact", path: "/contact/" },
-    ],
+    
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },
+      { label: "E-waste recycling Kochi", path: "/e-waste-recycling-kochi/" },    ],
     sources: [
       { title: "Published Kochi office and contact details", href: `${SITE_URL}/contact/`, publisher: "Ewaste Kochi", note: "Office details do not establish walk-in acceptance or free drop-off." },
       { title: "Equipment condition and transport planning", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
@@ -746,7 +769,9 @@ export const LOCATION_GUIDES: DiscoveryGuide[] = [
       { label: "Book a pickup enquiry", path: "/pickup/" },
       { label: "Scheduled pickup service", path: "/scheduled-pickup/" },
       { label: "Office pickup service", path: "/office-e-waste-pickup/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },    ],
     sources: [
       { title: "Pickup process and feasibility factors", href: `${SITE_URL}/pickup/`, publisher: "Ewaste Kochi" },
       { title: "Core and regional enquiry areas", href: `${SITE_URL}/locations/`, publisher: "Ewaste Kochi" },
@@ -830,7 +855,10 @@ export const LOCATION_GUIDES: DiscoveryGuide[] = [
       { label: "How to get a recycling certificate", path: "/how-to-get-certificate-of-recycling/" },
       { label: "Electronics recycling service", path: "/recycling/" },
       { label: "Kochi office contact", path: "/contact/" },
-    ],
+    
+      { label: "E-waste center in Kerala", path: "/e-waste-center-in-kerala/" },
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },    ],
     sources: [
       { title: "Published Kochi office and documentation scope", href: `${SITE_URL}/contact/`, publisher: "Ewaste Kochi" },
       { title: "Core coverage and regional feasibility directory", href: `${SITE_URL}/locations/`, publisher: "Ewaste Kochi" },

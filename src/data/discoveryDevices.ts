@@ -67,7 +67,9 @@ export const DEVICE_GUIDES: DiscoveryGuide[] = [
       { label: "Swollen battery encyclopedia", path: "/wiki/technical/swollen-batteries/" },
       { label: "Business compliance roles", path: "/epr-registration-for-businesses/" },
       { label: "Server-room UPS disposal", path: "/server-room-ups-disposal/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "Sell used electronics", path: "/sell-electronics/" },    ],
     sources: [
       { title: "Battery EPR portal", href: "https://eprbattery.cpcb.gov.in/", publisher: "Central Pollution Control Board" },
       { title: "Lithium-Ion Battery Recycling Frequently Asked Questions", href: "https://www.epa.gov/hw/lithium-ion-battery-recycling-frequently-asked-questions", publisher: "United States Environmental Protection Agency", note: "Safety background; US waste classifications are not Indian legal requirements." },
@@ -138,7 +140,10 @@ export const DEVICE_GUIDES: DiscoveryGuide[] = [
       { label: "Electronics recycling service", path: "/services/electronics-recycling-near-me/" },
       { label: "Corporate compliance planning", path: "/corporate-e-waste-management/" },
       { label: "Old television recycling", path: "/old-tv-recycling/" },
-    ],
+    
+      { label: "Monitor recycling", path: "/monitor-recycling/" },
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "Sell used electronics", path: "/sell-electronics/" },    ],
     sources: [
       { title: "Cathode Ray Tubes (CRTs)", href: "https://www.epa.gov/hw/cathode-ray-tubes-crts", publisher: "United States Environmental Protection Agency", note: "CRT composition and recycling challenges; US regulatory provisions are not applied here." },
       { title: "FAQs under E-Waste (Management) Rules, 2022", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board" },
@@ -210,7 +215,9 @@ export const DEVICE_GUIDES: DiscoveryGuide[] = [
       { label: "Battery disposal encyclopedia", path: "/wiki/disposal/where-to-recycle-batteries/" },
       { label: "Business EPR roles", path: "/epr-registration-for-businesses/" },
       { label: "Solar panel e-waste", path: "/solar-panel-e-waste/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },    ],
     sources: [
       { title: "Battery EPR portal", href: "https://eprbattery.cpcb.gov.in/", publisher: "Central Pollution Control Board" },
       { title: "Frequently Asked Questions under Battery Waste Management Rules, 2022", href: "https://eprbattery.cpcb.gov.in/upload/adminDoc/Frequently%20Asked%20Questions%20(General).pdf", publisher: "Central Pollution Control Board", note: "Consumer, manufacturer and importer role distinctions." },
@@ -282,7 +289,10 @@ export const DEVICE_GUIDES: DiscoveryGuide[] = [
       { label: "Data-centre encyclopedia", path: "/wiki/technical/data-center-decommissioning/" },
       { label: "Corporate compliance planning", path: "/corporate-e-waste-management/" },
       { label: "Server decommissioning", path: "/server-decommissioning/" },
-    ],
+    
+      { label: "Data destruction service", path: "/data-destruction/" },
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "Server recycling Kochi", path: "/server-recycling-kochi/" },    ],
     sources: [
       { title: "Battery EPR portal", href: "https://eprbattery.cpcb.gov.in/", publisher: "Central Pollution Control Board" },
       { title: "E-Waste (Management) Rules, 2022", href: "https://www.mppcb.mp.gov.in/proc/E-Waste-Management-Rules-2022-English.pdf", publisher: "Ministry of Environment, Forest and Climate Change; hosted by Madhya Pradesh Pollution Control Board", note: "Equipment schedule and separate treatment of waste batteries; check amendments." },
@@ -353,7 +363,10 @@ export const DEVICE_GUIDES: DiscoveryGuide[] = [
       { label: "Electronics recycling service", path: "/services/electronics-recycling-near-me/" },
       { label: "Corporate compliance planning", path: "/corporate-e-waste-management/" },
       { label: "Old television recycling", path: "/old-tv-recycling/" },
-    ],
+    
+      { label: "TV recycling Kochi", path: "/tv-recycling-kochi/" },
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "Sell used electronics", path: "/sell-electronics/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022", href: "https://www.mppcb.mp.gov.in/proc/E-Waste-Management-Rules-2022-English.pdf", publisher: "Ministry of Environment, Forest and Climate Change; hosted by Madhya Pradesh Pollution Control Board", note: "Schedule includes televisions using LCD and LED technology; consult amendments." },
       { title: "Battery EPR portal", href: "https://eprbattery.cpcb.gov.in/", publisher: "Central Pollution Control Board" },
@@ -424,7 +437,10 @@ export const DEVICE_GUIDES: DiscoveryGuide[] = [
       { label: "Electronics recycling service", path: "/services/electronics-recycling-near-me/" },
       { label: "Corporate compliance planning", path: "/corporate-e-waste-management/" },
       { label: "Bulk e-waste recycling", path: "/bulk-e-waste-recycling/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "Sell used electronics", path: "/sell-electronics/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },    ],
     sources: [
       { title: "Electrocution Hazard with Do-It-Yourself Repairs of Microwave Ovens", href: "https://www.cpsc.gov/safety-education/safety-guides/electronics-and-electrical-home/electrocution-hazard-do-it-yourself", publisher: "United States Consumer Product Safety Commission", note: "Appliance safety guidance, not Indian waste-law advice." },
       { title: "E-Waste (Management) Rules, 2022", href: "https://www.mppcb.mp.gov.in/proc/E-Waste-Management-Rules-2022-English.pdf", publisher: "Ministry of Environment, Forest and Climate Change; hosted by Madhya Pradesh Pollution Control Board" },
@@ -495,7 +511,10 @@ export const DEVICE_GUIDES: DiscoveryGuide[] = [
       { label: "Electronics recycling service", path: "/services/electronics-recycling-near-me/" },
       { label: "Business compliance roles", path: "/epr-registration-for-businesses/" },
       { label: "Corporate e-waste management", path: "/corporate-e-waste-management/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "Sell used electronics", path: "/sell-electronics/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [
       { title: "HP Ink and Toner Cartridge Recycling", href: "https://www.hp.com/us-en/hp-information/recycling/ink-toner.html", publisher: "HP", note: "Manufacturer example of eligibility and processing; US page does not establish local availability or pricing." },
       { title: "E-Waste (Management) Rules, 2022", href: "https://www.mppcb.mp.gov.in/proc/E-Waste-Management-Rules-2022-English.pdf", publisher: "Ministry of Environment, Forest and Climate Change; hosted by Madhya Pradesh Pollution Control Board", note: "Scope includes relevant operational consumables; assess specific waste classification and amendments." },
@@ -567,7 +586,10 @@ export const DEVICE_GUIDES: DiscoveryGuide[] = [
       { label: "Corporate compliance planning", path: "/corporate-e-waste-management/" },
       { label: "CRT monitor recycling", path: "/crt-monitor-recycling/" },
       { label: "LED TV recycling", path: "/led-tv-recycling/" },
-    ],
+    
+      { label: "TV recycling Kochi", path: "/tv-recycling-kochi/" },
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "Sell used electronics", path: "/sell-electronics/" },    ],
     sources: [
       { title: "Cathode Ray Tubes (CRTs)", href: "https://www.epa.gov/hw/cathode-ray-tubes-crts", publisher: "United States Environmental Protection Agency", note: "CRT material and processing context, not Indian regulatory classification." },
       { title: "E-Waste (Management) Rules, 2022", href: "https://www.mppcb.mp.gov.in/proc/E-Waste-Management-Rules-2022-English.pdf", publisher: "Ministry of Environment, Forest and Climate Change; hosted by Madhya Pradesh Pollution Control Board" },
@@ -640,7 +662,10 @@ export const DEVICE_GUIDES: DiscoveryGuide[] = [
       { label: "Business EPR roles", path: "/epr-registration-for-businesses/" },
       { label: "Industrial e-waste planning", path: "/industrial-e-waste-disposal/" },
       { label: "Inverter battery recycling", path: "/inverter-battery-recycling/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste center in Kerala", path: "/e-waste-center-in-kerala/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [
       { title: "FAQs under E-Waste (Management) Rules, 2022", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Solar-specific responsibilities; verify subsequent guidance and amendments." },
       { title: "PV System Owner's Guide to Weather Vulnerabilities, Risks, and Impacts", href: "https://www.energy.gov/sites/default/files/2021-09/pv-system-owners-guide-to-weather-vulnerabilities.pdf", publisher: "United States Department of Energy", note: "Professional safety background, especially for storm-damaged systems; not an Indian legal source." },
@@ -706,7 +731,10 @@ export const DEVICE_GUIDES: DiscoveryGuide[] = [
       { label: "Data security encyclopedia", path: "/wiki/technical/data-security-recycling/" },
       { label: "Business compliance roles", path: "/epr-registration-for-businesses/" },
       { label: "Bulk recycling planning", path: "/bulk-e-waste-recycling/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },
+      { label: "E-waste center in Kerala", path: "/e-waste-center-in-kerala/" },    ],
     sources: [
       { title: "FAQs under E-Waste (Management) Rules, 2022", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board" },
       { title: "Guidelines for Media Sanitization, SP 800-88 Rev. 2", href: "https://csrc.nist.gov/pubs/sp/800/88/r2/final", publisher: "National Institute of Standards and Technology", note: "Institutional sanitization planning, not mandatory Indian certification." },

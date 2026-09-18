@@ -116,7 +116,10 @@ export const HOW_TO_GUIDES_2: DiscoveryGuide[] = [
       { label: "Laptop recycling in Kochi", path: "/laptop-recycling/" },
       { label: "How to prepare electronics for recycling", path: "/wiki/disposal/how-to-recycle-electronics-at-home/" },
       { label: "Recycling service", path: "/recycling/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "Sell used electronics", path: "/sell-electronics/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
       { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
@@ -239,7 +242,10 @@ export const HOW_TO_GUIDES_2: DiscoveryGuide[] = [
       { label: "TV recycling in Kochi", path: "/blog/old-tv-disposal-kochi/" },
       { label: "How to prepare electronics for recycling", path: "/wiki/disposal/how-to-recycle-electronics-at-home/" },
       { label: "Recycling service", path: "/recycling/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "Sell used electronics", path: "/sell-electronics/" },
+      { label: "Data destruction service", path: "/data-destruction/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
       { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
@@ -357,7 +363,9 @@ export const HOW_TO_GUIDES_2: DiscoveryGuide[] = [
       { label: "Data destruction in Kochi", path: "/data-destruction/" },
       { label: "Hard drive shredding", path: "/blog/hard-drive-shredding-kochi/" },
       { label: "ITAD service", path: "/itad/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "Sell used electronics", path: "/sell-electronics/" },    ],
     sources: [
       { title: "NIST SP 800-88 Rev. 2: Guidelines for Media Sanitization", href: "https://csrc.nist.gov/pubs/sp/800/88/r2/final", publisher: "National Institute of Standards and Technology", note: "Consult the official publication for current recommendations." },
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
@@ -486,7 +494,10 @@ export const HOW_TO_GUIDES_2: DiscoveryGuide[] = [
       { label: "Network equipment disposal", path: "/blog/network-equipment-disposal-guide/" },
       { label: "ITAD service", path: "/itad/" },
       { label: "Recycling service", path: "/recycling/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "Data destruction service", path: "/data-destruction/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
       { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
@@ -614,7 +625,10 @@ export const HOW_TO_GUIDES_2: DiscoveryGuide[] = [
       { label: "TV recycling in Kochi", path: "/blog/old-tv-disposal-kochi/" },
       { label: "How to prepare electronics for recycling", path: "/wiki/disposal/how-to-recycle-electronics-at-home/" },
       { label: "Recycling service", path: "/recycling/" },
-    ],
+    
+      { label: "TV recycling Kochi", path: "/tv-recycling-kochi/" },
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "Sell used electronics", path: "/sell-electronics/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
       { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
@@ -742,7 +756,10 @@ export const HOW_TO_GUIDES_2: DiscoveryGuide[] = [
       { label: "Business printer disposal", path: "/blog/business-printer-disposal-guide/" },
       { label: "How to prepare electronics for recycling", path: "/wiki/disposal/how-to-recycle-electronics-at-home/" },
       { label: "Recycling service", path: "/recycling/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "Sell used electronics", path: "/sell-electronics/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
       { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
@@ -870,7 +887,10 @@ export const HOW_TO_GUIDES_2: DiscoveryGuide[] = [
       { label: "Mobile phone recycling in Kochi", path: "/blog/mobile-phone-recycling-kochi/" },
       { label: "How to prepare electronics for recycling", path: "/wiki/disposal/how-to-recycle-electronics-at-home/" },
       { label: "Recycling service", path: "/recycling/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "Sell used electronics", path: "/sell-electronics/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
       { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
@@ -998,7 +1018,10 @@ export const HOW_TO_GUIDES_2: DiscoveryGuide[] = [
       { label: "Mobile phone recycling in Kochi", path: "/blog/mobile-phone-recycling-kochi/" },
       { label: "How to prepare electronics for recycling", path: "/wiki/disposal/how-to-recycle-electronics-at-home/" },
       { label: "Recycling service", path: "/recycling/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "Sell used electronics", path: "/sell-electronics/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
       { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
@@ -1126,7 +1149,10 @@ export const HOW_TO_GUIDES_2: DiscoveryGuide[] = [
       { label: "Electronics recycling for apartments", path: "/blog/electronics-disposal-apartments-kochi/" },
       { label: "How to prepare electronics for recycling", path: "/wiki/disposal/how-to-recycle-electronics-at-home/" },
       { label: "Recycling service", path: "/recycling/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "Sell used electronics", path: "/sell-electronics/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
       { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
@@ -1254,7 +1280,10 @@ export const HOW_TO_GUIDES_2: DiscoveryGuide[] = [
       { label: "Home security device disposal", path: "/blog/home-security-device-disposal/" },
       { label: "How to prepare electronics for recycling", path: "/wiki/disposal/how-to-recycle-electronics-at-home/" },
       { label: "Recycling service", path: "/recycling/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "Sell used electronics", path: "/sell-electronics/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
       { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },

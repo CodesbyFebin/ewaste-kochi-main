@@ -82,7 +82,10 @@ export const HOW_TO_GUIDES: DiscoveryGuide[] = [
       { label: "Laptop and computer disposal", path: "/wiki/disposal/laptop-and-computer-disposal/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "What is data destruction?", path: "/what-is-data-destruction/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "Sell used electronics", path: "/sell-electronics/" },
+      { label: "Laptop recycling", path: "/laptop-recycling/" },    ],
     sources: [ewasteSource, batterySource, nistSource],
   },
   {
@@ -141,7 +144,10 @@ export const HOW_TO_GUIDES: DiscoveryGuide[] = [
       { label: "Phone and tablet recycling", path: "/wiki/disposal/mobile-phone-and-tablet-recycling/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "Lithium battery recycling explained", path: "/what-is-lithium-battery-recycling/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "Sell used electronics", path: "/sell-electronics/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [ewasteSource, batterySource, batterySafetySource, nistSource],
   },
   {
@@ -200,7 +206,9 @@ export const HOW_TO_GUIDES: DiscoveryGuide[] = [
       { label: "Swollen battery guidance", path: "/wiki/technical/swollen-batteries/" },
       { label: "Battery recycling service", path: "/battery-recycling/" },
       { label: "What is lithium battery recycling?", path: "/what-is-lithium-battery-recycling/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },    ],
     sources: [batterySource, batterySafetySource],
   },
   {
@@ -259,7 +267,9 @@ export const HOW_TO_GUIDES: DiscoveryGuide[] = [
       { label: "Selling electronics locally", path: "/wiki/sales/where-to-sell-electronics-locally/" },
       { label: "Sell electronics", path: "/sell-electronics/" },
       { label: "Recycle a laptop in India", path: "/how-to-recycle-laptop-in-india/" },
-    ],
+    
+      { label: "Laptop recycling", path: "/laptop-recycling/" },
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },    ],
     sources: [nistSource, batterySafetySource, ewasteSource],
   },
   {
@@ -318,7 +328,9 @@ export const HOW_TO_GUIDES: DiscoveryGuide[] = [
       { label: "Office equipment buyback", path: "/wiki/sales/office-equipment-buyback/" },
       { label: "Sell electronics", path: "/sell-electronics/" },
       { label: "What is ITAD?", path: "/what-is-itad/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [nistSource, ewasteSource, batterySource],
   },
   {
@@ -377,7 +389,9 @@ export const HOW_TO_GUIDES: DiscoveryGuide[] = [
       { label: "Reuse versus recycling", path: "/wiki/technical/reuse-vs-recycle/" },
       { label: "Sell electronics enquiries", path: "/sell-electronics/" },
       { label: "Why recycle electronics?", path: "/why-recycle-electronics/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },    ],
     sources: [ewasteSource, { title: "Appliance disposal", href: "https://www.epa.gov/section608/appliance-disposal", publisher: "US Environmental Protection Agency", note: "Refrigerant and appliance environmental background; US legal provisions are not Indian requirements." }],
   },
   {
@@ -436,7 +450,9 @@ export const HOW_TO_GUIDES: DiscoveryGuide[] = [
       { label: "Collection planning", path: "/wiki/disposal/e-waste-pickup-services/" },
       { label: "Pickup enquiries", path: "/pickup/" },
       { label: "Recycling evidence checklist", path: "/how-to-get-certificate-of-recycling/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },    ],
     sources: [ewasteSource, batterySource, batterySafetySource],
   },
   {
@@ -493,7 +509,10 @@ export const HOW_TO_GUIDES: DiscoveryGuide[] = [
       { label: "Choosing a recycler", path: "/wiki/technical/choose-recycler/" },
       { label: "ITAD documentation enquiries", path: "/itad/" },
       { label: "What is Form 6?", path: "/what-is-form-6/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste center in Kerala", path: "/e-waste-center-in-kerala/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [ewasteSource, nistSource, { title: "E-waste EPR management system", href: "https://eprewaste.cpcb.gov.in/", publisher: "Central Pollution Control Board" }, { title: "Legacy Form 6 e-waste manifest", href: "https://kspcb.karnataka.gov.in/sites/default/files/inline-files/FORM-6-E-waste-Rules-2016_0.pdf", publisher: "Karnataka State Pollution Control Board", note: "Historical 2016 transport form." }],
   },
   {
@@ -553,7 +572,10 @@ export const HOW_TO_GUIDES: DiscoveryGuide[] = [
       { label: "ITAD service", path: "/itad/" },
       { label: "CPCB registration explained", path: "/what-is-cpcb-registration/" },
       { label: "EPR explained", path: "/what-is-epr/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [ewasteSource, batterySource, { title: "Legacy Form 6 e-waste manifest", href: "https://kspcb.karnataka.gov.in/sites/default/files/inline-files/FORM-6-E-waste-Rules-2016_0.pdf", publisher: "Karnataka State Pollution Control Board", note: "Historical 2016 form." }, { title: "Form 10: Manifest for Hazardous and Other Waste", href: "https://ddnocmms.nic.in/SPCB_DOCUMENTS/Foms%2010-%20HW.pdf", publisher: "Pollution Control Committee, Daman and Diu", note: "Separate waste framework; verify applicability." }],
   },
   {
@@ -616,7 +638,9 @@ export const HOW_TO_GUIDES: DiscoveryGuide[] = [
       { label: "Hard-drive destruction overview", path: "/wiki/technical/hard-drive-destruction/" },
       { label: "Data destruction service", path: "/data-destruction/" },
       { label: "What is NIST SP 800-88?", path: "/what-is-nist-800-88/" },
-    ],
+    
+      { label: "Hard drive shredding service", path: "/hard-drive-shredding-service/" },
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },    ],
     sources: [nistSource, ewasteSource],
     readerQuestions: [
       { role: "IT administrator", q: "Our laptops are failing but the drives still spin. Should I wipe them before sending the units for recycling?", a: "Do not assume a failed computer means an unreadable drive, and do not treat ordinary wiping as sufficient sanitization. Verify backups and retention, then ask a qualified provider to identify the media and agree a method with documented results. Keep the drive in secure custody until an approved outcome is recorded." },

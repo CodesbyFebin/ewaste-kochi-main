@@ -115,7 +115,10 @@ export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
       { label: "Corporate e-waste management", path: "/corporate-e-waste-management/" },
       { label: "ITAD service", path: "/itad/" },
       { label: "Recycling service", path: "/recycling/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "Sell used electronics", path: "/sell-electronics/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
       { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
@@ -232,7 +235,10 @@ export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
       { label: "Retail electronics disposal", path: "/retail-e-waste-recycling/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
-    ],
+    
+      { label: "Sell used electronics", path: "/sell-electronics/" },
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
       { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
@@ -349,7 +355,10 @@ export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
       { label: "Hotel e-waste management", path: "/best-ewaste-hotel-kochi/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste pickup service", path: "/pickup/" },
+      { label: "Data destruction service", path: "/data-destruction/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
       { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
@@ -466,7 +475,10 @@ export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
       { label: "School e-waste drives", path: "/school-e-waste-recycling/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },
+      { label: "Sell used electronics", path: "/sell-electronics/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
       { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
@@ -583,7 +595,9 @@ export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
       { label: "Healthcare electronics disposal", path: "/hospital-e-waste-recycling/" },
       { label: "Data destruction service", path: "/data-destruction/" },
       { label: "Recycling service", path: "/recycling/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
       { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
@@ -711,7 +725,10 @@ export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
       { label: "Corporate e-waste management", path: "/corporate-e-waste-management/" },
       { label: "ITAD service", path: "/itad/" },
       { label: "Recycling service", path: "/recycling/" },
-    ],
+    
+      { label: "Data destruction service", path: "/data-destruction/" },
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste center in Kerala", path: "/e-waste-center-in-kerala/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
       { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
@@ -828,7 +845,10 @@ export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
       { label: "Corporate e-waste management", path: "/corporate-e-waste-management/" },
       { label: "ITAD service", path: "/itad/" },
       { label: "Recycling service", path: "/recycling/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "Sell used electronics", path: "/sell-electronics/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
       { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
@@ -956,7 +976,10 @@ export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
       { label: "Construction electronics disposal", path: "/best-ewaste-construction-kochi/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "Sell used electronics", path: "/sell-electronics/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
       { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
@@ -1084,7 +1107,10 @@ export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
       { label: "Corporate e-waste management", path: "/corporate-e-waste-management/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
-    ],
+    
+      { label: "Sell used electronics", path: "/sell-electronics/" },
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
       { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
@@ -1197,7 +1223,10 @@ export const BUSINESS_GUIDES_2: DiscoveryGuide[] = [
       { label: "Corporate e-waste management", path: "/corporate-e-waste-management/" },
       { label: "ITAD service", path: "/itad/" },
       { label: "Recycling service", path: "/recycling/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "Sell used electronics", path: "/sell-electronics/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022 FAQ", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments." },
       { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },

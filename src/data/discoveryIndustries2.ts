@@ -127,7 +127,10 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
       { label: "Hotel e-waste management", path: "/best-ewaste-hotel-kochi/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste pickup service", path: "/pickup/" },
+      { label: "Data destruction service", path: "/data-destruction/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022: frequently asked questions", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments and role-specific requirements." },
       { title: "EPR portal for Battery Waste Management", href: "https://eprbattery.cpcb.gov.in/", publisher: "Central Pollution Control Board" },
@@ -233,7 +236,10 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
       { label: "Marine electronics disposal", path: "/best-ewaste-marine-kochi/" },
       { label: "Battery recycling service", path: "/battery-recycling/" },
       { label: "Recycling service", path: "/recycling/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "Sell used electronics", path: "/sell-electronics/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022: frequently asked questions", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments and role-specific requirements." },
       { title: "EPR portal for Battery Waste Management", href: "https://eprbattery.cpcb.gov.in/", publisher: "Central Pollution Control Board" },
@@ -339,7 +345,10 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
       { label: "Agricultural electronics disposal", path: "/best-ewaste-agriculture-kerala/" },
       { label: "Battery recycling service", path: "/battery-recycling/" },
       { label: "Recycling service", path: "/recycling/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste pickup service", path: "/pickup/" },
+      { label: "Sell used electronics", path: "/sell-electronics/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022: frequently asked questions", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments and role-specific requirements." },
       { title: "EPR portal for Battery Waste Management", href: "https://eprbattery.cpcb.gov.in/", publisher: "Central Pollution Control Board" },
@@ -445,7 +454,10 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
       { label: "Telecom equipment disposal", path: "/best-ewaste-telecom-kochi/" },
       { label: "ITAD service", path: "/itad/" },
       { label: "Recycling service", path: "/recycling/" },
-    ],
+    
+      { label: "Data destruction service", path: "/data-destruction/" },
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022: frequently asked questions", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments and role-specific requirements." },
       { title: "EPR portal for Battery Waste Management", href: "https://eprbattery.cpcb.gov.in/", publisher: "Central Pollution Control Board" },
@@ -552,7 +564,9 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
       { label: "ITAD for data centers", path: "/itad/" },
       { label: "Data destruction service", path: "/data-destruction/" },
       { label: "Corporate e-waste management", path: "/corporate-e-waste-management/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022: frequently asked questions", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments and role-specific requirements." },
       { title: "SP 800-88 Rev. 2: Guidelines for Media Sanitization", href: "https://csrc.nist.gov/pubs/sp/800/88/r2/final", publisher: "National Institute of Standards and Technology", note: "Consult the official publication for current recommendations." },
@@ -658,7 +672,10 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
       { label: "Retail e-waste recycling", path: "/retail-e-waste-recycling/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
-    ],
+    
+      { label: "Sell used electronics", path: "/sell-electronics/" },
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022: frequently asked questions", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments and role-specific requirements." },
       { title: "EPR portal for Battery Waste Management", href: "https://eprbattery.cpcb.gov.in/", publisher: "Central Pollution Control Board" },
@@ -764,7 +781,10 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
       { label: "Construction equipment disposal", path: "/best-ewaste-construction-kochi/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "Sell used electronics", path: "/sell-electronics/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022: frequently asked questions", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments and role-specific requirements." },
       { title: "EPR portal for Battery Waste Management", href: "https://eprbattery.cpcb.gov.in/", publisher: "Central Pollution Control Board" },
@@ -881,7 +901,10 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
       { label: "Fleet electronics disposal", path: "/best-ewaste-logistics-kochi/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "Sell used electronics", path: "/sell-electronics/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022: frequently asked questions", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments and role-specific requirements." },
       { title: "EPR portal for Battery Waste Management", href: "https://eprbattery.cpcb.gov.in/", publisher: "Central Pollution Control Board" },
@@ -998,7 +1021,10 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
       { label: "EdTech equipment disposal", path: "/best-ewaste-edtech-kochi/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "Data destruction service", path: "/data-destruction/" },
+      { label: "Sell used electronics", path: "/sell-electronics/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022: frequently asked questions", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments and role-specific requirements." },
       { title: "EPR portal for Battery Waste Management", href: "https://eprbattery.cpcb.gov.in/", publisher: "Central Pollution Control Board" },
@@ -1115,7 +1141,10 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
       { label: "Healthcare equipment disposal", path: "/hospital-e-waste-recycling/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
-    ],
+    
+      { label: "Data destruction service", path: "/data-destruction/" },
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [
       { title: "E-Waste (Management) Rules, 2022: frequently asked questions", href: "https://eprewaste.cpcb.gov.in/assets/PDF/faqewaste.pdf", publisher: "Central Pollution Control Board", note: "Check current amendments and role-specific requirements." },
       { title: "EPR portal for Battery Waste Management", href: "https://eprbattery.cpcb.gov.in/", publisher: "Central Pollution Control Board" },

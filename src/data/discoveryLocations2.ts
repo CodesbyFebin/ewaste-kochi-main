@@ -104,7 +104,10 @@ export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
       { label: "E-waste recycling Kochi", path: "/e-waste-recycling-kochi/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },
+      { label: "E-waste center in Kerala", path: "/e-waste-center-in-kerala/" },    ],
     sources: [
       { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
       { title: "Published Kochi office details", href: "https://www.ewastekochi.com/contact/", publisher: "Ewaste Kochi" },
@@ -210,7 +213,10 @@ export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
       { label: "E-waste recycling Kochi", path: "/e-waste-recycling-kochi/" },
       { label: "Data destruction service", path: "/data-destruction/" },
       { label: "Recycling service", path: "/recycling/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },
+      { label: "E-waste center in Kerala", path: "/e-waste-center-in-kerala/" },    ],
     sources: [
       { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
       { title: "Published Kochi office details", href: "https://www.ewastekochi.com/contact/", publisher: "Ewaste Kochi" },
@@ -316,7 +322,10 @@ export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
       { label: "E-waste recycling Kochi", path: "/e-waste-recycling-kochi/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },
+      { label: "E-waste center in Kerala", path: "/e-waste-center-in-kerala/" },    ],
     sources: [
       { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
       { title: "Published Kochi office details", href: "https://www.ewastekochi.com/contact/", publisher: "Ewaste Kochi" },
@@ -422,7 +431,10 @@ export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
       { label: "E-waste recycling Kochi", path: "/e-waste-recycling-kochi/" },
       { label: "ITAD service", path: "/itad/" },
       { label: "Recycling service", path: "/recycling/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },
+      { label: "E-waste center in Kerala", path: "/e-waste-center-in-kerala/" },    ],
     sources: [
       { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
       { title: "Published Kochi office details", href: "https://www.ewastekochi.com/contact/", publisher: "Ewaste Kochi" },
@@ -528,7 +540,10 @@ export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
       { label: "E-waste recycling Kochi", path: "/e-waste-recycling-kochi/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [
       { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
       { title: "Published Kochi office details", href: "https://www.ewastekochi.com/contact/", publisher: "Ewaste Kochi" },
@@ -634,7 +649,10 @@ export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
       { label: "E-waste recycling Kochi", path: "/e-waste-recycling-kochi/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [
       { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
       { title: "Published Kochi office details", href: "https://www.ewastekochi.com/contact/", publisher: "Ewaste Kochi" },
@@ -740,7 +758,10 @@ export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
       { label: "E-waste recycling Kochi", path: "/e-waste-recycling-kochi/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },
+      { label: "E-waste center in Kerala", path: "/e-waste-center-in-kerala/" },    ],
     sources: [
       { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
       { title: "Published Kochi office details", href: "https://www.ewastekochi.com/contact/", publisher: "Ewaste Kochi" },
@@ -846,7 +867,10 @@ export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
       { label: "E-waste recycling Kochi", path: "/e-waste-recycling-kochi/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },
+      { label: "E-waste center in Kerala", path: "/e-waste-center-in-kerala/" },    ],
     sources: [
       { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
       { title: "Published Kochi office details", href: "https://www.ewastekochi.com/contact/", publisher: "Ewaste Kochi" },
@@ -952,7 +976,10 @@ export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
       { label: "E-waste recycling Kochi", path: "/e-waste-recycling-kochi/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },
+      { label: "E-waste center in Kerala", path: "/e-waste-center-in-kerala/" },    ],
     sources: [
       { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
       { title: "Published Kochi office details", href: "https://www.ewastekochi.com/contact/", publisher: "Ewaste Kochi" },
@@ -1058,7 +1085,10 @@ export const LOCATION_GUIDES_2: DiscoveryGuide[] = [
       { label: "E-waste recycling Kochi", path: "/e-waste-recycling-kochi/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
-    ],
+    
+      { label: "Electronics recycling service", path: "/electronics-recycling/" },
+      { label: "E-waste drop-off points in Kochi", path: "/e-waste-drop-off-kochi/" },
+      { label: "E-waste pickup service", path: "/pickup/" },    ],
     sources: [
       { title: "Pickup planning and feasibility", href: "https://www.ewastekochi.com/pickup/", publisher: "Ewaste Kochi" },
       { title: "Published Kochi office details", href: "https://www.ewastekochi.com/contact/", publisher: "Ewaste Kochi" },
