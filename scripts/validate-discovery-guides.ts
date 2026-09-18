@@ -7,7 +7,7 @@ import { ROUTES } from "../src/data/routes";
 import { BUSINESS, SITE_URL } from "../src/data/site";
 import { sanitizeJsonLdBlocks } from "../src/lib/schemaSafety";
 
-const expectedCount = Number(process.argv[2] ?? 50);
+const expectedCount = Number(process.argv[2] ?? 100);
 assert.equal(DISCOVERY_GUIDES.length, expectedCount, "Guide count");
 assert.equal(new Set(DISCOVERY_ROUTES.map((route) => route.path)).size, DISCOVERY_ROUTES.length, "Unique routes");
 assert.equal(new Set(DISCOVERY_GUIDES.map((guide) => guide.title)).size, expectedCount, "Unique titles");
@@ -86,7 +86,7 @@ for (const category of GUIDE_CATEGORIES) {
   assert.equal(homepage(`a[href='${category.path}']`).length > 0, true, `Homepage category: ${category.id}`);
   const $ = load(readFileSync(join("dist", category.path, "index.html"), "utf8"));
   const guides = DISCOVERY_GUIDES.filter((guide) => guide.category === category.id);
-  if (expectedCount === 50) assert.equal(guides.length, 10, `Category size: ${category.id}`);
+  if (expectedCount === 100) assert.equal(guides.length, 20, `Category size: ${category.id}`);
   for (const guide of guides) assert.equal($(`article a[href='/${guide.slug}/']`).length, 1, `Hub link: ${guide.slug}`);
 }
 const safe = sanitizeJsonLdBlocks([
