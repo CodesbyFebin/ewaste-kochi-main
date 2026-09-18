@@ -133,7 +133,7 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
       { role: "Housekeeping lead", q: "Can we collect small electronics into a box for the recycler?", a: "List items individually where possible. A mixed box without descriptions can lead to rejected items or unresolved data devices. Flag any damaged or battery-powered items separately." },
     ],
     related: [
-      { label: "Hotel e-waste management", path: "/best-ewaste-hotel-kochi/" },
+      { label: "Hotel e-waste management", path: "/ewaste-government-offices-kochi/" },
       { label: "Recycling service", path: "/recycling/" },
       { label: "How to schedule e-waste pickup", path: "/how-to-schedule-e-waste-pickup/" },
     

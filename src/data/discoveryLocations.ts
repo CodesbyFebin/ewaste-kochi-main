@@ -6,7 +6,7 @@ export const LOCATION_GUIDES: DiscoveryGuide[] = [
     slug: "e-waste-recycling-kochi",
     category: "locations",
     title: "E-Waste Recycling in Kochi: Planning a Household Handover",
-    description: "Plan a Kochi household electronics handover with apartment access, item sorting, data preparation and confirmed pickup or drop-off arrangements.",
+    description: "Waste disposal near you in Kochi. Free doorstep pickup for e-waste, batteries, and IT equipment. CPCB-authorized collection, 24-hour response.",
     answer: "For e-waste recycling in Kochi, start with an item list and your exact collection location. Ewaste Kochi reviews pickup requests against equipment, access and route availability. The published office is in Thrippunithura; a Kochi area listing does not identify a separate neighbourhood drop-off counter.",
     sections: [
       {
@@ -781,7 +781,7 @@ export const LOCATION_GUIDES: DiscoveryGuide[] = [
     slug: "e-waste-center-in-kerala",
     category: "locations",
     title: "Choosing an E-Waste Centre in Kerala: Verify Its Role Before Visiting",
-    description: "Distinguish a Kerala collection point, business office and processing facility; verify acceptance, current operating status and the onward recycling route.",
+    description: "Find a recycling center near you in Kochi. Free e-waste drop-off and doorstep pickup for electronics, batteries, and IT equipment. CPCB-authorized.",
     answer: "An e-waste centre in Kerala might be a collection point, an office coordinating pickup or a processing facility; these roles are not interchangeable. Ewaste Kochi publishes a Kochi office in Thrippunithura. That address does not establish a statewide branch network or prove that recycling machinery operates at the office.",
     sections: [
       {

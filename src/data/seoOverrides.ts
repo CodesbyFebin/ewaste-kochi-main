@@ -158,6 +158,41 @@ export const SEO_OVERRIDES: Record<string, SeoOverride> = {
     source: "GSC P99 CTR pass 2026-08-10",
     reason: "Protected location page; keep feasibility wording rather than unsupported service guarantee.",
   },
+  "/e-waste-recycling-kochi/": {
+    title: "Waste Disposal Near Me — Free Kochi Pickup in 24hrs | EWASTECOCHI",
+    description: "Waste disposal near you in Kochi. Free doorstep pickup for e-waste, batteries, and IT equipment. CPCB-authorized collection, 24-hour response.",
+    intentional: true,
+    source: "GSC CTR rescue 2026-09-18",
+    reason: "Rescue high-impression zero-click queries 'waste disposal near me' (338 impr, 0.3% CTR) and 'waste disposal kochi' (57 impr, 1.8% CTR).",
+  },
+  "/e-waste/": {
+    title: "E-Waste Pickup Near Me — CPCB Certified, Free Collection Kochi | EWASTECOCHI",
+    description: "E-waste pickup near you in Kochi. CPCB-certified collection for laptops, phones, TVs, and IT equipment. Free doorstep pickup, 24-hour scheduling.",
+    intentional: true,
+    source: "GSC CTR rescue 2026-09-18",
+    reason: "Rescue high-impression query 'e waste near me' (126 impr, 4.0% CTR).",
+  },
+  "/electronics-scrap-value/": {
+    title: "Electronic Scrap Shop Near Me — Best Price Per Kg, Kochi | EWASTECOCHI",
+    description: "Electronic scrap shop near you in Kochi. Best price per kg for laptops, PCs, phones, and circuit boards. CPCB-authorized buyers, instant quote.",
+    intentional: true,
+    source: "GSC CTR rescue 2026-09-18",
+    reason: "Rescue high-impression query 'electronic scrap shop near me' (147 impr, 3.4% CTR).",
+  },
+  "/e-waste-center-in-kerala/": {
+    title: "Recycling Center Near Me in Kochi — Free E-Waste Drop-Off & Pickup",
+    description: "Find a recycling center near you in Kochi. Free e-waste drop-off and doorstep pickup for electronics, batteries, and IT equipment. CPCB-authorized.",
+    intentional: true,
+    source: "GSC CTR rescue 2026-09-18",
+    reason: "Rescue high-impression query 'recycling center near me' (29 impr, 0% CTR).",
+  },
+  "/computer-scrap-buyers-kochi/": {
+    title: "Computer Scrap Shop Near Me — Laptop & PC Buyers, Kochi | EWASTECOCHI",
+    description: "Computer scrap shop near you in Kochi. Best price for laptops, desktops, and PC components. CPCB-authorized buyers, free doorstep pickup.",
+    intentional: true,
+    source: "GSC CTR rescue 2026-09-18",
+    reason: "Rescue high-impression query 'computer scrap shop near me' (31 impr, 3.2% CTR).",
+  },
 };
 
 export function resolveSeoMetadata(path: string, pageTitle: string, pageDescription: string) {
