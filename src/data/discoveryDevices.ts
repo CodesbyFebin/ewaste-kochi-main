@@ -668,10 +668,30 @@ export const DEVICE_GUIDES: DiscoveryGuide[] = [
           "Budget for transport, supervision, packing, data services and difficult items. Any recovery value or manufacturer-supported return is conditional, not a guaranteed fundraiser or free event. Reconcile the final collection list, record rejected items and obtain agreed downstream evidence. Publish only aggregate educational results, avoiding student names, device contents or sensitive asset details.",
         ],
       },
+      {
+        heading: "Run the drive with student involvement but no disassembly",
+        paragraphs: [
+          "Give students supervised, non-dismantling work: sorting illustrations, inventory exercises, acceptance-list checks and discussions of material recovery and hazards. Real waste equipment can contain stored energy, sharp components and confidential information, so keep it in the access-controlled store and out of student handling. Frame the drive as responsible disposal education rather than a competition to collect the most items, and explain why informal or damaged items are excluded.",
+        ],
+      },
+      {
+        heading: "Reconcile, report and keep the next cycle honest",
+        paragraphs: [
+          "After collection, reconcile the accepted list against the inventory, record rejected items and explain any exclusions. Keep contributor receipts and institutional asset records separate so a later audit can tell which equipment left under which authority. Store the evidence under the institution's retention and access policy, and restrict sensitive identifiers. If a drive is incomplete or a partner changes, assign a named owner rather than closing the file on an assumption.",
+        ],
+      },
     ],
     faq: [
       { q: "Can students learn recycling by taking devices apart?", a: "Use supervised, non-dismantling activities such as sorting illustrations, inventory exercises and discussions of material recovery. Actual waste equipment can contain stored energy, sharp components and confidential information." },
       { q: "Can families bring any electrical item to a campus drive?", a: "Only items on the confirmed acceptance list. Explain exclusions, battery handling and collection arrangements in advance so the institution does not become responsible for an unmanaged stockpile." },
+      { q: "Does a large campus automatically have producer EPR duties?", a: "Not because of its size or student numbers. Assess the equipment it actually uses and any other relevant activities against current requirements, and seek qualified advice where the facts are unclear." },
+      { q: "Should we promise a fundraising total before collection?", a: "Do not. Any recovery value or manufacturer-supported return is conditional. State expected outcomes honestly and explain that a collection event is not itself a guaranteed revenue line." },
+    ],
+    readerQuestions: [
+      { role: "Lab coordinator", q: "A projector is listed as working but has student login history on it. What should we do before it leaves?", a: "Have IT complete approved sanitization for the stored accounts and records, then redeploy or release the unit through the agreed route. Do not involve student volunteers in the data handling, and record the outcome in the asset register." },
+      { role: "Faculty advisor", q: "Students want to run a battery drive as a project. What boundaries should we set?", a: "Confirm the receiving partner accepts the battery types and agree packing and transport arrangements. Keep batteries in supervised storage, require trained staff to handle damaged or swollen cells, and exclude them from student collection bins." },
+      { role: "Bursar", q: "A sponsor offered to take the old computers for refurbishment. Is that acceptable?", a: "Verify the sponsor's scope, data handling and downstream evidence before authorising release. Agree custody and reporting terms in writing, and keep the arrangement separate from the registered recycling route." },
+      { role: "Estate manager", q: "The collection date conflicts with exams. Should we move it?", a: "Reschedule rather than running a supervised store near an exam period. Confirm the new date with the receiving partner and update the acceptance criteria and publicity so contributors are not misled." },
     ],
     related: [
       { label: "Collection service", path: "/pickup/" },

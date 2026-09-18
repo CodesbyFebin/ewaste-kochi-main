@@ -454,6 +454,13 @@ export const HOW_TO_GUIDES: DiscoveryGuide[] = [
         heading: "Check what the document does not establish",
         paragraphs: ["A collection acknowledgement proves receipt, not completed recycling. A recycler's batch statement is not automatically a CPCB portal EPR certificate for producer compliance, and neither proves hard-drive sanitization without separate evidence. Ask how reused equipment, batteries, residues and downstream transfers are distinguished. Avoid accepting a blanket statement that everything was recycled when some assets were resold or remain unprocessed."],
       },
+      {
+        heading: "Reconcile quantities, reuse and downstream evidence",
+        paragraphs: [
+          "Match reported quantities to the agreed tracking method rather than comparing unlike units. Asset-level counts, category totals and measured weight each describe a different consignment view, and a single document may combine them. Ask the issuer to explain any exclusion, reuse or downstream transfer instead of treating the stated total as the only figure that matters. Keep the original estimate identified as such and preserve a correction history when figures change, rather than silently editing the inventory.",
+          "Confirm that the reported event is completed processing, not receipt, assessment or an intended future route. Distinguish issue, receipt and processing dates, and do not request backdating or use an internal reporting deadline as a substitute for evidence of completed work. Where evidence remains incomplete, record the limitation honestly and maintain an assigned follow-up instead of marking every asset recycled because a certificate-shaped document has arrived. Store the final record alongside its supporting documents under the applicable retention and access policy, with the reviewer, review date and outstanding questions noted.",
+        ],
+      },
     ],
     steps: [
       { name: "Agree reporting before release", text: "State your audit purpose and request the issuer, fields, supporting records and expected reporting stage. Verify relevant registration rather than relying on a certificate design. Ask for a sample showing how the legal entity, receiving facility, consignment reference and treatment scope will be identified. Establish whether quantities are tracked as assets, categories, measured weight or a combination, and distinguish estimates from measurements. Specify how reuse, battery routing, rejected items and downstream transfers will appear rather than asking for a blanket recycling declaration. Check whether the proposed evidence meets your internal or contractual need with the person responsible for that requirement. Avoid describing an ordinary recycler statement as a portal EPR certificate or a sanitization report. Keep the agreed specification and any reporting charges with the collection terms, including who supplies supporting evidence and what happens if processing is incomplete. Resolve material gaps before release instead of discovering after collection that the provider never agreed to produce the records you need." },
@@ -573,6 +580,12 @@ export const HOW_TO_GUIDES: DiscoveryGuide[] = [
           "Define the final record before handing over media. It should link the agreed identifiers to the actual treatment, execution result, verification and authorised acceptance or exception handling. A generic destruction certificate or collection receipt may not provide enough detail to reconcile individual drives. Ask how failed attempts and substituted treatment will be reported and approved. Retain the custody trail and separate recycling evidence for the hardware or resulting material, since sanitization and materials management answer different questions. Store records under an appropriate access and retention policy, and leave gaps visible for follow-up rather than interpreting a provider's invoice as proof that every medium passed.",
         ],
       },
+      {
+        heading: "Decide reuse versus destruction on evidence",
+        paragraphs: [
+          "Physical destruction is not automatically the best choice for every authorised retirement. Suitable verified sanitization may preserve reuse value where policy, media condition and risk allow it. Conversely, a possible resale amount should not override required assurance or justify releasing an unresolved drive. Compare costs only after the owner has selected an acceptable outcome, including secure transport, treatment, verification and recycling of resulting materials. Do not attempt DIY drilling, crushing, burning or shredding to avoid a service charge. Those actions do not provide a documented professional outcome and can create physical hazards without establishing that the required data treatment was achieved.",
+        ],
+      },
     ],
     steps: [
       { name: "Approve and inventory", text: "Verify recoverable backups, resolve retention restrictions and record media identifiers. Separate approved drives from equipment still in use." },
@@ -591,5 +604,11 @@ export const HOW_TO_GUIDES: DiscoveryGuide[] = [
       { label: "What is NIST SP 800-88?", path: "/what-is-nist-800-88/" },
     ],
     sources: [nistSource, ewasteSource],
+    readerQuestions: [
+      { role: "IT administrator", q: "Our laptops are failing but the drives still spin. Should I wipe them before sending the units for recycling?", a: "Do not assume a failed computer means an unreadable drive, and do not treat ordinary wiping as sufficient sanitization. Verify backups and retention, then ask a qualified provider to identify the media and agree a method with documented results. Keep the drive in secure custody until an approved outcome is recorded." },
+      { role: "Office manager", q: "The collector said their shredder handles everything. Is that enough assurance?", a: "Ask for the specific method, how it applies to each media type, what evidence is produced and how failures are reported. A generic equipment name does not by itself demonstrate suitability for every storage technology involved." },
+      { role: "Finance controller", q: "We want to avoid a service charge by drilling the drives ourselves. Is that acceptable?", a: "Do not attempt DIY destruction. Drilling, crushing or burning does not provide a documented professional outcome and can create physical hazards without establishing that the required data treatment was achieved." },
+      { role: "Compliance coordinator", q: "The certificate arrived but one laptop is still listed as missing. What should I do?", a: "Record the gap and assign a follow-up rather than treating the certificate as complete. Preserve the earlier record and explain the correction history, and keep sanitization evidence separate from the materials recycling record." },
+    ],
   },
 ];
