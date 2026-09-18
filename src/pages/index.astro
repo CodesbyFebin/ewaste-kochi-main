@@ -4,6 +4,7 @@ import Faq from "../components/Faq.astro";
 import LangSwitch from "../components/LangSwitch.astro";
 import { BUSINESS, SITE_URL, telLink, whatsappLink } from "../data/site";
 import { getHreflang } from "../data/routes";
+import { GUIDE_CATEGORIES } from "../data/discoveryGuides";
 
 const title = "Where to Recycle Old Electronics in Kochi | Free Pickup";
 const description =
@@ -532,6 +533,15 @@ const faqItems = [
         </tbody>
       </table>
     </div>
+  </section>
+
+  <section aria-labelledby="guide-topics-title">
+    <h2 id="guide-topics-title">Practical e-waste guides</h2>
+    <ul>
+      {GUIDE_CATEGORIES.map((category) => (
+        <li><a href={category.path}>{category.title}</a><p>{category.description}</p></li>
+      ))}
+    </ul>
   </section>
 
   <Faq items={faqItems} />

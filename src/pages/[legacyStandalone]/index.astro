@@ -1,19 +1,32 @@
 ---
 import IndexedLegacyGuide from "../../components/IndexedLegacyGuide.astro";
 import { INDEXED_STANDALONE_ALIAS_PAGES } from "../../data/gscIndexedGeneratedPages";
+import DiscoveryGuidePage from "../../components/DiscoveryGuide.astro";
+import { DISCOVERY_GUIDES, GUIDE_CATEGORIES } from "../../data/discoveryGuides";
 
 export function getStaticPaths() {
-  return INDEXED_STANDALONE_ALIAS_PAGES.map((page) => ({
-    params: { legacyStandalone: page.path.replace(/^\/|\/$/g, "") },
-    props: { page },
-  }));
+  return [
+    ...INDEXED_STANDALONE_ALIAS_PAGES.map((page) => ({
+      params: { legacyStandalone: page.path.replace(/^\/|\/$/g, "") },
+      props: { page, guide: undefined, category: undefined },
+    })),
+    ...DISCOVERY_GUIDES.map((guide) => ({
+      params: { legacyStandalone: guide.slug },
+      props: { page: undefined, guide, category: GUIDE_CATEGORIES.find((category) => category.id === guide.category)! },
+    })),
+    ...GUIDE_CATEGORIES.map((category) => ({
+      params: { legacyStandalone: category.path.replace(/^\/|\/$/g, "") },
+      props: { page: undefined, guide: undefined, category },
+    })),
+  ];
 }
 
-const { page } = Astro.props;
-const breadcrumbs = [
+const { page, guide, category } = Astro.props;
+const breadcrumbs = page ? [
   { name: "Home", path: "/" },
   { name: page.h1, path: page.path },
-];
+] : [];
 ---
 
-<IndexedLegacyGuide page={page} breadcrumbs={breadcrumbs} />
+{page && <IndexedLegacyGuide page={page} breadcrumbs={breadcrumbs} />}
+{category && <DiscoveryGuidePage guide={guide} category={category} />}

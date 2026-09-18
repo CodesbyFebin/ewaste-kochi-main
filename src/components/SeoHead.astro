@@ -25,8 +25,7 @@ const canonicalUrl = new URL(path, SITE_URL).toString();
 // and reviewable rather than hidden inside this rendering component.
 const resolvedSeo = resolveSeoMetadata(path, inputTitle, inputDescription);
 const { title, description } = resolvedSeo;
-const isArticle = path.startsWith("/blog/") || path.startsWith("/e-waste/") || path.startsWith("/wiki/");
-const isWiki = path.startsWith("/wiki/");
+const isArticle = path.startsWith("/blog/") || path.startsWith("/e-waste/") || path.startsWith("/wiki/") || jsonLd.some((block) => block["@type"] === "Article");
 
 const safeJsonLd = sanitizeJsonLdBlocks(jsonLd).map((block) => {
   if (block["@type"] === "WebPage") {
