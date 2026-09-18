@@ -594,7 +594,7 @@ export const INDUSTRY_GUIDES_2: DiscoveryGuide[] = [
     faq: [
       { q: "Can you shred hard drives at our Kochi data center instead of transporting them?", a: "Yes. On-site shredding with a mobile unit is available for bulk decommissions, and you receive serialized destruction certificates the same day." },
       { q: "Do you handle SSDs and NVMe drives differently from HDDs?", a: "Yes. SSDs require either cryptographic erasure or physical destruction of the NAND packages. Standard HDD shredding does not guarantee SSD data destruction." },
-      { q: "What certifications should I verify before signing?", a: "CPCB authorization number, KSPCB compliance, ISO 14001 and a documented data destruction standard. Verify the CPCB number independently on the official portal." },
+      { q: "What certifications should I verify before signing?", a: "CPCB authorization number, KSPCB compliance, an environmental management system certification, and a documented data destruction standard. Verify the CPCB number independently on the official portal." },
       { q: "How long does a full rack decommission take?", a: "A single rack typically completes in one to two business days including destruction and reporting. Multi-rack decommissions are scheduled in phases." },
       { q: "Do you provide material recovery reports?", a: "Yes, metals recovered by weight are broken down by category and issued with the recycling certificate." },
       { q: "Is there resale value in old servers?", a: "Often yes for hardware under five to six years. We assess resale separately from material recovery and pass through applicable proceeds." },

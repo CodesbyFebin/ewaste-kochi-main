@@ -1,9 +1,10 @@
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
+import { fileURLToPath } from "node:url";
 
 const DIST = new URL("../dist/", import.meta.url);
-const distPath = DIST.pathname;
-const pagesPath = new URL("../src/pages/", import.meta.url).pathname;
+const distPath = fileURLToPath(DIST);
+const pagesPath = fileURLToPath(new URL("../src/pages/", import.meta.url));
 const baselinePath = new URL("../data/index-surface-baseline.json", import.meta.url);
 const vercelPath = new URL("../vercel.json", import.meta.url);
 const recoveryMapPath = new URL("../data/gsc-404-recovery-map.json", import.meta.url);

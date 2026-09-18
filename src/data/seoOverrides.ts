@@ -173,8 +173,8 @@ export const SEO_OVERRIDES: Record<string, SeoOverride> = {
     reason: "Rescue high-impression query 'e waste near me' (126 impr, 4.0% CTR).",
   },
   "/electronics-scrap-value/": {
-    title: "Electronic Scrap Shop Near Me — Best Price Per Kg, Kochi | EWASTECOCHI",
-    description: "Electronic scrap shop near you in Kochi. Best price per kg for laptops, PCs, phones, and circuit boards. CPCB-authorized buyers, instant quote.",
+    title: "Electronic Scrap Shop Near Me — Rates Per Kg, Kochi | EWASTECOCHI",
+    description: "Electronic scrap shop near you in Kochi. Compare rates per kg for laptops, PCs, phones, and circuit boards. CPCB-authorized buyers, instant quote.",
     intentional: true,
     source: "GSC CTR rescue 2026-09-18",
     reason: "Rescue high-impression query 'electronic scrap shop near me' (147 impr, 3.4% CTR).",
@@ -188,7 +188,7 @@ export const SEO_OVERRIDES: Record<string, SeoOverride> = {
   },
   "/computer-scrap-buyers-kochi/": {
     title: "Computer Scrap Shop Near Me — Laptop & PC Buyers, Kochi | EWASTECOCHI",
-    description: "Computer scrap shop near you in Kochi. Best price for laptops, desktops, and PC components. CPCB-authorized buyers, free doorstep pickup.",
+    description: "Computer scrap shop near you in Kochi. Fair rates for laptops, desktops, and PC components. CPCB-authorized buyers, free doorstep pickup.",
     intentional: true,
     source: "GSC CTR rescue 2026-09-18",
     reason: "Rescue high-impression query 'computer scrap shop near me' (31 impr, 3.2% CTR).",

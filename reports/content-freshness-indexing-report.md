@@ -1,6 +1,6 @@
 # Content Freshness Indexing Queue
 
-Generated: 2026-07-18T18:00:00+05:30
+Generated: 2026-09-18T08:27:30.500Z
 
 ## Safety Position
 
@@ -17,19 +17,41 @@ References:
 
 - Git range: `HEAD~1..HEAD`
 - Working tree included: no
-- Changed files inspected: 6
-- Canonical candidate URLs found: 29
-- Live checks passed: 29
+- Changed files inspected: 28
+- Canonical candidate URLs found: 33
+- Live checks passed: 33
 - Live checks held: 0
 
 ## Changed Files
 
-- `reports/v2-validation-report.md`
-- `scripts/validate-seo-v2.ts`
-- `src/data/site.ts`
+- `public/.well-known/keys.txt`
+- `scripts/regenerate-llms.mjs`
+- `scripts/validate-discovery-guides.ts`
+- `src/components/DiscoveryGuide.astro`
+- `src/components/SeoHead.astro`
+- `src/data/discoveryBusiness.ts`
+- `src/data/discoveryBusiness2.ts`
+- `src/data/discoveryCompliance2.ts`
+- `src/data/discoveryDefinitions.ts`
+- `src/data/discoveryDevices.ts`
+- `src/data/discoveryGuideTypes.ts`
+- `src/data/discoveryGuides.ts`
+- `src/data/discoveryHowTo.ts`
+- `src/data/discoveryHowTo2.ts`
+- `src/data/discoveryIndustries2.ts`
+- `src/data/discoveryLocations.ts`
+- `src/data/discoveryLocations2.ts`
+- `src/data/routes.json`
+- `src/data/routes.ts`
+- `src/data/seoOverrides.ts`
 - `src/lib/schemaSafety.ts`
-- `src/pages/contact/index.astro`
+- `src/pages/[legacyStandalone]/index.astro`
 - `src/pages/index.astro`
+- `src/pages/schema/organization.json.ts`
+- `src/pages/wiki/sales/choose-secure-itad-vendor/index.astro`
+- `src/pages/wiki/sales/e-waste-scrap-buyers/index.astro`
+- `src/pages/wiki/sales/online-selling-platforms/index.astro`
+- `src/pages/wiki/technical/choose-recycler/index.astro`
 
 ## Manual GSC Queue
 
@@ -64,6 +86,10 @@ References:
 | https://www.ewastekochi.com/blog/how-to-choose-itad-provider/ | P3 | Pass | After production deployment, inspect live URL in GSC and request indexing if the content update is important. |
 | https://www.ewastekochi.com/blog/laptop-scrap-price-kochi/ | P3 | Pass | After production deployment, inspect live URL in GSC and request indexing if the content update is important. |
 | https://www.ewastekochi.com/tools/scrap-value-calculator/ | P3 | Pass | After production deployment, inspect live URL in GSC and request indexing if the content update is important. |
+| https://www.ewastekochi.com/wiki/sales/choose-secure-itad-vendor/ | freshness | Pass | After production deployment, inspect live URL in GSC and request indexing if the content update is important. |
+| https://www.ewastekochi.com/wiki/sales/e-waste-scrap-buyers/ | freshness | Pass | After production deployment, inspect live URL in GSC and request indexing if the content update is important. |
+| https://www.ewastekochi.com/wiki/sales/online-selling-platforms/ | freshness | Pass | After production deployment, inspect live URL in GSC and request indexing if the content update is important. |
+| https://www.ewastekochi.com/wiki/technical/choose-recycler/ | freshness | Pass | After production deployment, inspect live URL in GSC and request indexing if the content update is important. |
 
 ## Skip Rules
 

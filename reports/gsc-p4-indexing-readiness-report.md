@@ -1,6 +1,6 @@
 # GSC-P4 Indexing Readiness Report
 
-Generated: 2026-08-27T15:42:31.613Z
+Generated: 2026-09-18T08:27:24.734Z
 
 ## Verdict
 
