@@ -1,7 +1,7 @@
 # https://www.ewastekochi.com
 # Full content dump for LLM/RAG ingestion
-# Generated: 2026-09-18T08:24:21.144Z
-# Total routes: 1036
+# Generated: 2026-09-22T23:15:19.956Z
+# Total routes: 1089
 
 ## /
 Title: E-Waste Recycling Kochi | Free Pickup for Electronics, Batteries & IT Scrap
@@ -5882,6 +5882,430 @@ Type: blog
 Language: en-IN
 Indexable: true
 URL: https://www.ewastekochi.com/blog/battery-recycling-in-vyttila/
+
+## /blog/b2b-e-waste-pickup/
+Title: B2B E-Waste Pickup Cost & Process in Kochi | Ewaste Kochi
+Description: How B2B e-waste pickup pricing and scheduling works in Kochi — volume-based quotes, invoicing, and what businesses should prepare before collection.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/b2b-e-waste-pickup/
+
+## /blog/battery-recycling-kochi/
+Title: Battery Recycling Cost in Kochi: What You Actually Pay or Get Paid
+Description: Battery recycling pricing in Kochi — what determines scrap value for lead-acid, lithium and inverter batteries, and where costs apply instead.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/battery-recycling-kochi/
+
+## /blog/bulk-e-waste-recycling/
+Title: Bulk E-Waste Recycling Pricing for Offices in Kochi
+Description: How bulk e-waste recycling is priced and scheduled for offices in Kochi — volume tiers, invoicing, and what a commercial quote should include.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/bulk-e-waste-recycling/
+
+## /blog/corporate-e-waste-management/
+Title: Corporate E-Waste Management for Small Businesses in Kochi
+Description: A small-business-focused look at corporate e-waste management in Kochi — what to budget for, how often to schedule pickups, and basic policy setup.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/corporate-e-waste-management/
+
+## /blog/crt-monitor-recycling/
+Title: CRT Monitor Scrap Value in Kochi: What Old Monitors Are Worth
+Description: What determines CRT monitor scrap value in Kochi, why most CRTs cost to dispose rather than pay, and how pricing compares to flat-panel monitors.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/crt-monitor-recycling/
+
+## /blog/data-destruction-services/
+Title: Data Destruction Services Pricing in Kochi
+Description: How data destruction services are priced in Kochi — per-device rates, certificate costs, and what affects the price for businesses vs individuals.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/data-destruction-services/
+
+## /blog/e-waste-center-in-kerala/
+Title: E-Waste Centers Across Kerala: Full State Directory
+Description: A state-wide directory of e-waste centers across Kerala districts, beyond Kochi — coverage areas and how to check pickup feasibility by district.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/e-waste-center-in-kerala/
+
+## /blog/e-waste-drop-off-kochi/
+Title: E-Waste Drop-Off Points in Kochi: Locations & Hours
+Description: A list of e-waste drop-off points across Kochi with hours and accepted items — for people who prefer dropping off over scheduling a pickup.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/e-waste-drop-off-kochi/
+
+## /blog/e-waste-for-schools-and-colleges/
+Title: E-Waste Recycling Programs for Schools & Colleges in Kochi
+Description: How schools and colleges in Kochi can set up a recurring e-waste collection program — student equipment, lab electronics, and admin IT.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/e-waste-for-schools-and-colleges/
+
+## /blog/e-waste-pickup-service/
+Title: E-Waste Pickup Service Areas & Coverage in Kochi
+Description: Which parts of Kochi and Ernakulam district the e-waste pickup service covers, and what to check before booking outside the core service area.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/e-waste-pickup-service/
+
+## /blog/e-waste-recycling-aluva/
+Title: Household E-Waste Recycling in Aluva
+Description: A household-focused guide to recycling electronics in Aluva — what residents can drop off or schedule for pickup, separate from business collection.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/e-waste-recycling-aluva/
+
+## /blog/e-waste-recycling-ernakulam/
+Title: Household E-Waste Recycling Across Ernakulam District
+Description: A household-focused guide to e-waste recycling across Ernakulam district — residential pickup, drop-off options, and what's covered by area.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/e-waste-recycling-ernakulam/
+
+## /blog/e-waste-recycling-kochi/
+Title: E-Waste Recycling in Kochi: Household vs Business Options
+Description: How e-waste recycling options in Kochi differ for households versus businesses — separate pickup paths, pricing, and documentation needs.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/e-waste-recycling-kochi/
+
+## /blog/e-waste-recycling-kollam/
+Title: Household E-Waste Recycling in Kollam
+Description: A household-focused guide to e-waste recycling in Kollam — residential pickup and drop-off, separate from office electronics collection.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/e-waste-recycling-kollam/
+
+## /blog/e-waste-recycling-thrissur/
+Title: Household E-Waste Recycling in Thrissur
+Description: A household-focused guide to e-waste recycling in Thrissur — residential pickup and drop-off, separate from office batch collection.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/e-waste-recycling-thrissur/
+
+## /blog/e-waste-recycling-trivandrum/
+Title: Household E-Waste Recycling in Trivandrum
+Description: A household-focused guide to e-waste recycling in Trivandrum — residential pickup and drop-off, separate from institutional collection.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/e-waste-recycling-trivandrum/
+
+## /blog/epr-registration-for-businesses/
+Title: EPR Registration Cost & Timeline for Businesses in Kerala
+Description: What EPR registration typically costs and how long it takes for businesses in Kerala — documents needed and common delays to plan around.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/epr-registration-for-businesses/
+
+## /blog/hard-drive-destruction/
+Title: Hard Drive Destruction Cost in Kochi
+Description: What hard drive destruction costs in Kochi — per-drive pricing, certificate fees, and how bulk business rates differ from individual requests.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/hard-drive-destruction/
+
+## /blog/hard-drive-shredding-service/
+Title: Hard Drive Shredding for Bulk Office Decommissions in Kochi
+Description: How hard drive shredding works for bulk office and data-center decommissions in Kochi — volume scheduling, chain-of-custody, and reporting.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/hard-drive-shredding-service/
+
+## /blog/how-to-comply-with-e-waste-rules/
+Title: E-Waste Compliance Checklist for Kochi Businesses
+Description: A practical compliance checklist for Kochi businesses handling e-waste — registration, documentation, and vendor verification steps.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/how-to-comply-with-e-waste-rules/
+
+## /blog/how-to-destroy-hard-drive-data/
+Title: Hard Drive Data Destruction Checklist Before Recycling
+Description: A step-by-step checklist for destroying hard drive data before recycling or resale — what to verify, and what a destruction certificate should show.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/how-to-destroy-hard-drive-data/
+
+## /blog/how-to-get-certificate-of-recycling/
+Title: What a Certificate of Recycling Should Include
+Description: What details a proper certificate of recycling should contain, why businesses need one for audits, and how to request one from a recycler.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/how-to-get-certificate-of-recycling/
+
+## /blog/how-to-recycle-batteries-safely/
+Title: Battery Recycling Checklist: Prepare Before Pickup
+Description: A pre-pickup checklist for battery recycling — taping terminals, separating chemistries, and what not to store together before collection.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/how-to-recycle-batteries-safely/
+
+## /blog/how-to-recycle-laptop-in-india/
+Title: Laptop Recycling Checklist for India
+Description: A pre-recycling checklist for laptops in India — data wipe steps, battery handling, and what documentation to request before handover.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/how-to-recycle-laptop-in-india/
+
+## /blog/how-to-recycle-mobile-phone/
+Title: Mobile Phone Recycling Checklist Before Drop-Off
+Description: A pre-drop-off checklist for mobile phone recycling — account sign-out, SIM/SD removal, and factory reset steps to complete first.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/how-to-recycle-mobile-phone/
+
+## /blog/how-to-schedule-e-waste-pickup/
+Title: E-Waste Pickup Scheduling: Lead Times & What to Expect
+Description: Typical lead times for scheduling an e-waste pickup, what information is needed upfront, and how rescheduling works.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/how-to-schedule-e-waste-pickup/
+
+## /blog/how-to-sell-computers-for-cash/
+Title: Computer Scrap Value in Kochi: What Affects the Price
+Description: What affects computer scrap value in Kochi — condition, age, specs and working state — and how quotes are typically calculated.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/how-to-sell-computers-for-cash/
+
+## /blog/how-to-sell-old-fridge/
+Title: Old Fridge Scrap Value: What Determines the Price
+Description: What determines an old fridge's scrap value — refrigerant handling, metal weight, and working condition — before you get a quote.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/how-to-sell-old-fridge/
+
+## /blog/how-to-sell-used-laptops/
+Title: Used Laptop Resale Value: What Buyers Actually Pay For
+Description: What actually affects a used laptop's resale value — specs, battery health, screen condition — separate from scrap-only pricing.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/how-to-sell-used-laptops/
+
+## /blog/industrial-e-waste-disposal/
+Title: Industrial E-Waste Disposal Pricing & Scheduling
+Description: How industrial e-waste disposal is priced and scheduled — equipment classification, logistics, and what a commercial quote should cover.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/industrial-e-waste-disposal/
+
+## /blog/inverter-battery-recycling/
+Title: Inverter Battery Scrap Value in Kochi
+Description: What determines inverter battery scrap value in Kochi — lead-acid weight, condition, and how exchange offers compare to straight recycling.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/inverter-battery-recycling/
+
+## /blog/it-asset-disposition-india/
+Title: ITAD Pricing Models in India: What Businesses Pay For
+Description: How ITAD services are typically priced in India — per-asset fees, data destruction add-ons, and resale-offset arrangements.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/it-asset-disposition-india/
+
+## /blog/led-tv-recycling/
+Title: LED TV Recycling Cost vs Scrap Value
+Description: Whether an LED TV recycling job costs money or pays out — screen size, panel technology, and condition all factor into which side of that line it falls.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/led-tv-recycling/
+
+## /blog/lithium-ion-battery-disposal/
+Title: Lithium-Ion Battery Disposal Cost & Safety Handling Fees
+Description: Why lithium-ion battery disposal sometimes carries a handling fee, what drives that cost, and how it differs from other battery chemistries.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/lithium-ion-battery-disposal/
+
+## /blog/microwave-oven-e-waste/
+Title: Microwave Oven Recycling: Cost vs Scrap Value in Kochi
+Description: Whether recycling an old microwave oven in Kochi costs money or has scrap value — what parts matter and what doesn't.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/microwave-oven-e-waste/
+
+## /blog/old-tv-recycling/
+Title: Old TV Scrap Value by Technology Type in Kochi
+Description: How old TV scrap value in Kochi differs by technology — CRT typically costs to dispose, flat-panel sometimes has residual value.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/old-tv-recycling/
+
+## /blog/printer-cartridge-e-waste/
+Title: Printer Cartridge Recycling: Free vs Paid Options in Kochi
+Description: When printer cartridge recycling in Kochi is free through retailer take-back versus when it's bundled into paid e-waste pickup.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/printer-cartridge-e-waste/
+
+## /blog/server-decommissioning/
+Title: Server Decommissioning Cost for Small Offices in Kochi
+Description: What server decommissioning typically costs for a small office in Kochi — per-unit fees, data wipe add-ons, and logistics for a handful of units.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/server-decommissioning/
+
+## /blog/server-recycling-kochi/
+Title: Server Recycling Value: What Old Racks Are Worth in Kochi
+Description: What determines server and rack recycling value in Kochi — drive presence, age, and component recovery versus straight scrap weight.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/server-recycling-kochi/
+
+## /blog/server-room-ups-disposal/
+Title: Server Room UPS Disposal Cost in Kochi
+Description: What UPS and server-room battery disposal typically costs in Kochi, and how it's billed separately from general server recycling.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/server-room-ups-disposal/
+
+## /blog/solar-panel-e-waste/
+Title: Solar Panel Recycling Cost in Kochi
+Description: What solar panel recycling costs in Kochi, why panels don't usually have scrap value like other electronics, and who handles specialist removal.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/solar-panel-e-waste/
+
+## /blog/tv-monitor-recycling-kochi/
+Title: TV & Monitor Recycling Cost vs Scrap Value in Kochi
+Description: Whether TV and monitor recycling in Kochi costs money or pays out, broken down by screen technology and size.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/tv-monitor-recycling-kochi/
+
+## /blog/warehouse-e-waste-disposal/
+Title: Warehouse E-Waste Disposal Pricing & Logistics
+Description: How warehouse-scale e-waste disposal is priced — logistics coordination, volume tiers, and stock reconciliation for large facilities.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/warehouse-e-waste-disposal/
+
+## /blog/what-is-cpcb-registration/
+Title: CPCB Registration Cost & Process for E-Waste Businesses
+Description: What CPCB registration typically costs and involves for e-waste-handling businesses — documentation, timelines, and renewal.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/what-is-cpcb-registration/
+
+## /blog/what-is-data-destruction/
+Title: Data Destruction Methods Compared: Cost & Assurance Level
+Description: How different data destruction methods compare on cost and assurance level — wiping, degaussing, and physical shredding.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/what-is-data-destruction/
+
+## /blog/what-is-e-waste/
+Title: E-Waste Examples: A Practical Item-by-Item List
+Description: A practical, item-by-item list of what counts as e-waste — grouped by whether it's typically reusable, recyclable, or hazardous.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/what-is-e-waste/
+
+## /blog/what-is-epr/
+Title: EPR Compliance Cost for Manufacturers & Importers
+Description: What EPR compliance typically costs manufacturers and importers under India's e-waste rules — registration, targets, and reporting overhead.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/what-is-epr/
+
+## /blog/what-is-form-6/
+Title: Form 6 Filing Process for E-Waste Recyclers
+Description: How the Form 6 filing process works for e-waste recyclers under CPCB rules — what it documents and when it's required.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/what-is-form-6/
+
+## /blog/what-is-itad/
+Title: ITAD Cost Breakdown: What Businesses Actually Pay For
+Description: A cost breakdown of ITAD services — what's typically billed per asset, what's bundled, and what drives price differences between vendors.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/what-is-itad/
+
+## /blog/what-is-lithium-battery-recycling/
+Title: Lithium Battery Recycling Cost & Safety Handling Fees
+Description: What lithium battery recycling typically costs, why safety handling adds a fee, and how it differs from lead-acid battery recycling.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/what-is-lithium-battery-recycling/
+
+## /blog/what-is-nist-800-88/
+Title: NIST 800-88 Compliance Cost for Data Destruction Vendors
+Description: What NIST 800-88 compliant data destruction typically costs, and why verified compliance can carry a premium over basic wiping.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/what-is-nist-800-88/
+
+## /blog/why-epr-is-mandatory/
+Title: EPR Non-Compliance Penalties for Businesses in India
+Description: What businesses risk under India's e-waste rules if EPR compliance is skipped — penalty structure and enforcement patterns.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/why-epr-is-mandatory/
+
+## /blog/why-recycle-electronics/
+Title: Electronics Recycling vs Landfill: The Cost Difference
+Description: How the cost of recycling electronics compares to the hidden cost of landfill disposal — cleanup liability, fines, and material loss.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/why-recycle-electronics/
 
 ## /wiki/
 Title: The E-Waste Recycling Encyclopedia: The Ultimate Guide
