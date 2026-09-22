@@ -1,7 +1,7 @@
 # https://www.ewastekochi.com
 # Full content dump for LLM/RAG ingestion
-# Generated: 2026-09-22T23:15:19.956Z
-# Total routes: 1089
+# Generated: 2026-09-22T23:36:24.543Z
+# Total routes: 1152
 
 ## /
 Title: E-Waste Recycling Kochi | Free Pickup for Electronics, Batteries & IT Scrap
@@ -6306,6 +6306,510 @@ Type: blog
 Language: en-IN
 Indexable: true
 URL: https://www.ewastekochi.com/blog/why-recycle-electronics/
+
+## /blog/aluva-e-waste/
+Title: E-Waste Pickup in Aluva: What to Prepare Before Collection
+Description: What to prepare before an e-waste pickup in Aluva — item packaging, access notes, and typical scheduling windows for residents.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/aluva-e-waste/
+
+## /blog/appliance-recycling-kochi/
+Title: Home Appliance Recycling Cost in Kochi
+Description: What home appliance recycling typically costs in Kochi — how pricing differs between small and large appliances.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/appliance-recycling-kochi/
+
+## /blog/audit-trail-e-waste/
+Title: Building an E-Waste Audit Trail
+Description: How Kochi organisations create a defensible audit trail from pickup request to certificate.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/audit-trail-e-waste/
+
+## /blog/bulk-consumer-records/
+Title: Bulk Consumer E-Waste Records & Documentation
+Description: The records bulk consumers in Kochi should keep for e-waste handover: manifests, certificates and audit trails.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/bulk-consumer-records/
+
+## /blog/bulk-it-disposal/
+Title: Bulk IT Asset Disposal Pricing for Kochi Offices
+Description: How bulk IT asset disposal is priced for offices in Kochi — volume tiers, data destruction add-ons, and invoicing.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/bulk-it-disposal/
+
+## /blog/camera-recycling-kochi/
+Title: Camera & Photography Gear Recycling in Kochi
+Description: How to recycle cameras, lenses and photography electronics in Kochi.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/camera-recycling-kochi/
+
+## /blog/cctv-recycling-kochi/
+Title: CCTV & Surveillance Recycling in Kochi
+Description: How to recycle CCTV cameras, DVRs and NVRs in Kochi with data handling.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/cctv-recycling-kochi/
+
+## /blog/certificate-of-recycling/
+Title: Certificate of Recycling: What It Is & Why It Matters
+Description: What a Certificate of Recycling proves, who needs it, and how Kochi businesses obtain one.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/certificate-of-recycling/
+
+## /blog/charger-adapter-recycling/
+Title: Charger & Adapter Recycling: Where They Go After Pickup
+Description: What actually happens to chargers and adapters after e-waste pickup in Kochi — the sorting and recovery process.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/charger-adapter-recycling/
+
+## /blog/compliance-b2b/
+Title: Compliance & B2B: EPR, Regulations & Corporate E-Waste Management
+Description: EPR compliance, CPCB registration, bulk consumer records, and corporate e-waste management solutions for businesses and organizations. Navigate India's E-Waste Rules 2022 with confidence.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/compliance-b2b/
+
+## /blog/compliance-checklist-business/
+Title: E-Waste Compliance Checklist for Small Businesses
+Description: A compliance checklist scoped specifically for small businesses handling e-waste in Kerala — lighter than enterprise EPR requirements.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/compliance-checklist-business/
+
+## /blog/corporate-e-waste-policy/
+Title: Building a Corporate E-Waste Policy
+Description: How Kochi companies can set an internal e-waste and IT-disposal policy covering procurement, retirement and records.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/corporate-e-waste-policy/
+
+## /blog/cpcb-authorisation/
+Title: CPCB & KSPCB Authorisation for E-Waste Recyclers
+Description: Why authorised recycler status matters, how CPCB and Kerala SPCB registration works, and what businesses should verify.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/cpcb-authorisation/
+
+## /blog/data-destruction-compliance/
+Title: Data Destruction Compliance for Retired Devices
+Description: Why certified data destruction matters for compliance, the standards involved, and how Kochi businesses document it.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/data-destruction-compliance/
+
+## /blog/devices-materials/
+Title: Devices & Materials: Component-Level E-Waste Recycling Guides
+Description: Component-level recycling guides for laptops, phones, batteries, hard drives, cables and displays in Kochi. Safe handling steps and material-value recovery.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/devices-materials/
+
+## /blog/doorstep-pickup-kochi/
+Title: Doorstep E-Waste Pickup in Kochi
+Description: How doorstep e-waste collection works in Kochi: request, confirm, prepare, hand over.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/doorstep-pickup-kochi/
+
+## /blog/dpdp-act-e-waste/
+Title: DPDP Act and E-Waste Handling
+Description: How India's Digital Personal Data Protection Act intersects with e-waste disposal and data-bearing devices.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/dpdp-act-e-waste/
+
+## /blog/e-waste-disposal-kochi/
+Title: E-Waste Disposal in Kochi: Safe Options
+Description: Safe e-waste disposal options in Kochi for homes and businesses, and what to avoid.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/e-waste-disposal-kochi/
+
+## /blog/e-waste-environment-impact/
+Title: What Happens When E-Waste Isn't Recycled: Risks in Kerala
+Description: The environmental risks of unrecycled e-waste in Kerala specifically — soil and groundwater contamination pathways.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/e-waste-environment-impact/
+
+## /blog/e-waste-myths/
+Title: Common E-Waste Myths Debunked
+Description: Clearing up frequent misunderstandings: 'it's just one device', 'scrap buyers are fine', and 'recycling is expensive'.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/e-waste-myths/
+
+## /blog/e-waste-rules-2022/
+Title: E-Waste Rules 2022: Key Changes for Kerala Businesses
+Description: What changed under the E-Waste (Management) Rules 2022 that specifically affects businesses operating in Kerala.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/e-waste-rules-2022/
+
+## /blog/e-waste-vs-regular-waste/
+Title: E-Waste vs Regular Waste: Why the Difference Matters
+Description: Why electronic waste is regulated differently from household garbage, and what happens when the two streams mix.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/e-waste-vs-regular-waste/
+
+## /blog/edappally-e-waste/
+Title: E-Waste Pickup in Edappally: Timing & What to Prepare
+Description: Typical timing and preparation steps for an e-waste pickup in Edappally — what to have ready before the collection window.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/edappally-e-waste/
+
+## /blog/electronic-scrap-buyers-kochi/
+Title: Electronic Scrap Buyers in Kochi: How Pricing Works
+Description: How electronic scrap pricing works with buyers in Kochi — weight-based rates versus component-value assessments.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/electronic-scrap-buyers-kochi/
+
+## /blog/epr-compliance-india/
+Title: EPR Compliance Timeline for E-Waste in India
+Description: A timeline view of EPR compliance milestones for e-waste in India — registration, target-setting, and annual reporting.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/epr-compliance-india/
+
+## /blog/epr-portal-guide/
+Title: EPR Portal Guide for E-Waste
+Description: How India's EPR portal supports compliance, and what Kochi businesses should know.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/epr-portal-guide/
+
+## /blog/ernakulam-e-waste/
+Title: E-Waste Disposal in Ernakulam
+Description: Ernakulam-specific e-waste pickup and drop-off guidance, including South Ernakulam coverage.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/ernakulam-e-waste/
+
+## /blog/ewaste-pickup-kochi/
+Title: E-Waste Pickup in Kochi: Booking Guide
+Description: How to book e-waste pickup in Kochi: what to send, how feasibility is confirmed, and what to expect.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/ewaste-pickup-kochi/
+
+## /blog/fort-kochi-e-waste/
+Title: E-Waste Pickup in Fort Kochi: Heritage Zone Access Notes
+Description: Access notes for e-waste pickup in Fort Kochi's heritage zone — narrow-lane scheduling and what residents should expect.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/fort-kochi-e-waste/
+
+## /blog/gaming-console-recycling-kochi/
+Title: Gaming Console Trade-In vs Recycling Value in Kochi
+Description: Whether a gaming console is worth more traded in or recycled in Kochi — what condition and generation change.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/gaming-console-recycling-kochi/
+
+## /blog/general-ewaste/
+Title: General E-Waste: Recycling Basics, Preparation & Everyday Disposal
+Description: Essential e-waste recycling guidance for households and small businesses. Find out what can be recycled, how to prepare items, where to find authorized services, and why proper disposal matters.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/general-ewaste/
+
+## /blog/home-e-waste-disposal/
+Title: Home E-Waste Disposal: Safe Steps for Households
+Description: How Kochi households can dispose of old electronics safely, what to avoid, and how free pickup works for homes.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/home-e-waste-disposal/
+
+## /blog/infopark-e-waste/
+Title: E-Waste Pickup for Infopark Residents & Small Teams
+Description: E-waste pickup for Infopark residents and small teams, separate from the bulk ITAD collection offered to larger IT offices.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/infopark-e-waste/
+
+## /blog/itad-for-businesses/
+Title: ITAD for Small & Mid-Size Businesses: What's Different
+Description: How ITAD needs differ for small and mid-size businesses versus large enterprises — scaled-down process and reporting.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/itad-for-businesses/
+
+## /blog/kadavanthra-e-waste/
+Title: E-Waste Pickup in Kadavanthra: What Items Are Accepted
+Description: Which items are accepted for e-waste pickup in Kadavanthra, and what to set aside before the collection team arrives.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/kadavanthra-e-waste/
+
+## /blog/kakkanad-e-waste/
+Title: E-Waste Pickup in Kakkanad: Scheduling & Item Limits
+Description: How e-waste pickup scheduling and item limits work in Kakkanad, for both individual households and small IT setups.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/kakkanad-e-waste/
+
+## /blog/kalamassery-e-waste/
+Title: E-Waste Pickup in Kalamassery: What to Prepare
+Description: What to prepare before an e-waste pickup in Kalamassery, covering both household electronics and small industrial units.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/kalamassery-e-waste/
+
+## /blog/keyboard-mouse-recycling-kochi/
+Title: Keyboard & Mouse Recycling: Batch With Your Next Pickup
+Description: Why keyboards and mice are best recycled as part of a bundled e-waste pickup rather than on their own in Kochi.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/keyboard-mouse-recycling-kochi/
+
+## /blog/kochi-metro-pickup/
+Title: Kochi Metro E-Waste Pickup Coverage
+Description: Which Kochi metro areas are serviceable for doorstep e-waste pickup, and how to confirm your locality.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/kochi-metro-pickup/
+
+## /blog/kochi-residents-e-waste-guide/
+Title: Kochi Residents' E-Waste Guide
+Description: A practical e-waste guide for Kochi residents: what to do with old electronics at home.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/kochi-residents-e-waste-guide/
+
+## /blog/kundannoor-e-waste/
+Title: E-Waste Pickup in Kundannoor
+Description: E-waste pickup near the Kundannoor junction and southern corridor — what's covered and how to schedule collection.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/kundannoor-e-waste/
+
+## /blog/led-bulb-recycling-kochi/
+Title: LED & CFL Bulb Recycling in Kochi
+Description: How to recycle LED and CFL bulbs in Kochi, including mercury handling.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/led-bulb-recycling-kochi/
+
+## /blog/locations-services/
+Title: E-Waste Service Areas Directory: All Kochi Locations at a Glance
+Description: A directory view of every Kochi-area location the e-waste pickup service covers, linking out to each area's specific page.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/locations-services/
+
+## /blog/maradu-e-waste/
+Title: E-Waste Pickup in Maradu: Timing & Item Checklist
+Description: A timing guide and item checklist for e-waste pickup in Maradu — what's collected and how far ahead to schedule.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/maradu-e-waste/
+
+## /blog/old-electronic-items-buyers-kochi/
+Title: Old Electronic Items: Sell vs Recycle Decision Guide
+Description: A decision guide for old electronic items in Kochi — when selling makes sense versus when recycling is the better option.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/old-electronic-items-buyers-kochi/
+
+## /blog/palarivattom-e-waste/
+Title: E-Waste Pickup in Palarivattom: What to Prepare
+Description: What to prepare before an e-waste pickup in Palarivattom, including item sorting and access notes for the collection team.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/palarivattom-e-waste/
+
+## /blog/pcb-motherboard-recycling/
+Title: PCB & Motherboard Recycling in Kochi
+Description: How circuit boards and motherboards are recycled in Kochi for precious metals.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/pcb-motherboard-recycling/
+
+## /blog/prepare-e-waste-for-pickup/
+Title: How to Prepare E-Waste for Pickup in Kochi
+Description: A practical checklist for households and offices before e-waste collection: drying, separating batteries, listing items and sharing photos.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/prepare-e-waste-for-pickup/
+
+## /blog/producer-responsibility-e-waste/
+Title: Producer Responsibility for E-Waste: What It Means for Retailers
+Description: What Extended Producer Responsibility rules mean specifically for retailers and sellers of electronics in India.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/producer-responsibility-e-waste/
+
+## /blog/reduce-e-waste-at-home/
+Title: How to Reduce E-Waste at Home in Kochi
+Description: Practical ways Kochi households can buy less, repair more and extend device life to cut e-waste before it starts.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/reduce-e-waste-at-home/
+
+## /blog/router-recycling-kochi/
+Title: Router & Networking Gear Recycling in Kochi
+Description: How to recycle routers, switches and networking equipment in Kochi, including data notes.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/router-recycling-kochi/
+
+## /blog/sell-used-electronics-kochi/
+Title: Selling Used Electronics in Kochi: Documentation to Keep
+Description: What documentation to keep when selling used electronics in Kochi — proof of sale, IMEI records, and data-wipe confirmation.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/sell-used-electronics-kochi/
+
+## /blog/smartwatch-recycling-kochi/
+Title: Smartwatch & Wearable Battery Recycling: What's Different
+Description: Why smartwatch and wearable battery recycling needs different handling than phone or laptop batteries.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/smartwatch-recycling-kochi/
+
+## /blog/solar-panel-recycling/
+Title: Solar Panel & Inverter Recycling: What's Handled Together
+Description: Why solar panels and their inverters are typically collected and processed together, and what that means for scheduling.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/solar-panel-recycling/
+
+## /blog/speaker-recycling-kochi/
+Title: Speaker & Audio Device Recycling in Kochi
+Description: How to recycle speakers, soundbars and audio gear in Kochi.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/speaker-recycling-kochi/
+
+## /blog/ssd-ram-recycling-kochi/
+Title: SSD & RAM Recycling in Kochi
+Description: How to recycle SSDs and RAM modules in Kochi with data destruction.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/ssd-ram-recycling-kochi/
+
+## /blog/tablet-recycling-kochi/
+Title: Tablet Recycling in Kochi
+Description: How to recycle or resell old tablets in Kochi with data and battery safety.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/tablet-recycling-kochi/
+
+## /blog/take-back-programs/
+Title: E-Waste Take-Back Programs
+Description: How take-back and collection programs work, and how Kochi organisations can participate.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/take-back-programs/
+
+## /blog/thrippunithura-e-waste/
+Title: E-Waste Pickup in Thrippunithura: Scheduling Notes
+Description: Scheduling notes for e-waste pickup in Thrippunithura — typical lead times and what to have ready in advance.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/thrippunithura-e-waste/
+
+## /blog/types-of-e-waste/
+Title: E-Waste Categories: Which Ones Need Special Handling
+Description: Which e-waste categories need special handling — batteries, CRTs, and fluorescent components — versus standard processing.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/types-of-e-waste/
+
+## /blog/ups-inverter-recycling/
+Title: UPS & Inverter Battery Recycling: Exchange vs Recycle Value
+Description: Whether a UPS or inverter battery is worth more through a dealer exchange offer or straight recycling in Kochi.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/ups-inverter-recycling/
+
+## /blog/vyttila-e-waste/
+Title: E-Waste Pickup in Vyttila: What Items Are Accepted
+Description: Which items are accepted for e-waste pickup in Vyttila, covering both home electronics and small office equipment.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/vyttila-e-waste/
+
+## /blog/what-is-e-waste-kochi/
+Title: What Is E-Waste? Simple Definition for Kochi Households
+Description: A plain-language definition of e-waste, what counts as electronic waste in Kochi, and why separate handling matters for homes and small offices.
+Type: blog
+Language: en-IN
+Indexable: true
+URL: https://www.ewastekochi.com/blog/what-is-e-waste-kochi/
 
 ## /wiki/
 Title: The E-Waste Recycling Encyclopedia: The Ultimate Guide
