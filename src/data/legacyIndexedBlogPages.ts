@@ -31,8 +31,14 @@ const paths = [
   "/blog/computer-scrap-dealers-kochi/",
   "/blog/corporate-data-destruction-services/",
   "/blog/corporate-ewaste-compliance-90-day-checklist/",
-  "/blog/corporate-e-waste-collection-solutions-in-vyttila-vyttila/",
-  "/blog/cost-of-data-destruction-in-edappally-2/",
+  // Removed 2026-09-23: doubled-city-slug duplicate of the existing area hub
+  // page. GSC "Crawled - currently not indexed" audit; 301'd to
+  // /locations/vyttila/ in vercel.json in the same commit.
+  // "/blog/corporate-e-waste-collection-solutions-in-vyttila-vyttila/",
+  // Removed 2026-09-23: numeric-suffix duplicate, no meaningful traffic.
+  // GSC "Crawled - currently not indexed" audit; 301'd to
+  // /locations/edappally/ in vercel.json in the same commit.
+  // "/blog/cost-of-data-destruction-in-edappally-2/",
   "/blog/data-security-disposal-checklist-kochi/",
   "/blog/dpdp-act-2023-it-disposal-compliance/",
   "/blog/e-waste-collection-near-me-kochi/",
@@ -41,12 +47,19 @@ const paths = [
   "/blog/e-waste-recycling-kalamassery-kochi/",
   "/blog/e-waste-recycling-process/",
   "/blog/e-waste-rules-2022-compliance-checklist-kochi/",
-  "/blog/e-waste-laws-in-kalamassery-complete-guide-kalamassery-3-3/",
+  // Removed 2026-09-23: doubled-city-slug + numeric-suffix duplicate (one of
+  // several "-N-N" variants of this same topic). GSC "Crawled - currently
+  // not indexed" audit; 301'd to /wiki/technical/indian-laws/ in vercel.json
+  // in the same commit.
+  // "/blog/e-waste-laws-in-kalamassery-complete-guide-kalamassery-3-3/",
   "/blog/e-waste-laws-in-kochi-complete-guide-kochi-1/",
   "/blog/e-waste-laws-in-north-paravur-complete-guide-north-paravur/",
   "/blog/e-waste-management-it-companies/",
   "/blog/economic-benefits-of-data-destruction-in-ernakulam-ernakulam/",
-  "/blog/economic-benefits-of-e-waste-collection-in-kalamassery-kalamassery/",
+  // Removed 2026-09-23: doubled-city-slug duplicate of the existing area hub
+  // page. GSC "Crawled - currently not indexed" audit; 301'd to
+  // /locations/kalamassery/ in vercel.json in the same commit.
+  // "/blog/economic-benefits-of-e-waste-collection-in-kalamassery-kalamassery/",
   "/blog/electronic-waste-collection-near-me-kochi/",
   "/blog/electronic-waste-disposal-kerala/",
   "/blog/enterprise-monitor-recycling-in-angamaly-angamaly/",
@@ -64,22 +77,39 @@ const paths = [
   "/blog/it-asset-disposal-kochi/",
   "/blog/itad/enterprise/affordable-itad-enterprise-tripunithura-115/",
   "/blog/itad/enterprise/best-itad-enterprise-panampilly-nagar-188/",
-  "/blog/itad/enterprise/government-approved-itad-enterprise-cheranallur-24/",
-  "/blog/itad/enterprise/government-approved-itad-enterprise-trivandrum-94/",
+  // Removed 2026-09-23: numeric-suffix batch-generated page, no dedicated
+  // area page for Cheranallur. GSC "Crawled - currently not indexed" audit;
+  // 301'd to /itad/ in vercel.json in the same commit.
+  // "/blog/itad/enterprise/government-approved-itad-enterprise-cheranallur-24/",
+  // Removed 2026-09-23: numeric-suffix batch-generated page. GSC "Crawled -
+  // currently not indexed" audit; 301'd to /wiki/locations/e-waste-trivandrum/
+  // in vercel.json in the same commit.
+  // "/blog/itad/enterprise/government-approved-itad-enterprise-trivandrum-94/",
   "/blog/itad/enterprise/iso-certified-itad-enterprise-calicut-113/",
   "/blog/itad/enterprise/professional-itad-enterprise-thevara-3/",
   "/blog/itad/enterprise/safe-itad-enterprise-calicut-88/",
   "/blog/itad/enterprise/top-itad-enterprise-mg-road-11/",
-  "/blog/itad/enterprise/verified-itad-enterprise-infopark-151/",
+  // Removed 2026-09-23: numeric-suffix batch-generated page, duplicates the
+  // existing Infopark area page. GSC "Crawled - currently not indexed"
+  // audit; 301'd to /locations/infopark-kochi/ in vercel.json in the same
+  // commit.
+  // "/blog/itad/enterprise/verified-itad-enterprise-infopark-151/",
   "/blog/itad/enterprise/verified-itad-enterprise-trivandrum-165/",
-  "/blog/kspcb-regulations-for-e-waste-collection-in-kalamassery-kalamassery/",
+  // Removed 2026-09-23: doubled-city-slug duplicate; topic is KSPCB
+  // licensing, not location-service. GSC "Crawled - currently not indexed"
+  // audit; 301'd to /wiki/locations/kerala-licensing-ewaste/ in vercel.json
+  // in the same commit.
+  // "/blog/kspcb-regulations-for-e-waste-collection-in-kalamassery-kalamassery/",
   "/blog/laptop-data-wipe-checklist/",
   // Removed 2026-08-14: also declared as vercel.json redirect source
   // (→ /e-waste-scrap-prices-kochi/). The undated sibling slug
   // "/blog/laptop-scrap-price-kochi/" remains a live legacy page.
   // "/blog/laptop-scrap-price-kochi-2026/",
   "/blog/laptop-scrap-price-kochi/",
-  "/blog/legal-requirements-for-it-asset-disposition-in-ernakulam-ernakulam/",
+  // Removed 2026-09-23: doubled-city-slug duplicate of the existing area hub
+  // page. GSC "Crawled - currently not indexed" audit; 301'd to
+  // /locations/ernakulam-south/ in vercel.json in the same commit.
+  // "/blog/legal-requirements-for-it-asset-disposition-in-ernakulam-ernakulam/",
   "/blog/mobile-scrap-price-kochi/",
   "/blog/mobile-phone-recycling-kochi/",
   "/blog/nist-800-88-data-wiping/",
@@ -91,7 +121,10 @@ const paths = [
   "/blog/printer-recycling-price-guide-for-north-paravur-north-paravur/",
   "/blog/printer-recycling-problems-in-north-paravur-solutions-north-paravur/",
   "/blog/recycling-electronics-helps-kerala/",
-  "/blog/recycling/enterprise/best-recycling-enterprise-kakkanad-9/",
+  // Removed 2026-09-23: numeric-suffix batch-generated page, duplicates the
+  // existing Kakkanad area page. GSC "Crawled - currently not indexed"
+  // audit; 301'd to /locations/kakkanad/ in vercel.json in the same commit.
+  // "/blog/recycling/enterprise/best-recycling-enterprise-kakkanad-9/",
   "/blog/recycling/enterprise/fast-recycling-enterprise-mg-road-6/",
   "/blog/recycling/enterprise/trusted-recycling-enterprise-kaloor-8/",
   "/blog/school-ewaste-drive-checklist/",

@@ -3776,6 +3776,106 @@
       "source": "/blogs/disposal",
       "destination": "/blog/",
       "permanent": true
+    },
+    {
+      "source": "/blog/corporate-e-waste-collection-solutions-in-vyttila-vyttila/",
+      "destination": "/locations/vyttila/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/corporate-e-waste-collection-solutions-in-vyttila-vyttila",
+      "destination": "/locations/vyttila/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/cost-of-data-destruction-in-edappally-2/",
+      "destination": "/locations/edappally/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/cost-of-data-destruction-in-edappally-2",
+      "destination": "/locations/edappally/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/e-waste-laws-in-kalamassery-complete-guide-kalamassery-3-3/",
+      "destination": "/wiki/technical/indian-laws/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/e-waste-laws-in-kalamassery-complete-guide-kalamassery-3-3",
+      "destination": "/wiki/technical/indian-laws/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/economic-benefits-of-e-waste-collection-in-kalamassery-kalamassery/",
+      "destination": "/locations/kalamassery/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/economic-benefits-of-e-waste-collection-in-kalamassery-kalamassery",
+      "destination": "/locations/kalamassery/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/itad/enterprise/government-approved-itad-enterprise-cheranallur-24/",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/itad/enterprise/government-approved-itad-enterprise-cheranallur-24",
+      "destination": "/itad/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/itad/enterprise/government-approved-itad-enterprise-trivandrum-94/",
+      "destination": "/wiki/locations/e-waste-trivandrum/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/itad/enterprise/government-approved-itad-enterprise-trivandrum-94",
+      "destination": "/wiki/locations/e-waste-trivandrum/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/itad/enterprise/verified-itad-enterprise-infopark-151/",
+      "destination": "/locations/infopark-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/itad/enterprise/verified-itad-enterprise-infopark-151",
+      "destination": "/locations/infopark-kochi/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/kspcb-regulations-for-e-waste-collection-in-kalamassery-kalamassery/",
+      "destination": "/wiki/locations/kerala-licensing-ewaste/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/kspcb-regulations-for-e-waste-collection-in-kalamassery-kalamassery",
+      "destination": "/wiki/locations/kerala-licensing-ewaste/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/legal-requirements-for-it-asset-disposition-in-ernakulam-ernakulam/",
+      "destination": "/locations/ernakulam-south/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/legal-requirements-for-it-asset-disposition-in-ernakulam-ernakulam",
+      "destination": "/locations/ernakulam-south/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/recycling/enterprise/best-recycling-enterprise-kakkanad-9/",
+      "destination": "/locations/kakkanad/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/recycling/enterprise/best-recycling-enterprise-kakkanad-9",
+      "destination": "/locations/kakkanad/",
+      "permanent": true
     }
   ]
 }
