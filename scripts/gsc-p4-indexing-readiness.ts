@@ -53,7 +53,6 @@ const priorityUrls: Array<{ tier: string; url: string }> = [
   ...[
     "/blog/free-e-waste-pickup-kochi/",
     "/blog/laptop-scrap-price-kochi/",
-    "/blog/electronic-waste-disposal-kerala/",
     "/blog/how-to-choose-itad-provider/",
     "/tools/scrap-value-calculator/",
   ].map((path) => ({ tier: "P3", url: `${SITE_URL}${path}` })),

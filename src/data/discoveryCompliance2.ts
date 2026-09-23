@@ -490,7 +490,7 @@ export const DEFINITION_GUIDES_2: DiscoveryGuide[] = [
     related: [
       { label: "Data destruction in Kochi", path: "/data-destruction/" },
       { label: "Hard drive shredding", path: "/blog/hard-drive-shredding-kochi/" },
-      { label: "NIST 800-88 guide", path: "/blog/nist-800-88-data-wiping/" },
+      { label: "NIST 800-88 guide", path: "/what-is-nist-800-88/" },
     
       { label: "Electronics recycling service", path: "/electronics-recycling/" },    ],
     sources: [
