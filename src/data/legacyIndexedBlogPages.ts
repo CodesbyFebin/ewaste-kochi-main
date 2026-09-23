@@ -14,22 +14,42 @@ export interface LegacyIndexedBlogPage {
 const paths = [
   "/blog/ac-scrap-price-kerala/",
   "/blog/affordable-it-asset-disposition-in-kalamassery-complete-pricing-kalamassery/",
-  "/blog/battery-disposal-india/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/battery-disposal-india/",
   "/blog/battery-disposal-safety-checklist-kochi/",
-  "/blog/battery-recycling-during-monsoon-kochi/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/battery-recycling-during-monsoon-kochi/",
   // Removed 2026-08-14: also declared as vercel.json redirect source
   // (→ /battery-recycling/). Cannot be both a live route and a legacy
   // redirect — redirect wins.
   // "/blog/battery-recycling-options-in-kochi-which-to-choose-kochi/",
-  "/blog/best-e-waste-recycling-kochi/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/best-e-waste-recycling-kochi/",
   "/blog/best-scrap-dealers-kochi-electronics/",
   // Removed 2026-08-14: also declared as vercel.json redirect source. Its
   // target /locations/ernakulam/ was a broken 2-hop chain; the redirect
   // has been repointed to /locations/ in the same commit.
   // "/blog/best-way-to-e-waste-collection-in-ernakulam-2026-ernakulam/",
   "/blog/bulk-e-waste-disposal-kochi/",
-  "/blog/computer-scrap-dealers-kochi/",
-  "/blog/corporate-data-destruction-services/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/computer-scrap-dealers-kochi/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/corporate-data-destruction-services/",
   "/blog/corporate-ewaste-compliance-90-day-checklist/",
   // Removed 2026-09-23: doubled-city-slug duplicate of the existing area hub
   // page. GSC "Crawled - currently not indexed" audit; 301'd to
@@ -40,9 +60,17 @@ const paths = [
   // /locations/edappally/ in vercel.json in the same commit.
   // "/blog/cost-of-data-destruction-in-edappally-2/",
   "/blog/data-security-disposal-checklist-kochi/",
-  "/blog/dpdp-act-2023-it-disposal-compliance/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/dpdp-act-2023-it-disposal-compliance/",
   "/blog/e-waste-collection-near-me-kochi/",
-  "/blog/e-waste-collection-problems-kalamassery/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/e-waste-collection-problems-kalamassery/",
   "/blog/e-waste-recycling-kakkanad-kochi/",
   "/blog/e-waste-recycling-kalamassery-kochi/",
   "/blog/e-waste-recycling-process/",
@@ -55,28 +83,68 @@ const paths = [
   "/blog/e-waste-laws-in-kochi-complete-guide-kochi-1/",
   "/blog/e-waste-laws-in-north-paravur-complete-guide-north-paravur/",
   "/blog/e-waste-management-it-companies/",
-  "/blog/economic-benefits-of-data-destruction-in-ernakulam-ernakulam/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/economic-benefits-of-data-destruction-in-ernakulam-ernakulam/",
   // Removed 2026-09-23: doubled-city-slug duplicate of the existing area hub
   // page. GSC "Crawled - currently not indexed" audit; 301'd to
   // /locations/kalamassery/ in vercel.json in the same commit.
   // "/blog/economic-benefits-of-e-waste-collection-in-kalamassery-kalamassery/",
-  "/blog/electronic-waste-collection-near-me-kochi/",
-  "/blog/electronic-waste-disposal-kerala/",
-  "/blog/enterprise-monitor-recycling-in-angamaly-angamaly/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/electronic-waste-collection-near-me-kochi/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/electronic-waste-disposal-kerala/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/enterprise-monitor-recycling-in-angamaly-angamaly/",
   "/blog/epr-compliance-checklist-india-kochi/",
   "/blog/esg-ewaste-reporting-template-kochi/",
   "/blog/ewaste-business-startup-cost-calculator/",
-  "/blog/environmental-impact-ewaste/",
-  "/blog/free-laptop-recycling-kochi/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/environmental-impact-ewaste/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/free-laptop-recycling-kochi/",
   "/blog/hard-drive-destruction-certificate-template/",
   "/blog/hard-drive-shredding-kochi/",
-  "/blog/hdd-vs-ssd-destruction/",
-  "/blog/how-destroy-hard-disk-data/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/hdd-vs-ssd-destruction/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/how-destroy-hard-disk-data/",
   "/blog/how-to-choose-itad-provider/",
   "/blog/how-to-e-waste-collection-in-kochi/",
   "/blog/it-asset-disposal-kochi/",
-  "/blog/itad/enterprise/affordable-itad-enterprise-tripunithura-115/",
-  "/blog/itad/enterprise/best-itad-enterprise-panampilly-nagar-188/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/itad/enterprise/affordable-itad-enterprise-tripunithura-115/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/itad/enterprise/best-itad-enterprise-panampilly-nagar-188/",
   // Removed 2026-09-23: numeric-suffix batch-generated page, no dedicated
   // area page for Cheranallur. GSC "Crawled - currently not indexed" audit;
   // 301'd to /itad/ in vercel.json in the same commit.
@@ -85,16 +153,36 @@ const paths = [
   // currently not indexed" audit; 301'd to /wiki/locations/e-waste-trivandrum/
   // in vercel.json in the same commit.
   // "/blog/itad/enterprise/government-approved-itad-enterprise-trivandrum-94/",
-  "/blog/itad/enterprise/iso-certified-itad-enterprise-calicut-113/",
-  "/blog/itad/enterprise/professional-itad-enterprise-thevara-3/",
-  "/blog/itad/enterprise/safe-itad-enterprise-calicut-88/",
-  "/blog/itad/enterprise/top-itad-enterprise-mg-road-11/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/itad/enterprise/iso-certified-itad-enterprise-calicut-113/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/itad/enterprise/professional-itad-enterprise-thevara-3/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/itad/enterprise/safe-itad-enterprise-calicut-88/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/itad/enterprise/top-itad-enterprise-mg-road-11/",
   // Removed 2026-09-23: numeric-suffix batch-generated page, duplicates the
   // existing Infopark area page. GSC "Crawled - currently not indexed"
   // audit; 301'd to /locations/infopark-kochi/ in vercel.json in the same
   // commit.
   // "/blog/itad/enterprise/verified-itad-enterprise-infopark-151/",
-  "/blog/itad/enterprise/verified-itad-enterprise-trivandrum-165/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/itad/enterprise/verified-itad-enterprise-trivandrum-165/",
   // Removed 2026-09-23: doubled-city-slug duplicate; topic is KSPCB
   // licensing, not location-service. GSC "Crawled - currently not indexed"
   // audit; 301'd to /wiki/locations/kerala-licensing-ewaste/ in vercel.json
@@ -112,27 +200,71 @@ const paths = [
   // "/blog/legal-requirements-for-it-asset-disposition-in-ernakulam-ernakulam/",
   "/blog/mobile-scrap-price-kochi/",
   "/blog/mobile-phone-recycling-kochi/",
-  "/blog/nist-800-88-data-wiping/",
-  "/blog/office-computer-recycling-kerala/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/nist-800-88-data-wiping/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/office-computer-recycling-kerala/",
   "/blog/old-electronic-buyers-near-me-kochi/",
-  "/blog/old-tv-disposal-kochi/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/old-tv-disposal-kochi/",
   "/blog/pillars/bulk-e-waste/",
-  "/blog/printer-recycling-kochi/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/printer-recycling-kochi/",
   "/blog/printer-recycling-price-guide-for-north-paravur-north-paravur/",
-  "/blog/printer-recycling-problems-in-north-paravur-solutions-north-paravur/",
-  "/blog/recycling-electronics-helps-kerala/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/printer-recycling-problems-in-north-paravur-solutions-north-paravur/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/recycling-electronics-helps-kerala/",
   // Removed 2026-09-23: numeric-suffix batch-generated page, duplicates the
   // existing Kakkanad area page. GSC "Crawled - currently not indexed"
   // audit; 301'd to /locations/kakkanad/ in vercel.json in the same commit.
   // "/blog/recycling/enterprise/best-recycling-enterprise-kakkanad-9/",
-  "/blog/recycling/enterprise/fast-recycling-enterprise-mg-road-6/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/recycling/enterprise/fast-recycling-enterprise-mg-road-6/",
   "/blog/recycling/enterprise/trusted-recycling-enterprise-kaloor-8/",
   "/blog/school-ewaste-drive-checklist/",
-  "/blog/secure-data-destruction-kochi/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/secure-data-destruction-kochi/",
   "/blog/server-scrap-price-kochi/",
-  "/blog/server-scrap-value-india/",
-  "/blog/service-phone-buyback/",
-  "/blog/topic-business/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/server-scrap-value-india/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/service-phone-buyback/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/topic-business/",
   "/blog/troubleshooting-server-recycling-in-kalamassery-kalamassery/",
   "/blog/tv-recycling-kochi/",
   "/blog/ups-battery-recycling-kochi/",
@@ -141,9 +273,21 @@ const paths = [
   // built for the "where to recycle batteries" GSC zero-click query).
   // Cannot be both a live route and a legacy redirect — redirect wins.
   // "/blog/where-to-recycle-batteries-kochi/",
-  "/blog/where-sell-ewaste-near-me/",
-  "/blog/why-companies-destroy-data/",
-  "/blog/why-data-destruction-important-businesses/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/where-sell-ewaste-near-me/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/why-companies-destroy-data/",
+  // Removed 2026-09-23: data/gsc-indexed-url-upgrade-map.json marks this
+  // build_required:false ("Indexed legacy/generated URL has no meaningful traffic signal; do not recreate old pSEO risk."). Was being built here regardless --
+  // same class of bug fixed in gscIndexedGeneratedPages.ts this session, this
+  // file just hardcodes paths with no per-row check at all.
+  // "/blog/why-data-destruction-important-businesses/",
   "/blog/zero-landfill-ewaste-checklist-kochi/",
 ];
 
