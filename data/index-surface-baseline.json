@@ -1,14 +1,14 @@
 {
-  "approvedAt": "2026-08-15",
-  "approvedFrom": "measured full pre-7209f10d generated-route restoration on PR #12",
-  "notes": "Baseline is measured from the restored production build, not inferred from historical aggregate figures. The location sitemap is restored exactly to 184 URLs. Future reductions require an explicit reviewed baseline change rather than a generated-page eligibility side effect.",
+  "approvedAt": "2026-09-23",
+  "approvedFrom": "gscIndexedGeneratedPages.ts build_required fix, reviewed via GSC Coverage Drilldown audit",
+  "notes": "Baseline reduced 2026-09-23 after fixing a real generator bug, not a regression: buildPage() in gscIndexedGeneratedPages.ts was building every row with current_v2_status===\"missing_not_built\" regardless of the row's own build_required field. 218 rows across the whole dataset had build_required:false (mostly page_type:\"location-service-matrix\", the /locations/{area}/{service}-kochi/ pattern) with explicit reasons like \"do not recreate old pSEO risk\" -- a prior comment in the same function incorrectly claimed these were \"intentionally still built\". Cross-checked against a live GSC 404/crawled-not-indexed export: 131 of these were live pages Google had actively crawled and declined to index. Fixed by adding build_required===false to the skip condition. All 23 real location hub pages (build_required:true, current_v2_status:built_200, built via a separate static-file mechanism) are unaffected and confirmed still present. This is the second, corrected baseline after the PR #12 restoration this note previously referenced -- that restoration brought back pages this fix now removes for a documented, evidenced reason, not a side effect.",
   "thresholds": {
     "totalDropPercent": 5,
     "groupDropPercent": 20
   },
   "counts": {
-    "total": 885,
-    "locations": 184,
-    "blog": 619
+    "total": 997,
+    "locations": 41,
+    "blog": 871
   }
 }

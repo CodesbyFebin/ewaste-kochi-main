@@ -11,6 +11,7 @@ interface GscIndexedRow {
   traffic_tier: string;
   upgrade_action: string;
   current_v2_status: string;
+  build_required?: boolean;
 }
 
 export interface IndexedGeneratedPage {
@@ -449,6 +450,7 @@ function buildPage(row: GscIndexedRow): IndexedGeneratedPage | undefined {
     !row.path.startsWith("/") ||
     row.current_v2_status !== "missing_not_built" ||
     row.upgrade_action === "redirect_301" ||
+    row.build_required === false ||
     row.path.startsWith("/locations/kalamassery-hitech-park/") ||
     !generatedCandidateTypes.has(row.page_type)
   ) {
@@ -460,16 +462,11 @@ function buildPage(row: GscIndexedRow): IndexedGeneratedPage | undefined {
   if (row.page_type === "blogs-taxonomy-legacy") return legacyBlogsPage(row);
   if (row.page_type === "service-page") return serviceAliasPage(row);
   if (row.page_type === "location-page") return legacyLocationPage(row);
-  // Legacy per-SKU buyback URLs: the source data explicitly marks these
-  // "leave_404" with "do not rebuild model-specific quote spam" (0 traffic
-  // across all rows) — respect that here rather than in the shared filter
-  // above, since upgrade_action:"leave_404" also covers ~200 unrelated
-  // location-service-matrix/blog rows that are intentionally still built.
   if (row.path.startsWith("/buyback/laptops/")) {
-    return row.upgrade_action === "leave_404" ? undefined : buybackPage(row);
+    return buybackPage(row);
   }
   if (row.path.startsWith("/ml/buyback/laptops/")) {
-    return row.upgrade_action === "leave_404" ? undefined : buybackPage(row, true);
+    return buybackPage(row, true);
   }
   if (row.path === "/ml/services") return serviceAliasPage(row, true);
   if (row.path.startsWith("/ml/services/")) return serviceAliasPage(row, true);
