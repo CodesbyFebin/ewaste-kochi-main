@@ -158,11 +158,11 @@
       "location": "",
       "service_intent": "laptop-buyback-kochi",
       "traffic_tier": 3,
-      "action": "manual_review",
-      "target_url": "",
-      "reason": "/hi/ Hindi pages \u2014 open scope question since Phase 2B (never confirmed as intentional multi-language scope; only Malayalam was ever briefed). Not auto-decided here.",
+      "action": "redirect_301",
+      "target_url": "https://www.ewastekochi.com/sell-electronics/",
+      "reason": "Locale decision 2026-09-23: /hi/ is not a supported locale -- no Hindi content was ever briefed or built (only Malayalam). 9 impressions historically; redirected to the nearest English equivalent rather than left 404, since a clean target exists and there is real (if modest) signal.",
       "risk_level": "low",
-      "notes": "classification_source=rule"
+      "notes": "classification_source=rule;locale_decision=2026-09-23"
     },
     {
       "url": "https://www.ewastekochi.com/blogs/recycling/how-electronics-recycling-works-in-thiruvananthapuram",
@@ -598,11 +598,11 @@
       "location": "",
       "service_intent": "computer-recycling",
       "traffic_tier": 2,
-      "action": "manual_review",
-      "target_url": "",
-      "reason": "/hi/ Hindi pages \u2014 open scope question since Phase 2B (never confirmed as intentional multi-language scope; only Malayalam was ever briefed). Not auto-decided here.",
+      "action": "redirect_301",
+      "target_url": "https://www.ewastekochi.com/recycling/",
+      "reason": "Locale decision 2026-09-23: /hi/ is not a supported locale. 25 impressions historically; already redirected to /recycling/ prior to this session -- confirming and closing the manual_review status.",
       "risk_level": "low",
-      "notes": "classification_source=rule"
+      "notes": "classification_source=rule;locale_decision=2026-09-23"
     },
     {
       "url": "https://www.ewastekochi.com/blogs/recycling/laptop-recycling-in-kollam-reuse-buyback-or-scrap",
@@ -718,11 +718,11 @@
       "location": "",
       "service_intent": "mobile-recycling-kochi",
       "traffic_tier": 3,
-      "action": "manual_review",
-      "target_url": "",
-      "reason": "/hi/ Hindi pages \u2014 open scope question since Phase 2B (never confirmed as intentional multi-language scope; only Malayalam was ever briefed). Not auto-decided here.",
+      "action": "redirect_301",
+      "target_url": "https://www.ewastekochi.com/recycling/",
+      "reason": "Locale decision 2026-09-23: /hi/ is not a supported locale. 18 impressions historically; already redirected to /recycling/ prior to this session -- confirming and closing the manual_review status.",
       "risk_level": "low",
-      "notes": "classification_source=rule"
+      "notes": "classification_source=rule;locale_decision=2026-09-23"
     },
     {
       "url": "https://www.ewastekochi.com/blog/itad-roi-kochi-enterprise",
@@ -958,11 +958,11 @@
       "location": "",
       "service_intent": "e-waste-recycling-kochi",
       "traffic_tier": 1,
-      "action": "manual_review",
-      "target_url": "",
-      "reason": "/hi/ Hindi pages \u2014 open scope question since Phase 2B (never confirmed as intentional multi-language scope; only Malayalam was ever briefed). Not auto-decided here.",
+      "action": "redirect_301",
+      "target_url": "https://www.ewastekochi.com/recycling/",
+      "reason": "Locale decision 2026-09-23: /hi/ is not a supported locale. 107 impressions historically, the strongest signal of the five -- already redirected to /recycling/ prior to this session -- confirming and closing the manual_review status.",
       "risk_level": "low",
-      "notes": "classification_source=rule"
+      "notes": "classification_source=rule;locale_decision=2026-09-23"
     },
     {
       "url": "https://www.ewastekochi.com/blogs/ewaste-laws/kspcb-authorized-recyclers-list-how-thiruvananthapuram-businesses-verify-vendors",
@@ -6418,11 +6418,11 @@
       "location": "",
       "service_intent": "network-equipment-disposal-kochi",
       "traffic_tier": 4,
-      "action": "manual_review",
+      "action": "leave_404",
       "target_url": "",
-      "reason": "/hi/ Hindi pages \u2014 open scope question since Phase 2B (never confirmed as intentional multi-language scope; only Malayalam was ever briefed). Not auto-decided here.",
+      "reason": "Locale decision 2026-09-23: /hi/ is not a supported locale. 0 impressions, no traffic signal -- fails the past-value test used elsewhere this session (redirect requires prior traffic or backlinks). Stays 404 despite a clean English target existing (/network-equipment-recycling/), for consistency with that test.",
       "risk_level": "low",
-      "notes": "classification_source=rule"
+      "notes": "classification_source=rule;locale_decision=2026-09-23"
     },
     {
       "url": "https://www.ewastekochi.com/blog/how-to-it-asset-disposition-in-kochi-kochi-1",

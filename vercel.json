@@ -3876,6 +3876,16 @@
       "source": "/blog/recycling/enterprise/best-recycling-enterprise-kakkanad-9",
       "destination": "/locations/kakkanad/",
       "permanent": true
+    },
+    {
+      "source": "/hi/services/laptop-buyback-kochi",
+      "destination": "/sell-electronics/",
+      "permanent": true
+    },
+    {
+      "source": "/hi/services/laptop-buyback-kochi/",
+      "destination": "/sell-electronics/",
+      "permanent": true
     }
   ]
 }
